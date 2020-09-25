@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b51ae675af9c37cf7a347830520f0782d801cfea
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff3d2de93c28d106cf24cd72b72c5d2e3346d287
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537754"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111006"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -166,7 +166,7 @@ GO
 ##  <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a><a name="bkmk_PercentAvailable"></a> Porcentaje de memoria disponible para tablas e índices optimizados para memoria  
  Si asigna una base de datos con tablas optimizadas para memoria y una carga de trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al mismo grupo de recursos de servidor, el regulador de recursos establece un umbral interno para uso de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] de modo que los usuarios del grupo no experimenten conflictos al usar el grupo. En general, el umbral para el uso de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] es aproximadamente el 80 % del valor del grupo. En la tabla siguiente se muestran los umbrales reales para diversos tamaños de memoria.  
   
- Al crear un grupo de recursos de servidor dedicado para la base de datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , debe evaluar cuánta memoria física necesita para las tablas en memoria después de tener en cuenta las versiones de filas y el aumento de datos. Una vez calculada la memoria necesaria, puede crear un grupo de recursos de servidor con un porcentaje de memoria de destino de confirmación para la instancia de SQL como se refleja en la columna "committed_target_kb" en la DMV `sys.dm_os_sys_info` (vea [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)). Por ejemplo, puede crear un grupo de recursos de servidor P1 con el 40 % de la memoria total disponible para la instancia. Fuera de este 40 %, el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] obtiene un porcentaje inferior para almacenar los datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  Esto se hace para asegurarse de que [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no usa toda la memoria de este grupo.  Este valor del porcentaje menor depende de la memoria confirmada de destino. En la siguiente tabla se describe la memoria disponible para la base de datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] en un grupo de recursos de servidor (designado o predeterminado) antes de que se genere un error de OOM.  
+ Al crear un grupo de recursos de servidor dedicado para la base de datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , debe evaluar cuánta memoria física necesita para las tablas en memoria después de tener en cuenta las versiones de filas y el aumento de datos. Una vez que se calcula la memoria necesaria, se crea un grupo de recursos con un porcentaje de la memoria de destino de confirmación para la instancia de SQL, tal como se refleja en la columna "committed_target_kb" de la DMV [`sys.dm_os_sys_info`](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md). Por ejemplo, puede crear un grupo de recursos de servidor P1 con el 40 % de la memoria total disponible para la instancia. Fuera de este 40 %, el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] obtiene un porcentaje inferior para almacenar los datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  Esto se hace para asegurarse de que [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no usa toda la memoria de este grupo.  Este valor del porcentaje menor depende de la memoria confirmada de destino. En la siguiente tabla se describe la memoria disponible para la base de datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] en un grupo de recursos de servidor (designado o predeterminado) antes de que se genere un error de OOM.  
   
 |Memoria asignada de destino|Porcentaje disponible para tablas en memoria|  
 |-----------------------------|---------------------------------------------|  
@@ -204,7 +204,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
 259         PoolIMOLTP 0                  100                3845          1356           2307  
 ```  
   
- Para obtener más información, vea [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+ Para más información, consulte [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
  Si no enlaza la base de datos a un grupo de recursos de servidor con nombre, se enlaza al grupo "default". Puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el grupo de recursos de servidor predeterminado para la mayoría de las demás asignaciones, no podrá supervisar con precisión la memoria usada por las tablas optimizadas para memoria mediante la DMV sys.dm_resource_governor_resource_pools para la base de datos de interés.  
   

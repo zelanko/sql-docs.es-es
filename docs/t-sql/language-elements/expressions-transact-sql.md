@@ -22,12 +22,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc6e54c2e820794e3346842d748c4bc0c7384b9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b0a6f3b475e09a0a154bc6bcee83ca21167295f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361171"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227232"
 ---
 # <a name="expressions-transact-sql"></a>Expresiones (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88361171"
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 -- Expression in a SELECT statement  
 <expression> ::=   
@@ -132,7 +132,7 @@ GO
   
  La expresión `1+2` se evalúa como `3` en cada fila del conjunto de resultados. Aunque la expresión `ProductID` genera un valor único en cada fila del conjunto de resultados, cada fila tiene solo un valor para `ProductID`.  
  
-- Azure SQL Data Warehouse asigna una cantidad de memoria máxima fija a cada subproceso, para que ningún subproceso pueda usar toda la memoria.  Parte de esta memoria se usa para almacenar las expresiones de las consultas.  Si una consulta tiene demasiadas expresiones y su memoria necesaria supera el límite interno, el motor no la ejecutará.  Para evitar este problema, los usuarios pueden cambiar la consulta en varias consultas con un número menor de expresiones en cada una. Por ejemplo, tiene una consulta con una larga lista de expresiones en la cláusula WHERE: 
+- [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] asigna una cantidad de memoria máxima fija a cada subproceso, para que ningún subproceso pueda usar toda la memoria.  Parte de esta memoria se usa para almacenar las expresiones de las consultas.  Si una consulta tiene demasiadas expresiones y su memoria necesaria supera el límite interno, el motor no la ejecutará.  Para evitar este problema, los usuarios pueden cambiar la consulta en varias consultas con un número menor de expresiones en cada una. Por ejemplo, tiene una consulta con una larga lista de expresiones en la cláusula WHERE: 
 
 ```sql
 DELETE FROM dbo.MyTable 

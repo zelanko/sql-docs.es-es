@@ -28,12 +28,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75866a02dee75aaaccb77e2f870b38222471d8c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b21487a6cfbe896dd81194710784a6cc148d389
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444815"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024267"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -316,7 +316,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>Argumentos
 
-*login_name* Especifica el nombre del inicio de sesión que se va a crear. Las bases de datos únicas y agrupadas de Azure SQL Database y las bases de datos de Azure Synapse Analytics (anteriormente Azure SQL Data Warehouse) solo admiten inicios de sesión de SQL. Para crear cuentas para usuarios de Azure Active Directory o para crear cuentas de usuario que no estén asociadas a un inicio de sesión, use la instrucción [CREATE USER](create-user-transact-sql.md). Para obtener más información, vea [Administración de inicios de sesión en Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+*login_name* Especifica el nombre del inicio de sesión que se va a crear. Las bases de datos únicas y agrupadas de Azure SQL Database y las bases de datos de [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] solo admiten inicios de sesión de SQL. Para crear cuentas para usuarios de Azure Active Directory o para crear cuentas de usuario que no estén asociadas a un inicio de sesión, use la instrucción [CREATE USER](create-user-transact-sql.md). Para obtener más información, vea [Administración de inicios de sesión en Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 PASSWORD **='** password* *'* Especifica la contraseña del inicio de sesión SQL que se está creando. Utilice una contraseña segura. Para obtener más información, vea [Contraseñas seguras](../../relational-databases/security/strong-passwords.md) y [Directiva de contraseñas](../../relational-databases/security/password-policy.md). A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la información de la contraseña almacenada se calcula con las funciones SHA-512 de la contraseña salada.
 

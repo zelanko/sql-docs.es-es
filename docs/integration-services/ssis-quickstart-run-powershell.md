@@ -1,7 +1,7 @@
 ---
 description: Ejecutar un paquete SSIS con PowerShell
 title: Ejecutar un paquete SSIS con PowerShell | Microsoft Docs
-ms.date: 05/21/2018
+ms.date: 09/17/2020
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 659fb23619eeb8f4f74c43307a03b082dfca1919
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a876164579679802c5dc0335d01dd5ec8839e95b
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422179"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989928"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>Ejecutar un paquete SSIS con PowerShell
 
@@ -33,7 +33,7 @@ Puede usar la información que aparece en este inicio rápido para ejecutar un p
 
 -   SQL Server en Windows.
 
--   Azure SQL Database. Para más información sobre cómo implementar y ejecutar paquetes en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+-   Entorno de ejecución de integración (IR) de SSIS en Azure Data Factory (ADF), donde Azure SQL Managed Instance (MI) hospeda el catálogo de SSIS (SSISDB). Para más información sobre cómo implementar y ejecutar paquetes en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 No puede usar la información que aparece en este inicio rápido para ejecutar un paquete de SSIS en Linux. Para más información sobre cómo ejecutar paquetes en Linux, vea [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md) (Extraer, transformar y cargar datos en Linux con SSIS).
 

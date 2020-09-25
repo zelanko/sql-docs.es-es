@@ -10,12 +10,12 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3959d2bbf06cbb5ab106cc805e37f700d3be624f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97cabcda2e5b680e9fe2d5d6a4f0ce2130e19a27
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357521"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226885"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -23,12 +23,12 @@ ms.locfileid: "88357521"
 Cambia el nombre de una tabla creada por el usuario en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Cambia el nombre de una tabla creada por el usuario, una columna de una tabla creada por el usuario o una base de datos en [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 > [!NOTE]
-> Para cambiar el nombre de una base de datos en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use [ALTER DATABASE (Azure SQL Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7). Para cambiar el nombre de una base de datos en Azure SQL Database, use la instrucción [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current). Para cambiar el nombre de una base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use el procedimiento almacenado [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
+> Para cambiar el nombre de una base de datos en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], use [ALTER DATABASE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true). Para cambiar el nombre de una base de datos en Azure SQL Database, use la instrucción [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true). Para cambiar el nombre de una base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use el procedimiento almacenado [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
 
 ## <a name="syntax"></a>Sintaxis
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 -- Rename a table.
 RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name
@@ -61,7 +61,7 @@ Sirve para cambiar el nombre de una tabla definida por el usuario. Especifique l
 RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 **APPLIES TO:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Sirve para cambiar el nombre de una base de datos definida por el usuario de *database_name* a *new_database_name*. El nombre de una base de datos no se puede cambiar a ninguno de los siguientes nombres de base de datos reservados de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
+Sirve para cambiar el nombre de una base de datos definida por el usuario de *database_name* a *new_database_name*. No puede cambiar el nombre de una base de datos a ninguno de los siguientes nombres reservados de bases de datos de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
 - maestro
 - model
@@ -93,7 +93,7 @@ El nombre de tablas externas, índices o vistas no se puede cambiar. En lugar de
 
 ### <a name="cannot-rename-a-table-in-use"></a>No se puede cambiar el nombre de una tabla en uso
 
-No se puede cambiar el nombre una tabla o una base de datos mientras estas están en uso. Cambiar el nombre de una tabla requiere un bloqueo exclusivo en dicha tabla. Si la tabla está en uso, puede que tenga que finalizar las sesiones que la estén usando. Para ello, puede usar el comando KILL. Use KILL con precaución, ya que cuando una sesión se finaliza, se revertirán todos los trabajos que no estén confirmados. Las sesiones en SQL Data Warehouse llevan el prefijo "SID". Incluya "SID" y el número de sesión al invocar el comando KILL. En este ejemplo se muestra una lista de sesiones activas o inactivas y, luego, finaliza la sesión "SID1234".
+No se puede cambiar el nombre una tabla o una base de datos mientras estas están en uso. Cambiar el nombre de una tabla requiere un bloqueo exclusivo en dicha tabla. Si la tabla está en uso, puede que tenga que finalizar las sesiones que la estén usando. Para ello, puede usar el comando KILL. Use KILL con precaución, ya que cuando una sesión se finaliza, se revertirán todos los trabajos que no estén confirmados. Las sesiones en [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] tienen el prefijo "SID". Incluya "SID" y el número de sesión al invocar el comando KILL. En este ejemplo se muestra una lista de sesiones activas o inactivas y, luego, finaliza la sesión "SID1234".
 
 ### <a name="rename-column-restrictions"></a>Restricciones al cambiar el nombre de una columna
 
@@ -156,7 +156,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 **SE APLICA A**: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
-Es importante recordar que no se puede cambiar el nombre una tabla mientras está en uso. Cambiar el nombre de una tabla requiere un bloqueo exclusivo en dicha tabla. Si la tabla está en uso, puede que tenga que finalizar la sesión que la esté usando. Para ello, puede usar el comando KILL. Use KILL con precaución, ya que cuando una sesión se finaliza, se revertirán todos los trabajos que no estén confirmados. Las sesiones en SQL Data Warehouse llevan el prefijo "SID". Cuando invoque el comando KILL, deberá incluir "SID", así como el número de la sesión. En este ejemplo se muestra una lista de sesiones activas o inactivas y, luego, finaliza la sesión "SID1234".
+No se puede cambiar el nombre de una tabla mientras está en uso. Cambiar el nombre de una tabla requiere un bloqueo exclusivo en dicha tabla. Si la tabla está en uso, puede que tenga que finalizar la sesión que la esté usando. Para ello, puede usar el comando KILL. Use KILL con precaución, ya que cuando una sesión se finaliza, se revertirán todos los trabajos que no estén confirmados. Las sesiones en [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] tienen el prefijo "SID". Cuando invoque el comando KILL, deberá incluir "SID", así como el número de la sesión. En este ejemplo se muestra una lista de sesiones activas o inactivas y, luego, finaliza la sesión "SID1234".
 
 ```sql
 -- View a list of the current sessions

@@ -1,29 +1,30 @@
 ---
 title: Referencia de azdata bdc app status
 titleSuffix: SQL Server big data clusters
-description: Use este artículo de referencia para entender los comandos SQL en la herramienta azdata, en particular los comandos bdc app status.
+description: Artículo de referencia sobre los comandos de azdata bdc app status.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fd6288649db641bc846b8ebed3b997aa0092d36e
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 30df5815de3263645bba568354c9d98801e52628
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89734047"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914692"
 ---
 # <a name="azdata-bdc-app-status"></a>azdata bdc app status
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Se aplica a `azdata`
 
-En el artículo siguiente se proporciona una referencia de los comandos `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
+En el siguiente artículo se proporciona una referencia de los comandos **sql** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos:
-| Comando | Descripción |
+## <a name="commands"></a>Comandos
+
+|Comando|Descripción|
 | --- | --- |
 [azdata bdc app status show](#azdata-bdc-app-status-show) | Estado del servicio de aplicaciones.
 ## <a name="azdata-bdc-app-status-show"></a>azdata bdc app status show
@@ -64,4 +65,7 @@ Aumente el nivel de detalle de registro. Use --debug para obtener registros de d
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta `azdata`, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](../install/deploy-install-azdata.md).
+Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md). 
+
+Para más información sobre cómo instalar la herramienta **azdata**, consulte [Instalación de azdata](..\install\deploy-install-azdata.md).
+

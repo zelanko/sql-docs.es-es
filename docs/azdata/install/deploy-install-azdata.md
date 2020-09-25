@@ -1,26 +1,25 @@
 ---
 title: Instalación de azdata
-titleSuffix: SQL Server big data clusters
-description: Obtenga información sobre cómo instalar la herramienta azdata para instalar y administrar Clústeres de macrodatos.
+titleSuffix: ''
+description: Obtenga información sobre cómo instalar la herramienta azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: 408dec76480a36ff2280926147b948859fa7088d
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 7939aa1575aaeec8edff33a9a9f7101a1014abc2
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89734098"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914917"
 ---
 # <a name="install-azdata"></a>Instalar `azdata`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
-`azdata` es una utilidad de línea de comandos escrita en Python para arrancar y administrar el clúster de macrodatos mediante las API REST. 
+`azdata` es una utilidad de línea de comandos escrita en Python para arrancar los servicios de datos y administrarlos mediante las API REST. 
 
 ## <a name="find-latest-version"></a>Búsqueda de la versión más reciente
 
@@ -42,4 +41,6 @@ Para averiguar la versión instalada y ver si tiene que actualizar, ejecute `azd
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md) para obtener más información sobre los clústeres de macrodatos.
+Use azdata con Clústeres de macrodatos, vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+
+Use azdata con [servicios de datos habilitados para Azure Arc](/azure/azure-arc/data/).

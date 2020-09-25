@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 439c723463516ad046c6a37a6d327b289efc9eb6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471180"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210630"
 ---
 # <a name="rebuild-system-databases"></a>Volver a generar bases de datos del sistema
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,21 +29,23 @@ ms.locfileid: "88471180"
   
  **En este tema**  
   
--   **Antes de empezar:**  
+   - **Antes de empezar:**  
   
      [Limitaciones y restricciones](#Restrictions)  
   
      [Requisitos previos](#Prerequisites)  
   
--   **Procedimientos:**  
+   - **Procedimientos:**  
   
      [Volver a generar bases de datos del sistema](#RebuildProcedure)  
   
      [Volver a generar la base de datos de recursos](#Resource)  
   
-     [Crear una base de datos msdb](#CreateMSDB)  
+     [Crear una base de datos msdb](#CreateMSDB) 
+
+     [Volver a generar la base de datos tempdb](#RebuildTempdb)  
   
--   **Seguimiento:**  
+   - **Seguimiento:**  
   
      [Solucionar errores de recompilación](#Troubleshoot)  
   
@@ -55,15 +57,15 @@ ms.locfileid: "88471180"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Realice las tareas siguientes antes de volver a generar las bases de datos del sistema para asegurarse de que puede restaurar la configuración actual de las mismas.  
   
-1.  Registre todos los valores de configuración del servidor.  
+1. Registre todos los valores de configuración del servidor.  
   
-    ```  
+    ```SQL  
     SELECT * FROM sys.configurations;  
     ```  
   
 2.  Registre todas las correcciones aplicadas a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la intercalación actual. Debe aplicar estas correcciones de nuevo después de recompilar las bases de datos del sistema.  
   
-    ```  
+    ```SQL  
     SELECT  
     SERVERPROPERTY('ProductVersion ') AS ProductVersion,  
     SERVERPROPERTY('ProductLevel') AS ProductLevel,  
@@ -74,7 +76,7 @@ ms.locfileid: "88471180"
   
 3.  Registre la ubicación actual de todos los archivos de registro y datos de las bases de datos del sistema. Al volver a generar las bases de datos del sistema, todas ellas se instalan en su ubicación original. Si ha movido los archivos de registro o datos de las bases de datos del sistema a otra ubicación, deberá volver a moverlos.  
   
-    ```  
+    ```SQL  
     SELECT name, physical_name AS current_file_location  
     FROM sys.master_files  
     WHERE database_id IN (DB_ID('master'), DB_ID('model'), DB_ID('msdb'), DB_ID('tempdb'));  
@@ -158,6 +160,7 @@ ms.locfileid: "88471180"
 6.  En la página **Listo para reparar** , haga clic en **Reparar**. La página Operación completada indica que la operación ha finalizado.  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> Crear una base de datos msdb  
+
  Si la base de datos **msdb** se daña y no tiene una copia de seguridad de la base de datos **msdb** , puede crear una nueva **msdb** con el script **instmsdb** .  
   
 > [!WARNING]  
@@ -186,6 +189,33 @@ ms.locfileid: "88471180"
 9. Vuelva a crear el contenido de usuario almacenado en la base de datos **msdb** , como los trabajos, la alerta, etc.  
   
 10. Haga una copia de seguridad de la base de datos **msdb** .  
+
+##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> Volver a generar la base de datos Tempdb  
+
+Si la base de datos **tempdb** está dañada y el motor de base de datos no se inicia, puede volver a generar **tempdb** sin necesidad de volver a generar todas las bases de datos del sistema.
+  
+1. Cambie el nombre de los archivos Tempdb.mdf y Templog.ldf actuales, si existen. 
+1. Inicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un símbolo del sistema con el comando siguiente. 
+
+   ```sql
+   sqlservr -c -f -T3608 -T4022 -s <instance> -mSQLCMD
+   ```
+
+   Para un nombre de instancia predeterminado, use MSSQLSERVER, para una instancia con nombre, use MSSQL$<nombre_de_instancia>. La marca de seguimiento 4022 deshabilita la ejecución de procedimientos almacenados de inicio. La opción -mSQLCMD permite que solo [sqlcmd.exe](../../ssms/scripting/sqlcmd-use-the-utility.md) se conecte al servidor (consulte [Otras opciones de inicio](../../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options)).
+
+   > [!Note] 
+   > Asegúrese de que la ventana del símbolo del sistema permanece abierta después del inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al cerrar la ventana del símbolo del sistema, finalizará el proceso.
+
+1. Conéctese al servidor mediante **sqlcmd** y, a continuación, use el siguiente procedimiento almacenado para restablecer el estado de la base de datos tempdb.
+
+   ```sql
+   exec master..sp_resetstatus Tempdb
+   ```
+
+1. Pulse CTRL+C en la ventana del símbolo del sistema para detener el servidor.
+
+1. Reinicie el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto crea un nuevo conjunto de archivos de la base de datos tempdb y recupera la base de datos tempdb.
+
   
 ##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> Solucionar errores de recompilación  
  Los errores de sintaxis y otros errores en tiempo de ejecución se muestran en la ventana del símbolo del sistema. Examine la instrucción de instalación en busca de los siguientes errores de sintaxis:  

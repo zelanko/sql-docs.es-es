@@ -1,7 +1,7 @@
 ---
 title: Instalación de azdata con instalador en Linux
-titleSuffix: SQL Server big data clusters
-description: Aprenda a instalar la herramienta azdata para instalar y administrar clústeres de macrodatos de SQL Server con el instalador (Linux).
+titleSuffix: ''
+description: Obtenga información sobre cómo instalar la herramienta azdata con el instalador (Linux).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 767268e11519d6ec3a4c3af4325870361a92cfc7
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 2dc1c3d58ee5f7b6ea032a2e41f7c18431229881
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89734080"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914971"
 ---
 # <a name="install-azdata-with-apt"></a>Instalación de `azdata` con apt
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
-En este artículo se explica cómo instalar `azdata` para clústeres de macrodatos de SQL Server 2019 en Linux. Antes de que estos administradores de paquetes estuviesen disponibles, la instalación de `azdata` exigía `pip`.
+En este artículo se describe cómo instalar `azdata` en Linux. Antes de que estos administradores de paquetes estuviesen disponibles, la instalación de `azdata` exigía `pip`.
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
@@ -52,12 +52,12 @@ El paquete de instalación `azdata` está disponible para Ubuntu con `apt`.
 
    Para el cliente Ubuntu 16.04, ejecute:
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
     ```
 
    Para el cliente Ubuntu 18.04, ejecute:
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"
     ```
 
 4. Actualice la información del repositorio e instale `azdata`:
@@ -113,3 +113,5 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ## <a name="next-steps"></a>Pasos siguientes
 
 Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md) para obtener más información sobre los clústeres de macrodatos.
+
+Use azdata con [servicios de datos habilitados para Azure Arc](/azure/azure-arc/data/).

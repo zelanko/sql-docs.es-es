@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed9bec3042903f22c4a4c71ac4f07520062e60c9
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247084"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989908"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -273,35 +273,31 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Observe que el operador Hash Match no se admite para la agregación. Por consiguiente, toda la agregación en los procedimientos almacenados compilados de forma nativa utiliza el operador Stream Aggregate, incluso si el plan para la misma consulta en [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado utiliza el operador Hash Match.|  
   
 ## <a name="column-statistics-and-joins"></a>Combinaciones y estadísticas de columnas  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene estadísticas en los valores de columnas de clave de índice para ayudar a evaluar el costo de ciertas operaciones, como el examen de índice y las búsquedas de índice. ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también crea estadísticas en columnas de clave sin índice si se crean explícitamente o si el optimizador de consultas las crea en respuesta a una consulta con predicado). La métrica principal en la estimación del costo es el número de filas procesadas por un único operador. Tenga en cuenta que para las tablas basadas en disco, el número de páginas a las que tiene acceso un operador determinado es importante en la estimación de costos. Sin embargo, como el recuento de páginas no es importante para las tablas optimizadas para memoria (siempre es cero), esta explicación se centra en el recuento de filas. La estimación comienza por los operadores de examen y búsqueda de índice en el plan, y se extiende después para incluir los otros operadores, como el operador de combinación. El número estimado de filas que va a procesar un operador de combinación se basa en la estimación de los operadores de examen, índice y búsqueda subyacentes. Para que [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado pueda obtener acceso a las tablas optimizadas para memoria, puede seguir el plan de ejecución real para ver la diferencia entre los recuentos de filas estimado y real de los operadores del plan.  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene estadísticas en los valores de columnas de clave de índice para ayudar a evaluar el costo de ciertas operaciones, como el examen de índice y las búsquedas de índice. ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también crea estadísticas en columnas de clave sin índice si se crean explícitamente o si el optimizador de consultas las crea en respuesta a una consulta con predicado). La métrica principal en la estimación del costo es el número de filas procesadas por un único operador. Tenga en cuenta que para las tablas basadas en disco, el número de páginas a las que tiene acceso un operador determinado es importante en la estimación de costos. Sin embargo, como el recuento de páginas no es importante para las tablas optimizadas para memoria (siempre es cero), esta explicación se centra en el recuento de filas. La estimación comienza por los operadores de examen y búsqueda de índice en el plan, y se extiende después para incluir los otros operadores, como el operador de combinación. El número estimado de filas que va a procesar un operador de combinación se basa en la estimación de los operadores de examen, índice y búsqueda subyacentes. Para que [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado pueda obtener acceso a las tablas optimizadas para memoria, puede seguir el plan de ejecución real para ver la diferencia entre los recuentos de filas estimado y real de los operadores del plan.  
   
- Para el ejemplo en la ilustración 1,  
+Para el ejemplo en la ilustración 1,  
   
--   El examen de índice clúster en Customer ha estimado 91; reales 91.  
+- El examen de índice clúster en Customer ha estimado 91; reales 91.  
+- El examen de índice no clúster en CustomerID ha estimado 830; reales 830.  
+- El operador Merge Join ha estimado 815; reales 830.  
   
--   El examen de índice no clúster en CustomerID ha estimado 830; reales 830.  
+Las estimaciones de los exámenes de índice son precisas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene el recuento de filas en las tablas basadas en disco. Las estimaciones para los recorridos de índice y de la tabla completa siempre son precisas. La estimación de la combinación es bastante precisa también.  
   
--   El operador Merge Join ha estimado 815; reales 830.  
+Si estas estimaciones cambian, las consideraciones de costo para las diferentes alternativas de plan también cambian. Por ejemplo, si uno de los lados de la combinación tiene un recuento estimado de filas de 1 o menos, usar las combinaciones de bucles anidados es menos costoso. Considere la siguiente consulta:  
   
- Las estimaciones de los exámenes de índice son precisas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene el recuento de filas en las tablas basadas en disco. Las estimaciones para los recorridos de índice y de la tabla completa siempre son precisas. La estimación de la combinación es bastante precisa también.  
-  
- Si estas estimaciones cambian, las consideraciones de costo para las diferentes alternativas de plan también cambian. Por ejemplo, si uno de los lados de la combinación tiene un recuento estimado de filas de 1 o menos, usar las combinaciones de bucles anidados es menos costoso.  
-  
- A continuación se muestra el plan de la consulta:  
-  
-```  
+```sql
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
- Después de eliminar todas las filas menos una en la tabla Customer:  
+Después de eliminar todas las filas menos una en la tabla `Customer`, se genera el plan de consulta siguiente:  
   
- ![Combinaciones y estadísticas de columnas.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Combinaciones y estadísticas de columnas.")  
+![Combinaciones y estadísticas de columnas.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Combinaciones y estadísticas de columnas.")  
   
- Acerca de este plan de consulta:  
+Acerca de este plan de consulta:  
   
--   Hash Match se ha reemplazado por un operador de combinación anidada Nested Loops.  
-  
--   El examen de índice completo en IX_CustomerID se ha reemplazado por index seek. Esto provocó el examen de 5 filas en lugar de las 830 necesarias para el examen de índice completo.  
+- Hash Match se ha reemplazado por un operador de combinación anidada Nested Loops.  
+- El examen de índice completo en IX_CustomerID se ha reemplazado por index seek. Esto provocó el examen de 5 filas en lugar de las 830 necesarias para el examen de índice completo.  
   
 ## <a name="see-also"></a>Consulte también  
  [Tablas optimizadas para la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

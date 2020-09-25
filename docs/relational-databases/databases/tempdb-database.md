@@ -2,7 +2,7 @@
 title: Base de datos tempdb | Microsoft Docs
 description: En este tema se proporcionan detalles relacionados con la configuración y el uso de la base de datos tempdb en SQL Server en Azure SQL Database.
 ms.custom: P360
-ms.date: 04/17/2020
+ms.date: 09/16/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5090a021f1402c88abf84d502ae3538eeced5bd1
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 30e481590a41e5c5670360bac265a0d7656fff9f
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076830"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024347"
 ---
 # <a name="tempdb-database"></a>tempdb [base de datos]
 
@@ -115,6 +115,8 @@ Para obtener una descripción de estas opciones de la base de datos, vea [Opcion
 
 ### <a name="tempdb-sizes-for-dtu-based-service-tiers"></a>tamaños de tempdb para los niveles de servicio basado en DTU
 
+<!-- tempdb being larger for Basic and 50 eDTU pools than for 100-400 eDTU pools reflects actual config (historical reasons) --> 
+
 |Objetivo de nivel de servicio|Tamaño máximo del archivo de datos de `tempdb` (GB)|Número de archivos de datos de `tempdb`|Tamaño máximo de los datos de `tempdb` (GB)|
 |---|---:|---:|---:|
 |Básica|13.9|1|13.9|
@@ -133,10 +135,16 @@ Para obtener una descripción de estas opciones de la base de datos, vea [Opcion
 |P6|13.9|12|166.7|
 |P11|13.9|12|166.7|
 |P15|13.9|12|166.7|
-|Grupos de bases de datos elásticos prémium (todas las configuraciones de DTU)|13.9|12|166.7|
-|Grupos de bases de datos elásticas estándar (S0-S2)|13.9|12|166.7|
-|Grupos de bases de datos elásticas estándar (S3 y versiones posteriores) |32|12|384|
-|Grupos de bases de datos elásticos básico (todas las configuraciones de DTU)|13.9|12|166.7|
+|Grupos elásticos básicos (todas las configuraciones de DTU)|13.9|12|166.7|
+|Grupos elásticos estándar (50 eDTU)|13.9|12|166.7|
+|Grupos elásticos estándar (100 eDTU)|32|1|32|
+|Grupos elásticos estándar (200 eDTU)|32|2|64|
+|Grupos elásticos estándar (300 eDTU)|32|3|96|
+|Grupos elásticos estándar (400 eDTU)|32|3|96|
+|Grupos elásticos estándar (800 eDTU)|32|6|192|
+|Grupos elásticos estándar (1200 eDTU)|32|10|320|
+|Grupos elásticos estándar (1600-3000 eDTU)|32|12|384|
+|Grupos elásticos premium (todas las configuraciones de DTU)|13.9|12|166.7|
 ||||
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>tamaños de tempdb para los niveles de servicio basado en núcleo virtual

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63770bce9243775e8c9c218371f016a23555b146
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c0e716d7405580dcda3cd4f3aa4d175141469b2b
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549034"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227312"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -483,6 +483,9 @@ GO
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. Usar MERGE para realizar una operación INSERT o UPDATE en una tabla perimetral de destino en una base de datos de gráficos
 
 En este ejemplo, se crean las tablas de nodo `Person` y `City`, así como una tabla perimetral `livesIn`. Utilice la instrucción MERGE en la tabla perimetral `livesIn` para insertar una fila nueva si aún no existe el perímetro entre `Person` y `City`. Si ya existe el perímetro, simplemente se actualiza el atributo StreetAddress en la tabla perimetral `livesIn`.
+
+> [!NOTE]
+> El ejemplo siguiente se aplica a SQL Server a partir de la versión 2019.
 
 ```sql
 -- CREATE node and edge tables

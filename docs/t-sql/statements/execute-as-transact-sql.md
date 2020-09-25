@@ -24,12 +24,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 1ae261b89d375ac13914c87674bdfc43cd0751e9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d263f8db7e95cbc5e961d5b4d3879ce53ce99d47
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547733"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227336"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "89547733"
  Especifica que el contexto de ejecución que se va a suplantar es un inicio de sesión. El ámbito de la suplantación se produce en el nivel de servidor.  
   
 > [!NOTE]  
->  Esta opción no está disponible en una base de datos independiente, Azure SQL Database ni Azure SQL Data Warehouse.  
+>  Esta opción no está disponible en una base de datos independiente ni en SQL Database ni en [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
  USER  
  Especifica que el contexto de ejecución que se va a suplantar es un usuario de la base de datos actual. El ámbito de la suplantación se restringe a la base de datos actual. Un cambio de contexto a un usuario de base de datos no hereda los permisos de nivel de servidor de ese usuario.  
@@ -96,7 +96,7 @@ ms.locfileid: "89547733"
  Cuando se usa dentro de un módulo, especifica que las instrucciones dentro del módulo se ejecutan en el contexto del autor de llamada del módulo.
 Cuando se utiliza fuera de un módulo, la instrucción no tiene ninguna acción.
  > [!NOTE]  
->  Esta opción no está disponible en SQL Data Warehouse.  
+>  Esta opción no está disponible en [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
 ## <a name="remarks"></a>Observaciones  
  El cambio en el contexto de ejecución continúa efectivo hasta que sucede algo de lo siguiente:  
@@ -146,7 +146,7 @@ Si el usuario está huérfano (el inicio de sesión asociado ya no existe) y no 
 ###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. Usar EXECUTE AS y REVERT para cambiar el contexto  
  En el siguiente ejemplo se crea una pila de contextos de ejecución que utilizan varias entidades de seguridad. La instrucción `REVERT` se utiliza a continuación para restablecer el contexto de ejecución al anterior autor de la llamada. La instrucción `REVERT` se ejecuta varias veces subiendo la pila hasta que el contexto de ejecución se establezca en el autor de la llamada original.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 --Create two temporary principals  
@@ -190,7 +190,7 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>B. Usar la cláusula WITH COOKIE  
  En este ejemplo se establece el contexto de ejecución de una sesión en un usuario determinado y se especifica la cláusula WITH NO REVERT COOKIE = @*varbinary_variable*. La instrucción `REVERT` debe especificar el valor pasado a la variable `@cookie` en la instrucción `EXECUTE AS` para volver correctamente el contexto al llamador. Para ejecutar este ejemplo, deben existir el inicio de sesión `login1` y el usuario `user1` creados en el ejemplo A.  
   
-```  
+```sql
 DECLARE @cookie varbinary(8000);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie in a safe location in your application.  

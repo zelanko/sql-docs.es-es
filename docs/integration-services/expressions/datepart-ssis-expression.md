@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3d4509e356193391b903b764771dca170c06026d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 180d727ea04e3be55cde62c32f8f49785e41f89b
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88348251"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226909"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (expresión de SSIS)
 
@@ -61,7 +61,7 @@ DATEPART(datepart, date)
 |Día|dd, d|  
 |Semana|wk, ww|  
 |Día de la semana|dw|  
-|Hora|Hh|  
+|Hora|Hh, hh, HH|  
 |Minute|mi, n|  
 |Second|ss, s|  
 |Millisecond|Ms|  
@@ -83,6 +83,14 @@ DATEPART("dd", ModifiedDate)
   
 ```  
 DATEPART("yy",GETDATE())  
+```  
+  
+ Todos estos ejemplos devuelven 19. 
+  
+```  
+DATEPART("HH", (DT_DATE) "2020-09-02 19:24" )
+DATEPART("hh", (DT_DATE) "2020-09-02 19:24" )
+DATEPART("Hh", (DT_DATE) "2020-09-02 19:24" )
 ```  
   
 ## <a name="see-also"></a>Vea también  

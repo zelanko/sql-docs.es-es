@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353102"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989438"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notas de la versión de SqlPackage.exe
 
@@ -34,6 +34,41 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="186-sqlpackage"></a>18.6 sqlpackage
+
+|Plataforma|Descargar|Fecha de la versión|Versión|Build
+|:---|:---|:---|:---|:---|
+|Windows|[Instalador MSI](https://go.microsoft.com/fwlink/?linkid=2143544)|18 de septiembre de 2020|18.6|15.0.4897.1|
+|macOS .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2143659)|18 de septiembre de 2020| 18.6|15.0.4897.1|
+|Linux .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2143497)|18 de septiembre de 2020| 18.6|15.0.4897.1|
+|Windows .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2143496)|18 de septiembre de 2020| 18.6|15.0.4897.1|
+
+### <a name="features"></a>Características
+| Característica | Detalles |
+| :------ | :------ |
+| Plataforma | Se ha actualizado sqlpackage para .NET Core a la versión .NET Core 3.1. |
+| Always Encrypted | Se ha agregado compatibilidad con la importación y exportación de enclave seguro para SQL Server 2019. |
+| Implementación | Se ha agregado compatibilidad para omitir las tablas habilitadas para la captura de datos modificados al exportar desde Azure SQL Database. |
+| Implementación | Se ha agregado compatibilidad con la opción de índice OPTIMIZE_FOR_SEQUENTIAL_KEY en Azure SQL Database. |
+| Implementación | Se ha agregado compatibilidad con las columnas de identidad para Azure SQL Data Warehouse. | 
+| Ayuda | Se ha generado la versión de sqlpackage en la ayuda (/?) y la compatibilidad con el parámetro /version. | 
+
+### <a name="fixes"></a>Correcciones
+| Característica | Detalles |
+| :------ | :------ | 
+| Implementación | Se ha corregido un script de implementación incorrecto generado al establecer como destino Instancia administrada de Azure SQL Database como un usuario que no es sysadmin.  | 
+| Implementación | Se han corregido los colaboradores de implementación de carga al ejecutar acciones de script. | 
+| Ayuda | Se ha generado un tiempo transcurrido correcto en sqlpackage cuando la operación tarda más de 1 día. | 
+| Implementación | Se ha corregido el registro de dacpac al implementar para .NET Core. | 
+| Implementación | Se ha corregido sqlpackage en el control de .NET Core del parámetro /accessToken (/at). | 
+| Implementación | Se permiten las instrucciones ALTER TABLE en procedimientos almacenados como instrucciones de nivel no superior. | 
+| Implementación | Se ha corregido la validación de las vistas materializadas de Azure SQL Data Warehouse para que no distinga entre mayúsculas y minúsculas. | 
+
+### <a name="known-issues"></a>Problemas conocidos
+| Característica | Detalles |
+| :------ | :------ |
+| Implementación | Todavía no se admite la característica Administración de cargas de trabajo de Azure SQL Data Warehouse (Grupos de cargas de trabajo y Clasificadores de cargas de trabajo). | 
 
 ## <a name="1851-sqlpackage"></a>sqlpackage 18.5.1
 
@@ -133,7 +168,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Plataforma | sqlpackage .NET Core en disponibilidad general para macOS, Linux y Windows. | 
 | Seguridad | Se quitó la firma de código SHA1. |
 | Implementación | Se agregó compatibilidad para las nuevas ediciones de base de datos de Azure: GeneralPurpose, BusinessCritical, Hyperscale |
-| Implementación | Se agregó compatibilidad con Instancia administrada para usuarios y grupos de AAD. |
+| Implementación | Se agrega compatibilidad con Instancia administrada para el usuario y los grupos de Azure Active Directory. |
 | Implementación | Compatibilidad con el parámetro/AccessToken para sqlpackage en .NET Core. |
 | &nbsp; | &nbsp; |
 

@@ -4,26 +4,27 @@ titleSuffix: SQL Server big data clusters
 description: Artículo de referencia de los comandos azdata extension.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: de222d502cb7caf6faa3118ae39b679e47f3577e
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 16facb611565f02d1b07ae8a46f53ba2b83b3bfc
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733946"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914396"
 ---
 # <a name="azdata-extension"></a>azdata extension
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Se aplica a `azdata`
 
-En el artículo siguiente se proporciona una referencia de los comandos `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
+En el siguiente artículo se proporciona una referencia de los comandos **sql** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandos
-| Comando | Descripción |
+
+|Comando|Descripción|
 | --- | --- |
 [azdata extension add](#azdata-extension-add) | Agrega una extensión.
 [azdata extension remove](#azdata-extension-remove) | Quita una extensión.
@@ -43,13 +44,11 @@ azdata extension add --source -s
 ### <a name="examples"></a>Ejemplos
 Agregar una extensión desde una dirección URL.
 ```bash
-azdata extension add --source https://contoso.com/some_ext-0.0.1-py2.py3-none-any.whl
-```
-Agregar una extensión desde un disco local.
+azdata extension add --source https://contoso.com/some_ext-0.0.1-py2.py3-none-any.whl```
+Add extension from local disk.
 ```bash
-azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl
-```
-Agregue la extensión desde el disco local y use el proxy de pip para las dependencias.
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl```
+Add extension from local disk and use pip proxy for dependencies.
 ```bash
 azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl --pip-proxy https://user:pass@proxy.server:8080
 ```
@@ -128,4 +127,7 @@ Aumente el nivel de detalle de registro. Use --debug para obtener registros de d
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta `azdata`, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](../install/deploy-install-azdata.md).
+Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md). 
+
+Para obtener más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata](..\install\deploy-install-azdata.md).
+

@@ -1,5 +1,5 @@
 ---
-title: Grupo de recursos del regulador de recursos | Microsoft Docs
+title: Grupo de recursos de servidor del regulador de recursos
 description: Resource Governor de SQL Server especifica los límites en cuanto a la cantidad de CPU, E/S física y memoria del grupo de recursos de servidor que pueden usar las solicitudes entrantes procedentes de las aplicaciones.
 ms.custom: ''
 ms.date: 10/20/2017
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bfc4c3eb6562c6424ecff4cfa8f311afe0a3510c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: fa28f69fea78c3ccf09b0b41357ab156ed72c608
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457835"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115667"
 ---
 # <a name="resource-governor-resource-pool"></a>Grupo de recursos de servidor del regulador de recursos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -31,15 +31,17 @@ ms.locfileid: "86457835"
   
 -   **MIN_CPU_PERCENT y MAX_CPU_PERCENT**  
   
-     Estos son los valores mínimo y máximo para el ancho de banda de la CPU promedio garantizado para todas las solicitudes del grupo de recursos de servidor cuando hay contención de CPU. Puede utilizar estos valores para establecer un uso de recursos de la CPU predecible para varias cargas de trabajo que se basa en las necesidades de cada carga de trabajo. Por ejemplo, suponga que los departamentos de ventas y marketing de una empresa comparten la misma base de datos. El departamento de ventas tiene una carga de trabajo intensiva de CPU con consultas de alta prioridad. El departamento de marketing también tiene una carga de trabajo intensiva de CPU, pero tiene consultas de baja prioridad. Si crea un grupo de recursos de servidor independiente para cada departamento, puede asignar un porcentaje de CPU *mínimo* de 70 para el grupo de recursos de servidor de ventas y un porcentaje *máximo* de CPU de 30 para el grupo de recursos de servidor de marketing. Así se asegurará de que la carga de trabajo de ventas recibe los recursos de CPU que necesita y la carga de trabajo de marketing está aislada de la demanda de la carga de trabajo de ventas. Observe que el porcentaje de CPU máximo es un máximo oportunista. Si hay capacidad de CPU disponible, la carga de trabajo utiliza hasta el 100 por cien. El valor máximo solo se aplica cuando hay contención de recursos de CPU. En este ejemplo, si la carga de trabajo de ventas se desactiva, la carga de trabajo de marketing puede utilizar el 100 por cien de la CPU si es necesario.  
+     Estos son los valores mínimo y máximo para el ancho de banda de la CPU promedio garantizado para todas las solicitudes del grupo de recursos de servidor cuando hay contención de CPU. Puede utilizar estos valores para establecer un uso de recursos de la CPU predecible para varias cargas de trabajo que se basa en las necesidades de cada carga de trabajo. Por ejemplo, suponga que los departamentos de ventas y marketing de una empresa comparten la misma base de datos. El departamento de ventas tiene una carga de trabajo intensiva de CPU con consultas de alta prioridad. El departamento de marketing también tiene una carga de trabajo intensiva de CPU, pero tiene consultas de baja prioridad. Si crea un grupo de recursos de servidor independiente para cada departamento, puede asignar un porcentaje de CPU *mínimo* de 70 para el grupo de recursos de servidor de ventas y un porcentaje *máximo* de CPU de 30 para el grupo de recursos de servidor de marketing. Así se asegurará de que la carga de trabajo de ventas recibe los recursos de CPU que necesita y la carga de trabajo de marketing está aislada de la demanda de la carga de trabajo de ventas. Tenga en cuenta que el porcentaje de CPU máximo es un máximo oportunista. Si hay capacidad de CPU disponible, la carga de trabajo utiliza hasta el 100 por cien. El valor máximo solo se aplica cuando hay contención de recursos de CPU. En este ejemplo, si la carga de trabajo de ventas se desactiva, la carga de trabajo de marketing puede utilizar el 100 por cien de la CPU si es necesario.  
   
 -   **CAP_CPU_PERCENT**  
   
-     Este valor constituye un límite máximo en cuanto al ancho banda de la CPU para todas las solicitudes del grupo de recursos de servidor. Las cargas de trabajo asociadas al grupo pueden utilizar la capacidad de CPU existente por encima del valor de MAX_CPU_PERCENT si está disponible, pero sin sobrepasar el valor de CAP_CPU_PERCENT. Utilizando el ejemplo anterior, supongamos que se cobra al departamento de marketing por el uso de recursos. Desean una facturación predecible y no desean pagar más del 30 por ciento de la CPU. Esto se logra estableciendo CAP_CPU_PERCENT en 30 para el grupo de recursos de servidor de marketing.  
+     El valor CAP_CPU_PERCENT constituye un límite máximo en cuanto al ancho banda de la CPU para todas las solicitudes del grupo de recursos. Las cargas de trabajo asociadas al grupo pueden utilizar la capacidad de CPU existente por encima del valor de MAX_CPU_PERCENT si está disponible, pero sin sobrepasar el valor de CAP_CPU_PERCENT. Utilizando el ejemplo anterior, supongamos que se cobra al departamento de marketing por el uso de recursos. Desean una facturación predecible y no desean pagar más del 30 por ciento de la CPU. Esto se logra estableciendo CAP_CPU_PERCENT en 30 para el grupo de recursos de servidor de marketing.  
   
 -   **MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT**  
   
-     Estos valores representan la cantidad mínima y máxima de memoria reservada para el grupo de recursos de servidor que no se puede compartir con otros grupos de recursos de servidor. La memoria especificada aquí se refiere a la memoria concedida para la ejecución de consultas, no la memoria del grupo de búferes (por ejemplo, las páginas de datos y de índices). Establecer un valor mínimo de memoria para un grupo significa asegurarse de que el porcentaje de memoria especificado estará disponible para cualquier solicitud que pueda ejecutarse en este grupo de recursos de servidor. Existe una diferencia importante en comparación con MIN_CPU_PERCENT ya que, en este caso, la memoria puede permanecer en el grupo de recursos de servidor incluso si este no tiene ninguna solicitud procedente de los grupos de cargas de trabajo que pertenecen a este grupo de recursos. Por consiguiente, es fundamental que tenga mucha precaución al utilizar este valor, porque esta memoria no estará disponible para su uso en ningún otro grupo, aunque no haya solicitudes activas. Establecer un valor máximo de memoria para un grupo significa que cuando las solicitudes se ejecuten en este grupo nunca obtendrán más que este porcentaje de la memoria total.  
+     Estos valores representan la cantidad mínima y máxima de memoria reservada para el grupo de recursos que no se puede compartir con otros grupos de recursos. Para bases de datos sin tablas optimizada para memoria, la memoria especificada aquí se refiere a la memoria concedida para la ejecución de consultas, no la memoria del grupo de búferes (por ejemplo, las páginas de datos y de índices). Establecer un valor mínimo de memoria para un grupo significa asegurarse de que el porcentaje de memoria especificado estará disponible para cualquier solicitud que pueda ejecutarse en este grupo de recursos de servidor. Existe una diferencia importante en comparación con MIN_CPU_PERCENT ya que, en este caso, la memoria puede permanecer en el grupo de recursos de servidor incluso si este no tiene ninguna solicitud procedente de los grupos de cargas de trabajo que pertenecen a este grupo de recursos. Por consiguiente, es fundamental que tenga mucha precaución al utilizar este valor, porque esta memoria no estará disponible para su uso en ningún otro grupo, aunque no haya solicitudes activas. Establecer un valor máximo de memoria para un grupo significa que cuando las solicitudes se ejecuten en este grupo nunca obtendrán más que este porcentaje de la memoria total.
+
+     Con el fin de controlar la memoria de las tablas optimizadas para memoria con Resource Governor, debe enlazar la base de datos a un grupo de recursos independiente. Para más información, consulte [Enlace de una base de datos con tablas optimizadas para memoria a un grupo de recursos](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).
   
 -   **AFFINITY**  
   
@@ -47,7 +49,7 @@ ms.locfileid: "86457835"
   
 -   **MIN_IOPS_PER_VOLUME y MAX_IOPS_PER_VOLUME**  
   
-     Estos valores representan el número mínimo y máximo de operaciones de E/S físicas por segundo (IOPS) por cada volumen de disco para un grupo de recursos de servidor. Puede utilizar estos valores para controlar las E/S físicas emitidas para los subprocesos de usuario para un grupo de recursos de servidor determinado. Por ejemplo, el departamento de ventas genera varios informes de fin de mes en lotes grandes. Las consultas de estos lotes pueden generar operaciones de E/S que podrían saturar el volumen de disco y afectar al rendimiento de otras cargas de trabajo de mayor prioridad en la base de datos. Para aislar esta carga de trabajo, MIN_IOPS_PER_VOLUME se establece en 20 y MAX_IOPS_PER_VOLUME se establece en 100 para el grupo de recursos de servidor del departamento de ventas, lo que controla el nivel de operaciones de E/S que se pueden emitir para la carga de trabajo.  
+     Estos valores representan el número mínimo y máximo de operaciones de E/S físicas por segundo (IOPS) por cada volumen de disco para un grupo de recursos de servidor. Puede utilizar estos valores para controlar las E/S físicas emitidas para los subprocesos de usuario para un grupo de recursos de servidor determinado. Por ejemplo, el departamento de ventas genera varios informes de fin de mes en lotes grandes. Las consultas de estos lotes pueden generar operaciones de E/S que podrían saturar el volumen de disco y afectar al rendimiento de otras cargas de trabajo de mayor prioridad en la base de datos. Para aislar esta carga de trabajo, MIN_IOPS_PER_VOLUME se establece en 20 y MAX_IOPS_PER_VOLUME se establece en 100 para el grupo de recursos del departamento de ventas, lo que controla el nivel de operaciones de E/S que se pueden emitir para la carga de trabajo.  
   
 Cuando se configura la CPU o la memoria, la suma de los valores MIN de todos los grupos no puede superar el 100 por cien de los recursos del servidor. Además, al configurar la CPU o la memoria, los valores MAX y CAP se pueden establecer en cualquier punto del intervalo entre el valor MIN y el 100 por cien inclusive.  
   
@@ -110,7 +112,7 @@ El grupo predeterminado es el primer grupo de usuario predefinido. Antes de real
   
 **Grupo externo**  
   
-Los usuarios pueden definir un grupo externo para definir los recursos para los procesos externos. Para los servicios de R, esto rige en concreto `rterm.exe`, `BxlServer.exe` y otros procesos generados por ellos.  
+Los usuarios pueden definir un grupo externo para definir los recursos para los procesos externos. Para los servicios de R, esto rige específicamente `rterm.exe`, `BxlServer.exe` y otros procesos generados por ellos.  
   
 **Grupos de recursos de servidor definidos por el usuario**  
   
@@ -118,7 +120,7 @@ Los grupos de recursos de servidor definidos por el usuario son los que se crean
   
 ## <a name="resource-pool-tasks"></a>Tareas de los grupos de recursos de servidor  
   
-|Descripción de la tarea|Tema|  
+|Descripción de la tarea|Artículo|  
 |----------------------|-----------|  
 |Describe cómo crear un grupo de recursos de servidor.|[Crear un grupo de recursos de servidor](../../relational-databases/resource-governor/create-a-resource-pool.md)|  
 |Describe cómo cambiar la configuración del grupo de recursos de servidor.|[Cambiar la configuración del grupo de recursos de servidor](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  

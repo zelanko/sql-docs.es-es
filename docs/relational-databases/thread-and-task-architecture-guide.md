@@ -2,7 +2,7 @@
 title: Guía de arquitectura de subprocesos y tareas | Microsoft Docs
 description: Obtenga información sobre la arquitectura de subprocesos y tareas en SQL Server, incluida la programación de tareas, la adición de CPU en caliente y procedimientos recomendados para el uso de equipos con más de 64 CPU.
 ms.custom: ''
-ms.date: 07/06/2020
+ms.date: 09/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,24 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
+- task scheduling
+- working threads
+- Large Deficit First scheduling
+- LDF scheduling
+- scheduling, SQL Server
+- tasks, SQL Server
+- threads, SQL Server
+- quantum, SQL Server
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: f2500a95946ee1a8226763ebd7983edd2a9f81c6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076810"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114589"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guía de arquitectura de subprocesos y tareas
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -59,6 +67,14 @@ El número de subprocesos de trabajo generados para cada tarea depende de:
 Un **programador**, conocido también como programador de SOS, administra los subprocesos de trabajo que requieren tiempo de procesamiento para hacer el trabajo en nombre de las tareas. Cada programador está asignado a un procesador individual (CPU). El tiempo que un trabajo puede permanecer activo en un programador se es el denominado cuanto del SO, con un máximo de 4 ms. Una vez que expira el tiempo de cuanto, un trabajo suspende su tiempo en favor de otros trabajos que necesitan acceder a los recursos de la CPU y cambia su estado. Esta cooperación entre los trabajos para maximizar el acceso a los recursos de la CPU se denomina **programación cooperativa**, también conocida como programación no preferente. A su vez, el cambio en el estado del trabajo se propaga a la tarea asociada con ese trabajo y a la solicitud asociada con la tarea. Para más información sobre los estados del trabajo, consulte [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). Para más información sobre los programados, consulte [sys.dm_os_schedulers ](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
 
 En resumen, una **solicitud** puede generar una o varias **tareas** para llevar a cabo las unidades de trabajo. Cada tarea se asigna a un **subproceso de trabajo** responsable de completar la tarea. Cada subproceso de trabajo debe estar programado (ubicado en un **programador**) para la ejecución activa de la tarea. 
+
+> [!NOTE]
+> Considere el caso siguiente:   
+> -  El trabajo 1 es una tarea de ejecución prolongada, por ejemplo, una consulta de lectura con lectura previa en tablas basadas en memoria. El trabajo 1 determina si las páginas de datos necesarias están ya en el grupo de búferes, por lo que no tiene que esperar a que se produzcan las operaciones de E/S y puede consumir su cuanto completo antes de la suspensión.   
+> -  El trabajo 2 está realizando tareas por debajo de milisegundos más cortas y, por lo tanto, es necesario esperar antes de que se agote su cuanto completo.     
+>
+> En este escenario y hasta [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], se permite que el trabajo 1 monopolice el programador porque tiene más tiempo de cuanto en general.   
+> A partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la programación cooperativa incluye la programación de tipo Déficit grande primero (LDF). Con la programación de LDF, se supervisan los patrones de uso del cuanto y un subproceso de trabajo no monopoliza un programador. En el mismo escenario, se permite que el trabajo 2 consuma repetidos cuantos antes de que el trabajo 1 tenga más cuanto, por lo que se evita que el trabajo 1 monopolice el programador de forma no deseada.
 
 ### <a name="scheduling-parallel-tasks"></a>Programación de tareas paralelas
 Imagine un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configurado con MaxDOP 8 y que la afinidad de CPU se ha configurado para 24 CPU (programadores) en los nodos NUMA 0 y 1. Los programadores del 0 al 11 pertenecen al nodo NUMA 0, y los programadores del 12 al 23 pertenecen al nodo NUMA 1. Una aplicación envía la siguiente consulta (solicitud) al [!INCLUDE[ssde_md](../includes/ssde_md.md)]:
@@ -228,8 +244,8 @@ No se recomienda usar Seguimiento de SQL y SQL Profiler en un entorno de producc
 > [!NOTE]
 > [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] para las cargas de trabajo de Analysis Services NO está en desuso y seguirá siendo compatible.
 
-### <a name="setting-the-number-of-tempdb-data-files"></a>Establecer el número de archivos de datos TempDB
-El número de archivos depende del número de procesadores (lógicos) de la máquina. Como regla general, si el número de procesadores lógicos es inferior o igual a ocho, use el mismo número de archivos de datos que procesadores lógicos. Si el número de procesadores lógicos es superior a ocho, use ocho archivos de datos y, después, si se mantiene la contención, aumente el número de archivos de datos en múltiplos de 4 hasta que la contención se reduzca a niveles aceptables, o bien modifique el código o la carga de trabajo. Tenga en cuenta también otras recomendaciones para TempDB, disponibles en [Optimizar el rendimiento de TempDB en SQL Server](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server). 
+### <a name="setting-the-number-of-tempdb-data-files"></a>Establecimiento del número de archivos de datos de tempdb
+El número de archivos depende del número de procesadores (lógicos) de la máquina. Como regla general, si el número de procesadores lógicos es inferior o igual a ocho, use el mismo número de archivos de datos que procesadores lógicos. Si el número de procesadores lógicos es superior a ocho, use ocho archivos de datos y, después, si se mantiene la contención, aumente el número de archivos de datos en múltiplos de 4 hasta que la contención se reduzca a niveles aceptables, o bien modifique el código o la carga de trabajo. Tenga en cuenta también otras recomendaciones para tempdb, disponibles en [Optimización del rendimiento de tempdb en SQL Server](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server). 
 
 Sin embargo, si considera minuciosamente las necesidades de simultaneidad de tempdb, podrá simplificar la carga administrativa de la base de datos. Por ejemplo, si un sistema tiene 64 CPU y normalmente solo 32 consultas utilizan tempdb, al aumentar el número de archivos tempdb a 64 no se mejorará rendimiento.
 

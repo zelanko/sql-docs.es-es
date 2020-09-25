@@ -11,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ebfca5c6b25f16bb4f86ca692b09bbc5d0beaaa9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c30d9c27550913f5c83334ff33ff3a1cc08e1bc
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462071"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990418"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Lección 1-7: Adición y configuración del destino de OLE DB
 
@@ -43,20 +43,22 @@ En esta tarea, se agrega y configura un destino de OLE DB para usar el administr
 6.  En el cuadro de diálogo **Editor de destino de OLE DB**, asegúrese de que **localhost.AdventureWorksDW2012** está seleccionado en el cuadro **Administrador de conexiones OLE DB**.  
   
 7.  En el cuadro **Nombre de la tabla o la vista**, escriba o seleccione **[dbo].[FactCurrencyRate]**.  
+ 
+8.  Si ya existe una tabla denominada **NewFactCurrencyRate**, elimínela ahora. Creará la tabla en el paso siguiente.
+ 
+9.  Haga clic en el botón **Nuevo** para crear una tabla.  Cambie el nombre de la tabla en el script de **Sample OLE DB Destination** a **NewFactCurrencyRate**.  Seleccione **Aceptar**.  
+ 
+10. Al hacer clic en **Aceptar**, se cierra el cuadro de diálogo y el **Nombre de la tabla o la vista** cambia automáticamente a **NewFactCurrencyRate**.  
   
-8.  Haga clic en el botón **Nuevo** para crear una tabla.  Cambie el nombre de la tabla en el script de **Sample OLE DB Destination** a **NewFactCurrencyRate**.  Seleccione **Aceptar**.  
+11. Haga clic en **Asignaciones**.  
   
-9. Al hacer clic en **Aceptar**, se cierra el cuadro de diálogo y el **Nombre de la tabla o la vista** cambia automáticamente a **NewFactCurrencyRate**.  
+12. Compruebe que las columnas de entrada **AverageRate**, **CurrencyKey**, **EndOfDayRate**y **DateKey** están correctamente asignadas a las columnas de destino. Si hay columnas con el mismo nombre asignadas, la asignación es correcta.  
   
-10. Haga clic en **Asignaciones**.  
+13. Seleccione **Aceptar**.  
   
-11. Compruebe que las columnas de entrada **AverageRate**, **CurrencyKey**, **EndOfDayRate**y **DateKey** están correctamente asignadas a las columnas de destino. Si hay columnas con el mismo nombre asignadas, la asignación es correcta.  
+14. Haga clic con el botón derecho en **Sample OLE DB Destination** y seleccione **Propiedades**.  
   
-12. Seleccione **Aceptar**.  
-  
-13. Haga clic con el botón derecho en **Sample OLE DB Destination** y seleccione **Propiedades**.  
-  
-14. En la ventana **Propiedades**, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)** y la propiedad **DefaultCodePage** en **1252**.  
+15. En la ventana **Propiedades**, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)** y la propiedad **DefaultCodePage** en **1252**.  
   
 ## <a name="go-to-next-task"></a>Ir a la tarea siguiente
 [Paso 8: Anotación y formato del paquete de la lección 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

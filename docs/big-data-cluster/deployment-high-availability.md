@@ -5,22 +5,22 @@ description: Aprenda a implementar clústeres de macrodatos de SQL Server con al
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2ed7a1b5169c7104ea089410d244095cd953aaf2
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 17aaed99c8adb73b88a2d81482fcdefc7d8f68fd
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790285"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990027"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implementación de clústeres de macrodatos de SQL Server con alta disponibilidad
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Dado que los clústeres de macrodatos de SQL Server se encuentran en Kubernetes como aplicaciones en contenedores y usan características como los conjuntos con estado y el almacenamiento persistente, esta infraestructura tiene supervisión de estado integrada, detección de errores y mecanismos de conmutación por error que los componentes de los clústeres aprovechan para mantener el estado del servicio. Para mayor confiabilidad, también puede configurar un nodo de nombre HDFS o de instancia maestra de SQL Server y servicios compartidos de Spark para implementar con réplicas adicionales en una configuración de alta disponibilidad. La supervisión, la detección de errores y la conmutación automática por error se administran mediante un servicio de administración de clústeres de macrodatos, es decir, el servicio de control. Este servicio se proporciona sin intervención del usuario, desde la configuración del grupo de disponibilidad y la configuración de puntos de conexión de creación de reflejo de la base de datos, hasta la incorporación de bases de datos al grupo de disponibilidad, o conmutación por error y coordinación de actualizaciones. 
+Dado que los clústeres de macrodatos de SQL Server se encuentran en Kubernetes como aplicaciones en contenedores y usan características como los conjuntos con estado y el almacenamiento persistente, esta infraestructura tiene supervisión de estado integrada, detección de errores y mecanismos de conmutación por error que los componentes de los clústeres aprovechan para mantener el estado del servicio. Para mayor confiabilidad, también puede configurar la instancia maestra de SQL Server o un nodo de nombre HDFS y servicios compartidos de Spark para realizar la implementación con réplicas adicionales en una configuración de alta disponibilidad. La supervisión, la detección de errores y la conmutación automática por error se administran mediante el servicio de administración de clústeres de macrodatos, es decir, el servicio de control. Este servicio se proporciona sin intervención del usuario, desde la configuración del grupo de disponibilidad y la configuración de puntos de conexión de creación de reflejo de la base de datos, hasta la incorporación de bases de datos al grupo de disponibilidad, o conmutación por error y coordinación de actualizaciones. 
 
 En la imagen siguiente se refleja cómo se implementa un grupo de disponibilidad en un clúster de macrodatos de SQL Server:
 
@@ -32,7 +32,7 @@ Estas son algunas de las funcionalidades que habilitan los grupos de disponibili
 - Todas las bases de datos se agregan automáticamente al grupo de disponibilidad, incluidas todas las bases de datos del usuario y el sistema, como `master` y `msdb`. Esta funcionalidad proporciona una vista de un solo sistema de las réplicas del grupo de disponibilidad. Se usan otras bases de datos modelo (`model_replicatedmaster` y `model_msdb`) para inicializar la parte replicada de las bases de datos del sistema. Además de estas bases de datos, aparecen las bases de datos `containedag_master` y `containedag_msdb` si se conecta directamente a la instancia. Las bases de datos `containedag` representan `master` y `msdb` dentro del grupo de disponibilidad.
 
   > [!IMPORTANT]
-  > En el momento del lanzamiento de SQL Server 2019 CU1, solo se agregaban automáticamente al grupo de disponibilidad las bases de datos creadas como resultado de una instrucción CREATE DATABASE. Las bases de datos creadas en la instancia como resultado de otros flujos de trabajo como adjuntar la base de datos todavía no se agregaban al grupo de disponibilidad y el administrador del clúster de macrodatos tenía que hacerlo manualmente. Vea la sección [Conectarse a la instancia de SQL Server](#instance-connect) para obtener instrucciones. Antes de la versión SQL Server 2019 CU2, las bases de datos creadas como resultado de una instrucción RESTORE tenían el mismo comportamiento y requerían la incorporación manual de las bases de datos al grupo de disponibilidad contenido.
+  > Las bases de datos creadas en la instancia como resultado de otros flujos de trabajo, como la asociación de la base de datos, no se agregan automáticamente al grupo de disponibilidad y el administrador del clúster de macrodatos tendrá que hacerlo manualmente. Consulte la sección [Conectarse a la instancia de SQL Server](#instance-connect) para obtener instrucciones sobre cómo habilitar un punto de conexión temporal en la base de datos maestra de la instancia de SQL Server. Antes de la versión SQL Server 2019 CU2, las bases de datos creadas como resultado de una instrucción RESTORE tenían el mismo comportamiento y requerían la incorporación manual de las bases de datos al grupo de disponibilidad contenido.
   >
 - Las bases de datos de configuración de Polybase no se incluyen en el grupo de disponibilidad porque incluyen metadatos de nivel de instancia específicos de cada réplica.
 - Se aprovisiona automáticamente un punto de conexión externo para conectarse a las bases de datos del grupo de disponibilidad. Este punto de conexión `master-svc-external` desempeña el rol de escucha de grupo de disponibilidad.
@@ -201,13 +201,17 @@ Este es un ejemplo que muestra cómo exponer este punto de conexión y luego agr
 
 ## <a name="known-limitations"></a>Restricciones conocidas
 
-Problemas y limitaciones conocidos de los grupos de disponibilidad de la instancia maestra de SQL Server en el clúster de macrodatos:
+Estos son los problemas y las limitaciones conocidos de los grupos de disponibilidad contenidos de la instancia maestra de SQL Server en el clúster de macrodatos:
 
-- Antes de SQL Server 2019 CU2, las bases de datos creadas como resultado de flujos de trabajo distintos a `CREATE DATABASE` y `RESTORE DATABASE`, como `CREATE DATABASE FROM SNAPSHOT`, no se agregan automáticamente al grupo de disponibilidad. [Conéctese a la instancia](#instance-connect) y agregue la base de datos al grupo de disponibilidad manualmente.
+- La configuración de alta disponibilidad debe crearse al implementar el clúster de macrodatos. No se puede habilitar la configuración de alta disponibilidad con grupos de disponibilidad después de la implementación. En este momento, la configuración habilitada solo es para las réplicas de confirmación sincrónicas.
+
+> [!WARNING]
+> La actualización del modo de sincronización a la confirmación asincrónica de cualquiera de las réplicas en la confirmación de cuórum producirá una configuración de alta disponibilidad no válida. Trabajar con esta configuración conlleva un riesgo de pérdida de datos, ya que, en caso de que se produzcan eventos de error que afecten a la réplica principal, no se desencadena una conmutación por error automática y el usuario debe aceptar este riesgo al emitir la conmutación por error manual.
+
 - Para restaurar de forma correcta una base de datos habilitada para TDE a partir de una copia de seguridad creada en otro servidor, debe asegurarse de que los [certificados necesarios](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md) se restauren tanto en la instancia maestra de SQL Server como en el grupo de disponibilidad maestro contenido. [Aquí](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/) puede ver un ejemplo de cómo realizar una copia de seguridad de los certificados y restaurarlos.
 - Determinadas operaciones, como la ejecución de la configuración de servidor con `sp_configure`, requieren una conexión a la base de datos `master` de la instancia de SQL Server, no a `master` del grupo de disponibilidad. No se puede usar el punto de conexión principal correspondiente. Siga las [instrucciones](#instance-connect) para exponer un punto de conexión y conectarse a la instancia de SQL Server y ejecutar `sp_configure`. Solo se puede usar autenticación SQL cuando se expone manualmente el punto de conexión para conectarse a la base de datos `master` de la instancia de SQL Server.
-- La configuración de alta disponibilidad debe crearse al implementar el clúster de macrodatos. No se puede habilitar la configuración de alta disponibilidad con grupos de disponibilidad después de la implementación.
-- Aunque la base de datos msdb independiente se incluye en el grupo de disponibilidad y los trabajos del Agente SQL se replican ahí, los trabajos no se desencadenan según una programación. La solución consiste en [conectarse a cada una de las instancias de SQL Server](#instance-connect) y crear los trabajos en la instancia msdb. A partir de SQL Server 2019 CU2, solo se admiten los trabajos creados en cada una de las réplicas de la instancia maestra.
+- Aunque la base de datos msdb independiente se incluye en el grupo de disponibilidad y los trabajos del Agente SQL se replican ahí, los trabajos solo se ejecutan según una programación en la réplica principal.
+- Antes de SQL Server 2019 CU2, las bases de datos creadas como resultado de flujos de trabajo distintos a `CREATE DATABASE` y `RESTORE DATABASE`, como `CREATE DATABASE FROM SNAPSHOT`, no se agregan automáticamente al grupo de disponibilidad. [Conéctese a la instancia](#instance-connect) y agregue la base de datos al grupo de disponibilidad manualmente.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

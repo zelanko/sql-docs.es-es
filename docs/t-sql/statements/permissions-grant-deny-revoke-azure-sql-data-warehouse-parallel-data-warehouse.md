@@ -1,7 +1,7 @@
 ---
-description: 'Permisos: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Almacenamiento de datos paralelos)'
+description: 'Permisos: GRANT, DENY, REVOKE (Azure Synapse Analytics, Almacenamiento de datos en paralelo)'
 title: Permisos GRANT-DENY-REVOKE
-titleSuffix: Azure SQL Data Warehouse
+titleSuffix: Azure Synapse Analytics
 ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ed28cb4adb7acd80212770d5760197854d8e8539
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7704b286c89942ccb7b6345789514b11a9ec3765
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357751"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227169"
 ---
-# <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Permisos: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Almacenamiento de datos paralelos)
+# <a name="permissions-grant-deny-revoke-azure-synapse-analytics-parallel-data-warehouse"></a>Permisos: GRANT, DENY, REVOKE (Azure Synapse Analytics, Almacenamiento de datos en paralelo)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Use las instrucciones **GRANT** y **DENY** de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] para conceder o denegar un permiso (como **UPDATE**) en un elemento protegible (por ejemplo, una base de datos, una tabla, una vista, etc.) a una entidad de seguridad (un inicio de sesión, un usuario de base de datos o un rol de base de datos). Use **REVOKE** para quitar la concesión o la denegación de un permiso.  
@@ -42,7 +42,7 @@ ms.locfileid: "88357751"
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
--- Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Azure Synapse Analytics and Parallel Data Warehouse  
 GRANT   
     <permission> [ ,...n ]  
     [ ON [ <class_type> :: ] securable ]   

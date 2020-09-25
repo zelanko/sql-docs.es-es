@@ -19,19 +19,19 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70b2e52af1ae87f4cacdb2189609c3ead2e3bc4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c0264ccc6e2f083b61b4c80c98248be80e33675
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417111"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227367"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Palabras clave reservadas (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza palabras clave reservadas para definir, manipular y tener acceso a las bases de datos. Las palabras clave reservadas forman parte de la gramática del lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para analizar y comprender las instrucciones y lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Aunque resulta sintácticamente posible usar palabras clave reservadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como identificadores y nombres de objetos en scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)], solo se puede hacer usando identificadores delimitados.  
   
- En la siguiente tabla se enumeran las palabras clave reservadas de Azure SQL Data Warehouse y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En la tabla siguiente se enumeran las palabras clave reservadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
 
 :::row:::
     :::column:::
@@ -716,7 +716,7 @@ ms.locfileid: "88417111"
 :::row-end:::
 
   
-En la tabla siguiente se enumeran las palabras clave reservadas exclusivas de **SQL Data Warehouse**.
+En la tabla siguiente se enumeran las palabras clave reservadas exclusivas de **[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]** .
   
 :::row:::
     :::column:::

@@ -2,7 +2,7 @@
 title: Actividad de registro
 description: Obtenga información sobre cómo configurar diferentes combinaciones de opciones de registro al usar controladores de Microsoft para PHP para SQL Server
 ms.custom: ''
-ms.date: 08/10/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6301b429191b0f563a5f1dea08bd6e8d92a0c46a
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 0d5da2aa33741e0c93b067bd942958ca70137d0b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680550"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024514"
 ---
 # <a name="logging-activity"></a>Actividad de registro
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-De manera predeterminada, los errores y las advertencias generados por los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] no se registran. En este tema se describe cómo configurar la actividad de registro.  
+De manera predeterminada, los errores y las advertencias generados por los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] no se registran en el registro del sistema de PHP. En este tema se describe cómo configurar la actividad de registro de controladores. Para más información sobre cómo configurar las opciones de control de errores de PHP que no son específicas de los controladores, consulte la [documentación de PHP](https://www.php.net/manual/en/errorfunc.configuration.php).  
   
 ## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>Actividad de registro con el controlador PDO_SQLSRV  
-La única configuración disponible para el controlador PDO_SQLSRV es la entrada pdo_sqlsrv.log_severity en el archivo php.ini.  
+La única configuración de registro disponible específica del controlador PDO_SQLSRV es la entrada pdo_sqlsrv.log_severity del archivo php.ini.  
   
 Agregue lo siguiente al final del archivo php.ini:  
   
@@ -37,7 +37,7 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** puede ser uno de los siguientes valores:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |---------|---------------|  
 |0|El registro está deshabilitado (se trata del valor predeterminado si no se define ninguno).|  
 |-1|Especifica que se registran errores, advertencias y avisos.|  
@@ -53,7 +53,7 @@ PHP lee el archivo de configuración durante la inicialización y almacena los d
 Para activar el registro, puede utilizar la función [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) o modificar el archivo php.ini. Puede registrar la actividad sobre inicializaciones, conexiones, instrucciones o funciones de error. También puede especificar si desea registrar los errores, las advertencias, los avisos o los tres tipos.  
   
 > [!NOTE]  
-> Puede configurar la ubicación del archivo de registro en el archivo php.ini.  
+> Puede configurar la ubicación del archivo de registro en el archivo php.ini. Consulte la [documentación de PHP](https://www.php.net/manual/en/errorfunc.configuration.php) para más información.  
   
 ### <a name="turning-logging-on"></a>Activación del registro  
 Puede activar el registro usando la función [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) para especificar un valor para la configuración **LogSubsystems**. Por ejemplo, la siguiente línea de código configura el controlador para que registre la actividad de las conexiones:  

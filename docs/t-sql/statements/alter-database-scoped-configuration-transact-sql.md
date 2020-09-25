@@ -3,7 +3,7 @@ title: ALTER DATABASE SCOPED CONFIGURATION
 description: Permite varios valores de configuración de base de datos en el nivel de base de datos individual.
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: seo-lt-2019
-ms.date: 10/31/2019
+ms.date: 09/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: f395ef15f82b4975a3df677abea227e181835e83
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9b3710606df63baaf85134be47fb0fe1643c72f3
+ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537098"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90565090"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -153,7 +153,7 @@ Puede utilizar la opción MAXDOP para limitar el número de procesadores utiliza
 Para establecer esta opción en el nivel de instancia, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 > [!NOTE]
-> En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], la configuración de nivel de servicio **Grado máximo de paralelismo** siempre se establece en 0. MAXDOP se puede configurar para cada base de datos tal y como se describe en el artículo actual. Para obtener recomendaciones sobre la configuración óptima de MAXDOP, vea la sección [Recursos adicionales](#additional-resources).
+> En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], la configuración de ámbito de base de datos MAXDOP de las nuevas bases de datos de grupos simples y elásticos se establece en 8 de forma predeterminada. MAXDOP se puede configurar para cada base de datos tal y como se describe en el artículo actual. Para obtener recomendaciones sobre la configuración óptima de MAXDOP, vea la sección [Recursos adicionales](#additional-resources).
 
 > [!TIP]
 > Para llevar a cabo esta acción en el nivel de consulta, use la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.    

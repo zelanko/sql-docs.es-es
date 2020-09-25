@@ -4,16 +4,16 @@ description: En este artículo se ofrecen instrucciones y procedimientos recomen
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 09/14/2017
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4c3b0715547e8658f83d544578e91b554854a5ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b2a4f55908f249d9f574d392dea26932648e58d
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887836"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989918"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Procedimientos recomendados de rendimiento e instrucciones de configuración para SQL Server en Linux
 
@@ -85,7 +85,7 @@ sysctl -w kernel.numa_balancing=0
 
 ### <a name="kernel-settings-for-virtual-address-space"></a>Configuración del kernel para el espacio de direcciones virtuales
 
-Es posible que la configuración predeterminada de **vm.max_map_count** (que es 65536) no sea lo suficientemente alta para una instalación SQL Server. Cambie este valor (que es un límite superior) a 256 KB.
+Es posible que la configuración predeterminada de **vm.max_map_count** (que es 65536) no sea lo suficientemente alta para una instalación SQL Server. Por este motivo, cambie el valor de **vm.max_map_count** a 262144 para una implementación de SQL Server y consulte la sección [Configuración propuesta de Linux mediante un perfil mssql optimizado](#proposed-linux-settings-using-a-tuned-mssql-profile) para realizar ajustes adicionales en estos parámetros de kernel. El valor máximo de vm.max_map_count es 2147483647.
 
 ```bash
 sysctl -w vm.max_map_count=262144
@@ -112,7 +112,7 @@ vm.dirty_ratio = 80
 vm.dirty_expire_centisecs = 500
 vm.dirty_writeback_centisecs = 100
 vm.transparent_hugepages=always
-# For , use
+# For multi-instance SQL deployments, use
 # vm.transparent_hugepages=madvice
 vm.max_map_count=1600000
 net.core.rmem_default = 262144
@@ -138,7 +138,7 @@ Compruebe que se habilita con
 ```bash
 tuned-adm active
 ```
-or
+o
 ```bash
 tuned-adm list
 ```
@@ -152,12 +152,12 @@ Use el atributo **noatime** con cualquier sistema de archivos que se use para al
 La mayoría de las instalaciones de Linux deben tener esta opción activada de forma predeterminada. Se recomienda que, para obtener un rendimiento más coherente, deje habilitada esta opción de configuración. Pero, por ejemplo, en el caso de una actividad de paginación de memoria alta en implementaciones de SQL Server con varias instancias o la ejecución de SQL Server con otras aplicaciones que requieren mucha memoria del servidor, se recomienda probar el rendimiento de las aplicaciones después de ejecutar el comando siguiente 
 
 ```bash
-echo madvice > /sys/kernel/mm/transparent_hugepage/enabled
+echo madvise > /sys/kernel/mm/transparent_hugepage/enabled
 ```
 o bien, modificar el perfil optimizado de mssql con la línea
 
 ```bash
-vm.transparent_hugepages=madvice
+vm.transparent_hugepages=madvise
 ```
 y activarlo después de la modificación.
 ```bash

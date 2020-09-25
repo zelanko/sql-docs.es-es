@@ -6,23 +6,23 @@ ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b50f2cda111a38ffd6ba67dbbf0fb9fc74192168
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ac2fe67316f32d372c4f8faddef32af1bcc7f805
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894497"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116227"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Creación de un grupo de disponibilidad independiente del dominio
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-Los grupos de disponibilidad AlwaysOn (AG) requieren un clúster de conmutación por error de Windows Server (WSFC) subyacente. Implementar un WSFC a través de Windows Server 2012 R2 siempre ha requerido que los servidores que participan en ese WSFC (también conocidos como nodos) estén unidos al mismo dominio. Para más información sobre Active Directory Domain Services (AD DS), vaya [aquí](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
+Los grupos de disponibilidad Always On requieren un clúster de conmutación por error de Windows Server (WSFC) subyacente. Implementar un WSFC a través de Windows Server 2012 R2 siempre ha requerido que los servidores que participan en ese WSFC (también conocidos como nodos) estén unidos al mismo dominio. Para más información sobre Active Directory Domain Services (AD DS), vaya [aquí](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
 
 La dependencia de AD DS y WSFC es más compleja de lo que se ha implementado previamente con una configuración de creación de reflejo de base de datos (DBM), dado que DBM se puede implementar a través de varios centros de datos con certificados sin necesidad de estas dependencias.  Un grupo de disponibilidad tradicional que abarca más de un centro de datos requiere que todos los servidores estén unidos al mismo dominio de Active Directory; si los dominios son diferentes, aun siendo de confianza, esto no funcionará. Todos los servidores deben ser nodos del mismo WSFC. En la siguiente imagen se muestra este proceso. SQL Server 2016 tiene, además, grupos de disponibilidad distribuidos que también pueden lograr este objetivo de otro modo.
 

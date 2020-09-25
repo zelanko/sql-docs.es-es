@@ -14,18 +14,18 @@ ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 921d626eaacb0cdfd6f14988cd41e39efc35339b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41b99ede74cb7e8213fb50e95f1a9160b4d947af
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459141"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226923"
 ---
 # <a name="queries"></a>Consultas
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  El lenguaje de manipulación de datos (DML) es un vocabulario usado para recuperar y trabajar con datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y en SQL Database. La mayoría funciona también en SQL Data Warehouse y PDW (revise cada instrucción individual para más información). Use estas instrucciones para agregar, modificar, consultar o quitar datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  El lenguaje de manipulación de datos (DML) es un vocabulario usado para recuperar y trabajar con datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y en SQL Database. La mayoría funciona también en [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (revise cada instrucción individual para más información). Use estas instrucciones para agregar, modificar, consultar o quitar datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
  En la siguiente tabla se describen las instrucciones DML que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -11,16 +11,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
+- PMO
+- Partitioned Memory Objects
+- cmemthread
+- AWE
+- SPA, Single Page Allocator
+- MPA, Multi Page Allocator
+- memory allocation, SQL Server
+- memory pressure, SQL Server
+- stack size, SQL Server
+- buffer manager, SQL Server
+- buffer pool, SQL Server
+- resource monitor, SQL Server
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8677c1e3fff32a5ea2ae43f6437f0d219180123c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243716"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116221"
 ---
 # <a name="memory-management-architecture-guide"></a>guía de arquitectura de administración de memoria
 
@@ -62,7 +74,7 @@ Mediante AWE y el privilegio Bloquear páginas en memoria, puede proporcionar la
 |Privilegio del sistema operativo (OS) Bloquear páginas en la memoria (permite bloquear memoria física e impedir la paginación en el sistema operativo de la memoria bloqueada). <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ediciones Standard, Enterprise y Developer: necesario para que el proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] use el mecanismo AWE. La memoria asignada a través del mecanismo AWE no se puede paginar. <br> Si se concede este privilegio sin habilitar AWE, no tiene efecto en el servidor. | Solo se debe usar cuando sea necesario, principalmente si hay algún indicio de que el proceso sqlservr se está transfiriendo al almacenamiento auxiliar. En este caso, se informará sobre el error 17890 en el registro de errores, similar al siguiente ejemplo: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> Las versiones de 32 bits no están disponibles a partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
-<sup>2</sup> /3gb es un parámetro de arranque del sistema operativo. Para obtener más información, visite MSDN Library.  
+<sup>2</sup> /3gb es un parámetro de arranque del sistema operativo.  
 <sup>3</sup> WOW64 (Windows on Windows 64) es un modo en el que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de 32 bits se ejecuta en un sistema operativo de 64 bits.  
 <sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition admite hasta 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition admite el máximo del sistema operativo máximo.  
 <sup>5</sup> Tenga en cuenta que la opción sp_configure awe enabled estaba presente en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]de 64 bits, pero se omite.    
@@ -76,7 +88,7 @@ Mediante AWE y el privilegio Bloquear páginas en memoria, puede proporcionar la
 ## <a name="changes-to-memory-management-starting-with-sssql11"></a>Cambios en la administración de memoria a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 En versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), la asignación de memoria se realizaba mediante cinco mecanismos diferentes:
--  **Asignador de página única (SPA)** , que incluye solo las asignaciones de memoria menores o iguales a 8 KB en el proceso [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las opciones de configuración *memoria de servidor máxima (MB)* y *memoria de servidor mínima (MB)* determinaban los límites de la memoria física que podía consumir el SPA. El grupo de búferes era el mecanismo para SPA y el mayor consumidor de asignaciones de página única.
+-  **Asignador de página única (SPA)** , que incluye solo las asignaciones de memoria menores o iguales a 8 KB en el proceso [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las opciones de configuración *memoria de servidor máxima (MB)* y *memoria de servidor mínima (MB)* determinaban los límites de la memoria física que podía consumir el SPA. El grupo de búferes era simultáneamente el mecanismo para SPA y el mayor consumidor de asignaciones de página única.
 -  **Asignador de varias páginas (MPA)** , para las asignaciones de memoria que solicitan más de 8 KB.
 -  **Asignador de CLR**, que incluye las pilas CLR de SQL y las asignaciones globales creadas durante la inicialización de CLR.
 -  Asignaciones de memoria para **[pilas de subprocesos](../relational-databases/memory-management-architecture-guide.md#stacksizes)** en el proceso [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -94,7 +106,7 @@ En la tabla siguiente se indica si un tipo de asignación de memoria específico
 |Asignaciones de página única|Sí|Sí, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
 |Asignaciones de varias páginas|No|Sí, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
 |Asignaciones de CLR|No|Sí|
-|Memoria de pilas de subprocesos|No|Sin|
+|Memoria de pilas de subprocesos|No|No|
 |Asignaciones directas de Windows|No|No|
 
 A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podría asignar más memoria que el valor especificado en el valor de memoria de servidor máxima. Esto puede ocurrir cuando el valor de **_Memoria total del servidor (KB_**) ya ha alcanzado la configuración de **_Memoria total del servidor (KB)_** (tal y como se especifica en la memoria de servidor máxima). Si no hay memoria libre contigua suficiente para atender a la demanda de solicitudes de memoria de varias páginas (más de 8 KB) debido a la fragmentación de memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede realizar compromisos por encima de lo indicado en vez de rechazar las solicitudes de memoria. 
@@ -213,7 +225,7 @@ Un desbordamiento que se produzca durante una operación de hash se conoce como 
 -  La recursividad hash se produce cuando no hay suficiente memoria para la entrada generada, lo que causa que ésta se divida en varias particiones que se procesan por separado. Si alguna de estas particiones sigue sin caber en la memoria disponible, se vuelve a dividir en subparticiones, que también se procesan por separado. Este proceso de división continúa hasta que cada partición quepa en la memoria disponible o hasta que se alcance el nivel máximo de recursividad.
 -  La salida hash se produce cuando una operación de hash alcanza el nivel máximo de repetición y vuelve a un plan alternativo para procesar el resto de datos con particiones. Estos eventos pueden producir un rendimiento reducido en el servidor.
 
-Para la **ejecución del modo por lotes**, la concesión de memoria inicial puede aumentar de forma dinámica hasta un umbral interno concreto de forma predeterminada. Este mecanismo de concesión de memoria dinámico está diseñado para permitir la ejecución residente de memoria de las operaciones de **hash** u **orden** que se ejecutan en el modo por lotes. Si estas operaciones siguen sin caber en la memoria, se desbordarán al disco.
+Para la **ejecución del modo por lotes**, la concesión de memoria inicial puede aumentar de forma dinámica hasta un umbral interno concreto de forma predeterminada. Este mecanismo de concesión de memoria dinámico está diseñado para permitir la ejecución residente en memoria de las operaciones **hash** y **sort** que se ejecutan en el modo de procesamiento por lotes. Si estas operaciones siguen sin caber en la memoria, se desbordarán al disco.
 
 Para obtener más información sobre los modos de ejecución, vea [Guía de arquitectura de procesamiento de consultas](../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
@@ -288,7 +300,7 @@ Las causas internas incluyen:
 - La configuración de memoria se redujo manualmente reduciendo la configuración *memoria de servidor máxima*. 
 - Cambios en la distribución de memoria de los componentes internos entre varias cachés.
 
-El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] implementa un marco de trabajo dedicado para detectar y controlar la presión de memoria, como parte de su administración de memoria dinámica. Este marco de trabajo incluye la tarea en segundo plano denominada **Monitor de recursos**. La tarea Monitor de recursos supervisa el estado de los indicadores de memoria externa e interna. Cuando uno de estos indicadores cambia de estado, calcula la notificación correspondiente y la difunde. Estas notificaciones son mensajes internos desde cada uno de los componentes del motor y se almacenan en búferes en anillo. 
+El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] implementa un marco de trabajo dedicado para detectar y controlar la presión de memoria, como parte de su administración de memoria dinámica. Este marco de trabajo incluye la tarea en segundo plano llamada **Monitor de recursos**. La tarea Monitor de recursos supervisa el estado de los indicadores de memoria externa e interna. Cuando uno de estos indicadores cambia de estado, calcula la notificación correspondiente y la difunde. Estas notificaciones son mensajes internos desde cada uno de los componentes del motor y se almacenan en búferes en anillo. 
 
 Dos búferes en anillo contienen información relevante para la administración dinámica de memoria: 
 - El búfer en anillo Monitor de recursos, que realiza el seguimiento de la actividad del Monitor de recursos, como si la presión de memoria se ha señalado o no. Este búfer en anillo tiene información de estado en función de la condición actual de *RESOURCE_MEMPHYSICAL_HIGH*, *RESOURCE_MEMPHYSICAL_LOW*, *RESOURCE_MEMPHYSICAL_STEADY* o *RESOURCE_MEMVIRTUAL_LOW*.
@@ -311,7 +323,7 @@ El tipo de protección de página que se utilice es un atributo de la base de da
 La protección contra página rasgada, que se introdujo en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, es básicamente una forma de detectar errores en las páginas a causa de problemas con el suministro eléctrico. Por ejemplo, es posible que por un problema con el suministro eléctrico solo se escriba una parte de la página en el disco. Cuando se usa la protección de páginas rasgadas, se almacena un patrón de firma de 2 bits específico por cada sector de 512 bytes de la página de base de datos de 8 kilobytes (KB) en el encabezado de página de la base de datos cuando la página se escribe en disco. Si la página se lee desde el disco, los bits rasgados almacenados en el encabezado de página se comparan con la información del sector de la página real. El patrón de firma alterna entre los binarios 01 y 10 en cada escritura, por lo que siempre es posible detectar las ocasiones en que solo una parte de los sectores las hicieron en el disco: si hay un bit con el estado incorrecto cuando la página se lee posteriormente, la página se escribió de forma incorrecta y se detecta una página rasgada. La detección de página rasgada utiliza un mínimo de recursos; sin embargo, no detecta todos los errores causados por errores del hardware de disco. Para obtener información acerca de cómo configurar la detección de páginas rasgadas, vea [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify) (Opciones de ALTER DATABASE SET (Transact-SQL).
 
 #### <a name="checksum-protection"></a>Protección de suma de comprobación  
-La protección de suma de comprobación, característica implementada en [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], proporciona una comprobación de integridad de datos más sólida. Se calcula una suma de comprobación para los datos de cada página que se escribe y se almacena en el encabezado de la página. Cada vez que se lee desde disco una página con una suma de comprobación almacenada, el motor de base de datos vuelve a calcular la suma de comprobación para los datos de la página y muestra el error 824 cuando la nueva suma de comprobación no coincide con la suma almacenada. La protección de suma de comprobación puede detectar más errores que la protección contra página rasgada porque tiene en cuenta cada byte de la página; sin embargo, consume una cantidad de recursos considerable. Cuando la suma de comprobación está habilitada, pueden detectarse los errores debidos a cualquier problema con el suministro eléctrico o a hardware o firmware defectuosos cada vez que el administrador de búfer lea una página del disco. Para obtener información acerca de cómo configurar la suma de comprobación, vea [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify) (Opciones de ALTER DATABASE SET (Transact-SQL)).
+La protección de suma de comprobación, característica implementada en [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], proporciona una comprobación de integridad de datos más sólida. Se calcula una suma de comprobación para los datos de cada página que se escribe y se almacena en el encabezado de la página. Cada vez que se lee desde disco una página con una suma de comprobación almacenada, el motor de base de datos vuelve a calcular la suma de comprobación para los datos de la página y muestra el error 824 cuando la nueva suma de comprobación no coincide con la suma almacenada. La protección de suma de comprobación puede detectar más errores que la protección contra página rasgada porque tiene en cuenta cada byte de la página; sin embargo, consume una cantidad moderada de recursos. Cuando la suma de comprobación está habilitada, pueden detectarse los errores debidos a cualquier problema con el suministro eléctrico o a hardware o firmware defectuosos cada vez que el administrador de búfer lea una página del disco. Para obtener información acerca de cómo configurar la suma de comprobación, vea [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify) (Opciones de ALTER DATABASE SET (Transact-SQL)).
 
 > [!IMPORTANT]
 > Si una base de datos de usuario o del sistema se actualiza a [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] o una versión posterior, se conserva el valor de [PAGE_VERIFY](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify) (NONE o TORN_PAGE_DETECTION). Se recomienda utilizar CHECKSUM.
@@ -319,6 +331,19 @@ La protección de suma de comprobación, característica implementada en [!INCLU
 
 ## <a name="understanding-non-uniform-memory-access"></a>Descripción del acceso no uniforme a memoria
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  está preparado para el acceso no uniforme a memoria (NUMA) y realiza un buen rendimiento en hardware NUMA sin necesidad de establecer ninguna configuración especial. A medida que aumentan la velocidad del reloj y el número de procesadores, resulta cada vez más difícil reducir la latencia de la memoria necesaria para utilizar esta potencia de procesamiento adicional. Para evitarlo, los proveedores de hardware proporcionan cachés L3 grandes, pero esto es solo una solución limitada. La arquitectura NUMA proporciona una solución escalable para este problema. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ha diseñado para aprovechar los equipos basados en NUMA sin necesidad de realizar cambios en las aplicaciones. Para más información, vea: [Cómo: Configurar SQL Server para que use Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
+
+## <a name="dynamic-partition-of-memory-objects"></a>Partición dinámica de objetos de memoria
+Los asignadores de montón, llamados objetos de memoria en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], permiten a [!INCLUDE[ssde_md](../includes/ssde_md.md)] asignar memoria del montón. Se puede realizar un seguimiento de ellos mediante la DMV [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md). CMemThread es un tipo de objeto de memoria seguro para subprocesos que permite asignaciones de memoria simultáneas desde varios subprocesos. Para realizar un seguimiento correcto, los objetos CMemThread se basan en construcciones de sincronización (una exclusión mutua) para garantizar que un solo subproceso actualiza datos críticos a la vez. 
+
+> [!NOTE]
+> El tipo de objeto CMemThread se utiliza en la base de código de [!INCLUDE[ssde_md](../includes/ssde_md.md)] para muchas asignaciones diferentes y se puede particionar globalmente, por nodo o por CPU.   
+
+Sin embargo, el uso de exclusiones mutuas puede llevar a contención si muchos subprocesos asignan desde el mismo objeto de memoria de un modo muy simultáneo. Por lo tanto, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene el concepto de objetos de memoria con particiones (PMO) y cada partición se representa mediante un único objeto CMemThread. La creación de particiones de un objeto de memoria se define estáticamente y no se puede cambiar después de la creación. Dado que los patrones de asignación de memoria varían considerablemente en función de aspectos como el uso de hardware y memoria, es imposible conseguir el patrón de particionamiento perfecto de antemano. En la gran mayoría de los casos, el uso de una sola partición será suficiente, pero en algunos escenarios esto puede provocar contención, lo que solo se puede evitar con un objeto de memoria muy particionado. No es aconsejable particionar cada objeto de memoria, ya que más particiones pueden afectar a la eficiencia de otras formas y aumentar la fragmentación de la memoria.
+
+> [!NOTE]
+> Antes de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la marca de seguimiento 8048 se podría usar para forzar que un PMO basada en nodo se convierta en un PMO basada en CPU. A partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 y [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], este comportamiento es dinámico y lo controla el motor.
+
+A partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 y [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], [!INCLUDE[ssde_md](../includes/ssde_md.md)] puede detectar dinámicamente la contención en un objeto CMemThread específico y promover el objeto a una implementación por nodo o por CPU. Una vez promocionado, el PMO sigue promocionado hasta que se reinicie el proceso [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La contención de CMemThread se puede detectar por la presencia de esperas CMEMTHREAD altas en la DMV [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) y mediante la observación de las siguientes columnas de la DMV [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md): *contention_factor*, *partition_type*, *exclusive_allocations_count* y *waiting_tasks_count*.
 
 ## <a name="see-also"></a>Consulte también
 [Opciones de configuración de memoria del servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

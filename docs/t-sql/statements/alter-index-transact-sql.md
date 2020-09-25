@@ -47,12 +47,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce5edfba05262da83060030aa00117a81e730e24
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d7d731d320c51b70bf73ea76361f9dba283ea38c
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544395"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024494"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 
@@ -149,7 +149,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 ```  
   
 ```syntaxsql
--- Syntax for SQL Data Warehouse and Parallel Data Warehouse 
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse 
   
 ALTER INDEX { index_name | ALL }  
     ON   [ schema_name. ] table_name  
@@ -663,7 +663,7 @@ Cuando se especifica `ALL`, se reorganizan los índices relacionales, tanto agru
 Para obtener más información, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
 
 > [!IMPORTANT]
-> Para una tabla de Azure SQL Data Warehouse con un índice de almacén de columnas agrupadas ordenado, `ALTER INDEX REORGANIZE` no reordenará los datos. Para reordenar los datos, use `ALTER INDEX REBUILD`.
+> En una tabla de [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] con un índice de almacén de columnas agrupadas ordenado, `ALTER INDEX REORGANIZE` no reordenará los datos. Para reordenar los datos, use `ALTER INDEX REBUILD`.
   
 ## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> Deshabilitar índices  
 Al deshabilitar un índice, se impide que el usuario tenga acceso al mismo y, en el caso de los índices clúster, a los datos de la tabla subyacente. La definición de índice permanece en el catálogo del sistema. La deshabilitación de un índice no clúster o agrupado en una vista elimina físicamente los datos del índice. La deshabilitación de un índice clúster evita el acceso a los datos, aunque éstos permanecen en el árbol b hasta que el índice se quita o se vuelve a generar. Para ver el estado de un índice habilitado o deshabilitado, realice una consulta en la columna **is_disabled** de la vista de catálogo **sys.indexes**.  

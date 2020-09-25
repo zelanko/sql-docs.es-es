@@ -3,31 +3,29 @@ title: Actualización de los entornos de ejecución de Python y R (enlace)
 description: Actualice los entornos de ejecución de R y Python en SQL Server Machine Learning Services o en SQL Server R Services mediante sqlbindr.exe para enlazarlos con Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/17/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 63bd14d9229d276966a3e118d097316a3ab58a4f
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: f6b7d5b0dbff20961b6f719e0e0f3360433712f8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009381"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990120"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>Actualización del entorno de ejecución de Python y R con enlace en SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-En este artículo se describe cómo usar un proceso de instalación llamado **enlace** para actualizar los entornos de ejecución de R o Python en [SQL Server 2016 R Services](../r/sql-server-r-services.md) o [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md).
+En este artículo se describe cómo usar un proceso de instalación llamado **enlace** para actualizar los entornos de ejecución de R o Python en [SQL Server 2016 R Services](../r/sql-server-r-services.md) o [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md). Puede obtener las [versiones más recientes de Python y R](#version-map) *enlazando* a [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server).
 
 > [!IMPORTANT]
 > En este artículo se describe un método anterior para actualizar los entornos de ejecución de R y Python, denominado *enlace*. Si ha instalado **actualización acumulativa (CU) 14 o posterior para SQL Server 2016 Services Pack (SP) 2** o la **actualización acumulativa (CU) 22 o posterior para SQL Server 2017**, consulte cómo [cambiar el entorno de ejecución del lenguaje R o Python predeterminado a una versión posterior](change-default-language-runtime-version.md) en su lugar.
 
-Puede obtener las [versiones más recientes de Python y R](#version-map) *enlazando* a Microsoft Machine Learning Server. La versión se aplica a SQL Server Machine Learning Services (en base de datos) y SQL Server R Services (en base de datos).
-
 ## <a name="what-is-binding"></a>¿Qué es un enlace?
 
-El enlace es un proceso de instalación que intercambia el contenido de las carpetas **R_SERVICES** y **PYTHON_SERVICES** con archivos ejecutables, bibliotecas y herramientas más recientes de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
+El enlace es un proceso de instalación que reemplaza el contenido de las carpetas **R_SERVICES** y **PYTHON_SERVICES** por archivos ejecutables, bibliotecas y herramientas más recientes de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server).
 
 Los componentes cargados que se incluyen con el modelo de servicio han cambiado. Las actualizaciones del servicio coinciden con la [escala de tiempo de soporte técnico para Microsoft R Server y Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) en el [ciclo de vida moderno](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 

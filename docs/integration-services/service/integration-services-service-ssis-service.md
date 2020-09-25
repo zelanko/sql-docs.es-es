@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 08fd5b99d4ffe74bb409db65093a3148dc5f786b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487727"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990416"
 ---
 # <a name="integration-services-service-ssis-service"></a>Servicio Integration Services (servicio SSIS)
 
@@ -368,16 +368,14 @@ Cuando se instala [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)],
   
 6.  Reinicie el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-### <a name="connecting-by-using-a-local-account"></a>Conectarse con una cuenta local  
- Si se trabaja en una cuenta local de Windows en un equipo cliente, solo es posible conectarse al servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en un equipo remoto si en el equipo remoto existe una cuenta local con el mismo nombre y contraseña, y con los derechos adecuados.  
+### <a name="connecting-by-using-a-local-account"></a>Conectarse con una cuenta local
+
+Si se trabaja en una cuenta local de Windows en un equipo cliente, solo es posible conectarse al servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en un equipo remoto si en el equipo remoto existe una cuenta local con el mismo nombre y contraseña, y con los derechos adecuados.  
   
-### <a name="by-default-the-ssis-service-does-not-support-delegation"></a>De forma predeterminada, el servicio SSIS no admite la delegación  
-De forma predeterminada, el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no admite la delegación de credenciales, a veces denominada salto doble. En este escenario, se trabaja con un equipo cliente, el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se ejecuta en un segundo equipo y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un tercer equipo. Primero, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pasa correctamente las credenciales del equipo cliente al segundo equipo en el que se ejecuta el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pero, después, el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no puede delegar las credenciales del segundo equipo al tercero, en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+### <a name="ssis-windows-service-doesnt-support-delegation"></a>Delegación no admitida por el servicio de Windows SSIS
 
-Puede habilitar la delegación de credenciales si concede el derecho **Confiar en este usuario para la delegación a cualquier servicio (solo Kerberos)** a la cuenta de servicio de SQL Server, que inicia el servicio Integration Services (ISServerExec.exe) como un proceso secundario. Antes de conceder este derecho, considere si cumple los requisitos de seguridad de su organización.
+SSIS no admite la delegación de credenciales, a veces denominada como salto doble. En este escenario, se trabaja con un equipo cliente, SSIS está instalado en un segundo equipo y SQL Server está instalado en un tercer equipo. Aunque SSMS pase correctamente las credenciales del usuario del equipo cliente al segundo equipo (en el que SSIS se ejecuta), SSIS no puede delegar esas credenciales del segundo equipo al tercer equipo (en el que se ejecuta SQL Server).
 
-Para obtener más información, vea [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(Conseguir que la delegación y Kerberos entre dominios funcionen con el paquete SSIS).
- 
 ## <a name="configure-the-firewall"></a>Configuración del firewall
   
  El sistema Firewall de Windows impide el acceso no autorizado a los recursos de los equipos de una conexión de red. Para obtener acceso a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante este firewall, debe configurarlo para permitir el acceso.  

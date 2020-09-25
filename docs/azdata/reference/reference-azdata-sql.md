@@ -4,39 +4,118 @@ titleSuffix: SQL Server big data clusters
 description: Artículo de referencia de los comandos sql de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9965c6805cb8e12e6a5a2990a43bb7bf7c937fe1
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 01e6cd577892a1d6738afdc1fdf3b2518a23a5f3
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733949"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914409"
 ---
 # <a name="azdata-sql"></a>sql de azdata
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Se aplica a `azdata`
 
-En el artículo siguiente se proporciona una referencia de los comandos `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
+En el siguiente artículo se proporciona una referencia de los comandos **sql** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos:
-| Comando | Descripción |
+## <a name="commands"></a>Comandos
+
+|Comando|Descripción|
 | --- | --- |
-[azdata sql shell](#azdata-sql-shell) | La CLI de SQL Database permite al usuario interactuar con SQL Server mediante T-SQL.
-[azdata sql query](#azdata-sql-query) | El comando de consulta permite ejecutar una consulta T-SQL.
+[azdata sql shell](#azdata-sql-shell) | La CLI de SQL permite al usuario interactuar con SQL Server y Azure SQL mediante T-SQL.
+[azdata sql query](#azdata-sql-query) | La CLI de SQL permite al usuario interactuar con SQL Server y Azure SQL mediante T-SQL.
 ## <a name="azdata-sql-shell"></a>azdata sql shell
-La CLI de SQL Database permite al usuario interactuar con SQL Server mediante T-SQL.
+La CLI de SQL permite al usuario interactuar con SQL Server y Azure SQL mediante T-SQL.
 ```bash
-azdata sql shell 
+azdata sql shell [--username -u] 
+                 [--database -d]  
+                 
+[--server -s]  
+                 
+[--integrated -e]  
+                 
+[--mssqlclirc]  
+                 
+[--row-limit]  
+                 
+[--less-chatty]  
+                 
+[--auto-vertical-output]  
+                 
+[--encrypt -n]  
+                 
+[--trust-server-certificate -c]  
+                 
+[--connect-timeout -l]  
+                 
+[--application-intent -k]  
+                 
+[--multi-subnet-failover -m]  
+                 
+[--packet-size]  
+                 
+[--dac-connection -a]  
+                 
+[--input-file -i]  
+                 
+[--output-file]  
+                 
+[--enable-sqltoolsservice-logging]  
+                 
+[--prompt]
 ```
 ### <a name="examples"></a>Ejemplos
 Línea de comandos de ejemplo para iniciar la experiencia interactiva.
 ```bash
 azdata sql shell
 ```
+Ejemplo de línea de comandos usando un servidor, un usuario y una base de datos proporcionados
+```bash
+azdata sql shell --server localhost --username sa --database master         
+```
+### <a name="optional-parameters"></a>Parámetros opcionales
+#### `--username -u`
+Nombre de usuario para conectarse a la base de datos.
+#### `--database -d`
+Nombre de la base de datos a la que conectarse.
+#### `--server -s`
+Nombre o dirección de la instancia de SQL Server.
+#### `--integrated -e`
+Usar la autenticación integrada en Windows.
+#### `--mssqlclirc`
+Ubicación del archivo de configuración mssqlclirc.
+#### `--row-limit`
+Establecer el umbral de la solicitud de límite de filas. Usar 0 para deshabilitar la solicitud.
+#### `--less-chatty`
+Omitir introducción al inicio y despedida al salir.
+#### `--auto-vertical-output`
+Cambiar automáticamente al modo de salida vertical si el resultado es más ancho que el ancho del terminal.
+#### `--encrypt -n`
+SQL Server usa el cifrado SSL con todos los datos si el servidor tiene un certificado instalado.
+#### `--trust-server-certificate -c`
+El canal se cifrará mientras se omite el recorrido de la cadena de certificados para validar la confianza.
+#### `--connect-timeout -l`
+Tiempo en segundos que se debe esperar a una conexión con el servidor antes de finalizar la solicitud.
+#### `--application-intent -k`
+Declara el tipo de carga de trabajo de la aplicación al conectarse a una base de datos en un grupo de disponibilidad de SQL Server.
+#### `--multi-subnet-failover -m`
+Si la aplicación se va a conectar al grupo de disponibilidad AlwaysOn en distintas subredes, al establecer este valor la detección del servidor activo y la conexión a este se realizan de forma más rápida.
+#### `--packet-size`
+Tamaño en bytes de los paquetes de red utilizados para comunicarse con SQL Server.
+#### `--dac-connection -a`
+Conéctese a SQL Server mediante la conexión de administrador dedicada.
+#### `--input-file -i`
+Especifica el archivo que contiene un lote de instrucciones SQL para procesar.
+#### `--output-file`
+Especifica el archivo que recibe la salida de una consulta.
+#### `--enable-sqltoolsservice-logging`
+Habilita el registro de diagnóstico para SqlToolsService.
+#### `--prompt`
+Formato de la solicitud (valor predeterminado: \d>
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
 Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
@@ -49,21 +128,35 @@ Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-sql-query"></a>azdata sql query
-El comando de consulta permite ejecutar una consulta T-SQL.
+La CLI de SQL permite al usuario interactuar con SQL Server y Azure SQL mediante T-SQL.
 ```bash
-azdata sql query --database -d 
-                 -q
+azdata sql query -q 
+                 [--database -d]  
+                 
+[--username -u]  
+                 
+[--server -s]  
+                 
+[--integrated -e]
 ```
 ### <a name="examples"></a>Ejemplos
-Seleccione la lista de nombres de tablas.  De forma predeterminada, la base de datos es maestra.
+Ejemplo de línea de comandos para seleccionar la lista de nombres de tablas.
 ```bash
-azdata sql query "SELECT name FROM SYS.TABLES"
+azdata sql query --server localhost --username sa --database master -q "SELECT name FROM SYS.TABLES"
 ```
-### <a name="required-parameters"></a>Parámetros obligatorios
-#### `--database -d`
-Base de datos en la que se ejecutará la consulta.  De forma predeterminada, es maestra.
+### <a name="required-parameters"></a>Parámetros requeridos
 #### `-q`
 Consulta T-SQL que se va a ejecutar.
+### <a name="optional-parameters"></a>Parámetros opcionales
+#### `--database -d`
+Nombre de la base de datos a la que conectarse.
+`master`
+#### `--username -u`
+Nombre de usuario para conectarse a la base de datos.
+#### `--server -s`
+Nombre o dirección de la instancia de SQL Server.
+#### `--integrated -e`
+Usar la autenticación integrada en Windows.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
 Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
@@ -78,4 +171,7 @@ Aumente el nivel de detalle de registro. Use --debug para obtener registros de d
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta `azdata`, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](../install/deploy-install-azdata.md).
+Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md). 
+
+Para más información sobre cómo instalar la herramienta **azdata**, consulte [Instalación de azdata](..\install\deploy-install-azdata.md).
+

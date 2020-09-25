@@ -1,6 +1,6 @@
 ---
-description: CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
-title: CREATE TABLE AS SELECT (Azure SQL Data Warehouse) | Microsoft Docs
+description: CREATE TABLE AS SELECT (Azure Synapse Analytics)
+title: CREATE TABLE AS SELECT (Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/07/2016
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fb060b4a5f42cdc526bbb2a3737fd728c9ac3b71
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: ab6d2ce34991dfaf4d2266ca0b0d900eb93fdde6
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688675"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990158"
 ---
-# <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
+# <a name="create-table-as-select-azure-synapse-analytics"></a>CREATE TABLE AS SELECT (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 CREATE TABLE AS SELECT (CTAS) es una de las características más importantes de T-SQL disponibles. Se trata de una operación de ejecución completamente en paralelo que crea una tabla basada en la salida de una instrucción SELECT. CTAS es la forma más sencilla y rápida de crear una copia de una tabla.   
@@ -32,7 +32,7 @@ CREATE TABLE AS SELECT (CTAS) es una de las características más importantes de
 -   Consultar o importar datos externos.  
 
 > [!NOTE]  
-> Dado que CTAS se agrega a las funcionalidades para crear tablas, en este tema se procura no repetir el tema CREATE TABLE. En su lugar, se describen las diferencias entre las instrucciones CTAS y CREATE TABLE. Para obtener todos los detalles sobre CREATE TABLE, vea la instrucción [CREATE TABLE (Azure SQL Data Warehouse)](https://msdn.microsoft.com/library/mt203953/). 
+> Dado que CTAS se agrega a las funcionalidades para crear tablas, en este tema se procura no repetir el tema CREATE TABLE. En su lugar, se describen las diferencias entre las instrucciones CTAS y CREATE TABLE. Para obtener todos los detalles sobre CREATE TABLE, vea la instrucción [CREATE TABLE (Azure Synapse Analytics)](https://msdn.microsoft.com/library/mt203953/). 
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 <table_option> ::= 
     {   
-        CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+        CLUSTERED COLUMNSTORE INDEX --default for Synapse Analytics 
       | CLUSTERED COLUMNSTORE INDEX ORDER (column[,...n])
       | HEAP --default for Parallel Data Warehouse   
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) --default is ASC 
@@ -138,7 +138,7 @@ Para más información, vea [Notas generales](https://msdn.microsoft.com/library
 
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
 
-Se puede crear un índice de almacén de columnas agrupado y ordenado en columnas de cualquier tipo de datos que se admita en Azure SQL Data Warehouse, excepto en las columnas de cadena.  
+Se puede crear un índice de almacén de columnas agrupado y ordenado en columnas de cualquier tipo de datos que se admita en [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], excepto en columnas de cadena.  
 
 [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) no tiene ningún efecto en CTAS. Para lograr un comportamiento similar, use [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
  
@@ -167,7 +167,7 @@ Para evitar el movimiento de datos en las consultas posteriores, puede especific
 <a name="ctas-copy-table-bk"></a>
 
 ### <a name="a-use-ctas-to-copy-a-table"></a>A. Uso de CTAS para copiar una tabla 
-Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos
+Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Quizás uno de los usos más comunes de `CTAS` es crear una copia de una tabla para poder cambiar el DDL. Si, por ejemplo, creó inicialmente la tabla como `ROUND_ROBIN` y ahora quiere cambiarla a una tabla distribuida en una columna, cambiaría la columna de distribución con `CTAS`. `CTAS` también se puede usar para cambiar los tipos de particiones, indexación o columna.
 
@@ -239,7 +239,7 @@ DROP TABLE FactInternetSales_old;
 <a name="ctas-change-column-attributes-bk"></a>
 
 ### <a name="b-use-ctas-to-change-column-attributes"></a>B. Usar CTAS para cambiar los atributos de columna 
-Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos
+Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 En este ejemplo se usa CTAS para cambiar los tipos de datos, la nulabilidad y la intercalación de varias columnas en la tabla DimCustomer2.  
   
@@ -300,13 +300,13 @@ DROP TABLE DimCustomer2_old;
 <a name="ctas-change-distribution-method-bk"></a>
 
 ### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. Usar CTAS para cambiar el método de distribución de una tabla
-Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos
+Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 En este sencillo ejemplo se muestra cómo cambiar el método de distribución de una tabla. Para mostrar la mecánica de cómo se hace, cambia una tabla distribuida de hash a round robin y, después, cambia la tabla round robin de nuevo a distribuida de hash. La tabla final coincide con la tabla original. 
 
 En la mayoría de los casos no es necesario convertir una tabla distribuida de hash en una tabla round robin. A menudo, deberá cambiar una tabla round robin a una tabla distribuida de hash. Por ejemplo, es posible que cargue inicialmente una tabla nueva como round robin y, después, la mueva a una tabla distribuida de hash para obtener un mejor rendimiento de combinación.
 
-En este ejemplo se usa la base de datos de ejemplo AdventureWorksDW. Para cargar la versión de SQL Data Warehouse, vea [Cargar datos de ejemplo en SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/).
+En este ejemplo se usa la base de datos de ejemplo AdventureWorksDW. Para cargar la versión [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], vea [Carga de datos de ejemplo en [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/).
  
 ```sql
 -- DimSalesTerritory is hash-distributed.
@@ -350,7 +350,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 <a name="ctas-change-to-replicated-bk"></a>
 
 ### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>D. Usar CTAS para convertir una tabla en una tabla replicada  
-Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos 
+Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 En este ejemplo se convierten tablas round robin o distribuidas de hash en una tabla replicada. En este ejemplo en concreto, el método anterior de cambiar el tipo de distribución va un paso más allá.  Dado que DimSalesTerritory es una dimensión y es probable que sea una tabla menor, puede volver a crear la tabla como replicada para evitar el movimiento de datos al combinarla con otras tablas. 
 
@@ -374,7 +374,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>E. Usar CTAS para crear una tabla con menos columnas
-Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos 
+Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 En el ejemplo siguiente se crea una tabla distribuida round robin denominada `myTable (c, ln)`. La nueva tabla solo tiene dos columnas. Usa los alias de columna en la instrucción SELECT para los nombres de las columnas.  
   
@@ -396,7 +396,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 <a name="ctas-query-hint-bk"></a>
 
 ### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. Usar una sugerencia de consulta con CREATE TABLE AS SELECT (CTAS)  
-Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos
+Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 Esta consulta muestra la sintaxis básica para usar una sugerencia de combinación de consulta con la instrucción CTAS. Una vez enviada la consulta, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] aplica la estrategia de combinación hash al generar el plan de consulta para cada distribución individual. Para más información sobre la sugerencia de consulta de combinación hash, vea [Cláusula OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
@@ -419,7 +419,7 @@ OPTION ( HASH JOIN );
 <a name="ctas-azure-blob-storage-bk"></a>
 
 ### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. Usar CTAS para importar datos de Azure Blob Storage  
-Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos  
+Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 Para importar datos de una tabla externa, basta con que use CREATE TABLE AS SELECT para hacer una selección en la tabla externa. La sintaxis para seleccionar datos de una tabla externa en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] es igual que la sintaxis para seleccionar datos de una tabla normal.  
   
@@ -440,7 +440,7 @@ WITH (
 ;  
   
 --Use CREATE TABLE AS SELECT to import the Azure blob storage data into a new   
---SQL Data Warehouse table called ClickStreamData  
+--Synapse Analytics table called ClickStreamData  
 CREATE TABLE ClickStreamData   
 WITH  
   (  
@@ -501,7 +501,7 @@ Use CTAS para hallar soluciones temporales para algunas características no admi
 <a name="ctas-replace-select-into-bk"></a>
 
 ### <a name="i-use-ctas-instead-of-selectinto"></a>I. Usar CTAS en lugar de SELECT..EN  
-Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos
+Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 El código de SQL Server suele usar SELECT..INTO para rellenar una tabla con los resultados de una instrucción SELECT. Este es un ejemplo de una instrucción SELECT..INTO de SQL Server.
 
@@ -511,7 +511,7 @@ INTO    #tmp_fct
 FROM    [dbo].[FactInternetSales]
 ```
 
-Esta sintaxis no se admite en SQL Data Warehouse ni en el Almacenamiento de datos paralelos. En este ejemplo se muestra cómo reescribir la anterior instrucción SELECT..INTO como una instrucción CTAS. Puede elegir cualquiera de las opciones DISTRIBUTION que se describen en la sintaxis CTAS. En este ejemplo se usa el método de distribución ROUND_ROBIN.
+Esta sintaxis no se admite en [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] ni en Almacenamiento de datos paralelos. En este ejemplo se muestra cómo reescribir la anterior instrucción SELECT..INTO como una instrucción CTAS. Puede elegir cualquiera de las opciones DISTRIBUTION que se describen en la sintaxis CTAS. En este ejemplo se usa el método de distribución ROUND_ROBIN.
 
 ```sql
 CREATE TABLE #tmp_fct
@@ -528,7 +528,7 @@ FROM    [dbo].[FactInternetSales]
 <a name="ctas-replace-implicit-joins-bk"></a>
 
 ### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. Usar CTAS y combinaciones implícitas para reemplazar combinaciones ANSI en la cláusula `FROM` de una instrucción `UPDATE`  
-Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos  
+Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 Es posible que se encuentre con una actualización compleja que combina más de dos tablas mediante la sintaxis de combinación de ANSI para llevar a cabo UPDATE o DELETE.
 
@@ -572,7 +572,7 @@ AND [acs].[CalendarYear]                = [fis].[CalendarYear]
 ;
 ```
 
-Dado que SQL Data Warehouse no admite combinaciones ANSI en la cláusula `FROM` de una instrucción `UPDATE`, no puede usar este código de SQL Server sin cambiarlo ligeramente.
+Dado que [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] no admite combinaciones ANSI en la cláusula `FROM` de una instrucción `UPDATE`, no se puede usar este código de SQL Server sin cambiarlo ligeramente.
 
 Puede usar una combinación de una instrucción `CTAS` y una combinación implícita para reemplazar este código:
 
@@ -611,9 +611,9 @@ DROP TABLE CTAS_acs
 <a name="ctas-replace-ansi-joins-bk"></a>
 
 ### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. Usar CTAS para especificar qué datos se deben conservar en lugar de usar combinaciones ANSI en la cláusula FROM de una instrucción DELETE  
-Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos  
+Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-A veces, lo más recomendable para eliminar datos es usar `CTAS`. En lugar de eliminar los datos, simplemente seleccione los datos que quiere conservar. Esto es especialmente aconsejable para las instrucciones `DELETE` que usan sintaxis de combinación ANSI, ya que SQL Data Warehouse no admite combinaciones ANSI en la cláusula `FROM` de una instrucción `DELETE`.
+A veces, lo más recomendable para eliminar datos es usar `CTAS`. En lugar de eliminar los datos, simplemente seleccione los datos que quiere conservar. Esto es especialmente aconsejable en el caso de las instrucciones `DELETE` que usan sintaxis de combinación ANSI, ya que [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] no admite combinaciones ANSI en la cláusula `FROM` de una instrucción `DELETE`.
 
 A continuación se muestra un ejemplo de una instrucción DELETE convertida:
 
@@ -639,7 +639,7 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 <a name="ctas-simplify-merge-bk"></a>
 
 ### <a name="l-use-ctas-to-simplify-merge-statements"></a>L. Usar CTAS para simplificar las instrucciones de fusión  
-Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos  
+Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 Las instrucciones de fusión se pueden sustituir, al menos en parte, mediante `CTAS`. Es posible consolidar `INSERT` y `UPDATE` en una única instrucción. Los registros eliminados deben cerrarse en una segunda instrucción.
 
@@ -678,9 +678,9 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 <a name="ctas-data-type-and-nullability-bk"></a>
 
 ### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. establezca explícitamente el tipo de datos y la nulabilidad de salida  
-Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos  
+Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-Al migrar código de SQL Server a SQL Data Warehouse, puede encontrarse con este tipo de patrón de codificación:
+Al migrar código de SQL Server a [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], puede encontrarse con este tipo de patrón de codificación:
 
 ```sql
 DECLARE @d DECIMAL(7,2) = 85.455
@@ -844,7 +844,7 @@ OPTION (MAXDOP 1);
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [CREATE TABLE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  

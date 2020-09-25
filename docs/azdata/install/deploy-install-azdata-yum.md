@@ -1,7 +1,7 @@
 ---
 title: Instalación de azdata con yum
-titleSuffix: SQL Server big data clusters
-description: Obtenga información sobre cómo instalar la herramienta azdata para instalar y administrar Clústeres de macrodatos con yum.
+titleSuffix: ''
+description: Obtenga información sobre cómo instalar la herramienta azdata con yum.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f343d4d6b46c581d0f633aa2c7eb79ef9b5c536c
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: eae81ccee65899335b161b3a32fbb260d0a8517a
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89734101"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914896"
 ---
 # <a name="install-azdata-with-yum"></a>Instalación de `azdata` con yum
 
@@ -41,13 +41,13 @@ Para las distribuciones de Linux con `yum`, hay un paquete para `azdata-cli`. El
    Para una ejecución de cliente RHEL 7:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/prod.repo
    ```
   
    Para una ejecución de cliente RHEL 8:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```
 
 1. Realice la instalación con el comando `yum install`.
@@ -88,3 +88,5 @@ sudo yum update azdata-cli
 ## <a name="next-steps"></a>Pasos siguientes
 
 Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md) para obtener más información sobre los clústeres de macrodatos.
+
+Use azdata con [servicios de datos habilitados para Azure Arc](/azure/azure-arc/data/).

@@ -1,31 +1,33 @@
 ---
 title: Referencia de azdata bdc
 titleSuffix: SQL Server big data clusters
-description: Use este artículo de referencia para entender los comandos SQL en la herramienta azdata, en particular los distintos comandos bdc.
+description: Artículo de referencia sobre los comandos de azdata bdc.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dee94bc76f1a59940a753eec6944ccdab8bfc943
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: f3b7d4bd76e1b988fa9481fad18c4573c5b6a13b
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733954"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914724"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Se aplica a `azdata`
 
-En el artículo siguiente se proporciona una referencia de los comandos `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
+En el siguiente artículo se proporciona una referencia de los comandos **sql** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos:
-| Comando | Descripción |
+## <a name="commands"></a>Comandos
+
+|Comando|Descripción|
 | --- | --- |
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Los comandos de Spark permiten al usuario interactuar con el sistema de Spark mediante la creación y administración de sesiones, instrucciones y lotes.
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | El módulo HDFS proporciona comandos para acceder a un sistema de archivos HDFS.
 [azdata bdc create](#azdata-bdc-create) | Crea el clúster de macrodatos.
 [azdata bdc delete](#azdata-bdc-delete) | Elimina el clúster de macrodatos.
 [azdata bdc upgrade](#azdata-bdc-upgrade) | Actualiza las imágenes implementadas en cada contenedor en el clúster de macrodatos de SQL Server.
@@ -39,7 +41,6 @@ En el artículo siguiente se proporciona una referencia de los comandos `sql` de
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Comandos de servicio de Spark.
 [azdata bdc gateway](reference-azdata-bdc-gateway.md) | Comandos de servicio de la puerta de enlace.
 [azdata bdc app](reference-azdata-bdc-app.md) | Comandos de servicio de la aplicación.
-[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | El módulo HDFS proporciona comandos para acceder a un sistema de archivos HDFS.
 ## <a name="azdata-bdc-create"></a>azdata bdc create
 Crea un clúster de macrodatos de SQL Server. Es necesario que Kubernetes esté configurado en el sistema junto con las siguientes variables de entorno: ['AZDATA_USERNAME', 'AZDATA_PASSWORD'].
 ```bash
@@ -73,7 +74,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 Nombre del clúster de macrodatos, se usa para espacios de nombres de kubernetes.
 #### `--config-profile -c`
-Perfil de configuración del clúster de macrodatos, que se usa para implementar el clúster: ['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test'].
+Perfil de configuración del clúster de macrodatos, usado para implementar el clúster: ["openshift-prod", "aks-dev-test-ha", "aro-dev-test-ha", "aks-dev-test", "kubeadm-prod", "aro-dev-test", "openshift-dev-test", "kubeadm-dev-test"]
 #### `--accept-eula -a`
 ¿Acepta los términos de licencia? [sí/no]. Si no quiere usar este argumento, puede establecer la variable de entorno ACCEPT_EULA en “yes”. Los términos de licencia de azdata se pueden ver en https://aka.ms/eula-azdata-en.
 #### `--node-label -l`
@@ -174,4 +175,7 @@ Aumente el nivel de detalle de registro. Use --debug para obtener registros de d
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta `azdata`, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](../install/deploy-install-azdata.md).
+Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md). 
+
+Para más información sobre cómo instalar la herramienta **azdata**, consulte [Instalación de azdata](..\install\deploy-install-azdata.md).
+

@@ -13,18 +13,24 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: da1baba9e50007358bd7a0f4d550282ee130e4a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b6c05db7b6022aec3b7f6123f0a070f238560db8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491478"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989895"
 ---
 # <a name="accelerated-database-recovery"></a>Recuperación acelerada de bases de datos.
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-La recuperación de bases de datos acelerada (ADR) mejora considerablemente la disponibilidad de la base de datos, especialmente en presencia de transacciones de larga duración, al volver a diseñar el proceso de recuperación del motor de base de datos de SQL. ADR es nuevo para SQL Server 2019 y también está disponible para bases de datos únicas y bases de datos agrupadas en Azure SQL Database, y en las bases de datos de Azure SQL Data Warehouse (actualmente en versión preliminar pública). Las principales ventajas de ADR son:
+La recuperación de bases de datos acelerada (ADR) mejora considerablemente la disponibilidad de la base de datos, especialmente en presencia de transacciones de larga duración, al volver a diseñar el proceso de recuperación del motor de base de datos de SQL. ADR es nuevo en SQL Server 2019. 
+
+ADR también está disponible para las bases de datos en Azure SQL Database, Azure SQL Managed Instance y Azure Synapse SQL. ADR está habilitado de forma predeterminada en SQL Database y SQL Managed Instance y no se puede deshabilitar. 
+
+## <a name="overview"></a>Información general
+
+Las principales ventajas de ADR son:
 
 - **Recuperación de base de datos rápida y coherente**
 

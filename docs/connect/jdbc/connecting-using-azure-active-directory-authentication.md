@@ -2,7 +2,7 @@
 title: Conexión mediante autenticación de Azure Active Directory
 description: Obtenga información sobre cómo desarrollar aplicaciones Java que usan la característica de autenticación de Azure Active Directory con Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
-ms.date: 06/17/2020
+ms.date: 09/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae19b292788af43226de12a342e870768ad2ac26
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899015"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117135"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Conexión mediante autenticación de Azure Active Directory
 
@@ -33,7 +33,7 @@ Las propiedades de conexión para admitir la autenticación de Azure Active Dire
     * **ActiveDirectoryIntegrated**
         * Compatible desde la versión **v6.0** del controlador, `authentication=ActiveDirectoryIntegrated` se puede usar para conectarse con Azure SQL Database/Data Warehouse mediante la autenticación integrada. Para usar este modo de autenticación, debe federar los Servicios de federación de Active Directory (ADFS) locales con Azure Active Directory en la nube. Una vez que se haya configurado, puede conectarse si agrega la biblioteca nativa "mssql-jdbc_auth-\<version>-\<arch>.dll" a la ruta de acceso de la clase de aplicación del sistema operativo Windows, o bien si configura un vale Kerberos para la compatibilidad con la autenticación multiplataforma. Podrá obtener acceso a Azure SQL Database o SQL Data Warehouse sin que se le soliciten credenciales al iniciar sesión en una máquina unida al dominio.
     * **ActiveDirectoryPassword**
-        * Compatible desde la versión **v6.0** del controlador, `authentication=ActiveDirectoryPassword` se puede usar para conectarse con Azure SQL Database/Data Warehouse mediante un nombre de entidad de seguridad de AD y una contraseña.
+        * Compatible desde la versión **v6.0** del controlador, `authentication=ActiveDirectoryPassword` se puede usar para conectarse con Azure SQL Database o Data Warehouse mediante un nombre de usuario de Azure AD y una contraseña.
     * **SqlPassword**
         * Use `authentication=SqlPassword` para conectarse a un servidor SQL Server mediante las propiedades userName/user y password.
     * **NotSpecified**
@@ -113,7 +113,7 @@ Para más información, vea [Establecimiento del vale Kerberos en Windows, Linux
 > [!NOTE]
 >  Si usa una versión anterior del controlador, compruebe este [vínculo](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) para las dependencias correspondientes necesarias para usar este modo de autenticación. 
 
-En el siguiente ejemplo se muestra cómo usar el modo `authentication=ActiveDirectoryIntegrated`. Ejecute este ejemplo en una máquina unida al dominio que se federa con Azure Active Directory. Un usuario de la base de datos independiente que represente su entidad de seguridad de Azure AD, o bien uno de los grupos a los que pertenece, debe existir en la base de datos y debe contar con el permiso CONNECT. 
+En el siguiente ejemplo se muestra cómo usar el modo `authentication=ActiveDirectoryIntegrated`. Ejecute este ejemplo en una máquina unida al dominio que se federa con Azure Active Directory. En la base de datos debe haber un usuario de base de datos independiente que represente a su usuario de Azure AD o a uno de los grupos a los que pertenece, y debe tener el permiso CONNECT. 
 
 Antes de compilar y ejecutar el ejemplo, en el equipo cliente (donde desea ejecutar el ejemplo), descargue la [biblioteca azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) y sus dependencias, e inclúyalas en la ruta de acceso de compilación de Java.
 

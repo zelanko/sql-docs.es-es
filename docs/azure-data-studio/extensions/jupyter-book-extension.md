@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: af6cb013109d5d871c709f72cf5a564ae69940cb
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: a781affee2db40dbd7636c25712ca622c881650e
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288177"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226842"
 ---
 # <a name="create-a-jupyter-book-extension"></a>Creación de una extensión de libro de Jupyter
 
@@ -176,7 +176,7 @@ Vuelva a abrir la paleta de comandos y busque el comando que ha registrado, **In
 
 ¡Enhorabuena! Ha creado la primera extensión de libro de Jupyter y ya puede enviarla. Para obtener más información sobre los libros de Jupyter, vea [Libros con Jupyter](https://jupyterbook.org/intro.html).
 
-## <a name="publish-your-extension-to-the-marketplace"></a>Publicación de la extensión en marketplace
+## <a name="publish-your-extension-to-the-marketplace"></a>Publicación de la extensión en Marketplace
 
 El marketplace de extensiones de Azure Data Studio todavía no se ha implementado de forma completa. Para publicar, hospede la extensión VSIX en algún lugar (por ejemplo, una página de versión de GitHub) y envíe una solicitud de incorporación de cambios que actualice [este archivo JSON](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) con la información de la extensión.
 

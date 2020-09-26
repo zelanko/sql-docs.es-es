@@ -1,7 +1,7 @@
 ---
 title: Cuadernos con kernel de SQL en Azure Data Studio
 description: En este tutorial se muestra cómo crear y ejecutar un cuaderno de SQL Server.
-ms.topic: tutorial
+ms.topic: how-to
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 author: markingmyname
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: mikeray, alayu
 ms.custom: ''
 ms.date: 07/01/2020
-ms.openlocfilehash: d235b4acf40a2711d5935c34f72c5e97996fbc5c
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: cd71a160036bdcb5768e7a2ca51529989f733eeb
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137072"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364212"
 ---
 # <a name="create-and-run-a-sql-server-notebook"></a>Creación y ejecución de un cuaderno de SQL Server
 

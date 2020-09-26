@@ -3,18 +3,18 @@ title: Creación y personalización de métodos abreviados de teclado
 description: Obtenga información sobre cómo ver, editar y crear métodos abreviados de teclado en Azure Data Studio mediante una funcionalidad basada en la incluida en Visual Studio Code.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: how-to
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: e8f5e60d0a8f5c578e27dfb283459882d58a0195
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: fa4b5bc766b6d9bf269f08a1f00e2ef4d8c52b0e
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746125"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91363973"
 ---
 # <a name="keyboard-shortcuts-in-azure-data-studio"></a>Métodos abreviados de teclado de Azure Data Studio
 

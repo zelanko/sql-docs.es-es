@@ -9,17 +9,17 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6882700208e165464261f236cadd00b30503b81f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761909"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379583"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configuración de Windows Server Update Services (WSUS) en Analytics Platform System
 Estas instrucciones le guiarán por los pasos necesarios para usar el Asistente para configuración de Windows Server Update Services (WSUS) para configurar WSUS para el sistema de plataforma de análisis. Debe configurar WSUS para poder aplicar actualizaciones de software al dispositivo. WSUS ya está instalado en la máquina virtual de VMM del dispositivo.  
   
-Para obtener más información acerca de la configuración de WSUS, consulte la [Guía de instalación paso a paso de WSUS](https://go.microsoft.com/fwlink/?LinkId=202417) en el sitio web de WSUS. Después de configurar WSUS, consulte [Descargar y aplicar actualizaciones de Microsoft &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) para iniciar una actualización.  
+Para obtener más información acerca de la configuración de WSUS, consulte la [Guía de instalación paso a paso de WSUS](/windows/deployment/deploy-whats-new) en el sitio web de WSUS. Después de configurar WSUS, consulte [Descargar y aplicar actualizaciones de Microsoft &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) para iniciar una actualización.  
   
 > [!WARNING]  
 > Si se producen errores durante este proceso de configuración, detenga y póngase en contacto con el soporte técnico para obtener ayuda. No ignore los errores ni continúe en el proceso después de que se reciban los errores.  
@@ -61,7 +61,7 @@ Para configurar WSUS, debe:
   
         ![Menú del panel del Administrador del servidor](./media/configure-windows-server-update-services-wsus/WSUS_Wiz0.png "WSUS_Wiz0")  
   
-    4.  Si es la primera vez que ejecuta el Asistente de WSUS, es posible que se le pida que configure un directorio para almacenar las actualizaciones. `C:\wsus`es una ubicación adecuada; sin embargo, puede proporcionar una ruta de acceso diferente.  
+    4.  Si es la primera vez que ejecuta el Asistente de WSUS, es posible que se le pida que configure un directorio para almacenar las actualizaciones. `C:\wsus` es una ubicación adecuada; sin embargo, puede proporcionar una ruta de acceso diferente.  
   
         ![WSUS - Ruta de acceso](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
   
@@ -83,7 +83,7 @@ Para configurar WSUS, debe:
   
     #### <a name="to-update-by-using-microsoft-update"></a>Para actualizar mediante Microsoft Update  
   
-    1.  Si decide sincronizar con Microsoft Update, no es necesario realizar ningún cambio en la página **elegir servidor que precede** en la cadena. Haga clic en **Next**.  
+    1.  Si decide sincronizar con Microsoft Update, no es necesario realizar ningún cambio en la página **elegir servidor que precede** en la cadena. Haga clic en **Siguiente**.  
   
         ![WSUS - Sincronizar servidor que precede en la cadena](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -170,13 +170,13 @@ Para configurar WSUS, debe:
   
 12. Finish. (Finalizar)  
   
-    Haga clic en **Finalizar**.  
+    Haga clic en **Finalizar**  
   
 ## <a name="group-the-appliance-servers-in-wsus"></a><a name="bkmk_WSUSGroup"></a>Agrupar los servidores de la aplicación en WSUS  
 Después de configurar WSUS para el sistema de plataforma de análisis, el siguiente paso es agrupar los servidores de la aplicación. Al agregar todos los servidores de dispositivo a un grupo, WSUS podrá aplicar actualizaciones de software a todos los servidores del dispositivo.  
   
 > [!NOTE]  
-> El sistema WSUS está diseñado para ejecutarse de forma asincrónica. La actividad de inicio no siempre produce una actualización inmediata. Por lo tanto, es posible que tenga que esperar un rato hasta que los equipos estén visibles en los cuadros de diálogo de WSUS. La ejecución `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` del comando que se describe al final del tema [descarga y aplicación de actualizaciones de Microsoft &#40;analytics Platform System&#41;](download-and-apply-microsoft-updates.md) puede ayudarle a actualizar los cuadros de diálogo.  
+> El sistema WSUS está diseñado para ejecutarse de forma asincrónica. La actividad de inicio no siempre produce una actualización inmediata. Por lo tanto, es posible que tenga que esperar un rato hasta que los equipos estén visibles en los cuadros de diálogo de WSUS. La ejecución del `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` comando que se describe al final del tema [descarga y aplicación de actualizaciones de Microsoft &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) puede ayudarle a actualizar los cuadros de diálogo.  
   
 #### <a name="to-group-the-appliance-servers"></a>Para agrupar los servidores de la aplicación  
   
@@ -203,4 +203,3 @@ Después de configurar WSUS para el sistema de plataforma de análisis, el sigui
 6.  Seleccione el nuevo grupo de equipos, cambie su **Estado** a **cualquiera**y, a continuación, haga clic en **Actualizar**. Ahora todos los equipos deben estar asignados a este grupo y aparecer en el panel derecho. Por lo general, es seguro continuar cuando los nodos muestran advertencias, como que **este nodo todavía no ha notificado el estado**.  
   
     ![Cambie el estado a cualquiera y haga clic en actualizar.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeStatusAnyRefresh.png "SQL_Server_PDW_WSUSChangeStatusAnyRefresh")  
-  

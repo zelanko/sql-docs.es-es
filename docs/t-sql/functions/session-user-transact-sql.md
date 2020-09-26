@@ -24,12 +24,12 @@ ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b5c75b95d32905e6cd2fa7ff30cb0440cca0dd9
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 4de45bdd147626832f932f5bd619c3a89860d68a
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688821"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379420"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "90688821"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 SESSION_USER  
 ```  
   
@@ -59,7 +59,7 @@ SESSION_USER
 ### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>A. Utilizar SESSION_USER para devolver el nombre de usuario de la sesión actual  
  En el siguiente ejemplo se declara una variable como `nchar`, se le asigna el valor actual de `SESSION_USER` y, a continuación, se imprime la variable con una descripción de texto.  
   
-```  
+```sql  
 DECLARE @session_usr NCHAR(30);  
 SET @session_usr = SESSION_USER;  
 SELECT 'This session''s current user is: '+ @session_usr;  
@@ -78,7 +78,7 @@ This session's current user is: Surya
 ### <a name="b-using-session_user-with-default-constraints"></a>B. Utilizar SESSION_USER con restricciones DEFAULT  
  En el siguiente ejemplo se crea una tabla que utiliza `SESSION_USER` como una restricción `DEFAULT` para el nombre de la persona que registra la recepción de un envío.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE deliveries3  
@@ -95,7 +95,7 @@ GO
   
  Los registros agregados a la tabla se mostrarán con el nombre de usuario del usuario actual. En este ejemplo, `Wanida`, `Sylvester` y `Alejandro` comprueban la recepción de los envíos. Se puede simular si se cambia el contexto del usuario con `EXECUTE AS`.  
   
-```  
+```sql
 EXECUTE AS USER = 'Wanida'  
 INSERT deliveries3 (cust_id)  
 VALUES (7510);  
@@ -117,7 +117,7 @@ GO
   
  La siguiente consulta selecciona toda la información de la tabla `deliveries3`.  
   
-```  
+```sql
 SELECT order_id AS 'Order #', cust_id AS 'Customer #',   
    delivery_date AS 'When Delivered', received_shipment   
    AS 'Received By'  
@@ -145,7 +145,7 @@ Order #   Customer #  When Delivered       Received By
 ### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C. Usar SESSION_USER para devolver el nombre de usuario de la sesión actual  
  En el siguiente ejemplo se devuelve la sesión de usuario de la sesión actual.  
   
-```  
+```sql
 SELECT SESSION_USER;  
 ```  
   

@@ -9,18 +9,18 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4325dfa9c16edba12c2bba694b47c1b0875c7c6f
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 0dd6f92c728962b78c20e3c4fef956f9182206c7
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "74400315"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379610"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Servicio de software en Analytics Platform System
 En esta sección se resumen los requisitos de servicio de software para los dispositivos de sistema de plataforma de análisis, incluidas las revisiones de WSUS y análisis de plataforma de la plataforma.  
   
 ## <a name="software-servicing-basics"></a><a name="Basics"></a>Aspectos básicos del servicio de software  
-**WSUS:** El dispositivo de análisis de plataforma de Analytics debe configurarse para recibir actualizaciones de Windows Server Update Services (WSUS). Estas actualizaciones incluyen cambios importantes en el software del dispositivo. Una vez configuradas, muchas actualizaciones se instalarán automáticamente y no requieren la administración práctica. Normalmente, las actualizaciones de WSUS se configuran durante el paso [configurar Windows Server Update Services &#40;wsus&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md) realizada durante la configuración de la nueva aplicación. Si no es así, este paso de configuración se puede realizar más adelante. Para obtener información sobre WSUS, consulte la [Guía del sitio web de WSUS](https://go.microsoft.com/fwlink/?LinkId=202417).  
+**WSUS:** El dispositivo de análisis de plataforma de Analytics debe configurarse para recibir actualizaciones de Windows Server Update Services (WSUS). Estas actualizaciones incluyen cambios importantes en el software del dispositivo. Una vez configuradas, muchas actualizaciones se instalarán automáticamente y no requieren la administración práctica. Normalmente, las actualizaciones de WSUS se configuran durante el paso [configurar Windows Server Update Services &#40;wsus&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md) realizada durante la configuración de la nueva aplicación. Si no es así, este paso de configuración se puede realizar más adelante. Para obtener información sobre WSUS, consulte la [Guía del sitio web de WSUS](/windows/deployment/deploy-whats-new).  
   
 **Revisiones:** Además, es posible que tenga que aplicar revisiones de Analytics Platform System. Una *revisión* es una actualización de software que se crea para un cliente específico con el fin de resolver un problema con el software de sistema de la plataforma de análisis. Cada revisión es un archivo ejecutable que instala la corrección para el problema específico del cliente. Cada revisión también contiene una acumulación de todas las actualizaciones de software publicadas anteriormente para Windows, SQL Server y Analytics Platform System. Si necesita instalar una revisión, el soporte técnico de Microsoft le proporcionará la revisión y las instrucciones.  
   
@@ -41,4 +41,3 @@ En los temas siguientes se describe cómo administrar el servicio de mantenimien
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-  

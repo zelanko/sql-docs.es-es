@@ -21,12 +21,12 @@ ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c19d7f874b17009d28ce3c41a1fb468454cd1fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2c30468f62758e0483b339baf436a788c2cdcabf
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422649"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380652"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88422649"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 REVERSE ( string_expression )  
 ```  
   
@@ -59,7 +59,7 @@ REVERSE ( string_expression )
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se devuelven los nombres de todos los contactos con los caracteres invertidos. En este ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 SELECT FirstName, REVERSE(FirstName) AS Reverse  
 FROM Person.Person  
 WHERE BusinessEntityID < 5  
@@ -82,8 +82,8 @@ Terri          irreT
   
  En el ejemplo siguiente se invierten los caracteres de una variable.  
   
-```  
-DECLARE @myvar varchar(10);  
+```sql
+DECLARE @myvar VARCHAR(10);  
 SET @myvar = 'sdrawkcaB';  
 SELECT REVERSE(@myvar) AS Reversed ;  
 GO  
@@ -91,7 +91,7 @@ GO
   
  En el ejemplo siguiente se realiza una conversión implícita de un tipo de datos **int** a un tipo de datos **varchar** y luego se invierte el resultado.  
   
-```  
+```sql
 SELECT REVERSE(1234) AS Reversed ;  
 GO  
 ```  
@@ -99,7 +99,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En este ejemplo se devuelven los nombres de todas las bases de datos y los nombres con los caracteres invertidos.  
   
-```  
+```sql
 SELECT name, REVERSE(name) FROM sys.databases;  
 GO  
 ```  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a9a0566b1601696dd63579f90b75cb81b6f8709c
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: cbf0c127a47fc18f3b2a56dd303ac60565689ddb
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646311"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379760"
 ---
 # <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY (Transact-SQL)
 
@@ -54,14 +54,14 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
  *security_policy_name*  
  El nombre de la directiva de seguridad. Los nombres de directivas de seguridad deben seguir las reglas de los identificadores y deben ser únicos en la base de datos y para su esquema.  
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY SECURITY POLICY y el permiso ALTER en el esquema.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```sql  
 DROP SECURITY POLICY secPolicy;  
 ```  
   

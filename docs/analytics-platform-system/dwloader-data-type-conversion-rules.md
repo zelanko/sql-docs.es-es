@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: fe5d8790b5adb8477c994d265f458cdb1ceda61a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1ce48c3352ffbd0a1c112f7fd60db2f0d85c6e6
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401178"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379564"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Reglas de conversión de tipos de datos para dwloader-almacenamiento de datos paralelos
 En este tema se describen los formatos de datos de entrada y las conversiones de tipos de datos implícitos que admite el [cargador de línea de comandos de dwloader](dwloader.md) cuando carga datos en PDW. Las conversiones de datos implícitas se producen cuando los datos de entrada no coinciden con el tipo de datos de la PDW de SQL Server tabla de destino. Use esta información al diseñar el proceso de carga para asegurarse de que los datos se cargarán correctamente en PDW de SQL Server.  
@@ -129,7 +129,7 @@ En la tabla siguiente se definen el formato y las reglas predeterminadas para ca
 |Literal decimal|fffnn.fffn<br /><br />Ejemplo: 1234,5678|Un valor mayor que 1 o menor que 0 se convierte en 1. Por ejemplo, los valores 123,45 y-123,45 se convierten en 1.|  
   
 ### <a name="decimal-data-type"></a>decimal (tipo de datos)  
-En la tabla siguiente se definen las reglas para cargar valores literales en una columna de tipo **decimal** (*p, s*). Las reglas de conversión de datos son las mismas que para SQL Server. Para obtener más información, vea [conversión de tipos de datos (motor de base de datos)](https://go.microsoft.com/fwlink/?LinkId=202128) en MSDN.  
+En la tabla siguiente se definen las reglas para cargar valores literales en una columna de tipo **decimal** (*p, s*). Las reglas de conversión de datos son las mismas que para SQL Server. Para obtener más información, vea [conversión de tipos de datos (motor de base de datos)](/previous-versions/sql/sql-server-2008-r2/ms191530(v=sql.105)) en MSDN.  
   
 |Tipo de datos de entrada|Ejemplos de datos de entrada|  
 |-------------------|-----------------------|  
@@ -185,4 +185,3 @@ En la tabla siguiente se definen el formato y las reglas predeterminadas para ca
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 
 -->
-  

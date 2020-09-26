@@ -20,12 +20,12 @@ ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36f8d4e87ad6e3b92f71ae45dab6e7020c9d8c72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 40422b7ea89dd6a62ea3f59f3d08d8eb48107a98
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363051"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380797"
 ---
 # <a name="percent_rank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,10 +34,9 @@ ms.locfileid: "88363051"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 PERCENT_RANK( )  
     OVER ( [ partition_by_clause ] order_by_clause )  
-  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -57,7 +56,7 @@ PERCENT_RANK( )
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa la función CUME_DIST para calcular el percentil de salario de cada empleado dentro de un departamento determinado. El valor devuelto por la función CUME_DIST representa el porcentaje de empleados que tienen un salario menor o igual que el empleado actual del mismo departamento. La función PERCENT_RANK calcula el rango de salario del empleado dentro de un departamento como un porcentaje. La cláusula PARTITION BY se especifica para crear particiones de las filas del conjunto de resultados por departamento. La cláusula ORDER BY de la cláusula OVER ordena las filas de cada partición. La cláusula ORDER BY de la instrucción SELECT ordena las filas del conjunto de resultados completo.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Department, LastName, Rate,   

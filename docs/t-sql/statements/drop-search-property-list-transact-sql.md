@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16183df11f450e0bcef6425f7ad20a514971ad8f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: de8f55242f3727eb1491b9a89e9bf7d349cef860
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540630"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380032"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "89540630"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
+```syntaxsql
 DROP SEARCH PROPERTY LIST property_list_name  
 ;  
 ```  
@@ -49,7 +48,7 @@ DROP SEARCH PROPERTY LIST property_list_name
   
  Para ver los nombres de las listas de propiedades existentes, use la vista de catálogo [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) de la siguiente manera:  
   
-```  
+```sql  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
@@ -77,7 +76,7 @@ SELECT name FROM sys.registered_search_property_lists;
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se quita la lista de propiedades `JobCandidateProperties` de la base de datos `AdventureWorks2012`.  
   
-```  
+```sql  
 DROP SEARCH PROPERTY LIST JobCandidateProperties;  
 GO  
 ```  

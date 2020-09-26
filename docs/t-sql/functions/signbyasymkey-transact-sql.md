@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e39fe276442feec54f7dc87bba65fde0381c82b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b90807f116b115e3e4756791d821ea9bad85f14e
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362611"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379000"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "88362611"
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
-  
 SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )  
 ```  
   
@@ -66,12 +65,12 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una tabla, `SignedData04`, en la que se almacenará texto simple y su firma. A continuación se inserta un registro en la tabla, firmado con la clave asimétrica `PrimeKey`, que se descifra primero con la contraseña `'pGFD4bb925DGvbd2439587y'`.  
   
-```  
+```sql  
 -- Create a table in which to store the data  
-CREATE TABLE [SignedData04](Description nvarchar(max), Data nvarchar(max), DataSignature varbinary(8000));  
+CREATE TABLE [SignedData04](Description NVARCHAR(max), Data NVARCHAR(max), DataSignature VARBINARY(8000));  
 GO  
 -- Store data together with its signature  
-DECLARE @clear_text_data nvarchar(max);  
+DECLARE @clear_text_data NVARCHAR(max);  
 set @clear_text_data = N'Important numbers 2, 3, 5, 7, 11, 13, 17,   
       19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79,  
       83, 89, 97';  

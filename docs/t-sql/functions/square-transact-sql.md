@@ -20,12 +20,12 @@ ms.assetid: 007b6b12-da86-4229-8f5c-fdd4fa839f5f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 342576d4010f068c397df70db08ce209ef07a56d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c50317300611ecb805835283cf0bd0a7a01d31b1
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88309061"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379900"
 ---
 # <a name="square-transact-sql"></a>SQUARE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88309061"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 SQUARE ( float_expression )  
 ```  
   
@@ -52,8 +52,8 @@ SQUARE ( float_expression )
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se devuelve el volumen de un cilindro de `1` pulgada de radio y `5` pulgadas de alto.  
   
-```  
-DECLARE @h float, @r float;  
+```sql  
+DECLARE @h FLOAT, @r FLOAT;  
 SET @h = 5;  
 SET @r = 1;  
 SELECT PI()* SQUARE(@r)* @h AS 'Cyl Vol';  
@@ -70,13 +70,13 @@ Cyl Vol
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el siguiente ejemplo se devuelve el cuadrado de cada valor de la columna `volume` de la tabla `containers`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 CREATE TABLE Containers (  
-    ID int NOT NULL,  
-    Name varchar(20),  
-    Volume float(24));  
+    ID INT NOT NULL,  
+    Name VARCHAR(20),  
+    Volume FLOAT(24));  
   
 INSERT INTO Containers VALUES (1, 'Cylinder', '125.22');  
 INSERT INTO Containers VALUES (2, 'Cube', '23.98');  

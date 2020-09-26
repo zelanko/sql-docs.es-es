@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 433ff155da65471abe8b3ebde3df437b0a3f55ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2524b2e828615ee1e413f36bd77cd8ebc3fa8b77
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362061"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380565"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88362061"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
+```syntaxsql
 VerifySignedByCert( Cert_ID , signed_data , signature )  
 ```  
   
@@ -73,7 +72,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 ### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>A. Comprobar que los datos firmados no se han manipulado  
  En el siguiente ejemplo se comprueba si la información en `Signed_Data` ha cambiado desde que se firmó con el certificado denominado `Shipping04`. La firma se almacena en `DataSignature`. El certificado, `Shipping04`, se pasa a `Cert_ID`, que devuelve el identificador del certificado en la base de datos. Si `VerifySignedByCert` devuelve 1, la firma es correcta. Si `VerifySignedByCert` devuelve 0, los datos de `Signed_Data` no son los datos que se usaron para generar `DataSignature`. En este caso, `Signed_Data` se ha cambiado desde que se firmó o `Signed_Data` se firmó con otro certificado.  
   
-```  
+```sql
 SELECT Data, VerifySignedByCert( Cert_Id( 'Shipping04' ),  
     Signed_Data, DataSignature ) AS IsSignatureValid  
 FROM [AdventureWorks2012].[SignedData04]   
@@ -84,7 +83,7 @@ GO
 ### <a name="b-returning-only-records-that-have-a-valid-signature"></a>B. Devolver solo los registros que tienen una firma válida  
  Esta consulta solo devuelve los registros que no han cambiado desde que se firmaron con el certificado `Shipping04`.  
   
-```  
+```sql
 SELECT Data FROM [AdventureWorks2012].[SignedData04]   
 WHERE VerifySignedByCert( Cert_Id( 'Shipping04' ), Data,   
     DataSignature ) = 1   

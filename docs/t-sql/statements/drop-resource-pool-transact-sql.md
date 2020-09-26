@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5554ed7ae2e741ebd2138ce8faae0f441f5d3b56
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c6545e1b06f2bcfac792868ec8c18bfde0da56f8
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540699"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380322"
 ---
 # <a name="drop-resource-pool-transact-sql"></a>DROP RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "89540699"
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
-  
 DROP RESOURCE POOL pool_name  
 [ ; ]  
 ```  
@@ -59,7 +58,7 @@ DROP RESOURCE POOL pool_name
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se quita el grupo de recursos de servidor denominado `big_pool`.  
   
-```  
+```sql  
 DROP RESOURCE POOL big_pool;  
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  

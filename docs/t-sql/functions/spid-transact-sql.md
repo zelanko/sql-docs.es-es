@@ -25,12 +25,12 @@ ms.assetid: df955d32-8194-438e-abee-387eebebcbb7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 465398c82d3720b3af19750aaa8c4cefeaa09665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88cdc4c31f94e4f09f73c37993005acb80e5942b
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422679"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379916"
 ---
 # <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88422679"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 @@SPID  
 ```  
   
@@ -56,7 +56,7 @@ ms.locfileid: "88422679"
 ## <a name="examples"></a>Ejemplos  
  Este ejemplo devuelve el Id. de sesión, el nombre de inicio de sesión y el nombre de usuario del proceso de usuario actual.  
   
-```  
+```sql  
 SELECT @@SPID AS 'ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   
@@ -71,7 +71,7 @@ ID     Login Name                     User Name
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Este ejemplo devuelve el identificador de sesión de [!INCLUDE[ssDW](../../includes/ssdw-md.md)], el identificador de sesión del nodo de control de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nombre de inicio de sesión y el nombre de usuario del proceso de usuario actual.  
   
-```  
+```sql  
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   

@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9c08893006e0b2edf093477259ebed788d49097
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 75af471239529587cf51b151c04a541a612949c0
+ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989998"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91145394"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Notas de la versión para los Clústeres de macrodatos de SQL Server 2019
 
@@ -62,7 +62,7 @@ Para obtener una lista completa, vea [¿Qué herramientas son necesarias?](deplo
 
 En la tabla siguiente, se muestra la lista del historial de versiones de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Versión <sup>1</sup> | Versión de BDC  | Versión <sup>2</sup> de `azdata` | Fecha de la versión |
+| Release | Versión de BDC  | Versión <sup>1</sup> de `azdata` | Fecha de la versión |
 |----------------------|--------------|-------------------------------|--------------|
 | [CU6](#cu6)          | 15.0.4053.23 | 20.0.1                        | 04-08-2020   |
 | [CU5](#cu5)          | 15.0.4043.16 | 20.0.0                        | 22-06-2020   |
@@ -72,9 +72,7 @@ En la tabla siguiente, se muestra la lista del historial de versiones de [!INCLU
 | [CU1](#cu1)          | 15.0.4003.23 | 15.0.4003                     | 07-01-2020   |
 | [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 2019-11-04   |
 
-<sup>1</sup> No hay actualizaciones de clústeres de macrodatos de SQL Server 2019 para CU7.
-
-La versión <sup>2</sup> de `azdata` refleja la versión de la herramienta en el momento de la versión de CU. La versión de `azdata` también puede ser independientemente de la versión del servidor, por lo que podría obtener versiones más recientes al instalar los paquetes más recientes. Las versiones más recientes son compatibles con las versiones anteriores de CU.
+La versión <sup>1</sup> de `azdata` refleja la versión de la herramienta en el momento de la versión de CU. La versión de `azdata` también puede ser independientemente de la versión del servidor, por lo que podría obtener versiones más recientes al instalar los paquetes más recientes. Las versiones más recientes son compatibles con las versiones anteriores de CU.
 
 ## <a name="how-to-install-updates"></a>Instalación de las actualizaciones
 

@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a147dc29131e8764b723bc981567faae9593f369
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 8d9ba741433cf5e010861dd3096ac9bf8b4f1707
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137105"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227167"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Instalación de un entorno de ejecución personalizado de R para SQL Server
 
@@ -164,7 +164,7 @@ Como alternativa, haga clic con el botón derecho en el servicio SQL Server Lau
 
 ## <a name="download-r-language-extension"></a>Descarga de la extensión del lenguaje R
 
-Descargue el archivo ZIP que contiene la extensión del lenguaje R, [R-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143953).
+Descargue el [archivo ZIP que contiene la extensión del lenguaje R para Windows](https://github.com/microsoft/sql-server-language-extensions/releases). Se recomienda usar la versión de lanzamiento en producción. Use la versión de depuración en desarrollo o pruebas, ya que proporciona información de registro detallada para investigar los errores.
 
 ## <a name="register-external-language"></a>Registrar lenguaje externo
 
@@ -343,7 +343,7 @@ sudo systemctl restart mssql-launchpadd
 
 ## <a name="download-r-language-extension"></a>Descarga de la extensión del lenguaje R
 
-Descargue el archivo ZIP que contiene la extensión del lenguaje R, [R-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143954).
+Descargue el [archivo ZIP que contiene la extensión del lenguaje R para Linux](https://github.com/microsoft/sql-server-language-extensions/releases). Se recomienda usar la versión de lanzamiento en producción. Use la versión de depuración en desarrollo o pruebas, ya que proporciona información de registro detallada para investigar los errores.
 
 ## <a name="register-external-language"></a>Registrar lenguaje externo
 

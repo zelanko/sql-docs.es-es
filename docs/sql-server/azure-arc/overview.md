@@ -8,12 +8,13 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59cbdd31d32014d54240b4c20937918aaa2c0770
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.custom: references_regions
+ms.openlocfilehash: 8312ab1f13d5a85c6dfb43cd29d0ba734846a512
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90943018"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210589"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>SQL Server habilitado para Azure Arc (versión preliminar)
 
@@ -25,7 +26,7 @@ SQL Server se puede instalar en una máquina física o virtual con Windows o Li
 
 La versión preliminar pública de SQL Server habilitado para Azure Arc admite un conjunto de soluciones que requieren la instalación de la extensión de servidor Microsoft Monitoring Agent (MMA) y su conexión a un área de trabajo de Azure Log Analytics para la recopilación de datos y la generación de informes. Estas soluciones incluyen Advanced Data Security con Azure Defender y Azure Sentinel, así como comprobaciones de estado del entorno de SQL con la característica SQL Assessment a petición.
 
-En el siguiente diagrama se ilustra la arquitectura de SQL Server habilitado para Azure Arc mediante el entorno virtualizado.
+En el siguiente diagrama se ilustra la arquitectura de SQL Server habilitado para Azure Arc.
 
 ![Arquitectura de la versión preliminar pública](media/overview/pubic-preview-architecture.png)
 
@@ -66,7 +67,7 @@ La versión preliminar pública está disponible en las siguientes regiones:
 - Este de EE. UU. 2
 - Oeste de EE. UU. 2
 - Este de Australia
-- Sudeste Asiático
+- Sudeste de Asia
 - Norte de Europa
 - Oeste de Europa
 - Sur de Reino Unido

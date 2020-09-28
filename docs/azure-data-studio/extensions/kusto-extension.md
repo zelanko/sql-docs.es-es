@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 6533133aaac7f2479bb9eea27ef3f6c47e019938
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 3df020725458318aa1c3936b2b4430582ace8997
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942763"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226830"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Extensión Kusto (KQL) para Azure Data Studio (versión preliminar)
 
@@ -45,7 +45,7 @@ Para instalar la extensión Kusto (KQL) en Azure Data Studio, siga los pasos q
 
 4. Seleccione **Instalar**.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-icon.png" alt-text="Extensión Kusto":::
+:::image type="content" source="media/kusto-extension/kusto-extension-icon.png" alt-text="Extensión de Kusto":::
 
 ## <a name="how-to-connect-to-an-azure-data-explorer-cluster"></a>Conexión a un clúster de Azure Data Explorer
 
@@ -125,6 +125,12 @@ La configuración de la extensión tiene este aspecto:
 La [extensión SandDance](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension) conjuntamente con la extensión Kusto (KQL) en Azure Data Studio aportan una visualización interactiva enriquecida. En el conjunto de resultados de consulta de KQL, seleccione el botón **Visualizador** para iniciar [SandDance](https://sanddance.js.org/).
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Visualización de SandDance":::
+
+## <a name="limitations-and-considerations"></a>Limitaciones y consideraciones
+
+- Debe elegir una base de datos para el clúster de Azure Data Explorer antes de ejecutar una consulta Kusto.
+- Si deja el clúster de Azure Data Explorer inactivo durante demasiado tiempo, este puede desconectarse.
+    - Solución alternativa: Desconéctese del clúster y vuelva a conectarse.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

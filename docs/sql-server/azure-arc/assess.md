@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59a6ff65e25878aefe08cfd87bf1f9e36da7366b
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: f3d2051e7003407a4ba7cbb3fb2ff8682ec6ee8f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90943043"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227328"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Configuración de la evaluación de SQL a petición de la instancia de SQL Server habilitada para Azure Arc
 
@@ -37,7 +37,7 @@ Puede habilitar la evaluación de SQL para las instancias de SQL Server siguien
 
    ![Selección de SQL Assessment](media/assess/sql-assessment-heading-sql-server-arc.png)
 
-1. Especifique un directorio de trabajo en la máquina de recopilación de datos. Durante la recopilación y el análisis, los datos se almacenan temporalmente en esa carpeta. Si la carpeta no existe, se creará automáticamente.
+1. Especifique un directorio de trabajo en la máquina de recopilación de datos. De forma predeterminada, se usará `C:\sql_assessment\work_dir`. Durante la recopilación y el análisis, los datos se almacenan temporalmente en esa carpeta. Si la carpeta no existe, se creará automáticamente.
 
 1. Haga clic en __Descargar script de configuración__ y copie el script descargado en la máquina de destino.
 
@@ -76,3 +76,5 @@ Microsoft Monitoring Agent examina la carpeta de trabajo cada 15 minutos para 
 ## <a name="next-steps"></a>Pasos siguientes
 
 Para obtener más información, vea el documento de SQL Server en [Requisitos previos de las evaluaciones a petición del Centro de servicios](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
+
+Para obtener soporte técnico completo del SQL Assessment a petición, se requiere una suscripción de soporte técnico de tipo Premier o unificado. Consulte [Soporte técnico Premier de Microsoft Azure](https://azure.microsoft.com/support/plans/premier) para obtener más información.

@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e945d07f357055904fe31bb54746e94e69a7d46
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: ca8827f5dcee9b25d873ac7fed83679480bedb44
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137129"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227269"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Instalación de un entorno de ejecución personalizado de Python para SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -117,7 +117,7 @@ Anexe el nombre de la instancia a `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME
 2. Give permissions to **SID S-1-15-2-1**.
     ```cmd
     icacls "%PYTHONHOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
-    
+
 >[!NOTE]
 >The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to ALL APPLICATION PACKAGES on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
@@ -134,7 +134,7 @@ Como alternativa, haga clic con el botón derecho en el servicio SQL Server Lau
 
 ## <a name="download-python-language-extension"></a>Descarga de la extensión del lenguaje Python
 
-Descargue el archivo ZIP que contiene la extensión del lenguaje Python, [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143952).
+Descargue el [archivo ZIP que contiene la extensión del lenguaje Python para Windows](https://github.com/microsoft/sql-server-language-extensions/releases). Se recomienda usar la versión de lanzamiento en producción. Use la versión de depuración en desarrollo o pruebas, ya que proporciona información de registro detallada para investigar los errores.
 
 ## <a name="register-external-language"></a>Registrar lenguaje externo
 
@@ -280,7 +280,7 @@ sudo systemctl restart mssql-launchpadd
 ```
 ## <a name="download-python-language-extension"></a><a name="download-python-linux"></a>Descarga de la extensión del lenguaje Python
 
-Descargue el archivo ZIP que contiene la extensión del lenguaje Python, [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143793).
+Descargue el [archivo ZIP que contiene la extensión del lenguaje Python para Linux](https://github.com/microsoft/sql-server-language-extensions/releases). Se recomienda usar la versión de lanzamiento en producción. Use la versión de depuración en desarrollo o pruebas, ya que proporciona información de registro detallada para investigar los errores.
 
 ## <a name="register-external-language"></a>Registrar lenguaje externo
 

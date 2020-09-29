@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 645d927a66deba3d19c44872a28abc16b2054fd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fc41c7e1a848ffd7b57012f0fbb1093a9115da3e
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539752"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498260"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,14 +51,14 @@ Si la instancia del servidor local no puede comunicar con el clúster de conmuta
 |**tiempo de espera de sesión \_**|**int**|Período de tiempo de espera, en segundos. El período de tiempo de espera es el tiempo máximo que la réplica espera hasta recibir un mensaje de otra réplica antes de considerar que se ha producido un error en la conexión entre la réplica principal y secundaria. El tiempo de espera de la sesión detecta si las réplicas secundarias están conectadas a la réplica principal.<br /><br /> Al detectar una conexión con errores con una réplica secundaria, la réplica principal considera que la réplica secundaria no está \_ sincronizada. Al detectar un error en la conexión con la réplica principal, la réplica secundaria intenta volver a conectarse.<br /><br /> **Nota:** Los tiempos de espera de la sesión no producen conmutaciones por error automáticas.<br /><br /> Para cambiar este valor, use la opción SESSION_TIMEOUT de la instrucción [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |**rol principal- \_ \_ permitir \_ conexiones**|**tinyint**|Si la disponibilidad permite todas las conexiones o solamente conexiones de lectura/escritura, que puede tener uno de los siguientes valores:<br /><br /> 2 = Todas (predeterminado)<br /><br /> 3 = Lectura/escritura|  
 |**\_rol principal \_ permitir \_ conexiones \_ DESC**|**nvarchar(60)**|Descripción del ** \_ rol principal \_ permitir \_ conexiones**, una de las siguientes:<br /><br /> ALL<br /><br /> LECTURA y \_ escritura|  
-|**\_rol secundario \_ permitir \_ conexiones**|**tinyint**|Si una réplica de disponibilidad que está realizando el rol secundario (es decir, una réplica secundaria) puede aceptar conexiones de clientes; puede tener uno de los valores siguientes:<br /><br /> 0 = No. No se permiten conexiones directas con las bases de datos de la réplica secundaria y las bases de datos no están disponible para acceso de lectura. Ésta es la configuración predeterminada.<br /><br /> 1 = Solo lectura. Solo se permiten conexiones de solo lectura a las bases de datos de la réplica secundaria. Todas las bases de datos de la réplica están disponibles para acceso de lectura.<br /><br /> 2 = Todas. Se permiten todas las conexiones con las bases de datos de la réplica secundaria para acceso de solo lectura.<br /><br /> Para más información, consulte [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).|  
+|**\_rol secundario \_ permitir \_ conexiones**|**tinyint**|Si una réplica de disponibilidad que está realizando el rol secundario (es decir, una réplica secundaria) puede aceptar conexiones de clientes; puede tener uno de los valores siguientes:<br /><br /> 0 = No. No se permiten conexiones directas con las bases de datos de la réplica secundaria y las bases de datos no están disponible para acceso de lectura. Esta es la configuración predeterminada.<br /><br /> 1 = Solo lectura. Solo se permiten conexiones de solo lectura a las bases de datos de la réplica secundaria. Todas las bases de datos de la réplica están disponibles para acceso de lectura.<br /><br /> 2 = Todas. Se permiten todas las conexiones con las bases de datos de la réplica secundaria para acceso de solo lectura.<br /><br /> Para más información, consulte [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).|  
 |**secondary_role_allow_connections_desc**|**nvarchar(60)**|Descripción de **secondary_role_allow_connections**, uno de los siguientes:<br /><br /> No<br /><br /> READ_ONLY<br /><br /> ALL|  
 |**create_date**|**datetime**|Fecha en que se creó la réplica.<br /><br /> NULL = La réplica no está en esta instancia de servidor.|  
 |**modify_date**|**datetime**|Fecha de la última modificación de la réplica.<br /><br /> NULL = La réplica no está en esta instancia de servidor.|  
 |**backup_priority**|**int**|Representa la prioridad definida por el usuario para realizar copias de seguridad en esta réplica en relación con las otras réplicas del mismo grupo de disponibilidad. El valor es un número entero en el intervalo de 0..100.<br /><br /> Para más información, consulte [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
 |**read_only_routing_url**|**nvarchar(256)**|Extremo de conectividad (URL) de la réplica de disponibilidad de solo lectura. Para obtener más información, vea [Configurar el enrutamiento de solo lectura para un grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).|  
-|**seeding_mode**|**tinyint**|Uno de los valores siguientes: </br></br> 0: manual </br></br> 1: automático|
-|**seeding_mode_desc**|**nvarchar(60)**|Describe el modo de propagación. </br></br> MANUAL </br></br> AUTOMATIC|
+|**seeding_mode**|**tinyint**|Uno de los valores siguientes: </br></br> 0: automático </br></br> 1: manual|
+|**seeding_mode_desc**|**nvarchar(60)**|Describe el modo de propagación. </br></br> AUTOMATIC </br></br>MANUAL|
   
 ## <a name="security"></a>Seguridad  
   

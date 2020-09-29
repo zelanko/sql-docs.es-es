@@ -4,22 +4,33 @@ description: Obtenga información sobre los cambios en SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 8391c9642bb7ee0849ea4627b42ac580c4d44d20
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: fdbe37ddb915e64c5f947a64078e574a8eed8bbd
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864712"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497801"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Novedades de SSMA para SAP ASE (SybaseToSQL)
 
 En este artículo se enumeran los cambios de SQL Server Migration Assistant (SSMA) para SAP ASE (anteriormente SSMA para Sybase) en cada versión.
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+Además de varias mejoras para garantizar una mayor accesibilidad para las personas con discapacidades, la versión v 8.14 de SSMA for SAP ASE requiere una actualización del proyecto, ya que ahora almacena la versión completa del servidor de origen/destino en los metadatos del proyecto.
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+La versión v 8.13 de SSMA para SAP ASE contiene los siguientes cambios:
+
+* Considerar conversiones de tipo implícitas al convertir llamadas a procedimientos y funciones
+* Mejorar el registro de la cadena de conexión de origen para ayudar a solucionar problemas de conexión
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -328,7 +339,7 @@ La versión de noviembre de 2006 de SSMA para Sybase contiene los siguientes cam
   * Comprueba si hay valores NULL en expresiones de igualdad.
   * Tablas de proxy.
   * Números de error de mensaje de usuario para `RAISERROR` .
-  * `UPDATE`instrucciones que contienen identificadores sin resolver.
+  * `UPDATE` instrucciones que contienen identificadores sin resolver.
 * Se ha agregado una nueva opción de migración que le permite especificar cómo SSMA debe controlar las fechas que están fuera del [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] intervalo de fechas.
 * Se ha agregado una configuración de **SQL con formato** en la pestaña **SQL** , que da formato al código para mejorar la legibilidad.
 * Correcciones de errores, incluidos:
@@ -340,6 +351,6 @@ La versión de noviembre de 2006 de SSMA para Sybase contiene los siguientes cam
 
 La versión de julio de 2006 de SSMA para Sybase fue la versión inicial.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Introducción con SSMA para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

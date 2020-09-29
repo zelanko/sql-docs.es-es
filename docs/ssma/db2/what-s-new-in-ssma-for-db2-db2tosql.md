@@ -4,22 +4,34 @@ description: Obtenga información sobre los cambios en SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 9706f1f2313594ded00cc0fa7e1335bb194b8313
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 8f84892230de6e7070933657cd25636a2fc697d8
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862482"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498228"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Novedades de SSMA para DB2 (DB2ToSQL)
 
 En este artículo se enumeran los cambios de SQL Server Migration Assistant (SSMA) para DB2 en cada versión.
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+Además de varias mejoras para garantizar una mayor accesibilidad para las personas con discapacidades, la versión v 8.14 de SSMA para DB2 requiere una actualización del proyecto, ya que ahora almacena la versión completa del servidor de origen/destino en los metadatos del proyecto.
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+La versión v 8.13 de SSMA para DB2 contiene los siguientes cambios:
+
+* Compatibilidad con índices únicos filtrados
+* Considerar conversiones de tipo implícitas al convertir llamadas a procedimientos y funciones
+* Mejorar el registro de la cadena de conexión de origen para ayudar a solucionar problemas de conexión
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -33,7 +45,7 @@ La versión v 8.12 de SSMA para DB2 contiene los siguientes cambios:
 La versión v 8.11 de SSMA para DB2 contiene los siguientes cambios:
 
 * Compatibilidad con DB2 para i (v 7.1 y versiones posteriores)
-* Traducción de `SQLSTATE` y`SQLCODE`
+* Traducción de `SQLSTATE` y `SQLCODE`
 * Mensaje de error de conversión para los operadores de efectos secundarios dentro de una función
 * Usar la biblioteca MSAL.NET para la autenticación interactiva Azure Active Directory
 

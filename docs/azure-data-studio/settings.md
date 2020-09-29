@@ -3,18 +3,18 @@ title: Configuración del usuario y el área de trabajo
 description: Aprenda a usar la configuración para personalizar el editor, la interfaz de usuario y el comportamiento funcional de Azure Data Studio de modo que se adapten a sus preferencias.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: how-to
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 05ed5f644b26c970383197376bce481a96ba5742
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 06e9efa72ef82d8335db4b7ec6b8941c95501790
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114524"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364186"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modificación de la configuración del usuario y el área de trabajo
 
@@ -37,7 +37,7 @@ En el siguiente ejemplo se deshabilitan los números de línea en el editor y se
 
 Azure Data Studio vuelve a cargar los cambios realizados en la configuración después de guardar el archivo `settings.json` modificado.
 
-> [!NOTE] 
+> [!NOTE]
 > La configuración del área de trabajo resulta útil para compartir la configuración específica del proyecto en un equipo.
 
 ## <a name="settings-file-locations"></a>Ubicaciones del archivo de configuración
@@ -52,7 +52,7 @@ El archivo de configuración del área de trabajo se encuentra en la carpeta `.A
 
 ## <a name="hot-exit"></a>Salida rápida
 
-De forma predeterminada, Azure Data Studio recuerda los cambios no guardados en los archivos al salir. Este comportamiento es igual que la característica de salida rápida en Visual Studio Code.
+De forma predeterminada, Azure Data Studio recuerda los cambios no guardados en los archivos al salir. En Visual Studio Code este comportamiento es igual que la característica de salida rápida.
 
 De forma predeterminada, la salida rápida está desactivada. Para habilitar la salida rápida, edite la configuración `files.hotExit`. Para obtener más información, consulte [Salida rápida (en la documentación de Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 

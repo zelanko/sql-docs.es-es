@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d9eaba636c2567d60dfc62ce37080717e9c32e9
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: b486d0fbb8e0f2c8595251de386bb9f133ac73cf
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680580"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379630"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>¿Qué son los grupos de datos en un clúster de macrodatos de SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-En este artículo, se describe la función de los *grupos de datos de SQL Server* en un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. En las secciones siguientes, se describen la arquitectura y las funciones de un grupo de datos SQL.
+En este artículo, se describe la función de los *grupos de datos de SQL Server* en un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. En las secciones siguientes se describen la arquitectura, la funcionalidad y los escenarios de uso de un grupo de datos de SQL.
 
 Este vídeo de 5 minutos presenta grupos de datos y muestra cómo consultar los datos de los grupos de datos:
 
@@ -28,13 +28,15 @@ Este vídeo de 5 minutos presenta grupos de datos y muestra cómo consultar los 
 
 ## <a name="data-pool-architecture"></a>Arquitectura de un grupo de datos
 
-Un grupo de datos está formado por una o más instancias de grupos de datos de SQL Server. Las instancias del grupo de datos SQL proporcionan un almacenamiento de SQL Server persistente para el clúster. Se usa un grupo de datos para ingerir datos a partir de consultas SQL o trabajos de Spark. Para ofrecer un mejor rendimiento en conjuntos de datos de gran tamaño, los datos de un grupo de datos se distribuyen en particiones en todas las instancias del grupo de datos SQL que sean miembros.
-
-## <a name="scale-out-data-marts"></a>Data marts de escalado horizontal
-
-Los grupos de datos permiten la creación de data marts de escalado horizontal, donde los datos externos de varios orígenes se ingieren en el grupo de datos. Como los datos se distribuyen en varias instancias de grupos de datos, las consultas paralelas en los datos recopilados son más eficientes.
+Un grupo de datos consta de una o varias instancias de grupo de datos de SQL Server que proporcionan almacenamiento persistente de SQL Server para el clúster. Permite consultas de alto rendimiento de los datos en caché sobre orígenes de datos externos y la descarga de trabajo. Los datos se ingieren en el grupo de datos mediante consultas T-SQL o desde trabajos de Spark. Con el fin de mejorar el rendimiento en conjuntos de datos grandes, los datos ingeridos se distribuyen en particiones y se almacenan entre todas las instancias de SQL Server del grupo. Los métodos de distribución admitidos son round robin y replicados. Para la optimización del acceso de lectura, se crea un índice de almacén de columnas en clúster en cada tabla de cada instancia del grupo de datos. Un grupo de datos sirve como data mart de escalado horizontal para los clústeres de macrodatos de SQL.
 
 ![Data mart de escalado horizontal](media/concept-data-pool/data-virtualization-improvements.png)
+
+El acceso a las instancias de SQL Server del grupo de datos se administra desde la instancia maestra de SQL Server. Se crea un origen de datos externo al grupo de datos, junto con las tablas externas de PolyBase para almacenar la memoria caché de datos. En segundo plano, el controlador crea una base de datos en el grupo de datos con tablas que coinciden con las tablas externas. Desde la instancia maestra de SQL Server, el flujo de trabajo es transparente; el controlador redirige las solicitudes de tablas externas específicas a las instancias de SQL Server del grupo de datos, algo que pueden ser mediante el grupo de proceso, ejecuta las consultas y devuelve el conjunto de resultados. Los datos del grupo de datos solo se pueden ingerir o consultar y no se pueden modificar. Por lo tanto, cualquier actualización de los datos requeriría una eliminación de la tabla, seguida de una nueva creación de la tabla y el rellenado de datos subsiguiente. 
+
+## <a name="data-pool-scenarios"></a>Escenarios del grupo de datos
+
+ La elaboración de informes es un escenario común del grupo de datos. Por ejemplo, se podría descargar en el grupo de datos una consulta compleja que combina varios orígenes de datos de PolyBase que se usan para un informe semanal. Los datos en caché proporcionan un proceso local rápido y eliminan la necesidad de volver a los conjuntos de datos originales. Del mismo modo, los datos de paneles que requieren una actualización periódica se pueden almacenar en caché en el grupo de datos para la elaboración de informes optimizada. La exploración repetitiva del aprendizaje automático también puede aprovechar las ventajas del almacenamiento en caché de conjuntos de datos en el grupo de datos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

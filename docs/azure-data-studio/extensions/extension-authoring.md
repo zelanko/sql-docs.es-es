@@ -1,6 +1,6 @@
 ---
 title: Creación de extensiones
-description: Puede agregar funcionalidad a Azure Data Studio con una extensión. Obtenga información sobre cómo crear una y publicarla en la galería de extensiones.
+description: Puede agregar funcionalidad a Azure Data Studio con una extensión. Aprenda a crear una extensión y a publicarla en la galería de extensiones.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -9,14 +9,14 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/26/2020
-ms.openlocfilehash: 9dbb60dab5d2b1a5dc3a95189a93d6617ed83b6b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 92c6a5d9522d015786eafdefaeea64b46925b92b
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123526"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364042"
 ---
-# <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Extensión de la funcionalidad mediante la creación de extensiones de Azure Data Studio
+# <a name="extend-functionality-by-creating-azure-data-studio-extensions"></a>Extensión de la funcionalidad mediante la creación de extensiones de Azure Data Studio
 
 Las extensiones de Azure Data Studio proporcionan una manera sencilla de agregar más funcionalidad a la instalación base de Azure Data Studio.
 
@@ -26,13 +26,13 @@ Las extensiones las proporciona el equipo de Azure Data Studio (Microsoft), así
 
 Si está interesado en las extensiones de Azure Data Studio, puede crear su propia extensión y publicarla en la galería de extensiones.
 
-### <a name="writing-an-extension"></a>Escritura de una extensión
+### <a name="write-an-extension"></a>Escritura de una extensión
 
 #### <a name="prerequisites"></a>Prerrequisitos
 
-Para desarrollar una extensión ha de tener [Node.js](https://nodejs.org/) instalado y disponible en `$PATH`. Node.js incluye npm, el administrador de paquetes de Node.js, que se usará para instalar el generador de extensiones.
+Para desarrollar una extensión ha de tener [Node.js](https://nodejs.org/) instalado y disponible en `$PATH`. Node.js incluye npm, el administrador de paquetes de Node.js, que se usa para instalar el generador de extensiones.
 
-Para crear la extensión, puede usar el generador de extensiones de Azure Data Studio. El [generador de extensiones](https://www.npmjs.com/package/generator-azuredatastudio) de Yeoman es un punto de partida beneficioso para los proyectos de extensión. Para iniciar el generador, escriba lo siguiente en un símbolo del sistema:
+Para crear la extensión, puede usar el generador de extensiones de Azure Data Studio. El [generador de extensiones](https://www.npmjs.com/package/generator-azuredatastudio) de Yeoman es un punto de partida beneficioso para los proyectos de extensión. Para iniciar el generador, escriba el siguiente comando en un símbolo del sistema:
 
 ```console
 npm install -g yo generator-azuredatastudio # Install the generator
@@ -43,18 +43,18 @@ Para obtener instrucciones detalladas sobre cómo empezar a usar la plantilla de
 
 ### <a name="extensibility-references"></a>Referencias de extensibilidad
 
-Para obtener información sobre la extensibilidad de Azure Data Studio, consulte el artículo sobre [introducción a la extensibilidad](../extensibility.md). También puede ver ejemplos de uso de la API en [ejemplos](https://github.com/Microsoft/azuredatastudio/tree/main/samples) existentes.
+Para más información sobre la extensibilidad de Azure Data Studio, consulte el artículo sobre [introducción a la extensibilidad](../extensibility.md). También puede ver ejemplos de uso de la API en [ejemplos](https://github.com/Microsoft/azuredatastudio/tree/main/samples) existentes.
 
 ## <a name="debug-an-extension"></a>Depuración de una extensión
 
-Puede depurar la nueva extensión mediante la extensión [Debug de Azure Data Studio](https://github.com/kevcunnane/sqlops-debug) de Visual Studio Code.
+Puede depurar la nueva extensión mediante la extensión [Debug de Azure Data Studio](https://github.com/kevcunnane/sqlops-debug) de Visual Studio Code.
 
-Pasos:
+Para depurar la extensión:
 
 1. Abra la extensión con [Visual Studio Code](https://code.visualstudio.com/).
 2. Instale la extensión Debug de Azure Data Studio.
-3. Pulse **F5** o seleccione el icono Depurar y, a continuación, seleccione **Iniciar**.
-4. Se inicia una nueva instancia de Azure Data Studio en un modo especial (Host de desarrollo de la extensión) y esta nueva instancia tiene ahora en cuenta la extensión.
+3. Seleccione **F5** o seleccione el icono **Depurar** y, a continuación, seleccione **Iniciar**.
+4. Se inicia una nueva instancia de Azure Data Studio en un modo especial (Host de desarrollo de la extensión). Esta nueva instancia tiene ahora en cuenta la extensión.
 
 ## <a name="create-an-extension-package"></a>Creación de un paquete de extensión
 
@@ -67,20 +67,20 @@ vsce package
 # The myExtensionName.vsix file has now been generated
 ```
 
-Con un paquete VSIX, puede compartir la extensión de forma local y privada si comparte el archivo `.vsix` y usa el comando **Extensiones: Instalar desde archivo VSIX** de la paleta de comandos con el fin de instalar la extensión en Azure Data Studio.
+Con un paquete VSIX, puede compartir la extensión de forma local y privada si comparte el archivo .vsix y usa el comando **Extensiones: Instalar desde archivo VSIX** de la paleta de comandos con el fin de instalar la extensión en Azure Data Studio.
 
 ## <a name="publish-an-extension"></a>Publicación de una extensión
 
 Para publicar la nueva extensión en Azure Data Studio:
 
-1. Agregue la extensión a https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json.
-2. Actualmente no tenemos soporte para hospedar extensiones de terceros, por lo que en lugar de descargar la extensión, Azure Data Studio tiene la opción de ir a una página de descarga. Para establecer una página de descarga para la extensión, establezca el valor del recurso "Microsoft.AzureDataStudio.DownloadPage".
+1. Agregue la extensión a la [galería de extensiones](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json).
+2. Actualmente no se admite el hospedaje de extensiones de terceros. En lugar de descargar la extensión, Azure Data Studio tiene la opción de ir a una página de descarga. Para establecer una página de descarga para la extensión, establezca el valor del recurso **Microsoft.AzureDataStudio.DownloadPage**.
 3. Cree una solicitud de incorporación de cambios en la rama de versión/extensiones.
 4. Envíe una solicitud de revisión al equipo.
 
 La extensión se revisará y se agregará a la galería de extensiones.
 
-### <a name="publishing-extension-updates"></a>Publicación de actualizaciones de extensión
+### <a name="publish-extension-updates"></a>Publicación de actualizaciones de extensión
 
 El proceso de publicación de actualizaciones es similar al de publicación de una extensión. Asegúrese de que la versión está actualizada en package.json.
 

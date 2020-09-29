@@ -3,18 +3,18 @@ title: Creación de fragmentos de código reutilizables
 description: Aprenda a crear y usar fragmentos de código SQL en Azure Data Studio, que permiten crear fácilmente bases de datos y objetos de bases de datos.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: how-to
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 95b0385178a5e2bd25f8b64be5f910d4f885e34b
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: aa1826539a6b9d2a5f649159e566d3ceda8d624d
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746095"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364132"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>Creación y uso de fragmentos de código para crear rápidamente scripts de Transact-SQL (T-SQL) en Azure Data Studio
 
@@ -30,42 +30,40 @@ También se pueden crear fragmentos de código definidos por el usuario.
 
    ![fragmentos de código](media/code-snippets/sql-snippets.png)
 
-1. Seleccione el fragmento de código que quiera usar y se generará el script de T-SQL. Por ejemplo, seleccione *sqlCreateTable*:
+2. Seleccione el fragmento de código que quiera usar y se generará el script de T-SQL. Por ejemplo, seleccione *sqlCreateTable*:
 
    ![crear fragmentos de código de tabla](media/code-snippets/create-table.png)
 
-1. Actualice los campos resaltados con los valores específicos. Por ejemplo, reemplace *TableName* y *Schema* por los valores de su base de datos:
+3. Actualice los campos resaltados con los valores específicos. Por ejemplo, reemplace *TableName* y *Schema* por los valores de su base de datos:
 
-   ![reemplazar campo de plantilla](media/code-snippets/table-from-snippet.png)
+   ![Tabla a partir de fragmento de código](media/code-snippets/table-from-snippet.png)
 
    Si el campo que quiere cambiar ya no está resaltado (esto puede ocurrir si desplaza el cursor por el editor), haga clic con el botón derecho en la palabra que quiera cambiar y seleccione **Cambiar todas las repeticiones**:
 
-   ![reemplazar campo de plantilla](media/code-snippets/change-all.png)
+   ![Cambiar todo](media/code-snippets/change-all.png)
 
-1. Actualice o agregue las instrucciones T-SQL que necesite para el fragmento de código seleccionado. Por ejemplo, actualice *Column1* y *Column2*, y agregue más columnas.
+4. Actualice o agregue las instrucciones T-SQL que necesite para el fragmento de código seleccionado. Por ejemplo, actualice *Column1* y *Column2*, y agregue más columnas.
 
-
- 
-## <a name="creating-sql-code-snippets"></a>Crear fragmentos de código de SQL 
+## <a name="creating-sql-code-snippets"></a>Crear fragmentos de código de SQL
 
 Puede definir sus propios fragmentos de código. Para abrir el archivo de fragmento de código de SQL y editarlo:
 
 1. Abra la *Paleta de comandos* (**Mayús+Ctrl+P**), escriba *snip* y seleccione **Preferencias: abrir fragmentos de código del usuario**:
 
-   ![reemplazar campo de plantilla](media/code-snippets/user-snippets.png)
+   ![Fragmentos de código del usuario](media/code-snippets/user-snippets.png)
 
-1. Seleccione **SQL**:
+2. Seleccione **SQL**:
 
    > [!NOTE]
    > Azure Data Studio hereda la función de fragmentos de código de Visual Studio Code, ya que en este artículo se explica específicamente el uso de fragmentos de código de SQL. Para obtener más información, vea [Creación de sus propios fragmento de código](https://code.visualstudio.com/docs/editor/userdefinedsnippets) en la documentación de Visual Studio Code. 
 
-   ![reemplazar campo de plantilla](media/code-snippets/select-sql.png)
+   ![Seleccionar SQL](media/code-snippets/select-sql.png)
 
-1. Pegue el código siguiente en *sql.json*:
+3. Pegue el código siguiente en *sql.json*:
 
-   ```sql
-   {
-   "Select top 5": {
+    ```sql
+    {
+     "Select top 5": {
     "prefix": "sqlSelectTop5",
     "body": "SELECT TOP 5 * FROM ${1:TableName}",
     "description": "User-defined snippet example 1"
@@ -81,25 +79,26 @@ Puede definir sus propios fragmentos de código. Para abrir el archivo de fragme
     "-- Create the table in the specified schema",
     "CREATE TABLE $2.$1",
     "(",
-    "   $1Id INT NOT NULL PRIMARY KEY, -- primary key column",
-    "   Column1 [NVARCHAR](50) NOT NULL,",
-    "   Column2 [NVARCHAR](50) NOT NULL",
-    "   -- specify more columns here",
+    "$1Id INT NOT NULL PRIMARY KEY, -- primary key column",
+    "Column1 [NVARCHAR](50) NOT NULL,",
+    "Column2 [NVARCHAR](50) NOT NULL",
+    "-- specify more columns here",
     ");",
     "GO"
     ],
-   "description": "User-defined snippet example 2"
-   }
-   }
-   ```
+       "description": "User-defined snippet example 2"
+       }
+       }
+       ```
 
-1. Guarde el archivo sql.json.
-1. Presione **Ctrl+N** para abrir una nueva ventana del editor de consultas.
-2. Escriba **sql**; verá los dos fragmentos de código del usuario que acaba de agregar: *sqlCreateTable2* y *sqlSelectTop5*.
+4. Save the sql.json file.
 
-Seleccione uno de los nuevos fragmentos de código y ejecútelo a modo de prueba.
+5. Open a new query editor window by clicking **Ctrl+N**.
 
+6. Type **sql**, and you see the two user snippets you just added; *sqlCreateTable2* and *sqlSelectTop5*.
 
-## <a name="additional-resources"></a>Recursos adicionales
+Select one of the new snippets and give it a test run!
 
-Para obtener información sobre el editor de SQL, vea [Tutorial del editor de código](tutorial-sql-editor.md).
+## Next steps
+
+For information about the SQL editor, see [Code editor tutorial](tutorial-sql-editor.md).

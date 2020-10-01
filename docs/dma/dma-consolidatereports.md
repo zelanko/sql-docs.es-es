@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dd3b2d26b79cf612c18a201a2b077323b1b68420
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: b16ed1f153259f1301f78d82291c677337677643
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823247"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624802"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluación de una empresa y consolidación de informes de evaluación con DMA.
 
@@ -36,7 +36,7 @@ Las siguientes instrucciones paso a paso le ayudarán a usar la Data Migration A
   - [Escritorio Power BI](/power-bi/fundamentals/desktop-get-the-desktop).
   - [Módulos de Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Descargar y extraer:
-  - La [plantilla de Power BI de informes DMA](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip).
+  - La [plantilla de Power BI de informes DMA](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip).
   - El [script LoadWarehouse](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Carga de los módulos de PowerShell
@@ -64,7 +64,7 @@ Para cargar los módulos, realice los pasos siguientes:
 
     PowerShell debe cargar ahora estos módulos automáticamente cuando se inicia una nueva sesión de PowerShell.
 
-## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a>Crear un inventario de servidores SQL Server
+## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a> Crear un inventario de servidores SQL Server
 
 Antes de ejecutar el script de PowerShell para evaluar los servidores SQL Server, debe crear un inventario de los servidores SQL Server que desea evaluar.
 
@@ -126,12 +126,12 @@ Los parámetros asociados a la función dmaDataCollector se describen en la tabl
 |Parámetro  |Descripción |
 |---------|---------|
 |**getServerListFrom** | El inventario. Los valores posibles son **SQLServer** y **CSV**.<br/>Para obtener más información, vea [crear un inventario de servidores SQL Server](#create-inventory). |
-|**csvPath** | La ruta de acceso al archivo de inventario de CSV.  Solo se usa cuando **getServerListFrom** está establecido en **CSV**. |
+|**csvPath** | La ruta de acceso al archivo de inventario de CSV.  Solo se usa cuando **getServerListFrom** está establecido en  **CSV**. |
 |**serverName** | El nombre de la instancia de SQL Server del inventario cuando se usa **SQLServer** en el parámetro **getServerListFrom** . |
 |**databaseName** | La base de datos que hospeda la tabla de inventario. |
 |**useInstancesOnly** | Marca de bits para especificar si se va a usar una lista de instancias para la evaluación o no.  Si se establece en 0, se usará la tabla DatabaseInventory para compilar la lista de destino de la evaluación. |
 |**AssessmentName** | Nombre de la evaluación de DMA. |
-|**TargetPlatform** | El tipo de destino de la evaluación que desea realizar.  Los valores posibles son **AzureSQLDatabase**, **ManagedSqlServer**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**, **SqlServerWindows2019**y **SqlServerLinux2019**.  |
+|**TargetPlatform** | El tipo de destino de la evaluación que desea realizar.  Los valores posibles son **AzureSQLDatabase**, **ManagedSqlServer**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**,  **SqlServerWindows2019**y **SqlServerLinux2019**.  |
 |**AuthenticationMethod** | El método de autenticación para conectarse a los destinos SQL Server que desea evaluar. Los valores posibles son **SQLAuth** y **WindowsAuth**. |
 |**OutputLocation** | Directorio en el que se va a almacenar el archivo de salida de evaluación de JSON. Dependiendo del número de bases de datos que se estén evaluando y del número de objetos dentro de las bases de datos, las evaluaciones pueden tardar un tiempo excepcionalmente largo. El archivo se escribirá una vez completadas todas las evaluaciones. |
 
@@ -274,7 +274,7 @@ Esta sección es la parte principal del informe, que muestra la preparación de 
 
 - InstanceDatabase
 - ChangeCategory
-- Title
+- Título
 - ObjectType
 - ImpactedObjectName
 

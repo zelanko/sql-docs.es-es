@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 4caf97a9afb4a40ba82e2fe6730d46dbdcbea7f6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 67b427e7d1d73b072ce2ec319bfc3cbcbbcfddf9
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951540"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636105"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturar un seguimiento en Asistente para experimentación con bases de datos
 
@@ -133,20 +133,20 @@ Si ve un error al ejecutar una captura de seguimiento, confirme lo siguiente:
 
 - El nombre del equipo que ejecuta SQL Server es válido. Para confirmar, intente conectarse al equipo que ejecuta SQL Server mediante SQL Server Management Studio (SSMS).
 - La configuración del firewall no bloquea las conexiones con el equipo que ejecuta SQL Server.
-- El usuario tiene los permisos que se enumeran en las [preguntas más frecuentes sobre la reproducción](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
+- El usuario tiene los permisos que se enumeran en las [preguntas más frecuentes sobre la reproducción](./database-experimentation-assistant-replay-trace.md?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
 - El nombre de seguimiento no sigue la Convención estándar de sustitución incremental (Capture \_ 1). En su lugar, pruebe nombres de seguimiento como Capture \_ 1A o Capture1.
 
 A continuación se muestran algunos posibles errores que podrían aparecer y soluciones para resolverlos:
 
-|Posibles errores|Solución|  
+|Posibles errores|Soluciones|  
 |---|---|  
 |No se puede iniciar el seguimiento en el SQL Server de destino, compruebe si tiene los permisos necesarios y si la cuenta de SQL Server tiene acceso de escritura a la ruta del archivo de seguimiento especificada código de error de SQL (53)|El usuario que ejecuta la herramienta DEA debe tener acceso al equipo que ejecuta SQL Server. El usuario debe tener asignado el rol sysadmin.|  
 |No se puede iniciar el seguimiento en el SQL Server de destino, compruebe si tiene los permisos necesarios y si la cuenta de SQL Server tiene acceso de escritura a la ruta del archivo de seguimiento especificada código de error de SQL (19062)|Es posible que la ruta de acceso especificada no exista o que la carpeta no tenga permisos de escritura para la cuenta en la que se están ejecutando los servicios de SQL Server (por ejemplo, servicio de red). La ruta de acceso debe existir y debe tener los permisos necesarios para que se inicie el seguimiento.|  
 |Actualmente se está ejecutando un seguimiento de DEA en el servidor de destino.|Ya se está ejecutando un seguimiento activo en el servidor de destino. No se puede iniciar un nuevo seguimiento cuando un seguimiento de todo el servidor ya se está ejecutando.|  
 |No se puede abrir la base de datos solicitada para capturar el seguimiento. Este error puede deberse a un nombre de base de datos incorrecto.|La base de datos especificada no existe o no es accesible para el usuario actual. Use el nombre de base de datos correcto.|  
 
-Si ve algún otro error con la etiqueta *código de error de SQL*, consulte [motor de base de datos errores](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) para obtener descripciones detalladas.
+Si ve algún otro error con la etiqueta *código de error de SQL*, consulte [motor de base de datos errores](../relational-databases/errors-events/database-engine-events-and-errors.md) para obtener descripciones detalladas.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - Para obtener información sobre cómo configurar las herramientas de Distributed Replay en SQL Server antes de reproducir un seguimiento capturado, consulte [configuración de Distributed Replay para Asistente para experimentación con bases de datos](database-experimentation-assistant-configure-replay.md).

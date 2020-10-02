@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 8df03adc67cb4ae97e099ad31d4af42c34a8533c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fa37fb348aa94e59ac3816d523cc5a30bc314713
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951230"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636175"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Reproducir un seguimiento en Asistente para experimentación con bases de datos
 
@@ -122,7 +122,7 @@ Abra un archivo de seguimiento de destino y verlo en SQL Server Profiler. O bien
 
 **P: ¿Qué eventos de seguimiento recopilan DEA durante la reproducción?**
 
-DEA captura eventos de seguimiento que contienen información relacionada con el rendimiento. La configuración de captura está en el script StartReplayCaptureTrace. SQL. Estos eventos son típicos SQL Server eventos de seguimiento que se enumeran en la [documentación de referencia de sp_trace_setevent (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql).
+DEA captura eventos de seguimiento que contienen información relacionada con el rendimiento. La configuración de captura está en el script StartReplayCaptureTrace. SQL. Estos eventos son típicos SQL Server eventos de seguimiento que se enumeran en la [documentación de referencia de sp_trace_setevent (Transact-SQL)](../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).
 
 ## <a name="troubleshoot-trace-replay"></a>Solucionar problemas de reproducción de seguimiento
 
@@ -139,7 +139,7 @@ Puede obtener más detalles en los registros en% Temp% \\ DEA. Si el problema pe
 
 - Compruebe que el servicio del controlador de Distributed Replay se está ejecutando en el equipo del controlador. Para comprobarlo, use las herramientas de administración de Distributed Replay (ejecute el comando `dreplay.exe status -f 1` ).
 - Si la reproducción se inicia de forma remota:
-  - Confirme que el equipo que ejecuta DEA puede hacer ping correctamente en el controlador. Confirme que la configuración del Firewall permite conexiones según las instrucciones de la página **configurar el entorno de reproducción** . Para obtener más información, vea el artículo [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017).
+  - Confirme que el equipo que ejecuta DEA puede hacer ping correctamente en el controlador. Confirme que la configuración del Firewall permite conexiones según las instrucciones de la página **configurar el entorno de reproducción** . Para obtener más información, vea el artículo [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017).
   - Asegúrese de que se permite el inicio remoto DCOM y la activación remota para el usuario del controlador de Distributed Replay.
   - Asegúrese de que los derechos de usuario de acceso remoto DCOM están permitidos para el usuario del controlador de Distributed Replay.
 
@@ -163,6 +163,6 @@ Este problema se conoce en la versión RTM de SQL Server 2017. Para obtener más
   
 El problema se ha solucionado en la última actualización acumulativa 1 de SQL Server 2017. Descargue la versión más reciente de la [actualización acumulativa 1 para SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - Para crear un informe de análisis que le ayude a obtener información sobre los cambios propuestos, vea [crear informes](database-experimentation-assistant-create-report.md).

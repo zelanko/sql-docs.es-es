@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 7519b35bb89704acad32f3dfe46c2f916b4dc441
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2e3490f1a381bbe3a27f9860df2884c759387c39
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951360"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636095"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configuración de Distributed Replay para Asistente para experimentación con bases de datos
 
@@ -53,7 +53,7 @@ Para configurar el servicio del controlador:
    `NET STOP "SQL Server Distributed Replay Controller"`</br>
    `NET START "SQL Server Distributed Replay Controller"`
 
-Para más opciones de configuración, consulte [configuración de Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+Para más opciones de configuración, consulte [configuración de Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md).
 
 ## <a name="configure-dcom"></a>Configurar DCOM
 
@@ -93,7 +93,7 @@ Antes de configurar el servicio de cliente, use herramientas de red como ping pa
 
     Si la configuración es correcta, el registro muestra el mensaje **registrado con el controlador <el \> nombre del controlador**.
 
-Para más opciones de configuración, consulte [configuración de Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+Para más opciones de configuración, consulte [configuración de Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md).
 
 ## <a name="set-up-distributed-replay-administration-tools"></a>Configurar herramientas de administración de Distributed Replay
 
@@ -126,6 +126,6 @@ Se deben realizar los pasos siguientes para cada reproducción:
 2. Proporcione permisos para que el usuario de la cuenta de servicio del cliente tenga acceso a las bases de datos en la instancia de SQL Server. Los permisos son necesarios para que las consultas se ejecuten en la instancia de SQL Server.
 3. Inicie la reproducción.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - Para obtener información sobre cómo reproducir un seguimiento capturado en un entorno de prueba actualizado, vea [reproducir un seguimiento en Asistente para experimentación con bases de datos](database-experimentation-assistant-replay-trace.md).

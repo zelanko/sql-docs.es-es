@@ -19,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e4b24a8b2a825c5754d7cd1ec3f1c9594896eed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 06182bbd036fd746920f6e164b73321a170acc4f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551255"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670111"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,9 @@ sp_statistics [ @table_name = ] 'table_name'
      [ , [ @is_unique = ] 'is_unique' ]  
      [ , [ @accuracy = ] 'accuracy' ]  
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## <a name="arguments"></a>Argumentos  
 `[ @table_name = ] 'table_name'` Especifica la tabla que se utiliza para devolver información del catálogo. *TABLE_NAME* es de **tipo sysname**y no tiene ningún valor predeterminado. No se admite la coincidencia de patrón de caracteres comodín.  
   
@@ -79,7 +81,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**SEQ_IN_INDEX**|**smallint**|Posición de la columna dentro del índice.|  
 |**COLUMN_NAME**|**sysname**|Nombre de columna de cada columna del **TABLE_NAME** devuelto. Esta columna siempre devuelve un valor.|  
 |**COLLATION**|**char(1)**|Orden utilizado en la intercalación. Puede ser:<br /><br /> A = Ascendente<br /><br /> D = Descendente<br /><br /> NULL = No aplicable|  
-|**CARDINALIDAD**|**int**|Número de filas de la tabla o valores únicos del índice.|  
+|**CARDINALITY**|**int**|Número de filas de la tabla o valores únicos del índice.|  
 |**PÁGINAS**|**int**|Número de páginas para el almacenamiento del índice o tabla.|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor.|  
   

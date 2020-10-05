@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c9d3876b358721c7d63b1bbbb0aca98c56721b83
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0ad7fcb2bb63d77bd50c89f11e9b818439b0d1d0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977856"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721406"
 ---
 # <a name="rds-tutorial-vbscript"></a>Tutorial de RDS (VBScript)
 Este es el tutorial de RDS, escrito en Microsoft Visual Basic Scripting Edition. Para obtener una descripción del propósito de este tutorial, vea el [tutorial de RDS](./rds-tutorial.md).  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](/dotnet/framework/wcf/).  
   
  En este tutorial, [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md) y [RDS. El espacio](../../reference/rds-api/dataspace-object-rds.md) de bits se crea en tiempo de diseño; es decir, se definen con etiquetas de objeto, como se indica a continuación: `<OBJECT>...</OBJECT>` . Como alternativa, se podrían crear en tiempo de ejecución con el método [CreateObject (RDS)](../../reference/rds-api/createobject-method-rds.md) . Por ejemplo, **RDS. ** El objeto DataControl podría crearse de la siguiente manera:  
   

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6b6bb99ea218268a7ccb988acb2f49fb4898f32
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0f5c98370ebb1a1b16e09e900455888d0c201905
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978446"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721576"
 ---
 # <a name="address-book-data-binding-object"></a>Objeto de enlace de datos de la libreta de direcciones
 La aplicación de libreta de direcciones utiliza [RDS. Objeto DataControl](../../reference/rds-api/datacontrol-object-rds.md) para enlazar datos de la base de datos SQL Server a un objeto visual (en este caso, una tabla DHTML) en la página HTML del cliente de la aplicación. La lógica del programa VBScript orientada a eventos utiliza [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md) para:  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](/dotnet/framework/wcf/).  
   
 -   Consultar la base de datos, enviar actualizaciones a la base de datos y actualizar la cuadrícula de datos.  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6d20c04b6771b0f6a5893868d7484d2cae6ae47f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 289a25088c61988382093f50526546bf5036a510
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466534"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727666"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>Seleccione del &lt; modelo &gt; . CASOS (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -62,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  El uso de la función [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) en la cláusula **Where** solo devuelve los casos que están asociados al nodo especificado por la columna NODE_UNIQUE_NAME del conjunto de filas de esquema.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos siguientes se basan en la estructura de minería de datos Targeted mailing, que se basa en la base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] y sus modelos de minería de datos asociados. Para obtener más información, vea [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Los ejemplos siguientes se basan en la estructura de minería de datos Targeted mailing, que se basa en la base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] y sus modelos de minería de datos asociados. Para obtener más información, vea [tutorial básico de minería de datos](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Ejemplo 1: obtención de detalles de los casos del modelo y de las columnas de estructura  
  En el siguiente ejemplo se devuelven las columnas para todos los casos que se emplearon para probar el modelo Targeted Mailing. Si la estructura de minería de datos en la que se genera el modelo no tiene un conjunto de datos de prueba de exclusión, esta consulta devolvería 0 casos. Puede utilizar la lista de expresiones para devolver únicamente las columnas que necesite.  
@@ -85,12 +85,11 @@ AND IsInNode('002')
  Para devolver una columna de estructura, los permisos de obtención de detalles deben estar habilitados en el modelo de minería de datos y en la estructura de minería de datos.  
   
 > [!NOTE]  
->  No todos los tipos de modelos de minería de datos admiten la obtención de detalles. Para obtener información acerca de los modelos que admiten la obtención de detalles, vea [consultas de obtención de detalles &#40;&#41;de minería de datos ](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining).  
+>  No todos los tipos de modelos de minería de datos admiten la obtención de detalles. Para obtener información acerca de los modelos que admiten la obtención de detalles, vea [consultas de obtención de detalles &#40;&#41;de minería de datos ](/analysis-services/data-mining/drillthrough-queries-data-mining).  
   
 ## <a name="see-also"></a>Consulte también  
  [SELECCIONE &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

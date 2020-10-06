@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 64c18c32cde0c29c120c8cb1b2d976bd983c774a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886002"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727796"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurar las opciones de Data Migration Assistant
 
-Puede ajustar el comportamiento de Data Migration Assistant estableciendo los valores de configuración en el archivo DMA. exe. config. En este artículo se describen los valores de configuración clave.
+Puede ajustar el comportamiento de Data Migration Assistant estableciendo los valores de configuración en el archivo de dma.exe.config. En este artículo se describen los valores de configuración clave.
 
-Puede encontrar el archivo DMA. exe. config para la aplicación de escritorio Data Migration Assistant y la utilidad de línea de comandos, en las siguientes carpetas de la máquina.
+Puede encontrar el archivo de dma.exe.config para la aplicación de escritorio Data Migration Assistant y la utilidad de línea de comandos, en las siguientes carpetas de la máquina.
 
 - Aplicación de escritorio
 
-  % ProgramFiles% \\ Microsoft Data Migration Assistant \\ DMA. exe. config
+  % ProgramFiles% \\ Microsoft Data Migration Assistant \\dma.exe.config
 
 - Utilidad de línea de comandos
 
-  % ProgramFiles% \\ Microsoft Data Migration Assistant \\ dmacmd. exe. config 
+  % ProgramFiles% \\ Microsoft Data Migration Assistant \\dmacmd.exe.config 
 
 Asegúrese de guardar una copia del archivo de configuración original antes de realizar cualquier modificación. Después de realizar los cambios, reinicie Data Migration Assistant para que los nuevos valores de configuración surtan efecto.
 
@@ -111,7 +111,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: umbral de recomendación
 
-Con [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), puede ampliar dinámicamente los datos transaccionales activos e inactivos de Microsoft SQL Server 2016 a Azure. Stretch Database se dirige a las bases de datos transaccionales con grandes cantidades de datos inactivos. En la recomendación de Stretch Database, en la recomendación de características de almacenamiento, primero se identifican las tablas que considera que se beneficiarán de esta característica y, a continuación, se identifican los cambios que se deben realizar para habilitar la tabla para esta característica.
+Con [SQL Server Stretch Database](../sql-server/stretch-database/stretch-database.md), puede ampliar dinámicamente los datos transaccionales activos e inactivos de Microsoft SQL Server 2016 a Azure. Stretch Database se dirige a las bases de datos transaccionales con grandes cantidades de datos inactivos. En la recomendación de Stretch Database, en la recomendación de características de almacenamiento, primero se identifican las tablas que considera que se beneficiarán de esta característica y, a continuación, se identifican los cambios que se deben realizar para habilitar la tabla para esta característica.
 
 A partir de Data Migration Assistant v 2.0, puede controlar este umbral para que una tabla pueda optar a la característica de Stretch Database mediante el valor de configuración recommendedNumberOfRows. El valor predeterminado es 100.000 filas. Si desea analizar las capacidades de stretch para tablas incluso más pequeñas, disminuya el valor en consecuencia.
 
@@ -130,7 +130,7 @@ A partir de Data Migration Assistant v 2.0, puede controlar este umbral para que
 
 ## <a name="sql-connection-timeout"></a>Tiempo de espera de conexión SQL
 
-Puede controlar el [tiempo de espera de conexión de SQL](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx) para las instancias de origen y de destino durante la ejecución de una evaluación o migración, estableciendo el valor de tiempo de espera de la conexión en un número de segundos especificado. El valor predeterminado es 15 segundos.
+Puede controlar el [tiempo de espera de conexión de SQL](/dotnet/api/system.data.sqlclient.sqlconnection.connectiontimeout) para las instancias de origen y de destino durante la ejecución de una evaluación o migración, estableciendo el valor de tiempo de espera de la conexión en un número de segundos especificado. El valor predeterminado es 15 segundos.
 
 ```
 <appSettings>

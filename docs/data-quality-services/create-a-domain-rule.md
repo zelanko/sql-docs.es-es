@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9762c84ba42a3d35d0d9ebbcbb3ffb5f114ac1c8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: bfb2db2c6ec11fa765d3554aef3daf853a305fa6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480425"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725423"
 ---
 # <a name="create-a-domain-rule"></a>Cree una regla de dominio
 
@@ -98,7 +98,7 @@ ms.locfileid: "89480425"
   
 2.  Haga clic en **Descartar todos los cambios** para quitar los cambios realizados en las reglas de dominio y volver a las reglas aplicadas previamente, con lo que los cambios efectuados después de la última aplicación de las reglas no se aplicarán. La validez de cada uno de los valores del dominio se actualizará de acuerdo con las reglas previamente aplicadas, no con los cambios descartados.  
   
-3.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+3.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a> Seguimiento: después de crear una regla de dominio  
  Una vez creada una regla de dominio, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
@@ -131,7 +131,6 @@ ms.locfileid: "89480425"
 |El valor no coincide con el modelo|Solo serán válidos los valores que no coincidan con el modelo de caracteres, dígitos o caracteres especiales del operando.|Operando de ejemplo: A1 (el valor no debe coincidir con un patrón de *cualquier* carácter seguido de *cualquier* dígito).<br /><br /> Valores válidos: AB1, A, A:5<br /><br /> Valores no válidos: B7, c9|  
 |El valor contiene el modelo|Solo serán válidos los valores que contengan el modelo de caracteres, dígitos o caracteres especiales del operando.|Operando de ejemplo: AA-12 (el valor contiene un modelo de *cualesquiera* dos caracteres seguidos de un guion (-), que a su vez va seguido de *cualesquiera* dos dígitos).<br /><br /> Valores válidos: AAA-01, ab-975<br /><br /> Valores no válidos: A7, AA-6, C-45, aa;98|  
 |El valor no contiene el modelo|Solo serán válidos los valores que no contengan el modelo de caracteres del operando.|Operando de ejemplo: AB-12 (el valor no debe contener un modelo de *cualesquiera* dos caracteres seguidos de un guion (-), que a su vez va seguido de *cualesquiera* dos dígitos).<br /><br /> Valores válidos: A7, AA-6, C-45, aa;98<br /><br /> Valores no válidos: AAA-01, ab-975|  
-|El valor coincide con la expresión regular|Solo se considerarán válidos los valores que coincidan con la expresión regular del operando.<br /><br /> No incluya los delimitadores "^" ni "$" en la expresión regular, ya que DQS los agrega de forma automática a las cláusulas que contienen esta condición. (Como alternativa, puede incluir la expresión regular que contiene los delimitadores "^" y "$" entre paréntesis). Para obtener más información sobre las expresiones regulares, vea [elementos del lenguaje de expresiones regulares](https://go.microsoft.com/fwlink/?LinkId=225561).|Operando de ejemplo: [1-5] + (cada carácter debe ser un dígito numérico comprendido entre 1 y 5, apareciendo al menos una vez)<br /><br /> Valores válidos: 123, 12345, 14352<br /><br /> Valores no válidos: 456, ABC|  
+|El valor coincide con la expresión regular|Solo se considerarán válidos los valores que coincidan con la expresión regular del operando.<br /><br /> No incluya los delimitadores "^" ni "$" en la expresión regular, ya que DQS los agrega de forma automática a las cláusulas que contienen esta condición. (Como alternativa, puede incluir la expresión regular que contiene los delimitadores "^" y "$" entre paréntesis). Para obtener más información sobre las expresiones regulares, vea [elementos del lenguaje de expresiones regulares](/dotnet/standard/base-types/regular-expression-language-quick-reference).|Operando de ejemplo: [1-5] + (cada carácter debe ser un dígito numérico comprendido entre 1 y 5, apareciendo al menos una vez)<br /><br /> Valores válidos: 123, 12345, 14352<br /><br /> Valores no válidos: 456, ABC|  
 |El valor no coincide con una expresión regular|Solo se considerarán válidos los valores que no coincidan con la expresión regular del operando.|Operando de ejemplo: [1-5] + (la cadena no debe esta formada únicamente por dígitos numéricos comprendidos entre 1 y 5)<br /><br /> Valores válidos: 456, ABC<br /><br /> Valores no válidos: 123, 123456, 14352|  
-  
   

@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5388b3a4d59a80f3e4b030313cde4a5ea9361a3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37a7a0e8be59136eb3ab6e0454c7910b9c9e3198
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352921"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726166"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  Procesa el objeto de minería de datos especificado. Para obtener más información sobre el procesamiento de modelos y estructuras de minería de datos, vea [requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/processing-requirements-and-considerations-data-mining).  
+  Procesa el objeto de minería de datos especificado. Para obtener más información sobre el procesamiento de modelos y estructuras de minería de datos, vea [requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](/analysis-services/data-mining/processing-requirements-and-considerations-data-mining).  
   
  Si se especifica una estructura de minería de datos, la instrucción procesa la estructura de minería de datos y todos sus modelos de minería de datos asociados. Si se especifica un modelo de minería de datos, la instrucción procesa solamente el modelo de minería de datos.  
   
@@ -35,7 +35,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  Identificador de modelo.  
   
- *structure*  
+ *estructuras*  
  Identificador de estructura.  
   
  *columnas del modelo asignado*  
@@ -49,7 +49,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
   
  Mediante el uso de la segunda forma de sintaxis, inserte INTO *\<object>* . COLUMN_VALUES, puede insertar datos directamente en las columnas del modelo sin entrenar el modelo. Este método proporciona datos de columna al modelo de forma concisa y ordenada que resultan útiles a la hora de trabajar con conjuntos de datos que contienen jerarquías o columnas ordenadas.  
   
- Si utiliza **Insert Into** con un modelo de minería de datos o una estructura de minería de datos y deja fuera de los \<mapped model columns> \<source data query> argumentos y, la instrucción se comporta como **ProcessDefault**, mediante enlaces que ya existen. La instrucción devuelve un error cuando no existen enlaces. Para obtener más información sobre **ProcessDefault**, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). En el siguiente ejemplo se muestra la sintaxis:  
+ Si utiliza **Insert Into** con un modelo de minería de datos o una estructura de minería de datos y deja fuera de los \<mapped model columns> \<source data query> argumentos y, la instrucción se comporta como **ProcessDefault**, mediante enlaces que ya existen. La instrucción devuelve un error cuando no existen enlaces. Para obtener más información sobre **ProcessDefault**, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). En el siguiente ejemplo se muestra la sintaxis:  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -59,7 +59,7 @@ INSERT INTO [MINING MODEL] <model>
   
  La siguiente tabla ofrece una descripción del resultado de distintas formas de la instrucción, en función del estado de los objetos.  
   
-|.|Estado de los objetos|Resultado|  
+|Instrucción|Estado de los objetos|Resultado|  
 |---------------|----------------------|------------|  
 |INSERTAR EN EL MODELO DE MINERÍA DE DATOS*\<model>*|La estructura de minería de datos está procesada.|Se procesa el modelo de minería de datos.|  
 ||La estructura de minería de datos no está procesada.|Se procesan el modelo y la estructura de minería de datos.|  
@@ -124,5 +124,4 @@ AS [Models]
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

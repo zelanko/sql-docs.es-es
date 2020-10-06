@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 393d9d10fd882f1dedfbaac012b2dbd0ec200a3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bffd325b4c940302ebcc4fef67c17f5f76c03a00
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450022"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724680"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Agregar conocimiento a una base de conocimiento
 
@@ -44,14 +44,14 @@ ms.locfileid: "88450022"
   
 -   Para obtener más información en la documentación, vea [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md).  
   
--   Para obtener un vídeo que muestra cómo realizar la detección de conocimiento, haga clic [aquí](https://msdn.microsoft.com/sqlserver/hh323825.aspx).  
+-   Para obtener un vídeo que muestra cómo realizar la detección de conocimiento, haga clic [aquí](../sql-server/index.yml).  
   
 ##  <a name="manage-data-values-in-a-domain"></a><a name="ManageDomain"></a> Administrar valores de datos en un dominio  
  DQS le permite cambiar y aumentar de forma interactiva los metadatos generados por la actividad de detección de conocimiento asistida por PC. Puede hacerlo en la actividad Administración de dominios, donde puede aplicar un cambio a un valor de datos específico.  
   
 -   Para obtener más información en la documentación, vea [Change Domain Values](../data-quality-services/change-domain-values.md).  
   
--   Para obtener un vídeo que muestra cómo realizar la administración de dominios, haga clic [aquí](https://msdn.microsoft.com/sqlserver/hh323825.aspx). Observe que, en este vídeo, los valores de dominio se cambian en la página Administrar valores del dominio del Asistente para la detección de conocimiento. También puede realizar estos pasos en la página Valores del dominio de la actividad Administración de dominios.  
+-   Para obtener un vídeo que muestra cómo realizar la administración de dominios, haga clic [aquí](../sql-server/index.yml). Observe que, en este vídeo, los valores de dominio se cambian en la página Administrar valores del dominio del Asistente para la detección de conocimiento. También puede realizar estos pasos en la página Valores del dominio de la actividad Administración de dominios.  
   
 ##  <a name="import-knowledge-from-a-dqs-file"></a><a name="DQSFile"></a> Importar conocimiento desde un archivo. DQS  
  Puede importar un dominio desde un archivo de datos .dqs a una base de conocimiento existente, o puede importar una base de conocimiento completa desde un archivo .dqs a una nueva base de conocimiento. Para ello, primero debe exportar un dominio o una base de conocimiento existente a un archivo .dqs. Un archivo .dqs que contiene un dominio incluye todos los datos de este; un archivo .dqs que contiene una base de conocimiento contendrá toda la información de esta, incluidos los dominios y la directiva de coincidencia.  
@@ -72,5 +72,4 @@ ms.locfileid: "88450022"
  DQS se suministra con una base de conocimiento denominada Datos de DQS que contiene dominios para datos de direcciones y de empresas de EE. UU. Esta base de conocimiento se puede utilizar para iniciar rápidamente un proyecto sin crear una nueva base de conocimiento. La base de conocimiento Datos de DQS es de solo lectura, pero el administrador de datos puede crear una nueva base de conocimiento basándose en ella.  
   
 -   Para obtener más información en la documentación, vea [Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md).  
-  
   

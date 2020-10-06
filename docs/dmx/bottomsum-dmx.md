@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8a80c42971199d6acf57e802994feced63b7899f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 551fde90989093ab601cfa6100b6c6e208fac9e6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431147"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727754"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,7 +38,7 @@ BottomSum(<table expression>, <rank expression>, <sum>)
  La función **BottomSum** devuelve las filas inferiores en orden creciente de rango. El rango se basa en el valor evaluado del \<rank expression> argumento de cada fila, de modo que la suma de los \<rank expression> valores sea al menos el total especificado por el \<sum> argumento. **BottomSum** devuelve el menor número posible de elementos mientras se cumple el valor de suma especificado.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea una consulta de predicción con el modelo de asociación que se genera mediante el [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ En el ejemplo siguiente se crea una consulta de predicción con el modelo de asociación que se genera mediante el [tutorial básico de minería de datos](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
  Para entender cómo funciona BottomSum, puede ser útil ejecutar primero una consulta de predicción que devuelva solo la tabla anidada.  
   
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  En este ejemplo, el valor proporcionado como entrada contiene una comilla sencilla y, por consiguiente, se debe anteponer como carácter de escape otra comilla sencilla. Si duda de la sintaxis para insertar un carácter de escape, puede utilizar el generador de consultas de predicción para crear la consulta. Al seleccionar el valor en la lista desplegable, se inserta el carácter de escape necesario. Para obtener más información, vea [crear una consulta Singleton en el diseñador de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
+>  En este ejemplo, el valor proporcionado como entrada contiene una comilla sencilla y, por consiguiente, se debe anteponer como carácter de escape otra comilla sencilla. Si duda de la sintaxis para insertar un carácter de escape, puede utilizar el generador de consultas de predicción para crear la consulta. Al seleccionar el valor en la lista desplegable, se inserta el carácter de escape necesario. Para obtener más información, vea [crear una consulta Singleton en el diseñador de minería de datos](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Resultados de ejemplo:  
   
@@ -102,5 +102,4 @@ NATURAL PREDICTION JOIN
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [&#41;BottomPercent &#40;DMX ](../dmx/bottompercent-dmx.md)  
-  
   

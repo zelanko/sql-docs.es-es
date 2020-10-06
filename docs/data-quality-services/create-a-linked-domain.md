@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b2fb5b1a57b39a91735e213385c7756a7bb05984
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6dbe71b94bfc71cca727f34bb6a4fd4e532455bd
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487884"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725406"
 ---
 # <a name="create-a-linked-domain"></a>Crear dominio vinculado
 
@@ -63,7 +63,7 @@ ms.locfileid: "88487884"
   
 6.  Si fuera necesario, puede cambiar el nombre o la descripción del dominio vinculado en la pestaña Propiedades del dominio.  
   
-7.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a> Asignar dos campos a dominios vinculados  
   
@@ -100,5 +100,4 @@ ms.locfileid: "88487884"
 -   No se puede crear un dominio vinculado o un dominio compuesto vinculado a un dominio compuesto.  
   
 -   Al hacer doble clic en un dominio vinculado en cualquiera de las pestañas de la administración de dominios, el dominio se abrirá para su edición indicando en la cadena de nombre que es un dominio vinculado.  
-  
   

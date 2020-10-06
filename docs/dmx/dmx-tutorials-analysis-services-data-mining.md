@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8974b18cf666382d5be395f5b52b87fccae29aff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0cd78d74af4858203d5cbbb2d95c00794935b205
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88413402"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726219"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>Tutoriales de DMX (Analysis Services - Minería de datos)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "88413402"
   Los siguientes tutoriales muestran el uso de las instrucciones de Extensiones de minería de datos (DMX) con los modelos y estructuras de minería de datos.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Tutorial DMX de Bike Buyer](https://msdn.microsoft.com/library/4b634cc1-86dc-42ec-9804-a19292fe8448)  
+ [Tutorial DMX de Bike Buyer](/previous-versions/sql/sql-server-2016/ms345287(v=sql.130))  
   
  En este tutorial aprenderá a crear, entrenar y explorar modelos de minería de datos utilizando el lenguaje de consulta DMX. A continuación, los utilizará para crear predicciones sobre si es probable que un cliente compre un producto concreto.  
   
- [Tutorial DMX de Market Basket](https://msdn.microsoft.com/library/6e262a1d-c89e-4033-8368-46cf25168ef5)  
+ [Tutorial DMX de Market Basket](/previous-versions/sql/sql-server-2016/ms345326(v=sql.130))  
   
  En este tutorial, aprenderá cómo crear un modelo de minería de datos que prediga qué productos tienden a adquirirse simultáneamente. Este tutorial también demuestra el uso de tablas anidadas en la minería de datos.  
   
@@ -40,10 +40,9 @@ ms.locfileid: "88413402"
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Acceso a datos de modelo multidimensional &#40;Analysis Services: datos multidimensionales&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)  
+ [Acceso a datos de modelo multidimensional &#40;Analysis Services: datos multidimensionales&#41;](/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)  
   
 ## <a name="see-also"></a>Consulte también  
  [Estructura y uso de las consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)  
-  
+ [Tutorial básico de minería de datos](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))  
   

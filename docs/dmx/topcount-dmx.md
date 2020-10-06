@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae44534ae51f0bc49ca687ce73a17f9486bc1b31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23a9a1594c31bda040a22ad3914af8b8e7d3603f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88395731"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726090"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -42,7 +42,7 @@ TopCount(<table expression>, <rank expression>, <count>)
  Sin embargo, hay situaciones en las que es posible que siga necesitando usar el número de recuentos. Por ejemplo, DMX no admite el calificador **Top** en una instrucción Sub-SELECT. La función [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) tampoco admite la adición de la **parte superior**.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos siguientes son consultas de predicción en el modelo de asociación que se genera mediante el [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Las consultas devuelven los mismos resultados, pero en el primer ejemplo se usa Topcount y en el segundo ejemplo se usa la función PREDICT.  
+ Los ejemplos siguientes son consultas de predicción en el modelo de asociación que se genera mediante el [tutorial básico de minería de datos](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)). Las consultas devuelven los mismos resultados, pero en el primer ejemplo se usa Topcount y en el segundo ejemplo se usa la función PREDICT.  
   
  Para entender cómo funciona el recuento, puede ser útil ejecutar primero una consulta de predicción que devuelva solo la tabla anidada.  
   
@@ -55,7 +55,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  En este ejemplo, el valor proporcionado como entrada contiene una comilla sencilla y, por consiguiente, se debe anteponer como carácter de escape otra comilla sencilla. Si duda de la sintaxis para insertar un carácter de escape, puede utilizar el generador de consultas de predicción para crear la consulta. Al seleccionar el valor en la lista desplegable, se inserta el carácter de escape necesario. Para obtener más información, vea [crear una consulta Singleton en el diseñador de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
+>  En este ejemplo, el valor proporcionado como entrada contiene una comilla sencilla y, por consiguiente, se debe anteponer como carácter de escape otra comilla sencilla. Si duda de la sintaxis para insertar un carácter de escape, puede utilizar el generador de consultas de predicción para crear la consulta. Al seleccionar el valor en la lista desplegable, se inserta el carácter de escape necesario. Para obtener más información, vea [crear una consulta Singleton en el diseñador de minería de datos](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Resultados de ejemplo:  
   
@@ -117,5 +117,4 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
  [&#41;BottomCount &#40;DMX ](../dmx/bottomcount-dmx.md)   
  [&#40;DMX&#41;](../dmx/toppercent-dmx.md)   
  [&#40;DMX&#41;](../dmx/topsum-dmx.md)  
-  
   

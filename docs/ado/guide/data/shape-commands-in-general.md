@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a982f08323a9e852f555732b290d598412d3a802
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c20132fe933d232d38ee843a706e9ad923d0d376
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979616"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724936"
 ---
 # <a name="shape-commands-in-general"></a>Comandos Shape en General
 La forma de datos define las columnas de un **conjunto de registros**con forma, las relaciones entre las entidades representadas por las columnas y la manera en que el **conjunto de registros** se rellena con datos.  
@@ -46,7 +46,7 @@ La forma de datos define las columnas de un **conjunto de registros**con forma, 
   
  Puede tener acceso a los componentes de **conjunto** de registros del **conjunto de registros** con forma mediante programación o a través de un control visual adecuado.  
   
- Microsoft proporciona una herramienta visual que genera comandos de forma (vea el [Diseñador de entorno de datos](https://go.microsoft.com/fwlink/?LinkId=5689) en la documentación de Visual Basic 6) y otro que muestra los cursores jerárquicos (vea "usar el control Hierarchical FlexGrid de Microsoft" en la documentación de Visual Basic 6).  
+ Microsoft proporciona una herramienta visual que genera comandos de forma (vea el [Diseñador de entorno de datos](/previous-versions/visualstudio/aa445793(v=vs.60)) en la documentación de Visual Basic 6) y otro que muestra los cursores jerárquicos (vea "usar el control Hierarchical FlexGrid de Microsoft" en la documentación de Visual Basic 6).  
   
  Para obtener información sobre cómo navegar por un **conjunto de registros**jerárquico, vea [obtener acceso a las filas de un conjunto de registros jerárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   

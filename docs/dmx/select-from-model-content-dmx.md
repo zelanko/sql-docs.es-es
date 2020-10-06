@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df70a8726e9abc56d677c48ba8f3f995814866d4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496298"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727646"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Seleccione del &lt; modelo &gt; . CONTENIDO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -52,7 +52,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  En la tabla siguiente se enumeran las columnas que están incluidas en el contenido del modelo de minería de datos.  
   
 > [!NOTE]  
->  Los algoritmos podrían interpretar las columnas de forma distinta para poder representar el contenido correctamente. Para obtener una descripción del contenido del modelo de minería de datos para cada algoritmo y sugerencias sobre cómo interpretar y consultar el contenido del modelo de minería de datos para cada tipo de modelo, vea [contenido del modelo de minería de datos &#40;Analysis Services-data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
+>  Los algoritmos podrían interpretar las columnas de forma distinta para poder representar el contenido correctamente. Para obtener una descripción del contenido del modelo de minería de datos para cada algoritmo y sugerencias sobre cómo interpretar y consultar el contenido del modelo de minería de datos para cada tipo de modelo, vea [contenido del modelo de minería de datos &#40;Analysis Services-data mining&#41;](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 |Columna de conjunto de filas CONTENT|Descripción|  
 |---------------------------|-----------------|  
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  Resultados esperados:  
   
- Dado que el modelo es de árboles de decisión, los descendientes del nodo primario del modelo incluyen un único nodo de estadísticas marginal, un nodo que representa el atributo de predicción y varios nodos que contienen los atributos de entrada y los valores. Para obtener más información, vea [Contenido del modelo de minería de datos para los modelos de árboles de decisión &#40;Analysis Services - Minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
+ Dado que el modelo es de árboles de decisión, los descendientes del nodo primario del modelo incluyen un único nodo de estadísticas marginal, un nodo que representa el atributo de predicción y varios nodos que contienen los atributos de entrada y los valores. Para obtener más información, vea [Contenido del modelo de minería de datos para los modelos de árboles de decisión &#40;Analysis Services - Minería de datos&#41;](/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
   
 ## <a name="using-the-flattened-keyword"></a>Usar la palabra clave FLATTENED  
  El contenido del modelo de minería de datos suele contener información interesante sobre el modelo en columnas de tablas anidadas. La palabra clave FLATTENED le permite recuperar los datos de una columna de tabla anidada sin utilizar un proveedor que admita conjuntos de filas jerárquicos.  
@@ -147,5 +147,4 @@ WHERE NODE_TYPE = 26
  [SELECCIONE &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

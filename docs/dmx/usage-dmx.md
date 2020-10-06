@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3886cd500282d34ef07145913e036a6ab4ad4852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e9108fc9bc53361a15d144f1f11afa62f9d5a97
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394861"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726054"
 ---
 # <a name="usage-dmx"></a>Uso (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "88394861"
   
  Las columnas que se especifican como el tipo de **predicción** se usan como columnas de entrada y de salida. Las columnas que se especifican como **PredictOnly** solo se usan como columnas de salida. Algunos algoritmos pueden tratar las columnas Predict de forma distinta.  
   
- Para obtener más información sobre los tipos de uso de columnas que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite, vea [columnas del modelo de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
+ Para obtener más información sobre los tipos de uso de columnas que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite, vea [columnas del modelo de minería de datos](/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="see-also"></a>Consulte también  
- [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos ](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Referencia de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Referencia de funciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -50,5 +50,4 @@ ms.locfileid: "88394861"
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Estructura y uso de las consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

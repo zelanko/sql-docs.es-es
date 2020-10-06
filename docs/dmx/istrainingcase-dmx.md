@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e31f1c575441c01c6ff7e9325179ae6776802276
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eb68d0aaa0d19fb903154b8d5c4d4135b57883e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352341"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726156"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,12 +37,12 @@ IsTrainingCase()
  Se puede determinar si los datos de una estructura de minería de datos determinada se han dividido en conjuntos de entrenamiento y de prueba observando el valor de las propiedades <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> y <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A>.  
   
 > [!NOTE]  
->  La obtención de detalles debe estar habilitada en el modelo si desea utilizar las funciones IsTrainingCase o IsTestCase para devolver detalles sobre los casos del modelo. Para obtener más información, vea [Habilitar la obtención de detalles para un modelo de minería](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
+>  La obtención de detalles debe estar habilitada en el modelo si desea utilizar las funciones IsTrainingCase o IsTestCase para devolver detalles sobre los casos del modelo. Para obtener más información, vea [Habilitar la obtención de detalles para un modelo de minería](/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
   
  Para devolver los casos que forman parte del conjunto de datos de prueba, use la función [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md).  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se usa el modelo de minería de datos de agrupación en clústeres del escenario de distribución de datos de destino en el [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta solo devuelve los casos que se utilizaron para entrenar el modelo de minería de datos. Además, los casos de entrenamiento se restringen a los clientes menores de 40 años.  
+ En el ejemplo siguiente se usa el modelo de minería de datos de agrupación en clústeres del escenario de distribución de datos de destino en el [tutorial básico de minería de datos](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)). La consulta solo devuelve los casos que se utilizaron para entrenar el modelo de minería de datos. Además, los casos de entrenamiento se restringen a los clientes menores de 40 años.  
   
 ```  
 SELECT *  
@@ -54,8 +54,7 @@ AND [Age] <40
  Para ver otros ejemplos de cómo consultar los casos que se usan en la minería de datos, vea [SELECT FROM &#60;model&#62;. Los casos &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md) y [seleccionar de &#60;estructura&#62;. CASOS](../dmx/select-from-structure-cases.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Conjuntos de datos de entrenamiento y de prueba](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)   
+ [Conjuntos de datos de entrenamiento y de prueba](/analysis-services/data-mining/training-and-testing-data-sets)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Consultas de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)  
-  
+ [Consultas de minería de datos](/analysis-services/data-mining/data-mining-queries)  
   

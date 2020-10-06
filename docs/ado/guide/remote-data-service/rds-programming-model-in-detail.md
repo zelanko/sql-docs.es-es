@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af1b575f642159cad84d0ce833bb783cf2363701
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a2b307c89d5e4a25d6963ef100083015ffe6ce74
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977976"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724926"
 ---
 # <a name="rds-programming-model-in-detail"></a>Modelo detallado de programación de RDS
 Los siguientes son elementos clave del modelo de programación de RDS:  
@@ -32,7 +32,7 @@ Los siguientes son elementos clave del modelo de programación de RDS:
 -   Evento  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](/dotnet/framework/wcf/).  
   
 ## <a name="rdsdataspace"></a>ActiveX. DataSpace  
  La aplicación cliente debe especificar el servidor y el programa de servidor que se va a invocar. A cambio, la aplicación recibe una referencia al programa de servidor y puede tratar la referencia como si fuera el propio programa de servidor.  
@@ -65,7 +65,7 @@ Los siguientes son elementos clave del modelo de programación de RDS:
   
  **Objeto RDS. **El objeto DataControl también tiene sus propios métodos para navegar, ordenar y filtrar las filas del objeto de conjunto de **registros** asociado. Estos métodos son similares, pero no son los mismos que los métodos del objeto de **conjunto de registros** de ADO.  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  RDS admite dos de sus propios eventos, que son independientes del modelo de eventos de ADO. Se llama al evento [onreadystatechange](../../reference/rds-api/onreadystatechange-event-rds.md) siempre que el **objeto RDS. **Los cambios en la propiedad [ReadyState](../../reference/rds-api/readystate-property-rds.md) de DataControl, lo que le notifica cuando una operación asincrónica ha finalizado correctamente, finalizado o se ha producido un error. Se llama al evento [OnError](../../reference/rds-api/onerror-event-rds.md) siempre que se produce un error, incluso si se produce un error durante una operación asincrónica.  
   
 > [!NOTE]

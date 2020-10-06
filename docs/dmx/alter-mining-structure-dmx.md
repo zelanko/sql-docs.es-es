@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ba2a5e81b7ae19b431f35b3fe0eac291718c4df3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6169d898479637d8f8c0a74aececd56cf1f62eb7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431187"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727816"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,7 +37,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *structure*  
+ *estructuras*  
  Nombre de la estructura de minería de datos a la que se agregará el modelo de minería de datos.  
   
  *model*  
@@ -56,7 +56,7 @@ USING <algorithm> [(<parameter list>)]
  Nombre de un algoritmo de minería de datos definido por el proveedor.  
   
 > [!NOTE]  
->  Se puede recuperar una lista de los algoritmos admitidos por el proveedor actual mediante [DMSCHEMA_MINING_SERVICES conjunto de filas](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Para ver los algoritmos admitidos en la instancia actual de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vea [propiedades de minería de datos](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Se puede recuperar una lista de los algoritmos admitidos por el proveedor actual mediante [DMSCHEMA_MINING_SERVICES conjunto de filas](/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Para ver los algoritmos admitidos en la instancia actual de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vea [propiedades de minería de datos](/analysis-services/server-properties/data-mining-properties).  
   
  *lista de parámetros*  
  Opcional. Lista delimitada por comas de parámetros definidos por el proveedor para el algoritmo.  
@@ -97,7 +97,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ### <a name="column-name-and-alias"></a>Nombre y alias de la columna  
- El nombre de columna que se utiliza en la lista de definiciones de columna debe ser el nombre de la columna tal como se utiliza en la estructura de minería de datos. Sin embargo, también se puede definir un alias para representar la columna de estructura en el modelo de minería de datos. Asimismo, se pueden crear varias definiciones de columna para la misma columna de estructura y asignar a cada copia de la columna un alias y uso de predicción diferentes. De forma predeterminada, se utiliza el nombre de la columna de estructura si no se define un alias. Para obtener más información, vea [crear un alias para una columna de modelo](https://docs.microsoft.com/analysis-services/data-mining/create-an-alias-for-a-model-column).  
+ El nombre de columna que se utiliza en la lista de definiciones de columna debe ser el nombre de la columna tal como se utiliza en la estructura de minería de datos. Sin embargo, también se puede definir un alias para representar la columna de estructura en el modelo de minería de datos. Asimismo, se pueden crear varias definiciones de columna para la misma columna de estructura y asignar a cada copia de la columna un alias y uso de predicción diferentes. De forma predeterminada, se utiliza el nombre de la columna de estructura si no se define un alias. Para obtener más información, vea [crear un alias para una columna de modelo](/analysis-services/data-mining/create-an-alias-for-a-model-column).  
   
  En el caso de las columnas de tabla anidada, especifique el nombre de la tabla anidada, especifique el tipo de datos como **tabla**y, a continuación, proporcione la lista de columnas anidadas que se incluirán en el modelo, entre paréntesis.  
   
@@ -121,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
   
 |Cláusula|Descripción|  
 |-|-|  
-|**MANERA**|Esta columna puede predecirla el modelo y sus valores se pueden usar como entrada para predecir el valor de otras columnas de predicción.|  
+|**PREDICT**|Esta columna puede predecirla el modelo y sus valores se pueden usar como entrada para predecir el valor de otras columnas de predicción.|  
 |**PREDICT_ONLY**|Esta columna puede predecirla el modelo, pero sus valores no se pueden utilizar en escenarios de entrada para predecir el valor de otras columnas de predicción.|  
   
 ## <a name="filter-criteria-expressions"></a>Expresiones de criterios de filtro  
@@ -129,15 +129,15 @@ USING <algorithm> [(<parameter list>)]
   
  Las expresiones de criterios de filtro son predicados DMX simplificados, similares a una cláusula WHERE. Las expresiones de filtro se reducen a fórmulas que utilizan operadores matemáticos básicos, escalares y nombres de columna. La excepción la constituye el operador EXISTS; se evalúa como TRUE si la subconsulta devuelve al menos una fila. Los predicados se pueden combinar mediante los operadores lógicos comunes: AND, OR y NOT.  
   
- Para obtener más información acerca de los filtros utilizados con modelos de minería de datos, vea [filtros para modelos de minería de datos &#40;Analysis Services-data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
+ Para obtener más información acerca de los filtros utilizados con modelos de minería de datos, vea [filtros para modelos de minería de datos &#40;Analysis Services-data mining&#41;](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
 > [!NOTE]  
 >  Las columnas de un filtro deben ser columnas de estructura de minería de datos. No se puede crear un filtro para una columna del modelo ni para una columna con alias.  
   
- Para obtener más información sobre los operadores y la sintaxis de DMX, vea [columnas del modelo de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
+ Para obtener más información sobre los operadores y la sintaxis de DMX, vea [columnas del modelo de minería de datos](/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="parameter-definition-list"></a>Lista de definiciones de parámetros  
- Para ajustar el rendimiento y la funcionalidad de un modelo, se pueden agregar parámetros del algoritmo a la lista de parámetros. Los parámetros que se pueden utilizar dependen del algoritmo que se especifique en la cláusula USING. Para obtener una lista de parámetros asociados a cada algoritmo, vea [algoritmos de minería de datos &#40;Analysis Services-&#41;de minería de datos ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
+ Para ajustar el rendimiento y la funcionalidad de un modelo, se pueden agregar parámetros del algoritmo a la lista de parámetros. Los parámetros que se pueden utilizar dependen del algoritmo que se especifique en la cláusula USING. Para obtener una lista de parámetros asociados a cada algoritmo, vea [algoritmos de minería de datos &#40;Analysis Services-&#41;de minería de datos ](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
  La sintaxis de la lista de parámetros es:  
   
@@ -204,5 +204,4 @@ USING Microsoft_Decision Trees
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e78ab8a8a652f07d93f98b144a5a9ba09f5419b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 65d5686dc605e1ba254f4b7c39e879eb59733d79
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978416"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724846"
 ---
 # <a name="address-book-navigation-buttons"></a>Botones de navegación de la libreta de direcciones
 La aplicación de libreta de direcciones muestra los botones de navegación en la parte inferior de la Página Web. Puede usar los botones de navegación para desplazarse por los datos de la pantalla de la cuadrícula HTML seleccionando la primera o la última fila de datos o las filas adyacentes a la selección actual.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](/dotnet/framework/wcf/).  
   
 ## <a name="navigation-sub-procedures"></a>Procedimientos sub de navegación  
  La aplicación de libreta de direcciones contiene varios procedimientos que permiten a los usuarios hacer clic en los botones **primero**, **siguiente**, **anterior**y **último** para desplazarse por los datos.  

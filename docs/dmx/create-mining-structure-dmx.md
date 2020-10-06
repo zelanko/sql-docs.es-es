@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab738433380302e0f3d8bc70113aa2a8d13f7ac8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414031"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726286"
 ---
 # <a name="create-mining-structure-dmx"></a>CREAR ESTRUCTURA DE MINERÍA DE DATOS (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -35,7 +35,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *structure*  
+ *estructuras*  
  Nombre único de la estructura.  
   
  *lista de definiciones de columna*  
@@ -65,7 +65,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ## <a name="remarks"></a>Observaciones  
  Para definir una estructura de minería de datos hay que especificar una lista de columnas y, opcionalmente, las relaciones jerárquicas entre las columnas; también existe la opción de crear particiones de la estructura de minería de datos en conjuntos de datos de aprendizaje y de pruebas.  
   
- La palabra clave opcional SESSION indica que la estructura es una estructura temporal que solamente puede usarse durante el transcurso de la sesión actual. Cuando finalice la sesión, se eliminará la estructura, así como cualquier modelo basado en la estructura. Para crear estructuras y modelos de minería de datos temporales, primero debe establecer la propiedad de la base de datos AllowSessionMiningModels,. Para más información, consulte [Data Mining Properties](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+ La palabra clave opcional SESSION indica que la estructura es una estructura temporal que solamente puede usarse durante el transcurso de la sesión actual. Cuando finalice la sesión, se eliminará la estructura, así como cualquier modelo basado en la estructura. Para crear estructuras y modelos de minería de datos temporales, primero debe establecer la propiedad de la base de datos AllowSessionMiningModels,. Para más información, consulte [Data Mining Properties](/analysis-services/server-properties/data-mining-properties).  
   
 ## <a name="column-definition-list"></a>Lista de definiciones de columna  
  Para definir una estructura de minería de datos, debe incluir la siguiente información para cada columna de la lista de definiciones de columna:  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Para obtener una lista de los tipos de datos, tipos de contenido, distribuciones de columnas y marcadores de modelado que pueden usarse en la definición de una columna de estructura, vea los siguientes temas:  
   
--   [Tipos de datos &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Tipos de datos &#40;minería de datos&#41;](/analysis-services/data-mining/data-types-data-mining)  
   
--   [Tipos de contenido &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Tipos de contenido &#40;minería de datos&#41;](/analysis-services/data-mining/content-types-data-mining)  
   
--   [Distribuciones de columnas &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Distribuciones de columnas &#40;minería de datos&#41;](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Marcas de modelado &#40;Minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Marcas de modelado &#40;Minería de datos&#41;](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  Puede definir varios valores de marcas de modelado para una columna. Sin embargo, solo puede haber un tipo de contenido y un tipo de datos para cada columna.  
   
@@ -113,7 +113,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Indica una jerarquía de valores. El destino de una columna RELATED TO puede ser una columna de clave de una tabla anidada, una columna de valores discretos en la fila de caso u otra columna con una cláusula RELATED TO, que indica una jerarquía de más niveles.  
   
 ## <a name="holdout-parameters"></a>Parámetros de exclusión  
- Cuando se especifican parámetros de exclusión, se crea una partición de los datos de la estructura. La cantidad de datos especificada para la exclusión se reserva para las pruebas y los datos restantes se utilizan para el aprendizaje. De forma predeterminada, si crea una estructura de minería de datos mediante [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], se crea automáticamente una partición de exclusión que contiene un 30 por ciento de datos de pruebas y un 70 por ciento de datos de aprendizaje. Para más información, consulte [Training and Testing Data Sets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets).  
+ Cuando se especifican parámetros de exclusión, se crea una partición de los datos de la estructura. La cantidad de datos especificada para la exclusión se reserva para las pruebas y los datos restantes se utilizan para el aprendizaje. De forma predeterminada, si crea una estructura de minería de datos mediante [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], se crea automáticamente una partición de exclusión que contiene un 30 por ciento de datos de pruebas y un 70 por ciento de datos de aprendizaje. Para más información, consulte [Training and Testing Data Sets](/analysis-services/data-mining/training-and-testing-data-sets).  
   
  Si crea una estructura de minería de datos mediante Extensiones de minería de datos (DMX), debe especificar manualmente que se cree una partición de exclusión.  
   
@@ -182,5 +182,4 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

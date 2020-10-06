@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 11795005d0a2a7cf97a515278a30a586ff640ef0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0bc9e4ffe7da1f81bbd246e9cbfa7398bfec50e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352281"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726153"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,12 +37,12 @@ IsTestCase()
  Puede determinar si un conjunto de prueba se ha creado en una estructura de minería de datos específica viendo el valor de las propiedades <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> y <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A>.  
   
 > [!NOTE]  
->  La obtención de detalles debe estar habilitada en el modelo si desea utilizar las funciones IsTrainingCase o IsTestCase para devolver detalles sobre los casos de un modelo determinado. Para obtener más información, vea [Habilitar la obtención de detalles para un modelo de minería](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
+>  La obtención de detalles debe estar habilitada en el modelo si desea utilizar las funciones IsTrainingCase o IsTestCase para devolver detalles sobre los casos de un modelo determinado. Para obtener más información, vea [Habilitar la obtención de detalles para un modelo de minería](/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
   
  Para devolver los casos que forman parte del conjunto de datos de entrenamiento, utilice la función [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md).  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se utiliza la `Targeted Mailing` estructura de minería de datos que se crea en el [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta devuelve todos los casos de la estructura que se utilizan para pruebas.  
+ En el ejemplo siguiente se utiliza la `Targeted Mailing` estructura de minería de datos que se crea en el [tutorial básico de minería de datos](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)). La consulta devuelve todos los casos de la estructura que se utilizan para pruebas.  
   
 ```  
 SELECT *  
@@ -54,7 +54,6 @@ WHERE IsTestCase()
   
 ## <a name="see-also"></a>Consulte también  
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Consultas de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)   
- [Conjuntos de datos de entrenamiento y de prueba](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)  
-  
+ [Consultas de minería de datos](/analysis-services/data-mining/data-mining-queries)   
+ [Conjuntos de datos de entrenamiento y de prueba](/analysis-services/data-mining/training-and-testing-data-sets)  
   

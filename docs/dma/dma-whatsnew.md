@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 11bbf0a39ed9a9bbaa19992f98e4e23d50d6fbe9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988501"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727764"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novedades de Data Migration Assistant
 
@@ -83,7 +83,7 @@ El flujo de trabajo de evaluación le ayuda a detectar los siguientes problemas,
   - Cambios de comportamiento: los objetos de esquema que se indican pueden seguir funcionando, pero pueden presentar un comportamiento diferente, por ejemplo, una degradación del rendimiento.
   - Problemas informativos: estos objetos no afectarán a la migración, pero pueden haber quedado en desuso de las versiones de SQL Server de características.
 
-Una vez completada la evaluación, use nuestro [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) para realizar la migración de las bases de datos de SQL Server a SQL instancia administrada.  DMS admite migraciones de bases de datos [sin conexión](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (de un solo uso) y [en línea](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (tiempo de inactividad mínimo) a SQL instancia administrada.
+Una vez completada la evaluación, use nuestro [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) para realizar la migración de las bases de datos de SQL Server a SQL instancia administrada.  DMS admite migraciones de bases de datos [sin conexión](/azure/dms/tutorial-sql-server-to-managed-instance) (de un solo uso) y [en línea](/azure/dms/tutorial-sql-server-managed-instance-online) (tiempo de inactividad mínimo) a SQL instancia administrada.
 
 ## <a name="data-migration-assistant-v40"></a>Data Migration Assistant v 4.0
 
@@ -141,7 +141,7 @@ Si el archivo de copia de seguridad físico se encuentra en un equipo que ejecut
 
 ### <a name="migrating-windows-logins"></a>Migrar inicios de sesión de Windows
 
-Aunque la migración de inicios de sesión de Active Directory (AD) es oficialmente compatible con SQL Server 2017 en Linux, requiere una configuración adicional para funcionar correctamente. Consulte el artículo [Active Directory la autenticación con SQL Server en Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) para obtener información detallada sobre la configuración de inicios de sesión de Active Directory en SQL Server 2017 en Linux. Después de realizar la configuración necesaria, se completa la instalación y puede migrar los inicios de sesión de Active Directory como de costumbre. La autenticación de SQL estándar funciona según lo previsto sin necesidad de ninguna configuración adicional.
+Aunque la migración de inicios de sesión de Active Directory (AD) es oficialmente compatible con SQL Server 2017 en Linux, requiere una configuración adicional para funcionar correctamente. Consulte el artículo [Active Directory la autenticación con SQL Server en Linux](../linux/sql-server-linux-active-directory-authentication.md) para obtener información detallada sobre la configuración de inicios de sesión de Active Directory en SQL Server 2017 en Linux. Después de realizar la configuración necesaria, se completa la instalación y puede migrar los inicios de sesión de Active Directory como de costumbre. La autenticación de SQL estándar funciona según lo previsto sin necesidad de ninguna configuración adicional.
 
 ## <a name="data-migration-assistant-v32"></a>Data Migration Assistant v 3.2
 

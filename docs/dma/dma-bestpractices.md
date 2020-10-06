@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 1d9dc4c4030330e7065d6f8531af967dcf88baa3
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 440d6d12ed639d158ad0309209b60daa56e08322
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472371"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727786"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Procedimientos recomendados para ejecutar Data Migration Assistant
 En este artículo se proporciona información sobre procedimientos recomendados para la instalación, la evaluación y la migración.
@@ -40,6 +40,6 @@ No instale ni ejecute el Data Migration Assistant directamente en la máquina ho
 
 - Habilite la conexión de cifrado al conectarse a los servidores de origen y de destino. El uso del cifrado TLS aumenta la seguridad de los datos transmitidos a través de las redes entre Data Migration Assistant y la instancia de SQL Server, lo que resulta ventajoso especialmente al migrar inicios de sesión de SQL. Si no se usa el cifrado TLS y la red se ve comprometida por un atacante, el atacante podría interceptar o modificar los inicios de sesión de SQL que se van a migrar sobre la marcha.
 
-    Sin embargo, si todo el acceso se realiza dentro de una configuración de intranet segura, el cifrado podría no ser necesario. Al habilitar el cifrado, se reduce el rendimiento, ya que la sobrecarga adicional necesaria para cifrar y descifrar los paquetes. Para obtener más información, consulte [cifrar conexiones a SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    Sin embargo, si todo el acceso se realiza dentro de una configuración de intranet segura, el cifrado podría no ser necesario. Al habilitar el cifrado, se reduce el rendimiento, ya que la sobrecarga adicional necesaria para cifrar y descifrar los paquetes. Para obtener más información, consulte [cifrar conexiones a SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)).
     
 - Compruebe si hay restricciones que no sean de confianza en la base de datos de origen y en la base de datos de destino antes de migrar los datos. Después de la migración, analice de nuevo la base de datos de destino para ver si las restricciones no son de confianza como parte del movimiento de datos. Corrija las restricciones que no son de confianza según sea necesario. Si se dejan las restricciones que no son de confianza, se puede producir un plan de ejecución deficiente y puede afectar al rendimiento.

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f27a901bbb45c48996c82bbedbbb3691c1a6cbc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb2cc218ff18b23237c561a3cac1a9a68373f3ae
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431117"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726331"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +32,7 @@ ClusterProbability([<Node_Caption>])
  Esta función solo se puede utilizar si el modelo de minería de datos subyacente admite la agrupación en clústeres.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
- Un valor escalar.  
+ Valor escalar.  
   
 ## <a name="remarks"></a>Observaciones  
  La siguiente sintaxis usa el conjunto de filas de esquema CONTENT del modelo de minería de datos para devolver los títulos de nodo que existen en el modelo de minería de datos.  
@@ -41,7 +41,7 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- Para obtener más información sobre el uso de esta sintaxis, vea [SELECT FROM &#60;model&#62;. CONTENT &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md). Para obtener más información sobre el conjunto de filas de esquema de contenido del modelo de minería de datos, vea [DMSCHEMA_MINING_MODEL_CONTENT conjunto de filas](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110)).  
+ Para obtener más información sobre el uso de esta sintaxis, vea [SELECT FROM &#60;model&#62;. CONTENT &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md). Para obtener más información sobre el conjunto de filas de esquema de contenido del modelo de minería de datos, vea [DMSCHEMA_MINING_MODEL_CONTENT conjunto de filas](/previous-versions/sql/sql-server-2012/ms126267(v=sql.110)).  
   
  Si \<node caption> no se especifica, la función devuelve la probabilidad de que los casos de entrada pertenezcan al clúster más probable. Use la función **cluster** para devolver el clúster más probable.  
   
@@ -66,5 +66,4 @@ NATURAL PREDICTION JOIN
  [Referencia de funciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
-  
   

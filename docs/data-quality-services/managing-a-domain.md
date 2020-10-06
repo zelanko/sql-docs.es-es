@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5083a23b8e29bfcbf1a4fc343cc8535667b0af89
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb3e35b7ad6809eef6fec9bf8e390f36f6572cdf
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496346"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724641"
 ---
 # <a name="managing-a-domain"></a>Administrar un dominio
 
@@ -53,7 +53,7 @@ ms.locfileid: "88496346"
 |Cambiar o aumentar los valores de una base de conocimiento|[Cambiar valores de dominio](../data-quality-services/change-domain-values.md)|  
 |Utilizar reglas de validación y normalización|[Cree una regla de dominio](../data-quality-services/create-a-domain-rule.md)|  
 |Utilizar relaciones para corregir un término que forma parte de un valor de un dominio|[Crear relaciones basadas en términos](../data-quality-services/create-term-based-relations.md)|  
-|Completar, cerrar o cancelar la actividad de administración de dominios|[Finalizar la actividad Administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Completar, cerrar o cancelar la actividad de administración de dominios|[Finalizar la actividad Administración de dominios](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -62,5 +62,4 @@ ms.locfileid: "88496346"
 |Generar una base de conocimiento ejecutando la detección de conocimiento y administrando el conocimiento de forma interactiva|[Crear una base de conocimiento](../data-quality-services/building-a-knowledge-base.md)|  
 |Importar conocimiento en una base de conocimiento o exportarlo desde esta.|[Importar y exportar conocimiento](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |Crear un dominio compuesto y agregarle conocimiento.|[Administrar un dominio compuesto](../data-quality-services/managing-a-composite-domain.md)|  
-  
   

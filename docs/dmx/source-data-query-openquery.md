@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fd654bf63cfbb961b6aaa3c6369358db25371846
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62d638b6b6028ffa861460e07f2283cb7380e129
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500889"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726115"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;consulta de datos &gt; de origen: OPENQUERY
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -36,9 +36,9 @@ OPENQUERY(<named datasource>, <query syntax>)
  Sintaxis de consulta que devuelve un conjunto de filas.  
   
 ## <a name="remarks"></a>Observaciones  
- **OPENQUERY** proporciona una manera más segura de acceder a los datos externos mediante la compatibilidad con los permisos del origen de datos. La cadena de conexión se almacena en el origen de datos, lo que permite a los administradores utilizar las propiedades del origen de datos para administrar el acceso a los mismos. Para obtener más información sobre los orígenes de datos, vea [orígenes de datos compatibles &#40;SSAS-multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional).  
+ **OPENQUERY** proporciona una manera más segura de acceder a los datos externos mediante la compatibilidad con los permisos del origen de datos. La cadena de conexión se almacena en el origen de datos, lo que permite a los administradores utilizar las propiedades del origen de datos para administrar el acceso a los mismos. Para obtener más información sobre los orígenes de datos, vea [orígenes de datos compatibles &#40;SSAS-multidimensional&#41;](/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional).  
   
- Puede obtener una lista de los orígenes de datos que están disponibles en un servidor consultando el conjunto de filas de esquema **MDSCHEMA_INPUT_DATASOURCES** . Para obtener más información sobre el uso de **MDSCHEMA_INPUT_DATASOURCES**, vea [MDSCHEMA_INPUT_DATASOURCES conjunto de filas](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126243(v=sql.110)).  
+ Puede obtener una lista de los orígenes de datos que están disponibles en un servidor consultando el conjunto de filas de esquema **MDSCHEMA_INPUT_DATASOURCES** . Para obtener más información sobre el uso de **MDSCHEMA_INPUT_DATASOURCES**, vea [MDSCHEMA_INPUT_DATASOURCES conjunto de filas](/previous-versions/sql/sql-server-2012/ms126243(v=sql.110)).  
   
  También puede devolver una lista de orígenes de datos en la base de datos de Analysis Services actual utilizando la consulta DMX siguiente:  
   
@@ -55,5 +55,4 @@ OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')
  [&#60;consulta de datos de origen&#62;](../dmx/source-data-query.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

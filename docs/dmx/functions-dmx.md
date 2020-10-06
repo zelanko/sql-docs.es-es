@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 70e448c9d47dbffd4bc37e7b4dfd6e96bf0de9dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8e5d887195e27f706ef995ff92e32aa41b9149
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353561"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726201"
 ---
 # <a name="functions-dmx"></a>Funciones (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -49,7 +49,7 @@ FROM [TM_Decision_Tree].CONTENT
 ## <a name="stored-procedures"></a>Procedimientos almacenados  
  Puede usar lenguajes de programación de Common Language Runtime para crear procedimientos almacenados que amplíen la funcionalidad de DMX. Por ejemplo, un modelo de minería de datos de árbol de regresión devuelve coeficientes, como A, B, etc., que describen la ecuación de regresión, pero el modelo no devuelve la propia ecuación, como un + BX = y. Sin embargo, puede escribir un procedimiento almacenado que use el objeto de modelo de minería de datos para navegar por el esquema de contenido y para devolver la ecuación de regresión como salida. Por lo tanto, una instrucción DMX puede devolver una lista de las ecuaciones de regresión como parte del resultado de la consulta.  
   
- **Para obtener más información: administración de** [ensamblados de modelos multidimensionales](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
+ **Para obtener más información: administración de** [ensamblados de modelos multidimensionales](/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -61,5 +61,4 @@ FROM [TM_Decision_Tree].CONTENT
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Estructura y uso de las consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

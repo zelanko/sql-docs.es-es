@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e421b128faa5a7d90ec658a7c42e246110d921fb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6d761b781e7de4225f51fb3600ac467015a0c274
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977346"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722726"
 ---
 # <a name="writing-your-own-customized-handler"></a>Escritura de un controlador personalizado
 Es posible que desee escribir su propio controlador si es un administrador del servidor IIS que desea la compatibilidad predeterminada de RDS, pero más control sobre las solicitudes de usuario y los derechos de acceso.  
@@ -27,7 +27,7 @@ Es posible que desee escribir su propio controlador si es un administrador del s
  El MSDFMAP. El controlador implementa la interfaz **IDataFactoryHandler** .  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](/dotnet/framework/wcf/).  
   
 ## <a name="idatafactoryhandler-interface"></a>Interfaz IDataFactoryHandler  
  Esta interfaz tiene dos métodos, **GetRecordset** y **reconnect**. Ambos métodos requieren que la propiedad [CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md) esté establecida en **adUseClient**.  

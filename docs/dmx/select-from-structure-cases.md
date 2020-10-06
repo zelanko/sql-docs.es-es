@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e4a14565a0ac4b2aba19dd1ef0dfbbfdc4454b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf8afcdf84c5d33e91971c58dff5c1f93c68fd08
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500931"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726136"
 ---
 # <a name="select-from-ltstructuregtcases"></a>Seleccione de la &lt; estructura &gt; . VECES
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -47,7 +47,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
  Una expresión puede incluir identificadores de columna, funciones definidas por el usuario y funciones VBA.  
   
- *structure*  
+ *estructuras*  
  Nombre de la estructura.  
   
  *expresión de condición*  
@@ -66,7 +66,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  Por lo tanto, para proteger datos confidenciales o información personal, debe construir la vista del origen de datos para enmascarar información personal y conceder el permiso **AllowDrillthrough** en una estructura o modelo de minería de datos solo cuando sea necesario.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos siguientes se basan en la estructura de minería de datos Targeted mailing, que se basa en la base de datos [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] y en los modelos de minería de datos asociados. Para obtener más información, vea [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Los ejemplos siguientes se basan en la estructura de minería de datos Targeted mailing, que se basa en la base de datos [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] y en los modelos de minería de datos asociados. Para obtener más información, vea [tutorial básico de minería de datos](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>Ejemplo 1: obtener detalles de los casos de estructura  
  El ejemplo siguiente devuelve una lista de los 500 clientes más antiguos de la estructura de minería de datos Targeted Mailing. La consulta devuelve todas las columnas del modelo de minería de datos, pero restringe las filas a aquéllos que compraron una bicicleta y los ordena por edades. También puede editar la lista de expresiones para devolver únicamente las columnas que necesite.  
@@ -94,5 +94,4 @@ WHERE IsTestCase();
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

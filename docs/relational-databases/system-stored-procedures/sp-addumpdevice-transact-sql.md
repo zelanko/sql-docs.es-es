@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 91af8d735fb27f5009d4c7067805523f02413ba4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1f17681ffbb922b25cffc6b21ecf2f6317d400db
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550022"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753799"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta la [versión actual](../../sql-server/what-s-new-in-sql-server-2016.md)).  
 
 Agrega un dispositivo de copia de seguridad a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -50,7 +50,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ## <a name="arguments"></a>Argumentos  
 `[ @devtype = ] 'device_type'` Es el tipo de dispositivo de copia de seguridad. *device_type* es de tipo **VARCHAR (20)**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**discos**|Archivo de disco duro que se utiliza como dispositivo de copia de seguridad.|  
 |**cinta**|Todos los dispositivos de cinta admitidos por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Nota: La compatibilidad con dispositivos de cinta de copia de seguridad se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
@@ -77,7 +77,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  None  
   
 ## <a name="remarks"></a>Observaciones  
- **sp_addumpdevice** agrega un dispositivo de copia de seguridad a la vista de catálogo **Sys. backup_devices** . Después, se puede hacer referencia al dispositivo de forma lógica en las instrucciones BACKUP y RESTORE. **sp_addumpdevice** no realiza ningún acceso al dispositivo físico. El acceso al dispositivo especificado solo se produce cuando se ejecuta una instrucción BACKUP o RESTORE. La creación de un dispositivo lógico de copia de seguridad puede simplificar las instrucciones BACKUP y RESTORE, en las que se puede especificar el nombre del dispositivo como alternativa mediante una cláusula "TAPE =" o "DISK =" para indicar la ruta de acceso del dispositivo.  
+ **sp_addumpdevice** agrega un dispositivo de copia de seguridad a la vista de catálogo de **Sys.backup_devices** . Después, se puede hacer referencia al dispositivo de forma lógica en las instrucciones BACKUP y RESTORE. **sp_addumpdevice** no realiza ningún acceso al dispositivo físico. El acceso al dispositivo especificado solo se produce cuando se ejecuta una instrucción BACKUP o RESTORE. La creación de un dispositivo lógico de copia de seguridad puede simplificar las instrucciones BACKUP y RESTORE, en las que se puede especificar el nombre del dispositivo como alternativa mediante una cláusula "TAPE =" o "DISK =" para indicar la ruta de acceso del dispositivo.  
   
  Los problemas de propiedad y permisos pueden interferir en el uso de los dispositivos de copia de seguridad de disco o de archivo. Asegúrese de que la cuenta de Windows con la que se inicia el [!INCLUDE[ssDE](../../includes/ssde-md.md)] disponga de los permisos de archivo apropiados.  
   
@@ -148,5 +148,4 @@ GO
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

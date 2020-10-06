@@ -34,12 +34,12 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae9077610031075f71564eb5938b2a1415842827
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b012aa98d5dd1042a8e6a02ab4e91747ab512667
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454804"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753712"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ CONTAINSTABLE
 ## <a name="remarks"></a>Observaciones  
  Los predicados y las funciones de texto completo operan en una única tabla, que se obtiene del predicado FROM. Para buscar en varias tablas, utilice una tabla combinada en la cláusula FROM a fin de buscar en un conjunto de resultados que sea el producto de dos o más tablas.  
   
- La tabla devuelta tiene una columna denominada **key** que contiene valores de clave de texto completo. Cada tabla indizada de texto completo tiene una columna cuyos valores se garantiza que son únicos y los valores devueltos en la columna de **clave** son los valores de clave de texto completo de las filas que coinciden con los criterios de selección especificados en la condición de búsqueda Contains. La propiedad **TableFulltextKeyColumn** , obtenida a partir de la función OBJECTPROPERTYEX, proporciona la identidad de esta columna de clave única. Para obtener el identificador de la columna asociada a la clave de texto completo del índice de texto completo, utilice **Sys. fulltext_indexes**. Para obtener más información, vea [Sys. fulltext_indexes &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ La tabla devuelta tiene una columna denominada **key** que contiene valores de clave de texto completo. Cada tabla indizada de texto completo tiene una columna cuyos valores se garantiza que son únicos y los valores devueltos en la columna de **clave** son los valores de clave de texto completo de las filas que coinciden con los criterios de selección especificados en la condición de búsqueda Contains. La propiedad **TableFulltextKeyColumn** , obtenida a partir de la función OBJECTPROPERTYEX, proporciona la identidad de esta columna de clave única. Para obtener el identificador de la columna asociada a la clave de texto completo del índice de texto completo, use **Sys.fulltext_indexes**. Para obtener más información, vea [sys.fulltext_indexes &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  Para obtener las filas que desee de la tabla original, especifique una combinación con las filas de CONTAINSTABLE. La forma típica de la cláusula FROM de una instrucción SELECT que utiliza CONTAINSTABLE es la siguiente:  
   
@@ -284,10 +284,9 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [Limitar los resultados de la búsqueda con rango](../../relational-databases/search/limit-search-results-with-rank.md)   
  [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
- [Crear consultas de búsqueda de texto completo &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [Crear consultas de búsqueda de texto completo &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
-  
   

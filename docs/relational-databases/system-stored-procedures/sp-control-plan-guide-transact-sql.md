@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 596ebe11f6fb455993add8c80da83e2c1f1ffca9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5a66806fa3c4865da7486a7ada3c46a9691be6d7
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539062"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753909"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
  Al deshabilitar una guía de plan deshabilitada o habilitar una guía de plan habilitada, no se produce ningún cambio o error.  
   
- Las guías de planes no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Sin embargo, puede ejecutar **sp_control_plan_guide** con la opción DROP o Drop All en cualquier edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Las guías de planes no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). Sin embargo, puede ejecutar **sp_control_plan_guide** con la opción DROP o Drop All en cualquier edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="permissions"></a>Permisos  
  Para ejecutar **sp_control_plan_guide** en una guía de plan de tipo Object (creada especificando ** @type = '** Object **'** ), se requiere el permiso ALTER en el objeto al que hace referencia la guía de plan. Todas las demás guías de plan requieren el permiso ALTER DATABASE.  
@@ -140,5 +140,4 @@ EXEC sp_control_plan_guide N'DISABLE ALL';
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [Guías de plan](../../relational-databases/performance/plan-guides.md)  
-  
   

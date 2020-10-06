@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eeb70b4bc548496dcb8d0c93eeba27a9644c5bca
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 627793d900903a28ce4e4b7ee6a3272b4c63ee32
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539207"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753851"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,19 +54,19 @@ sp_filestream_force_garbage_collection
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
   
-| Valor | Descripción |
+| Value | Descripción |
 | ----- | ----------- |   
 |0|Operación correcta|  
 |1|Error de operación|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*file_name*|Indica el nombre del contenedor de FILESTREAM|  
 |*num_collected_items*|Indica el número de elementos de FILESTREAM (archivos o directorios) que el recolector de elementos eliminados ha eliminado en este contenedor.|  
 |*num_marked_for_collection_items*|Indica el número de elementos de FILESTREAM (archivos o directorios) que se han marcado para la recolección de elementos no utilizados en este contenedor. Estos elementos todavía no se han eliminado, pero pueden ser válidos para su eliminación después de la fase de recolección de elementos no utilizados.|  
-|*num_unprocessed_items*|Indica el número de elementos de FILESTREAM (archivos o directorios) que se podían haber eliminado y no se procesaron para la recolección de elementos no utilizados en este contenedor de FILESTREAM. Los elementos pueden no haberse procesado por diversas razones, por ejemplo:<br /><br /> Archivos que se tienen que anclar porque no se ha tomado la copia de seguridad de registros o CHECKPOINT.<br /><br /> Archivos del modelo de recuperación FULL o BULK_LOGGED.<br /><br /> Hay una transacción activa de ejecución prolongada.<br /><br /> No se ha ejecutado el trabajo del lector del registro de replicación. Consulte las notas del producto [almacenamiento FileStream en SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=209156) para obtener más información.|  
+|*num_unprocessed_items*|Indica el número de elementos de FILESTREAM (archivos o directorios) que se podían haber eliminado y no se procesaron para la recolección de elementos no utilizados en este contenedor de FILESTREAM. Los elementos pueden no haberse procesado por diversas razones, por ejemplo:<br /><br /> Archivos que se tienen que anclar porque no se ha tomado la copia de seguridad de registros o CHECKPOINT.<br /><br /> Archivos del modelo de recuperación FULL o BULK_LOGGED.<br /><br /> Hay una transacción activa de ejecución prolongada.<br /><br /> No se ha ejecutado el trabajo del lector del registro de replicación. Consulte las notas del producto [almacenamiento FileStream en SQL Server 2008](/previous-versions/sql/sql-server-2008/hh461480(v=msdn.10)) para obtener más información.|  
 |*last_collected_xact_seqno*|Devuelve el último número de secuencia de registro (LSN) correspondiente hasta el que el recolector de elementos no utilizados ha recolectado archivos del contenedor de FILESTREAM especificado.|  
   
 ## <a name="remarks"></a>Observaciones  
@@ -111,5 +111,4 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 <br>[Vistas de administración dinámica de secuencia de archivo y FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Vistas de catálogo de secuencia de archivo y FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 <br>[sp_kill_filestream_non_transacted_handles (Transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
-  
   

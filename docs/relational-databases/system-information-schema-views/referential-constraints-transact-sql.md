@@ -20,12 +20,12 @@ ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c52f6d3c89051bd07143180410a0040c9d01144d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 42ebb05e1ec3bf70426cb0cef662623e2beb57f7
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548472"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753963"
 ---
 # <a name="referential_constraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,10 +47,9 @@ ms.locfileid: "89548472"
 |**DELETE_RULE**|**VARCHAR (** 11 **)**|Acción que se realiza cuando una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] infringe la integridad referencial definida por esta restricción. Devuelve una de las siguientes opciones: <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> Si para esta restricción se especifica NO ACTION en ON DELETE, la eliminación de la clave principal a la que se hace referencia en la restricción no se propagará a la clave externa. Si una eliminación de una clave principal de estas características provocara una infracción de la integridad referencial porque al menos una clave externa contiene el mismo valor, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no realizará ningún cambio en las tablas primaria y de referencia. Asimismo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generará un error.<br /><br /> Si para esta restricción se especifica CASCADE en ON DELETE, cualquier cambio en el valor de clave principal se propagará automáticamente al valor de clave externa.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Vistas del sistema &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
  [Vistas de esquema de información &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [Sys. foreign_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)  
-  
+ [sys.foreign_keys &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)  
   

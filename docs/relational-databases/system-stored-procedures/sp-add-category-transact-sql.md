@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 40ce855f929a19f9dbcd757b0e1ea8774fbe2cb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 845801380e1047dc9c44bf597a5fbea21e9d8dc4
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481698"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753717"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Agrega al servidor la categoría de trabajo, alerta u operador especificada. Para obtener un método alternativo, vea [crear una categoría de trabajo mediante SQL Server Management Studio](/sql/ssms/agent/create-a-job-category).
+  Agrega al servidor la categoría de trabajo, alerta u operador especificada. Para obtener un método alternativo, vea [crear una categoría de trabajo mediante SQL Server Management Studio](../../ssms/agent/create-a-job-category.md).
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > En [Azure SQL instancia administrada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría, pero no todas las características Agente SQL Server se admiten actualmente. Para más información, consulte [diferencias de sql instancia administrada T-SQL de Azure en SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+ > En [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -97,5 +97,4 @@ GO
  [ Trabajos dedbo.sys&#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobservers &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

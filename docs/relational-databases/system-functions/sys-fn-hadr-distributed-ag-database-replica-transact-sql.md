@@ -1,6 +1,6 @@
 ---
-description: Sys. fn_hadr_distributed_ag_database_replica (Transact-SQL)
-title: Sys. fn_hadr_distributed_ag_database_replica (Transact-SQL) | Microsoft Docs
+description: sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
+title: sys.fn_hadr_distributed_ag_database_replica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2016
 ms.prod: sql
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f54cfdf987474435b452421620246b6432892a36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b87e98f49941cfa9da555d54a10185d21e36d47e
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419509"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753689"
 ---
-# <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>Sys. fn_hadr_distributed_ag_database_replica (Transact-SQL)
+# <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Se usa para asignar una base de datos de un grupo de disponibilidad distribuido a la base de datos del grupo de disponibilidad local.  
@@ -57,7 +57,7 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="using-sysfn_hadr_distributed_ag_database_replica"></a>Usar sys. fn_hadr_distributed_ag_database_replica  
+### <a name="using-sysfn_hadr_distributed_ag_database_replica"></a>Usar sys.fn_hadr_distributed_ag_database_replica  
  En el ejemplo siguiente se pasa el identificador de base de datos en un grupo de disponibilidad distribuido. Devuelve una tabla con el identificador de base de datos asociado al grupo de disponibilidad local.  
   
 ```  
@@ -71,8 +71,7 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [Always On funciones de grupos de disponibilidad &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Grupos de disponibilidad distribuidos &#40;Always On grupos de disponibilidad&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
+ [Grupos de disponibilidad distribuidos &#40;Always On grupos de disponibilidad&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
-  
   

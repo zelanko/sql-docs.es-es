@@ -20,12 +20,12 @@ ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8cda806de638edcea2c7b28cfa850414c90006a2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ec57f41be3971b41d5bebf6c139b9913666e8c20
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550138"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753977"
 ---
 # <a name="routine_columns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,9 +61,8 @@ ms.locfileid: "89550138"
 |**DOMAIN_NAME**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, esta columna es el nombre del tipo de datos definido por el usuario. De lo contrario, devuelve NULL.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Vistas del sistema &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
  [Vistas de esquema de información &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
-  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3255e54b961effa6581875a332dc6651b7e1dce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ee456f7be6d59ded32a67908d69bf59028e931c6
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542020"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753843"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_type = ] freq_type` Valor que indica cuándo se va a ejecutar un trabajo. *freq_type* es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**4**|Diario|  
@@ -69,7 +69,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|Mensual|  
 |**32**|Mensualmente, con respecto a *freq_interval*|  
 |**64**|Ejecutar cuando se inicia el servicio Agente SQL|  
-|**128**|Ejecutar cuando el equipo está inactivo (no se admite en [Azure SQL instancia administrada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
+|**128**|Ejecutar cuando el equipo está inactivo (no se admite en [Azure SQL instancia administrada](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
   
 `[ @freq_interval = ] freq_interval` Los días en los que se ejecuta un trabajo. *freq_interval* es de **tipo int**, su valor predeterminado es **1**y depende del valor de *freq_type*.  
   
@@ -85,7 +85,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_subday_type = ] freq_subday_type` Especifica las unidades para *freq_subday_interval*. *freq_subday_type* es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores.  
   
-|Valor|Descripción (unidad)|  
+|Value|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**0x1**|A la hora especificada|  
 |**0x2**|Segundos|  
@@ -96,10 +96,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_relative_interval = ] freq_relative_interval` La repetición de un trabajo de *freq_interval* en cada mes, si *freq_interval* es 32 (relativo mensual). *freq_relative_interval* es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores. *freq_relative_interval* se omite en los casos en los que *freq_type* no es igual a 32.  
   
-|Valor|Descripción (unidad)|  
+|Value|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**1**|First|  
-|**2**|Segundo|  
+|**2**|Second|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
 |**16**|Último|  
@@ -201,5 +201,4 @@ GO
  [sp_delete_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
-  
   

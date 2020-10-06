@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 632d9a16af35f5b889a03892c92cb7836e3f9d50
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 89f90d460287fadc9cdda97c020ccef7a47ceccd
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539215"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753868"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89539215"
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > En [Azure SQL instancia administrada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría, pero no todas las características Agente SQL Server se admiten actualmente. Para más información, consulte [diferencias de sql instancia administrada T-SQL de Azure en SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+ > En [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
  
 ## <a name="syntax"></a>Sintaxis  
   
@@ -74,7 +74,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @notify_level_eventlog = ] eventlog_level` Valor que indica cuándo se debe colocar una entrada en el registro de aplicación de Microsoft Windows para este trabajo. *eventlog_level*es de **tipo int**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Nunca|  
 |**1**|En caso de éxito|  
@@ -180,5 +180,4 @@ GO
  [sp_help_jobstep &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [sp_update_job &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

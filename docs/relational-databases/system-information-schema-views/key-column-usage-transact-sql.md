@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ec1e18c2-63a1-4d2b-ba9a-c13857403782
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bfc4132397d73aeaf99053ac5c9852614775d4a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 62d2257271ad0a3357808ba78cbce02c9bc15fdc
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543776"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753620"
 ---
 # <a name="key_column_usage-transact-sql"></a>KEY_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,12 +45,11 @@ ms.locfileid: "89543776"
 |**ORDINAL_POSITION**|**int**|Posición ordinal de la columna.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Vistas del sistema &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
  [Vistas de esquema de información &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [Sys. foreign_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)   
- [Sys. key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)  
-  
+ [sys.foreign_keys &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)   
+ [sys.key_constraints &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53db2ff3554c095832a6fa21accb061f2575c3d6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fe56373e9f80ce88c647458444655bea60ac431c
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548393"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753896"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -57,7 +57,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
  Requiere el permiso CONTROL SERVER.  
   
 ## <a name="remarks"></a>Observaciones  
- Después de ejecutar el procedimiento almacenado, apague el motor de polybase y reinicie el servicio Movimiento de datos de PolyBase en el equipo. Para comprobar, ejecute la siguiente DMV en el nodo principal: **Sys. dm_exec_compute_nodes**.  
+ Después de ejecutar el procedimiento almacenado, apague el motor de polybase y reinicie el servicio Movimiento de datos de PolyBase en el equipo. Para comprobar, ejecute la siguiente DMV en el nodo principal: **Sys.dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo se une el equipo actual como un nodo de proceso a un grupo de polybase.  El nombre del nodo principal es **HST01** y el nombre de la instancia de SQL Server en el nodo principal es **MSSQLSERVER**.  
@@ -67,7 +67,6 @@ EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [Introducción a PolyBase](../polybase/polybase-guide.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

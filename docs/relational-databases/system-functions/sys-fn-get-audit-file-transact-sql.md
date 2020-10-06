@@ -1,6 +1,6 @@
 ---
 description: sys.fn_get_audit_file (Transact-SQL)
-title: Sys. fn_get_audit_file (Transact-SQL) | Microsoft Docs
+title: sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: cda66aed0e3ddea4bcb14bc30ca5805bf943afb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b631c6a8139304bd716e4eb1f3969de706f31d6
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88321801"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753772"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -95,7 +95,7 @@ fn_get_audit_file ( file_pattern,
 | class_type | **varchar(2)** | El tipo de entidad auditable en la que se produce la auditoría. No admite valores NULL. |  
 | client_ip | **nvarchar(128)** | **Se aplica a**: Azure SQL Database + SQL Server (a partir de 2017)<br /><br />  IP de origen de la aplicación cliente |  
 | connection_id | GUID | **Se aplica a**: Azure SQL Database y SQL instancia administrada<br /><br /> Identificador de la conexión en el servidor |
-| data_sensitivity_information | nvarchar(4000) | **Se aplica a**: solo Azure SQL Database<br /><br /> Tipos de información y etiquetas de confidencialidad devueltas por la consulta auditada, basados en las columnas clasificadas en la base de datos. Obtenga más información sobre la [clasificación y detección de datos de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification). |
+| data_sensitivity_information | nvarchar(4000) | **Se aplica a**: solo Azure SQL Database<br /><br /> Tipos de información y etiquetas de confidencialidad devueltas por la consulta auditada, basados en las columnas clasificadas en la base de datos. Obtenga más información sobre la [clasificación y detección de datos de Azure SQL Database](/azure/sql-database/sql-database-data-discovery-and-classification). |
 | database_name | **sysname** | Contexto de base de datos en el que se produjo la acción. Acepta valores NULL. Devuelve NULL para las auditorías que se producen en el nivel de servidor. |  
 | database_principal_id | **int** |Identificador del contexto de usuario de la base de datos en el que se realiza la acción. No admite valores NULL. Devuelve 0 si esto no es aplicable. Por ejemplo, una operación de servidor.|
 | database_principal_name | **sysname** | Usuario actual. Acepta valores NULL. Devuelve NULL si no está disponible. |  
@@ -103,8 +103,8 @@ fn_get_audit_file ( file_pattern,
 | event_time | **datetime2** | Fecha y hora en que se desencadena la acción auditable. No admite valores NULL. |  
 | file_name | **varchar(260)** | Ruta de acceso y nombre del archivo de registro de auditoría del que procede el registro. No admite valores NULL. |
 | is_column_permission | **bit** | Marca que indica si se trata de un permiso de nivel de columna. No admite valores NULL. Devuelve 0 si permission_bitmask = 0.<br /> 1 = verdadero<br /> 0 = falso |
-| object_id | **int** | Identificador de la entidad en la que se produjo la auditoría. Entre estas estructuras se incluyen las siguientes:<br /> Objetos de servidor<br /> Bases de datos<br /> Objetos de base de datos<br /> Objetos de esquema<br /> No admite valores NULL. Devuelve 0 si la entidad es el propio servidor o si la auditoría no se realiza en un nivel de objeto. Por ejemplo, la autenticación. |  
-| object_name | **sysname** | Nombre de la entidad en la que se produjo la auditoría. Entre estas estructuras se incluyen las siguientes:<br /> Objetos de servidor<br /> Bases de datos<br /> Objetos de base de datos<br /> Objetos de esquema<br /> Acepta valores NULL. Devuelve NULL si la entidad es el propio servidor o si la auditoría no se realiza en un nivel de objeto. Por ejemplo, la autenticación. |
+| object_id | **int** | Identificador de la entidad en la que se produjo la auditoría. Incluye lo siguiente:<br /> Objetos de servidor<br /> Bases de datos<br /> Objetos de base de datos<br /> Objetos de esquema<br /> No admite valores NULL. Devuelve 0 si la entidad es el propio servidor o si la auditoría no se realiza en un nivel de objeto. Por ejemplo, la autenticación. |  
+| object_name | **sysname** | Nombre de la entidad en la que se produjo la auditoría. Incluye lo siguiente:<br /> Objetos de servidor<br /> Bases de datos<br /> Objetos de base de datos<br /> Objetos de esquema<br /> Acepta valores NULL. Devuelve NULL si la entidad es el propio servidor o si la auditoría no se realiza en un nivel de objeto. Por ejemplo, la autenticación. |
 | permission_bitmask | **varbinary(16)** | En algunas acciones, este es el permiso que se concedió, denegó o revocó. |
 | response_rows | **bigint** | **Se aplica a**: Azure SQL Database y SQL instancia administrada<br /><br /> Número de filas devueltas en el conjunto de resultados. |  
 | schema_name | **sysname** | Contexto de esquema en el que se produjo la acción. Acepta valores NULL. Devuelve NULL para las auditorías que se producen fuera de un esquema. |  
@@ -177,10 +177,10 @@ fn_get_audit_file ( file_pattern,
 
 Para ver un ejemplo completo de cómo crear una auditoría, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
-Para obtener información sobre cómo configurar la auditoría de Azure SQL Database, consulte Introducción [a la auditoría de SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-auditing).
+Para obtener información sobre cómo configurar la auditoría de Azure SQL Database, consulte Introducción [a la auditoría de SQL Database](/azure/sql-database/sql-database-auditing).
   
 ## <a name="see-also"></a>Consulte también  
- [CREAR &#40;de auditoría de servidor de Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
@@ -200,5 +200,4 @@ Para obtener información sobre cómo configurar la auditoría de Azure SQL Data
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [Crear una auditoría de servidor y una especificación de auditoría de servidor](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
-  
   

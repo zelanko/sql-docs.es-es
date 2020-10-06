@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7774b738dd8ec6fc0619bc8f72fa85c9ab0db349
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0b8026e1aae3df927a6cc454f7fb4763e3d05093
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542027"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753503"
 ---
 # <a name="sp_attach_single_file_db-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89542027"
   Adjunta al servidor actual una base de datos que tiene un solo archivo de datos. no se puede usar **sp_attach_single_file_db** con varios archivos de datos.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, se recomienda usar CREATE DATABASE *database_name* para Attach. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). No utilice este procedimiento en una base de datos replicada.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, se recomienda usar CREATE DATABASE *database_name* para Attach. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-transact-sql.md). No utilice este procedimiento en una base de datos replicada.  
   
 > [!IMPORTANT]  
 >  Se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Para usar una base de datos desde un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) en la base de datos de un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
@@ -52,7 +52,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 `[ @physname = ] 'physical_name'` Es el nombre físico, incluida la ruta de acceso, del archivo de base de datos. *physical_name* es de tipo **nvarchar (260)** y su valor predeterminado es NULL.  
   
 > [!NOTE]  
->  Este argumento se asigna al parámetro FILENAME de la instrucción CREATE DATABASE. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+>  Este argumento se asigna al parámetro FILENAME de la instrucción CREATE DATABASE. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
  Al adjuntar una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] que contiene los archivos de catálogo de texto completo a una instancia del servidor de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , los archivos de catálogo se adjuntan de su ubicación anterior junto con los demás archivos de base de datos, igual que en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obtener más información, vea [Actualizar la búsqueda de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
   
@@ -73,7 +73,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  No utilice este procedimiento en una base de datos replicada.  
   
 ## <a name="permissions"></a>Permisos  
- Para obtener información sobre cómo se administran los permisos cuando se adjunta una base de datos, vea [Create database &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Para obtener información sobre cómo se administran los permisos cuando se adjunta una base de datos, vea [Create database &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se separa [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] y, después, se adjunta un archivo de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] al servidor actual.  
@@ -92,5 +92,4 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
  [sp_detach_db &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_helpfile &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

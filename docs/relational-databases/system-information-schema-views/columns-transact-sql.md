@@ -20,19 +20,19 @@ ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1ca78098732a9a65cf7c81cc2b4147b6251f2e3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f4f49fe215279782a5f2e8df8fe501e0619f4bd2
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89530708"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753642"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve una fila por cada columna a la que puede tener acceso el usuario actual en la base de datos actual.  
   
- Para recuperar información de estas vistas, especifique el nombre completo de **INFORMATION_SCHEMA**_. view_name_.  
+ Para recuperar información de estas vistas, especifique el nombre completo de **INFORMATION_SCHEMA**_.view_name_.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Vistas del sistema &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)   
  [Vistas de esquema de información &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.sysde juegos de caracteres &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
@@ -82,5 +82,4 @@ GO
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
  [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)  
-  
   

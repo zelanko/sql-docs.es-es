@@ -1,6 +1,6 @@
 ---
-description: Sys. dm_user_db_resource_governance (Transact-SQL)
-title: Sys. dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs
+description: sys.dm_user_db_resource_governance (Transact-SQL)
+title: sys.dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2019
 ms.prod: sql
@@ -21,14 +21,14 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 869a5d802e36e74c22a88e599065b04df35c62a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2038883693288a75f9e2dbe17d80b6b9c7474343
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498262"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753731"
 ---
-# <a name="sysdm_user_db_resource_governance-transact-sql"></a>Sys. dm_user_db_resource_governance (Transact-SQL)
+# <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
@@ -44,23 +44,23 @@ Devuelve la configuración y los valores de capacidad reales que usan los mecani
 |**slo_name**|NVARCHAR|Objetivo de nivel de servicio, incluida la generación de hardware.|
 |**dtu_limit**|int|Límite de DTU de la base de datos (NULL para núcleo virtual).|
 |**cpu_limit**|int|Núcleo virtual límite de base de datos (NULL para las bases de datos de DTU).|
-|**min_cpu**|TINYINT|El valor MIN_CPU_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
-|**max_cpu**|TINYINT|El valor MAX_CPU_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
-|**cap_cpu**|TINYINT|El valor CAP_CPU_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
+|**min_cpu**|TINYINT|El valor MIN_CPU_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
+|**max_cpu**|TINYINT|El valor MAX_CPU_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
+|**cap_cpu**|TINYINT|El valor CAP_CPU_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**min_cores**|SMALLINT|Exclusivamente para uso interno.|
-|**max_dop**|SMALLINT|El valor de MAX_DOP del grupo de cargas de trabajo del usuario. Consulte [creación](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)de un grupo de cargas de trabajo.|
-|**min_memory**|int|El valor MIN_MEMORY_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
-|**max_memory**|int|El valor MAX_MEMORY_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
+|**max_dop**|SMALLINT|El valor de MAX_DOP del grupo de cargas de trabajo del usuario. Consulte [creación](../../t-sql/statements/create-workload-group-transact-sql.md)de un grupo de cargas de trabajo.|
+|**min_memory**|int|El valor MIN_MEMORY_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
+|**max_memory**|int|El valor MAX_MEMORY_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**max_sessions**|int|El número máximo de sesiones permitidas en el grupo de cargas de trabajo de usuario.|
-|**max_memory_grant**|int|El valor de REQUEST_MAX_MEMORY_GRANT_PERCENT del grupo de cargas de trabajo del usuario. Consulte [creación](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)de un grupo de cargas de trabajo.|
+|**max_memory_grant**|int|El valor de REQUEST_MAX_MEMORY_GRANT_PERCENT del grupo de cargas de trabajo del usuario. Consulte [creación](../../t-sql/statements/create-workload-group-transact-sql.md)de un grupo de cargas de trabajo.|
 |**max_db_memory**|int|Exclusivamente para uso interno.|
 |**govern_background_io**|bit|Exclusivamente para uso interno.|
-|**min_db_max_size_in_mb**|bigint|El valor mínimo max_size para un archivo de datos, en MB. Vea [Sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
-|**max_db_max_size_in_mb**|bigint|El valor máximo max_size para un archivo de datos, en MB. Vea [Sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
-|**default_db_max_size_in_mb**|bigint|El valor predeterminado max_size para un archivo de datos, en MB. Vea [Sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
-|**db_file_growth_in_mb**|bigint|Incremento de crecimiento predeterminado para un archivo de datos, en MB. Vea [Sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
-|**initial_db_file_size_in_mb**|bigint|Tamaño predeterminado del nuevo archivo de datos, en MB. Vea [Sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
-|**log_size_in_mb**|bigint|Tamaño predeterminado del nuevo archivo de registro, en MB. Vea [Sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
+|**min_db_max_size_in_mb**|bigint|El valor mínimo max_size para un archivo de datos, en MB. Vea [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
+|**max_db_max_size_in_mb**|bigint|El valor máximo max_size para un archivo de datos, en MB. Vea [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
+|**default_db_max_size_in_mb**|bigint|El valor predeterminado max_size para un archivo de datos, en MB. Vea [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
+|**db_file_growth_in_mb**|bigint|Incremento de crecimiento predeterminado para un archivo de datos, en MB. Vea [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
+|**initial_db_file_size_in_mb**|bigint|Tamaño predeterminado del nuevo archivo de datos, en MB. Vea [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
+|**log_size_in_mb**|bigint|Tamaño predeterminado del nuevo archivo de registro, en MB. Vea [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**instance_cap_cpu**|int|Exclusivamente para uso interno.|
 |**instance_max_log_rate**|bigint|Límite de velocidad de generación de registros para la instancia de SQL Server, en bytes por segundo. Se aplica a todos los registros generados por la instancia de, incluidas `tempdb` y otras bases de datos del sistema. En un grupo elástico, se aplica al registro generado por todas las bases de datos del grupo.|
 |**instance_max_worker_threads**|int|Límite de subprocesos de trabajo para la instancia de SQL Server.|
@@ -97,7 +97,7 @@ Esta vista necesita el permiso VIEW DATABASE STATE.
 
 ## <a name="remarks"></a>Observaciones
 
-Para obtener una descripción de la regulación de recursos en Azure SQL Database, consulte [SQL Database límites de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
+Para obtener una descripción de la regulación de recursos en Azure SQL Database, consulte [SQL Database límites de recursos](/azure/sql-database/sql-database-resource-limits-database-server).
 
 > [!IMPORTANT]
 > La mayoría de los datos devueltos por esta DMV están destinados al consumo interno y están sujetos a cambios en cualquier momento.
@@ -118,11 +118,11 @@ ORDER BY database_name;
 
 ## <a name="see-also"></a>Consulte también
 
-- [Regulador de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)
-- [sys.dm_resource_governor_resource_pools (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)
-- [sys.dm_resource_governor_workload_groups (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)
-- [Sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database)
-- [sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database)
-- [Regulación de la tasa de registro de transacciones](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Límites de recursos de DTU de bases de datos única](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
-- [Límites de recursos de núcleo virtual de bases de datos únicas](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)
+- [Regulador de recursos](../resource-governor/resource-governor.md)
+- [sys.dm_resource_governor_resource_pools (Transact-SQL)](./sys-dm-resource-governor-resource-pools-transact-sql.md)
+- [sys.dm_resource_governor_workload_groups (Transact-SQL)](./sys-dm-resource-governor-workload-groups-transact-sql.md)
+- [sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)](./sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database.md)
+- [sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)](./sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database.md)
+- [Regulación de la tasa de registro de transacciones](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [Límites de recursos de DTU de bases de datos única](/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
+- [Límites de recursos de núcleo virtual de bases de datos únicas](/azure/sql-database/sql-database-vcore-resource-limits-single-databases)

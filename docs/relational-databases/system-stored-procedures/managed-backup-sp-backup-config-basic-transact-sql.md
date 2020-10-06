@@ -1,6 +1,6 @@
 ---
 description: managed_backup.sp_backup_config_basic (Transact-SQL)
-title: managed_backup. sp_backup_config_basic (Transact-SQL) | Microsoft Docs
+title: managed_backup managed_backup.sp_backup_config_basic (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d738a7cf10801366abaebe4ef7857475cd2aad5e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 428dff3f22b5a924f7a208a988334c14ece752a3
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550009"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753739"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89550009"
   Configura los [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] valores básicos para una base de datos concreta o para una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Se puede llamar a este procedimiento por su cuenta para crear una configuración básica de copia de seguridad administrada. Sin embargo, si tiene previsto agregar características avanzadas o una programación personalizada, configure primero esos valores con [managed_backup. sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) y [managed_backup. sp_backup_config_schedule &#40;Transact-SQL ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)&#41;antes de habilitar la copia de seguridad administrada con este procedimiento.  
+>  Se puede llamar a este procedimiento por su cuenta para crear una configuración básica de copia de seguridad administrada. Sin embargo, si tiene previsto agregar características avanzadas o una programación personalizada, configure primero esos valores con [managed_backup. sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) y [managed_backup. sp_backup_config_schedule &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) antes de habilitar la copia de seguridad administrada con este procedimiento.  
    
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  Nombre de la base de datos para habilitar la copia de seguridad administrada en una base de datos específica.  
   
  @container_url  
- Una dirección URL que indica la ubicación de la copia de seguridad. Cuando @credential_name es null, esta dirección URL es una dirección URL de firma de acceso compartido (SAS) para un contenedor de blobs en Azure Storage y las copias de seguridad usan la nueva funcionalidad de copia de seguridad para bloquear BLOB. Para obtener más información, consulte [Descripción de SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Cuando @credential_name se especifica, se trata de una dirección URL de cuenta de almacenamiento y las copias de seguridad usan la funcionalidad de BLOB de copia de seguridad en página en desuso.  
+ Una dirección URL que indica la ubicación de la copia de seguridad. Cuando @credential_name es null, esta dirección URL es una dirección URL de firma de acceso compartido (SAS) para un contenedor de blobs en Azure Storage y las copias de seguridad usan la nueva funcionalidad de copia de seguridad para bloquear BLOB. Para obtener más información, consulte [Descripción de SAS](/azure/storage/common/storage-sas-overview). Cuando @credential_name se especifica, se trata de una dirección URL de cuenta de almacenamiento y las copias de seguridad usan la funcionalidad de BLOB de copia de seguridad en página en desuso.  
   
 > [!NOTE]  
 >  En este momento solo se admite una dirección URL de SAS para este parámetro.  
@@ -110,7 +110,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [managed_backup. sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
+ [managed_backup managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
-  
   

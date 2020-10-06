@@ -16,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: bb8a754ee5e477f0bccce286f8f93193136276e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8e4b24e5fcab13083c06f53868f462c3b45cc497
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464746"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753807"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -32,7 +32,7 @@ Agrega un paso (operación) a un trabajo del Agente SQL.
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!IMPORTANT]
-> En [Azure SQL instancia administrada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de los tipos de trabajo de Agente SQL Server se admiten, pero no todos. Para más información, consulte [diferencias de sql instancia administrada T-SQL de Azure en SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+> En [Azure SQL instancia administrada](/azure/sql-database/sql-database-managed-instance), la mayoría de los tipos de trabajo de Agente SQL Server se admiten, pero no todos. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -100,7 +100,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 Para obtener más información sobre estos tokens y la actualización de los pasos de trabajo para usar la nueva sintaxis de token, consulte [usar tokens en pasos de trabajo](../../ssms/agent/use-tokens-in-job-steps.md).
 
 > [!IMPORTANT]
-> Todos los usuarios de Windows que tengan permisos de escritura en el Registro de eventos de Windows pueden tener acceso a los pasos de trabajo activados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de WMI. Para evitar este riesgo de seguridad, se deshabilitan de manera predeterminada los tokens del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pueden utilizarse en trabajos activados por alertas. Estos tokens son: **a-DBN**, **a-SVR**, **a-Err**, **a-gravedad**, **a-MSG**. y **WMI (**_propiedad_**)**. Tenga en cuenta que en esta versión el uso de los tokens se ha ampliado a todas las alertas.
+> Todos los usuarios de Windows que tengan permisos de escritura en el Registro de eventos de Windows pueden tener acceso a los pasos de trabajo activados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de WMI. Para evitar este riesgo de seguridad, se deshabilitan de manera predeterminada los tokens del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pueden utilizarse en trabajos activados por alertas. Estos tokens son: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** y **WMI(** _propiedad_ **)** . Tenga en cuenta que en esta versión el uso de los tokens se ha ampliado a todas las alertas.
 >
 > Si necesita usar estos tokens, asegúrese primero de que solo los miembros de los grupos de seguridad de Windows de confianza, como el grupo Administradores, tienen permisos de escritura en el registro de eventos del equipo donde reside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A continuación, para habilitar estos tokens, haga clic con el botón derecho en **Agente SQL Server** en el Explorador de objetos, elija **Propiedades**y, en la página **Sistema de alerta** , active la casilla **Reemplazar tokens para todas las respuestas de trabajos a alertas** .
 

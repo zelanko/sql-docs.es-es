@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46f76ceeba699f614e19b494785c42591ab5299a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b474931aad2958a4ddba3bccb20773e7f36fd0e7
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549995"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753827"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89549995"
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > En [Azure SQL instancia administrada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría, pero no todas las características Agente SQL Server se admiten actualmente. Para más información, consulte [diferencias de sql instancia administrada T-SQL de Azure en SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+  > En [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -69,7 +69,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_type = ] frequency_type` Valor que indica cuándo se va a ejecutar el trabajo. *frequency_type* es de **tipo int**, su valor predeterminado es **0**y puede tener uno de los valores siguientes:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**4**|Diario|  
@@ -81,7 +81,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_interval = ] frequency_interval` Día en el que se ejecuta el trabajo. *frequency_interval* es de **tipo int**, su valor predeterminado es 0 y depende del valor de *frequency_type* como se indica en la tabla siguiente:  
   
-|Valor|Efecto|  
+|Value|Efecto|  
 |-----------|------------|  
 |**1** (una vez)|*frequency_interval* no se usa.|  
 |**4** (diariamente)|Cada *frequency_interval* días.|  
@@ -93,7 +93,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_subday_type = ] frequency_subday_type` Especifica las unidades para *frequency_subday_interval*. *frequency_subday_type* es de **tipo int**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes:  
   
-|Valor|Descripción (unidad)|  
+|Value|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**0x1**|A la hora especificada|  
 |**0x4**|Minutos|  
@@ -105,10 +105,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* es de **tipo int**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes:  
   
-|Valor|Descripción (unidad)|  
+|Value|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**1**|First|  
-|**2**|Segundo|  
+|**2**|Second|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
 |**16**|Último|  
@@ -173,5 +173,4 @@ EXEC msdb.dbo.sp_add_jobschedule
  [sp_delete_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
-  
   

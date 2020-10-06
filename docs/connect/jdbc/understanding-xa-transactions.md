@@ -2,7 +2,7 @@
 title: Descripción de las transacciones XA
 description: Microsoft JDBC Driver para SQL Server es compatible con las transacciones distribuidas opcionales de Java Platform, Enterprise Edition/JDBC 2.0.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff48d23727c8dd48048293dd34127b6acbb3f005
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: f64cbc7b054f6e60285b3a34921e3219ddd507ff
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294005"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529336"
 ---
 # <a name="understanding-xa-transactions"></a>Descripción de las transacciones XA
 
@@ -63,7 +63,7 @@ Los siguientes pasos son necesarios si desea usar los orígenes de datos XA junt
 > Los componentes de transacciones distribuidas de JDBC están incluidos en el directorio xa de la instalación del controlador JDBC. Estos componentes incluyen los archivos xa_install.sql y sqljdbc_xa.dll. Si tiene otras versiones del controlador JDBC en otros clientes, se recomienda usar el archivo sqljdbc_xa.dll más reciente en el servidor.  
 
 > [!NOTE]  
-> A partir de la versión preliminar pública CTP 2.0 de SQL Server 2019, los componentes de transacciones distribuidas de JDBC XA se incluyen en el motor de SQL Server y se pueden habilitar o deshabilitar con un procedimiento almacenado del sistema.
+> Los componentes de las transacciones distribuidas de JDBC XA se incluyen en el motor de SQL Server en SQL Server 2017 a partir de la actualización acumulativa 16 y en SQL Server 2019, y se pueden habilitar o deshabilitar con un procedimiento almacenado del sistema.
 > Para permitir que los componentes necesarios realicen transacciones distribuidas de XA con el controlador JDBC, ejecute el siguiente procedimiento almacenado.
 >
 > EXEC sp_sqljdbc_xa_install
@@ -86,11 +86,11 @@ En Windows Vista y versiones posteriores:
   
 4. En el cuadro de diálogo **Propiedades de DTC local**, haga clic en la pestaña **Seguridad**.  
   
-5. Active la casilla **Habilitar transacciones XA** y haga clic en **Aceptar**. De este modo, se reiniciará el servicio MS DTC.
+5. Active la casilla **Habilitar transacciones XA** y haga clic en **Aceptar**. Con esta acción se reiniciará el servicio MS DTC.
   
 6. Vuelva a hacer clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades** y luego cierre **Servicios de componentes**.  
   
-7. Detenga y reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para asegurarse de que se sincroniza con los cambios realizados en MS DTC.  
+7. Detenga y reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para asegurarse de que se sincroniza con los cambios realizados en MS DTC.  
 
 ### <a name="configuring-the-jdbc-distributed-transaction-components"></a>Configurar los componentes de transacciones distribuidas de JDBC  
 
@@ -145,15 +145,15 @@ Cuando se inicia, se establece un valor de tiempo de espera para cada transacci�
   
 - `XADefaultTimeout = 60`, `XAMaxTimeout = 0`
   
-     Significa que todas las transacciones tendrán un tiempo de espera de 60 segundos si el cliente no especifica ningún tiempo de espera. Si el cliente especifica un tiempo de espera, entonces se usará ese valor de tiempo de espera. No se exige ningún valor máximo para el tiempo de espera.  
+     Significa que todas las transacciones tendrán un tiempo de espera de 60 segundos, si el cliente no especifica ninguno. Si el cliente especifica un tiempo de espera, entonces se usará ese valor de tiempo de espera. No se exige ningún valor máximo para el tiempo de espera.  
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     Significa que todas las transacciones tendrán un tiempo de espera de 30 segundos si el cliente no especifica ningún tiempo de espera. Si el cliente especifica algún tiempo de espera, entonces se usará el tiempo de espera del cliente siempre y cuando sea inferior a 60 segundos (el valor máximo).  
+     Significa que todas las transacciones tendrán un tiempo de espera de 30 segundos, si el cliente no especifica ninguno. Si el cliente especifica algún tiempo de espera, entonces se usará el tiempo de espera del cliente siempre y cuando sea inferior a 60 segundos (el valor máximo).  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     Significa que todas las transacciones tendrán un tiempo de espera de 30 segundos (el valor máximo) si el cliente no especifica ningún tiempo de espera. Si el cliente especifica algún tiempo de espera, entonces se usará el tiempo de espera del cliente siempre y cuando sea inferior a 30 segundos (el valor máximo).  
+     Significa que todas las transacciones tendrán un tiempo de espera de 30 segundos (valor máximo), si el cliente no especifica ninguno. Si el cliente especifica algún tiempo de espera, entonces se usará el tiempo de espera del cliente siempre y cuando sea inferior a 30 segundos (el valor máximo).  
   
 ### <a name="upgrading-sqljdbc_xadll"></a>Actualización de sqljdbc_xa.dll
 
@@ -175,9 +175,9 @@ Para conceder permisos a un usuario concreto de modo que pueda participar en las
 ```sql
 USE master  
 GO  
-EXEC sp_grantdbaccess 'shelby', 'shelby'  
+EXEC sp_grantdbaccess 'shelly', 'shelly'  
 GO  
-EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'  
+EXEC sp_addrolemember [SqlJDBCXAUser], 'shelly'  
 ```
 
 Los roles definidos por el usuario de SQL se definen para cada base de datos. Para crear su propio rol por motivos de seguridad, debe definir el rol en cada base de datos y agregar los usuarios para cada base de datos. El rol SqlJDBCXAUser se define estrictamente en la base de datos maestra porque se utiliza para conceder acceso a los procedimientos almacenados extendidos del controlador JDBC de SQL que se encuentran en la base de datos maestra. En primer lugar, debe conceder acceso a cada usuario a la base de datos maestra y, a continuación, concederles acceso al rol SqlJDBCXAUser mientras esté conectado a la base de datos maestra.  

@@ -1,6 +1,6 @@
 ---
 title: 'Paso 1: Configuración del entorno de desarrollo para Ruby'
-description: Obtenga información sobre cómo configurar el entorno de desarrollo para Ruby.
+description: El paso 1 de esta guía de introducción implica la instalación de Ruby y un controlador ODBC para SQL Server en el entorno de desarrollo.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 700b0c1979b0eccc1544afb59296fba867e24c53
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a6412015000a5f9dda09ea5d489c8080fd2e1c09
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634590"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603368"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Paso 1: Configuración del entorno de desarrollo para el desarrollo Ruby
 Tendrá que configurar el entorno de desarrollo con los requisitos previos para desarrollar una aplicación con el controlador de Ruby para SQL Server.    

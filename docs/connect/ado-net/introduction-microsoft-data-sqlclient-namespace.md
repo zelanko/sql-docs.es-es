@@ -1,7 +1,7 @@
 ---
 title: Introducción al espacio de nombres Microsoft.Data.SqlClient
-description: Página de introducción al espacio de nombres Microsoft.Data.SqlClient.
-ms.date: 06/23/2019
+description: Infórmese sobre el espacio de nombres Microsoft.Data.SqlClient y por qué es la forma preferida de conectarse a SQL en el caso de las aplicaciones .NET.
+ms.date: 09/29/2020
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3a4f0611d3708aba9557deb81ab702f29e7a7462
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: c3af23cb3816ad45fa75516633749d1f011c930d
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334581"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529356"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Introducción al espacio de nombres Microsoft.Data.SqlClient
 
@@ -59,7 +59,7 @@ Para obtener más información, vea cómo [habilitar el seguimiento de eventos e
 
 #### <a name="enabling-managed-networking-on-windows"></a>Habilitación de redes administradas en Windows
 
-Un modificador nuevo de AppContext **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows"** permite el uso de una implementación de SNI administrada en Windows con fines de prueba y depuración. Este modificador alternará el comportamiento del controlador a fin de usar un SNI administrado en los proyectos de .NET Core 2.1+ y .NET Standard 2.0+ en Windows, eliminando todas las dependencias de las bibliotecas nativas para la biblioteca Microsoft.Data.SqlClient.
+Un nuevo modificador de AppContext **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows"** permite el uso de una implementación de SNI administrada en Windows con fines de prueba y depuración. Este modificador alternará el comportamiento del controlador a fin de usar un SNI administrado en los proyectos de .NET Core 2.1+ y .NET Standard 2.0+ en Windows, eliminando todas las dependencias de las bibliotecas nativas para la biblioteca Microsoft.Data.SqlClient.
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows", true);
@@ -206,11 +206,11 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="utf-8-support"></a>Compatibilidad con UTF-8
 
-La compatibilidad con UTF-8 no requiere hacer ningún cambio en el código de la aplicación. Estos cambios de SqlClient optimizan la comunicación entre el cliente y el servidor cuando el servidor admite UTF-8 y la intercalación de columna subyacente es UTF-8. Vea la sección UTF-8 en [Novedades de SQL Server 2019 (15.x)](../../sql-server/what-s-new-in-sql-server-ver15.md).
+La compatibilidad con UTF-8 no requiere hacer ningún cambio en el código de la aplicación. Estos cambios de SqlClient optimizan la comunicación entre el cliente y el servidor cuando el servidor admite UTF-8 y la intercalación de columna subyacente es UTF-8. Consulte la sección UTF-8 en [Novedades de SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).
 
 ### <a name="always-encrypted-with-enclaves"></a>Always Encrypted con enclaves seguros
 
-En general, la documentación que usa System.Data.SqlClient en .NET Framework **y los proveedores de almacenamiento de claves maestras de columna integradas** ahora deben funcionar también con .NET Core.
+En general, la documentación existente que usa System.Data.SqlClient en .NET Framework **y los proveedores de almacenamiento de claves maestras de columna integradas** ahora deben trabajar también con .NET Core.
 
  [Desarrollar con Always Encrypted con el proveedor de datos .NET Framework](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 

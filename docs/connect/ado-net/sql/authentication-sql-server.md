@@ -1,6 +1,6 @@
 ---
 title: Autenticación en SQL Server
-description: Describe los inicios de sesión y la autenticación en SQL Server y proporciona vínculos a recursos adicionales.
+description: Infórmese sobre los inicios de sesión y la autenticación en SQL Server al usar ADO.NET y dónde encontrar recursos adicionales.
 ms.date: 09/26/2019
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3c12f3adacbf26cfe70e2f5993db0ace84460404
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8bdcc51fad2bbc14499b60a1986bec5d2bcb6a1e
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928929"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603482"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticación en SQL Server
 

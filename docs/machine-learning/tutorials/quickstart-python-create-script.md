@@ -4,24 +4,24 @@ titleSuffix: SQL machine learning
 description: Ejecute un conjunto de scripts de Python sencillos con Machine Learning Services en SQL Server, en clústeres de macrodatos o en instancias de Azure SQL Managed Instance. Obtenga información sobre cómo usar el procedimiento almacenado sp_execute_external_script para ejecutar el script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/23/2020
+ms.date: 09/28/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperfq1
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2a21e17e5732b8819a955692f2c3721736a533cf
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: a2db492306aff5b4980bb97a6f65b93515dbfe1b
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136386"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497821"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>Inicio rápido: Ejecución de scripts de Python sencillos con aprendizaje automático de SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-En este inicio rápido, ejecutará un conjunto de scripts de Python sencillos mediante [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md), [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) o [clústeres de macrodatos de SQL Server](../../big-data-cluster/machine-learning-services.md). Aprenderá a usar el procedimiento almacenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para ejecutar el script en una instancia de SQL Server.
+En este inicio rápido, ejecutará un conjunto de scripts de Python sencillos mediante [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md), [Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) o [Clústeres de macrodatos de SQL Server](../../big-data-cluster/machine-learning-services.md). Aprenderá a usar el procedimiento almacenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para ejecutar el script en una instancia de SQL Server.
 
 ## <a name="prerequisites"></a>Prerrequisitos
 

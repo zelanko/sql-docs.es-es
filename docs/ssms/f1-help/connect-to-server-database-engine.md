@@ -18,12 +18,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: d46002843574b54c803ed0da33c02f1d795494ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2298bc5ad9a6be79d8ab48a42c579c2114bc1656
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88317931"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412966"
 ---
 # <a name="connect-to-server-database-engine"></a>Conectar al servidor (motor de base de datos)
 
@@ -65,10 +65,10 @@ La versión actual de SSMS ofrece cinco modos de autenticación al conectarse a 
 > Active Directory - Universal compatible con MFA es un flujo de trabajo interactivo que es compatible con Azure Multi-Factor Authentication (MFA). Azure MFA ayuda a proteger el acceso a los datos y las aplicaciones mientras se cumple la exigencia del usuario en cuanto a un proceso de inicio de sesión simple. Ofrece una autenticación segura con una variedad de opciones de comprobación sencillas, como llamadas de teléfono, mensajes de texto, tarjetas inteligentes con PIN o notificaciones de aplicaciones móviles, que permiten que los usuarios elijan el método que prefieran. Si la cuenta de usuario está configurada para MFA, el flujo de trabajo de autenticación interactivo requiere una interacción adicional por parte del usuario a través de cuadros de diálogo emergentes, las tarjetas inteligentes, etc. Si la cuenta de usuario está configurada para MFA, el usuario debe seleccionar Autenticación universal de Azure para conectarse. Si la cuenta de usuario no requiere MFA, el usuario puede usar de todas maneras las otras dos opciones de Autenticación de Azure Active Directory. Para obtener más información, consulte [Compatibilidad de SSMS con Azure AD MFA con SQL Database y SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Si es necesario, puede cambiar el dominio que autentica el inicio de sesión. Para ello, haga clic en **Opciones**, seleccione la pestaña **Propiedades de conexión** y complete el cuadro **Nombre de dominio o ID de inquilino de AD**.  
 > 
 > **Azure Active Directory: contraseña**  
-> Autenticación de Azure Active Directory es un mecanismo que permite conectar con [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mediante identidades de Azure Active Directory.  Use este método para conectarse con [!INCLUDE[ssSDS](../../includes/sssds-md.md)] si ha iniciado sesión en Windows con credenciales de un dominio no federado con Azure o si usa la autenticación de Azure AD con Azure AD basado en el dominio inicial o de cliente. Para más información, consulte [Usar la autenticación de Azure Active Directory para autenticación con SQL](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
+> La autenticación de Azure Active Directory es un mecanismo que permite conectarse a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mediante identidades de Azure Active Directory (Azure AD).  Use este método para conectarse con [!INCLUDE[ssSDS](../../includes/sssds-md.md)] si ha iniciado sesión en Windows con credenciales de un dominio no federado con Azure o si usa la autenticación de Azure AD con Azure AD basado en el dominio inicial o de cliente. Para más información, consulte [Usar la autenticación de Azure Active Directory para autenticación con SQL](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
 > 
 > **Active Directory - Integrado**  
-> Autenticación de Azure Active Directory es un mecanismo que permite conectar con [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mediante identidades de Azure Active Directory. Use este método para conectarse con [!INCLUDE[ssSDS](../../includes/sssds-md.md)] si ha iniciado sesión en Windows con credenciales de Azure Active Directory de un dominio federado. Para más información, consulte [Usar la autenticación de Azure Active Directory para autenticación con SQL](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
+> La autenticación de Azure Active Directory es un mecanismo que permite conectarse a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mediante identidades de Azure Active Directory (Azure AD). Use este método para conectarse con [!INCLUDE[ssSDS](../../includes/sssds-md.md)] si ha iniciado sesión en Windows con credenciales de Azure Active Directory de un dominio federado. Para más información, consulte [Usar la autenticación de Azure Active Directory para autenticación con SQL](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
   
 **Nombre de usuario**  
 El nombre de usuario de Windows con el que se va a conectar. Esta opción solo está disponible si ha seleccionado la autenticación **Azure Active Directory: contraseña** para conectarse. Es de solo lectura cuando se selecciona **Autenticación de Windows** o la autenticación **Azure Active Directory: integrado**.  

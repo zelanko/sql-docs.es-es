@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: eafad9ac648994c1a8ce24746401728caa4b1500
-ms.sourcegitcommit: 5be63bf337f765dfe04972c034dbd9e93c834dc5
-ms.translationtype: MT
+ms.openlocfilehash: a443b615a6a04b588ed6dc84c6a8a4f6ed12e2f0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721609"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726767"
 ---
 ## <a name="specifying-application-intent"></a>Especificar el intento de la aplicación
 
@@ -31,9 +31,9 @@ Cuando una conexión elige **ReadOnly**, la conexión se asigna a cualquiera de 
 - [Always On](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
     - Una base de datos puede permitir o denegar la lectura de las cargas de trabajo en la base de datos de destino Always On. Esta opción se controla mediante la cláusula **ALLOW_CONNECTIONS** de las instrucciones Transact-SQL **PRIMARY_ROLE** y **SECONDARY_ROLE**.
 
-- [Replicación geográfica](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview):
+- [Replicación geográfica](/azure/sql-database/sql-database-geo-replication-overview):
 
-- [Escalado horizontal de lectura](https://docs.microsoft.com/azure/sql-database/sql-database-read-scale-out)
+- [Escalado horizontal de lectura](/azure/sql-database/sql-database-read-scale-out)
 
 Si ninguno de esos destinos especiales está disponible, se lee desde la base de datos normal.
 
@@ -54,5 +54,4 @@ El enrutamiento de solo lectura es una característica que puede asegurar la dis
 
 Es posible que varias conexiones, cada una con enrutamiento de solo lectura, no se conecten todas a la misma réplica de solo lectura. Los cambios en la sincronización de la base de datos o los cambios en la configuración de enrutamiento del servidor pueden producir conexiones de cliente para réplicas de solo lectura diferentes. Puede asegurarse de que todas las solicitudes de solo lectura se conecten a la misma réplica de solo lectura. Para ello, *no* pase un cliente de escucha del grupo de disponibilidad a la palabra clave **Server** de la cadena de conexión. En su lugar, especifique el nombre de la instancia de solo lectura.
 
-El enrutamiento de solo lectura puede tardar más que la conexión a la principal. La espera más larga se debe a que el enrutamiento de solo lectura se conecta primero a la principal y, luego, busca la mejor instancia secundaria legible que esté disponible. Debido a estos varios pasos, debe aumentar el tiempo de espera de inicio de sesión a 30 segundos como mínimo.
-
+El enrutamiento de solo lectura puede tardar más que la conexión a la principal. La espera más larga se debe a que el enrutamiento de solo lectura se conecta primero a la principal y, luego, busca la mejor instancia secundaria legible que esté disponible. Debido a estos múltiples pasos, debe aumentar el tiempo de espera de inicio de sesión a 30 segundos como mínimo.

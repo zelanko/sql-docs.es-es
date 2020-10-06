@@ -1,6 +1,6 @@
 ---
-description: Empleo de almacenamiento en búfer adaptable
-title: Empleo de almacenamiento en búfer adaptable | Microsoft Docs
+title: Empleo de almacenamiento en búfer adaptable
+description: Descubra cómo el uso del almacenamiento en búfer adaptable elimina la sobrecarga de los cursores de servidor al recuperar datos de valores grandes mediante Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 720baad5c144148fae222bc19bb268aa9adae463
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f0e31c679ab1c85e5bbee9f3e66336c20e86521
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487949"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603398"
 ---
 # <a name="using-adaptive-buffering"></a>Empleo de almacenamiento en búfer adaptable
 

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6eafb66e4cc5f14803027d26f88dbf4baafbcd0c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 94fcbdfe06b99e0fb66cb6d462512c7d2a283914
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540639"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497939"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "89540639"
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
-  
 END CONVERSATION conversation_handle  
    [   [ WITH ERROR = failure_code DESCRIPTION = 'failure_text' ]  
      | [ WITH CLEANUP ]  
@@ -96,14 +95,14 @@ END CONVERSATION conversation_handle
 ### <a name="a-ending-a-conversation"></a>A. Finalizar una conversación  
  El ejemplo siguiente finaliza el cuadro de diálogo que especifica `@dialog_handle`.  
   
-```  
+```sql 
 END CONVERSATION @dialog_handle ;  
 ```  
   
 ### <a name="b-ending-a-conversation-with-an-error"></a>B. Finalizar una conversación con un error  
  En el ejemplo siguiente se finaliza con un error el cuadro de diálogo especificado por `@dialog_handle` si la instrucción que se está procesando genera un error. Tenga en cuenta que éste es un planteamiento simplista del control de errores y puede no ser adecuado para algunas aplicaciones.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
         @ErrorSave INT,  
         @ErrorDesc NVARCHAR(100) ;  
@@ -128,7 +127,7 @@ COMMIT TRANSACTION ;
 ### <a name="c-cleaning-up-a-conversation-that-cannot-complete-normally"></a>C. Limpiar una conversación que no puede finalizar con normalidad  
  El ejemplo siguiente finaliza el cuadro de diálogo que especifica `@dialog_handle`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quita inmediatamente todos los mensajes de la cola de servicio y la cola de transmisión, sin notificárselo al servicio remoto. Dado que, cuando un cuadro de diálogo finaliza con la opción de limpieza, el servicio remoto no recibe ninguna notificación, esta opción se debe usar únicamente cuando el servicio remoto no esté disponible para recibir un mensaje **EndDialog** o **Error**.  
   
-```  
+```sql  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   

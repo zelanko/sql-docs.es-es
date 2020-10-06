@@ -15,12 +15,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7704b286c89942ccb7b6345789514b11a9ec3765
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 113b8dfd288eccff391f9c72df3647955770b916
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227169"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498067"
 ---
 # <a name="permissions-grant-deny-revoke-azure-synapse-analytics-parallel-data-warehouse"></a>Permisos: GRANT, DENY, REVOKE (Azure Synapse Analytics, Almacenamiento de datos en paralelo)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -269,55 +269,55 @@ REVOKE
 ### <a name="a-granting-a-server-level-permission-to-a-login"></a>A. Conceder un permiso de nivel de servidor a un inicio de sesión  
  Las dos instrucciones siguientes conceden un permiso de nivel de servidor a un inicio de sesión.  
   
-```  
+```sql  
 GRANT CONTROL SERVER TO [Ted];  
 ```  
   
-```  
+```sql  
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
 ### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. Conceder un permiso de nivel de servidor a un inicio de sesión  
  En el ejemplo siguiente se concede un permiso de nivel de servidor en un inicio de sesión a una entidad de seguridad de servidor (otro inicio de sesión).  
   
-```  
+```sql  
 GRANT  VIEW DEFINITION ON LOGIN::Ted TO Mary;  
 ```  
   
 ### <a name="c-granting-a-database-level-permission-to-a-user"></a>C. Conceder un permiso de nivel de base de datos a un usuario  
  En el ejemplo siguiente se concede un permiso de nivel de base de datos en un usuario a una entidad de seguridad de base de datos (otro usuario).  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON USER::[Ted] TO Mary;  
 ```  
   
 ### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>D. Conceder, denegar y revocar un permiso de esquema  
  La siguiente instrucción **GRANT** concede a Yuen la capacidad de seleccionar datos de cualquier tabla o vista del esquema dbo.  
   
-```  
+```sql  
 GRANT SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
  La siguiente instrucción **DENY** impide que Yuen pueda seleccionar datos de cualquier tabla o vista del esquema dbo. Yuen no puede leer los datos, ni siquiera aunque tenga el permiso de otra manera, por ejemplo, mediante una pertenencia a un rol.  
   
-```  
+```sql  
 DENY SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
  La siguiente instrucción **REVOKE** quita el permiso **DENY**. Ahora, los permisos explícitos de Yuen son neutros. Yuen puede seleccionar los datos de cualquier tabla mediante otro permiso implícito, como una pertenencia a un rol.  
   
-```  
+```sql  
 REVOKE SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
 ### <a name="e-demonstrating-the-optional-object-clause"></a>E. Demostración de la cláusula opcional OBJECT::  
  Dado que OBJECT es la clase predeterminada para una instrucción de permiso, las dos instrucciones siguientes son iguales. La cláusula **OBJECT::** es opcional.  
   
-```  
+```sql  
 GRANT UPDATE ON OBJECT::dbo.StatusTable TO [Ted];  
 ```  
   
-```  
+```sql  
 GRANT UPDATE ON dbo.StatusTable TO [Ted];  
 ```  
   

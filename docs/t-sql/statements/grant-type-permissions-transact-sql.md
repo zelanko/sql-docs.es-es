@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1b9130d9da029cdd759a672de680270f0e2fb27b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1eced05b0eb6a293a4bb2eb21880e2181effa750
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426567"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498129"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT (permisos de tipo de Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88426567"
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
-  
 GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name  
     TO <database_principal> [ ,...n ]  
     [ WITH GRANT OPTION ]  
@@ -137,7 +136,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se concede el permiso `VIEW DEFINITION` con `GRANT OPTION` sobre el tipo definido por el usuario `PhoneNumber` al usuario `KhalidR`. `PhoneNumber` se encuentra en el esquema `Telemarketing`.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
     TO KhalidR WITH GRANT OPTION;  
 GO  

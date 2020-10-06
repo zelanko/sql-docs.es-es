@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1beca4564978fc069a896eadd42ed257dc28414
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 9f9db43b930baffc31529a3e36fb014225957a39
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024371"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529396"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -322,7 +322,6 @@ Notas sobre la tabla:
    `Encoding = {'UTF8' | 'UTF16'}`
    
  En [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4), PolyBase puede leer archivos de texto delimitados y codificados con UTF8 y UTF16-LE. En SQL Server, PolyBase no puede leer archivos codificados UTF16.
-
 
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY EXTERNAL FILE FORMAT.

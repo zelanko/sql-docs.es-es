@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16b73d0d01f4507dfb1a53596ca6ed38c49fd78a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e433b0ba5513396d732c1230f8e3ce43539e3976
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548996"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497874"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "89548996"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```syntaxsql
-  
+```syntaxsql 
 [ WAITFOR ( ]  
    GET CONVERSATION GROUP @conversation_group_id  
       FROM <queue>  
@@ -106,7 +105,7 @@ ms.locfileid: "89548996"
 ### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>A. Obtener un grupo de conversación, esperando indefinidamente  
  En el siguiente ejemplo se establece `@conversation_group_id` en el identificador de grupo de conversación para el siguiente mensaje disponible en `ExpenseQueue`. El comando espera hasta que un mensaje esté disponible.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 WAITFOR (  
@@ -118,7 +117,7 @@ WAITFOR (
 ### <a name="b-getting-a-conversation-group-waiting-one-minute"></a>B. Obtener un grupo de conversación, esperando un minuto  
  En el siguiente ejemplo se establece `@conversation_group_id` en el identificador de grupo de conversación para el siguiente mensaje disponible en `ExpenseQueue`. Si en un minuto no está disponible ningún mensaje, GET CONVERSATION GROUP devuelve `@conversation_group_id` sin cambiar su valor.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER  
   
 WAITFOR (  
@@ -130,7 +129,7 @@ TIMEOUT 60000 ;
 ### <a name="c-getting-a-conversation-group-returning-immediately"></a>C. Obtener un grupo de conversación, devolviendo un valor inmediatamente  
  En el siguiente ejemplo se establece `@conversation_group_id` en el identificador de grupo de conversación para el siguiente mensaje disponible en `ExpenseQueue`. Si no está disponible ningún mensaje, `GET CONVERSATION GROUP` devuelve inmediatamente `@conversation_group_id` sin cambiar su valor.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 GET CONVERSATION GROUP @conversation_group_id  

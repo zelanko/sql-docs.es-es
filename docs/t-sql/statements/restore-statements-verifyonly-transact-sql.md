@@ -24,12 +24,12 @@ ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cfa7ad3f583eea2253c29042e0be3fbe58026b33
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d198e47b3faf8cb7efc81a4075d90407f75dfb59
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88303984"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498020"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>Instrucciones RESTORE: VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -46,7 +46,6 @@ ms.locfileid: "88303984"
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
-  
 RESTORE VERIFYONLY  
 FROM <backup_device> [ ,...n ]  
 [ WITH    
@@ -125,7 +124,7 @@ FROM <backup_device> [ ,...n ]
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se comprueba la copia de seguridad desde el disco.
   
-```  
+```sql  
 RESTORE VERIFYONLY FROM DISK = 'D:\AdventureWorks.bak';
 GO
 ```  

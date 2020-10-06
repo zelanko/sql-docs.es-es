@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 50499b52303952556f54ac1a0fd9e446d53d5ad5
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ebe23aa1fb252ce19f887b225527c3ec7a3339c6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113644"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726473"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Configuración de copias de seguridad en las réplicas secundarias de un grupo de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -154,13 +154,13 @@ ms.locfileid: "91113644"
     ```  
   
 > [!NOTE]  
->  Para ver la sintaxis de un cmdlet, use el cmdlet **Get-Help** en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+>  Para ver la sintaxis de un cmdlet, use el cmdlet **Get-Help** en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="follow-up-after-configuring-backup-on-secondary-replicas"></a><a name="FollowUp"></a> Seguimiento: después de configurar la copia de seguridad en las réplicas secundarias  
  Para tener en cuenta la preferencia de la copia de seguridad automatizada para un grupo de disponibilidad dado, en cada instancia de servidor que hospede una réplica de disponibilidad cuya prioridad de copia de seguridad sea mayor que cero (>0), se necesitan los scripts de trabajos de copia de seguridad para las bases de datos del grupo de disponibilidad. Para determinar si la réplica actual es la réplica de copia de seguridad preferida, use la función [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) en el script de copia de seguridad. Si la réplica de disponibilidad que está hospedada en la instancia de servidor actual es la réplica preferida para las copias de seguridad, esta función devuelve 1. De lo contrario, la función devuelve 0. Mediante la ejecución de un script simple en cada réplica de disponibilidad que consulta esta función, puede determinar qué réplica debe ejecutar un trabajo de copia de seguridad determinado. Por ejemplo, un fragmento de código típico de un script de trabajo de copia de seguridad sería:  
@@ -192,12 +192,11 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
--   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
-  
   

@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 193280bb5e7f702336bf31fde363db08f437cc9b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 7bbd02e21b369732da72d7dbd7563d32f81c2a46
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113330"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727954"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Configuración de un agente de escucha para un grupo de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -196,11 +196,11 @@ ms.locfileid: "91113330"
     ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el cmdlet **Get-Help**  en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet **Get-Help**  en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
 ## <a name="troubleshooting"></a>Solución de problemas  
   
@@ -306,21 +306,21 @@ Start-Clustergroup yourListenerGroupName
   
         3.  Agregue una dependencia al recurso de grupo de disponibilidad de WSFC.  
   
-         Para obtener información sobre los cuadros de diálogo y las pestañas del Administrador de clústeres de conmutación por error, vea [Interfaz de usuario: complemento Administrador de clúster de conmutación por error](https://technet.microsoft.com/library/cc772502.aspx).  
+         Para obtener información sobre los cuadros de diálogo y las pestañas del Administrador de clústeres de conmutación por error, vea [Interfaz de usuario: complemento Administrador de clúster de conmutación por error](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772502(v=ws.11)).  
   
     -   **Con Windows PowerShell para los clústeres de conmutación por error:**  
   
         1.  Use [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) para crear un nombre de red y los recursos de dirección IP.  
   
-        2.  Use [Start-ClusterResource](https://technet.microsoft.com/library/ee461056.aspx) para iniciar el recurso de nombre de red.  
+        2.  Use [Start-ClusterResource](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461056(v=technet.10)) para iniciar el recurso de nombre de red.  
   
-        3.  Use [Add-ClusterResourceDependency](https://technet.microsoft.com/library/ee461014.aspx) para establecer la dependencia entre el nombre de red y el recurso de grupo de disponibilidad de SQL Server existente.  
+        3.  Use [Add-ClusterResourceDependency](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461014(v=technet.10)) para establecer la dependencia entre el nombre de red y el recurso de grupo de disponibilidad de SQL Server existente.  
   
-         Para obtener información sobre cómo usar Windows PowerShell en los clústeres de conmutación por error, vea [Introducción a los comandos del Administrador del servidor](https://technet.microsoft.com/library/cc732757.aspx#BKMK_wps).  
+         Para obtener información sobre cómo usar Windows PowerShell en los clústeres de conmutación por error, vea [Introducción a los comandos del Administrador del servidor](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732757(v=ws.11)#BKMK_wps).  
   
 2.  Inicie la escucha de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el nuevo agente de escucha. Después de crear el agente de escucha adicional, conéctese a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal del grupo de disponibilidad y use [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell para modificar el puerto de escucha.  
   
- Para obtener más información, vea [How to create multiple listeners for same availability group (Cómo crear varios agentes de escucha para el mismo grupo de disponibilidad)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/) (un blog del equipo de AlwaysOn de SQL Server).  
+ Para obtener más información, vea [How to create multiple listeners for same availability group (Cómo crear varios agentes de escucha para el mismo grupo de disponibilidad)](/archive/blogs/sqlalwayson/how-to-create-multiple-listeners-for-same-availability-group-goden-yao) (un blog del equipo de AlwaysOn de SQL Server).  
   
  
   
@@ -329,4 +329,3 @@ Start-Clustergroup yourListenerGroupName
 Ahora que ha creado el cliente de escucha, configure la aplicación para que se [conecte al cliente de escucha](listeners-client-connectivity-application-failover.md). También puede revisar varias [estrategias de supervisión de grupos de disponibilidad](monitoring-of-availability-groups-sql-server.md) para garantizar el estado del grupo de disponibilidad.
 
 También puede [ver las propiedades de un cliente de escucha](view-availability-group-listener-properties-sql-server.md) u obtener información sobre cómo [quitar el cliente de escucha](remove-an-availability-group-listener-sql-server.md), si es necesario. 
-  

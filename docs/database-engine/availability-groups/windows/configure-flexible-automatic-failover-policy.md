@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 31a68fa84d408a83412144bf6ace80a252f35dc2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 471038dea4e921b1bb9de97cae77330155e9aca3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113675"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727973"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Configuración de una directiva de conmutación automática por error flexible para un grupo de disponibilidad Always On
 
@@ -104,7 +104,7 @@ ms.locfileid: "91113675"
         |4|Cuatro|En errores de servidor moderados. Se cumple cualquier condición de un valor inferior o se produce un error de servidor moderado.|  
         |5|Cinco|En cualquier condición de error apta. Se cumple cualquier condición de un valor inferior o se produce una condición de error adecuada.|  
   
-         Para obtener más información sobre los niveles de condición de conmutación por error, vea [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
+         Para obtener más información sobre los niveles de condición de conmutación por error, vea [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;]().  
   
     -   Para configurar el umbral del tiempo de espera de comprobación de estado, use la opción HEALTH_CHECK_TIMEOUT = *n* , donde *n* es un entero de 15 000 milisegundos (15 segundos) a 4 294 967 295 milisegundos. El valor predeterminado es 30000 milisegundos (30 segundos).  
   
@@ -132,7 +132,7 @@ ms.locfileid: "91113675"
         |**OnModerateServerError**|Cuatro|En errores de servidor moderados. Se cumple cualquier condición de un valor inferior o se produce un error de servidor moderado.|  
         |**OnAnyQualifiedFailureConditions**|Cinco|En cualquier condición de error apta. Se cumple cualquier condición de un valor inferior o se produce una condición de error adecuada.|  
   
-         Para obtener más información sobre los niveles de condición de conmutación por error, vea [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
+         Para obtener más información sobre los niveles de condición de conmutación por error, vea [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;]().  
   
          Por ejemplo, el siguiente comando cambia el nivel de condición de error de un grupo de disponibilidad existente, `AG1`al nivel uno.  
   
@@ -153,13 +153,13 @@ ms.locfileid: "91113675"
         ```  
   
 > [!NOTE]  
->  Para ver la sintaxis de un cmdlet, use el cmdlet **Get-Help** en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+>  Para ver la sintaxis de un cmdlet, use el cmdlet **Get-Help** en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
 
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para configurar la conmutación automática por error**  
@@ -181,5 +181,4 @@ ms.locfileid: "91113675"
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Directiva de conmutación por error para instancias de clústeres de conmutación por error](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)  
-  
   

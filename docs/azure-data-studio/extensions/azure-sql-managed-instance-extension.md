@@ -9,12 +9,12 @@ ms.author: jovanpop
 ms.reviewer: alanyu, maghan, sstein
 ms.custom: ''
 ms.date: 10/07/2019
-ms.openlocfilehash: e31895f09b06e51f76c745a9b00a1dfe7c41d759
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: bc4a01ce30d05853c08b59b720452a3e09cb6417
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111754"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725206"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Panel de Azure SQL Managed Instance para Azure Data Studio (versión preliminar)
 
@@ -28,7 +28,7 @@ La extensión de Azure SQL Managed Instance proporciona un panel para trabajar c
 
 ## <a name="install"></a>Instalar
 
-Puede instalar la versión oficial de esta extensión. Siga los pasos descritos en la [documentación de Azure Data Studio](../extensions.md).
+Puede instalar la versión oficial de esta extensión. Siga los pasos descritos en la [documentación de Azure Data Studio](./add-extensions.md).
 En el panel **Extensiones**, busque "Instancia administrada" e instálela ahí. Una vez que esté instalada, recibirá notificaciones automáticamente sobre las futuras actualizaciones de la extensión.
 
 Con la extensión instalada, verá la pestaña **Instancia administrada** en Azure Data Studio. Aquí puede encontrar información específica para su instancia administrada.
@@ -50,7 +50,7 @@ En el panel superior se muestran los detalles siguientes:
 
 Si selecciona el segundo panel en la pestaña **Instancia administrada**, obtendrá recomendaciones y alertas que le ayudarán a optimizar su instancia administrada.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Recomendaciones para la instancia administrada":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Propiedades de la instancia administrada":::
 
 Es posible que vea algunas de las siguientes recomendaciones:
 
@@ -67,7 +67,7 @@ Revise periódicamente estas recomendaciones, investigue las causas principales 
 
 El tercer panel de la pestaña **Instancia administrada** muestra el estado de las réplicas de base de datos en su instancia administrada.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Réplicas de la instancia administrada":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Propiedades de la instancia administrada":::
 
 En el nivel de servicio de uso general, cada base de datos tiene una única réplica (principal). En una instancia de nivel de servicio crítico para la empresa, cada base de datos tiene una réplica principal y tres secundarias, una de las cuales se usa para las cargas de trabajo de solo lectura. En el panel **Réplicas**, puede supervisar el proceso de sincronización y comprobar que todas las réplicas secundarias están sincronizadas con la réplica principal.
 
@@ -75,7 +75,7 @@ En el nivel de servicio de uso general, cada base de datos tiene una única rép
 
 En el cuarto panel de **Instancia administrada** se muestran las entradas más recientes y relevantes del registro de errores de SQL.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Entradas de registro de la instancia administrada":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Propiedades de la instancia administrada":::
 
 Aunque su instancia administrada genera un gran número de entradas de registro, la mayoría de ellas son internas o de información del sistema. Además, algunas entradas del registro muestran los nombres de las bases de datos físicas (valores `GUID`) en lugar de los nombres de las bases de datos lógicas reales.
 

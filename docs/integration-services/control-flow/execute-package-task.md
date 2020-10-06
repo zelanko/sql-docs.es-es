@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3307c81165731907f8252c99ebb03b057ca6af74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab1215ca58f64c6e28f78e423bdee5a66b4c46b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457559"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725944"
 ---
 # <a name="execute-package-task"></a>Tarea Ejecutar paquete
 
@@ -67,7 +67,7 @@ ms.locfileid: "88457559"
  De forma predeterminada, la propiedad ExecuteOutOfProcess de la tarea Ejecutar paquete se establece en **False**y el paquete secundario se ejecuta en el mismo proceso que el paquete primario. Si establece esta propiedad en **True**, el paquete secundario se ejecuta en un proceso independiente. Esto puede ralentizar el inicio del paquete secundario. Además, si establece la propiedad en **True**, no se podrá depurar el paquete en una instalación de solo herramientas. Debe instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información, vea [Instalar Integration Services](../../integration-services/install-windows/install-integration-services.md)  
   
 ## <a name="extending-transactions"></a>Extender transacciones  
- La transacción utilizada por el paquete primario puede ampliarse al paquete secundario; por tanto, puede confirmarse o revertirse el trabajo realizado por ambos paquetes. Por ejemplo, las inserciones en la base de datos realizadas por el paquete primario pueden confirmarse o revertirse en función de las inserciones en la base de datos realizadas por el paquete secundario y viceversa. Para obtener más información, vea [Inherited Transactions](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
+ La transacción utilizada por el paquete primario puede ampliarse al paquete secundario; por tanto, puede confirmarse o revertirse el trabajo realizado por ambos paquetes. Por ejemplo, las inserciones en la base de datos realizadas por el paquete primario pueden confirmarse o revertirse en función de las inserciones en la base de datos realizadas por el paquete secundario y viceversa. Para obtener más información, vea [Inherited Transactions](../integration-services-transactions.md).  
   
 ## <a name="propagating-logging-details"></a>Propagar detalles de registro  
  El paquete secundario ejecutado por la tarea Ejecutar paquete puede estar configurado o no para usar registro, pero el paquete secundario siempre reenviará los detalles de registro al paquete primario. Si la tarea Ejecutar paquete está configurada para usar registro, la tarea registra los detalles del paquete secundario. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "88457559"
   
 -   **Parámetros**  
   
-     Puede configurar la tarea Ejecutar paquete para asignar variables o parámetros del paquete primario o bien, parámetros del proyecto a los parámetros del paquete secundario. El proyecto debe utilizar el modelo de implementación del proyecto y el paquete secundario debe estar incluido en el mismo proyecto que contiene el paquete primario. Para obtener más información, vea [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md).  
+     Puede configurar la tarea Ejecutar paquete para asignar variables o parámetros del paquete primario o bien, parámetros del proyecto a los parámetros del paquete secundario. El proyecto debe utilizar el modelo de implementación del proyecto y el paquete secundario debe estar incluido en el mismo proyecto que contiene el paquete primario. Para obtener más información, vea [Execute Package Task Editor]().  
   
     > [!NOTE]  
     >  Si el parámetro del paquete secundario no es confidencial y se asigna a un parámetro primario que sea confidencial, el paquete secundario no podrá ejecutarse.  
@@ -118,7 +118,7 @@ ms.locfileid: "88457559"
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="configuring-the-execute-package-task-programmatically"></a>Configurar la tarea Ejecutar paquete mediante programación  
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en el tema siguiente:  
@@ -224,5 +224,4 @@ ms.locfileid: "88457559"
   
  **Remove**  
  Haga clic para quitar una asignación entre un parámetro o variable y un parámetro de paquete secundario.  
-  
   

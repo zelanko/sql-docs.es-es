@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9466f9434ff06d22b7dcabc1d42da6d1bae76014
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 0a180d924a4033b45bdcfe60746110bc560aa470
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115058"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727883"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>Introducción a los grupos de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ En este tema se describen los pasos para las instancias de configuración de [!I
   
 |Tarea|Vínculo|  
 |----------|----------|  
-|Modificar la [directiva de conmutación por error flexible](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md) del grupo de disponibilidad para controlar las condiciones que producen una conmutación por error automática. Esta directiva es pertinente cuando la conmutación automática por error es posible.|[Configurar la directiva flexible de conmutación por error de un grupo de disponibilidad](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
+|Modificar la [directiva de conmutación por error flexible](./configure-flexible-automatic-failover-policy.md) del grupo de disponibilidad para controlar las condiciones que producen una conmutación por error automática. Esta directiva es pertinente cuando la conmutación automática por error es posible.|[Configurar la directiva flexible de conmutación por error de un grupo de disponibilidad](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
 |Realizar una conmutación por error manual planeada o una conmutación por error manual forzada (con posible pérdida de datos), denominada normalmente *conmutación por error forzada*. Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).|[Realizar una conmutación manual por error planeada](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [Realizar una conmutación manual por error forzada](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
 |Usar un conjunto de directivas definidas previamente para ver el estado de un grupo de disponibilidad y sus réplicas y bases de datos.|[Usar la administración basada en directivas para ver el estado de los grupos de disponibilidad](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Usar el Panel de grupo AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)|  
 |Agregar o quitar una réplica secundaria.|[Agregar una réplica secundaria](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [Quitar una réplica secundaria](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
@@ -90,9 +90,9 @@ En este tema se describen los pasos para las instancias de configuración de [!I
   
 -   **Vídeo de profundización en Always On:**  [Microsoft SQL Server Code-Named "Denali" AlwaysOn Series,Part 2: Building a Mission-Critical High Availability Solution Using AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404) (Microsoft SQL Server Code-Named "Denali", Serie Always On, parte 2: Creación de una solución esencial de alta disponibilidad mediante Always On)  
   
--   **Notas del producto:**  [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   **Notas del producto:**  [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   **Blogs:**  [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlAlwaysOn/)  
+-   **Blogs:**  [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte también  
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
@@ -102,5 +102,4 @@ En este tema se describen los pasos para las instancias de configuración de [!I
  [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
  [Información general sobre instrucciones Transact-SQL para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
  [Información general de los cmdlets de PowerShell para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
-  
   

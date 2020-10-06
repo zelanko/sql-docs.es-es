@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1fc520e8c1f9044b86bea23ae226d14de4a3088e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b395bda0eb9c5eaa8ff5bf34fa7ed1f8bf18df8f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431067"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726010"
 ---
 # <a name="bulk-insert-task"></a>Inserción masiva, tarea
 
@@ -101,7 +101,7 @@ ms.locfileid: "88431067"
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el tema siguiente:  
   
--   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="programmatic-configuration-of-the-bulk-insert-task"></a>Configuración mediante programación de la tarea Inserción masiva  
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en el tema siguiente:  
@@ -109,13 +109,13 @@ ms.locfileid: "88431067"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Establecer las propiedades de tareas o contenedores](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
 -   Artículo técnico, sobre la [posible aparición del error "No se puede preparar la inserción masiva de SSIS para la inserción de datos" en sistemas habilitados para UAC](https://go.microsoft.com/fwlink/?LinkId=233693), en support.microsoft.com.  
   
--   Artículo técnico, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=233700), en msdn.microsoft.com.  
+-   Artículo técnico, [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)), en msdn.microsoft.com.  
   
 -   Artículo técnico sobre cómo [usar SQL Server Integration Services para la carga masiva de datos](https://go.microsoft.com/fwlink/?LinkId=233701), en simple-talk.com.  
   
@@ -217,4 +217,3 @@ ms.locfileid: "88431067"
   
 > [!NOTE]  
 >  Cada fila que no pueda importarse con la operación de carga masiva se contabilizará como un error.  
-  

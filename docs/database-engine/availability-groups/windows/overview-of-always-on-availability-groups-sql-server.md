@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f24efc5f72b0be5b362e3af12ce8b7f21fd7d51b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 41bb72eefbfac24da8c390cea2bb9fa741e7255f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480263"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727842"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>¿Qué es un grupo de disponibilidad AlwaysOn?
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ El modo de disponibilidad es una propiedad de cada réplica de disponibilidad. E
   
     -   **Conmutación automática por error** (sin pérdida de datos)  
   
-         Una conmutación por error automática se produce en respuesta a un error que produce la transición de una réplica secundaria al rol principal (con protección de datos garantizada). Cuando la réplica principal anterior está disponible, efectúa la transición al rol secundario. La conmutación por error automática requiere que la réplica principal y la réplica secundaria de destino se ejecuten en modo de confirmación sincrónica con el modo de conmutación por error establecido en "Automático". Además, la réplica secundaria ya debe estar sincronizada, tener quórum de WSFC y cumplir las condiciones especificadas por la [directiva de conmutación por error flexible](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)del grupo de disponibilidad.  
+         Una conmutación por error automática se produce en respuesta a un error que produce la transición de una réplica secundaria al rol principal (con protección de datos garantizada). Cuando la réplica principal anterior está disponible, efectúa la transición al rol secundario. La conmutación por error automática requiere que la réplica principal y la réplica secundaria de destino se ejecuten en modo de confirmación sincrónica con el modo de conmutación por error establecido en "Automático". Además, la réplica secundaria ya debe estar sincronizada, tener quórum de WSFC y cumplir las condiciones especificadas por la [directiva de conmutación por error flexible](./configure-flexible-automatic-failover-policy.md)del grupo de disponibilidad.  
   
         > [!IMPORTANT]  
         >  Las instancias de clúster de conmutación por error (FCI) de SQL Server no admiten la conmutación automática por error de grupos de disponibilidad, por lo tanto, todas las réplicas de disponibilidad hospedadas por un FCI solo se pueden configurar para la conmutación por error manual.  
@@ -156,11 +156,11 @@ El modo de disponibilidad es una propiedad de cada réplica de disponibilidad. E
   
 -   **Blogs:**  
   
-     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
+     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
   
-     [Blogs del equipo de Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Blogs del equipo de Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](/archive/blogs/sqlalwayson/)  
   
-     [Blogs de los ingenieros de SQL Server de CSS](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [Blogs de los ingenieros de SQL Server de CSS](/archive/blogs/psssql/)  
   
 -   **Vídeos:**  
   
@@ -170,9 +170,9 @@ El modo de disponibilidad es una propiedad de cada réplica de disponibilidad. E
   
 -   **Notas del producto:**  
   
-     [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
-     [Notas del producto de Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Notas del producto de Microsoft para SQL Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [Notas del producto del equipo de asesoramiento al cliente de SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -188,4 +188,3 @@ El modo de disponibilidad es una propiedad de cada réplica de disponibilidad. E
  [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
-   

@@ -9,12 +9,12 @@ ms.date: 05/24/2018
 ms.topic: how-to
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 1eef940dd30ab0d5b9f987edf6f68c7d777c6a90
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 25ef257560a04c6e9df341fce8470ea1e7a992fb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111039"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726450"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Configuración de escalado de lectura para un grupo de disponibilidad Always On
 
@@ -87,6 +87,6 @@ Hay dos maneras de conectarse a réplicas secundarias de solo lectura:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-* [Grupos de disponibilidad distribuidos](distributed-availability-groups-always-on-availability-groups.md)
+* [Grupos de disponibilidad distribuidos](./distributed-availability-groups.md)
 * [Información general de los grupos de disponibilidad AlwaysOn (SQL Server)](overview-of-always-on-availability-groups-sql-server.md)
 * [Realizar una conmutación manual por error forzada](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

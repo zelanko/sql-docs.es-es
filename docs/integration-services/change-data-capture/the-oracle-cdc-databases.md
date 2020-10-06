@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b54697ebaad053c4fa7a598fa5407d150c6a51d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eba08dc813e869a6ce412dd185757d6b533407a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496177"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724993"
 ---
 # <a name="the-oracle-cdc-databases"></a>Las bases de datos CDC de Oracle
 
@@ -35,7 +35,7 @@ ms.locfileid: "88496177"
   
 -   Un conjunto de tablas de cambios y funciones de acceso a cambios generadas por el mecanismo CDC de SQL Server y que son idénticas a las usadas en CDC de SQL Server no de Oracle.  
   
- El esquema `cdc` solo es accesible inicialmente para los miembros del rol fijo de base de datos **dbowner** . El acceso a las tablas y funciones de cambios está determinado por el mismo modelo de seguridad que CDC de SQL Server. Para obtener más información sobre el modelo de seguridad, vea [Modelo de seguridad](https://go.microsoft.com/fwlink/?LinkId=231151).  
+ El esquema `cdc` solo es accesible inicialmente para los miembros del rol fijo de base de datos **dbowner** . El acceso a las tablas y funciones de cambios está determinado por el mismo modelo de seguridad que CDC de SQL Server. Para obtener más información sobre el modelo de seguridad, vea [Modelo de seguridad](/previous-versions/sql/sql-server-2008-r2/cc645961(v=sql.105)).  
   
 ## <a name="creating-the-cdc-database"></a>Crear la base de datos CDC  
  En la mayoría de los casos, la base de datos CDC se crea mediante la Consola del diseñador CDC, pero también se puede crear con un script de implementación CDC que se genera mediante la Consola del diseñador CDC. El administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede cambiar la configuración de la base de datos si es necesario (para elementos como almacenamiento, seguridad o disponibilidad).  
@@ -55,11 +55,11 @@ ms.locfileid: "88496177"
  Las tablas reflejadas están vacías; no se almacena ningún dato en ellas. Se usan para habilitar la infraestructura estándar CDC de SQL Server que usa la instancia CDC de Oracle. Para evitar que se inserten o actualicen datos en las tablas reflejadas, se deniegan todas las operaciones UPDATE, DELETE e INSERT para PUBLIC. Esto garantiza que no se puedan modificar.  
   
 ## <a name="access-to-change-data"></a>Obtener acceso a datos modificados  
- Debido al modelo de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] empleado para obtener acceso a los datos modificados que está asociado a una instancia de captura, el usuario debe tener acceso `select` para todas las columnas capturadas de la tabla reflejada asociada (los permisos de acceso a las tablas originales de Oracle no proporcionan acceso a las tablas de cambios en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Para obtener información sobre el modelo de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Modelo de seguridad](https://go.microsoft.com/fwlink/?LinkId=231151).  
+ Debido al modelo de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] empleado para obtener acceso a los datos modificados que está asociado a una instancia de captura, el usuario debe tener acceso `select` para todas las columnas capturadas de la tabla reflejada asociada (los permisos de acceso a las tablas originales de Oracle no proporcionan acceso a las tablas de cambios en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Para obtener información sobre el modelo de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Modelo de seguridad](/previous-versions/sql/sql-server-2008-r2/cc645961(v=sql.105)).  
   
  Además, si se especifica un rol de acceso cuando se crea la instancia de captura, el autor de las llamadas también debe ser miembro del rol de acceso especificado. Otras funciones generales de captura de datos modificados para obtener acceso a los metadatos son accesibles para todos los usuarios de la base de datos a través del rol PUBLIC, aunque el acceso a los metadatos devueltos se suele conseguir mediante un acceso exclusivo a las tablas de origen subyacentes y por pertenencia a cualquier rol de acceso definido.  
   
- Los datos modificados se pueden leer llamando a funciones especiales basadas en tablas generadas por el componente CDC de SQL Server cuando se crea una instancia de captura. Para obtener más información sobre esta función, vea [Funciones de captura de datos modificados (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
+ Los datos modificados se pueden leer llamando a funciones especiales basadas en tablas generadas por el componente CDC de SQL Server cuando se crea una instancia de captura. Para obtener más información sobre esta función, vea [Funciones de captura de datos modificados (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md).  
   
  El acceso a datos CDC mediante el componente CDC Source de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está sujeto a las mismas reglas.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88496177"
   
  Cuando la captura está habilitada inicialmente para la tabla `<schema-name>.<table-name>`, el nombre predeterminado de la instancia de captura es `<schema-name>_<table-name>`. Por ejemplo, el nombre predeterminado de la instancia de captura para la tabla de Oracle HR.EMPLOYEES es HR_EMPLOYEES y la tabla de cambios asociada es [cdc]. [HR_EMPLOYEES_CT].  
   
- Las tablas de captura están escritas por la instancia CDC de Oracle. Se leen mediante funciones especiales con valores de tabla generadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se crea la instancia de captura. Por ejemplo, `fn_cdc_get_all_changes_HR_EMPLOYEES`. Para obtener más información sobre estas funciones CDC, vea [Funciones de captura de datos modificados (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
+ Las tablas de captura están escritas por la instancia CDC de Oracle. Se leen mediante funciones especiales con valores de tabla generadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se crea la instancia de captura. Por ejemplo, `fn_cdc_get_all_changes_HR_EMPLOYEES`. Para obtener más información sobre estas funciones CDC, vea [Funciones de captura de datos modificados (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md).  
   
 ###  <a name="cdclsn_time_mapping"></a><a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  El componente CDC de SQL Server genera la tabla **[cdc].[lsn_time_mapping]** . Su uso en el caso de CDC de Oracle es diferente del uso normal.  
@@ -192,5 +192,4 @@ ms.locfileid: "88496177"
   
 ## <a name="see-also"></a>Consulte también  
  [Diseñador de captura de datos modificados para Oracle de Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
-  
   

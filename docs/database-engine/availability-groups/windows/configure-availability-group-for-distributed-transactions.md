@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfa584b5b6debf497438dc7b50f513e5da1b6d4e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 797885368b0aa8abfd2d367d4dbaf9b1b6942b41
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114036"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726476"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configuración de transacciones distribuidas para un grupo de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -193,16 +193,16 @@ Después de confirmar o revertir la transacción, puede usar `ALTER DATABASE` pa
    ALTER DATABASE [DB1] SET ONLINE
    ```
 
-Para más información sobre cómo resolver transacciones dudosas, vea [Resolve Transactions Manually](https://technet.microsoft.com/library/cc754134.aspx) (Resolver transacciones manualmente).
+Para más información sobre cómo resolver transacciones dudosas, vea [Resolve Transactions Manually](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754134(v=ws.10)) (Resolver transacciones manualmente).
 
 ## <a name="next-steps"></a>Pasos siguientes  
 
-[Transacciones distribuidas](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
+[Transacciones distribuidas](/dotnet/framework/data/adonet/distributed-transactions)
 
 [Grupos de disponibilidad Always On: interoperabilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [Transactions - Always On Availability Groups and Database Mirroring](transactions-always-on-availability-and-database-mirroring.md) (Transacciones: grupos de disponibilidad AlwaysOn y creación de reflejo de la base de datos)  
 
-[Supporting XA Transactions](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx) (Compatibilidad con las transacciones XA)
+[Supporting XA Transactions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753563(v=ws.10)) (Compatibilidad con las transacciones XA)
 
-[Cómo funciona: Session/SPID (-2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/) (Funcionamiento de Session/SPID [-2] en las transacciones de DTC)
+[Cómo funciona: Session/SPID (-2) for DTC Transactions](/archive/blogs/bobsql/how-it-works-sessionspid-2-for-dtc-transactions) (Funcionamiento de Session/SPID [-2] en las transacciones de DTC)

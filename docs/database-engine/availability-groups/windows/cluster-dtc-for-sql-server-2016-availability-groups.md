@@ -11,12 +11,12 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b4c7725de6d0381f80a5cc90beaf54d7101fa82
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 1b5232854920083c685e426e0ca55eeb9a065c70
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115646"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726506"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Cómo agrupar en clústeres el servicio DTC para un grupo de disponibilidad Always On
 
@@ -36,7 +36,7 @@ En este tema se describen los requisitos y los pasos para agrupar en clústeres 
 |Tarea|Referencia|  
 |-----------------|----------|  
 |Una unidad de almacenamiento compartido.|[Configuración de la unidad de almacenamiento compartido](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). Considere la posibilidad de usar la letra de unidad **M**.|
-|Un recurso de nombre de red del DTC único.  El nombre se registrará como objeto de equipo del clúster en Active Directory.<br /><br />Asegúrese de que se cumple alguna de las siguientes condiciones:<br /><br />• El usuario que crea el recurso de nombre de red del DTC tiene el permiso para crear objetos de equipo en la unidad organizativa o el contenedor donde residirá el recurso de nombre de red del DTC.<br /><br />• Si el usuario no tiene el permiso para crear objetos de equipo, pida a un administrador de dominio que preconfigure un objeto de equipo del clúster para el recurso de nombre de red del DTC.|[Preconfiguración de objetos de equipo del clúster en Active Directory Domain Services](https://technet.microsoft.com/library/dn466519(v=ws.11).aspx)|
+|Un recurso de nombre de red del DTC único.  El nombre se registrará como objeto de equipo del clúster en Active Directory.<br /><br />Asegúrese de que se cumple alguna de las siguientes condiciones:<br /><br />• El usuario que crea el recurso de nombre de red del DTC tiene el permiso para crear objetos de equipo en la unidad organizativa o el contenedor donde residirá el recurso de nombre de red del DTC.<br /><br />• Si el usuario no tiene el permiso para crear objetos de equipo, pida a un administrador de dominio que preconfigure un objeto de equipo del clúster para el recurso de nombre de red del DTC.|[Preconfiguración de objetos de equipo del clúster en Active Directory Domain Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466519(v=ws.11))|
 |Una dirección IP estática disponible válida y la máscara de subred adecuada para esa dirección IP.||
 
 ## <a name="cluster-the-dtc-resource"></a>Agrupar en clústeres el recurso del DTC
@@ -47,7 +47,7 @@ Una vez que haya creado el recurso de grupo de disponibilidad, cree un recurso D
 
 |Tarea|Referencia|  
 |-----------------|----------|  
-|Habilite el acceso de red de forma segura para el recurso del DTC en clúster.|[Habilitar el acceso de red de forma segura para MS DTC](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|
+|Habilite el acceso de red de forma segura para el recurso del DTC en clúster.|[Habilitar el acceso de red de forma segura para MS DTC](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753620(v=ws.10))|
 |Detenga y deshabilite el servicio DTC local.|[Configurar la forma en que se inicia un servicio](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
 |Reinicie el servicio SQL Server para cada instancia del grupo de disponibilidad.  Conmute por error el grupo de disponibilidad según sea necesario.|[Realizar una conmutación por error manual planeada de un grupo de disponibilidad (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
@@ -60,13 +60,13 @@ Una vez que haya creado el recurso de grupo de disponibilidad, cree un recurso D
 ### <a name="resources"></a>RECURSOS
 
 
-[Más información sobre la prueba de DTC en grupos de disponibilidad:](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/)
+[Más información sobre la prueba de DTC en grupos de disponibilidad:](/archive/blogs/dataplatform/sql-server-2016-dtc-support-in-availability-groups)
 
 [Supervisar grupos de disponibilidad (Transact-SQL)](monitor-availability-groups-transact-sql.md)
 
 [Crear un grupo de disponibilidad (Transact-SQL)](create-an-availability-group-transact-sql.md)
 
 
-[SQL Server 2016 DTC Support in Availability Groups](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) (Compatibilidad con SQL Server 2016 DTC en grupos de disponibilidad) 
+[SQL Server 2016 DTC Support in Availability Groups](/archive/blogs/dataplatform/sql-server-2016-dtc-support-in-availability-groups) (Compatibilidad con SQL Server 2016 DTC en grupos de disponibilidad) 
 
 [Vínculo externo: a un artículo sobre cómo configurar DTC para una instancia en clúster de SQL Server con Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

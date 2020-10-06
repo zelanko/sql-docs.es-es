@@ -18,12 +18,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c10980b60d41f107ff0104eedd5b51aa40cd6a6e
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: eed9c3c7644345da76cda9882844e553691b9683
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480657"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727886"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server)
 
@@ -74,7 +74,7 @@ ms.locfileid: "89480657"
  **La configuración de la directiva de conmutación por error del grupo de disponibilidad se aplica a todas las réplicas, ya estén hospedadas en una instancia independiente o una instancia de FCI.  
   
 > [!NOTE]  
->  Para obtener más información sobre el **número de nodos** en FCI y **grupos de disponibilidad AlwaysOn** en otras ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Para obtener más información sobre el **número de nodos** en FCI y **grupos de disponibilidad AlwaysOn** en otras ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2012](/previous-versions/sql/sql-server-2012/cc645993(v=sql.110)) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Consideraciones para hospedar una réplica de disponibilidad en una FCI  
   
@@ -107,23 +107,23 @@ ms.locfileid: "89480657"
 -   **No use el Administrador de clústeres de conmutación por error para mover los grupos de disponibilidad a otros nodos o para conmutar los grupos de disponibilidad.** El Administrador de clústeres de conmutación por error no conoce el estado de sincronización de las réplicas de disponibilidad y hacer esto puede conducir a un tiempo de inactividad extendido. Debe usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
 
   >[!WARNING]
-  > Si usa el Administrador de clústeres de conmutación por error para mover una *instancia de clúster de conmutación por error* que hospeda un grupo de disponibilidad a un nodo que *ya* hospeda una réplica del mismo grupo de disponibilidad, podría provocar la pérdida de la réplica del grupo de disponibilidad, impidiendo que se ponga en línea en el nodo de destino. Un único nodo de un clúster de conmutación por error no puede hospedar más de una réplica para el mismo grupo de disponibilidad. Para más información sobre cómo se produce esto y cómo recuperar, eche un vistazo a la entrada de blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Réplica dejada inesperadamente en grupo de disponibilidad). 
+  > Si usa el Administrador de clústeres de conmutación por error para mover una *instancia de clúster de conmutación por error* que hospeda un grupo de disponibilidad a un nodo que *ya* hospeda una réplica del mismo grupo de disponibilidad, podría provocar la pérdida de la réplica del grupo de disponibilidad, impidiendo que se ponga en línea en el nodo de destino. Un único nodo de un clúster de conmutación por error no puede hospedar más de una réplica para el mismo grupo de disponibilidad. Para más información sobre cómo se produce esto y cómo recuperar, eche un vistazo a la entrada de blog [Replica unexpectedly dropped in availability group](/archive/blogs/alwaysonpro/issue-replica-unexpectedly-dropped-in-availability-group) (Réplica dejada inesperadamente en grupo de disponibilidad). 
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   **Blogs:**  
   
-     [Configurar el clúster de conmutación por error de Windows para SQL Server (grupo de disponibilidad o FCI) con seguridad limitada](https://blogs.msdn.microsoft.com/sqlalwayson/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security/)  
+     [Configurar el clúster de conmutación por error de Windows para SQL Server (grupo de disponibilidad o FCI) con seguridad limitada](/archive/blogs/sqlalwayson/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security)  
   
-     [Blogs del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Blogs del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](/archive/blogs/sqlalwayson/)  
   
-     [Blogs de los ingenieros de SQL Server de CSS](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [Blogs de los ingenieros de SQL Server de CSS](/archive/blogs/psssql/)  
   
 -   **Notas del producto:**  
   
-     [Guía de la arquitectura de AlwaysOn: generar una solución de alta disponibilidad y recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [Guía de la arquitectura de AlwaysOn: generar una solución de alta disponibilidad y recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](/previous-versions/sql/sql-server-2012/jj215886(v=msdn.10))  
   
-     [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
      [Notas del producto de Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -134,5 +134,4 @@ ms.locfileid: "89480657"
  [Habilitar y deshabilitar grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Instancias de clúster de conmutación por error de AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
-  
   

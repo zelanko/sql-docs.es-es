@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c546eee3e6dfe71d3e554f28c467407fc5baea16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 074aa791a20eed06241aef1087f5ac355f8ea493
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477956"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725383"
 ---
 # <a name="cache-connection-manager"></a>Administrador de conexiones de caché
 
@@ -32,7 +32,7 @@ ms.locfileid: "88477956"
  La transformación de caché escribe los datos procedentes de un origen de datos conectado del flujo de datos en un administrador de conexiones de caché. La transformación Búsqueda de un paquete realiza búsquedas en los datos.  
   
 > [!NOTE]  
->  El administrador de conexiones de caché no admite los tipos de datos de objetos binarios grandes (BLOB) DT_TEXT, DT_NTEXT y DT_IMAGE. Si el conjunto de datos de referencia contiene un tipo de datos BLOB, se producirá un error en el componente al ejecutar el paquete. Puede utilizar el **Editor del administrador de conexiones de caché** para modificar los tipos de datos de columna. Para obtener más información, vea [Cache Connection Manager Editor](cache-connection-manager-editor.md).  
+>  El administrador de conexiones de caché no admite los tipos de datos de objetos binarios grandes (BLOB) DT_TEXT, DT_NTEXT y DT_IMAGE. Si el conjunto de datos de referencia contiene un tipo de datos BLOB, se producirá un error en el componente al ejecutar el paquete. Puede utilizar el **Editor del administrador de conexiones de caché** para modificar los tipos de datos de columna. Para obtener más información, vea [Cache Connection Manager Editor]().  
   
 > [!NOTE]  
 >  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para más información, vea [Acceso a los archivos usados por los paquetes](../../integration-services/security/security-overview-integration-services.md#files).  
@@ -133,5 +133,4 @@ ms.locfileid: "88477956"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
-  
   

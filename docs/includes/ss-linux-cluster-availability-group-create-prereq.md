@@ -166,6 +166,4 @@ El puerto TCP en el firewall debe estar abierto para el puerto de escucha.
 >[!IMPORTANT]
 >Para la versión de SQL Server 2017, el único método de autenticación que se admite para el punto de conexión de creación de reflejo de la base de datos es `CERTIFICATE`. La opción `WINDOWS` se habilitará en una futura versión.
 
-Para obtener más información, vea [El punto de conexión de creación de reflejo de la base de datos (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx).
-
-
+Para obtener más información, vea [El punto de conexión de creación de reflejo de la base de datos (SQL Server)](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).

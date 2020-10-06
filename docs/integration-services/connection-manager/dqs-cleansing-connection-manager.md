@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 051a2c558675d4d80b0b414668fcd3c4cb824478
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33586839b3efb0c8c93786a2e020228a44dc6bbc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477958"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726702"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>Administrador de conexiones de limpieza de DQS
 
@@ -31,8 +31,7 @@ ms.locfileid: "88477958"
 >  El administrador de conexiones de Limpieza de DQS solo admite la autenticación de Windows.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación. Para más información sobre las propiedades que puede establecer en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Cuadro de diálogo Editor de transformación Limpieza de DQS](../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
+ Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación. Para más información sobre las propiedades que puede establecer en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Cuadro de diálogo Editor de transformación Limpieza de DQS](../data-flow/transformations/dqs-cleansing-transformation.md).  
   
  Para obtener información sobre cómo configurar un administrador de conexiones mediante programación, vea la documentación de la clase <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> en la Guía del desarrollador.  
-  
   

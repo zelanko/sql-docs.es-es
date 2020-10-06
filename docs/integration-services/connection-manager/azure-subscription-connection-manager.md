@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5940e7b45288913bbda4930c267f1f806ed4937d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da836cc7f53f4a4d83aae28ea2a41ec646ca3bd0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477995"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728076"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure Subscription Connection Manager (Administrador de conexiones de suscripciones de Azure)
 
@@ -40,12 +40,11 @@ ms.locfileid: "88477995"
   
 3.  Elija **Management certificate store location** (Ubicación de almacén de certificados de administración) y **Management certificate store name** (Nombre de almacén de certificados de administración) en las listas desplegables.  
   
-4.  Escriba **Management certificate thumbprint** (Huella digital de certificado de administración) o haga clic en **Examinar…** para elegir un certificado en el almacén seleccionado. El certificado se debe cargar como un certificado de administración para la suscripción. Para hacerlo, haga clic en **Cargar** en la página siguiente de Azure Portal (consulte esta [publicación de MSDN](https://msdn.microsoft.com/library/azure/gg551722.aspx) para obtener más detalles).  
+4.  Escriba **Management certificate thumbprint** (Huella digital de certificado de administración) o haga clic en **Examinar…** para elegir un certificado en el almacén seleccionado. El certificado se debe cargar como un certificado de administración para la suscripción. Para hacerlo, haga clic en **Cargar** en la página siguiente de Azure Portal (consulte esta [publicación de MSDN](/previous-versions/azure/gg551722(v=azure.100)) para obtener más detalles).  
   
      ![SSIS-AzureSettings-ManagementCertificate](../../integration-services/connection-manager/media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   
 5.  Haga clic en **Probar conexión** para probar la conexión.  
   
 6.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
-  
   

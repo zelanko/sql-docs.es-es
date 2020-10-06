@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28d57d973f0c1c33e46930c8fb0277aec70dc89f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: e3ca428410760ac224cccf513aa8e8ed2a3060e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115049"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726552"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>Supervisión y solución de problemas de grupos de disponibilidad
  Esta guía le ayudará a empezar a trabajar en la supervisión de grupos de disponibilidad Always On y en la solución de problemas de algunos de los problemas comunes en los grupos de disponibilidad. Proporciona contenido original, así como una página de aterrizaje con información útil que está publicada en otra parte. Aunque esta guía no puede analizar completamente todos los problemas que pueden producirse en todo el área de grupos de disponibilidad, puede orientarle en la dirección correcta en el análisis de la causa principal de los problemas y en su resolución. 
@@ -35,7 +35,7 @@ ms.locfileid: "91115049"
 |[Solución de problemas: el grupo de disponibilidad superó el RTO](troubleshoot-availability-group-exceeded-rto.md)|Rendimiento|Después de una conmutación por error automática o una manual planeada sin pérdida de datos, el tiempo de conmutación por error supera el RTO. O bien, al estimar el tiempo de conmutación por error de una réplica secundaria de confirmación sincrónica (por ejemplo, un asociado de conmutación automática por error), descubre que supera el RTO.|  
 |[Solución de problemas: el grupo de disponibilidad superó el RPO](troubleshoot-availability-group-exceeded-rpo.md)|Rendimiento|Después de realizar una conmutación por error manual forzada, la pérdida de datos supera la RPO. O bien, al calcular la posible pérdida de datos de una réplica secundaria de confirmación asincrónica, descubre que supera la RPO.|  
 |[Solución de problemas: cambios en la réplica principal que no se reflejan en la réplica secundaria](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Rendimiento|La aplicación cliente finaliza una actualización en la réplica principal correctamente, pero una consulta a la réplica secundaria muestra que el cambio no se ha reflejado.|  
-|[Solución de problemas: tipo de espera HADR_SYNC_COMMIT alto con grupos de disponibilidad Always On](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|Rendimiento|Si HADR_SYNC_COMMIT es demasiado largo, hay un problema de rendimiento en el flujo de movimiento de datos o en el refuerzo del registro de réplica secundaria.|  
+|[Solución de problemas: tipo de espera HADR_SYNC_COMMIT alto con grupos de disponibilidad Always On](/archive/blogs/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups)|Rendimiento|Si HADR_SYNC_COMMIT es demasiado largo, hay un problema de rendimiento en el flujo de movimiento de datos o en el refuerzo del registro de réplica secundaria.|  
 
 ##  <a name="useful-tools-for-troubleshooting"></a><a name="BKMK_TOOLS"></a> Herramientas útiles para solucionar problemas  
  Al configurar o ejecutar grupos de disponibilidad, las diferentes herramientas pueden ayudarle a diagnosticar diferentes tipos de problemas. En la tabla siguiente se proporcionan vínculos a información útil sobre las herramientas.  
@@ -64,15 +64,14 @@ ms.locfileid: "91115049"
 |-----------|-----------------|  
 |[Monitor performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md) (Supervisar el rendimiento de los grupos de disponibilidad Always On)|Describe el proceso de sincronización de datos para los grupos de disponibilidad, puertas de control de flujo y métricas útiles al supervisar un grupo de disponibilidad; y también muestra cómo recopilar métricas de RTO y RPO.|  
 |[Herramientas para supervisar grupos de disponibilidad Always On &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Proporciona información sobre herramientas para supervisar un grupo de disponibilidad.|  
-|[The Always On health model, part 1: Health model architecture](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture) (Modelo de mantenimiento de Always On, parte 1: arquitectura del modelo de mantenimiento)|Proporciona información general sobre el modelo de estado de Always On.|  
-|[The Always On health model, part 2: Extending the health model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (Modelo de mantenimiento de Always On, parte 2: extender el modelo de mantenimiento)|Muestra cómo personalizar el modelo de mantenimiento de Always On y personalizar el panel de Always On para mostrar información adicional.|  
-|[Monitoring Always On health with PowerShell, part 1: Basic cmdlet overview](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview) (Supervisar el mantenimiento de Always On con PowerShell, parte 1: información general básica de los cmdlets)|Proporciona una introducción básica a los cmdlets de PowerShell en Always On que puede usarse para supervisar el mantenimiento de un grupo de disponibilidad.|  
-|[Monitoring Always On health with PowerShell, part 2: Advanced cmdlet usage](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage) (Supervisar el mantenimiento de Always On con PowerShell, parte 2: uso avanzado de cmdlets)|Proporciona información sobre el uso avanzado de los cmdlets de PowerShell en Always On para supervisar el mantenimiento de un grupo de disponibilidad.|  
-|[Monitoring Always On health with PowerShell, part 3: A simple monitoring application](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application) (Supervisar el mantenimiento de Always On con PowerShell, parte 3: una aplicación de supervisión sencilla)|Muestra cómo supervisar automáticamente un grupo de disponibilidad con una aplicación.|  
-|[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent) (Supervisar el mantenimiento de Always On con PowerShell, parte 4: integración con el agente SQL Server)|Proporciona información sobre cómo integrar la supervisión del grupo de disponibilidad con el agente SQL Server y cómo configurar notificaciones a las personas adecuadas cuando surjan problemas.|  
+|[The Always On health model, part 1: Health model architecture](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture) (Modelo de mantenimiento de Always On, parte 1: arquitectura del modelo de mantenimiento)|Proporciona información general sobre el modelo de estado de Always On.|  
+|[The Always On health model, part 2: Extending the health model](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (Modelo de mantenimiento de Always On, parte 2: extender el modelo de mantenimiento)|Muestra cómo personalizar el modelo de mantenimiento de Always On y personalizar el panel de Always On para mostrar información adicional.|  
+|[Monitoring Always On health with PowerShell, part 1: Basic cmdlet overview](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview) (Supervisar el mantenimiento de Always On con PowerShell, parte 1: información general básica de los cmdlets)|Proporciona una introducción básica a los cmdlets de PowerShell en Always On que puede usarse para supervisar el mantenimiento de un grupo de disponibilidad.|  
+|[Monitoring Always On health with PowerShell, part 2: Advanced cmdlet usage](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage) (Supervisar el mantenimiento de Always On con PowerShell, parte 2: uso avanzado de cmdlets)|Proporciona información sobre el uso avanzado de los cmdlets de PowerShell en Always On para supervisar el mantenimiento de un grupo de disponibilidad.|  
+|[Monitoring Always On health with PowerShell, part 3: A simple monitoring application](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application) (Supervisar el mantenimiento de Always On con PowerShell, parte 3: una aplicación de supervisión sencilla)|Muestra cómo supervisar automáticamente un grupo de disponibilidad con una aplicación.|  
+|[Monitoring Always On health with PowerShell, part 4: Integration with SQL Server Agent](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent) (Supervisar el mantenimiento de Always On con PowerShell, parte 4: integración con el agente SQL Server)|Proporciona información sobre cómo integrar la supervisión del grupo de disponibilidad con el agente SQL Server y cómo configurar notificaciones a las personas adecuadas cuando surjan problemas.|  
 
 ## <a name="next-steps"></a>Pasos siguientes  
- [SQL Server Always On Team Blog](https://docs.microsoft.com/archive/blogs/sqlalwayson/)  (Blog del equipo Always On de SQL Server)  
- [Blogs de los ingenieros de SQL Server de CSS](https://docs.microsoft.com/archive/blogs/psssql/)  
-  
+ [SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  (Blog del equipo Always On de SQL Server)  
+ [Blogs de los ingenieros de SQL Server de CSS](/archive/blogs/psssql/)  
   

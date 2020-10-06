@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d622a00995ec8a371ef531994e4f18c61173a20
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25c17b0d61c5e1f58932eb6abc035e7862dcbe6e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477997"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728072"
 ---
 # <a name="data-sources-for-ssisnoversion-packages"></a>Orígenes de datos para paquetes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477997"
   
 > **NOTA:** Puede agregar orígenes de datos solo a los proyectos configurados para utilizar el modelo de implementación de paquetes. Si se configura un proyecto para utilizar el modelo de implementación de proyectos, los administradores de conexiones creados en el nivel de proyecto se usan para compartir las conexiones, en lugar de usar orígenes de datos.  
 >   
->  Para obtener más información acerca de los modelos de implementación, vea [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). Para obtener más información sobre cómo convertir un proyecto al modelo de implementación de proyectos, vea [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
+>  Para obtener más información acerca de los modelos de implementación, vea [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). Para obtener más información sobre cómo convertir un proyecto al modelo de implementación de proyectos, vea [Deploy Projects to Integration Services Server](../packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Estas son algunas de las ventajas de usar orígenes de datos en paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
   
@@ -47,5 +47,4 @@ ms.locfileid: "88477997"
  Un objeto de origen de datos representa una simple conexión a un origen de datos y proporciona acceso a los objetos en el almacén de datos al que hace referencia. Por ejemplo, un objeto de origen de datos que se conecta a la base de datos de ejemplo AdventureWorks de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]incluye las 60 tablas de la base de datos.  
   
  No existe dependencia entre un origen de datos y los administradores de conexión que hacen referencia a él. Si el origen de datos ya no forma parte de un proyecto, los paquetes siguen siendo válidos, porque la información sobre el origen de datos, como, por ejemplo, su tipo de conexión y cadena de conexión, se incluye en la definición de paquete.  
-  
   

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: a8379e10e8c3e3af64381e9a4536b253e203964e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379600"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725129"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Creación y ejecución de un cuaderno de Kusto (KQL) (versión preliminar)
 
@@ -28,7 +28,7 @@ Esta funcionalidad actualmente está en su versión preliminar.
 
 Si no tiene una suscripción a Azure, cree una [cuenta gratuita de Azure](https://azure.microsoft.com/free/) antes de empezar.
 
-- [Clúster de Azure Data Explorer con una base de datos a la que puede conectarse](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
+- [Clúster de Azure Data Explorer con una base de datos a la que puede conectarse](/azure/data-explorer/create-cluster-database-portal).
 - [Azure Data Studio](../download-azure-data-studio.md)
 - [Extensión de Kusto (KQL) para Azure Data Studio](../extensions/kusto-extension.md).
 
@@ -118,6 +118,6 @@ Puede informar de un [error](https://github.com/microsoft/azuredatastudio/issues
 Obtenga más información sobre los cuadernos:
 
 - [Extensión de Kusto (KQL) para Azure Data Studio](../extensions/kusto-extension.md)
-- [Uso de cuadernos en Azure Data Studio](../notebooks-guidance.md)
-- [Creación y ejecución de un cuaderno de Python](../notebooks-tutorial-python-kernel.md)
-- [Creación y ejecución de un cuaderno de SQL Server](../notebooks-tutorial-sql-kernel.md)
+- [Uso de cuadernos en Azure Data Studio](./notebooks-guidance.md)
+- [Creación y ejecución de un cuaderno de Python](./notebooks-python-kernel.md)
+- [Creación y ejecución de un cuaderno de SQL Server](./notebooks-sql-kernel.md)

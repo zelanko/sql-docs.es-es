@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f0038fb53bb0f50dfd11551bed9a7c17a41971a1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 286a3e31caad83c421865626eee28d9f7d3f91f1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115712"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726586"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Grupos de disponibilidad Always On: interoperabilidad (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -63,15 +63,15 @@ Las siguientes características interoperan con [!INCLUDE[ssHADR](../../../inclu
 
 - **Blogs:**
 
-  [Guía de migración: migración a clústeres de conmutación por error y grupos de disponibilidad de SQL Server 2012 desde implementaciones anteriores de agrupación en clústeres y creación de reflejo](https://blogs.msdn.microsoft.com/sqlalwayson/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments/)
-  [Blogs del equipo de Always On de SQL Server: blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)
-  [Blogs de los ingenieros de SQL Server de CSS](https://docs.microsoft.com/archive/blogs/psssql/)
+  [Guía de migración: migración a clústeres de conmutación por error y grupos de disponibilidad de SQL Server 2012 desde implementaciones anteriores de agrupación en clústeres y creación de reflejo](/archive/blogs/sqlalwayson/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments)
+  [Blogs del equipo de Always On de SQL Server: blog oficial del equipo de Always On de SQL Server](/archive/blogs/sqlalwayson/)
+  [Blogs de los ingenieros de SQL Server de CSS](/archive/blogs/psssql/)
 
 - **Notas del producto:**
 
-  [Guía de migración: migración a grupos de disponibilidad Always On desde implementaciones anteriores que combinan la creación de reflejo de la base de datos y el trasvase de registros](https://msdn.microsoft.com/library/jj635217)
-  [Guía de soluciones de Microsoft SQL Server Always On para la alta disponibilidad y la recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)
-  [Notas del producto de Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)
+  [Guía de migración: migración a grupos de disponibilidad Always On desde implementaciones anteriores que combinan la creación de reflejo de la base de datos y el trasvase de registros](/previous-versions/sql/sql-server-2012/jj635217(v=msdn.10))
+  [Guía de soluciones de Microsoft SQL Server Always On para la alta disponibilidad y la recuperación ante desastres](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))
+  [Notas del producto de Microsoft para SQL Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)
   [Notas del producto del equipo de asesoramiento al cliente de SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)
 
 ## <a name="see-also"></a>Consulte también

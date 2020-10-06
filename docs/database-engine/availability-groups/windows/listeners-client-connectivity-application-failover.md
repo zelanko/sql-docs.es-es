@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ff79d4838b5982edf658dbb35cc40fa3d29e803
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 36828d66fb91f60bf920c18324c7e7ace479452b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116941"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727878"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Conexión a un agente de escucha del grupo de disponibilidad Always On 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ Las conexiones se enrutan de forma automática a la réplica de solo lectura si 
  
 -   Al menos una réplica secundaria se establece para acceso de solo lectura, y cada réplica secundaria de solo lectura y la réplica principal se [configuran para admitir el enrutamiento de solo lectura](configure-read-only-routing-for-an-availability-group-sql-server.md). 
 
--   La cadena de conexión hace referencia a una base de datos implicada en el grupo de disponibilidad. Una alternativa para esto sería que el inicio de sesión usado en la conexión tenga la base de datos configurada como su base de datos predeterminada. Para más información, vea [Calculating read_only_routing_url for Always On](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/) (Calcular read_only_routing_url para Always On).
+-   La cadena de conexión hace referencia a una base de datos implicada en el grupo de disponibilidad. Una alternativa para esto sería que el inicio de sesión usado en la conexión tenga la base de datos configurada como su base de datos predeterminada. Para más información, vea [Calculating read_only_routing_url for Always On](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson) (Calcular read_only_routing_url para Always On).
 
 -   La cadena de conexión hace referencia a un agente de escucha de grupo de disponibilidad y la intención de aplicaciones de la conexión entrante se establece en solo lectura (por ejemplo, al usar la palabra clave **Application Intent=ReadOnly** en las cadenas de conexión, los atributos de conexión o las propiedades de ODBC u OLEDB). 
 
@@ -198,4 +198,4 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2
 
 Una vez que se haya conectado correctamente al cliente de escucha, considere la posibilidad de descargar las [cargas de trabajo de solo lectura](overview-of-always-on-availability-groups-sql-server.md) y las [copias de seguridad](configure-backup-on-availability-replicas-sql-server.md) a la réplica secundaria para mejorar el rendimiento. También puede revisar varias [estrategias de supervisión de grupos de disponibilidad](monitoring-of-availability-groups-sql-server.md) para garantizar el estado del grupo de disponibilidad. 
 
-Para obtener más información sobre los grupos de disponibilidad, vea [Información general de los grupos de disponibilidad Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). 
+Para obtener más información sobre los grupos de disponibilidad, vea [Información general de los grupos de disponibilidad Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).

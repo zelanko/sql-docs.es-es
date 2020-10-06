@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 006a18f65350cd94e0070834e21b1ee846883770
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3208f04a990bc7cc07cfc8b1672e7534074bec70
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883002"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724606"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Descarga de cargas de trabajo de solo lectura a la réplica secundaria de un grupo de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "85883002"
   
 -   Las cargas de trabajo de solo lectura para tablas basadas en disco usan las versiones de fila para quitar la contención de bloqueo en las bases de datos secundarias. Todas las consultas que se ejecutan en las bases de datos secundarias se asignan automáticamente al nivel de transacción de aislamiento de instantánea, incluso cuando se establecen otros niveles de aislamiento de transacción de forma explícita. Asimismo, se pasan por alto todas las sugerencias de bloqueo. Esto elimina la contención de lectura y escritura.  
   
--   Las cargas de trabajo de solo lectura para tablas duraderas optimizadas para memoria tienen acceso a los datos exactamente de la misma forma que en la base de datos principal, con el uso de procedimientos almacenados nativos o interoperabilidad de SQL con las mismas limitaciones del nivel de aislamiento de transacción (vea [Niveles de aislamiento del motor de base de datos](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)). La carga de trabajo de informes o las consultas de solo lectura que se ejecutan en la réplica principal se pueden ejecutar en la réplica secundaria sin necesidad de hacer ningún cambio. De forma similar, las cargas de trabajo de informes o las consultas de solo lectura que se ejecutan en una réplica secundaria se pueden ejecutar en la réplica principal sin necesidad de hacer ningún cambio.  Al igual que ocurre con las tablas basadas en disco, todas las consultas que se ejecutan en las bases de datos secundarias se asignan automáticamente al nivel de transacción de aislamiento de instantánea, incluso cuando se establecen otros niveles de aislamiento de transacción de forma explícita.  
+-   Las cargas de trabajo de solo lectura para tablas duraderas optimizadas para memoria tienen acceso a los datos exactamente de la misma forma que en la base de datos principal, con el uso de procedimientos almacenados nativos o interoperabilidad de SQL con las mismas limitaciones del nivel de aislamiento de transacción (vea [Niveles de aislamiento del motor de base de datos](/previous-versions/sql/sql-server-2008-r2/ms189122(v=sql.105))). La carga de trabajo de informes o las consultas de solo lectura que se ejecutan en la réplica principal se pueden ejecutar en la réplica secundaria sin necesidad de hacer ningún cambio. De forma similar, las cargas de trabajo de informes o las consultas de solo lectura que se ejecutan en una réplica secundaria se pueden ejecutar en la réplica principal sin necesidad de hacer ningún cambio.  Al igual que ocurre con las tablas basadas en disco, todas las consultas que se ejecutan en las bases de datos secundarias se asignan automáticamente al nivel de transacción de aislamiento de instantánea, incluso cuando se establecen otros niveles de aislamiento de transacción de forma explícita.  
   
 -   Las operaciones DML se permiten en variables de tabla tanto para los tipos de tabla basadas en disco como para los tipos de tabla optimizada para memoria en la réplica secundaria.  
   
@@ -240,12 +240,11 @@ GO
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
--   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [estadísticas](../../../relational-databases/statistics/statistics.md)  
-  
   

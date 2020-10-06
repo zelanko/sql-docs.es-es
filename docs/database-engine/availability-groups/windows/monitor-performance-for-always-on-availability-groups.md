@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 03c89633fa5b61a8d08e78bd90a06a5f8497be75
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362705"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727874"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Supervisión del rendimiento para grupos de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "87362705"
 > [!IMPORTANT]  
 >  Si un grupo de disponibilidad contiene más de una base de datos de disponibilidad, aquella con el valor Tfailover más alto se convierte en el valor límite para el cumplimiento del RTO.  
   
- El tiempo de detección de errores, Tdetection, es el tiempo que tarda el sistema en detectar el error. Este tiempo depende de la configuración del clúster y no de las réplicas de disponibilidad individuales. Según la condición de conmutación automática por error configurada, una conmutación por error se puede desencadenar como una respuesta inmediata a un error interno de SQL Server crítico, como un bloqueo por subproceso huérfano. En este caso, la detección puede ser tan rápida como tarda en enviarse el informe de error [sp_server_diagnostics &#40;Transact-SQL&#41; ](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) al clúster WSFC (el intervalo predeterminado es 1/3 del tiempo de espera de comprobación de estado). Una conmutación por error también se puede desencadenar debido a un tiempo de espera, por ejemplo, cuando el tiempo de espera de comprobación de estado del clúster ha expirado (30 segundos de forma predeterminada) o la concesión entre la DLL del recurso y la instancia de SQL Server ha expirado (20 segundos de forma predeterminada). En este caso, el tiempo de detección es tan largo como el intervalo de tiempo de espera. Para obtener más información, vea [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](https://msdn.microsoft.com/library/hh710061(SQL.120).aspx).  
+ El tiempo de detección de errores, Tdetection, es el tiempo que tarda el sistema en detectar el error. Este tiempo depende de la configuración del clúster y no de las réplicas de disponibilidad individuales. Según la condición de conmutación automática por error configurada, una conmutación por error se puede desencadenar como una respuesta inmediata a un error interno de SQL Server crítico, como un bloqueo por subproceso huérfano. En este caso, la detección puede ser tan rápida como tarda en enviarse el informe de error [sp_server_diagnostics &#40;Transact-SQL&#41; ](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) al clúster WSFC (el intervalo predeterminado es 1/3 del tiempo de espera de comprobación de estado). Una conmutación por error también se puede desencadenar debido a un tiempo de espera, por ejemplo, cuando el tiempo de espera de comprobación de estado del clúster ha expirado (30 segundos de forma predeterminada) o la concesión entre la DLL del recurso y la instancia de SQL Server ha expirado (20 segundos de forma predeterminada). En este caso, el tiempo de detección es tan largo como el intervalo de tiempo de espera. Para obtener más información, vea [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](./configure-flexible-automatic-failover-policy.md?viewFallbackFrom=sql-server-2014).  
   
  Lo único que la réplica secundaria tiene que hacer para prepararse para una conmutación por error es que la fase de puesta al día alcance el final del registro. El tiempo de fase de puesta al día, Tredo, se calcula mediante la siguiente fórmula:  
   
@@ -310,7 +310,7 @@ Se pueden consultar las DMV [sys.dm_hadr_database_replica_states](../../../relat
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>Supervisión de RTO y RPO  
- En esta sección se muestra cómo supervisar las métricas RTO y RPO de los grupos de disponibilidad. Esta demostración es similar al tutorial de GUI proporcionado en [The Always On health model, part 2: Extending the health model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (El modelo de estado de Always On, parte 2: extensión del modelo de estado).  
+ En esta sección se muestra cómo supervisar las métricas RTO y RPO de los grupos de disponibilidad. Esta demostración es similar al tutorial de GUI proporcionado en [The Always On health model, part 2: Extending the health model](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (El modelo de estado de Always On, parte 2: extensión del modelo de estado).  
   
  Se proporcionan elementos de los cálculos de tiempo de conmutación por error y de posible pérdida de datos de [Estimación del tiempo de conmutación por error (RTO)](#estimating-failover-time-rto) y [Estimación de la posible pérdida de datos (RPO)](#estimating-potential-data-loss-rpo) como métricas de rendimiento de la faceta de administración de directivas **Estado de réplica de base de datos** (vea [Ver las facetas de administración basada en directivas en un objeto de SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Puede supervisar estas dos métricas según una programación y recibir alertas cuando superen el RTO y el RPO, respectivamente.  
   
@@ -454,4 +454,4 @@ Para crear las directivas, siga las instrucciones siguientes en todas las instan
 |hadr_worker_pool_task|`alwayson`|Depurar|Principal|  
 |hadr_dump_primary_progress|`alwayson`|Depurar|Principal|  
 |hadr_dump_log_progress|`alwayson`|Depurar|Principal|  
-|hadr_undo_of_redo_log_scan|`alwayson`|Analíticos|Secundario|  
+|hadr_undo_of_redo_log_scan|`alwayson`|Analíticos|Secundario|

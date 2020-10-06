@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 238c31cf94df05dfb172695d2984df8f3b815342
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9cf9343673732daee37aacb0a37943dc8be67616
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900370"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727848"
 ---
 # <a name="tools-to-monitor-always-on-availability-groups"></a>"Herramientas para supervisar grupos de disponibilidad Always On"
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,34 +37,33 @@ ms.locfileid: "85900370"
   
 -   **Blogs:**  
   
-     [Modelo de estado AlwaysOn, parte 1: arquitectura del modelo de estado](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/08/the-alwayson-health-model-part-1-health-model-architecture/)  
+     [Modelo de estado AlwaysOn, parte 1: arquitectura del modelo de estado](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)  
   
-     [Modelo de estado de AlwaysOn, parte 2: extender el modelo de estado](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/)  
+     [Modelo de estado de AlwaysOn, parte 2: extender el modelo de estado](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
-     [Supervisar el estado de AlwaysOn con PowerShell, parte 1: información general básica de los cmdlets](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  
+     [Supervisar el estado de AlwaysOn con PowerShell, parte 1: información general básica de los cmdlets](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
-     [Supervisar el estado de AlwaysOn con PowerShell, parte 2: uso avanzado de los cmdlets](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/)  
+     [Supervisar el estado de AlwaysOn con PowerShell, parte 2: uso avanzado de los cmdlets](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)  
   
-     [Supervisar el estado de AlwaysOn con PowerShell, parte 3: una aplicación sencilla de supervisión](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
+     [Supervisar el estado de AlwaysOn con PowerShell, parte 3: una aplicación sencilla de supervisión](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)  
   
-     [Supervisar el estado de AlwaysOn con PowerShell, parte 4: integración con el Agente SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
+     [Supervisar el estado de AlwaysOn con PowerShell, parte 4: integración con el Agente SQL Server](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)  
   
-     [Blogs del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Blogs del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](/archive/blogs/sqlalwayson/)  
   
-     [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.microsoft.com/psssql/)  
+     [Blogs de los ingenieros de SQL Server de CSS](/archive/blogs/psssql/)  
   
 -   **Notas del producto:**  
   
-     [Notas del producto de Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Notas del producto de Microsoft para SQL Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [Notas del producto del equipo de asesoramiento al cliente de SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo de grupos de disponibilidad AlwaysOn &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Funciones y vistas de administración dinámica de grupos de disponibilidad AlwaysOn &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)   
+ [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](./configure-flexible-automatic-failover-policy.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Reparación de página automática &#40;grupos de disponibilidad/creación de reflejo de la base de datos&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
-  
   

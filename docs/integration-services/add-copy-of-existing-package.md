@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c76e0178aa21a91cbbbb479aaf46e901fdd11992
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e24122bddbbc2c00d3437481d07194621b94b5bf
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478197"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724446"
 ---
 # <a name="add-copy-of-existing-package"></a>Agregar copia de paquete existente
 
@@ -49,8 +49,7 @@ ms.locfileid: "88478197"
  Escriba la ruta de acceso del paquete, o bien haga clic en el botón Examinar **(…)** y busque el paquete que quiere copiar.  
   
 ## <a name="see-also"></a>Vea también  
- [Guardar copia del paquete](https://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
+ [Guardar copia del paquete](./save-packages.md)   
  [Guardar paquetes](../integration-services/save-packages.md)   
  [Servicio Integration Services &#40;servicio SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)
-  
   

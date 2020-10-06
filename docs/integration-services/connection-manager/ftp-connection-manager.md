@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6aac44dfdbbe1c88965ff7aa37249651d3f7c199
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 854f975c64f5622c53d04c51651929d83745864a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350921"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728051"
 ---
 # <a name="ftp-connection-manager"></a>FTP, administrador de conexiones
 
@@ -60,7 +60,7 @@ ms.locfileid: "88350921"
 ## <a name="configuration-of-the-ftp-connection-manager"></a>Configuración del administrador de conexiones FTP  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener información sobre las propiedades que se pueden configurar en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Editor del administrador de conexiones FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md).  
+ Para obtener información sobre las propiedades que se pueden configurar en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Editor del administrador de conexiones FTP]().  
   
  Para obtener información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -103,5 +103,4 @@ ms.locfileid: "88350921"
 ## <a name="see-also"></a>Vea también  
  [Tarea FTP](../../integration-services/control-flow/ftp-task.md)   
  [Conexiones de Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

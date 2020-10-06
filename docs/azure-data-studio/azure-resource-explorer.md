@@ -9,19 +9,19 @@ ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 5b4081d98a30daa61a1e10ecf4faa6000a0fe11c
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 972e715de4ec8504c488ce70c47fecc3f04b3fca
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364165"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725236"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Exploración y administración de recursos de Azure SQL con Azure Resource Explorer
 
 En este documento aprenderá a explorar y administrar recursos de Azure SQL Server, Azure SQL Database e Instancia administrada de Azure SQL con Azure Resource Explorer en [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 
 >[!NOTE]
->El Azure Resource Explorer se admite en SQL Server 2019. Llegado ese momento, podrá instalar la extensión mediante el [administrador de extensiones](extensions.md) o mediante **Archivo** > **Instalar paquete desde paquete VSIX**.
+>El Azure Resource Explorer se admite en SQL Server 2019. Llegado ese momento, podrá instalar la extensión mediante el [administrador de extensiones](./extensions/add-extensions.md) o mediante **Archivo** > **Instalar paquete desde paquete VSIX**.
 
 ## <a name="connect-to-azure"></a>Conexión con Azure
 

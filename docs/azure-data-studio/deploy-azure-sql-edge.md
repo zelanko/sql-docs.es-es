@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 89732af2b2fc5926193519b4a6508b97ac998c88
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 74901a5360e4b9badcc7569211bfaea90d2b94a3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364122"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725226"
 ---
 # <a name="deploy-azure-sql-edge-with-azure-data-studio-preview"></a>Implementación de Azure SQL Edge con Azure Data Studio (Preview)
 
-[Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/overview) es un motor de base de datos relacional optimizado para implementaciones de IoT y Azure IoT Edge. Proporciona funcionalidades para crear una capa de procesamiento y almacenamiento de datos de alto rendimiento para las aplicaciones y soluciones de IoT. En este artículo se muestra cómo implementar una instancia de Azure SQL Edge con Azure Data Studio y los escenarios de implementación compatibles con el asistente para la implementación.  
+[Azure SQL Edge](/azure/azure-sql-edge/overview) es un motor de base de datos relacional optimizado para implementaciones de IoT y Azure IoT Edge. Proporciona funcionalidades para crear una capa de procesamiento y almacenamiento de datos de alto rendimiento para las aplicaciones y soluciones de IoT. En este artículo se muestra cómo implementar una instancia de Azure SQL Edge con Azure Data Studio y los escenarios de implementación compatibles con el asistente para la implementación.  
 
 Los siguientes escenarios son compatibles con el asistente para la implementación en Azure Data Studio:
 
@@ -76,11 +76,11 @@ Opcionalmente, se puede comprimir un archivo DACPAC en una carpeta e implementar
 
 ## <a name="multiple-devices-of-an-azure-iot-hub"></a>Varios dispositivos de una instancia de Azure IoT Hub
 
-Si tiene un centro de IoT y un dispositivo conectado, Azure SQL Edge se puede implementar en el dispositivo según el grupo de recursos, el nombre del centro de IoT y una [condición de destino](https://docs.microsoft.com/azure/iot-edge/module-deployment-monitoring#target-condition) para seleccionar dispositivos.
+Si tiene un centro de IoT y un dispositivo conectado, Azure SQL Edge se puede implementar en el dispositivo según el grupo de recursos, el nombre del centro de IoT y una [condición de destino](/azure/iot-edge/module-deployment-monitoring#target-condition) para seleccionar dispositivos.
 La dirección IP proporcionada en el asistente para la implementación se usa para generar un vínculo de conexión rápida en la parte inferior del cuaderno.
 
 Opcionalmente, se puede comprimir un archivo DACPAC en una carpeta e implementarlo en la nueva instancia de Azure SQL Edge como parte del proceso.  Si se proporciona un archivo DACPAC, se crea una cuenta de Azure Blob Storage en el mismo grupo de recursos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Obtenga más información acerca de Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/).
+- [Obtenga más información acerca de Azure SQL Edge](/azure/azure-sql-edge/).

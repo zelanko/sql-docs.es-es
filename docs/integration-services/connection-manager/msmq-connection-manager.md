@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d58122aeba74489981a387c2477699784778a60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7eb223aaa1ab8ece253e90db998b258e843f225e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394051"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724996"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ, administrador de conexiones
 
@@ -52,7 +52,7 @@ ms.locfileid: "88394051"
 ## <a name="configuration-of-the-msmq-connection-manager"></a>Configuración del administrador de conexiones MSMQ  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para más información sobre las propiedades que puede configurar en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Editor del administrador de conexiones MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md).  
+ Para más información sobre las propiedades que puede configurar en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Editor del administrador de conexiones MSMQ]().  
   
  Para obtener información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -87,5 +87,4 @@ ms.locfileid: "88394051"
 ## <a name="see-also"></a>Consulte también  
  [Tarea Cola de mensajes](../../integration-services/control-flow/message-queue-task.md)   
  [Conexiones de Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

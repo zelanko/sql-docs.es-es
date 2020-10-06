@@ -13,12 +13,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: 87c4b6ca0ccb53087c2c4532631edfde9d0e6516
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d40fea72f0c39bf932146de239f4713dbe5eb247
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918592"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726698"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Administrador de conexiones de Azure Data Lake Analytics
 
@@ -43,15 +43,15 @@ El administrador de conexiones de Data Lake Analytics es un componente de [Featu
    a. Si seleccionó la opción de autenticación **Identidad de usuario de Azure AD**:
    
       i. Proporcione los valores para los campos **Nombre de usuario** y **Contraseña**.    
-      ii. Seleccione **Probar conexión** para probar la conexión. Si usted o el administrador de inquilinos no permitió previamente que SSIS obtuviera acceso a la cuenta de Data Lake Analytics, seleccione **Aceptar** cuando se le solicite. Para obtener más información sobre esta experiencia del consentimiento, consulte [Integración de aplicaciones con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
+      ii. Seleccione **Probar conexión** para probar la conexión. Si usted o el administrador de inquilinos no permitió previamente que SSIS obtuviera acceso a la cuenta de Data Lake Analytics, seleccione **Aceptar** cuando se le solicite. Para obtener más información sobre esta experiencia del consentimiento, consulte [Integración de aplicaciones con Azure Active Directory](/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
     
    > [!NOTE] 
    > Al seleccionar la opción de autenticación **Identidad de usuario de Azure AD**, no se admitirá la autenticación multifactor ni la autenticación de la cuenta de Microsoft.
     
    b. Si seleccionó la opción de autenticación **Identidad de servicio de Azure AD**:
    
-      i. Cree una entidad de servicio y una aplicación de Azure AD para tener acceso a la cuenta de Data Lake Analytics. Para obtener más información sobre esta opción de autenticación, consulte [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)(Utilizar el portal para crear una aplicación de Active Directory y una entidad de servicio que puedan tener acceso a los recursos).    
-      ii. Asigne los permisos adecuados para permitir que esta aplicación de Azure AD tenga acceso a la cuenta de Data Lake Analytics. Obtenga información sobre cómo conceder permisos a la cuenta de Data Lake Analytics mediante el [Asistente para agregar usuario](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user).    
+      i. Cree una entidad de servicio y una aplicación de Azure AD para tener acceso a la cuenta de Data Lake Analytics. Para obtener más información sobre esta opción de autenticación, consulte [Use portal to create Active Directory application and service principal that can access resources](/azure/azure-resource-manager/resource-group-create-service-principal-portal)(Utilizar el portal para crear una aplicación de Active Directory y una entidad de servicio que puedan tener acceso a los recursos).    
+      ii. Asigne los permisos adecuados para permitir que esta aplicación de Azure AD tenga acceso a la cuenta de Data Lake Analytics. Obtenga información sobre cómo conceder permisos a la cuenta de Data Lake Analytics mediante el [Asistente para agregar usuario](/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user).    
       iii. Proporcione valores para los campos **Id. de la aplicación**, **Clave de autenticación** e **Identificador de inquilino**.    
       iv. Seleccione **Probar conexión** para probar la conexión.  
 
@@ -59,5 +59,4 @@ El administrador de conexiones de Data Lake Analytics es un componente de [Featu
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>Ver las propiedades del administrador de conexiones
 Puede ver las propiedades del Administrador de conexiones que creó en la ventana **Propiedades** .  
-  
   

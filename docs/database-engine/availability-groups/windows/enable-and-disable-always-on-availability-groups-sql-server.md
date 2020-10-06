@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 48504866119c344020ad9a6570a5a1fcdd21f74f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 08a051a5b0fa450680566b8bcfb408e481016325
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116205"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727934"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Habilitación o deshabilitación de la característica de grupo de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -97,11 +97,11 @@ ms.locfileid: "91116205"
     ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el cmdlet **Get-Help** en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet **Get-Help** en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="enable-always-on-availability-groups"></a><a name="EnableAOAG"></a> Habilitar los grupos de disponibilidad AlwaysOn  
  **Para habilitar AlwaysOn, mediante:**  
@@ -134,14 +134,14 @@ ms.locfileid: "91116205"
   
 2.  Use el cmdlet **Enable-SqlAlwaysOn** para habilitar los grupos de disponibilidad AlwaysOn.  
   
-     Para ver la sintaxis de un cmdlet, use el cmdlet **Get-Help** en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+     Para ver la sintaxis de un cmdlet, use el cmdlet **Get-Help** en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
     > [!NOTE]  
     >  Para información sobre cómo controlar si el cmdlet **Enable-SqlAlwaysOn** reinicia el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea [¿Cuándo reinicia un cmdlet el servicio SQL Server?](#WhenCmdletRestartsSQL), más adelante en este tema.  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
 ####  <a name="example-enable-sqlalwayson"></a><a name="ExmplEnable-SqlHadrServic"></a> Ejemplo: Enable-SqlAlwaysOn  
  El siguiente comando de PowerShell habilita [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en una instancia de SQL Server (*Computer*\\*Instance*).  
@@ -205,11 +205,11 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
     > [!IMPORTANT]  
     >  Para información sobre cómo controlar si el cmdlet **Disable-SqlAlwaysOn** reinicia el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea [¿Cuándo reinicia un cmdlet el servicio SQL Server?](#WhenCmdletRestartsSQL), más adelante en este tema.  
   
-     Para ver la sintaxis de un cmdlet, use el cmdlet **Get-Help** en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+     Para ver la sintaxis de un cmdlet, use el cmdlet **Get-Help** en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
 ###  <a name="follow-up-after-disabling-always-on"></a><a name="FollowUp"></a> Seguimiento: después de deshabilitar Always On  
  Después de deshabilitar los grupos de disponibilidad AlwaysOn, se debe reiniciar la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El Administrador de configuración de SQL reinicia la instancia de servidor automáticamente. Sin embargo, si utilizó el cmdlet **Disable-SqlAlwaysOn** , tendrá que reiniciar la instancia del servidor manualmente. Para más información, consulte [sqlservr Application](../../../tools/sqlservr-application.md).  
@@ -246,5 +246,3 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../../t-sql/functions/serverproperty-transact-sql.md)  
   
-  
-

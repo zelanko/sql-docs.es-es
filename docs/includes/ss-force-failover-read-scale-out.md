@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: aa0b00ec24c96aea37901cc03aac2dda9b20bed2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: eeef45e1678a1770f2dd0fc89c38943fa76cef72
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88655043"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726449"
 ---
 Cada grupo de disponibilidad tiene solo una réplica principal. La réplica principal permite lecturas y escrituras. Para cambiar la réplica principal, puede efectuar una conmutación por error. En un grupo de disponibilidad de alta disponibilidad, el administrador de clústeres automatiza el proceso de conmutación por error. En un grupo de disponibilidad con el tipo de clúster NONE, el proceso de conmutación por error es manual. 
 
@@ -98,7 +98,7 @@ Para realizar la conmutación por error manual sin pérdida de datos:
    ```
 
    > [!NOTE] 
-   > Para eliminar un grupo de disponibilidad, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql). Para un grupo de disponibilidad creado con el tipo de clúster NONE o EXTERNAL, ejecute el comando en todas las réplicas que forman parte del grupo de disponibilidad.
+   > Para eliminar un grupo de disponibilidad, use [DROP AVAILABILITY GROUP](../t-sql/statements/drop-availability-group-transact-sql.md). Para un grupo de disponibilidad creado con el tipo de clúster NONE o EXTERNAL, ejecute el comando en todas las réplicas que forman parte del grupo de disponibilidad.
 
 1. Reanude el movimiento de datos, ejecute el siguiente comando para cada base de datos del grupo de disponibilidad en la instancia de SQL Server que hospeda la réplica principal: 
 

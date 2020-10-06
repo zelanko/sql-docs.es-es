@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b621eca278c73b357b8d7c91c63dfc23a6147fc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: de57f7518136cecca09041e0ce93971aeebe9fd9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115828"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724577"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Administración basada en directivas de problemas operativos con grupos de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "91115828"
   
  Una directiva definida por el usuario puede usar cualquiera de las facetas PBM disponibles, incluidas las utilizadas por las directivas predefinidas AlwaysOn (vea [Directiva predefinidas y problemas](#Always OnPBM), anteriormente en este tema). La faceta de servidor proporciona las propiedades siguientes para supervisar el estado de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: (**IsHadrEnabled** y **HadrManagerStatus**). La faceta de servidor también proporciona a las propiedades las directivas siguientes para supervisar la configuración de clúster de WSFC: **ClusterQuorumType** y **ClusterQuorumState**.  
   
- Para obtener más información, vea el blog del equipo de SQL Server AlwaysOn [Modelo de estado de AlwaysOn, parte 2: extender el modelo de estado](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) .  
+ Para obtener más información, vea el blog del equipo de SQL Server AlwaysOn [Modelo de estado de AlwaysOn, parte 2: extender el modelo de estado](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) .  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -106,16 +106,15 @@ ms.locfileid: "91115828"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
--   [Modelo de estado AlwaysOn, parte 1: arquitectura del modelo de estado](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/08/the-alwayson-health-model-part-1-health-model-architecture/)  
+-   [Modelo de estado AlwaysOn, parte 1: arquitectura del modelo de estado](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)  
   
--   [Modelo de estado de AlwaysOn, parte 2: extender el modelo de estado](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/)  
+-   [Modelo de estado de AlwaysOn, parte 2: extender el modelo de estado](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
--   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
 ## <a name="see-also"></a>Consulte también  
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Administración de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
  [Herramientas para supervisar grupos de disponibilidad Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

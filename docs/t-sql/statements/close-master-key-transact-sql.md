@@ -23,12 +23,12 @@ ms.assetid: bb04ef7a-9f3a-437e-a6f9-ba0204082cb9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23d7ea90f1bd30500ae568a8833ec88244a1e4a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c1520b668c1b187849720a074870c04e9c564cb5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496993"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724266"
 ---
 # <a name="close-master-key-transact-sql"></a>CLOSE MASTER KEY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,16 +39,18 @@ ms.locfileid: "88496993"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 CLOSE MASTER KEY  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
  No tiene argumentos.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta instrucción revierte la operación realizada por OPEN MASTER KEY. CLOSE MASTER KEY solo funciona correctamente si la clave maestra de la base de datos se abrió en la sesión actual con la instrucción OPEN MASTER KEY.  
   
 ## <a name="permissions"></a>Permisos  
@@ -56,7 +58,7 @@ CLOSE MASTER KEY
   
 ## <a name="examples"></a>Ejemplos  
   
-```  
+```sql
 USE AdventureWorks2012;  
 CLOSE MASTER KEY;  
 GO  
@@ -64,7 +66,7 @@ GO
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-```  
+```sql
 USE master;  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';  
 GO   

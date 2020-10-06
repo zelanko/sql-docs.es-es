@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3fa77d1c6796220937a6966a5e4202c7f029ddd8
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 10517361b14711595b08a2c4761a368666b764b1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790328"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726576"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>Compatibilidad con la conectividad de cliente y controlador para grupos de disponibilidad
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "87790328"
 |ADO.NET con .NET Framework 4.0 con revisión de conectividad*|Sí|Sí|Sí|Sí|Sí|  
 |ADO.NET con .NET Framework 3.5 SP1 con revisión de conectividad **|Sí|Sí|Sí|Sí|Sí|  
 |[Microsoft ODBC Driver 13.1 para SQL Server](../../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)|Sí|Sí|Sí|Sí|Sí|
-|[Microsoft JDBC Driver 4.0+ para SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)|Sí|Sí|Sí|Sí|Sí| 
-|[Controlador Microsoft OLE DB para SQL Server](../../../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md)|Sí|Sí|Sí|Sí|Sí| 
+|[Microsoft JDBC Driver 4.0+ para SQL Server](../../../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md)|Sí|Sí|Sí|Sí|Sí| 
+|[Controlador Microsoft OLE DB para SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)|Sí|Sí|Sí|Sí|Sí| 
   
  *Descargar la revisión de conectividad para ADO .NET con .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
   
  **Descargar la revisión de conectividad para ADO.NET con .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
  
- *Descargar el nuevo controlador de Microsoft OLE DB para SQL Server: [https://aka.ms/downloadmsoledbsql](https://aka.ms/downloadmsoledbsql).  
+ *Descargar el nuevo controlador de Microsoft OLE DB para SQL Server: [https://aka.ms/downloadmsoledbsql](../../../connect/oledb/download-oledb-driver-for-sql-server.md).  
 
 > [!IMPORTANT]  
 >  Para conectarse a un agente de escucha del grupo de disponibilidad, los clientes deben usar una cadena de conexión de TCP.  
@@ -65,10 +65,9 @@ ms.locfileid: "87790328"
  [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)   
- [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)   
+ [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))   
+ [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](/archive/blogs/sqlalwayson/)   
  [Se produce un retraso prolongado cuando se vuelve a conectar una conexión de IPSec desde un equipo que ejecuta Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 o Windows Server 2008 R2](https://support.microsoft.com/kb/980915)   
  [El servicio de clúster tarda en torno a 30 segundos en la conmutación por error de las direcciones IP IPv6 en Windows Server 2008 R2](https://support.microsoft.com/kb/2578113)   
  [Reducir la operación de conmutación por error si no existe un enrutador entre el clúster y un servidor de aplicaciones](https://support.microsoft.com/kb/2582281)  
-  
   

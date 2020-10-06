@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21ef6f741ebfdd035630a40aba431c08a1ff9341
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: beb42ea05e69b9c806b0a0306b91e9c333bdd631
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431037"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725973"
 ---
 # <a name="data-flow-task"></a>tarea Flujo de datos
 
@@ -108,7 +108,7 @@ ms.locfileid: "88431037"
   
  Para obtener más información sobre cómo establecer estas propiedades en la ventana **Propiedades** , haga clic en el tema siguiente:  
   
--   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>Configuración mediante programación de la tarea Flujo de datos  
  Para obtener más información sobre cómo agregar una tarea Flujo de datos a un paquete y establecer las propiedades del flujo de datos mediante programación, haga clic en el tema siguiente:  
@@ -116,9 +116,8 @@ ms.locfileid: "88431037"
 -   [Agregar la tarea de flujo de datos mediante programación](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Establecer las propiedades de tareas o contenedores](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Vídeo, [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), en technet.microsoft.com  
-  
+ Vídeo, [Balanced Data Distributor](/previous-versions/dn912438(v=msdn.10)), en technet.microsoft.com  
   

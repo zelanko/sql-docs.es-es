@@ -14,12 +14,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 37ebb31c408d20708d6398be95a30883cceb04d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68b556070ef8714bc793a333b2a7e6c5d392d882
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496108"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719894"
 ---
 # <a name="odata-connection-manager"></a>Administrador de conexiones OData
 
@@ -55,7 +55,7 @@ Para el acceso anónimo, seleccione la opción Autenticación de Windows.
 Para conectarse a Microsoft Dynamics AX Online o Microsoft Dynamics CRM Online, no puede usar la opción de autenticación **Microsoft Online Services**. Tampoco podrá usar ninguna opción que esté configurada para la autenticación multifactor. En este momento no se admite la autenticación moderna. 
   
 ### <a name="specifying-and-securing-credentials"></a>Especificar y proteger las credenciales  
- Si el servicio OData requiere autenticación básica, puede especificar un nombre de usuario y una contraseña en el [Editor del administrador de conexiones OData](../../integration-services/connection-manager/odata-connection-manager-editor.md). Los valores que especifica en el editor se conservan en el paquete. El valor de contraseña se cifra según el nivel de protección del paquete.  
+ Si el servicio OData requiere autenticación básica, puede especificar un nombre de usuario y una contraseña en el [Editor del administrador de conexiones OData](). Los valores que especifica en el editor se conservan en el paquete. El valor de contraseña se cifra según el nivel de protección del paquete.  
   
  Hay varias maneras de parametrizar los valores de nombre de usuario y contraseña o almacenarlos fuera del paquete. Por ejemplo, puede usar parámetros o definir las propiedades del administrador de conexiones directamente al ejecutar el paquete desde SQL Server Management Studio.  
   
@@ -92,4 +92,4 @@ Si selecciona una opción distinta de la autenticación de Windows, escriba el *
 Para conectarse a Microsoft Dynamics AX Online o Microsoft Dynamics CRM Online, no puede usar la opción de autenticación **Microsoft Online Services**. Tampoco podrá usar ninguna opción que esté configurada para la autenticación multifactor.
 
  **Probar conexión**  
- Haga clic en este botón para probar la conexión con el origen OData.  
+ Haga clic en este botón para probar la conexión con el origen OData.

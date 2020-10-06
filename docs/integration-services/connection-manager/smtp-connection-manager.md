@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a621a780f7bd0e9cc231630e5d20a02a3f95c0c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0609ea0b10cd5f656c78cbda8c3f2b7ad5be382f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425987"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719305"
 ---
 # <a name="smtp-connection-manager"></a>Administrador de conexiones SMTP
 
@@ -51,7 +51,7 @@ ms.locfileid: "88425987"
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información sobre las propiedades que puede configurar en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Editor del administrador de conexiones SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md).  
+ Para obtener más información sobre las propiedades que puede configurar en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Editor del administrador de conexiones SMTP]().  
   
  Para obtener información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -81,4 +81,3 @@ ms.locfileid: "88425987"
   
  **Habilitar capa de sockets seguros (SSL)**  
  Seleccione esta opción para cifrar la comunicación mediante TLS/SSL al enviar mensajes de correo electrónico.  
-  

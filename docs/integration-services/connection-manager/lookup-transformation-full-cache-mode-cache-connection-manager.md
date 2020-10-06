@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c4bd90a73c0723baf716b5c503f18d1f690d77e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d897301336c7697b658fbf40837b23b0a2e3797
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394221"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719896"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Transformación Búsqueda en el modo Caché completa - Administrador de conexiones de caché
 
@@ -28,7 +28,7 @@ ms.locfileid: "88394221"
   Puede configurar la transformación de búsqueda para utilizar el modo de caché completa y un Administrador de conexiones de caché. En el modo de caché completa, el conjunto de datos de referencia se carga en la memoria caché antes de que se ejecute la transformación Búsqueda.  
   
 > [!NOTE]  
->  El administrador de conexiones de caché no admite los tipos de datos de objetos binarios grandes (BLOB) DT_TEXT, DT_NTEXT y DT_IMAGE. Si el conjunto de datos de referencia contiene un tipo de datos BLOB, se producirá un error en el componente al ejecutar el paquete. Puede utilizar el **Editor del administrador de conexiones de caché** para modificar los tipos de datos de columna. Para obtener más información, vea [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+>  El administrador de conexiones de caché no admite los tipos de datos de objetos binarios grandes (BLOB) DT_TEXT, DT_NTEXT y DT_IMAGE. Si el conjunto de datos de referencia contiene un tipo de datos BLOB, se producirá un error en el componente al ejecutar el paquete. Puede utilizar el **Editor del administrador de conexiones de caché** para modificar los tipos de datos de columna. Para obtener más información, vea [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
  La transformación Búsqueda realiza búsquedas mediante la combinación de datos de las columnas de entrada procedentes de un origen de datos conectado con columnas de un conjunto de datos de referencia. Para más información, consulte [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88394221"
   
 -   [contenedor de secuencias](../../integration-services/control-flow/sequence-container.md)  
   
- Para ver un vídeo donde se muestra cómo implementar una transformación de búsquedas en el modo de caché completa con el Administrador de conexiones de caché, visite [Cómo implementar una transformación Búsqueda en modo de memoria caché completa (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Para ver un vídeo donde se muestra cómo implementar una transformación de búsquedas en el modo de caché completa con el Administrador de conexiones de caché, visite [Cómo implementar una transformación Búsqueda en modo de memoria caché completa (vídeo de SQL Server)](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100)).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Implementar una transformación Búsqueda en el modo de caché completa en un paquete utilizando el Administrador de conexiones de caché y un origen de datos del flujo de datos  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88394221"
      Para las columnas de no índice, la posición de índice es 0. Para las columnas de índice, la posición de índice es un número secuencial positivo.  
   
     > [!NOTE]  
-    >  Cuando la transformación Búsqueda se configura para utilizar un administrador de conexiones de caché, a las columnas de entrada solo se les puede asignar las columnas de índice del conjunto de datos de referencia. Asimismo, todas las columnas de índice deben estar asignadas. Para obtener más información, vea [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  Cuando la transformación Búsqueda se configura para utilizar un administrador de conexiones de caché, a las columnas de entrada solo se les puede asignar las columnas de índice del conjunto de datos de referencia. Asimismo, todas las columnas de índice deben estar asignadas. Para obtener más información, vea [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
 6.  Para guardar la memoria caché en un archivo, en el **Editor del administrador de conexiones de caché**, en la pestaña **General** , configure el administrador a través de las opciones siguientes:  
   
@@ -98,7 +98,7 @@ ms.locfileid: "88394221"
     > [!NOTE]  
     >  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para más información, vea [Acceso a los archivos usados por los paquetes](../../integration-services/security/security-overview-integration-services.md#files).  
   
-7.  Configure la transformación de caché según sea necesario. Para obtener más información, vea [Editor de transformación Caché &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) y [Editor de transformación Caché &#40;página Asignaciones&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+7.  Configure la transformación de caché según sea necesario. Para obtener más información, vea [Editor de transformación Caché &#40;página Administrador de conexiones&#41;](../data-flow/transformations/cache-transform.md) y [Editor de transformación Caché &#40;página Asignaciones&#41;](../data-flow/transformations/cache-transform.md).  
   
 8.  En el segundo flujo de datos, agregue una transformación Búsqueda y, a continuación, realice las tareas siguientes para configurar la transformación:  
   
@@ -127,7 +127,7 @@ ms.locfileid: "88394221"
   
     8.  En la lista **Columnas de búsqueda disponibles** , seleccione las columnas. A continuación, en la lista **Operación de búsqueda** , especifique si los valores de las columnas de búsqueda reemplazan los valores de la columna de entrada o se escriben en una nueva columna.  
   
-    9. Para configurar la salida de errores, haga clic en la página **Salida de error** y establezca las opciones de control de errores. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Para configurar la salida de errores, haga clic en la página **Salida de error** y establezca las opciones de control de errores. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Haga clic en **Aceptar** para guardar los cambios realizados en la transformación Búsqueda.  
   
@@ -161,9 +161,9 @@ ms.locfileid: "88394221"
      Para las columnas de no índice, la posición de índice es 0. Para las columnas de índice, la posición de índice es un número secuencial positivo.  
   
     > [!NOTE]  
-    >  Cuando la transformación Búsqueda se configura para utilizar un administrador de conexiones de caché, a las columnas de entrada solo se les puede asignar las columnas de índice del conjunto de datos de referencia. Asimismo, todas las columnas de índice deben estar asignadas. Para obtener más información, vea [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  Cuando la transformación Búsqueda se configura para utilizar un administrador de conexiones de caché, a las columnas de entrada solo se les puede asignar las columnas de índice del conjunto de datos de referencia. Asimismo, todas las columnas de índice deben estar asignadas. Para obtener más información, vea [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
-7.  Configure la transformación de caché según sea necesario. Para obtener más información, vea [Editor de transformación Caché &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) y [Editor de transformación Caché &#40;página Asignaciones&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+7.  Configure la transformación de caché según sea necesario. Para obtener más información, vea [Editor de transformación Caché &#40;página Administrador de conexiones&#41;](../data-flow/transformations/cache-transform.md) y [Editor de transformación Caché &#40;página Asignaciones&#41;](../data-flow/transformations/cache-transform.md).  
   
 8.  Realice una de las siguientes acciones para rellenar el administrador de conexiones de caché que se utiliza en el segundo paquete:  
   
@@ -213,7 +213,7 @@ ms.locfileid: "88394221"
   
     8.  En la lista **Columnas de búsqueda disponibles** , seleccione las columnas. A continuación, en la lista **Operación de búsqueda** , especifique si los valores de las columnas de búsqueda reemplazan los valores de la columna de entrada o se escriben en una nueva columna.  
   
-    9. Para configurar la salida de errores, haga clic en la página **Salida de error** y establezca las opciones de control de errores. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Para configurar la salida de errores, haga clic en la página **Salida de error** y establezca las opciones de control de errores. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Haga clic en **Aceptar** para guardar los cambios realizados en la transformación Búsqueda.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "88394221"
      Para las columnas de no índice, la posición de índice es 0. Para las columnas de índice, la posición de índice es un número secuencial positivo.  
   
     > [!NOTE]  
-    >  Cuando la transformación Búsqueda se configura para utilizar un administrador de conexiones de caché, a las columnas de entrada solo se les puede asignar las columnas de índice del conjunto de datos de referencia. Asimismo, todas las columnas de índice deben estar asignadas. Para obtener más información, vea [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  Cuando la transformación Búsqueda se configura para utilizar un administrador de conexiones de caché, a las columnas de entrada solo se les puede asignar las columnas de índice del conjunto de datos de referencia. Asimismo, todas las columnas de índice deben estar asignadas. Para obtener más información, vea [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
 7.  En la pestaña **Flujo de control** , agregue una tarea Flujo de datos al paquete y, a continuación, agregue una transformación Búsqueda al flujo de datos.  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88394221"
   
     8.  En la lista **Columnas de búsqueda disponibles** , seleccione las columnas. A continuación, en la lista **Operación de búsqueda** , especifique si los valores de las columnas de búsqueda reemplazan los valores de la columna de entrada o se escriben en una nueva columna.  
   
-    9. Para configurar la salida de errores, haga clic en la página **Salida de error** y establezca las opciones de control de errores. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Para configurar la salida de errores, haga clic en la página **Salida de error** y establezca las opciones de control de errores. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Haga clic en **Aceptar** para guardar los cambios realizados en la transformación Búsqueda.  
   
@@ -288,5 +288,4 @@ ms.locfileid: "88394221"
  [Implementación de una transformación Búsqueda en el modo Caché completa con el administrador de conexiones OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implementación de una búsqueda en los modos No hay caché o Caché parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformaciones de Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

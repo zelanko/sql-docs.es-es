@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9fdcdc937ba8509f67b71352dd1b87d8f98f92d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 505f09118b4c1b4598936e59c57ce2202a4ddd55
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631418"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670860"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modos de funcionamiento de la creación de reflejo de la base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85631418"
  En esta sección se describe cómo funciona la creación de reflejo de la base de datos asincrónica, cuándo es adecuado utilizar el modo de alto rendimiento y cómo responder si se produce un error en el servidor principal.  
   
 > [!NOTE]  
->  La mayoría de las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] solo admiten la creación de reflejo de la base de datos sincrónica (“Solo seguridad completa”). Para más información sobre las ediciones que permiten totalmente crear reflejos de la base de datos, vea "Alta disponibilidad (AlwaysOn)" en [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
+>  La mayoría de las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] solo admiten la creación de reflejo de la base de datos sincrónica (“Solo seguridad completa”). Para más información sobre las ediciones que permiten totalmente crear reflejos de la base de datos, vea "Alta disponibilidad (AlwaysOn)" en [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
   
  Si la seguridad de las transacciones está configurada en OFF, la sesión de creación de reflejo de la base de datos funciona de forma asincrónica. La operación asincrónica solo admite el modo operativo de alto rendimiento. Este modo mejora el rendimiento a costa de la alta disponibilidad. El modo de alto rendimiento utiliza solamente el servidor principal y el servidor reflejado. Los problemas del servidor reflejado nunca afectan al servidor principal. Al perderse el servidor principal, la base de datos reflejada se marca como DISCONNECTED, pero está disponible como base de datos en espera activa.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "85631418"
  El modo de alto rendimiento puede resultar útil en un caso de recuperación de desastres en el que los servidores principal y reflejado se encuentran separados por una distancia considerable y no se desea que los pequeños errores afecten al servidor principal.  
   
 > [!NOTE]  
->  El trasvase de registros puede complementar a la creación de reflejo de la base de datos y es una alternativa conveniente a la creación asincrónica de reflejo de la base de datos. Para obtener información sobre las ventajas del trasvase de registros, vea [Soluciones de alta disponibilidad &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md). Para obtener información sobre cómo usar el trasvase de registros con la creación de reflejo de la base de datos, vea [Crear reflejo de la base de datos y trasvase de registros &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md).  
+>  El trasvase de registros puede complementar a la creación de reflejo de la base de datos y es una alternativa conveniente a la creación asincrónica de reflejo de la base de datos. Para obtener información sobre las ventajas del trasvase de registros, vea [Soluciones de alta disponibilidad &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md). Para obtener información sobre cómo usar el trasvase de registros con la creación de reflejo de la base de datos, vea [Crear reflejo de la base de datos y trasvase de registros &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md).  
   
 ###  <a name="the-impact-of-a-witness-on-high-performance-mode"></a><a name="WitnessImpactOnHighPerf"></a> El impacto de un testigo en el modo de alto rendimiento  
  Si se utiliza Transact-SQL para configurar el modo de alto rendimiento, siempre que la propiedad SAFETY esté establecida en OFF, se recomienda encarecidamente que la propiedad WITNESS también se establezca en OFF. Un testigo puede coexistir con el modo de alto rendimiento, pero no proporciona ventaja alguna y genera riesgo.  
@@ -287,5 +287,4 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 ## <a name="see-also"></a>Consulte también  
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md)  
-  
   

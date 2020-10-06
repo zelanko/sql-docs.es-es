@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9c707c97df5b6c639a2c9df5847ff4f14fc400db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b8dd6ffa60bdf43b4e6d112ba26de959005f549
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729444"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670538"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Características desusadas del motor de base de datos de SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -50,7 +50,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Category|Característica desusada|Sustituta|Nombre de característica|Id. de la característica|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Copias de seguridad y restauración|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD sigue en desuso. BACKUP { DATABASE &#124; LOG } WITH PASSWORD y BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD han dejado de proporcionarse.|None|BACKUP DATABASE o LOG WITH PASSWORD<br /><br /> BACKUP DATABASE or LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Niveles de compatibilidad|Actualización desde la versión 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Cuando una versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se queda sin [soporte](https://aka.ms/sqllifecycle), el nivel de compatibilidad de base de datos asociado se marcará como en desuso. Pero seguiremos dando soporte a las aplicaciones certificadas en cualquier nivel de compatibilidad de base de datos compatible, siempre que sea posible, para facilitar las actualizaciones. Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Nivel de compatibilidad de la base de datos 100|108|  
+|Niveles de compatibilidad|Actualización desde la versión 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Cuando una versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se queda sin [soporte](/lifecycle/products/?products=sql-server), el nivel de compatibilidad de base de datos asociado se marcará como en desuso. Pero seguiremos dando soporte a las aplicaciones certificadas en cualquier nivel de compatibilidad de base de datos compatible, siempre que sea posible, para facilitar las actualizaciones. Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Nivel de compatibilidad de la base de datos 100|108|  
 |Objetos de base de datos|Capacidad de devolver conjuntos de resultados de los desencadenadores|None|Devolver resultados del desencadenador|12|  
 |Cifrado|El cifrado mediante RC4 o RC4_128 está en desuso y se quitará en la próxima versión. El descifrado con RC4 y RC4_128 no está en desuso.|Utilice otro algoritmo de cifrado como AES.|Algoritmo de cifrado desusado|253|  
 |Algoritmos hash|El uso de MD2, MD4, MD5, SHA y SHA1 está obsoleto.|Use SHA2_256 o SHA2_512 en su lugar. Los algoritmos antiguos seguirán funcionando, pero generarán un evento de desuso.|Algoritmo hash en desuso|None|  
@@ -174,5 +174,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > El parámetro **OUTPUT** de la cookie para **sp_setapprole** está documentado actualmente como **varbinary(8000)** , que es la longitud máxima correcta. Pero la implementación actual devuelve **varbinary(50)** . Si los programadores han asignado **varbinary(50)** , es posible que la aplicación requiera cambios si el tamaño devuelto de la cookie aumenta en una versión futura. Aunque no se trate de un problema de desuso, se menciona en este tema porque los ajustes de aplicación son similares. Para obtener más información, vea [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Funcionalidad del motor de base de datos no incluida en SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)     
- [Características en desuso del motor de base de datos de SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)    
+ [Funcionalidad del motor de base de datos no incluida en SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)     
+ [Características en desuso del motor de base de datos de SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)

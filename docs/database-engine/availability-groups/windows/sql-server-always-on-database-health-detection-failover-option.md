@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 287e6cd2fd4f1004aaa79a69ec7388eb3b695a68
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25103e53ab29e9a19872ea1563f98607f3821b67
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898063"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669995"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opción de conmutación por error de detección del estado del nivel de la base de datos de un grupo de disponibilidad
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -186,11 +186,8 @@ En esta salida de ejemplo, fault_type (tipo de error 2: apagado) refleja que se 
 
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
-* [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)
+* [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad (SQL Server)](./configure-flexible-automatic-failover-policy.md)
 
-* [Enhance AlwaysOn Failover Policy to Test SQL Server Database Data and Log Drives](https://blogs.msdn.microsoft.com/alwaysonpro/2016/01/14/enhance-alwayson-failover-policy-to-test-sql-server-database-data-and-log-drives/) (Mejorar la directiva de conmutación por error de AlwaysOn para probar las unidades de registro y de datos de la base de datos de SQL Server)
+* [Enhance AlwaysOn Failover Policy to Test SQL Server Database Data and Log Drives](/archive/blogs/alwaysonpro/enhance-alwayson-failover-policy-to-test-sql-server-database-data-and-log-drives) (Mejorar la directiva de conmutación por error de AlwaysOn para probar las unidades de registro y de datos de la base de datos de SQL Server)
 
 * [Eventos extendidos](../../../relational-databases/extended-events/extended-events.md)
-
-
-

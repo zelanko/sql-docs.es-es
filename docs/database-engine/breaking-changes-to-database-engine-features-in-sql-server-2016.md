@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bddfd0b06bfc64d68534548cfb90ea09ed2d4076
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 30d666e4793501831dc4fc4a06d3ae6c4a24f3cc
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87236073"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670368"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Cambios importantes en las características del Motor de base de datos de SQL Server 2016
 
@@ -48,7 +48,7 @@ Para obtener información sobre los cambios importantes en [!INCLUDE[ssSQL14](..
 
 ## <a name="see-also"></a>Consulte también  
  [Características desusadas del motor de base de datos de SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Funcionalidad del motor de base de datos no incluida en SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [Funcionalidad del motor de base de datos no incluida en SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)   
+ [Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server](./discontinued-database-engine-functionality-in-sql-server.md)   
  [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [Mejoras de SQL Server 2016 o 2017 en Windows en la manipulación de algunos tipos de datos y operaciones infrecuentes](https://support.microsoft.com/help/4010261)   
+ [Mejoras de SQL Server 2016 o 2017 en Windows en la manipulación de algunos tipos de datos y operaciones infrecuentes](https://support.microsoft.com/help/4010261)

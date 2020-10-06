@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b891ba283acb1176a60bcc64105e126192aa8225
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04205ee05e3c26cc807a3a6aa828152c20e4c3c7
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772461"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670959"
 ---
 # <a name="filestream-access-level-server-configuration-option"></a>filestream access level (opción de configuración del servidor)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,6 @@ ms.locfileid: "85772461"
 |2|Habilita FILESTREAM para el acceso de transmisión por secuencias a [!INCLUDE[tsql](../../includes/tsql-md.md)] y Win32.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Configuración del motor de base de datos - Secuencia de archivo](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)   
+ [Configuración del motor de base de datos - Secuencia de archivo](../install-windows/install-sql-server.md)   
  [Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
-  
   

@@ -16,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: ec6c743ea40da4d7ee6846c3a1373d3912ec0dc9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 687f314e776dcc049f03cb4c8a164fb5fa84073e
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900303"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670208"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2019"></a>Actualizaciones de ediciones y versiones admitidas (SQL Server 2019)
 
@@ -44,7 +44,7 @@ ms.locfileid: "85900303"
   
 - [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] solo está disponible para plataformas de 64 bits. No se admite la actualización entre plataformas. No puede actualizar una instancia de 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bits nativo con el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin embargo, puede realizar copias de seguridad o separar bases de datos de una instancia de 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, después, si no están publicadas en replicación, restaurarlas o anexarlas a una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64 bits). Debe volver a crear los inicios de sesión y los demás objetos de usuario en las bases de datos del sistema maestra, msdb y modelo.  
   
-- No puede agregar características nuevas durante la actualización de una instancia existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Después de actualizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], puede agregar características mediante el programa de instalación de [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]. Para más información, vea [Agregar características a una instancia de SQL Server &#40;programa de instalación&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+- No puede agregar características nuevas durante la actualización de una instancia existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Después de actualizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], puede agregar características mediante el programa de instalación de [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]. Para más información, vea [Agregar características a una instancia de SQL Server &#40;programa de instalación&#41;](./add-features-to-an-instance-of-sql-server-setup.md).  
  
 ## <a name="upgrades-from-earlier-versions-to-sssqlv15-md"></a>Actualizaciones de versiones anteriores a [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
  
@@ -100,7 +100,7 @@ Para obtener más información, consulte la [guía de migración de Azure Databa
 
 Los consejos y herramientas siguientes le ayudarán a planear e implementar la migración.
 
-- Herramientas de migración: la migración se admite a través de [Data Migration Assistant (DMA)](https://aka.ms/dma).
+- Herramientas de migración: la migración se admite a través de [Data Migration Assistant (DMA)](../../dma/dma-overview.md).
 - Copias de seguridad y restauración: las copias de seguridad realizadas en SQL Server 2008 o SQL Server 2008 R2 se pueden restaurar en SQL Server 2019.
 - Trasvase de registros: se admite el trasvase de registros si la instancia principal ejecuta SQL Server 2008 SP3 o una versión posterior, o bien SQL Server 2008 R2 SP2 o una versión posterior, y si la instancia secundaria ejecuta SQL Server 2019. 
 
@@ -149,4 +149,4 @@ Para obtener instrucciones paso a paso sobre cómo realizar una actualización d
 
  [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 
- [Actualizar SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Actualizar SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)

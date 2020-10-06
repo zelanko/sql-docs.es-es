@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f5364e0120c6bb4cbd9d6f7bbf5dfa021a5591f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69d363980f09ecf0bd732bafc119bd5dd511d29f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772598"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670733"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instancias del motor de base de datos (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85772598"
 |Describe cómo administrar el servicio asociado a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Esto incluye acciones como iniciar y detener el servicio o configurar opciones de inicio de acciones como iniciar y detener el servicio u opciones de configuración de opciones de inicio.|[Administrar el servicio del motor de base de datos](../../database-engine/configure-windows/manage-the-database-engine-services.md)|  
 |Describe la forma de realizar tareas de configuración de red del servidor tales como habilitar protocolos, modificar el puerto o la canalización usados por el protocolo, configurar el cifrado, configurar el servicio SQL Server Browser, exponer u ocultar el motor de base de datos de SQL Server en la red y registrar el nombre de la entidad de seguridad del servidor.|[Configuración de red del servidor](../../database-engine/configure-windows/server-network-configuration.md)|  
 |Describe cómo realizar tareas de configuración de red de cliente tales como configurar protocolos de cliente y crear o eliminar un alias de servidor.|[Configuración de red de cliente](../../database-engine/configure-windows/client-network-configuration.md)|  
-|Describe los editores de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que se pueden usar para diseñar, depurar y ejecutar scripts como scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] . También describe cómo codificar scripts de Windows PowerShell para trabajar con componentes de SQL Server.|[Scripting del motor de base de datos](../../relational-databases/scripting/database-engine-scripting.md)|  
+|Describe los editores de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que se pueden usar para diseñar, depurar y ejecutar scripts como scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] . También describe cómo codificar scripts de Windows PowerShell para trabajar con componentes de SQL Server.|[Scripting del motor de base de datos](../../ssms/scripting/database-engine-scripting.md)|  
 |Describe cómo usar planes de mantenimiento para especificar un flujo de trabajo de tareas habituales de administración de una instancia. Los flujos de trabajo incluyen tareas como hacer copias de seguridad de bases de datos y actualizar las estadísticas para mejorar el rendimiento.|[Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md)|  
 |Describe cómo usar el regulador de recursos para administrar el consumo de recursos y las cargas de trabajo especificando los límites de CPU y de memoria que las solicitudes de aplicación pueden usar.|[Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)|  
 |Describe cómo las aplicaciones de base de datos pueden usar el correo electrónico de base de datos para enviar mensajes de correo electrónico desde [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)|  
@@ -55,7 +55,6 @@ ms.locfileid: "85772598"
   
 ## <a name="see-also"></a>Consulte también  
  [sqlservr (aplicación)](../../tools/sqlservr-application.md)   
- [Características de la base de datos](../../relational-databases/database-features.md)   
- [Características entre instancias del motor de base de datos](../../relational-databases/database-engine-cross-instance-features.md)  
-  
+ [Características de la base de datos](../../relational-databases/databases/databases.md)   
+ [Características entre instancias del motor de base de datos](../../relational-databases/databases/databases.md)  
   

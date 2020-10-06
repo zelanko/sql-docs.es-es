@@ -11,12 +11,12 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 67c6dd12c7c4829c2dc615ce8e440f8518d5fd09
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 706f0252b5a56b1084c678d259af97c7917e696c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883236"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670478"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Consideraciones acerca de la instalación de SQL Server con SysPrep
 
@@ -43,7 +43,7 @@ Puede usar la funcionalidad de SysPrep de [!INCLUDE[ssNoVersion](../../includes/
   
 - En combinación con la herramienta de preparación del sistema de Windows (también denominada Windows SysPrep), puede crear una imagen del sistema operativo, incluidas las instancias preparadas no configuradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo de origen. Puede implementar la imagen del sistema operativo en varios equipos. Después de completar la configuración del sistema operativo, puede configurar las instancias preparadas con el paso Completar imagen del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-    La herramienta SysPrep de Windows se usa para preparar las imágenes del sistema operativo Windows. Se usa para capturar una imagen personalizada del sistema operativo para su implementación en toda la organización. Para más información sobre SysPrep y sus usos, vea [SysPrep](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
+    La herramienta SysPrep de Windows se usa para preparar las imágenes del sistema operativo Windows. Se usa para capturar una imagen personalizada del sistema operativo para su implementación en toda la organización. Para más información sobre SysPrep y sus usos, vea [SysPrep](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
   
 ## <a name="installation-media-considerations"></a>Consideraciones acerca de los medios de instalación  
  Si usa una versión completa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], considere los siguientes aspectos:  
@@ -97,4 +97,4 @@ Puede completar las instancias preparadas de [!INCLUDE[ssNoVersion](../../includ
 - Obtener acceso al paso **Completar imagen de una instancia independiente preparada de SQL Server** de la página **Avanzadas** del **Centro de instalación**.  
   
 ## <a name="see-also"></a>Consulte también  
-[Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)  
+[Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93f20096c1ccce60b5ea0e2299725a4037f71ae3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e712528cc3716f054b498e4f322c64ea4873918d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894187"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670671"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>Configuración de una máquina virtual de Azure como una réplica secundaria en un grupo de disponibilidad
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "85894187"
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal actual.  
   
--   Debe tener un entorno de tecnologías informáticas híbrido donde la subred local tenga una VPN de sitio a sitio con Azure. Para obtener más información, vea [Configurar una VPN de sitio a sitio en el Portal de administración](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
+-   Debe tener un entorno de tecnologías informáticas híbrido donde la subred local tenga una VPN de sitio a sitio con Azure. Para obtener más información, vea [Configurar una VPN de sitio a sitio en el Portal de administración](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-classic-portal).  
   
 -   Es preciso que el grupo de disponibilidad cuente con réplicas locales disponibles.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "85894187"
   
 1.  En primer lugar, descargue un certificado de administración para la suscripción de Azure. Haga clic en **Descargar** para abrir la página de inicio de sesión.  
   
-2.  Inicie sesión en Microsoft Azure con la cuenta de Microsoft o la cuenta corporativa. La cuenta corporativa o de Microsoft presenta el formato de una dirección de correo electrónico, como HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Para obtener más información sobre las credenciales de Azure, vea [Preguntas frecuentes sobre Cuenta para organizaciones de Microsoft](https://technet.microsoft.com/jj592903) y [Solución de problemas de inicio de sesión con la cuenta corporativa](https://support.microsoft.com/kb/2756852).  
+2.  Inicie sesión en Microsoft Azure con la cuenta de Microsoft o la cuenta corporativa. La cuenta corporativa o de Microsoft presenta el formato de una dirección de correo electrónico, como HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Para obtener más información sobre las credenciales de Azure, vea [Preguntas frecuentes sobre Cuenta para organizaciones de Microsoft](/previous-versions/jj592903(v=msdn.10)) y [Solución de problemas de inicio de sesión con la cuenta corporativa](https://support.microsoft.com/kb/2756852).  
   
 3.  A continuación, haga clic en **Conectar**para conectarse a su suscripción. Cuando lo haya hecho, las listas desplegables se rellenan con los parámetros de Azure, como **Red virtual** y **Subred de la red virtual**.  
   
@@ -107,5 +107,4 @@ ms.locfileid: "85894187"
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Agregar una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
-  
   

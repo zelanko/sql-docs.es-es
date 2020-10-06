@@ -11,12 +11,12 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 22821930b8d0e10826fcaad0f33258262f59f2ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 96a7bde8459edcc6e6fe4758167c35b95aaedfef
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900385"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670591"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Instalar actualizaciones desde el símbolo del sistema
 
@@ -90,6 +90,5 @@ El nombre del paquete de actualización puede variar y es posible que incluya un
  *No puede especificar este parámetro para aplicar una actualización a una instancia preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Debe especificar el parámetro /instanceID en su lugar. 
  
 ## <a name="see-also"></a>Consulte también 
- [Información general sobre la instalación de servicios de SQL Server](https://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 
- 
+ [Información general sobre la instalación de servicios de SQL Server](./install-sql-server-servicing-updates.md) 
  

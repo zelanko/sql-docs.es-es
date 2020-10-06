@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c31375615a55d6ae8dfa12e9ffddfe921c066c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 11492d2488fabdc4128844bca60c3ecbfac58ad6
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042846"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670696"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Solución de problemas: El grupo de disponibilidad superó el RPO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ Para solucionar este problema, intente actualizar el ancho de banda de red o eli
  La pérdida de datos se evita en cuanto el bloque de registro se protege en el archivo de registro. Por lo tanto, es fundamental aislar el archivo de registro del archivo de datos. Si el archivo de registro y el archivo de datos se asignan al mismo disco duro, la carga de trabajo de los informes con lecturas intensivas del archivo de datos consumirá los mismos recursos de E/S necesarios para la operación de protección del registro. Una protección de registro lenta puede traducirse en una aceptación lenta de la réplica principal, lo que puede producir una activación excesiva y largos tiempos de espera del control de flujo.  
   
 ### <a name="diagnosis-and-resolution"></a>Diagnóstico y resolución  
- Si ha comprobado que la red no presenta una alta latencia o un rendimiento bajo, verifique si existen contenciones de E/S en la réplica secundaria. Las consultas de [SQL Server: minimizar la E/S de disco](https://technet.microsoft.com/magazine/jj643251.aspx) son útiles para identificar las contenciones. A continuación encontrará los ejemplos de ese artículo.  
+ Si ha comprobado que la red no presenta una alta latencia o un rendimiento bajo, verifique si existen contenciones de E/S en la réplica secundaria. Las consultas de [SQL Server: minimizar la E/S de disco](/previous-versions/technet-magazine/jj643251(v=msdn.10)) son útiles para identificar las contenciones. A continuación encontrará los ejemplos de ese artículo.  
   
  En el siguiente script verá el número de lecturas y escrituras de cada archivo de datos y de registro para cada base de datos de disponibilidad que se ejecute en una instancia de SQL Server. Está ordenado por el tiempo de pausa de E/S promedio, en milisegundos. Tenga en cuenta que los números se acumulan desde la última vez que se inició la instancia del servidor. Por lo tanto, debe tomar la diferencia entre dos mediciones después de que haya transcurrido cierto tiempo.  
   
@@ -127,6 +127,5 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  Si detecta un cuello de botella de E/S y ha colocado el archivo de registro y el archivo de datos en el mismo disco duro, lo primero que debe hacer es colocar dichos archivos en discos separados. Este procedimiento recomendado impide que la carga de trabajo de informes interfiera con la ruta de transferencia de registros de la réplica principal al búfer de registro y con su capacidad de proteger la transacción en la réplica secundaria.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Solucionar problemas de rendimiento en SQL Server (se aplica a SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
-  
+ [Solucionar problemas de rendimiento en SQL Server (se aplica a SQL Server 2012)](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100))  
   

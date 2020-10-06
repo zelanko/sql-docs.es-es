@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2554a93ab1b7be6dc0a81c0ddb63797b8146a444
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 4d3d1b76144de526146e4938ad655d990b443e1c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472456"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669909"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Redireccionamiento de la conexión de lectura/escritura de réplicas de secundaria a principal (grupos de disponibilidad AlwaysOn)
 
@@ -155,7 +155,7 @@ En el diagrama siguiente, la réplica principal se ha conmutado por error de for
 
 ## <a name="sql-server-instance-offline"></a>Instancia de SQL Server sin conexión
 
-Si la instancia de SQL Server especificada en la cadena de conexión no está disponible (sufre una interrupción), se producirá un error en la conexión, independientemente de la función que desempeñe la réplica en el servidor de destino. Para evitar un tiempo de inactividad prolongado de la aplicación, configure un `FailoverPartner` alternativo en la cadena de conexión. La aplicación tiene que implementar una lógica de reintento para dar cabida a las réplicas principales y secundarias que no están en línea durante la conmutación por error real. Para obtener información sobre las cadenas de conexión, consulte [Propiedad SqlConnection.ConnectionString](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
+Si la instancia de SQL Server especificada en la cadena de conexión no está disponible (sufre una interrupción), se producirá un error en la conexión, independientemente de la función que desempeñe la réplica en el servidor de destino. Para evitar un tiempo de inactividad prolongado de la aplicación, configure un `FailoverPartner` alternativo en la cadena de conexión. La aplicación tiene que implementar una lógica de reintento para dar cabida a las réplicas principales y secundarias que no están en línea durante la conmutación por error real. Para obtener información sobre las cadenas de conexión, consulte [Propiedad SqlConnection.ConnectionString](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring).
 
 ## <a name="see-also"></a>Consulte también
 
@@ -163,4 +163,4 @@ Si la instancia de SQL Server especificada en la cadena de conexión no está di
  
 [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
 
-[Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md) 
+[Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)

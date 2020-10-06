@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 67131a066a9885547e04ff58c80cd9f05d365051
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 74014a2fe98646a5a25d337719636c3471562ff3
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888007"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670663"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Determinación de por qué los cambios de la réplica principal no se reflejan en una réplica secundaria de un grupo de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -127,6 +127,5 @@ from sys.dm_hadr_database_replica_states
  Si realmente el subproceso de la fase de puesta al día se retrasa, debe investigar la causa principal de la degradación del rendimiento en la réplica secundaria. Si se produce una contención de E/S en la carga de trabajo de los informes, puede usar [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) para controlar, hasta cierto punto, los ciclos de CPU que usa la carga de trabajo de informes para controlar indirectamente los ciclos de E/S realizados. Por ejemplo, si la carga de trabajo de los informes está consumiendo un 10 % de la CPU, pero la carga de trabajo está enlazada a E/S, puede utilizar Resource Governor para limitar el uso de recursos de la CPU al 5 % y regular así la carga de trabajo de lectura. De esta forma, se reduce el impacto en la E/S.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Troubleshooting performance problems in SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) (Solucionar problemas de rendimiento en SQL Server 2008)
-  
+ [Troubleshooting performance problems in SQL Server 2008](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100)) (Solucionar problemas de rendimiento en SQL Server 2008)
   

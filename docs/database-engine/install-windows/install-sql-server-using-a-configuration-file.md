@@ -10,12 +10,12 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b187160fcc25119a5be65207138920969352b4aa
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8c2fb5fcd6c7f9902f52481a1e66350f4543a85a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110216"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670312"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Instalar SQL Server mediante un archivo de configuración
 
@@ -66,7 +66,7 @@ FEATURES=SQL,Tools
 3. Cancele la instalación sin completarla realmente para generar el archivo INI. 
   
     > [!NOTE]  
-    >  La infraestructura de instalación escribe todos los parámetros correspondientes a las acciones que se ejecutaron, con la excepción de la información confidencial, como las contraseñas. El parámetro /IAcceptSQLServerLicenseTerms tampoco se escribe en el archivo de configuración, y para incluirlo es necesario modificar dicho archivo o proporcionar un valor en el símbolo del sistema. Para más información, consulte [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Además se incluye un valor para los parámetros booleanos, ya que normalmente no se proporciona a través del símbolo del sistema. 
+    >  La infraestructura de instalación escribe todos los parámetros correspondientes a las acciones que se ejecutaron, con la excepción de la información confidencial, como las contraseñas. El parámetro /IAcceptSQLServerLicenseTerms tampoco se escribe en el archivo de configuración, y para incluirlo es necesario modificar dicho archivo o proporcionar un valor en el símbolo del sistema. Para más información, consulte [Instalar SQL Server 2016 desde el símbolo del sistema](./install-sql-server-from-the-command-prompt.md). Además se incluye un valor para los parámetros booleanos, ya que normalmente no se proporciona a través del símbolo del sistema. 
   
 ## <a name="using-the-configuration-file-to-install-ssnoversion"></a>Usar el archivo de configuración para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -145,8 +145,7 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Instalar SQL Server desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Instalar SQL Server desde el símbolo del sistema](./install-sql-server-from-the-command-prompt.md)   
  [Instalación de clúster de conmutación por error de SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [Actualización de una instancia del clúster de conmutación por error de SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md).  
-  
   

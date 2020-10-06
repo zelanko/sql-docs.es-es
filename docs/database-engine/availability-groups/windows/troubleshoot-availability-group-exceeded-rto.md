@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 391215275c97dba05fb7a3df0692a5a48e9fe58a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888027"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670678"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Solución de problemas: El grupo de disponibilidad superó el RTO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -64,6 +64,5 @@ from sys.dm_hadr_database_replica_states
  Si realmente el subproceso de la fase de puesta al día se retrasa, debe investigar la causa principal de la degradación del rendimiento en la réplica secundaria. Si se produce una contención de E/S en la carga de trabajo de los informes, puede usar [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) para controlar, hasta cierto punto, los ciclos de CPU que usa la carga de trabajo de informes para controlar indirectamente los ciclos de E/S realizados. Por ejemplo, si la carga de trabajo de los informes está consumiendo un 10 % de la CPU, pero la carga de trabajo está enlazada a E/S, puede utilizar Resource Governor para limitar el uso de recursos de la CPU al 5 % y regular así la carga de trabajo de lectura. De esta forma, se reduce el impacto en la E/S.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Solucionar problemas de rendimiento en SQL Server (se aplica a SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
-  
+ [Solucionar problemas de rendimiento en SQL Server (se aplica a SQL Server 2012)](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100))  
   

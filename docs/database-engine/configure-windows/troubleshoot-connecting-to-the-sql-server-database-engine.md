@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbd46a6a2de2e46841eb8cc7b40542d8073e82c6
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: ceca51cf35e1a2e061d841336f0ab7a91b97dc9a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988646"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670738"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solución de problemas de conexión al Motor de base de datos de SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -193,7 +193,7 @@ Una vez que se pueda conectar con TCP en el mismo equipo, es hora de intentar co
    - Inicie el servicio SQL Server Browser. Consulte las instrucciones para [iniciar el explorador en Administrador de configuración de SQL Server](#startbrowser).
    - El firewall está bloqueando el servicio SQL Server Browser. Abra el puerto UDP 1434 del firewall. Vuelva a la sección [Apertura de un puerto del firewall](#open-a-port-in-the-firewall). Asegúrese de estar abriendo un puerto UDP, no un puerto TCP.
    - Un enrutador está bloqueando la información del puerto UDP 1434. La comunicación UDP (protocolo de datagramas de usuario) no está diseñada para pasar a través de enrutadores. Esto evita que la red se llene de tráfico de baja prioridad. Es posible que pueda configurar el enrutador para reenviar el tráfico UDP. También puede optar por proporcionar siempre el número de puerto al conectarse.
-   - Si el equipo cliente usa Windows 7 o Windows Server 2008 (o un sistema operativo más reciente), el sistema operativo cliente podría eliminar el tráfico UDP porque la respuesta del servidor se devuelve desde una dirección IP diferente a la que se consultó. Esta es una característica de seguridad que bloquea la "asignación de origen no estricta". Para más información, vea la sección **Varias direcciones IP de servidor** del tema de los Libros en pantalla [Solucionar problemas de: tiempo de espera expirado](https://msdn.microsoft.com/library/ms190181.aspx). Se trata de un artículo de SQL Server 2008 R2, pero las entidades de seguridad aún son válidas. Es posible que pueda configurar el cliente para usar la dirección IP correcta. También puede optar por proporcionar siempre el número de puerto al conectarse.
+   - Si el equipo cliente usa Windows 7 o Windows Server 2008 (o un sistema operativo más reciente), el sistema operativo cliente podría eliminar el tráfico UDP porque la respuesta del servidor se devuelve desde una dirección IP diferente a la que se consultó. Esta es una característica de seguridad que bloquea la "asignación de origen no estricta". Para más información, vea la sección **Varias direcciones IP de servidor** del tema de los Libros en pantalla [Solucionar problemas de: tiempo de espera expirado](/previous-versions/sql/sql-server-2008-r2/ms190181(v=sql.105)). Se trata de un artículo de SQL Server 2008 R2, pero las entidades de seguridad aún son válidas. Es posible que pueda configurar el cliente para usar la dirección IP correcta. También puede optar por proporcionar siempre el número de puerto al conectarse.
 
 3. Una vez que se pueda conectar con la dirección IP (o la dirección IP y el nombre de instancia de una instancia con nombre), intente conectarse con el nombre de equipo (o el nombre de equipo y el nombre de instancia de una instancia con nombre). Coloque `tcp:` delante del nombre del equipo para forzar una conexión TCP/IP. Por ejemplo, en el caso de la instancia predeterminada en un equipo denominado `ACCNT27`, use `tcp:ACCNT27` ; en el caso de una instancia con nombre denominada `PAYROLL`en ese equipo, use `tcp:ACCNT27\PAYROLL` . Si puede conectarse con la dirección IP pero no con el nombre de equipo, entonces tiene un problema de resolución de nombres. Vuelva a la sección 4 de **Prueba de la conectividad TCP/IP**.
 

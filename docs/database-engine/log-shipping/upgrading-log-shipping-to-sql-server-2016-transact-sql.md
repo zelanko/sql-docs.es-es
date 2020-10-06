@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a3bc9ad12e37cf5b208a98a1f9a09396d37d5cb8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e7c19d7e0294fb65a2a5ba1783e7ca65f3453ab3
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748548"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670832"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Actualización del trasvase de registros a SQL Server 2016 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,9 +89,8 @@ ms.locfileid: "85748548"
   
 ## <a name="see-also"></a>Consulte también  
  [Actualización a SQL Server 2016 mediante el Asistente para instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Instalar SQL Server 2016 desde el símbolo del sistema](../install-windows/install-sql-server-from-the-command-prompt.md)   
  [Configurar el trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)   
  [Supervisar el trasvase de registros &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)   
  [Tablas y procedimientos almacenados de trasvase de registros](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
-  
   

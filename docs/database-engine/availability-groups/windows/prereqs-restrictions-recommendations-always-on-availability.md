@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8a2a54ac42cef552fa24af5d10171eda899163e5
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: 38c643bf5faac76d895181476b7d92c469445c26
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88092015"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670128"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88092015"
 ###  <a name="permissions-windows-system"></a><a name="PermissionsWindows"></a> Permisos (sistema de Windows)  
  Para administrar un WSFC, el usuario debe ser administrador del sistema en cada nodo de clúster.  
   
- Para más información sobre la cuenta para administrar el clúster, vea [Apéndice A: Requisitos de clúster de conmutación por error](https://technet.microsoft.com/library/dd197454.aspx).  
+ Para más información sobre la cuenta para administrar el clúster, vea [Apéndice A: Requisitos de clúster de conmutación por error](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197454(v=ws.10)).  
   
 ###  <a name="related-tasks-windows-system"></a><a name="RelatedTasksWindows"></a> Tareas relacionadas (sistema de Windows)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88092015"
   
 -   [Introducción a Windows PowerShell en un clúster de conmutación por error](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Comandos de recursos de clúster y cmdlets equivalentes de Windows PowerShell](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Comandos de recursos de clúster y cmdlets equivalentes de Windows PowerShell](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619744(v=ws.10)#BKMK_resource)  
   
 ###  <a name="related-content-windows-system"></a><a name="RelatedContentWS"></a> Contenido relacionado (sistema Windows)  
   
@@ -131,10 +131,10 @@ ms.locfileid: "88092015"
   
 |Requisito previo|Vínculos|  
 |------------------|-----------|  
-|Este equipo host debe ser un nodo de WSFC. Las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedan réplicas de disponibilidad de un determinado grupo de disponibilidad residen en nodos independientes del clúster. Un grupo de disponibilidad puede ocupar temporalmente dos clústeres mientras se migra a otro clúster. SQL Server 2016 incorpora la novedad de los grupos de disponibilidad distribuidos. En un grupo de disponibilidad distribuido, dos grupos de disponibilidad residen en clústeres distintos.|[Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Grupos de disponibilidad distribuidos (Grupos de disponibilidad AlwaysOn)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
+|Este equipo host debe ser un nodo de WSFC. Las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedan réplicas de disponibilidad de un determinado grupo de disponibilidad residen en nodos independientes del clúster. Un grupo de disponibilidad puede ocupar temporalmente dos clústeres mientras se migra a otro clúster. SQL Server 2016 incorpora la novedad de los grupos de disponibilidad distribuidos. En un grupo de disponibilidad distribuido, dos grupos de disponibilidad residen en clústeres distintos.|[Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Grupos de disponibilidad distribuidos (Grupos de disponibilidad AlwaysOn)](./distributed-availability-groups.md)|  
 |Si desea que un grupo de disponibilidad trabaje con Kerberos:<br /><br /> Todas las instancias de servidor que hospedan una réplica de disponibilidad para el grupo de disponibilidad deben usar la misma cuenta de servicio de SQL Server.<br /><br /> El administrador de dominio debe registrar manualmente un nombre principal de servicio (SPN) con Active Directory en la cuenta del servicio SQL Server para el nombre de red virtual (VNN) del agente de escucha del grupo de disponibilidad. Si el SPN se registra en una cuenta distinta de la cuenta del servicio SQL Server, la autenticación no se realizará correctamente.<br /><br /> <br /><br /> <b>\*\* Importante \*\*</b> Si cambia la cuenta del servicio SQL Server, el administrador de dominio deberá volver a registrar manualmente el SPN.|[Registrar un nombre principal de servicio para las conexiones con Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Breve explicación:**<br /><br /> Kerberos y los SPN exigen la autenticación mutua. El SPN se asigna a la cuenta de Windows que inicia los servicios SQL Server. Si el SPN no se registra correctamente o provoca un error, el nivel de seguridad de Windows no podrá determinar la cuenta asociada al SPN y no podrá utilizarse la autenticación Kerberos.<br /><br /> <br /><br /> Nota: NTLM no tiene este requisito.|  
 |Si va a usar una instancia de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para hospedar una réplica de disponibilidad, asegúrese de que comprende las restricciones de FCI y de que se cumplen los requisitos de FCI.|[Requisitos previos y requisitos para usar una instancia de clúster de conmutación por error (FCI) de SQL Server para hospedar una réplica de disponibilidad](#FciArLimitations) (más adelante en este artículo)|  
-|Cada instancia del servidor debe ejecutar la misma versión de SQL Server para participar en un grupo de disponibilidad Always On.|Ediciones y características admitidas para [SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016), [SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017).|  
+|Cada instancia del servidor debe ejecutar la misma versión de SQL Server para participar en un grupo de disponibilidad Always On.|Ediciones y características admitidas para [SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md?view=sql-server-2016), [SQL 2017](../../../sql-server/editions-and-components-of-sql-server-2017.md?view=sql-server-2017).|  
 |Todas las instancias del servidor que hospedan réplicas de disponibilidad para un grupo de disponibilidad deben usar la misma intercalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Configurar o cambiar la intercalación del servidor](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |Habilite la característica de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en cada instancia de servidor que hospeda una réplica de disponibilidad para cualquier grupo de disponibilidad. En un equipo determinado, puede habilitar tantas instancias de servidor de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] como admita la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Habilitar y deshabilitar grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* Importante \*\*</b> Si elimina y vuelve a crear un WSFC, debe deshabilitar y volver a habilitar la característica [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en cada instancia del servidor habilitada para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en el clúster original.|  
 |Cada instancia del servidor requiere un extremo de creación de reflejo de la base de datos. Observe que todas las réplicas de disponibilidad, asociados de creación de reflejo de la base de datos y testigos de la instancia del servidor comparten este extremo.<br /><br /> Si una instancia de servidor seleccionada para hospedar una réplica de disponibilidad se ejecuta bajo una cuenta de usuario de dominio y no tiene todavía un punto de conexión de creación de reflejo de la base de datos, el [Asistente para nuevo grupo de disponibilidad](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (o el [asistente Agregar réplica a grupo de disponibilidad](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) puede crear el punto de conexión y conceder el permiso CONNECT a la cuenta de servicio de la instancia de servidor. Sin embargo, si el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ejecuta como una cuenta integrada (como sistema local, servicio local o servicio de red), o una cuenta que no es de dominio, debe usar certificados para la autenticación de extremos y el asistente no podrá crear un extremo de creación de reflejo de la base de datos en la instancia de servidor. En este caso, se recomienda crear los extremos de creación de reflejo de la base de datos manualmente antes de iniciar el asistente.<br /><br /> <br /><br /> <b>\*\* Nota de seguridad \*\*</b> La seguridad de transporte para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] es la misma que para la creación de reflejo de la base de datos.|[El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
@@ -166,7 +166,7 @@ ms.locfileid: "88092015"
 
 -  SQL Server 2019 presentó una puesta al día en paralelo de las bases de datos de grupo de disponibilidad optimizadas para memoria. En SQL Server 2016 y 2017, las tablas basadas en disco no usan la puesta al día en paralelo si una base de datos de un grupo de disponibilidad también está optimizada para memoria. 
   
- Para más información, vea [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (Series de aprendizaje de Always ON - HADRON: Uso del grupo de trabajo para las bases de datos compatibles con HADRON) (Blog de ingenieros de CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+ Para más información, vea [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases) (Series de aprendizaje de Always ON - HADRON: Uso del grupo de trabajo para las bases de datos compatibles con HADRON) (Blog de ingenieros de CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 ###  <a name="permissions-server-instance"></a><a name="PermissionsSI"></a> Permisos (instancia del servidor)  
   
@@ -185,7 +185,7 @@ ms.locfileid: "88092015"
   
 ###  <a name="related-content-server-instance"></a><a name="RelatedContentSI"></a> Contenido relacionado (instancia del servidor)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
   
 ##  <a name="network-connectivity-recommendations"></a><a name="NetworkConnect"></a> Recomendaciones de conectividad de red  
  Se recomienda usar los mismos vínculos de red para las comunicaciones entre los nodos de WSFC y las comunicaciones entre las réplicas de disponibilidad.  El uso de vínculos de red independientes puede provocar comportamientos inesperados si alguno de los vínculos da error (incluso de forma intermitente).  
@@ -209,14 +209,14 @@ ms.locfileid: "88092015"
 ###  <a name="restrictions-fcis"></a><a name="RestrictionsFCI"></a> Restricciones (FCI)  
   
 > [!NOTE]  
-> Las instancias del clúster de conmutación por error admiten volúmenes compartidos en clúster (CSV). Para obtener más información sobre CSV, vea [Descripción de Volúmenes compartidos de clúster en un clúster de conmutación por error](https://technet.microsoft.com/library/dd759255.aspx).  
+> Las instancias del clúster de conmutación por error admiten volúmenes compartidos en clúster (CSV). Para obtener más información sobre CSV, vea [Descripción de Volúmenes compartidos de clúster en un clúster de conmutación por error](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759255(v=ws.11)).  
   
 -   **Los nodos de clúster de una FCI pueden hospedar una única réplica para un grupo de disponibilidad determinado:**  si agrega una réplica de disponibilidad en una FCI, los nodos del clúster de WSFC que sean posibles propietarios de FCI no pueden hospedar otra réplica para el mismo grupo de disponibilidad.  Para evitar posibles conflictos, se recomienda configurar los posibles propietarios de la instancia de clúster de conmutación por error. Con esto se evitará que un único WSFC intente hospedar dos réplicas de disponibilidad para el mismo grupo de disponibilidad.
   
      Además, el resto de réplicas debe hospedarse en una instancia de SQL Server 2016 que resida en otro nodo de clúster del mismo clúster de conmutación por error de Windows Server. La única excepción es que mientras se migra a otro clúster, un grupo de disponibilidad puede ocupar temporalmente dos clústeres. 
 
   >[!WARNING]
-  > Si usa el Administrador de clústeres de conmutación por error para mover una *instancia de clúster de conmutación por error* que hospeda un grupo de disponibilidad a un nodo que *ya* hospeda una réplica del mismo grupo de disponibilidad, podría provocar la pérdida de la réplica del grupo de disponibilidad, impidiendo que se ponga en línea en el nodo de destino. Un único nodo de un clúster de conmutación por error no puede hospedar más de una réplica para el mismo grupo de disponibilidad. Para más información sobre cómo se produce esto y cómo recuperar, eche un vistazo a la entrada de blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Réplica dejada inesperadamente en grupo de disponibilidad). 
+  > Si usa el Administrador de clústeres de conmutación por error para mover una *instancia de clúster de conmutación por error* que hospeda un grupo de disponibilidad a un nodo que *ya* hospeda una réplica del mismo grupo de disponibilidad, podría provocar la pérdida de la réplica del grupo de disponibilidad, impidiendo que se ponga en línea en el nodo de destino. Un único nodo de un clúster de conmutación por error no puede hospedar más de una réplica para el mismo grupo de disponibilidad. Para más información sobre cómo se produce esto y cómo recuperar, eche un vistazo a la entrada de blog [Replica unexpectedly dropped in availability group](/archive/blogs/alwaysonpro/issue-replica-unexpectedly-dropped-in-availability-group) (Réplica dejada inesperadamente en grupo de disponibilidad). 
 
   
 -   **Las FCI no admiten la conmutación automática por error por grupos de disponibilidad:**  las FCI no admiten la conmutación automática por error de grupos de disponibilidad; por tanto, todas las réplicas de disponibilidad hospedadas por una FCI solo se pueden configurar para la conmutación por error manual.  
@@ -234,14 +234,14 @@ ms.locfileid: "88092015"
 |Tarea|Artículo|  
 |----------|-----------|  
 |Instalar un clúster de conmutación por error de SQL Server|[Crear un nuevo clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|Actualización en contexto del clúster de conmutación por error existente de SQL Server|[Actualizar una instancia de clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
+|Actualización en contexto del clúster de conmutación por error existente de SQL Server|[Actualizar una instancia de clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
 |Mantener el clúster de conmutación por error existente de SQL Server|[Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
   
 ###  <a name="related-content-fcis"></a><a name="RelatedContentFCIs"></a> Contenido relacionado (FCI)  
   
 -   [Clústeres de conmutación por error y grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Guía de arquitectura de Always On: generación de una solución de alta disponibilidad y recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [Guía de arquitectura de Always On: generación de una solución de alta disponibilidad y recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](/previous-versions/sql/sql-server-2012/jj215886(v=msdn.10))  
   
 ##  <a name="availability-group-prerequisites-and-restrictions"></a><a name="PrerequisitesForAGs"></a> Requisitos previos y restricciones de los grupos de disponibilidad  
  **En esta sección:**  
@@ -381,11 +381,11 @@ ms.locfileid: "88092015"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
--   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](/archive/blogs/sqlalwayson/)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
@@ -394,5 +394,4 @@ ms.locfileid: "88092015"
   
     
   
---------------------------------------------------  
-
+--------------------------------------------------

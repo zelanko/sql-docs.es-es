@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244086"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670528"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Características en desuso del motor de base de datos de SQL Server 2017
 
@@ -62,7 +62,7 @@ Las siguientes características del Motor de base de datos de SQL Server estar�
 
 | Característica desusada | Sustituta | Nombre de característica | Id. de la característica |
 |--------------------|-------------|--------------|------------|
-Actualización desde la versión 100 (SQL Server 2008 y SQL Server 2008 R2). | Cuando una versión de SQL Server se queda sin [soporte técnico](https://aka.ms/sqllifecycle), el nivel de compatibilidad de base de datos asociado se marca como en desuso. Pero se sigue dando soporte a las aplicaciones certificadas en cualquier nivel de compatibilidad de base de datos admitido, siempre que sea posible, para facilitar las actualizaciones. Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Nivel de compatibilidad de la base de datos 100 | 108 |
+Actualización desde la versión 100 (SQL Server 2008 y SQL Server 2008 R2). | Cuando una versión de SQL Server se queda sin [soporte técnico](/lifecycle/products/?products=sql-server), el nivel de compatibilidad de base de datos asociado se marca como en desuso. Pero se sigue dando soporte a las aplicaciones certificadas en cualquier nivel de compatibilidad de base de datos admitido, siempre que sea posible, para facilitar las actualizaciones. Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Nivel de compatibilidad de la base de datos 100 | 108 |
 
 ### <a name="database-objects"></a>Objetos de base de datos
 
@@ -370,6 +370,4 @@ Las siguientes características del Motor de base de datos de SQL Server se adm
 > El parámetro **OUTPUT** de la cookie para **sp_setapprole** está documentado actualmente como **varbinary(8000)** , que es la longitud máxima correcta. Pero la implementación actual devuelve **varbinary(50)** . Si los programadores han asignado **varbinary(50)** , es posible que la aplicación requiera cambios si el tamaño devuelto de la cookie aumenta en una versión futura. Aunque no se trate de un problema de desuso, se menciona en este tema porque los ajustes de aplicación son similares. Para obtener más información, vea [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Funcionalidad del motor de base de datos no incluida en SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
-
+ [Funcionalidad del motor de base de datos no incluida en SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)  

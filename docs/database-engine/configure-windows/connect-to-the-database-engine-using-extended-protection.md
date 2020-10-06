@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9f54a62d7110f86087f796b6dc1f9a6c688d89d6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22b1d58bac2433f9f5bae7dac5a6568050e38daf
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772637"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670288"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85772637"
 ### <a name="operating-system-support"></a>Sistemas operativos admitidos  
  Los siguientes vínculos proporcionan más información acerca del modo en que Windows admite la **protección ampliada**:  
   
--   [Autenticación de Windows integrada con protección ampliada](https://msdn.microsoft.com/library/dd639324.aspx)  
+-   [Autenticación de Windows integrada con protección ampliada](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   
 -   [Asesor de seguridad de Microsoft (973811), protección ampliada para la autenticación](/security-updates/SecurityAdvisories/2009/973811)
   
@@ -100,12 +100,11 @@ ms.locfileid: "85772637"
 ## <a name="configuring-other-sql-server-components"></a>Configurar otros componentes de SQL Server  
  Para obtener más información sobre cómo configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Protección ampliada para la autenticación con Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
   
- Al utilizar IIS para tener acceso a los datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizando una conexión HTTPS o HTTP, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pueden sacar provecho de la protección ampliada que proporciona IIS. Para obtener más información acerca de cómo configurar IIS para utilizar la protección ampliada, vea el tema que trata cómo [configurar la protección ampliada en IIS 7.5](https://go.microsoft.com/fwlink/?LinkId=181105).  
+ Al utilizar IIS para tener acceso a los datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizando una conexión HTTPS o HTTP, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pueden sacar provecho de la protección ampliada que proporciona IIS. Para obtener más información acerca de cómo configurar IIS para utilizar la protección ampliada, vea el tema que trata cómo [configurar la protección ampliada en IIS 7.5](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee909472(v=ws.10)).  
   
 ## <a name="see-also"></a>Consulte también  
  [Configuración de red del servidor](../../database-engine/configure-windows/server-network-configuration.md)   
  [Configuración de red de cliente](../../database-engine/configure-windows/client-network-configuration.md)   
- [Introducción a la protección ampliada para la autenticación](https://go.microsoft.com/fwlink/?LinkID=177943)   
- [Autenticación de Windows integrada con protección ampliada](https://go.microsoft.com/fwlink/?LinkId=179922)  
-  
+ [Introducción a la protección ampliada para la autenticación](/previous-versions/dotnet/netframework-3.5/dd767318(v=vs.90))   
+ [Autenticación de Windows integrada con protección ampliada](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   

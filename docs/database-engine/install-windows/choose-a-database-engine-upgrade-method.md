@@ -11,12 +11,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f3f9aef2003676c90d049a894a03c816225def3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: fd4acadbf94f45c1b155d10a70a376ea11c326e4
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244083"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670511"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Elegir un método de actualización del motor de base de datos
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -35,7 +35,7 @@ Existen varios métodos que se deben considerar a la hora de planear la actualiz
 >  También puede plantearse actualizar la base de datos SQL de Azure o virtualizar su entorno de SQL Server como parte de su plan de actualización. Estos artículos están fuera del ámbito de este artículo, pero aquí incluimos algunos vínculos:
 >   - [Información general sobre SQL Server en Azure Virtual Machines](https://azure.microsoft.com/services/virtual-machines/sql-server/#overview)
 >   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
->   - [Selección de una opción de SQL Server en Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
+>   - [Selección de una opción de SQL Server en Azure](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview)  
   
 ## <a name="upgrade-in-place"></a>Actualización local  
  Con este método, el programa de instalación de SQL Server actualiza la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente reemplazando los bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existentes por los nuevos bits de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] y, después, actualiza cada una de las bases de datos de usuario y del sistema.  El enfoque de actualización local es el más sencillo, conlleva la menor cantidad de tiempo de inactividad, tarda más en tiempo en revertirse (si esto fuera necesario) y no se admite en todos los casos. Para más información sobre los escenarios de actualización local que se admiten y los que no, vea [Actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
@@ -81,7 +81,7 @@ Existen varios métodos que se deben considerar a la hora de planear la actualiz
  Después de migrar las bases de datos de usuario, dirija a los nuevos usuarios a la nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante uno de los diversos métodos disponibles (por ejemplo, cambiar el nombre del servidor, usar una entrada DNS, modificar las cadenas de conexión, etc.).  El método de nueva instalación reduce los riesgos y el tiempo de inactividad (en comparación con una actualización local). Además, facilita que se actualice el hardware y el sistema operativo con la actualización a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Si ya dispone de una solución de alta disponibilidad o de algún otro entorno con varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vaya a [Actualización gradual](#rolling-upgrade). Si no cuenta con una solución de alta disponibilidad, puede plantearse configurar temporalmente la [creación de reflejo de la base de datos](../database-mirroring/setting-up-database-mirroring-sql-server.md) a fin de minimizar el tiempo de inactividad y facilitar la actualización, o bien aprovechar esta oportunidad para configurar un [grupo de disponibilidad AlwaysOn](https://msdn.microsoft.com/library/hh510260.aspx) como solución de alta disponibilidad permanente.  
+>  Si ya dispone de una solución de alta disponibilidad o de algún otro entorno con varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vaya a [Actualización gradual](#rolling-upgrade). Si no cuenta con una solución de alta disponibilidad, puede plantearse configurar temporalmente la [creación de reflejo de la base de datos](../database-mirroring/setting-up-database-mirroring-sql-server.md) a fin de minimizar el tiempo de inactividad y facilitar la actualización, o bien aprovechar esta oportunidad para configurar un [grupo de disponibilidad AlwaysOn](../availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md) como solución de alta disponibilidad permanente.  
   
  Por ejemplo, puede utilizar este enfoque para actualizar los siguientes elementos:  
   
@@ -89,7 +89,7 @@ Existen varios métodos que se deben considerar a la hora de planear la actualiz
 -   Una instalación x86 de SQL Server, ya que ni [!INCLUDE[ss2016](../../includes/sssql15-md.md)] ni las versiones posteriores admiten este tipo de instalaciones.   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en hardware nuevo o una nueva versión del sistema operativo.    
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] junto con una consolidación de servidores.   
--   SQL Server 2005, ya que ni [!INCLUDE[ss2016](../../includes/sssql15-md.md)] ni las versiones posteriores admiten la actualización local de SQL Server 2005. Para más información, vea [¿Desea actualizar desde SQL Server 2005?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).
+-   SQL Server 2005, ya que ni [!INCLUDE[ss2016](../../includes/sssql15-md.md)] ni las versiones posteriores admiten la actualización local de SQL Server 2005. Para más información, vea [¿Desea actualizar desde SQL Server 2005?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).
 
   
 Los pasos necesarios realizar una actualización mediante una nueva instalación varían ligeramente en función de si usa almacenamiento conectado o SAN.  
@@ -114,4 +114,4 @@ Los pasos necesarios realizar una actualización mediante una nueva instalación
   
 ## <a name="next-steps"></a>Pasos siguientes
  [Planeación y prueba del plan de actualización del motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
- [Completar la actualización motor de base de datos](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
+ [Completar la actualización motor de base de datos](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)

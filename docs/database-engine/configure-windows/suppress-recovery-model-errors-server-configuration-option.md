@@ -10,18 +10,18 @@ ms.technology: configuration
 ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 73681a19df18a7bdae9c49b78c283a8345820322
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 942dfc62bd55d1843babb78d89b95ad602f3d938
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496249"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670748"
 ---
 # <a name="suppress-recovery-model-errors-server-configuration-option"></a>Supresión de errores del modelo de recuperación (opción de configuración del servidor)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md](../../includes/tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md)]
 
-Los [modelos de recuperación](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server) de SQL Server controlan el mantenimiento del registro de transacciones. El modelo de recuperación completa garantiza que no se pierda trabajo por culpa de un archivo de datos extraviado o dañado, y admite la recuperación a un momento dado en el tiempo dentro de la directiva de retención de copias de seguridad. El modelo de recuperación completa es un valor predeterminado y el único modelo de recuperación compatible con SQL Managed Instance. Los intentos de cambiar el modelo de recuperación en SQL Managed Instance devolverán un mensaje de error.
+Los [modelos de recuperación](../../relational-databases/backup-restore/recovery-models-sql-server.md) de SQL Server controlan el mantenimiento del registro de transacciones. El modelo de recuperación completa garantiza que no se pierda trabajo por culpa de un archivo de datos extraviado o dañado, y admite la recuperación a un momento dado en el tiempo dentro de la directiva de retención de copias de seguridad. El modelo de recuperación completa es un valor predeterminado y el único modelo de recuperación compatible con SQL Managed Instance. Los intentos de cambiar el modelo de recuperación en SQL Managed Instance devolverán un mensaje de error.
 
 Use la opción de configuración avanzada **suppress recovery model errors** para especificar si los comandos para cambiar el modelo de recuperación de base de datos, ejecutados en SQL Managed Instance, devolverán errores o solo advertencias. Cuando esta opción se establece en 1 (ON) en SQL Managed Instance, la ejecución del comando ALTER DATABASE SET RECOVERY no cambiará el modelo de recuperación de la base de datos, y no devolverá un mensaje de error, sino de advertencia. Cuando esta opción se establece en 0 (desactivada) en SQL Managed Instance, la ejecución del comando ALTER DATABASE SET RECOVERY devolverá un mensaje de error.
 

@@ -11,12 +11,12 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 65614af22873f907363bd721ff5c364e9cca5ea7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 93fa8a3fa6346a9e93f8caae43aecc0ba49bb763
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900348"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671038"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Planear y probar el plan de actualización del Motor de base de datos
 
@@ -29,7 +29,7 @@ ms.locfileid: "85900348"
 
 - [Notas de la versión de SQL Server 2017](../../sql-server/sql-server-2017-release-notes.md) 
 - [Notas de la versión de SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 
-- Artículo [Compatibilidad con versiones anteriores del motor de base de datos de SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
+- Artículo [Compatibilidad con versiones anteriores del motor de base de datos de SQL Server](../discontinued-database-engine-functionality-in-sql-server.md).  
   
 ## <a name="pre-upgrade-planning-checklist"></a>Lista de comprobación previa a la planificación de la actualización  
  Antes de actualizar [!INCLUDE[ssDE](../../includes/ssde-md.md)], revise esta lista de comprobación y los artículos relacionados. Estos artículos se aplican a todas las actualizaciones, independientemente del método de actualización, y con ellos puede determinar cuál es la actualización más adecuada: local, gradual o una nueva instalación. Por ejemplo, es posible que no pueda realizar una actualización local o gradual si va a actualizar el sistema operativo, o bien si actualiza desde SQL Server 2005 o desde una versión de 32 bits de SQL Server. Para ver un árbol de decisión, consulte [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "85900348"
     > [!NOTE]  
     >  Al actualizar [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edición Enterprise, elija entre Enterprise Edition: Licencia basada en Core y Enterprise Edition. Estas ediciones Enterprise solo se diferencian en los modos de licencia. Para obtener más información, consulte [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
--   **Compatibilidad con versiones anteriores:** lea el artículo sobre la compatibilidad con versiones anteriores del motor de base de datos de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] para ver los cambios en el comportamiento entre [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] y la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde la que vaya a actualizar. Consulte [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
+-   **Compatibilidad con versiones anteriores:** lea el artículo sobre la compatibilidad con versiones anteriores del motor de base de datos de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] para ver los cambios en el comportamiento entre [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] y la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde la que vaya a actualizar. Consulte [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md).  
   
 -   **Data Migration Assistant:** ejecute Data Migration Assistant para ayudar a diagnosticar problemas que podrían bloquear el proceso de actualización o precisar la modificación de scripts o aplicaciones existentes debido a un cambio importante.
     Puede descargar Data Migration Assistant [aquí](https://aka.ms/get-dma).  
@@ -98,4 +98,4 @@ ms.locfileid: "85900348"
 [Actualizar el motor de base de datos](../../database-engine/install-windows/upgrade-database-engine.md) 
   
 ## <a name="additional-resources"></a>Recursos adicionales 
-[Guía sobre Database Migration](https://aka.ms/datamigration)  
+[Guía sobre Database Migration](https://aka.ms/datamigration)

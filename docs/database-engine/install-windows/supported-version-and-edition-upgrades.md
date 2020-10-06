@@ -16,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f3f80b726b155f94851326660d47da5cbac1018
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 784e005a9a7851c6e088255d8ff8b9e671796367
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900288"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671009"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2016"></a>Actualizaciones de ediciones y versiones admitidas (SQL Server 2016)
 
@@ -47,7 +47,7 @@ ms.locfileid: "85900288"
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] solo está disponible para plataformas de 64 bits. No se admite la actualización entre plataformas. No puede actualizar una instancia de 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a 64 bits nativo con el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin embargo, puede realizar copias de seguridad o separar bases de datos de una instancia de 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, después, si no están publicadas en replicación, restaurarlas o anexarlas a una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64 bits). Debe volver a crear los inicios de sesión y los demás objetos de usuario en las bases de datos del sistema maestra, msdb y modelo.  
   
--   No puede agregar características nuevas durante la actualización de una instancia existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Después de actualizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], puede agregar características mediante el programa de instalación de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]. Para obtener más información, vea [Agregar características a una instancia de SQL Server 2016 &#40;programa de instalación&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+-   No puede agregar características nuevas durante la actualización de una instancia existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Después de actualizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], puede agregar características mediante el programa de instalación de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]. Para obtener más información, vea [Agregar características a una instancia de SQL Server 2016 &#40;programa de instalación&#41;](./add-features-to-an-instance-of-sql-server-setup.md).  
  
 -   Los clústeres de conmutación por error no se admiten en el modo WOW.  
   
@@ -174,8 +174,7 @@ Además, también puede realizar una actualización de la edición entre [!INCLU
   
 ## <a name="see-also"></a>Consulte también  
 
-[Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)     
+[Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)     
 [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)     
 [Actualizar a SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)    
-  
   

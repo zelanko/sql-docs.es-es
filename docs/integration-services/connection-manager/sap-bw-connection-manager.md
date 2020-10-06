@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6a67889df1635e2654adc80151e33a1c137985d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6e09a6cdf6f8d863e57d2de0749e29b33c989eea
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426007"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719648"
 ---
 # <a name="sap-bw-connection-manager"></a>Administrador de conexiones de SAP BW
 
@@ -50,12 +50,12 @@ ms.locfileid: "88426007"
   
  Si no conoce todos los valores necesarios para configurar el administrador de conexiones, puede que tenga que ponerse en contacto con el administrador de SAP.  
   
- Para obtener instrucciones sobre cómo configurar y utilizar el administrador de conexiones, el origen y el destino de SAP BW, vea las notas del producto, [Usar SQL Server 2008 Integration Services con SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). Estas notas del producto también muestran cómo configurar los objetos necesarios en SAP BW.  
+ Para obtener instrucciones sobre cómo configurar y utilizar el administrador de conexiones, el origen y el destino de SAP BW, vea las notas del producto, [Usar SQL Server 2008 Integration Services con SAP BI 7.0](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100)). Estas notas del producto también muestran cómo configurar los objetos necesarios en SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Usar el Diseñador SSIS para configurar el origen  
  Para obtener más información sobre las propiedades del administrador de conexiones de SAP BW que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el tema siguiente:  
   
--   [Editor del administrador de conexiones SAP BW](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
+-   [Editor del administrador de conexiones SAP BW]()  
   
 ## <a name="sap-bw-connection-manager-editor"></a>Editor del administrador de conexiones SAP BW
   Use el **Editor del administrador de conexiones de SAP BW** para especificar las propiedades que se van a usar para establecer una conexión con la versión 7 del sistema SAP Netweaver BW.  
@@ -154,5 +154,4 @@ ms.locfileid: "88426007"
   
 ## <a name="see-also"></a>Consulte también  
  [Componentes de Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
   

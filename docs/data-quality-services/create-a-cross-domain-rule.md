@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 96e56120e8573294ddc051932e2b629025cc76de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5da54333208b1e9781387387374f58a822e08f06
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487998"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728031"
 ---
 # <a name="create-a-cross-domain-rule"></a>Crear una regla entre dominios
 
@@ -95,9 +95,8 @@ ms.locfileid: "88487998"
   
     6.  Una vez finalizada la prueba, haga clic en **Cerrar** en el cuadro de diálogo **Probar regla de dominio compuesto** .  
   
-2.  Cuando haya terminado de definir las reglas entre dominios, haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+2.  Cuando haya terminado de definir las reglas entre dominios, haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-creating-a-cross-domain-rule"></a><a name="FollowUp"></a> Seguimiento: después de crear una regla entre dominios  
  Una vez creada una regla entre dominios, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
-  
   

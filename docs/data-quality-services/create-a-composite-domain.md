@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2ea7a9297f7a2f5e05a23bcab32b10922847882b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2da6f9cf82d189647d8b13ec864403134d6af571
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449901"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728036"
 ---
 # <a name="create-a-composite-domain"></a>Crear un dominio compuesto
 
@@ -90,7 +90,7 @@ ms.locfileid: "88449901"
   
 5.  Si selecciona **Delimitadores** como método de análisis, también puede seleccionar **Usar el análisis de bases de conocimiento**. Para obtener más información, consulte [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
-6.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+6.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a> Seguimiento: después de crear un dominio compuesto  
  Una vez creado el dominio compuesto, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
@@ -103,5 +103,4 @@ ms.locfileid: "88449901"
  El análisis basado en conocimiento se puede utilizar cuando el dominio compuesto consta de dominios de cadena o cuando el dominio compuesto consta de una combinación de varios tipos de dominios (int, date, time, etc.). Si el origen de datos consta de varios tipos de datos, el análisis debe realizarse primero para los tipos de datos que no son de cadena y después, como se ha descrito anteriormente, basándose en el conocimiento del dominio para el resto de los datos.  
   
  Si, cuando se utiliza el análisis basado en conocimiento, los datos de origen contienen un número de valores inferior al número de dominios que hay en el dominio compuesto, DQS colocará un valor NULL en el dominio que falta. Cuando los datos de origen contienen un número de valores superior al número de dominios que hay en el dominio compuesto, DQS agregará los datos adicionales a una de las columnas. Si dos o más dominios incluyen los mismos valores, el origen de datos se analizará para el primer dominio coincidente.  
-  
   

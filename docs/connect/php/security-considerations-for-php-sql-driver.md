@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36c5826b81c68229c5c5bffba7f19d17187447a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b079801b30b21f16876447218847b5e611e16650
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414391"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726732"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Consideraciones de seguridad de los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-En este tema se describen consideraciones de seguridad específicas para el desarrollo, la implementación y la ejecución de aplicaciones que utilizan los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para más información sobre la seguridad de SQL Server, consulte [Información general sobre la seguridad de SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security).  
+En este tema se describen consideraciones de seguridad específicas para el desarrollo, la implementación y la ejecución de aplicaciones que utilizan los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para más información sobre la seguridad de SQL Server, consulte [Información general sobre la seguridad de SQL Server](/dotnet/framework/data/adonet/sql/overview-of-sql-server-security).  
   
 ## <a name="connect-using-windows-authentication"></a>Conexión con la autenticación de Windows  
 Debe utilizarse la autenticación de Windows para conectarse a SQL Server siempre que sea posible por los siguientes motivos:  
@@ -34,7 +34,7 @@ Debe utilizarse la autenticación de Windows para conectarse a SQL Server siempr
   
 Para obtener información sobre cómo conectarse a un servidor con la autenticación de Windows, consulte [Cómo conectarse mediante la autenticación de Windows](../../connect/php/how-to-connect-using-windows-authentication.md).  
   
-Cuando se conecte mediante la autenticación de Windows, se recomienda que configure el entorno para que SQL Server puede utilizar el protocolo de autenticación Kerberos. Para obtener más información, vea [Cómo asegurarse de que está utilizando la autenticación Kerberos cuando crea una conexión remota a una instancia de SQL Server 2005](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c) o [Autenticación Kerberos y SQL Server](https://msdn.microsoft.com/library/cc280744.aspx).  
+Cuando se conecte mediante la autenticación de Windows, se recomienda que configure el entorno para que SQL Server puede utilizar el protocolo de autenticación Kerberos. Para obtener más información, vea [Cómo asegurarse de que está utilizando la autenticación Kerberos cuando crea una conexión remota a una instancia de SQL Server 2005](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c) o [Autenticación Kerberos y SQL Server](/previous-versions/sql/sql-server-2008-r2/cc280744(v=sql.105)).  
   
 ## <a name="use-encrypted-connections-when-transferring-sensitive-data"></a>Uso de conexiones cifradas cuando se transfiere información confidencial  
 Se deben usar conexiones cifradas siempre que se envíe información confidencial o se recupere de SQL Server. Para obtener información sobre cómo habilitar conexiones cifradas, vea el artículo [Habilitar conexiones cifradas en el motor de base de datos (Administrador de configuración de SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Para establecer una conexión segura con los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], utilice el atributo de conexión Encrypt cuando se conecte al servidor. Para obtener más información sobre los atributos de conexión, consulte [Connection Options](../../connect/php/connection-options.md).  
@@ -42,7 +42,7 @@ Se deben usar conexiones cifradas siempre que se envíe información confidencia
 ## <a name="use-parameterized-queries"></a>Uso de consultas con parámetros  
 Utilice consultas con parámetros para reducir el riesgo de ataques por inyección de SQL. Para obtener ejemplos de la ejecución de consultas con parámetros, consulte [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md).  
   
-Para obtener más información sobre los ataques por inyección de SQL y las consideraciones de seguridad relacionadas, vea [Inyección de código SQL](https://msdn.microsoft.com/library/ms161953.aspx).  
+Para obtener más información sobre los ataques por inyección de SQL y las consideraciones de seguridad relacionadas, vea [Inyección de código SQL](/previous-versions/sql/sql-server-2008-r2/ms161953(v=sql.105)).  
   
 ## <a name="do-not-accept-server-or-connection-string-information-from-end-users"></a>No aceptación de información de la cadena de conexión o del servidor procedente de usuarios finales  
 Escriba aplicaciones para que los usuarios finales no puedan enviar información de la cadena de conexión o del servidor a la aplicación. Al mantener un control estricto sobre la información de la cadena de conexión y del servidor, se reduce el área expuesta a actividades malintencionadas.  
@@ -55,4 +55,3 @@ Para las aplicaciones implementadas, asegúrese de que los registros se agregan 
   
 ## <a name="see-also"></a>Consulte también  
 [Guía de programación para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
-  

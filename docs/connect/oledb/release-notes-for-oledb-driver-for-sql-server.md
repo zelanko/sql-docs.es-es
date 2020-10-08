@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 296efcdd888e2424cfb80f40221f7d8f65acab89
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2e957fdb91720c46f5065f4b671c14b757a7cb0f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011911"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726950"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notas de la versión del controlador Microsoft OLE DB para SQL Server
 
@@ -49,8 +49,8 @@ Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/
 
 | Error corregido | Detalles |
 | :-------- | :------ |
-| Se han corregido varios errores en la interfaz [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) | Algunos errores que afectan a las páginas de códigos multibyte hacen que la interfaz notifique prematuramente el final de la secuencia durante la operación de lectura.|
-| Se ha corregido una fuga de memoria en la interfaz [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)). | Se ha corregido una fuga de memoria en la interfaz [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) cuando se habilita la propiedad `SSPROP_IRowsetFastLoad`. |
+| Se han corregido varios errores en la interfaz [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) | Algunos errores que afectan a las páginas de códigos multibyte hacen que la interfaz notifique prematuramente el final de la secuencia durante la operación de lectura.|
+| Se ha corregido una fuga de memoria en la interfaz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)). | Se ha corregido una fuga de memoria en la interfaz [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) cuando se habilita la propiedad `SSPROP_IRowsetFastLoad`. |
 | Se ha corregido un error en escenarios con un tipo de datos `sql_variant` y cadenas no ASCII. | La ejecución de ciertos escenarios en los que participan un tipo de datos `sql_variant` y cadenas no ASCII puede provocar daños en los datos. Para obtener detalles, consulte: [Problemas conocidos](ole-db-data-types/ssvariant-structure.md#known-issues). |
 | Se han corregido problemas con el botón *Probar conexión* del cuadro de diálogo [Configuración de UDL](help-topics/data-link-pages.md) | El botón *Probar conexión* del cuadro de diálogo [Configuración de UDL](help-topics/data-link-pages.md) ahora respeta las propiedades de inicialización establecidas en la pestaña *Todos*. |
 | Se ha corregido el control de los valores predeterminados de la propiedad `SSPROP_INIT_PACKETSIZE`. | Se ha corregido un error inesperado cuando la propiedad `SSPROP_INIT_PACKETSIZE` se establece en su valor predeterminado de `0`. Para obtener más información sobre esta propiedad, vea [Propiedades de inicialización y autorización](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
@@ -82,7 +82,7 @@ Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/
 
 | Error corregido | Detalles |
 | :-------- | :------ |
-| Se corrigió la lógica de DROP INDEX en [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Las versiones anteriores del controlador de OLE DB no pueden quitar un índice de clave principal cuando el identificador de esquema y el identificador de usuario del propietario del índice no son iguales. |
+| Se corrigió la lógica de DROP INDEX en [IIndexDefinition::DropIndex](/previous-versions/windows/desktop/ms722733(v=vs.85)). | Las versiones anteriores del controlador de OLE DB no pueden quitar un índice de clave principal cuando el identificador de esquema y el identificador de usuario del propietario del índice no son iguales. |
 | &nbsp; | &nbsp; |
 
 Para descargar las versiones anteriores del controlador OLE DB, haga clic en los vínculos de descarga de las secciones siguientes:
@@ -120,7 +120,7 @@ Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/
 
 | Error corregido | Detalles |
 | :-------- | :------ |
-| Se ha corregido un problema de interactividad en la autenticación de Azure Active Directory en contenedores multiproceso (MTA). | El controlador OLE DB 18.2.1 intenta cambiar por error el modelo de simultaneidad de COM en un contenedor previamente inicializado como multiproceso (MTA). Como resultado de esto, en una aplicación que realiza más de una llamada subsiguiente a [CoInitialize](https://go.microsoft.com/fwlink/?linkid=2092520) o [CoInitializeEx](https://go.microsoft.com/fwlink/?linkid=2092521) antes de llamar a la interfaz [IDBInitialize::Initialize](https://go.microsoft.com/fwlink/?linkid=2092522), el controlador no puede establecer una conexión al usar cualquier modo de autenticación de Azure Active Directory. |
+| Se ha corregido un problema de interactividad en la autenticación de Azure Active Directory en contenedores multiproceso (MTA). | El controlador OLE DB 18.2.1 intenta cambiar por error el modelo de simultaneidad de COM en un contenedor previamente inicializado como multiproceso (MTA). Como resultado de esto, en una aplicación que realiza más de una llamada subsiguiente a [CoInitialize](/windows/win32/api/objbase/nf-objbase-coinitialize) o [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) antes de llamar a la interfaz [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)), el controlador no puede establecer una conexión al usar cualquier modo de autenticación de Azure Active Directory. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1821"></a>18.2.1

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - azure active directory, authentication, access token
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac1e598b5599caa9020ed795d1bffd185887ad76
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7b0d644d362ad4105c4e0b4f0db8d50c92a7e8b1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625465"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726896"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Conectar mediante autenticación de Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) es una tecnología de administración de identificador de usuario central que funciona como alternativa a la [autenticación de SQL Server](how-to-connect-using-sql-server-authentication.md). Azure AD permite las conexiones a Microsoft Azure SQL Database y SQL Data Warehouse con identidades federadas en Azure AD mediante un nombre de usuario y una contraseña, Autenticación integrada de Windows o un token de acceso de Azure AD. Los controladores PHP para SQL Server ofrecen compatibilidad parcial con estas características.
+[Azure Active Directory](/azure/active-directory/active-directory-whatis) (Azure AD) es una tecnología de administración de identificador de usuario central que funciona como alternativa a la [autenticación de SQL Server](how-to-connect-using-sql-server-authentication.md). Azure AD permite las conexiones a Microsoft Azure SQL Database y SQL Data Warehouse con identidades federadas en Azure AD mediante un nombre de usuario y una contraseña, Autenticación integrada de Windows o un token de acceso de Azure AD. Los controladores PHP para SQL Server ofrecen compatibilidad parcial con estas características.
 
 Para usar Azure AD, use las palabras clave **Authentication** o **AccessToken** (se excluyen mutuamente), tal como se muestra en la siguiente tabla. Para obtener detalles más técnicos, consulte [Uso de Azure Active Directory con el controlador ODBC](../odbc/using-azure-active-directory.md).
 
@@ -32,7 +32,7 @@ Para usar Azure AD, use las palabras clave **Authentication** o **AccessToken** 
 |**Autenticación**|Sin establecer (valor predeterminado)|Modo de autenticación determinado por otras palabras clave. Para obtener más información, consulte [Connection Options](connection-options.md). |
 ||`SqlPassword`|Autentíquese directamente en una instancia de SQL Server (que puede ser una instancia de Azure) mediante un nombre de usuario y una contraseña. El nombre de usuario y la contraseña deben pasarse a la cadena de conexión mediante las palabras clave **UID** y **PWD**. |
 ||`ActiveDirectoryPassword`|Autentíquese con una identidad de Azure Active Directory mediante un nombre de usuario y una contraseña. El nombre de usuario y la contraseña deben pasarse a la cadena de conexión mediante las palabras clave **UID** y **PWD**. |
-||`ActiveDirectoryMsi`|Autentíquese mediante una identidad administrada asignada por el sistema o una identidad administrada asignada por el usuario (requiere la versión 17.3.1.1 del controlador ODBC o una versión posterior). Para obtener información general y tutoriales, consulte [¿Qué son las identidades administradas de los recursos de Azure?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)|
+||`ActiveDirectoryMsi`|Autentíquese mediante una identidad administrada asignada por el sistema o una identidad administrada asignada por el usuario (requiere la versión 17.3.1.1 del controlador ODBC o una versión posterior). Para obtener información general y tutoriales, consulte [¿Qué son las identidades administradas de los recursos de Azure?](/azure/active-directory/managed-identities-azure-resources/overview)|
 
 La palabra clave **Authentication** afecta a la configuración de seguridad de la conexión. Si se establece en la cadena de conexión, la palabra clave **Encrypt** se establecerá en true de forma predeterminada, lo que significa que el cliente solicitará el cifrado. Además, el certificado de servidor se validará con independencia de la configuración de cifrado a menos que **TrustServerCertificate** se establezca en true (**false** de forma predeterminada). Esta característica se distingue del método de inicio de sesión anterior y menos seguro, en el que el certificado de servidor se valida solo cuando se solicita de forma específica en la cadena de conexión.
 
@@ -237,4 +237,4 @@ try {
 ## <a name="see-also"></a>Consulte también
 [Uso de Azure Active Directory con el controlador ODBC](../odbc/using-azure-active-directory.md)
 
-[¿Qué son las identidades administradas de los recursos de Azure?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)
+[¿Qué son las identidades administradas de los recursos de Azure?](/azure/active-directory/managed-identities-azure-resources/overview)

@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: af86eae9866960c58ec9967f32a45998e5a91106
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 403c134c6e627ba1eb6c18cd2ba5341e54d65975
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147586"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727268"
 ---
 # <a name="sql-server-login-dialog-box"></a>Cuadro de diálogo de inicio de sesión de SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,14 +27,14 @@ Cuando intenta conectarse sin especificar suficiente información, el controlado
 > [!NOTE]  
 > La propiedad de inicialización de `DBPROP_INIT_PROMPT` controla el comportamiento de petición del cuadro de diálogo Inicio de sesión de SQL Server. Para más información, consulte:
 > - [Propiedades de inicialización y autorización](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
-> - [Guía del programador de OLE DB](https://go.microsoft.com/fwlink/?linkid=2067702)
+> - [Guía del programador de OLE DB](/previous-versions/windows/desktop/ms714342(v=vs.85))
 
 ![Captura de pantalla del cuadro de diálogo Inicio de sesión de SQL Server](../media/sql-server-login-dialog.png)
 
 ## <a name="options"></a>Opciones
 |Opción|Descripción|
 |---   |---        |
-|Server|Nombre de una instancia de SQL Server en la red. Seleccione un nombre de servidor\instancia de la lista, o escriba el nombre de servidor\instancia en el cuadro **Servidor**. Opcionalmente, se puede crear un alias de servidor en el equipo cliente mediante el **Administrador de configuración de SQL Server** y escribir ese nombre en el cuadro **Servidor**. <br/><br/>Puede escribir "(local)" si está utilizando el mismo equipo que SQL Server. Después puede establecer conexión con una instancia local de SQL Server, incluso si ejecuta una versión que no está en red de SQL Server.<br/><br/>Para más información sobre los nombres de servidor para diferentes tipos de redes, consulte [Instalación de SQL Server](https://go.microsoft.com/fwlink/?linkid=2067541).|
+|Server|Nombre de una instancia de SQL Server en la red. Seleccione un nombre de servidor\instancia de la lista, o escriba el nombre de servidor\instancia en el cuadro **Servidor**. Opcionalmente, se puede crear un alias de servidor en el equipo cliente mediante el **Administrador de configuración de SQL Server** y escribir ese nombre en el cuadro **Servidor**. <br/><br/>Puede escribir "(local)" si está utilizando el mismo equipo que SQL Server. Después puede establecer conexión con una instancia local de SQL Server, incluso si ejecuta una versión que no está en red de SQL Server.<br/><br/>Para más información sobre los nombres de servidor para diferentes tipos de redes, consulte [Instalación de SQL Server](../../../database-engine/install-windows/install-sql-server.md).|
 |Modo de autenticación|Puede seleccionar las siguientes opciones de autenticación en la lista desplegable:<br/><ul><li>`Windows Authentication:` autenticación en SQL Server con las credenciales de la cuenta de Windows del usuario que ha iniciado sesión actualmente.</li><li>`SQL Server Authentication:` autenticación con el identificador y la contraseña de inicio de sesión.</li><li>`Active Directory - Integrated:` autenticación integrada con una identidad de Azure Active Directory. Este modo también se puede usar para la autenticación de Windows en SQL Server.</li><li>`Active Directory - Password:` autenticación de identificador de usuario y contraseña con una identidad de Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` autenticación interactiva con una identidad de Azure Active Directory. Este modo admite Microsoft Azure Multi-Factor Authentication (MFA).</li></ul>|
 |Dirección SPN del servidor|Si utiliza una conexión de confianza, puede especificar un nombre principal de servicio (SPN) para el servidor.|
 |Id. de inicio de sesión|Especifica el identificador de inicio de sesión que se va a usar en la conexión. El cuadro de texto Id. de inicio de sesión solo se habilita si `Authentication Mode` se establece en `SQL Server Authentication`, `Active Directory - Password` o `Active Directory - Universal with MFA support`.|

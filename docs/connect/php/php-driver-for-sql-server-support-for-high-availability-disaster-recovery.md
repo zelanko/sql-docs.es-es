@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e0386a6aba186924ee345bd9d5b470bd0bd6c56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 875c5944a0b74c7140843388da1e783e9f2ba5b8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478007"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726768"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Compatibilidad con recuperación ante desastres de alta disponibilidad
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ A partir de la versión 3.0 de los controladores de Microsoft para PHP para SQL
 
 La propiedad de conexión **MultiSubnetFailover** indica que la aplicación se está implementando en un grupo de disponibilidad o una instancia de clúster de conmutación por error y que el controlador intentará conectarse a la base de datos en la instancia principal de SQL Server mediante un intento de conexión a todas las direcciones IP. Al conectarse a un agente de escucha de grupo de disponibilidad de SQL Server o una instancia de clúster de conmutación por error de SQL Server, especifique siempre **MultiSubnetFailover=True**. Si la aplicación está conectada a una base de datos AlwaysOn que conmuta por error, se interrumpirá la conexión original y la aplicación deberá abrir una nueva para seguir trabajando tras la conmutación por error.
 
-Puede encontrar detalles completos sobre los grupos de disponibilidad Always On en la página de documentación de [recuperación ante desastres de alta disponibilidad](https://docs.microsoft.com/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery).
+Puede encontrar detalles completos sobre los grupos de disponibilidad Always On en la página de documentación de [recuperación ante desastres de alta disponibilidad](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).
 
 ## <a name="transparent-network-ip-resolution-tnir"></a>Resolución de IP de red transparente (TNIR)
 
@@ -72,4 +72,3 @@ Si la creación de reflejo de la base de datos se usa en la base de datos princi
 
 ## <a name="see-also"></a>Consulte también  
 [Conexión al servidor](../../connect/php/connecting-to-the-server.md)  
-  

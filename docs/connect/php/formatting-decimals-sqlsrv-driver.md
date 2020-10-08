@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6d77fb9fcfdc720c4053688f8f0dcf759af15c8
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: b111dd925a98c4f0380dfceb0a09ddffadb96592
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680730"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726829"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Aplicación de formato a cadenas decimales y valores de moneda (controlador SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Para conservar la precisión, los [tipos decimales o numéricos](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) siempre se capturan como cadenas con precisiones y escalas exactas. Si cualquier valor es inferior a 1, falta el cero inicial. Lo mismo ocurre con los campos money y smallmoney, ya que son campos decimales con una escala fija igual a 4.
+Para conservar la precisión, los [tipos decimales o numéricos](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) siempre se capturan como cadenas con precisiones y escalas exactas. Si cualquier valor es inferior a 1, falta el cero inicial. Lo mismo ocurre con los campos money y smallmoney, ya que son campos decimales con una escala fija igual a 4.
 
 ## <a name="add-leading-zeroes-if-missing"></a>Adición de ceros iniciales si faltan
 A partir de la versión 5.6.0, la opción `FormatDecimals` se agrega a los niveles de instrucción y conexión sqlsrv, permitiendo al usuario dar formato a las cadenas decimales. Esta opción espera un valor booleano (true o false) y solo afecta al formato de los valores decimales o numéricos de los resultados capturados. Es decir, la opción `FormatDecimals` no tiene ningún efecto en otras operaciones como la inserción o la actualización.

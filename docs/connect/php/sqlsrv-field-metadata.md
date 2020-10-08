@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd0c925808fda11127d1632e62c296f8cce30272
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5629096fb59bbb081aa535e8e3436a4cb06130d8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449971"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726720"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -129,7 +129,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>Metadatos de clasificación de datos confidenciales
 
-En la versión 5.8.0, se incluye una nueva opción `DataClassification` para que los usuarios tengan acceso a los [metadatos de clasificación de datos confidenciales](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4) en Microsoft SQL Server 2019 con `sqlsrv_field_metadata`, que requiere Microsoft ODBC Driver 17.4.2 o versiones posteriores.
+En la versión 5.8.0, se incluye una nueva opción `DataClassification` para que los usuarios tengan acceso a los [metadatos de clasificación de datos confidenciales](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql&view=sql-server-ver15#subheading-4) en Microsoft SQL Server 2019 con `sqlsrv_field_metadata`, que requiere Microsoft ODBC Driver 17.4.2 o versiones posteriores.
 
 De forma predeterminada, la opción `DataClassification` es `false`, pero cuando se establece en `true`, la matriz devuelta por `sqlsrv_field_metadata` se rellenará con los metadatos de la clasificación de datos confidenciales, si existe. 
 
@@ -244,4 +244,3 @@ Como puede ver en la representación JSON siguiente, se muestran los metadatos d
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
-  

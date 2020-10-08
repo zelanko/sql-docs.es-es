@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: e4591d74ba5e11b65cc3ede83533d72a11dbec96
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: bace88bd8ccf42cbef96a34ddb2af2593cedd7be
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899055"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727306"
 ---
 # <a name="using-azure-active-directory"></a>Uso de Azure Active Directory
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -259,8 +259,8 @@ Cleanup:
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes
-- [Autorización del acceso a aplicaciones web de Azure Active Directory mediante el flujo de concesión de código OAuth 2.0](https://go.microsoft.com/fwlink/?linkid=2072672).
+- [Autorización del acceso a aplicaciones web de Azure Active Directory mediante el flujo de concesión de código OAuth 2.0](/azure/active-directory/azuread-dev/v1-protocols-oauth-code).
 
-- Aprenda más sobre la [autenticación de Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2073783) a SQL Server.
+- Aprenda más sobre la [autenticación de Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview) a SQL Server.
 
 - Configuración de las conexiones de controlador mediante [palabras clave de cadena de conexión](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md) que el controlador OLE DB admite.

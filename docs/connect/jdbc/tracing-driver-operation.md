@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c25f97d79477497d60d458c994ef5dbdc102463d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393133"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727544"
 ---
 # <a name="tracing-driver-operation"></a>Seguimiento del funcionamiento del controlador
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "86393133"
   El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite el uso del seguimiento (o registro) para facilitar la resolución de problemas con el controlador JDBC durante su uso en la aplicación. Para habilitar el uso de la función de seguimiento, el controlador JDBC usa las API de registro de java.util.logging, que proporcionan un conjunto de clases para crear objetos Logger y LogRecord.  
   
 > [!NOTE]  
->  En el caso del componente nativo (sqljdbc_xa.dll) que se incluye con el controlador JDBC, el marco de diagnósticos integrados (BID) habilita el seguimiento. Para obtener información sobre BID, vea la página sobre [seguimiento de acceso de datos de SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=70042) (puede estar en inglés).  
+>  En el caso del componente nativo (sqljdbc_xa.dll) que se incluye con el controlador JDBC, el marco de diagnósticos integrados (BID) habilita el seguimiento. Para obtener información sobre BID, vea la página sobre [seguimiento de acceso de datos de SQL Server 2005](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)) (puede estar en inglés).  
   
  Al desarrollar la aplicación, puede realizar llamadas a objetos Logger, que a su vez crean objetos LogRecord que, después, se pasan a los objetos Handler para su procesamiento. Ambos objetos registrador y controlador usan niveles de registro y, además, filtros de registro, para regular qué LogRecords se procesan. Una vez completadas las operaciones de registro, los objetos Handler pueden usar de forma opcional objetos Formatter para publicar la información de registro.  
   
@@ -161,5 +161,4 @@ com.microsoft.sqlserver.jdbc.level=FINEST
   
 ## <a name="see-also"></a>Consulte también  
  [Diagnóstico de problemas del controlador JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
   

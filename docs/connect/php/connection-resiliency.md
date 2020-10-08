@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8b425d57a0b1aee0c01db62d3fd1b77eb59c8aed
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4008dd4f023170b50bdf28f1f026da9ee892f970
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632955"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726866"
 ---
 # <a name="idle-connection-resiliency"></a>Resistencia de conexión inactiva
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ La resistencia de la conexión se aplica cuando la conexión está inactiva. Los
 
 ## <a name="example"></a>Ejemplo
 
-El siguiente código se conecta a una base de datos y ejecuta una consulta. La conexión se interrumpe al terminar la sesión y se intenta realizar una nueva consulta mediante la conexión interrumpida. En este ejemplo se utiliza la base de datos de ejemplo [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx).
+El siguiente código se conecta a una base de datos y ejecuta una consulta. La conexión se interrumpe al terminar la sesión y se intenta realizar una nueva consulta mediante la conexión interrumpida. En este ejemplo se utiliza la base de datos de ejemplo [AdventureWorks](/previous-versions/sql/sql-server-2008/ms124501(v=sql.100)).
 
 En este ejemplo, especificamos un cursor de búfer antes de interrumpir la conexión. Si no especificamos un cursor de búfer, la conexión no se restablecería, ya que habría un cursor del lado servidor activo y, por tanto, la conexión no estaría inactiva al interrumpirse. Sin embargo, en ese caso llamaríamos a sqlsrv_free_stmt() antes de interrumpir la conexión para desocupar el cursor y la conexión se restablecería correctamente.
 

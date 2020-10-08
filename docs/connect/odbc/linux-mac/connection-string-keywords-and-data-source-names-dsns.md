@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f667fc06ffe7ced9241e8bfdd2a00caba3b8b2a5
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: 8bc808e2e25a1f421712f6146fd13e8f6adafac3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009341"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727456"
 ---
 # <a name="connecting-to-sql-server"></a>Conectarse a SQL Server
 
@@ -77,7 +77,7 @@ Puede usar la Seguridad de la capa de transporte (TLS), antes conocida como Capa
 
 Al habilitar el cifrado, aumenta la seguridad a expensas del rendimiento.
 
-Para obtener más información, consulte [Cifrar las conexiones a SQL Server](https://go.microsoft.com/fwlink/?LinkId=220900) y [Utilizar el cifrado sin validación](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
+Para obtener más información, consulte [Cifrar las conexiones a SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)) y [Utilizar el cifrado sin validación](../../../relational-databases/native-client/features/using-encryption-without-validation.md).
 
 Con independencia de la configuración de **Encrypt** y **TrustServerCertificate**, siempre se cifran las credenciales de inicio de sesión del servidor (nombre de usuario y contraseña). En la tabla siguiente se muestra el efecto de la configuración de **Encrypt** y **TrustServerCertificate** .  
 

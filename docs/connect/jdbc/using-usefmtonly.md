@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: da61e1881d4c7df01cdc92ad41f6a78c95dda8b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad8f30b236ca9d4fe8a134db3e1726aaeb17a2d3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450045"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727466"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>Recuperación de ParameterMetaData a través de useFmtOnly
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -91,7 +91,7 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  La característica solo admite consultas `SELECT/INSERT/UPDATE/DELETE`. Las consultas deben empezar por una de las cuatro palabras clave admitidas o una [expresión de tabla común](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017) seguida de una de las consultas admitidas. No se admiten los parámetros dentro de expresiones de tabla comunes.
+>  La característica solo admite consultas `SELECT/INSERT/UPDATE/DELETE`. Las consultas deben empezar por una de las cuatro palabras clave admitidas o una [expresión de tabla común](../../t-sql/queries/with-common-table-expression-transact-sql.md?view=sql-server-2017) seguida de una de las consultas admitidas. No se admiten los parámetros dentro de expresiones de tabla comunes.
 
 ## <a name="known-issues"></a>Problemas conocidos
   Actualmente hay algunos problemas con esta característica; su causa son las deficiencias en la lógica de análisis de SQL. Estos problemas pueden solucionarse en una futura actualización de la característica y se documentan a continuación junto con sugerencias de soluciones alternativas.
@@ -139,7 +139,6 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo) WHERE c1 = ?; --Incorrect syntax near '
 UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 ```
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Establecimiento de las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md)  
-  
   

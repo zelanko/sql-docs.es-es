@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf29942e5d427a4a4852a6d1a856d81765690050
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 198c8a21fcea9a1386effe8d30c8d954180d6dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414531"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727488"
 ---
 # <a name="using-sql_variant-data-type"></a>Uso del tipo de datos Sql_variant
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-A partir de la versión 6.3.0, el controlador JDBC admite el tipo de datos sql_variant. Sql_variant también se admite al usar características como parámetros con valores de tabla y BulkCopy con algunas limitaciones mencionadas más adelante en esta página. No todos los tipos de datos se pueden almacenar en el tipo de datos sql_variant. Para obtener una lista de tipos de datos admitidos con sql_variant, compruebe la [documentación](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) de SQL Server.
+A partir de la versión 6.3.0, el controlador JDBC admite el tipo de datos sql_variant. Sql_variant también se admite al usar características como parámetros con valores de tabla y BulkCopy con algunas limitaciones mencionadas más adelante en esta página. No todos los tipos de datos se pueden almacenar en el tipo de datos sql_variant. Para obtener una lista de tipos de datos admitidos con sql_variant, compruebe la [documentación](../../t-sql/data-types/sql-variant-transact-sql.md) de SQL Server.
 
 ##  <a name="populating-and-retrieving-a-table"></a>Rellenar y recuperar una tabla:
 Suponiendo que se disponga de una tabla con una columna sql_variant como:
@@ -95,4 +95,4 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 
 ## <a name="see-also"></a>Consulte también
 
-[Descripción de los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Descripción de los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

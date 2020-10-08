@@ -4,17 +4,17 @@ description: Obtenga información sobre cómo instalar la extensión de PostgreS
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: rachel-msft
-ms.author: raagyema
+author: sunilagarwal
+ms.author: sunila
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 03/19/2019
-ms.openlocfilehash: 0efbc734e8b4e8b9e0597dcf7104c857e51b3c2e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: c673b1e1e9f5c24b8e874037e3a74f234bb0d83d
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123509"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784957"
 ---
 # <a name="postgresql-extension-preview"></a>Extensión de PostgreSQL (versión preliminar)
 
@@ -36,9 +36,9 @@ Si aún no tiene instalado Azure Data Studio, consulte las [instrucciones de ins
 
 1. Seleccione el icono de extensiones situado en la barra lateral de Azure Data Studio.
 
-    :::image type="content" source="media/postgresql-extension/extensions-icon.png" alt-text="Icono de extensiones":::
+    :::image type="content" source="media/postgresql-extension/extensions-icon.png" alt-text="Icono de extensiones&quot;:::
 
-2. Escriba "PostgreSQL" en la barra de búsqueda. Seleccione la extensión de PostgreSQL.
+2. Escriba &quot;PostgreSQL" en la barra de búsqueda. Seleccione la extensión de PostgreSQL.
 
 3. Seleccione **Instalar**. Una vez instalada, seleccione **Volver a cargar** para activar la extensión en Azure Data Studio.
 

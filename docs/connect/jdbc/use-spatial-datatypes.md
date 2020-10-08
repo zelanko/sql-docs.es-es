@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0f4b01775e2c78c0cc8602539169a794eb476f92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02b545ec1d33d17674266d58a2a120f07af423ad
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487966"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727532"
 ---
 # <a name="using-spatial-datatypes"></a>Empleo de tipos de datos espaciales
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Los tipos de datos espaciales (Geometry y Geography) se admiten a partir de la versión 6.5.0 en vista previa del controlador JDBC. Actualmente, no se admiten los tipos de datos espaciales con procedimientos almacenados, parámetros con valores de tabla (TVP), BulkCopy y Always Encrypted. En esta página se muestran diversos casos de uso de los tipos de datos Geometry y Geography con el controlador JDBC. Para obtener información general sobre los tipos de datos espaciales, compruebe la página [Información general de los tipos de datos espaciales](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview).
+Los tipos de datos espaciales (Geometry y Geography) se admiten a partir de la versión 6.5.0 en vista previa del controlador JDBC. Actualmente, no se admiten los tipos de datos espaciales con procedimientos almacenados, parámetros con valores de tabla (TVP), BulkCopy y Always Encrypted. En esta página se muestran diversos casos de uso de los tipos de datos Geometry y Geography con el controlador JDBC. Para obtener información general sobre los tipos de datos espaciales, compruebe la página [Información general de los tipos de datos espaciales](../../relational-databases/spatial/spatial-data-types-overview.md).
 
 ## <a name="creating-a-geometry--geography-object"></a>Creación de un objeto Geometry o Geography
 

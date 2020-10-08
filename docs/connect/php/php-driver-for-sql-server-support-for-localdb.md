@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d618706cd05796079904c971cdf7b0c32485c1d4
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 47bcfa16712e0ef227da7c7ae53de14aa42deacb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886292"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726776"
 ---
 # <a name="support-for-localdb"></a>Compatibilidad con LocalDB
 
@@ -76,7 +76,7 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-Para instrucciones sobre la instalación de LocalDB, consulte la [documentación de LocalDB](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). Si usa sqlcmd.exe para modificar datos en su instancia de LocalDB, necesitará la [utilidad sqlcmd](../../tools/sqlcmd-utility.md).
+Para instrucciones sobre la instalación de LocalDB, consulte la [documentación de LocalDB](../../database-engine/configure-windows/sql-server-express-localdb.md). Si usa sqlcmd.exe para modificar datos en su instancia de LocalDB, necesitará la [utilidad sqlcmd](../../tools/sqlcmd-utility.md).
 
 ## <a name="see-also"></a>Consulte también
 

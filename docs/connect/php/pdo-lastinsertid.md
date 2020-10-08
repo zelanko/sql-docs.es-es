@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 004125e217b1e2bf79ef26dc9ebffae2877890b2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 854446b0a505dd2f8a2dc44c4f3eca70158e20be
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646735"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726806"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Devuelve el identificador de la fila que se insertó más recientemente en una tabla de la base de datos. La tabla debe tener una columna IDENTITY NOT NULL. Si se proporciona un nombre de secuencia, `lastInsertId` devuelve el número de secuencia insertado más recientemente para el nombre de secuencia proporcionado (para más información sobre los números de secuencia, consulte [aquí](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)).
+Devuelve el identificador de la fila que se insertó más recientemente en una tabla de la base de datos. La tabla debe tener una columna IDENTITY NOT NULL. Si se proporciona un nombre de secuencia, `lastInsertId` devuelve el número de secuencia insertado más recientemente para el nombre de secuencia proporcionado (para más información sobre los números de secuencia, consulte [aquí](../../relational-databases/sequence-numbers/sequence-numbers.md)).
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -155,4 +155,3 @@ Last sequence number when a table name is supplied =
 [Clase PDO](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

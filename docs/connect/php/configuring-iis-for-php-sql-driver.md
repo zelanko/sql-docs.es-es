@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3033e557ea1e70402a6647cc36558cba26bd10b5
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 7ab31be628d4c93f0e4331e3d63d47c4924a6fa7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728394"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726889"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>Configuración de IIS para los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,16 +28,16 @@ En este tema se proporcionan vínculos a recursos del [sitio web de Internet Inf
 ## <a name="tutorials"></a>Tutoriales  
 En los siguientes vínculos se ofrecen tutoriales sobre cómo configurar FastCGI para PHP y hospedar aplicaciones PHP en IIS 6.0 e IIS 7.0:  
   
--   [FastCGI with PHP (FastCGI con PHP)](https://docs.microsoft.com/iis/web-hosting/web-server-for-shared-hosting/fastcgi-with-php)  
--   [Using FastCGI to Host PHP Applications on IIS 7.0 (Uso de FastCGI para hospedar aplicaciones PHP en IIS 7.0)](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis)  
--   [Using FastCGI to Host PHP Applications on IIS 6.0 (Uso de FastCGI para hospedar aplicaciones PHP en IIS 6.0)](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis-60)  
--   [Configuring FastCGI Extension for IIS 6.0 (Configuración de la extensión de FastCGI para IIS 6.0)](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-on-iis/configuring-the-fastcgi-extension-for-iis-60)  
+-   [FastCGI with PHP (FastCGI con PHP)](/iis/web-hosting/web-server-for-shared-hosting/fastcgi-with-php)  
+-   [Using FastCGI to Host PHP Applications on IIS 7.0 (Uso de FastCGI para hospedar aplicaciones PHP en IIS 7.0)](/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis)  
+-   [Using FastCGI to Host PHP Applications on IIS 6.0 (Uso de FastCGI para hospedar aplicaciones PHP en IIS 6.0)](/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis-60)  
+-   [Configuring FastCGI Extension for IIS 6.0 (Configuración de la extensión de FastCGI para IIS 6.0)](/iis/application-frameworks/install-and-configure-php-on-iis/configuring-the-fastcgi-extension-for-iis-60)  
   
 ## <a name="video-presentations"></a>Presentaciones en vídeo  
 En los siguientes vínculos se ofrecen presentaciones en vídeo sobre cómo configurar FastCGI para PHP y utilizar las características de IIS 7.0 para hospedar aplicaciones PHP:  
   
--   [Setting up FastCGI for PHP (Configuración de FastCGI para PHP)](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/set-up-fastcgi-for-php)  
--   [Partying with PHP on Microsoft Internet Information Services 7 (Integración de PHP con Microsoft Internet Information Services 7)](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
+-   [Setting up FastCGI for PHP (Configuración de FastCGI para PHP)](/iis/application-frameworks/running-php-applications-on-iis/set-up-fastcgi-for-php)  
+-   [Partying with PHP on Microsoft Internet Information Services 7 (Integración de PHP con Microsoft Internet Information Services 7)](/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
   
 ## <a name="support-resources"></a>Recursos de soporte  
 En los siguientes foros se ofrece soporte técnico de la comunidad para FastCGI en IIS:  
@@ -53,4 +53,3 @@ En los siguientes foros se ofrece soporte técnico de la comunidad para FastCGI 
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-  

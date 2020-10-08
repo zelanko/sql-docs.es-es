@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 009853cd960a49ec559edd1d8a619e458102364d
-ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
+ms.openlocfilehash: 6aa01e932003fb1ca650e4b7bf135ff8266b6457
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89392183"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725856"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Cómo actualizar los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -60,10 +60,10 @@ En esta sección se explica cómo actualizar un clúster de macrodatos de SQL S
 1. Actualice `azdata`.
 
    Siga las instrucciones para instalar `azdata`. 
-   - [Windows Installer](deploy-install-azdata-installer.md)
-   - [Linux con apt](deploy-install-azdata-linux-package.md)
-   - [Linux con yum](deploy-install-azdata-yum.md)
-   - [Linux con zypper](deploy-install-azdata-zypper.md)
+   - [Windows Installer](../azdata/install/deploy-install-azdata-installer.md)
+   - [Linux con apt](../azdata/install/deploy-install-azdata-linux-package.md)
+   - [Linux con yum](../azdata/install/deploy-install-azdata-yum.md)
+   - [Linux con zypper](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
    >Si `azdata` se instaló con `pip`, debe quitarlo manualmente antes de realizar la instalación con Windows Installer o el administrador de paquetes de Linux.

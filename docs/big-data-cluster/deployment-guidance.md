@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10c3e83451efd0f7ac5868fd25d540191821b72c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765774"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725876"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Procedimientos para implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes
 
@@ -80,7 +80,7 @@ Antes de implementar un clúster de macrodatos de SQL Server 2019, [instale pr
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- [Extensión de virtualización de datos](../azure-data-studio/data-virtualization-extension.md) para Azure Data Studio
+- [Extensión de virtualización de datos](../azure-data-studio/extensions/data-virtualization-extension.md) para Azure Data Studio
 
 
 ## <a name="deployment-overview"></a><a id="deploy"></a> Información general sobre la implementación
@@ -255,7 +255,7 @@ Una vez que el script de implementación se haya completado de forma correcta, p
    > [!TIP]
    > Si no ha cambiado el nombre predeterminado durante la implementación, use `-n mssql-cluster` en el comando anterior. `mssql-cluster` es el nombre predeterminado del clúster de macrodatos.
 
-1. Inicie sesión en el clúster de macrodatos con [azdata login](reference-azdata.md). Establezca el parámetro `--endpoint` en la dirección IP externa del punto de conexión del controlador.
+1. Inicie sesión en el clúster de macrodatos con [azdata login](../azdata/reference/reference-azdata.md). Establezca el parámetro `--endpoint` en la dirección IP externa del punto de conexión del controlador.
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -266,7 +266,7 @@ Una vez que el script de implementación se haya completado de forma correcta, p
    > [!TIP]
    > Si es el administrador del clúster de Kubernetes y tiene acceso al archivo de configuración del clúster (el archivo kube config), puede configurar el contexto actual para que apunte al clúster de Kubernetes de destino. En este caso, puede iniciar sesión con `azdata login -n <namespaceName>`, donde `namespace` es el nombre del clúster de macrodatos. Si no se especifican en el comando de inicio de sesión, se le solicitarán las credenciales.
    
-1. Ejecute [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) para obtener una lista con una descripción de cada punto de conexión y los valores correspondientes de dirección IP y puerto. 
+1. Ejecute [azdata bdc endpoint list](../azdata/reference/reference-azdata-bdc-endpoint.md) para obtener una lista con una descripción de cada punto de conexión y los valores correspondientes de dirección IP y puerto. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -298,7 +298,7 @@ kubectl get svc -n <your-big-data-cluster-name>
 
 ## <a name="verify-the-cluster-status"></a><a id="status"></a> Comprobación del estado del clúster
 
-Después de la implementación, puede comprobar el estado del clúster con el comando [azdata bdc status show](reference-azdata-bdc-status.md).
+Después de la implementación, puede comprobar el estado del clúster con el comando [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md).
 
 ```bash
 azdata bdc status show
@@ -381,7 +381,7 @@ Bdc: ready                                                                      
 
 También puede obtener un estado más detallado con los comandos siguientes:
 
-- [azdata bdc control status show](reference-azdata-bdc-control-status.md) devuelve el estado de mantenimiento de todos los componentes asociados al servicio de administración de control
+- [azdata bdc control status show](../azdata/reference/reference-azdata-bdc-control-status.md) devuelve el estado de mantenimiento de todos los componentes asociados al servicio de administración de control
 ```
 azdata bdc control status show
 ```

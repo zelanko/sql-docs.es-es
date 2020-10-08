@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 43a7f03a4e8a9a3c67a3263f792f2f921eef7a78
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ff8e80314210dee9c227360e54f8ba1e6b1a3691
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928855"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725656"
 ---
 # <a name="date-and-time-data"></a>Datos de fecha y hora
 
@@ -27,7 +27,7 @@ SQL Server 2008 introduce nuevos tipos de datos para administrar la informaci�
   
 Las versiones de SQL Server anteriores a SQL Server 2008 solo tenían dos tipos de datos para trabajar con valores de fecha y hora: `datetime` y `smalldatetime`. Ambos tipos de datos contienen el valor de fecha y el valor de hora, lo que dificulta trabajar solo con valores de fecha o de hora. Además, estos tipos de datos solo admiten las fechas posteriores a la introducción del calendario gregoriano en Inglaterra en 1753. Otra limitación es que estos tipos de datos más antiguos no reconocen la zona horaria, por lo que resulta difícil trabajar con datos que proceden de varias zonas horarias.  
   
-La documentación completa de los tipos de datos de SQL Server está disponible en Libros en pantalla de SQL Server. Consulte [Uso de datos de fecha y hora](https://go.microsoft.com/fwlink/?LinkID=98361) para consultar temas de nivel de entrada sobre datos de fecha y hora.
+La documentación completa de los tipos de datos de SQL Server está disponible en Libros en pantalla de SQL Server. Consulte [Uso de datos de fecha y hora](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)) para consultar temas de nivel de entrada sobre datos de fecha y hora.
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Tipos de datos de fecha y hora incorporados en SQL Server 2008  
  En la tabla siguiente se describen los nuevos tipos de datos de fecha y hora.  
@@ -47,12 +47,12 @@ La forma en que SQL Server analiza los valores de fecha y hora no solo depende 
   
 La instrucción SET LANGUAGE de Transact-SQL establece implícitamente DATEFORMAT, que determina el orden de las partes de la fecha. Puede usar la instrucción SET DATEFORMAT de Transact-SQL en una conexión para eliminar la ambigüedad de los valores de fecha ordenando las partes de fecha según MDA, DMA, AMD, ADM, MAD o DAM.  
   
-Si no especifica ningún valor DATEFORMAT para la conexión, SQL Server utiliza el idioma predeterminado asociado a la conexión. Por ejemplo, una cadena de fecha de "01/02/03" se interpretaría como MDA (2 de enero de 2003) en un servidor con una configuración de idioma de inglés de Estados Unidos y como DMA (1 de febrero de 2003) en un servidor con una configuración de idioma de inglés británico. El año se determina mediante el uso de la regla del año límite de SQL Server, que define la fecha límite para asignar el valor del siglo. Para obtener más información, vea[two digit year cutoff (opción)](https://go.microsoft.com/fwlink/?LinkId=120473) en los Libros en pantalla de SQL Server.  
+Si no especifica ningún valor DATEFORMAT para la conexión, SQL Server utiliza el idioma predeterminado asociado a la conexión. Por ejemplo, una cadena de fecha de "01/02/03" se interpretaría como MDA (2 de enero de 2003) en un servidor con una configuración de idioma de inglés de Estados Unidos y como DMA (1 de febrero de 2003) en un servidor con una configuración de idioma de inglés británico. El año se determina mediante el uso de la regla del año límite de SQL Server, que define la fecha límite para asignar el valor del siglo. Para obtener más información, vea[two digit year cutoff (opción)](/previous-versions/sql/sql-server-2008-r2/ms189577(v=sql.105)) en los Libros en pantalla de SQL Server.  
   
 > [!NOTE]
 >  No se admite el formato de fecha ADM al convertir de un formato de cadena a `date`, `time`, `datetime2` o `datetimeoffset`.  
   
-Para obtener más información sobre cómo SQL Server interpreta los datos de fecha y hora, vea [Usar datos de fecha y hora](https://go.microsoft.com/fwlink/?LinkID=98361) en los Libros en pantalla de SQL Server 2008.  
+Para obtener más información sobre cómo SQL Server interpreta los datos de fecha y hora, vea [Usar datos de fecha y hora](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)) en los Libros en pantalla de SQL Server 2008.  
   
 ## <a name="datetime-data-types-and-parameters"></a>Tipos de datos y parámetros de fecha y hora  
 Se han agregado los siguientes valores de enumeración a <xref:System.Data.SqlDbType> para admitir los nuevos tipos de datos de fecha y hora.  
@@ -208,9 +208,9 @@ Para obtener más información sobre cómo trabajar con valores de fecha y hora 
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Tipos de datos y funciones de fecha y hora (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Proporciona información general sobre todos los tipos de datos y funciones de fecha y hora de Transact-SQL.|  
-|[Uso de datos de fecha y hora](https://go.microsoft.com/fwlink/?LinkId=98361)|Proporciona información sobre las funciones y los tipos de datos de fecha y hora, además de ejemplos de uso.|  
-|[Tipos de datos (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Describe los tipos de datos de sistema que incluye SQL Server 2008.|  
+|[Tipos de datos y funciones de fecha y hora (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms186724(v=sql.100))|Proporciona información general sobre todos los tipos de datos y funciones de fecha y hora de Transact-SQL.|  
+|[Uso de datos de fecha y hora](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|Proporciona información sobre las funciones y los tipos de datos de fecha y hora, además de ejemplos de uso.|  
+|[Tipos de datos (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms187752(v=sql.100))|Describe los tipos de datos de sistema que incluye SQL Server 2008.|  
   
 ## <a name="next-steps"></a>Pasos siguientes
 - [Tipos de datos de SQL Server en ADO.NET](sql-server-data-types.md)

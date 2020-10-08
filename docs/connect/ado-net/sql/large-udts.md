@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 06abbc88d80dffba14a48d82561dd4db1a2eb68e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cbeac11486783b8eb2f0de59bd34e72234c8ea68
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924327"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725617"
 ---
 # <a name="large-udts"></a>UDT grandes
 
@@ -27,7 +27,7 @@ Los tipos definidos por el usuario (UDT) permiten a los desarrolladores extender
   
 Anteriormente, los UDT estaban restringidos a un tamaño máximo de 8 kilobytes. En SQL Server 2008, esta restricción se ha eliminado en los UDT con un formato de <xref:Microsoft.Data.SqlClient.Server.Format.UserDefined>.  
   
-Para obtener la documentación completa de los tipos definidos por el usuario, vea [Tipos definidos por el usuario de CLR](https://go.microsoft.com/fwlink/?LinkId=98366) de Libros en pantalla de SQL Server.
+Para obtener la documentación completa de los tipos definidos por el usuario, vea [Tipos definidos por el usuario de CLR](/previous-versions/sql/sql-server-2008/ms131120(v=sql.100)) de Libros en pantalla de SQL Server.
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Recuperación de esquemas de UDT mediante GetSchema  
 El método <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> de <xref:Microsoft.Data.SqlClient.SqlConnection> devuelve información del esquema de la base de datos en un parámetro <xref:System.Data.DataTable>.
@@ -110,4 +110,3 @@ reader.close
   
 ## <a name="next-steps"></a>Pasos siguientes
 - [Datos binarios y datos de valores grandes de SQL Server](sql-server-binary-large-value-data.md)
- 

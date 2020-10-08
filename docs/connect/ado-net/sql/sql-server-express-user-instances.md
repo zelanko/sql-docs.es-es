@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 646eb9359dc5e7dfaad77bc3746fbfdf9ed9ce7a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f44991b2ea59d3f6cf6e1cf5a2bd653f270aa1ad
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920365"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725586"
 ---
 # <a name="sql-server-express-user-instances"></a>Instancias de usuario de SQL Server Express
 
@@ -143,7 +143,7 @@ Entre los escenarios de instancias de usuario están los siguientes:
   
 - Cualquier aplicación de usuario único en la que no es necesario compartir datos.  
   
-- Implementación ClickOnce. Si .NET Framework 2.0 (o posterior) o .NET Core 1.0 (o posterior) y SQL Server Express ya están instalados en el equipo de destino, los usuarios que no sean administradores pueden instalar y usar el paquete de instalación descargado como resultado de una acción ClickOnce. Tenga en cuenta que un administrador debe instalar SQL Server Express si forma parte de la configuración. Para obtener más información, consulte [Implementación de ClickOnce para formularios Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/clickonce-deployment-for-windows-forms).
+- Implementación ClickOnce. Si .NET Framework 2.0 (o posterior) o .NET Core 1.0 (o posterior) y SQL Server Express ya están instalados en el equipo de destino, los usuarios que no sean administradores pueden instalar y usar el paquete de instalación descargado como resultado de una acción ClickOnce. Tenga en cuenta que un administrador debe instalar SQL Server Express si forma parte de la configuración. Para obtener más información, consulte [Implementación de ClickOnce para formularios Windows Forms](/dotnet/framework/winforms/clickonce-deployment-for-windows-forms).
   
 - Hospedaje de ASP.NET dedicado mediante la autenticación de Windows. Una única instancia de SQL Server Express se puede hospedar en una intranet. La aplicación se conecta mediante la cuenta de Windows ASPNET, no mediante la suplantación. Las instancias de usuario no deben usarse para escenarios de hospedaje compartido o de terceros en los que todas las aplicaciones compartan la misma instancia de usuario y ya no permanezcan aisladas entre sí.  
   

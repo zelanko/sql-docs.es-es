@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 94950f346ddaf4264926438ca107c49350577b27
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117135"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725476"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Conexión mediante autenticación de Azure Active Directory
 
@@ -24,7 +24,7 @@ ms.locfileid: "91117135"
 
 En este artículo se proporciona información sobre cómo desarrollar aplicaciones Java que usan la característica de autenticación de Azure Active Directory con Microsoft JDBC Driver para SQL Server.
 
-Puede usar la autenticación de Azure Active Directory (Azure AD), que es un mecanismo que permite conectar con Azure SQL Database v12 mediante identidades en Azure Active Directory. Use la autenticación de Azure Active Directory para administrar identidades de usuarios de base de datos de forma centralizada y como alternativa a la autenticación de SQL Server. El controlador JDBC permite especificar las credenciales de Azure Active Directory en la cadena de conexión de JDBC para conectarse a Azure SQL Database. Para obtener información sobre cómo configurar la autenticación de Azure Active Directory, visite [Conectar a la SQL Database mediante la autenticación de Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
+Puede usar la autenticación de Azure Active Directory (Azure AD), que es un mecanismo que permite conectar con Azure SQL Database v12 mediante identidades en Azure Active Directory. Use la autenticación de Azure Active Directory para administrar identidades de usuarios de base de datos de forma centralizada y como alternativa a la autenticación de SQL Server. El controlador JDBC permite especificar las credenciales de Azure Active Directory en la cadena de conexión de JDBC para conectarse a Azure SQL Database. Para obtener información sobre cómo configurar la autenticación de Azure Active Directory, visite [Conectar a la SQL Database mediante la autenticación de Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview). 
 
 Las propiedades de conexión para admitir la autenticación de Azure Active Directory en Microsoft JDBC Driver para SQL Server son:
 *   **autenticación**:  use esta propiedad para indicar qué método de autenticación de SQL se va a utilizar para la conexión. Los valores posibles son: 
@@ -287,7 +287,7 @@ En el siguiente ejemplo se incluye una aplicación Java sencilla que se conecta 
     12. Haga clic en Azure Active Directory en el panel izquierdo. En "Registros de aplicaciones", busque la pestaña "Puntos finales". Copie la dirección URL en "PUNTO DE CONEXIÓN DE TOKEN DE OATH 2.0". Esta es su dirección URL de STS.
     
     ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
-2. Inicie sesión en la base de datos de usuario de Azure SQL Server como administrador de Azure Active Directory y use un comando de T-SQL para aprovisionar un usuario de la base de datos independiente para su entidad de seguridad de aplicación. Para obtener más información, consulte [Conexión a SQL Database o a SQL Data Warehouse mediante autenticación de Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) para más detalles sobre cómo crear un administrador de Azure Active Directory y un usuario de la base de datos independiente.
+2. Inicie sesión en la base de datos de usuario de Azure SQL Server como administrador de Azure Active Directory y use un comando de T-SQL para aprovisionar un usuario de la base de datos independiente para su entidad de seguridad de aplicación. Para obtener más información, consulte [Conexión a SQL Database o a SQL Data Warehouse mediante autenticación de Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview) para más detalles sobre cómo crear un administrador de Azure Active Directory y un usuario de la base de datos independiente.
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
@@ -351,4 +351,4 @@ Si la conexión se realiza correctamente, debería ver el siguiente mensaje como
 ```bash
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>    
-``` 
+```

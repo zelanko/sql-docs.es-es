@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: f51e5326d29d7edd6a518c02f7042cc9ed104b4f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02b05f65928aad5f0022d31e00847baeeb42e75c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78895956"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725556"
 ---
 # <a name="table-valued-parameters"></a>Parámetros con valores de tabla
 
@@ -34,8 +34,8 @@ Para obtener más información sobre los parámetros con valores de tabla, vea l
   
 |Resource|Descripción|  
 |--------------|-----------------|  
-|[Parámetros con valores de tabla (motor de base de datos)](https://go.microsoft.com/fwlink/?LinkId=98363) en los Libros en pantalla de SQL Server|Describe cómo crear y usar parámetros con valores de tabla.|  
-|[Tipos de tabla definidos por el usuario](https://go.microsoft.com/fwlink/?LinkId=98364) en Libros en pantalla de SQL Server|Describe los tipos de tabla definidos por el usuario que se usan para declarar parámetros con valores de tabla.|  
+|[Parámetros con valores de tabla (motor de base de datos)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) en los Libros en pantalla de SQL Server|Describe cómo crear y usar parámetros con valores de tabla.|  
+|[Tipos de tabla definidos por el usuario](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) en Libros en pantalla de SQL Server|Describe los tipos de tabla definidos por el usuario que se usan para declarar parámetros con valores de tabla.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Paso de varias filas en versiones anteriores de SQL Server  
 Antes de la incorporación de los parámetros con valores de tabla a SQL Server 2008, las opciones para pasar varias filas de datos a un procedimiento almacenado o a un comando SQL con parámetros eran limitadas. Un desarrollador podría elegir entre las siguientes opciones para pasar varias filas al servidor:  
@@ -49,7 +49,7 @@ Antes de la incorporación de los parámetros con valores de tabla a SQL Server�
 - Use el programa de la utilidad `bcp` o el objeto <xref:Microsoft.Data.SqlClient.SqlBulkCopy> para cargar muchas filas de datos en una tabla. Aunque esta técnica es muy eficaz, no admite el procesamiento del lado servidor a menos que los datos se carguen en una tabla temporal o una variable de tabla.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Creación de tipos de parámetro con valores de tabla  
-Los parámetros con valores de tabla se basan en estructuras de tabla fuertemente tipadas definidas mediante instrucciones CREATE TYPE de Transact-SQL. Debe crear un tipo de tabla y definir la estructura en SQL Server para poder usar los parámetros con valores de tabla en las aplicaciones de cliente. Para obtener más información sobre la creación de tipos de tabla, vea [Tipos de tabla definidos por el usuario](https://go.microsoft.com/fwlink/?LinkID=98364) en los Libros en pantalla de SQL Server.  
+Los parámetros con valores de tabla se basan en estructuras de tabla fuertemente tipadas definidas mediante instrucciones CREATE TYPE de Transact-SQL. Debe crear un tipo de tabla y definir la estructura en SQL Server para poder usar los parámetros con valores de tabla en las aplicaciones de cliente. Para obtener más información sobre la creación de tipos de tabla, vea [Tipos de tabla definidos por el usuario](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) en los Libros en pantalla de SQL Server.  
   
 La instrucción siguiente crea un tipo de tabla denominado CategoryTableType que consta de las columnas CategoryID y CategoryName:  
   
@@ -119,7 +119,7 @@ tvpParam.SqlDbType = SqlDbType.Structured;
 ```  
   
 ## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a> Paso de un parámetro con valores de tabla a un procedimiento almacenado  
-En este ejemplo se muestra cómo pasar datos de parámetros con valores de tabla a un procedimiento almacenado. El código extrae las filas agregadas a un nuevo objeto <xref:System.Data.DataTable> mediante el método <xref:System.Data.DataTable.GetChanges%2A>. A continuación, el código define <xref:Microsoft.Data.SqlClient.SqlCommand>, estableciendo la propiedad <xref:Microsoft.Data.SqlClient.SqlCommand.CommandType%2A> en <xref:System.Data.CommandType.StoredProcedure>. El valor <xref:Microsoft.Data.SqlClient.SqlParameter> se rellena con el método <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> y el valor <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> se establece en `Structured`. A continuación, se ejecuta <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> utilizando el método <xref:Microsoft.Data.SqlClient.SqlCommand>.  
+En este ejemplo se muestra cómo pasar datos de parámetros con valores de tabla a un procedimiento almacenado. El código extrae las filas agregadas a un nuevo objeto <xref:System.Data.DataTable> mediante el método <xref:System.Data.DataTable.GetChanges%2A>. A continuación, el código define <xref:Microsoft.Data.SqlClient.SqlCommand>, estableciendo la propiedad <xref:Microsoft.Data.SqlClient.SqlCommand.CommandType%2A> en <xref:System.Data.CommandType.StoredProcedure>. El valor <xref:Microsoft.Data.SqlClient.SqlParameter> se rellena con el método <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> y el valor <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> se establece en `Structured`. A continuación, se ejecuta <xref:Microsoft.Data.SqlClient.SqlCommand> utilizando el método <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection object.  

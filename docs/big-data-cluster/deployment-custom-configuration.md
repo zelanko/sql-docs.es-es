@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: db42b544127041a0d06cce8ff5f94466198bfa9f
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 48a2c99a029517ebbab24b017bbaeba906b1c6cb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860569"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725870"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configuración de opciones de implementación de recursos y servicios de clúster
 
@@ -171,7 +171,7 @@ Para personalizar los archivos de configuración de implementación de clústere
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
-- [Instalación de azdata](deploy-install-azdata.md).
+- [Instalación de azdata](../azdata/install/deploy-install-azdata.md).
 
 - En cada uno de los ejemplos de esta sección se supone que ha creado una copia de una de las configuraciones estándar. Para obtener más información, vea [Creación de una configuración personalizada](deployment-guidance.md#customconfig). Por ejemplo, el siguiente comando crea un directorio denominado `custom-bdc` que contiene dos archivos de configuración de implementación JSON, `bdc.json` y `control.json`, según la configuración predeterminada de `aks-dev-test`:
 

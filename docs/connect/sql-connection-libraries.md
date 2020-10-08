@@ -8,16 +8,16 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 8d5c44c11d9f5158abc52634f648a4159f86c143
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988512"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726616"
 ---
 # <a name="connection-modules-for-microsoft-sql-database"></a>Módulos de conexión para las bases de datos SQL de Microsoft
 
-En este artículo se proporcionan vínculos de descarga a módulos de conexión o *controladores* que los programas cliente pueden usar para interactuar con [Microsoft SQL Server](../relational-databases/database-features.md) y con su gemelo en la nube, [Azure SQL Database](/azure/sql-database/). Hay controladores disponibles para diversos lenguajes de programación, que se ejecutan en los siguientes sistemas operativos:
+En este artículo se proporcionan vínculos de descarga a módulos de conexión o *controladores* que los programas cliente pueden usar para interactuar con [Microsoft SQL Server](../relational-databases/databases/databases.md) y con su gemelo en la nube, [Azure SQL Database](/azure/sql-database/). Hay controladores disponibles para diversos lenguajes de programación, que se ejecutan en los siguientes sistemas operativos:
 
 - Linux
 - macOS
@@ -54,7 +54,7 @@ En la tabla siguiente se muestran ejemplos de marcos de asignación relacional d
 
 | Idioma | Descargar controlador de ORM |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x o posterior)](https://docs.microsoft.com/ef/) |
+| C# | [Entity Framework Core](/ef/core/)<br />[Entity Framework (6.x o posterior)](/ef/) |
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM, incluido en la instalación de Laravel](https://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](https://sequelize.org/) |
@@ -85,7 +85,7 @@ En la tabla siguiente se muestran ejemplos de marcos de asignación relacional d
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de código para conectarse a Azure SQL Database en la nube, con Java y otros lenguajes](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
+- [Ejemplos de código para conectarse a Azure SQL Database en la nube, con Java y otros lenguajes](/azure/sql-database/sql-database-connect-query-java).
 
 <!--
 Image references, **obsolete** markdown syntax alternative:

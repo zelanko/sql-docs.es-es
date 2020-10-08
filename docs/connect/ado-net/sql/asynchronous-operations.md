@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 4c88a8ccbc242b0fd85c66acfb3539ec260c58dd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3923db97ce144662f7fe5410c13278862d1ab6a1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928936"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725684"
 ---
 # <a name="asynchronous-operations"></a>Operaciones asincrónicas
 
@@ -26,7 +26,7 @@ Algunas operaciones de base de datos, como las ejecuciones de comandos, pueden t
 .NET proporciona varios patrones de diseño asincrónicos estándar que los desarrolladores pueden usar para aprovechar los subprocesos en segundo plano y liberar la interfaz de usuario o los subprocesos de alta prioridad para realizar otras operaciones en su clase <xref:Microsoft.Data.SqlClient.SqlCommand>. En concreto, los métodos <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> y <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>, emparejados con los métodos <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A> y <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A>, proporcionan la compatibilidad asincrónica.  
   
 > [!NOTE]
->  La programación asincrónica es una característica principal de .NET. Para obtener más información sobre las diferentes técnicas asincrónicas disponibles para los desarrolladores, vea el artículo sobre cómo [llamar a métodos sincrónicos de forma asincrónica](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously).  
+>  La programación asincrónica es una característica principal de .NET. Para obtener más información sobre las diferentes técnicas asincrónicas disponibles para los desarrolladores, vea el artículo sobre cómo [llamar a métodos sincrónicos de forma asincrónica](/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously).  
   
 Aunque el uso de técnicas asincrónicas con características de ADO.NET no agrega ninguna consideración especial, es importante tener en cuenta las ventajas e inconvenientes de la creación de aplicaciones multiproceso. En los ejemplos siguientes de esta sección se indican varios problemas importantes que los desarrolladores deben tener en cuenta al crear aplicaciones que incorporan funcionalidades multiproceso.  
   
@@ -42,4 +42,4 @@ Proporciona un ejemplo que muestra el uso del sondeo para esperar a que se compl
   
 ## <a name="next-steps"></a>Pasos siguientes
 - [SQL Server y ADO.NET](index.md)
-- [Llamar a métodos sincrónicos de forma asincrónica](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)
+- [Llamar a métodos sincrónicos de forma asincrónica](/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)

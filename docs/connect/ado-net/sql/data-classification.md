@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: 27b9c232fe785d3c016848f3bb952236b8e7cd75
-ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
+ms.openlocfilehash: b53e71c4c302145af14c1f2e37f30fe0e3c8f8e2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85110160"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725726"
 ---
 # <a name="data-discovery-and-classification-in-sqlclient"></a>Clasificación y detección de datos en SqlClient
 
@@ -24,7 +24,7 @@ ms.locfileid: "85110160"
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-La [clasificación y detección de datos](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017) es un conjunto de servicios avanzados para detectar, clasificar, etiquetar y notificar información confidencial en las bases de datos. SqlClient proporciona una API que expone información de clasificación y detección de datos de solo lectura cuando el origen subyacente es compatible con la característica. Se obtiene acceso a esta información a través de SqlDataReader.
+La [clasificación y detección de datos](../../../relational-databases/security/sql-data-discovery-and-classification.md?view=sql-server-2017) es un conjunto de servicios avanzados para detectar, clasificar, etiquetar y notificar información confidencial en las bases de datos. SqlClient proporciona una API que expone información de clasificación y detección de datos de solo lectura cuando el origen subyacente es compatible con la característica. Se obtiene acceso a esta información a través de SqlDataReader.
 
 En esta aplicación de ejemplo se muestra cómo acceder a las propiedades de clasificación de datos de SqlDataReader.
 
@@ -32,4 +32,4 @@ En esta aplicación de ejemplo se muestra cómo acceder a las propiedades de cla
 
 **Consulte también**  
 
- [Características de SQL Server y ADO.NET](sql-server-features-adonet.md)   
+ [Características de SQL Server y ADO.NET](sql-server-features-adonet.md)

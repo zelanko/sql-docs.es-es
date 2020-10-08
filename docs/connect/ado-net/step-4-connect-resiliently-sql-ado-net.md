@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: a70b5449d1af02c3b367a204e2e32dfb32281d72
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: d2a300ce4565d9eb6104dd73c89a7b30b7aa1e8e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391770"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725538"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Paso 4: Conexión de forma resistente a SQL con ADO.NET
 
@@ -41,7 +41,7 @@ Las clases ADO.NET para conectarse al servidor Microsoft SQL Server local tambi�
   
 El programa debe distinguir entre errores transitorios frente a errores persistentes. Los errores transitorios son condiciones de error que pueden borrarse en un breve período, como problemas de red transitorios.  Un ejemplo de un error persistente sería si el programa tiene un error ortográfico en el nombre de la base de datos de destino; en este caso, el error "No se encontró esa base de datos" persistirá y no se podría borrar en un breve período.  
   
-La lista de números de error que se clasifican como errores transitorios está disponible en el artículo sobre [mensaje de error de las aplicaciones cliente de SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/).  
+La lista de números de error que se clasifican como errores transitorios está disponible en el artículo sobre [mensaje de error de las aplicaciones cliente de SQL Database](/azure/sql-database/sql-database-develop-error-messages/).  
   
 ## <a name="step-2-create-and-run-sample-application"></a>Paso 2: Crear y ejecutar la aplicación de ejemplo  
   
@@ -319,4 +319,4 @@ Para demostrar que el código gestiona los errores persistentes de forma correct
   
 ## <a name="next-steps"></a>Pasos siguientes  
   
-Para explorar otras prácticas recomendadas y directrices de diseño, visite [Conexión a SQL Database: vínculos, prácticas recomendadas y directrices de diseño](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/).  
+Para explorar otras prácticas recomendadas y directrices de diseño, visite [Conexión a SQL Database: vínculos, prácticas recomendadas y directrices de diseño](/azure/azure-sql/database/develop-overview).

@@ -11,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a6faff357f036f521a88fa37b15db5ead82b5758
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: 85b7c9f681a79a3678b932c63f755fc01d543100
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529406"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726597"
 ---
 # <a name="sql-data-developer"></a>Desarrollador de datos SQL
 Use la plataforma de datos SQL de Microsoft para crear soluciones basadas en datos en dispositivos móviles y escritorios para servidores web, servidores empresariales y la nube.  
 
 ## <a name="sql-data-storage"></a>Almacenamiento de datos SQL
 * [Motor de base de datos de SQL Server](../database-engine/install-windows/install-sql-server-database-engine.md): use el Motor de base de datos de SQL Server para crear bases de datos relacionales para el procesamiento de transacciones en línea o el procesamiento de datos analíticos en línea. 
-* [Azure SQL](https://docs.microsoft.com/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview): use Azure SQL para trasladar su base de datos a la nube. 
+* [Azure SQL](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview): use Azure SQL para trasladar su base de datos a la nube. 
 * [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): use SQL Server Compact para compilar aplicaciones independientes y conectadas de manera ocasional para dispositivos móviles, escritorios y clientes web.
-* [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): use LocalDB durante el desarrollo para escribir y probar código Transact-SQL sin tener que administrar una instancia de servidor de SQL Server.
+* [LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md): use LocalDB durante el desarrollo para escribir y probar código Transact-SQL sin tener que administrar una instancia de servidor de SQL Server.
 
 ## <a name="sql-data-tools"></a>SQL Data Tools
 * [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md): use Azure Data Studio en Windows, macOS y Linux para ejecutar cuadernos de SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebook y muchos más.

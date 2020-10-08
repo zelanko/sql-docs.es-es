@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6e85889a3a1118ab60595a9b0c6bd614b6071829
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bcf42d76f855e6fc722caa18f3c0d3c3672f9ec7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772444"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725850"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>Implementación de clústeres de macrodatos de SQL Server con un cuaderno de Azure Data Studio
 
@@ -23,7 +23,7 @@ ms.locfileid: "88772444"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] proporciona una extensión para Azure Data Studio que incluye cuadernos de implementación. Un cuaderno de implementación incluye documentación y código que se puede usar en Azure Data Studio para crear un clúster de macrodatos de SQL Server.
 
-Los [cuadernos](../azure-data-studio/notebooks-guidance.md), que al principio se implementaban como un proyecto de código abierto, se han implementado en [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15). Puede usar Markdown para el texto de las celdas de texto y uno de los kernels disponibles para escribir código en las celdas de código.
+Los [cuadernos](../azure-data-studio/notebooks/notebooks-guidance.md), que al principio se implementaban como un proyecto de código abierto, se han implementado en [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15). Puede usar Markdown para el texto de las celdas de texto y uno de los kernels disponibles para escribir código en las celdas de código.
 
 Puede usar cuadernos para implementar clústeres de macrodatos para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -35,7 +35,7 @@ Los siguientes requisitos previos son indispensables para iniciar también el cu
 
 Además de lo anterior, la implementación de clústeres de macrodatos de SQL Server 2019 también requiere:
 
-* [azdata](deploy-install-azdata.md)
+* [azdata](../azdata/install/deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [CLI de Azure (si se implementa en Azure)](/cli/azure/install-azure-cli?view=azure-cli-latest)
 

@@ -10,12 +10,12 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 372520b7bc4d5c80f67e6206194d8e02e2562e7b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e54c9b01a58ba6eeeeda2fb74ca422d9d90ae45c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778534"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725793"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Administración de clústeres de macrodatos de SQL Server con cuadernos de Azure Data Studio
 
@@ -23,7 +23,7 @@ ms.locfileid: "88778534"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] proporciona una extensión para Azure Data Studio que incluye cuadernos. Un cuaderno proporciona documentación y código que se puede usar en Azure Data Studio para administrar clústeres de macrodatos de SQL Server 2019.
 
-Los [cuadernos](../azure-data-studio/notebooks-guidance.md), que originalmente se implementaban como un proyecto de código abierto, se han incorporado a [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15). Puede usar Markdown para el texto de las celdas de texto y uno de los kernels disponibles para escribir código en las celdas de código.
+Los [cuadernos](../azure-data-studio/notebooks/notebooks-guidance.md), que originalmente se implementaban como un proyecto de código abierto, se han incorporado a [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15). Puede usar Markdown para el texto de las celdas de texto y uno de los kernels disponibles para escribir código en las celdas de código.
 
 Puede usar cuadernos para implementar clústeres de macrodatos para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -33,12 +33,12 @@ Además de los cuadernos, puede ver una colección de cuadernos, que se denomina
 
 Deberá cumplir estos requisitos previos para abrir un cuaderno:
 
-* La versión más reciente de la [compilación Azure Data Studio Insiders](https://aka.ms/azuredatastudio-rc)
+* La versión más reciente de la [compilación Azure Data Studio Insiders](./deploy-big-data-tools.md?viewFallbackFrom=sqlallproducts)
 * La extensión [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] instalada en Azure Data Studio
 
 Además de estos requisitos previos, para implementar clústeres de macrodatos de SQL Server 2019, también necesitará:
 
-* [azdata](deploy-install-azdata.md)
+* [azdata](../azdata/install/deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [CLI de Azure](/cli/azure/install-azure-cli)
 
@@ -97,4 +97,4 @@ Para cambiar el clúster de macrodatos de SQL Server de un cuaderno:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los cuadernos en Azure Data Studio, vea [Procedimiento para usar cuadernos con SQL Server](../azure-data-studio/notebooks-guidance.md).
+Para obtener más información sobre los cuadernos en Azure Data Studio, vea [Procedimiento para usar cuadernos con SQL Server](../azure-data-studio/notebooks/notebooks-guidance.md).

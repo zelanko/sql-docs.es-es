@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: be42913b07f037b002123bedb6d285f41b52c9a3
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f4ccc330491ba5699ed10de48a883792d896447
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393173"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725649"
 ---
 # <a name="handling-null-values"></a>Tratamiento de valores NULL
 
@@ -26,7 +26,7 @@ ms.locfileid: "86393173"
 Se utiliza un valor NULL en una base de datos relacional cuando el valor de una columna es desconocido o falta. Un valor NULL no es una cadena vacía (para tipos de datos de caracteres o de fecha y hora) ni un valor cero (para tipos de datos numéricos). La especificación ANSI SQL-92 indica que un valor NULL debe ser el mismo para todos los tipos de datos, de modo que todos los valores NULL se traten de manera uniforme. El espacio de nombres <xref:System.Data.SqlTypes> proporciona la semántica de NULL implementando la interfaz <xref:System.Data.SqlTypes.INullable>. Cada uno de los tipos de datos de <xref:System.Data.SqlTypes> tiene su propia propiedad `IsNull` y un valor `Null` que se puede asignar a una instancia de ese tipo de datos.  
   
 > [!NOTE]
->  La versión 2.0 de .NET Framework y la versión 1 0 de .NET Core introdujeron la compatibilidad con tipos que aceptan valores NULL, que permiten a los programadores extender un tipo de valor para representar todos los valores del tipo subyacente. Estos tipos CLR que aceptan valores NULL representan una instancia de la estructura <xref:System.Nullable>. Esta funcionalidad es especialmente útil cuando se aplica la conversión boxing y la conversión unboxing de tipos de valor, lo que proporciona compatibilidad mejorada con los tipos de objeto. Los tipos CLR que aceptan valores NULL no están diseñados para el almacenamiento de valores NULL de base de datos porque un valor NULL de ANSI SQL no se comporta de la misma manera que una referencia `null` (o `Nothing` en Visual Basic). Para trabajar con valores NULL de ANSI SQL de la base de datos, utilice valores NULL de tipo <xref:System.Data.SqlTypes> en lugar de <xref:System.Nullable>. Para obtener más información sobre el trabajo con tipos CLR que admiten valores NULL en C#, consulte [Tipos de valor que admiten valores NULL (referencia de C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/) y, para C#, consulte [Uso de tipos de valor que admiten valores NULL](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/).  
+>  La versión 2.0 de .NET Framework y la versión 1 0 de .NET Core introdujeron la compatibilidad con tipos que aceptan valores NULL, que permiten a los programadores extender un tipo de valor para representar todos los valores del tipo subyacente. Estos tipos CLR que aceptan valores NULL representan una instancia de la estructura <xref:System.Nullable>. Esta funcionalidad es especialmente útil cuando se aplica la conversión boxing y la conversión unboxing de tipos de valor, lo que proporciona compatibilidad mejorada con los tipos de objeto. Los tipos CLR que aceptan valores NULL no están diseñados para el almacenamiento de valores NULL de base de datos porque un valor NULL de ANSI SQL no se comporta de la misma manera que una referencia `null` (o `Nothing` en Visual Basic). Para trabajar con valores NULL de ANSI SQL de la base de datos, utilice valores NULL de tipo <xref:System.Data.SqlTypes> en lugar de <xref:System.Nullable>. Para obtener más información sobre el trabajo con tipos CLR que admiten valores NULL en C#, consulte [Tipos de valor que admiten valores NULL (referencia de C#)](/dotnet/csharp/programming-guide/nullable-types/) y, para C#, consulte [Uso de tipos de valor que admiten valores NULL](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/).  
   
 ## <a name="nulls-and-three-valued-logic"></a>Valores NULL y lógica de tres valores  
 Al permitir valores NULL en definiciones de columna, se introduce la lógica de tres valores en la aplicación. Una comparación puede evaluarse en una de estas tres condiciones:  

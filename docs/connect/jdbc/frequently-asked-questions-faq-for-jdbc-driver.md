@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4ca5823ac73868400d9f9a370e053d263143c0f
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: f1fe92ec4216998d36826c518a5dce40c26253c0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042428"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725471"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Preguntas más frecuentes (P+F) sobre el controlador JDBC
 
@@ -146,7 +146,7 @@ En la tabla siguiente se muestran las opciones de autenticación disponibles. La
 Sí. El controlador admite el uso de direcciones IPv6. Use la colección de las propiedades de conexión y la propiedad de la cadena de conexión serverName. Para más información, consulte [Generar URL de conexión](../../connect/jdbc/building-the-connection-url.md).
 
 **¿Qué es el almacenamiento en búfer adaptable?**  
-El almacenamiento en búfer adaptable se introdujo a partir de la versión 1.2 del controlador JDBC Driver de Microsoft SQL Server 2005. Se diseña para recuperar cualquier tipo de datos de valores grandes sin sufrir la sobrecarga de los cursores de servidor. La característica de almacenamiento en búfer adaptable de Microsoft SQL Server JDBC Driver proporciona una propiedad de cadena de conexión, responseBuffering, cuyos valores puede establecerse en "adaptive" o "full". En la versión 1.2, el modo del almacenamiento en búfer es "full" de manera predeterminada y la aplicación debe establecer el modo de almacenamiento en búfer adaptable explícitamente. A partir de Microsoft JDBC Driver 2.0, el comportamiento predeterminado del controlador es "adaptive". Por tanto, la aplicación no tiene que solicitar explícitamente el comportamiento adaptable para obtener dicho comportamiento. Para obtener más información, vea [Usar el almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md) y la entrada de blog [What is adaptive response buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575) (¿Qué es el almacenamiento en búfer adaptable y por qué se debe usar?).
+El almacenamiento en búfer adaptable se introdujo a partir de la versión 1.2 del controlador JDBC Driver de Microsoft SQL Server 2005. Se diseña para recuperar cualquier tipo de datos de valores grandes sin sufrir la sobrecarga de los cursores de servidor. La característica de almacenamiento en búfer adaptable de Microsoft SQL Server JDBC Driver proporciona una propiedad de cadena de conexión, responseBuffering, cuyos valores puede establecerse en "adaptive" o "full". En la versión 1.2, el modo del almacenamiento en búfer es "full" de manera predeterminada y la aplicación debe establecer el modo de almacenamiento en búfer adaptable explícitamente. A partir de Microsoft JDBC Driver 2.0, el comportamiento predeterminado del controlador es "adaptive". Por tanto, la aplicación no tiene que solicitar explícitamente el comportamiento adaptable para obtener dicho comportamiento. Para obtener más información, vea [Usar el almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md) y la entrada de blog [What is adaptive response buffering and why should I use it?](/archive/blogs/jdbcteam/) (¿Qué es el almacenamiento en búfer adaptable y por qué se debe usar?).
 
 **¿El controlador es compatible con la agrupación de conexiones?**  
 El controlador proporciona compatibilidad con la agrupación de conexiones de Java Platform, Enterprise Edition 5 (Java EE 5). El controlador implementa las interfaces necesarias de JDBC 3.0 para que pueda participar en la implementación de la agrupación de conexiones de los proveedores de servidores de aplicaciones de software intermedio. El controlador participa en las conexiones agrupadas en estos entornos. Para más información, consulte [Usar agrupación de conexiones](../../connect/jdbc/using-connection-pooling.md). El controlador no proporciona su propia implementación de agrupación, sino que se basa en servidores de aplicaciones Java de terceros.
@@ -158,7 +158,7 @@ Existen varias opciones de soporte. Puede publicar su pregunta o problema en nue
 El controlador se ha probado con los principales servidores de aplicaciones, incluidos IBM WebSphere y SAP NetWeaver.
 
 **¿Cómo se habilita el seguimiento?**  
-El controlador admite el uso del seguimiento (o registro) para ayudar a solucionar problemas con Microsoft JDBC Driver cuando se esté utilizando en su aplicación. Para habilitar el uso de seguimiento de archivos JAR del lado cliente, Microsoft JDBC Driver utiliza las API de registro de java.util.logging. Para obtener más información, vea [Hacer un seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md). Para el seguimiento de archivos XA del lado servidor, consulte [Data Access Tracing in SQL Server](https://go.microsoft.com/fwlink/?LinkId=248705)(Seguimiento de datos de acceso en SQL Server).
+El controlador admite el uso del seguimiento (o registro) para ayudar a solucionar problemas con Microsoft JDBC Driver cuando se esté utilizando en su aplicación. Para habilitar el uso de seguimiento de archivos JAR del lado cliente, Microsoft JDBC Driver utiliza las API de registro de java.util.logging. Para obtener más información, vea [Hacer un seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md). Para el seguimiento de archivos XA del lado servidor, consulte [Data Access Tracing in SQL Server](/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))(Seguimiento de datos de acceso en SQL Server).
 
 **¿Dónde puedo descargar las versiones anteriores del controlador como Microsoft JDBC Driver para SQL Server 2000 o 2005, o las versiones 1.0, 1.1 o 1.2?**  
 Estas versiones del controlador no están disponibles para descargarse debido a que ya no son compatibles. Estamos trabajando continuamente para mejorar la compatibilidad con la conectividad de Java. Por tanto, se recomienda encarecidamente trabajar con la versión más reciente de Microsoft JDBC Driver.

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5e3c7f2f34f949f16821ad7c1dd6a3c3b0d4681e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f5b3b210cb4e20bdf9585a7efdfd0f10aa19f29
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772822"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725798"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Procedimiento para ver el estado de un clúster de macrodatos 
 
@@ -24,7 +24,7 @@ En este artículo se describe cómo acceder a los puntos de conexión del servic
 
 ## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Usar Azure Data Studio
 
-Después de descargar la versión más reciente de la **compilación para los participantes del programa Insider** de [Azure Data Studio](https://aka.ms/getazuredatastudio), podrá ver los puntos de conexión del servicio y el estado de un clúster de macrodatos con el panel del clúster de macrodatos de SQL Server. Algunas de las siguientes características solo estarán disponibles por primera vez en la compilación de los participantes del programa Insider de Azure Data Studio.
+Después de descargar la versión más reciente de la **compilación para los participantes del programa Insider** de [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), podrá ver los puntos de conexión del servicio y el estado de un clúster de macrodatos con el panel del clúster de macrodatos de SQL Server. Algunas de las siguientes características solo estarán disponibles por primera vez en la compilación de los participantes del programa Insider de Azure Data Studio.
 
 1. Primero, cree una conexión al clúster de macrodatos en Azure Data Studio. Para obtener más información, vea [Conectarse a un clúster de macrodatos de SQL Server con Azure Data Studio](connect-to-big-data-cluster.md).
 
@@ -83,11 +83,11 @@ Puede hacer clic directamente de estos vínculos. Se le pedirá que se autentiqu
 
 ## <a name="use-azdata"></a>Usar azdata
 
-También puede usar los comandos de [azdata](deploy-install-azdata.md) para ver tanto los puntos de conexión como el estado del clúster.
+También puede usar los comandos de [azdata](../azdata/install/deploy-install-azdata.md) para ver tanto los puntos de conexión como el estado del clúster.
 
 ### <a name="service-endpoints"></a>Puntos de conexión del servicio
 
-1. Inicie sesión en el clúster de macrodatos con [azdata login](reference-azdata.md). Establezca el parámetro **--controller-endpoint** en la dirección IP externa del punto de conexión del controlador.
+1. Inicie sesión en el clúster de macrodatos con [azdata login](../azdata/reference/reference-azdata.md). Establezca el parámetro **--controller-endpoint** en la dirección IP externa del punto de conexión del controlador.
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -100,7 +100,7 @@ También puede usar los comandos de [azdata](deploy-install-azdata.md) para ver 
    azdata login --endpoint https://<control_domain_name>:30080 --auth ad
    ```
 
-1. Ejecute [`azdata bdc endpoint list`](reference-azdata-bdc-endpoint.md) para obtener una lista con una descripción de cada punto de conexión y los valores correspondientes de dirección IP y puerto. 
+1. Ejecute [`azdata bdc endpoint list`](../azdata/reference/reference-azdata-bdc-endpoint.md) para obtener una lista con una descripción de cada punto de conexión y los valores correspondientes de dirección IP y puerto. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -126,7 +126,7 @@ También puede usar los comandos de [azdata](deploy-install-azdata.md) para ver 
 
 ### <a name="view-cluster-status"></a>Vista del estado del clúster
 
-Puede ver el estado del clúster con el comando [`azdata bdc status show`](reference-azdata-bdc-status.md).
+Puede ver el estado del clúster con el comando [`azdata bdc status show`](../azdata/reference/reference-azdata-bdc-status.md).
 
 ```bash
 azdata bdc status show
@@ -211,7 +211,7 @@ Este es un resultado de ejemplo de este comando:
 
 ### <a name="view-specific-resource-status"></a>Visualización del estado de un recurso específico
 
-Puede ver el estado de un recurso específico en el clúster con el comando [azdata bdc status show](reference-azdata-bdc-status.md). Cuando se usa este comando, se puede filtrar con el parámetro `--resource`. Estos son algunos ejemplos de entradas del parámetro `--resource`:
+Puede ver el estado de un recurso específico en el clúster con el comando [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md). Cuando se usa este comando, se puede filtrar con el parámetro `--resource`. Estos son algunos ejemplos de entradas del parámetro `--resource`:
 
 - maestro
 - control
@@ -316,7 +316,7 @@ Los valores `nodeMetricsUrl` y `sqlMetricsUrl` vinculan a un panel de Grafana pa
 
 ### <a name="view-controller-status"></a>Ver el estado del controlador
 
-Puede ver el estado del controlador con el comando [`azdata bdc control status show`](reference-azdata-bdc-control-status.md). Proporciona vínculos similares a los paneles de supervisión relacionados con los complementos de controlador del clúster de macrodatos.
+Puede ver el estado del controlador con el comando [`azdata bdc control status show`](../azdata/reference/reference-azdata-bdc-control-status.md). Proporciona vínculos similares a los paneles de supervisión relacionados con los complementos de controlador del clúster de macrodatos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

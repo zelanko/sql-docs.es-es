@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c8dad935a404d682cf5c627a09795bf257efc209
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86553030"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725886"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en el entorno local de OpenShift y Red Hat OpenShift en Azure
 
@@ -88,7 +88,7 @@ En este artículo se describen los pasos de implementación específicos de la p
 
 ## <a name="deploy-big-data-cluster"></a>Implementación de un clúster de macrodatos
 
-1. Instalación de la versión más reciente de [azdata](deploy-install-azdata.md).
+1. Instalación de la versión más reciente de [azdata](../azdata/install/deploy-install-azdata.md).
 
 1. Clone uno de los archivos de configuración integrados para OpenShift, en función del entorno de destino (OpenShift local o ARO) y del escenario de implementación. Vea más abajo la sección *Configuración específica de OpenShift en los archivos de configuración de implementación* para observar la configuración específica de OpenShift en los archivos de configuración integrados. Para obtener más detalles sobre los archivos de configuración disponibles, vea [guía de implementación](deployment-guidance.md).
 

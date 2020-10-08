@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d2cfd61efa1ffed78b96f4ef22e01de20f200dfb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 57e0cec178c407cda530e6699e51743094c57dca
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920966"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725596"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Tipos de datos de SQL Server en ADO.NET
 
@@ -25,7 +25,7 @@ SQL Server y .NET se basan en sistemas de tipos diferentes, lo que puede dar lu
   
 SQL Server 2008 introduce nuevos tipos de datos que están diseñados para satisfacer las necesidades empresariales de trabajar con datos de fecha y hora, estructurados, semiestructurados y no estructurados. Están documentados en los Libros en pantalla de SQL Server 2008.  
   
-Los tipos de datos de SQL Server que están disponibles para su uso en la aplicación dependen de la versión de SQL Server que esté usando. Para obtener más información, vea [Tipo de datos (motor de base de datos) ](https://go.microsoft.com/fwlink/?LinkID=107468) en los Libros en pantalla de SQL Server.
+Los tipos de datos de SQL Server que están disponibles para su uso en la aplicación dependen de la versión de SQL Server que esté usando. Para obtener más información, vea [Tipo de datos (motor de base de datos) ](/previous-versions/sql/sql-server-2008-r2/ms187594(v=sql.105)) en los Libros en pantalla de SQL Server.
   
 ## <a name="in-this-section"></a>En esta sección  
 [SqlTypes y DataSet](sqltypes-dataset.md)  

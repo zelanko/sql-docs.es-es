@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 904f90d5758fe158fac1737c6cab79dc51ef857a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f55cb14a95844558e4a759a4acce71509d62d4ba
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924307"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725626"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modificación de datos de valores grandes (max) en ADO.NET
 
@@ -27,7 +27,7 @@ Los tipos de datos de objeto grande (LOB) son aquellos que superan el tamaño m�
   
 Los tipos de datos `max` se pueden usar para comparaciones, como variables de Transact-SQL y para la concatenación. También se pueden usar en las cláusulas DISTINCT, ORDER BY, GROUP BY de una instrucción SELECT, así como en agregados, combinaciones y subconsultas.
 
-Vea [Usar tipos de datos de valores grandes](https://go.microsoft.com/fwlink/?LinkId=120498) en Libros en pantalla de SQL Server más detalles sobre los tipos de datos de valores grandes.
+Vea [Usar tipos de datos de valores grandes](/previous-versions/sql/sql-server-2008/ms178158(v=sql.100)) en Libros en pantalla de SQL Server más detalles sobre los tipos de datos de valores grandes.
   
 ## <a name="large-value-type-restrictions"></a>Restricciones de tipo de valor grande  
 Las restricciones siguientes se aplican a los tipos de datos `max`, que no existen para tipos de datos más pequeños:  
@@ -63,7 +63,7 @@ La instrucción UPDATE de Transact-SQL tiene una nueva sintaxis WRITE para modif
   
 UPDATE  
   
-{ *\<objeto>* }  
+{ *\<object>* }  
   
 SET  
   

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d0c4f21d6fcf8f90026164dded1007de4e34164
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c901147ec1481f93bb76a9bf013d393b47be97ab
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765844"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725902"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalación de las herramientas de macrodatos de SQL Server 2019
 
@@ -29,10 +29,10 @@ En la tabla siguiente se indican herramientas comunes de clúster de macrodatos 
 | Herramienta | Obligatorio | Descripción | Instalación |
 |---|---|---|---|
 | `python` | Sí | Python es un lenguaje de programación de alto nivel, interpretado y orientado a objetos con semántica dinámica. Muchas partes de los clústeres de macrodatos para SQL Server usan Python. | [Instalación de Python](#python)|
-| `azdata` | Sí | Herramienta de línea de comandos para instalar y administrar un clúster de macrodatos. | [Instalación](deploy-install-azdata.md) |
+| `azdata` | Sí | Herramienta de línea de comandos para instalar y administrar un clúster de macrodatos. | [Instalación](../azdata/install/deploy-install-azdata.md) |
 | `kubectl`<sup>1</sup> | Sí | Herramienta de línea de comandos para supervisar el clúster de Kubernetes subyacente ([Más información](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
-| **Azure Data Studio** | Sí | Herramienta gráfica multiplataforma para consultar SQL Server. | [Instalación](https://aka.ms/getazuredatastudio) |
-| **Extensión de virtualización de datos** | Sí | Extensión de Azure Data Studio que proporciona un asistente para la virtualización de datos. | [Instalación](../azure-data-studio/data-virtualization-extension.md) |
+| **Azure Data Studio** | Sí | Herramienta gráfica multiplataforma para consultar SQL Server. | [Instalación](../azure-data-studio/download-azure-data-studio.md) |
+| **Extensión de virtualización de datos** | Sí | Extensión de Azure Data Studio que proporciona un asistente para la virtualización de datos. | [Instalación](../azure-data-studio/extensions/data-virtualization-extension.md) |
 | **CLI de Azure**<sup>2</sup> | Para AKS | Interfaz de línea de comandos moderna para administrar servicios de Azure. Se usa con implementaciones de clústeres de macrodatos de AKS ([Más información](/cli/azure/?view=azure-cli-latest)). | [Instalación](/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Opcional | Interfaz de línea de comandos moderna para consultar SQL Server ([Más información](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | Para algunos scripts | Herramienta de línea de comandos heredada para consultar SQL Server ([Más información](../tools/sqlcmd-utility.md?view=sql-server-ver15)). Es posible que tenga que instalar Microsoft ODBC Driver 11 para SQL Server antes de instalar el paquete SQLCMD. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
@@ -85,7 +85,7 @@ Las herramientas restantes solo son necesarias en determinados escenarios. La **
 
 Azure Data Studio proporciona funcionalidades y características específicamente para clústeres de macrodatos de SQL Server.
 
-[Obtenga la versión más reciente de Azure Data Studio](https://aka.ms/getazuredatastudio).
+[Obtenga la versión más reciente de Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).
 
 Para más información sobre la última versión, consulte las [notas de la versión](./release-notes-big-data-cluster.md).
 

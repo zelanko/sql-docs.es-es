@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ffaa2eb4d9016436813ac57bdfb47031eadb1e97
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b62bccc5d3633a4f9f69416a49dfc3511c8370e2
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551486"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809244"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -32,16 +32,16 @@ Devuelve la edición (nivel de servicio), el objetivo de servicio (nivel de prec
   
  Para obtener información sobre los precios, consulte [Opciones y rendimiento de SQL Database: SQL Database precios](https://azure.microsoft.com/pricing/details/sql-database/) y [SQL Data Warehouse precios](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
- Para cambiar la configuración del servicio, vea [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md) y [alter Database (Azure SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest).  
+ Para cambiar la configuración del servicio, vea [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md) y [alter Database (Azure SQL Data Warehouse)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest).  
   
- La vista sys. database_service_objectives contiene las columnas siguientes.  
+ La vista sys.database_service_objectives contiene las columnas siguientes.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |database_id|int|IDENTIFICADOR de la base de datos, único dentro de una instancia de Azure SQL Database Server. Se combina con [Sys. databases &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edition|sysname|El nivel de servicio para la base de datos o el almacenamiento de datos: **básico**, **estándar**, **Premium** o **almacenamiento de datos**.|  
 |service_objective|sysname|El plan de tarifa de la base de datos. Si la base de datos está en un grupo elástico, devuelve **ElasticPool**.<br /><br /> En el nivel **básico** , devuelve **Basic**.<br /><br /> Una **sola base de datos en un nivel de servicio estándar** devuelve uno de los siguientes: S0, S1, S2, S3, S4, S6, S7, S9 o S12.<br /><br /> **Una sola base de datos en un nivel Premium** devuelve lo siguiente: P1, P2, P4, P6, P11 o p15.<br /><br /> **SQL Data Warehouse** devuelve DW100 a DW30000c.<br /><br /> Para más información, consulte bases de datos [únicas](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [grupos elásticos](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [almacenamientos de datos](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/) .|  
-|elastic_pool_name|sysname|Nombre del [Grupo elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) al que pertenece la base de datos. Devuelve **null** si la base de datos es una sola base de datos o un almacenamiento de datos.|  
+|elastic_pool_name|sysname|Nombre del [Grupo elástico](/azure/azure-sql/database/elastic-pool-overview) al que pertenece la base de datos. Devuelve **null** si la base de datos es una sola base de datos o un almacenamiento de datos.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso **dbManager** en la base de datos maestra.  En el nivel de base de datos, el usuario debe ser el creador o el propietario.  
@@ -57,5 +57,4 @@ JOIN sys.database_service_objectives slo
 ON d.database_id = slo.database_id;  
   
 ```  
-  
   

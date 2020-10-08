@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5779e5982ee6c9c3729b2995b25771b993a5e442
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9f7fbd6decf193fa695066a8133ec37e74d7e959
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727607"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810779"
 ---
 # <a name="clr-integration---overview"></a>Integración CLR: información general
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,8 +61,7 @@ ms.locfileid: "85727607"
   
 ## <a name="see-also"></a>Consulte también  
  [Instalación del .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [Arquitectura de la integración CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+ [Arquitectura de la integración CLR](./clr-integration-architecture-clr-hosted-environment.md)   
  [Acceso a datos desde objetos de base de datos CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [Introducción a la integración CLR](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
-  
   

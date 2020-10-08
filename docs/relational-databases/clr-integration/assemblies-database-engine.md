@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 399c1dca1657c95edd70dcec0ba26619f6001180
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c3a507f250dcecf62560284916d543ca2f6d53c0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727676"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810241"
 ---
 # <a name="assemblies-database-engine"></a>Ensamblados (motor de base de datos)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "85727676"
   
 -   Funciones CLR. Para obtener más información, vea [Create CLR Functions](../../relational-databases/user-defined-functions/create-clr-functions.md).  
   
--   Procedimientos almacenados CLR. Para obtener más información, vea [procedimientos almacenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
+-   Procedimientos almacenados CLR. Para obtener más información, vea [procedimientos almacenados CLR](/dotnet/framework/data/adonet/sql/clr-stored-procedures).  
   
 -   Desencadenadores CLR. Para obtener más información, vea [crear desencadenadores CLR](../../relational-databases/triggers/create-clr-triggers.md).  
   
@@ -59,5 +59,4 @@ ms.locfileid: "85727676"
   
 ## <a name="see-also"></a>Consulte también  
  [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

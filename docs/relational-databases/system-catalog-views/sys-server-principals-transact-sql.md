@@ -1,6 +1,6 @@
 ---
 description: sys.server_principals (Transact-SQL)
-title: Sys. server_principals (Transact-SQL) | Microsoft Docs
+title: sys.server_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3d8a54afa21c46a7881b95d100c4c7746c6e3f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f7d0f7afb3d432bdf0c266ee3dfb66813102709
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377301"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809341"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -38,7 +38,8 @@ ms.locfileid: "88377301"
 |**name**|**sysname**|Nombre de la entidad de seguridad. Es exclusivo en el servidor.|  
 |**principal_id**|**int**|Número de Id. de la entidad de seguridad. Es exclusivo en el servidor.|  
 |**sid**|**varbinary(85)**|SID (identificador de seguridad) de la entidad de seguridad. Si se trata de una entidad de seguridad de Windows, coincide con el SID de Windows.|  
-|**type**|**Char (1)**|Tipo de entidad de seguridad:<br /><br /> S = Inicio de sesión de SQL<br /><br /> U = Inicio de sesión de Windows<br /><br /> G = Grupo de Windows<br /><br /> R = Rol del servidor<br /><br /> C = Inicio de sesión asignado a un certificado<br /><br /> K = Inicio de sesión asignado a una clave asimétrica|  
+|**type**|**char(1)**|Tipo de entidad de seguridad:<br /><br /> S = Inicio de sesión de SQL<br /><br /> U = Inicio de sesión de Windows<br /><br /> G = Grupo de Windows<br /><br /> R = Rol del servidor<br /><br /> C = Inicio de sesión asignado a un certificado<br /><br /> E = Inicio de sesión externo desde Azure Active Directory<br /><br /> X = grupo externo de Azure Active Directory grupo o aplicaciones
+<br /><br /> K = Inicio de sesión asignado a una clave asimétrica|  
 |**type_desc**|**nvarchar(60)**|Descripción de los tipos de entidad de seguridad:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = Inicio de sesión deshabilitado|  
 |**create_date**|**datetime**|Hora en que se creó la entidad de seguridad.|  
@@ -58,7 +59,7 @@ ms.locfileid: "88377301"
  La consulta siguiente enumera los permisos que se otorgan o deniegan específicamente a las entidades de seguridad de servidor.  
   
 > [!IMPORTANT]  
->  Los permisos de los roles fijos de servidor (que no son públicos) no aparecen en sys. server_permissions. Por tanto, es posible que las entidades de seguridad de servidor tengan permisos adicionales que no aparezcan aquí.  
+>  Los permisos de los roles fijos de servidor (que no son públicos) no aparecen en sys.server_permissions. Por tanto, es posible que las entidades de seguridad de servidor tengan permisos adicionales que no aparezcan aquí.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

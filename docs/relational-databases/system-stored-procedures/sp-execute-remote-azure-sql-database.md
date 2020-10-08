@@ -16,19 +16,19 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1fbd97400ced46a70026b832ad4721d9f33cf690
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd5b35e6c999f69b7adda16fd4590942cd2da63b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543474"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810251"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Ejecuta una [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción en un solo Azure SQL Database remoto o conjunto de bases de datos que sirven de particiones en un esquema de particionamiento horizontal.  
   
- El procedimiento almacenado forma parte de la característica de consulta elástica.  Consulte [Azure SQL Database información general sobre consultas de bases de datos elásticas](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) y [consultas de bases de datos elásticas para particionamiento (particionamiento horizontal)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-horizontal-partitioning/).  
+ El procedimiento almacenado forma parte de la característica de consulta elástica.  Consulte [Azure SQL Database información general sobre consultas de bases de datos elásticas](/azure/azure-sql/database/elastic-query-overview) y [consultas de bases de datos elásticas para particionamiento (particionamiento horizontal)](/azure/azure-sql/database/elastic-query-horizontal-partitioning).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -106,4 +106,3 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
-    

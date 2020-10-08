@@ -1,6 +1,6 @@
 ---
-description: Sys. dm_os_spinlock_stats (Transact-SQL)
-title: Sys. dm_os_spinlock_stats (Transact-SQL) | Microsoft Docs
+description: sys.dm_os_spinlock_stats (Transact-SQL)
+title: sys.dm_os_spinlock_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql-non-specified
@@ -23,14 +23,14 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 053dc2ccc68a7e0479ad1e37a181a25b0cefcc53
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 31f89519a70612ba22c2fda79218d9d92153109f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042756"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810111"
 ---
-# <a name="sysdm_os_spinlock_stats-transact-sql"></a>Sys. dm_os_spinlock_stats (Transact-SQL)
+# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
@@ -53,9 +53,9 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
   
 ## <a name="remarks"></a>Observaciones  
  
- Sys. dm_os_spinlock_stats se puede usar para identificar el origen de la contención de Spinlock. En algunas situaciones, es posible que pueda resolver o reducir la contención de Spinlock. No obstante, puede haber situaciones que requerirán ponerse en contacto con los servicios de soporte al cliente de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ sys.dm_os_spinlock_stats se puede usar para identificar el origen de la contención de Spinlock. En algunas situaciones, es posible que pueda resolver o reducir la contención de Spinlock. No obstante, puede haber situaciones que requerirán ponerse en contacto con los servicios de soporte al cliente de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Puede restablecer el contenido de sys. dm_os_spinlock_stats mediante el uso de la `DBCC SQLPERF` siguiente manera:  
+ Puede restablecer el contenido de sys.dm_os_spinlock_stats mediante el uso `DBCC SQLPERF` de la siguiente manera:  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -413,6 +413,7 @@ GO
 
  [¿Cuándo se Spinlock un controlador importante del uso de CPU en SQL Server?](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
+ [Diagnóstico y resolución de la contención de Spinlock en SQL Server](../diagnose-resolve-spinlock-contention.md)
   
   
 

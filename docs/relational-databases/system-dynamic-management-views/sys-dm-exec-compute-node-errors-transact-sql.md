@@ -1,6 +1,6 @@
 ---
-description: Sys. dm_exec_compute_node_errors (Transact-SQL)
-title: Sys. dm_exec_compute_node_errors (Transact-SQL) | Microsoft Docs
+description: sys.dm_exec_compute_node_errors (Transact-SQL)
+title: sys.dm_exec_compute_node_errors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -23,14 +23,14 @@ ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7e65469192e14c7a2cb9d3facf3be3730a08428
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 68f260aa547550d08c853b69cc6fb6e3e46d9a72
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546628"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833562"
 ---
-# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>Sys. dm_exec_compute_node_errors (Transact-SQL)
+# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
@@ -42,7 +42,7 @@ ms.locfileid: "89546628"
 |source|`nvarchar(255)`|Descripción del proceso o subproceso de origen||  
 |type|`nvarchar(255)`|Tipo de error.||  
 |create_time|`datetime`|La hora de la ocurrencia del error||  
-|compute_node_id|`int`|Identificador del nodo de proceso específico|Vea compute_node_id de [Sys. dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|compute_node_id|`int`|Identificador del nodo de proceso específico|Vea compute_node_id de [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|Identificador de la consulta de polybase, si existe.||  
 |spid|`int`|Identificador de la sesión de SQL Server||  
 |thread_id|`int`|Identificador numérico del subproceso en el que se produjo el error.||  
@@ -51,8 +51,7 @@ ms.locfileid: "89546628"
 
   
 ## <a name="see-also"></a>Consulte también  
- [Solución de problemas de polybase con vistas de administración dinámica](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Solución de problemas de polybase con vistas de administración dinámica](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vistas de administración dinámica relacionadas con bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

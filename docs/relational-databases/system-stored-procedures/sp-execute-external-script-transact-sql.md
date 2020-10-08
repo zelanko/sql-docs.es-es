@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447210"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810201"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -165,14 +165,14 @@ Puede controlar los recursos utilizados por los scripts externos mediante la con
 
 ### <a name="monitor-script-execution"></a>Supervisión de la ejecución del script
 
-Supervise la ejecución del script mediante [Sys. dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) y [Sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
+Supervise la ejecución de scripts mediante [Sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) y [Sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ### <a name="parameters-for-partition-modeling"></a>Parámetros para el modelado de particiones
 
 Puede establecer dos parámetros adicionales que permitan el modelado de datos con particiones, donde las particiones se basan en una o varias columnas que se proporcionan para segmentar lógicamente un conjunto de datos en particiones lógicas creadas y usadas únicamente durante la ejecución del script. Las columnas que contienen valores de repetición de edad, sexo, región geográfica, fecha u hora, son algunos ejemplos que se prestan a conjuntos de datos con particiones.
 
-Los dos parámetros son **input_data_1_partition_by_columns** y **input_data_1_order_by_columns**, donde el segundo parámetro se utiliza para ordenar el conjunto de resultados. Los parámetros se pasan como entradas a `sp_execute_external_script` con el script externo que se ejecuta una vez para cada partición. Para obtener más información y ejemplos, vea [Tutorial: crear modelos basados en particiones](https://docs.microsoft.com/sql/machine-learning/tutorials/r-tutorial-create-models-per-partition).
+Los dos parámetros son **input_data_1_partition_by_columns** y **input_data_1_order_by_columns**, donde el segundo parámetro se utiliza para ordenar el conjunto de resultados. Los parámetros se pasan como entradas a `sp_execute_external_script` con el script externo que se ejecuta una vez para cada partición. Para obtener más información y ejemplos, vea [Tutorial: crear modelos basados en particiones](../../machine-learning/tutorials/r-tutorial-create-models-per-partition.md).
 
 Puede ejecutar un script en paralelo especificando `@parallel=1` . Si la consulta de entrada puede ejecutarse en paralelo, debe establecer `@parallel=1` como parte de los argumentos en `sp_execute_external_script` . De forma predeterminada, el optimizador de consultas opera en `@parallel=1` las tablas que tienen más de 256 filas, pero si desea controlar esto explícitamente, este script incluye el parámetro como una demostración.
 
@@ -334,4 +334,4 @@ Para puntuar, también puede usar la función nativa [PREDICT](../../t-sql/queri
 + [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
 + [SQL Server, objeto External Scripts](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 + [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
-+ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 
++ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)

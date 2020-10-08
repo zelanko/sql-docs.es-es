@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d087a160324ec84cbb94a73cba3ab45f36dfc29e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 62a4904a608ccfd5ed02cbf21c3342619ea32e8f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536682"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810171"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89536682"
   
 ||  
 |-|  
-|**Se aplica a**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Se aplica a**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de la [versión actual](../../sql-server/what-s-new-in-sql-server-2016.md)).|  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  Es un parámetro necesario que designa qué operación realizará el cursor. *optype* requiere uno de los siguientes valores de entrada **int** .  
   
-|Valor|Nombre|Descripción|  
+|Value|Nombre|Descripción|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Se usa para actualizar una o varias filas en el búfer de captura.  Se vuelve a tener acceso a las filas especificadas en *ROWNUM* y se actualizan.|  
-|0x0002|DELETE|Se usa para eliminar una o varias filas en el búfer de captura. Se vuelve a tener acceso a las filas especificadas en *ROWNUM* y se eliminan.|  
+|0x0002|Delete|Se usa para eliminar una o varias filas en el búfer de captura. Se vuelve a tener acceso a las filas especificadas en *ROWNUM* y se eliminan.|  
 |0X0004|INSERT|Inserta datos sin generar una instrucción **Insert** de SQL.|  
 |0X0008|REFRESH|Se usa para rellenar el búfer a partir de las tablas subyacentes y se puede usar para actualizar la fila si una actualización o eliminación no puede realizarse debido a un control de simultaneidad optimista o después de una operación UPDATE.|  
 |0X10|LOCK|Hace que se adquiera un SQL Server U-Lock en la página que contiene la fila especificada. Este bloqueo es compatible con los bloqueos S. No es compatible con los bloqueos X ni U. Se puede usar para implementar el bloqueo a corto plazo.|  
@@ -178,5 +178,4 @@ sp_cursor  cursor, optype, rownum, table
  [sp_cursoropen &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

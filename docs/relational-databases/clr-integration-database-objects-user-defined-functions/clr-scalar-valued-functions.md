@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e69f48867cc5dd66d72d30f6fa72b2d44d5fc54c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7416b00b55ea680e25d80151957b3da0ccfc6351
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719892"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810391"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funciones escalares de CLR
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -153,8 +153,7 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Asignar datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
- [Información general sobre los atributos personalizados de la integración CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
+ [Información general sobre los atributos personalizados de la integración CLR](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)   
  [Funciones definidas por el usuario](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  [Acceso a datos de objetos de base de datos de CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
-  
   

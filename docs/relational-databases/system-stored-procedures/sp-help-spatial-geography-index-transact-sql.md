@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9cdf2a8a9e5b608c68f544e3f31357dbca07228a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b2b519fd8e52af2a67c37941a4868622aa254599
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538794"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810351"
 ---
 # <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Permisos  
  El usuario debe tener asignado un rol PUBLIC para tener acceso al procedimiento. Requiere el permiso READ ACCESS en el servidor y el objeto.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente `sp_help_spatial_geography_index` se utiliza para investigar el índice espacial **geography** **SIndx_SpatialTable_geography_col2** definido en la tabla **geography_col** para ** \@ **el ejemplo de consulta determinado en. En este ejemplo se devuelven solo las propiedades básicas del índice especificado.  
@@ -67,9 +67,8 @@ exec sp_help_spatial_geography_index 'geography_col', 'SIndx_SpatialTable_geogra
 ## <a name="requirements"></a>Requisitos  
   
 ## <a name="see-also"></a>Consulte también  
- [Procedimientos almacenados de índice espacial](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Procedimientos almacenados de índice espacial](./spatial-index-stored-procedures-arguments-and-properties.md)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
-  
   

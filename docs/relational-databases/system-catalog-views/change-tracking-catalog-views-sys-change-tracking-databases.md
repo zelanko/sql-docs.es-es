@@ -1,6 +1,6 @@
 ---
-description: 'Change Tracking vistas de catálogo: sys. change_tracking_databases'
-title: Sys. change_tracking_databases (Transact-SQL) | Microsoft Docs
+description: Change Tracking vistas de catálogo-sys.change_tracking_databases
+title: sys.change_tracking_databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -22,14 +22,14 @@ ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 653588e0fca8593305e70634029a54832264e8b7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 05421e215b41fcf0f1be93b189873c3f0d2aa51c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545166"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810371"
 ---
-# <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>Change Tracking vistas de catálogo: sys. change_tracking_databases
+# <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>Change Tracking vistas de catálogo-sys.change_tracking_databases
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve una fila por cada base de datos que tenga habilitada el seguimiento de cambios.  
@@ -46,7 +46,6 @@ ms.locfileid: "89545166"
  Se realizan las mismas comprobaciones del permiso para sys.change_tracking_databases que para sys.databases. Si el autor de la llamada de sys.change_tracking_databases no es el propietario de la base de datos, los permisos mínimos necesarios para ver la fila correspondiente son ALTER ANY DATABASE o VIEW ANY DATABASE de nivel de servidor, o el permiso CREATE DATABASE en la base de datos actual o maestra.  
   
 ## <a name="see-also"></a>Consulte también  
- [Change Tracking vistas de catálogo &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+ [Change Tracking vistas de catálogo &#40;Transact-SQL&#41;](./catalog-views-transact-sql.md)   
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
-  
   

@@ -21,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bcead6ebe4064dc43e97d0c0aa9d74920f69bbb8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a3befa2740bd11fcd88233cef3000deec0d7006e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539587"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809332"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89539587"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Id. local del servidor vinculado.|  
 |**name**|**sysname**|Cuando **server_id** = 0, el valor devuelto es el nombre del servidor.<br /><br /> Cuando **server_id** > 0, el valor devuelto es el nombre local del servidor vinculado.|  
-|**Manuales**|**sysname**|Nombre de producto del servidor vinculado. Un valor de "SQL Server" indica otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**product**|**sysname**|Nombre de producto del servidor vinculado. Un valor de "SQL Server" indica otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**presta**|**sysname**|Nombre del proveedor OLE DB para la conexión con el servidor vinculado.<br /><br />A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , el valor "SQLNCLI" se asigna al [controlador de Microsoft OLE DB para SQL Server (MSOLEDBSQL) de](../../connect/oledb/oledb-driver-for-sql-server.md) forma predeterminada. En versiones anteriores, el valor "SQLNCLI" se asigna al [proveedor de OLE DB de SQL Server Native Client (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
 |**data_source**|**nvarchar(4000)**|Propiedad de conexión del origen de datos OLE DB.|  
 |**ubicación**|**nvarchar(4000)**|Propiedad de conexión de la ubicación OLE DB. Es NULL si no hay ninguna.|  
@@ -60,7 +60,7 @@ ms.locfileid: "89539587"
 |**is_nonsql_subscriber**|**bit**|El servidor es un suscriptor de replicación que no es de SQL Server.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|Si es 1, al llamar a un procedimiento remoto almacenado se inicia una transacción distribuida y se da de alta en MS DTC. Para obtener más información, vea [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).|  
 |**modify_date**|**datetime**|Fecha en que cambió por última vez la información del servidor.|  
-|**is_rda_server**|**bit**|**Se aplica a:** A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />El servidor es habilitado para el archivo de datos remotos (habilitado para Stretch). Para obtener más información, consulte [enable Stretch Database on The Server](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer).|
+|**is_rda_server**|**bit**|**Se aplica a:** A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />El servidor es habilitado para el archivo de datos remotos (habilitado para Stretch). Para obtener más información, consulte [enable Stretch Database on The Server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).|
   
 ## <a name="permissions"></a>Permisos  
  El valor de **provider_string** siempre es null, a menos que el autor de la llamada tenga el permiso ALTER any Linked Server.  
@@ -80,4 +80,3 @@ ms.locfileid: "89539587"
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
- 

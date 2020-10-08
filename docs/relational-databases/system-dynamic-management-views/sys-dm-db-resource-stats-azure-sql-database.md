@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_resource_stats (base de datos SQL de Azure)
-title: Sys. dm_db_resource_stats (Azure SQL Database) | Microsoft Docs
+title: sys.dm_db_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2020
 ms.service: sql-database
@@ -20,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 083a9d14803d0a8c4e34c43e338f58a0b44be5ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21cef237634891d4795e46f96f63eba701f55852
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475035"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833698"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (base de datos SQL de Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88475035"
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Hora UTC que indica el fin del intervalo de informes actual.|  
 |avg_cpu_percent|**decimal (5, 2)**|Uso de proceso promedio como porcentaje del límite del nivel de servicio.|  
-|avg_data_io_percent|**decimal (5, 2)**|Uso promedio de e/s de datos en porcentaje del límite del nivel de servicio. Para las bases de datos de hiperescala, consulte [e/s de datos en estadísticas de uso de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
+|avg_data_io_percent|**decimal (5, 2)**|Uso promedio de e/s de datos en porcentaje del límite del nivel de servicio. Para las bases de datos de hiperescala, consulte [e/s de datos en estadísticas de uso de recursos](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**decimal (5, 2)**|Promedio de escrituras del registro de transacciones (en MBps) como porcentaje del límite del nivel de servicio.|  
 |avg_memory_usage_percent|**decimal (5, 2)**|Uso de memoria promedio como porcentaje del límite del nivel de servicio.<br /><br /> Esto incluye la memoria usada para las páginas del grupo de búferes y el almacenamiento de objetos OLTP en memoria.|  
 |xtp_storage_percent|**decimal (5, 2)**|Uso del almacenamiento para OLTP en memoria en porcentaje del límite del nivel de servicio (al final del intervalo de informes). Esto incluye la memoria usada para el almacenamiento de los siguientes objetos OLTP en memoria: tablas, índices y variables de tabla con optimización para memoria. También incluye la memoria usada para procesar las operaciones de ALTER TABLE.<br /><br /> Devuelve 0 si no se utiliza OLTP en memoria en la base de datos.|  
@@ -51,17 +51,17 @@ ms.locfileid: "88475035"
 |||
   
 > [!TIP]  
-> Para más información sobre estos límites y los niveles de servicio, consulte los temas [niveles de servicio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [ajuste manual del rendimiento de las consultas en Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)y [SQL Database límites de recursos y regulación de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
+> Para más información sobre estos límites y los niveles de servicio, consulte los temas [niveles de servicio](/azure/azure-sql/database/purchasing-models), [ajuste manual del rendimiento de las consultas en Azure SQL Database](/azure/azure-sql/database/performance-guidance)y [SQL Database límites de recursos y regulación de recursos](/azure/sql-database/sql-database-resource-limits-database-server).
   
 ## <a name="permissions"></a>Permisos
  Esta vista necesita el permiso VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Observaciones
- Los datos devueltos por **Sys. dm_db_resource_stats** se expresan como un porcentaje de los límites máximos permitidos para el nivel de servicio/nivel de rendimiento que se está ejecutando.
+ Los datos devueltos por **Sys.dm_db_resource_stats** se expresan como un porcentaje de los límites máximos permitidos para el nivel de servicio/nivel de rendimiento que se está ejecutando.
  
  Si la base de datos ha conmutado por error a otro servidor en los últimos 60 minutos, la vista solo devolverá datos durante el tiempo transcurrido desde esa conmutación por error.  
   
- Para obtener una vista menos granular de estos datos con un período de retención más largo, utilice la vista de catálogo **Sys. resource_stats** de la base de datos **maestra** . Esta vista captura datos cada 5 minutos y mantiene datos históricos durante 14 días.  Para obtener más información, vea [Sys. resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Para obtener una vista menos granular de estos datos con un período de retención más largo, utilice **Sys.resource_stats** vista de catálogo en la base de datos **maestra** . Esta vista captura datos cada 5 minutos y mantiene datos históricos durante 14 días.  Para obtener más información, vea [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
  Cuando una base de datos es miembro de un grupo elástico, las estadísticas de recursos que se presentan como valores porcentuales se expresan como el porcentaje del límite máximo de las bases de datos establecidas en la configuración del grupo elástico.  
   
@@ -102,4 +102,4 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. resource_stats &#40;Azure SQL Database](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [niveles de servicio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)&#41;
+ [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [niveles de servicio](/azure/azure-sql/database/purchasing-models)

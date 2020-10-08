@@ -1,6 +1,6 @@
 ---
 description: sys.dm_operation_status
-title: Sys. dm_operation_status | Microsoft Docs
+title: sys.dm_operation_status | Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -20,12 +20,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 201d7b1c0a15299817edfc663a0176f98ad72156
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 777dd89339ef2eefccdb5ee180178100a16b5216
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532058"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834157"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
@@ -46,7 +46,7 @@ ms.locfileid: "89532058"
 |percent_complete|**int**|Porcentaje de la operación que se ha completado. Los valores no son continuos y los valores válidos se enumeran a continuación. NOT NULL.<br/><br/>0 = operación no iniciada<br/>50 = operación en curso<br/>100 = operación completada|  
 |error_code|**int**|Código que indica el error que se produjo durante una operación con errores. Si el valor es 0, indica que la operación se completó correctamente.|  
 |error_desc|**nvarchar(2048)**|Descripción del error que se produjo durante una operación con errores.|  
-|error_severity|**int**|Nivel de gravedad del error que se produjo durante una operación con errores. Para obtener más información acerca de los errores de gravedad, consulte [motor de base de datos errores de gravedad](https://go.microsoft.com/fwlink/?LinkId=251052).|  
+|error_severity|**int**|Nivel de gravedad del error que se produjo durante una operación con errores. Para obtener más información acerca de los errores de gravedad, consulte [motor de base de datos errores de gravedad](../errors-events/database-engine-error-severities.md).|  
 |error_state|**int**|Reservado para un uso futuro. La compatibilidad con versiones posteriores no está garantizada.|  
 |start_time|**datetime**|Marca de tiempo del inicio de la operación.|  
 |last_modify_time|**datetime**|Marca de tiempo en la que se modificó el registro por última vez para una operación de ejecución prolongada. En el caso de operaciones completadas correctamente, este campo muestra la marca de tiempo en la que se completó la operación.|  
@@ -75,7 +75,7 @@ ms.locfileid: "89532058"
   
 -   Eliminar base de datos  
 
-La información de esta vista se conserva durante aproximadamente 1 hora. Use el [registro de actividad de Azure](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log) para ver detalles de las operaciones en los últimos 90 días. Para una retención superior a 90 días, considere la posibilidad de enviar entradas del [registro de actividad](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) a un área de trabajo log Analytics.
+La información de esta vista se conserva durante aproximadamente 1 hora. Use el [registro de actividad de Azure](/azure/azure-monitor/platform/activity-log) para ver detalles de las operaciones en los últimos 90 días. Para una retención superior a 90 días, considere la posibilidad de enviar entradas del [registro de actividad](/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) a un área de trabajo log Analytics.
 
 ## <a name="example"></a>Ejemplo  
  Mostrar las operaciones de replicación geográfica más recientes asociadas a la base de datos ' mydb '.  
@@ -88,8 +88,7 @@ SELECT * FROM sys.dm_operation_status
   
 ## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica de replicación geográfica &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [Sys. dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [Sys. geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
-  
+ [sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   

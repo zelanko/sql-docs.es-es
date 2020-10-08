@@ -1,6 +1,6 @@
 ---
 description: sys.dm_clr_appdomains (Transact-SQL)
-title: Sys. dm_clr_appdomains (Transact-SQL) | Microsoft Docs
+title: sys.dm_clr_appdomains (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ac0a451dd88d79ab1847d4c5414fadeb01724e3d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7f1357535d22306f09f8378e8e71aef6801975ae
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545351"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834100"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "89545351"
   
  Existen varios tipos de objetos de base de datos administrados de integración CLR. Para obtener información general sobre estos objetos, vea [crear objetos de base de datos con la integración de Common Language Runtime (CLR)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Cada vez que se ejecutan estos objetos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un **AppDomain** en el que puede cargar y ejecutar el código necesario. El nivel de aislamiento de un **AppDomain** es un **AppDomain** por cada base de datos por propietario. Es decir, todos los objetos CLR propiedad de un usuario se ejecutan siempre en el mismo **AppDomain** por base de datos (si un usuario registra objetos de base de datos de CLR en diferentes bases de datos, los objetos de base de datos de CLR se ejecutarán en dominios de aplicación diferentes). Un **AppDomain** no se destruye una vez finalizada la ejecución del código. sino que se almacena en la memoria caché de cara a futuras ejecuciones. De este modo se aumenta el rendimiento.  
   
- Para obtener más información, consulte [dominios de aplicación](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ Para obtener más información, consulte [dominios de aplicación](../../sql-server/what-s-new-in-sql-server-2016.md).  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**appdomain_address**|**varbinary(8**|Dirección del **AppDomain**. Todos los objetos de base de datos administrados que pertenecen a un usuario se cargan siempre en el mismo **AppDomain**. Puede utilizar esta columna para buscar todos los ensamblados cargados actualmente en este **AppDomain** en **Sys. dm_clr_loaded_assemblies**.|  
+|**appdomain_address**|**varbinary(8**|Dirección del **AppDomain**. Todos los objetos de base de datos administrados que pertenecen a un usuario se cargan siempre en el mismo **AppDomain**. Puede utilizar esta columna para buscar todos los ensamblados cargados actualmente en este **AppDomain** en **Sys.dm_clr_loaded_assemblies**.|  
 |**appdomain_id**|**int**|IDENTIFICADOR del **AppDomain**. Cada **AppDomain** tiene un identificador único.|  
 |**appdomain_name**|**VARCHAR (386)**|Nombre del **AppDomain** asignado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**creation_time**|**datetime**|Hora a la que se creó el **AppDomain** . Dado que los **AppDomains** se almacenan en caché y se reutilizan para mejorar el rendimiento, **creation_time** no es necesariamente el momento en que se ejecutó el código.|  
@@ -53,7 +53,7 @@ ms.locfileid: "89545351"
 |**survived_memory_kb**|**bigint**|Número de kilobytes que sobrevivieron a la última colección de bloqueo completa a que debe hacer referencia el dominio de aplicación actual. Esto es equivalente a **System. AppDomain. MonitoringSurvivedMemorySize**.|  
   
 ## <a name="remarks"></a>Observaciones  
- Existe una relación de uno a varios entre **dm_clr_appdomains. appdomain_address** y **dm_clr_loaded_assemblies. appdomain_address**.  
+ Existe una relación de uno a uno entre **dm_clr_appdomains. appdomain_address** y **dm_clr_loaded_assemblies. appdomain_address**.  
   
  En las tablas siguientes se enumeran los posibles valores de **Estado** , sus descripciones y cuándo se producen en el ciclo de vida de **AppDomain** . Puede usar esta información para seguir el vida de un **AppDomain** y para ver la descarga de instancias de **AppDomain** sospechosas o repetitivas, sin tener que analizar el registro de eventos de Windows.  
   
@@ -110,7 +110,6 @@ where appdomain_id = 15);
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
+ [sys.dm_clr_loaded_assemblies &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [Vistas de administración dinámica relacionadas con Common Language Runtime &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
-  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_index_physical_stats (Transact-SQL)
-title: Sys. dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9633305e5d60a9ccbdfcf57f966353792c24a12a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd4c4946b5e62b9e7f06ca2beea8e75732f17e43
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89518941"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833860"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "89518941"
   Devuelve información de tamaño y fragmentación de los datos y los índices de la tabla o vista especificada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En el caso de un índice, se devuelve una fila por cada nivel de árbol b en cada partición. En el caso de un montón, se devuelve una fila para la unidad de asignación IN_ROW_DATA en cada partición. En el caso de datos de objetos grandes (LOB), se devuelve una fila para la unidad de asignación LOB_DATA en cada partición. Si en la tabla hay datos de desbordamiento de fila, se devuelve una fila para la unidad de asignación ROW_OVERFLOW_DATA en cada partición. No devuelve información sobre los índices de almacén de columnas optimizadas en memoria xVelocity.  
   
 > [!IMPORTANT]
-> Si consulta **Sys. dm_db_index_physical_stats** en una instancia de servidor que hospeda una [réplica secundaria legible](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)Always On, es posible que se produzca un problema de bloqueo de reconstitución. Esto se debe a que esta vista de administración dinámica adquiere un bloqueo IS en la tabla de usuario especificada o la vista que puede bloquear las solicitudes de un subproceso de REDO durante un bloqueo X en esa tabla o vista de usuario.  
+> Si consulta **Sys.dm_db_index_physical_stats** en una instancia de servidor que hospeda una [réplica secundaria legible](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)Always On, es posible que se produzca un problema de bloqueo de puesta al día. Esto se debe a que esta vista de administración dinámica adquiere un bloqueo IS en la tabla de usuario especificada o la vista que puede bloquear las solicitudes de un subproceso de REDO durante un bloqueo X en esa tabla o vista de usuario.  
   
- **Sys. dm_db_index_physical_stats** no devuelve información acerca de los índices optimizados para memoria. Para obtener información sobre el uso de índices optimizados para memoria, vea [Sys. dm_db_xtp_index_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+ **Sys.dm_db_index_physical_stats** no devuelve información acerca de los índices optimizados para memoria. Para obtener información sobre el uso de índices optimizados para memoria, vea [sys.dm_db_xtp_index_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -111,7 +111,7 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Promedio de tamaño del registro en bytes.<br /><br /> En el caso de un índice, el promedio de tamaño del registro se aplica al nivel actual del árbol b en la unidad de asignación IN_ROW_DATA.<br /><br /> En el caso de un montón, el promedio de tamaño del registro en la unidad de asignación IN_ROW_DATA.<br /><br /> En el caso de unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA, el promedio de tamaño del registro en toda la unidad de asignación.<br /><br /> NULL cuando *mode* = Limited.|  
 |forwarded_record_count|**bigint**|Número de registros de un montón que han reenviado punteros a otra ubicación de datos. Este estado se produce durante una actualización, cuando no existe suficiente espacio para almacenar la nueva fila en la ubicación original.<br /><br /> NULL para todas las unidades de asignación salvo IN_ROW_DATA para un montón.<br /><br /> NULL para montones cuando *mode* = Limited.|  
 |compressed_page_count|**bigint**|Número de páginas comprimidas.<br /><br /> En el caso de los montones, las nuevas páginas asignadas no usan la compresión de página. Un montón usa la compresión de página bajo dos condiciones especiales: cuando los datos se importan de forma masiva o cuando vuelve a generarse un montón. Las operaciones DML que producen las asignaciones de página no usarán la compresión de página. Vuelva a generar un montón cuando el valor compressed_page_count sea mayor que el umbral que desea.<br /><br /> En las tablas que tienen un índice clúster, el valor compressed_page_count indica la eficacia de la compresión de página.|  
-|hobt_id|bigint|Solo para los índices de almacén de columnas, es el identificador de un conjunto de filas que realiza un seguimiento de los datos internos de almacén de columnas para una partición. Los conjuntos de filas se almacenan como montones de datos o árboles binarios. Tienen el mismo identificador de índice que el índice de almacén de columnas principal. Para obtener más información, vea [Sys. internal_partitions &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL si <br /><br /> **Se aplica a**: SQL Server 2016 y versiones posteriores, Azure SQL Database, Azure SQL instancia administrada|  
+|hobt_id|bigint|Solo para los índices de almacén de columnas, es el identificador de un conjunto de filas que realiza un seguimiento de los datos internos de almacén de columnas para una partición. Los conjuntos de filas se almacenan como montones de datos o árboles binarios. Tienen el mismo identificador de índice que el índice de almacén de columnas principal. Para obtener más información, vea [sys.internal_partitions &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL si <br /><br /> **Se aplica a**: SQL Server 2016 y versiones posteriores, Azure SQL Database, Azure SQL instancia administrada|  
 |column_store_delete_buffer_state|TINYINT| 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = PURGAR<br /><br /> 3 = VACIADO<br /><br /> 4 = RETIRADA<br /><br /> 5 = LISTO<br /><br />**Se aplica a**: SQL Server 2016 y versiones posteriores, Azure SQL Database, Azure SQL instancia administrada|  
 |column_store_delete_buff_state_desc|| NO válido: el índice primario no es un índice de almacén de columnas.<br /><br /> Los analizadores y los eliminadores abiertos utilizan este.<br /><br /> PURGAr: los eliminadores se están purgando pero los analizadores aún lo usan.<br /><br /> VACIAdo: el búfer está cerrado y las filas del búfer se escriben en el mapa de bits de eliminación.<br /><br /> RETIRADA: las filas del búfer de eliminación cerrado se han escrito en el mapa de bits de eliminación, pero el búfer no se ha truncado porque los escáneres aún lo están usando. No es necesario que los nuevos escáneres usen el búfer de retirada porque el búfer abierto es suficiente.<br /><br /> LISTO: este búfer de eliminación está listo para su uso. <br /><br /> **Se aplica a**: SQL Server 2016 y versiones posteriores, Azure SQL Database, Azure SQL instancia administrada|  
 |version_record_count|**bigint**|Es el recuento de los registros de versión de fila que se mantienen en este índice.  Estas versiones de fila se mantienen mediante la característica de [recuperación de base de datos acelerada](../../relational-databases/accelerated-database-recovery-concepts.md) . <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
@@ -125,7 +125,7 @@ sys.dm_db_index_physical_stats (
  La función de administración dinámica sys.dm_db_index_physical_stats sustituye a la instrucción DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Modos de recorrido  
- El modo en que se ejecuta la función determina el nivel de recorrido realizado para obtener los datos estadísticos que utiliza la función. el *modo* se especifica como Limited, sampled o Detailed. La función recorre las cadenas de páginas buscando las unidades de asignación que producen las particiones especificadas de la tabla o el índice. Sys. dm_db_index_physical_stats solo requiere un bloqueo de tabla con intención compartida (IS), independientemente del modo en que se ejecute.  
+ El modo en que se ejecuta la función determina el nivel de recorrido realizado para obtener los datos estadísticos que utiliza la función. el *modo* se especifica como Limited, sampled o Detailed. La función recorre las cadenas de páginas buscando las unidades de asignación que producen las particiones especificadas de la tabla o el índice. sys.dm_db_index_physical_stats solo requiere un bloqueo de tabla con intención compartida (IS), independientemente del modo en que se ejecute.  
   
  El modo LIMITED es el modo más rápido y examina el menor número de páginas. Para un índice, solamente se examinan las páginas del nivel primario del árbol b (es decir, las páginas sobre el nivel hoja). Para un montón, se examinan las páginas PFS e IAM asociadas y las páginas de datos de un montón se exploran en modo LIMITED.  
   
@@ -138,7 +138,7 @@ sys.dm_db_index_physical_stats (
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Usar funciones del sistema para especificar valores de parámetros  
  Puede usar las [!INCLUDE[tsql](../../includes/tsql-md.md)] funciones [DB_ID](../../t-sql/functions/db-id-transact-sql.md) y [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) para especificar un valor para los parámetros *database_id* y *object_id* . Sin embargo, el envío de valores no válidos a estas funciones puede provocar resultados no deseados. Por ejemplo, si no se encuentra un nombre de objeto o base de datos, porque no existe o se ha escrito incorrectamente, ambas funciones devolverán NULL. La función sys.dm_db_index_physical_stats interpreta NULL como un valor comodín que especifica todas las bases de datos o todos los objetos.  
   
- Además, la función OBJECT_ID se procesa antes de llamar a la función sys. dm_db_index_physical_stats y, por tanto, se evalúa en el contexto de la base de datos actual, no en la base de datos especificada en *database_id*. Este comportamiento puede hacer que la función OBJECT_ID devuelva un valor NULL; o bien, si el nombre de objeto existe en el contexto de la base de datos actual y en el de la base de datos especificada, podría devolverse un mensaje de error. En los siguientes ejemplos se ilustran estos resultados no deseados.  
+ Además, la función de OBJECT_ID se procesa antes de llamar a la función de sys.dm_db_index_physical_stats y, por tanto, se evalúa en el contexto de la base de datos actual, no en la base de datos especificada en *database_id*. Este comportamiento puede hacer que la función OBJECT_ID devuelva un valor NULL; o bien, si el nombre de objeto existe en el contexto de la base de datos actual y en el de la base de datos especificada, podría devolverse un mensaje de error. En los siguientes ejemplos se ilustran estos resultados no deseados.  
   
 ```  
 USE master;  
@@ -175,7 +175,7 @@ GO
 ```  
   
 ### <a name="best-practice"></a>Procedimiento recomendado  
- Asegúrese de que se devuelva un identificador válido cuando utilice DB_ID u OBJECT_ID. Por ejemplo, al usar OBJECT_ID, especifique un nombre de tres partes como `OBJECT_ID(N'AdventureWorks2012.Person.Address')` , o bien Pruebe el valor devuelto por las funciones antes de usarlos en la función sys. dm_db_index_physical_stats. En los ejemplos A y B siguientes se ilustra una forma segura de especificar identificadores de objetos y bases de datos.  
+ Asegúrese de que se devuelva un identificador válido cuando utilice DB_ID u OBJECT_ID. Por ejemplo, al usar OBJECT_ID, especifique un nombre de tres partes como `OBJECT_ID(N'AdventureWorks2012.Person.Address')` , o bien Pruebe el valor devuelto por las funciones antes de usarlos en la función sys.dm_db_index_physical_stats. En los ejemplos A y B siguientes se ilustra una forma segura de especificar identificadores de objetos y bases de datos.  
   
 ## <a name="detecting-fragmentation"></a>Detectar la fragmentación  
  La fragmentación es consecuencia de los procesos de modificación de los datos (instrucciones INSERT, UPDATE y DELETE) efectuados en la tabla y en los índices definidos en la tabla. Como dichas modificaciones no suelen estar distribuidas de forma equilibrada entre las filas de la tabla y los índices, el llenado de cada página puede variar con el paso del tiempo. Para las consultas que examinan parcial o totalmente los índices de una tabla, este tipo de fragmentación puede producir lecturas de páginas adicionales. Esto impide el examen paralelo de los datos.  
@@ -434,10 +434,8 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con índices &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [Sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [Sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Vistas del sistema &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)  
   
-  
-

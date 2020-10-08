@@ -1,6 +1,6 @@
 ---
-description: Sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
-title: Sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
+description: sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
+title: sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -21,14 +21,14 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 62aec7de63493a94ea05f91883e506d0fc0f6f7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cbc5d23a7c7843a2186cd951fd5bb16079489d3
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481797"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834321"
 ---
-# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>Sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
+# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
@@ -36,7 +36,7 @@ Devuelve una instantánea en un intervalo de 20 segundos para los últimos 32 mi
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**pool_id**|int|Identificador del grupo de recursos. No admite valores NULL.
+|**{1}pool_id{2}**|int|Identificador del grupo de recursos. No admite valores NULL.
 |**name**|sysname|Nombre del grupo de recursos. No admite valores NULL.|
 |**snapshot_time**|datetime2|Fecha y hora de la instantánea de estadísticas del grupo de recursos tomada|
 |**duration_ms**|int|Duración entre la instantánea actual y la anterior|
@@ -119,7 +119,7 @@ En el ejemplo siguiente se devuelven los datos de velocidad de registro máximo 
 select snapshot_time, name, max_log_rate_kb, delta_log_bytes_used from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
 ```
 
-En el ejemplo siguiente se devuelve información similar a sys. elastic_pool_resource_stats sin tener que conectarse a la maestra lógica
+En el ejemplo siguiente se devuelve información similar a sys.elastic_pool_resource_stats sin tener que conectarse a la maestra lógica.
 
 ```sql
 select snapshot_time, name, cap_vcores_used_percent,
@@ -135,6 +135,6 @@ select snapshot_time, name, cap_vcores_used_percent,
 
 ## <a name="see-also"></a>Consulte también
 
-- [Gobierno de velocidad de registro de traducción](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Límites de recursos de DTU de grupos elásticos](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Límites de recursos de núcleo virtual de grupos elásticos](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Gobierno de velocidad de registro de traducción](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [Límites de recursos de DTU de grupos elásticos](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Límites de recursos de núcleo virtual de grupos elásticos](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

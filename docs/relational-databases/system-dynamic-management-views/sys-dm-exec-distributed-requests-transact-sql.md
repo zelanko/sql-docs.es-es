@@ -1,6 +1,6 @@
 ---
-description: Sys. dm_exec_distributed_requests (Transact-SQL)
-title: Sys. dm_exec_distributed_requests (Transact-SQL) | Microsoft Docs
+description: sys.dm_exec_distributed_requests (Transact-SQL)
+title: sys.dm_exec_distributed_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,19 +23,19 @@ ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2794dfd106c00531c1c1cff96571dbb59c0b67a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4ceec8dbac1d66a516ad80e2e029fce2d5f405fc
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548601"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834373"
 ---
-# <a name="sysdm_exec_distributed_requests-transact-sql"></a>Sys. dm_exec_distributed_requests (Transact-SQL)
+# <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Contiene información sobre todas las solicitudes que se encuentran actualmente o que están activas recientemente en las consultas de polybase. Muestra una fila por solicitud o consulta.  
   
- En función de la sesión y el identificador de solicitud, un usuario puede recuperar las solicitudes distribuidas reales generadas que se ejecutarán a través de sys. dm_exec_distributed_requests. Por ejemplo, una consulta que implique tablas SQL externas y normales se descomponerá en varias instrucciones o solicitudes ejecutadas en los distintos nodos de proceso. Para realizar un seguimiento de los pasos distribuidos en todos los nodos de proceso, se introduce un identificador de ejecución "global" que se puede usar para realizar el seguimiento de todas las operaciones en los nodos de proceso asociados a una solicitud y un operador determinados, respectivamente.  
+ En función de la sesión y el identificador de solicitud, un usuario puede recuperar las solicitudes distribuidas reales generadas que se ejecutarán a través de sys.dm_exec_distributed_requests. Por ejemplo, una consulta que implique tablas SQL externas y normales se descomponerá en varias instrucciones o solicitudes ejecutadas en los distintos nodos de proceso. Para realizar un seguimiento de los pasos distribuidos en todos los nodos de proceso, se introduce un identificador de ejecución "global" que se puede usar para realizar el seguimiento de todas las operaciones en los nodos de proceso asociados a una solicitud y un operador determinados, respectivamente.  
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
@@ -48,8 +48,7 @@ ms.locfileid: "89548601"
 |total_elapsed_time|**int**|Tiempo transcurrido en la ejecución desde que se inició la solicitud, en milisegundos.|Entre 0 y la diferencia entre start_time y end_time. Si total_elapsed_time supera el valor máximo de un entero, total_elapsed_time seguirá siendo el valor máximo. Esta condición generará la advertencia "se ha superado el valor máximo". El valor máximo en milisegundos es equivalente a 24,8 días.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Solución de problemas de polybase con vistas de administración dinámica](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Solución de problemas de polybase con vistas de administración dinámica](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vistas de administración dinámica relacionadas con bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

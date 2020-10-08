@@ -1,6 +1,6 @@
 ---
-description: Sys. dm_exec_external_work (Transact-SQL)
-title: Sys. dm_exec_external_work (Transact-SQL) | Microsoft Docs
+description: sys.dm_exec_external_work (Transact-SQL)
+title: sys.dm_exec_external_work (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -23,26 +23,26 @@ ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 660b41d250f8bfccfc8d0e123f0e1a6aafb5fcde
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5559a1f1ce7ebc4a231a24022c9642d598d81f73
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548518"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834421"
 ---
-# <a name="sysdm_exec_external_work-transact-sql"></a>Sys. dm_exec_external_work (Transact-SQL)
+# <a name="sysdm_exec_external_work-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Devuelve información sobre la carga de trabajo por trabajador en cada nodo de proceso.  
   
- Consulte sys. dm_exec_external_work para identificar el trabajo que se va a establecer para comunicarse con el origen de datos externo (por ejemplo, Hadoop o SQL Server externo).  
+ Consulte sys.dm_exec_external_work para identificar el trabajo que se ha actualizado para comunicarse con el origen de datos externo (por ejemplo, Hadoop o SQL Server externos).  
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|Identificador único para la consulta de polybase asociada.|Vea *request_ID* en [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|step_index|`int`|Solicitud que está realizando este trabajador.|Vea *step_index* en  [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|dms_step_index|`int`|Paso del plan DMS en el que se está ejecutando este trabajador.|Vea [Sys. dm_exec_dms_workers &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
-|compute_node_id|`int`|Nodo en el que se está ejecutando el trabajo.|Vea [Sys. dm_exec_compute_nodes &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|execution_id|`nvarchar(32)`|Identificador único para la consulta de polybase asociada.|Vea *request_ID* en [Sys.dm_exec_requests &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|step_index|`int`|Solicitud que está realizando este trabajador.|Vea *step_index* en  [Sys.dm_exec_requests &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|dms_step_index|`int`|Paso del plan DMS en el que se está ejecutando este trabajador.|Vea [sys.dm_exec_dms_workers &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
+|compute_node_id|`int`|Nodo en el que se está ejecutando el trabajo.|Vea [sys.dm_exec_compute_nodes &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |type|`nvarchar(60)`|Tipo de trabajo externo.|' División de archivos '|  
 |work_id|`int`|IDENTIFICADOR de la división real.|Mayor o igual que 0.|  
 |input_name|`nvarchar(4000)`|Nombre de la entrada que se va a leer|Nombre de archivo cuando se usa Hadoop.|  
@@ -56,8 +56,7 @@ ms.locfileid: "89548518"
 |compute_pool_id|`int`|Identificador único para el grupo.|
 
 ## <a name="see-also"></a>Consulte también  
- [Solución de problemas de polybase con vistas de administración dinámica](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Solución de problemas de polybase con vistas de administración dinámica](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vistas de administración dinámica relacionadas con bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

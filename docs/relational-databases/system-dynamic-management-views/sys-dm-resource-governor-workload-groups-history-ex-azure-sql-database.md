@@ -1,6 +1,6 @@
 ---
 description: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
-title: Sys. dm_resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs
+title: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: eee98e604fad74b58db9acd5e1f5b20a0189f216
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d761d1ca80037e26f8757ec681929dd5356b182f
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489773"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834402"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -33,7 +33,7 @@ Devuelve una instantánea en un intervalo de 20 segundos durante los últimos 32
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**pool_id**| int |Id. del grupo de recursos de servidor. No admite valores NULL.|
+|**{1}pool_id{2}**| int |Id. del grupo de recursos de servidor. No admite valores NULL.|
 |**group_id**| int |Id. del grupo de cargas de trabajo No admite valores NULL.|
 |**name**| nvarchar(256) |Nombre del grupo de cargas de trabajo No admite valores NULL.|
 |**snapshot_time**| datetime |Fecha y hora de la instantánea de estadísticas del grupo de recursos tomada.|
@@ -101,8 +101,8 @@ WHERE name LIKE 'User%'
 ORDER BY snapshot_time DESC;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Gobierno de velocidad de registro de traducción](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Límites de recursos de DTU de grupos elásticos](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Límites de recursos de núcleo virtual de grupos elásticos](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Gobierno de velocidad de registro de traducción](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [Límites de recursos de DTU de grupos elásticos](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Límites de recursos de núcleo virtual de grupos elásticos](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

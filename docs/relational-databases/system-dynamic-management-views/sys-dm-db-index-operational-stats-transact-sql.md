@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_index_operational_stats (Transact-SQL)
-title: Sys. dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1badd8c51d3d12f8243324cf8afae58d6ef4ae04
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3e66b54b849f8e8ce35737a8c84871b95f28232f
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544859"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834378"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "89544859"
  Los índices con optimización para memoria no aparecen en esta DMV.    
     
 > [!NOTE]    
->  **Sys. dm_db_index_operational_stats** no devuelve información acerca de los índices optimizados para memoria. Para obtener información sobre el uso de índices optimizados para memoria, vea [Sys. dm_db_xtp_index_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).    
+>  **Sys.dm_db_index_operational_stats** no devuelve información acerca de los índices optimizados para memoria. Para obtener información sobre el uso de índices optimizados para memoria, vea [sys.dm_db_xtp_index_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).    
         
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
@@ -147,7 +147,7 @@ sys.dm_db_index_operational_stats (
 |**object_id**|**int**|Identificador de la tabla o vista.|    
 |**id_de_índice**|**int**|Identificador del índice o montón.<br /><br /> 0 = Montón| 
 |**partition_number**|**int**|Número de partición en base 1 en el índice o montón.| 
-|**hobt_id**|**bigint**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] desde hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> IDENTIFICADOR del conjunto de filas de montículo o árbol B de datos que realiza el seguimiento de los datos internos de un índice de almacén de columnas.<br /><br /> NULL: este no es un conjunto de filas de almacén de columnas interno.<br /><br /> Para obtener más información, vea [Sys. internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**hobt_id**|**bigint**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] desde hasta la [versión actual](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> IDENTIFICADOR del conjunto de filas de montículo o árbol B de datos que realiza el seguimiento de los datos internos de un índice de almacén de columnas.<br /><br /> NULL: este no es un conjunto de filas de almacén de columnas interno.<br /><br /> Para obtener más información, vea [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Recuento acumulado de inserciones en el nivel hoja.|    
 |**leaf_delete_count**|**bigint**|Recuento acumulado de eliminaciones en el nivel hoja. leaf_delete_count solo se incrementa para los registros eliminados que no están marcados como fantasma en primer lugar. En el caso de los registros eliminados que se borran primero, **leaf_ghost_count** se incrementa en su lugar.|    
 |**leaf_update_count**|**bigint**|Recuento acumulado de actualizaciones en el nivel hoja.|    
@@ -236,12 +236,12 @@ sys.dm_db_index_operational_stats (
  El valor en las columnas **lob_fetch_in_pages** y **lob_fetch_in_bytes** puede ser mayor que cero para índices no clúster que contengan una o varias columnas de LOB como columnas incluidas. Para más información, consulte [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md). De forma similar, el valor en las columnas **row_overflow_fetch_in_pages** y **row_overflow_fetch_in_bytes** puede ser mayor que cero para índices no clúster si el índice contiene columnas que se pueden insertar de manera no consecutiva.    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>Restablecer los contadores en la memoria caché de metadatos    
- Los datos devueltos por **sys.dm_db_index_operational_stats** existen solamente mientras está disponible el objeto de memoria caché de metadatos que representa el montón o el índice. Estos datos nunca son permanentes ni transaccionalmente coherentes. Esto significa que no se pueden utilizar estos contadores para determinar si se ha utilizado un índice o cuándo se usó por última vez. Para obtener información sobre esto, vea [Sys. dm_db_index_usage_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    
+ Los datos devueltos por **sys.dm_db_index_operational_stats** existen solamente mientras está disponible el objeto de memoria caché de metadatos que representa el montón o el índice. Estos datos nunca son permanentes ni transaccionalmente coherentes. Esto significa que no se pueden utilizar estos contadores para determinar si se ha utilizado un índice o cuándo se usó por última vez. Para obtener más información, vea [sys.dm_db_index_usage_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    
     
  Los valores de cada columna se establecerán en cero siempre que los metadatos del montón o índice se incorporen a la memoria caché de metadatos y las estadísticas se acumulen hasta que el objeto de la memoria caché se quite de la memoria caché de metadatos. Por tanto, es probable que un índice o montón activo tenga siempre sus metadatos en la memoria caché, y los recuentos acumulados puedan reflejar la actividad desde la última vez que se inició la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los metadatos de un índice o montón menos activo entrarán y saldrán de la memoria caché según se utilicen. Como resultado, sus valores pueden estar disponibles o no. La eliminación de un índice hará que las estadísticas correspondientes se quiten de la memoria y que la función ya no informe de las mismas. Otras operaciones DDL en el índice pueden hacer que el valor de las estadísticas se restablezca en cero.    
     
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Usar funciones del sistema para especificar valores de parámetros    
- Puede usar las [!INCLUDE[tsql](../../includes/tsql-md.md)] funciones [DB_ID](../../t-sql/functions/db-id-transact-sql.md) y [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) para especificar un valor para los parámetros *database_id* y *object_id* . Sin embargo, el envío de valores no válidos a estas funciones puede provocar resultados no deseados. Asegúrese de que se devuelva un identificador válido cuando utilice DB_ID u OBJECT_ID. Para obtener más información, vea la sección Comentarios en [Sys. dm_db_index_physical_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
+ Puede usar las [!INCLUDE[tsql](../../includes/tsql-md.md)] funciones [DB_ID](../../t-sql/functions/db-id-transact-sql.md) y [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) para especificar un valor para los parámetros *database_id* y *object_id* . Sin embargo, el envío de valores no válidos a estas funciones puede provocar resultados no deseados. Asegúrese de que se devuelva un identificador válido cuando utilice DB_ID u OBJECT_ID. Para obtener más información, vea la sección Comentarios en [sys.dm_db_index_physical_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
     
 ## <a name="permissions"></a>Permisos    
  Necesita los siguientes permisos:    
@@ -301,11 +301,9 @@ GO
  [Funciones y vistas de administración dinámica relacionadas con índices &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
- [Sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
+ [sys.dm_db_index_usage_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
- [Sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
+ [sys.dm_db_partition_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
-  
-

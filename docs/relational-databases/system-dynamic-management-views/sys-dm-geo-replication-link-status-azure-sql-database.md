@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 433bcea8a7d0a1f719aac9f76a782f666113189f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0d105ddedeafa8a82c068fce90f3e29bc4622f57
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548486"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834256"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 
@@ -44,14 +44,14 @@ ms.locfileid: "89548486"
 |rol|**tinyint**|Rol de replicación geográfica, uno de los siguientes:<br /><br /> 0 = principal. El database_id hace referencia a la base de datos principal de la Asociación de replicación geográfica.<br /><br /> 1 = secundaria.  El database_id hace referencia a la base de datos principal de la Asociación de replicación geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|El tipo secundario, uno de los siguientes:<br /><br /> 0 = no se permiten conexiones directas a la base de datos secundaria y la base de datos no está disponible para acceso de lectura.<br /><br /> 2 = se permiten todas las conexiones a la base de datos en el REPL secundario; ication para el acceso de solo lectura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> Todas|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> All|  
 |last_commit|**datetimeoffset**|Hora de la última transacción confirmada en la base de datos. Si se recupera en la base de datos principal, indica la hora de la última confirmación en la base de datos principal. Si se recupera en la base de datos secundaria, indica la hora de la última confirmación en la base de datos secundaria. Si se recupera en la base de datos secundaria cuando la réplica principal del vínculo de replicación está inactiva, indica hasta qué punto se ha detectado el elemento secundario.|
   
 > [!NOTE]  
->  Si la relación de replicación se termina quitando la base de datos secundaria (sección 4,2), la fila de esa base de datos en la vista **Sys. dm_geo_replication_link_status** desaparece.  
+>  Si la relación de replicación se termina quitando la base de datos secundaria (sección 4,2), la fila de esa base de datos en la vista **Sys.dm_geo_replication_link_status** desaparece.  
   
 ## <a name="permissions"></a>Permisos  
- Cualquier cuenta con permiso view_database_state puede consultar **Sys. dm_geo_replication_link_status**.  
+ Cualquier cuenta con permiso view_database_state puede consultar **Sys.dm_geo_replication_link_status**.  
   
 ## <a name="example"></a>Ejemplo  
  Mostrar los intervalos de replicación y la hora de la última replicación de las bases de datos secundarias.  
@@ -66,8 +66,7 @@ FROM sys.dm_geo_replication_link_status;
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [Sys. geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [Sys. dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
+ [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
  [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
-  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_object_stats (Transact-SQL)
-title: Sys. dm_db_xtp_object_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_object_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 07300b59-3cab-4d3e-8138-5ea8f584f88f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7ba94c5561f43aac191c06f032cc18d34ea5bac
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f6d6c0d191022099e027b29a5be1b34b592da31f
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542226"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834123"
 ---
 # <a name="sysdm_db_xtp_object_stats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Indica el número de filas afectadas por operaciones en cada uno de los objetos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] desde el último reinicio de la base de datos. Las estadísticas se actualizan cuando se ejecuta la operación, independientemente de si la transacción se confirma o se revirtió.  
   
- sys.dm_db_xtp_object_stats puede ayudarle a identificar las tablas optimizadas para memoria que más cambian. Puede decidir quitar de la tabla los índices que no se usan o que usan con poca frecuencia, ya que cada índice afecta al rendimiento. Si hay índices hash, debe volver a evaluar periódicamente el número de depósitos. Para obtener más información, vea [Determining the Correct Bucket Count for Hash Indexes](https://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5).  
+ sys.dm_db_xtp_object_stats puede ayudarle a identificar las tablas optimizadas para memoria que más cambian. Puede decidir quitar de la tabla los índices que no se usan o que usan con poca frecuencia, ya que cada índice afecta al rendimiento. Si hay índices hash, debe volver a evaluar periódicamente el número de depósitos. Para obtener más información, vea [Determining the Correct Bucket Count for Hash Indexes](/previous-versions/sql/).  
   
  sys.dm_db_xtp_object_stats puede ayudarle a identificar qué tablas optimizadas para memoria incurren en conflictos de escritura contra escritura, lo que puede afectar al rendimiento de la aplicación. Por ejemplo, si tiene lógica de reintento de transacciones, puede que sea necesario ejecutar más de una vez la misma instrucción. También puede usar esta información para identificar las tablas (y por tanto la lógica de negocios) que necesitan un control de errores de escritura contra escritura.  
   
@@ -56,5 +56,4 @@ ms.locfileid: "89542226"
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas de administración dinámica de tablas optimizadas para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
-  
   

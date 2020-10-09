@@ -22,11 +22,12 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab2bb533605c09a0a0d20e970eef58c1fbdd7ffd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 95cf24fb9cfa226708c4d628110c295f35e1fe4d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002913"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869344"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Usar parámetros de instrucciones: enlazar parámetros
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,9 +60,8 @@ ms.locfileid: "86002913"
   
  Los parámetros con nombre solo se admiten cuando se usa la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción **Execute** o la secuencia de escape ODBC Call para ejecutar un procedimiento almacenado.  
   
- Si se establece **SQL_DESC_NAME** para un parámetro de procedimiento almacenado, todos los parámetros de procedimiento almacenado de la consulta también deben establecer **SQL_DESC_NAME**.  Si se usan literales en llamadas a procedimientos almacenados, donde los parámetros tienen **SQL_DESC_NAME** establecen, los literales deben usar el formato *' nombre* = *valor*', donde *nombre* es el nombre del parámetro del procedimiento almacenado (por ejemplo, @p1 ). Para obtener más información, vea [enlazar parámetros por nombre (parámetros con nombre)](https://go.microsoft.com/fwlink/?LinkId=167215).  
+ Si se establece **SQL_DESC_NAME** para un parámetro de procedimiento almacenado, todos los parámetros de procedimiento almacenado de la consulta también deben establecer **SQL_DESC_NAME**.  Si se usan literales en llamadas a procedimientos almacenados, donde los parámetros tienen **SQL_DESC_NAME** establecen, los literales deben usar el formato *' nombre* = *valor*', donde *nombre* es el nombre del parámetro del procedimiento almacenado (por ejemplo, @p1 ). Para obtener más información, vea [enlazar parámetros por nombre (parámetros con nombre)](../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Usar parámetros de instrucciones](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
-  
   

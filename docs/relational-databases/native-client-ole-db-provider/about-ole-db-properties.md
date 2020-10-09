@@ -17,12 +17,12 @@ ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7c6e88a9f8a5083e18744e954a6063cda076750
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b443a9389e45cdaa8abd8bb64f6845fbb47c7106
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490751"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864941"
 ---
 # <a name="about-sql-server-native-client-ole-db-properties"></a>Acerca de SQL Server Native Client propiedades de OLE DB
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,6 +51,5 @@ ms.locfileid: "88490751"
   
 ## <a name="see-also"></a>Consulte también  
  [Creación de una aplicación de proveedor de OLE DB de SQL Server Native Client](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [Propiedades (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
-  
+ [Propiedades (OLE DB)](/previous-versions/windows/desktop/ms722734(v=vs.85))  
   

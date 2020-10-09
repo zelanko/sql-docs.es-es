@@ -15,11 +15,12 @@ ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15f45d404a21345cec76b975054c1ecdbcb63c0f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 03dd345e2b7fc3be27b9bd1c61f3d252d7afb229
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012428"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867817"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -392,15 +393,14 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
   
 ## <a name="see-also"></a>Consulte también
 
- [SQLSetConnectAttr, función](https://go.microsoft.com/fwlink/?LinkId=59368)   
+ [SQLSetConnectAttr, función](../../odbc/reference/syntax/sqlsetconnectattr-function.md)   
  [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [Funciones de copia masiva](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   
- [ESTABLECER ANSI_NULLS &#40;&#41;de Transact-SQL](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [ESTABLECER ANSI_PADDING &#40;&#41;de Transact-SQL](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [ESTABLECER ANSI_WARNINGS &#40;&#41;de Transact-SQL](../../t-sql/statements/set-ansi-warnings-transact-sql.md)   
- [ESTABLECER CONCAT_NULL_YIELDS_NULL &#40;&#41;de Transact-SQL](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)   
- [ESTABLECER QUOTED_IDENTIFIER &#40;&#41;de Transact-SQL](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [SQLPrepare (función)](https://go.microsoft.com/fwlink/?LinkId=59360)   
+ [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
+ [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)   
+ [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SQLPrepare (función)](../../odbc/reference/syntax/sqlprepare-function.md)   
  [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)  
-  
   

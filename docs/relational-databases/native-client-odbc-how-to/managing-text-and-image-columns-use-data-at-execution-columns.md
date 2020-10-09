@@ -14,12 +14,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02b21f406a010d55724f73562361d1bc92486d8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae7ada6dd2eea49f407731cb8ef985c9f12405b2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420549"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868924"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Administrar columnas de texto e imagen: utilizar columnas de datos en ejecución
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "88420549"
   
     -   Para el cuarto parámetro, incluya un identificador de columna definido por el programa.  
   
-2.  La llamada a [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) devuelve SQL_NEED_DATA, que indica las columnas de datos en ejecución listas para procesarse.  
+2.  La llamada a [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md) devuelve SQL_NEED_DATA, que indica las columnas de datos en ejecución listas para procesarse.  
   
 3.  Para cada columna de datos en ejecución:  
   
-    -   Llame a [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) para obtener el puntero a la matriz de columnas. Devolverá SQL_NEED_DATA si hay otra columna de datos en ejecución.  
+    -   Llame a [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) para obtener el puntero a la matriz de columnas. Devolverá SQL_NEED_DATA si hay otra columna de datos en ejecución.  
   
     -   Llame a [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) una o más veces para enviar los datos de columna, hasta que se envíe la longitud.  
   
-4.  Llame a [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) para indicar que se han enviado todos los datos de la columna de datos en ejecución final. No devolverá SQL_NEED_DATA.  
+4.  Llame a [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) para indicar que se han enviado todos los datos de la columna de datos en ejecución final. No devolverá SQL_NEED_DATA.  
 
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo leer datos de caracteres variables SQL_LONG mediante SQLGetData. Este ejemplo no es compatible con IA64.  
@@ -188,6 +188,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Temas de procedimientos de administración de columnas de texto e imagen &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
-  
+ [Temas de procedimientos de administración de columnas de texto e imagen &#40;ODBC&#41;](./odbc-how-to-topics.md)  
   

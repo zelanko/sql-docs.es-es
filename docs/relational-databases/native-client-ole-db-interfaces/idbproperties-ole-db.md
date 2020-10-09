@@ -12,12 +12,12 @@ ms.assetid: 2e5a4fd8-5164-495a-9986-3477aef8d8a5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed1d47f6de4e0e3dddaac0b100727be95ca056ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8b1e72d69d047f2fee77db933f9acb447724035
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486710"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866744"
 ---
 # <a name="idbproperties-native-client-ole-db-provider"></a>IDBProperties (proveedor de OLE DB de Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,6 +25,5 @@ ms.locfileid: "88486710"
   La especificación estándar OLE DB permite a los proveedores especificar VT_EMPTY para **DBPROPINFO::vValues**. Sin embargo, OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client siempre devuelve VT_EMPTY cuando se llama a **IDBProperties::GetPropertyInfo** con **DBPROPSET_ROWSETALL** para recuperar propiedades de conjuntos de filas.  
   
 ## <a name="see-also"></a>Consulte también  
- [Interfaces &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
-  
+ [Interfaces &#40;OLE DB&#41;](./sql-server-native-client-ole-db-interfaces.md)  
   

@@ -1,6 +1,6 @@
 ---
 description: Enviar datos como un parámetro con valores de tabla usando datos en ejecución (ODBC)
-title: Parámetro con valores de tabla, datos en ejecución (ODBC)
+title: Parámetro Table-Valued, datos en ejecución (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72fc2ad3db6c6eddde0124fc2144fa6faca6f058
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48823426052fec8f16989facc77a676ed8d3e2c6
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499146"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868212"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Enviar datos como un parámetro con valores de tabla usando datos en ejecución (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Es similar al procedimiento [All in memory](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) , pero utiliza datos en ejecución para el parámetro con valores de tabla.  
   
- Para ver otro ejemplo en el que se muestran los parámetros con valores de tabla, vea [usar parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Para ver otro ejemplo en el que se muestran los parámetros con valores de tabla, vea [Use Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
  En este ejemplo, cuando se llama a SQLExecute o SQLExecDirect, el controlador devuelve SQL_NEED_DATA. A continuación, la aplicación llama a SQLParamData repetidamente hasta que el controlador devuelve un valor distinto de SQL_NEED_DATA. El controlador devuelve *ParameterValuePtr* para informar a la aplicación de los parámetros para los que solicita datos. La aplicación llama a SQLPutData para proporcionar los datos de parámetro antes de la siguiente llamada a SQLParamData. En el caso de un parámetro con valores de tabla, la llamada a SQLPutData indica el número de filas que ha preparado para el controlador (en este ejemplo, siempre 1). Cuando todas las filas del valor de tabla se han pasado al controlador, se llama a SQLPutData para indicar que hay 0 filas disponibles.  
   
@@ -582,6 +582,5 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplos de programación de parámetros con valores de tabla ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
-  
+ [Ejemplos de programación de parámetros con valores de tabla ODBC](./table-valued-parameters-odbc.md)  
   

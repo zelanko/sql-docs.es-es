@@ -15,12 +15,12 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd4bb999be51961d11dccf5cae107706dae9f6d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 42323e6fbf35ddb6093ac4e764e81e7f0274cbb2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423987"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867477"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88423987"
   
 -   Cualquier valor menor que 0 es un error tiene como resultado un registro de diagnóstico que se registra con con SQLState HY090 y el mensaje "Longitud de búfer o cadena no válida".  
   
- Se omite el parámetro *DataPtr* , pero debe establecerse en un valor distinto de NULL. Para obtener más información, vea la sección sobre el enlace de filas variable TVP en [Binding y transferencia de datos de parámetros con valores de tabla y valores de columna](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
+ Se omite el parámetro *DataPtr* , pero debe establecerse en un valor distinto de NULL. Para obtener más información, vea la sección sobre el enlace de filas variable TVP en [Binding y transferencia de datos de Table-Valued parámetros y valores de columna](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
  Si *StrLen_Or_Ind* tiene un valor distinto de SQL_DEFAULT_PARAM o un número entre 0 y el SQL_PARAMSET_SIZE (es decir, el parámetro *columnas* de SQLBindParameter), se trata de un error. Este error hace que SQLPutData devuelva SQL_ERROR: SQLSTATE=HY090, "Longitud de búfer o cadena no válida".  
   
@@ -64,10 +64,9 @@ ms.locfileid: "88423987"
  Para obtener más información, vea [mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>Compatibilidad de SQLPutData con los UDT CLR grandes  
- **SQLPutData** admite tipos definidos por el usuario (UDT) CLR grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLPutData** admite tipos definidos por el usuario (UDT) CLR grandes. Para obtener más información, vea [tipos de User-Defined CLR grandes &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [SQLPutData función)](https://go.microsoft.com/fwlink/?LinkId=59365)   
+ [SQLPutData función)](../../odbc/reference/syntax/sqlputdata-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

@@ -1,6 +1,6 @@
 ---
 description: Parámetros con valores de tabla (ODBC)
-title: Parámetros con valores de tabla (ODBC) | Microsoft Docs
+title: Parámetros de Table-Valued (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f263b0ade88e21f79182f2667714de2e1a105155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b82ec830d04f89fd4a166a999673a6182429a66
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420509"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867863"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parámetros con valores de tabla (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   La compatibilidad con ODBC para parámetros con valores de tabla permite a una aplicación cliente enviar datos parametrizados al servidor más eficazmente, enviando varias filas al servidor con una llamada.  
   
- Para obtener información sobre los parámetros con valores de tabla en el servidor, vea [usar parámetros con valores de tabla &#40;Motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Para obtener información sobre los parámetros con valores de tabla en el servidor, vea [usar parámetros de Table-Valued &#40;Motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  En ODBC, hay dos formas de enviar parámetros con valores de tabla al servidor:  
   
@@ -77,12 +77,8 @@ ms.locfileid: "88420509"
   
  [Resumen de la API de parámetros con valores de tabla de ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  Muestra la lista de funciones ODBC que admiten parámetros con valores de tabla.  
-  
- [Ejemplos de programación de parámetros con valores de tabla ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
- Describe cómo realizar tareas comunes.  
-  
+
 ## <a name="see-also"></a>Consulte también  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Parámetros con valores de tabla &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
-  
   

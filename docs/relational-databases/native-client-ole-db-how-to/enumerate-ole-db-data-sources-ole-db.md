@@ -14,19 +14,19 @@ ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a27332a7948c535b768f6507aad81ca72bbcbb26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8fc37fff75c3ba078c104e87af38cbcc03954563
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455990"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867991"
 ---
 # <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>Enumerar SQL Server Native Client OLE DB orígenes de datos (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   En este ejemplo se indica cómo utilizar el objeto enumerador para mostrar los orígenes de datos disponibles.  
   
- Para enumerar los orígenes de datos visibles para el enumerador SQLOLEDB, el consumidor llama al método [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) . Este método devuelve un conjunto de filas de información sobre los orígenes de datos actualmente visibles.  
+ Para enumerar los orígenes de datos visibles para el enumerador SQLOLEDB, el consumidor llama al método [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) . Este método devuelve un conjunto de filas de información sobre los orígenes de datos actualmente visibles.  
   
  Dependiendo de la biblioteca de redes utilizada, se buscan en el dominio adecuado los orígenes de datos. Para las canalizaciones con nombre, es el dominio en el que el cliente ha iniciado sesión. Para AppleTalk, es la zona predeterminada. Para SPX/IPX, es la lista de instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se encuentran en el enlace. Para Banyan VINES, se trata de las instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se encuentran en la red local. No se admite multiprotocolo ni sockets TCP/IP.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88455990"
  Este ejemplo requiere la base de datos de ejemplo AdventureWorks que se puede descargar de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>Para enumerar los orígenes de datos OLE DB  
   
@@ -280,5 +280,4 @@ SAFE_EXIT:
    return TRUE;  
 }  
 ```  
-  
   

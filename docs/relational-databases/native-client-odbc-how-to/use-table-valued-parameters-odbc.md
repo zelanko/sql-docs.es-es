@@ -1,6 +1,6 @@
 ---
 description: Usar parámetros con valores de tabla (ODBC)
-title: Usar parámetros con valores de tabla (ODBC) | Microsoft Docs
+title: Usar parámetros de Table-Valued (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1d5b7baaba443c948e0c02440d6e38520eb16c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 089d113a6908b02736626445360e99c5f29807e7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499199"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866871"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Usar parámetros con valores de tabla (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Este ejemplo muestra cómo utilizar los parámetros de valores de tabla para insertar varias filas, con varias columnas, mediante una llamada al servidor.  
   
- Para obtener más información sobre los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Para obtener más ejemplos del uso de parámetros con valores de tabla, vea [ODBC Table-Valued Parameter Programming Examples](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
+ Para obtener más información sobre los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Para obtener más ejemplos del uso de parámetros con valores de tabla, vea [ODBC Table-Valued Parameter Programming Examples](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="example"></a>Ejemplo  
  También necesitará un origen de datos ODBC denominado TVPDemo. La base de datos predeterminada para TVPDemo puede ser cualquier base de datos de prueba del equipo. Este origen de datos debe estar basado en el controlador ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -1256,5 +1256,4 @@ int _tmain() {
    demo_metadata_from_catalog_APIs((SQLTCHAR *)_T("TVPOrderEntry"));  
 }  
 ```  
-  
   

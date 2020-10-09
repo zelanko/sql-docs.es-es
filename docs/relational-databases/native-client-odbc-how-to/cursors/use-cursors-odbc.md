@@ -14,12 +14,12 @@ ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fbb647cc83c9d98aedc15531c919c54f9ae7d53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8d8b297afe44f990b7d0fa685ffa4aff51accf
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494094"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867779"
 ---
 # <a name="use-cursors-odbc"></a>Usar cursores (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "88494094"
   
      Establezca los atributos SQL_ATTR_CURSOR_TYPE y SQL_ATTR_CONCURRENCY (ésta es la opción preferida).  
   
-     Or  
+     \- O bien -  
   
      Establezca los atributos SQL_CURSOR_SCROLLABLE y SQL_CURSOR_SENSITIVITY.  
   
 2.  Llame a [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) para establecer el tamaño del conjunto de filas mediante el atributo SQL_ATTR_ROW_ARRAY_SIZE.  
   
-3.  Opcionalmente, llame a [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) para establecer un nombre de cursor si las actualizaciones posicionadas se van a hacer mediante la cláusula de WHERE CURRENT OF.  
+3.  Opcionalmente, llame a [SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md) para establecer un nombre de cursor si las actualizaciones posicionadas se van a hacer mediante la cláusula de WHERE CURRENT OF.  
   
 4.  Ejecute la instrucción SQL.  
   
-5.  Opcionalmente, llame a [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) para obtener el nombre de cursor si las actualizaciones posicionadas se van a hacer mediante la cláusula WHERE ACTUAL OF y un nombre de cursor no se ha proporcionado con [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) en el paso 3.  
+5.  Opcionalmente, llame a [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) para obtener el nombre de cursor si las actualizaciones posicionadas se van a hacer mediante la cláusula WHERE ACTUAL OF y un nombre de cursor no se ha proporcionado con [SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md) en el paso 3.  
   
 6.  Llame a [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) para obtener el número de columnas (C) en el conjunto de filas.  
   
      Use el enlace de modo de columna.  
   
-     \- O bien  
+     \- o -  
   
      Use el enlace de modo de fila.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "88494094"
   
     -   Si devuelve SQL_NO_DATA, no hay ningún otro conjunto de resultados disponible.  
   
-    -   Si devuelve SQL_SUCCESS_WITH_INFO o SQL_ERROR, llame a [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) para determinar si está disponible la salida de una instrucción PRINT o RAISERROR.  
+    -   Si devuelve SQL_SUCCESS_WITH_INFO o SQL_ERROR, llame a [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) para determinar si está disponible la salida de una instrucción PRINT o RAISERROR.  
   
      Si se utilizan parámetros de instrucción enlazados como parámetros de salida o como valor devuelto de un procedimiento almacenado, utilice los datos ahora disponibles en los búferes de parámetros enlazados.  
   
-     Si se usan parámetros enlazados, cada llamada a [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) o [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) habrá ejecutado la instrucción SQL S veces, donde S es el número de elementos en la matriz de parámetros enlazados. Esto significa que habrá S conjuntos de resultados para procesar, donde cada conjunto de resultados comprende todos los conjuntos de resultados, parámetros de salida y códigos de retorno devueltos normalmente por una ejecución única de la instrucción SQL.  
+     Si se usan parámetros enlazados, cada llamada a [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) o [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) habrá ejecutado la instrucción SQL S veces, donde S es el número de elementos en la matriz de parámetros enlazados. Esto significa que habrá S conjuntos de resultados para procesar, donde cada conjunto de resultados comprende todos los conjuntos de resultados, parámetros de salida y códigos de retorno devueltos normalmente por una ejecución única de la instrucción SQL.  
   
      Tenga en cuenta que cuando un conjunto de resultados contiene filas del cálculo, cada fila del cálculo está disponible como un conjunto de resultados independiente. Estos conjuntos de resultados de cálculo se intercalan entre las filas normales e interrumpen las filas normales en varios conjuntos de resultados.  
   
@@ -77,5 +77,4 @@ ms.locfileid: "88494094"
   
 ## <a name="see-also"></a>Consulte también  
  [Temas de procedimientos de uso de cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
-  
   

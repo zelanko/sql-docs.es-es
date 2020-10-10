@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2caa0afdd029b630b0c10f1e3c3c0ea3c0ea0ca5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 92a09ac4702cae987c4fa5f4ccd420819c29073a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537103"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529436"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Compatibilidad con alta disponibilidad para bases de datos OLTP en memoria
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "89537103"
 
   
 ## <a name="always-on-availability-groups-and-in-memory-oltp-databases"></a>Grupos de disponibilidad AlwaysOn y bases de datos OLTP en memoria  
- La configuración de bases de datos con componentes de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] proporciona lo siguiente:  
+ La configuración de bases de datos con componentes de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] proporciona los siguientes beneficios:  
   
 -   **Una experiencia completamente integrada**   
     Puede configurar las bases de datos que contienen tablas optimizadas para memoria usando el mismo asistente con el mismo nivel de compatibilidad para las réplicas secundarias sincrónicas y asincrónicas. Además, el seguimiento de estado se proporciona con el panel AlwaysOn familiar en SQL Server Management Studio.  
@@ -42,10 +42,10 @@ ms.locfileid: "89537103"
 - SQL Server 2019 presentó una puesta al día en paralelo de las bases de datos de grupo de disponibilidad optimizadas para memoria. En SQL Server 2016 y 2017, las tablas basadas en disco no usan la puesta al día en paralelo si una base de datos de un grupo de disponibilidad también está optimizada para memoria. 
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>Instancia de clústeres de conmutación por error (FCI) y bases de datos OLTP en memoria  
- Para lograr alta disponibilidad en una configuración de almacenamiento compartido, puede configurar una instancia de clúster de conmutación por error con bases de datos con tablas optimizadas para memoria. Necesitará tener en cuenta los siguientes factores como parte de la configuración de una FCI.  
+ Para lograr alta disponibilidad en una configuración de almacenamiento compartido, puede configurar una instancia de clúster de conmutación por error con bases de datos con tablas optimizadas para memoria. Tenga en cuenta los siguientes factores como parte de la configuración de una FCI:  
   
 -   **Objetivo de tiempo de recuperación**   
-    El tiempo de conmutación por error será mayor ya que las tablas optimizadas para memoria deben cargarse en memoria antes de que la base de datos pueda estar disponible.  
+    Es probable que el tiempo de conmutación por error sea mayor, ya que las tablas optimizadas para memoria deben cargarse en la memoria antes de que la base de datos esté disponible.  
   
 -   **Tablas SCHEMA_ONLY**   
     Tenga en cuenta que las tablas SCHEMA_ONLY estarán vacías sin filas después de la conmutación por error. Así es como se ha diseñado y definido por la aplicación. Este es exactamente el mismo comportamiento que cuando se reinicia una base de datos [!INCLUDE[hek_2](../../includes/hek-2-md.md)] con una o más tablas SCHEMA_ONLY.  

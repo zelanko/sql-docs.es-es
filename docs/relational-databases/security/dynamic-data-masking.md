@@ -11,12 +11,12 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf3c9a827a4a3318bbee7e550aa8759a8dcc0eb4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eb0c19820d7f3dcb4ff60c39d0cf3cbd6661b062
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005594"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727630"
 ---
 # <a name="dynamic-data-masking"></a>Enmascaramiento dinámico de datos
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -32,8 +32,6 @@ El enmascaramiento dinámico de datos evita el acceso no autorizado a informaci�
 * DDM cuenta con funciones de enmascaramiento total y parcial, además de una máscara aleatoria para datos numéricos.
 * Comandos [!INCLUDE[tsql_md](../../includes/tsql-md.md)] simples definen y administran las máscaras.
 
-Por ejemplo, un técnico de soporte técnico de un centro de llamadas puede identificar al autor de la llamada mediante varios dígitos de su número del seguro social o de una tarjeta de crédito.  Los números del seguro social o los números de una tarjeta de crédito no deben mostrarse por completo al técnico de soporte técnico. Se puede definir una regla de enmascaramiento que enmascare todo excepto los cuatro últimos dígitos de un número de seguridad social o un número de tarjeta de crédito en el conjunto de resultados de cualquier consulta. Por poner otro ejemplo, si utiliza la máscara de datos adecuada para proteger la información de identificación personal, un desarrollador puede realizar consultas en los entornos de producción para resolver problemas sin que ello suponga una infracción de las normativas de cumplimiento.
-
 La finalidad del enmascaramiento dinámico de datos consiste en limitar la exposición de la información confidencial, con lo que se impide que los usuarios vean datos a los que no deberían poder acceder. El enmascaramiento dinámico de datos no pretende evitar que los usuarios de la base de datos se conecten directamente a ella y ejecuten consultas exhaustivas que expongan información confidencial. El enmascaramiento dinámico de datos se complementa con otras características de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (auditoría, cifrado, seguridad de nivel de fila...), y resulta muy recomendable usarlo con esas características para proteger mejor la información confidencial en la base de datos.  
   
 El enmascaramiento dinámico de datos está disponible en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], y se configura con comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para obtener más información sobre cómo configurar el enmascaramiento dinámico de datos con el Portal de Azure, vea [Introducción al enmascaramiento dinámico de datos de SQL Database (Portal de Azure)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
@@ -46,7 +44,7 @@ El enmascaramiento dinámico de datos está disponible en [!INCLUDE[ssSQL15](../
 |Valor predeterminado|Enmascaramiento completo de acuerdo con los tipos de datos de los campos designados.<br /><br /> Para los tipos de datos String, use XXXX o un número menor de X si el tamaño del campo es inferior a 4 caracteres (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Para los tipos de datos numéricos, use un valor cero (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> En el caso de los tipos de datos de fecha y hora, use 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />En lo que respecta a los tipos de datos binarios, use un solo byte de valor 0 de ASCII (**binary**, **varbinary**, **image**).|Ejemplo de sintaxis de definición de columna: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|Método de enmascaramiento que expone la primera letra de una dirección de correo electrónico y el sufijo constante ".com", en el formato de una dirección de correo electrónico. `aXXX@XXXX.com`.|Ejemplo de sintaxis de definición: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Random|Una función de enmascaramiento aleatorio que se puede usar con cualquier tipo numérico a fin de enmascarar el valor original con uno aleatorio dentro de un intervalo especificado.|Ejemplo de sintaxis de definición: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
-|Cadena personalizada|Método de enmascaramiento que expone la primera y última letra y agrega una cadena de relleno personalizada en el medio. `prefix,[padding],suffix`<br /><br /> Nota: Si el valor original es demasiado corto como para que se complete toda la máscara, no se expondrá parte del prefijo o sufijo.|Ejemplo de sintaxis de definición: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Otros ejemplos:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
+|Cadena personalizada|Método de enmascaramiento que expone la primera y última letra y agrega una cadena de relleno personalizada en el medio. `prefix,[padding],suffix`<br /><br /> Nota: Si el valor original es demasiado corto como para que se complete toda la máscara, no se expondrá parte del prefijo o sufijo.|Ejemplo de sintaxis de definición: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Ejemplo adicional:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`|  
   
 ## <a name="permissions"></a>Permisos  
  No se necesita ningún permiso especial para crear una tabla una máscara dinámica de datos, solo los permisos de esquema estándares **CREATE TABLE** y **ALTER** .  
@@ -157,7 +155,7 @@ REVERT;
   
 ### <a name="adding-or-editing-a-mask-on-an-existing-column"></a>Adición o edición de una máscara en una columna existente  
  Utilice la instrucción **ALTER TABLE** para agregar una máscara a una columna existente de la tabla o a fin de editarla en dicha columna.  
-En el siguiente ejemplo se agrega la función de enmascaramiento a la columna `LastName` :  
+En el siguiente ejemplo, se agrega la función de enmascaramiento a la columna `LastName`:  
   
 ```sql  
 ALTER TABLE Membership  

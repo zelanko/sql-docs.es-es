@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff086556b507c0d09750b7ab27671a7b1cfaf496
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7e106fa85ac8832782c339b115969e2ca8d4fad4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89522279"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891535"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent, clase
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ class SQLErrorLogEvent
 |Mensaje|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Mensaje del evento.|  
 |ProcessInfo|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Información sobre el identificador del proceso del servidor de origen (SPID) para el evento.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 | Tipo | Nombre |
 | ---- | ---- |
@@ -95,10 +95,9 @@ Next
   
      ** \<Drive> : \Archivos de Programa\microsoft SQL Server\MSSQL13** **. \<InstanceName> \Mssql\log.**  
   
- Si se conecta a través de un firewall, asegúrese de que se establece una excepción en el firewall para WMI en los equipos de destino remotos. Para obtener más información, consulte [conectarse a WMI de forma remota a partir de Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
+ Si se conecta a través de un firewall, asegúrese de que se establece una excepción en el firewall para WMI en los equipos de destino remotos. Para obtener más información, consulte [conectarse a WMI de forma remota a partir de Windows Vista](/windows/win32/wmisdk/connecting-to-wmi-remotely-starting-with-vista).  
   
 ## <a name="see-also"></a>Consulte también  
  [Clase SqlErrorLogFile](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   
  [Ver archivos del registro sin conexión](../../relational-databases/logs/view-offline-log-files.md)  
-  
   

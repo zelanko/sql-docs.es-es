@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb1e919942d491cdf44388f24de151b2ddeeeee0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4c28188a6abada5ff699b8ee759a84c237b8d8e8
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537575"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891625"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Trabajar con el proveedor WMI para eventos de servidor
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se proporcionan instrucciones que deben tenerse en cuenta antes de programar con el proveedor WMI para eventos del servidor.  
   
 ## <a name="enabling-service-broker"></a>Habilitar Service Broker  
- El proveedor WMI para eventos del servidor funciona traduciendo las consultas WQL para los eventos en notificaciones de eventos en la base de datos de destino. Entender la forma en que funcionan las notificaciones de eventos puede resultar de gran utilidad a la hora de programar con el proveedor. Para obtener más información, vea [Conceptos del proveedor WMI para eventos de servidor](https://technet.microsoft.com/library/ms180560.aspx).  
+ El proveedor WMI para eventos del servidor funciona traduciendo las consultas WQL para los eventos en notificaciones de eventos en la base de datos de destino. Entender la forma en que funcionan las notificaciones de eventos puede resultar de gran utilidad a la hora de programar con el proveedor. Para obtener más información, vea [Conceptos del proveedor WMI para eventos de servidor](./wmi-provider-for-server-events-concepts.md).  
   
  En concreto, debido a que las notificaciones de eventos creadas por el proveedor WMI usan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para enviar mensajes sobre eventos del servidor, este servicio debe estar habilitado dondequiera que se generen los eventos. Si un programa consulta los eventos en una instancia del servidor, el [!INCLUDE[ssSB](../../includes/sssb-md.md)] debe habilitarse en la base de datos msdb de dicha instancia, porque esa es la ubicación del servicio [!INCLUDE[ssSB](../../includes/sssb-md.md)] de destino (denominado SQL/Notifications/ProcessWMIEventProviderNotification/v1.0) creado por el proveedor. Si su programa consulta eventos en una base de datos o en un objeto de base de datos determinado, [!INCLUDE[ssSB](../../includes/sssb-md.md)] debe habilitarse en dicha base de datos de destino. Si el [!INCLUDE[ssSB](../../includes/sssb-md.md)] correspondiente no está habilitado una vez implementada la aplicación, los eventos generados por la notificación de eventos subyacentes se envían a la cola del servicio usada por la notificación de eventos, pero no se devuelven a la aplicación de administración WMI hasta que se habilita [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
@@ -114,6 +114,5 @@ WHERE DatabaseName = "AdventureWorks2012"
  Una vez que el proveedor WMI de eventos de servidor crea la notificación de eventos necesaria en la base de datos de destino, la notificación de eventos envía los datos de evento al servicio de destino en msdb que se denomina **SQL/Notifications/ProcessWMIEventProviderNotification/v 1.0**. El servicio de destino coloca el evento en una cola de **msdb** denominada **WMIEventProviderNotificationQueue**. (El servicio y la cola los crea dinámicamente el proveedor cuando se conecta por primera vez a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). A continuación, el proveedor Lee los datos de evento XML de esta cola y los transforma en Managed Object Format (MOF) antes de devolverlos a la aplicación cliente. Los datos MOF se componen de las propiedades del evento solicitado por la consulta WQL como una definición de clase del Modelo de información común (CIM). Cada propiedad tiene un tipo CIM correspondiente. Por ejemplo, la propiedad `SPID` se devuelve como un tipo CIM **Sint32**. Los tipos CIM de cada propiedad se muestran debajo de cada clase de eventos en [Proveedor WMI de clases y propiedades de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Conceptos del proveedor WMI para eventos de servidor](https://technet.microsoft.com/library/ms180560.aspx)  
-  
+ [Conceptos del proveedor WMI para eventos de servidor](./wmi-provider-for-server-events-concepts.md)  
   

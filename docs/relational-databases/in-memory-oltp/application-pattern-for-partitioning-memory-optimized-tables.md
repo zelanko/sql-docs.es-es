@@ -11,12 +11,12 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0da2cd346f2f71b190d4192646bc58a70c116933
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 08fb58f77382dae2d6455cc181c983798c89050a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730418"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529416"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Patrón de aplicación para crear particiones de tablas con optimización para memoria
 
@@ -24,7 +24,7 @@ ms.locfileid: "85730418"
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] admite un modelo de diseño de aplicaciones muy completo en cuanto a recursos de rendimiento de datos relativamente actuales. Este modelo es adecuado cuando los datos actuales se leen o actualizan con mucha más frecuencia que los datos más antiguos. En este caso, se dice que los datos actuales son *activos* o *de acceso frecuente* y los datos más antiguos, *inactivos*.
 
-La idea principal es almacenar los datos *de acceso frecuente*  en una tabla optimizada para memoria. Los datos más antiguos que han pasado a ser *inactivos* se trasladan a una tabla con particiones de forma quizá semanal o mensual. Los datos de las tablas con particiones se almacenan en un disco o en otra unidad de disco duro, no en memoria.
+La idea principal es almacenar los datos *de acceso frecuente*  en una tabla optimizada para memoria. Los datos más antiguos que han pasado a ser *inactivos* se trasladan a una tabla con particiones de forma semanal o mensual. Los datos de las tablas con particiones se almacenan en un disco o en otra unidad de disco duro, no en memoria.
 
 Por lo general, este diseño usa una clave de **fecha y hora** para que el proceso de traslado de datos distinga eficazmente entre datos activos y datos inactivos.
 

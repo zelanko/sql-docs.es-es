@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1e7cb88f8fbb942678c2aaf785a4b04a9297c74f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 02703ceb13fdd04e0a90fee6b7c996a2fa632b73
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545211"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891955"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Clase SqlServiceAdvancedProperty
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -31,9 +31,8 @@ ms.locfileid: "89545211"
   
  La [propiedad AdvancedProperties (clase SqlService)](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md) hace referencia a una matriz de objetos de la [clase SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) .  
   
- La clase de [servicios de inicio y detención](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) representa propiedades que son únicas para el servicio. Estas propiedades no están en la lista de propiedades que está asociada a la clase de [clase SqlService](https://technet.microsoft.com/library/ms186497.aspx) . La clase de [clase SqlServiceAdvancedProperty](https://technet.microsoft.com/library/ms182447.aspx) permite la representación de propiedades de cadena, numéricas o booleanas. Puede utilizar esta clase para ver las propiedades únicas del servicio especificado.  
+ La clase de [servicios de inicio y detención](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) representa propiedades que son únicas para el servicio. Estas propiedades no están en la lista de propiedades que está asociada a la clase de [clase SqlService](../sqlservice-class/sqlservice-class.md) . La `SqlServiceAdvancedProperty Class` clase permite la representación de propiedades de cadena, numéricas o booleanas. Puede utilizar esta clase para ver las propiedades únicas del servicio especificado.  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
-  
   

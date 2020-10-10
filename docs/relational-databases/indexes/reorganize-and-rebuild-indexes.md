@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cdc5c87275af6056e9044ed534d6e916772a3dc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7c29522d20a3d263c602884daa0277a8e1a2095
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537073"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753537"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Solución de la fragmentación de índices mediante la reorganización o recompilación de índices
 
@@ -86,7 +86,7 @@ Del mismo modo, la eliminación de la fragmentación en un montón (una tabla si
 
 <sup>2</sup> La regeneración de un índice se puede ejecutar en línea o sin conexión. La reorganización de un índice siempre se ejecuta en línea. Para lograr una disponibilidad similar a la opción de reorganización, debe volver a generar los índices en línea. Para obtener más información, vea [INDEX](#rebuild-an-index) y [Realización de operaciones de índice en línea](../../relational-databases/indexes/perform-index-operations-online.md).
 
-Los índices con fragmentación o menos del 5 % no se deben desfragmentar, ya que el beneficio de quitar una cantidad de fragmentación tan pequeña es casi siempre ampliamente superado por el costo de CPU implicado en la reorganización o recompilación del índice. Además, cuando se vuelven a generar o se reorganizan índices pequeños de almacén de filas, por lo general la fragmentación no se reduce realmente. Hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], inclusive, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] asigna espacio mediante extensiones mixtas. Por consiguiente, las páginas de índices pequeños a veces se almacenan en extensiones mixtas. Las extensiones mixtas pueden estar compartidas por hasta ocho objetos, de modo que es posible que no se pueda reducir la fragmentación en un índice pequeño después de reorganizar o volver a generar dicho índice. Vea también [Consideraciones específicas para volver a generar índices de almacén de filas](#considerations-specific-to-rebuilding-rowstore-indexes). Para más información sobre las extensiones, vea la [Guía de arquitectura de páginas y extensiones](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
+Los índices con una fragmentación inferior al 5 % no se deben desfragmentar, ya que el beneficio de quitar una cantidad de fragmentación tan pequeña es casi siempre menor que el costo de CPU que implica la reorganización o regeneración del índice. Además, cuando se vuelven a generar o se reorganizan índices pequeños de almacén de filas, por lo general la fragmentación real no se reduce. Hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], inclusive, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] asigna espacio mediante extensiones mixtas. Por consiguiente, las páginas de índices pequeños a veces se almacenan en extensiones mixtas. Las extensiones mixtas pueden estar compartidas por hasta ocho objetos, de modo que es posible que no se pueda reducir la fragmentación en un índice pequeño después de reorganizar o volver a generar dicho índice. Vea también [Consideraciones específicas para volver a generar índices de almacén de filas](#considerations-specific-to-rebuilding-rowstore-indexes). Para más información sobre las extensiones, vea la [Guía de arquitectura de páginas y extensiones](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>Detección de la fragmentación en índices de almacén de columnas
 

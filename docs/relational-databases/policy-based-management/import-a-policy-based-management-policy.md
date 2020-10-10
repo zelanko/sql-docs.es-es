@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 37f49a006b0fe17120af2309f9b3991ab594ebda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ea5d3c83667dbd194e9fb82ae7bce2e815d479b
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423719"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412776"
 ---
 # <a name="import-a-policy-based-management-policy"></a>Importar una directiva de administración basada en directivas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,4 +46,4 @@ ms.locfileid: "88423719"
 
 
 ## <a name="example-policies"></a>Directivas de ejemplo
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] no incluye directivas de ejemplo, pero se puede tener acceso a las directivas de ejemplo distribuidas anteriormente instalando [la versión 17 de SQL Server Management Studio](../../ssms/release-notes-ssms.md#previous-ssms-releases).  Una vez instalada la versión 17 de SQL Server Management Studio, encontrará las directivas de ejemplo en `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies`. Estas directivas se pueden importar y usar como base para sus propias directivas de administración basada en directivas.
+ Las directivas de ejemplo están disponibles en el [repositorio de código de ejemplo de SQL Server](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies). Estas directivas se pueden importar y usar como base para sus propias directivas de administración basada en directivas.

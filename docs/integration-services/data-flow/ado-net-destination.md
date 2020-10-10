@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1c1864f1a0a5e57a025f90d1219b8068656f87d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: de65e13530f46b72a8474e58407de61e463685d5
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425907"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412766"
 ---
 # <a name="ado-net-destination"></a>Destino ADO NET
 
@@ -96,7 +96,7 @@ ms.locfileid: "88425907"
   
  Solamente los proveedores ADO.NET que devuelven un objeto <xref:System.Data.SqlClient.SqlConnection> admiten el uso de la interfaz <xref:System.Data.SqlClient.SqlBulkCopy> . El Proveedor de datos .NET para SQL Server (SqlClient) devuelve un objeto <xref:System.Data.SqlClient.SqlConnection> y, por otra parte, un proveedor personalizado puede devolver un objeto <xref:System.Data.SqlClient.SqlConnection> .  
   
- Puede usar el proveedor de datos .NET para SQL Server (SqlClient) para conectarse a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+ Puede usar el proveedor de datos .NET para SQL Server (SqlClient) a fin de conectarse a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  Si selecciona **Use bulk insert when available**(Usar la inserción masiva cuando esté disponible) y establece la opción **Error** en **Redirect the row**(Redirigir la fila), el lote de datos que el destino redirige a la salida de error puede incluir filas correctas. Para obtener más información sobre cómo administrar errores en operaciones masivas, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md). Para obtener más información sobre la opción **Error** , vea [Editor de destinos de ADO NET &#40;página Salida de error&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
   

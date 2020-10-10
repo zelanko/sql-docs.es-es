@@ -1,8 +1,8 @@
 ---
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Sintaxis de creación de bases de datos para SQL Server, Azure SQL Database, Azure Synapse Analytics y Analytics Platform System
-ms.custom: ''
-ms.date: 07/21/2020
+ms.custom: references_regions
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4738bbf83c73ae8f2e58b10196e1fc1394d43383
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b488b5861c807bbac66599b71feb71d70d261ba9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539882"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723516"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -84,7 +84,7 @@ En SQL Server, esta instrucción crea una base de datos nueva y los archivos usa
 
 ## <a name="syntax"></a>Sintaxis
 
-Crear una base de datos.
+Crear una base de datos
 
 ```syntaxsql
 CREATE DATABASE database_name
@@ -133,14 +133,6 @@ CREATE DATABASE database_name
 FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY_OPTIMIZED_DATA ]
     <filespec> [ ,...n ]
 }
-
-<service_broker_option> ::=
-{
-    ENABLE_BROKER
-  | NEW_BROKER
-  | ERROR_BROKER_CONVERSATIONS
-}
-
 ```
 
 Adjuntar una base de datos
@@ -157,6 +149,13 @@ CREATE DATABASE database_name
       <service_broker_option>
     | RESTRICTED_USER
     | FILESTREAM ( DIRECTORY_NAME = { 'directory_name' | NULL } )
+}
+
+<service_broker_option> ::=
+{
+    ENABLE_BROKER
+  | NEW_BROKER
+  | ERROR_BROKER_CONVERSATIONS
 }
 ```
 
@@ -207,7 +206,7 @@ Para más información sobre los nombres de intercalación de Windows y de SQL, 
 > Las bases de datos independientes se intercalan de modo diferente al de las bases de datos dependientes. Para obtener más información, consulte [Intercalaciones de bases de datos independientes](../../relational-databases/databases/contained-database-collations.md).
 
 WITH \<option>
- **\<filestream_options>**
+ **\<filestream_option>**
 
 NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores
 
@@ -897,8 +896,14 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
 }
-[ WITH CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }]
+[ WITH <with_options> [,..n]]
 [;]
+
+<with_options> ::=
+{
+  CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
+  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
+}
 
 <edition_options> ::=
 {
@@ -971,6 +976,11 @@ CATALOG_COLLATION especifica la intercalación predeterminada del catálogo de m
 
 *SQL_Latin1_General_CP1_CI_AS* especifica que el catálogo de metadatos usado para las tablas y vistas del sistema se intercalará en una intercalación fija SQL_Latin1_General_CP1_CI_AS. Se trata de la configuración predeterminada en Azure SQL Database si no se especifica.
 
+BACKUP_STORAGE_REDUNDANCY especifica cómo se replican la restauración a un momento dado y las copias de seguridad de retención a largo plazo de una base de datos. La restauración geográfica o la capacidad de recuperación desde una interrupción regional solo está disponible cuando se crea la base de datos con la redundancia de almacenamiento de copia de seguridad "GEO". A menos que se especifique explícitamente, las bases de datos creadas con T-SQL usan el almacenamiento de copia de seguridad con redundancia geográfica. 
+
+> [!IMPORTANT]
+> La opción BACKUP_STORAGE_REDUNDANCY para Azure SQL Database solo está disponible en la versión preliminar pública en la región Sudeste de Asia de Azure.  
+
 EDITION especifica el nivel de servicio de la base de datos.
 
 Bases de datos únicas y agrupadas. Los valores disponibles son: "Basic", "Standard", "Premium", "GeneralPurpose", "BusinessCritical" e "Hyperscale".
@@ -999,12 +1009,12 @@ MAXSIZE especifica el tamaño máximo de la base de datos. El valor de MAXSIZE d
 |150 GB|N/D|√|√|√|√|
 |200 GB|N/D|√|√|√|√|
 |250 GB|N/D|√ (D)|√ (D)|√|√|
-|300 GB|N/A|N/A|√|√|√|
-|400 GB|N/A|N/A|√|√|√|
-|500 GB|N/A|N/A|√|√ (D)|√|
-|750 GB|N/A|N/A|√|√|√|
-|1024 GB|N/A|N/A|√|√|√ (D)|
-|Desde 1024 GB hasta 4096 GB en incrementos de 256 GB* |N/D|N/A|N/A|N/D|√|√|
+|300 GB|N/D|N/D|√|√|√|
+|400 GB|N/D|N/D|√|√|√|
+|500 GB|N/D|N/D|√|√ (D)|√|
+|750 GB|N/D|N/D|√|√|√|
+|1024 GB|N/D|N/D|√|√|√ (D)|
+|Desde 1024 GB hasta 4096 GB en incrementos de 256 GB* |N/D|N/D|N/D|N/D|√|√|
 
 \* P11 y P15 permiten un valor de MAXSIZE de hasta 4 TB, con 1024 GB como tamaño predeterminado. P11 y P15 pueden usar hasta 4 TB de almacenamiento incluido sin cargos adicionales. En el nivel Premium, un valor de MAXSIZE mayor de 1 TB está actualmente disponible en las regiones siguientes: Este de EE. UU. 2, Oeste de EE. UU., US Gov Virginia, Oeste de Europa, Centro de Alemania, Sudeste de Asia, Este de Japón, Este de Australia, Centro de Canadá y Este de Canadá. Para obtener más información sobre las limitaciones de recursos para el modelo de DTU, consulte [Límites de recursos de DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
@@ -1170,6 +1180,10 @@ Se aplican las siguientes reglas semánticas y de sintaxis al uso del argumento 
 
 Para obtener más información, consulte [Crear una copia de una base de datos de SQL Azure mediante Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).
 
+> [!IMPORTANT]
+> De forma predeterminada, la copia de la base de datos se crea con la misma redundancia de almacenamiento de copia de seguridad que la de la base de datos de origen. No se admite el cambio de la redundancia de almacenamiento de copia de seguridad al crear una copia de base de datos a través de T-SQL. 
+
+
 ## <a name="permissions"></a>Permisos
 
 Para crear una base de datos, el inicio de sesión debe ser uno de los siguientes:
@@ -1258,6 +1272,15 @@ En el siguiente ejemplo se establece la intercalación de catálogo en DATABASE_
 ```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'Basic')
   WITH CATALOG_COLLATION = DATABASE_DEFAULT
+```
+
+### <a name="create-database-using-zone-redundancy-for-backups"></a>Creación de bases de datos con redundancia de zona para copias de seguridad
+
+En el ejemplo siguiente, se establece la redundancia de zona para las copias de seguridad de base de datos. Tanto las copias de seguridad de restauración a un momento dado como las copias de seguridad de retención a largo plazo (si se configuran) usarán la misma redundancia de almacenamiento de copia de seguridad.
+
+```sql
+CREATE DATABASE test_zone_redundancy 
+  WITH BACKUP_STORAGE_REDUNDANCY = 'ZONE';
 ```
 
 ## <a name="see-also"></a>Consulte también
@@ -1380,6 +1403,7 @@ En Azure Synapse, esta instrucción se puede usar con un servidor de Azure SQL D
 
 ## <a name="syntax"></a>Sintaxis
 
+### <a name="sql-pool"></a>[Grupo de SQL](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1400,6 +1424,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
+### <a name="sql-on-demand-preview"></a>[SQL a petición (versión preliminar)](#tab/sqlod)
+```syntaxsql
+CREATE DATABASE database_name [ COLLATE collation_name ]
+[;] 
+```
+---
 
 ## <a name="arguments"></a>Argumentos
 

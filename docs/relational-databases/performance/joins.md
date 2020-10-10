@@ -18,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511317"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726016"
 ---
 # <a name="joins-sql-server"></a>Combinaciones (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -263,7 +263,7 @@ Algunas condiciones convierten a una combinación lógica en apta como combinaci
 - El nivel de compatibilidad de la base de datos es 140 o superior.
 - La consulta es una instrucción `SELECT` (las instrucciones de modificación de datos no son aptas actualmente).
 - La combinación puede ser ejecutada tanto por una combinación de bucles anidados indexada como por un algoritmo físico de combinación hash.
-- La combinación hash usa el modo por lotes, habilitado mediante la presencia de un índice de almacén de columnas en la consulta global, una referencia directa a la tabla con índice de almacén de columnas por parte de la combinación, o mediante el uso del [modo por lotes en la característica de almacén de filas](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).
+- La combinación hash usa el modo por lotes, habilitado mediante la presencia de un índice de almacén de columnas en la consulta global, una referencia directa a la tabla con índice de almacén de columnas por parte de la combinación, o mediante el uso del [modo por lotes en el almacén de filas](./intelligent-query-processing.md#batch-mode-on-rowstore).
 - Las soluciones alternativas generadas de la combinación de bucles anidados y la combinación hash deben tener el mismo primer elemento secundario (referencia externa).
 
 ### <a name="adaptive-threshold-rows"></a>Filas de umbral adaptable

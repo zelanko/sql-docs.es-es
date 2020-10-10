@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 28711d123d4084c973d301f7fa93c9f5d598986f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: b0acdd99ed178329210bdab83e4492b7a4bfc2a7
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380840"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624822"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -99,7 +99,7 @@ Es donde se almacenan provisionalmente los archivos que contienen los datos. Act
 - *Ubicación externa* para ADLS Gen2: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> El punto de conexión de blob está disponible para ADLS Gen2 para la compatibilidad con versiones anteriores. Use el punto de conexión de **blob** para obtener el mejor rendimiento.
+> El punto de conexión .blob también está disponible para ADLS Gen2 y actualmente ofrece el mejor rendimiento. Use el punto de conexión .blob cuando no se requiera .dfs para su método de autenticación.
 
 - *Cuenta*: el nombre de la cuenta de almacenamiento
 
@@ -141,14 +141,15 @@ Solo se pueden especificar varias ubicaciones de archivos desde el mismo contene
 |  **Azure Blob Storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1: Debe usar el punto de conexión del blob ( **.blob**.core.windows.net) en la ruta de acceso de la ubicación externa.
+1: Para este método de autenticación, se requiere el punto de conexión .blob ( **.blob**.core.windows.net) en la ruta de acceso a la ubicación externa.
 
-2: Debe usar el punto de conexión de dfs ( **.dfs**.core.windows.net) en la ruta de acceso de la ubicación externa.
+2: Para este método de autenticación, se requiere el punto de conexión .dfs ( **.dfs**.core.windows.net) en la ruta de acceso a la ubicación externa.
+
 
 > [!NOTE]  
 >
 > - Al autenticarse mediante AAD o en una cuenta de almacenamiento pública, no es necesario especificar CREDENTIAL. 
->  - Si la cuenta de almacenamiento está asociada a una red virtual, debe autenticarse con MSI (identidad administrada).
+> - Si la cuenta de almacenamiento está asociada a una red virtual, debe autenticarse con MSI (identidad administrada).
 
 - Autenticación con firmas de acceso compartido (SAS)
   
@@ -428,9 +429,6 @@ Las instrucciones sobre el número de archivos se describen en la tabla siguient
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>¿Cuál es el procedimiento para dividir archivos a la hora de cargar archivos ORC o Parquet con el comando COPY?
 No es necesario dividir los archivos ORC o Parquet porque el comando COPY lo hará de forma automática. Para obtener el mejor rendimiento, los archivos Parquet y ORC de la cuenta de almacenamiento de Azure deben tener un tamaño de 256 MB o más. 
-
-### <a name="when-will-the-copy-command-be-generally-available"></a>¿Cuándo estará disponible el comando COPY con carácter general?
-El comando COPY estará disponible con carácter general a principios del siguiente año natural (2020). 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>¿Hay alguna limitación en el número o el tamaño de los archivos?
 No hay limitaciones en cuanto al número o tamaño de los archivos; sin embargo, para obtener el mejor rendimiento, recomendamos usar archivos de al menos 4 MB.

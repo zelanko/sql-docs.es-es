@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 9d4dd55daf26c9f927e23c0f269a084c711d0481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 107e25f9d4307532e4d1bd6d413e05347fc5209b
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215754"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624742"
 ---
 # <a name="type-mapping-with-polybase"></a>Asignación de tipos con PolyBase
 
@@ -64,7 +64,8 @@ En tablas externas que hacen referencia a archivos de orígenes de datos externo
 | Tipo de datos de Oracle | Tipo de SQL Server | 
 | -------------    | --------------- |
 |Float             |Float            |
-|NUMBER            |Decimal          |
+|NUMBER            |Float            |
+|NUMBER (p,s)      |Decimal (p, s)   |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
 |BINARY_DOUBLE     |Float            | 
@@ -102,7 +103,7 @@ En tablas externas que hacen referencia a archivos de orígenes de datos externo
 | Date               | Datetime2       |
 | Entero de 32 bits     | Int             |
 | Timestamp          | nvarchar        |
-| Entero de 64 bits     | BigInt          |
+| Entero de 64 bits     | BigInt          |
 |Decimal 128         | Decimal         | 
 | DBPointer          | nvarchar        |
 | JavaScript         | nvarchar        |
@@ -139,7 +140,7 @@ MongoDB usa documentos BSON para almacenar los registros de datos. A diferencia 
 |timestamp           |Datetime2        |
 |TIME                |Time             |
 |TIME WITH TIME ZONE |Time             |
-|TIMESTAMP WITH TIME ZONE|Time         |
+|TIMESTAMP WITH TIME ZONE|Hora         |
 
 ::: moniker-end
 

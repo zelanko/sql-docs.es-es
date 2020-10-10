@@ -12,21 +12,21 @@ ms.assetid: 12be8011-b76c-45c1-8f55-7f46e0e374e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60be5a470cffa69ab58251b57c1668ab5213a212
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 076d1d07ea0f28ccabe2d90930ce9f77c3d13bdc
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723348"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529516"
 ---
 # <a name="create-and-access-tables-in-tempdb-from-stored-procedures"></a>Creación y acceso a tablas de TempDB desde procedimientos almacenados
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   No es posible crear ni obtener acceso a tablas de TempDB desde procedimientos almacenados compilados de forma nativa. En su lugar, use tablas optimizadas para memoria con DURABILITY=SCHEMA_ONLY, o bien use tipos de tabla y variables de tabla. 
 
-Para obtener más información sobre la optimización de memoria de la tabla temporal y escenarios de variable de tabla, vea: [Tabla temporal y variable de tabla más rápidas con optimización para memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
+Para obtener más información sobre la optimización de memoria de la tabla temporal y escenarios de variable de tabla, vea lo siguiente: [Tabla temporal y variable de tabla más rápidas con optimización para memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
-  En el ejemplo siguiente se muestra cómo el uso de una tabla temporal con tres columnas (id, ProductID, Quantity) se puede reemplazar mediante una variable de tabla **\@OrderQuantityByProduct** de tipo **dbo.OrderQuantityByProduct**:  
+  En el ejemplo siguiente, se muestra cómo el uso de una tabla temporal con tres columnas (ID, ProductID, Quantity) se puede reemplazar mediante una variable de tabla **\@OrderQuantityByProduct** de tipo **dbo.OrderQuantityByProduct**:  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

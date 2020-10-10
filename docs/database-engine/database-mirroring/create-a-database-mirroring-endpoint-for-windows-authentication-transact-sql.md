@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 15b7fe1a4a8ad78402226814e46ffc9d47964439
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c364aab699f49a4a9c4814a572a6a7295273650b
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789729"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529459"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Crear un extremo de reflejo de la base de datos para la autenticación de Windows (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "85789729"
 ###  <a name="security"></a><a name="Security"></a> Seguridad  
  El administrador del sistema establece los métodos de autenticación y cifrado de la instancia del servidor.  
   
-> [!IMPORTANT]  
+> [!WARNING]  
 >  El algoritmo RC4 está obsoleto. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda utilizar AES.  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
- Requiere permiso CREATE ENDPOINT o pertenecer al rol fijo de servidor sysadmin. Para obtener más información, vea [GRANT &#40;permisos de punto de conexión de Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+ Debe disponer del permiso `CREATE ENDPOINT` o pertenecer al rol fijo de servidor `sysadmin`. Para obtener más información, vea [GRANT &#40;permisos de punto de conexión de Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -58,15 +58,16 @@ ms.locfileid: "85789729"
   
 3.  Determine si ya existe un extremo de creación de reflejo de la base de datos utilizando la siguiente instrucción:  
   
-    ```  
+    ```sql  
     SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
     ```  
   
     > [!IMPORTANT]  
     >  Si ya existe un extremo de creación de reflejo de la base de datos para la instancia del servidor, utilice ese extremo para todas las otras sesiones que establezca en la instancia del servidor.  
   
-4.  Para usar Transact-SQL para crear un extremo que se utilice con la autenticación de Windows, utilice la instrucción CREATE ENDPOINT. La instrucción toma la siguiente forma general:  
+4.  Si quiere usar Transact-SQL a fin de crear un punto de conexión para utilizarlo con la autenticación de Windows, use la instrucción `CREATE ENDPOINT`. La instrucción toma la siguiente forma general:  
   
+     ```syntaxsql
      CREATE ENDPOINT *\<endpointName>*  
   
      STATE=STARTED  
@@ -81,17 +82,18 @@ ms.locfileid: "85789729"
   
      ]  
   
-     [ [ **,** ] ENCRYPTION = **REQUIRED**  
+     [ [**,**] ENCRYPTION = **REQUIRED**  
   
      [ ALGORITHM { *\<algorithm>* } ]  
   
      ]  
   
-     [ **,** ] ROLE = *\<role>*  
+     [**,**] ROLE = *\<role>*  
   
      )  
-  
-     , donde  
+     ```
+     
+     Donde:  
   
     -   *\<endpointName>* es un nombre único para el punto de conexión de creación de reflejos de las bases de datos de la instancia del servidor.  
   
@@ -101,7 +103,7 @@ ms.locfileid: "85789729"
   
          Un número de puerto solo se puede usar una vez por sistema. Un extremo de creación de reflejo de base de datos puede utilizar cualquier puerto disponible en el sistema local cuando se crea el extremo. Para identificar los puertos que están usando los extremos TCP del sistema, utilice la siguiente instrucción Transact-SQL:  
   
-        ```  
+        ```sql  
         SELECT name, port FROM sys.tcp_endpoints;  
         ```  
   
@@ -124,12 +126,12 @@ ms.locfileid: "85789729"
   
          AES RC4 especifica que este extremo negociará el algoritmo de cifrado, dando preferencia al algoritmo AES. RC4 AES especifica que este extremo negociará el algoritmo de cifrado, dando preferencia al algoritmo RC4. Si ambos extremos especifican estos dos algoritmos en distintas órdenes, el extremo que acepte la conexión gana. Proporcione el mismo algoritmo de forma explícita para evitar errores de conexión entre distintos servidores.
   
-        > [!NOTE]  
+        > [!WARNING]  
         >  El algoritmo RC4 está obsoleto. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda utilizar AES.  
   
     -   *\<role>* define el rol o los roles que el servidor puede llevar a cabo. Se tiene que especificar ROLE. Sin embargo, el rol del extremo solo es relevante para la creación de reflejo de la base de datos. Para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], el rol del extremo se omite.  
   
-         Para permitir que una instancia de servidor sirva como un rol para una sesión de reflejo de base de datos y un rol diferente para otra sesión, especifique ROLE=ALL. Para hacer que la instancia de un servidor solo sea un asociado o un testigo, especifique ROLE=PARTNER o ROLE=WITNESS, respectivamente.  
+         Para permitir que una instancia de servidor sirva como un rol para una sesión de reflejo de base de datos y un rol diferente para otra sesión, especifique ROLE=ALL. Para hacer que la instancia de un servidor solo sea un asociado o un testigo, especifique `ROLE = PARTNER` o `ROLE = WITNESS`, respectivamente.  
   
         > [!NOTE]  
         >  Para obtener más información sobre las opciones de creación de reflejo de la base de datos en distintas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -155,7 +157,7 @@ ms.locfileid: "85789729"
 > [!IMPORTANT]  
 >  Cada instancia de servidor solo puede tener un extremo. Por lo tanto, si desea que una instancia de servidor actúe como asociado en ciertas sesiones y como testigo en otras, especifique ROLE=ALL.  
   
-```  
+```sql  
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  

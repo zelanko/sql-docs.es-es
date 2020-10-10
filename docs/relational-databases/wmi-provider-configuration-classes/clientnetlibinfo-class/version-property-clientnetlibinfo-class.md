@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 216c6415a7897f3363f0404d199e9b64a62c33e7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 412075bd466962e9e87f4a3892c0b5fafc9ddbb2
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89523255"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890612"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Propiedad Version (clase ClientNetLibInfo)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene la versión del archivo de biblioteca de red del cliente.  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -43,9 +43,8 @@ object.Version [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica la versión del archivo de biblioteca de red del cliente.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

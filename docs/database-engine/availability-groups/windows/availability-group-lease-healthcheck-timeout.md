@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc9b71fc08356731cdc3e536cea9c6ad17b651fe
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 074a66a094b08f843eed67cfb0276f8c9e635a63
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116981"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753754"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Instrucciones y mecanismos de los tiempos de espera de comprobación de estado, clúster y concesión para grupos de disponibilidad Always On 
 
@@ -157,7 +157,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
  | Tiempo de espera de concesión </br> **Valor predeterminado: 20000** | Evitar cerebro dividido (split-brain) | Principal a clúster </br> (HADR) | [Objetos de eventos de Windows](/windows/desktop/Sync/event-objects)| Usado en ambas | Falta de respuesta del sistema operativo, memoria virtual baja, paginación del espacio de trabajo, generación de volcado de memoria, CPU fijado, WSFC fuera de servicio (pérdida de cuórum) | Recurso de grupo de disponibilidad sin conexión-en línea, conmutación por error |  
  | Tiempo de espera de sesión </br> **Valor predeterminado: 10 000** | Informar de problema de comunicación entre réplica principal y secundaria | Secundaria a principal </br> (HADR) | [Sockets de TCP (mensajes enviados a través del extremo DBM)](/windows/desktop/WinSock/windows-sockets-start-page-2) | No se usa en ninguna | Comunicación de red, </br> Problemas en la réplica secundaria: fuera de servicio, falta de respuesta del SO, contención de recursos | Secundaria - DESCONECTADA | 
- |Tiempo de espera de HealthCheck  </br> **Valor predeterminado: 30000** | Indicar el tiempo de espera al intentar determinar el estado de la réplica principal | Clúster a principal </br> (FCI & HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Usado en ambas | Cumple las condiciones de error, falta de respuesta del sistema operativo, memoria virtual baja, reducción de espacio de trabajo, generación de volcado de memoria, WSFC (pérdida de cuórum), problemas del programador (programadores bloqueados)| Recursos de grupo de disponibilidad sin conexión-en línea o conmutación por error, reinicio o conmutación por error de FCI |  
+ |Tiempo de espera de HealthCheck  </br> **Valor predeterminado: 30000** | Indicar el tiempo de espera al intentar determinar el estado de la réplica principal | Clúster a principal </br> (FCI & HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Usado en ambas | Cumple las condiciones de error, falta de respuesta del sistema operativo, memoria virtual baja, reducción de espacio de trabajo, generación de volcado de memoria, WSFC (pérdida de cuórum), problemas del programador (programadores bloqueados)| Recursos de grupo de disponibilidad sin conexión y en línea o conmutación por error, reinicio o conmutación por error de FCI |  
   | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Consulte también    

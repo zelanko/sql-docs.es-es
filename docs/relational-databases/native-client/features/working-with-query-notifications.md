@@ -22,12 +22,12 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 054be9fbd641b926668666cfb82a32fdab1f38ce
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5fcd6eb55e54880365952491224e1b9511c8c561
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921063"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891985"
 ---
 # <a name="working-with-query-notifications"></a>Trabajar con notificaciones de consulta
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "86921063"
   
  Las notificaciones se envían una sola vez. Para obtener notificaciones continuas de cambios de datos, debe crearse una nueva suscripción ejecutando de nuevo la consulta después de procesar cada notificación.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Normalmente, las aplicaciones cliente nativas reciben notificaciones mediante el [!INCLUDE[tsql](../../../includes/tsql-md.md)] comando [Receive](../../../t-sql/statements/receive-transact-sql.md) para leer las notificaciones de la cola asociada al servicio especificado en las opciones de notificación.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Normalmente, las aplicaciones cliente nativas reciben notificaciones mediante el [!INCLUDE[tsql](../../../includes/tsql-md.md)] comando [Receive](../../../t-sql/statements/receive-transact-sql.md) para leer las notificaciones de la cola asociada al servicio especificado en las opciones de notificación.  
   
 > [!NOTE]  
 >  Los nombres de tabla deben calificarse en las consultas para las que se requiere notificación como, por ejemplo, `dbo.myTable`. Las tablas deben calificarse con nombres de dos partes. La suscripción no será válida si se usan nombres de tres o cuatro partes.  
@@ -80,7 +80,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Número de segundos que la notificación de consulta va a permanecer activa.<br /><br /> El valor predeterminado es 432000 segundos (5 días). El valor mínimo es 1 segundo y el valor máximo es 2^31-1 segundos.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Texto del mensaje de la notificación. Lo define el usuario y no tiene ningún formato predefinido.<br /><br /> De forma predeterminada, la cadena está vacía. Puede especificarse un mensaje usando de 1 a 2000 caracteres.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Opciones de notificación de consulta. Se especifican en una cadena con la sintaxis del valor de *nombre* = *value* . El usuario es responsable de la creación del servicio y de la lectura de las notificaciones fuera de la cola.<br /><br /> El valor predeterminado es una cadena vacía.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Opciones de notificación de consulta. Se especifican en una cadena con la sintaxis *nombre*=*valor*. El usuario es responsable de la creación del servicio y de la lectura de las notificaciones fuera de la cola.<br /><br /> El valor predeterminado es una cadena vacía.|  
   
  La suscripción de notificación se confirma siempre, independientemente de que la instrucción se haya ejecutado en una transacción de usuario o en una confirmación automática o de que la transacción en la que se haya ejecutado la instrucción se haya confirmado o revertido. La notificación del servidor se activa ante cualquiera de las siguientes condiciones de notificación no válida: cambio de esquema o datos subyacentes o cuando se alcanza el período de tiempo de espera, lo que ocurra antes. Los registros de notificación se eliminan en cuanto se activan. Por lo tanto, al recibir las notificaciones, la aplicación debe suscribirse de nuevo en caso de que deseen obtenerse actualizaciones posteriores.  
   
@@ -116,7 +116,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- Si los valores de SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT y SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS son distintos de NULL, el encabezado TDS de notificación de consulta que contiene los tres atributos definidos anteriormente se enviará al servidor cada vez que se ejecute el comando. Si alguno de estos valores es NULL, el encabezado no se envía y se devuelve SQL_SUCCESS_WITH_INFO. La validación se produce en la [función SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**y **SqlExecute**, y todas ellas generan un error si los atributos no son válidos. Del mismo modo, cuando estos atributos de notificación de consulta se establecen para versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se produce un error de ejecución con SQL_SUCCESS_WITH_INFO.  
+ Si los valores de SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT y SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS son distintos de NULL, el encabezado TDS de notificación de consulta que contiene los tres atributos definidos anteriormente se enviará al servidor cada vez que se ejecute el comando. Si alguno de estos valores es NULL, el encabezado no se envía y se devuelve SQL_SUCCESS_WITH_INFO. La validación se produce en la [función SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md), **SqlExecDirect**y **SqlExecute**, y todas ellas generan un error si los atributos no son válidos. Del mismo modo, cuando estos atributos de notificación de consulta se establecen para versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se produce un error de ejecución con SQL_SUCCESS_WITH_INFO.  
   
 > [!NOTE]  
 >  La preparación de instrucciones no hará que se inicie nunca la suscripción; la ejecución de la instrucción sí que puede iniciar la suscripción.  
@@ -138,5 +138,4 @@ RECEIVE * FROM MyQueue
   
 ## <a name="see-also"></a>Consulte también  
  [Características de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
-  
   

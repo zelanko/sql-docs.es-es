@@ -14,12 +14,12 @@ ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f87d123e9400d068b31ad45d193c17d8df2c526
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: d06eef79d29b0b2c731aab3e7561ee7b04685c6f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480341"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891975"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Buscar más información sobre SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "89480341"
  [Centro para desarrolladores de acceso a datos y almacenamiento](https://go.microsoft.com/fwlink?linkid=4173)  
  Este sitio proporciona artículos técnicos, código de ejemplo y otros recursos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y otras tecnologías de acceso a datos.  
   
- [Blog de acceso a datos](https://docs.microsoft.com/archive/blogs/dataaccess/quick-update-re-data-access-blog)  
+ [Blog de acceso a datos](/archive/blogs/dataaccess/quick-update-re-data-access-blog)  
  Este blog proporciona información sobre las tecnologías de acceso a datos y le permite interactuar directamente con miembros del equipo del producto.  
   
- [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907) (Componentes de Windows Data Access)  
+ [Windows Data Access Components](/previous-versions/windows/desktop/ms692897(v=vs.85)) (Componentes de Windows Data Access)  
  Este sitio incluye la documentación más reciente del SDK de Data Access Components para Windows (DAC para Windows). DAC para Windows es la versión de los componentes de acceso a datos (denominada MDAC en versiones anteriores) que se incluye en Windows Vista y Windows Server 2008.  
   
  El SDK de DAC para Windows incluye la documentación de Objetos de datos ActiveX (ADO), OLE DB y Conectividad abierta de bases de datos (ODBC).  
@@ -40,5 +40,4 @@ ms.locfileid: "89480341"
 
 ## <a name="see-also"></a>Consulte también  
  [Programación de SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md)  
-  
   

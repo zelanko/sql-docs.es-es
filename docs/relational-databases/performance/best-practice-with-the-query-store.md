@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c19088caa9942d3eafaf6ccf8c6195851f05c27f
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 8f0d845cc010b41fe7789ead2a66a188b214020a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042830"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529496"
 ---
 # <a name="best-practices-with-query-store"></a>Procedimientos recomendados con el almacén de consultas
 
@@ -434,7 +434,7 @@ Las marcas de seguimiento globales 7745 y 7752 se pueden usar para mejorar la di
 > Si va a usar el Almacén de consultas para resultados de la carga de trabajo Just-In-Time en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prevea la instalación de las mejoras de escalabilidad de rendimiento descritas en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) lo antes posible. Sin estas mejoras, cuando la base de datos está sometida a cargas de trabajo intensas, puede producirse la contención de bloqueo por subproceso y el rendimiento del servidor puede resultar lento. En concreto, puede ver una contención intensa en el bloqueo por subproceso `QUERY_STORE_ASYNC_PERSIST` o `SPL_QUERY_STORE_STATS_COOKIE_CACHE`. Después de aplicar esta mejora, el Almacén de consultas ya no producirá la contención de bloqueo por subproceso.
 
 > [!IMPORTANT]
-> Si va a usar el Almacén de consultas para resultados de la carga de trabajo Just-In-Time en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], prevea la instalación de la mejora de escalabilidad de rendimiento descrita en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 lo antes posible. Sin esta mejora, cuando la base de datos se encuentra sometida a cargas de trabajo ad hoc intensas, el Almacén de consultas puede usar una gran cantidad de memoria y el rendimiento del servidor puede ser lento. Después de aplicar esta mejora, el Almacén de consultas impone límites internos a la cantidad de memoria que pueden usar sus distintos componentes y puede cambiar automáticamente el modo de operación a solo lectura hasta que se devuelva suficiente memoria a [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Tenga en cuenta que los límites de memoria interna del Almacén de consultas no están documentados porque están sujetos a cambios.  
+> Si va a usar el Almacén de consultas para los resultados de la carga de trabajo Just-In-Time en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), prevea la instalación de la mejora de escalabilidad de rendimiento descrita en SP2 CU15 de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y CU22 de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] lo antes posible. Sin esta mejora, cuando la base de datos se encuentra sometida a cargas de trabajo ad hoc intensas, el Almacén de consultas puede usar una gran cantidad de memoria y el rendimiento del servidor puede ser lento. Después de aplicar esta mejora, el Almacén de consultas impone límites internos a la cantidad de memoria que pueden usar sus distintos componentes y puede cambiar automáticamente el modo de operación a solo lectura hasta que se devuelva suficiente memoria a [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Tenga en cuenta que los límites de memoria interna del Almacén de consultas no están documentados porque están sujetos a cambios.  
 
 ## <a name="see-also"></a>Consulte también
 

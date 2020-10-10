@@ -9,18 +9,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 6a590b895a1929e0c83ebef76cc2d6dc544ae5af
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088976"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753523"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Copia de seguridad y restauración de bases de datos de SQL Server en Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Puede realizar copias de seguridad de bases de datos de SQL Server 2017 en Linux con muchas opciones diferentes. En un servidor Linux, puede usar **sqlcmd** para conectarse a SQL Server y realizar copias de seguridad. En Windows, puede conectarse a SQL Server en Linux y realizar copias de seguridad con la interfaz de usuario. La funcionalidad de copia de seguridad es la misma en todas las plataformas. Por ejemplo, puede realizar copias de seguridad de bases de datos localmente, en unidades remotas o en el [servicio de almacenamiento Microsoft Azure Blob](../relational-databases/backup-restore/sql-server-backup-to-url.md).
+
+> [!IMPORTANT]
+> SQL Server en Linux solo admite la copia de seguridad en Azure Blob Storage mediante blobs en bloques. El uso de una clave de almacenamiento para la copia de seguridad y la restauración hará que se utilice un blob en páginas, lo que no se admite. En su lugar, utilice una firma de acceso compartido. Para obtener información sobre los blobs en bloques en comparación con los blogs en páginas, consulte [Copia de seguridad en blobs en bloques y blobs en páginas](../relational-databases/backup-restore/sql-server-backup-to-url.md#blockbloborpageblob).
 
 ## <a name="backup-a-database"></a>Realizar una copia de seguridad de una base de datos
 

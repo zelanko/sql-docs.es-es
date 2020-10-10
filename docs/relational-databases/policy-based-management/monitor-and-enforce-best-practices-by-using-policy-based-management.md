@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8560ed40c5a50ca16c6bad6b78d4a2eddcb0f0e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa82df08581e8667bdcae7e8c64fa1562e4b7081
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785086"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412771"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  La administración basada en directivas permite supervisar los procedimientos recomendados de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un conjunto de archivos de directivas que puede importar como directivas de procedimientos recomendados y después evalúa las directivas con un conjunto de destinos que incluye instancias, objetos de instancia, bases de datos u objetos de base de datos. Evalúe manualmente las directivas y establecer directivas para evaluar un conjunto de destinos según una programación o para evaluar un conjunto de destinos según un evento. Para obtener más información sobre la administración basada en directivas, vea [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+  La administración basada en directivas permite supervisar los procedimientos recomendados de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  Evalúe manualmente las directivas y establecer directivas para evaluar un conjunto de destinos según una programación o para evaluar un conjunto de destinos según un evento. Para obtener más información sobre la administración basada en directivas, vea [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  Hay disponible un conjunto de [archivos de directivas de ejemplo](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies) que puede importar como directivas de procedimientos recomendados. Después, puede evaluar las directivas con un conjunto de destinos que incluye instancias, objetos de instancia, bases de datos u objetos de base de datos.
   
 ## <a name="policy-and-rules-for-database-engine"></a>Directivas y reglas para el motor de base de datos  
- En la tabla siguiente se muestran las directivas incluidas con la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se ofrece información sobre las reglas de los procedimientos recomendados que evalúa cada directiva. Las directivas se almacenan como archivos XML y se deben importar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre cómo importar directivas, vea [Importar una directiva de administración basada en directivas](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
+ En la tabla siguiente se muestran las directivas incluidas en el conjunto de [directivas de ejemplo](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies) y se ofrece información sobre las reglas de los procedimientos recomendados que evalúa cada directiva. Las directivas se almacenan como archivos XML y se deben importar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre cómo importar directivas, vea [Importar una directiva de administración basada en directivas](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
   
 |Nombre de la directiva|Regla de práctica recomendada|  
 |-----------------|------------------------|  

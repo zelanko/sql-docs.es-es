@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6704808520b77867bd1a0b39af5118225398dae2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 54d992dd3d9b3604644f985f9e7db5f523b553f9
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537297"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889044"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>Propiedad ProtocolDLL (clase ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Obtiene el nombre del archivo .dll que necesita el protocolo de red especificado por [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx).  
+  Obtiene el nombre del archivo .dll que necesita el protocolo de red especificado por [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md).  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -43,9 +43,8 @@ object.ProtocolDLL [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el archivo .dll de protocolo requerido por el protocolo de red del cliente.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

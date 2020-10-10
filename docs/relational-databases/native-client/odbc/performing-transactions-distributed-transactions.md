@@ -18,11 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7732b2e0f975ad1cd026a75f9614b3cb59ec7d8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b20ac97f52b9429c1d3ab0b0db5230100af2e19f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009740"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892265"
 ---
 # <a name="create-a-distributed-transaction"></a>Crear una transacción distribuida
 
@@ -59,7 +60,7 @@ _(1)_ MSDTC se puede invocar sin ODBC. En tal caso, MSDTC se convierte en el adm
 
 Supongamos que la aplicación ODBC de C++ Native Client se ha dado de alta en una transacción distribuida. Después, la aplicación se da de alta en una segunda transacción distribuida. En este caso, el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client deja la transacción distribuida original y se da de alta en la nueva transacción distribuida.
 
-Para obtener más información, vea [Referencia del programador de DTC](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\)).
+Para obtener más información, vea [Referencia del programador de DTC](/previous-versions/windows/desktop/ms686108(v=vs.85)).
 
 ## <a name="c-alternative-for-sql-database-in-the-cloud"></a>Alternativa de C# para SQL Database en la nube
 
@@ -75,6 +76,6 @@ Los siguientes lenguajes de programación podrían no proporcionar compatibilida
 - Servidor vinculado mediante Transact-SQL
 - Controladores JDBC
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 [Realizar transacciones (ODBC)](performing-transactions-in-odbc.md)

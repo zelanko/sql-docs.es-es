@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6835fbc893b45214cf8ea6f7b6a02d8f1e1df773
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 68bfdb9d087539efaf05d9f3f78bb5348d2a2831
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988746"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624842"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,6 +85,9 @@ La copia de seguridad de una base de datos grande en el almacenamiento de blobs 
   
 -   SQL Server limita a 1 TB el tamaño máximo de copia de seguridad admitido con un blob en páginas. El tamaño máximo de copia de seguridad admitido con blobs en bloques está limitado a aproximadamente 200 GB (50 000 bloques * 4 MB MAXTRANSFERSIZE). Los blobs en bloques admiten la creación de bandas para admitir tamaños de copia de seguridad considerablemente mayores.  
   
+    > [!IMPORTANT]  
+    >  Aunque el tamaño máximo de copia de seguridad admitido por cada blob en bloques sea de 200 GB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede escribir en tamaños de bloque más pequeños, lo que puede provocar que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alcance el límite de 50 000 bloques antes de que se transfiera toda la copia de seguridad. Divida las copias de seguridad en secciones (aunque tengan menos de 200 GB) para evitar el límite de bloques, especialmente cuando use copias de seguridad diferenciales o descomprimidas.
+
 -   Puede emitir una copia de seguridad o restaurar instrucciones mediante TSQL, SMO, cmdlets de PowerShell o el Asistente para copia de seguridad o restauración de SQL Server Management Studio.   
   
 -   No se admite la creación de un nombre de dispositivo lógico. Por tanto, no se admite agregar URL como dispositivo de copia de seguridad mediante sp_dumpdevice o mediante SQL Server Management Studio.  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9c60bea64ad528a953101da7625347ca659b1c6d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: f4140db7be7367105832ff564d927ba6bc40ed25
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485104"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955896"
 ---
 # <a name="adventureworks-sample-databases"></a>Bases de datos de ejemplo AdventureWorks
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ Use estos vínculos para descargar la base de datos de ejemplo adecuada para su 
 
 Si no está seguro de lo que necesita, comience con la versión de OLTP que coincida con la versión de SQL Server. 
 
-|**OLTP** |**Almacenamiento de datos** |**Ligero**|
+|**OLTP** |**almacenamiento de datos** |**Ligero**|
 |---------|---------|---------|
 |[AdventureWorks2019. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)|[AdventureWorksDW2019. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2019.bak)|[AdventureWorksLT2019. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2019.bak)|
 |[AdventureWorks2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak)|[AdventureWorksDW2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak)|[AdventureWorksLT2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2017.bak)|
@@ -63,7 +63,7 @@ Puede usar el `.bak` archivo para restaurar la base de datos de ejemplo en la in
 
 # <a name="sql-server-management-studio-ssms"></a>[SQL Server Management Studio (SSMS)](#tab/ssms)
 
-Si no está familiarizado con SQL Server Management Studio (SSMS), puede ver [connect & Query](../ssms/tutorials/connect-query-sql-server.md) para comenzar. 
+Si no está familiarizado con SQL Server Management Studio (SSMS), puede ver [connect & Query](../ssms/quickstarts/connect-query-sql-server.md) para comenzar. 
 
 Para restaurar la base de datos en SQL Server Management Studio, siga estos pasos:
 
@@ -121,21 +121,21 @@ Para restaurar la base de datos en Azure Data Studio, siga estos pasos:
 
 1. Seleccionar **restauración**
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="Seleccione restaurar en el menú superior para restaurar la base de datos.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="Para restaurar la base de datos, haga clic con el botón secundario en bases de datos en Explorador de objetos y seleccione restaurar base de datos.":::
 
 1. En la pestaña **General** , rellene los valores que aparecen en **origen**.
     1. En **restaurar desde**, seleccione *archivo de copia de seguridad*.
     1. En **ruta de acceso del archivo de copia de seguridad**, seleccione la ubicación en la que almacenó el archivo. bak. 
     
-   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="Seleccione la ruta de acceso del archivo de copia de seguridad":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="Para restaurar la base de datos, haga clic con el botón secundario en bases de datos en Explorador de objetos y seleccione restaurar base de datos.":::
     
     Esto rellena automáticamente el resto de los campos, como la **base de datos**, la base de **datos de destino** y la **restauración en**. 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="Una vez que haya elegido una ruta de acceso al archivo de copia de seguridad, el resto de los campos se rellenan automáticamente.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="Para restaurar la base de datos, haga clic con el botón secundario en bases de datos en Explorador de objetos y seleccione restaurar base de datos.":::
 
 1. Seleccione **restaurar** para restaurar la base de datos. 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Una vez que esté listo, seleccione restaurar para restaurar la base de datos.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Para restaurar la base de datos, haga clic con el botón secundario en bases de datos en Explorador de objetos y seleccione restaurar base de datos.":::
 
 ---
 
@@ -157,7 +157,7 @@ Siga estos pasos para utilizar una base de datos de ejemplo para crear una nueva
 1. Rellene la información solicitada para crear la base de datos. 
 1. En la pestaña **configuración adicional** , elija **muestra** como datos existentes en **origen de datos**: 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="Elija ejemplo como origen de datos en la pestaña configuración adicional en el Azure Portal al crear el Azure SQL Database":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="Para restaurar la base de datos, haga clic con el botón secundario en bases de datos en Explorador de objetos y seleccione restaurar base de datos.":::
 
 1. Seleccione **crear** para crear el nuevo SQL Database, que es la copia restaurada de la base de datos AdventureWorksLT. 
 
@@ -172,7 +172,7 @@ Para implementar una base de datos de ejemplo desde SQL Server a Azure SQL Datab
 1. Si todavía no lo ha hecho, [restaure la base de datos de ejemplo en SQL Server](#restore-to-sql-server). 
 1. Haga clic con el botón derecho en la base de datos restaurada en **Explorador de objetos**  >  **tareas**  >  **implementar base de datos en Microsoft Azure SQL Database.**... 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="Elija implementar la base de datos en Microsoft Azure SQL Database haciendo clic con el botón derecho en la base de datos y seleccionando tareas.":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="Para restaurar la base de datos, haga clic con el botón secundario en bases de datos en Explorador de objetos y seleccione restaurar base de datos.":::
 
 1. Siga el Asistente para conectarse a Azure SQL Database e implementar la base de datos. 
 
@@ -194,5 +194,5 @@ Una vez que haya restaurado la base de datos de ejemplo, use los siguientes tuto
 
 
 [Tutoriales de SQL Server motor de base de datos](../relational-databases/database-engine-tutorials.md)   
-[Conectarse y realizar consultas con SQL Server Management Studio (SSMS)](../ssms/tutorials/connect-query-sql-server.md)   
-[Conectarse y realizar consultas con Azure Data Studio](../ssms/tutorials/connect-query-sql-server.md)
+[Conectarse y realizar consultas con SQL Server Management Studio (SSMS)](../ssms/quickstarts/connect-query-sql-server.md)   
+[Conectarse y realizar consultas con Azure Data Studio](../ssms/quickstarts/connect-query-sql-server.md)

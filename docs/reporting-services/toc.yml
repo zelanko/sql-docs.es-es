@@ -145,23 +145,23 @@
           href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
         - name: Hospedar una base de datos del servidor de informes en un clúster de conmutación por error de SQL Server
           href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-    - name: Administrador de configuración de Reporting Services (modo nativo)
+    - name: Administrador de configuración del servidor de informes (modo nativo)
       href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
       items:
-        - name: Configurar la cuenta de servicio del servidor de informes (Administrador de configuración de SSRS)
+        - name: Configurar la cuenta de servicio del servidor de informes
           href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-        - name: Configurar las direcciones URL del servidor de informes (Administrador de configuración de SSRS)
+        - name: Configurar las direcciones URL del servidor de informes
           href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
           items:
-            - name: Acerca de las reservas y el registro de resrvas de URL (Administrador de configuración de SSRS)
+            - name: Acerca de las reservas y el registro de direcciones URL
               href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-            - name: Configurar una dirección URL (Administrador de configuración de SSRS)
+            - name: Configurar una dirección URL
               href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-            - name: Sintaxis de reserva de direcciones URL (Administrador de configuración de SSRS)
+            - name: Sintaxis de reserva de direcciones URL
               href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-            - name: Direcciones URL en archivos de configuración (Administrador de configuración de SSRS)
+            - name: Direcciones URL en archivos de configuración
               href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-            - name: Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias (Administrador de configuración de SSRS)
+            - name: Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias
               href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
         - name: Crear una base de datos
           href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
@@ -171,7 +171,7 @@
           href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
         - name: 'Configuración de correo electrónico: Modo nativo de Reporting Services (Administrador de configuración)'
           href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-        - name: Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)
+        - name: Configuración de la cuenta de ejecución desatendida
           href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
         - name: 'Claves de cifrado de SSRS: Administración de claves de cifrado'
           href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
@@ -188,7 +188,7 @@
               href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
         - name: Configuración de la suscripción y una cuenta de recurso compartido de archivos (Administrador de configuración)
           href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
-        - name: Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo (Administrador de configuración de SSRS)
+        - name: Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo
           href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
         - name: Integración de Power BI
           href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md

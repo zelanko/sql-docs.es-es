@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 6af3d91a76dd1964b7ef2e929392f85eb4b9245c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5324b953f70a9f0f64a4988c50ae02d1653d94f5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482498"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891135"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guía de optimización y validación posterior a la migración
 
@@ -38,7 +38,7 @@ Al migrar desde una versión anterior de [!INCLUDE[ssNoVersion](../includes/ssno
 
 Esto es debido a que, a partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], todos los cambios del optimizador de consultas están vinculados al [nivel de compatibilidad de la base de datos](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)más reciente, por lo que los planes no se cambian en el momento de la actualización, sino cuando un usuario cambia la opción de base de datos `COMPATIBILITY_LEVEL` a la versión más reciente. Esta función, junto con el Almacén de consultas, confiere al usuario un enorme control sobre el rendimiento de las consultas en el proceso de actualización. 
 
-Para obtener más información sobre los cambios del optimizador de consultas introducidas en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], consulte [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimizar los planes de consulta con el programa de estimación de cardinalidad de SQL Server 2014)](https://msdn.microsoft.com/library/dn673537.aspx).
+Para obtener más información sobre los cambios del optimizador de consultas introducidas en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], consulte [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimizar los planes de consulta con el programa de estimación de cardinalidad de SQL Server 2014)](/previous-versions/dn673537(v=msdn.10)).
 
 ### <a name="steps-to-resolve"></a>Pasos para resolver
 
@@ -67,7 +67,7 @@ Surge un posible problema si esa primera compilación puede que no haya usado lo
 5.  Vuelva a escribir la consulta para usar la sugerencia `DISABLE_PARAMETER_SNIFFING`. Se consigue el mismo efecto que al usar la técnica de variable local al deshabilitar completamente el examen de parámetros, a menos que se usen `OPTION(RECOMPILE)`, `WITH RECOMPILE` o `OPTIMIZE FOR <value>`.
 
 > [!TIP] 
-> Aproveche la característica de análisis de plan de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para identificar rápidamente si se trata de un problema. Encontrará más información [aquí](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
+> Aproveche la característica de análisis de plan de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para identificar rápidamente si se trata de un problema. Encontrará más información [aquí](/archive/blogs/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier).
 
 ## <a name="missing-indexes"></a><a name="MissingIndexes"></a> Faltan índices
 
@@ -166,8 +166,8 @@ Las funciones con valores de tabla devuelven un tipo de datos de tabla que puede
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Lecturas adicionales
 
  [Procedimiento recomendado con el Almacén de consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  
-[Tablas optimizadas para la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[Tablas optimizadas para la memoria](./in-memory-oltp/sample-database-for-in-memory-oltp.md)  
 [Funciones definidas por el usuario](../relational-databases/user-defined-functions/user-defined-functions.md)  
-[Table Variables and Row Estimations - Part 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/) (Variables de tabla y estimaciones de fila: parte 1)  
-[Table Variables and Row Estimations - Part 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/) (Variables de tabla y estimaciones de fila: parte 2)  
+[Table Variables and Row Estimations - Part 1](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-1) (Variables de tabla y estimaciones de fila: parte 1)  
+[Table Variables and Row Estimations - Part 2](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-2) (Variables de tabla y estimaciones de fila: parte 2)  
 [Almacenar en caché y volver a utilizar un plan de ejecución](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)

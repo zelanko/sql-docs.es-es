@@ -12,12 +12,12 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72c4b76489628e29825a7a212232a8f4aad99fde
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547005"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810468"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tablas temporales con control de versiones del sistema con tablas con optimización para memoria
 
@@ -25,7 +25,7 @@ ms.locfileid: "89547005"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-Las tablas temporales con control de versiones del sistema para [tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) están diseñadas con el objetivo de ofrecer una solución rentable para escenarios donde se requieren [auditorías de los datos y análisis puntales](https://msdn.microsoft.com/library/mt631669.aspx) , además de los datos recopilados con cargas de trabajo de OLTP en memoria. Ofrecen gran rendimiento transaccional, simultaneidad sin bloqueo y, al mismo tiempo, la capacidad de almacenar grandes cantidades de datos de historial en los que se pueden realizar consultas fácilmente.
+Las tablas temporales con control de versiones del sistema para [tablas con optimización para memoria](../in-memory-oltp/sample-database-for-in-memory-oltp.md) están diseñadas con el objetivo de ofrecer una solución rentable para escenarios donde se requieren [auditorías de los datos y análisis puntales](./temporal-table-usage-scenarios.md) , además de los datos recopilados con cargas de trabajo de OLTP en memoria. Ofrecen gran rendimiento transaccional, simultaneidad sin bloqueo y, al mismo tiempo, la capacidad de almacenar grandes cantidades de datos de historial en los que se pueden realizar consultas fácilmente.
 
 ## <a name="overview"></a>Información general
 
@@ -43,7 +43,7 @@ Los siguientes datos sobre las tablas temporales con control de versiones del si
 
 - Solo se puede usar el control de versiones del sistema en tablas optimizadas para memoria duraderas (**DURABILITY = SCHEMA_AND_DATA**).
 - La tabla de historial para la tabla con control de versiones del sistema optimizado para memoria debe ser basada en disco, al margen de si la creó el usuario final o el sistema.
-- Las consultas que afectan solo a la tabla actual (en memoria) pueden usarse en [módulos T-SQL compilados de forma nativa](https://msdn.microsoft.com/library/dn133184.aspx). No se admiten consultas temporales con la cláusula FOR SYSTEM TIME en módulos compilados de forma nativa. Se admite el uso de la cláusula FOR SYSTEM TIME con tablas optimizadas para memoria en consultas ad hoc y módulos no nativos.
+- Las consultas que afectan solo a la tabla actual (en memoria) pueden usarse en [módulos T-SQL compilados de forma nativa](../in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md). No se admiten consultas temporales con la cláusula FOR SYSTEM TIME en módulos compilados de forma nativa. Se admite el uso de la cláusula FOR SYSTEM TIME con tablas optimizadas para memoria en consultas ad hoc y módulos no nativos.
 - Cuando **SYSTEM_VERSIONING = ON**, se crea automáticamente una tabla de almacenamiento provisional interna optimizada para memoria a fin de aceptar los cambios con control de versiones del sistema más recientes, que son consecuencia de operaciones de actualización y eliminación en la tabla actual optimizada para memoria.
 - La tarea de vaciado de datos asincrónica mueve con regularidad los datos de la tabla de almacenamiento provisional interna optimizada para memoria a la tabla de historial basada en disco. Este mecanismo de vaciado de datos tiene el objetivo de mantener los búferes de memoria interna a menos del 10 % del consumo de memoria de sus objetos primarios. Puede efectuar un seguimiento del consumo de memoria total de la tabla temporal con control de versiones del sistema y optimizado para memoria si realiza una consulta a [sys.dm_db_xtp_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql.md) y resume los datos de la tabla de almacenamiento provisional interna optimizada para memoria y la tabla temporal actual.
 - Puede forzar un vaciado de datos invocando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).

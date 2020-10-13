@@ -11,23 +11,23 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 7c23b7faa93281ab34ed4b500d10dfd50e9c8c76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 90c219cd2e1034df4cc714247ae8d983bf54ff01
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737040"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867764"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Clasificación y detección de datos de SQL
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-La clasificación y detección de datos cuenta con una nueva herramienta integrada en [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) para **detectar**, **clasificar**, **etiquetar** y **notificar** los datos confidenciales de las bases de datos.
+La clasificación y detección de datos cuenta con una nueva herramienta integrada en [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) para **detectar**, **clasificar**, **etiquetar** y **notificar** los datos confidenciales de las bases de datos.
 La detección y clasificación de la información más confidencial (empresarial, financiera, sanitaria, etc.) pueden desempeñar un papel fundamental en el estado de protección de la información de la organización. Puede servir como infraestructura para lo siguiente:
 * Ayudar a cumplir los estándares de privacidad de datos.
 * Controlar el acceso a bases de datos o columnas que contienen datos altamente confidenciales y aumentar su seguridad.
 
 > [!NOTE]
-> La clasificación y detección de datos se **admite para SQL Server 2012 y versiones posteriores, y se puede usar con [SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) o versiones posteriores**. Para Azure SQL Database, vea [Clasificación y detección de datos de Azure SQL Database](/azure/sql-database/sql-database-data-discovery-and-classification/).
+> La clasificación y detección de datos se **admite para SQL Server 2012 y versiones posteriores, y se puede usar con [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) o versiones posteriores**. Para Azure SQL Database, vea [Clasificación y detección de datos de Azure SQL Database](/azure/sql-database/sql-database-data-discovery-and-classification/).
 
 ## <a name="overview"></a><a id="subheading-1"></a>Información general
 La clasificación y detección de datos incluye un conjunto de servicios avanzados que forman un nuevo paradigma de Information Protection de SQL destinado a proteger los datos, no solo la base de datos:
@@ -93,7 +93,7 @@ La clasificación incluye dos atributos de metadatos:
 
 ## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>Administración de la directiva de Information Protection con SSMS
 
-Puede administrar la directiva de Information Protection mediante [SSMS 18.4](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) o posterior:
+Puede administrar la directiva de Information Protection mediante [SSMS 18.4](../../ssms/download-sql-server-management-studio-ssms.md) o posterior:
 
 1. En SQL Server Management Studio (SSMS), conéctese a SQL Server.
 
@@ -116,7 +116,7 @@ Puede administrar la directiva de Information Protection mediante [SSMS 18.4](h
 SQL Server 2019 presenta la vista de catálogo del sistema [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md). Esta vista devuelve los tipos de información y las etiquetas de confidencialidad. 
 
 > [!NOTE]
-> Esta vista requiere el permiso **VIEW ANY SENSITIVITY CLASSIFICATION**. Para obtener más información, consulte [Metadata Visibility Configuration](https://docs.microsoft.com/sql/relational-databases/security/metadata-visibility-configuration?view=sql-server-ver15).
+> Esta vista requiere el permiso **VIEW ANY SENSITIVITY CLASSIFICATION**. Para obtener más información, consulte [Metadata Visibility Configuration](./metadata-visibility-configuration.md?view=sql-server-ver15).
 
 En las instancias de SQL Server 2019, consulte `sys.sensitivity_classifications` para revisar todas las columnas clasificadas con sus clasificaciones correspondientes. Por ejemplo: 
 
@@ -190,27 +190,27 @@ FROM
 # <a name="t-sql"></a>[T-SQL](#tab/t-sql)
 Puede utilizar T-SQL para agregar o quitar las clasificaciones de columna, así como recuperar todas las clasificaciones para toda la base de datos.
 
-- Agregue o actualice la clasificación de una o varias columnas: [ADD SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql) (Agregar clasificación de confidencialidad)
-- Quite la clasificación de una o varias columnas: [DROP SENSITIVITY CLASSIFICATION](https://docs.microsoft.com/sql/t-sql/statements/drop-sensitivity-classification-transact-sql) (Eliminar clasificación de la confidencialidad)
+- Agregue o actualice la clasificación de una o varias columnas: [ADD SENSITIVITY CLASSIFICATION](../../t-sql/statements/add-sensitivity-classification-transact-sql.md) (Agregar clasificación de confidencialidad)
+- Quite la clasificación de una o varias columnas: [DROP SENSITIVITY CLASSIFICATION](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md) (Eliminar clasificación de la confidencialidad)
 
 # <a name="powershell-cmdlet"></a>[Cmdlet de PowerShell](#tab/sql-powelshell)
 Puede usar cmdlet de PowerShell para agregar o quitar las clasificaciones de columna, así como recuperar todas las clasificaciones y obtener recomendaciones para toda la base de datos.
 
-- [Get-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
-- [Get-SqlSensitivityRecommendations](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
-- [Set-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
-- [Remove-SqlSensitivityClassification](https://docs.microsoft.com/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityClassification](/powershell/module/sqlserver/Get-SqlSensitivityClassification?view=sqlserver-ps)
+- [Get-SqlSensitivityRecommendations](/powershell/module/sqlserver/Get-SqlSensitivityRecommendations?view=sqlserver-ps)
+- [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification?view=sqlserver-ps)
+- [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification?view=sqlserver-ps)
 
 ---
 
 ## <a name="next-steps"></a><a id="subheading-6"></a>Pasos siguientes
 
-Para Azure SQL Database, vea [Clasificación y detección de datos de Azure SQL Database](https://go.microsoft.com/fwlink/?linkid=866265).
+Para Azure SQL Database, vea [Clasificación y detección de datos de Azure SQL Database](/azure/azure-sql/database/data-discovery-and-classification-overview).
 
 Considere la posibilidad de proteger sus columnas confidenciales mediante la aplicación de mecanismos de seguridad en el nivel de columna:
 
-* [Enmascaramiento dinámico de datos](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking) para ofuscar columnas confidenciales en uso.
-* [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine) para cifrar columnas confidenciales en reposo.
+* [Enmascaramiento dinámico de datos](./dynamic-data-masking.md) para ofuscar columnas confidenciales en uso.
+* [Always Encrypted](./encryption/always-encrypted-database-engine.md) para cifrar columnas confidenciales en reposo.
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

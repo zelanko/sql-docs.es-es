@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c3a609c9d9cdf4f01fea153fa85316920b674e88
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: f02f8883b0a6f913eee65047a183d013c75b800b
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670322"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834347"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar los permisos y las cuentas de servicio de Windows
 
@@ -68,6 +68,7 @@ Cada servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] repre
 
 |Versión de SQL Server|Path|
 |-|-|
+|SQL Server 2019|C:\Windows\SysWOW64\SQLServerManager15.msc|
 |SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|
@@ -378,7 +379,7 @@ Cuando los archivos de base de datos se almacenan en una ubicación definida por
 
 Es posible que sea necesario conceder algunos permisos de control de acceso a cuentas integradas o a otras cuentas de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La tabla siguiente muestra las ACL adicionales que son establecidas mediante el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :
 
-|Componente que realiza la solicitud|Cuenta|Resource|Permisos|
+|Componente que realiza la solicitud|Cuenta|Recurso|Permisos|
 |--------------------------|-------------|--------------|-----------------|
 |MSSQLServer|Usuarios del registro de rendimiento|Instid\MSSQL\binn|Mostrar el contenido de la carpeta|
 ||Usuarios de Monitor de rendimiento|Instid\MSSQL\binn|Mostrar el contenido de la carpeta|

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 27ccecb8293adff8fe5f2aaa3062a871d745c587
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: e33b72c93022a02538c143f976d4114589998b6f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435442"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867245"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclaves seguros
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -125,7 +125,7 @@ Si se produce un error en una instancia de SQL Server, sus bases de datos pueden
 > [!IMPORTANT]
 > Microsoft recomienda encarecidamente habilitar la [recuperación de base de datos acelerada (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) para la base de datos **antes** de crear el primer índice en una columna habilitada para enclave que se ha cifrado con cifrado aleatorio.
 
-Con el [proceso de recuperación de base de datos tradicional](https://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (que sigue al modelo de recuperación [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf)), para deshacer un cambio en un índice, SQL Server debe esperar a que una aplicación proporcione la clave de cifrado de la columna al enclave, lo que puede tardar mucho tiempo. ADR reduce enormemente el número de operaciones de deshacer que se debe aplazar porque una clave de cifrado de columna no está disponible en la caché dentro del enclave. Por lo tanto, aumenta considerablemente la disponibilidad de la base de datos, ya que reduce la posibilidad de que una nueva transacción se bloquee. Con ADR habilitado, SQL Server puede seguir necesitando una clave de cifrado de columna para completar la limpieza de las versiones de datos antiguas, pero se haría como una tarea en segundo plano que no afecta a la disponibilidad de la base de datos o a las transacciones del usuario. Sin embargo, puede que vea mensajes de error en el registro de errores, que indican operaciones de limpieza incorrectas debido a que falta una clave de cifrado de columna.
+Con el [proceso de recuperación de base de datos tradicional](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (que sigue al modelo de recuperación [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf)), para deshacer un cambio en un índice, SQL Server debe esperar a que una aplicación proporcione la clave de cifrado de la columna al enclave, lo que puede tardar mucho tiempo. ADR reduce enormemente el número de operaciones de deshacer que se debe aplazar porque una clave de cifrado de columna no está disponible en la caché dentro del enclave. Por lo tanto, aumenta considerablemente la disponibilidad de la base de datos, ya que reduce la posibilidad de que una nueva transacción se bloquee. Con ADR habilitado, SQL Server puede seguir necesitando una clave de cifrado de columna para completar la limpieza de las versiones de datos antiguas, pero se haría como una tarea en segundo plano que no afecta a la disponibilidad de la base de datos o a las transacciones del usuario. Sin embargo, puede que vea mensajes de error en el registro de errores, que indican operaciones de limpieza incorrectas debido a que falta una clave de cifrado de columna.
 
 ### <a name="indexes-on-enclave-enabled-columns-using-deterministic-encryption"></a>Índices en columnas habilitadas para enclave mediante cifrado determinista
 
@@ -187,5 +187,3 @@ Las siguientes limitaciones son específicas de Always Encrypted con enclaves se
 - [Consulta de columnas mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-query-columns.md)
 - [Uso de Always Encrypted con enclaves seguros para las columnas cifradas existentes](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Creación y uso de índices en columnas mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-create-use-indexes.md)
-
-

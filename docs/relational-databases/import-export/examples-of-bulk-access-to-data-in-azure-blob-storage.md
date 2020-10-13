@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7d05c7c6b049958f2f6280f3ee8ed2ae56ce325d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b067b668cfdf0dc42596d7fb6858240ad8d944e9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650850"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867717"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Ejemplos de Acceso en bloque a datos en Azure Blob Storage
 
@@ -40,7 +40,7 @@ El acceso masivo a Azure Blob Storage desde SQL Server, necesita al menos [!INCL
 Todos los ejemplos siguientes requieren una credencial con ámbito de base de datos que haga referencia a una firma de acceso compartido.
 
 > [!IMPORTANT]
-> El origen de datos externo debe crearse con una credencial con ámbito de base de datos que use la identidad `SHARED ACCESS SIGNATURE`. Para crear una firma de acceso compartido para la cuenta de almacenamiento, vea la propiedad **Firma de acceso compartido** en la página de propiedades de la cuenta de almacenamiento, en Azure Portal. Para más información sobre las firmas de acceso compartido, vea [Uso de Firmas de acceso compartido (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Para más información sobre las credenciales, vea [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+> El origen de datos externo debe crearse con una credencial con ámbito de base de datos que use la identidad `SHARED ACCESS SIGNATURE`. Para crear una firma de acceso compartido para la cuenta de almacenamiento, vea la propiedad **Firma de acceso compartido** en la página de propiedades de la cuenta de almacenamiento, en Azure Portal. Para más información sobre las firmas de acceso compartido, vea [Uso de Firmas de acceso compartido (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). Para más información sobre las credenciales, vea [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 Cree una credencial con ámbito de base de datos mediante `IDENTITY` que debe ser `SHARED ACCESS SIGNATURE`. Use el token de SAS creado para la cuenta de almacenamiento de blobs. Compruebe que el token de SAS no tenga un valor `?` inicial, que tenga al menos permiso de lectura sobre el objeto que debe cargarse y que el período de expiración sea válido (todas las fechas están en hora UTC).
 

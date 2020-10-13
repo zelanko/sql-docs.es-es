@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b1ec9fe-f6c5-46f7-aa63-6e671be1572d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 297b61dad13abbc4ab327d2e5432b73961ae443b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb78aa2fce1a416f280a1a62da723335366eb6f7
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494036"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892185"
 ---
 # <a name="check-integrity-of-database-with-suspect-pages"></a>Comprobar la integridad de una base de datos con páginas sospechosas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,9 +32,8 @@ ms.locfileid: "88494036"
   
 -   Realice una comprobación completa de coherencia de la base de datos ([DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)).  
   
--   Implemente las acciones del usuario que se definen en [MSSQLSERVER_824](https://go.microsoft.com/fwlink/?LinkId=81397).  
+-   Implemente las acciones del usuario que se definen en [MSSQLSERVER_824](/previous-versions/sql/sql-server-2016/aa337274(v=sql.130)).  
   
 ## <a name="for-more-information"></a>Para obtener más información  
  [Administrar la tabla suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
-  
   

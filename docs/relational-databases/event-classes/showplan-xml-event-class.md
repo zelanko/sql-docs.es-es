@@ -13,12 +13,12 @@ ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00aaf0a6a479901c72da0e8142191d59abc6ecc4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6114ecb7fc4ce386b9b86719031c80a0c815f149
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88329981"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866795"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML [clase de eventos]
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88329981"
   
  Si se incluye la clase de eventos Showplan XML en un seguimiento, la carga hará disminuir significativamente el rendimiento. Showplan XML almacena un plan de consulta creado al optimizar la consulta. Para minimizar la carga, limite el uso de esta clase de evento a seguimientos que supervisan problemas específicos durante períodos de tiempo breves.  
   
- Los documentos de Showplan XML tienen un esquema asociado. Puede encontrar este esquema en el [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740) o como parte de la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Los documentos de Showplan XML tienen un esquema asociado. Puede encontrar este esquema en el [sitio web de Microsoft](/previous-versions/aa720019(v=vs.71)) o como parte de la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="showplan-xml-event-class-data-columns"></a>Columnas de datos de la clase de evento Showplan XML  
   
@@ -64,5 +64,4 @@ ms.locfileid: "88329981"
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
-  
   

@@ -12,12 +12,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 38626888302f4644a8cdc36c1c370cf43a8134cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46fb0f6fa4e8607296ead7a2f5e77ac97e75f9d5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493868"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866991"
 ---
 # <a name="customize-behavior-of-word-breakers-with-a-custom-dictionary-sql-server-search"></a>Personalización del comportamiento de los separadores de palabras con un diccionario personalizado (Búsqueda de SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "88493868"
   
  Para obtener más información, vea el artículo siguiente de SharePoint:  
   
- [Cree un diccionario personalizado (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=215011)  
+ [Cree un diccionario personalizado (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/cc263242(v=office.14))  
   
  Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], coloque los archivos de diccionario personalizado en la siguiente carpeta:  
   
@@ -34,5 +34,4 @@ ms.locfileid: "88493868"
  Después de crear o cambiar los archivos de diccionario personalizado, reinicie el Selector de demonio de filtro de texto completo de SQL con el comando siguiente:  
   
  `exec sp_fulltext_service 'restart_all_fdhosts'`  
-  
   

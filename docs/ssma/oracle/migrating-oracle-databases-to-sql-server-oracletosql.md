@@ -11,18 +11,18 @@ ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 194d33d0b5318ca66494b838c7f59dfde5c72b88
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 98070662e3e097aea0edc6c0879a8c63e4bb5850
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933446"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005865"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>Migración de bases de datos de Oracle a SQL Server (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) para Oracle es un entorno completo que le ayuda a migrar rápidamente las bases de datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database o Azure SQL Data Warehouse. Con SSMA para Oracle, puede revisar los datos y los objetos de base de datos, evaluar las bases de datos para la migración, migrar objetos de base de datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database o Azure SQL Data Warehouse y, a continuación, migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database o Azure SQL Data Warehouse. Tenga en cuenta que no puede migrar los esquemas SYS y SYSTEM de Oracle.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para Oracle es un entorno completo que le ayuda a migrar rápidamente las bases de datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database o Azure Synapse Analytics. Con SSMA para Oracle, puede revisar los datos y los objetos de base de datos, evaluar las bases de datos para la migración, migrar objetos de base de datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database o Azure Synapse Analytics y, a continuación, migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database o Azure Synapse Analytics. Tenga en cuenta que no puede migrar los esquemas SYS y SYSTEM de Oracle.
   
 ## <a name="recommended-migration-process"></a>Proceso de migración recomendado  
-Para migrar correctamente objetos y datos de bases de datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database o Azure SQL Data Warehouse, utilice el siguiente proceso:
+Para migrar correctamente objetos y datos de bases de datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Azure SQL Database o Azure Synapse Analytics, use el siguiente proceso:
   
 1.  [Cree un nuevo proyecto de SSMA](working-with-ssma-projects-oracletosql.md).  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f4fafa88b228551aabab01cdb34bd5f119db5fa0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ef4d351d9eb1cdfc58cfe78696b21451163c42c9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537761"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867334"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Hacer copia de seguridad de una base de datos con tablas con optimización para memoria
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,6 +70,5 @@ ms.locfileid: "89537761"
  Si las tablas optimizadas para memoria son una parte significativa del tamaño de la base de datos, la copia de seguridad diferencial puede reducir considerablemente el tamaño de la copia de seguridad de la base de datos. Para las cargas de trabajo OLTP habituales, las copias de seguridad diferenciales serán mucho menores que las copias de seguridad completas de base de datos.  
   
 ## <a name="see-also"></a>Consulte también  
- [Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  
+ [Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
   

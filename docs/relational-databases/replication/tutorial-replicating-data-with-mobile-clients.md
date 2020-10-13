@@ -14,18 +14,18 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4110d523762a147a569caaf03d71dbdc4567c5c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4ffeb0300e8211110ba3a8b303ff21b230626b9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720691"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866905"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Configuración de la replicación (de mezcla) entre un servidor y clientes móviles
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 La replicación de mezcla es una buena solución al problema de mover datos entre un servidor central y clientes móviles que solo se conectan en determinadas ocasiones. Al usar los asistentes para replicación, es más fácil configurar y administrar una topología de replicación de mezcla. 
 
-Este tutorial le mostrará cómo configurar una topología de replicación para clientes móviles. Para más información sobre la replicación de mezcla, vea [Replicación de mezcla](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication).
+Este tutorial le mostrará cómo configurar una topología de replicación para clientes móviles. Para más información sobre la replicación de mezcla, vea [Replicación de mezcla](./merge/merge-replication.md).
   
 ## <a name="what-you-will-learn"></a>Aprendizaje  
 En este tutorial se explica cómo usar la replicación de mezcla para publicar datos de una base de datos central en uno o más usuarios móviles, de modo que cada usuario obtenga un subconjunto de datos filtrado de manera exclusiva. 
@@ -48,14 +48,14 @@ Para completar este tutorial, necesita tener SQL Server, SQL Server Management S
   
 - En el servidor de suscriptor (destino), instale cualquier edición de SQL Server, excepto SQL Server Express o SQL Server Compact. La publicación que se crea en este tutorial no es compatible con SQL Server Express ni con SQL Server Compact. 
 
-- Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Descargue la [base de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para obtener instrucciones sobre cómo restaurar una base de datos en SSMS, vea [Restaurar una copia de seguridad de base de datos con SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+- Descargue la [base de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para obtener instrucciones sobre cómo restaurar una base de datos en SSMS, vea [Restaurar una copia de seguridad de base de datos con SSMS](../backup-restore/restore-a-database-backup-using-ssms.md).  
  
   
 >[!NOTE]
 > - La replicación no se admite entre instancias de SQL Server que estén separadas por más de dos versiones entre sí. Para más información, vea la entrada de blog [Supported SQL Server versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (Versiones de SQL Server admitidas en la topología de replicación).
-> - En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], debe conectarse al publicador y al suscriptor con un inicio de sesión que sea miembro del rol fijo de servidor **sysadmin**. Para más información sobre este rol, vea [Roles de nivel de servidor](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], debe conectarse al publicador y al suscriptor con un inicio de sesión que sea miembro del rol fijo de servidor **sysadmin**. Para más información sobre este rol, vea [Roles de nivel de servidor](../security/authentication-access/server-level-roles.md).  
   
   
 **Tiempo estimado para completar este tutorial: 60 minutos**  
@@ -91,7 +91,7 @@ En esta sección, se crea una publicación de mezcla mediante [!INCLUDE[ssManStu
    >
    > Si usa una versión anterior a SQL 2017, verá un mensaje en la parte inferior de la pantalla que le notifica de posibles pérdidas de datos si usa esta columna en la replicación bidireccional. Puede ignorar este mensaje, ya que no afecta al propósito de este tutorial. Pero no olvide que este tipo de datos no debería replicarse en un entorno de producción, a menos que esté usando la versión compatible.
    > 
-   > Para más información sobre cómo replicar el tipo de datos **hierarchyid**, vea [Usar columnas hierarchyid en tablas replicadas](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables).
+   > Para más información sobre cómo replicar el tipo de datos **hierarchyid**, vea [Usar columnas hierarchyid en tablas replicadas](../../t-sql/data-types/hierarchyid-data-type-method-reference.md#using-hierarchyid-columns-in-replicated-tables).
     
   
 7. En la página **Filtrar filas de tabla**, seleccione **Agregar** y luego **Agregar filtro**.  
@@ -281,7 +281,6 @@ Para más información, consulte:
 - [Inicializar una suscripción con una instantánea](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [Sincronizar datos](../../relational-databases/replication/synchronize-data.md)  
 - [Sincronizar una suscripción de extracción](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
-  
   
   
   

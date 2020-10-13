@@ -14,12 +14,12 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce93ba3d2049315911ec7297991bf7ce416fab64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7cf573478ce602b15718a54cfb71b03b243d601b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756856"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867047"
 ---
 # <a name="sql-server-extended-events-packages"></a>Paquetes de SQL Server Extended Events
 
@@ -98,7 +98,7 @@ where name = 'keyword_map'
 >  Las palabras clave se asignan estrechamente a la agrupación actual de los eventos de Seguimiento de SQL.  
   
 ### <a name="targets"></a>Destinos  
- Los destinos son los consumidores de evento. Los destinos procesan los eventos, ya sea de forma sincrónica en el subproceso que activa el evento o de forma asincrónica en un subproceso proporcionado por el sistema. Eventos extendidos proporciona varios destinos que se pueden utilizar según corresponda para dirigir el resultado de los eventos. Para más información, consulte [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+ Los destinos son los consumidores de evento. Los destinos procesan los eventos, ya sea de forma sincrónica en el subproceso que activa el evento o de forma asincrónica en un subproceso proporcionado por el sistema. Eventos extendidos proporciona varios destinos que se pueden utilizar según corresponda para dirigir el resultado de los eventos. Para más información, consulte [SQL Server Extended Events Targets](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130)).  
   
 ### <a name="actions"></a>Acciones  
  Una acción es una respuesta o serie de respuestas de programación a un evento. Están enlazadas a un evento y cada evento puede tener un conjunto único de acciones.  
@@ -220,6 +220,5 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>Consulte también  
  [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Motor de SQL Server Extended Events](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [Destinos de SQL Server Extended Events](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
-  
+ [Destinos de SQL Server Extended Events](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))  
   

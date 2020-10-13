@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2e97a0e8ddae735865b4314e33f3a5ce6d365de0
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4479093323ceb6bb235fd1adab6eed7d796774af
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197272"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810570"
 ---
 # <a name="utility-explorer-f1-help"></a>Explorador de Utilidad (Ayuda F1)
 
@@ -68,7 +68,7 @@ ms.locfileid: "86197272"
   
  Observe que, al hacer clic en un vínculo de una categoría de utilización, se agrega **(filtrado)** al nodo correspondiente en el panel de navegación del explorador de la utilidad; es decir, **Instancias administradas** se etiqueta **Instancias administradas (filtrado)** . Para ver la configuración del filtro, haga clic con el botón derecho en el nodo en el panel de navegación y seleccione **Filtro**y, después, haga clic en **Configuración del filtro**. Para borrar la configuración del filtro, haga clic con el botón derecho en el nodo en el panel de navegación, seleccione **Filtro** y, después, haga clic en **Quitar filtro**.  
   
- Para obtener más información sobre cómo ver el estado de mantenimiento de instancias individuales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para ver o cambiar la configuración de la directiva, vea [Detalles de las instancias administradas &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2).  
+ Para obtener más información sobre cómo ver el estado de mantenimiento de instancias individuales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para ver o cambiar la configuración de la directiva, vea [Detalles de las instancias administradas &#40;Utilidad de SQL Server&#41;]().  
   
  Resumen de la utilidad  
  Muestra el número de instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el número de aplicaciones de capa de datos que administra la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -96,10 +96,10 @@ ms.locfileid: "86197272"
   
 -   No hay datos disponibles: no hay datos disponibles para las aplicaciones de capa de datos porque la instancia administrada de SQL Server que contiene la aplicación de capa de datos no está efectuando la notificación de datos.  
   
- El estado detallado de cada parámetro de estado se muestra en indicadores deslizantes. La zona a la derecha de los indicadores deslizantes muestra el número de aplicaciones de capa de datos que se encuentran en cada categoría de estado. Para obtener más información sobre cómo ver el estado de mantenimiento de aplicaciones de capa de datos individuales o para ver o cambiar la configuración de la directiva, vea [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ El estado detallado de cada parámetro de estado se muestra en indicadores deslizantes. La zona a la derecha de los indicadores deslizantes muestra el número de aplicaciones de capa de datos que se encuentran en cada categoría de estado. Para obtener más información sobre cómo ver el estado de mantenimiento de aplicaciones de capa de datos individuales o para ver o cambiar la configuración de la directiva, vea [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server&#41;](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130)).  
   
  Historial de la utilización del almacenamiento de la utilidad  
- El historial de utilización se muestra en un gráfico cronológico en la parte inferior del panel de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Observe que los datos sobre el momento muestran la fecha y hora locales del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+ El historial de utilización se muestra en un gráfico cronológico en la parte inferior del panel de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Observe que los datos sobre el momento muestran la fecha y hora locales del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) .  
   
  Utilice los botones de radio a la izquierda del área de presentación para cambiar los periodos de notificación del gráfico.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "86197272"
   
  La secuencia de columnas en la vista de lista se puede cambiar, para ello arrastre las columnas hacia la izquierda o la derecha. En la vista de lista, se pueden agregar o eliminar columnas, para ello haga clic en los encabezados de columna y seleccione columnas o anule su selección. El menú contextual también proporciona opciones de ordenación. La capacidad de ordenación también se puede activar si hace clic en la parte superior del nombre de una columna.  
   
- Para tener acceso a las opciones de filtro para la vista de lista de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic con el botón derecho en el nodo **Aplicaciones de capa de datos implementadas** en el panel de navegación del Explorador de Utilidad y seleccione **Filtro**. Una vez implementada la configuración del filtro, el nodo **Aplicaciones de capa de datos implementadas** en el Explorador de Utilidad se etiquetará con **Aplicaciones de capa de datos implementadas (filtradas)** . Para más información, consulte [Configuración del filtro &#40;Explorador de objetos y Explorador de Utilidad&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ Para tener acceso a las opciones de filtro para la vista de lista de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic con el botón derecho en el nodo **Aplicaciones de capa de datos implementadas** en el panel de navegación del Explorador de Utilidad y seleccione **Filtro**. Una vez implementada la configuración del filtro, el nodo **Aplicaciones de capa de datos implementadas** en el Explorador de Utilidad se etiquetará con **Aplicaciones de capa de datos implementadas (filtradas)** . Para más información, consulte [Configuración del filtro &#40;Explorador de objetos y Explorador de Utilidad&#41;](../../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  De forma predeterminada, las siguientes columnas muestran información sobre el estado de mantenimiento de cada aplicación de capa de datos.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "86197272"
   
 -   Modelo de recuperación: (simple, completo u optimizado para cargas masivas)  
   
--   Última hora notificada: Esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Última hora notificada: Esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) .  
   
  Pestaña Uso de la CPU  
  La pestaña Uso de la CPU muestra gráficos en paralelo de datos históricos para la aplicación de capa de datos y la utilización de la CPU del sistema informático.  
@@ -197,7 +197,7 @@ ms.locfileid: "86197272"
 -   1 año; se muestra en intervalos de 1 mes.  
   
  Pestaña Uso del almacenamiento  
- La pestaña Uso del almacenamiento tiene una vista de árbol que muestra los detalles de utilización del almacenamiento para los archivos de base de datos y archivos de registro que pertenecen a la aplicación de capa de datos seleccionada en la vista de lista. Observe que los datos sobre el momento muestran la fecha y hora locales del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+ La pestaña Uso del almacenamiento tiene una vista de árbol que muestra los detalles de utilización del almacenamiento para los archivos de base de datos y archivos de registro que pertenecen a la aplicación de capa de datos seleccionada en la vista de lista. Observe que los datos sobre el momento muestran la fecha y hora locales del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) .  
   
  La presentación se puede agrupar según el grupo de archivos o según el volumen. Para utilizar la vista de árbol de grupo de archivos, seleccione el botón de radio **Grupo de archivos** en **Archivos agrupados por:** selección.  
   
@@ -256,7 +256,7 @@ ms.locfileid: "86197272"
   
 -   Modelo de recuperación: (simple, completo u optimizado para cargas masivas)  
   
--   Última hora notificada: Esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Última hora notificada: Esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Detalles de las instancias administradas (Utilidad de SQL Server)
  La información de la vista Instancias administradas del Explorador de Utilidad proporciona los detalles de utilización para las instancias individuales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el historial de uso de la CPU, los detalles de utilización del almacenamiento en el nivel de archivo y la capacidad de ver y actualizar los umbrales de la directiva. Los umbrales de la directiva se pueden controlar en el nivel de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , para un equipo, para los archivos de base de datos y los archivos de registro, y en el nivel de volúmenes de almacenamiento. También se pueden ver los detalles sobre las propiedades correspondientes a las instancias administradas individuales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -275,7 +275,7 @@ ms.locfileid: "86197272"
   
  La secuencia de columnas en la vista de lista se puede cambiar, para ello arrastre las columnas hacia la izquierda o la derecha. En la vista de lista, se pueden agregar o eliminar columnas, para ello haga clic en los encabezados de columna y seleccione columnas o anule su selección. El menú contextual también proporciona opciones de ordenación. La capacidad de ordenación también se puede activar si hace clic en la parte superior del nombre de una columna.  
   
- Para tener acceso a las opciones de filtro de la vista de lista de la utilidad, haga clic con el botón derecho en el nodo **Instancias administradas** en el panel de navegación del Explorador de Utilidad y seleccione **Filtro**. Una vez se haya implementado la configuración del filtro, aparecerá la etiqueta **Instancias administradas (filtradas)** en el nodo **Instancias administradas** del Explorador de Utilidad. Para más información, consulte [Configuración del filtro &#40;Explorador de objetos y Explorador de Utilidad&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ Para tener acceso a las opciones de filtro de la vista de lista de la utilidad, haga clic con el botón derecho en el nodo **Instancias administradas** en el panel de navegación del Explorador de Utilidad y seleccione **Filtro**. Una vez se haya implementado la configuración del filtro, aparecerá la etiqueta **Instancias administradas (filtradas)** en el nodo **Instancias administradas** del Explorador de Utilidad. Para más información, consulte [Configuración del filtro &#40;Explorador de objetos y Explorador de Utilidad&#41;](../../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  De forma predeterminada, las siguientes columnas muestran información sobre el estado de mantenimiento con respecto a cada instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -319,7 +319,7 @@ ms.locfileid: "86197272"
   
 -   Language:  
   
--   Última hora notificada: Esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Última hora notificada: Esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) .  
   
  Pestaña Uso de la CPU  
  La pestaña Uso de CPU muestra gráficos en paralelo de datos históricos para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el uso de la CPU del sistema informático.  
@@ -337,7 +337,7 @@ ms.locfileid: "86197272"
 -   1 año; se muestra en intervalos de 1 mes.  
   
  Pestaña Uso del almacenamiento  
- La pestaña Uso del almacenamiento tiene una vista de árbol que muestra los detalles de la utilización del almacenamiento. Observe que los datos sobre el momento muestran la fecha y hora locales del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+ La pestaña Uso del almacenamiento tiene una vista de árbol que muestra los detalles de la utilización del almacenamiento. Observe que los datos sobre el momento muestran la fecha y hora locales del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) .  
   
  La presentación se puede agrupar según la base de datos o según el volumen. Para utilizar la vista de árbol de la base de datos, seleccione el botón de opción **Base de datos** en **Agrupar archivos por:** selección. Para ver el estado de la utilización del almacenamiento para los archivos de base de datos individuales, haga clic en el signo más junto a un nombre de base de datos en la vista de árbol. Los archivos de base de datos incluyen todas las bases de datos del usuario y del sistema que pertenecen a la instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ha seleccionado en la vista de lista.  
   
@@ -513,6 +513,5 @@ Pestaña **Almacenamiento de datos**: muestra los detalles de configuración par
   
 ## <a name="see-also"></a>Consulte también  
  [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Solucionar problemas de la Utilidad de SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [Solucionar problemas de la Utilidad de SQL Server](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

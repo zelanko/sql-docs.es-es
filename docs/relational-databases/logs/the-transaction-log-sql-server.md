@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 4d6e28a0e86a240d03ab4cdccac843488ff84446
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834766"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869300"
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ Después de una pérdida de hardware o un error de disco que afecten a los archi
 Según restaura cada copia de seguridad del registro, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] vuelve a aplicar todas las modificaciones incluidas en el registro para poner al día todas las transacciones. Cuando se restaura la última copia de seguridad, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] utiliza la información del registro para revertir todas las transacciones no completadas hasta ese momento. Para más información, vea [Información general sobre restauración y recuperación (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="supporting-transactional-replication"></a>Permitir la replicación transaccional
-El Agente de registro del LOG supervisa el registro de transacciones de cada base de datos configurada para crear replicaciones transaccionales y copia las transacciones marcadas para la replicación desde el registro de transacciones a la base de datos de distribución. Para obtener más información, consulte [Cómo funciona la replicación transaccional](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).
+El Agente de registro del LOG supervisa el registro de transacciones de cada base de datos configurada para crear replicaciones transaccionales y copia las transacciones marcadas para la replicación desde el registro de transacciones a la base de datos de distribución. Para obtener más información, consulte [Cómo funciona la replicación transaccional](/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>Compatibilidad con las soluciones de alta disponibilidad y recuperación ante desastres
 Las soluciones de servidor en espera, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], creación de reflejo de la base de datos y trasvase de registros dependen en gran medida del registro de transacciones. 
@@ -192,5 +192,4 @@ Cuando la replicación transaccional está habilitada, las operaciones `SELECT I
 [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-  
   

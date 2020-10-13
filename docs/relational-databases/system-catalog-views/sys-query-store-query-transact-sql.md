@@ -1,6 +1,6 @@
 ---
-description: Sys. query_store_query (Transact-SQL)
-title: Sys. query_store_query (Transact-SQL) | Microsoft Docs
+description: sys.query_store_query (Transact-SQL)
+title: sys.query_store_query (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -22,14 +22,14 @@ ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e96891721e5c42deb03e697c06a7f99ce353ad99
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1099243569f74cc5c50c90de1ec7bf35a5c53d51
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546732"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005821"
 ---
-# <a name="sysquery_store_query-transact-sql"></a>Sys. query_store_query (Transact-SQL)
+# <a name="sysquery_store_query-transact-sql"></a>sys.query_store_query (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Contiene información sobre la consulta y sus estadísticas de ejecución de tiempo de ejecución agregadas globales asociadas.  
@@ -37,47 +37,47 @@ ms.locfileid: "89546732"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**query_id**|**bigint**|Clave principal.|  
-|**query_text_id**|**bigint**|Clave externa. Combinaciones a [Sys. query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
-|**context_settings_id**|**bigint**|Clave externa. Combina con [Sys. query_context_settings &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**object_id**|**bigint**|IDENTIFICADOR del objeto de base de datos del que forma parte la consulta (procedimiento almacenado, desencadenador, CLR UDF/UDAgg, etc.). 0 si la consulta no se ejecuta como parte de un objeto de base de datos (consulta ad hoc).<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**batch_sql_handle**|**varbinary (64)**|IDENTIFICADOR del lote de instrucciones del que forma parte la consulta. Solo se rellena si la consulta hace referencia a tablas temporales o variables de tabla.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá *null*.|  
+|**query_text_id**|**bigint**|Clave externa. Combinaciones a [sys.query_store_query_text &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
+|**context_settings_id**|**bigint**|Clave externa. Combina con [sys.query_context_settings &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|  
+|**object_id**|**bigint**|IDENTIFICADOR del objeto de base de datos del que forma parte la consulta (procedimiento almacenado, desencadenador, CLR UDF/UDAgg, etc.). 0 si la consulta no se ejecuta como parte de un objeto de base de datos (consulta ad hoc).<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|  
+|**batch_sql_handle**|**varbinary (64)**|IDENTIFICADOR del lote de instrucciones del que forma parte la consulta. Solo se rellena si la consulta hace referencia a tablas temporales o variables de tabla.<br/>**Nota:** Azure Synapse Analytics siempre devolverá *null*.|  
 |**query_hash**|**Binary(8**|Hash MD5 de la consulta individual, basado en el árbol de consulta lógico. Incluye sugerencias del optimizador.|  
-|**is_internal_query**|**bit**|La consulta se ha generado internamente.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**query_parameterization_type**|**tinyint**|Tipo de parametrización:<br /><br /> 0 - Ninguno<br /><br /> 1: usuario<br /><br /> 2-simple<br /><br /> 3-forzado<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**query_parameterization_type_desc**|**nvarchar(60)**|Descripción textual del tipo de parametrización.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá *None*.|  
+|**is_internal_query**|**bit**|La consulta se ha generado internamente.<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|  
+|**query_parameterization_type**|**tinyint**|Tipo de parametrización:<br /><br /> 0 - Ninguno<br /><br /> 1: usuario<br /><br /> 2-simple<br /><br /> 3-forzado<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|  
+|**query_parameterization_type_desc**|**nvarchar(60)**|Descripción textual del tipo de parametrización.<br/>**Nota:** Azure Synapse Analytics siempre devolverá *ninguno*.|  
 |**initial_compile_start_time**|**datetimeoffset**|Hora de inicio de la compilación.|  
 |**last_compile_start_time**|**datetimeoffset**|Hora de inicio de la compilación.|  
 |**last_execution_time**|**datetimeoffset**|Última hora de ejecución hace referencia a la última hora de finalización de la consulta o el plan.|  
-|**last_compile_batch_sql_handle**|**varbinary (64)**|Identificador del último lote de SQL en el que se usó la consulta por última vez. Se puede proporcionar como entrada para [Sys. dm_exec_sql_text &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) para obtener el texto completo del lote.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá *null*.|  
-|**last_compile_batch_offset_start**|**bigint**|Información que se puede proporcionar a sys. dm_exec_sql_text junto con last_compile_batch_sql_handle.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|
-|**last_compile_batch_offset_end**|**bigint**|Información que se puede proporcionar a sys. dm_exec_sql_text junto con last_compile_batch_sql_handle.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**count_compiles**|**bigint**|Estadísticas de compilación.<br/>**Nota:** Azure SQL Data Warehouse devolverá siempre uno (1).|  
+|**last_compile_batch_sql_handle**|**varbinary (64)**|Identificador del último lote de SQL en el que se usó la consulta por última vez. Se puede proporcionar como entrada para [sys.dm_exec_sql_text &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) para obtener el texto completo del lote.<br/>**Nota:** Azure Synapse Analytics siempre devolverá *null*.|  
+|**last_compile_batch_offset_start**|**bigint**|Información que se puede proporcionar a sys.dm_exec_sql_text junto con last_compile_batch_sql_handle.<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|
+|**last_compile_batch_offset_end**|**bigint**|Información que se puede proporcionar a sys.dm_exec_sql_text junto con last_compile_batch_sql_handle.<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|  
+|**count_compiles**|**bigint**|Estadísticas de compilación.<br/>**Nota:** Azure Synapse Analytics siempre devolverá uno (1).|  
 |**avg_compile_duration**|**float**|Estadísticas de compilación en microsegundos.|  
 |**last_compile_duration**|**bigint**|Estadísticas de compilación en microsegundos.|  
-|**avg_bind_duration**|**float**|Estadísticas de enlace en microsegundos.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**last_bind_duration**|**bigint**|Estadísticas de enlace.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**avg_bind_cpu_time**|**float**|Estadísticas de enlace.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**last_bind_cpu_time**|**bigint**|Estadísticas de enlace.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**avg_optimize_duration**|**float**|Estadísticas de optimización en microsegundos.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|
-|**last_optimize_duration**|**bigint**|Estadísticas de optimización.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|
-|**avg_optimize_cpu_time**|**float**|Estadísticas de optimización en microsegundos.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|
-|**last_optimize_cpu_time**|**bigint**|Estadísticas de optimización.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|
-|**avg_compile_memory_kb**|**float**|Estadísticas de memoria de compilación.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|
-|**last_compile_memory_kb**|**bigint**|Estadísticas de memoria de compilación.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|
-|**max_compile_memory_kb**|**bigint**|Estadísticas de memoria de compilación.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|
-|**is_clouddb_internal_query**|**bit**|Siempre es 0 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el entorno local.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|
+|**avg_bind_duration**|**float**|Estadísticas de enlace en microsegundos.<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|  
+|**last_bind_duration**|**bigint**|Estadísticas de enlace.<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|  
+|**avg_bind_cpu_time**|**float**|Estadísticas de enlace.<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|  
+|**last_bind_cpu_time**|**bigint**|Estadísticas de enlace.<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|  
+|**avg_optimize_duration**|**float**|Estadísticas de optimización en microsegundos.<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|
+|**last_optimize_duration**|**bigint**|Estadísticas de optimización.<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|
+|**avg_optimize_cpu_time**|**float**|Estadísticas de optimización en microsegundos.<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|
+|**last_optimize_cpu_time**|**bigint**|Estadísticas de optimización.<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|
+|**avg_compile_memory_kb**|**float**|Estadísticas de memoria de compilación.<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|
+|**last_compile_memory_kb**|**bigint**|Estadísticas de memoria de compilación.<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|
+|**max_compile_memory_kb**|**bigint**|Estadísticas de memoria de compilación.<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|
+|**is_clouddb_internal_query**|**bit**|Siempre es 0 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el entorno local.<br/>**Nota:** Azure Synapse Analytics siempre devolverá cero (0).|
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso **View Database State** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [Sys. query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [Sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [Sys. query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys.database_query_store_options &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.query_context_settings &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_plan &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys.query_store_query_text &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [Sys. query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
- [Sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [sys.query_store_runtime_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys.query_store_runtime_stats_interval &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del Almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   

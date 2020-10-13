@@ -12,12 +12,12 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5711115843a32b18a1a16f50cd8eaf79fefb2f63
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ab153d8d28e2f8005f0b0a370ffa4def42f81c58
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537095"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868024"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demostración: Mejora de rendimiento de OLTP en memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +66,7 @@ go
   
 2.  Si decide crear una nueva base de datos de prueba, use el [portal de Azure](https://portal.azure.com) para crear una base de datos denominada **imoltp**.  
   
- Si desea obtener instrucciones para usar el portal de Azure para esto, consulte [Get Started with Azure SQL Database (Introducción a Base de datos SQL de Azure)](https://azure.microsoft.com/documentation/articles/sql-database-get-started).  
+ Si desea obtener instrucciones para usar el portal de Azure para esto, consulte [Get Started with Azure SQL Database (Introducción a Base de datos SQL de Azure)](/azure/azure-sql/database/single-database-create-quickstart).  
   
 ### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Paso 2: crear tablas optimizadas para memoria y un NCSProc  
  En este paso se crean tablas optimizadas para memoria y un procedimiento almacenado compilado de forma nativa (NCSProc). Haga lo siguiente:  
@@ -198,5 +198,4 @@ go
   
 ## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   

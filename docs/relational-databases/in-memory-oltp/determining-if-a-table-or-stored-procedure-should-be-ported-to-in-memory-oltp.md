@@ -15,17 +15,17 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a445b423375a9ca577435424c0bd89016cd53f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8e484cfef4f805f1456101ad966ddf64912daca5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723274"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867182"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  El informe de análisis del rendimiento de las transacciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permite evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos. En el informe también se indicará cuánto trabajo debe hacer para habilitar OLTP en memoria en la aplicación. Después de identificar una tabla basada en disco para convertirla a OLTP en memoria, puede usar el [Asistente de optimización de memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)para que le ayude a migrar la tabla. De manera similar, el [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) le permitirá convertir un procedimiento almacenado en un procedimiento almacenado compilado de forma nativa. Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](https://msdn.microsoft.com/library/dn673538.aspx).  
+  El informe de análisis del rendimiento de las transacciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permite evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos. En el informe también se indicará cuánto trabajo debe hacer para habilitar OLTP en memoria en la aplicación. Después de identificar una tabla basada en disco para convertirla a OLTP en memoria, puede usar el [Asistente de optimización de memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)para que le ayude a migrar la tabla. De manera similar, el [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) le permitirá convertir un procedimiento almacenado en un procedimiento almacenado compilado de forma nativa. Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](/previous-versions/dn673538(v=msdn.10)).  
   
  El informe de análisis del rendimiento de las transacciones se ejecuta directamente en la base de datos de producción, o bien en una base de datos de prueba con una carga de trabajo activa similar a la carga de trabajo de producción.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "85723274"
     > [!IMPORTANT]  
     >  El rendimiento de un sistema de base de datos depende de diversos de factores, no todos los cuales puede observar y medir el recopilador de rendimiento de las transacciones. Por consiguiente, el informe de análisis del rendimiento de las transacciones no garantiza que las mejoras reales en el rendimiento coincidirán con las predicciones, en el caso de que las haya.  
   
- El informe de análisis de rendimiento de transacción y los asesores de migración se instalan como parte de SQL Server Management Studio (SSMS) cuando se selecciona **Herramientas de administración - Básica** o **Herramientas de administración - Avanzada** al instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o bien al [descargar SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).    
+ El informe de análisis de rendimiento de transacción y los asesores de migración se instalan como parte de SQL Server Management Studio (SSMS) cuando se selecciona **Herramientas de administración - Básica** o **Herramientas de administración - Avanzada** al instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o bien al [descargar SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).    
   
 ## <a name="transaction-performance-analysis-reports"></a>Informes de análisis del rendimiento de las transacciones  
  Puede generar informes de análisis del rendimiento de las transacciones en **Explorador de objetos** haciendo clic con el botón derecho en la base de datos, seleccionando **Informes**y, después, **Informes estándar**e **Información general de análisis del rendimiento de las transacciones**. La base de datos debe tener una carga de trabajo activa o haber ejecutado una recientemente para generar un informe de análisis significativo.  
@@ -174,6 +174,5 @@ Las estadísticas de contención del informe de detalles de la tabla se recopila
     -   Un informe de lista de comprobación de migración para <nombre_objeto> es el único informe que hay en la ubicación especificada por folder_path2.  
   
 ## <a name="see-also"></a>Consulte también  
- [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [Migrar a OLTP en memoria](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

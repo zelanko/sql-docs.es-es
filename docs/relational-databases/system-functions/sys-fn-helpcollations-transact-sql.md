@@ -1,6 +1,6 @@
 ---
 description: sys.fn_helpcollations (Transact-SQL)
-title: Sys. fn_helpcollations (Transact-SQL) | Microsoft Docs
+title: sys.fn_helpcollations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66b0a9ad6c68e209cbcf21a05ef015f43535ec4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bec27f5d1f49abb1b05beaa1b17509c6cdf1ca5b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427837"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006566"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
@@ -58,7 +58,7 @@ fn_helpcollations ()
  En el ejemplo siguiente se devuelven todos los nombres de intercalación que comienzan por la letra `L` y que son intercalaciones de orden binario.
 
 > [!Note]
-> Azure SQL Data Warehouse consultas realizadas en fn_helpcollations () se deben ejecutar en la base de datos maestra.  
+> Las consultas de Azure Synapse Analytics en fn_helpcollations () se deben ejecutar en la base de datos maestra.  
   
 ```sql  
 SELECT Name, Description FROM fn_helpcollations()  
@@ -85,4 +85,4 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
 
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
 [COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
-[Compatibilidad de la intercalación de base de datos con Azure SQL Data Warehouse](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
+[Compatibilidad con la intercalación de base de datos para Azure Synapse Analytics](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  

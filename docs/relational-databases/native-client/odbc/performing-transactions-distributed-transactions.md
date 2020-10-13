@@ -18,12 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b20ac97f52b9429c1d3ab0b0db5230100af2e19f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e5ace381694dcc3afdbed36e35e48af147067b32
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892265"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005972"
 ---
 # <a name="create-a-distributed-transaction"></a>Crear una transacción distribuida
 
@@ -64,7 +64,7 @@ Para obtener más información, vea [Referencia del programador de DTC](/previou
 
 ## <a name="c-alternative-for-sql-database-in-the-cloud"></a>Alternativa de C# para SQL Database en la nube
 
-MSDTC no es compatible con Azure SQL Database ni con Azure SQL Data Warehouse.
+MSDTC no es compatible con Azure SQL Database o Azure Synapse Analytics.
 
 Sin embargo, se puede crear una transacción distribuida para SQL Database haciendo que el programa de C# use la clase .NET [System. Transactions. TransactionScope](/dotnet/api/system.transactions.transactionscope).
 
@@ -76,6 +76,6 @@ Los siguientes lenguajes de programación podrían no proporcionar compatibilida
 - Servidor vinculado mediante Transact-SQL
 - Controladores JDBC
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 [Realizar transacciones (ODBC)](performing-transactions-in-odbc.md)

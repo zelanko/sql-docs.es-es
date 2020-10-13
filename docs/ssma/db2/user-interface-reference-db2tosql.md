@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fa7ecb8749fb0b5a6f9a105393e3cb20a41456a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ae2a0f65d638af965b7dbb933a38c0b3b0e151e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454171"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988491"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Referencia de la interfaz de usuario (DB2ToSQL)
 En esta sección se incluyen temas de ayuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para DB2.  
@@ -30,7 +30,7 @@ En la tabla siguiente se muestran los cuadros de diálogo de SSMA:
 |[Conectar con la base de datos DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Utilice el cuadro de diálogo **conectar con DB2** para conectarse a la base de datos DB2 que desea migrar.|  
 |[Conéctese a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|Utilice el cuadro de diálogo **conectar con SQL Server** para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que desea migrar.|  
 |[Informe de migración de datos &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|Muestra los resultados de la migración de datos de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|[Configuración de la migración de datos](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Use la pestaña **configuración de migración de datos extendida** para escribir consultas personalizadas para la migración de datos.|  
+|[Configuración de la migración de datos](./data-migration-settings-db2tosql.md)|Use la pestaña **configuración de migración de datos extendida** para escribir consultas personalizadas para la migración de datos.|  
 |[Editar asignación de tipos &#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|Utilice los cuadros de diálogo **nueva asignación de tipos** o **Editar asignación de tipos** para crear o modificar la asignación de tipos de datos entre las bases de datos de origen y de destino y los objetos de base de datos.|  
 |[Configuración global &#40;editor&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|Use la página editor del cuadro de diálogo **configuración global** para configurar las opciones del editor de código.|  
 |[Configuración global &#40;cuadros de diálogo&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|Use la página cuadros de diálogo del cuadro de diálogo **configuración global** para configurar los valores predeterminados del cuadro de diálogo y de las advertencias.|  
@@ -49,4 +49,3 @@ En la tabla siguiente se muestran los cuadros de diálogo de SSMA:
 ## <a name="see-also"></a>Consulte también  
 [Introducción con SSMA para DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [Migrar bases de datos DB2 a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
-  

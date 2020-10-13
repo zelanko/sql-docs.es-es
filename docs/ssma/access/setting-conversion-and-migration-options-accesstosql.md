@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8d5113a5c007105a0fab7700d92a16672fa9ab84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc9a5328095f2ef839eb0c9617798299e46371fd
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488245"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987688"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Configuración de las opciones de conversión y migración (AccessToSQL)
 Para cada proyecto de SSMA, puede establecer opciones de nivel de proyecto. Estas opciones especifican cómo se convierten los objetos, cómo se migran los datos y cómo se asignan los tipos de datos de origen a los tipos de datos de destino. Antes de convertir objetos a o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure o migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, compruebe que las opciones de configuración son adecuadas para el proyecto.  
@@ -32,15 +32,15 @@ SSMA tiene cuatro conjuntos de opciones de configuración y cuatro modos para co
   
 La configuración se describe en la sección "referencia de la interfaz de usuario" de esta documentación. Para obtener más información sobre la configuración y cómo se aplica la configuración en cada modo, vea los temas siguientes:  
   
--   [Configuración del proyecto (conversión)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+-   [Configuración del proyecto (conversión)](./project-settings-conversion-accesstosql.md)  
   
--   [Configuración del proyecto (migración)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
+-   [Configuración del proyecto (migración)](./project-settings-migration-accesstosql.md)  
   
--   [Configuración del proyecto (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [Configuración del proyecto (GUI)](../sybase/project-settings-gui-sybasetosql.md)  
   
--   [Configuración del proyecto (asignación de tipo)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
+-   [Configuración del proyecto (asignación de tipo)](./project-settings-type-mapping-accesstosql.md)  
   
--   [Configuración del proyecto (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
+-   [Configuración del proyecto (SQL Azure)](./project-settings-azure-sql-db-accesstosql.md)  
   
 ## <a name="setting-project-options"></a>Configuración de opciones de proyecto  
 En SSMA, puede configurar los valores predeterminados para todos los proyectos. Estas opciones se guardan en el archivo de configuración de SSMA y se aplican a cualquier proyecto nuevo que cree.  
@@ -87,4 +87,3 @@ El siguiente paso de la migración depende de las necesidades del proyecto:
   
 ## <a name="see-also"></a>Consulte también  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

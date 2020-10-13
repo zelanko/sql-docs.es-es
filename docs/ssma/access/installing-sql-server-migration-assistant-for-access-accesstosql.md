@@ -23,24 +23,24 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 97974e649c27e8cf1182baa3b168d3490371a4cf
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 1313699a3d82e0dbced8469f251a0a105f296246
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411633"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985251"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Instalación de SQL Server Migration Assistant para Access (AccessToSQL)
 
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) para el acceso se instala mediante un asistente basado en Windows Installer. En este tema se proporciona información sobre los requisitos previos de instalación, un vínculo a la versión más reciente de SSMA e instrucciones para instalar, conceder licencias, desinstalar y actualizar SSMA.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 Antes de instalar SSMA, asegúrese de que el sistema cumple los requisitos siguientes:
 
 - Windows 7 o una versión posterior, o Windows Server 2008 o una versión posterior.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 o una versión posterior.
-- La [!INCLUDE[msCoName](../../includes/msconame_md.md)] versión .NET Framework 4.7.2 o una versión posterior. La .NET Framework está disponible en [Microsoft .net guía](https://docs.microsoft.com/dotnet/framework/).
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3,1 o una versión posterior.
+- La [!INCLUDE[msCoName](../../includes/msconame_md.md)] versión .NET Framework 4.7.2 o una versión posterior. La .NET Framework está disponible en [Microsoft .net guía](/dotnet/framework/).
 - Acceso y permisos suficientes en el equipo que hospeda la instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] en la que se van a migrar los datos y los objetos de base de datos.
 - Proveedor de Microsoft Data Access Object (DAO) versión 12,0 o 14,0. Puede instalar el proveedor de DAO desde Microsoft Office producto 2010/2007 o descargarlo desde el sitio web de Microsoft.
 - 4 GB de RAM (recomendado).
@@ -59,7 +59,7 @@ Para instalar SSMA:
 
    Si no tiene instalados los requisitos previos, aparece un mensaje que indica que primero debe instalar los componentes necesarios. Asegúrese de que ha instalado todos los requisitos previos y, a continuación, vuelva a ejecutar el programa de instalación.
 
-3. Lea el contrato de licencia para el usuario final. Si está de acuerdo, seleccione Acepto **el contrato**y, a continuación, haga clic en **siguiente**.
+3. Lea el contrato de licencia de End-User. Si está de acuerdo, seleccione Acepto **el contrato**y, a continuación, haga clic en **siguiente**.
 4. En la página **elegir tipo de instalación** , haga clic en **típica**.
 5. En la página **listo para instalar** puede habilitar o deshabilitar la telemetría y las comprobaciones de actualizaciones automáticas cada vez que se inicia la herramienta. Haga clic en **Instalar** para iniciar la instalación.
   

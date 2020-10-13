@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e541bf7cecf1614fc7fcdb1bf44cb8d71910bc13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f6b1db29b03d0ea0b2f6704039a1436107a4fd9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372921"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987648"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>Convertir, cargar y migrar (AccessToSQL)
 
@@ -36,6 +36,5 @@ Muestra el informe de conversión o migración asociado.
   
 ## <a name="see-also"></a>Consulte también
 
-[Referencia de la interfaz de usuario (acceso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-[Asistente para la migración](migration-wizard-accesstosql.md)  
-  
+[Referencia de la interfaz de usuario (acceso)](./user-interface-reference-accesstosql.md)  
+[asistente para migración](migration-wizard-accesstosql.md)  

@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d95c7b5d429aeba2425c9deb63af1df4ab0f6ac8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92ce9298b6d3752a4b60e98918404c2116423973
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497853"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988701"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Asignación de tipos de datos de origen y de destino (AccessToSQL)
 Los tipos de base de datos de Access se diferencian de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos Al convertir objetos de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos de Access en objetos de, debe especificar cómo se asignan los tipos de datos de a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en los procedimientos siguientes.  
   
 ## <a name="default-mappings"></a>Asignaciones predeterminadas  
-SSMA tiene un conjunto predeterminado de asignaciones de tipos de datos. Para obtener la lista de asignaciones predeterminadas, vea [configuración del proyecto (asignación de tipos)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
+SSMA tiene un conjunto predeterminado de asignaciones de tipos de datos. Para obtener la lista de asignaciones predeterminadas, vea [configuración del proyecto (asignación de tipos)](./project-settings-type-mapping-accesstosql.md).  
   
 ## <a name="customizing-data-type-mappings"></a>Personalizar asignaciones de tipos de datos  
 Mediante el cuadro de diálogo **configuración del proyecto** , puede personalizar cómo se asignan los tipos para todas las bases de datos y los objetos de base de datos de un proyecto. Las asignaciones de tipos de un proyecto de se aplican a todas las bases de datos y a los objetos de base de datos que no tienen asignaciones de tipo personalizadas.  
@@ -91,6 +91,5 @@ En el procedimiento siguiente se muestra cómo asignar tipos de datos en el nive
 ## <a name="next-steps"></a>Pasos siguientes  
 El siguiente paso del proceso de migración es [convertir los objetos de base de datos de Access en objetos de SQL Server](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

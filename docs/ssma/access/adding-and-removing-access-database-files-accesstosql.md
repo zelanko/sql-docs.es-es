@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 597de64479014e44f38c7073b6bc88e76a3137b4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 12c51ce9a3b4bdd83a1d1c4c7295f2ff438bc707
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934146"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987721"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Agregar y quitar archivos de base de datos de Access (AccessToSQL)
 Para migrar datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, debe agregar una o varias bases de datos de Access al proyecto SSMA. Estas bases de datos deben ser Access 97 o versiones posteriores. Si tiene bases de datos de una versión anterior de Access, debe convertir las bases de datos en una versión más reciente. Para ello, abra y guarde las bases de datos en Access 97 o una versión posterior antes de agregarlas a SSMA.  
@@ -129,9 +129,8 @@ Puede quitar una base de datos de Access de un proyecto siguiendo estos pasos.
 2.  Haga clic con el botón secundario en la base de datos y seleccione **quitar base de datos**.  
   
 ## <a name="next-step"></a>siguiente paso  
-El siguiente paso del proceso de migración consiste en [conectarse a SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
+El siguiente paso del proceso de migración consiste en [conectarse a SQL Server](../sybase/connecting-to-sql-server-sybasetosql.md).  
   
 ## <a name="see-also"></a>Consulte también  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Creación y administración de proyectos](creating-and-managing-projects-accesstosql.md)  
-  

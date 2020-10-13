@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 15e065410a32b0902ad065a1903f4e28da044149
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1babfbf6364371cbd1f96b310f29416b84f2b031
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488316"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984951"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Asistente buscar bases de datos (ubicaciones seleccionadas) (AccessToSQL)
 En la página seleccionar ubicaciones del asistente buscar bases de datos, especifique los parámetros de búsqueda para buscar las bases de datos de Access.  
@@ -58,7 +58,6 @@ Para buscar las bases de datos que coinciden con un criterio de tamaño, selecci
 **Propietario**  
 Escriba el nombre de usuario completo de Windows del propietario. Esto podría tener el formato *domain* \\ *usuario*de dominio.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Agregar y quitar archivos de base de datos de Access](adding-and-removing-access-database-files-accesstosql.md)  
-[Referencia de la interfaz de usuario (acceso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Referencia de la interfaz de usuario (acceso)](./user-interface-reference-accesstosql.md)  

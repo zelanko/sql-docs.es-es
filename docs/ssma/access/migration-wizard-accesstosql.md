@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8f2e2308cbee8aea34f8fa4b33de50ee69a2fdb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8f03fa27bf8c49cfeef06246c47996860c932ba
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423039"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988655"
 ---
 # <a name="migration-wizard-accesstosql"></a>Asistente para migración (AccessToSQL)
 El Asistente para migración le guía a través de la migración de una o varias bases de datos de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Mediante el asistente, se crea un proyecto, se agregan bases de datos al proyecto, se seleccionan los objetos que se van a migrar y se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. También convertirá, cargará y migrará los esquemas y los datos de Access. Opcionalmente, puede vincular tablas de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tablas de o SQL Azure.  
@@ -41,18 +41,18 @@ La página de bienvenida presenta el Asistente para migración y proporciona la 
 De forma predeterminada, SSMA iniciará el Asistente para migración al iniciar SSMA. Para evitar el inicio automático del asistente, desactive esta casilla.  
   
 ## <a name="create-new-project-page"></a>Página crear nuevo proyecto  
-La página crear nuevo proyecto es donde se escribe el nombre de archivo del proyecto, la ubicación y el tipo de proyecto de migración (la versión de destino SQL Server usar para la migración). Para obtener más información, vea [nuevo proyecto (SSMA)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3) .  
+La página crear nuevo proyecto es donde se escribe el nombre de archivo del proyecto, la ubicación y el tipo de proyecto de migración (la versión de destino SQL Server usar para la migración). Para obtener más información, vea [nuevo proyecto (SSMA)](./new-project-ssma-accesstosql.md) .  
   
 ## <a name="add-access-databases-page"></a>Página agregar bases de datos de Access  
 En la página Agregar bases de datos de Access se agregan una o varias bases de datos de Access al proyecto. Para agregar bases de datos individuales, haga clic en **Agregar bases de datos**y, a continuación, seleccione las bases de datos en la ventana **abrir** . O bien, puede buscar las bases de datos mediante el botón **Buscar bases de datos** . Para obtener más información, vea los temas siguientes:  
   
 -   [Agregar y quitar archivos de base de datos de Access](adding-and-removing-access-database-files-accesstosql.md)  
   
--   [Asistente buscar bases de datos (seleccionar ubicaciones)](https://msdn.microsoft.com/00b2d32a-998b-47a7-b25c-589b5bd6777a)  
+-   [Asistente Buscar bases de datos (Seleccionar ubicaciones)](./find-databases-wizard-select-locations-accesstosql.md)  
   
--   [Asistente buscar bases de datos (seleccionar archivos)](https://msdn.microsoft.com/2f574a34-4bab-40a4-89a8-ad4907ffc3fd)  
+-   [Asistente Buscar bases de datos (Seleccionar archivos)](./find-databases-wizard-select-files-accesstosql.md)  
   
--   [Asistente Buscar bases de datos (Comprobar selección)](https://msdn.microsoft.com/62e20e03-50cc-4ac8-8072-524d194d2ec3)  
+-   [Asistente Buscar bases de datos (Comprobar selección)](./find-databases-wizard-verify-selection-accesstosql.md)  
   
 ## <a name="select-objects-to-migrate-page"></a>Página seleccionar objetos que se van a migrar  
 En la página seleccionar objetos que se van a migrar, se seleccionan los objetos que se van a convertir. Puede seleccionar todos los objetos, grupos de objetos u objetos individuales.  
@@ -73,7 +73,7 @@ En la página seleccionar objetos que se van a migrar, se seleccionan los objeto
   
 Si tiene muchos objetos, es posible que desee usar las opciones **avanzadas de selección de objetos** en el panel derecho para filtrar los objetos de base de datos de Access. Por ejemplo, si selecciona **tablas** en el panel izquierdo, puede filtrar la lista de tablas escribiendo cadenas en el cuadro de **filtro** . A continuación, puede activar o desactivar las tablas filtradas para la migración con los botones situados en la parte superior del panel.  
   
-Para obtener más información sobre el filtrado, consulte la sección Opciones de [selección avanzada de objetos (SSMA Common)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c).  
+Para obtener más información sobre el filtrado, consulte la sección Opciones de [selección avanzada de objetos (SSMA Common)](../sybase/advanced-object-selection-sybasetosql.md).  
   
 ## <a name="connect-to-sql-server-page"></a>Página conectar con SQL Server  
 En la página conectar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , especifique las propiedades de conexión y, a continuación, conéctese a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [conexión a SQL Server](connect-to-sql-server-accesstosql.md).
@@ -96,10 +96,9 @@ Active la casilla **vincular tablas** para vincular las tablas de Access a las t
 ## <a name="migration-status-page"></a>Página estado de la migración  
 La página estado de la migración muestra el progreso de la conversión de los esquemas de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure esquemas, la carga de los esquemas convertidos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure y, a continuación, la migración de datos.  
   
-Para obtener más información acerca de esta página, vea [convertir, cargar y migrar](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b) .  
+Para obtener más información acerca de esta página, vea [convertir, cargar y migrar](./convert-load-and-migrate-accesstosql.md) .  
   
 ## <a name="see-also"></a>Consulte también  
 [Introducción con SQL Server Migration Assistant para el acceso &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[Referencia de la interfaz de usuario (acceso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Referencia de la interfaz de usuario (acceso)](./user-interface-reference-accesstosql.md)  

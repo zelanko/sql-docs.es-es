@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b05a5a6e571179dd5dcd5b1e50368d0b2e16035e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e3c86b950eb156e966db1cfe030bc40753d01f6e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320651"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988437"
 ---
 # <a name="appendix---1-mysqltosql"></a>Apéndice - 1 (MySQLToSQL)
 Vista rápida de las opciones de la línea de comandos de la consola de SSMA:  
@@ -32,5 +32,4 @@ Vista rápida de las opciones de la línea de comandos de la consola de SSMA:
 |8|-?|No|No es aplicable|No es aplicable|  
   
 ## <a name="see-also"></a>Consulte también  
-[Ejecutar la consola SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
-  
+[Ejecutar la consola SSMA (MySQL)](./executing-the-ssma-console-mysqltosql.md)  

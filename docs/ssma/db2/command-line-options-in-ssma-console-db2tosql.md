@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5dde1168e8107f01f06d5e60fb2b1853d47abc43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3dfef8a72c8c578b468ebcf34372e603579d13ed
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472528"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987441"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Opciones de la línea de comandos en la consola SSMA (DB2ToSQL)
 Microsoft proporciona un sólido conjunto de opciones de línea de comandos para ejecutar y controlar las actividades de SSMA. Las secciones siguientes detallan el mismo.  
@@ -120,7 +120,7 @@ Esto denota la carpeta de configuración del entorno de proyecto para el proyect
 ### <a name="secure-password-option--psecurepassword"></a>Opción de contraseña segura:-p/securepassword  
 Esta opción indica la contraseña cifrada para las conexiones del servidor. Difiere del resto de opciones: la opción no ejecuta ningún script ni ayuda en ninguna actividad relacionada con la migración, pero ayuda a administrar el cifrado de contraseñas para las conexiones de servidor usadas en el proyecto de migración.  
   
-No se puede especificar ninguna otra opción o contraseña como parámetro de la línea de comandos. De lo contrario, se producirá un error. Para obtener más información, consulte la sección [Administración de contraseñas](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) .  
+No se puede especificar ninguna otra opción o contraseña como parámetro de la línea de comandos. De lo contrario, se producirá un error. Para obtener más información, consulte la sección [Administración de contraseñas](./managing-passwords-db2tosql.md) .  
   
 Se admiten las siguientes subopciones para `-p/securepassword` :  
   
@@ -170,4 +170,3 @@ El paso siguiente depende de los requisitos del proyecto:
 2.  Para generar informes, consulte [generación de informes &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md).  
   
 3.  Para solucionar problemas de la consola de, consulte solución de problemas de [&#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
-  

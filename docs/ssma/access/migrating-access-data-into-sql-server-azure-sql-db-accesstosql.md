@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c44f7af6972c316322d4a81b7de9fa13b77205a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc1cdb31969eb94c29a6c58f974aef92c5cdfc62
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488318"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988661"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-database-accesstosql"></a>Migración de datos de Access en SQL Server-Azure SQL Database (AccessToSQL)
 Después de haber creado correctamente los objetos de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos en, puede migrar los datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
 ## <a name="setting-migration-options"></a>Establecer opciones de migración  
-Antes de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, revise las opciones de migración del proyecto en el cuadro de diálogo **configuración del proyecto** . En este cuadro de diálogo, puede establecer el tamaño del lote de migración, el bloqueo de tablas, la comprobación de restricciones, la activación del desencadenador de inserción, la identidad y el control de valores NULL, y cómo controlar las fechas que están fuera del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intervalo. Para obtener más información, vea [configuración del proyecto (migración)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+Antes de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, revise las opciones de migración del proyecto en el cuadro de diálogo **configuración del proyecto** . En este cuadro de diálogo, puede establecer el tamaño del lote de migración, el bloqueo de tablas, la comprobación de restricciones, la activación del desencadenador de inserción, la identidad y el control de valores NULL, y cómo controlar las fechas que están fuera del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intervalo. Para obtener más información, vea [configuración del proyecto (migración)](./project-settings-migration-accesstosql.md).  
   
 ## <a name="migrating-data"></a>Migrar datos  
 La migración de datos es una operación de carga masiva que mueve filas de datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure en transacciones. El número de filas que se van a cargar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure en cada transacción se configura en la configuración del proyecto.  
@@ -54,7 +54,6 @@ También puede migrar datos fuera de SSMA mediante la [!INCLUDE[ssNoVersion](../
 ## <a name="next-step"></a>siguiente paso  
 Si tiene acceso a las aplicaciones de base de datos que desea seguir usando después de la migración, vincule las tablas de base de datos de Access a las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tablas o SQL Azure. Para obtener más información, consulte [vincular aplicaciones de Access a SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Configuración de las opciones de conversión y migración](setting-conversion-and-migration-options-accesstosql.md)  
-  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 48054f25a5c7156a6d9d25d4770d19437d9dbadf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c39bc03cb6a1da09c7be6aac41c18b9d3bbd871
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454308"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987531"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Configuración del proyecto (asignación de tipo) (AccessToSQL)
 La configuración del proyecto de asignación de tipos permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA. También puede especificar asignaciones de tipos para objetos de base de datos individuales. Para obtener más información, vea [asignar tipos de datos de origen y de destino](mapping-source-and-target-data-types-accesstosql.md).  
@@ -75,5 +75,4 @@ Haga clic para restablecer todas las asignaciones de tipos de datos a los valore
   
 ## <a name="see-also"></a>Consulte también  
 [Asignación de tipos de datos de origen y de destino](mapping-source-and-target-data-types-accesstosql.md)  
-[Referencia de la interfaz de usuario (acceso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Referencia de la interfaz de usuario (acceso)](./user-interface-reference-accesstosql.md)  

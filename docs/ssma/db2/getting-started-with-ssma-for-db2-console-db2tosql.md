@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cb55f49a063ba58b526cccafbd2f400f4f889f17
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57cf454c5d13bf4a40325024e51bd19c4d56c446
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454289"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985134"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Introducción con SSMA para la consola de DB2 (DB2ToSQL)
 En esta sección se describe el procedimiento para iniciar y comenzar a usar la aplicación de consola DB2. Además, aquí se enumeran las convenciones que se usan en una ventana de salida de la consola de SSMA típica.  
@@ -42,9 +42,9 @@ Una vez que se haya iniciado correctamente la consola de en el sistema Windows, 
   
 Características adicionales:  
   
-1.  [Administración de contraseñas](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) y exportación e importación en otras máquinas Windows  
+1.  [Administración de contraseñas](./managing-passwords-db2tosql.md) y exportación e importación en otras máquinas Windows  
   
-2.  [Generación de informes](https://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883) para ver los informes de salida XML detallados para la evaluación de/conversion y la migración de datos. También se pueden generar informes de errores detallados para los comandos de actualización y sincronización.  
+2.  [Generación de informes](./generating-reports-db2tosql.md) para ver los informes de salida XML detallados para la evaluación de/conversion y la migración de datos. También se pueden generar informes de errores detallados para los comandos de actualización y sincronización.  
   
 ## <a name="ssma-console-output-conventions"></a>Convenciones de salida de la consola SSMA  
 Al ejecutar los comandos y las opciones de script de SSMA, el programa de consola muestra los resultados y los mensajes (información, error, etc.) al usuario en la consola de o, si es necesario, redirige a un archivo de salida XML. Cada tipo de mensaje de la salida se indica mediante un color único. Por ejemplo, el mensaje de texto en color blanco denota los comandos del archivo de script; el color verde representa un mensaje para la entrada del usuario, etc.  
@@ -63,5 +63,4 @@ Interpretación de color de la salida de la consola en la tabla siguiente:
 |Cian|Inicio, finalización y resultado de una operación|  
   
 ## <a name="see-also"></a>Consulte también  
-[Instalación de SSMA para DB2](https://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
-  
+[Instalación de SSMA para DB2](./installing-ssma-for-db2-db2tosql.md)  

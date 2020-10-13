@@ -15,12 +15,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2e05c41cfa226fc2cdc6d2050657b607430f4ef7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 548779915a1d3a1753a99b16ac95969c755cbb19
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723994"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988781"
 ---
 # <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "91723994"
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_pdw_remove_network_credentials 'target_server_name'  
 ```
@@ -51,7 +51,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso **ALTER Server State** .  
   
-## <a name="error-handling"></a>Tratamiento de errores  
+## <a name="error-handling"></a>Control de errores  
  Se produce un error si la eliminación de credenciales no se realiza correctamente en el nodo de control y en todos los nodos de proceso.  
   
 ## <a name="general-remarks"></a>Notas generales  

@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4b893bd45de93ab0ee934343e16bf6d577f1123
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77e6942702594d7c33e3e88ca0d695dda3a59caa
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427937"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868074"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Mejorar el rendimiento de los índices de texto completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -207,7 +207,7 @@ El motor de texto completo usa dos tipos de filtros cuando rellena un índice de
   
  Por razones de seguridad, los procesos de host de demonio de filtro cargan los filtros. Una instancia del servidor utiliza un proceso multiproceso para todos los filtros multiproceso y un proceso de un solo subproceso para todos los filtros de un solo subproceso. Cuando un documento que utiliza un filtro multiproceso contiene un documento incrustado que utiliza un filtro de un solo subproceso, el motor de texto completo inicia un proceso de un solo subproceso para el documento incrustado. Por ejemplo, al encontrar un documento de Word que contiene un documento PDF, el motor de texto completo usa el proceso multiproceso para el contenido de Word e inicia un proceso de un solo subproceso para el contenido PDF. Sin embargo, un filtro de un solo subproceso podría no funcionar bien en este entorno y desestabilizar el proceso de filtrado. En ciertas circunstancias en las que tal inserción es común, la desestabilización podría provocar el bloqueo del proceso. Cuando esto ocurre, el motor de texto completo vuelve a enrutar cualquier documento con error (por ejemplo, un documento de Word que incluya contenido PDF incrustado) al proceso del filtrado de un solo subproceso. Si esto sucede con frecuencia, se produce una disminución del rendimiento del proceso de indización de texto completo.  
   
-Para solucionar este problema, marque el filtro para el documento contenedor (en este ejemplo, el documento de Word) como filtro de un solo subproceso. Para marcar un filtro como de un solo subproceso, establezca el valor del Registro **ThreadingModel** del filtro en **Apartment Threaded**. Para obtener más información sobre los contenedores uniproceso, vea las notas del producto [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(Descripción y uso de modelos de subprocesos COM).  
+Para solucionar este problema, marque el filtro para el documento contenedor (en este ejemplo, el documento de Word) como filtro de un solo subproceso. Para marcar un filtro como de un solo subproceso, establezca el valor del Registro **ThreadingModel** del filtro en **Apartment Threaded**. Para obtener más información sobre los contenedores uniproceso, vea las notas del producto [Understanding and Using COM Threading Models](/previous-versions/ms809971(v=msdn.10))(Descripción y uso de modelos de subprocesos COM).  
   
 ## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de memoria del servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
@@ -217,5 +217,4 @@ Para solucionar este problema, marque el filtro para el documento contenedor (en
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)   
  [Solucionar problemas de indización de texto completo](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
-  
   

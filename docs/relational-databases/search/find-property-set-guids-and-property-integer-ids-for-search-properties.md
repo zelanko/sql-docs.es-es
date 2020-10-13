@@ -15,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b405768f889e73d1885b67b05d8cf124d3f28d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c916bcaa0ff0a3fb294038df30e65e7f53f367aa
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498625"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867461"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Búsqueda de GUID de conjuntos de propiedades e identificadores de enteros de propiedades para las propiedades de búsqueda
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88498625"
 |Tipo|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo de archivo percibido basado en su tipo canónico.|  
 |Title|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Título del elemento. Por ejemplo, el título de un documento, el asunto de un mensaje, la leyenda de una foto o el nombre de una pista de música.|  
   
- Para fomentar la coherencia entre los formatos de archivo, Microsoft ha identificado subconjuntos de las propiedades de documento de alta prioridad usadas con frecuencia para diversas categorías de documentos. Esto incluye comunicaciones, contactos, documentos, archivos de música, imágenes y vídeos. Para obtener más información sobre las principales propiedades para cada categoría, vea la sección sobre las [propiedades definidas por el sistema para formatos de archivo personalizados](https://go.microsoft.com/fwlink/?LinkId=144336) en la documentación de Windows Search.  
+ Para fomentar la coherencia entre los formatos de archivo, Microsoft ha identificado subconjuntos de las propiedades de documento de alta prioridad usadas con frecuencia para diversas categorías de documentos. Esto incluye comunicaciones, contactos, documentos, archivos de música, imágenes y vídeos. Para obtener más información sobre las principales propiedades para cada categoría, vea la sección sobre las [propiedades definidas por el sistema para formatos de archivo personalizados](/windows/win32/search/-shell-systemdefinedpropertiesforfileformats) en la documentación de Windows Search.  
   
  Un formato de archivo específico puede implementar propiedades de tres tipos:  
   
@@ -84,9 +84,9 @@ propID = 4
 ...  
 ```  
   
- Para obtener la descripción completa de esta propiedad, vea [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) en la documentación de Windows Search.  
+ Para obtener la descripción completa de esta propiedad, vea [System.Author](/windows/win32/properties/props-system-author) en la documentación de Windows Search.  
   
- Para obtener una lista completa de las propiedades de Windows, vea [Propiedades de Windows](https://go.microsoft.com/fwlink/?LinkId=215013), también en la documentación de Windows Search.  
+ Para obtener una lista completa de las propiedades de Windows, vea [Propiedades de Windows](/windows/win32/properties/props), también en la documentación de Windows Search.  
   
 ##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a> Agregar una propiedad a una lista de propiedades de búsqueda  
  En el ejemplo siguiente se muestra cómo agregar una propiedad a una lista de propiedades de búsqueda. En el ejemplo se usa una instrucción [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) para agregar la propiedad `System.Author` a una lista de propiedades de búsqueda denominada `PropertyList1`y se proporciona un nombre descriptivo para la propiedad, `Author`.  
@@ -107,5 +107,4 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

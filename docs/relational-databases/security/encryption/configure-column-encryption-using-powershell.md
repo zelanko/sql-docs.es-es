@@ -12,17 +12,17 @@ ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 623986a7ff2adaa7b2769090c2d94a8e9ebf2e83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7014f349998781dcd890e84a77deb4732fe028c9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493825"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91865756"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>Configuración del cifrado de columna mediante Always Encrypted con PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-En este artículo se proporcionan los pasos necesarios para establecer la configuración de destino de Always Encrypted para las columnas de base de datos mediante el cmdlet [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (en el módulo *SqlServer* de PowerShell). El cmdlet **Set-SqlColumnEncryption** modifica el esquema de la base de datos de destino y los datos almacenados en las columnas seleccionadas. Los datos almacenados en una columna se pueden cifrar, volver a cifrar o descifrar, en función de la configuración de cifrado de destino especificada para las columnas y la configuración de cifrado actual.
+En este artículo se proporcionan los pasos necesarios para establecer la configuración de destino de Always Encrypted para las columnas de base de datos mediante el cmdlet [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (en el módulo *SqlServer* de PowerShell). El cmdlet **Set-SqlColumnEncryption** modifica el esquema de la base de datos de destino y los datos almacenados en las columnas seleccionadas. Los datos almacenados en una columna se pueden cifrar, volver a cifrar o descifrar, en función de la configuración de cifrado de destino especificada para las columnas y la configuración de cifrado actual.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
@@ -66,9 +66,9 @@ Tarea  |Artículo  |Accede a claves de texto no cifrado o a almacén de claves  
 ---|---|---|---
 Paso 1. Inicie un entorno de PowerShell e importe el módulo SqlServer. | [Importar el módulo SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | No
 Paso 2. Conecte con el servidor y la base de datos. | [Conexión a una base de datos](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Sí
-Paso 3. Autentíquese en Azure si la clave maestra de columna (que protege la clave de cifrado de columna que se va a rotar) se almacena en el Almacén de claves de Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sí | No
-Paso 4. Construya una matriz de objetos SqlColumnEncryptionSettings, una para cada columna de base de datos que quiera cifrar, volver a cifrar o descifrar. SqlColumnMasterKeySettings es un objeto que existe en memoria (en PowerShell). Especifica el esquema de cifrado de destino de una columna. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | No | No
-Paso 5. Establezca la configuración de cifrado que quiera, especificada en la matriz de objetos SqlColumnMasterKeySettings que creó en el paso anterior. Una columna se cifrará, se volverá a cifrar o se descifrará en función de la configuración de destino especificada y la configuración de cifrado actual de la columna.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Nota:** Este paso puede llevar mucho tiempo. Las aplicaciones no podrán tener acceso a las tablas durante toda la operación o parte de esta, dependiendo del enfoque (en línea o sin conexión) que seleccione. | Sí | Sí
+Paso 3. Autentíquese en Azure si la clave maestra de columna (que protege la clave de cifrado de columna que se va a rotar) se almacena en el Almacén de claves de Azure. | [Add-SqlAzureAuthenticationContext](/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sí | No
+Paso 4. Construya una matriz de objetos SqlColumnEncryptionSettings, una para cada columna de base de datos que quiera cifrar, volver a cifrar o descifrar. SqlColumnMasterKeySettings es un objeto que existe en memoria (en PowerShell). Especifica el esquema de cifrado de destino de una columna. | [New-SqlColumnEncryptionSettings](/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | No | No
+Paso 5. Establezca la configuración de cifrado que quiera, especificada en la matriz de objetos SqlColumnMasterKeySettings que creó en el paso anterior. Una columna se cifrará, se volverá a cifrar o se descifrará en función de la configuración de destino especificada y la configuración de cifrado actual de la columna.| [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Nota:** Este paso puede llevar mucho tiempo. Las aplicaciones no podrán tener acceso a las tablas durante toda la operación o parte de esta, dependiendo del enfoque (en línea o sin conexión) que seleccione. | Sí | Sí
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>Cifrar columnas con el enfoque sin conexión: ejemplo
 
@@ -156,5 +156,3 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
  - [Configurar Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
  - [Configuración del cifrado de columna mediante el asistente para Always Encrypted](always-encrypted-wizard.md)
  - [Configuración del cifrado de columnas mediante Always Encrypted con un paquete DAC](configure-always-encrypted-using-dacpac.md)
-
-

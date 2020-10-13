@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 83a024997910e16b67e66244edcd9cc34c6751a7
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 1699ac4a2ad49a6a65fafed6a75c71585514de51
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442532"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868055"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Uso de un archivo de formato para la importación en bloque de datos (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,9 +34,9 @@ En este tema se describe cómo usar un archivo de formato en operaciones de impo
   * SQLNCHAR o SQLNVARCHAR (los datos se envían como Unicode).
   * SQLBINARY o SQLVARYBIN (los datos se envían sin realizar ninguna conversión).
 * Azure SQL Database y Almacenamiento de datos SQL de Azure solo admiten [bcp](../../tools/bcp-utility.md).  Para información adicional, consulte:
-  * [Carga de datos en Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
-  * [Carga de datos de SQL Server en Azure SQL Data Warehouse (archivos planos)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
-  * [Migración de los datos](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
+  * [Carga de datos en Azure SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [Carga de datos de SQL Server en Azure SQL Data Warehouse (archivos planos)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [Migración de los datos](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-develop)
 
 ## <a name="example-test-conditions"></a>Condiciones de prueba de ejemplo
 Los ejemplos de archivos de formato de este tema se basan en la tabla y archivo de datos definidos a continuación.
@@ -263,4 +263,3 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
  [Archivos de formato no XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)  
   [Archivos de formato para importar o exportar datos (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
-  

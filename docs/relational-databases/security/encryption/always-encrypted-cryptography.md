@@ -13,12 +13,12 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 364dbefa72708910d54977600ecb47942a5d96e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2cc6c779f441934e76108a71445078386dc4d567
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627561"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866916"
 ---
 # <a name="always-encrypted-cryptography"></a>Criptografía de Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85627561"
   
  Una clave de cifrado de columna (CEK) es una clave de cifrado de contenido (por ejemplo, una clave que se utiliza para proteger los datos) que está protegida por una CMK.  
   
- Todos los proveedores de almacenes CMK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] cifran las CEK por medio de RSA con relleno óptimo de cifrado asimétrico (RSA OAEP). El proveedor de almacén de claves que admite Microsoft Cryptography API: Next Generation (CNG) en .NET Framework ([clase SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) usa los parámetros predeterminados especificados por RFC 8017 en la sección A.2.1. Estos parámetros predeterminados utilizan una función hash de SHA-1 y una función de generación de máscara de MGF1 con SHA-1. Todos los demás proveedores de almacenes de claves usan SHA-256. 
+ Todos los proveedores de almacenes CMK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] cifran las CEK por medio de RSA con relleno óptimo de cifrado asimétrico (RSA OAEP). El proveedor de almacén de claves que admite Microsoft Cryptography API: Next Generation (CNG) en .NET Framework ([clase SqlColumnEncryptionCngProvider](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider)) usa los parámetros predeterminados especificados por RFC 8017 en la sección A.2.1. Estos parámetros predeterminados utilizan una función hash de SHA-1 y una función de generación de máscara de MGF1 con SHA-1. Todos los demás proveedores de almacenes de claves usan SHA-256. 
   
 ## <a name="data-encryption-algorithm"></a>Algoritmo de cifrado de datos  
  Always Encrypted usa el algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** para cifrar los datos de la base de datos.  
@@ -181,5 +181,4 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 ## <a name="see-also"></a>Consulte también  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Desarrollo de aplicaciones con Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
-  
   

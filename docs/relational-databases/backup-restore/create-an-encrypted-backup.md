@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a235ae2c396334d7dbd7c27efb582bf8c1890219
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fbf54c1e384357a423ee9c2c1f086edbc5c947f9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748437"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809261"
 ---
 # <a name="create-an-encrypted-backup"></a>Crear una copia de seguridad cifrada
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "85748437"
   
  **Requisitos previos:**  
   
--   Una cuenta de almacenamiento de Windows y un contenedor. Para obtener más información, vea: [Lección 1: Crear objetos de Azure Storage](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
+-   Una cuenta de almacenamiento de Windows y un contenedor. Para obtener más información, vea: [Lección 1: Crear objetos de Azure Storage](/previous-versions/sql/sql-server-2016/jj720557(v=sql.130)).  
   
 -   Una clave maestra para la base de datos maestra y un certificado o una clave asimétrica en la instancia de SQL Server. Para conocer los requisitos de cifrado y los permisos, vea [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md).  
   
@@ -129,5 +129,4 @@ ms.locfileid: "85748437"
     GO  
   
     ```  
-  
   

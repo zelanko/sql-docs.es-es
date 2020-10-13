@@ -11,16 +11,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2da7ecd383b1db1ef9a66b3ac3fb75ef9fbf8723
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9aea3dff9973d75c71eb27a60859c99d4385b617
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403881"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866937"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala una nueva versión (versión 14.0.4999.1038) del separador de palabras y del lematizador para el idioma inglés, reemplazando la versión anterior de estos componentes (versión 12.0.6828.0). Para obtener más información sobre el comportamiento modificado de los nuevos componentes, vea [Cambios de comportamiento en la búsqueda de texto completo](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15). En este tema se describe cómo pasar de la nueva versión de estos componentes a la versión previa o viceversa. Para las instalaciones de clúster, estos cambios deben realizarse en todos los nodos principales y pasivos.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala una nueva versión (versión 14.0.4999.1038) del separador de palabras y del lematizador para el idioma inglés, reemplazando la versión anterior de estos componentes (versión 12.0.6828.0). Para obtener más información sobre el comportamiento modificado de los nuevos componentes, vea [Cambios de comportamiento en la búsqueda de texto completo](./full-text-search.md?view=sql-server-ver15). En este tema se describe cómo pasar de la nueva versión de estos componentes a la versión previa o viceversa. Para las instalaciones de clúster, estos cambios deben realizarse en todos los nodos principales y pasivos.  
   
  Las versiones previas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizaban separadores de palabras distintos representados por CLSID diferentes para el inglés de Estados Unidos (LCID 1033) y el inglés del Reino Unido (LCID 2057). En esta versión, ambos LCID usan los mismos componentes con los mismos CLSID, como se muestra en la siguiente tabla:  
   
@@ -127,6 +127,5 @@ ms.locfileid: "88403881"
   
 ## <a name="see-also"></a>Consulte también  
  [Revertir los separadores de palabras usados por las búsquedas a la versión anterior](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [Cambios de comportamiento en la búsqueda de texto completo](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)  
-  
+ [Cambios de comportamiento en la búsqueda de texto completo](./full-text-search.md?view=sql-server-ver15)  
   

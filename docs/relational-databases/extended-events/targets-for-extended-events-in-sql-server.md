@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 706aa149b51b2cc56b524ad39db0e1453324bd00
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 45f347cb606773ad5e568a8d443bbe010e1a3fd1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863383"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868776"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos para eventos extendidos en SQL Server
 
@@ -156,7 +156,7 @@ El destino **event_file** escribe el resultado de la sesión de eventos desde el
 > [!NOTE]
 > Azure SQL Database solo admite el almacenamiento de archivos `xel` en Azure Blob Storage. 
 >
-> Para ver un ejemplo de código de **event_file** particular de SQL Database (y de SQL Managed Instance), vea [Código de destino del archivo de evento para eventos extendidos en SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
+> Para ver un ejemplo de código de **event_file** particular de SQL Database (y de SQL Managed Instance), vea [Código de destino del archivo de evento para eventos extendidos en SQL Database](/azure/sql-database/sql-database-xevent-code-event-file).
 
 ::: moniker-end
 
@@ -792,9 +792,6 @@ En caso de aparecer, el error **25726** significa que el flujo de eventos se lle
 ### <a name="xevent-namespaces"></a>Espacios de nombres de XEvent
 
 
-- [Espacio de nombres Microsoft.SqlServer.Management.XEvent](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
+- [Espacio de nombres Microsoft.SqlServer.Management.XEvent](/dotnet/api/microsoft.sqlserver.management.xevent)
 
-- [Espacio de nombres Microsoft.SqlServer.XEvent.Linq](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
-
-
-
+- [Espacio de nombres Microsoft.SqlServer.XEvent.Linq](/dotnet/api/microsoft.sqlserver.xevent.linq)

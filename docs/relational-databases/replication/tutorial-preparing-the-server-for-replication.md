@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ae1dddb8ac5b84bea8a602264c43797b2b041e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f9cbaaca472c6b63d0196cb2f751e28b184e206
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726029"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868396"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutorial: Preparación de SQL Server para la replicación (publicador, distribuidor, suscriptor)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,13 +48,13 @@ Para completar este tutorial, necesita tener SQL Server, SQL Server Management S
   
 - En el servidor del suscriptor (destino), instale cualquier edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], excepto [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] no puede ser un suscriptor de una replicación transaccional.  
   
-- Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Descargue la [base de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para obtener instrucciones sobre cómo restaurar una base de datos en SSMS, vea [Restaurar una copia de seguridad de base de datos con SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Descargue la [base de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para obtener instrucciones sobre cómo restaurar una base de datos en SSMS, vea [Restaurar una copia de seguridad de base de datos con SSMS](../backup-restore/restore-a-database-backup-using-ssms.md). 
     
 >[!NOTE]
 > - La replicación no se admite entre instancias de SQL Server que estén separadas por más de dos versiones entre sí. Para más información, vea la entrada de blog [Supported SQL Server versions in Replication Topology](replication-backward-compatibility.md) (Versiones de SQL Server admitidas en la topología de replicación).
-> - En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], debe conectarse al publicador y al suscriptor con un inicio de sesión que sea miembro del rol fijo de servidor **sysadmin**. Para más información sobre este rol, vea [Roles de nivel de servidor](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], debe conectarse al publicador y al suscriptor con un inicio de sesión que sea miembro del rol fijo de servidor **sysadmin**. Para más información sobre este rol, vea [Roles de nivel de servidor](../security/authentication-access/server-level-roles.md).  
 
 
 **Tiempo estimado para completar este tutorial: 30 minutos**
@@ -247,5 +247,4 @@ Ya ha preparado correctamente el servidor para la replicación. El artículo sig
 > [!div class="nextstepaction"]
 > [Tutorial: Configuración de la replicación entre dos servidores conectados completamente (transaccional)](tutorial-replicating-data-between-continuously-connected-servers.md)
 
-  
   

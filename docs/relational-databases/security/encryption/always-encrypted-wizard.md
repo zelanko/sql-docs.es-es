@@ -17,12 +17,12 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f592004e96a9b469a56bc9ff85b8f4080af38406
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9e130997ff6e81ffaef45597b0f4fbe9a238154c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627452"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866691"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Configuración del cifrado de columnas mediante el asistente para Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,8 @@ El asistente sirve para sacar datos de la base de datos y realizar operaciones c
 Se recomienda el uso de PowerShell: 
 
  - Para ver una introducción completa en la que se muestra cómo configurar Always Encrypted con el asistente y cómo usarlo en una aplicación cliente, consulte los siguientes tutoriales de Azure SQL Database:
-    - [Protección de la información confidencial en Azure SQL Database con Always Encrypted y con claves maestras de columna en el almacén de certificados de Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-    - [Protección de la información confidencial en Azure SQL Database con Always Encrypted y con claves maestras de columna en Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
+    - [Protección de la información confidencial en Azure SQL Database con Always Encrypted y con claves maestras de columna en el almacén de certificados de Windows](/azure/azure-sql/database/always-encrypted-certificate-store-configure)
+    - [Protección de la información confidencial en Azure SQL Database con Always Encrypted y con claves maestras de columna en Azure Key Vault](/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
 
  - Para ver un vídeo que incluye el uso del asistente, vea [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Protección de la información confidencial con Always Encrypted). Consulte también el blog del equipo de seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps (Asistente para cifrado de SSMS: habilitación de Always Encrypted en unos sencillos pasos)](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545).  
  - Para obtener más información sobre las claves de Always Encrypted, vea [Información general de administración de claves de Always Encrypted](overview-of-key-management-for-always-encrypted.md).

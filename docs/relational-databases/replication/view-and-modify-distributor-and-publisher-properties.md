@@ -17,12 +17,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 18b5f2e898638823e20aa237d9bbbc43bb025967
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 88321dc6030b76869c55039f04dea39728342751
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720596"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868121"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Ver y modificar las propiedades del distribuidor y del publicador
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -176,7 +176,7 @@ ms.locfileid: "85720596"
 5.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Pase el nuevo valor de contraseña para el parámetro *password* .  
   
     > [!IMPORTANT]  
-    >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+    >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](/previous-versions/aa719848(v=vs.71)) (en inglés) proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 6.  (Opcional) Realice los pasos siguientes para cambiar la contraseña en cada publicador remoto que utilice este distribuidor:  
   
@@ -208,5 +208,4 @@ ms.locfileid: "85720596"
  [Distributor and Publisher Information Script](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)  (Script de información del distribuidor y del publicador)  
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Ver información y realizar tareas para un publicador &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)  
-  
   

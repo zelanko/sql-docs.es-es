@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d3804de9de13720d5d7813d54bf5f8962b5e2992
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b75085f8b5c01ad5257f5bc165f32be7a7a91902
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748423"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809246"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>Crear credencial - autenticarse en Azure Storage
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "85748423"
   
 ## <a name="azure-credentials"></a>Credenciales de Azure  
  **Certificado de administración**  
- Use esta opción para especificar un certificado del almacén de certificados local que coincida con el certificado de administración de Azure. Para obtener más información sobre el certificado de administración de Azure, vea [Creación y actualización de un certificado de administración para Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
+ Use esta opción para especificar un certificado del almacén de certificados local que coincida con el certificado de administración de Azure. Para obtener más información sobre el certificado de administración de Azure, vea [Creación y actualización de un certificado de administración para Azure](/previous-versions/azure/gg551722(v=azure.100)).  
   
  **Suscripción**  
  Seleccione, escriba o pegue el identificador de su suscripción de Azure que coincida con el certificado de administración del almacén de certificados local.  
@@ -44,5 +44,4 @@ ms.locfileid: "85748423"
   
 ## <a name="storage-account"></a>Cuenta de almacenamiento  
  Seleccione la cuenta de almacenamiento que desea usar para almacenar los archivos de copia de seguridad.  
-  
   

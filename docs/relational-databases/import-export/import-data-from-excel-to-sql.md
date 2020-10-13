@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df99c766fa727af8981f048b231abac95c3a168c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6b299248e1bd953109d72e4536a4d520ccd942d7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715389"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868763"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importación de datos de Excel a SQL Server o Azure SQL Database
 
@@ -135,7 +135,7 @@ Para consultar los datos de Excel sin importarlos, solo tiene que usar la sintax
 
 Para obtener más información sobre las consultas distribuidas, vea los temas siguientes:
 
-- [Consultas distribuidas](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx) (Las consultas distribuidas todavía se admiten en SQL Server 2016, pero no se ha actualizado la documentación para esta característica).
+- [Consultas distribuidas](/previous-versions/sql/sql-server-2008-r2/ms188721(v=sql.105)) (Las consultas distribuidas todavía se admiten en SQL Server 2016, pero no se ha actualizado la documentación para esta característica).
 - [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
 - [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
 
@@ -252,8 +252,8 @@ Como se ha descrito anteriormente en la sección [Requisitos previos](#prereq), 
 
 Para obtener más información sobre el Asistente para copia, vea los temas siguientes:
 
-- [Asistente para copia de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
-- [Tutorial: crear una canalización con la actividad de copia mediante el Asistente para copia de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
+- [Asistente para copia de Data Factory](/azure/data-factory/data-factory-azure-copy-wizard)
+- [Tutorial: crear una canalización con la actividad de copia mediante el Asistente para copia de Data Factory](/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## <a name="azure-data-factory"></a><a name="adf"></a> Azure Data Factory
 
@@ -263,14 +263,14 @@ Como se ha descrito anteriormente en la sección [Requisitos previos](#prereq), 
 
 Para obtener más información sobre el uso de estos orígenes y receptores de Data Factory, vea los temas siguientes:
 
-- [Sistema de archivos](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
-- [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
-- [Azure SQL Database](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
+- [Sistema de archivos](/azure/data-factory/data-factory-onprem-file-system-connector)
+- [SQL Server](/azure/data-factory/data-factory-sqlserver-connector)
+- [Azure SQL Database](/azure/data-factory/data-factory-azure-sql-connector)
 
 Para empezar a obtener información sobre cómo copiar los datos con Azure Data Factory, vea los temas siguientes:
 
-- [Movimiento de datos con la actividad de copia](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
-- [Tutorial: crear una canalización con la actividad de copia mediante Azure Portal](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- [Movimiento de datos con la actividad de copia](/azure/data-factory/data-factory-data-movement-activities)
+- [Tutorial: crear una canalización con la actividad de copia mediante Azure Portal](/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>Errores comunes
 

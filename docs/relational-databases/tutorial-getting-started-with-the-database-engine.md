@@ -18,12 +18,12 @@ ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8398d6dcd8dc4fa10a6a4e4c52c0e910a9de1f18
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cad1def690f9ebf0803f25e83300d3790d6ef4c9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485404"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809390"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Introducción al motor de base de datos
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -48,9 +48,7 @@ Para usar este tutorial, debe tener el software siguiente instalado en el sistem
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para instalar [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], vea [Descarga de SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
-## <a name="see-also"></a>Vea también  
-[Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+## <a name="see-also"></a>Consulte también  
+[Tutorial: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)  
   
   
-  
-

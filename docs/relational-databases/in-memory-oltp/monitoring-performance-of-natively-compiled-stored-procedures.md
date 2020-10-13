@@ -12,12 +12,12 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbac8fa27b79b96a55f580983586141e14e27fc1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4214a85d3adc673c557d99d6bc21176559a85bd
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545189"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868509"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa
 
@@ -133,6 +133,5 @@ GO
  El plan de ejecución estimado para los procedimientos almacenados compilados de forma nativa muestra los operadores y las expresiones de consulta para las consultas del procedimiento. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] no admite todos los atributos SHOWPLAN_XML para los procedimientos almacenados compilados de forma nativa. Por ejemplo, los atributos relacionados con el costo del optimizador de consultas no forman parte de SHOWPLAN_XML para el procedimiento.  
   
 ## <a name="see-also"></a>Consulte también  
- [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
+ [Procedimientos almacenados compilados de forma nativa](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10c344ac156a59dda89e678709e6b846bf3c33a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: cededc3af0cb9c5e1980246ef67491c7e68fc960
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541192"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868139"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Crear una tabla con optimización para memoria y un procedimiento almacenado compilado de forma nativa
 
@@ -42,7 +42,7 @@ Para obtener información sobre cómo usar [!INCLUDE[ssManStudioFull](../../incl
 
 ### <a name="natively-compiled-stored-procedures"></a>Procedimientos almacenados compilados de forma nativa
 
-Los procedimientos almacenados compilados de forma nativa son los procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] compilados para código nativo y que tienen acceso a las tablas optimizadas para memoria. Los procedimientos almacenados compilados de forma nativa permiten la ejecución eficaz de consultas y la lógica empresarial en el procedimiento almacenado. Para obtener más información sobre el proceso de compilación nativa, vea [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md). Para obtener más información sobre cómo migrar procedimientos almacenados basados en disco a procedimientos almacenados compilados de forma nativa, vea [Problemas de migración para los procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md).
+Los procedimientos almacenados compilados de forma nativa son los procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] compilados para código nativo y que tienen acceso a las tablas optimizadas para memoria. Los procedimientos almacenados compilados de forma nativa permiten la ejecución eficaz de consultas y la lógica empresarial en el procedimiento almacenado. Para obtener más información sobre el proceso de compilación nativa, vea [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md). Para obtener más información sobre cómo migrar procedimientos almacenados basados en disco a procedimientos almacenados compilados de forma nativa, vea [Problemas de migración para los procedimientos almacenados compilados de forma nativa](./a-guide-to-query-processing-for-memory-optimized-tables.md).
 
 > [!NOTE]
 > Una diferencia entre los procedimientos almacenados (basados en disco) interpretados y los procedimientos almacenados compilados de forma nativa es que un procedimiento almacenado interpretado se compila en la primera ejecución mientras que un procedimiento almacenado compilado se compila cuando se crea. Con los procedimientos almacenados compilados de forma nativa, muchas condiciones de error se pueden detectar en el momento de la creación y harán que la creación del procedimiento almacenado compilado de forma nativa genere un error (desbordamiento aritmético, conversión de tipo y otras condiciones de división por cero). Con los procedimientos almacenados interpretados, estas condiciones de error normalmente no provocan un error al crear el procedimiento almacenado, pero todas las ejecuciones producirán un error.
@@ -291,6 +291,5 @@ ORDER BY so.so_id, sod.lineitem_id
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplos de código de OLTP en memoria](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
-  
+ [Ejemplos de código de OLTP en memoria](./sample-database-for-in-memory-oltp.md)  
   

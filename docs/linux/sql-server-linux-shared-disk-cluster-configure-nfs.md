@@ -2,19 +2,19 @@
 title: 'Configuración de FCI para almacenamiento NFS: SQL Server en Linux'
 description: Aprenda a configurar una instancia de clúster de conmutación por error (FCI) mediante almacenamiento NFS para SQL Server en Linux.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 47c2e816219ebbb4a4b3fefea2974ef511cdaee2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 06cd2218a2a194ab3345fc9ed00ae40e17f0141d
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897280"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784881"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configuración de la instancia de clúster de conmutación por error: NFS: SQL Server en Linux
 

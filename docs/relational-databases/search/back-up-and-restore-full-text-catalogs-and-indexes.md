@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 37a8ab93e1a7f4747167dc6a69acf173c318751f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8b6708493f92712fddb22582fe94382d882f0a2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465006"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869198"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Realizar copias de seguridad de los catálogos de texto completo y restaurarlos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88465006"
   En este tema se explica cómo hacer una copia de seguridad y restaurar los índices de texto completo creados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el catálogo de texto completo es un concepto lógico y no reside en un grupo de archivos. Por consiguiente, para hacer una copia de seguridad de un catálogo de texto completo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe identificar cada grupo de archivos que contenga un índice de texto completo que pertenezca al catálogo. A continuación, debe hacer copia de seguridad de cada uno de estos grupos de archivos, uno por uno.  
   
 > [!IMPORTANT]  
->  Se pueden importar los catálogos de texto completo al actualizar una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Cada catálogo de texto completo importado es un archivo de base de datos en su propio grupo de archivos. Para hacer una copia de seguridad de un catálogo importado, basta con hacer una copia de seguridad de su grupo de archivos. Para obtener más información, vea [Realizar copias de seguridad y restaurar catálogos de texto completo](https://go.microsoft.com/fwlink/?LinkID=121052), en los Libros en pantalla de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+>  Se pueden importar los catálogos de texto completo al actualizar una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Cada catálogo de texto completo importado es un archivo de base de datos en su propio grupo de archivos. Para hacer una copia de seguridad de un catálogo importado, basta con hacer una copia de seguridad de su grupo de archivos. Para obtener más información, vea [Realizar copias de seguridad y restaurar catálogos de texto completo](), en los Libros en pantalla de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ##  <a name="backing-up-the-full-text-indexes-of-a-full-text-catalog"></a><a name="backingup"></a> Hacer la copia de seguridad de los índices de texto completo de un catálogo de texto completo  
   
@@ -105,5 +105,4 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [Actualizar la búsqueda de texto completo](../../relational-databases/search/upgrade-full-text-search.md)  
-  
   

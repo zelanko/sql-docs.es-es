@@ -16,12 +16,12 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: acaf5441ee5ca80468d6795071f99979ac3bcda9
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 85f30b310f6878e9090dcf55e63be41c16f1490e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863387"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809867"
 ---
 # <a name="copy-only-backups"></a>Copias de seguridad de solo copia
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ Una *copia de seguridad de solo copia* es una copia de seguridad de [!INCLUDE[ss
  Las copias de seguridad de solo copia se registran en la columna **is_copy_only** de la tabla [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) .  
  
  > [!IMPORTANT]  
-> En Azure SQL Managed Instance no se puede crear una copia de seguridad de solo copia de una base de datos cifrada con [Cifrado de datos transparente (TDE) administrado por el servicio](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption). El TDE administrado por el servicio usa la clave interna para el cifrado de datos, y esa clave no se puede exportar, por lo que no se puede restaurar la copia de seguridad en ningún otro lugar. Considere la posibilidad de usar [TDE administrado por el cliente](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql) en su lugar para poder crear copias de seguridad de solo copia de bases de datos cifradas, pero asegúrese de que la clave de cifrado esté disponible para su posterior restauración.
+> En Azure SQL Managed Instance no se puede crear una copia de seguridad de solo copia de una base de datos cifrada con [Cifrado de datos transparente (TDE) administrado por el servicio](/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption). El TDE administrado por el servicio usa la clave interna para el cifrado de datos, y esa clave no se puede exportar, por lo que no se puede restaurar la copia de seguridad en ningún otro lugar. Considere la posibilidad de usar [TDE administrado por el cliente](/azure/sql-database/transparent-data-encryption-byok-azure-sql) en su lugar para poder crear copias de seguridad de solo copia de bases de datos cifradas, pero asegúrese de que la clave de cifrado esté disponible para su posterior restauración.
   
 ## <a name="to-create-a-copy-only-backup"></a>Para crear una copia de seguridad de solo copia  
  Para crear una copia de seguridad de solo copia, utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
@@ -98,7 +98,7 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
-- [Proveedor de SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+- [Proveedor de SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md)  
 
 ## <a name="see-also"></a>Consulte también  
  [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
@@ -108,4 +108,3 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase)
 
-  

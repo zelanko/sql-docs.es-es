@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fd961b275f6b392e9284312675c873f16fecd27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe74f56af2726a32d6216852ca2d8dec341ee6dd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718068"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809448"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85718068"
   
 -   Es necesario RESTORE WITH MOVE.  
   
--   Para obtener más información sobre Premium Storage, consulte [Premium Storage: almacenamiento de alto rendimiento para cargas de trabajo de máquinas virtuales de Azure](https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/)  
+-   Para obtener más información sobre Premium Storage, consulte [Premium Storage: almacenamiento de alto rendimiento para cargas de trabajo de máquinas virtuales de Azure](/azure/virtual-machines/disks-types)  
   
  **Cuenta de almacenamiento única:** la instantánea de archivos y los blobs de destino deben usar la misma cuenta de almacenamiento.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "85718068"
   
  **Restauración con conexión:** al utilizar las copias de seguridad de instantánea, no se pueden realizar restauraciones con conexión. Para obtener más información sobre la restauración con conexión, vea [Restauración con conexión &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
- **Facturación:** el uso de la copia de seguridad de instantánea de archivos de SQL Server conlleva cargos adicionales con el cambio de datos. Para obtener más información, vea [Introducción a cómo las instantáneas pueden incrementar los costos](https://msdn.microsoft.com/library/azure/hh768807.aspx).  
+ **Facturación:** el uso de la copia de seguridad de instantánea de archivos de SQL Server conlleva cargos adicionales con el cambio de datos. Para obtener más información, vea [Introducción a cómo las instantáneas pueden incrementar los costos](/rest/api/storageservices/Understanding-How-Snapshots-Accrue-Charges).  
   
  **Archivado:** si quiere archivar una copia de seguridad de instantánea de archivos, puede hacerlo en almacenamiento de blobs o en copia de seguridad de secuencias. Para archivar en el almacenamiento de blobs, copie las instantáneas del conjunto de copia de seguridad de instantánea de archivos en blobs diferentes. Para archivar en una copia de seguridad de secuencias, restaure la copia de seguridad de instantánea de archivos como una base de datos nueva y luego realice una copia de seguridad de secuencias normal con compresión y/o cifrado y archívela durante el tiempo que desee, independientemente de los blobs de base.  
   
@@ -178,5 +178,4 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Tutorial: Uso del servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-  
   

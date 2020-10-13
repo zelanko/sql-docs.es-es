@@ -12,12 +12,12 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 611fb6d081167053240bcf105d28e63b74c69ada
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: f5617201ce5cfb5dd5f341bcb1264ed250109a64
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279302"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867738"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Características de SQL Server no admitidas para OLTP en memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,4 +94,4 @@ En la tabla siguiente, los valores _versión_ como `(15.x)` hacen referencia al 
 
 ## <a name="see-also"></a>Consulte también
 
-- [Compatibilidad de SQL Server con OLTP en memoria](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)
+- [Compatibilidad de SQL Server con OLTP en memoria](./transact-sql-support-for-in-memory-oltp.md)

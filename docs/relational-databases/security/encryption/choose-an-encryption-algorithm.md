@@ -17,12 +17,12 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e93eeab1636dd2ee866ee6727bddb99c58a8c14
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 04f5ea78761812c54c13fcf611d3f6e4765769a5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332232"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869498"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Elegir un algoritmo de cifrado
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "87332232"
 >   
 >  El uso repetido de la misma RC4 o RC4_128 KEY_GUID en bloques diferentes de datos producirá la misma clave RC4 porque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no proporciona un valor de salt automáticamente. El uso repetido de la misma clave RC4 es un error conocido que producirá un cifrado muy poco seguro. Por consiguiente, hemos dejado de utilizar las palabras clave RC4_128 y RC4. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- Para obtener más información acerca de los algoritmos y la tecnología de cifrado, vea la sección referente a [conceptos claves de seguridad](https://go.microsoft.com/fwlink/?LinkId=62082) de la publicación .NET Framework Developer's Guide en MSDN.  
+ Para obtener más información acerca de los algoritmos y la tecnología de cifrado, vea la sección referente a [conceptos claves de seguridad](/previous-versions/aa720225(v=vs.71)) de la publicación .NET Framework Developer's Guide en MSDN.  
   
  **Clarificación con respecto a los algoritmos DES:**  
   
@@ -77,5 +77,4 @@ ms.locfileid: "87332232"
 ## <a name="see-also"></a>Consulte también  
  [Cifrado de SQL Server](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [Jerarquía de cifrado](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
   

@@ -15,23 +15,23 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e31863944670cbb6e32e999ec06164792848236a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efbd90e43c4f2bf7863106330b59f436c31b6238
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722448"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868538"
 ---
 # <a name="native-compilation-advisor"></a>Asistente de compilación nativa
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Los informes de análisis de rendimiento de transacciones le informan sobre los procedimientos almacenados interpretados de la base de datos que se beneficiarían si se convierten para utilizar la compilación nativa. Para obtener más información, vea [Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md).  
   
- Después de identificar el procedimiento almacenado que desea convertir para que utilice la compilación nativa, puede utilizar el Asistente para compilación nativa (NCA) para que le ayude a migrar el procedimiento almacenado interpretado a la compilación nativa. Para obtener más información acerca de los procedimientos almacenados compilados de forma nativa, vea [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Después de identificar el procedimiento almacenado que desea convertir para que utilice la compilación nativa, puede utilizar el Asistente para compilación nativa (NCA) para que le ayude a migrar el procedimiento almacenado interpretado a la compilación nativa. Para obtener más información acerca de los procedimientos almacenados compilados de forma nativa, vea [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md).  
   
  En un procedimiento almacenado interpretado determinado, el NCA le permite identificar todas las características que no se admiten en los módulos nativos. El NCA proporciona vínculos de documentación a soluciones alternativas o soluciones propiamente dichas.  
   
- Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](https://msdn.microsoft.com/library/dn673538.aspx).  
+ Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](/previous-versions/dn673538(v=msdn.10)).  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>Tutorial del uso del Asistente de compilación nativa  
  En el **Explorador de objetos**, haga clic con el botón secundario en el procedimiento almacenado que desea convertir, y seleccione **Asistente de compilación nativa**. Se mostrará la página de bienvenida del **Asistente de compilación nativa de procedimiento almacenado**. Haga clic en **Siguiente** para continuar.  
@@ -105,7 +105,6 @@ SELECT * from SalesOrders;
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)   
+ [Migrar a OLTP en memoria](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)   
  [Requisitos para usar tablas con optimización para memoria](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)  
-  
   

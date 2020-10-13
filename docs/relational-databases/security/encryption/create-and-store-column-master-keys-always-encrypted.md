@@ -12,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10f95ba72bbb57481d5753e4a26d2fde3ecf1f16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765048"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867828"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Creación y almacenamiento de claves maestras de columna para Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>Crear un certificado autofirmado mediante SQL Server Management Studio (SSMS)
 
 Para obtener más detalles, consulte [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
-Para obtener un tutorial paso a paso que usa SSMS y almacena claves Always Encrypted en el Almacén de certificados de Windows, vea [Always Encrypted: protección de los datos confidenciales en Base de datos SQL con cifrado de base de datos y almacenamiento de las claves de cifrado en el almacén de certificados de Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).
+Para obtener un tutorial paso a paso que usa SSMS y almacena claves Always Encrypted en el Almacén de certificados de Windows, vea [Always Encrypted: protección de los datos confidenciales en Base de datos SQL con cifrado de base de datos y almacenamiento de las claves de cifrado en el almacén de certificados de Windows](/azure/azure-sql/database/always-encrypted-certificate-store-configure).
 
 
 ### <a name="making-certificates-available-to-applications-and-users"></a>Hacer que los certificados estén disponibles para aplicaciones y usuarios
@@ -104,7 +104,7 @@ Para conceder al usuario el permiso de *lectura* para un certificado almacenado 
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Crear claves maestras de columna en el Almacén de claves de Azure
 
-El Almacén de claves de Azure ayuda a proteger los secretos y las claves criptográficas, y es una opción adecuada para almacenar claves maestras de columna para Always Encrypted (especialmente si sus aplicaciones se hospedan en Azure). Para crear una clave en el [Almacén de claves de Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), necesita una [suscripción de Azure](https://azure.microsoft.com/free/) y un Almacén de claves de Azure.
+El Almacén de claves de Azure ayuda a proteger los secretos y las claves criptográficas, y es una opción adecuada para almacenar claves maestras de columna para Always Encrypted (especialmente si sus aplicaciones se hospedan en Azure). Para crear una clave en el [Almacén de claves de Azure](/azure/key-vault/general/overview), necesita una [suscripción de Azure](https://azure.microsoft.com/free/) y un Almacén de claves de Azure.
 
 ### <a name="using-powershell"></a>Usar PowerShell
 
@@ -128,7 +128,7 @@ $akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination H
 ### <a name="using-sql-server-management-studio-ssms"></a>Usar SQL Server Management Studio (SSMS)
 
 Para obtener más detalles sobre cómo crear una clave maestra de columna en Azure Key Vault con SSMS, consulte [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
-Para obtener un tutorial paso a paso que usa SSMS y almacena claves Always Encrypted en un Almacén de claves de Azure, vea [Always Encrypted: protección de datos confidenciales en Base de datos SQL de Azure con cifrado de datos y almacenamiento de las claves de cifrado en el Almacén de claves de Azure](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault).
+Para obtener un tutorial paso a paso que usa SSMS y almacena claves Always Encrypted en un Almacén de claves de Azure, vea [Always Encrypted: protección de datos confidenciales en Base de datos SQL de Azure con cifrado de datos y almacenamiento de las claves de cifrado en el Almacén de claves de Azure](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Hacer que las claves del Almacén de claves de Azure estén disponibles para aplicaciones y usuarios
 
@@ -138,7 +138,7 @@ Para aprovisionar claves de cifrado de columnas que se protegen con una clave ma
 
 #### <a name="using-powershell"></a>Usar PowerShell
 
-Para permitir que los usuarios y las aplicaciones accedan a las claves reales en Azure Key Vault, debe establecer la directiva de acceso del almacén ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
+Para permitir que los usuarios y las aplicaciones accedan a las claves reales en Azure Key Vault, debe establecer la directiva de acceso del almacén ([Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
 
 ```
 $vaultName = "<vault name>"
@@ -227,4 +227,4 @@ Consulte la documentación de HSM y CSP sobre cómo configurar CSP en una máqui
   
 ## <a name="see-also"></a>Consulte también 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Información general sobre la administración de claves de Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
+- [Información general sobre la administración de claves de Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

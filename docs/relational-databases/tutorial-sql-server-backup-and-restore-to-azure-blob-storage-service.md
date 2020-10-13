@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 332fde643d285b20c0bd772918f8c9cf1bf578f2
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a0fffe198adc37a9cabe232d5509e9df1652013b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864962"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809131"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Inicio rápido: Copia de seguridad y restauración de SQL en el servicio Azure Blob Storage
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -26,10 +26,10 @@ Con este inicio rápido, entenderá mejor cómo escribir copias de seguridad en 
 Para completar este inicio rápido, debe estar familiarizado con los conceptos de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y con la sintaxis de T-SQL.  Necesita una cuenta de Azure Storage, SQL Server Management Studio (SSMS) y acceso a un servidor que ejecute SQL Server o Azure SQL Managed Instance. Además, la cuenta que se usa para emitir comandos BACKUP o RESTORE debe tener el rol de base de datos **db_backupoperator** con permisos **Modificar cualquier credencial**. 
 
 - Obtenga una [cuenta de Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratis.
-- Cree una [cuenta de almacenamiento de Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
-- Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Cree una [cuenta de almacenamiento de Azure](/azure/storage/common/storage-quickstart-create-account?tabs=portal).
+- Instale [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) o implemente [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started) con conectividad establecida mediante una [máquina virtual de Azure SQL](/azure/sql-database/sql-database-managed-instance-configure-vm) o de [punto a sitio](/azure/sql-database/sql-database-managed-instance-configure-p2s).
-- Asigne la cuenta de usuario al rol [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) y conceda permisos [Modificar cualquier credencial](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
+- Asigne la cuenta de usuario al rol [db_backupoperator](./security/authentication-access/database-level-roles.md) y conceda permisos [Modificar cualquier credencial](../t-sql/statements/alter-credential-transact-sql.md). 
 
 ## <a name="create-azure-blob-container"></a>Creación de un contenedor de blobs de Azure
 Los contenedores proporcionan una agrupación de un conjunto de blobs. Todos los blobs deben estar en un contenedor. Una cuenta de almacenamiento puede contener un número ilimitado de contenedores, pero debe tener al menos uno. Un contenedor puede almacenar un número ilimitado de blobs. 
@@ -46,7 +46,7 @@ Para crear un contenedor, siga estos pasos:
     ![Nuevo contenedor](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
   > [!NOTE]
-  > La autenticación en la cuenta de almacenamiento es necesaria para las copias de seguridad y la restauración de SQL Server, incluso aunque elija crear un contenedor público. También puede crear un contenedor mediante programación con las API de REST. Para más información, vea [Create container](https://docs.microsoft.com/rest/api/storageservices/Create-Container) (Creación de contenedor)
+  > La autenticación en la cuenta de almacenamiento es necesaria para las copias de seguridad y la restauración de SQL Server, incluso aunque elija crear un contenedor público. También puede crear un contenedor mediante programación con las API de REST. Para más información, vea [Create container](/rest/api/storageservices/Create-Container) (Creación de contenedor)
 
 ## <a name="create-a-test-database"></a>Creación de una base de datos de prueba 
 En este paso, cree una base de datos de prueba con SQL Server Management Studio (SSMS). 
@@ -235,4 +235,3 @@ Estas son algunas lecturas recomendadas para comprender mejor los conceptos y lo
   
 -   [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
 -   [Procedimientos recomendados y solución de problemas de Copia de seguridad en URL de SQL Server](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  

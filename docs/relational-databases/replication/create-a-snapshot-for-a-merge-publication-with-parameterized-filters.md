@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6b4f57e1593d9f8335f62095cf309ee85f74e1a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0229c5fb1166d49c8e4db2e80fbed03c0ea95a9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773912"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868308"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Crear una instantánea para una publicación de mezcla con filtros con parámetros
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -285,7 +285,7 @@ PAUSE
 >  Si al filtrar un artículo se producen particiones no superpuestas que son únicas para cada suscripción (especificando el valor F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription para P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption al crear un artículo de mezcla), cada vez que se ejecuta el Agente de mezcla se limpian los metadatos. Esto significa que la instantánea con particiones expira antes. Cuando utilice esta opción, puede ser conveniente permitir a los suscriptores que soliciten la generación de instantáneas. Para obtener más información, vea la sección Usar las opciones de filtrado apropiadas del tema [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 > [!IMPORTANT]  
->  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](/previous-versions/aa719848(v=vs.71)) (en inglés) proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>Para crear una publicación que permita a los suscriptores iniciar la generación y entrega de instantáneas  
   
@@ -424,5 +424,4 @@ PAUSE
  [Filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Procedimientos recomendados de seguridad de replicación](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

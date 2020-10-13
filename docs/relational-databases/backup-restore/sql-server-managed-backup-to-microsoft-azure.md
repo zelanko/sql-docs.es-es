@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bb479998c739a5d9bd62a5f7d6c517a3ec4b52d1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e181ce4851e2d00867c25942e8842b200525a3bf
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246304"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810879"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Copia de seguridad administrada en Microsoft Azure para SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "87246304"
 |Requisito previo|Descripción|  
 |------------------|-----------------|  
 |**Cuenta de Microsoft Azure**|Puede comenzar a trabajar con Azure con un [prueba gratuita](https://azure.microsoft.com/pricing/free-trial/) antes de explorar [opciones de compra](https://azure.microsoft.com/pricing/purchase-options/).|  
-|**Cuenta de Azure Storage**|Las copias de seguridad se almacenan en el servicio Almacenamiento de blobs de Microsoft Azure asociado con una cuenta de Almacenamiento de Azure. Para obtener instrucciones paso a paso sobre cómo crear una cuenta de almacenamiento, vea [Acerca de las cuentas de almacenamiento de Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
-|**Contenedor de blobs**|Los blobs se organizan en contenedores. Hay que especificar el contenedor de destino para los archivos de copia de seguridad. Puede crear un contenedor en el [Portal de administración de Microsoft Azure](https://manage.windowsazure.com/), o bien usar el comando **New-AzureStorageContainer** de [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).|  
-|**Firma de acceso compartido (SAS)**|El acceso al contenedor de destino se controla mediante una firma de acceso compartido (SAS). Para más información, vea [Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Puede crear un token SAS en el código o con el comando de PowerShell **New-AzureStorageContainerSASToken** . Para ver un script de PowerShell que simplifica este proceso, vea [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)(Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido (SAS) en Almacenamiento de Azure con PowerShell). El token SAS se puede almacenar en una **credencial SQL** para emplearla con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|**Cuenta de Azure Storage**|Las copias de seguridad se almacenan en el servicio Almacenamiento de blobs de Microsoft Azure asociado con una cuenta de Almacenamiento de Azure. Para obtener instrucciones paso a paso sobre cómo crear una cuenta de almacenamiento, vea [Acerca de las cuentas de almacenamiento de Azure](/azure/storage/common/storage-account-create).|  
+|**Contenedor de blobs**|Los blobs se organizan en contenedores. Hay que especificar el contenedor de destino para los archivos de copia de seguridad. Puede crear un contenedor en el [Portal de administración de Microsoft Azure](https://manage.windowsazure.com/), o bien usar el comando **New-AzureStorageContainer** de [Azure PowerShell](/powershell/azure/).|  
+|**Firma de acceso compartido (SAS)**|El acceso al contenedor de destino se controla mediante una firma de acceso compartido (SAS). Para más información, vea [Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](/azure/storage/common/storage-sas-overview). Puede crear un token SAS en el código o con el comando de PowerShell **New-AzureStorageContainerSASToken** . Para ver un script de PowerShell que simplifica este proceso, vea [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)(Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido (SAS) en Almacenamiento de Azure con PowerShell). El token SAS se puede almacenar en una **credencial SQL** para emplearla con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**Agente SQL Server**|El Agente SQL Server debe estar en ejecución para que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] funcione. Considere la posibilidad de establecer la opción de inicio automático.|  
   
 ## <a name="components"></a>Componentes  
@@ -133,5 +133,4 @@ ms.locfileid: "87246304"
 - [Deshabilitación de la copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
 - [Realizar copias de seguridad y restaurar bases de datos del sistema](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 - [Copias de seguridad y restauración de bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
-  
   

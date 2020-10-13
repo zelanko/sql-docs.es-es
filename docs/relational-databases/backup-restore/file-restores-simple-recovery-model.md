@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 0e4bd61a4b08e394acfe53e0430f762f7c31d868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84ba17db1df93ed95853519691a6caac94b6afb8
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718079"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809438"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Restauraciones de archivos (modelo de recuperación simple)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "85718079"
   
      En *restauración de archivos en línea*, si la base de datos está en línea durante una restauración de archivos, permanecerá en línea durante la restauración de archivos. Sin embargo, cada grupo de archivos en el que se restaura un archivo está sin conexión durante la operación de restauración. Una vez recuperados todos los archivos de un grupo de archivos sin conexión, este se conecta automáticamente.  
   
-     Para información sobre la compatibilidad con la restauración en línea de la página y de archivo, vea [Características y tareas del motor de base de datos](https://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34). Para obtener más información sobre la restauración con conexión, vea [Restauración con conexión &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
+     Para información sobre la compatibilidad con la restauración en línea de la página y de archivo, vea [Características y tareas del motor de base de datos](../../sql-server/what-s-new-in-sql-server-ver15.md). Para obtener más información sobre la restauración con conexión, vea [Restauración con conexión &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
     > [!TIP]  
     >  Si quiere que la base de datos esté sin conexión durante una restauración de archivos, deje sin conexión la base de datos antes de iniciar la secuencia de restauración mediante la ejecución de la instrucción [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) siguiente: ALTER DATABASE *nombre_base_de_datos* SET OFFLINE.  
@@ -96,7 +96,7 @@ ms.locfileid: "85718079"
   
 -   [Restaurar archivos y grupos de archivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   
--   [Método Restore.SqlRestore (servidor) (SMO)](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.restore.sqlrestore.aspx)   
+-   [Método Restore.SqlRestore (servidor) (SMO)](/dotnet/api/microsoft.sqlserver.management.smo.restore.sqlrestore)   
   
 ## <a name="see-also"></a>Consulte también  
  [Copias de seguridad y restauración: interoperabilidad y coexistencia &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
@@ -107,5 +107,4 @@ ms.locfileid: "85718079"
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restauraciones de base de datos completas &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Restauraciones por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  
   

@@ -8,12 +8,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: f366af08581accf5ef1f1c8fc00830f6cc592537
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0174ce5aae88406719fbf57c53734d535476a799
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403571"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868158"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Uso de SID de servicio para conceder permisos a servicios en SQL Server
 
@@ -28,7 +28,7 @@ Ejemplos de servicios donde se puede usar un SID de servicio:
 
 Algunos servicios no disponen de un SID de servicio de forma predeterminada. El SID de servicio debe crearse con [SC.exe](/windows/desktop/services/configuring-a-service-using-sc). [Este método](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/) lo han adoptado los administradores de Microsoft System Center Operations Manager para conceder permiso para el Servicio de mantenimiento en SQL server.
 
-Una vez se haya creado y confirmado el servicio de SID, se debe conceder permiso en SQL Server. La concesión de permisos se lleva a cabo mediante la creación de un inicio de sesión en Windows con [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) o una consulta. Una vez creado el inicio de sesión, se le pueden conceder permisos, agregar a roles y asignar a bases de datos al igual que cualquier otro inicio de sesión.
+Una vez se haya creado y confirmado el servicio de SID, se debe conceder permiso en SQL Server. La concesión de permisos se lleva a cabo mediante la creación de un inicio de sesión en Windows con [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) o una consulta. Una vez creado el inicio de sesión, se le pueden conceder permisos, agregar a roles y asignar a bases de datos al igual que cualquier otro inicio de sesión.
 
 > [!TIP]
 > Si se recibe el error `Login failed for user 'NT AUTHORITY\SYSTEM'`, compruebe que existe el SID de servicio para el servicio deseado, que el inicio de sesión de SID de servicio se ha creado en SQL Server y que se han concedido los permisos adecuados para el SID de servicio en SQL Server.
@@ -41,7 +41,7 @@ Tradicionalmente, las cuentas de servicio se han usado para permitir que los ser
 
 ### <a name="granular-permissions-to-system-accounts"></a>Permisos granulares a las cuentas del sistema
 
-Las cuentas del sistema históricamente han concedido permisos mediante la creación de un inicio de sesión para las cuentas [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190) ([NT AUTHORITY\SYSTEM en en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) o [NetworkService](/windows/desktop/Services/networkservice-account) ([ NT AUTHORITY\NETWORK SERVICE en en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) y la concesión de esos permisos de los inicios de sesión. Este método concede cualquier permiso de proceso o servicio en SQL, que se ejecuta como una cuenta del sistema.
+Las cuentas del sistema históricamente han concedido permisos mediante la creación de un inicio de sesión para las cuentas [LocalSystem](/windows/win32/services/localsystem-account) ([NT AUTHORITY\SYSTEM en en-us](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)) o [NetworkService](/windows/desktop/Services/networkservice-account) ([ NT AUTHORITY\NETWORK SERVICE en en-us](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Localized_service_names)) y la concesión de esos permisos de los inicios de sesión. Este método concede cualquier permiso de proceso o servicio en SQL, que se ejecuta como una cuenta del sistema.
 
 El uso de un SID de servicio permite que los permisos se concedan a un servicio específico. El servicio solo tiene acceso a los recursos cuyos permisos se le han concedido cuando se está ejecutando. Por ejemplo, si la `HealthService` se está ejecutando como `LocalSystem` y se le concede `View Server State`, la cuenta `LocalSystem` solo tendrá permiso para `View Server State` cuando se esté ejecutando en el contexto de la `HealthService`. Si cualquier otro proceso intenta acceder al estado del servidor de SQL como `LocalSystem`, se le denegará el acceso.
 
@@ -106,8 +106,8 @@ GO
 
 Para obtener más información sobre la estructura de SID de servicio, consulte [Estructura de SERVICE_SID_INFO](/windows/win32/api/winsvc/ns-winsvc-service_sid_info).
 
-Obtenga información sobre las opciones adicionales que están disponibles cuando se [crea un inicio de sesión](/sql/t-sql/statements/create-login-transact-sql).
+Obtenga información sobre las opciones adicionales que están disponibles cuando se [crea un inicio de sesión](../../t-sql/statements/create-login-transact-sql.md).
 
-Para usar seguridad basada en roles con los SID de servicio, obtenga información sobre [crear roles](/sql/t-sql/statements/create-role-transact-sql) en SQL Server.
+Para usar seguridad basada en roles con los SID de servicio, obtenga información sobre [crear roles](../../t-sql/statements/create-role-transact-sql.md) en SQL Server.
 
-Obtenga información sobre diferentes formas de [conceder permisos](/sql/t-sql/statements/grant-transact-sql) a SID de servicio en SQL Server.
+Obtenga información sobre diferentes formas de [conceder permisos](../../t-sql/statements/grant-transact-sql.md) a SID de servicio en SQL Server.

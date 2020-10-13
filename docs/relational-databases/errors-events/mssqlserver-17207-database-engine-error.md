@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: a7938f28af84596f620246d3d70ad491cb22828c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1c0face9315a38d4748cffef71e135401102dd0
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456472"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869461"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 ```
 
 ## <a name="cause"></a>Causa
-Antes de que se pueda usar cualquier base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es necesario iniciar la base de datos. El proceso de inicio de la base de datos implica inicializar diversas estructuras de datos que representan la base de datos y los archivos de base de datos, abrir todos los archivos que pertenecen a la base de datos y, por último, ejecutar la recuperación en la base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la función de la API de Windows [CreateFile](https://docs.microsoft.com/windows/win32/api/fileapi/nf-fileapi-createfilea) para abrir los archivos que pertenecen a una base de datos.
+Antes de que se pueda usar cualquier base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es necesario iniciar la base de datos. El proceso de inicio de la base de datos implica inicializar diversas estructuras de datos que representan la base de datos y los archivos de base de datos, abrir todos los archivos que pertenecen a la base de datos y, por último, ejecutar la recuperación en la base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la función de la API de Windows [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilea) para abrir los archivos que pertenecen a una base de datos.
  
 Los mensajes 17207 y 17204 indican que se ha producido un error mientras [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentaba abrir los archivos de base de datos durante el proceso de inicio.
  
@@ -83,7 +83,7 @@ La información de error del sistema operativo que se imprime en estos mensajes 
 1. Si obtiene el error ```Access is Denied``` del sistema operativo = 5, tenga en cuenta estos métodos:
    -  Para comprobar los permisos que se establecen en el archivo, examine las propiedades del archivo en el Explorador de Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa grupos de Windows para aprovisionar el control de acceso en los distintos recursos de archivo. Asegúrese de que el grupo adecuado (con nombres como SQLServerMSSQLUser$ComputerName$MSSQLSERVER o SQLServerMSSQLUser$ComputerName$InstanceName) tiene los permisos necesarios en el archivo de base de datos mencionado en el mensaje de error. Vea [Configurar permisos del sistema de archivos para el acceso al motor de base de datos](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014) para obtener más información. Asegúrese de que el grupo de Windows incluye realmente la cuenta de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el identificador de seguridad del servicio.
    -  Revise la cuenta de usuario en la que se ejecuta actualmente el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede usar el administrador de tareas de Windows para obtener esta información. Busque el valor "Nombre de usuario" para el archivo ejecutable "sqlservr.exe". Además, si ha cambiado recientemente la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe saber que la manera admitida para realizar esta operación es usar la utilidad Administrador de configuración de SQL Server. Hay más información disponible en [Administrador de configuración de SQL Server](../sql-server-configuration-manager.md). 
-   -  En función del tipo de operación (abrir bases de datos durante el inicio del servidor, adjuntar una base de datos, restaurarla, etc.) la cuenta que se usa para la suplantación y el acceso al archivo de base de datos puede variar. Revise el tema [Proteger archivos de datos y de registro](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) para comprender qué operación establece qué permiso y para qué cuentas. Use una herramienta como [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) de Windows SysInternals para saber si el acceso al archivo se produce en el contexto de seguridad de la cuenta de inicio del servicio de la instancia de SQL Server (o el identificador de seguridad del servicio) o una cuenta suplantada.
+   -  En función del tipo de operación (abrir bases de datos durante el inicio del servidor, adjuntar una base de datos, restaurarla, etc.) la cuenta que se usa para la suplantación y el acceso al archivo de base de datos puede variar. Revise el tema [Proteger archivos de datos y de registro](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)) para comprender qué operación establece qué permiso y para qué cuentas. Use una herramienta como [Process Monitor](/sysinternals/downloads/procmon) de Windows SysInternals para saber si el acceso al archivo se produce en el contexto de seguridad de la cuenta de inicio del servicio de la instancia de SQL Server (o el identificador de seguridad del servicio) o una cuenta suplantada.
 
       Si SQL Server suplanta las credenciales de usuario del inicio de sesión que ejecuta la operación ALTER DATABASE o CREATE DATABASE, verá la siguiente información en la herramienta Process Monitor (ejemplo).
 
@@ -115,7 +115,6 @@ La información de error del sistema operativo que se imprime en estos mensajes 
    - Asegúrese de que el disco o la ubicación de red [por ejemplo, la unidad iSCSI] está disponible antes de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intente acceder a los archivos de base de datos en estas ubicaciones. Si es necesario, cree las dependencias necesarias en el Administrador de clústeres o el Administrador de control de servicios.
 
 1. Si recibe el error del sistema operativo = 32 `The process cannot access the file because it is being used by another process`:
-   - Use una herramienta como [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer) o [Handle](https://docs.microsoft.com/sysinternals/downloads/handle) de Windows Sysinternals para determinar si otro proceso o servicio ha adquirido un bloqueo exclusivo en este archivo de base de datos.
+   - Use una herramienta como [Process Explorer](/sysinternals/downloads/process-explorer) o [Handle](/sysinternals/downloads/handle) de Windows Sysinternals para determinar si otro proceso o servicio ha adquirido un bloqueo exclusivo en este archivo de base de datos.
    - Detenga el acceso de ese proceso a los archivos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Algunos ejemplos comunes son los programas antivirus (vea las instrucciones sobre exclusiones de archivos en el siguiente [artículo de KB](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)).
    - En un entorno de clústeres, asegúrese de que el proceso sqlservr.exe del nodo propietario anterior haya liberado realmente los identificadores de los archivos de base de datos. Normalmente esto no ocurre, pero las configuraciones incorrectas del clúster o las rutas de acceso de E/S pueden generar estos problemas.
-  

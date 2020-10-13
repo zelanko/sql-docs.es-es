@@ -15,12 +15,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 588b33d51a2a3814c3be8ddf3b083050df856c41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55fdb422e4a8dd35a23e8e637cabd165729c97b0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488631"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809981"
 ---
 # <a name="tables"></a>Tablas
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,7 @@ El resultado final es una reducción de las recompilaciones extrañas y la sobre
 
 ### <a name="system-tables"></a>Tablas del sistema
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena los datos que definen la configuración del servidor y de todas sus tablas en un conjunto de tablas especial, conocido como tablas del sistema. Los usuarios no pueden consultar o actualizar directamente las tablas del sistema. La información de las tablas del sistema está disponible a través de las vistas del sistema. Para obtener más información, vea [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90). 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena los datos que definen la configuración del servidor y de todas sus tablas en un conjunto de tablas especial, conocido como tablas del sistema. Los usuarios no pueden consultar o actualizar directamente las tablas del sistema. La información de las tablas del sistema está disponible a través de las vistas del sistema. Para obtener más información, vea [Vistas del sistema &#40;Transact-SQL&#41;](../../t-sql/language-reference.md). 
  
 ### <a name="wide-tables"></a>Tablas anchas
 
@@ -103,5 +103,3 @@ Las tablas anchas tienen las siguientes implicaciones de rendimiento.
 
 ## <a name="see-also"></a>Vea también
  [Restricciones entre claves principales y claves externas](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [Restricciones UNIQUE y restricciones CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
-
-

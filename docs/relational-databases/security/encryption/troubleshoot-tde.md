@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c37c2aa1f36fca57e544dc588d492be98c653fef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19b9d31caf45a5438bf03fcab675ad9ebe5cf71
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448085"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867947"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Errores comunes en el cifrado de datos transparente con claves administradas por el cliente en Azure Key Vault
 
@@ -34,7 +34,7 @@ Durante las primeras 8 horas, si se resuelve el problema de acceso a la clave de
 
 Si ya no se necesita una base de datos inaccesible, puede eliminarse inmediatamente para dejar de incurrir en gastos. No se permiten todas las demás acciones en la base de datos hasta que se restaure el acceso a la clave de Azure Key Vault y la base de datos vuelva a estar en línea. Tampoco es posible cambiar en el servidor la opción de TDE de claves administradas por el cliente por la de claves administradas por el servicio mientras una base de datos cifrada con claves administradas por el cliente sea inaccesible. Esto es necesario para proteger los datos contra el acceso no autorizado mientras se han revocado los permisos para el protector de TDE. 
 
-Cuando no se pueda obtener acceso a una base de datos durante más de 8 horas, ya no se realizará la restauración automática. Si tras dicho período se ha restaurado el acceso a la clave de Azure Key Vault requerido, debe volver a validar el acceso a la clave manualmente para que la base de datos vuelva a estar en línea. En este caso, volver a poner la base de datos en línea puede tardar una cantidad considerable de tiempo según el tamaño de la base de datos. Una vez que la base de datos vuelva a estar en línea, **se perderán** los valores configurados previamente, como el [grupo de conmutación por error](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group), el historial de PITR y las etiquetas. Por tanto, se recomienda implementar un sistema de notificación mediante [Grupos de acciones](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) que permita percatarse y resolver los problemas de acceso a la clave del almacén de claves subyacentes lo antes posible. 
+Cuando no se pueda obtener acceso a una base de datos durante más de 8 horas, ya no se realizará la restauración automática. Si tras dicho período se ha restaurado el acceso a la clave de Azure Key Vault requerido, debe volver a validar el acceso a la clave manualmente para que la base de datos vuelva a estar en línea. En este caso, volver a poner la base de datos en línea puede tardar una cantidad considerable de tiempo según el tamaño de la base de datos. Una vez que la base de datos vuelva a estar en línea, **se perderán** los valores configurados previamente, como el [grupo de conmutación por error](/azure/sql-database/sql-database-auto-failover-group), el historial de PITR y las etiquetas. Por tanto, se recomienda implementar un sistema de notificación mediante [Grupos de acciones](/azure/azure-monitor/platform/action-groups) que permita percatarse y resolver los problemas de acceso a la clave del almacén de claves subyacentes lo antes posible. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Errores comunes que hacen que las bases de datos dejen de estar accesibles
 
@@ -68,17 +68,17 @@ _401 AzureKeyVaultNoServerIdentity: la identidad del servidor no se ha configura
 
 Use el comando o el cmdlet siguiente para asegurarse de que se asignó una identidad a la instancia de SQL Server lógica:
 
-- Azure PowerShell: [Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+- Azure PowerShell: [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
 
-- CLI de Azure: [az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- CLI de Azure: [az-sql-server-show](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
 
 **Mitigación**
 
 Use el comando o el cmdlet siguiente para configurar una identidad de Azure AD (una AppId) para la instancia de SQL Server lógica:
 
-- Azure PowerShell: [Set-AzureRmSqlServer](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) con la opción `-AssignIdentity`.
+- Azure PowerShell: [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) con la opción `-AssignIdentity`.
 
-- CLI de Azure: [az sql server update](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) con la opción `--assign_identity`.
+- CLI de Azure: [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) con la opción `--assign_identity`.
 
 En Azure Portal, vaya al almacén de claves y, luego, a **Directivas de acceso**. Siga estos pasos: 
 
@@ -103,9 +103,9 @@ Para identificar un URI de clave y el almacén de claves:
 
 1. Use el comando o el cmdlet siguiente para obtener el URI de clave de una instancia de SQL Server lógica específica:
 
-    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-    - CLI de Azure: [az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+    - CLI de Azure: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 
 1. Use el URI de clave para identificar el almacén de claves:
 
@@ -165,7 +165,7 @@ Confirme que la instancia de SQL Server lógica tiene permisos para el almacén
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>Obtención del estado de TDE del registro de actividad
 
-Para permitir la supervisión del estado de la base de datos debido a problemas de acceso a la clave de Azure Key Vault, se registrarán los siguientes eventos en el [Registro de actividad](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) para el identificador de recurso en función de la dirección URL de Azure Resource Manager y Subscription+Resourcegroup+ServerName+DatabseName: 
+Para permitir la supervisión del estado de la base de datos debido a problemas de acceso a la clave de Azure Key Vault, se registrarán los siguientes eventos en el [Registro de actividad](/azure/service-health/alerts-activity-log-service-notifications) para el identificador de recurso en función de la dirección URL de Azure Resource Manager y Subscription+Resourcegroup+ServerName+DatabseName: 
 
 **Evento cuando el servicio pierde el acceso a la clave de Azure Key Vault**
 
@@ -238,7 +238,5 @@ Descripción: Se ha producido un error al restaurar el acceso de la base de dato
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- Obtenga información sobre [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview).
-- Configure los [Grupos de acciones](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) para recibir notificaciones y alertas en función de sus preferencias, por ejemplo, correo electrónico/SMS/inserciones/voz, aplicación lógica, webhook, ITSM o Runbook de automatización. 
-
-
+- Obtenga información sobre [Azure Resource Health](/azure/service-health/resource-health-overview).
+- Configure los [Grupos de acciones](/azure/azure-monitor/platform/action-groups) para recibir notificaciones y alertas en función de sus preferencias, por ejemplo, correo electrónico/SMS/inserciones/voz, aplicación lógica, webhook, ITSM o Runbook de automatización.

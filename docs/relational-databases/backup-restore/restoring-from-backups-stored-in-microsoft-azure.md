@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9b36628be4fbb72b48136f56c9403207f5e03dd8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24ebd7d212b125d5cce1e39aab0427c35784eefc
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759108"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809761"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Restaurar a partir de copias de seguridad archivadas en Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "85759108"
 -   Se utiliza la tarea de restauración para restaurar una base de datos con SQL Server Management Studio. La página de medios de copia de seguridad incluye ahora la opción **Dirección URL** para mostrar los archivos de copia de seguridad almacenados en el servicio Azure Blob Storage. También debe proporcionar la credencial SQL que se usa para autenticarse en la cuenta de almacenamiento. La cuadrícula **Conjuntos de copia de seguridad para restaurar** se rellena con las copias de seguridad disponibles en Azure Blob Storage. Para más información, consulte [Restaurar desde el almacenamiento de Microsoft Azure con SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
   
 ### <a name="optimizing-restores"></a>Optimizar restauraciones  
- Para reducir el tiempo de escritura de restauración, agregue el derecho de usuario **Realizar tareas de mantenimiento del volumen** a la cuenta de usuario de SQL Server. Para obtener más información, vea [Inicialización de archivos de base de datos](https://go.microsoft.com/fwlink/?LinkId=271622). Si la restauración sigue siendo lenta con la inicialización de archivos instantánea activada, examine el tamaño del archivo de registro en la instancia donde se hizo copia de seguridad de la base de datos. Si el registro es muy grande (varios GB), cabe esperar que la restauración sea lenta. Durante la restauración, el archivo de registro se debe poner a cero, lo que lleva una cantidad considerable de tiempo.  
+ Para reducir el tiempo de escritura de restauración, agregue el derecho de usuario **Realizar tareas de mantenimiento del volumen** a la cuenta de usuario de SQL Server. Para obtener más información, vea [Inicialización de archivos de base de datos](/previous-versions/sql/sql-server-2008-r2/ms175935(v=sql.105)). Si la restauración sigue siendo lenta con la inicialización de archivos instantánea activada, examine el tamaño del archivo de registro en la instancia donde se hizo copia de seguridad de la base de datos. Si el registro es muy grande (varios GB), cabe esperar que la restauración sea lenta. Durante la restauración, el archivo de registro se debe poner a cero, lo que lleva una cantidad considerable de tiempo.  
   
- Para reducir los tiempos de restauración, se recomienda usar copias de seguridad comprimidas.  Para los tamaños de copia de seguridad que sobrepasen los 25 GB, use la [utilidad AzCopy](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) para realizar la descarga en la unidad local y, después, realizar la restauración. Para obtener información sobre otros procedimientos recomendados y sugerencias para copias de seguridad, vea [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
+ Para reducir los tiempos de restauración, se recomienda usar copias de seguridad comprimidas.  Para los tamaños de copia de seguridad que sobrepasen los 25 GB, use la [utilidad AzCopy](/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) para realizar la descarga en la unidad local y, después, realizar la restauración. Para obtener información sobre otros procedimientos recomendados y sugerencias para copias de seguridad, vea [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   
  También puede activar la marca de seguimiento 3051 al realizar la restauración para generar un registro detallado. Este archivo de registro se coloca en el directorio de registros y se le asigna un nombre de acuerdo al formato: BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log. El archivo de registro incluye información sobre cada recorrido de ida y vuelta a Azure Storage, incluido el tiempo que puede resultar útil para diagnosticar el problema.  
   
@@ -57,5 +57,4 @@ ms.locfileid: "85759108"
 -   [Restauraciones de archivos &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)  
   
 -   [Restauraciones por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  
   

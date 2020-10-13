@@ -1,25 +1,25 @@
 ---
 title: Instalación desde un símbolo del sistema
-description: Ejecute la instalación de línea de comandos de SQL Server para agregar el lenguaje R y la integración de Python a una instancia del motor de base de datos de SQL Server.
+description: Ejecute la instalación de línea de comandos de SQL Server para agregar Machine Learning Services con R y Python a una instancia del motor de base de datos de SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 09/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c496778731a972603019450be15b3ea72d4c415
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9769675d3901efc9e5ad794794705f924e494fe2
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179804"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624762"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Instalación de componentes de R y Python de aprendizaje automático de SQL Server desde la línea de comandos
+# <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Instalación de SQL Server Machine Learning Services con R y Python mediante la línea de comandos
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-En este artículo se proporcionan instrucciones para instalar componentes de aprendizaje automático de SQL Server desde una línea de comandos:
+En este artículo se proporcionan instrucciones para instalar [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) mediante una línea de comandos:
 
 + [Nueva instancia en base de datos](#indb)
 + [Agregar a una instancia existente del motor de base de datos](#add-existing)

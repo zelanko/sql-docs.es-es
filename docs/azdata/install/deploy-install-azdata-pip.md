@@ -5,59 +5,55 @@ description: Obtenga información sobre cómo instalar la herramienta azdata con
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6bf2bbff5f1d048895515f18b600cd05acd8ae6f
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: ecf4eaaddf9423bb9a3ae88036b5c3cb2090451b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914951"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725292"
 ---
 # <a name="install-azdata-with-pip"></a>Instalación de `azdata` con `pip`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
-En este artículo se explica cómo instalar la herramienta `azdata` en Windows o Linux mediante `pip`.
+En este artículo se explica cómo instalar la herramienta `azdata` en Windows, Linux o macOS/OS X mediante `pip`.
 
-Para Windows y Linux (distribución de Ubuntu), se puede realizar la instalación con un [administrador de paquetes](./deploy-install-azdata-installer.md) a fin de obtener una experiencia más sencilla.
+> [!TIP]
+> Para obtener una experiencia más sencilla, `azdata` se puede instalar con un [administrador de paquetes](./deploy-install-azdata.md) para Windows, Linux (distribuciones de Ubuntu, Debian, RHEL, CentOS, openSUSE y SLE) y macOS.
 
 ## <a name="prerequisites"></a><a id="prerequisites"></a> Requisitos previos
 
-`azdata` es una utilidad de línea de comandos escrita en Python que permite a los administradores de clústeres arrancar y administrar datos mediante las API REST. La versión mínima de Python necesaria es v3.5. Para descargar e instalar la herramienta `azdata` se requiere `pip`. Las instrucciones siguientes proporcionan ejemplos para Windows y Ubuntu. Para instalar Python en otras plataformas, consulte la [documentación de Python](https://wiki.python.org/moin/BeginnersGuide/Download).
-Además, instale y actualice la versión más reciente del paquete Python `requests`:
+`azdata` es una utilidad de línea de comandos escrita en Python que permite a los administradores de clústeres arrancar y administrar recursos de datos mediante API REST. La versión mínima de Python necesaria es v3.5. Para descargar e instalar la herramienta `azdata`, se requiere `pip`. En las instrucciones siguientes se proporcionan ejemplos para Windows, Linux (Ubuntu) y macOS/OS X. Para instalar Python en otras plataformas, consulte la [documentación de Python](https://wiki.python.org/moin/BeginnersGuide/Download). Además, instale y actualice la versión más reciente del paquete Python `requests`:
 
 ```bash
 pip3 install -U requests
 ```
 
-> [!IMPORTANT]
-> Si va a instalar una versión más reciente de los clústeres de macrodatos, haga una copia de seguridad de los datos y elimine el clúster anterior actualizando `azdata` e instalando la versión nueva. Para obtener más información, consulte el artículo sobre [actualización a una nueva versión](../../big-data-cluster/deployment-upgrade.md).
-
 ## <a name="windows-azdata-installation"></a><a id="windows"></a> Instalación de `azdata` en Windows
 
-1. En un cliente de Windows, descargue el paquete de Python necesario desde [https://www.python.org/downloads/](https://www.python.org/downloads/). Para Python 3.5.3 y versiones posteriores, al instalar Python también se instala pip3. 
+1. En un cliente de Windows, descargue el paquete de Python necesario desde [https://www.python.org/downloads/](https://www.python.org/downloads/). Para Python 3.5.3 y versiones posteriores, al instalar Python también se instala pip3.
 
-   > [!TIP] 
+   > [!TIP]
    > Al instalar Python3, seleccione agregar Python al elemento `PATH`. Si no lo hace, más adelante podrá buscar dónde se encuentra pip3 y agregarlo manualmente al elemento `PATH`.
 
 1. Abra una nueva sesión de Windows PowerShell para que obtenga la ruta de acceso más reciente con Python.
 
-1. Si tiene instaladas versiones anteriores de `azdata`, es importante que las desinstale antes de instalar la versión más reciente.
+1. A partir de la versión SQL Server 2019 CU5, azdata tiene una versión semántica independiente del servidor. Si tiene instaladas versiones anteriores de `azdata`, es importante que las desinstale antes de instalar la versión más reciente.
 
-   En CTP 3.2 o RC1, ejecute el comando siguiente.
+   Por ejemplo, para 2019-cu4, ejecute el siguiente comando:
 
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
-   ```
-   or
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
+   ```powershell
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-cu4/requirements.txt
    ```
 
-1. Instale `azdata` con el comando siguiente:
+  > [!NOTE]
+  > En los ejemplos anteriores, reemplace `2019-cu6` por la versión y CU de la instalación de `azdata`. 
+
+1. Instalar `azdata`.
 
    ```powershell
    pip3 install -r https://aka.ms/azdata
@@ -78,25 +74,24 @@ En Linux, debe instalar Python 3.5 y, después, actualizar pip. En el ejemplo si
    sudo apt-get install -y unixodbc-dev
    ```
 
-1. Actualice pip3:
+1. Actualice pip3.
 
    ```bash
    sudo -H pip3 install --upgrade pip
    ```
 
-1. Si tiene instaladas versiones anteriores de `azdata`, es importante que las desinstale antes de instalar la versión más reciente.
+1. A partir de la versión SQL Server 2019 CU5, azdata tiene una versión semántica independiente del servidor. Si tiene instaladas versiones anteriores de `azdata`, es importante que las desinstale antes de instalar la versión más reciente.
 
-   En CTP 3.2 o RC1, ejecute el comando siguiente.
+   Por ejemplo, para `2019-cu6`, ejecute el siguiente comando:
 
    ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
-   ```
-   or
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-cu6/requirements.txt
    ```
 
-1. Instale `azdata` con el comando siguiente:
+  > [!NOTE]
+  > En los ejemplos anteriores, reemplace `2019-cu6` por la versión y CU de la instalación de `azdata`.
+
+1. Instalar `azdata`.
 
    ```bash
    pip3 install -r https://aka.ms/azdata --user
@@ -111,32 +106,32 @@ Para instalar `azdata` en macOS u OS X complete estos pasos. Para cada paso, eje
 
 1. En un cliente macOS, instale [Homebrew](https://brew.sh), si aún no lo tiene instalado:
 
-   ```
+   ```bash
    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
    ```
 
 1. Instale, como mínimo, la versión 3.0 de Python y pip:
 
-   ```
+   ```bash
    brew install python3
    ```
 
 1. Instale las dependencias:
 
-   ```
+   ```bash
    pip3 install -U requests
    brew install freetds
    ```
 
-1. Si tiene instaladas versiones anteriores de la herramienta, es importante que las desinstale antes de instalar la versión más reciente de `azdata`. El comando siguiente quita la versión de `azdata`.
+1. A partir de la versión SQL Server 2019 CU5, azdata tiene una versión semántica independiente del servidor. Si tiene instaladas versiones anteriores de `azdata`, es importante que las desinstale antes de instalar la versión más reciente. Por ejemplo, el comando siguiente quita la versión RC1 de `azdata`:
 
-   ```
+   ```bash
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. Instale `azdata` con el comando siguiente:
+1. Instalar `azdata`.
 
-   ```
+   ```bash
    pip3 install -r https://aka.ms/azdata
    ```
 

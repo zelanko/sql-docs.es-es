@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: eac620d522408ff9fb4de5550d92cfcbd0f3ec4a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631945"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727476"
 ---
 # <a name="using-table-valued-parameters"></a>Empleo de parámetros con valores de tabla
 
@@ -35,8 +35,8 @@ El acceso a los valores de columna de los parámetros con valores de tabla se re
   
 | Resource                                                                                                             | Descripción                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Parámetros con valores de tabla (motor de base de datos)](https://go.microsoft.com/fwlink/?LinkId=98363) en los Libros en pantalla de SQL Server | Describe cómo crear y usar parámetros con valores de tabla.                             |
-| [Tipos de tabla definidos por el usuario](https://go.microsoft.com/fwlink/?LinkId=98364) en Libros en pantalla de SQL Server                  | Describe los tipos de tabla definidos por el usuario que se usan para declarar parámetros con valores de tabla. |
+| [Parámetros con valores de tabla (motor de base de datos)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) en los Libros en pantalla de SQL Server | Describe cómo crear y usar parámetros con valores de tabla.                             |
+| [Tipos de tabla definidos por el usuario](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) en Libros en pantalla de SQL Server                  | Describe los tipos de tabla definidos por el usuario que se usan para declarar parámetros con valores de tabla. |
 | La sección del [Motor de base de datos de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=120507) de CodePlex        | Contiene ejemplos que muestran el uso de las características y la funcionalidad de SQL Server.  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Paso de varias filas en versiones anteriores de SQL Server  
@@ -53,7 +53,7 @@ Antes de la incorporación de los parámetros con valores de tabla a SQL Server�
   
 ## <a name="creating-table-valued-parameter-types"></a>Creación de tipos de parámetro con valores de tabla  
 
-Los parámetros con valores de tabla se basan en estructuras de tabla fuertemente tipadas definidas mediante instrucciones `CREATE TYPE` de Transact-SQL. Debe crear un tipo de tabla y definir la estructura en SQL Server para poder usar los parámetros con valores de tabla en las aplicaciones de cliente. Para obtener más información sobre la creación de tipos de tabla, vea [Tipos de tabla definidos por el usuario](https://go.microsoft.com/fwlink/?LinkID=98364) en los Libros en pantalla de SQL Server.  
+Los parámetros con valores de tabla se basan en estructuras de tabla fuertemente tipadas definidas mediante instrucciones `CREATE TYPE` de Transact-SQL. Debe crear un tipo de tabla y definir la estructura en SQL Server para poder usar los parámetros con valores de tabla en las aplicaciones de cliente. Para obtener más información sobre la creación de tipos de tabla, vea [Tipos de tabla definidos por el usuario](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) en los Libros en pantalla de SQL Server.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -265,7 +265,7 @@ Esta clase representa una tabla de datos en memoria que se va a usar con paráme
 | Nombre                                                          | Descripción                                          |
 | ------------------------------------------------------------- | ---------------------------------------------------- |
 | Public SQLServerDataTable()                                   | Inicializa una nueva instancia de SQLServerDataTable.    |
-| public Iterator<Entry\<Integer, Object[]>> getIterator()      | Recupera un iterador en las filas de la tabla de datos. |
+| public Iterator<Entrada\<Integer, Object[]>> getIterator()      | Recupera un iterador en las filas de la tabla de datos. |
 | public void addColumnMetadata(String columnName, int sqlType) | Agrega metadatos para la columna especificada.              |
 | public void addColumnMetadata(SQLServerDataColumn column)     | Agrega metadatos para la columna especificada.              |
 | public void addRow(Object... values)                          | Agrega una fila de datos a la tabla de datos.              |
@@ -315,4 +315,4 @@ Se han agregado los siguientes métodos a esta clase para admitir el paso de par
 
 ## <a name="see-also"></a>Consulte también
 
-[Introducción al controlador JDBC](overview-of-the-jdbc-driver.md)  
+[Introducción al controlador JDBC](overview-of-the-jdbc-driver.md)

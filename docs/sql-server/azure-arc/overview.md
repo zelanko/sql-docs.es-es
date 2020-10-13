@@ -5,16 +5,16 @@ description: Administre instancias de SQL Server con SQL Server habilitado par
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: c647a1cdf767b7dacef5b7e376d6e787af688469
-ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
+ms.openlocfilehash: 5cf1a67d1eeb36ec4889d75241eba34b515264b0
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589304"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834313"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>SQL Server habilitado para Azure Arc (versión preliminar)
 
@@ -44,8 +44,7 @@ SQL Server habilitado para Azure Arc admite SQL Server 2012 o una versión po
 ### <a name="required-permissions"></a>Permisos necesarios
 
 Para conectar el hospedaje y las instancias de SQL Server a Azure Arc, debe tener una cuenta con privilegios para realizar las siguientes acciones:
-   * Microsoft.AzureData/sqlServerInstances/write
-   * Microsoft.AzureData/sqlServerInstances/read
+   * Microsoft.AzureData/*
    * Microsoft.HybridCompute/machines/read
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read

@@ -1,15 +1,15 @@
 ---
 title: Objetos de scripts de SSMS
 description: Genere scripts de Transact-SQL (T-SQL) para distintos objetos de SQL Server Management Studio (SSMS).
-keywords: SQL Server, SSMS, SQL Server Management Studio, scripts, scripting
-author: MashaMSFT
-ms.author: mathoma
-ms.date: 03/13/2018
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
+ms.topic: tutorial
+keywords: SQL Server, SSMS, SQL Server Management Studio, scripts, scripting
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
+ms.date: 03/13/2018
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - source controls [SQL Server Management Studio], tutorials
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 0cc0e394e622880dc60991b1c0ca3b0c00597be6
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 4d8df5bbc3ead279cb9606da6a906f9d713ff439
+ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523337"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662044"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Creación de scripts de objetos en SQL Server Management Studio
 
@@ -156,7 +156,7 @@ En la siguiente sección se explica cómo crear un script de la base de datos co
 
 9. Seleccione **Reemplazar todo** para reemplazar todas las instancias de *AdventureWorks2016* por *AdventureWorks2016b*.
 
-    ![AdventureWorks2016b](media/scripting-ssms/adventureworks2016b.png)
+    ![AdventureWorks 2016](media/scripting-ssms/adventureworks2016b.png)
 
 10. Seleccione **Ejecutar** para ejecutar la consulta y crear la nueva base de datos AdventureWorks2016b.
 

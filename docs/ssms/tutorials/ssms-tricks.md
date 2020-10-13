@@ -1,12 +1,12 @@
 ---
 title: Recomendaciones y trucos para el uso de SSMS
 description: Aprenda a convertir código en comentario y a quitar la marca de comentario, aplicar sangría al texto, filtrar objetos, acceder a los registros de errores y buscar nombres de instancia de SQL Server con SQL Server Management Studio.
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
-author: MashaMSFT
-ms.author: mathoma
+ms.topic: tutorial
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
@@ -19,43 +19,43 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 60bf46d57b029696229ebf50188eca39f5b97c0a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462349"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724516"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Recomendaciones y trucos para usar SQL Server Management Studio (SSMS)
 
-En este artículo se brindan algunas recomendaciones y trucos para usar SQL Server Management Studio (SSMS). En este artículo aprenderá a: 
+En este artículo se brindan algunas recomendaciones y trucos para usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). En este artículo aprenderá a: 
 
 > [!div class="checklist"]
 > * Agregar o quitar marcas de comentario del texto de Transact-SQL (T-SQL)
 > * Aplicar sangría al texto
 > * Filtrar objetos en el Explorador de objetos
-> * Acceder al registro de errores de SQL Server
-> * Buscar el nombre de su instancia de SQL Server
+> * Acceder al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+> * Buscar el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
-Para probar los pasos proporcionados en este artículo, necesita SQL Server Management Studio, acceso a una instancia de SQL Server y una base de datos de AdventureWorks. 
+Para probar los pasos proporcionados en este artículo, necesita [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], acceso a una instancia de SQL Server y una base de datos de AdventureWorks. 
 
 * Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-* Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Instale [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Descargue una [base de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para aprender a restaurar una base de datos en SSMS, vea [Restaurar una base de datos](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>Agregar o quitar marcas de comentario del código de T-SQL
 
 Se puede usar el botón **Comentario** de la barra de herramientas para agregar o quitar marcas de comentario en las secciones del texto. El texto al que se haya quitado la marca de comentario no se ejecutará.
 
-1. Abra SQL Server Management Studio.
+1. Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 2. Conéctese a su servidor de SQL Server.
 
 3. Abra una ventana de nueva consulta.
 
-4. Pegue el siguiente código de T-SQL en la ventana de texto.
+4. Pegue el siguiente código de [!INCLUDE[tsql](../../includes/tsql-md.md)] en la ventana de texto.
 
     ```sql
     USE master
@@ -105,7 +105,7 @@ Puede usar los botones de sangría de la barra de herramientas para aumentar o r
 
 1. Abra una ventana de nueva consulta.
 
-2. Pegue el siguiente código de T-SQL en la ventana de texto:
+2. Pegue el siguiente código de [!INCLUDE[tsql](../../includes/tsql-md.md)] en la ventana de texto:
 
     ```sql
     USE master
@@ -163,11 +163,11 @@ En bases de datos con muchos objetos, puede usar el filtrado para buscar tablas,
 
 ## <a name="access-your-sql-server-error-log"></a>Acceder al registro de errores de SQL Server
 
-El registro de errores es un archivo que contiene información sobre lo que ocurre en su instancia de SQL Server. Puede examinar y consultar el registro de errores en SSMS. El registro de errores es un archivo .log que se encuentra en el disco.
+El registro de errores es un archivo que contiene información sobre lo que ocurre en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede examinar y consultar el registro de errores en SSMS. El registro de errores es un archivo .log que se encuentra en el disco.
 
 ### <a name="open-the-error-log-in-ssms"></a>Abrir el registro de errores en SSMS
 
-1. Conéctese a su servidor de SQL Server.  
+1. Conéctese con su instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 2. Expanda **Administración** > **Registros de SQL Server**. 
 
@@ -181,7 +181,7 @@ El registro de errores es un archivo que contiene información sobre lo que ocur
 
 2. Abra una ventana de nueva consulta.
 
-3. Pegue el siguiente código de T-SQL en la ventana de consulta:
+3. Pegue el siguiente código de [!INCLUDE[tsql](../../includes/tsql-md.md)] en la ventana de consulta:
 
      ```sql
        sp_readerrorlog 0,1,'Server process ID'
@@ -195,11 +195,11 @@ El registro de errores es un archivo que contiene información sobre lo que ocur
 
 ### <a name="find-the-error-log-location-if-youre-connected-to-sql-server"></a>Buscar la ubicación del registro de errores si se ha conectado a SQL Server
 
-1. Conéctese a su servidor de SQL Server.
+1. Conéctese con su instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 2. Abra una ventana de nueva consulta.
 
-3. Pegue el siguiente código de T-SQL en la ventana de consulta y, después, seleccione **Ejecutar**:
+3. Pegue el siguiente código de [!INCLUDE[tsql](../../includes/tsql-md.md)] en la ventana de consulta y, después, seleccione **Ejecutar**:
 
      ```sql
         SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
@@ -211,13 +211,13 @@ El registro de errores es un archivo que contiene información sobre lo que ocur
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>Buscar la ubicación del registro de errores si no se puede conectar a SQL Server
 
-La ruta de acceso para su registro de errores de SQL Server puede variar según sus opciones de configuración. La ruta de acceso para la ubicación de registro de errores puede encontrarse en los parámetros de inicio del Administrador de configuración de SQL Server. Siga los pasos siguientes para buscar el parámetro de inicio pertinente que identifica la ubicación de su registro de errores de SQL Server. *Su ruta de acceso puede variar respecto de la indicada a continuación*.
+La ruta de acceso del registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede variar según las opciones de configuración. La ruta de acceso para la ubicación de registro de errores puede encontrarse en los parámetros de inicio del Administrador de configuración de SQL Server. Siga estos pasos para buscar el parámetro de inicio pertinente que identifica la ubicación de su registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Su ruta de acceso puede variar respecto de la indicada a continuación*.
 
 1. Abra el Administrador de configuración de SQL Server.
 
 2. Expanda **Servicios**.
 
-3. Haga clic con el botón derecho en la instancia de SQL Server y, después, seleccione **Propiedades**:
+3. Haga clic con el botón derecho en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, después, seleccione **Propiedades**:
 
     ![Propiedades del Administrador de configuración de SQL Server](media/ssms-tricks/serverproperties.PNG)
 
@@ -227,13 +227,13 @@ La ruta de acceso para su registro de errores de SQL Server puede variar según 
 
     ![Registro de errores](media/ssms-tricks/errorlog.png)
 
-    En esta ubicación hay varios archivos errorlog.*. El nombre de archivo que termina por *.log es el archivo de registro de errores actual. Los nombres de archivo que terminan con números son archivos de registro anteriores. Cada vez que se reinicia SQL Server se crea un registro nuevo.
+    En esta ubicación hay varios archivos de registro de errores. El nombre de archivo que termina por *.log es el archivo de registro de errores actual. Los nombres de archivo que terminan con números son archivos de registro anteriores. Cada vez que se reinicia SQL Server se crea un registro nuevo.
 
-6. Abra el archivo errorlog.log en el Bloc de notas. 
+6. Abra el archivo errorlog.log en el Bloc de notas.
 
-## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>Búsqueda del nombre de la instancia de SQL Server.
+## <a name="find-sql-server-instance-name"></a>Búsqueda del nombre de la instancia de SQL Server.
 
-Tiene a su disposición algunas opciones para buscar el nombre de su instancia de SQL Server antes y después de conectarse a SQL Server.  
+Tiene a su disposición algunas opciones para buscar el nombre de su instancia de SQL Server antes y después de conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ### <a name="before-you-connect-to-sql-server"></a>Antes de conectarse a SQL Server
 
@@ -243,7 +243,7 @@ Tiene a su disposición algunas opciones para buscar el nombre de su instancia d
 
 3. Busque el texto *El nombre del servidor es*.
 
-    Lo que aparezca entre las comillas simples es el nombre de la instancia de SQL Server a la que se conectará:
+    Lo que aparezca entre las comillas simples es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que se conectará:
 
     ![Buscar el nombre del servidor en el registro de errores](media/ssms-tricks/servernameinlog.png)
 
@@ -251,7 +251,7 @@ Tiene a su disposición algunas opciones para buscar el nombre de su instancia d
 
 ### <a name="when-youre-connected-to-sql-server"></a>Si se ha conectado a SQL Server
 
-Si se ha conectado a SQL Server, puede buscar el nombre del servidor en tres sitios: 
+Si se ha conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede buscar el nombre del servidor en tres sitios: 
 
 1. El nombre del servidor se muestra en el Explorador de objetos:
 
@@ -266,19 +266,19 @@ Si se ha conectado a SQL Server, puede buscar el nombre del servidor en tres sit
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>Si se ha conectado a un alias o a un agente de escucha del grupo de disponibilidad
 
-Si se ha conectado a un alias o a un agente de escucha del grupo de disponibilidad, esa información aparecerá en Explorador de objetos y en Propiedades. En este caso, puede que el nombre de la instancia de SQL Server no sea claro y se deba consultar:
+Si se ha conectado a un alias o a un agente de escucha del grupo de disponibilidad, esa información aparecerá en Explorador de objetos y en Propiedades. En este caso, puede que el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no sea claro y se deba consultar:
 
 1. Conéctese a su servidor de SQL Server.
 
 2. Abra una ventana de nueva consulta.
 
-3. Pegue el siguiente código de T-SQL en la ventana:
+3. Pegue el siguiente código de [!INCLUDE[tsql](../../includes/tsql-md.md)] en la ventana:
 
       ```sql
        select @@Servername
      ```
 
-4. Vea los resultados de la consulta para identificar el nombre de la instancia de SQL Server a la que se ha conectado: 
+4. Vea los resultados de la consulta para identificar el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que se ha conectado: 
 
     ![Consultar el nombre de SQL Server](media/ssms-tricks/queryservername.png)
 

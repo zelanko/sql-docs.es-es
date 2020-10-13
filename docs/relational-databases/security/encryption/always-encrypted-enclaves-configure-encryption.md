@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 38f421815202b16fe5d7d2570ce5661be5097109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bb922b1dc85706e0630dd3d67dcb33459c490124
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490502"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863694"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>Configuración del cifrado de columna en contexto mediante Always Encrypted con enclaves seguros 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -43,7 +43,7 @@ Un usuario o una aplicación que desencadena operaciones criptográficas debe te
 El cifrado en contexto solo se puede desencadenar mediante [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) desde SQL Server Management Studio o la aplicación personalizada. Vea [Configuración del cifrado de columnas en contexto con Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md).
 
 > [!NOTE]
-> Actualmente, el [Asistente de Always Encrypted](always-encrypted-wizard.md) y el cmdlet [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/module/sqlserver/set-sqlcolumnencryption) no admiten el cifrado en contexto, y siempre descargan los datos de las operaciones criptográficas, incluso cuando la configuración cumple con los requisitos anteriores. 
+> Actualmente, el [Asistente de Always Encrypted](always-encrypted-wizard.md) y el cmdlet [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption) no admiten el cifrado en contexto, y siempre descargan los datos de las operaciones criptográficas, incluso cuando la configuración cumple con los requisitos anteriores. 
 
 ## <a name="next-steps"></a>Pasos siguientes
 - [Configuración del cifrado de columnas en contexto con Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)

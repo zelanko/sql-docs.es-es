@@ -23,12 +23,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3af77a60678e8286fadfbafcf46f742439e9bf7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: de468b09b6f6b1f05545cb4a93b6db6082cef48e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902593"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891125"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aumentar el rendimiento de la replicación transaccional
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -84,7 +84,7 @@ Las conclusiones:
     - Aumentar el valor de **SubscriptionStreams** sí ayuda en el rendimiento general del Agente de distribución, ya que varias conexiones al suscriptor aplican lotes de cambios en paralelo. Sin embargo, dependiendo del número de procesadores y otras condiciones de metadatos (por ejemplo, la clave principal, claves externas, restricciones únicas e índices), el valor más alto de SubscriptionStreams realmente podría tener un efecto adverso. Además, si no se puede ejecutar ni confirmar una secuencia, el Agente de distribución retrocede para usar una secuencia única para reintentar los lotes con errores.
 
 
-Para más información sobre estas pruebas, consulte el blog [Optimizing replication agent profile parameters for better performance](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/) (Optimizar los parámetros de perfil del agente de replicación para mejorar el rendimiento).
+Para más información sobre estas pruebas, consulte el blog [Optimizing replication agent profile parameters for better performance](/archive/blogs/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance) (Optimizar los parámetros de perfil del agente de replicación para mejorar el rendimiento).
 
 
 ### <a name="log-reader-agent"></a>Agente de registro del LOG
@@ -162,5 +162,4 @@ Confirmar un conjunto de transacciones tiene una sobrecarga fija; al confirmar u
 [Trabajar con perfiles del Agente de replicación](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
 [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
-  
   

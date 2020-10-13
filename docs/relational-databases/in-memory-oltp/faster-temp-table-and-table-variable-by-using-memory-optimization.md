@@ -12,12 +12,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8f6369de798c04805e2c5facb01fcfd6dc31153
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 699819c74630687f4548d248632536e6e713e68b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723243"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869373"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabla temporal y variable de tabla más rápidas con optimización para memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -429,11 +429,10 @@ Si se accede a la variable de tabla optimizada para memoria solo con un valor de
   
 ## <a name="h-see-also"></a>H. Consulte también  
   
-- [Tablas optimizadas para memoria.](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+- [Tablas optimizadas para memoria.](./sample-database-for-in-memory-oltp.md)
 
 - [Definición de la durabilidad de los objetos con optimización para memoria](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)
 
 - [Cumulative Update to eliminate chance of improper Out Of Memory errors, announced in blog September 2017.](https://support.microsoft.com/help/4025208/fix-memory-leak-occurs-when-you-use-memory-optimized-tables-in-microso) (Actualización acumulativa para eliminar la posibilidad de errores de memoria insuficiente incorrectos, anunciada en el blog de septiembre de 2017)
     - En [Versiones de compilación de SQL Server 2016](https://support.microsoft.com/help/3177312/sql-server-2016-build-versions) se proporciona toda la información de las versiones, Service Pack y actualizaciones acumulativas.
     - Estos errores ocasionales incorrectos no aparecen en la edición Enterprise de SQL Server.
-

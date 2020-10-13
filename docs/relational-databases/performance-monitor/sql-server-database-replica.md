@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d164d5d2ad9bba0cbb052941944e3808cf1dc822
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 280fae3d260995a15a7baa9e40a861cb2cfdecc4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458339"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892235"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, réplica de base de datos
 
@@ -42,7 +42,7 @@ ms.locfileid: "86458339"
 |**Rehacer bytes restantes**|Cantidad restante de registro en kilobytes que se debe rehacer para finalizar la fase de reversión.|Réplica secundaria|  
 |**Bytes puestos al día/s**|Cantidad de entradas de registro rehechas en la base de datos secundaria en el último segundo.|Réplica secundaria|  
 |**Registro total que requiere la operación de deshacer**|Kilobytes totales del registro que se deben deshacer.|Réplica secundaria|  
-|**Retraso de transacción**|Retraso en la espera de reconocimiento de confirmación no terminada de todas las transacciones actuales, en milisegundos. Divida entre las *transacciones de escritura reflejadas por segundo* para obtener el *promedio de retraso de transacción*. Para obtener más información, vea [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/) (SQL Server 2012 AlwaysOn – Parte 12: Cuestiones de rendimiento y supervisión del rendimiento II).|Réplica principal|  
+|**Retraso de transacción**|Retraso en la espera de reconocimiento de confirmación no terminada de todas las transacciones actuales, en milisegundos. Divida entre las *transacciones de escritura reflejadas por segundo* para obtener el *promedio de retraso de transacción*. Para obtener más información, vea [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii) (SQL Server 2012 AlwaysOn – Parte 12: Cuestiones de rendimiento y supervisión del rendimiento II).|Réplica principal|  
   
 ## <a name="see-also"></a>Consulte también
   
@@ -50,4 +50,3 @@ ms.locfileid: "86458339"
  [SQL Server, réplica de disponibilidad](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [Databases (objeto de SQL Server)](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
-  

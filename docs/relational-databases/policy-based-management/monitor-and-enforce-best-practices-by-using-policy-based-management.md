@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fa82df08581e8667bdcae7e8c64fa1562e4b7081
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.openlocfilehash: 189ce28ed2480a6efedd14c91a96ebae12c862e2
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412771"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892165"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "91412771"
 |Nombre de la directiva|Regla de práctica recomendada|  
 |-----------------|------------------------|  
 |Algoritmo de cifrado de claves asimétricas|[Intensidad del cifrado de claves asimétricas](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|Ubicación de copia de seguridad y archivo de datos|[Los archivos de copia de seguridad deben estar en dispositivos independientes de los archivos de base de datos](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|Ubicación de copia de seguridad y archivo de datos|[Los archivos de copia de seguridad deben estar en dispositivos independientes de los archivos de base de datos](../backup-restore/backup-devices-sql-server.md)|  
 |Ubicación de datos y archivo de registro|[Colocar los datos y los archivos de registro en unidades independientes](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |Cerrar automáticamente la base de datos|[Establecer en OFF la opción de base de datos AUTO_CLOSE](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |Reducir automáticamente la base de datos|[Establecer la opción de base de datos AUTO_SHRINK en OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|Intercalación de base de datos|[Establecer la intercalación de bases de datos definidas por el usuario para que coincidan con las de las bases de datos modelo y maestra](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|Intercalación de base de datos|[Establecer la intercalación de bases de datos definidas por el usuario para que coincidan con las de las bases de datos modelo y maestra](/previous-versions/sql/sql-server-2016/bb402915(v=sql.130))|  
 |Comprobación de página de la base de datos|[Establecer la opción de base de datos PAGE_VERIFY en CHECKSUM.](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |Estado de la página de la base de datos|[Comprobar la integridad de una base de datos con páginas sospechosas](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Permisos de invitado|[Permisos de invitado en bases de datos de usuario](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
@@ -70,5 +70,4 @@ ms.locfileid: "91412771"
   
 ## <a name="see-also"></a>Consulte también  
  [Trabajar con facetas de administración basada en directivas](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
-  
   

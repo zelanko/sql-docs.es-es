@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: b636a615544cdf3ab642e34b1d02c59db2e11872
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818228"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892515"
 ---
 # <a name="polybase-scale-out-groups"></a>Grupos de escalado horizontal de PolyBase
 
@@ -27,7 +27,7 @@ ms.locfileid: "84818228"
 
 Una instancia de SQL Server independiente con PolyBase puede convertirse en un cuello de botella de rendimiento cuando se trabaja con grandes conjuntos de datos en Hadoop o Azure Blog Storage. La característica de grupos de PolyBase permite crear un clúster de instancias de SQL Server para procesar grandes conjuntos de datos a partir de orígenes de datos externos, como Hadoop o Almacenamiento de blobs de Azure, en un modo de escalado horizontal para mejorar el rendimiento de las consultas. Ahora puede escalar la capacidad de proceso de SQL Server para satisfacer las demandas de rendimiento de la carga de trabajo. Los grupos de escalado horizontal de PolyBase, un grupo de instancias de SQL Server, permiten procesar grandes conjuntos de datos externos en una arquitectura de procesamiento en paralelo. El rendimiento de las consultas y la carga de datos puede aumentar linealmente a medida que agrega más instancias de SQL Server al grupo. 
   
-Vea [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) y [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md).
+Vea [Introducción a PolyBase](./polybase-guide.md) y [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md).
   
 ![grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Grupos de escalado horizontal de PolyBase")  
   
@@ -68,5 +68,4 @@ Para configurar un grupo de escalado horizontal de PolyBase, consulte la guía s
 
  [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
  [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
- [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
-
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)

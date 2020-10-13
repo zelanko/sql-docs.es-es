@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f0d845cc010b41fe7789ead2a66a188b214020a
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: aab93dcc8036e0e1273a1c9444d7418214ad8926
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529496"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891055"
 ---
 # <a name="best-practices-with-query-store"></a>Procedimientos recomendados con el almacén de consultas
 
@@ -28,13 +28,13 @@ En este artículo se describen los procedimientos recomendados para usar el alma
 
 ## <a name="use-the-latest-ssmanstudiofull"></a><a name="SSMS"></a> Utilice la versión más reciente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tiene un conjunto de interfaces de usuario diseñadas para configurar el almacén de consultas y para consumir datos recopilados sobre la carga de trabajo. Descargue la última versión de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [aquí](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tiene un conjunto de interfaces de usuario diseñadas para configurar el almacén de consultas y para consumir datos recopilados sobre la carga de trabajo. Descargue la última versión de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [aquí](../../ssms/download-sql-server-management-studio-ssms.md).
 
 Para obtener una descripción rápida sobre cómo usar el almacén de consultas en escenarios de solución de problemas, vea los [blogs de @Azure del Almacén de consultas](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Uso de Información de rendimiento de consultas en Azure SQL Database
 
-Si ejecuta Almacén de consultas en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], puede usar [Información de rendimiento de consultas](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) para analizar el consumo de recursos a lo largo del tiempo. Aunque se puede usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y [Azure Data Studio](../../azure-data-studio/what-is.md) para obtener el consumo de recursos detallado para todas las consultas (CPU, memoria y E/S) Información de rendimiento de consultas ofrece una forma rápida y eficaz de determinar su impacto en el consumo global de DTU de la base de datos. Para obtener más información, vea [Información de rendimiento de consultas de Base de datos SQL de Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
+Si ejecuta Almacén de consultas en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], puede usar [Información de rendimiento de consultas](/azure/sql-database/sql-database-query-performance) para analizar el consumo de recursos a lo largo del tiempo. Aunque se puede usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y [Azure Data Studio](../../azure-data-studio/what-is.md) para obtener el consumo de recursos detallado para todas las consultas (CPU, memoria y E/S) Información de rendimiento de consultas ofrece una forma rápida y eficaz de determinar su impacto en el consumo global de DTU de la base de datos. Para obtener más información, vea [Información de rendimiento de consultas de Base de datos SQL de Azure](/azure/azure-sql/database/query-performance-insight-use).
 
 En esta sección se describen los valores predeterminados de configuración óptimos que están diseñados para garantizar el funcionamiento confiable del Almacén de consultas y de las características que dependen de él. La configuración predeterminada está optimizada para una recopilación continua de los datos, es decir, un tiempo mínimo en los estados OFF y READ_ONLY. Para obtener más información sobre todas las opciones disponibles del Almacén de consultas, vea [Opciones de ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 

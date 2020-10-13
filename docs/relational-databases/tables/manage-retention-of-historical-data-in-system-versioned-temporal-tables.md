@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 912aca78675b1cf5a0a088ba9a2264fe23b2b2eb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 322f977207bb593ddc6a4c8c78fae7621bd2aad4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548905"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810694"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Administración de la retención de datos históricos en las tablas temporales con versiones del sistema
 
@@ -38,10 +38,10 @@ La administración de la retención de datos de la tabla temporal empieza por de
 
 Una vez que determine el período de retención de datos, el siguiente paso es desarrollar un plan para administrar los datos históricos, cómo y dónde almacenar los datos históricos y cómo eliminar los datos históricos que son anteriores a los requisitos de retención. Los cuatro enfoques siguientes están disponibles para administrar los datos históricos en la tabla temporal de historial:
 
-- [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)
-- [Partición de tabla](https://msdn.microsoft.com/library/mt637341.aspx#using-table-partitioning-approach)
-- [Script de limpieza personalizado](https://msdn.microsoft.com/library/mt637341.aspx#using-custom-cleanup-script-approach)
-- [Directiva de retención](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)
+- [Stretch Database](#using-stretch-database-approach)
+- [Partición de tabla](#using-table-partitioning-approach)
+- [Script de limpieza personalizado](#using-custom-cleanup-script-approach)
+- [Directiva de retención](#using-temporal-history-retention-policy-approach)
 
  Con cada uno de estos enfoques, la lógica para la migración o limpieza de datos del historial se basa en la columna que se corresponde con el final del período en la tabla actual. El final del valor del período para cada fila determina el momento en el que la versión de fila se "cierra", es decir, cuando llega a la tabla de historial. Por ejemplo, la condición `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` especifica que esos datos históricos anteriores a un mes tienen quitarse o extraerse de la tabla de historial.
 
@@ -53,7 +53,7 @@ Una vez que determine el período de retención de datos, el siguiente paso es d
 > [!NOTE]
 > El uso del enfoque de Stretch Database solo se aplica a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y no se aplica a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
-[Stretch Database](../../sql-server/stretch-database/stretch-database.md) en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migra los datos históricos de forma transparente a Azure. Para obtener seguridad adicional, puede cifrar los datos en movimiento con la característica [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx) de SQL Server. Además, puede usar [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md) y otras características de seguridad avanzadas de SQL Server con Temporal y Stretch Database para proteger los datos.
+[Stretch Database](../../sql-server/stretch-database/stretch-database.md) en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migra los datos históricos de forma transparente a Azure. Para obtener seguridad adicional, puede cifrar los datos en movimiento con la característica [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) de SQL Server. Además, puede usar [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md) y otras características de seguridad avanzadas de SQL Server con Temporal y Stretch Database para proteger los datos.
 
 Con el enfoque de Stretch Database, puede ajustar algunas o todas las tablas de historial temporales en Azure y SQL Server moverá de forma silenciosa los datos históricos a Azure. La habilitación del ajuste de una tabla de historial no cambia la forma en la que interactúa con la tabla temporal en términos de modificación de datos y consultas temporales.
 
@@ -98,7 +98,7 @@ Consulte también:
 
 ### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>Uso de Transact-SQL para ajustar la tabla de historial completo
 
-También puede usar Transact-SQL para habilitar Stretch en el servidor local y [Habilitación de Stretch Database para una base de datos](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). Después, puede [usar Transact-SQL para habilitar Stretch Database en una tabla](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1). Con una base de datos habilitada previamente para Stretch Database, ejecute el siguiente script de Transact-SQL para ajustar una tabla de historial temporal con versiones del sistema existente:
+También puede usar Transact-SQL para habilitar Stretch en el servidor local y [Habilitación de Stretch Database para una base de datos](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). Después, puede [usar Transact-SQL para habilitar Stretch Database en una tabla](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). Con una base de datos habilitada previamente para Stretch Database, ejecute el siguiente script de Transact-SQL para ajustar una tabla de historial temporal con versiones del sistema existente:
 
 ```sql
 ALTER TABLE <history table name>
@@ -315,7 +315,7 @@ Puede modificar ligeramente el script anterior y usarlo en el proceso normal de 
 4. En el paso (6), modifique la función de partición mediante la combinación del límite inferior: `MERGE RANGE(N'2015-10-31T23:59:59.999'` después de extraer los datos de octubre.
 5. En el paso (7), divida la función de partición mediante la creación del límite superior: `SPLIT RANGE (N'2016-04-30T23:59:59.999'` después de extraer los datos de octubre.
 
-Sin embargo, la mejor solución sería ejecutar regularmente un script de Transact-SQL genérico que fuese capaz de llevar a cabo la acción apropiada cada mes sin modificar el script. Es posible generalizar el script anterior para que actúe sobre los parámetros proporcionados (límite inferior que debe combinarse y límite nuevo que se creará con la división de particiones). Para evitar la creación de una tabla de almacenamiento provisional cada mes, puede crear una con antelación y volver a usarla cambiando la restricción de comprobación para que coincida con la partición que se conmutará. Eche un vistazo a las páginas siguientes para obtener ideas sobre [cómo la ventana deslizante puede automatizarse al completo](https://msdn.microsoft.com/library/aa964122.aspx) mediante un script de Transact-SQL.
+Sin embargo, la mejor solución sería ejecutar regularmente un script de Transact-SQL genérico que fuese capaz de llevar a cabo la acción apropiada cada mes sin modificar el script. Es posible generalizar el script anterior para que actúe sobre los parámetros proporcionados (límite inferior que debe combinarse y límite nuevo que se creará con la división de particiones). Para evitar la creación de una tabla de almacenamiento provisional cada mes, puede crear una con antelación y volver a usarla cambiando la restricción de comprobación para que coincida con la partición que se conmutará. Eche un vistazo a las páginas siguientes para obtener ideas sobre [cómo la ventana deslizante puede automatizarse al completo](/previous-versions/sql/sql-server-2005/administrator/aa964122(v=sql.90)) mediante un script de Transact-SQL.
 
 ### <a name="performance-considerations-with-table-partitioning"></a>Consideraciones de rendimiento con las particiones de tabla
 
@@ -502,7 +502,7 @@ La tarea de limpieza del almacén de columnas agrupadas quita los grupos de fila
 
 La excelente compresión de datos y la limpieza eficaz de la retención hacen que el índice de almacén de columnas agrupadas sea una elección perfecta en escenarios en los que la carga de trabajo genera rápidamente una gran cantidad de datos de historial. Este patrón es típico de las cargas de trabajo de procesamiento intensivo de transacciones que usan tablas temporales para el seguimiento de cambios y la auditoría, el análisis de tendencias o la ingesta de datos de IoT.
 
-Para obtener más información, consulte [Administración de datos históricos en tablas temporales con directivas de retención](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy).
+Para obtener más información, consulte [Administración de datos históricos en tablas temporales con directivas de retención](/azure/sql-database/sql-database-temporal-tables-retention-policy).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

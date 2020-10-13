@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 86014f1a4c7ee4f9c002df67d2f739124dc70e2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 246c9d419d6f9b8fdbaae2619ef45df4d9465c36
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785083"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892435"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lección 2: Creación y aplicación de una directiva de normas de denominación
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ Algunos tipos de directivas de administración basada en directivas pueden crear
 ## <a name="prerequisites"></a>Prerrequisitos
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio y acceso a un servidor que ejecute SQL Server.
 
-- Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
   
 ## <a name="create-the-finance-database"></a>Creación de la base de datos Finance  
@@ -160,4 +160,4 @@ Este tutorial ha finalizado. Para volver al inicio, visite [Tutorial: Administra
 Para obtener una lista de tutoriales, vea [Tutoriales para SQL Server 2016](../../sql-server/tutorials-for-sql-server-2016.md).  
   
 ## <a name="see-also"></a>Consulte también  
-[Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
+[Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)

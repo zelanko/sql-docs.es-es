@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 40763d6caadc420a3bb1794a4759c848d579007c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 137a4156dde6cfe89ff76998b383fb4ab17ea672
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173386"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891345"
 ---
 # <a name="polybase-transact-sql-reference"></a>Referencia de Transact-SQL de PolyBase
 
@@ -198,7 +198,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Crear tablas externas para Azure Data Lake Store
 Se aplica a: Azure SQL Data Warehouse
 
-Para obtener más información, vea [Carga de datos de Azure Data Lake Store](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
+Para obtener más información, vea [Carga de datos de Azure Data Lake Store](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
 
 **1. Crear credencial con ámbito de base de datos**   
 
@@ -567,5 +567,5 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 Para obtener ejemplos de consultas, vea [Consultas de PolyBase](../../relational-databases/polybase/polybase-queries.md).  
   
 ## <a name="see-also"></a>Vea también  
-[Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+[Introducción a PolyBase](./polybase-guide.md)   
 [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)

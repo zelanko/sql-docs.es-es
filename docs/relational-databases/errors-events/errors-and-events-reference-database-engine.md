@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 89907738aa2e496e082a633f00882a72de5c07aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0ce6e6c625850f1723fe2e0bed6332404a3ef117
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781594"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869478"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Referencia de errores y eventos del motor de base de datos
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "85781594"
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[Comunidad de SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455)|Este sitio contiene vínculos a grupos de noticias y foros supervisados por la comunidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También muestra orígenes de información de las comunidades, como blogs y sitios web. La comunidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es de gran utilidad para obtener respuesta a algunas preguntas, aunque la respuesta no se puede garantizar.|  
-|[Comunidad del Centro para programadores de SQL Server](/sql/sql-server/)|El sitio se centra en los grupos de noticias, foros y otros recursos de la comunidad útiles para los programadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Comunidad de SQL Server](../../sql-server/index.yml)|Este sitio contiene vínculos a grupos de noticias y foros supervisados por la comunidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También muestra orígenes de información de las comunidades, como blogs y sitios web. La comunidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es de gran utilidad para obtener respuesta a algunas preguntas, aunque la respuesta no se puede garantizar.|  
+|[Comunidad del Centro para programadores de SQL Server](../../sql-server/index.yml)|El sitio se centra en los grupos de noticias, foros y otros recursos de la comunidad útiles para los programadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Ayuda y soporte técnico de Microsoft](https://go.microsoft.com/fwlink/?linkid=16419)|Puede utilizar este sitio web para abrir un caso con un profesional de soporte de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
-  
   

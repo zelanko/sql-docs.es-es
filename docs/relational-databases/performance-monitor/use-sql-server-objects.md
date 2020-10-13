@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0b5f120e82f44966d42a9c511f8c240e9d74c493
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 0dd256b071ce3621f02e6c4a6a152670e2fd5c0f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458622"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892225"
 ---
 # <a name="use-sql-server-objects"></a>Usar objetos de SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "86458622"
   
  Algunos objetos tienen varias instancias si existen varios recursos de un determinado tipo en el equipo. Por ejemplo, el tipo de objeto **Procesador** tendrá varias instancias si un sistema contiene varios procesadores. El tipo de objeto **Bases de datos** tiene una instancia para cada base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Algunos tipos de objetos (por ejemplo, el objeto **Administrador de memoria** ) tienen solo una instancia. Si un tipo de objeto tiene varias instancias, puede agregar contadores para realizar un seguimiento de las estadísticas relativas a cada instancia o, en muchos casos, de todas las instancias a la vez. Los contadores de la instancia predeterminada aparecen con el formato **SQLServer:** _\<object name>_ . Los contadores para las instancias con nombre aparecen con el formato **MSSQL$** _\<instance name>_ **:** _\<counter name>_ o **SQLAgent$** _\<instance name>_ **:** _\<counter name>_ .  
   
-Los valores del contador de rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se generan mediante el motor del contador de rendimiento de Windows (WPC). Algunos valores del contador no se calculan directamente mediante [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona valores base al motor de WPC, que realizará los cálculos necesarios (en forma de porcentajes). La vista de administración dinámica [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) proporciona todos los contadores con el valor original generado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La columna `cntr_type` indica el tipo de contador. El modo en el que el motor de WPC procesa los valores del contador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende de este tipo. Para más información sobre los tipos de contadores de rendimiento, vea la [documentación de WMI](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types).
+Los valores del contador de rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se generan mediante el motor del contador de rendimiento de Windows (WPC). Algunos valores del contador no se calculan directamente mediante [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona valores base al motor de WPC, que realizará los cálculos necesarios (en forma de porcentajes). La vista de administración dinámica [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) proporciona todos los contadores con el valor original generado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La columna `cntr_type` indica el tipo de contador. El modo en el que el motor de WPC procesa los valores del contador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende de este tipo. Para más información sobre los tipos de contadores de rendimiento, vea la [documentación de WMI](/windows/win32/wmisdk/wmi-performance-counter-types).
   
  Al agregar o quitar contadores en el gráfico y guardar la configuración del gráfico, puede especificar los objetos y contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se supervisan al iniciar el Monitor de sistema.  
   
@@ -144,5 +144,4 @@ Los valores del contador de rendimiento de [!INCLUDE[ssNoVersion](../../includes
 ## <a name="see-also"></a>Consulte también  
  [Usar objetos de rendimiento](../../ssms/agent/use-performance-objects.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
-  
   

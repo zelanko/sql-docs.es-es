@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85729b4f194cedb1a0682387ab7047f332a2ceb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90bb710e57e87bfb6bf86f4ae0543329a4500940
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490478"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863644"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>Configuración del cifrado de columnas en contexto con Transact-SQL
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -36,7 +36,7 @@ Como todas las consultas que usan un enclave seguro del lado servidor, se debe e
 En el resto de este artículo se describe cómo desencadenar el cifrado en contexto mediante la instrucción `ALTER TABLE`/`ALTER COLUMN` de SQL Server Management Studio. También puede emitir `ALTER TABLE`/`ALTER COLUMN` desde la aplicación. 
 
 > [!NOTE]
-> Actualmente, otras herramientas distintas de SSMS, incluidos el cmdlet [Invoke-Sqlcmd](https://docs.microsoft.com/powershell/module/sqlserver/invoke-sqlcmd) del módulo SqlServer de PowerShell y [sqlcmd](../../../tools/sqlcmd-utility.md), no admiten el uso de `ALTER TABLE`/`ALTER COLUMN` para operaciones criptográficas en contexto.
+> Actualmente, otras herramientas distintas de SSMS, incluidos el cmdlet [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) del módulo SqlServer de PowerShell y [sqlcmd](../../../tools/sqlcmd-utility.md), no admiten el uso de `ALTER TABLE`/`ALTER COLUMN` para operaciones criptográficas en contexto.
 
 ## <a name="perform-in-place-encryption-with-transact-sql-in-ssms"></a>Realización del cifrado en contexto con Transact-SQL en SSMS
 ### <a name="pre-requisites"></a>Requisitos previos

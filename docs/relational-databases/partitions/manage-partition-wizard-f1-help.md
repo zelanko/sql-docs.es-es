@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e49dc9ad226d9a9a1bd3cc277a1944f7b5b6622e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45cfba1078dbe72e09f760f24fc0c9f47c0c0b1f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482527"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891025"
 ---
 # <a name="manage-partition-wizard"></a>Asistente para administrar particiones 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "88482527"
  **Administrar datos particionados en un escenario de ventana deslizante**  
  Anexa una partición vacía a la tabla existente que se puede utilizar para activar la partición de los datos. Actualmente, el asistente permite activar la última partición y desactivar la primera.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Página Seleccionar las opciones de activación de la partición  
  Use la página **Seleccionar las opciones de activación de la partición** para seleccionar la tabla de ensayo que quiera activar en la tabla con particiones.  
@@ -105,7 +105,7 @@ ms.locfileid: "88482527"
  **Tabla de activación**  
  Seleccione la tabla de ensayo que contiene la partición que desea agregar a la tabla con particiones. Debe crear esta tabla de almacenamiento provisional antes de activar las particiones con el **Asistente para la administración de particiones**.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Página Seleccionar las opciones de desactivación de la partición  
  Use la página **Seleccionar las opciones de desactivación de la partición** para seleccionar la partición y la tabla de ensayo donde se almacenarán los datos particionados que está desactivando en la tabla con particiones.  
@@ -123,7 +123,7 @@ ms.locfileid: "88482527"
  **Existente**  
  Seleccione el nombre de la tabla de ensayo existente que desee utilizar para desactivar la partición de la tabla de origen actual. Si la tabla existente contiene datos, estos se sobrescribirán con los datos cuya partición esté desactivando.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
 ##  <a name="select-the-staging-table-options-page"></a><a name="StagingTableOptions"></a> Página Seleccionar las opciones de tabla de ensayo  
  Utilice la página **Seleccionar las opciones de tabla de ensayo** para crear la tabla de ensayo que desea utilizar para modificar los datos con particiones.  
@@ -145,7 +145,7 @@ ms.locfileid: "88482527"
  **Grupo de archivos**  
  Seleccione un grupo de archivos para la nueva tabla.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
 ##  <a name="select-output-option-page"></a><a name="OutputOption"></a> Página Seleccionar la opción de salida  
  Utilice la página **Seleccionar la opción de salida** para especificar cómo desea completar las modificaciones de las particiones.  
@@ -172,7 +172,7 @@ ms.locfileid: "88482527"
  **Cambiar programación**  
  Abre el cuadro de diálogo **Nueva programación de trabajo** , donde puede seleccionar, cambiar o ver las propiedades del trabajo programado.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
 ##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> Página Nueva programación del trabajo  
  Utilice la página **Nueva programación del trabajo** para ver y cambiar las propiedades de la programación.  
@@ -255,7 +255,7 @@ ms.locfileid: "88482527"
  **Time**  
  Seleccione la hora de ejecución del trabajo.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
 ##  <a name="summary-page"></a><a name="Summary"></a> Página Resumen  
  Utilice la página **Resumen** para revisar las opciones que ha seleccionado en las páginas anteriores.  
@@ -264,7 +264,7 @@ ms.locfileid: "88482527"
  **Revisar opciones seleccionadas**  
  Muestra las selecciones que ha realizado en cada página del asistente. Haga clic en un nodo para expandir y ver sus opciones seleccionadas previamente.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
 ##  <a name="progress-page"></a><a name="Progress"></a> Página Progreso  
  Utilice la página **Progreso** para supervisar la información de estado sobre las acciones del **Asistente para la administración de particiones**. Según las opciones que se seleccionen en el asistente, la página **Progreso** puede contener una o varias acciones. El cuadro superior muestra el estado general del asistente y el número de mensajes de estado, error y advertencia que ha recibido.  
@@ -302,9 +302,8 @@ ms.locfileid: "88482527"
  **Close**  
  Cierra el asistente.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
 ## <a name="see-also"></a>Consulte también  
  [Tablas e índices con particiones](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
-  
   

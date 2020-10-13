@@ -13,16 +13,16 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c083045beaae0d9cbdc6c815723a60093a97431a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 68144fbcffdc2535471c279b5771963fcfb05fec
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646057"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868734"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Importación de archivos planos mediante el asistente de SQL
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-> Para obtener más información sobre el Asistente para importación y exportación, consulte [Asistente para importación y exportación de SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+> Para obtener más información sobre el Asistente para importación y exportación, consulte [Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
 El Asistente para la importación de archivos planos es una forma muy sencilla de copiar datos de un archivo plano (.csv, .txt) a una nueva tabla de la base de datos.  El Asistente para importar archivos planos admite archivos separados por comas y de ancho fijo. En la información general puede consultar los motivos por los que el asistente resulta tan útil, el proceso para encontrarlo y un ejemplo que podrá seguir fácilmente.
 
@@ -36,7 +36,7 @@ Para comprender mejor la mejora de la experiencia de usuario del Asistente para 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Prerrequisitos
-Esta característica está disponible en la versión 17.3 de SQL Server Management Studio (SSMS) u otras posteriores. Asegúrese de utilizar la última versión, que podrá encontrar [aquí](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Esta característica está disponible en la versión 17.3 de SQL Server Management Studio (SSMS) u otras posteriores. Asegúrese de utilizar la última versión, que podrá encontrar [aquí](../../ssms/download-sql-server-management-studio-ssms.md).
  
 ## <a name="getting-started"></a><a id="started"></a>Introducción
 Para acceder al Asistente para importación de archivos planos, siga estos pasos:
@@ -124,7 +124,6 @@ Failed to convert parameter value from a String to a Double. (System.Data)
 
 Obtenga más información sobre el asistente.
  
-- **Obtenga más información sobre cómo importar otros orígenes**. Si quiere importar otros recursos además de archivos planos, consulte [Asistente para importación y exportación de SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
-- **Obtenga más información sobre cómo conectar con orígenes de archivos planos**. Si quiere más información sobre cómo conectar con orígenes de archivos planos, consulte [Connect to a Flat File Data Source](https://docs.microsoft.com/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard) (Conexión con orígenes de datos de archivos planos).
+- **Obtenga más información sobre cómo importar otros orígenes**. Si quiere importar otros recursos además de archivos planos, consulte [Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+- **Obtenga más información sobre cómo conectar con orígenes de archivos planos**. Si quiere más información sobre cómo conectar con orígenes de archivos planos, consulte [Connect to a Flat File Data Source](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md) (Conexión con orígenes de datos de archivos planos).
 - **Obtenga más información sobre PROSE**. Si quiere información general sobre el marco inteligente que usa este asistente, consulte [PROSE SDK](https://microsoft.github.io/prose/) (SDK de PROSE).
-

@@ -24,12 +24,12 @@ ms.assetid: d6e0e21a-7568-4321-b6d6-bcfba183a719
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f5afe06027e489fb7b9971edd1fcc81853e4f93
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 7baa74c6e4655ee95cfd9e10b7107431339cddb2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498254"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955826"
 ---
 # <a name="drop-user-transact-sql"></a>DROP USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,31 +50,31 @@ DROP USER [ IF EXISTS ] user_name
 -- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DROP USER user_name  
-  
+```  
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
-## Arguments
+## <a name="arguments"></a>Argumentos
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
- Conditionally drops the user only if it already exists.  
+ Quita el usuario condicionalmente solo si ya existe.  
   
  *user_name*  
- Specifies the name by which the user is identified inside this database.  
+ Especifica el nombre por el que se identifica al usuario en esta base de datos.  
   
-## Remarks  
- Users that own securables cannot be dropped from the database. Before dropping a database user that owns securables, you must first drop or transfer ownership of those securables.  
+## <a name="remarks"></a>Observaciones  
+ Los usuarios que poseen elementos protegibles no pueden quitarse de la base de datos. Para poder quitar un usuario de la base de datos que posea elementos protegibles, primero debe quitar o transferir la propiedad de esos elementos protegibles.  
   
- The guest user cannot be dropped, but guest user can be disabled by revoking its CONNECT permission by executing REVOKE CONNECT FROM GUEST within any database other than master or tempdb.  
+ El usuario guest no puede quitarse, pero puede deshabilitarse si revoca su permiso CONNECT; para ello, ejecute REVOKE CONNECT FROM GUEST en cualquier base de datos que no sea master o tempdb.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## Permissions  
- Requires ALTER ANY USER permission on the database.  
+## <a name="permissions"></a>Permisos  
+ Requiere el permiso ALTER ANY USER en la base de datos.  
   
-## Examples  
- The following example removes database user `AbolrousHazem` from the `AdventureWorks2012` database.  
+## <a name="examples"></a>Ejemplos  
+ En este ejemplo se quita el usuario `AbolrousHazem` de la base de datos `AdventureWorks2012`.  
   
 ```sql  
 DROP USER AbolrousHazem;  

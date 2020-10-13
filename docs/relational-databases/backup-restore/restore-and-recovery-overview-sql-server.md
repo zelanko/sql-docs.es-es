@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e62b9f4c4de0db24294640cd2013f0fc4b0d6c7b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5157ab86adbbea5b6e9fa1bdb14264f5418ac07b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480420"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810709"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Información general sobre restauración y recuperación (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +97,7 @@ En caso de una conmutación por error u otro apagado no limpio, las bases de dat
 
 -   **Fase de reversión** revierte las transacciones incompletas encontradas en la ATT para asegurarse de que se conserva la integridad de la base de datos. Después de la reversión, la base de datos pasa a estar en línea y no se pueden aplicar más copias de seguridad del registro de transacciones a la base de datos.
 
-La información sobre el progreso de cada fase de recuperación de base de datos se registra en el [registro de errores](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También se puede realizar el seguimiento del progreso de recuperación de la base de datos mediante eventos extendidos. Para obtener más información, vea la entrada de blog [Nuevos eventos extendidos para el progreso de recuperación de base de datos](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/).
+La información sobre el progreso de cada fase de recuperación de base de datos se registra en el [registro de errores](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También se puede realizar el seguimiento del progreso de recuperación de la base de datos mediante eventos extendidos. Para obtener más información, vea la entrada de blog [Nuevos eventos extendidos para el progreso de recuperación de base de datos](/archive/blogs/sql_server_team/new-extended-events-for-database-recovery-progress).
 
 > [!NOTE]
 > En un escenario de restauración por etapas, si un grupo de archivos de solo lectura ha sido de solo lectura desde antes de la creación de la copia de seguridad de archivos, no es necesario aplicar las copias de seguridad de registros al grupo de archivos y estas se omiten en la restauración de archivos. 
@@ -174,9 +174,9 @@ El Asistente para recuperación de base de datos facilita la creación de planes
   
 Para obtener más información sobre el Asistente para recuperación de base de datos, vea los siguientes blogs de Facilidad de uso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [Asistente para la recuperación: Introducción](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
+-   [Asistente para la recuperación: Introducción](/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
--   [Asistente para la recuperación: uso de SSMS para crear o restaurar copias de seguridad de división](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
+-   [Asistente para la recuperación: uso de SSMS para crear o restaurar copias de seguridad de división](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> Recuperación acelerada de bases de datos
 La [recuperación acelerada de bases de datos](/azure/sql-database/sql-database-accelerated-database-recovery/) está disponible en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La recuperación acelerada de bases de datos mejora considerablemente la disponibilidad de la base de datos, especialmente en presencia de transacciones de larga duración, al volver a diseñar el [proceso de recuperación](#TlogAndRecovery) de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Una base de datos para la que se ha habilitado la recuperación acelerada de base de datos completa el proceso de recuperación más rápidamente después de una conmutación por error u otro apagado no limpio. Cuando está habilitada, la recuperación acelerada de base de datos también completa la reversión de las transacciones de larga ejecución canceladas significativamente más rápido.
@@ -195,4 +195,4 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
  [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
- [Aplicar copias de seguridad de registros de transacción (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [Aplicar copias de seguridad de registros de transacción (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)

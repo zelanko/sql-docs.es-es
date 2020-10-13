@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 065b882ac2a3fdd2d43f9d7754b267384a163e89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5881835f6a415b47825181d7d5a74ec24677e3c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772095"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891945"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover los valores XML usados con frecuencia con columnas calculadas
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  Para ello, primero deberá crear la función de transmisión por secuencias de CLR. El tipo de datos **xml** se expone como una clase administrada SqlXml en ADO.NET y admite el método **CreateReader()** que devuelve un XmlReader.  
   
 > [!NOTE]  
->  El código de ejemplo de esta sección usa XPathDocument y XPathNavigator. De este modo, se fuerza la carga de todos los documentos XML en la memoria. Si utiliza código similar en su aplicación para procesar varios documentos XML grandes, este código no es escalable. En lugar de ello, mantenga asignaciones de memoria de pequeño tamaño y use interfaces de transmisión por secuencias siempre que sea posible. Para obtener más información sobre el rendimiento, vea [Arquitectura de integración CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
+>  El código de ejemplo de esta sección usa XPathDocument y XPathNavigator. De este modo, se fuerza la carga de todos los documentos XML en la memoria. Si utiliza código similar en su aplicación para procesar varios documentos XML grandes, este código no es escalable. En lugar de ello, mantenga asignaciones de memoria de pequeño tamaño y use interfaces de transmisión por secuencias siempre que sea posible. Para obtener más información sobre el rendimiento, vea [Arquitectura de integración CLR](../clr-integration/clr-integration-architecture-clr-hosted-environment.md).  
   
 ```  
 public class c_streaming_xml_tvf {  
@@ -257,5 +257,4 @@ as
   
 ## <a name="see-also"></a>Consulte también  
  [Usar XML en columnas calculadas](../../relational-databases/xml/use-xml-in-computed-columns.md)  
-  
   

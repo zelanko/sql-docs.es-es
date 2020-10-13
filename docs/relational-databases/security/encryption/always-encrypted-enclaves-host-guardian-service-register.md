@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd8b43e431a4e67eb1933548935fb37562dcdeb7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: e161eff506c1aa5398752f052f00dc4dd69ae8d9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411151"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868899"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>Registro del equipo con el servicio de protección de host
 
@@ -120,7 +120,7 @@ Hay tres archivos de datos recopilados para la atestación de TPM, algunos de lo
 | -------------------- | ---------------- | ---------- |
 | Identificador de plataforma  | La clave de aprobación pública en el TPM del equipo y el certificado de clave de aprobación del fabricante del TPM. | 1 para cada equipo |
 | Base de referencia de TPM | Los registros de control de plataforma (PCR) del TPM que miden el firmware y la configuración del sistema operativo cargados durante el proceso de arranque. Algunos ejemplos son el estado de arranque seguro y si los volcados de memoria están cifrados. | Una base de referencia por configuración única de equipo (si el hardware y el software son idénticos, pueden usar la misma base de referencia) |
-| Directiva de integridad de código | La directiva de [Windows Defender Application Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) en la que confía para proteger los equipos | Uno por directiva de integración continua única implementada en los equipos. |
+| Directiva de integridad de código | La directiva de [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) en la que confía para proteger los equipos | Uno por directiva de integración continua única implementada en los equipos. |
 
 Puede configurar más de un artefacto de atestación en HGS para prestar asistencia a una flota mixta de hardware y software.
 HGS solo requiere que la atestación de un equipo coincida con una directiva de cada categoría de directivas.
@@ -147,7 +147,7 @@ Si ya usa una directiva de integridad de código de WDAC personalizada en los eq
     ConvertFrom-CIPolicy -XmlFilePath $temppolicy -BinaryFilePath "$HOME\Desktop\allowall_cipolicy.bin"
     ```
 
-2. Siga las instrucciones que encontrará en la [guía de implementación del Control de aplicaciones de Microsoft Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) para implementar el archivo `allowall_cipolicy.bin` en los equipos de [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] con la [directiva de grupo](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy). En el caso de los equipos del grupo de trabajo, siga el mismo proceso con el editor de la directiva de grupo local (`gpedit.msc`).
+2. Siga las instrucciones que encontrará en la [guía de implementación del Control de aplicaciones de Microsoft Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) para implementar el archivo `allowall_cipolicy.bin` en los equipos de [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] con la [directiva de grupo](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy). En el caso de los equipos del grupo de trabajo, siga el mismo proceso con el editor de la directiva de grupo local (`gpedit.msc`).
 
 3. Ejecute `gpupdate /force` en los equipos de [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] para configurar la nueva directiva de integridad de código y después reinicie los equipos para aplicar la directiva.
 
@@ -243,7 +243,7 @@ Repita el paso 4B para cada equipo [!INCLUDE [ssnoversion-md](../../../includes
 
 Una vez que haya registrado el equipo de [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] con HGS ([paso 4A](#step-4a-register-a-computer-in-tpm-mode) para el modo TPM, [paso 4B](#step-4b-register-a-computer-in-host-key-mode) para el modo de clave de host), debe confirmar que es capaz de realizar la atestación correctamente.
 
-Puede comprobar la configuración del cliente de atestación de HGS y realizar un intento de atestación en cualquier momento con [Get-HgsClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
+Puede comprobar la configuración del cliente de atestación de HGS y realizar un intento de atestación en cualquier momento con [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
 La salida del comando será similar a esta:
 
 ```

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3617249a1309a86c5ff0a083f3c0db15ee91299d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 97e37ced535863dfe232fb1299be70774643c1c7
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773547"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811055"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>Reducir el ruido en las directivas de uso de la CPU (utilidad de SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "85773547"
   
 -   Aumente la tolerancia para el porcentaje de infracciones en 1 incremento del 30%. Una infracción única en 1 hora sería 1 punto de datos en un tamaño de prueba de 4. En este caso, la directiva toleraría 1 infracción por hora pero notificaría la sobreutilización para 2 o más infracciones (>30% de puntos de datos) en un período de la recopilación de 1 hora.  
   
--   Aumente los umbrales de la directiva para el uso de procesador de la instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la aplicación de capa de datos. Para obtener más información sobre cómo cambiar las directivas globales del uso de la CPU para las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o las aplicaciones de capa de datos, vea [Administración de la utilidad &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d). Para obtener más información sobre cómo cambiar las directivas individuales del uso de la CPU para las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Detalles de las instancias administradas &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2). Para obtener más información sobre cómo cambiar las directivas de uso de la CPU de aplicaciones individuales de capa de datos, vea [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+-   Aumente los umbrales de la directiva para el uso de procesador de la instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la aplicación de capa de datos. Para obtener más información sobre cómo cambiar las directivas globales del uso de la CPU para las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o las aplicaciones de capa de datos, vea [Administración de la utilidad &#40;Utilidad de SQL Server&#41;](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130)). Para obtener más información sobre cómo cambiar las directivas individuales del uso de la CPU para las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Detalles de las instancias administradas &#40;Utilidad de SQL Server&#41;](./utility-explorer-f1-help.md). Para obtener más información sobre cómo cambiar las directivas de uso de la CPU de aplicaciones individuales de capa de datos, vea [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server&#41;](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130)).  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-underutilized"></a>¿Cuántas infracciones debe cometer el procesador para que se notifique como infrautilizado?  
  El período de tiempo de la evaluación y la tolerancia para el porcentaje de infracciones son ambos configurables usando los valores de la pestaña **Directiva** del nodo **Administración de la utilidad** del explorador de la utilidad. Para cambiar las directivas, utilice los controles deslizantes a la derecha de las descripciones de la directiva y, a continuación, haga clic en **Aplicar**. También puede restaurar los valores predeterminados o descartar los cambios con los botones en la parte inferior de la pantalla.  
@@ -56,12 +56,11 @@ ms.locfileid: "85773547"
   
 -   El porcentaje predeterminado de puntos de datos en infracción antes de que se notifique la infrautilización de la CPU es del 90%. Las opciones van de 0% a 100%.  
   
- De acuerdo con los valores predeterminados, se recogen 672 puntos cada semana, pero el umbral de la directiva es 0%. Así, de forma predeterminada, esta directiva no genera infracciones de infrautilización del procesador. Para obtener más información sobre cómo cambiar las directivas globales del uso de la CPU para las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o las aplicaciones de capa de datos, vea [Administración de la utilidad &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d). Para obtener más información sobre cómo cambiar las directivas individuales de uso de la CPU para las instancias administradas de SQL Server, vea [Detalles de las instancias administradas &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2). Para obtener más información sobre cómo cambiar las directivas de uso de la CPU de aplicaciones individuales de capa de datos, vea [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ De acuerdo con los valores predeterminados, se recogen 672 puntos cada semana, pero el umbral de la directiva es 0%. Así, de forma predeterminada, esta directiva no genera infracciones de infrautilización del procesador. Para obtener más información sobre cómo cambiar las directivas globales del uso de la CPU para las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o las aplicaciones de capa de datos, vea [Administración de la utilidad &#40;Utilidad de SQL Server&#41;](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130)). Para obtener más información sobre cómo cambiar las directivas individuales de uso de la CPU para las instancias administradas de SQL Server, vea [Detalles de las instancias administradas &#40;Utilidad de SQL Server&#41;](./utility-explorer-f1-help.md). Para obtener más información sobre cómo cambiar las directivas de uso de la CPU de aplicaciones individuales de capa de datos, vea [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server&#41;](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130)).  
   
 ## <a name="see-also"></a>Consulte también  
- [Administración de la utilidad &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)   
+ [Administración de la utilidad &#40;Utilidad de SQL Server&#41;](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130))   
  [Supervisar instancias de SQL Server en la utilidad de SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Modificar una definición de la directiva de mantenimiento de recursos &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)   
  [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
-  
   

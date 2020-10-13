@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: b2fcf4a523331260cea82a8537d83c891ea4a1c4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411391"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869163"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Planificación de la atestación del Servicio de protección de host
 
@@ -42,7 +42,7 @@ No es necesario que el equipo que ejecuta [!INCLUDE [ssnoversion-md](../../../in
 ### <a name="high-availability"></a>Alta disponibilidad
 
 La característica de HGS instala y configura automáticamente un clúster de conmutación por error.
-En un entorno de producción, se recomienda usar tres servidores HGS para lograr alta disponibilidad. Consulte la [documentación del clúster de conmutación por error](https://docs.microsoft.com/windows-server/failover-clustering/manage-cluster-quorum) para obtener información sobre cómo se determina el cuórum de clúster y sobre las configuraciones alternativas, como los clústeres de dos nodos con un testigo externo.
+En un entorno de producción, se recomienda usar tres servidores HGS para lograr alta disponibilidad. Consulte la [documentación del clúster de conmutación por error](/windows-server/failover-clustering/manage-cluster-quorum) para obtener información sobre cómo se determina el cuórum de clúster y sobre las configuraciones alternativas, como los clústeres de dos nodos con un testigo externo.
 
 No es necesario el almacenamiento compartido entre los nodos de HGS. Una copia de la base de datos de atestación se almacena en cada servidor HGS y se replica automáticamente a través de la red mediante el servicio de clúster.
 
@@ -67,7 +67,7 @@ HGS admite dos modos de atestación para su uso con [!INCLUDE [ssnoversion-md](.
 En general, se proponen las recomendaciones siguientes:
 
 - Para los **servidores de producción físicos**, se recomienda usar la atestación de TPM debido a las garantías adicionales que proporciona.
-- Para los **servidores de producción virtuales**, se recomienda la atestación de clave de host porque la mayoría de las máquinas virtuales no tienen TPM virtuales ni arranque seguro. Si va a usar una máquina virtual con seguridad mejorada, como un [máquina virtual blindada local](https://aka.ms/shieldedvms), puede usar el modo TPM. En todas las implementaciones virtualizadas, el proceso de atestación solo analiza el entorno de la máquina virtual, no la plataforma de virtualización subyacente.
+- Para los **servidores de producción virtuales**, se recomienda la atestación de clave de host porque la mayoría de las máquinas virtuales no tienen TPM virtuales ni arranque seguro. Si va a usar una máquina virtual con seguridad mejorada, como un [máquina virtual blindada local](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node), puede usar el modo TPM. En todas las implementaciones virtualizadas, el proceso de atestación solo analiza el entorno de la máquina virtual, no la plataforma de virtualización subyacente.
 - Para **escenarios de desarrollo y pruebas**, se recomienda la atestación de clave de host porque es más fácil de configurar.
 
 ### <a name="trust-model"></a>Modelo de confianza
@@ -114,7 +114,7 @@ No una los equipos HGS a un dominio antes de empezar.
 
 ### <a name="ssnoversion-md-computer-prerequisites"></a>Requisitos previos de los equipos con [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
-Los equipos que ejecutan [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] deben cumplir los [requisitos para instalar SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) y los [requisitos de hardware de Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
+Los equipos que ejecutan [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] deben cumplir los [requisitos para instalar SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) y los [requisitos de hardware de Hyper-V](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
 
 Estos requisitos incluyen:
 
@@ -124,7 +124,7 @@ Estos requisitos incluyen:
   - Intel VT-x con tablas de página extendida.
   - AMD-V con indexación de virtualización rápida.
   - Si va a ejecutar [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] en una máquina virtual, el hipervisor y la CPU física deben ofrecer funciones de virtualización anidadas. Consulte la sección del [modelo de confianza](#trust-model) para obtener información sobre las garantías al ejecutar enclaves de VBS en una máquina virtual.
-    - En Hyper-V 2016 o versiones posteriores, [habilite las extensiones de virtualización anidada en el procesador de máquina virtual](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - En Hyper-V 2016 o versiones posteriores, [habilite las extensiones de virtualización anidada en el procesador de máquina virtual](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
     - En Azure, seleccione un tamaño de máquina virtual que admita la virtualización anidada. Todas las máquinas virtuales de la serie v3 admiten la virtualización anidada, por ejemplo, Dv3 y Ev3. Consulte [Creación de una máquina virtual de Azure compatible con el anidamiento](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
     - En VMWare vSphere 6.7 o posterior, habilite la compatibilidad con la seguridad basada en virtualización en la máquina virtual, como se describe en la [documentación de VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - Es posible que otros hipervisores y nubes públicas admitan funciones de virtualización anidada que también permitan Always Encrypted con enclaves de VBS. Consulte la documentación de la solución de virtualización para obtener instrucciones relativas a la compatibilidad y configuración.

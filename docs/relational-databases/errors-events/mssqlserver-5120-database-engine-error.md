@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 756fba8fdec761d149240cf00ca0229fd816d80f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 368fba2b9f56af0b86741db0d15ceebcc238ab52
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487043"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869437"
 ---
 # <a name="mssqlserver_5120"></a>MSSQLSERVER_5120
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88487043"
 Si obtiene el error `Access is Denied` del sistema operativo = 5, tenga en cuenta estos métodos:
    -  Compruebe los permisos que se establecen en el archivo examinando las propiedades del archivo en el Explorador de Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza grupos de Windows para aprovisionar Access Control en los distintos recursos de archivo. Asegúrese de que el grupo adecuado [con nombres como SQLServerMSSQLUser$ComputerName$MSSQLSERVER o SQLServerMSSQLUser$ComputerName$InstanceName] tiene los permisos necesarios en el archivo de base de datos mencionado en el mensaje de error. Vea [Configuración de permisos del sistema de archivos para el acceso al motor de base de datos](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014) para obtener más información. Asegúrese de que el grupo de Windows incluye realmente la cuenta de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el identificador de seguridad del servicio.
    -  Revise la cuenta de usuario en la que se ejecuta actualmente el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede usar el administrador de tareas de Windows para obtener esta información. Busque el valor "Nombre de usuario" para el archivo ejecutable "sqlservr.exe". Además, si ha cambiado recientemente la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe saber que la manera admitida para realizar esta operación es usar la utilidad [Administrador de configuración de SQL Server](../sql-server-configuration-manager.md). 
-   -  En función del tipo de operación (abrir bases de datos durante el inicio del servidor, adjuntar una base de datos, restaurarla, etc.) la cuenta que se usa para la suplantación y el acceso al archivo de base de datos puede variar. Revise el tema [Proteger archivos de datos y de registro](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) para comprender qué operación establece qué permiso y para qué cuentas. Use una herramienta como [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) de Windows SysInternals para saber si el acceso al archivo se produce en el contexto de seguridad de la cuenta de inicio del servicio de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o el identificador de seguridad del servicio, o una cuenta suplantada.
+   -  En función del tipo de operación (abrir bases de datos durante el inicio del servidor, adjuntar una base de datos, restaurarla, etc.) la cuenta que se usa para la suplantación y el acceso al archivo de base de datos puede variar. Revise el tema [Proteger archivos de datos y de registro](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)) para comprender qué operación establece qué permiso y para qué cuentas. Use una herramienta como [Process Monitor](/sysinternals/downloads/procmon) de Windows SysInternals para saber si el acceso al archivo se produce en el contexto de seguridad de la cuenta de inicio del servicio de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o el identificador de seguridad del servicio, o una cuenta suplantada.
 
       Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suplanta las credenciales de usuario del inicio de sesión que ejecuta la operación ALTER DATABASE o CREATE DATABASE, verá la siguiente información en la herramienta Process Monitor (un ejemplo).
       
@@ -87,4 +87,3 @@ Para solucionarlo, siga estos pasos:
    exec sp_attach_db DatabaseName, '\\Network-attached storage_Path\DatabaseMDFFile.mdf', '\\Network-attached storage_Path\DatabaseLDFFile.ldf'
    go
    ```
- 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 83cbdce1203cbe28f58c676da361091880a9f675
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: a3ec26ba8988f36e3deac88373a932ef377f8d59
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197248"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810045"
 ---
 # <a name="view-resource-health-policy-results-sql-server-utility"></a>Ver los resultados de la directiva de mantenimiento de recursos (Utilidad de SQL Server)
 
@@ -42,6 +42,6 @@ Use el panel de Utilidad de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudi
 
 - [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)
 - [Reducir el ruido en las directivas de uso de la CPU &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)
-- [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)
-- [Detalles de las instancias administradas &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)
-- [Administración de la utilidad &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)
+- [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server&#41;](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130))
+- [Detalles de las instancias administradas &#40;Utilidad de SQL Server&#41;](./utility-explorer-f1-help.md)
+- [Administración de la utilidad &#40;Utilidad de SQL Server&#41;](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130))

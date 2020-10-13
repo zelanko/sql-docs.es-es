@@ -15,12 +15,12 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9579587e39b4becd16be9bcae1e206703eb4720c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d5d881ff7628c094b8d6880406650387c0cff48
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730863"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868575"
 ---
 # <a name="memory-optimization-advisor"></a>Asesor de optimización de memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85730863"
   
 -   Migrar una tabla y los datos a una tabla optimizada para memoria (si no hay ninguna característica no admitida).  
     
- Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](https://msdn.microsoft.com/library/dn673538.aspx).  
+ Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](/previous-versions/dn673538(v=msdn.10)).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Tutorial del uso del Asistente de optimización de memoria  
  En el **Explorador de objetos**, haga clic con el botón derecho en la tabla que quiere convertir y seleccione **Asistente de optimización de memoria**. Se mostrará la página de bienvenida del **Asistente de optimización de memoria de tablas**.  
@@ -99,7 +99,7 @@ ms.locfileid: "85730863"
   
  Si no existe una clave principal y la tabla se está migrando a una tabla no perdurable, esta pantalla no aparecerá.  
   
- Para las columnas de texto (columnas de tipo **char**, **nchar**, **varchar**y **nvarchar**), debe seleccionar la intercalación adecuada. OLTP en memoria solo admite las intercalaciones BIN2 para las columnas de una tabla optimizada para memoria y no admite intercalaciones con caracteres adicionales. Vea [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) para obtener información sobre las intercalaciones admitidas y el posible impacto de un cambio de la intercalación.  
+ Para las columnas de texto (columnas de tipo **char**, **nchar**, **varchar**y **nvarchar**), debe seleccionar la intercalación adecuada. OLTP en memoria solo admite las intercalaciones BIN2 para las columnas de una tabla optimizada para memoria y no admite intercalaciones con caracteres adicionales. Vea [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) para obtener información sobre las intercalaciones admitidas y el posible impacto de un cambio de la intercalación.  
   
  Puede configurar los parámetros siguientes para la clave principal:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "85730863"
   
 -   Un índice NONCLUSTERED. Este tipo de índice es mejor para los índices con muchas consultas por rango. Puede configurar el criterio de ordenación para cada columna en la lista **Columna de ordenación y orden** .  
   
- Para conocer cuál es el tipo de índice más adecuado para cada clave principal, vea [Índices hash](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
+ Para conocer cuál es el tipo de índice más adecuado para cada clave principal, vea [Índices hash](/previous-versions/sql/sql-server-2016/dn133190(v=sql.130)).  
   
  Haga clic en **Siguiente** cuando seleccione las opciones de la clave principal.  
   
@@ -130,6 +130,5 @@ ms.locfileid: "85730863"
  Después de que finalice el proceso, actualice el **Explorador de objetos** para ver la nueva tabla optimizada para memoria y la tabla basada en disco antigua. Puede conservar la tabla antigua o eliminarla según le convenga.  
   
 ## <a name="see-also"></a>Consulte también  
- [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [Migrar a OLTP en memoria](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 77d47d7492b9c4973d58113c80e5cca737315282
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 53d2ea62bebcce1df978a8b4e539c56408a9f673
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540849"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809201"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Escenarios de uso de tablas temporales
 
@@ -59,7 +59,7 @@ En [Creación de una tabla temporal con control de versiones del sistema](../../
 
 ### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>Habilitación del control de versiones del sistema en una tabla existente para auditoría de datos
 
-Si necesita realizar auditoría de datos en bases de datos existentes, utilice ALTER TABLE para extender las tablas no temporales para convertirlas en tablas con versión del sistema. Para evitar cambios importantes en la aplicación, agregue las columnas de período como HIDDEN, como se explica en [Creación de una tabla temporal con control de versiones del sistema](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3). En el ejemplo siguiente se muestra cómo habilitar el control de versiones del sistema en una tabla de Employee existente en una hipotética base de datos de recursos humanos:
+Si necesita realizar auditoría de datos en bases de datos existentes, utilice ALTER TABLE para extender las tablas no temporales para convertirlas en tablas con versión del sistema. Para evitar cambios importantes en la aplicación, agregue las columnas de período como HIDDEN, como se explica en [Creación de una tabla temporal con control de versiones del sistema](./creating-a-system-versioned-temporal-table.md). En el ejemplo siguiente se muestra cómo habilitar el control de versiones del sistema en una tabla de Employee existente en una hipotética base de datos de recursos humanos:
 
 ```sql
 /*

@@ -18,12 +18,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f69f19c766fc0768bf72101955ee5bc08b9e8702
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4710900a9a33de2be669ddf1204080068aad0220
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110576"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869256"
 ---
 # <a name="create-a-push-subscription"></a>Creación de una suscripción de inserción
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -164,7 +164,7 @@ Las suscripciones de inserción se pueden crear mediante programación usando pr
  Las suscripciones de inserción se pueden crear mediante programación usando Replication Management Objects (RMO). Las clases RMO que se utilizan para crear una suscripción de inserción dependen del tipo de publicación para el que se crea la suscripción.  
   
 > [!IMPORTANT]
-> Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+> Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](/previous-versions/aa719848(v=vs.71)) proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para crear una suscripción de inserción para una publicación de instantáneas o transaccional  
   
@@ -266,6 +266,5 @@ Las suscripciones de inserción se pueden crear mediante programación usando pr
  [Conceptos sobre Replication Management Objects](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Sincronizar una suscripción de inserción](../../relational-databases/replication/synchronize-a-push-subscription.md)   
  [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)   
- [Usar sqlcmd con variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
-  
+ [Usar sqlcmd con variables de script](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
   

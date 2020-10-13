@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d29ab79c75adb436b45faab5e8161c8d01e6c533
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 1d0951c4b5a51596db015a39ff146383a0b2aa6a
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196899"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809548"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Crear un punto de control de la utilidad de SQL Server (utilidad de SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "86196899"
   
 -   Para ejecutar este procedimiento, el usuario debe tener los permisos sysadmin, los mismos que se necesitan para crear un UCP.  
   
--   Todas las instancias administradas de SQL Server se deben quitar del UCP. Tenga en cuenta que el UCP es una instancia administrada de SQL Server. Para más información, vea: [Cómo: quitar una instancia de SQL Server de la utilidad de SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Todas las instancias administradas de SQL Server se deben quitar del UCP. Tenga en cuenta que el UCP es una instancia administrada de SQL Server. Para más información, vea: [Cómo: quitar una instancia de SQL Server de la utilidad de SQL Server](/previous-versions/sql/sql-server-2008-r2/ee210565(v=sql.105)).  
   
  Use este procedimiento para quitar una UCP de SQL Server de la utilidad de SQL Server. Cuando haya terminado la operación, se puede volver a crear un UCP en la instancia de SQL Server.  
   
@@ -140,7 +140,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  Para continuar, haga clic en **Siguiente**.  
   
 ##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Cuadro de diálogo de conexión  
- En el cuadro de diálogo Conectar al servidor, compruebe la información sobre el tipo de servidor, el nombre del equipo y el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ En el cuadro de diálogo Conectar al servidor, compruebe la información sobre el tipo de servidor, el nombre del equipo y el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
 >  Si la conexión está cifrada, se utilizará la conexión cifrada. Si la conexión no está cifrada, la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] volverá a conectarse mediante una conexión cifrada.  
@@ -170,7 +170,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede tener una base de datos denominada "sysutility_mdw".|La operación para crear un UCP generará un almacén de administración de datos de la utilidad (UMDW) denominado "sysutility_mdw". En esta operación es preciso que el nombre no exista en el equipo en el momento de ejecutar las reglas de validación. Para continuar, debe quitar o cambiar el nombre de cualquier base de datos denominada "sysutility_mdw." Para obtener más información sobre estas operaciones para cambiar el nombre, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |Los conjuntos de recopilación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada deben detenerse.|Detenga los conjuntos de recopilación que ya existen mientras el UCP se crea en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]especificada. Si se deshabilita el recopilador de datos, habilítelo, detenga cualquier conjunto de recopilación en ejecución y, a continuación, vuelva a ejecutar las reglas de validación para la operación Crear UCP.<br /><br /> Para habilitar el recopilador de datos:<br /><br /> En el Explorador de objetos, expanda el nodo **Administración** .<br /><br /> Haga clic con el botón derecho en **Recopilación de datos**y, luego, haga clic en **Habilitar recopilación de datos**.<br /><br /> Para detener un conjunto de recopilación:<br /><br /> En el Explorador de objetos, expanda el nodo Administración, expanda **Recopilación de datos**y, después, **Conjuntos de recopilación de datos del sistema**.<br /><br /> Haga clic con el botón derecho en el conjunto de recopilación que quiere detener y, luego, haga clic en **Detener conjunto de recopilación de datos**.<br /><br /> Un cuadro de mensaje muestra los resultados de esta acción y un círculo rojo en el icono para el conjunto de recopilación indica que el conjunto de recopilación se ha detenido.|  
 |Se debe iniciar el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la instancia especificada. Si la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe estar configurado de forma que se inicie manualmente. En caso contrario, el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe estar configurado para iniciarse automáticamente.|Inicie el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma que se tenga que iniciar manualmente. En caso contrario, configure el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se inicie automáticamente.|  
-|WMI debe estar configurado correctamente.|Para solucionar problemas de configuración de WMI, vea [Solucionar problemas de la Utilidad de SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
+|WMI debe estar configurado correctamente.|Para solucionar problemas de configuración de WMI, vea [Solucionar problemas de la Utilidad de SQL Server](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130)).|  
 |La cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede ser ninguna cuenta integrada, como Servicio de red.|Si la cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una cuenta integrada, como Servicio de red, vuelva a asignar la cuenta a una cuenta de dominio de Windows que sea sysadmin.|  
 |Si selecciona la opción de cuenta de proxy, la cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser una cuenta de dominio de Windows válida.|Especifique una cuenta de dominio de Windows válida. Para asegurarse de que la cuenta es válida, inicie sesión en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada mediante la cuenta de dominio de Windows.|  
 |Si selecciona la opción de cuenta del servicio, la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no podrá ser una cuenta integrada.|Si la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una cuenta integrada, como Servicio de red, vuelva a asignar la cuenta a una cuenta de dominio de Windows.|  
@@ -229,6 +229,5 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 ## <a name="see-also"></a>Consulte también  
  [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Solucionar problemas de la Utilidad de SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [Solucionar problemas de la Utilidad de SQL Server](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

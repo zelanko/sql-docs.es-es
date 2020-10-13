@@ -12,12 +12,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e601f2b89000902647631fda9ee46a90a92e5b39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2af78d5af858f6faad29c8baaf260610f377cb4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88409181"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868650"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Guía de diseño de índices de almacén de columnas
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ No utilice un índice de almacén de columnas agrupado cuando:
 * La tabla requiera tipo de datos varchar(max), nvarchar(max) o varbinary(max). O bien, diseñe el índice de almacén de columnas para que no incluya estas columnas.
 * Los datos de tabla no sean permanentes. Considere el uso de un montón o una tabla temporal cuando necesite almacenar y eliminar los datos rápidamente.
 * La tabla tenga menos de un millón de filas por partición. 
-* Más de un 10 % de las operaciones en la tabla son actualizaciones y eliminaciones. Una gran cantidad de actualizaciones y eliminaciones provoca fragmentación. La fragmentación afecta a las tasas de compresión y al rendimiento de consultas hasta que se ejecuta una operación denominada reorganizar que obliga a todos los datos a permanecer en el almacén de columnas y elimina la fragmentación. Para más información, vea [Minimizing index fragmentation in columnstore index](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/) (Minimizar la fragmentación en índices de almacén de columnas).
+* Más de un 10 % de las operaciones en la tabla son actualizaciones y eliminaciones. Una gran cantidad de actualizaciones y eliminaciones provoca fragmentación. La fragmentación afecta a las tasas de compresión y al rendimiento de consultas hasta que se ejecuta una operación denominada reorganizar que obliga a todos los datos a permanecer en el almacén de columnas y elimina la fragmentación. Para más información, vea [Minimizing index fragmentation in columnstore index](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command) (Minimizar la fragmentación en índices de almacén de columnas).
 
 Para más información, vea [Columnstore indexes - data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md) (Almacenamiento de datos de índices de almacén de columnas).
 
@@ -100,7 +100,7 @@ Para agregar recursos de procesamiento adicionales, puede ejecutar el análisis 
 
 Para más información, vea [Get started with columnstore indexes for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)(Introducción a los índices de almacén de columnas para análisis operativo en tiempo real).
 
-Para más información sobre cómo elegir el mejor índice de almacén de columnas, vea el blog de Sunil Agarwal [Which columnstore index is right for my workload?](https://blogs.msdn.microsoft.com/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload) (¿Qué índice de almacén de columnas es adecuado para mi carga de trabajo?).
+Para más información sobre cómo elegir el mejor índice de almacén de columnas, vea el blog de Sunil Agarwal [Which columnstore index is right for my workload?](/archive/blogs/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload) (¿Qué índice de almacén de columnas es adecuado para mi carga de trabajo?).
 
 ## <a name="use-table-partitions-for-data-management-and-query-performance"></a>Utilizar particiones de tabla para la administración de datos y el rendimiento de consultas
 Los índices de columna admiten la creación de particiones, que es una buena manera de administrar y archivar datos. La creación de particiones mejora el rendimiento de consultas limitando las operaciones a una o más particiones.
@@ -130,7 +130,7 @@ Ejemplo:
 * Cargue 1 000 000 de filas en una partición o una tabla sin particiones. Se obtiene un grupo de filas comprimido con 1 000 000 de filas. Esto es fantástico para compresión de datos alta y un rendimiento de consultas rápido.
 * Cargue 1 000 000 de filas equitativamente en 10 particiones. Cada partición obtiene 100 000 filas, que es menos que el umbral mínimo para la compresión del almacén de columnas. Como resultado, el índice de almacén de columnas podría tener 10 grupos de filas delta con 100 000 filas en cada uno. Existen varias maneras de obligar a los grupos de filas delta al almacén de columnas. Aun así, si estas son las únicas filas del índice de almacén de columnas, los grupos de filas comprimidos serán demasiado pequeños para la mejor compresión y rendimiento de consultas.
 
-Para más información sobre la creación de particiones, vea la publicación de blog de Sunil Agarwal, [Should I partition my columnstore index?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/) (¿Debo particionar mi índice de almacén de columnas?).
+Para más información sobre la creación de particiones, vea la publicación de blog de Sunil Agarwal, [Should I partition my columnstore index?](/archive/blogs/sqlserverstorageengine/columnstore-index-should-i-partition-my-columnstore-index) (¿Debo particionar mi índice de almacén de columnas?).
 
 ## <a name="choose-the-appropriate-data-compression-method"></a>Elija el método de compresión de datos adecuado
 El índice de almacén ofrece dos opciones para la compresión de datos: almacén de columnas compresión de archivo y compresión.El índice de almacén de columnas ofrece dos opciones para la compresión de datos: compresión de almacén de columnas y compresión de archivo. Puede elegir la opción de compresión al crear el índice, o cambiarla más adelante con [ALTER INDEX ... REBUILD](../../t-sql/statements/alter-index-transact-sql.md).
@@ -193,4 +193,3 @@ Para crear un índice de almacén de columnas vacío para:
 * [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], consulte [CREATE TABLE (almacenamiento de datos de SQL Azure)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
 
 Para obtener más información sobre cómo convertir un índice de montón o de árbol B de almacén de filas existente en un índice de almacén de columnas agrupado, o para crear un índice de almacén de columnas, consulte [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
-

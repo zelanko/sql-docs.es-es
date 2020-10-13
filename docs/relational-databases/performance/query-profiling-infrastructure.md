@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: c1327c908a034f524140ed8b9282766e328f75b9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91719544"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890769"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestructura de generación de perfiles de consultas
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> Para más información sobre la sobrecarga de rendimiento del generación de perfiles de consulta, vea la entrada de blog [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar). 
+> Para más información sobre la sobrecarga de rendimiento del generación de perfiles de consulta, vea la entrada de blog [Developers Choice: Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar). 
 
 Cuando se ejecuta una sesión de eventos extendidos que usa el evento *query_thread_profile*, la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) también se rellena con la generación de perfiles ligera, lo que habilita las estadísticas de consulta dinámicas para todas las sesiones mediante [Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md) o la consulta directa a la DMV.
 
@@ -212,4 +212,4 @@ Para más información sobre la sobrecarga de rendimiento del generación de per
  [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [Mostrar un plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md)    
- [Estadísticas de consultas activas](../../relational-databases/performance/live-query-statistics.md)      
+ [Estadísticas de consultas activas](../../relational-databases/performance/live-query-statistics.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de70d3235e6c8087b4932fdab5006e12a56d5734
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1683231db68ea20fda3082a8ade8f945fcae4c29
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885311"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868558"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85885311"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Fecha y hora en la que se desencadena la acción auditable.|**datetime2**|Sí|  
 |**sequence_no**|Realiza un seguimiento de la secuencia de registros de un único registro de auditoría que era demasiado grande para caber en el búfer de escritura destinado a las auditorías.|**int**|Sí|  
-|**action_id**|Identificador de la acción.<br /><br /> Sugerencia: Para usar **action_id** como predicado, debe convertirse de cadena de caracteres en valor numérico. Para obtener más información, vea [Filtrar SQL Server Audit por el predicado action_id / class_type](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate).|**varchar(4)**|Sí|  
+|**action_id**|Identificador de la acción.<br /><br /> Sugerencia: Para usar **action_id** como predicado, debe convertirse de cadena de caracteres en valor numérico. Para obtener más información, vea [Filtrar SQL Server Audit por el predicado action_id / class_type](/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate).|**varchar(4)**|Sí|  
 |**succeeded**|Indica si la comprobación del permiso de la acción que desencadena el evento de auditoría se ha realizado correctamente o no. |**bit**<br /> - 1 = correcto, <br />0 = error|Sí|  
 |**permission_bitmask**|Cuando es aplicable, muestra los permisos concedidos, denegados, o revocados.|**bigint**|No|  
 |**is_column_permission**|Marca que especifica un permiso de nivel de columna|**bit** <br />- 1 = True, <br />0 = False|No|  
@@ -110,5 +110,4 @@ ms.locfileid: "85885311"
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)  
   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
-  
   

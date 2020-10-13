@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: f185faf3ef585c1f76b3c1dea605632cedf7bd1b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636145"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869028"
 ---
 # <a name="server-level-roles"></a>Roles de nivel de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91636145"
   
  Puede agregar entidades de seguridad de nivel de servidor (inicios de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], cuentas de Windows y grupos de Windows) a los roles de nivel de servidor. Cada miembro de un rol fijo de servidor puede agregar otros inicios de sesión a ese mismo rol. Los miembros de roles de servidor definidos por el usuario no pueden agregar otras entidades de seguridad de servidor al rol.  
 > [!NOTE]
->  Los permisos de nivel de servidor no están disponible en SQL Database ni en SQL Data Warehouse. Para más información sobre SQL Database, vea [Control y concesión de acceso a bases de datos](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+>  Los permisos de nivel de servidor no están disponible en SQL Database ni en SQL Data Warehouse. Para más información sobre SQL Database, vea [Control y concesión de acceso a bases de datos](/azure/sql-database/sql-database-manage-logins).
   
 ## <a name="fixed-server-level-roles"></a>Roles fijos de nivel de servidor  
  En la tabla siguiente se muestran los roles fijos de nivel de servidor y sus capacidades.  
@@ -104,5 +104,4 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [REVOKE &#40;permisos de entidad de seguridad de servidor de Transact-SQL&#41;](../../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
  [DENY &#40;permisos de entidad de seguridad de servidor de Transact-SQL&#41;](../../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)   
  [Crear un rol de servidor](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
-  
   

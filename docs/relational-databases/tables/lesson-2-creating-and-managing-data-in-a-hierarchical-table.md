@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0a774ce3918388e8df23de43a01b8b0930f9336d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 89006f322ce113808deb989010b62ff9df49f04c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460239"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809471"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Lección 2: Creación y administración de los datos de una tabla jerárquica
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,11 +27,11 @@ En la lección 1, ha modificado una tabla existente para usar el tipo de datos *
 ## <a name="prerequisites"></a>Requisitos previos  
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, acceso a un servidor que ejecute SQL Server y una base de datos de AdventureWorks.
 
-- Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Descargue las [bases de datos de ejemplo de AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+- Descargue las [bases de datos de ejemplo de AdventureWorks2017](../../samples/adventureworks-install-configure.md).
 
-Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos](../backup-restore/restore-a-database-backup-using-ssms.md).   
   
 ## <a name="create-a-table-using-the-hierarchyid-data-type"></a>Creación de una tabla mediante el tipo de datos hierarchyid
 El ejemplo siguiente crea una tabla denominada EmployeeOrg que contiene los datos del empleado y la jerarquía correspondiente. En el ejemplo se crea la tabla en la base de datos AdventureWorks2017, aunque es opcional. Para mantener un esquema sencillo del ejemplo, esta tabla solo incluye cinco columnas:  
@@ -392,4 +392,3 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
 El árbol completo de la organización que había notificado a Jill (tanto Wanida como Kevin) ahora notifica a Sariya.  
   
 Para conseguir un procedimiento almacenado que reorganice una sección de una jerarquía, consulte la sección "Mover los subárboles" de [Mover los subárboles](../../relational-databases/hierarchical-data-sql-server.md#BKMK_MovingSubtrees).  
-  

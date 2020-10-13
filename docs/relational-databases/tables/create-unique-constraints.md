@@ -18,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a9be69bad3b4cad8265065d393bea75e107492f
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: fa72cf50aed832d92d0351ceb699df0646debacd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195102"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809666"
 ---
 # <a name="create-unique-constraints"></a>Crear restricciones UNIQUE
 
@@ -32,7 +32,7 @@ ms.locfileid: "89195102"
   Puede crear una restricción UNIQUE en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] para asegurarse de que no se escribirán valores duplicados en columnas específicas que no participan en una clave principal. Crear una restricción UNIQUE crea automáticamente un índice único correspondiente.  
   
 > [!NOTE]    
-> Vea [Clave principal, clave externa y clave única en Azure Synapse Analytics](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-table-constraints) para obtener información sobre las restricciones únicas en Azure Synapse Analytics.
+> Vea [Clave principal, clave externa y clave única en Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-table-constraints) para obtener información sobre las restricciones únicas en Azure Synapse Analytics.
   
  **En este tema**  
   
@@ -128,4 +128,4 @@ ms.locfileid: "89195102"
   
      Para obtener más información, vea [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) y [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).  
   
-###  <a name="TsqlExample"></a>  
+###  <a name="TsqlExample"></a>

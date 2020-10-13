@@ -17,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 763184ba374d004001b33357591a89668c3dd0a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4759838a20e721031db8e4ea5e644cc3822285a8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490598"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868943"
 ---
 # <a name="upgrade-full-text-search"></a>Actualizar la búsqueda de texto completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -113,7 +113,7 @@ Cuando una base de datos se actualiza a [!INCLUDE[ssCurrent](../../includes/sscu
 ## <a name="backup-and-imported-full-text-catalogs"></a>Copia de seguridad y catálogos de texto completo importados  
  En los catálogos de texto completo que se vuelven a generar o que se restablecen durante la actualización (y para los nuevos catálogos de texto completo), el catálogo de texto completo es un concepto lógico y no reside en ningún grupo de archivos. Por consiguiente, para hacer una copia de seguridad de un catálogo de texto completo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], debe identificar cada grupo de archivos que contenga un índice de texto completo del catálogo y hacer una copia de seguridad de cada uno de ellos, uno por uno. Para obtener más información, vea [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md).  
   
- Para los catálogos de texto completo importados de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], el catálogo de texto completo sigue siendo un archivo de base de datos en su propio grupo de archivos. Se sigue aplicando el proceso de copia de seguridad de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para los catálogos de texto completo, con la salvedad de que el servicio MSFTESQL no existe en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener información sobre el proceso de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vea [Backing Up and Restoring Full-Text Catalogs (Copia de seguridad y restauración de catálogos de texto completo)](https://go.microsoft.com/fwlink/?LinkId=209154) en los Libros en pantalla de SQL Server 2005.  
+ Para los catálogos de texto completo importados de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], el catálogo de texto completo sigue siendo un archivo de base de datos en su propio grupo de archivos. Se sigue aplicando el proceso de copia de seguridad de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para los catálogos de texto completo, con la salvedad de que el servicio MSFTESQL no existe en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener información sobre el proceso de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vea [Backing Up and Restoring Full-Text Catalogs (Copia de seguridad y restauración de catálogos de texto completo)](/previous-versions/sql/sql-server-2005/ms142511(v=sql.90)) en los Libros en pantalla de SQL Server 2005.  
   
 ##  <a name="migrating-full-text-indexes-when-upgrading-a-database-to-sscurrent"></a><a name="Upgrade_Db"></a> Migrar índices de texto completo al actualizar una base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Los archivos de base de datos y los catálogos de texto completo de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden actualizar a una instancia del servidor de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] existente mediante operaciones de anexión o restauración, o con el Asistente para copiar bases de datos. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] los índices de texto completo, si los hubiera, se importan, se restablecen o se vuelven a compilar. La propiedad de servidor **upgrade_option** controla cuál de las opciones de actualización de texto completo usa la instancia del servidor durante estas actualizaciones de bases de datos.  
@@ -135,7 +135,7 @@ Cuando una base de datos se actualiza a [!INCLUDE[ssCurrent](../../includes/sscu
   
 -   Si el catálogo de texto completo está sin conexión, se producirá un error en la copia de seguridad.  
   
- Para obtener más información sobre las copias de seguridad y la restauración de catálogos de texto completo de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vea [Backing Up and Restoring Full-Text Catalogs (Copia de seguridad y restauración de catálogos de texto completo)](https://go.microsoft.com/fwlink/?LinkId=121052) y [File Backup and Restore and Full-Text Catalogs (Copia de seguridad y restauración de archivos y catálogos de texto completo)](https://go.microsoft.com/fwlink/?LinkId=121053)en los Libros en pantalla de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+ Para obtener más información sobre las copias de seguridad y la restauración de catálogos de texto completo de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vea [Backing Up and Restoring Full-Text Catalogs (Copia de seguridad y restauración de catálogos de texto completo)](./back-up-and-restore-full-text-catalogs-and-indexes.md) y [File Backup and Restore and Full-Text Catalogs (Copia de seguridad y restauración de archivos y catálogos de texto completo)](/previous-versions/sql/sql-server-2008-r2/ms190643(v=sql.105))en los Libros en pantalla de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
  Cuando la base de datos se restaura en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se crea un nuevo archivo de base de datos para el catálogo de texto completo. El nombre predeterminado de este archivo es ftrow_*catalog-name*.ndf. Por ejemplo, si *catalog-name* es `cat1`, el nombre predeterminado del archivo de base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] será `ftrow_cat1.ndf`. Pero si el nombre predeterminado ya se usa en el directorio de destino, el nuevo archivo de base de datos se denominará `ftrow_`*catalog-name*`{`*GUID*`}.ndf`, donde *GUID* es el identificador único global del nuevo archivo.  
   
@@ -176,11 +176,10 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  Si [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no puede localizar un archivo de catálogo de texto completo o si el archivo de texto completo se mueve durante la operación de separación sin especificar una nueva ubicación, el comportamiento dependerá de la opción de actualización de texto completo seleccionada. Si la opción de actualización de texto completo es **Importar** o **Volver a generar**, se vuelve a generar el catálogo de texto completo adjunto. Si la opción de actualización de texto completo es **Restablecer**, se restablece el catálogo de texto completo adjunto.  
   
- Para obtener más información sobre cómo separar y adjuntar una base de datos, vea [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) y [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
+ Para obtener más información sobre cómo separar y adjuntar una base de datos, vea [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) y [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Introducción a la búsqueda de texto completo](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

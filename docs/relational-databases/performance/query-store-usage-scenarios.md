@@ -14,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8801e4727beba94c95408716606208c122e96204
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 3ededb226b10f99c1c064f08bfd2d75cfafcbad0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480361"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890764"
 ---
 # <a name="query-store-usage-scenarios"></a>Escenarios de uso del Almacén de consultas
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -77,7 +77,7 @@ Cuando identifique una consulta con un rendimiento deficiente, la acción depend
   
 -   Crear índices que faltan en las tablas a las que hacen referencia las consultas costosas.  
   
--   Aplicar una directiva de filtrado para la seguridad de nivel de fila. Para obtener más información, vea [Optimizing Row Level Security with Query Store](https://docs.microsoft.com/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store) (Optimización de la seguridad de nivel de fila con el Almacén de consultas).  
+-   Aplicar una directiva de filtrado para la seguridad de nivel de fila. Para obtener más información, vea [Optimizing Row Level Security with Query Store](/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store) (Optimización de la seguridad de nivel de fila con el Almacén de consultas).  
   
 -   Agregar versiones de sistema temporales a tablas que las aplicaciones de OLTP modifican con frecuencia.  
   
@@ -222,4 +222,3 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Procedimiento recomendado con el Almacén de consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)         
  [Actualización de bases de datos mediante el Asistente para la optimización de consultas](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
-  

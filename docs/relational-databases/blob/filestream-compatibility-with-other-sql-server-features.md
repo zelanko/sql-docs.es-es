@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e2d2fdefb8684a95c8c80376e0bb353125b911ab
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6d34e2db139a4b38f073f693d3828f9d403c660
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642841"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809940"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilidad de FILESTREAM con otras características de SQL Server
 
@@ -72,7 +72,7 @@ ms.locfileid: "85642841"
  Una columna **varbinary(max)** que tiene el atributo FILESTREAM habilitado en el publicador puede replicarse en un suscriptor con o sin el atributo FILESTREAM. Para especificar la manera en la que se replica la columna, utilice el cuadro de diálogo **Propiedades del artículo: \<Article>** o el parámetro @schema_option de [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) o [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Los datos que se replican en una columna **varbinary(max)** que no tiene el atributo FILESTREAM no deben superar el límite de 2 GB para ese tipo de datos; de lo contrario, se genera un error en tiempo de ejecución. Se recomienda que replique el atributo FILESTREAM, a menos que esté replicando datos a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. No se admite la replicación de tablas que incluyen columnas FILESTREAM en suscriptores de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] , independientemente opción de esquema especificada.  
   
 > [!NOTE]  
->  La replicación de valores de datos de gran tamaño de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a suscriptores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] está limitada a un máximo de 256 MB de valores de datos. Para obtener más información, vea [Especificaciones de capacidad máxima](https://go.microsoft.com/fwlink/?LinkId=103810).  
+>  La replicación de valores de datos de gran tamaño de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a suscriptores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] está limitada a un máximo de 256 MB de valores de datos. Para obtener más información, vea [Especificaciones de capacidad máxima](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
 ### <a name="considerations-for-transactional-replication"></a>Consideraciones acerca de la replicación transaccional  
  Si utiliza columnas FILESTREAM en tablas que se publican para la replicación transaccional, tenga en cuenta las consideraciones siguientes:  
@@ -124,5 +124,4 @@ ms.locfileid: "85642841"
   
 ## <a name="see-also"></a>Consulte también  
  [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
-  
   

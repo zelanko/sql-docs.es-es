@@ -2,20 +2,20 @@
 title: Funcionamiento de la FCI de RHEL para SQL Server en Linux
 description: Obtenga información sobre cómo usar una instancia de clúster de conmutación por error (FCI) de disco compartido de Red Hat Enterprise Linux (RHEL) para SQL Server de alta disponibilidad, como la conmutación por error manual de la FCI y agregar o quitar nodos del clúster.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 94ac1e7dbd6632d2346df2d7d1837b8ee66859c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 639e88a96ac639d20a6190bffeed75d46495aa51
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897267"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785071"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Funcionamiento de la instancia de clúster de conmutación por error (FCI) de RHEL para SQL Server
 

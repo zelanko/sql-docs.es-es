@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dc6b2c88fc2405aea99ac8ce7de9c38cf43c99aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4619b4bd72258e67388ee7498eff63b28a1f3b03
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773879"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869017"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Proteger su propiedad intelectual de SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,12 +34,11 @@ Los procedimientos y datos almacenados pueden estar cifrados, pero la estructura
 Si los clientes no son administradores de los equipos, puede impedirles el acceso. Puede usar un [cifrado de datos transparente](../../relational-databases/security/encryption/transparent-data-encryption.md) para cifrar los archivos de datos, puede cifrar las copias de seguridad y puede auditar las acciones de todos los usuarios. Sin embargo, los administradores de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] y los administradores del equipo de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pueden revertir estas acciones.
 
 ## <a name="solution"></a>Solución
-Hay varias maneras de configurar el acceso a los datos de los clientes sin necesidad de instalar [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] en el equipo del cliente. Es probable que la más sencilla sea usar [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] para que los clientes no sean administradores, tal vez conjuntamente con [Siempre cifrados](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Para obtener más información para empezar a trabajar con [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], vea [¿Qué es SQL Database? Introducción a SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview).  
+Hay varias maneras de configurar el acceso a los datos de los clientes sin necesidad de instalar [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] en el equipo del cliente. Es probable que la más sencilla sea usar [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] para que los clientes no sean administradores, tal vez conjuntamente con [Siempre cifrados](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Para obtener más información para empezar a trabajar con [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], vea [¿Qué es SQL Database? Introducción a SQL Database](/azure/sql-database/sql-database-technical-overview).  
 
 También puede hospedar un sistema [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] en su propia red y permitir a los clientes acceder a los datos a través de su red, ya sea directamente o a través de una aplicación web.
 
 ## <a name="see-also"></a>Consulte también
 
 [Centro de seguridad para el Motor de base de datos de SQL Server y Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[Proteger SQL Server](../../relational-databases/security/securing-sql-server.md)  
-
+[Proteger SQL Server](../../relational-databases/security/securing-sql-server.md)

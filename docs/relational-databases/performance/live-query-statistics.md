@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0d23b18096f1be3feeaddbee6bc2517bcaae8130
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: fe6467cbe5cc915b876b9efa6b8afd9ff59e2bbd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457898"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890776"
 ---
 # <a name="live-query-statistics"></a>Estadísticas de consulta activa
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86457898"
   
 > [!WARNING]  
 > Esta característica sirve principalmente para solucionar problemas. Al usarla, el rendimiento general de las consultas podría bajar de forma moderada, especialmente en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Para obtener más información, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).  
-> Esta característica se puede usar con el [depurador de Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
+> Esta característica se puede usar con el [depurador de Transact-SQL](../../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
   
 ## <a name="to-view-live-query-statistics-for-one-query"></a>Para ver estadísticas de consultas dinámicas para una consulta 
   
@@ -79,4 +79,4 @@ En los niveles Premium de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] se neces
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
  [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
- [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md) (Infraestructura de generación de perfiles de consultas)   
+ [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md) (Infraestructura de generación de perfiles de consultas)

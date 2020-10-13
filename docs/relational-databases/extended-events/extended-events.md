@@ -15,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fdca475c71f2f1b81dac9b2a37850cea697a4414
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e8ba3ebb2aca0f1afd435e654427250901f9d83a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727343"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868565"
 ---
 # <a name="extended-events-overview"></a>Introducción a los eventos extendidos
 
@@ -45,7 +45,7 @@ Eventos extendidos es un sistema ligero de supervisión de rendimiento que usa u
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Paquetes de SQL Server Extended Events](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Describe los paquetes de Eventos extendidos que contienen objetos. Estos objetos se usan para obtener y procesar datos cuando se está ejecutando una sesión de Eventos extendidos.|  
-|[Destinos de SQL Server Extended Events](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Describe los consumidores de eventos que pueden recibir datos durante una sesión de eventos.|  
+|[Destinos de SQL Server Extended Events](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))|Describe los consumidores de eventos que pueden recibir datos durante una sesión de eventos.|  
 |[Motor de SQL Server Extended Events](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|Describe el motor que implementa y administra una sesión de Extended Events.|  
 |[Sesiones de SQL Server Extended Events](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|Describe la sesión de eventos extendidos.|  
 | &nbsp; | &nbsp; |
@@ -68,7 +68,7 @@ Todas las aplicaciones tienen puntos de ejecución que son útiles tanto dentro 
   
 -   El motor de Extended Events es independiente del evento. El motor puede enlazar cualquier evento con cualquier destino, ya que el motor no está limitado por el contenido del evento. Para obtener más información sobre el motor de Extended Events, vea [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md).  
   
--   Los eventos están separados de los consumidores de eventos, llamados *destinos* en Extended Events. Esto significa que cualquier destino puede recibir cualquier evento. Además, cualquier evento generado puede ser automáticamente utilizado por el destino, que puede registrar o proporcionar el contexto adicional del evento. Para más información, consulte [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+-   Los eventos están separados de los consumidores de eventos, llamados *destinos* en Extended Events. Esto significa que cualquier destino puede recibir cualquier evento. Además, cualquier evento generado puede ser automáticamente utilizado por el destino, que puede registrar o proporcionar el contexto adicional del evento. Para más información, consulte [SQL Server Extended Events Targets](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130)).  
   
 -   Los eventos son diferentes de la acción que se lleva a cabo cuando se produce un evento. Por lo tanto, puede asociarse cualquier acción a cualquier evento.  
   
@@ -93,15 +93,15 @@ Si mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUD
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Utilice el **Explorador de objetos** para administrar sesiones de eventos.|[Administrar sesiones de eventos en el Explorador de objetos](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)|  
-|Describe cómo crear una sesión de Extended Events.|[Crear una sesión de eventos extendidos](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)|  
+|Describe cómo crear una sesión de Extended Events.|[Crear una sesión de eventos extendidos](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130))|  
 |Describe cómo ver y restaurar los datos de destino.| [Visualización avanzada de datos de destino de eventos extendidos en SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)|  
 |Describe cómo usar las herramientas de Extended Events para crear administrar sesiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events.|[Herramientas de eventos extendidos](../../relational-databases/extended-events/extended-events-tools.md)|  
 |Describe cómo alterar una sesión de Extended Events.|[Modificar una sesión de eventos extendidos](../../relational-databases/extended-events/alter-an-extended-events-session.md)|  
-|Describe cómo obtener información acerca de los campos asociados a los eventos.|[Obtener los campos de todos los eventos](https://msdn.microsoft.com/library/4e4ee03f-5bca-42ed-a37c-db1c82e3aad2)|  
-|Describe cómo determinar los eventos que están disponibles en los paquetes registrados.|[Ver los eventos de los paquetes registrados](https://msdn.microsoft.com/library/9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f)|  
-|Describe cómo determinar los destinos de eventos extendidos que están disponibles en los paquetes registrados.|[Ver los destinos de eventos extendidos de los paquetes registrados](https://msdn.microsoft.com/library/4985aa5f-ac99-49f6-852c-9d25916549e9)|  
+|Describe cómo obtener información acerca de los campos asociados a los eventos.|[Obtener los campos de todos los eventos](/previous-versions/sql/sql-server-2016/bb677249(v=sql.130))|  
+|Describe cómo determinar los eventos que están disponibles en los paquetes registrados.|[Ver los eventos de los paquetes registrados](./selects-and-joins-from-system-views-for-extended-events-in-sql-server.md)|  
+|Describe cómo determinar los destinos de eventos extendidos que están disponibles en los paquetes registrados.|[Ver los destinos de eventos extendidos de los paquetes registrados](/previous-versions/sql/sql-server-2016/bb677247(v=sql.130))|  
 |Describe cómo ver los eventos y las acciones de los eventos extendidos que son equivalentes a cada evento de Seguimiento de SQL y sus columnas asociadas.|[Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
-|Describe cómo determinar los parámetros que puede establecer al usar el argumento ADD TARGET en CREATE EVENT SESSION o ALTER EVENT SESSION.|[Obtener los parámetros configurables del argumento ADD TARGET](https://msdn.microsoft.com/library/08454543-c5c8-4ca3-9af9-f1d82264471c)|  
+|Describe cómo determinar los parámetros que puede establecer al usar el argumento ADD TARGET en CREATE EVENT SESSION o ALTER EVENT SESSION.|[Obtener los parámetros configurables del argumento ADD TARGET](/previous-versions/sql/sql-server-2016/bb677176(v=sql.130))|  
 |Describe cómo convertir un script de Seguimiento de SQL existente en una sesión de eventos extendidos.|[Convertir un script de seguimiento de SQL existente en una sesión de eventos extendidos](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
 |Describe cómo determinar las consultas que mantienen el bloqueo, el plan de la consulta y la pila de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el momento en que se realizó el bloqueo.|[Determinar las consultas que retienen bloqueos](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |Describe cómo identificar el origen de los bloqueas que afectan al rendimiento de la base de datos.|[Buscar los objetos que han obtenido más bloqueos](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
@@ -133,7 +133,7 @@ SELECT
 ## <a name="see-also"></a>Consulte también
 
 [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-[Compatibilidad de DAC con las versiones y objetos de SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
+[Compatibilidad de DAC con las versiones y objetos de SQL Server](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
 [Implementar una aplicación de capa de datos](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
 [Supervisar aplicaciones de capa de datos](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)  
 &nbsp;  
@@ -142,4 +142,4 @@ SELECT
 &nbsp;  
 [XELite: biblioteca multiplataforma para leer XEvents de archivos XEL o secuencias en directo de SQL](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/); publicada en mayo de 2019.  
 [Read-SQLXEvent PowerShell cmdlet](https://www.powershellgallery.com/packages/SqlServer.XEvent), publicado en junio de 2019.  
-[Misterios de SQL: Seguimiento de causalidad frente a secuencia de eventos para sesiones de XEvent (blog publicado el 1 de abril de 2019)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/)  
+[Misterios de SQL: Seguimiento de causalidad frente a secuencia de eventos para sesiones de XEvent (blog publicado el 1 de abril de 2019)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/)

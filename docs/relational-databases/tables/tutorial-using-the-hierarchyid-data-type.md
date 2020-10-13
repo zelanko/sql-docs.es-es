@@ -15,12 +15,12 @@ ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1abc4ab38086afd380707b2eb12fafc48713bf08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eece1dc9ea612e37c466d57e074ae105ea0608c4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418999"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809657"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>Tutorial: Uso del tipo de datos hierarchyid
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,12 +44,11 @@ El sistema debe tener instalado lo siguiente:
   
 -   Internet Explorer versión 6 o posterior.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Tutorial: Introducción al motor de base de datos](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 [Tutorial: Escribir instrucciones Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
-[Referencia de los métodos del tipo de datos hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[Referencia de los métodos del tipo de datos hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
 [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
-  
   
   

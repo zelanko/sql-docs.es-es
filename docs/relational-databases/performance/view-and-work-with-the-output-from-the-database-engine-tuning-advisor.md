@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c6a6dace6d14ea38aa411924f0c74dfec2218f77
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 0116bfc2b0b87ca6079c2c25fe63d40ec12f0273
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458583"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890915"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Consulta y trabajo con la salida del Asistente para la optimización de motor de base de datos (DTA)
 
@@ -45,7 +45,7 @@ ms.locfileid: "86458583"
  También puede usar la GUI para ver la salida de optimización generada por la utilidad de línea de comandos **dta** .  
   
 > [!NOTE]  
->  Si usa la utilidad de línea de comandos **dta** y especifica que la salida se escriba en un archivo XML con el argumento **-ox** , puede abrir y ver el archivo de salida XML si hace clic en **Abrir archivo** en el menú **Archivo** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para más información, consulte [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Para obtener información sobre la utilidad de línea de comandos **dta** , vea [dta (utilidad)](../../tools/dta/dta-utility.md).  
+>  Si usa la utilidad de línea de comandos **dta** y especifica que la salida se escriba en un archivo XML con el argumento **-ox** , puede abrir y ver el archivo de salida XML si hace clic en **Abrir archivo** en el menú **Archivo** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para más información, consulte [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md). Para obtener información sobre la utilidad de línea de comandos **dta** , vea [dta (utilidad)](../../tools/dta/dta-utility.md).  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Para ver recomendaciones de optimización con la GUI del Asistente para la optimización de motor de base de datos  
   
@@ -392,5 +392,4 @@ ms.locfileid: "86458583"
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [dta (utilidad)](../../tools/dta/dta-utility.md)  
-  
   

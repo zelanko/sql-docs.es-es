@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 425a463cce75440a40551b0487015bd2d39c203a
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: bca6797111b59257e96e447fc3d9e4ba9ba8bb80
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480284"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890885"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores mediante administración basada en directivas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ Por ejemplo, como el administrador de la base de datos, puede que desee asegurar
   
  En las directivas que no se cumplen, el Explorador de objetos indica una advertencia de estado crítico mediante un icono rojo junto al destino y los nodos superiores del árbol del Explorador de objetos.  
   
-> **NOTA:** Cuando el sistema calcula el conjunto de objetos para una directiva, los objetos del sistema se excluyen de forma predeterminada.  Por ejemplo, si el conjunto de objetos de la directiva hace referencia a todas las tablas, la directiva no se aplicará a las tablas del sistema. Si los usuarios desean evaluar una directiva con los objetos del sistema, pueden agregar explícitamente objetos del sistema al conjunto de objetos. Sin embargo, aunque se admiten todas las directivas para el modo de evaluación **Comprobar en la programación** , por razones de rendimiento, no todas las directivas con conjuntos de objetos arbitrarios se admiten para el modo de evaluación **Comprobar en los cambios** . Para obtener más información, consulte: [https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes)  
+> **NOTA:** Cuando el sistema calcula el conjunto de objetos para una directiva, los objetos del sistema se excluyen de forma predeterminada.  Por ejemplo, si el conjunto de objetos de la directiva hace referencia a todas las tablas, la directiva no se aplicará a las tablas del sistema. Si los usuarios desean evaluar una directiva con los objetos del sistema, pueden agregar explícitamente objetos del sistema al conjunto de objetos. Sin embargo, aunque se admiten todas las directivas para el modo de evaluación **Comprobar en la programación** , por razones de rendimiento, no todas las directivas con conjuntos de objetos arbitrarios se admiten para el modo de evaluación **Comprobar en los cambios** . Para obtener más información, consulte: [https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](/archive/blogs/sqlpbm/policy-evaluation-modes)  
   
 ## <a name="three-policy-based-management-components"></a>Tres componentes de la administración basada en directivas  
  La administración basada en directivas tiene tres componentes:  
@@ -119,4 +119,4 @@ Por ejemplo, como el administrador de la base de datos, puede que desee asegurar
  
  - [Tutorial: Crear y aplicar una directiva Desactivado de forma predeterminada](lesson-1-create-and-apply-an-off-by-default-policy.md)
  - [Tutorial: Crear y aplicar una directiva de normas de denominación](lesson-2-create-and-apply-a-naming-standards-policy.md)
- - [Vistas de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ - [Vistas de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)

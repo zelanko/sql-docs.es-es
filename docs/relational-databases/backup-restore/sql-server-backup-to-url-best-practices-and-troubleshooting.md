@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 98507653332b0dc221a0f1c93b189607e50574e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1487a5c7a6c9343438c1a3f6d42fd49e425000b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759020"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809181"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Procedimientos recomendados y solución de problemas de Copia de seguridad en URL de SQL Server
 
@@ -67,7 +67,7 @@ ms.locfileid: "85759020"
     (SELECT * FROM sys.credentials   
     WHERE credential_identity = 'mycredential')  
     CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
-    ,SECRET = '<storage access key> ;  
+    , SECRET = '<storage access key>' ;  
     ```  
   
 -   La credencial existe pero la cuenta de inicio de sesión usada para ejecutar el comando de copia de seguridad no tiene permisos de acceso a las credenciales. Use una cuenta de inicio de sesión en el rol **db_backupoperator** con permisos para ***Modificar cualquier credencial*** .  
@@ -92,7 +92,7 @@ ms.locfileid: "85759020"
   
     -   También puede encontrar información si examina el registro de eventos de Windows, en los registros de aplicación con el nombre `SQLBackupToUrl`.  
 
-    -   Considere la posibilidad de usar COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE y varios argumentos de URL cuando realice copias de seguridad de bases de datos grandes.  Vea [Backing up a VLDB to Azure Blob Storage](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/) (Copia de seguridad de una VLDB en Azure Blob Storage)
+    -   Considere la posibilidad de usar COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE y varios argumentos de URL cuando realice copias de seguridad de bases de datos grandes.  Vea [Backing up a VLDB to Azure Blob Storage](/archive/blogs/sqlcat/backing-up-a-vldb-to-azure-blob-storage) (Copia de seguridad de una VLDB en Azure Blob Storage)
   
         ```console
         Msg 3202, Level 16, State 1, Line 1
@@ -182,4 +182,3 @@ Para resolver este problema, cree un archivo de configuración que permita al pr
  [Restaurar a partir de copias de seguridad archivadas en Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-  

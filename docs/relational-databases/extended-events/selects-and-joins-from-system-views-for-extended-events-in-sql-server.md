@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58c105d3f4d4d49cd7bf064a2c3c6b88fc5a7eae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 897ebac1fa9d73444daf97a3642edb573a4f1c69
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756871"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868798"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Instrucciones SELECT y JOIN en vistas del sistema para eventos extendidos en SQL Server
 
@@ -80,7 +80,7 @@ Para seleccionar entre las vistas del sistema, se necesita el permiso siguiente:
 
 En esta sección se demuestra que tres perspectivas tecnológicas diferentes coinciden perfectamente en la misma sesión de eventos definida. La sesión se ha definido en el **Explorador de objetos** de SQL Server Management Studio (SSMS.exe) y es visible en dicho explorador, pero no se está ejecutando actualmente.
 
-Se recomienda [instalar la actualización más reciente de SSMS](https://msdn.microsoft.com/library/mt238290.aspx)todos los meses para evitar errores inesperados.
+Se recomienda [instalar la actualización más reciente de SSMS](../../ssms/download-sql-server-management-studio-ssms.md)todos los meses para evitar errores inesperados.
 
 
 Encontrará documentación de referencia sobre las vistas de catálogo para eventos extendidos en [Vistas de catálogo de eventos extendidos (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md).
@@ -891,5 +891,3 @@ Aquí se muestra el contenido de la primera celda XML del conjunto de filas devu
   </action>
 </event>
 ```
-
-

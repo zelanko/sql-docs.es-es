@@ -16,12 +16,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 811723fa85d059b5e750135bf551f723c5c137dc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab482e4818d7d60b9876fbf300a39de0b2f9ee40
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716719"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868387"
 ---
 # <a name="replication-tutorials"></a>Tutoriales de replicación
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,8 +51,7 @@ Aprenda a configurar la replicación de mezcla para intercambiar datos entre un 
 ## <a name="see-also"></a>Consulte también  
 [Ver y modificar la configuración de seguridad de la replicación](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
-[Replicación transaccional](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
+[Replicación transaccional](./transactional/transactional-replication.md) 
 
-[Replicación de mezcla](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)
+[Replicación de mezcla](./merge/merge-replication.md)
 
-  

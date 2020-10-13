@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a017eb6d2f9267408387413782a83488fa39d542
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3073607520bc6ebe25debf39e9ccc3a4b5b29d64
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748452"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809881"
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>Connect to a Microsoft Azure Subscription (Conectarse a una suscripción de Microsoft Azure)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Use **Connect to a Microsoft Azure Subscription (Conectarse a una suscripción de Microsoft)** para registrar un contenedor de blobs de Azure existente con la instancia de SQL Server.  El cuadro de diálogo creará una firma de acceso compartido y una directiva de acceso almacenada en un contenedor de blobs de Azure y, seguidamente, creará una credencial de SQL Server.  Este cuadro de diálogo aparece cuando se usa la tarea de copia de seguridad y restauración de SQL Server Management Studio y en dicha operación participa un dispositivo URL.
 
 ## <a name="limitation"></a>Limitación
-La opción**Connect to a Microsoft Azure Subscription (Conectarse a una suscripción de Microsoft)** funciona únicamente con una cuenta de almacenamiento de Azure creada a través del modelo de implementación de administración de servicios (Clásico).  Para obtener más información sobre los modelos de implementación de Azure, vea [La implementación de Azure Resource Manager frente a la implementación clásica: los modelos de implementación y el estado de los recursos](https://azure.microsoft.com/documentation/articles/resource-manager-deployment-model/).
+La opción**Connect to a Microsoft Azure Subscription (Conectarse a una suscripción de Microsoft)** funciona únicamente con una cuenta de almacenamiento de Azure creada a través del modelo de implementación de administración de servicios (Clásico).  Para obtener más información sobre los modelos de implementación de Azure, vea [La implementación de Azure Resource Manager frente a la implementación clásica: los modelos de implementación y el estado de los recursos](/azure/azure-resource-manager/management/deployment-models).
 
 ## <a name="options"></a>Opciones
 **Iniciar sesión**     

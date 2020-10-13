@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73edcacffe6267d6a2692018a106a4eb055817e6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 740636f90882f32ec42722e2f36cdd2932747025
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551264"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868681"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauración y recuperación de tablas optimizadas para memoria
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,6 +68,5 @@ Las tablas optimizadas para memoria se pueden cargar normalmente en memoria a la
 -   Las tablas grandes optimizadas para memoria con un índice no agrupado o más de uno pueden producir un uso de CPU elevado. A diferencia de un índice de hash cuyo número de cubos se establece en el momento de su creación, los índices no agrupados aumentan de forma dinámica.  
   
 ## <a name="see-also"></a>Consulte también  
- [Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  
+ [Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
   

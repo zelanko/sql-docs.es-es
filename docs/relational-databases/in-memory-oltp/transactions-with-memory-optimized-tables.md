@@ -12,12 +12,12 @@ ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e86e2957a4c9961a5d82d13737a3239deb9a7342
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c41b7f8fc9f1851daa72ca5189fee433c217f20
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753178"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868667"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -143,7 +143,7 @@ A continuación, se indican las condiciones de error que pueden provocar errores
 | Código de error | Descripción | Causa |
 | :-- | :-- | :-- |
 | **41302** | Ha intentado actualizar una fila que se ha actualizado en una transacción diferente desde el inicio de la transacción actual. | Esta condición de error se produce si dos transacciones simultáneas intentan actualizar o eliminar la misma fila al mismo tiempo. Una de las dos transacciones recibe este mensaje de error y será necesario reintentarla. <br/><br/>  | 
-| **41305**| Error de validación de lectura repetible La lectura de una fila de una tabla optimizada para memoria por parte de esta transacción se ha actualizado por otra transacción que se ha confirmado antes que esta transacción. | Este error puede producirse al usar los aislamientos REPEATABLE READ o SERIALIZABLE y, también, si las acciones de una transacción simultánea suponen una infracción de una restricción FOREIGN KEY. <br/><br/>Esa infracción simultánea de restricciones de clave externa es muy poco habitual y normalmente es indicativa de un problema con la lógica de aplicación o con la entrada de datos. Pero el error también puede producirse si no hay ningún índice en las columnas relacionadas con la restricción FOREIGN KEY. Por lo tanto, lo más conveniente es crear siempre un índice de las columnas de clave externa en una tabla optimizada para memoria. <br/><br/> Para ver consideraciones más exhaustivas sobre los errores de validación provocados por las infracciones de clave externas, vea [este blog](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) elaborado por el equipo de asesoramiento al cliente de SQL Server. |  
+| **41305**| Error de validación de lectura repetible La lectura de una fila de una tabla optimizada para memoria por parte de esta transacción se ha actualizado por otra transacción que se ha confirmado antes que esta transacción. | Este error puede producirse al usar los aislamientos REPEATABLE READ o SERIALIZABLE y, también, si las acciones de una transacción simultánea suponen una infracción de una restricción FOREIGN KEY. <br/><br/>Esa infracción simultánea de restricciones de clave externa es muy poco habitual y normalmente es indicativa de un problema con la lógica de aplicación o con la entrada de datos. Pero el error también puede producirse si no hay ningún índice en las columnas relacionadas con la restricción FOREIGN KEY. Por lo tanto, lo más conveniente es crear siempre un índice de las columnas de clave externa en una tabla optimizada para memoria. <br/><br/> Para ver consideraciones más exhaustivas sobre los errores de validación provocados por las infracciones de clave externas, vea [este blog](/archive/blogs/sqlcat/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys) elaborado por el equipo de asesoramiento al cliente de SQL Server. |  
 | **41325** | Error de validación serializable. Se ha insertado una fila nueva en un rango que la transacción actual ha examinado anteriormente. Esto se llama una fila fantasma. | Este error puede producirse al usar el aislamiento SERIALIZABLE y, también, si las acciones de una transacción simultánea suponen una infracción de una restricción PRIMARY KEY, UNIQUE o FOREIGN KEY. <br/><br/> Esa infracción de restricción simultánea es muy poco habitual y normalmente es indicativa de un problema con la lógica de aplicación o con la entrada de datos. Pero, de forma similar a los errores de validación de lectura repetible, este error también se puede producir si existe una restricción FOREIGN KEY sin ningún índice en las columnas implicadas. |  
 | **41301** | Error de dependencia: existe una dependencia con otra transacción que no se ha podido confirmar posteriormente. | Esta transacción (Tx1) ha creado una dependencia con otra transacción (Tx2) leyendo los datos escritos por dicha transacción Tx2 mientras esta se encontraba en su fase de procesamiento de confirmación o de validación. En consecuencia, Tx2 no se pudo confirmar posteriormente. Las causas más comunes para que Tx2 no se pueda confirmar son errores de validación de lectura repetible (41305) y serializables (41325). Una menos habitual son los errores de E/S de registro. |
 | **41823** y **41840** | Se alcanzó la cuota para los datos de usuario en las tablas optimizadas para memoria y las variables de tablas. | El error 41823 se aplica a las ediciones Express, Web y Standard de SQL Server, así como a las bases de datos únicas de [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. El error 41840 se aplica a los grupos elásticos de [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/> En la mayoría casos, estos errores indican que se ha alcanzado el tamaño máximo de datos de usuario, y la forma para resolver el error es eliminar datos de las tablas optimizadas para memoria. Sin embargo, hay casos poco frecuentes en los que este error es transitorio. Por lo tanto, le recomendamos que vuelva a intentarlo cuando se encuentre por primera vez con estos errores.<br/><br/> Al igual que con otros errores de esta lista, los errores 41823 y 41840 provocan que la transacción activa se anule. |
@@ -281,6 +281,6 @@ go
   
 - [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
-- [Niveles de aislamiento basado en versiones de fila del motor de base de datos](https://msdn.microsoft.com/library/ms177404.aspx)  
+- [Niveles de aislamiento basado en versiones de fila del motor de base de datos](/previous-versions/sql/sql-server-2008-r2/ms177404(v=sql.105))  
   
-- [Controlar la durabilidad de las transacciones](../../relational-databases/logs/control-transaction-durability.md)   
+- [Controlar la durabilidad de las transacciones](../../relational-databases/logs/control-transaction-durability.md)

@@ -19,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dad86600ba067bd0e03eb0e9b8a05be49593bf7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54c462ee83fe972eccc9347e8a9f41e570511239
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423389"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869408"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +69,7 @@ Use [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-t
   
     -   **Crear a partir de una lista de palabras irrelevantes de texto completo existente**  
   
-     Para obtener más información, vea [Nueva lista de palabras irrelevantes de texto completo &#40;página General&#41;](https://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309).  
+     Para obtener más información, vea [Nueva lista de palabras irrelevantes de texto completo &#40;página General&#41;](/previous-versions/sql/sql-server-2016/cc280518(v=sql.130)).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -96,7 +96,7 @@ Use [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alte
   
 4.  Haga clic con el botón derecho en la lista de palabras irrelevantes cuyas propiedades quiere cambiar y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo [Propiedades de lista de palabras irrelevantes de texto completo](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) :  
+5.  En el cuadro de diálogo [Propiedades de lista de palabras irrelevantes de texto completo](/previous-versions/sql/sql-server-2016/cc280415(v=sql.130)) :  
   
     1.  En el cuadro de lista **Acción** , seleccione una las acciones siguientes: **Agregar palabra irrelevante**, **Eliminar palabra irrelevante**, **Eliminar todas las palabras irrelevantes**o **Borrar lista de palabras irrelevantes**.  
   
@@ -139,6 +139,5 @@ Utilice la [opción de configuración del servidor transform noise words](../../
   
 ## <a name="upgrade-noise-words-from-sql-server-2005"></a>Actualizar las palabras irrelevantes de SQL Server 2005  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Cuando una base de datos se actualiza desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], los archivos de palabras irrelevantes de esa versión dejan de usarse. Sin embargo, los archivos de palabras irrelevantes están almacenados en la carpeta FTDATA\ FTNoiseThesaurusBak y se pueden usar posteriormente al actualizar o compilar las listas de palabras irrelevantes correspondientes. Para obtener información sobre cómo actualizar los archivos de palabras irrelevantes a listas de palabras irrelevantes, vea [Actualizar la búsqueda de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
-  
   
   

@@ -3,20 +3,20 @@ title: Configuración de los recursos compartidos de la carpeta de instantáneas
 titleSuffix: SQL Server on Linux
 description: Obtenga información sobre cómo configurar la replicación de SQL Server de los recursos compartidos de la carpeta de instantáneas en Linux.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e5f21fee3218977d22a5c3314fe82c5a3e508bfc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 16e1d3458e04d1693afeca030e0ecb89f434fc1d
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882669"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785042"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>Configuración de la carpeta de instantáneas de replicación con recursos compartidos
 

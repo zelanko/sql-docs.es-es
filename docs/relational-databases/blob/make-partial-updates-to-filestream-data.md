@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: d6f7661e-6c14-4d31-9541-4520ca0f82b2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 133cbfadceaf782e72fe5a3b604e37e9d56f61f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b47cdacd079bfa1235427938b3fa214a1babeb7
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767945"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809909"
 ---
 # <a name="make-partial-updates-to-filestream-data"></a>Realizar actualizaciones parciales de los datos FILESTREAM
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Una aplicación utiliza FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT para realizar actualizaciones parciales de los datos de FILESTREAM BLOB. La función [DeviceIoControl](https://go.microsoft.com/fwlink/?LinkId=105527) pasa este valor y el controlador que [OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) devuelve al controlador FILESTREAM. A continuación, el controlador obliga a hacer una copia del lado servidor de los datos FILESTREAM actuales en el archivo al que el controlador hace referencia. Si la aplicación emite el valor FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT una vez escrito el controlador, la última operación de escritura se conserva y se pierden las operaciones de escritura anteriores que se realizaron en el controlador.  
+  Una aplicación utiliza FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT para realizar actualizaciones parciales de los datos de FILESTREAM BLOB. La función [DeviceIoControl](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) pasa este valor y el controlador que [OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) devuelve al controlador FILESTREAM. A continuación, el controlador obliga a hacer una copia del lado servidor de los datos FILESTREAM actuales en el archivo al que el controlador hace referencia. Si la aplicación emite el valor FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT una vez escrito el controlador, la última operación de escritura se conserva y se pierden las operaciones de escritura anteriores que se realizaron en el controlador.  
   
 > [!NOTE]  
->  FILESTREAM se basa en el protocolo [SMB protocol](https://go.microsoft.com/fwlink/?LinkId=112454) para el acceso remoto.  
+>  FILESTREAM se basa en el protocolo [SMB protocol](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview) para el acceso remoto.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo utilizar el valor `FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT` para realizar una actualización parcial de un FILESTREAM BLOB insertado.  
@@ -39,5 +39,4 @@ ms.locfileid: "85767945"
 ## <a name="see-also"></a>Consulte también  
  [Obtener acceso a los datos FILESTREAM con OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [Crear aplicaciones cliente para datos FILESTREAM](../../relational-databases/blob/create-client-applications-for-filestream-data.md)  
-  
   

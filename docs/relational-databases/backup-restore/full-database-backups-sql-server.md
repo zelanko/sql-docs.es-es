@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3abf911faf82a4a20ed99c2f89d4171300981de0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de570769ee53617d0c8ed0cb71c13647c279fea1
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718050"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809411"
 ---
 # <a name="full-database-backups-sql-server"></a>Copias de seguridad completas de bases de datos (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,6 +106,5 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
-  
+ [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
   

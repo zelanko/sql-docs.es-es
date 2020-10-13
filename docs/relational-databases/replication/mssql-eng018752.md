@@ -14,12 +14,12 @@ ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b81ec42b06c310a7ac0d3ef038795aeb538ed768
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed7d71fb9c4e1306826c281806c66db38285e06d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448211"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868623"
 ---
 # <a name="mssql_eng018752"></a>MSSQL_ENG018752
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "88448211"
   
 -   Reinicie el Agente de registro del LOG. Para obtener más información, vea [Iniciar y detener un agente de replicación &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
--   Reinicie el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (déjelo sin conexión o conéctelo en un clúster) en el distribuidor. Si existe la posibilidad de que un trabajo programado pueda ejecutar **sp_repldone**, **sp_replcmds**o **sp_replshowcmds** desde cualquier otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , reinicie también el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en esas instancias. Para obtener más información, vea [Iniciar, detener o pausar el servicio del Agente SQL Server](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c).  
+-   Reinicie el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (déjelo sin conexión o conéctelo en un clúster) en el distribuidor. Si existe la posibilidad de que un trabajo programado pueda ejecutar **sp_repldone**, **sp_replcmds**o **sp_replshowcmds** desde cualquier otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , reinicie también el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en esas instancias. Para obtener más información, vea [Iniciar, detener o pausar el servicio del Agente SQL Server](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md).  
   
 -   Ejecute [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md) en el publicador de la base de datos de publicación y reinicie el Agente de registro del LOG.  
   
@@ -66,5 +66,4 @@ ms.locfileid: "88448211"
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y eventos &#40;replicación&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Agente de registro del LOG de replicación](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
-  
   

@@ -20,12 +20,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b471d7e0f6ab13c5718e1ec37a87d423e7115f94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea8f2b873b8990a00bc61cd8ce45c192feefaaa5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420929"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869409"
 ---
 # <a name="linked-servers-database-engine"></a>Servidores vinculados (motor de base de datos)
 
@@ -34,7 +34,7 @@ ms.locfileid: "88420929"
   Los servidores vinculados permiten que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] lean datos de los orígenes de datos remotos y ejecuten comandos en los servidores de bases de datos remotos (por ejemplo, orígenes de datos OLE DB) fuera de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los servidores vinculados normalmente se configuran para habilitar [!INCLUDE[ssDE](../../includes/ssde-md.md)] a fin de ejecutar una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que incluye las tablas de otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]u otro producto de base de datos como Oracle. Muchos tipos de orígenes de datos OLE DB pueden configurarse como servidores vinculados, incluidos [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel y Azure CosmosDB.
 
 > [!NOTE]
-> Los servidores vinculados están disponibles en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. No están habilitados en los grupos elásticos y la base de datos única de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Hay algunas [restricciones en Instancia administrada que se pueden encontrar aquí](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
+> Los servidores vinculados están disponibles en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. No están habilitados en los grupos elásticos y la base de datos única de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Hay algunas [restricciones en Instancia administrada que se pueden encontrar aquí](/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
 
 ## <a name="when-to-use-linked-servers"></a>¿Cuándo usar servidores vinculados?
 
@@ -76,7 +76,7 @@ Normalmente, los servidores vinculados se utilizan para tratar consultas distrib
 > Cuando se utiliza un proveedor OLE DB, la cuenta con la que se ejecuta el servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de lectura y ejecución para el directorio y todos los subdirectorios en los que esté instalado el proveedor. Esto incluye los proveedores publicados por Microsoft y cualquier proveedor externo.
 
 > [!NOTE]
-> Los servidores vinculados admiten la autenticación de paso a través de Active Directory cuando se usa la delegación completa. A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17, también se admite la autenticación de paso a través con delegación restringida, pero no la [delegación restringida basada en recursos](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview).
+> Los servidores vinculados admiten la autenticación de paso a través de Active Directory cuando se usa la delegación completa. A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17, también se admite la autenticación de paso a través con delegación restringida, pero no la [delegación restringida basada en recursos](/windows-server/security/kerberos/kerberos-constrained-delegation-overview).
 
 ## <a name="managing-providers"></a>Administrar proveedores  
 Existe un conjunto de opciones para controlar cómo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carga y utiliza proveedores OLE DB que se hayan especificado en el registro.  
@@ -107,5 +107,4 @@ También puede definir servidores vinculados mediante [!INCLUDE[ssManStudioFull]
   
 ## <a name="related-content"></a>Contenido relacionado  
  [sys.servers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
-
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)

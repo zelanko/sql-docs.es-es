@@ -12,12 +12,12 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad82e31acbe105810b00b1f6bfc59ec433ca273b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04bc3b16152307b5d5ed4a3437934e5c7ce6a45a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753200"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868784"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construcciones Transact-SQL no admitidas por OLTP en memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "85753200"
   
  Para obtener más información sobre las características admitidas con las tablas optimizadas para memoria y los procedimientos almacenados compilados de forma nativa, vea:  
   
--   [Problemas de migración para los procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+-   [Problemas de migración para los procedimientos almacenados compilados de forma nativa](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 -   [Compatibilidad de Transact-SQL con OLTP en memoria](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
 -   [Características de SQL Server no admitidas para OLTP en memoria](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)  
   
--   [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+-   [Procedimientos almacenados compilados de forma nativa](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 ## <a name="databases-that-use-in-memory-oltp"></a>Bases de datos que utilizan OLTP en memoria  
  En la siguiente tabla se enumeran las características de [!INCLUDE[tsql](../../includes/tsql-md.md)] no compatibles y las palabras clave que pueden aparecer en el texto del mensaje de error que implica una base de datos OLTP en memoria. La tabla también muestra la resolución del error.  
@@ -110,7 +110,7 @@ ms.locfileid: "85753200"
 |Característica|COMPUTE|No se admite la cláusula **COMPUTE** . Quítela de la consulta.|  
 |Característica|SELECT INTO|La cláusula **INTO** no se puede usar con la instrucción **SELECT** . Vuelva a escribir la consulta como **INSERT INTO** _Table_ **SELECT**.|  
 |Característica|Lista de columnas insertadas incompleta|En general, en las instrucciones INSERT, deben especificarse valores para todas las columnas de la tabla.<br /><br /> Sin embargo, se admiten las restricciones DEFAULT y las columnas IDENTITY(1,1) en tablas optimizadas para memoria. Estas columnas pueden omitirse de la lista de columnas INSERT. En el caso de columnas IDENTITY, la omisión es obligatoria.|  
-|Característica|*Function*|Los procedimientos almacenados compilados de forma nativa no admiten algunas funciones integradas. Quite la función rechazada del procedimiento almacenado. Para obtener más información sobre las funciones integradas admitidas, vea<br />[Características admitidas en los módulos T-SQL compilados de forma nativa](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)o<br />[Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Característica|*Function*|Los procedimientos almacenados compilados de forma nativa no admiten algunas funciones integradas. Quite la función rechazada del procedimiento almacenado. Para obtener más información sobre las funciones integradas admitidas, vea<br />[Características admitidas en los módulos T-SQL compilados de forma nativa](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)o<br />[Procedimientos almacenados compilados de forma nativa](./a-guide-to-query-processing-for-memory-optimized-tables.md).|  
 |Característica|CASE|**Se aplica a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] y SQL Server a partir de [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Las expresiones **CASE** no se admiten en las consultas en procedimientos almacenados compilados de forma nativa. Cree consultas diferentes para mayúsculas y minúsculas. Para obtener más información, vea [Implementación de una expresión CASE de un procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] admiten las expresiones CASE.|  
 |Característica|INSERT EXECUTE|Quite la referencia.|  
 |Característica|Ejecute|Solo se admite para ejecutar procedimientos almacenados de forma nativa y funciones definidas por el usuario.|  
@@ -147,7 +147,7 @@ ms.locfileid: "85753200"
 |Operator|TSEQUAL|No se admite este operador. Quite **TSEQUAL** del procedimiento almacenado compilado de forma nativa.|  
 |Operator|LIKE|No se admite este operador. Quite **LIKE** del procedimiento almacenado compilado de forma nativa.|  
 |Operator|NEXT VALUE FOR|En los procedimientos almacenados compilados de forma nativa no se puede hacer referencia a secuencias. Obtenga el valor usando [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado y, a continuación, páselo al procedimiento almacenado compilado de forma nativa. Para obtener más información, vea [Implementar IDENTITY en una tabla con optimización para memoria](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md).|  
-|Opción SET|*Opción*|En los procedimientos almacenados compilados de forma nativa no se pueden cambiar las opciones SET. Algunas opciones se pueden establecer con la instrucción BEGIN ATOMIC. Para obtener más información, vea la sección sobre bloques atomic en [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Opción SET|*Opción*|En los procedimientos almacenados compilados de forma nativa no se pueden cambiar las opciones SET. Algunas opciones se pueden establecer con la instrucción BEGIN ATOMIC. Para obtener más información, vea la sección sobre bloques atomic en [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md).|  
 |Operando|TABLESAMPLE|No se admite este operador. Quite **TABLESAMPLE** del procedimiento almacenado compilado de forma nativa.|  
 |Opción|RECOMPILE|Los procedimientos almacenados compilados de forma nativa se compilan en el momento de su creación. Quite **RECOMPILE** de la definición de procedimiento.<br /><br /> Si ejecuta sp_recompile en un procedimiento almacenado compilado de forma nativa, hará que se vuelva a compilar en la siguiente ejecución.|  
 |Opción|ENCRYPTION|Esta opción no se admite. Quite **ENCRYPTION** de la definición de procedimiento.|  
@@ -187,6 +187,5 @@ ms.locfileid: "85753200"
 |Característica|DTC|Las transacciones que tienen acceso a tablas optimizadas para memoria no pueden ser transacciones distribuidas.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [Migrar a OLTP en memoria](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

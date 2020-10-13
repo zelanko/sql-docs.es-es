@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c2f1b8e4a711081bb998c6417c90e28b7638e508
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e8e0c926a81d97561a16928dc33af406c69469ae
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001181"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868800"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importar y exportar datos de SQL Server y de Azure SQL Database
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ Puede importar o exportar datos desde una variedad de orígenes y destinos con e
 ### <a name="design-your-own-import-or-export"></a>Diseñar su propia importación o exportación
 Si quiere diseñar una importación de datos personalizada, puede usar una de las siguientes características o servicios:
 -   SQL Server Integration Services. Para más información, vea [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md).
--   Azure Data Factory. Para más información, vea [Introducción a Azure Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-introduction).
+-   Azure Data Factory. Para más información, vea [Introducción a Azure Data Factory](/azure/data-factory/data-factory-introduction).
 
 ## <a name="data-formats-for-import-and-export"></a>Formatos de datos para la importación y la exportación
 
@@ -53,7 +53,7 @@ Si quiere diseñar una importación de datos personalizada, puede usar una de la
 Puede importar y exportar datos a archivos planos o a muchos otros formatos de archivos, bases de datos relacionales y servicios en la nube. Para obtener más información sobre estas opciones para herramientas específicas, vea los temas siguientes.
 -   Para el Asistente para importación y exportación de SQL Server, vea [Conectarse a orígenes de datos con el Asistente para importar y exportar de SQL Server](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md).
 -   Para SQL Server Integration Services, vea [Conexiones de Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md).
--   Para Azure Data Factory, vea [Conectores de Azure Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector).
+-   Para Azure Data Factory, vea [Conectores de Azure Data Factory](/azure/data-factory/data-factory-amazon-redshift-connector).
 
 ### <a name="commonly-used-data-formats"></a>Formatos de datos de uso frecuente
 

@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 35a7f19d04edc8cdcacbd9d41ec27ce3c91f6fd1
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 75d9993cb91ff153075aa1feae19dd5a43499b0d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279371"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868162"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Always Encrypted con enclaves seguros con SSMS
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -42,8 +42,8 @@ Para empezar a trabajar con Always Encrypted con enclaves seguros, necesita al m
   - Intel VT-x con tablas de página extendida.
   - AMD-V con indexación de virtualización rápida.
   - Si va a ejecutar [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] en una máquina virtual, el hipervisor y la CPU física deben ofrecer funciones de virtualización anidadas. 
-    - En Hyper-V 2016 o versiones posteriores, [habilite las extensiones de virtualización anidada en el procesador de máquina virtual](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
-    - En Azure, seleccione un tamaño de máquina virtual que admita la virtualización anidada. Esto incluye todas las máquinas virtuales de la serie v3, por ejemplo, Dv3 y Ev3. Consulte [Creación de una máquina virtual de Azure compatible con el anidamiento](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+    - En Hyper-V 2016 o versiones posteriores, [habilite las extensiones de virtualización anidada en el procesador de máquina virtual](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - En Azure, seleccione un tamaño de máquina virtual que admita la virtualización anidada. Esto incluye todas las máquinas virtuales de la serie v3, por ejemplo, Dv3 y Ev3. Consulte [Creación de una máquina virtual de Azure compatible con el anidamiento](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
     - En VMWare vSphere 6.7 o posterior, habilite la compatibilidad con seguridad basada en la virtualización en la máquina virtual, tal como se describe en la [documentación de VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - Es posible que otros hipervisores y nubes públicas admitan funciones de virtualización anidada que también permitan Always Encrypted con enclaves de VBS. Consulte la documentación de la solución de virtualización para obtener instrucciones relativas a la compatibilidad y configuración.
 - [SQL Server Management Studio (SSMS) 18.3 o versiones posteriores](../../ssms/download-sql-server-management-studio-ssms.md)
@@ -264,7 +264,7 @@ En este paso, creará una clave de columna maestra y una clave de cifrado de col
     2. Seleccione el nombre de clave maestra de columna: **CMK1**.
     3. Seleccione **Almacén de certificados de Windows (usuario actual o equipo local)** o **Azure Key Vault**.
     4. Seleccione **Permitir cálculos de enclave**.
-    5. Si ha seleccionado Azure Key Vault, inicie sesión en Azure y seleccione su almacén de claves. Para obtener más información sobre cómo crear un almacén de claves para Always Encrypted, consulte [Administrar sus almacenes de claves desde Azure Portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
+    5. Si ha seleccionado Azure Key Vault, inicie sesión en Azure y seleccione su almacén de claves. Para obtener más información sobre cómo crear un almacén de claves para Always Encrypted, consulte [Administrar sus almacenes de claves desde Azure Portal](/archive/blogs/kv/manage-your-key-vaults-from-new-azure-portal).
     6. Seleccione su certificado o su clave de Azure Key Vault si ya existe, o bien haga clic en el botón **Generar certificado** para crear uno.
     7. Seleccione **Aceptar**.
 

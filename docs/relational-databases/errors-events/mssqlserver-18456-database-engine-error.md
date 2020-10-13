@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d3e1ad2ab6cda565e59268b063494c17941a81e5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6df2cae92398fdffafd4ef0e998c6f26a8103991
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780633"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869454"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -116,5 +116,4 @@ Si intenta conectarse con sus credenciales de administrador, inicie la aplicaci�
   
 Si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] admite bases de datos independientes, confirme que el inicio de sesión no se eliminó tras la migración a un usuario de base de datos independiente.  
   
-Al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma local, las conexiones de los servicios que se ejecutan en **NT AUTHORITY\NETWORK SERVICE** deben autenticarse con el nombre de dominio completo del equipo. Para obtener más información, consulte: [Procedimientos: Usar la cuenta de servicio de red para obtener acceso a recursos en ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
-  
+Al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma local, las conexiones de los servicios que se ejecutan en **NT AUTHORITY\NETWORK SERVICE** deben autenticarse con el nombre de dominio completo del equipo. Para obtener más información, consulte: [Procedimientos: Usar la cuenta de servicio de red para obtener acceso a recursos en ASP.NET](/previous-versions/msp-n-p/ff647402(v=pandp.10))  

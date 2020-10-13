@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7677421f25f2dcc04a80d7e39182936e40136420
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e10e89850c8028590fd9e498a062abe0ac0de06
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722041"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868236"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visor de conflictos de replicación de Microsoft (Replicación de mezcla)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85722041"
  Mientras se resuelven los conflictos durante la sincronización, los datos de la fila que pierde se escriben en una tabla de conflictos. Tanto si acepta la resolución original como si elige una resolución distinta para el conflicto, la fila de conflicto registrada se eliminará de la tabla de conflictos. Se recomienda revisar los conflictos de forma habitual con el fin de reducir el tamaño de las tablas de seguimiento de conflictos.  
   
 > [!NOTE]  
->  Los conflictos que implican registros lógicos no se muestran en el Visor de conflictos. Para ver información acerca de estos conflictos, utilice procedimientos almacenados de replicación. Para obtener más información, vea [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  Los conflictos que implican registros lógicos no se muestran en el Visor de conflictos. Para ver información acerca de estos conflictos, utilice procedimientos almacenados de replicación. Para obtener más información, vea [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](./view-and-resolve-data-conflicts-for-merge-publications.md).  
   
 ## <a name="options"></a>Opciones  
  El Visor de conflictos de replicación está dividido en dos secciones. La sección superior del cuadro de diálogo muestra la lista de conflictos de la tabla seleccionada. Si hace clic en un elemento de la lista de conflictos, se mostrarán los detalles del conflicto en la sección inferior del cuadro de diálogo.  
@@ -87,5 +87,4 @@ ms.locfileid: "85722041"
 ## <a name="see-also"></a>Consulte también  
  [Ver y resolver conflictos de datos para publicaciones de mezcla &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Replicación de mezcla avanzada: detección y resolución de conflictos](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
-  
   

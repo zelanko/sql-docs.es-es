@@ -1,6 +1,6 @@
 ---
-description: sp_datatype_info_90 (SQL Data Warehouse)
-title: sp_datatype_info_90 (SQL Data Warehouse) | Microsoft Docs
+description: sp_datatype_info_90 (Azure Synapse Analytics)
+title: sp_datatype_info_90 (Azure Synapse Analytics)
 ms.custom: ''
 ms.date: 03/13/2017
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a7f2cc25af40cc85ae3600e18d861d106af7168
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6c9d03578a2eab318be1669303e9a8b741eb3779
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987961"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059443"
 ---
-# <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
+# <a name="sp_datatype_info_90-azure-synapse-analytics"></a>sp_datatype_info_90 (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Devuelve información acerca de los tipos de datos que admite el entorno actual.  
@@ -70,7 +70,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|Valor de precisión inicial del intervalo si *data_type* es **Interval**; de lo contrario, NULL.|  
 |USERTYPE|**smallint**|valor **usertype** de la tabla systypes.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_datatype_info es equivalente a SQLGetTypeInfo en ODBC. Los resultados devueltos se ordenan por DATA_TYPE y, a continuación, por la proximidad de la asignación de los tipos de datos a los tipos de datos de ODBC SQL correspondientes.  
   
 ## <a name="permissions"></a>Permisos  
@@ -87,7 +87,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Data Warehouse procedimientos almacenados](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
+ [Procedimientos almacenados de Azure Synapse Analytics](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

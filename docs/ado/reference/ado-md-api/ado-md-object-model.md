@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61fc4c7ea45478af1911fec52f1c37dc017a2263
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9e1da1d708bf8fbe5b3c3cb6cea0a6d65f6e9ccf
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987566"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059393"
 ---
 # <a name="ado-md-object-model"></a>Modelo de objetos ADO MD
 En este tema se describe cómo se representan los objetos y cómo se relacionan en ADO MD.  
@@ -32,7 +32,7 @@ En este tema se describe cómo se representan los objetos y cómo se relacionan 
  Los objetos [AXIS](./axis-object-ado-md.md), [Cell](./cell-object-ado-md.md), [Cellset](./cellset-object-ado-md.md), [CubeDef](./cubedef-object-ado-md.md), [Dimension](./dimension-object-ado-md.md), [HIERARCHY](./hierarchy-object-ado-md.md), [LEVEL](./level-object-ado-md.md)y [member](./member-object-ado-md.md) tienen una colección de [propiedades](../ado-api/properties-collection-ado.md) de ADO estándar.  
   
 ## <a name="see-also"></a>Consulte también  
- [Referencia de API de ADO MD](?view=sql-server-ver15)   
+ [Referencia de API de ADO MD](?view=sql-server-ver15&preserve-view=true)   
  [Ejemplos de código ADO MD](./ado-md-code-examples.md)   
  [Colecciones de ADO MD](./ado-md-collections.md)   
  [ADO MD constantes enumeradas](./ado-md-enumerated-constants.md)   

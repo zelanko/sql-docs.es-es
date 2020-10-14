@@ -1,6 +1,6 @@
 ---
-description: SQL Data Warehouse procedimientos almacenados
-title: SQL Data Warehouse procedimientos almacenados | Microsoft Docs
+description: Procedimientos almacenados de Azure Synapse Analytics
+title: Procedimientos almacenados de Azure Synapse Analytics
 ms.custom: ''
 ms.date: 03/15/2017
 ms.service: sql-data-warehouse
@@ -13,31 +13,31 @@ ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 8edea157c14004d48f340af1313ccfabeb9d2818
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 080808c2f32990070ab630042a00e2173f0440a2
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005931"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059543"
 ---
 # <a name="azure-synapse-analytics-stored-procedures"></a>Procedimientos almacenados de Azure Synapse Analytics
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] proporciona procedimientos integrados que puede usar para realizar operaciones relacionadas con los roles de base de datos. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] incluye los siguientes procedimientos del sistema:  
   
-<a name="AggregateFunctions"></a>[sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
+<a name="AggregateFunctions"></a>[sp_datatype_info_90 &#40;Azure Synapse analytics&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
- [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
+ [sp_pdw_add_network_credentials &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
   
- [sp_pdw_database_encryption &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
+ [sp_pdw_database_encryption &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
   
- [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
+ [sp_pdw_database_encryption_regenerate_system_keys &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
- [sp_pdw_log_user_data_masking &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
+ [sp_pdw_log_user_data_masking &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
   
- [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
+ [sp_pdw_remove_network_credentials &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
- [sp_special_columns_100 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
+ [sp_special_columns_100 &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
 >  Algunos procedimientos almacenados del sistema adicionales solo se usan dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a través de las API de cliente y no están pensados para uso general de los clientes. Estos procedimientos se enumeran en [procedimientos almacenados del sistema (Transact-SQL)](./system-stored-procedures-transact-sql.md). Estos procedimientos están sujetos a cambios y no se garantiza la compatibilidad. Todos los procedimientos de la lista no están disponibles en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  

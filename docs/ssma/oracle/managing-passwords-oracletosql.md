@@ -14,12 +14,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 3ffcc42e790e6eb0f26ffa96ec8e3bcf7503ca3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 212d6792704ed2b52af91be3ea810a916a486bc8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480457"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038028"
 ---
 # <a name="managing-passwords-oracletosql"></a>Administración de contraseñas (OracleToSQL)
 Esta sección trata sobre la protección de contraseñas de base de datos y el procedimiento para importarlas o exportarlas entre servidores.
@@ -132,5 +132,4 @@ La aplicación de consola SSMA permite exportar contraseñas de base de datos ci
 8. Confirme la contraseña: xxxxxxxx  
 
 ## <a name="see-also"></a>Consulte también  
-[Ejecutar la consola SSMA (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
-  
+[Ejecutar la consola SSMA (Oracle)](./executing-the-ssma-console-oracletosql.md)  

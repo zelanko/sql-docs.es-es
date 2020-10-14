@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d6a1bbc7b47531c66e27818e8673a7c6aa9723c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3da213467ad6513d4c25e6888bd095e80746cba7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492428"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038278"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Proyectos de SSMA (MySQLToSQL)
 Para migrar las bases de datos de MySQL a SQL Server o SQL Azure, primero debe crear un proyecto de SSMA. El proyecto es un archivo que contiene la siguiente información:  
@@ -54,7 +54,7 @@ SSMA contiene varias opciones para convertir y cargar bases de datos, migrar dat
   
 -   Para obtener información sobre la configuración de la sincronización en SQL Server, vea [configuración del proyecto &#40;sincronización&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md).  
   
--   Para obtener información sobre la configuración de la GUI, vea [configuración del proyecto (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+-   Para obtener información sobre la configuración de la GUI, vea [configuración del proyecto (GUI) (SSMA Common)](../sybase/project-settings-gui-sybasetosql.md).  
   
 -   Para obtener información sobre la configuración de asignación de tipos de datos, vea [configuración del proyecto &#40;asignación de tipos&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
   
@@ -132,9 +132,8 @@ Al abrir un proyecto, se desconecta de MySQL y de SQL Server o SQL Azure. Esto l
 ## <a name="next-step"></a>siguiente paso  
 El siguiente paso del proceso de migración consiste en [conectarse a MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Conexión a MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
 [Migración de bases de datos de MySQL a SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [Conexión a SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
 [Conexión a Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
-  

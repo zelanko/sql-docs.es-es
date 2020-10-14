@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52d3c9676adbd95d219221270090dbcedc798bfb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ed7dd109906b4cace6ed185b1842f9e9e7dedde
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775425"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037044"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>Funciones de extensión de XQuery: sql:variable()
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "85775425"
 sql:variable("variableName") as xdt:anyAtomicType?  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Tal y como se describe en el tema [enlazar datos relacionales dentro de XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), puede utilizar esta función al utilizar [métodos de tipo de datos XML](../t-sql/xml/xml-data-type-methods.md) para exponer un valor relacional dentro de XQuery.  
   
  Por ejemplo, el [método Query ()](../t-sql/xml/query-method-xml-data-type.md) se utiliza para especificar una consulta en una instancia XML almacenada en una variable o columna de tipo de datos **XML** . En ocasiones, es posible que también se desee que la consulta utilice valores de una variable [!INCLUDE[tsql](../includes/tsql-md.md)], o un parámetro, para combinar los datos relacionales y XML. Para ello, utilice la función **SQL: variable** .  
@@ -94,11 +94,10 @@ WHERE ProductID=771
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Server funciones de extensión de XQuery](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [SQL Server funciones de extensión de XQuery](./xquery-extension-functions-sql-column.md)   
  [Comparar XML con tipo y XML sin tipo](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [&#40;de datos XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [Datos XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Crear instancias de datos XML](../relational-databases/xml/create-instances-of-xml-data.md)   
  [métodos del tipo de datos xml](../t-sql/xml/xml-data-type-methods.md)   
  [Lenguaje de manipulación de datos XML &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
-  
   

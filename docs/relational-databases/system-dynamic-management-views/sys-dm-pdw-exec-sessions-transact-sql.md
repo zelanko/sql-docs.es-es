@@ -1,6 +1,6 @@
 ---
-description: Sys. dm_pdw_exec_sessions (Transact-SQL)
-title: Sys. dm_pdw_exec_sessions (Transact-SQL) | Microsoft Docs
+description: sys.dm_pdw_exec_sessions (Transact-SQL)
+title: sys.dm_pdw_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2019
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5801b3e1b4cf57aef3b465a6190b3093480e6ca0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d155f836abb975b39ef7b2396057a43e59686f9b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489805"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035351"
 ---
-# <a name="sysdm_pdw_exec_sessions-transact-sql"></a>Sys. dm_pdw_exec_sessions (Transact-SQL)
+# <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contiene información acerca de todas las sesiones que se han abierto actualmente o recientemente en el dispositivo. Muestra una fila por sesión.  
@@ -37,14 +37,14 @@ ms.locfileid: "88489805"
 |is_transactional|**bit**|Captura si una sesión está actualmente dentro de una transacción o no.|0 para la confirmación automática, 1 para transaccional.|  
 |client_id|**nvarchar(255)**|Captura la información de cliente para la sesión.|Cualquier cadena válida.|  
 |app_name|**nvarchar(255)**|Captura la información del nombre de la aplicación opcionalmente establecida como parte del proceso de conexión.|Cualquier cadena válida.|  
-|sql_spid|**int**|Número de ID. del SPID. Use `session_id` esta sesión. Use la `sql_spid` columna para unirse a **sys. dm_pdw_nodes_exec_sessions**.<br /><br /> ADVERTENCIA: esta columna contiene SPID cerrados. ** \* \* \* \* **||  
+|sql_spid|**int**|Número de ID. del SPID. Use `session_id` esta sesión. Use la `sql_spid` columna para unirse a **Sys.dm_pdw_nodes_exec_sessions**.<br /><br /> ADVERTENCIA: esta columna contiene SPID cerrados. ** \* \* \* \* **||  
   
  Para obtener información acerca de las filas máximas retenidas en esta vista, consulte la sección de metadatos en el tema [límites de capacidad](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso `VIEW SERVER STATE`.  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>Consulte también  
+ [Azure Synapse Analytics y vistas de administración dinámica de almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

@@ -13,12 +13,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e6366de9514f625ef1c0a008b0ca6e0e331b5669
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: a2d573ef8cfc97d40451ad59d0fe51f98542c677
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006397"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92033825"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys.workload_management_workload_groups (Transact-SQL)
 
@@ -47,4 +47,4 @@ Requiere el permiso VIEW SERVER STATE.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
- Para obtener una lista de todas las vistas de catálogo de Azure Synapse Analytics y almacenamiento de datos paralelos, consulte [SQL Data Warehouse y las vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Para crear un grupo de cargas de trabajo, consulte Creación de un [grupo de cargas](../../t-sql/statements/create-workload-group-transact-sql.md)de trabajo. Para obtener más información sobre la clasificación de cargas de trabajo, consulte aislamiento de la [carga de trabajo](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)
+ Para obtener una lista de todas las vistas de catálogo de Azure Synapse Analytics y almacenamiento de datos paralelos, consulte [vistas de catálogo de Azure Synapse Analytics y almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Para crear un grupo de cargas de trabajo, consulte Creación de un [grupo de cargas](../../t-sql/statements/create-workload-group-transact-sql.md)de trabajo. Para obtener más información sobre la clasificación de cargas de trabajo, consulte aislamiento de la [carga de trabajo](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation)

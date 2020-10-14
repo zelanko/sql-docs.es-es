@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dacb3e54898ece6222d2f9eb3d7a546c8aa7b76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c27ed4fad982831288f1e115f6da94bc70114c61
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753554"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037438"
 ---
 # <a name="functions-on-sequences---id"></a>Funciones usadas en secuencias: id
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Uno o varios valores xs:IDREF.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El resultado de la función es una secuencia de elementos de la instancia XML, en el orden del documento, que tiene un valor xs:ID equivalente a uno o varios de los valores xs:IDREF de la lista de posibles valores xs:IDREF.  
   
  Si el valor xs:IDREF no coincide con ningún elemento, la función devolverá la secuencia vacía.  
@@ -177,11 +177,10 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Limitaciones de la implementación  
  Éstas son las limitaciones:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]no admite la versión de dos argumentos de **ID ()**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no admite la versión de dos argumentos de **ID ()**.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]requiere que el tipo de argumento de **ID ()** sea un subtipo de XS: idref *.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requiere que el tipo de argumento de **ID ()** sea un subtipo de XS: idref *.  
   
 ## <a name="see-also"></a>Consulte también  
- [Funciones utilizadas en secuencias](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
-  
+ [Funciones utilizadas en secuencias](./xquery-functions-against-the-xml-data-type.md)  
   

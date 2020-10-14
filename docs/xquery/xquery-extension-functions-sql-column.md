@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b3aeded0476c809bd1bcdfbfdacb4eac3381751
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55a38974ec5e85eeec58195c18edd1f6fb8b5cb4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775410"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038073"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Funciones de extensión de XQuery: sql:column()
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85775410"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Tenga en cuenta que la referencia a una columna especificada en la función **SQL: column ()** dentro de una expresión XQuery hace referencia a una columna de la fila que se está procesando.  
   
  En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , solo se puede hacer referencia a una instancia **XML** en el contexto de la expresión de origen de una instrucción INSERT de XML-DML; de lo contrario, no se puede hacer referencia a columnas que son de tipo **XML** o un tipo definido por el usuario CLR.  
@@ -131,11 +131,10 @@ select @x
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Server funciones de extensión de XQuery](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [SQL Server funciones de extensión de XQuery]()   
  [Comparar XML con tipo y XML sin tipo](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [&#40;de datos XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [Datos XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Crear instancias de datos XML](../relational-databases/xml/create-instances-of-xml-data.md)   
  [métodos del tipo de datos xml](../t-sql/xml/xml-data-type-methods.md)   
  [Lenguaje de manipulación de datos XML &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
-  
   

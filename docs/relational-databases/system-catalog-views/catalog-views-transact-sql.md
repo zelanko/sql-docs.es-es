@@ -24,12 +24,12 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3af547afd4b35c10358ce24be2fbcce96801144
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9d139633c9f1e38f7509696ce228c6e0559da52f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546895"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038308"
 ---
 # <a name="system-catalog-views-transact-sql"></a>Vistas de catálogo del sistema (Transact-SQL)
 
@@ -46,7 +46,7 @@ Las vistas de catálogo devuelven información utilizada por el [!INCLUDE[ssDEno
 - La vista derivada contiene un superconjunto de columnas y un subconjunto de filas.
 
 > [!IMPORTANT]
-> En versiones futuras de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] puede aumentar la definición de cualquier vista de catálogo del sistema y agregar columnas al final de la lista. Se recomienda no usar la sintaxis SELECT \* from *sys. catalog_view_name* en el código de producción porque el número de columnas devueltas podría cambiar e interrumpir la aplicación.
+> En versiones futuras de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] puede aumentar la definición de cualquier vista de catálogo del sistema y agregar columnas al final de la lista. Se recomienda no usar la sintaxis SELECT \* FROM *Sys.catalog_view_name* en el código de producción porque el número de columnas devueltas podría cambiar e interrumpir la aplicación.
 
 Las vistas de catálogo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se han organizado en las siguientes categorías:
 
@@ -109,7 +109,7 @@ Las vistas de catálogo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
         
         [Vistas de catálogo de datos espaciales](../../relational-databases/system-catalog-views/spatial-data-catalog-views.md)
         
-        [Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+        [Vistas de catálogo de Azure Synapse Analytics y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
         
         [Stretch Database vistas de catálogo &#40;Transact-SQL&#41;](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)
         

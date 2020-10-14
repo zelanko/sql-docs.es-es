@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ce33aca0939a6a956f053824da1f7fdd35930b30
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b070a45c7990efbb598401b241083fcb2d804f5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320081"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035144"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Uso de repositorios de prueba (OracleToSQL)
 El repositorio de prueba de SSMA almacena los casos de prueba y los resultados de pruebas del evaluador de SSMA para su uso posterior. Los datos del repositorio se guardan en las tablas SQL Server **TestCaseRepository** y **RunTestCaseResultRepository** del esquema **ssma_oracle_utilities** de la base de datos **ssmatesterdb** .  
@@ -50,7 +50,7 @@ Los siguientes botones están disponibles en la página casos de prueba:
   
 -   Haga clic en el botón **Editar** para ejecutar el Asistente para casos de prueba y cambiar la prueba seleccionada.  
   
--   Haga clic en el botón **Ejecutar** para abrir el cuadro de diálogo [casos de prueba en ejecución (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) y ejecutar la prueba seleccionada.  
+-   Haga clic en el botón **Ejecutar** para abrir el cuadro de diálogo [casos de prueba en ejecución (OracleToSQL)](./running-test-cases-oracletosql.md) y ejecutar la prueba seleccionada.  
   
 ## <a name="test-results-repository"></a>Resultados de pruebas repositorio  
 Puede ver el repositorio de Resultados de pruebas en la página **resultados de pruebas** de la ventana **repositorio de casos de prueba** . Ábralo haciendo clic en **resultados de pruebas...** en el menú de **evaluador** .  
@@ -78,4 +78,3 @@ Los siguientes botones están disponibles en la página resultado de la prueba:
 ## <a name="see-also"></a>Consulte también  
 [Ejecutar casos de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Probar objetos de base de datos migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
-  

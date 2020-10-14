@@ -13,12 +13,12 @@ ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1acf08369e0d6591c96e74defabe2a49d15e412d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1e8b211dc0a73ac6fd84515ce0153faa5ed7ae73
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932696"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038879"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Proyectos de SSMA (OracleToSQL)
 Para migrar bases de datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , primero debe crear un proyecto de SSMA. El proyecto es un archivo que contiene la siguiente información:  
@@ -27,7 +27,7 @@ Para migrar bases de datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssn
   
 -   Metadatos sobre la instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que recibirá los objetos y los datos migrados.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]información de conexión.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] información de conexión.  
   
 -   Configuración del proyecto.  
   
@@ -77,7 +77,7 @@ Para migrar datos de bases de datos de Oracle a [!INCLUDE[ssNoVersion](../../inc
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
@@ -121,10 +121,9 @@ Al abrir un proyecto, se desconecta de Oracle y de [!INCLUDE[ssNoVersion](../../
 3.  Para volver a conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en el menú **archivo** , haga clic en **volver a conectar a SQL Server**.  
   
 ## <a name="next-step"></a>siguiente paso  
-El siguiente paso del proceso de migración consiste en [conectarse a Oracle Database (OracleToSQL)](https://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6).  
+El siguiente paso del proceso de migración consiste en [conectarse a Oracle Database (OracleToSQL)](./connecting-to-oracle-database-oracletosql.md).  
   
 ## <a name="see-also"></a>Consulte también  
 [Migrar bases de datos de Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
 [Conexión a Oracle Database &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)  
 [Conexión a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
-  

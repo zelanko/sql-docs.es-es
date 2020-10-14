@@ -1,6 +1,6 @@
 ---
-description: Sys. pdw_nodes_column_store_row_groups (Transact-SQL)
-title: Sys. pdw_nodes_column_store_row_groups (Transact-SQL)
+description: sys.pdw_nodes_column_store_row_groups (Transact-SQL)
+title: sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 08/05/2020
 ms.prod: sql
@@ -13,21 +13,21 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e712d2b5adafbb3f47ef132c701a82d3c9026c9
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: c08303bd13b96089ac2b9e0f82c83a992ec83e63
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062354"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038306"
 ---
-# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>Sys. pdw_nodes_column_store_row_groups (Transact-SQL)
+# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Proporciona información del índice de almacén de columnas agrupado por segmento para ayudar al administrador a tomar decisiones de administración del sistema en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **Sys. pdw_nodes_column_store_row_groups** tiene una columna para el número total de filas almacenadas físicamente (incluidas las marcadas como eliminadas) y una columna para el número de filas marcadas como eliminadas. Use **Sys. pdw_nodes_column_store_row_groups** para determinar qué grupos de filas tienen un alto porcentaje de filas eliminadas y deben volver a generarse.  
+  Proporciona información del índice de almacén de columnas agrupado por segmento para ayudar al administrador a tomar decisiones de administración del sistema en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **Sys.pdw_nodes_column_store_row_groups** tiene una columna para el número total de filas almacenadas físicamente (incluidas las marcadas como eliminadas) y una columna para el número de filas marcadas como eliminadas. Use **Sys.pdw_nodes_column_store_row_groups** para determinar qué grupos de filas tienen un alto porcentaje de filas eliminadas y deben volver a generarse.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|IDENTIFICADOR de la tabla subyacente. Esta es la tabla física del nodo de proceso, no la object_id de la tabla lógica del nodo de control. Por ejemplo, object_id no coincide con el object_id de sys. tables.<br /><br /> Para combinar con sys. Tables, utilice sys. pdw_index_mappings.|  
+|**object_id**|**int**|IDENTIFICADOR de la tabla subyacente. Esta es la tabla física del nodo de proceso, no la object_id de la tabla lógica del nodo de control. Por ejemplo, object_id no coincide con el object_id de sys. tables.<br /><br /> Para combinar con sys. Tables, use sys.pdw_index_mappings.|  
 |**id_de_índice**|**int**|IDENTIFICADOR del índice de almacén de columnas agrupado en *object_id* tabla.|  
 |**partition_number**|**int**|IDENTIFICADOR de la partición de tabla que contiene el *row_group_id*de grupo de filas. Puede usar *partition_number* para unir esta DMV a sys. partitions.|  
 |**row_group_id**|**int**|IDENTIFICADOR de este grupo de filas. Es único en la partición.|  
@@ -43,7 +43,7 @@ ms.locfileid: "89062354"
 ## <a name="remarks"></a>Observaciones  
  Devuelve una fila para cada grupo de filas del almacén de columnas de cada tabla que tenga un índice clúster o no clúster de almacén de columnas.  
   
- Use **Sys. pdw_nodes_column_store_row_groups** para determinar el número de filas incluidas en el grupo de filas y el tamaño del grupo de filas.  
+ Utilice **Sys.pdw_nodes_column_store_row_groups** para determinar el número de filas incluidas en el grupo de filas y el tamaño del grupo de filas.  
   
  Cuando el número de filas eliminadas de un grupo de filas alcanza un alto porcentaje de las filas totales, la tabla pierde eficiencia. Vuelva a generar el índice de almacén de columnas para reducir el tamaño de la tabla, reduciendo así la E/S de disco necesaria para leer la tabla. Para volver a generar el índice de almacén de columnas, use la opción **rebuild** de la instrucción **ALTER index** .  
   
@@ -55,7 +55,7 @@ ms.locfileid: "89062354"
  Requiere el permiso **VIEW SERVER STATE**.  
   
 ## <a name="examples-sssdw-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- En el ejemplo siguiente se combina la tabla **Sys. pdw_nodes_column_store_row_groups** con otras tablas del sistema para devolver información acerca de tablas específicas. La columna `PercentFull` calculada es una estimación de la eficacia del grupo de filas. Para buscar información en una sola tabla, quite los guiones de comentario delante de la cláusula WHERE y proporcione un nombre de tabla.  
+ En el ejemplo siguiente se combina la tabla **Sys.pdw_nodes_column_store_row_groups** con otras tablas del sistema para devolver información acerca de tablas específicas. La columna `PercentFull` calculada es una estimación de la eficacia del grupo de filas. Para buscar información en una sola tabla, quite los guiones de comentario delante de la cláusula WHERE y proporcione un nombre de tabla.  
   
 ```sql
 SELECT IndexMap.object_id,   
@@ -109,9 +109,9 @@ ORDER BY 1, 2
 ```
   
 ## <a name="see-also"></a>Consulte también  
- [Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Vistas de catálogo de Azure Synapse Analytics y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [CREAR índice de almacén de columnas &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [Sys. pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [Sys. pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_segments &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

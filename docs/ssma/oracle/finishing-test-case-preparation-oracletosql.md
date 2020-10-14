@@ -11,12 +11,12 @@ ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: a0498953c28a90498aa3e15439840180efdd25f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4707c68c0b744e092844d57bd6f235a69dbec9ce
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463230"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038048"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>Finalización de la preparación del caso de prueba (OracleToSQL)
 La página final del asistente muestra la descripción del caso de prueba e información sobre los objetos implicados en la prueba. Además, en esta página puede establecer las opciones de ejecución de pruebas.  
@@ -55,10 +55,9 @@ Define el modo de guardado de las tablas auxiliares creadas durante la ejecució
   
 -   Si selecciona **preguntar al usuario si se**produce un error en la comparación de tablas, el usuario puede seleccionar la acción necesaria si se produce un error.  
   
-Haga clic en el botón **Finalizar** para guardar el caso de prueba preparado en [mediante repositorios de prueba (OracleToSQL)](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
+Haga clic en el botón **Finalizar** para guardar el caso de prueba preparado en [mediante repositorios de prueba (OracleToSQL)](./using-test-repositories-oracletosql.md).  
   
 ## <a name="see-also"></a>Consulte también  
 [Uso de repositorios de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
 [Ejecutar casos de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Probar objetos de base de datos migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
-  

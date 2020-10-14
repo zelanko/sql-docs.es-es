@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88bbf5697112fd80f8ffea629a1ad2b9e99977fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1a59104b8becec2edd8b4b15c28e13e19011a4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720050"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036831"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funciones relacionadas con QNames: expanded-QName
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  Es la parte local del nombre de QName.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Lo siguiente se aplica a la función **Expanded-QName ()** :  
   
 -   Si el valor de *$paramLocal* especificado no tiene el formato léxico correcto para el tipo XS: NCName, se devuelve la secuencia vacía y representa un error dinámico.  
@@ -133,7 +133,7 @@ go
 ```  
   
 ### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. Superar las limitaciones cuando se utiliza la función expanded-QName()  
- No se puede usar la función **Expanded-QName** en la construcción de XML. Esto se ilustra en el siguiente ejemplo. Para evitar esta limitación, el ejemplo inserta primero un nodo y, a continuación, modifica el nodo.  
+ No se puede usar la función **Expanded-QName** en la construcción de XML. Esto se ilustra en el siguiente ejemplo: Para evitar esta limitación, el ejemplo inserta primero un nodo y, a continuación, modifica el nodo.  
   
 ```  
 -- if exists drop the table T  
@@ -204,6 +204,5 @@ FROM T
  Existe una limitación: la función **Expanded-QName ()** acepta la secuencia vacía como segundo argumento y devolverá un valor vacío en lugar de generar un error en tiempo de ejecución cuando el segundo argumento sea incorrecto.  
   
 ## <a name="see-also"></a>Consulte también  
- [Funciones relacionadas con QNames &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
-  
+ [Funciones relacionadas con QNames &#40;XQuery&#41;]()  
   

@@ -1,6 +1,6 @@
 ---
-description: Sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
-title: Sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
+description: sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
+title: sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41c43a39c85c05dcb0155c90fea74c5899445527
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f4b29984f962f2ec4f542a57cd604c619a78c6a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475380"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036718"
 ---
-# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>Sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
+# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Contiene una fila para cada base de datos física en un nodo de proceso. Agregue información de base de datos física para obtener información detallada acerca de las bases de datos. Para combinar información, combine el `sys.pdw_nodes_pdw_physical_databases` en las `sys.pdw_database_mappings` `sys.databases` tablas y.  
@@ -28,7 +28,7 @@ ms.locfileid: "88475380"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|IDENTIFICADOR de objeto de la base de datos. Tenga en cuenta que este valor no es el mismo que un database_id de la vista [Sys. databases &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .|  
-|physical_name|**sysname**|El nombre físico de la base de datos en los nodos de proceso o shell. Este valor es igual que un valor de la columna physical_name de la vista [Sys. pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) .|  
+|physical_name|**sysname**|El nombre físico de la base de datos en los nodos de proceso o shell. Este valor es el mismo que el de la columna physical_name del [sys.pdw_database_mappings &#40;la vista&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) .|  
 |pdw_node_id|**int**|Identificador numérico único asociado al nodo.|  
   
 ## <a name="examples-sspdw"></a>Ejemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -47,7 +47,7 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B. Usar sys. pdw_nodes_pdw_physical_databases para recopilar información detallada del objeto  
+### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B. Usar sys.pdw_nodes_pdw_physical_databases para recopilar información detallada del objeto  
  La siguiente consulta muestra información acerca de los índices e incluye información útil acerca de la base de datos a la que pertenecen los objetos de la base de datos.  
   
 ```  
@@ -64,7 +64,7 @@ JOIN sys.dm_pdw_nodes_db_index_usage_stats AS IU
 ORDER BY D.database_id, IU.object_id, IU.index_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. Usar sys. pdw_nodes_pdw_physical_databases para determinar el estado de cifrado  
+### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. Usar sys.pdw_nodes_pdw_physical_databases para determinar el estado de cifrado  
  La siguiente consulta proporciona el estado de cifrado de la base de datos AdventureWorksPDW2012.  
   
 ```  
@@ -87,9 +87,9 @@ SELECT TOP 1 encryption_state
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Vistas de catálogo de Azure Synapse Analytics y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [Sys. pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
+ [sys.pdw_database_mappings &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   
 

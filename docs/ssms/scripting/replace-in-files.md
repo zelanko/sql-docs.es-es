@@ -13,12 +13,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbf692581a7ad2cb6d1e2bb5ad600b65fc63d7c3
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 3d3ccbef48b79ef0706920ab2ff83a2daee68db9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901974"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036411"
 ---
 # <a name="replace-in-files"></a>Reemplazar en archivos
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -104,10 +104,10 @@ ms.locfileid: "88901974"
  Indica cómo se interpretan los caracteres especiales especificados en los cuadros de texto **Buscar** o **Reemplazar con** . Esta opción incluye **Caracteres comodín** y **Expresiones regulares**.  
   
  **Regular Expressions**  
- Notaciones especiales que definen patrones de texto a partir de los cuales buscar coincidencias. Para obtener una lista, vea [Buscar texto mediante expresiones regulares](../../relational-databases/scripting/search-text-with-regular-expressions.md).  
+ Notaciones especiales que definen patrones de texto a partir de los cuales buscar coincidencias. Para obtener una lista, vea [Buscar texto mediante expresiones regulares](./search-text-with-regular-expressions.md).  
   
  **Caracteres comodín**  
- Caracteres especiales, como asteriscos (`*`) y signos de interrogación de cierre (`?`), que representan uno o varios caracteres. Para obtener una lista, vea [Buscar texto con caracteres comodín](../../relational-databases/scripting/search-text-with-wildcards.md).  
+ Caracteres especiales, como asteriscos (`*`) y signos de interrogación de cierre (`?`), que representan uno o varios caracteres. Para obtener una lista, vea [Buscar texto con caracteres comodín](./search-text-with-wildcards.md).  
   
  **Buscar en estos tipos de archivo**  
  Esta lista indica los tipos de archivos que se van a buscar en los directorios especificados en **Buscar en**. Si este cuadro está vacío, se buscarán todos los archivos de los directorios especificados en **Buscar en** .  
@@ -155,4 +155,4 @@ ms.locfileid: "88901974"
  Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Find in Symbols (Buscar en símbolos)** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

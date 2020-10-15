@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 66abbc624cfb4126a55ce36b9ea67cbdd9aaeff2
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: e78e984dee92f925467db818caee4f49b4d3fabd
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860027"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956834"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Supervisar scripts de Python o R con eventos extendidos en SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -34,7 +34,7 @@ WHERE o.object_type = 'event'
 AND p.name = 'SQLSatellite';
 ```
 
-Para obtener más información sobre cómo usar eventos extendidos, vea [Herramientas de eventos extendidos](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools).
+Para obtener más información sobre cómo usar eventos extendidos, vea [Herramientas de eventos extendidos](../../relational-databases/extended-events/extended-events-tools.md).
 
 ## <a name="additional-events-specific-to-machine-learning-services"></a>Eventos adicionales específicos de Machine Learning Services
 

@@ -9,12 +9,12 @@ ms.technology: tools
 ms.topic: conceptual
 ms.date: 08/17/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e3ea21418a058f3d4b8db13ea498c1bb94564964
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: 9d5132ad1ea115e051a4c9d4ba898aa53ddeb98a
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89282405"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988752"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>Página Opciones avanzadas de las propiedades del servidor: Power BI Report Server y Reporting Services
 
@@ -82,7 +82,7 @@ Se recomienda validar la configuración de la topología para garantizar que el 
 
 #### <a name="setting-the-customheaders-property"></a>Establecimiento de la propiedad CustomHeaders
 
-- Se puede establecer mediante el punto de conexión SOAP de [SetSystemProperties](https://docs.microsoft.com/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) pasando la propiedad CustomHeaders como parámetro.
+- Se puede establecer mediante el punto de conexión SOAP de [SetSystemProperties](/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) pasando la propiedad CustomHeaders como parámetro.
 - Puede usar el punto de conexión REST de [UpdateSystemProperties](https://app.swaggerhub.com/apis/microsoft-rs/PBIRS/2.0#/System/UpdateSystemProperties):  `/System/Properties` pasando la propiedad CustomHeaders.
 
 #### <a name="example"></a>Ejemplo

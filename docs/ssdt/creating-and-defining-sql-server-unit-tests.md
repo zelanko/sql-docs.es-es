@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 861014b336d9f75c2df1dfc7888a28eb663575de
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 0db07a60c00e499cb86b5efb1113bbfd49807dc4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518755"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988221"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Crear y definir pruebas unitarias de SQL Server
 
@@ -43,9 +43,8 @@ En la siguiente tabla, puede buscar las descripciones de tareas comunes que admi
 [Ejecutar pruebas unitarias de SQL Server](../ssdt/running-sql-server-unit-tests.md)  
 Después de crear las pruebas unitarias de SQL Server, puede ejecutarlas desde la ventana Vista de pruebas, el Diseñador de pruebas unitarias de SQL Server o mediante Team Foundation Build.  
   
-[Escenario: definir condiciones de prueba personalizadas para pruebas unitarias de base de datos](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[Escenario: definir condiciones de prueba personalizadas para pruebas unitarias de base de datos](/previous-versions/visualstudio/visual-studio-2010/dd193282(v=vs.100))  
 Puede crear una condición de prueba personalizada para probar un comportamiento que las condiciones de prueba predeterminadas no pueden comprobar.  
   
 ## <a name="see-also"></a>Consulte también  
 [Comprobar el código de base de datos con pruebas unitarias de SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

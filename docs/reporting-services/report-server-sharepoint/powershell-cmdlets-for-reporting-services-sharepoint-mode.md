@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2a92cb1a23c4c1d7062945bc24961a2c37d25950
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 69fbb16e0671c14426fc550d61bdb929b64d06ab
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83765006"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935518"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlets de PowerShell para el modo de SharePoint de Reporting Services
 
@@ -35,7 +35,7 @@ Al instalar SQL Server 2016 Reporting Services en modo de SharePoint, se instala
 
 ## <a name="cmdlet-summary"></a>Resumen de los cmdlets
 
- Para ejecutar los cmdlets es necesario abrir el Shell de administración de SharePoint. También puede usar el editor de la interfaz gráfica de usuario incluido en Microsoft Windows, **Entorno de scripting integrado (ISE) de Windows PowerShell**. Para más información, vea [Starting Windows PowerShell on Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). En los resúmenes de cmdlet siguientes, las referencias a la aplicación de servicio "databases" se aplican a todas las bases de datos creadas y usadas por una aplicación de servicio de Reporting Services. Esto incluye la configuración, la creación de alertas y las bases de datos temporales.  
+ Para ejecutar los cmdlets es necesario abrir el Shell de administración de SharePoint. También puede usar el editor de la interfaz gráfica de usuario incluido en Microsoft Windows, **Entorno de scripting integrado (ISE) de Windows PowerShell**. Para más información, vea [Starting Windows PowerShell on Windows Server](/powershell/scripting/getting-started/starting-windows-powershell). En los resúmenes de cmdlet siguientes, las referencias a la aplicación de servicio "databases" se aplican a todas las bases de datos creadas y usadas por una aplicación de servicio de Reporting Services. Esto incluye la configuración, la creación de alertas y las bases de datos temporales.  
   
  Si ve un mensaje de error similar al siguiente al escribir los ejemplos de PowerShell:  
   
@@ -52,7 +52,7 @@ Al instalar SQL Server 2016 Reporting Services en modo de SharePoint, se instala
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- Para más información, vea [Usar Windows PowerShell para administrar SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx).  
+ Para más información, vea [Usar Windows PowerShell para administrar SharePoint 2013](/powershell/module/sharepoint-server/).  
   
 ### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>Abrir el Shell de administración de SharePoint y ejecutar cmdlets
   
@@ -291,7 +291,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Uso de PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Lista de comprobación: Uso de PowerShell para comprobar PowerPivot para SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
-[Obtener ayuda de SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[Lista de comprobación: Uso de PowerShell para comprobar PowerPivot para SharePoint](/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
+[Obtener ayuda de SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

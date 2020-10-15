@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3a4a58cd8522050e3de958cafae1224ba59363b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2228819de295edf29d5b2b1ca6bfcc43626a42a0
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480097"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038956"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propiedades de columna (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ Muestra el nombre del origen de datos para la columna seleccionada. (Solo se apl
 Se expande para mostrar las propiedades restantes.  
   
 **Tipo de datos**  
-Muestra el tipo de datos de la columna seleccionada. Para obtener más información, vea [Tipos de datos (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Muestra el tipo de datos de la columna seleccionada. Para obtener más información, vea [Tipos de datos (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
 **Incremento de identidad**  
 Muestra el incremento que se agregará a la **Inicialización de identidad** para cada fila posterior de la columna de identidad. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
@@ -95,7 +95,7 @@ Muestra el nombre de la columna. Para editar el nombre, escriba en el cuadro de 
 Muestra si el tipo de datos de la columna admite o no los valores NULL.  
   
 **Tipo de datos**  
-Muestra el tipo de datos de la columna seleccionada. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor. Para obtener más información, vea [Tipos de datos (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Muestra el tipo de datos de la columna seleccionada. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor. Para obtener más información, vea [Tipos de datos (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
 **Valor o enlace predeterminado**  
 Muestra el valor predeterminado de esta columna cuando no se especifica ningún valor para esta columna. La lista desplegable contiene todos los valores predeterminados globales definidos en el origen de datos. Para enlazar la columna con un valor predeterminado global, realice una selección en la lista desplegable. Otra opción para crear una restricción predeterminada para la columna es escribir directamente el valor predeterminado como texto.  
@@ -143,7 +143,7 @@ Muestra qué columna se utiliza para definir el tipo de documento de una columna
 Indica el idioma empleado para indizar la columna.  
   
 **Semántica estadística**  
-Seleccione si desea habilitar la indización semántica estadística para la columna seleccionada. Para más información, consulte [Marcador de posición de Búsqueda semántica](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Seleccione si desea habilitar la indización semántica estadística para la columna seleccionada. Para más información, consulte [Marcador de posición de Búsqueda semántica](../../relational-databases/search/semantic-search-sql-server.md).  
   
 Si selecciona **Idioma** antes de seleccionar **Semántica estadística**y el idioma seleccionado no tiene un modelo de idioma semántico asociado, la opción **Semántica estadística** se establece en **No** y no puede modificarse. Si selecciona **Sí** para la opción de **Semántica estadística** antes de seleccionar **Idioma**, los idiomas disponibles en la columna **Idioma** estarán limitados a aquellos para los que exista un modelo de idioma semántico.  
   
@@ -188,4 +188,3 @@ Muestra el tamaño en bytes permitido por el tipo de datos de la columna. Por ej
   
 > [!NOTE]  
 > La longitud de un tipo de datos **varchar(max)** varía en cada fila. sp_help devuelve (-1) como la longitud de la columna **varchar(max)** . [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] muestra -1 como tamaño de columna.  
-  

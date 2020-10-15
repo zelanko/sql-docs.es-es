@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 762d272661fd9bfaa61781391e42d3d9919d78c1
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 9d8f65baaec3038431455712d64803459a96e45c
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442905"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956966"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function-with-sql-machine-learning"></a>Puntuación nativa mediante la función PREDICT de T-SQL con aprendizaje automático en SQL
 
@@ -71,7 +71,7 @@ El modelo debe estar en un formato de modelo [Open Neural Network Exchange (ONNX
 
 El modelo se debe entrenar de antemano con uno de los algoritmos **rx** admitidos que se enumeran más abajo mediante el paquete [RevoScaleR](../r/ref-r-revoscaler.md) o [revoscalepy](../python/ref-py-revoscalepy.md).
 
-Serialice el modelo mediante [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) para R y [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) para Python. Estas funciones de serialización se han optimizado para admitir la puntuación rápida.
+Serialice el modelo mediante [rxSerialize](/machine-learning-server/r-reference/revoscaler/rxserializemodel) para R y [rx_serialize_model](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) para Python. Estas funciones de serialización se han optimizado para admitir la puntuación rápida.
 
 <a name="bkmk_native_supported_algos"></a> 
 
@@ -81,19 +81,19 @@ Los algoritmos siguientes son compatibles con revoscalepy y RevoScaleR.
 
 + Algoritmos revoscalepy
 
-  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
-  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) 
-  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) 
-  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
-  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
+  + [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
+  + [rx_logit](/machine-learning-server/python-reference/revoscalepy/rx-logit) 
+  + [rx_btrees](/machine-learning-server/python-reference/revoscalepy/rx-btrees) 
+  + [rx_dtree](/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
+  + [rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
 
 + Algoritmos RevoScaleR
 
-  + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
-  + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
-  + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
-  + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
-  + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
+  + [rxLinMod](/r-server/r-reference/revoscaler/rxlinmod)
+  + [rxLogit](/r-server/r-reference/revoscaler/rxlogit)
+  + [rxBTrees](/r-server/r-reference/revoscaler/rxbtrees)
+  + [rxDtree](/r-server/r-reference/revoscaler/rxdtree)
+  + [rxDForest](/r-server/r-reference/revoscaler/rxdforest)
 
 Si necesita usar algoritmos de MicrosoftML o microsoftml, utilice [Puntuación en tiempo real con sp_rxPredict](../predictions/real-time-scoring.md).
 
@@ -210,7 +210,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE]
-> Asegúrese de usar la función [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) de RevoScaleR para guardar el modelo. La función `serialize` de R estándar no puede generar el formato que necesitamos.
+> Asegúrese de usar la función [rxSerializeModel](/machine-learning-server/r-reference/revoscaler/rxserializemodel) de RevoScaleR para guardar el modelo. La función `serialize` de R estándar no puede generar el formato que necesitamos.
 
 Puede ejecutar una instrucción como la siguiente para ver el modelo almacenado en formato binario:
 

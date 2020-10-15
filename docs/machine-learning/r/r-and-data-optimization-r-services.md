@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 95600d85c02d120f1bb4df2e7a73411a9965550a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: eaabfce536283644a0ccedcc315d91e11f33eade
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180002"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956586"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Rendimiento de R Services: optimización de datos
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -131,19 +131,19 @@ En esta sección se proporcionan varias sugerencias y recursos específicos de R
 
 Muchos algoritmos de RevoScaleR admiten parámetros para controlar cómo se genera el modelo entrenado. Aunque la precisión y la exactitud del modelo son importantes, el rendimiento del algoritmo puede ser igual de importante. Para obtener el equilibrio adecuado entre la precisión y el tiempo de entrenamiento, puede modificar los parámetros para aumentar la velocidad del cálculo y, en muchos casos, mejorar el rendimiento sin reducir la precisión o la corrección.
 
-+ [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
++ [rxDTree](/r-server/r-reference/revoscaler/rxdtree)
 
     `rxDTree` admite el parámetro `maxDepth`, que controla la profundidad del árbol de decisión. Cuando se aumenta `maxDepth`, el rendimiento puede disminuir, por lo que es importante analizar las ventajas de aumentar la profundidad frente al rendimiento perjudicial.
 
     Puede controlar el equilibrio entre la complejidad temporal y la precisión de la predicción mediante el ajuste de parámetros como `maxNumBins`, `maxDepth`, `maxComplete`, y `maxSurrogate`. Aumentar la profundidad por encima de 10 o 15 puede hacer que el cálculo sea muy costoso.
 
-+ [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
++ [rxLinMod](/r-server/r-reference/revoscaler/rxlinmod)
 
     Intente usar el argumento `cube` cuando la primera variable dependiente de la fórmula es una variable de factor.
     
     Cuando `cube` se establece en `TRUE`, la regresión se realiza mediante un inverso con particiones, que podría ser más rápida y usar menos memoria que el cálculo de regresión estándar. Si la fórmula tiene un gran número de variables, la ganancia de rendimiento puede ser significativa.
 
-+ [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
++ [rxLogit](/r-server/r-reference/revoscaler/rxlogit)
 
     Use el argumento `cube` si la primera variable dependiente es una variable de factor.
     
@@ -153,31 +153,31 @@ Para obtener instrucciones adicionales sobre la optimización de RevoScaleR, vea
 
 + Artículo de ayuda: [Opciones de rxDForest/rxDTree de optimización del rendimiento](https://support.microsoft.com/kb/3104235)
 
-+ Los métodos para controlar el modelo se ajustan a un modelo de árbol impulsado: [Cálculo de modelos mediante la potenciación de gradiente estocástico](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ Los métodos para controlar el modelo se ajustan a un modelo de árbol impulsado: [Cálculo de modelos mediante la potenciación de gradiente estocástico](/r-server/r/how-to-revoscaler-boosting)
 
-+ Información general sobre cómo RevoScaleR mueve y procesa los datos: [Escritura de algoritmos de fragmentación personalizados en ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ Información general sobre cómo RevoScaleR mueve y procesa los datos: [Escritura de algoritmos de fragmentación personalizados en ScaleR](/r-server/r/how-to-developer-write-chunking-algorithms)
 
-+ Modelo de programación para RevoScaleR: [Administración de subprocesos en RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
++ Modelo de programación para RevoScaleR: [Administración de subprocesos en RevoScaleR](/r-server/r/how-to-developer-manage-threads)
 
-+ Referencia de función para [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
++ Referencia de función para [rxDForest](/r-server/r-reference/revoscaler/rxdforest)
 
-+ Referencia de función para [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
++ Referencia de función para [rxBTrees](/r-server/r-reference/revoscaler/rxbtrees)
 
 ### <a name="use-microsoftml"></a>Uso de MicrosoftML
 
 También se recomienda que examine el nuevo paquete de **MicrosoftML**, que proporciona algoritmos de aprendizaje automático escalables que pueden usar los contextos de cálculo y las transformaciones proporcionadas por RevoScaleR.
 
-+ [Introducción a MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
++ [Introducción a MicrosoftML](/r-server/r/concept-what-is-the-microsoftml-package)
 
-+ [Cómo elegir un algoritmo de MicrosoftML](https://docs.microsoft.com/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
++ [Cómo elegir un algoritmo de MicrosoftML](/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
 
 ### <a name="operationalize-a-solution-using-microsoft-r-server"></a>Poner en funcionamiento una solución mediante Microsoft R Server
 
-Si el escenario implica una predicción rápida con un modelo almacenado o la integración de aprendizaje automático en una aplicación, puede usar las características de [operacionalización](https://docs.microsoft.com/r-server/what-is-operationalization) de Microsoft R Server (anteriormente conocidas como DeployR).
+Si el escenario implica una predicción rápida con un modelo almacenado o la integración de aprendizaje automático en una aplicación, puede usar las características de [operacionalización](/r-server/what-is-operationalization) de Microsoft R Server (anteriormente conocidas como DeployR).
 
-+ Como los **científicos de datos**, pueden usar el [paquete mrsdeploy](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) para compartir código de R con otros equipos e integrar análisis de R en aplicaciones web, de escritorio, móviles y de panel. [Cómo publicar y administrar servicios web de R en R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ Como los **científicos de datos**, pueden usar el [paquete mrsdeploy](/r-server/r-reference/mrsdeploy/mrsdeploy-package) para compartir código de R con otros equipos e integrar análisis de R en aplicaciones web, de escritorio, móviles y de panel. [Cómo publicar y administrar servicios web de R en R Server](/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ Como **administrador**, aprenda a administrar paquetes, supervisar nodos web y nodos de proceso, así como a controlar la seguridad en trabajos de R: [Cómo interactuar y consumir servicios web en R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ Como **administrador**, aprenda a administrar paquetes, supervisar nodos web y nodos de proceso, así como a controlar la seguridad en trabajos de R: [Cómo interactuar y consumir servicios web en R](/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## <a name="articles-in-this-series"></a>Artículos de esta serie
 

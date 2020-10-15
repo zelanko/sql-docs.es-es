@@ -16,12 +16,12 @@ ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a97616d707849e94de995e29bda6b7853f6631d7
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: e7596e6ef216682ad66695b30712b3e77e2aa5ab
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901931"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039002"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Insertar fragmentos de código de Transact-SQL para rodear
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88901931"
 ## <a name="inserting-surround-with-snippets"></a>Insertar fragmentos de código Rodea con  
  Los fragmentos de código Rodea con se pueden iniciar de tres modos distintos: a través de un método abreviado de teclado, a través del menú **Editar** y a través del menú contextual.  
   
- Después de insertar el fragmento de código, debe cambiar el texto de reemplazo para formar una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] válida. Para obtener más información, vea [Completar fragmentos de código de Transact-SQL](../../relational-databases/scripting/complete-transact-sql-snippets.md).  
+ Después de insertar el fragmento de código, debe cambiar el texto de reemplazo para formar una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] válida. Para obtener más información, vea [Completar fragmentos de código de Transact-SQL](./complete-transact-sql-snippets.md).  
   
 #### <a name="to-insert-a-surround-with-snippet"></a>Para insertar un fragmento de código rodea con  
   
@@ -47,6 +47,5 @@ ms.locfileid: "88901931"
 3.  Seleccione el nombre del fragmento de código (BEGIN, IF o WHILE) en la lista utilizando el mouse o escribiendo el nombre del fragmento de código y presionando TAB o ENTRAR.  
   
 ## <a name="see-also"></a>Consulte también  
- [Insertar fragmentos de código de Transact-SQL](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
-  
+ [Insertar fragmentos de código de Transact-SQL](./insert-transact-sql-snippets.md)  
   

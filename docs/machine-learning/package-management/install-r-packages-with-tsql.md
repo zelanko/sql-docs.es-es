@@ -9,25 +9,25 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1c2860efa5b47d3f6b6209f152e7085094fabaf3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 00ead49bdc0aa14304b3c95f0bee51329f6ad163
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178977"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956666"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Uso de T-SQL (CREATE EXTERNAL LIBRARY) para instalar paquetes de R en SQL Server
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 En este artículo se explica cómo instalar nuevos paquetes de R en una instancia de SQL Server en la que el aprendizaje automático está habilitado. Hay varios enfoques entre los que elegir. El uso de T-SQL funciona mejor para los administradores de servidores que no están familiarizados con R.
 
-La instrucción [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) permite agregar un paquete o un conjunto de paquetes a una instancia o una base de datos específica sin ejecutar código de R o Python directamente. Sin embargo, este método requiere la preparación del paquete y permisos de base de datos adicionales.
+La instrucción [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) permite agregar un paquete o un conjunto de paquetes a una instancia o una base de datos específica sin ejecutar código de R o Python directamente. Sin embargo, este método requiere la preparación del paquete y permisos de base de datos adicionales.
 
 + Todos los paquetes deben estar disponibles como un archivo comprimido local, en lugar de descargarse a petición desde Internet.
 
 + Todas las dependencias deben identificarse por el nombre y la versión e incluirse en el archivo ZIP. Se produce un error en la instrucción si los paquetes necesarios no están disponibles, incluidas las dependencias de paquetes de nivel inferior. 
 
-+ Debe tener el rol **db_owner** o contar con el permiso CREATE EXTERNAL LIBRARY en un rol de base de datos. Para obtener más información, consulte [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
++ Debe tener el rol **db_owner** o contar con el permiso CREATE EXTERNAL LIBRARY en un rol de base de datos. Para obtener más información, consulte [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
 ## <a name="download-packages-in-archive-format"></a>Descarga de paquetes en formato de archivo
 
@@ -68,4 +68,4 @@ EXEC sp_execute_external_script
 ## <a name="see-also"></a>Consulte también
 
 + [Obtención de información de paquetes de R](r-package-information.md)
-+ [Tutoriales de R](../tutorials/sql-server-r-tutorials.md)
++ [Tutoriales de R](../tutorials/r-tutorials.md)

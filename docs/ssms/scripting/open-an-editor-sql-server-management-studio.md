@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 66b83e6c2a26f5fb9f8c2676dc3245d4d79e080e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093496"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036489"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Abrir un editor (SQL Server Management Studio)
 
@@ -52,7 +52,7 @@ En este tema se describe cómo abrir el editor de consultas, MDX, DMX o XML/A de
 ### <a name="using-the-fileopen-menu"></a>Usar el menú Archivo/Abrir  
  En el menú **Archivo** , haga clic en **Abrir**y, a continuación, navegue a un archivo y ábralo. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre el tipo de editor adecuado correspondiente a la extensión de archivo, copia el contenido del archivo en la ventana del editor y también abre un cuadro de diálogo de conexión si es necesario. Por ejemplo, si abre un archivo con la extensión .sql, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre una ventana del editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , copia el contenido del archivo .sql, y abre un cuadro de diálogo de conexión. Si abre un archivo con una extensión no asociada a un editor determinado, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre una ventana y copia el editor de texto de contenido del archivo.  
   
- Para obtener más información, vea [Associate File Extensions to a Code Editor (Asociar extensiones de archivo a un editor de código)](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+ Para obtener más información, vea [Associate File Extensions to a Code Editor (Asociar extensiones de archivo a un editor de código)](./associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="using-the-toolbar"></a>Usar la barra de herramientas  
  En la barra de herramientas de **Estándar** , haga clic en uno de los siguientes botones:  

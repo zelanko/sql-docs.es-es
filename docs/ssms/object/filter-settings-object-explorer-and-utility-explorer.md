@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4595be9c345b32c20bf028cc384a2e61766295d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50a7eccca6f889a7bff57b244d8c209af7b73ec2
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480194"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037211"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Configuración de filtro (Explorador de objetos y Explorador de la utilidad)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,6 +75,5 @@ Escriba el valor que va a compararse con la propiedad. Para seleccionar una fech
 Elimina toda la configuración actual del filtro.  
   
 ## <a name="see-also"></a>Consulte también  
-[Usar SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
+[Usar SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
 [Información general de la Utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
-  

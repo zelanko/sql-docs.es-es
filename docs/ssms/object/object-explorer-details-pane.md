@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9ee38de46d4bcd689c471eb9f32fa79df40fa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 846c2707e5fe04e080460241e41df0ebf7ec8329
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370791"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037195"
 ---
 # <a name="object-explorer-details-pane"></a>Panel de detalles del Explorador de objetos
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +89,7 @@ Detalles del Explorador de objetos admite la selección de varios objetos. Por e
 ## <a name="sql-server-object-search"></a>Buscar objetos de SQL Server  
 Caracteres comodín  
   
--   Se admiten los caracteres comodín estándar. Por ejemplo, si se busca **dm_os%counters** , se devuelve tanto dm_os_memory_cache_counters como dm_os_performance_counters. Para más información, consulte [Buscar texto con caracteres comodín](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Se admiten los caracteres comodín estándar. Por ejemplo, si se busca **dm_os%counters** , se devuelve tanto dm_os_memory_cache_counters como dm_os_performance_counters. Para más información, consulte [Buscar texto con caracteres comodín](../scripting/search-text-with-wildcards.md).  
   
 Ámbito de búsqueda  
   
@@ -101,4 +101,3 @@ Grandes conjuntos
   
 ## <a name="see-also"></a>Consulte también  
 [Explorador de objetos](../../ssms/object/object-explorer.md)  
-  

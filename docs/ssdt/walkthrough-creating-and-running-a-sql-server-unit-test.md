@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7b5bc161cc66aa904ed63e67bbc5f2ff4695168f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882920"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987941"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Tutorial: Crear y ejecutar una prueba unitaria de SQL Server
 
@@ -40,7 +40,7 @@ En este tutorial, realizará las tareas siguientes:
 Cuando una de las pruebas unitarias detecta un error en un procedimiento almacenado, se corrige el error y se vuelve a ejecutar la prueba.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
-Para completar este tutorial, debe poder conectarse a un servidor de bases de datos (o a una base de datos LocalDB) en el que tenga permisos para crear e implementar una base de datos. Para más información, consulte [Permisos necesarios para las características de base de datos de Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
+Para completar este tutorial, debe poder conectarse a un servidor de bases de datos (o a una base de datos LocalDB) en el que tenga permisos para crear e implementar una base de datos. Para más información, consulte [Permisos necesarios para las características de base de datos de Visual Studio](/previous-versions/visualstudio/visual-studio-2010/aa833413(v=vs.100)).  
   
 ## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>Crear un script que contiene un esquema de la base de datos  
   
@@ -992,4 +992,3 @@ Después de establecer una línea base, puede crear y modificar los objetos de b
 [Comprobar el código de base de datos con pruebas unitarias de SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [Cómo: Crear una prueba unitaria de SQL Server vacía](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
 [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
-  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e60acfeb4f8a785fa55ee8df70003b9b8b42f13b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3b523b792889c21a0b1d00ea3ab3ea3ac6fbf2aa
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114644"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988414"
 ---
 # <a name="remove-a-failover-cluster-instance-setup"></a>Eliminación de una instancia de clúster de conmutación por error (programa de instalación)
 
@@ -39,7 +39,7 @@ Use este procedimiento para desinstalar una instancia de clúster de conmutació
   
 -   Si desinstala un clúster de conmutación por error que tenga más de un recurso de clúster IP de SQL, debe quitar los recursos IP de SQL adicionales mediante el administrador de clústeres de conmutación por error o PowerShell.  
   
- Para obtener más información sobre la sintaxis de la línea de comandos, vea [Instalar SQL Server 2016 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+ Para obtener más información sobre la sintaxis de la línea de comandos, vea [Instalar SQL Server 2016 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ### <a name="to-uninstall-a-ssnoversion-failover-cluster-instance"></a>Para desinstalar una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
   
@@ -47,5 +47,4 @@ Use este procedimiento para desinstalar una instancia de clúster de conmutació
   
 ## <a name="see-also"></a>Consulte también  
  [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   

@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3485795f239017df321e862a04c0411a3a9318c0
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: ea7e44a8069fc1b66c49f4bb20fbfc8ba3e1c3f7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480411"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036160"
 ---
 # <a name="transact-sql-debugger"></a>Depurador de Transact-SQL
 
@@ -47,7 +47,7 @@ El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] proporciona las sigu
 
     Si desea depurar una procedimiento almacenado o una función, puede depurar paso a paso por instrucciones el módulo. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] abre una nueva ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se rellena con el código fuente del módulo, pone la ventana en el modo de depuración y, a continuación, detiene la ejecución en la primera instrucción del módulo. Después puede navegar por el código del módulo, por ejemplo, estableciendo puntos de interrupción o recorriendo el código.  
 
-Para obtener más información sobre cómo el depurador le permite navegar por el código, vea [Avanzar paso a paso por el código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md).  
+Para obtener más información sobre cómo el depurador le permite navegar por el código, vea [Avanzar paso a paso por el código Transact-SQL](./step-through-transact-sql-code.md).  
 
 ## <a name="viewing-debugger-information"></a>Visualización de la información del depurador
 
@@ -69,11 +69,11 @@ Siempre que el depurador detenga la ejecución de una instrucción [!INCLUDE[tsq
 
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Describe cómo configurar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizar la depuración remota.|[Configurar reglas de firewall antes de ejecutar al depurador de TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
-|Describe cómo iniciar, detener y controlar el funcionamiento del depurador.|[Ejecutar el depurador de Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)|  
-|Describe cómo utilizar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] para recorrer el código.|[Avanzar paso a paso por el código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
-|Describe cómo utilizar el depurador para ver los datos de [!INCLUDE[tsql](../../includes/tsql-md.md)] , como los parámetros y las variables, así como la información del sistema.|[Ver información del depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
+|Describe cómo configurar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizar la depuración remota.|[Configurar reglas de firewall antes de ejecutar al depurador de TSQL](./configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|Describe cómo iniciar, detener y controlar el funcionamiento del depurador.|[Ejecutar el depurador de Transact-SQL](./run-the-transact-sql-debugger.md)|  
+|Describe cómo utilizar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] para recorrer el código.|[Avanzar paso a paso por el código Transact-SQL](./step-through-transact-sql-code.md)|  
+|Describe cómo utilizar el depurador para ver los datos de [!INCLUDE[tsql](../../includes/tsql-md.md)] , como los parámetros y las variables, así como la información del sistema.|[Ver información del depurador de Transact-SQL](./transact-sql-debugger-information.md)|  
 
 ## <a name="see-also"></a>Consulte también
 
-[Editores de consultas y texto &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+[Editores de consultas y texto &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)

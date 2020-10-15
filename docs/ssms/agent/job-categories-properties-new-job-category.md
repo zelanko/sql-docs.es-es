@@ -14,18 +14,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f237b1431d973acffe91a2466d3d48a0d999ddd4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6510d633e02eceea5c6bffd9e29d1ad85eea3fce
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480369"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037908"
 ---
 # <a name="job-categories-properties---new-job-category"></a>Propiedades de las categorías de trabajo - Nueva categoría de trabajo
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
+> En [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 Enumera los trabajos de una categoría de trabajo o todas las categorías de trabajo, y permite agregar una categoría de trabajo nueva.  
   
@@ -47,4 +47,3 @@ Muestra el nombre del trabajo.
   
 ## <a name="see-also"></a>Consulte también  
 [Crear trabajos](../../ssms/agent/create-jobs.md)  
-  

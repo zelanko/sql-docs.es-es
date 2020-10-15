@@ -9,12 +9,12 @@ ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 02fe62db4f59916f5b97624c4b4560a33738d761
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7940de563ab3b5dbee0fe59fb93f1dfe2d02ce3b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454356"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988261"
 ---
 # <a name="extended-events-for-stretch-database"></a>Extended Events for Stretch Database (Eventos extendidos de Stretch Database)
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "88454356"
 
 Stretch Database proporciona un conjunto de eventos extendidos para solucionar problemas.  
   
-Para obtener más información, vea [Eventos extendidos](../../relational-databases/extended-events/extended-events.md). Para obtener información sobre cómo iniciar una sesión de eventos extendidos para solucionar problemas, vea [Crear una sesión de eventos extendidos](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74).  
+Para obtener más información, vea [Eventos extendidos](../../relational-databases/extended-events/extended-events.md). Para obtener información sobre cómo iniciar una sesión de eventos extendidos para solucionar problemas, vea [Crear una sesión de eventos extendidos](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130)).  
   
 ## <a name="list-of-extended-events-for-stretch-database"></a>Lista de eventos extendidos de Stretch Database  
   
@@ -82,5 +82,4 @@ stretch_table_validation_error|Informa de la finalización de la validación par
 stretch_unprovision_table_start|Informa del inicio de la anulación del aprovisionamiento de la tabla de ajuste  
   
 ## <a name="see-also"></a>Consulte también  
-[Administración y solución de problemas de Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
-
+[Administración y solución de problemas de Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)

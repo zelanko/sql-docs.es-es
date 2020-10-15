@@ -16,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0cc6131719ffc3c683c06c720e0056a625d1f520
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd2f7210ed0c585088d979d9eb52600078869d20
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492161"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037354"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
+> En [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 En este tema se describe cómo volver a asignar a otro usuario la propiedad de los trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -77,7 +77,7 @@ Para obtener información detallada, vea [Implementar la seguridad del Agente SQ
   
 2.  En la barra de herramientas, haga clic en **Nueva consulta**.  
   
-3.  En la ventana de consulta, escriba las instrucciones siguientes que usan el procedimiento almacenado del sistema [sp_manage_jobs_by_login (Transact-SQL)](https://msdn.microsoft.com/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) . En el siguiente ejemplo se reasignan todos los trabajos de `danw` a `françoisa`.  
+3.  En la ventana de consulta, escriba las instrucciones siguientes que usan el procedimiento almacenado del sistema [sp_manage_jobs_by_login (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql.md) . En el siguiente ejemplo se reasignan todos los trabajos de `danw` a `françoisa`.  
   
     ```  
     USE msdb ;  
@@ -98,4 +98,3 @@ Para obtener información detallada, vea [Implementar la seguridad del Agente SQ
 ## <a name="see-also"></a>Consulte también  
 [Implementar trabajos](../../ssms/agent/implement-jobs.md)  
 [Crear trabajos](../../ssms/agent/create-jobs.md)  
-  

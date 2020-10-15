@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 42ec6c34cad7a14d397965717a9447c9d0e29a4b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 028f92e064b41d68e8c168f22faa479f1c29f559
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893832"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988181"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>Interpretar los resultados de pruebas unitarias de SQL Server
 
@@ -23,18 +23,17 @@ Al ejecutar una prueba unitaria de SQL Server, los resultados de prueba se gener
   
 Para ver información detallada sobre un resultado de prueba, haga doble clic en la ventana **Resultados de pruebas** para mostrar la página **Detalles de resultados de la prueba**. Para obtener más información acerca de un resultado de pruebas, haga doble clic en él.  
   
-Para más información sobre cómo cambiar la presentación de la ventana **Resultados de pruebas**, consulte [Cómo: Agregar o quitar columnas de las ventanas de pruebas (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182508(VS.100).aspx) o [Cómo: Agregar o quitar columnas de las ventanas de pruebas (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182508.aspx).  
+Para más información sobre cómo cambiar la presentación de la ventana **Resultados de pruebas**, consulte [Cómo: Agregar o quitar columnas de las ventanas de pruebas (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182508(v=vs.100)) o [Cómo: Agregar o quitar columnas de las ventanas de pruebas (Visual Studio 2012)](/previous-versions/visualstudio/visual-studio-2012/ms182508(v=vs.110)).  
   
 ## <a name="storing-test-results"></a>Almacenar los resultados de pruebas  
-Los resultados de las pruebas unitarias se almacenan en el disco duro en archivos con la extensión .trx. Un archivo .trx es un archivo XML que contiene los detalles de una serie de pruebas. Puede cargar los archivos .trx de series de pruebas anteriores para revisar los resultados de esas series de pruebas o volver a ejecutar pruebas anteriores. Para más información, vea: [Cómo: Vuelva a ejecutar una prueba (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx).  
+Los resultados de las pruebas unitarias se almacenan en el disco duro en archivos con la extensión .trx. Un archivo .trx es un archivo XML que contiene los detalles de una serie de pruebas. Puede cargar los archivos .trx de series de pruebas anteriores para revisar los resultados de esas series de pruebas o volver a ejecutar pruebas anteriores. Para más información, vea: [Cómo: Vuelva a ejecutar una prueba (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182472(v=vs.100)).  
   
 > [!NOTE]  
 > No puede ejecutar pruebas unitarias de forma remota.  
   
 Si el equipo está usando un proyecto de equipo de Visual Studio Team Foundation Server para ayudar a administrar su trabajo, también puede publicar los datos de prueba en una base de datos de SQL Server conocida como almacén operativo.  
   
-Para más información sobre cómo guardar los resultados de pruebas, reutilizarlos y compartirlos con su equipo, consulte [Cómo: Guardar y abrir resultados de pruebas en Visual Studio 2010](https://msdn.microsoft.com/library/ms404662(VS.100).aspx) o [Cómo: Guardar y abrir resultados de pruebas en Visual Studio 2012](https://msdn.microsoft.com/library/ms404662.aspx).  
+Para más información sobre cómo guardar los resultados de pruebas, reutilizarlos y compartirlos con su equipo, consulte [Cómo: Guardar y abrir resultados de pruebas en Visual Studio 2010](/previous-versions/visualstudio/visual-studio-2010/ms404662(v=vs.100)) o [Cómo: Guardar y abrir resultados de pruebas en Visual Studio 2012](/previous-versions/ms404662(v=vs.140)).  
   
 ## <a name="see-also"></a>Consulte también  
 [Ejecutar pruebas unitarias de SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-  

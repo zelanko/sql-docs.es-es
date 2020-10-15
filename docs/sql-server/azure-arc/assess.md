@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3d2051e7003407a4ba7cbb3fb2ff8682ec6ee8f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 41a7f1f4edc247f211ee5b3cdcaddfd139c5027c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227328"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988021"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Configuración de la evaluación de SQL a petición de la instancia de SQL Server habilitada para Azure Arc
 
@@ -23,13 +23,13 @@ Puede habilitar la evaluación de SQL para las instancias de SQL Server siguien
 
 * La instancia de SQL Server está conectada a Azure Arc. Siga estas instrucciones para la [incorporación de la instancia de SQL Server a SQL Server habilitado para Arc](connect.md).
 
-* La extensión de MMA está instalada y configurada en la máquina. Siga estas instrucciones para la [Instalación de Microsoft Monitoring Agent (MMA)](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma). Para obtener más información, vea [Agente de Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent).
+* La extensión de MMA está instalada y configurada en la máquina. Siga estas instrucciones para la [Instalación de Microsoft Monitoring Agent (MMA)](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma). Para obtener más información, vea [Agente de Log Analytics](/azure/azure-monitor/platform/log-analytics-agent).
 
 * SQL Server tiene el [protocolo TCP/IP habilitado](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
 * El [explorador de SQL Server](../../tools/configuration-manager/sql-server-browser-service.md) se ejecuta en caso de que trabaje con una instancia con nombre de SQL Server.
 
-* Ha revisado el documento de SQL Server en [Requisitos previos de las evaluaciones a petición del Centro de servicios](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
+* Ha revisado el documento de SQL Server en [Requisitos previos de las evaluaciones a petición del Centro de servicios](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
 
 ## <a name="enable-on-demand-sql-assessment"></a>Habilitación de SQL Assessment a petición
 
@@ -75,6 +75,6 @@ Microsoft Monitoring Agent examina la carpeta de trabajo cada 15 minutos para 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información, vea el documento de SQL Server en [Requisitos previos de las evaluaciones a petición del Centro de servicios](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
+Para obtener más información, vea el documento de SQL Server en [Requisitos previos de las evaluaciones a petición del Centro de servicios](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
 
 Para obtener soporte técnico completo del SQL Assessment a petición, se requiere una suscripción de soporte técnico de tipo Premier o unificado. Consulte [Soporte técnico Premier de Microsoft Azure](https://azure.microsoft.com/support/plans/premier) para obtener más información.

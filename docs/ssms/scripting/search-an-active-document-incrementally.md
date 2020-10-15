@@ -15,12 +15,12 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 390ffb66c98f2328b8bfb1807a1c6dc7f4a78def
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 6e28ed3ad28a47fba60a703882684a1625523675
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901947"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036418"
 ---
 # <a name="search-an-active-document-incrementally"></a>Buscar en un documento activo de forma incremental
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,10 +50,9 @@ ms.locfileid: "88901947"
 >  Para obtener una lista completa de las teclas de método abreviado, vea [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Buscar y reemplazar](../../relational-databases/scripting/search-and-replace.md)   
- [Buscar documentos de forma interactiva](../../relational-databases/scripting/search-documents-interactively.md)   
- [Buscar en documentos mediante las listas de resultados](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [Buscar texto con caracteres comodín](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Buscar texto mediante expresiones regulares](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [Buscar y reemplazar](./search-and-replace.md)   
+ [Buscar documentos de forma interactiva](./search-documents-interactively.md)   
+ [Buscar en documentos mediante las listas de resultados](./search-documents-using-results-lists.md)   
+ [Buscar texto con caracteres comodín](./search-text-with-wildcards.md)   
+ [Buscar texto mediante expresiones regulares](./search-text-with-regular-expressions.md)  
   

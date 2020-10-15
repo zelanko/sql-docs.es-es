@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aef4411334ee9ca345a5b2f2c8b325c6fd2dae70
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 0e2036700a138150c9d103cfc1bca9c3c65b6d60
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462419"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935404"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Funciones del Generador de informes: función Aggregate
   Devuelve un agregado personalizado de la expresión especificada, según esté definido en el proveedor de datos.  
@@ -40,7 +40,7 @@ Aggregate(expression, scope)
  El tipo de valor devuelto viene determinado por el proveedor de datos. Devuelve el valor **Nothing** si el proveedor de datos no admite esta función o no hay datos disponibles.  
   
 ## <a name="remarks"></a>Observaciones  
- La función **Aggregate** proporciona una manera de utilizar los agregados que se calculan en el origen de datos externo. La extensión de datos determina la compatibilidad con esta característica. Por ejemplo, la extensión de procesamiento de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] recupera los conjuntos de filas planas de una consulta MDX. Algunas filas del conjunto de resultados pueden contener valores agregados calculados en el servidor del origen de datos. Estos se conocen como *agregados de servidor*. Para ver los agregados de servidor en el diseñador gráfico de consultas para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el botón **Mostrar agregaciones** de la barra de herramientas. Para más información, vea [Interfaz de usuario del Diseñador de consultas MDX de Analysis Services &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26).  
+ La función **Aggregate** proporciona una manera de utilizar los agregados que se calculan en el origen de datos externo. La extensión de datos determina la compatibilidad con esta característica. Por ejemplo, la extensión de procesamiento de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] recupera los conjuntos de filas planas de una consulta MDX. Algunas filas del conjunto de resultados pueden contener valores agregados calculados en el servidor del origen de datos. Estos se conocen como *agregados de servidor*. Para ver los agregados de servidor en el diseñador gráfico de consultas para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el botón **Mostrar agregaciones** de la barra de herramientas. Para más información, vea [Interfaz de usuario del Diseñador de consultas MDX de Analysis Services &#40;Generador de informes&#41;](/previous-versions/sql/).  
   
  Cuando se muestra la combinación de valores agregados y valores de conjunto de datos de detalle en las filas de detalles de una región de datos Tablix, normalmente no se incluyen los agregados de servidor porque no son datos de detalle. Sin embargo, es probable que desee mostrar todos los valores recuperados para el conjunto de datos y personalizar la forma en que se calculan y se muestran los datos agregados.  
   
@@ -80,5 +80,4 @@ Aggregate(expression, scope)
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
-  
   

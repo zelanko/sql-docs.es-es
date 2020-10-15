@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f447368d92d3e19d6733c0c1f026298202a8c7a9
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 30869fbd4c9a57c068b56d638495cce76ac23789
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518825"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988699"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Procedimientos: Creación de una prueba unitaria de SQL Server vacía
 
@@ -96,10 +96,9 @@ Después de configurar el proyecto de prueba y crear la prueba unitaria, los pas
 -   Agregar las condiciones de prueba u otra instrucción de aserción para comprobar los resultados del script.  
   
 > [!NOTE]  
-> La condición de prueba no concluyente es la condición predeterminada agregada a cada prueba. Esta condición de prueba se incluye para indicar que la comprobación de la prueba no se ha implementado. Elimine esta condición de prueba de la prueba después de agregar otras condiciones de prueba. Para más información, vea: [Cómo: Incorporar condiciones de prueba a pruebas unitarias de base de datos](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> La condición de prueba no concluyente es la condición predeterminada agregada a cada prueba. Esta condición de prueba se incluye para indicar que la comprobación de la prueba no se ha implementado. Elimine esta condición de prueba de la prueba después de agregar otras condiciones de prueba. Para más información, vea: [Cómo: Incorporar condiciones de prueba a pruebas unitarias de base de datos](/previous-versions/visualstudio/visual-studio-2010/aa833242(v=vs.100)).  
   
 ## <a name="see-also"></a>Consulte también  
 [Cómo: Ejecutar pruebas unitarias de SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Crear pruebas unitarias](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
-  
+[Crear pruebas unitarias](/previous-versions/visualstudio/visual-studio-2008/ms182523(v=vs.90))  

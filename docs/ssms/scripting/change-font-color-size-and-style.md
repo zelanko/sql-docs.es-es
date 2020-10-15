@@ -19,12 +19,12 @@ ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d71d10d105bcd5d58a419644ffdb4ba269af2683
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: f4a4e57c2a1dffe8a41cf54827a0ae03b1e3cb18
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902072"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039132"
 ---
 # <a name="change-font-color-size-and-style"></a>Cambiar el color, el tamaño y el estilo de la fuente
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,6 @@ ms.locfileid: "88902072"
  Los valores para el color del texto y el tipo de fuente son globales para todos los tipos de elementos de texto, como comentarios, cadenas, etc.  
   
 ## <a name="see-also"></a>Consulte también  
- [Imprimir código y resultados](../../relational-databases/scripting/print-code-and-results.md)   
- [Codificación de colores en el Editor de consultas](../../relational-databases/scripting/color-coding-in-query-editors.md)  
-  
+ [Imprimir código y resultados](./print-code-and-results.md)   
+ [Codificación de colores en el Editor de consultas](./color-coding-in-query-editors.md)  
   

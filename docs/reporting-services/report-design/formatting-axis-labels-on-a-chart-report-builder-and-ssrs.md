@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d44212b3d290f69f8565040d44946104f92b045
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 240444331ed9a3ffa4fd083107aa68c476153392
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880285"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935129"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a las etiquetas de los ejes de un gráfico (Generador de informes y SSRS)
   Los tipos de gráficos basados en coordenadas (de columnas, de barras, de áreas, de puntos, de líneas y de intervalos) tienen dos ejes que se usan para clasificar y mostrar las relaciones entre los datos. A cada eje se le aplican distintos tipos de formato.  
@@ -106,7 +106,7 @@ ms.locfileid: "84880285"
   
  Hay dos maneras de establecer un eje escalar:  
   
--   Seleccione la opción **Eje escalar** en el cuadro de diálogo **Propiedades del eje** . Esto agregará valores numéricos o de fecha u hora al eje donde no existan valores de agrupación de datos. Para más información, vea [Cuadro de diálogo Propiedades del eje, Opciones del eje &#40;Generador de informes y SSRS&#41;](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   Seleccione la opción **Eje escalar** en el cuadro de diálogo **Propiedades del eje** . Esto agregará valores numéricos o de fecha u hora al eje donde no existan valores de agrupación de datos. Para más información, vea [Cuadro de diálogo Propiedades del eje, Opciones del eje &#40;Generador de informes y SSRS&#41;](/previous-versions/sql/).  
   
 -   Seleccione un campo o escriba una expresión para la opción **Campo de categorías** en el cuadro de diálogo **Propiedades de la serie** . El gráfico agregará intervalos al eje para todos los valores del campo de categorías que especificó.  
   
@@ -128,5 +128,4 @@ ms.locfileid: "84880285"
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
-  
   

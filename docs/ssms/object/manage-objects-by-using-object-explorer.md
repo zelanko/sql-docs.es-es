@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 974cf89ca255f42f088d9b271863c45f4294fbbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19caca02569f477570236eb2b71adceb388b1358
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491907"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037228"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Administrar objetos mediante el Explorador de objetos
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ Las acciones se llevan a cabo en los objetos haciendo clic con el botón secunda
 Cuando el Explorador de objetos está conectado a un servidor, es posible abrir una ventana nueva del Editor de código mediante los valores de conexión del Explorador de objetos. Para abrir una ventana nueva del Editor de código, haga clic con el botón derecho en el nombre del servidor en el Explorador de objetos y, a continuación, haga clic en **Nueva consulta**. Para abrir una ventana del Editor de código mediante una base de datos concreta, haga clic con el botón derecho en el nombre del servidor y, a continuación, haga clic en **Nueva consulta**. Al abrir una consulta nueva para un servidor de Analysis Services, puede seleccionar consultas DMX, MDX o XMLA.  
   
 ### <a name="start-powershell"></a>Iniciar PowerShell  
-Puede iniciar una sesión de PowerShell haciendo clic con el botón derecho en la mayoría de las carpetas y objetos en el árbol del Explorador de objetos y seleccionando **Iniciar PowerShell**. De este modo se inicia una sesión de PowerShell que tiene habilitada la compatibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, y tiene establecida la ruta de acceso al objeto en el que hizo clic con el botón secundario en el Explorador de objetos. A continuación, puede escribir comandos de PowerShell en un entorno interactivo de PowerShell. Para más información, consulte el artículo sobre [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
+Puede iniciar una sesión de PowerShell haciendo clic con el botón derecho en la mayoría de las carpetas y objetos en el árbol del Explorador de objetos y seleccionando **Iniciar PowerShell**. De este modo se inicia una sesión de PowerShell que tiene habilitada la compatibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, y tiene establecida la ruta de acceso al objeto en el que hizo clic con el botón secundario en el Explorador de objetos. A continuación, puede escribir comandos de PowerShell en un entorno interactivo de PowerShell. Para más información, consulte el artículo sobre [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="see-also"></a>Consulte también  
 [Explorador de objetos](../../ssms/object/object-explorer.md)  
@@ -61,4 +61,3 @@ Puede iniciar una sesión de PowerShell haciendo clic con el botón derecho en l
 [Conectarse a una instancia desde el Explorador de objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [Panel de detalles del Explorador de objetos](../../ssms/object/object-explorer-details-pane.md)  
 [Informes personalizados en Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
-  

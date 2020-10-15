@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d7b48e547d402e15404e39e849c262320c5ee59e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6295756f727dacffbfa54c1dccaf223cfac58351
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179952"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956896"
 ---
 # <a name="microsoftml-r-package-in-sql-server-machine-learning-services"></a>MicrosoftML (paquete de R en SQL Server Machine Learning Services)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "88179952"
 
 ## <a name="full-reference-documentation"></a>Documentación de referencia completa
 
-El paquete **MicrosoftML** se distribuye en varios productos de Microsoft, pero el uso es el mismo independientemente de si se obtiene el paquete en SQL Server o en otro producto. Dado que las funciones son las mismas, la [documentación de las funciones individuales de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) se publica en una sola ubicación en la [referencia de R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para Microsoft Machine Learning Server. Si existe algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
+El paquete **MicrosoftML** se distribuye en varios productos de Microsoft, pero el uso es el mismo independientemente de si se obtiene el paquete en SQL Server o en otro producto. Dado que las funciones son las mismas, la [documentación de las funciones individuales de RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) se publica en una sola ubicación en la [referencia de R](/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para Microsoft Machine Learning Server. Si existe algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
 
 ## <a name="versions-and-platforms"></a>Versiones y plataformas
 
@@ -30,7 +30,7 @@ El paquete **MicrosoftML** se basa en R 3.4.3 y solo está disponible cuando se
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
-+ [Microsoft Machine Learning Server 9.2.0 o posterior](https://docs.microsoft.com/machine-learning-server/)
++ [Microsoft Machine Learning Server 9.2.0 o posterior](/machine-learning-server/)
 + [Cliente de Microsoft R](set-up-a-data-science-client.md)
 
 > [!NOTE]
@@ -47,7 +47,7 @@ En la mayoría de los casos, los paquetes se cargarán juntos siempre que se use
 
 ## <a name="functions-by-category"></a>Funciones por categoría
 
-En esta sección se enumeran las funciones por categoría, para darle una idea del uso de cada una de ellas. También puede usar la [tabla de contenido](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para ver las funciones en orden alfabético.
+En esta sección se enumeran las funciones por categoría, para darle una idea del uso de cada una de ellas. También puede usar la [tabla de contenido](/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para ver las funciones en orden alfabético.
 
 <a name="ml-algorithms"></a>
 
@@ -55,13 +55,13 @@ En esta sección se enumeran las funciones por categoría, para darle una idea d
 
 | Nombre de función | Descripción |
 |---------------|-------------|
-|[rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) | Una implementación de FastRank, una implementación eficaz del algoritmo de impulso de gradiente MART.  |
-|[rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | Un bosque aleatorio y una implementación de bosque de regresión por cuantiles mediante [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees).  |
-|[rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/logisticregression) | Regresión logística mediante L-BFGS.  |
-|[rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm) | Máquinas de vectores de soporte de una clase.  
-|[rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) | Red neuronal binaria, de varias clases y de regresión.  |
-|[rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear) | Optimización del ascenso estocástico dual de coordenadas para la regresión y clasificación binaria lineal. |
-|[rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble) | Entrena varios modelos de diversos tipos para obtener un mejor rendimiento predictivo que el que se podría obtener a partir de un único modelo.|
+|[rxFastTrees](/machine-learning-server/r-reference/microsoftml/rxfasttrees) | Una implementación de FastRank, una implementación eficaz del algoritmo de impulso de gradiente MART.  |
+|[rxFastForest](/machine-learning-server/r-reference/microsoftml/rxfastforest) | Un bosque aleatorio y una implementación de bosque de regresión por cuantiles mediante [rxFastTrees](/machine-learning-server/r-reference/microsoftml/rxfasttrees).  |
+|[rxLogisticRegression](/machine-learning-server/r-reference/microsoftml/logisticregression) | Regresión logística mediante L-BFGS.  |
+|[rxOneClassSvm](/machine-learning-server/r-reference/microsoftml/rxoneclasssvm) | Máquinas de vectores de soporte de una clase.  
+|[rxNeuralNet](/machine-learning-server/r-reference/microsoftml/rxneuralnet) | Red neuronal binaria, de varias clases y de regresión.  |
+|[rxFastLinear](/machine-learning-server/r-reference/microsoftml/rxfastlinear) | Optimización del ascenso estocástico dual de coordenadas para la regresión y clasificación binaria lineal. |
+|[rxEnsemble](/machine-learning-server/r-reference/microsoftml/rxensemble) | Entrena varios modelos de diversos tipos para obtener un mejor rendimiento predictivo que el que se podría obtener a partir de un único modelo.|
 
 <a name="ml-transforms"></a>
 
@@ -69,69 +69,69 @@ En esta sección se enumeran las funciones por categoría, para darle una idea d
 
 | Nombre de función | Descripción |
 |---------------|-------------|
-|[concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat) | Transformación para crear una columna de valor vectorial única a partir de varias columnas.  |
-|[categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical) | Cree un vector indicador mediante la transformación categórica con el diccionario.  |
-|[categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalhash) | Convierte el valor categórico en una matriz indicadora mediante un código hash. |
-|[featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizetext) | Genera un contenedor de recuentos de secuencias de palabras consecutivas, denominadas n-gramas, a partir de un corpus de texto determinado. Ofrece detección de idioma, tokenización, eliminación de palabras irrelevantes, normalización de texto y generación de características.  |
-|[getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | Puntúa el texto en lenguaje natural y crea una columna que contiene las probabilidades de que las opiniones del texto sean positivas.|
-|[ngram](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/ngram) | Permite definir argumentos para la extracción de características basada en recuentos y en hash.|
-|[selectColumns](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectcolumns) | Selecciona un conjunto de columnas para volver a entrenar, y elimina todas las demás. |
-|[selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectfeatures) | Selecciona las características de las variables especificadas mediante un modo especificado.|
-|[loadImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loadimage) | Carga los datos de la imagen.|
-|[resizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/resizeimage) | Cambia el tamaño de una imagen a una dimensión especificada mediante un método de cambio de tamaño determinado.|
-|[extractPixels](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/extractpixels) | Extrae los valores de píxeles de una imagen.|
-|[featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | Caracteriza una imagen mediante un modelo de red neuronal profunda previamente entrenado.|
+|[concat](/machine-learning-server/r-reference/microsoftml/concat) | Transformación para crear una columna de valor vectorial única a partir de varias columnas.  |
+|[categorical](/machine-learning-server/r-reference/microsoftml/categorical) | Cree un vector indicador mediante la transformación categórica con el diccionario.  |
+|[categoricalHash](/machine-learning-server/r-reference/microsoftml/categoricalhash) | Convierte el valor categórico en una matriz indicadora mediante un código hash. |
+|[featurizeText](/machine-learning-server/r-reference/microsoftml/featurizetext) | Genera un contenedor de recuentos de secuencias de palabras consecutivas, denominadas n-gramas, a partir de un corpus de texto determinado. Ofrece detección de idioma, tokenización, eliminación de palabras irrelevantes, normalización de texto y generación de características.  |
+|[getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | Puntúa el texto en lenguaje natural y crea una columna que contiene las probabilidades de que las opiniones del texto sean positivas.|
+|[ngram](/machine-learning-server/r-reference/microsoftml/ngram) | Permite definir argumentos para la extracción de características basada en recuentos y en hash.|
+|[selectColumns](/machine-learning-server/r-reference/microsoftml/selectcolumns) | Selecciona un conjunto de columnas para volver a entrenar, y elimina todas las demás. |
+|[selectFeatures](/machine-learning-server/r-reference/microsoftml/selectfeatures) | Selecciona las características de las variables especificadas mediante un modo especificado.|
+|[loadImage](/machine-learning-server/r-reference/microsoftml/loadimage) | Carga los datos de la imagen.|
+|[resizeImage](/machine-learning-server/r-reference/microsoftml/resizeimage) | Cambia el tamaño de una imagen a una dimensión especificada mediante un método de cambio de tamaño determinado.|
+|[extractPixels](/machine-learning-server/r-reference/microsoftml/extractpixels) | Extrae los valores de píxeles de una imagen.|
+|[featurizeImage](/machine-learning-server/r-reference/microsoftml/featurizeimage) | Caracteriza una imagen mediante un modelo de red neuronal profunda previamente entrenado.|
 
 
 ## <a name="3-scoring-and-training-functions"></a>3- Funciones de puntuación y aprendizaje
 
 | Nombre de función | Descripción |
 |---------------|-------------|
-|[rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict) | Ejecuta la biblioteca de puntuación desde SQL Server, mediante el procedimiento almacenado, o bien desde código R, lo que permite una puntuación en tiempo real para proporcionar un rendimiento de predicción mucho más rápido.|
-|[rxFeaturize](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfeaturize) | Transforma los datos de un conjunto de datos de entrada en un conjunto de datos de salida.|
-|[mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mlmodel) | Proporciona un resumen de un modelo de Machine Learning de Microsoft R.|
+|[rxPredict.mlModel](/machine-learning-server/r-reference/microsoftml/rxpredict) | Ejecuta la biblioteca de puntuación desde SQL Server, mediante el procedimiento almacenado, o bien desde código R, lo que permite una puntuación en tiempo real para proporcionar un rendimiento de predicción mucho más rápido.|
+|[rxFeaturize](/machine-learning-server/r-reference/microsoftml/rxfeaturize) | Transforma los datos de un conjunto de datos de entrada en un conjunto de datos de salida.|
+|[mlModel](/machine-learning-server/r-reference/microsoftml/mlmodel) | Proporciona un resumen de un modelo de Machine Learning de Microsoft R.|
 
 
 ## <a name="4-loss-functions-for-classification-and-regression"></a>4- Funciones de pérdida para clasificación y regresión
 
 | Nombre de función | Descripción |
 |---------------|-------------|
-|[expLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Especificaciones de la función de pérdida de clasificación exponencial. | 
-|[logLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Especificaciones de la función de pérdida de clasificación de registros.  |
-|[hingeLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Especificaciones de la función de pérdida de clasificación de bisagra. | 
-|[smoothHingeLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Especificaciones de la función de pérdida de clasificación de bisagra uniforme.  |
-| [poissonLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Especificaciones de la función de pérdida de regresión de Poisson. | 
-|[squaredLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Especificaciones de la función de pérdida de regresión cuadrada.   |   
+|[expLoss](/machine-learning-server/r-reference/microsoftml/loss) | Especificaciones de la función de pérdida de clasificación exponencial. | 
+|[logLoss](/machine-learning-server/r-reference/microsoftml/loss) | Especificaciones de la función de pérdida de clasificación de registros.  |
+|[hingeLoss](/machine-learning-server/r-reference/microsoftml/loss) | Especificaciones de la función de pérdida de clasificación de bisagra. | 
+|[smoothHingeLoss](/machine-learning-server/r-reference/microsoftml/loss) | Especificaciones de la función de pérdida de clasificación de bisagra uniforme.  |
+| [poissonLoss](/machine-learning-server/r-reference/microsoftml/loss) | Especificaciones de la función de pérdida de regresión de Poisson. | 
+|[squaredLoss](/machine-learning-server/r-reference/microsoftml/loss) | Especificaciones de la función de pérdida de regresión cuadrada.   |   
 
 ## <a name="5-feature-selection-functions"></a>5- Funciones de selección de características
 
 | Nombre de función | Descripción |
 |---------------|-------------|
-|[minCount](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mincount) | Especificación de la selección de características en el modo de recuento. |
-|[mutualInformation](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mutualinformation) | Especificación de la selección de características en el modo de información mutua. |
+|[minCount](/machine-learning-server/r-reference/microsoftml/mincount) | Especificación de la selección de características en el modo de recuento. |
+|[mutualInformation](/machine-learning-server/r-reference/microsoftml/mutualinformation) | Especificación de la selección de características en el modo de información mutua. |
 
 ## <a name="6-ensemble-modeling-functions"></a>6- Funciones de modelado de conjuntos
 
 | Nombre de función | Descripción |
 |---------------|-------------|
-|[fastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/fasttrees) | Crea una lista que contiene el nombre de la función y los argumentos para entrenar un modelo de árbol rápido con [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
-|[fastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | Crea una lista que contiene el nombre de la función y los argumentos para entrenar un modelo de bosque rápido con [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
-|[fastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/fastlinear) | Crea una lista que contiene el nombre de la función y los argumentos para entrenar un modelo de lineal rápido con [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
-|[logisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/logisticregression) | Crea una lista que contiene el nombre de la función y los argumentos para entrenar un modelo de regresión logística con [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
-|[oneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/oneclasssvm) | Crea una lista que contiene el nombre de la función y los argumentos para entrenar un modelo de OneClassSvm con [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
+|[fastTrees](/machine-learning-server/r-reference/microsoftml/fasttrees) | Crea una lista que contiene el nombre de la función y los argumentos para entrenar un modelo de árbol rápido con [rxEnsemble](/machine-learning-server/r-reference/microsoftml/rxensemble).|
+|[fastForest](/machine-learning-server/r-reference/microsoftml/rxfastforest) | Crea una lista que contiene el nombre de la función y los argumentos para entrenar un modelo de bosque rápido con [rxEnsemble](/machine-learning-server/r-reference/microsoftml/rxensemble).|
+|[fastLinear](/machine-learning-server/r-reference/microsoftml/fastlinear) | Crea una lista que contiene el nombre de la función y los argumentos para entrenar un modelo de lineal rápido con [rxEnsemble](/machine-learning-server/r-reference/microsoftml/rxensemble).|
+|[logisticRegression](/machine-learning-server/r-reference/microsoftml/logisticregression) | Crea una lista que contiene el nombre de la función y los argumentos para entrenar un modelo de regresión logística con [rxEnsemble](/machine-learning-server/r-reference/microsoftml/rxensemble).|
+|[oneClassSvm](/machine-learning-server/r-reference/microsoftml/oneclasssvm) | Crea una lista que contiene el nombre de la función y los argumentos para entrenar un modelo de OneClassSvm con [rxEnsemble](/machine-learning-server/r-reference/microsoftml/rxensemble).|
 
 ## <a name="7-neural-networking-functions"></a>7- Funciones de red neuronal
 
 | Nombre de función | Descripción |
 |---------------|-------------|
-|[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Especifica los algoritmos de optimización para el algoritmo de aprendizaje automático [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet).|
+|[optimizer](/machine-learning-server/r-reference/microsoftml/optimizer) | Especifica los algoritmos de optimización para el algoritmo de aprendizaje automático [rxNeuralNet](/machine-learning-server/r-reference/microsoftml/rxneuralnet).|
 
 
 ## <a name="8-package-state-functions"></a>8- Funciones de estado del paquete
 
 | Nombre de función | Descripción |
 |---------------|-------------|
-|[rxHashEnv](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxHashEnv) | Objeto de entorno que se usa para almacenar el estado de todo el paquete. |
+|[rxHashEnv](/machine-learning-server/r-reference/microsoftml/rxHashEnv) | Objeto de entorno que se usa para almacenar el estado de todo el paquete. |
 
 
 ## <a name="how-to-use-microsoftml"></a>Cómo usar MicrosoftML
@@ -150,8 +150,8 @@ logisticRegression(args);
 
 ## <a name="see-also"></a>Consulte también
 
-+ [Tutoriales de R](../tutorials/sql-server-r-tutorials.md)
++ [Tutoriales de R](../tutorials/r-tutorials.md)
 + [Información sobre cómo usar contextos de cálculo](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 + [R para desarrolladores de SQL: Entrenar y hacer operativo un modelo](../tutorials/r-taxi-classification-introduction.md)
 + [Ejemplos de productos de Microsoft en GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
-+ [Referencia de R (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 
++ [Referencia de R (Microsoft Machine Learning Server)](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)

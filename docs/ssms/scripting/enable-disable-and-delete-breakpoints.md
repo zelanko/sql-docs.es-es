@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22a60f2f696a132bbcf7cc6b1497c286f5670cb5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 091f6a4fbe7650152eaf7b3c605618875013f92a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901266"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039062"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Habilitar, deshabilitar y eliminar puntos de interrupción
 
@@ -29,7 +29,7 @@ Para ver y administrar todos los puntos de interrupción abiertos, puede usar la
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
 ## <a name="the-breakpoints-window"></a>Ventana Puntos de interrupción  
- La ventana **Puntos de interrupción** muestra información como la línea de código en la que está ubicado el punto de interrupción. Además en **Puntos de interrupción** , puede eliminar, deshabilitar y habilitar los puntos de interrupción. Para obtener más información sobre la ventana **Puntos de interrupción** , vea [Breakpoints Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)  
+ La ventana **Puntos de interrupción** muestra información como la línea de código en la que está ubicado el punto de interrupción. Además en **Puntos de interrupción** , puede eliminar, deshabilitar y habilitar los puntos de interrupción. Para obtener más información sobre la ventana **Puntos de interrupción** , vea [Breakpoints Window](./transact-sql-debugger-breakpoints-window.md)  
   
  Al deshabilitar un punto de interrupción, se evita que detenga la ejecución, pero deja la definición en su lugar en caso de que desee habilitar el punto de interrupción posteriormente. Al eliminar un punto de interrupción se quita permanentemente. Debe alternar un nuevo punto de interrupción para pausar la ejecución de la instrucción.  
   
@@ -101,6 +101,5 @@ Para ver y administrar todos los puntos de interrupción abiertos, puede usar la
 -   En la barra de herramientas de la ventana **Puntos de interrupción** , haga clic en el botón **Eliminar todos los puntos de interrupción** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Alternar un punto de interrupción](../../relational-databases/scripting/toggle-a-breakpoint.md)  
-  
+ [Alternar un punto de interrupción](./toggle-a-breakpoint.md)  
   

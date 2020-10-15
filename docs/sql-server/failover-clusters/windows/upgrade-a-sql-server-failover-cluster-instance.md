@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 196678dbb5c91e6c5acbaf2fda0b6a65f9ac369e
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: c06446f14fd2f316f297b675cc1b96efc7801ba1
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442374"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988321"
 ---
 # <a name="upgrade-a-failover-cluster-instance"></a>Actualización de una instancia del clúster de conmutación por error 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "87442374"
   
  Este proceso da lugar a un tiempo de inactividad limitado a un tiempo de conmutación por error y un tiempo de ejecución de script de actualización de bases de datos durante la actualización completa de los clústeres de conmutación por error.  
   
- Para controlar el comportamiento de la conmutación por error de los nodos en clúster durante el proceso de actualización, ejecute la operación de actualización en el símbolo del sistema y use el parámetro /FAILOVERCLUSTERROLLOWNERSHIP. Para más información, consulte [Instalar SQL Server 2016 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+ Para controlar el comportamiento de la conmutación por error de los nodos en clúster durante el proceso de actualización, ejecute la operación de actualización en el símbolo del sistema y use el parámetro /FAILOVERCLUSTERROLLOWNERSHIP. Para más información, consulte [Instalar SQL Server 2016 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
 
  ## <a name="upgrade-with-installation-media"></a>Actualización con medios de instalación 
   
@@ -83,7 +83,7 @@ ms.locfileid: "87442374"
   
 7.  En la página Seleccionar instancia, especifique la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que desea a actualizar a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para continuar, haga clic en**Siguiente**.  
   
-8.  En la página Selección de características aparecen seleccionadas las características que van a actualizarse. Después de seleccionar el nombre de la característica se muestra una descripción de cada grupo de componentes en el panel derecho. Tenga en cuenta que no puede cambiar las características que se van a actualizar, y no puede agregar características durante la operación de actualización. Para agregar características a una instancia actualizada de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] una vez completada la operación de actualización, vea [Agregar características a una instancia de SQL Server 2016 &#40;programa de instalación&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+8.  En la página Selección de características aparecen seleccionadas las características que van a actualizarse. Después de seleccionar el nombre de la característica se muestra una descripción de cada grupo de componentes en el panel derecho. Tenga en cuenta que no puede cambiar las características que se van a actualizar, y no puede agregar características durante la operación de actualización. Para agregar características a una instancia actualizada de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] una vez completada la operación de actualización, vea [Agregar características a una instancia de SQL Server 2016 &#40;programa de instalación&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md).  
   
      Los requisitos previos para las características seleccionadas se muestran en el recuadro del lado derecho. La instalación de SQL Server instalará los requisitos previos que no se hayan instalado todavía durante el paso de instalación que se describe más adelante en este procedimiento. Para ahorrar tiempo, debe instalar previamente estos requisitos previos en cada nodo.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "87442374"
   
 10. La página Requisitos de espacio en disco calcula el espacio en disco necesario para las características especificadas y compara los requisitos con el espacio en disco disponible en el equipo donde se ejecuta el programa de instalación.  
   
-11. En la página Actualización de la búsqueda de texto completo, especifique las opciones de actualización para las bases de datos que van a actualizarse. Para obtener más información, vea [Opciones de actualización de búsqueda de texto completo](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+11. En la página Actualización de la búsqueda de texto completo, especifique las opciones de actualización para las bases de datos que van a actualizarse. Para obtener más información, vea [Opciones de actualización de búsqueda de texto completo](../../../database-engine/install-windows/install-sql-server.md).  
   
 12. En la página **Informes de errores** , especifique la información que desee enviar a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] y que ayudará a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. De forma predeterminada, se habilitan las opciones de informes de errores.  
   
@@ -140,8 +140,7 @@ Siga estos pasos para actualizar la instancia del clúster de conmutación por e
   
 -   [Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
   
--   [Aprovechamiento de las nuevas características de SQL Server 2016](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
+-   [Aprovechamiento de las nuevas características de SQL Server 2016](../../what-s-new-in-sql-server-2017.md)  
   
 
-  
   

@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 83d50d14f47c5b25de4bc3749bd2fd06dffff3df
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: f142a872688d28befefcffebfcdeb75976072863
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195131"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987861"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notas de la versión de SQL Server Data Tools (SSDT)
 
@@ -899,7 +899,7 @@ Console.WriteLine(result.DeploymentReport);
 **Analysis Services y Reporting Services**
 
 Se ha mejorado el rendimiento del analizador de DAX de diseñador de modelos tabulares de SSAS cuando se trabaja con expresiones de DAX de gran tamaño.
-Para obtener más información, lea la [entrada de blog de Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/).
+Para obtener más información, lea la [entrada de blog de Analysis Services](/archive/blogs/analysisservices/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular).
 
 ### <a name="fixed--improved-this-month"></a>Correcciones y mejoras de este mes
 
@@ -935,11 +935,11 @@ _Para SQL Server 2016._
 
 **Novedades**
 
-Comparación de esquemas es ahora compatible con SqlPackage.exe y la API de Data-Tier Application Framework (DacFx). Para obtener más información, consulte  [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/) (Comparación de esquemas en SqlPackage y Data-Tier Application Framework).
+Comparación de esquemas es ahora compatible con SqlPackage.exe y la API de Data-Tier Application Framework (DacFx). Para obtener más información, consulte  [Schema Compare in SqlPackage and the Data-Tier Application Framework](/archive/blogs/ssdt/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx) (Comparación de esquemas en SqlPackage y Data-Tier Application Framework).
 
 **Analysis Services: modo de área de trabajo integrada de SSDT Tabular (SSAS)**
 
-SSDT Tabular ahora incluye una instancia de SSAS interna que SSDT Tabular inicia automáticamente en segundo plano si se habilita el modo de área de trabajo integrada para que pueda agregar y ver tablas, columnas y datos en el Diseñador de modelos sin tener que proporcionar una instancia del servidor de área de trabajo externa. El modo de área de trabajo integrada no cambia el funcionamiento de SSDT Tabular con un servidor y una base de datos de área de trabajo. Lo que cambia es la ubicación en la que SSDT Tabular hospeda la base de datos del área de trabajo. Para habilitar el modo de área de trabajo integrada, seleccione la opción Área de trabajo integrada en el cuadro de diálogo del Diseñador de modelos tabulares que aparece al crear un nuevo proyecto tabular. Para los proyectos tabulares existentes que usan actualmente un servidor de área de trabajo explícito, puede cambiar al modo de área de trabajo integrada estableciendo el parámetro Modo de Área de trabajo integrada en verdadero en la ventana Propiedades, que se muestra cuando selecciona el archivo Model.bim en el Explorador de soluciones. Para obtener más información, consulte la [entrada de blog de Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/).
+SSDT Tabular ahora incluye una instancia de SSAS interna que SSDT Tabular inicia automáticamente en segundo plano si se habilita el modo de área de trabajo integrada para que pueda agregar y ver tablas, columnas y datos en el Diseñador de modelos sin tener que proporcionar una instancia del servidor de área de trabajo externa. El modo de área de trabajo integrada no cambia el funcionamiento de SSDT Tabular con un servidor y una base de datos de área de trabajo. Lo que cambia es la ubicación en la que SSDT Tabular hospeda la base de datos del área de trabajo. Para habilitar el modo de área de trabajo integrada, seleccione la opción Área de trabajo integrada en el cuadro de diálogo del Diseñador de modelos tabulares que aparece al crear un nuevo proyecto tabular. Para los proyectos tabulares existentes que usan actualmente un servidor de área de trabajo explícito, puede cambiar al modo de área de trabajo integrada estableciendo el parámetro Modo de Área de trabajo integrada en verdadero en la ventana Propiedades, que se muestra cuando selecciona el archivo Model.bim en el Explorador de soluciones. Para obtener más información, consulte la [entrada de blog de Analysis Services](/archive/blogs/analysisservices/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular).
 
 **Actualizaciones y correcciones de**
 **herramientas para bases de datos:**
@@ -1012,7 +1012,7 @@ _Para SQL Server 2016._
 **Novedades**  
 - **Compatibilidad con Always Encrypted:** para las bases de datos que contienen columnas de Always Encrypted, en esta versión se agrega compatibilidad completa con Always Encrypted mediante nuestras API de núcleo y la herramienta de línea de comandos (SqlPackage.exe). Puede crear y publicar proyectos de base de datos con compatibilidad total con todas las características de Always Encrypted.  
 - **Compatibilidad mejorada con tablas temporales:** se ha simplificado la experiencia mediante la desvinculación de las tablas temporales antes de las modificaciones y volviéndolas a vincular una vez que estas se hayan completado. Esto significa que las tablas temporales tienen paridad con otros tipos de tabla (estándar, en memoria) en cuanto a las operaciones que se admiten. 
-- **Cambios de instalación y SqlPackage.exe:** cambios para aislar SSDT del motor de SQL Server y las actualizaciones de SSMS. Para obtener más información, consulte [Changes to SSDT and SqlPackage.exe installation and updates](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/) (Cambios en la instalación y las actualizaciones de SqlPackage.exe y SSDT).
+- **Cambios de instalación y SqlPackage.exe:** cambios para aislar SSDT del motor de SQL Server y las actualizaciones de SSMS. Para obtener más información, consulte [Changes to SSDT and SqlPackage.exe installation and updates](/archive/blogs/ssdt/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates) (Cambios en la instalación y las actualizaciones de SqlPackage.exe y SSDT).
 
 
 **Actualizaciones y correcciones**
@@ -1050,12 +1050,12 @@ _Publicado:_ &nbsp; 1 de junio de 2016
 _Número de compilación:_ &nbsp; 14.0.60525.0  
 _Para SQL Server 2016._
 
-Ya se ha publicado Disponibilidad general (GA) de SSDT. La actualización de SSDT GA para junio de 2016 agrega compatibilidad con las últimas actualizaciones de SQL Server 2016 RTM y varias correcciones de errores. Para obtener más información, consulte [SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/) (Actualización de SQL Server Data Tools GA para junio de 2016).
+Ya se ha publicado Disponibilidad general (GA) de SSDT. La actualización de SSDT GA para junio de 2016 agrega compatibilidad con las últimas actualizaciones de SQL Server 2016 RTM y varias correcciones de errores. Para obtener más información, consulte [SQL Server Data Tools GA update for June 2016](/archive/blogs/ssdt/sql-server-data-tools-ga-update-for-june-2016) (Actualización de SQL Server Data Tools GA para junio de 2016).
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
 - [Descargar SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [Previous releases of SQL Server Data Tools &#40;SSDT and SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md) (Versiones anteriores de SQL Server Data Tools [SSDT y SSDT-BI])
-- [Novedades de SQL Server 2016 (motor de base de datos)](https://msdn.microsoft.com/library/bb510411.aspx)
-- [Novedades de Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)
+- [Novedades de SQL Server 2016 (motor de base de datos)](../sql-server/what-s-new-in-sql-server-2016.md)
+- [Novedades de Analysis Services](/analysis-services/what-s-new-in-analysis-services)
 - [Novedades de Integration Services en SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)

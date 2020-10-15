@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bf4e441352bce868d80ba00fe185c7494c0917
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111020"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988313"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Solucionar problemas de clústeres de conmutación por error
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91111020"
 -   Usar procedimientos almacenados extendidos y objetos COM.  
   
 ## <a name="basic-troubleshooting-steps"></a>Pasos básicos en la solución de problemas  
- El primer paso de diagnóstico consiste en ejecutar una comprobación de validación de clúster nueva. Para obtener detalles acerca de la validación, consulte [Guía paso a paso de clústeres de conmutación por error: Validación de hardware para un clúster de conmutación por error](https://technet.microsoft.com/library/cc732035.aspx).  Esto se puede completar sin ninguna interrupción del servicio, ya que no afecta a ningún recurso de clúster en línea. La validación se puede llevar a cabo en cualquier momento una vez instalada la característica Clúster de conmutación por error; por ejemplo, antes de implementar el clúster, durante su creación y mientras se esté ejecutando. De hecho, existen pruebas adicionales que se ejecutan cuando el clúster se encuentra en funcionamiento, que comprueban el cumplimiento de las prácticas recomendadas para cargas de trabajo de alta disponibilidad. Entre estas decenas de pruebas, solo unas pocas afectarán a las cargas de trabajo del clúster en ejecución y estas se engloban todas en la categoría de almacenamiento, por lo que la omisión de esta categoría por completo constituye una forma sencilla de evitar pruebas que interrumpan la actividad.  
+ El primer paso de diagnóstico consiste en ejecutar una comprobación de validación de clúster nueva. Para obtener detalles acerca de la validación, consulte [Guía paso a paso de clústeres de conmutación por error: Validación de hardware para un clúster de conmutación por error](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)).  Esto se puede completar sin ninguna interrupción del servicio, ya que no afecta a ningún recurso de clúster en línea. La validación se puede llevar a cabo en cualquier momento una vez instalada la característica Clúster de conmutación por error; por ejemplo, antes de implementar el clúster, durante su creación y mientras se esté ejecutando. De hecho, existen pruebas adicionales que se ejecutan cuando el clúster se encuentra en funcionamiento, que comprueban el cumplimiento de las prácticas recomendadas para cargas de trabajo de alta disponibilidad. Entre estas decenas de pruebas, solo unas pocas afectarán a las cargas de trabajo del clúster en ejecución y estas se engloban todas en la categoría de almacenamiento, por lo que la omisión de esta categoría por completo constituye una forma sencilla de evitar pruebas que interrumpan la actividad.  
 Clúster de conmutación por error incorpora una medida de seguridad integrada para evitar que el tiempo de inactividad accidental cuando se ejecuten pruebas de almacenamiento durante la validación. Si el clúster tiene algún grupo en línea cuando se inicia la validación, y las pruebas de almacenamiento permanecen seleccionadas, se mostrará un mensaje donde el usuario tendrá que confirmar si desea ejecutar todas las pruebas (y ocasionar tiempo de inactividad) u omitir la comprobación de los discos de los grupos en línea a fin de evitar dicho perjuicio. Si se ha excluido la categoría de almacenamiento en su totalidad de las pruebas, no se mostrará este mensaje. De este modo, se habilitará la validación del clúster sin conllevar tiempo de inactividad.  
   
 #### <a name="how-to-revalidate-your-cluster"></a>Cómo volver a validar el clúster  
@@ -189,5 +189,4 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
  [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Cómo funcionan los procedimientos almacenados extendidos](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [Características de ejecución de los procedimientos almacenados extendidos](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
-  
   

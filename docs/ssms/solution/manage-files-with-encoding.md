@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 887ed2fd171dc6164a9af45cfc4af3e0992c166f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f9c5d6fcb92c7b090c19d70969dfd37dc405e868
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497327"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036025"
 ---
 # <a name="manage-files-with-encoding"></a>Administrar archivos con codificación
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,5 +65,4 @@ Si utiliza Visual SourceSafe para almacenar archivos con ANSI, UTF8 o Unicode, t
   
 ## <a name="see-also"></a>Consulte también  
 [Archivos que administran soluciones y proyectos](../../ssms/solution/files-that-manage-solutions-and-projects.md)  
-[Asociación de extensiones de archivo a un editor de código](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
-  
+[Asociación de extensiones de archivo a un editor de código](../scripting/associate-file-extensions-to-a-code-editor.md)  

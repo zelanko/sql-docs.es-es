@@ -9,12 +9,12 @@ ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dc2b1eaee352b34333be5a166168161194e1f03d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09aa986c6f943b204cc037b452fe831bc0e8757e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418631"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891415"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>Agregar un front-end web adicional de Reporting Services a una granja de servidores
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] El modo de SharePoint incluye los componentes necesarios para los servidores de aplicaciones y los servidores front-end web (WFE). Este tema se centra en instalar los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] necesarios para un servidor de WFE, incluidas las páginas de aplicación utilizadas por las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] como, por ejemplo, suscripciones, alertas de datos y [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. La instalación primaria de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] necesaria para WFE es la del complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para Productos de SharePoint 2016.  
@@ -48,14 +48,14 @@ ms.locfileid: "88418631"
   
 |Paso|Descripción y vínculo|  
 |----------|--------------------------|  
-|Agregar un servidor de SharePoint a una granja de servidores.|Es necesario instalar SharePoint para implementar otra aplicación de Reporting Services.<br/><br/>Para SharePoint 2013, vea [Agregar un servidor web o de aplicaciones a la granja de servidores en SharePoint 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx).<br/><br/>Para SharePoint 2016, vea [Agregar un servidor web o de aplicaciones a la granja de servidores en SharePoint 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx).|  
+|Agregar un servidor de SharePoint a una granja de servidores.|Es necesario instalar SharePoint para implementar otra aplicación de Reporting Services.<br/><br/>Para SharePoint 2013, vea [Agregar un servidor web o de aplicaciones a la granja de servidores en SharePoint 2013](/SharePoint/install/add-web-or-application-server-to-the-farm).<br/><br/>Para SharePoint 2016, vea [Agregar un servidor web o de aplicaciones a la granja de servidores en SharePoint 2016](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm).|  
 |Instale el complemento SQL Server Reporting Services para productos de SharePoint 2016.|Hay varios métodos para instalar el complemento. En los siguientes pasos se usa el asistente para la instalación de SQL Server. Para obtener información detallada sobre cómo instalar el complemento, vea [Instalar o desinstalar el complemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).<br /><br /> 1) Ejecute la instalación de SQL Server.<br /><br /> 2) En la página **Rol de instalación** , seleccione **Instalación de características de SQL Server**.<br /><br /> 3) En la página **Selección de características** , seleccione **Complemento de Reporting Services para productos de SharePoint**.<br /><br /> 4) Haga clic **Siguiente** en las páginas siguientes para completar las opciones de configuración.<br /><br/>Para obtener más información sobre cómo instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Instalación del primer servidor de informes en modo de SharePoint](install-the-first-report-server-in-sharepoint-mode.md).|  
 |Comprobar que el nuevo servidor está operativo.|1) En Administración central de SharePoint, haga clic en **Administrar servidores en esta granja de servidores** en el grupo **Configuración del sistema** .<br /><br /> 2) Compruebe que el nuevo servidor está en la lista.|  
 |Actualizar la solución de NLB.|Si procede, actualice el entorno NLB de hardware o software para incluir el nuevo servidor.|  
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Agregar un servidor web o de aplicaciones a la granja de servidores en SharePoint 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
-[Agregar un servidor web o de aplicaciones a la granja de servidores en SharePoint 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
+[Agregar un servidor web o de aplicaciones a la granja de servidores en SharePoint 2016](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)  
+[Agregar un servidor web o de aplicaciones a la granja de servidores en SharePoint 2013](/SharePoint/install/add-web-or-application-server-to-the-farm)
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

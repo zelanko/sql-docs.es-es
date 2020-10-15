@@ -12,33 +12,33 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d27d25d374d737cc51f7e0a5149556a4d5a92260
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 810010b70a50f51c29b34b917af90127233d622c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883460"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987801"
 ---
 # <a name="running-sql-server-unit-tests"></a>Ejecución de pruebas unitarias de SQL Server
 
-Para mejorar y mantener la calidad del código, puede crear y ejecutar pruebas unitarias de SQL Server que comprueben el comportamiento de cualquier objeto de base de datos y después proteger esas pruebas en el control de versiones. Cuando usted o cualquier miembro del equipo cambie el esquema de la base de datos, ejecute pruebas unitarias de SQL Server y pruebas unitarias de software para comprobar que los cambios no interrumpen la funcionalidad existente. Puede ejecutar pruebas individuales o puede ejecutar grupos de prueba, que se denominan listas de pruebas. Para más información, consulte [Usar listas de pruebas (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182461(VS.100).aspx).  
+Para mejorar y mantener la calidad del código, puede crear y ejecutar pruebas unitarias de SQL Server que comprueben el comportamiento de cualquier objeto de base de datos y después proteger esas pruebas en el control de versiones. Cuando usted o cualquier miembro del equipo cambie el esquema de la base de datos, ejecute pruebas unitarias de SQL Server y pruebas unitarias de software para comprobar que los cambios no interrumpen la funcionalidad existente. Puede ejecutar pruebas individuales o puede ejecutar grupos de prueba, que se denominan listas de pruebas. Para más información, consulte [Usar listas de pruebas (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182461(v=vs.100)).  
   
 ## <a name="ways-to-run-sql-server-unit-tests"></a>Maneras de ejecutar las pruebas unitarias de SQL Server  
 Puede ejecutar pruebas unitarias de SQL Server de varias maneras, que varían según el software instalado, como se muestra a continuación:  
   
--   Ejecutar pruebas mediante la ventana **Vista de pruebas** de Visual Studio 2010. Para más información, vea: [Cómo: Ejecutar pruebas unitarias de SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md) y [Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx). Para Visual Studio 2012, vea [Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2012](https://msdn.microsoft.com/library/ms182470.aspx).  
+-   Ejecutar pruebas mediante la ventana **Vista de pruebas** de Visual Studio 2010. Para más información, vea: [Cómo: Ejecutar pruebas unitarias de SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md) y [Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2010](/previous-versions/visualstudio/visual-studio-2010/ms182470(v=vs.100)). Para Visual Studio 2012, vea [Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2012](/previous-versions/ms182470(v=vs.140)).  
   
--   Ejecutar pruebas mediante el comando MSTest.exe en un símbolo del sistema. Para más información, consulte [Cómo: Ejecutar pruebas automatizadas desde la línea de comandos usando MSTest (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182487(VS.100).aspx) o [Cómo: Ejecutar pruebas automatizadas desde la línea de comandos usando MSTest (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182487.aspx).  
+-   Ejecutar pruebas mediante el comando MSTest.exe en un símbolo del sistema. Para más información, consulte [Cómo: Ejecutar pruebas automatizadas desde la línea de comandos usando MSTest (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182487(v=vs.100)) o [Cómo: Ejecutar pruebas automatizadas desde la línea de comandos usando MSTest (Visual Studio 2012)](/previous-versions/ms182487(v=vs.140)).  
   
--   Ejecutar pruebas desde el **Explorador de soluciones** ejecutando un proyecto de prueba. Para más información, consulte [Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx) o [Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2012](https://msdn.microsoft.com/library/ms182470.aspx).  
+-   Ejecutar pruebas desde el **Explorador de soluciones** ejecutando un proyecto de prueba. Para más información, consulte [Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2010](/previous-versions/visualstudio/visual-studio-2010/ms182470(v=vs.100)) o [Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2012](/previous-versions/ms182470(v=vs.140)).  
   
--   Volver a ejecutar pruebas desde la ventana **Resultados de las pruebas**. Para más información, vea: [Cómo: Vuelva a ejecutar una prueba (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx).  
+-   Volver a ejecutar pruebas desde la ventana **Resultados de las pruebas**. Para más información, vea: [Cómo: Vuelva a ejecutar una prueba (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182472(v=vs.100)).  
   
--   Ejecutar pruebas individuales o listas de pruebas (Visual Studio 2010) desde la ventana **Editor de listas de pruebas**. Para más información, consulte [Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx) o [Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2012](https://msdn.microsoft.com/library/ms182470.aspx).  
+-   Ejecutar pruebas individuales o listas de pruebas (Visual Studio 2010) desde la ventana **Editor de listas de pruebas**. Para más información, consulte [Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2010](/previous-versions/visualstudio/visual-studio-2010/ms182470(v=vs.100)) o [Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2012](/previous-versions/ms182470(v=vs.140)).  
   
--   Ejecutar pruebas a medida que se compila un proyecto en Team Foundation Build. Para más información, consulte [Cómo: Configurar y ejecutar pruebas programadas después de compilar la aplicación (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182465(VS.100).aspx) o [Cómo: Configurar y ejecutar pruebas programadas después de compilar la aplicación (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182465.aspx).  
+-   Ejecutar pruebas a medida que se compila un proyecto en Team Foundation Build. Para más información, consulte [Cómo: Configurar y ejecutar pruebas programadas después de compilar la aplicación (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182465(v=vs.100)) o [Cómo: Configurar y ejecutar pruebas programadas después de compilar la aplicación (Visual Studio 2012)](/previous-versions/visualstudio/visual-studio-2012/ms182465(v=vs.110)).  
   
-Puede ejecutar las pruebas unitarias de SQL Server en un orden determinado usando una prueba por orden. Para más información, vea: [Cómo: Crear una prueba ordenada (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182631(VS.100).aspx) o [Cómo: Crear una prueba ordenada (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182631.aspx).  
+Puede ejecutar las pruebas unitarias de SQL Server en un orden determinado usando una prueba por orden. Para más información, vea: [Cómo: Crear una prueba ordenada (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182631(v=vs.100)) o [Cómo: Crear una prueba ordenada (Visual Studio 2012)](/previous-versions/ms182631(v=vs.140)).  
   
 ## <a name="interpreting-tests-results"></a>Interpretación de los resultados de pruebas  
 Una vez ejecutadas las pruebas, la ventana **Resultados de pruebas** muestra qué pruebas han producido errores y cuáles se han realizado correctamente. Para más información, consulte [Interpretar los resultados de pruebas unitarias de SQL Server](../ssdt/interpreting-sql-server-unit-test-results.md). Para obtener más información sobre cómo diagnosticar un error inesperado, vea [Cómo: Depurar objetos de base de datos](../ssdt/how-to-debug-database-objects.md).  
@@ -63,4 +63,3 @@ Puede crear una condición de prueba personalizada para probar cualquier condici
   
 ## <a name="see-also"></a>Consulte también  
 [Comprobar el código de base de datos con pruebas unitarias de SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

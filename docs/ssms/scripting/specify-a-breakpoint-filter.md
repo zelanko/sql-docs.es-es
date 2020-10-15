@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6e2a3540ea758fa394ad0ebcdcd28777bf4237b
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 307e262c57409725014a202b4a48143b5228763e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901589"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036312"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Especificar un filtro del punto de interrupción
 
@@ -52,6 +52,6 @@ Los filtros del punto de interrupción no suelen utilizarse con el depurador de 
 3.  Haga clic en **Aceptar** para implementar los cambios o en **Cancelar** para salir sin aplicar los cambios.  
   
 ## <a name="see-also"></a>Consulte también  
- [Especificar una condición de punto de interrupción](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [Especificar un número de llamadas](../../relational-databases/scripting/specify-a-hit-count.md)   
- [Especificar una acción del punto de interrupción](../../relational-databases/scripting/specify-a-breakpoint-action.md)  
+ [Especificar una condición de punto de interrupción](./specify-a-breakpoint-condition.md)   
+ [Especificar un número de llamadas](./specify-a-hit-count.md)   
+ [Especificar una acción del punto de interrupción](./specify-a-breakpoint-action.md)

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 54ea252e2fbe828200339fdbfb4d25ef83451cb3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897472"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987551"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Tutorial: Ampliación de la implementación del proyecto de base de datos para analizar el plan de implementación
 
@@ -46,7 +46,7 @@ Para crear un colaborador de implementación, debe realizar las siguientes tarea
   
 -   Cree un proyecto de biblioteca de clases y agregue las referencias necesarias.  
   
--   Defina una clase llamada DeploymentUpdateReportContributor que herede de [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx).  
+-   Defina una clase llamada DeploymentUpdateReportContributor que herede de [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor).  
   
 -   Invalide el método OnExecute.  
   
@@ -105,7 +105,7 @@ Para crear un colaborador de implementación, debe realizar las siguientes tarea
   
     ```  
   
-    Ahora ha definido un colaborador de implementación que hereda del DeploymentPlanExecutor. Durante los procesos de compilación e implementación, los colaboradores personalizados se cargan desde un directorio de la extensión estándar. Los colaboradores del ejecutor del plan de implementación se identifican con un atributo [ExportDeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute.aspx).  
+    Ahora ha definido un colaborador de implementación que hereda del DeploymentPlanExecutor. Durante los procesos de compilación e implementación, los colaboradores personalizados se cargan desde un directorio de la extensión estándar. Los colaboradores del ejecutor del plan de implementación se identifican con un atributo [ExportDeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute).  
   
     Este atributo es necesario para poder detectar colaboradores. Debería tener un aspecto similar al siguiente:  
   
@@ -249,9 +249,9 @@ Para crear un colaborador de implementación, debe realizar las siguientes tarea
             }  
     ```  
   
-    El método OnExecute se pasa a un objeto [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) que proporciona acceso a cualquier argumento especificado, al modelo de base de datos de origen y de destino, a las propiedades de compilación y a los archivos de la extensión. En este ejemplo, obtenemos el modelo y, a continuación llamamos a las funciones del asistente para generar información sobre el modelo. Utilizamos el método del asistente PublishMessage de la clase base para notificar los errores que se produzcan.  
+    El método OnExecute se pasa a un objeto [DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext) que proporciona acceso a cualquier argumento especificado, al modelo de base de datos de origen y de destino, a las propiedades de compilación y a los archivos de la extensión. En este ejemplo, obtenemos el modelo y, a continuación llamamos a las funciones del asistente para generar información sobre el modelo. Utilizamos el método del asistente PublishMessage de la clase base para notificar los errores que se produzcan.  
   
-    Entre los tipos y métodos adicionales de interés se encuentran: [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) y [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
+    Entre los tipos y métodos adicionales de interés se encuentran: [TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel), [ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult), [DeploymentPlanHandle](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanhandle) y [SqlDeploymentOptions](/dotnet/api/microsoft.sqlserver.dac.deployment.sqldeploymentoptions).  
   
     A continuación, defina la clase del asistente que examina más en profundidad los detalles del plan de implementación.  
   
@@ -524,11 +524,11 @@ Para crear un colaborador de implementación, debe realizar las siguientes tarea
   
     |**Área de código**|**Tipos útiles**|  
     |-----------------|--------------------|  
-    |Miembros de clase|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
+    |Miembros de clase|[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel), [ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult), [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep)|  
     |Método WriteReport|XmlWriter y XmlWriterSettings|  
-    |Método ReportPlanOperations|Entre los tipos de interés se encuentran: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Hay otros pasos, en la documentación de la API podrá obtener una lista completa de pasos.|  
-    |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
-    |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
+    |Método ReportPlanOperations|Entre los tipos de interés se encuentran: [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep), [SqlRenameStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlrenamestep), [SqlMoveSchemaStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlmoveschemastep), [SqlTableMigrationStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqltablemigrationstep), [CreateElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.createelementstep), [AlterElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.alterelementstep), [DropElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.dropelementstep).<br /><br />Hay otros pasos, en la documentación de la API podrá obtener una lista completa de pasos.|  
+    |GetElementCategory|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
+    |GetElementName|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
   
     A continuación, compile la biblioteca de clases.  
   
@@ -738,10 +738,9 @@ El proyecto se puede publicar o implementar de manera habitual en Visual Studio.
     Analizando el plan de implementación que se ejecuta, puede notificar cualquier información contenida en la implementación y puede tomar medidas adicionales en función de los pasos de este plan.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
-Puede crear herramientas adicionales para realizar el procesamiento de los archivos XML de salida. Esto es solo un ejemplo de un [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). También podría crear un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) para cambiar un plan de implementación antes de que se ejecute.  
+Puede crear herramientas adicionales para realizar el procesamiento de los archivos XML de salida. Esto es solo un ejemplo de un [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor). También podría crear un [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) para cambiar un plan de implementación antes de que se ejecute.  
   
 ## <a name="see-also"></a>Consulte también  
-[Tutorial: Ampliación de la compilación del proyecto de base de datos para generar estadísticas de modelo](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[Tutorial: Ampliación de la implementación del proyecto de base de datos para modificar el plan de implementación](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
-[Personalizar la compilación de bases de datos y la implementación con colaboradores de implementación y compilación](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
-  
+[Tutorial: Ampliación de la compilación del proyecto de base de datos para generar estadísticas de modelo](/previous-versions/visualstudio/visual-studio-2010/ee461508(v=vs.100))  
+[Tutorial: Ampliación de la implementación del proyecto de base de datos para modificar el plan de implementación](/previous-versions/visualstudio/visual-studio-2010/ee461507(v=vs.100))  
+[Personalizar la compilación de bases de datos y la implementación con colaboradores de implementación y compilación](/previous-versions/visualstudio/visual-studio-2010/ee461505(v=vs.100))  

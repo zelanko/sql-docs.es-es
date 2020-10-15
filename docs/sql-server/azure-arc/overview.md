@@ -9,12 +9,12 @@ ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 5cf1a67d1eeb36ec4889d75241eba34b515264b0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 59a3dab4136749f85e1f752ee823f8815080fd76
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834313"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987991"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>SQL Server habilitado para Azure Arc (versión preliminar)
 
@@ -49,7 +49,7 @@ Para conectar el hospedaje y las instancias de SQL Server a Azure Arc, debe ten
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
 
-Para lograr una seguridad óptima, se recomienda crear un rol personalizado en Azure que tenga los permisos mínimos enumerados. Para obtener información sobre cómo crear un rol personalizado en Azure con estos permisos, consulte la [información general sobre roles personalizados](https://docs.microsoft.com/azure/active-directory/users-groups-roles/roles-custom-overview). Para agregar una asignación de roles, consulte [Incorporación o eliminación de asignaciones de roles de Azure mediante Azure Portal](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) o [Incorporación o eliminación de asignaciones de roles de Azure mediante la CLI de Azure](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-cli).
+Para lograr una seguridad óptima, se recomienda crear un rol personalizado en Azure que tenga los permisos mínimos enumerados. Para obtener información sobre cómo crear un rol personalizado en Azure con estos permisos, consulte la [información general sobre roles personalizados](/azure/active-directory/users-groups-roles/roles-custom-overview). Para agregar una asignación de roles, consulte [Incorporación o eliminación de asignaciones de roles de Azure mediante Azure Portal](/azure/role-based-access-control/role-assignments-portal) o [Incorporación o eliminación de asignaciones de roles de Azure mediante la CLI de Azure](/azure/role-based-access-control/role-assignments-cli).
 
 ### <a name="azure-subscription-and-service-limits"></a>Límites del servicio y la suscripción de Azure
 
@@ -66,7 +66,7 @@ La versión preliminar pública está disponible en las siguientes regiones:
 - Este de EE. UU. 2
 - Oeste de EE. UU. 2
 - Este de Australia
-- Sudeste de Asia
+- Sudeste Asiático
 - Norte de Europa
 - Oeste de Europa
 - Sur de Reino Unido

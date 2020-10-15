@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13b2f1d7af594346a6c9f0ce46a0c412541fcc65
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 24bfa991596630165675bc0c8349a04c76085420
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547917"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987201"
 ---
 # <a name="cache-a-shared-dataset"></a>Almacenar en caché un conjunto de datos compartido
   Una manera de mejorar el rendimiento es configurar las propiedades de almacenamiento en caché para un conjunto de datos compartido. Cuando un conjunto de datos compartido se almacena en memoria caché, se guarda una copia de los resultados de la consulta durante un breve período de tiempo. El primer usuario que solicite un informe que utilice el conjunto de datos compartido debe esperar a que los resultados de la consulta y todo el procesamiento se completen antes de ver el informe. Los usuarios subsiguientes que solicitan el informe dentro del período de almacenamiento en caché experimentarán mejor rendimiento porque la consulta y el procesamiento ya se han producido. También puede especificar un plan de actualización de la memoria caché para ejecutar la consulta y almacenar en memoria caché los resultados hasta que expire la memoria caché especificada.  
@@ -25,7 +25,7 @@ ms.locfileid: "84547917"
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>Para programar la expiración de un informe en caché  
   
-1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](../web-portal-ssrs-native-mode.md).  
   
 2.  En el Administrador de informes, navegue al conjunto de datos compartidos para el que desea establecer propiedades de almacenamiento en caché, mantenga el mouse sobre el elemento y haga clic en la flecha de lista desplegable.  
   
@@ -44,5 +44,4 @@ ms.locfileid: "84547917"
   
 ## <a name="see-also"></a>Consulte también  
  [Administración de conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md)  
-  
   

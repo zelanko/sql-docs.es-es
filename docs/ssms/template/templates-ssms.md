@@ -19,12 +19,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 60b44b3676f7943cb6a2e5c1fdb7981ca47c965f
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 4662b6e9bcea26bc93ab0d5bf07a767797a98d70
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522997"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035943"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>Uso de plantillas en SQL Server Management Studio
 
@@ -34,7 +34,7 @@ En este tutorial se presentan las plantillas predefinidas de Transact-SQL (T-SQL
 
 Para llevar a cabo este tutorial, necesita tener SQL Server Management Studio, así como acceso a un servidor SQL Server.
 
-* Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Instale [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 
 * Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
@@ -118,7 +118,7 @@ También puede crear una plantilla en Explorador de plantillas. En los siguiente
 
 La mejor forma de familiarizarse con SSMS es practicar. Estos *tutoriales* y artículos de *procedimientos* lo ayudan con varias características disponibles dentro de SSMS.  Estos artículos le mostrarán cómo administrar los componentes de SSMS y cómo localizar las características que utiliza habitualmente.
 
-* [Conexión a una instancia y realización de consultas](../tutorials/connect-query-sql-server.md)
+* [Conexión a una instancia y realización de consultas](../quickstarts/connect-query-sql-server.md)
 * [Scripting](../tutorials/scripting-ssms.md)
 * [Configuración de SSMS](../tutorials/ssms-configuration.md)
 * [Otras recomendaciones y trucos al usar SSMS](../tutorials/ssms-tricks.md)

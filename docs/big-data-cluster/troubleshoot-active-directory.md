@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 269e886708ec82211a4e29ac8b1e492d9f69cc98
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772880"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891075"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>Solución de problemas de integración de Active Directory de un clúster de macrodatos de SQL Server
 
@@ -123,7 +123,7 @@ Para identificar por qué se ha salido de la implementación sin crear los pods 
 
 ## <a name="cause"></a>Causa
 
-En el ejemplo anterior, se produce un error en la implementación al crear un inicio de sesión para el usuario del dominio porque el ámbito del grupo de dominio es el dominio local. Use grupos de ámbito universal o global. En [Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en modo de Active Directory](deploy-active-directory.md) se explican los requisitos de ámbito de los grupo de AD.
+En el ejemplo anterior, se produce un error en la implementación al crear un inicio de sesión para el usuario del dominio porque el ámbito del grupo de dominio es el dominio local. Use grupos de ámbito universal o global. En [Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en modo de Active Directory](active-directory-deploy.md) se explican los requisitos de ámbito de los grupo de AD.
 
 ## <a name="verify"></a>Verify
 

@@ -45,12 +45,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: c3513b7209cc5f79aa26486540c236ac7b7dca1c
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 89088af9d3758a710db5bd1ee313835087bad832
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288327"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987711"
 ---
 # <a name="sql-server-2019-hardware-and-software-requirements"></a>SQL Server 2019: Requisitos de hardware y de software
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -97,7 +97,7 @@ El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 
 > [!IMPORTANT]
-> Existen otros requisitos de hardware y software para la característica PolyBase. Para obtener más información, vea [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
+> Existen otros requisitos de hardware y software para la característica PolyBase. Para obtener más información, vea [Introducción a PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
 
 ##  <a name="operating-system-support"></a><a name="TOP_Principal"></a> Sistemas operativos admitidos 
@@ -176,7 +176,7 @@ Para obtener más información sobre cómo instalar SQL Server en Server Core, v
     - En la actualidad, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite unidades de disco con tamaños de sector nativo estándar de 512 bytes y 4 KB.  En los discos duros con tamaños de sector mayores de 4 KB se pueden producir errores al intentar almacenar archivos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en ellos.  Vea [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/kb/926930) (Límites de compatibilidad de tamaños de sector de unidades de disco duro en SQL Server) para obtener más información sobre la compatibilidad de tamaños de sector de disco duro en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
     - La instalación de clústeres de conmutación por error de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el disco local solo para instalar los archivos tempdb. Asegúrese de que la ruta de acceso especificada para los archivos de datos y registro de tempdb es válida en todos los nodos del clúster. Durante la conmutación por error, si los directorios de tempdb no están disponibles en el nodo de destino de la conmutación por error, el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no podrá ponerse en línea.
 - Almacenamiento compartido  
-- [Espacios de almacenamiento directo \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)  
+- [Espacios de almacenamiento directo \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)  
 - Recurso compartido de archivos SMB  
     - El almacenamiento SMB no se admite para los archivos de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en instalaciones independientes o en clúster. En su lugar, use almacenamiento de conexión directa, una red de área de almacenamiento o S2D. 
     - El almacenamiento SMB podría estar hospedado en un servidor de archivos Windows o en un dispositivo de almacenamiento SMB de terceros. Si se utiliza un servidor de archivos Windows, la versión de Windows File Server debería ser 2008 o posterior. Para obtener más información sobre la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un recurso compartido de archivos SMB como opción de almacenamiento, vea [Instalar SQL Server con el recurso compartido de archivos SMB como opción de almacenamiento](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
@@ -206,5 +206,3 @@ Como alternativa, puede crear una máquina virtual de [Azure que ya ejecute SQL�
 ## <a name="next-steps"></a>Pasos siguientes
 
 Una vez que haya revisado los requisitos de hardware y software para instalar SQL Server, puede empezar a [planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md) o revisar las [consideraciones de seguridad para SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).
-
-

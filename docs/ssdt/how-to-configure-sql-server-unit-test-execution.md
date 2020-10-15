@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 51e2fc3b5e95fe022bd758d72fefb34611db0b79
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: b2d0b76423ab5a391351783970a6c9a057896bf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519035"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987971"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Procedimientos: Configuración de una ejecución de prueba unitaria de SQL Server
 
@@ -30,7 +30,7 @@ Estos valores controlan cómo se conecta la prueba a la base de datos que probar
 -   **Esquema de implementación**. Un proyecto de base de datos es una representación sin conexión de la base de datos. El proyecto de base de datos representa la estructura de los objetos de base de datos pero no contiene datos. Después de realizar cambios de esquema en un proyecto de base de datos, puede probarlos en una base de datos actual. En el paso de la implementación del esquema, los objetos de base de datos que desea probar se copian del proyecto de base de datos en el que se ejecutan las pruebas. Para más información sobre la implementación del esquema, consulte [Implementar un esquema de la base de datos](#DeployingDBSchema).  
   
     > [!NOTE]  
-    > Las pruebas no se ejecutan en la carpeta de la solución, sino en una carpeta independiente en el disco duro local. Aunque se pueden configurar algunos aspectos de la implementación de prueba, normalmente no es necesario configurarlos para las pruebas unitarias. Para más información acerca de la implementación de prueba, consulte [Ejecutar pruebas](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
+    > Las pruebas no se ejecutan en la carpeta de la solución, sino en una carpeta independiente en el disco duro local. Aunque se pueden configurar algunos aspectos de la implementación de prueba, normalmente no es necesario configurarlos para las pruebas unitarias. Para más información acerca de la implementación de prueba, consulte [Ejecutar pruebas](/previous-versions/visualstudio/visual-studio-2010/dd286680(v=vs.100)).  
   
 ## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>Especificar cadenas de conexión  
   
@@ -85,4 +85,3 @@ Estos valores controlan cómo se conecta la prueba a la base de datos que probar
 ## <a name="see-also"></a>Consulte también  
 [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Comprobar el código de base de datos con pruebas unitarias de SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

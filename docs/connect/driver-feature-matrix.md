@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: 4071353214f7ffde54ecd1097defaa6c60aa19d6
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 6a781688b4fc24f8b79f3820fbcc3dc339b6c068
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823360"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081434"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Matriz de compatibilidad de características del controlador para Microsoft SQL Server
 
@@ -51,8 +51,8 @@ Queremos que todos los controladores admitan todas las características y dedica
 | [Conjuntos de resultados activos múltiples (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [Sí](ado-net/sql/multiple-active-result-sets-mars.md) | [Sí](ado-net/sql/multiple-active-result-sets-mars.md) | [Sí](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) | [Sí](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) |
 | [Tipo de datos espaciales](../relational-databases/spatial/spatial-data-sql-server.md) | | Sí | | Sí |
 | [Parámetros con valores de tabla (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Sí](ado-net/sql/table-valued-parameters.md) | [Sí](ado-net/sql/table-valued-parameters.md) | [Sí](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [Sí](/dotnet/framework/data/adonet/sql/table-valued-parameters) |
-| [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Sí](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Sí](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Sí](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netcore-1.0) | [Sí](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netframework-4.8) |
-| [Resolución de IP de red transparente](odbc/using-transparent-network-ip-resolution.md) | | [Sí](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring?view=sqlclient-dotnet-1.1) | | [Sí](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=netframework-4.8) |
+| [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Sí](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Sí](ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Sí](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netcore-1.0&preserve-view=true) | [Sí](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover?view=netframework-4.8&preserve-view=true) |
+| [Resolución de IP de red transparente](odbc/using-transparent-network-ip-resolution.md) | | [Sí](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring?view=sqlclient-dotnet-1.1&preserve-view=true) | | [Sí](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring?view=netframework-4.8&preserve-view=true) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 | <a id="table2"></a>Característica | [ODBC Driver for SQL Server en Windows](odbc/microsoft-odbc-driver-for-sql-server.md) | [ODBC Driver for SQL Server en Linux y macOS](odbc/microsoft-odbc-driver-for-sql-server.md) | [Controlador JDBC en SQL Server](jdbc/microsoft-jdbc-driver-for-sql-server.md) | [Controlador OLE DB para SQL Server](oledb/oledb-driver-for-sql-server.md) |

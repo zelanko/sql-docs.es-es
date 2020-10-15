@@ -11,12 +11,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aeeaf52d389da8bb58d4b76bfbe85957cbd832dd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 623c0e6b5a1bafa033ddc9a6fd34a1911d6ecf5b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111128"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988541"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -30,27 +30,27 @@ SQL Server 2014 SP2 contiene acumulaciones de las revisiones publicadas de SQL S
 
 |Característica|Descripción|Para obtener más información|
 |---|---|---|
-|Particionamiento automático de Soft NUMA|Puede configurar automáticamente Soft NUMA en los sistemas que notifican ocho o más CPU por nodo NUMA.|[Soft-NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
-|Buffer Pool Extension|Permite al grupo de búferes de SQL Server escalar más allá de 8 TB.|[Extensión del grupo de búferes](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
-|Escalado de objetos de memoria dinámica| Particiones dinámicas de objeto de memoria según el número de nodos y de núcleos. Esta mejora elimina la necesidad de la marca de seguimiento 8048 después de SQL 2014 SP2.|[Escalado de objetos de memoria dinámica](https://blogs.msdn.microsoft.com/sql_server_team/dynamic-memory-object-scaling/)|
-|Sugerencia MAXDOP para los comandos DBCC CHECK*|Esta mejora es útil para ejecutar DBCC CHECKDB con una opción MAXDOP que no sea el valor sp_configure.|[Sugerencias (Transact-SQL): consulta](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)|
-|Mejora en el bloqueo por subproceso de SOS_RWLock|Elimina la necesidad de efectuar un bloqueo por subproceso en SOS_RWLock y aplica técnicas similares a OLTP en memoria. |[SOS_RWLock Redesign](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)|
+|Particionamiento automático de Soft NUMA|Puede configurar automáticamente Soft NUMA en los sistemas que notifican ocho o más CPU por nodo NUMA.|[Soft-NUMA (SQL Server)](../database-engine/configure-windows/soft-numa-sql-server.md)|
+|Buffer Pool Extension|Permite al grupo de búferes de SQL Server escalar más allá de 8 TB.|[Extensión del grupo de búferes](../database-engine/configure-windows/buffer-pool-extension.md)|
+|Escalado de objetos de memoria dinámica| Particiones dinámicas de objeto de memoria según el número de nodos y de núcleos. Esta mejora elimina la necesidad de la marca de seguimiento 8048 después de SQL 2014 SP2.|[Escalado de objetos de memoria dinámica](/archive/blogs/sql_server_team/dynamic-memory-object-scaling)|
+|Sugerencia MAXDOP para los comandos DBCC CHECK*|Esta mejora es útil para ejecutar DBCC CHECKDB con una opción MAXDOP que no sea el valor sp_configure.|[Sugerencias (Transact-SQL): consulta](../t-sql/queries/hints-transact-sql-query.md)|
+|Mejora en el bloqueo por subproceso de SOS_RWLock|Elimina la necesidad de efectuar un bloqueo por subproceso en SOS_RWLock y aplica técnicas similares a OLTP en memoria. |[SOS_RWLock Redesign](/archive/blogs/psssql/sql-2016-it-just-runs-faster-sos_rwlock-redesign)|
 |Implementación nativa espacial|Mejora significativa en el rendimiento de las consultas espaciales.|[Mejoras en el rendimiento espacial en SQL Server 2012 y 2014](https://support.microsoft.com/help/3107399/spatial-performance-improvements-in-sql-server-2012-and-2014)
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>Mejoras de compatibilidad y diagnóstico en SP2
 
 |Característica|Descripción|Para obtener más información|
 |---|---|---|
-|Registro del tiempo de espera de AlwaysON|Se ha incorporado una nueva capacidad de registro para los mensajes de tiempo de espera de concesión para que se registre el tiempo actual y los tiempos de renovación previstos. |[Diagnóstico mejorado del tiempo de espera de concesión de los grupos de disponibilidad AlwaysOn](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)
+|Registro del tiempo de espera de AlwaysON|Se ha incorporado una nueva capacidad de registro para los mensajes de tiempo de espera de concesión para que se registre el tiempo actual y los tiempos de renovación previstos. |[Diagnóstico mejorado del tiempo de espera de concesión de los grupos de disponibilidad AlwaysOn](/archive/blogs/alwaysonpro/improved-alwayson-availability-group-lease-timeout-diagnostics)
 |XEvents y contadores de rendimiento AlwaysOn|Nuevos contadores de rendimiento y XEvents AlwaysOn para mejorar el diagnóstico al solucionar problemas de latencia con AlwaysOn. |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) y [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)
 |Limpieza de seguimiento de cambios|Un nuevo procedimiento almacenado sp_flush_CT_internal_table_on_demand limpia las tablas internas de seguimiento de cambios a petición.|[KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)
 |Clonación de bases de datos|Puede usar el nuevo comando DBCC para solucionar problemas de bases de datos de producción existentes clonando el esquema, los metadatos y las estadísticas, pero sin los datos. Las bases de datos clonadas no están diseñadas para usarse en entornos de producción.|[KB 3177838](https://support.microsoft.com/help/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)
 |Adiciones de DMF|La nueva DMF sys.dm_db_incremental_stats_properties expone información por cada partición para las estadísticas incrementales.|[KB 3170114](https://support.microsoft.com/help/3170114/update-to-add-dmf-sys-dm-db-incremental-stats-properties-in-sql-server)
-|DMF para recuperar el búfer de entrada en SQL Server|Ahora está disponible una nueva DMF para recuperar el búfer de entrada de una sesión o solicitud (sys.dm_exec_input_buffer). Es funcionalmente equivalente a DBCC INPUTBUFFER.|[sys.dm_exec_input_buffer](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql)
+|DMF para recuperar el búfer de entrada en SQL Server|Ahora está disponible una nueva DMF para recuperar el búfer de entrada de una sesión o solicitud (sys.dm_exec_input_buffer). Es funcionalmente equivalente a DBCC INPUTBUFFER.|[sys.dm_exec_input_buffer](../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
 |Compatibilidad con DROP DDL para la replicación|Permite quitar de la base de datos y de la publicación una tabla que se incluye como un artículo en una publicación de replicación transaccional.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
-|Privilegio de IFI en la cuenta de servicio de SQL|Determina si la inicialización instantánea de archivos (IFI) está en vigor al iniciar el servicio SQL Server.|[Inicialización de archivos de base de datos](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
+|Privilegio de IFI en la cuenta de servicio de SQL|Determina si la inicialización instantánea de archivos (IFI) está en vigor al iniciar el servicio SQL Server.|[Inicialización de archivos de base de datos](../relational-databases/databases/database-instant-file-initialization.md)
 |Concesiones de memoria: gestión de problemas|Puede aprovechar las sugerencias de diagnóstico durante la ejecución de consultas restringiendo sus concesiones de memoria para evitar la contención de la memoria.|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
-|Generación de perfiles ligera por cada operador en la ejecución de consultas |Optimiza la recopilación de estadísticas de ejecución de consultas por cada operador (por ejemplo, el número real de filas).|[Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar)
+|Generación de perfiles ligera por cada operador en la ejecución de consultas |Optimiza la recopilación de estadísticas de ejecución de consultas por cada operador (por ejemplo, el número real de filas).|[Developers Choice: Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar)
 |Diagnóstico de la ejecución de consultas|El número real de filas leídas ahora se notifica en los planes de ejecución de consultas para mejorar la resolución de problemas del rendimiento de las consultas.|[KB 3107397](https://support.microsoft.com/help/3107397/improved-diagnostics-for-query-execution-plans-that-involve-residual-p)
 |Diagnóstico de la ejecución de consultas para el desbordamiento de tempdb|Las advertencias hash y las advertencias de ordenación ahora tienen más columnas para realizar el seguimiento de estadísticas de E/S física, la memoria usada y las filas afectadas. |[Mejora del diagnóstico del desbordamiento de temptdb](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
 |Compatibilidad con tempdb |Puede usar un nuevo mensaje de registro de errores para el número de archivos de tempdb y los cambios del archivo de datos de tempdb al iniciar el servidor.|[KB 2963384](https://support.microsoft.com/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)
@@ -82,7 +82,7 @@ SQL Server 2014 SP1 contiene revisiones proporcionadas en SQL Server 2014 CU 1 h
 ### <a name="download-pages-and-more-information-for-sp1"></a>Páginas de descarga y más información para SP1
 
 - [Descargar Service Pack 1 para Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=46694)
-- [Se ha publicado SQL Server 2014 Service Pack 1: actualización](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
+- [Se ha publicado SQL Server 2014 Service Pack 1: actualización](/archive/blogs/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated)
 - [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
 - [Feature Pack de Microsoft SQL Server 2014 SP1](https://www.microsoft.com/download/details.aspx?id=46696)
 
@@ -103,7 +103,7 @@ La actualización es totalmente compatible. En concreto, puede:
 1.  Adjuntar una base de datos de SQL Server 2014 CTP 2 a una instancia de SQL Server 2014 RTM.    
 2.  Restaurar una copia de seguridad de una base de datos realizada en SQL Server 2014 CTP 2 en una instancia de SQL Server 2014 RTM.    
 3.  Actualizar en contexto a SQL Server 2014 RTM.
-4.  Realizar una actualización gradual a SQL Server 2014 RTM. Es necesario cambiar al modo de conmutación por error manual antes de iniciar la actualización gradual. Vea [Actualizar servidores de un grupo de disponibilidad con una pérdida de datos y un tiempo de inactividad mínimos](https://msdn.microsoft.com/library/dn178483.aspx) para obtener más detalles.    
+4.  Realizar una actualización gradual a SQL Server 2014 RTM. Es necesario cambiar al modo de conmutación por error manual antes de iniciar la actualización gradual. Vea [Actualizar servidores de un grupo de disponibilidad con una pérdida de datos y un tiempo de inactividad mínimos](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md) para obtener más detalles.    
 5.  Los datos recopilados por los conjuntos de recopilación de rendimiento de transacción instalados en SQL Server 2014 CTP 2 no se pueden ver mediante SQL Server Management Studio en SQL Server 2014 RTM y viceversa.
   
 #### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>Degradar de SQL Server 2014 RTM a SQL Server 2014 CTP 2  
@@ -158,7 +158,7 @@ SQL Server 2014 Standard incluye los cambios siguientes:
 -   La memoria máxima se ha ampliado de 64 a 128 GB.  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>El Asesor de optimización para memoria marca las restricciones DEFAULT como incompatibles  
-**Problema:** el Asesor de optimización para memoria de SQL Server Management Studio marca todas las restricciones DEFAULT como incompatibles. En una tabla optimizada para memoria no se admiten todas las restricciones DEFAULT; el asesor no distingue entre los tipos admitidos y no admitidos de las restricciones DEFAULT. Entre las restricciones DEFAULT admitidas se incluyen todas las constantes, expresiones y funciones integradas que se admiten dentro de los procedimientos almacenados compilados de forma nativa. Para ver la lista de funciones admitidas en los procedimientos almacenados compilados de forma nativa, vea [Construcciones admitidas en procedimientos almacenados compilados de forma nativa](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
+**Problema:** el Asesor de optimización para memoria de SQL Server Management Studio marca todas las restricciones DEFAULT como incompatibles. En una tabla optimizada para memoria no se admiten todas las restricciones DEFAULT; el asesor no distingue entre los tipos admitidos y no admitidos de las restricciones DEFAULT. Entre las restricciones DEFAULT admitidas se incluyen todas las constantes, expresiones y funciones integradas que se admiten dentro de los procedimientos almacenados compilados de forma nativa. Para ver la lista de funciones admitidas en los procedimientos almacenados compilados de forma nativa, vea [Construcciones admitidas en procedimientos almacenados compilados de forma nativa](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md?viewFallbackFrom=sql-server-2014).  
   
 **Solución alternativa:** si quiere usar el asesor para identificar bloqueadores, omita las restricciones DEFAULT compatibles. Para usar el Asesor de optimización para memoria con el fin de migrar tablas que tienen restricciones DEFAULT compatibles, pero no otros bloqueadores, siga estos pasos:  
   
@@ -348,7 +348,7 @@ Este problema se debe a que los agentes de escucha de los grupos de disponibilid
   
     Esta solución alternativa permitirá que el asistente agregue la réplica a Azure.  
   
-2.  Cuando se complete el asistente, necesitará finalizar la configuración del agente de escucha en Azure como se describe en [Configuración del agente de escucha de los Grupos de disponibilidad AlwaysOn en Azure](https://msdn.microsoft.com/library/dn376546.aspx).  
+2.  Cuando se complete el asistente, necesitará finalizar la configuración del agente de escucha en Azure como se describe en [Configuración del agente de escucha de los Grupos de disponibilidad AlwaysOn en Azure](/previous-versions/azure/dn376546(v=azure.100)).  
   
 ### <a name="analysis-services-rtm"></a><a name="SSAS"></a>Analysis Services (RTM)
   
@@ -361,7 +361,7 @@ Este problema se debe a que los agentes de escucha de los grupos de disponibilid
   
 1.  Descargue el proveedor MSOLAP.5 desde [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale el proveedor en los servidores de aplicaciones que ejecutan Excel Services. Para obtener más información, vea la sección "Proveedor OLE DB de Microsoft Analysis Services para Microsoft SQL Server 2012 SP1" de [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Registre MSOLAP.5 como proveedor de confianza con Servicios de Excel de SharePoint. Para obtener más información, vea [Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
+2.  Registre MSOLAP.5 como proveedor de confianza con Servicios de Excel de SharePoint. Para obtener más información, vea [Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15).  
   
 **Más información:**  
   
@@ -376,7 +376,7 @@ Este problema se debe a que los agentes de escucha de los grupos de disponibilid
   
 1.  Descargue el proveedor MSOLAP.5 desde [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale el proveedor en los servidores de aplicaciones que ejecutan Excel Services. Para obtener más información, vea la sección "Proveedor OLE DB de Microsoft Analysis Services para Microsoft SQL Server 2012 SP1" de [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Registre MSOLAP.5 como proveedor de confianza con Servicios de Excel de SharePoint. Para obtener más información, vea [Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
+2.  Registre MSOLAP.5 como proveedor de confianza con Servicios de Excel de SharePoint. Para obtener más información, vea [Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15).  
   
 **Más información:**  
   

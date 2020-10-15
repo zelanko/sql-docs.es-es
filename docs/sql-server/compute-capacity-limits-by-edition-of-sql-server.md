@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 89a0398fe2e76e02daa123edfaef725de121760f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f169f8a88c13cc6b12b060405285c963dd9524e3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918830"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988075"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Límites de la capacidad de cálculo de cada edición de SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +97,7 @@ Puede que quiera deshabilitar el hyperthreading cuando el rendimiento de cada pr
  [Ediciones y componentes de SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Especificaciones de capacidad máxima para SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [Quick-Start Installation of SQL Server 2016](https://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81) (Instalación rápida de SQL Server 2016)  
+ [Quick-Start Installation of SQL Server 2016](../database-engine/install-windows/install-sql-server.md) (Instalación rápida de SQL Server 2016)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

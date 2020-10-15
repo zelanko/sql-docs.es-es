@@ -1,6 +1,6 @@
 ---
 description: cdc.captured_columns (Transact-SQL)
-title: CDC. captured_columns (Transact-SQL) | Microsoft Docs
+title: cdc.captured_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 675d6934c468b4f2a4574b82e79c203ab4796c9a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3337ab3e4b4c2221c018c326762251ff954b329d
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538372"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081494"
 ---
 # <a name="cdccaptured_columns-transact-sql"></a>cdc.captured_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Devuelve una fila para cada columna de la que se ha realizado un seguimiento en una instancia de captura. De forma predeterminada, se capturan todas las columnas de la tabla de origen. Sin embargo, se podrán incluir o excluir columnas si la tabla de origen está habilitada para la captura de datos modificados especificando una lista de columnas. Para obtener más información, vea [Sys. sp_cdc_enable_table &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
+  Devuelve una fila para cada columna de la que se ha realizado un seguimiento en una instancia de captura. De forma predeterminada, se capturan todas las columnas de la tabla de origen. Sin embargo, se podrán incluir o excluir columnas si la tabla de origen está habilitada para la captura de datos modificados especificando una lista de columnas. Para obtener más información, vea [sys.sp_cdc_enable_table &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   
- Se recomienda **no consultar directamente las tablas del sistema**. En su lugar, ejecute el procedimiento almacenado [Sys. sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md) .  
+ Se recomienda **no consultar directamente las tablas del sistema**. En su lugar, ejecute el procedimiento almacenado [Sys.sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md) .  
    
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|Id. de la tabla de origen a la que pertenece la columna capturada.|  
+|**object_id**|**int**|IDENTIFICADOR de la tabla de cambios a la que pertenece la columna capturada.|  
 |**column_name**|**sysname**|Nombre de la columna capturada.|  
 |**column_id**|**int**|Id. de la columna capturada dentro de la tabla de origen.|  
 |**column_type**|**sysname**|Tipo de columna capturada.|  
@@ -42,6 +42,6 @@ ms.locfileid: "89538372"
 |**is_computed**|**bit**|Indica que la columna capturada es una columna calculada en la tabla de origen.|  
   
 ## <a name="see-also"></a>Consulte también  
- [CDC. change_tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
+ [cdc.change_tables &#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
   
   

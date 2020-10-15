@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 38439c3eff4eee2eef3b3e39f7b2b2b5454b2bec
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a4c7664c35d4c98ebcf8f8ae4a57d2948a83624c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727453"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081524"
 ---
 # <a name="data-classification"></a>Clasificación de datos
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "91727453"
 ## <a name="overview"></a>Información general
 Con el fin de administrar datos confidenciales, SQL Server y Azure SQL Server presentaron la capacidad de proporcionar columnas de base de datos con metadatos confidenciales que permiten a la aplicación cliente administrar diferentes tipos de datos confidenciales (como datos de mantenimiento, financieros, etc.) según las directivas de protección de datos.
 
-Para obtener más información sobre cómo asignar una clasificación a las columnas, consulte [Clasificación y detección de datos de SQL](../../relational-databases/security/sql-data-discovery-and-classification.md?view=sql-server-2017).
+Para obtener más información sobre cómo asignar una clasificación a las columnas, consulte [Clasificación y detección de datos de SQL](../../relational-databases/security/sql-data-discovery-and-classification.md).
 
 Microsoft ODBC Driver 17.2 permite la recuperación de estos metadatos a través de SQLGetDescField mediante el identificador de campo SQL_CA_SS_DATA_CLASSIFICATION.
 

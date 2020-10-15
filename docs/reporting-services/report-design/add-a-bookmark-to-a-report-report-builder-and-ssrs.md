@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e79359d8d9cdfb6af624f86fca5ca2a5648ecb10
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: c3922a25108de54db68075589a5832a2f90832b7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779507"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934036"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>Agregar un marcador a un informe (Generador de informes y SSRS)
   Agregue marcadores y vínculos de marcador a un informe si desea incluir una tabla de contenido personalizada o vínculos de navegación interna personalizados en el informe. Normalmente, se agregan marcadores a las ubicaciones del informe a las que se desea dirigir a los usuarios, como las tablas, los gráficos o los valores de grupo únicos mostrados en una tabla o matriz. Puede crear sus propias cadenas para usarlas como marcadores o, para los grupos, puede establecer el marcador en la expresión de grupo.  
@@ -23,7 +23,7 @@ ms.locfileid: "84779507"
   
  Por ejemplo, si el informe muestra una tabla agrupada por color, podría agregar un marcador basado en la expresión de grupo al encabezado de grupo. A continuación, agregaría una tabla con un único cuadro de texto al principio del informe que mostrase los valores de color y establecería el vínculo de marcador en dicho cuadro de texto. Al hacer clic en el color, el informe saltará a la página que muestra la fila del encabezado de grupo para ese color.  
   
- Puede agregar un marcador a cualquier elemento de informe y un vínculo de marcador a cualquier elemento que tenga una propiedad **Action** , como por ejemplo, un cuadro de texto, una imagen o una serie calculada en un gráfico. Para más información vea [Cuadro de diálogo Propiedades de acción &#40;Generador de informes y SSRS&#41;](https://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9).  
+ Puede agregar un marcador a cualquier elemento de informe y un vínculo de marcador a cualquier elemento que tenga una propiedad **Action** , como por ejemplo, un cuadro de texto, una imagen o una serie calculada en un gráfico. Para más información vea [Cuadro de diálogo Propiedades de acción &#40;Generador de informes y SSRS&#41;](./add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -57,5 +57,4 @@ ms.locfileid: "84779507"
  [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
-  
   

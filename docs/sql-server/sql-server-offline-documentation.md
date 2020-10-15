@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.date: 08/12/2020
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1a933145d646c8e8a0c65151eaff7307066a223d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7ca5fa6785257de26e173a1946045109f00fbd7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550595"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986366"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>Instalación de la documentación de SQL Server para la vista sin conexión en SSMS
 
@@ -22,7 +22,7 @@ ms.locfileid: "89550595"
 
 En este artículo se describe cómo descargar y ver el contenido de SQL Server sin conexión en [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). El contenido sin conexión le permite acceder a la documentación sin conexión a Internet (aunque se necesita una conexión a Internet para descargarla).
 
-La documentación sin conexión está disponible para las versiones de SQL Server 2012 y posteriores. Aunque puede ver el contenido de las [versiones anteriores en línea](https://docs.microsoft.com/previous-versions/sql/), una opción sin conexión proporciona una manera cómoda de acceder al contenido anterior.
+La documentación sin conexión está disponible para las versiones de SQL Server 2012 y posteriores. Aunque puede ver el contenido de las [versiones anteriores en línea](/previous-versions/sql/), una opción sin conexión proporciona una manera cómoda de acceder al contenido anterior.
 
 - [SQL Server 2016 y versiones posteriores](#sql-server-2016-and-later-offline-content)
 - [SQL Server 2014](#sql-server-2014-offline-content)
@@ -171,6 +171,6 @@ Revise el ciclo de vida de los productos de Microsoft para obtener información 
 Para obtener más información sobre el contenido archivado y el visor de la Ayuda, vea los siguientes vínculos.
 
 - [Documentación en línea de SQL Server](../sql-server/index.yml?view=sql-server-2016&preserve-view=true)
-- [Documentación en línea de SQL Server 2014](https://docs.microsoft.com/previous-versions/sql/2014)
+- [Documentación en línea de SQL Server 2014](/previous-versions/sql/2014)
 - [Versiones anteriores de la documentación en línea de SQL Server](previous-versions-sql-server.md)
 - [Control del sistema de versiones de la documentación de SQL](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016&preserve-view=true)

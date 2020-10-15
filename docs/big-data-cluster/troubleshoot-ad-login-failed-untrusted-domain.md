@@ -9,12 +9,12 @@ ms.date: 05/01/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2cc173ca162ea69e65bce477f83e5ff6f75ac69a
-ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
+ms.openlocfilehash: 669d8f050c3dd86d733c33741eb6fc846245aff2
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82785274"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891045"
 ---
 # <a name="symptom-ad-mode-login-fails---untrusted-domain-big-data-clusters"></a>Síntoma: Error de inicio de sesión en el modo de AD: dominio que no es de confianza (clústeres de macrodatos)
 
@@ -203,4 +203,4 @@ Después de resolver el problema con una de las opciones anteriores, confirme qu
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Comprobación de la entrada de DNS inverso (registro PTR) para el controlador de dominio](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller).
+[Comprobación de la entrada de DNS inverso (registro PTR) para el controlador de dominio](active-directory-deploy.md#verify-reverse-dns-entry-for-domain-controller).

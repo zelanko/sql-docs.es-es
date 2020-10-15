@@ -10,16 +10,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e34ca98e6a6a9423bd0237c980e15b91fcdd9aa6
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: ae0b544fb49a1161699a1a9e2d152abea2d847bb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518895"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985943"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procedimientos: Creación de condiciones de prueba para el Diseñador de pruebas unitarias de SQL Server
 
-Puede usar la clase extensible [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) para crear nuevas condiciones de prueba. Por ejemplo, puede crear una nueva condición de prueba que compruebe el número de columnas o los valores de un conjunto de resultados.  
+Puede usar la clase extensible [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) para crear nuevas condiciones de prueba. Por ejemplo, puede crear una nueva condición de prueba que compruebe el número de columnas o los valores de un conjunto de resultados.  
   
 ## <a name="to-create-a-test-condition"></a>Para crear una condición de prueba  
 En este procedimiento se explica cómo crear una condición de prueba de manera que aparezca en el Diseñador de pruebas unitarias de SQL Server.  
@@ -47,9 +47,9 @@ En este procedimiento se explica cómo crear una condición de prueba de manera 
   
 9. Guarde el archivo y ciérrelo. Haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y elija **Volver a cargar el proyecto**.  
   
-10. Derive la clase de la clase [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx).  
+10. Derive la clase de la clase [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)).  
   
-11. Firme el ensamblado con un nombre seguro. Para más información, vea: [Cómo: Firmar un ensamblado con un nombre seguro](https://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Firme el ensamblado con un nombre seguro. Para más información, vea: [Cómo: Firmar un ensamblado con un nombre seguro](/dotnet/standard/assembly/sign-strong-name).  
   
 12. Compile la biblioteca de clases.  
   
@@ -172,9 +172,9 @@ namespace Ssdt.Samples.SqlUnitTesting
 }  
 ```  
   
-La clase de la condición de prueba personalizada hereda de la clase base [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). Debido a las propiedades adicionales de la condición de prueba personalizada, los usuarios pueden configurar la condición desde la ventana Propiedades después de haber instalado la condición.  
+La clase de la condición de prueba personalizada hereda de la clase base [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)). Debido a las propiedades adicionales de la condición de prueba personalizada, los usuarios pueden configurar la condición desde la ventana Propiedades después de haber instalado la condición.  
   
-[ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) debe agregarse a clases que extiendan [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx). Este atributo permite que SQL Server Data Tools detecte la clase y la use durante el diseño y la ejecución de pruebas unitarias. El atributo toma dos parámetros:  
+[ExportTestConditionAttribute](/previous-versions/sql/sql-server-data-tools/jj856578(v=vs.103)) debe agregarse a clases que extiendan [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)). Este atributo permite que SQL Server Data Tools detecte la clase y la use durante el diseño y la ejecución de pruebas unitarias. El atributo toma dos parámetros:  
   
 |Parámetro del atributo|Posición|Descripción|  
 |-----------------------|------------|---------------|  
@@ -205,4 +205,3 @@ Debe establecer la biblioteca de clases que contiene la condición de prueba que
   
 ## <a name="see-also"></a>Consulte también  
 [Condiciones de prueba personalizadas para pruebas unitarias de SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
-  

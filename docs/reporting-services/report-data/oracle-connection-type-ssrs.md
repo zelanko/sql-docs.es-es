@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32972e17c7dee83c1099cf8826eefe874db9d7dd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 425f864e31f1280fd31852de44a40d5e2d5c61ef
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246484"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891725"
 ---
 # <a name="oracle-connection-type-ssrs--power-bi-report-server"></a>Tipo de conexión de Oracle (SSRS y Power BI Report Server)
 
@@ -114,7 +114,7 @@ Data Source="Oracle"; Unicode="True"
   
  Para más información, consulte los siguientes artículos.  
   
--   [Cómo usar Reporting Services para tener acceso a un origen de datos de Oracle y configurarlo](https://docs.microsoft.com/archive/blogs/dataaccesstechnologies/configure-oracle-data-source-for-sql-server-reporting-services-ssdt-and-report-server)  
+-   [Cómo usar Reporting Services para tener acceso a un origen de datos de Oracle y configurarlo](/archive/blogs/dataaccesstechnologies/configure-oracle-data-source-for-sql-server-reporting-services-ssdt-and-report-server)  
 -   [Cómo agregar permisos para la entidad de seguridad NETWORK SERVICE](https://support.microsoft.com/kb/870668)  
   
 ### <a name="alternate-data-extensions"></a>Extensiones de datos alternativas 
@@ -137,5 +137,4 @@ Data Source="Oracle"; Unicode="True"
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

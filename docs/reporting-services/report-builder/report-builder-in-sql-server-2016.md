@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f67cf34bd18dc6a2743822f66acbee1692000bdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f8c6cb06fd63f526de699d7c6050dacd1b5ff05b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290893"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891865"
 ---
 # <a name="report-builder-in-sql-server"></a>Generador de informes en SQL Server
 
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] es una herramienta de creación de informes paginados para usuarios profesionales que prefieren trabajar en un entorno independiente en lugar de usar el Diseñador de informes de Visual Studio o SSDT.  Al diseñar un informe paginado, crea una definición de informe que especifica qué datos recuperar, dónde obtenerlos y cómo visualizarlos. Al ejecutar el informe, el procesador de informes usa la definición de informe especificada, recupera los datos y los combina con el diseño del informe para generar el informe. Puede obtener una vista previa del informe en [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Después, el informe se publica en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint (2016 y versiones anteriores). 
 
-También puede publicar un informe paginado en el servicio Power BI. Obtenga más información sobre [informes paginados en Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (versión preliminar).
+También puede publicar un informe paginado en el servicio Power BI. Obtenga más información sobre [informes paginados en Power BI Premium](/power-bi/paginated-reports-report-builder-power-bi) (versión preliminar).
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -93,5 +93,3 @@ También puede publicar un informe paginado en el servicio Power BI. Obtenga má
   
  [Métodos abreviados de teclado &#40;Generador de informes&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  Se describen las teclas de método abreviado disponibles para navegar y diseñar informes en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
-  
-

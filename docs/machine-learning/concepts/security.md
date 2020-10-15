@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 61294897524a0e260e457cbf98e892cad940ca54
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: f51998b722748bdfe51b773e251de88c8cac07a2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989846"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956537"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Arquitectura de seguridad del marco de extensibilidad en SQL Server Machine Learning Services
 
@@ -153,7 +153,7 @@ Durante la ejecución, launchpad crea carpetas temporales para almacenar datos d
 
 ## <a name="appcontainer-isolation"></a>Aislamiento de AppContainer
 
-El aislamiento se consigue a través de instancias de [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). En tiempo de ejecución, cuando se detecta un script externo en un procedimiento almacenado o una consulta, SQL Server llama a launchpad con una solicitud para un iniciador específico de la extensión. Launchpad invoca el entorno de runtime adecuado en un proceso bajo su identidad y crea una instancia de AppContainer para que lo contenga. Este cambio es beneficioso porque ya no se requiere la administración de cuentas y contraseñas locales. Además, en las instalaciones en las que las cuentas de usuario locales están prohibidas, la eliminación de la dependencia de la cuenta de usuario local comporta la posibilidad de usar esta característica.
+El aislamiento se consigue a través de instancias de [AppContainer](/windows/desktop/secauthz/appcontainer-isolation). En tiempo de ejecución, cuando se detecta un script externo en un procedimiento almacenado o una consulta, SQL Server llama a launchpad con una solicitud para un iniciador específico de la extensión. Launchpad invoca el entorno de runtime adecuado en un proceso bajo su identidad y crea una instancia de AppContainer para que lo contenga. Este cambio es beneficioso porque ya no se requiere la administración de cuentas y contraseñas locales. Además, en las instalaciones en las que las cuentas de usuario locales están prohibidas, la eliminación de la dependencia de la cuenta de usuario local comporta la posibilidad de usar esta característica.
 
 Según la implementación de SQL Server, los contenedores AppContainer son un mecanismo interno. Aunque no verá ninguna evidencia física de los contenedores AppContainer en el monitor de procesos, podrá encontrarlos en las reglas de firewall de salida creadas por el programa de instalación para evitar que los procesos realicen llamadas de red. Para obtener más información, vea [Configuración de firewall para SQL Server Machine Learning Services](../../machine-learning/security/firewall-configuration.md).
 
@@ -216,7 +216,7 @@ En el diagrama siguiente se muestra la interacción de los componentes de SQL S
 
 La *autenticación implícita* describe el comportamiento de la solicitud de conexión en la que los procesos externos que se ejecutan en objetos AppContainer se presentan como una identidad de usuario de confianza para SQL Server en solicitudes de bucle invertido para datos u operaciones. Como concepto, la autenticación implícita ya no es exclusiva de la autenticación de Windows, en cadenas de conexión de SQL Server que especifican una conexión de confianza, en las solicitudes que se originan en procesos externos como el script de R o Python. A veces también se denomina *bucle invertido*.
 
-Mediante la administración de la identidad y las credenciales, AppContainer impide el uso de las credenciales de usuario para acceder a recursos o iniciar sesión en otros entornos. El entorno de AppContainer crea un identificador que usa las identidades combinadas del usuario y la aplicación, por lo que las credenciales son únicas para cada emparejamiento de usuario y aplicación, y la aplicación no puede suplantar al usuario. Para más información, vea [Aislamiento de AppContainer](https://docs.microsoft.com/windows/win32/secauthz/appcontainer-isolation).
+Mediante la administración de la identidad y las credenciales, AppContainer impide el uso de las credenciales de usuario para acceder a recursos o iniciar sesión en otros entornos. El entorno de AppContainer crea un identificador que usa las identidades combinadas del usuario y la aplicación, por lo que las credenciales son únicas para cada emparejamiento de usuario y aplicación, y la aplicación no puede suplantar al usuario. Para más información, vea [Aislamiento de AppContainer](/windows/win32/secauthz/appcontainer-isolation).
 
 Para obtener más información sobre las conexiones de bucle invertido, vea [Conexión de bucle invertido a SQL Server desde un script de Python o R](../connect/loopback-connection.md).
 

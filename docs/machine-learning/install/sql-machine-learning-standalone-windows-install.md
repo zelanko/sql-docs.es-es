@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83e1ea4c96144f7188812522ee121530bac351c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 2332aff0cb4c73fb7bbda61e498b1167327f6957
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178662"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956819"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Instalación de Machine Learning Server (independiente) o R Server (independiente) con el programa de instalación de SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -26,7 +26,7 @@ El programa de instalación de SQL Server incluye una opción de **característ
 El programa de instalación de SQL Server incluye una opción de **características compartidas** para instalar un servidor aprendizaje automático independiente que se ejecuta fuera de SQL Server. En SQL Server 2016, esta característica se denomina **R Server (independiente)** .  
 ::: moniker-end
 
-Un servidor independiente instalado mediante el programa de instalación de SQL Server equivale funcionalmente a las versiones de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) que no son de marca SQL, y admite los mismos casos de uso y escenarios, a saber:
+Un servidor independiente instalado mediante el programa de instalación de SQL Server equivale funcionalmente a las versiones de [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) que no son de marca SQL, y admite los mismos casos de uso y escenarios, a saber:
 
 + Ejecución remota, alternancia entre sesión local y sesión remota en la misma consola
 + Operacionalización con nodos web y nodos de proceso
@@ -192,7 +192,7 @@ En los servidores desconectados, se requieren pasos extra. Hay que obtener la ac
 
 3. Si ha habilitado la ejecución de la operacionalización como nodos web y nodos de proceso en implementaciones de servicio web, haga una copia de seguridad del archivo **AppSettings.json** como medida de precaución. Este archivo se revisa al aplicar SQL Server 2017 CU13 o posterior, por lo que probablemente quiera conservar una copia de seguridad de la versión original.
 
-4. En una máquina conectada a Internet, descargue la actualización acumulativa más reciente para su versión desde [Actualizaciones más recientes de Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server).
+4. En una máquina conectada a Internet, descargue la actualización acumulativa más reciente para su versión desde [Actualizaciones más recientes de Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
 
 5. Descargue la actualización acumulativa más reciente. Es un archivo ejecutable.
 
@@ -215,7 +215,7 @@ En los servidores desconectados, se requieren pasos extra. Hay que obtener la ac
     }
     ```
 
-9. [Ejecute la utilidad de CLI de administración](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch) para reiniciar los nodos web y de proceso. Para conocer los pasos y la sintaxis, vea [Supervisión, inicio y detención de nodos web y de proceso](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start).
+9. [Ejecute la utilidad de CLI de administración](/machine-learning-server/operationalize/configure-admin-cli-launch) para reiniciar los nodos web y de proceso. Para conocer los pasos y la sintaxis, vea [Supervisión, inicio y detención de nodos web y de proceso](/machine-learning-server/operationalize/configure-admin-cli-stop-start).
 
 ## <a name="development-tools"></a>Herramientas de desarrollo
 

@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a498a46d2b3afce46079faaec0ef717836fc973
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 7bb0992fc4db3bf9745c7fe3ef9058cb2955967a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093481"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036436"
 ---
 # <a name="print-code-and-results"></a>Imprimir código y resultados
 
@@ -34,6 +34,5 @@ Al imprimir una consulta o un archivo, los elementos en color se imprimen en col
  Si tiene habilitados los números de línea en el editor, estos no se imprimirán a menos que se seleccione **Incluir números de línea** en el cuadro de diálogo **Imprimir** del menú **Archivo** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Cambiar el color, el tamaño y el estilo de la fuente](../../relational-databases/scripting/change-font-color-size-and-style.md)  
-  
+ [Cambiar el color, el tamaño y el estilo de la fuente](./change-font-color-size-and-style.md)  
   

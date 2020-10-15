@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee55a195e449b333fd2d0f71f8426ab2cf73928d
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 7c09057dab83f8aedf05256245afed845b0153f6
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759895"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035969"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>Entorno de SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,6 +34,5 @@ Esboza las características generales de la interfaz de usuario, como el Explora
 [Explorador de soluciones](../ssms/solution/solution-explorer.md)  
 Presenta el Explorador de soluciones, que proporciona una vista organizada de los proyectos y sus archivos, así como un fácil acceso a los comandos necesarios para administrarlos.  
   
-[Control de código fuente del Explorador de soluciones](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
+[Control de código fuente del Explorador de soluciones](./solution/solution-explorer.md)  
 Describe cómo se integra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] con los productos de control de código fuente.  
-  

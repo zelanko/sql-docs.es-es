@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ed1a61d719063643d0fef3c1c0598e45cec54555
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3968ea4001b4ada8940f4434bfbb2eff35840850
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893880"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988211"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>Procedimientos: Ejecución de pruebas unitarias de SQL Server
 
@@ -58,7 +58,6 @@ Este paso ejecuta todas las pruebas de la serie de pruebas actual. En cuanto se 
   
 ## <a name="see-also"></a>Consulte también  
 [Ejecutar pruebas unitarias de SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
-[Ejecutar pruebas automatizadas desde la línea de comandos (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
-[Probar la aplicación (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
-  
+[Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2010](/previous-versions/visualstudio/visual-studio-2010/ms182470(v=vs.100))  
+[Ejecutar pruebas automatizadas desde la línea de comandos (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182486(v=vs.100))  
+[Probar la aplicación (Visual Studio 2012)](/azure/devops/test/overview)  

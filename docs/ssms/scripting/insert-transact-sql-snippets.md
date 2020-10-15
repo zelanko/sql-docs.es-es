@@ -16,12 +16,12 @@ ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 979018404b696ef3d8a39b198d4cf115e28f068f
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 2998121fff0be71019539a9e40da5a06bbf9133a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901912"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039029"
 ---
 # <a name="insert-transact-sql-snippets"></a>Insertar fragmentos de código de Transact-SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88901912"
 ## <a name="inserting-snippets"></a>Insertar fragmentos de código  
  Puede utilizar el menú **Insertar fragmento** para abrir una lista por categorías de fragmentos de código para elegir.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] contienen puntos de reemplazo: texto que sugiere la sintaxis pertinente para ese punto. Por ejemplo, el fragmento de código CREATE TABLE tiene puntos de reemplazo para los elementos como el nombre de tabla, nombres de columna y tipos de datos de columna. Después de insertar el fragmento de código, debe cambiar el texto de reemplazo para formar una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] válida. Para obtener más información, vea [Completar fragmentos de código de Transact-SQL](../../relational-databases/scripting/complete-transact-sql-snippets.md).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] contienen puntos de reemplazo: texto que sugiere la sintaxis pertinente para ese punto. Por ejemplo, el fragmento de código CREATE TABLE tiene puntos de reemplazo para los elementos como el nombre de tabla, nombres de columna y tipos de datos de columna. Después de insertar el fragmento de código, debe cambiar el texto de reemplazo para formar una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] válida. Para obtener más información, vea [Completar fragmentos de código de Transact-SQL](./complete-transact-sql-snippets.md).  
   
 #### <a name="inserting-a-snippet-by-using-the-insert-snippet-menu"></a>Insertar un fragmento de código utilizando el menú Insertar fragmento  
   
@@ -47,6 +47,5 @@ ms.locfileid: "88901912"
 3.  Haga doble clic en el fragmento de código o seleccione el fragmento de código en el selector de fragmento de código y, a continuación, presione TAB o ENTER.  
   
 ## <a name="see-also"></a>Consulte también  
- [Insertar fragmentos de código de Transact-SQL para rodear](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
+ [Insertar fragmentos de código de Transact-SQL para rodear](./insert-surround-with-transact-sql-snippets.md)  
   

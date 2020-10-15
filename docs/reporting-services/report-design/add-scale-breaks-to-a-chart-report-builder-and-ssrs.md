@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 84d66436-ed62-4967-bbbd-b457593ee787
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bf77e72c4b8ac84d57668ebcf960ed8b926ba6e
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: c83ef4812dbd28da971877cf90b1b4e8406af272
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462339"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935251"
 ---
 # <a name="add-scale-breaks-to-a-chart-report-builder-and-ssrs"></a>Agregar quiebres de escala a un gráfico (Generador de informes y SSRS)
 
@@ -50,6 +50,6 @@ ms.locfileid: "84462339"
 
 [Gráficos](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [Dar formato a un gráfico](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[Cuadro de diálogo Propiedades del eje, Opciones del eje](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
+[Cuadro de diálogo Propiedades del eje, Opciones del eje](/previous-versions/sql/)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

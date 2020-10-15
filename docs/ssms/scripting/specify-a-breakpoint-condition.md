@@ -14,12 +14,12 @@ ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 451776ba842c38ca306c17291404355908cb5202
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 40e30f96de60e6d6bd404ca2b00099b7ac7b01a9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901601"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036318"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Especificar una condición de punto de interrupción
 
@@ -52,5 +52,5 @@ La expresión especificada debe ser una expresión válida de Transact-SQL que s
   
 ## <a name="see-also"></a>Consulte también
 
-- [Especificar un número de llamadas](../../relational-databases/scripting/specify-a-hit-count.md)
-- [Especificar una acción del punto de interrupción](../../relational-databases/scripting/specify-a-breakpoint-action.md)
+- [Especificar un número de llamadas](./specify-a-hit-count.md)
+- [Especificar una acción del punto de interrupción](./specify-a-breakpoint-action.md)

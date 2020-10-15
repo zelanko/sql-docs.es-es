@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein
 ms.date: 03/16/2018
-ms.openlocfilehash: 2b2590229fa175ac41f2af236c5f87d541895d95
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: 238df1200d88023abec54fdf3fa2c37df758f0f8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662034"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038950"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>Componentes y configuración de SQL Server Management Studio
 
@@ -33,7 +33,7 @@ En este tutorial se describen los distintos componentes de ventana que hay en SQ
 
 Para llevar a cabo este tutorial, necesita tener SQL Server Management Studio.  
 
-* Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Instale [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 
 ## <a name="sql-server-management-studio-components"></a>Componentes de SQL Server Management Studio
 
@@ -138,7 +138,7 @@ En esta sección se describe cómo modificar algunas opciones básicas de SSMS d
 
 La mejor forma de familiarizarse con SSMS es practicar. Estos *tutoriales* y artículos de *procedimientos* lo ayudan con varias características disponibles dentro de SSMS.  Estos artículos le mostrarán cómo administrar los componentes de SSMS y cómo localizar las características que utiliza habitualmente.
 
-* [Conexión a una instancia y realización de consultas](connect-query-sql-server.md)
+* [Conexión a una instancia y realización de consultas](../quickstarts/connect-query-sql-server.md)
 * [Scripting](scripting-ssms.md)
 * [Uso de plantillas en SSMS](../template/templates-ssms.md)
 * [Otras recomendaciones y trucos al usar SSMS](ssms-tricks.md)

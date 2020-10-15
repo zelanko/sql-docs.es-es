@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 801844176680032b24e777a70acceea65f19f1f2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 26c12a659e702765b4d69b58d5e1b4247d7aba3c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883390"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987791"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Actualizar un proyecto de prueba anterior que contiene pruebas unitarias de base de datos
 
@@ -24,7 +24,7 @@ Puede actualizar un proyecto de prueba anterior, que se creó en Visual Studio 2
 > [!TIP]  
 > Si está usando Visual Studio 2010, después de agregar pruebas unitarias de SQL Server a un proyecto de prueba, no debe agregar pruebas unitarias mediante la plantilla anterior de prueba unitaria de base de datos. Si lo hace, necesitará volver a convertir el proyecto para que las pruebas se ejecuten correctamente.  
   
-Si tiene un proyecto de base de datos de prueba creado en una versión anterior a Visual Studio 2010, puede usar la información incluida en [Actualización de las pruebas unitarias de base de datos de versiones anteriores de Visual Studio](https://msdn.microsoft.com/library/dd193412(VS.100).aspx) para actualizar el proyecto de base de datos a Visual Studio 2010, antes de actualizar el proyecto a SQL Server Data Tools.  
+Si tiene un proyecto de base de datos de prueba creado en una versión anterior a Visual Studio 2010, puede usar la información incluida en [Actualización de las pruebas unitarias de base de datos de versiones anteriores de Visual Studio](/previous-versions/visualstudio/visual-studio-2010/dd193412(v=vs.100)) para actualizar el proyecto de base de datos a Visual Studio 2010, antes de actualizar el proyecto a SQL Server Data Tools.  
   
 ### <a name="initiating-an-upgrade"></a>Iniciar una actualización  
   
@@ -41,4 +41,3 @@ Si tiene un proyecto de base de datos de prueba creado en una versión anterior 
   
 ## <a name="see-also"></a>Consulte también  
 [Comprobar el código de base de datos con pruebas unitarias de SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

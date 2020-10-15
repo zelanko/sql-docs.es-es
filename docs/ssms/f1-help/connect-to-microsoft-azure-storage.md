@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
-ms.openlocfilehash: ed8fa9e9ecb2f5f94d177c588584478fae8e8d81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d1074f9247e8c46a027bde25e3b6a01cc185cb9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417931"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035478"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Conectar con Almacenamiento de Microsoft Azure
 
@@ -32,7 +32,7 @@ Especifique la información siguiente sobre la cuenta de Azure y, después, sele
 1.  **Cuenta de almacenamiento**: especifique el nombre de la cuenta de almacenamiento.
 
    >[!NOTE]
-   > Solo se puede conectar a [Cuentas de almacenamiento de uso general](https://docs.microsoft.com/azure/storage/common/storage-introduction#azure-storage-services). La conexión a otros tipos de cuentas de almacenamiento puede dar lugar a un error similar al siguiente:
+   > Solo se puede conectar a [Cuentas de almacenamiento de uso general](/azure/storage/common/storage-introduction#azure-storage-services). La conexión a otros tipos de cuentas de almacenamiento puede dar lugar a un error similar al siguiente:
    >
    >  El valor de uno de los encabezados HTTP no tiene el formato correcto. (Microsoft.SqlServer.StorageClient).
    >
@@ -43,4 +43,3 @@ Especifique la información siguiente sobre la cuenta de Azure y, después, sele
 3.  **Usar puntos de conexión seguros (HTTPS)** : esta opción usa la comunicación cifrada y el identificador seguro de un servidor web de la red.  
   
 4.  **Guardar clave de cuenta** : esta opción guarda su contraseña en un archivo cifrado.  
-  

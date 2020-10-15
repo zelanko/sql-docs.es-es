@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ffdfc6e3a2141eddb484bc4dde3b25bda5a8b70a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1ea16180c9a4e67f40302de7d70ae357b8393010
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396114"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986631"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Deshabilitar o pausar el procesamiento de informes y suscripciones  
 Existen varios enfoques que puede usar para deshabilitar o pausar el procesamiento de informes y suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Los enfoques de este artículo comprenden desde deshabilitar una suscripción a interrumpir la conexión del origen de datos. No todos los enfoques son posibles con los dos modos de servidor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En la siguiente tabla se resumen los métodos y modos de servidor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admitidos:  
@@ -60,7 +60,7 @@ En el portal web, vaya a la suscripción desde la página **Mis suscripciones** 
   
  `RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:51:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca enabled at 06/20/2019 01:16:51`  
   
-![Contenido relacionado con PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell"): **Use Windows PowerShell para deshabilitar una sola suscripción:** Use el siguiente script de PowerShell para deshabilitar una suscripción específica. Actualice el identificador de la suscripción y el nombre del servidor en el script.  
+![Contenido relacionado con PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell"): **Use Windows PowerShell para deshabilitar una sola suscripción:** Use el siguiente script de PowerShell para deshabilitar una suscripción específica. Actualice el identificador de la suscripción y el nombre del servidor en el script.  
   
 ```PS  
 #disable specific subscription  
@@ -80,7 +80,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![Contenido relacionado con PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell") **Use Windows PowerShell para mostrar todas las suscripciones deshabilitadas:** use el siguiente script de PowerShell para mostrar todas las suscripciones deshabilitadas del servidor de informes actual de modo nativo. Actualice el nombre del servidor.  
+ ![Contenido relacionado con PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell") **Use Windows PowerShell para mostrar todas las suscripciones deshabilitadas:** use el siguiente script de PowerShell para mostrar todas las suscripciones deshabilitadas del servidor de informes actual de modo nativo. Actualice el nombre del servidor.  
   
 ```  
 #list all disabled subscriptions  
@@ -91,7 +91,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![Contenido relacionado con PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell") **Use Windows PowerShell para habilitar todas las suscripciones deshabilitadas:** use el siguiente script de PowerShell para habilitar todas las suscripciones que están deshabilitadas actualmente. Actualice el nombre del servidor.  
+ ![Contenido relacionado con PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell") **Use Windows PowerShell para habilitar todas las suscripciones deshabilitadas:** use el siguiente script de PowerShell para habilitar todas las suscripciones que están deshabilitadas actualmente. Actualice el nombre del servidor.  
   
 ```  
 #enable all subscriptions  
@@ -105,7 +105,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![Contenido relacionado con PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell") **Use Windows PowerShell para DESHABILITAR todas las suscripciones:** Use el siguiente script de PowerShell para deshabilitar **TODAS** las suscripciones.  
+ ![Contenido relacionado con PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell") **Use Windows PowerShell para DESHABILITAR todas las suscripciones:** Use el siguiente script de PowerShell para deshabilitar **TODAS** las suscripciones.  
   
 ```  
 #DISABLE all subscriptions  
@@ -121,7 +121,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> Pausar una programación compartida  
  Cuando un informe o una suscripción se ejecutan desde una programación compartida, es posible pausar la programación para evitar el procesamiento. Cualquier proceso de informes o suscripciones controlado por una programación se pospone hasta que se vuelve a reanudar la programación.  
   
--   **Modo SharePoint:** ![Configuración de SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint") En **Configuración del sitio**, seleccione **Administrar programaciones compartidas**. Seleccione la programación y haga clic en **Pausar programaciones seleccionadas**.  
+-   **Modo SharePoint:** ![Configuración de SharePoint](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint") En **Configuración del sitio**, seleccione **Administrar programaciones compartidas**. Seleccione la programación y haga clic en **Pausar programaciones seleccionadas**.  
   
 -   **Modo nativo:** En el portal web, seleccione el botón **Configuración** ![botón Configuración](media/ssrs-portal-settings-gear.png) en la barra de menús de la parte superior de la pantalla del portal web y seleccione **Configuración del sitio** en el menú desplegable. Seleccione la pestaña **Programaciones** para mostrar la página Programaciones. Active las casillas situadas junto a las programaciones que desea habilitar o deshabilitar y, a continuación, seleccione el botón **Habilitar** o **Deshabilitar** respectivamente para realizar la acción deseada. La columna de estado se actualizará a "Deshabilitado" o "Habilitado", en consecuencia.  
   
@@ -177,4 +177,3 @@ Una manera de hacer que un informe no esté disponible es eliminar temporalmente
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [El portal web de un servidor de informes (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [Elementos protegibles](../../reporting-services/security/securable-items.md) 
-  

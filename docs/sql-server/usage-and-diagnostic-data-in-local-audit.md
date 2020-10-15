@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a212013d950f6a8f39816361b7f9c6209d0fa3e3
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: bd75bde9e125ffc99f1af6f382aa91d2f1e0caf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362522"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987301"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Auditoría local para la recopilación de datos de uso y diagnóstico de SQL Server (CEIP)
 
@@ -333,7 +333,7 @@ Los administradores de bases de datos deberán administrar automáticamente la l
 
 **¿Existe algún cliente o herramienta que se pueda usar para leer esta salida JSON?**
 Es posible leer la entrada con el Bloc de notas, Visual Studio o cualquier lector de JSON de su preferencia.
-Como alternativa, puede leer el archivo JSON y analizar los datos de una instancia de SQL Server como se muestra a continuación. Para más detalles sobre cómo leer un archivo JSON en SQL Server, visite [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(Importación de archivos JSON a SQL Server con OPENROWSET [BULK] y OPENJSON [Transact-SQL]).
+Como alternativa, puede leer el archivo JSON y analizar los datos de una instancia de SQL Server como se muestra a continuación. Para más detalles sobre cómo leer un archivo JSON en SQL Server, visite [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](/archive/blogs/sqlserverstorageengine/bulk-importing-json-files-into-sql-server)(Importación de archivos JSON a SQL Server con OPENROWSET [BULK] y OPENJSON [Transact-SQL]).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

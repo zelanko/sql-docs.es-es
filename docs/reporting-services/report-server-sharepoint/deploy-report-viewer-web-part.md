@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 49ac20b46c5453c431cb856ad060512b48315262
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: b6c0280e54fab14c4a3f76f75a4639dad99a0635
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767042"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933560"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Implementar el elemento web Visor de informes de SQL Server Reporting Services en un sitio de SharePoint
 
@@ -53,7 +53,7 @@ En esta sección se muestra cómo implementar el paquete de solución en la gran
 
 1. En una instancia de SharePoint Server, abra un shell de administración de SharePoint mediante la opción **Ejecutar como administrador**.
 
-2. Ejecute [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) para agregar la solución de granja de servidores.
+2. Ejecute [Add-SPSolution](/powershell/module/sharepoint-server/Add-SPSolution) para agregar la solución de granja de servidores.
 
     ```
     Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
@@ -61,7 +61,7 @@ En esta sección se muestra cómo implementar el paquete de solución en la gran
 
     El cmdlet devuelve el nombre de la solución, su identificador de solución y Deployed=False. En el paso siguiente, implementará la solución.
 
-3. Ejecute el cmdlet [Install-SPSolution](https://technet.microsoft.com/library/ff607534(v=office.16).aspx) para implementar la solución de granja de servidores.
+3. Ejecute el cmdlet [Install-SPSolution](/powershell/module/sharepoint-server/Install-SPSolution) para implementar la solución de granja de servidores.
 
     **SharePoint 2013**
 
@@ -93,7 +93,7 @@ En esta sección se muestra cómo implementar el paquete de solución en la gran
 
 6. Repita este procedimiento con las demás colecciones de sitios al abrir cada sitio y hacer clic en Acciones del sitio.
 
-También puede usar PowerShell para habilitar esta característica en todos los sitios mediante el cmdlet [Enable-SPFeature](https://technet.microsoft.com/library/ff607803.aspx).
+También puede usar PowerShell para habilitar esta característica en todos los sitios mediante el cmdlet [Enable-SPFeature](/powershell/module/sharepoint-server/Enable-SPFeature).
 
 ```
 Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL | 

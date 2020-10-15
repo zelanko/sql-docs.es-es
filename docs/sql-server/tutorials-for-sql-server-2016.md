@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df4709bbbfa17cdf33cfd13a20486a213fcc5a05
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 45195437003088ea0be588f69d1c98329fb37cc9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934244"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987321"
 ---
 # <a name="tutorials-for-sql-server"></a>Tutoriales de SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -21,28 +21,28 @@ ms.locfileid: "87934244"
      
 -   Si un tutorial usa una de las bases de datos de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], debe descargar y usar la versión más reciente de CodePlex. Para obtener más información, consulte [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) (Scripts y bases de datos de AdventureWorks para SQL Server 2016 CTP3).    
 -   Descargue un libro de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e informes de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] para usarlos con los tutoriales de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , vaya a [Power View Samples for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=220734)(Ejemplos de Power View para SQL Server 2012).  
-- Visite el nuevo ejemplo [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md) disponible en el repositorio de GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples) . 
+- Visite el nuevo ejemplo [Wide World Importers](../samples/wide-world-importers-what-is.md) disponible en el repositorio de GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples) . 
 
  
 ## <a name="current-tutorials"></a>Tutoriales actuales  
   
 |Tecnología|Descripción|  
 |--------------|---------------|  
-|[Tutoriales de Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Aprenda a desarrollar e implementar modelos multidimensionales o tabulares de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . También aprenderá a utilizar herramientas como PowerPivot para analizar los datos de los modelos.|  
+|[Tutoriales de Analysis Services &#40;SSAS&#41;](/analysis-services/analysis-services-tutorials-ssas)|Aprenda a desarrollar e implementar modelos multidimensionales o tabulares de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . También aprenderá a utilizar herramientas como PowerPivot para analizar los datos de los modelos.|  
 |[Tutoriales del motor de base de datos](../relational-databases/database-engine-tutorials.md)|Aprenda a conectarse a una instancia del motor de base de datos, así como a escribir y ejecutar instrucciones Transact-SQL.|  
 |[Tutoriales de Administración de información empresarial](https://wiki.scn.sap.com/wiki/display/EIM/EIM+Tutorials)|Aprenda a administrar información en una empresa con las tecnologías EIM de Microsoft.|  
 |[Tutoriales de Integration Services](../integration-services/integration-services-tutorials.md)|Aprenda a crear e implementar soluciones [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Tutoriales de replicación](../relational-databases/replication/replication-tutorials.md)|Aprenda a configurar y ejecutar topologías de replicación con [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Aprenda a crear informes básicos y suscripciones.|  
-|[Tutoriales sobre aprendizaje automático de SQL Server](../machine-learning/tutorials/sql-server-r-tutorials.md)|Aprenda a trabajar con datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante R o Python. Ejecute scripts de R o Python desde [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[Tutoriales sobre aprendizaje automático de SQL Server](../machine-learning/tutorials/r-tutorials.md)|Aprenda a trabajar con datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante R o Python. Ejecute scripts de R o Python desde [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
  ## <a name="previously-published-tutorials"></a>Tutoriales publicados anteriormente 
   
  - [Tutoriales de SQL Server 2014](https://www.quackit.com/sql_server/sql_server_2014/tutorial/)  
   
- - [Tutoriales de SQL Server 2012](https://msdn.microsoft.com/library/hh231699(v=sql.110).aspx)  
+ - [Tutoriales de SQL Server 2012](/previous-versions/sql/sql-server-2012/hh231699(v=sql.110))  
   
- - [Tutoriales de SQL Server 2008 R2](https://msdn.microsoft.com/library/ms167593.aspx)   
+ - [Tutoriales de SQL Server 2008 R2](/previous-versions/sql/sql-server-2008-r2/ms167593(v=sql.105))   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

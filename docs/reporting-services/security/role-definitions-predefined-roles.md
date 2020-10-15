@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cb514f5580545c43752911257546d97bc67426d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c0929f82f7f9a086fa58856b6e1357807c198f7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454527"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987399"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definiciones de roles: roles predefinidos
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se instala junto con roles predefinidos que puede usar para conceder acceso a operaciones del servidor de informes. Cada rol predefinido describe una recopilación de tareas relacionadas. Puede asignar grupos y cuentas de usuario a los roles predefinidos para proporcionar acceso inmediato a las operaciones del servidor de informes.  
@@ -60,11 +60,11 @@ ms.locfileid: "88454527"
 |----------|-----------------|  
 |Usar informes|Permite leer definiciones de informes.|  
 |Crear informes vinculados|Crear informes vinculados que se basen en un informe no vinculado.|  
-|Administrar todas las suscripciones|Ver, modificar y eliminar cualquier suscripción para informes e informes vinculados, independientemente de quién sea su propietario. Esta tarea permite crear suscripciones controladas por datos. También admite la edición y ejecución de la [actualización programada para archivos de Power BI (.pbix) en Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
+|Administrar todas las suscripciones|Ver, modificar y eliminar cualquier suscripción para informes e informes vinculados, independientemente de quién sea su propietario. Esta tarea permite crear suscripciones controladas por datos. También admite la edición y ejecución de la [actualización programada para archivos de Power BI (.pbix) en Power BI Report Server](/power-bi/report-server/configure-scheduled-refresh).|  
 |Administración de orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades del origen de datos.|  
 |Administrar carpetas|Cree, vea y elimine carpetas; vea y modifique propiedades de carpetas.|  
 |Administración de modelos|Crear, ver y eliminar modelos; ver y modificar propiedades de modelos.|  
-|Administrar suscripciones individuales|Crear, ver, modificar y eliminar suscripciones de usuarios a informes e informes vinculados. Esta tarea también admite la edición y ejecución de la [actualización programada para archivos de Power BI (.pbix) en Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
+|Administrar suscripciones individuales|Crear, ver, modificar y eliminar suscripciones de usuarios a informes e informes vinculados. Esta tarea también admite la edición y ejecución de la [actualización programada para archivos de Power BI (.pbix) en Power BI Report Server](/power-bi/report-server/configure-scheduled-refresh).|  
 |Administrar historial de informe|Cree, vea y elimine el historial del informe, vea las propiedades del historial del informe; vea y modifique la configuración que determina los límites del historial de instantáneas y cómo funciona el almacenamiento en caché.|  
 |Administrar informes|Agregue y elimine informes, modifique parámetros de informes, vea y modifique propiedades de informes, vea y modifique orígenes de datos que proporcionen contenido al informe, vea y modifique definiciones de informe y establezca directivas de seguridad de nivel de informe.|  
 |Administrar recursos|Cree, modifique y elimine recursos; vea y modifique propiedades de recursos.|  
@@ -216,4 +216,3 @@ En la tabla siguiente se muestran las tareas que se incluyen en la definición d
 [Asignaciones de roles: modificación o eliminación](../../reporting-services/security/role-assignments-modify-or-delete.md)  
 [Concesión de permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
 [Tareas y permisos](../../reporting-services/security/tasks-and-permissions.md)
-  

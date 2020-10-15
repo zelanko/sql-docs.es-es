@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 80df8e86ed3d23c5ab097cdab3f26d83838c4544
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a13617ec599390718e5c56222fb40b5e78f384fd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245124"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892075"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lección 4: Definición de una conexión de datos y una tabla de datos para el informe secundario
 Después de diseñar el informe primario, el paso siguiente es crear una conexión de datos y una tabla de datos para el informe secundario. En este tutorial, la conexión de datos se produce con la base de datos AdventureWorks2014.  
@@ -62,7 +62,7 @@ Después de diseñar el informe primario, el paso siguiente es crear una conexi�
     > [!WARNING]  
     > Asegúrese de desactivar **Crear métodos para enviar actualizaciones directamente a la base de datos (GenerateDBDirectMethods)**  
   
-    Ahora ha completado la configuración del objeto [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) de ADO.NET como origen de datos para el informe. En la página del Diseñador de Dataset en Visual Studio, debería ver el objeto **DataTable** que ha agregado, con las columnas especificadas en la consulta. DataSet2 contiene los datos de la tabla PurhcaseOrderDetail, según la consulta.  
+    Ahora ha completado la configuración del objeto [DataTable](/dotnet/api/system.data.datatable) de ADO.NET como origen de datos para el informe. En la página del Diseñador de Dataset en Visual Studio, debería ver el objeto **DataTable** que ha agregado, con las columnas especificadas en la consulta. DataSet2 contiene los datos de la tabla PurhcaseOrderDetail, según la consulta.  
   
 11. Guarde el archivo.  
   
@@ -70,5 +70,3 @@ Después de diseñar el informe primario, el paso siguiente es crear una conexi�
   
 ## <a name="next-task"></a>Tarea siguiente  
 Ha creado correctamente una conexión de datos y una tabla de datos para el informe secundario. Después, diseñará el informe secundario usando el Asistente para informes. Consulte [Lección 5: Diseño del informe secundario mediante el Asistente para informes](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
-  
-

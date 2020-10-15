@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e4bdddf08a1d9b276b4e4714d75a0a231560ef19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d0a851a8f2374740f9a6cfe9d1ae6db5f2ee113e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373171"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987251"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Sistema de control de versiones para la documentación de SQL
 
@@ -159,17 +159,17 @@ El sistema de control de versiones está totalmente implementado para SQL Server
 
 - _2012 y versiones anteriores:_ &nbsp; el sistema de control de versiones no se usa para SQL Server 2012 o versiones anteriores.
     - El moniker especial **SQL Server - older** (SQL Server: anterior) está diseñado para ocultar prácticamente todos los artículos. Las excepciones poco frecuentes son un par de artículos que los clientes de versiones anteriores podrían necesitar una vez.
-    - [Versiones anteriores de SQL Server, 2012-2005](../toc/previous-versions-sql-server.md)
+    - [Versiones anteriores de SQL Server, 2012-2005](./previous-versions-sql-server.md)
 
 - _2014:_ &nbsp; el sistema de control de versiones está implementado parcialmente para SQL Server 2014. Puede elegir SQL Server 2014 en el control de versiones y funcionará. Pero los archivos de 2014 están dedicados exclusivamente a 2014, al igual que los archivos de 2008 están dedicados únicamente a 2008.
-    - [Documentación de SQL Server 2014 sin conexión](/sql/sql-server/sql-server-offline-documentation)
+    - [Documentación de SQL Server 2014 sin conexión](./sql-server-offline-documentation.md)
 
 - _2016 y versiones posteriores:_ &nbsp; el sistema de control de versiones está totalmente implementado para SQL Server 2016 y versiones posteriores.
-    - [Bienvenido a la documentación de SQL Server 2016 y versiones posteriores](/sql/sql-server/?view=sql-server-2016&preserve-view=true)
+    - [Bienvenido a la documentación de SQL Server 2016 y versiones posteriores](./index.yml?preserve-view=true&view=sql-server-2016)
     - [Documentación de SQL Server 2016 sin conexión](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>Consulte también
 
-[Versiones anteriores de SQL Server, 2014-2005](../toc/previous-versions-sql-server.md)  
+[Versiones anteriores de SQL Server, 2014-2005](./previous-versions-sql-server.md)  
 [Guía de navegación de la documentación de SQL Server](sql-docs-navigation-guide.md)  
-[Cómo colaborar en la documentación de SQL Server](sql-server-docs-contribute.md)  
+[Cómo colaborar en la documentación de SQL Server](sql-server-docs-contribute.md)

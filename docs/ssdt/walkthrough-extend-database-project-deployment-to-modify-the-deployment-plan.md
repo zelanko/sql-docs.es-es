@@ -10,16 +10,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 3fa3d424d3c6d46ba129c96d935612ce687b3ba0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e38e126274b03a53c693f9cdd904ee8301b0069b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882914"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987709"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Tutorial: Ampliación de la implementación del proyecto de base de datos para modificar el plan de implementación
 
-Puede crear colaboradores de implementación para realizar acciones personalizadas al implementar un proyecto de SQL. Puede crear un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) o un [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Utilice un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) para cambiar el plan antes de ejecutarlo y un [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) para realizar operaciones mientras se ejecuta el plan. En este tutorial, creará un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) denominado SqlRestartableScriptContributor que agrega instrucciones IF a los lotes del script de implementación para permitir volver a ejecutar el script hasta que se completen en el caso de que se produzca un error durante la ejecución.  
+Puede crear colaboradores de implementación para realizar acciones personalizadas al implementar un proyecto de SQL. Puede crear un [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) o un [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor). Utilice un [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) para cambiar el plan antes de ejecutarlo y un [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) para realizar operaciones mientras se ejecuta el plan. En este tutorial, creará un [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) denominado SqlRestartableScriptContributor que agrega instrucciones IF a los lotes del script de implementación para permitir volver a ejecutar el script hasta que se completen en el caso de que se produzca un error durante la ejecución.  
   
 En este tutorial, realizará las principales tareas siguientes:  
   
@@ -46,9 +46,9 @@ Para crear un colaborador de implementación, debe realizar las siguientes tarea
   
 -   Cree un proyecto de biblioteca de clases y agregue las referencias necesarias.  
   
--   Defina una clase denominada SqlRestartableScriptContributor que herede de [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx).  
+-   Defina una clase denominada SqlRestartableScriptContributor que herede de [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier).  
   
--   Invalide el método [OnExecute](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx).  
+-   Invalide el método [OnExecute](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute).  
   
 -   Agregue métodos del asistente privados.  
   
@@ -99,7 +99,7 @@ A continuación, empiece a agregar el código a la clase.
   
     ```  
   
-    Ahora ha definido un colaborador de implementación que hereda del [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx). Durante los procesos de compilación e implementación, los colaboradores personalizados se cargan desde un directorio de la extensión estándar. Los colaboradores que modifican el plan de implementación se identifican con un atributo [ExportDeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanmodifierattribute.aspx). Este atributo es necesario para poder detectar colaboradores. Este atributo deberá ser parecido al de la ilustración siguiente:  
+    Ahora ha definido un colaborador de implementación que hereda del [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier). Durante los procesos de compilación e implementación, los colaboradores personalizados se cargan desde un directorio de la extensión estándar. Los colaboradores que modifican el plan de implementación se identifican con un atributo [ExportDeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.exportdeploymentplanmodifierattribute). Este atributo es necesario para poder detectar colaboradores. Este atributo deberá ser parecido al de la ilustración siguiente:  
   
     ```csharp  
     [ExportDeploymentPlanModifier("MyOtherDeploymentContributor.RestartableScriptContributor", "1.0.0.0")]  
@@ -149,7 +149,7 @@ A continuación, empiece a agregar el código a la clase.
   
     ```  
   
-    Invalide el método [OnExecute](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx) de la clase base, [DeploymentPlanContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.aspx), que es la clase base tanto para [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) como para [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). El método OnExecute se pasa a un objeto [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) que proporciona acceso a cualquier argumento especificado, al modelo de base de datos de origen y de destino, al plan de implementación y a las opciones de implementación. En este ejemplo, obtenemos el plan de implementación y el nombre de la base de datos de destino.  
+    Invalide el método [OnExecute](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute) de la clase base, [DeploymentPlanContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor), que es la clase base tanto para [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) como para [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor). El método OnExecute se pasa a un objeto [DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext) que proporciona acceso a cualquier argumento especificado, al modelo de base de datos de origen y de destino, al plan de implementación y a las opciones de implementación. En este ejemplo, obtenemos el plan de implementación y el nombre de la base de datos de destino.  
   
 2.  Ahora agregue los principios de un cuerpo el método OnExecute:  
   
@@ -181,7 +181,7 @@ A continuación, empiece a agregar el código a la clase.
   
     ```  
   
-    En este código, definimos algunas variables locales, y configuramos el bucle que controlará el procesamiento de todos los pasos del plan de implementación. Después de que el bucle se complete, tendremos que hacer procesamiento posterior, y, a continuación, quitaremos la tabla temporal que creamos durante la implementación para realizar el seguimiento del progreso mientras el plan se ejecuta. Los tipos de clave aquí son: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx) y [DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx). Un método clave es AddAfter.  
+    En este código, definimos algunas variables locales, y configuramos el bucle que controlará el procesamiento de todos los pasos del plan de implementación. Después de que el bucle se complete, tendremos que hacer procesamiento posterior, y, a continuación, quitaremos la tabla temporal que creamos durante la implementación para realizar el seguimiento del progreso mientras el plan se ejecuta. Los tipos de clave aquí son: [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep) y [DeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptstep). Un método clave es AddAfter.  
   
 3.  Ahora agregue el procesamiento del paso adicional, para reemplazar el comentario “Agregar el procesamiento del paso adicional aquí”:  
   
@@ -248,7 +248,7 @@ A continuación, empiece a agregar el código a la clase.
   
     ```  
   
-    Los comentarios de código explican el procesamiento. En un nivel superior, este código busca los pasos que le interesan, saltándose otros y deteniéndose cuando se alcanza el principio de los pasos posteriores a la implementación. Si el paso contiene instrucciones que debemos rodear con condicionales, realizaremos el procesamiento adicional. Entre las propiedades, métodos y tipos clave se encuentran los siguientes: [BeginPreDeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.beginpredeploymentscriptstep.aspx), [BeginPostDeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.beginpostdeploymentscriptstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [TSqlScript](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlscript.aspx), Script, [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx) y [SqlPrintStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlprintstep.aspx).  
+    Los comentarios de código explican el procesamiento. En un nivel superior, este código busca los pasos que le interesan, saltándose otros y deteniéndose cuando se alcanza el principio de los pasos posteriores a la implementación. Si el paso contiene instrucciones que debemos rodear con condicionales, realizaremos el procesamiento adicional. Entre las propiedades, métodos y tipos clave se encuentran los siguientes: [BeginPreDeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.beginpredeploymentscriptstep), [BeginPostDeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.beginpostdeploymentscriptstep), [TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject), [TSqlScript](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlscript), Script, [DeploymentScriptDomStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep) y [SqlPrintStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlprintstep).  
   
 4.  Ahora, agregue el código de procesamiento por lotes reemplazando el comentario “Agregar procesamiento por lotes aquí”:  
   
@@ -298,7 +298,7 @@ A continuación, empiece a agregar el código a la clase.
   
     ```  
   
-    Este código crea una instrucción IF junto con un bloque BEGIN/END. A continuación realizamos el procesamiento adicional en las instrucciones del lote. Una vez que realizado, agregamos una instrucción INSERT para agregar información a la tabla temporal que realiza el seguimiento del progreso de la ejecución del script. Finalmente, actualice el lote, reemplazando las instrucciones que solían estar con el nuevo IF que contiene esas instrucciones. Los tipos, métodos y propiedades clave son: [IfStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.ifstatement.aspx), [BeginEndBlockStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.beginendblockstatement.aspx), [StatementList](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.statementlist.aspx), [TSqlBatch](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlbatch.aspx), [PredicateSetStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.predicatesetstatement.aspx), [SetOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.setoptions.aspx)y [InsertStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.insertstatement.aspx).  
+    Este código crea una instrucción IF junto con un bloque BEGIN/END. A continuación realizamos el procesamiento adicional en las instrucciones del lote. Una vez que realizado, agregamos una instrucción INSERT para agregar información a la tabla temporal que realiza el seguimiento del progreso de la ejecución del script. Finalmente, actualice el lote, reemplazando las instrucciones que solían estar con el nuevo IF que contiene esas instrucciones. Los tipos, métodos y propiedades clave son: [IfStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.ifstatement), [BeginEndBlockStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.beginendblockstatement), [StatementList](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.statementlist), [TSqlBatch](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlbatch), [PredicateSetStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.predicatesetstatement), [SetOptions](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.setoptions)y [InsertStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.insertstatement).  
   
 5.  Ahora, agregue el cuerpo del bucle de procesamiento de instrucciones. Reemplace el comentario “Agregar el procesamiento de la instrucción adicional aquí”:  
   
@@ -318,7 +318,7 @@ A continuación, empiece a agregar el código a la clase.
   
     ```  
   
-    Para cada instrucción del lote, si la instrucción es de un tipo que deba ajustarse a una instrucción sp_executesql, modifique la instrucción en consecuencia. El código agrega, a continuación, la instrucción a la lista de instrucciones para el bloque BEGIN/END que ha creado. Los tipos, métodos y propiedades clave son [TSqlStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlstatement.aspx) y [ExecuteStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx).  
+    Para cada instrucción del lote, si la instrucción es de un tipo que deba ajustarse a una instrucción sp_executesql, modifique la instrucción en consecuencia. El código agrega, a continuación, la instrucción a la lista de instrucciones para el bloque BEGIN/END que ha creado. Los tipos, métodos y propiedades clave son [TSqlStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlstatement) y [ExecuteStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executestatement).  
   
 6.  Por último, agregue la sección del procesamiento posterior en lugar del comentario “Agregar el procesamiento posterior aquí”:  
   
@@ -353,7 +353,7 @@ A continuación, empiece a agregar el código a la clase.
   
     Los tipos, propiedades y métodos adicionales de interés son:  
   
-    StringBuilder, [DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx) y AddBefore.  
+    StringBuilder, [DeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptstep) y AddBefore.  
   
     A continuación, define los métodos del asistente llamados por este método.  
   
@@ -363,12 +363,12 @@ A continuación, empiece a agregar el código a la clase.
   
     |**Método**|**Descripción**|  
     |--------------|-------------------|  
-    |CreateExecuteSQL|Define el método CreateExecuteSQL para rodear una instrucción determinada mediante una instrucción sp_executesql EXEC. Los tipos, métodos, y propiedades clave son los siguientes: [ExecuteStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx), [ExecutableProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference.aspx), [SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx), [ProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.procedurereference.aspx)y [ExecuteParameter](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executeparameter.aspx).|  
-    |CreateCompletedBatchesName|Define el método CreateCompletedBatchesName. Este método crea el nombre que se insertará en la tabla temporal para un lote. Los tipos, métodos, y propiedades clave son: [SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx).|  
+    |CreateExecuteSQL|Define el método CreateExecuteSQL para rodear una instrucción determinada mediante una instrucción sp_executesql EXEC. Los tipos, métodos, y propiedades clave son los siguientes: [ExecuteStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executestatement), [ExecutableProcedureReference](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference), [SchemaObjectName](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname), [ProcedureReference](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.procedurereference)y [ExecuteParameter](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executeparameter).|  
+    |CreateCompletedBatchesName|Define el método CreateCompletedBatchesName. Este método crea el nombre que se insertará en la tabla temporal para un lote. Los tipos, métodos, y propiedades clave son: [SchemaObjectName](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname).|  
     |IsStatementEscaped|Define el método IsStatementEscaped. Este método determina si el tipo de elemento de modelo requiere que la instrucción se ajuste en una instrucción sp_executesql EXEC antes de que se pueda incluir dentro de una instrucción IF. Entre las propiedades, métodos y tipos clave se encuentran los siguientes: TSqlObject.ObjectType, ModelTypeClass, and the TypeClass property for the following model types: Schema, Procedure, View,  TableValuedFunction, ScalarFunction, DatabaseDdlTrigger, DmlTrigger, ServerDdlTrigger.|  
     |CreateBatchCompleteInsert|Define el método CreateBatchCompleteInsert. Este método crea la instrucción INSERT que se agregará al script de implementación para realizar el seguimiento del progreso de la ejecución del script. Entre las propiedades, métodos y tipos clave se encuentran los siguientes: InsertStatement, NamedTableReference, ColumnReferenceExpression, ValuesInsertSource y RowValue.|  
     |CreateIfNotExecutedStatement|Define el método CreateIfNotExecutedStatement. Este método produce la instrucción IF que comprueba si los lotes temporales ejecutan la tabla que indica que el lote ya se ha ejecutado. Entre las propiedades, métodos y tipos clave se encuentran los siguientes: IfStatement, ExistsPredicate, ScalarSubquery, NamedTableReference, WhereClause, ColumnReferenceExpression, IntegerLiteral, BooleanComparisonExpression y BooleanNotExpression.|  
-    |GetStepInfo|Defina el método GetStepInfo. Este método extrae la información sobre el elemento modelo usado para crear el script del paso, además del nombre del paso. Los tipos y métodos de interés son los siguientes: [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx) y [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).|  
+    |GetStepInfo|Defina el método GetStepInfo. Este método extrae la información sobre el elemento modelo usado para crear el script del paso, además del nombre del paso. Los tipos y métodos de interés son los siguientes: [DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext), [DeploymentScriptDomStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep), [TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject), [CreateElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.createelementstep), [AlterElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.alterelementstep) y [DropElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.dropelementstep).|  
     |GetElementName|Crea un nombre con formato para un TSqlObject.|  
   
 1.  Agregue el código siguiente para definir los métodos del asistente:  
@@ -775,7 +775,7 @@ Después de haber seguido uno de estos métodos, puede usar MSBuild con el fin d
         > Si implementa un proyecto de base de datos idéntico a la base de datos de destino, el informe resultante no será muy significativo. Para resultados más significativos, implemente los cambios en una base de datos o implemente una nueva base de datos.  
   
 ## <a name="command-line-deployment-using-generated-dacpac-file"></a>Implementación de la línea de comandos mediante el archivo dacpac generado  
-Una vez que se ha compilado un proyecto de SQL, se crea un archivo dacpac que se puede utilizar para implementar el esquema desde la línea de comandos, y que puede habilitar la implementación desde otro equipo como un equipo de compilación. SqlPackage es un programa de línea de comandos que habilita la implementación de dacpacs con una gama completa de opciones que permiten a los usuarios implementar un dacpac o generar un script de implementación, entre otras acciones. Para más información, consulte [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080(v=VS.103).aspx).  
+Una vez que se ha compilado un proyecto de SQL, se crea un archivo dacpac que se puede utilizar para implementar el esquema desde la línea de comandos, y que puede habilitar la implementación desde otro equipo como un equipo de compilación. SqlPackage es un programa de línea de comandos que habilita la implementación de dacpacs con una gama completa de opciones que permiten a los usuarios implementar un dacpac o generar un script de implementación, entre otras acciones. Para más información, consulte [SqlPackage.exe](../tools/sqlpackage.md).  
   
 > [!NOTE]  
 > Para implementar correctamente los dacpacs compilados desde proyectos con la propiedad DeploymentContributors definida, el (los) DLL que contiene(n) su(s) colaborador(es) de implementación se deben instalar en el equipo que se está utilizando. Esto es así porque se han marcado como necesarios para que la implementación se complete correctamente.  
@@ -793,4 +793,3 @@ Puede experimentar con otros tipos de modificaciones en los planes de implementa
 [Personalizar la compilación de bases de datos y la implementación con colaboradores de implementación y compilación](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [Tutorial: Ampliación de la compilación del proyecto de base de datos para generar estadísticas de modelo](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)  
 [Tutorial: Ampliación de la implementación del proyecto de base de datos para analizar el plan de implementación](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
-  

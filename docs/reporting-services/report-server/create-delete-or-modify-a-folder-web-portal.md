@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae3ae4b181ee6b3308bcbe5bcfc4af1ca370c974
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: e1c2094a4ee16d33c6e076440e56a55434b2347a
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548027"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987191"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>Creación, eliminación o modificación de una carpeta: Reporting Services
   Puede crear carpetas para organizar y administrar los elementos que publica en un servidor de informes. La creación de carpetas puede ayudar a los usuarios a buscar informes de su interés. Para administradores de contenido, las carpetas proporcionan un marco para aplicar permisos. Puede crear asignaciones de roles en carpetas concretas para restringir el acceso a los informes que se están desarrollando o que no se deberían distribuir de manera amplia.  
@@ -23,7 +23,7 @@ ms.locfileid: "84548027"
 
 ## <a name="to-create-a-folder"></a>Para crear una carpeta  
   
-1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](../web-portal-ssrs-native-mode.md).  
   
 2.  En el Administrador de informes, seleccione la carpeta Inicio y haga clic en **Nueva carpeta**. O bien, para crear una carpeta en una carpeta existente, navegue hasta dicha carpeta en la página **Contenido** y haga clic en ella para abrirla. A continuación, haga clic en **Nueva carpeta**.  
   

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d33cab9f1805652501f9d65cfeb06e47dc444733
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 7674b05ba6c1fb5de836ed3b767e6653cbdc51cf
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255518"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933287"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Agregar una ordenación interactiva a una tabla o una matriz (Generador de informes y SSRS)
   Agregue botones de ordenación interactiva para que los usuarios puedan cambiar el criterio de ordenación de las filas y las columnas en las tablas y matrices. Esta característica solo es compatible con los formatos de representación que admiten la interacción con el usuario, como HTML.  
@@ -61,7 +61,7 @@ ms.locfileid: "84255518"
   
  Para comprobar la acción de ordenación, haga clic en **Ejecutar** para mostrar una vista previa del informe y, a continuación, haga clic en los botones de ordenación interactiva.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="sorting-a-top-level-parent-row-group-for-a-table-or-matrix"></a><a name="SortingTopLevelParent"></a> Ordenar un grupo de filas primarias de nivel superior para una tabla o matriz  
  Agregue un botón de ordenación interactiva a un encabezado de columna para que los usuarios puedan hacer clic en dicho encabezado y ordenar las filas del grupo primario de una tabla o matriz por el valor mostrado en esa columna. El orden de los grupos secundarios permanece invariable.  
@@ -85,7 +85,7 @@ ms.locfileid: "84255518"
   
  Para comprobar la acción de ordenación, haga clic en **Ejecutar** para mostrar una vista previa del informe y, a continuación, haga clic en los botones de ordenación interactiva.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="sorting-child-groups-or-detail-rows-for-a-group"></a><a name="SortingChildGroups"></a> Ordenar grupos secundarios o filas de detalles para un grupo  
  Agregue un botón de ordenación interactiva a una fila de encabezado de grupo para que los usuarios puedan ordenar los valores de un grupo secundario perteneciente a un grupo primario u ordenar las filas de detalles para el grupo secundario más interior.  
@@ -108,7 +108,7 @@ ms.locfileid: "84255518"
   
  Para comprobar la acción de ordenación, haga clic en **Ejecutar** para mostrar una vista previa del informe y, a continuación, haga clic en los botones de ordenación interactiva.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="sorting-rows-based-on-a-complex-group-expression"></a><a name="SortingMultipleRowGroups"></a> Ordenar filas basadas en una expresión de grupo compleja  
  Agregue un botón de ordenación interactiva a un encabezado de columna para que los usuarios puedan hacer clic en dicho encabezado y ordenar los grupos primarios y secundarios combinados. Para lograr este efecto, debe cambiar la expresión de grupo para que sea una expresión compuesta de ambos grupos. Por ejemplo, imagine que una matriz muestra los totales de inventario de una tienda para los artículos agrupados por color y tamaño. Para ordenar las filas basadas en la combinación de color y tamaño, en lugar de tener un grupo para el color y otro para el tamaño, puede definir un grupo basado en la combinación de ambos. Para obtener más información sobre la definición de expresiones de grupo, vea [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
@@ -165,7 +165,7 @@ ms.locfileid: "84255518"
   
  Para comprobar la acción de ordenación, haga clic en **Ejecutar** para mostrar una vista previa del informe y, a continuación, haga clic en el botón de ordenación interactiva. La matriz realiza la ordenación por los valores combinados de la expresión de grupo, aunque cada valor individual se muestra en su propia columna.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ##  <a name="synchronizing-sort-order-for-multiple-data-regions"></a><a name="SynchronizingSortOrder"></a> Sincronizar el criterio de ordenación para varias regiones de datos  
  Agregue un botón de ordenación interactiva que permita a los usuarios hacer clic en un botón de ordenación y ordenar varias regiones de datos. Al crear un botón de ordenación interactiva, puede especificar si desea sincronizar la ordenación para varias regiones de datos basadas en el mismo conjunto de datos de informe. Por ejemplo, un informe podría incluir una matriz y un gráfico que represente gráficamente los datos. Cuando un usuario cambia el criterio de ordenación de las filas de la matriz, el gráfico muestra automáticamente el mismo criterio de ordenación.  
@@ -214,12 +214,11 @@ ms.locfileid: "84255518"
   
  Para comprobar la acción de ordenación, haga clic en **Ejecutar** para mostrar una vista previa del informe y, a continuación, haga clic en el botón de ordenación interactiva. La matriz realiza la ordenación por los valores combinados de la expresión de grupo, aunque cada valor individual se muestra en su propia columna.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#BackToTop)  
   
 ## <a name="see-also"></a>Consulte también  
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Ordenación interactiva &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
  [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Explorar la flexibilidad de una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
-  
   

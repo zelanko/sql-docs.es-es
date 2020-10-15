@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2530029b43a4b01d8b6fce8b321f0c9b66a6a852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 700944b707416a89d16b5ce53eee471692779870
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417941"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037658"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Conexión a SQL Server o Azure SQL Database
 
@@ -29,7 +29,7 @@ Para trabajar con servidores y bases de datos, primero debe conectarse al servid
 
 1. En **Explorador de objetos**, haga clic en **Conectar > Motor de base de datos... **.
 
-   ![conectar](../media/connect-to-server/connect-db-engine.png)
+   ![connect](../media/connect-to-server/connect-db-engine.png)
 
 1. Rellene el formulario **Conectar al servidor** y haga clic en **Conectar**:
 
@@ -56,9 +56,9 @@ Para trabajar con servidores y bases de datos, primero debe conectarse al servid
 ## <a name="see-also"></a>Consulte también
 
 [SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
-[Descarga de SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
+[Descarga de SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
 
-[Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
-[Servicio de integración](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
-[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
-[Almacenamiento de Azure](../f1-help/connect-to-microsoft-azure-storage.md)  
+[Analysis Services](/analysis-services/instances/connect-from-client-applications-analysis-services)  
+[Servicio de integración](../../integration-services/sql-server-integration-services.md)  
+[Reporting Services](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
+[Almacenamiento de Azure](../f1-help/connect-to-microsoft-azure-storage.md)

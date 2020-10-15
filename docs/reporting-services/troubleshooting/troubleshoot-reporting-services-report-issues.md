@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dcd12b54aa0ef9cee4cd5e0be98889119a99336c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 18809d6d6d5937355fedebf72f50e82fadad10ff
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662799"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988379"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Solución de problemas de informes de Reporting Services
 Este tema contiene información útil para solucionar problemas con el diseño de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , la vista previa de un informe, la publicación de un informe en un servidor de informes en modo nativo o en modo de SharePoint, la visualización de un informe en el servidor de informes o la exportación de un informe en un formato de archivo diferente.  
@@ -38,7 +38,7 @@ Para ver la pila de llamadas, inicie sesión en el servidor de informes con las 
 ## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>Uso de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] para comprobar las consultas y credenciales  
 Puede utilizar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] para validar las consultas complejas antes de incluirlas en un informe.   
   
-Para más información, consulte [Editor de consultas del motor de base de datos](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) y [Administrar objetos mediante el Explorador de objetos](~/ssms/object/manage-objects-by-using-object-explorer.md).  
+Para más información, consulte [Editor de consultas del motor de base de datos](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md) y [Administrar objetos mediante el Explorador de objetos](~/ssms/object/manage-objects-by-using-object-explorer.md).  
   
 ## <a name="analyze-problem-reports-with-report-data-cached-on-the-client"></a>Análisis de informes del problema con los datos de informes almacenados en la memoria caché del cliente  
 Cuando el autor de un informe lo crea en Business Intelligence Development Studio, el cliente de creación almacena en memoria caché los datos en forma de archivo .rdl.data, que se utiliza al obtener la vista previa de un informe. Cada vez que la consulta cambia, la memoria caché se actualiza. Para depurar los problemas del informe, a veces resulta útil evitar la actualización de los datos del informe para que no cambien mientras lleva a cabo la depuración.   
@@ -60,5 +60,3 @@ Siempre que el valor esté establecido en 1, solo se utilizan los datos del info
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-

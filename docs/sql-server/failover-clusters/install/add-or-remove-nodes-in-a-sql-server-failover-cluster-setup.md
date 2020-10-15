@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db5dbec0733140f39abe377513ff23bc7dd7b880
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a560f2d421675b3e01e8c1350b37112187dc3aa8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117038"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988576"
 ---
 # <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>Incorporación o eliminación de nodos en una instancia de clúster de conmutación por error (programa de instalación)
 
@@ -68,7 +68,7 @@ ms.locfileid: "91117038"
   
 8.  En la página Configuración de nodo de clúster, use la lista desplegable para especificar el nombre de la instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se modificará durante esta operación de instalación.  
   
-9. En la página Configuración del servidor - Cuentas de servicio, especifique las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los servicios reales que se configuran en esta página dependen de las características que se van a instalar. En las instalaciones de instancia de clúster de conmutación por error, la información de nombre de cuenta y tipo de inicio se rellenará automáticamente en esta página en función de la configuración proporcionada para el nodo activo. Debe proporcionar contraseñas para cada cuenta. Para obtener más información, vea [Configuración del servidor - Cuentas de servicio](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) y [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+9. En la página Configuración del servidor - Cuentas de servicio, especifique las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los servicios reales que se configuran en esta página dependen de las características que se van a instalar. En las instalaciones de instancia de clúster de conmutación por error, la información de nombre de cuenta y tipo de inicio se rellenará automáticamente en esta página en función de la configuración proporcionada para el nodo activo. Debe proporcionar contraseñas para cada cuenta. Para obtener más información, vea [Configuración del servidor - Cuentas de servicio](../../../database-engine/install-windows/install-sql-server.md) y [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Nota de seguridad** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -108,5 +108,4 @@ ms.locfileid: "91117038"
   
 ## <a name="see-also"></a>Consulte también  
  [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   

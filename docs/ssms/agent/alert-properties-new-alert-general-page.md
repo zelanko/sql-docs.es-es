@@ -14,19 +14,19 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5ed13dc3f03a82adb3cfb85a9ecabce6742a4071
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2c27fa0cc8325a31cc851511375a01210e7f9d9b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418411"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036672"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>Propiedades de alerta - Nueva alerta (página General)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 > [!IMPORTANT]  
-> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
+> En [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 Utilice esta página para ver y modificar las propiedades generales de las alertas del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -90,4 +90,3 @@ Especifica la instrucción WQL que identifica el evento al que responde la alert
 [Usar WQL con el proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
 [Create an Alert Using an Error Number](../../ssms/agent/create-an-alert-using-an-error-number.md)  
 [Create an Alert Using Severity Level](../../ssms/agent/create-an-alert-using-severity-level.md)  
-  

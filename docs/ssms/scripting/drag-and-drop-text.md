@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f341d4dd956bd032bd5dcee264cbf48a5fd05e22
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 14ad38d835e4ef96cbf91a009026e35d504ca8cb
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093446"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039047"
 ---
 # <a name="drag-and-drop-text"></a>Arrastrar y colocar texto
 
@@ -49,6 +49,5 @@ Se puede seleccionar texto para arrastrarlo y colocarlo en otra ubicación. Se p
  Al arrastrar texto se mueve, es decir, se borra de la ubicación anterior y se mueve a la nueva ubicación. Al presionar la tecla CTRL mientras se arrastra, el texto se copia a la nueva ubicación. Sin embargo, si arrastra un objeto desde el Explorador de objetos esta norma no se cumple, ya que el nombre del objeto no se elimina del Explorador de objetos.  
   
 ## <a name="see-also"></a>Consulte también  
- [Navegar por código y texto](../../relational-databases/scripting/navigate-code-and-text.md)  
-  
+ [Navegar por código y texto](./navigate-code-and-text.md)  
   

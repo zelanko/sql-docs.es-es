@@ -14,18 +14,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fcf17f55c56e3a424bb9cb214020015566e4aaf0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15d0e96d85a5049f90f048cf48713678969d40c0
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468651"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037878"
 ---
 # <a name="job-properties---new-job-targets-page"></a>Propiedades del trabajo - Nuevo trabajo (página Destinos)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
+> En [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 Utilice esta página para administrar los servidores de destino del trabajo.  
   
@@ -38,4 +38,3 @@ Ejecuta el trabajo en uno o varios servidores de destino. Después de selecciona
   
 ## <a name="see-also"></a>Consulte también  
 [Implementar trabajos](../../ssms/agent/implement-jobs.md)  
-  

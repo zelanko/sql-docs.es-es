@@ -12,12 +12,12 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6c8bc141152f907154b1108ffb53f42daac7e462
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 20fce8623266a733bb777b0cd3153ad593cfded0
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114577"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988071"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012
 
@@ -321,7 +321,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 ## <a name="next-steps"></a>Pasos siguientes
 - [Completar la actualización motor de base de datos](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
-- [Aprovechamiento de las nuevas características de SQL Server 2016](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
+- [Aprovechamiento de las nuevas características de SQL Server 2016](../../what-s-new-in-sql-server-2017.md)
 - [Actualización de una instancia del clúster de conmutación por error de SQL Server](upgrade-a-sql-server-failover-cluster-instance.md).
 - [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-- [Agregar características a una instancia de SQL Server 2016 (programa de instalación)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
+- [Agregar características a una instancia de SQL Server 2016 (programa de instalación)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)

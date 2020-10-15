@@ -26,12 +26,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cc2f10905bdf80c1853aecefd6783bdc60819a82
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 5916b79410568a1fd2a89b753f9a3ff8ca606780
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255331"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935347"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Leyenda de gráfico: aplicar formato (Generador de informes)
   La leyenda de un gráfico contiene descripciones para cada una de las categorías de un gráfico. Una leyenda siempre contiene uno o varios elementos de leyenda, cada uno de los cuales consta de un cuadro coloreado que representa la serie y una cadena de texto que describe la serie, tal como se ve en la ilustración siguiente.  
@@ -78,12 +78,11 @@ ms.locfileid: "84255331"
  De forma predeterminada, el texto de la leyenda no se optimiza para que quepa en el área de la leyenda. Para hacer que el texto de la leyenda se ajuste automáticamente al espacio asignado, establezca la propiedad AutoFitTextDisabled en **False** y establezca un tamaño de fuente mínimo para la propiedad MinFontSize de modo que la fuente sea lo más pequeña posible, pero que sea presentable y permita la optimización de la leyenda.  
   
 ## <a name="see-also"></a>Consulte también  
- [Cuadro de diálogo de Propiedades de la leyenda, General &#40;Generador de informes y SSRS&#41;](https://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
+ [Cuadro de diálogo de Propiedades de la leyenda, General &#40;Generador de informes y SSRS&#41;]()   
  [Cambiar el texto de un elemento de leyenda &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Ocultar elementos de leyenda en el gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
  [Definir los colores de un gráfico mediante una paleta &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
-  
   

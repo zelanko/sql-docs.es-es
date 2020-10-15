@@ -12,19 +12,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3507ddef287a9f543b56ecb2e18c5a252260ccb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7210c3f59647dccb2c9c07c0f0fb7cfd25d8fe6
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418141"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037868"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modificar los servidores de destino asociados a un trabajo maestro del Agente SQL Server
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
+> En [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 En este tema se describe cómo modificar los servidores de destino asociados a un trabajo maestro del Agente SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
@@ -76,7 +76,7 @@ A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modi
     GO  
     ```  
   
-Para más información, consulte [sp_delete_jobserver (Transact-SQL)](https://msdn.microsoft.com/6d63ed32-68cf-4d8f-aa40-05a3826e05b8).  
+Para más información, consulte [sp_delete_jobserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md).  
   
 #### <a name="to-associate-a-target-server-with-the-current-sql-server-agent-master-job"></a>Para asociar un servidor de destino al trabajo maestro del Agente SQL Server actual  
   
@@ -99,5 +99,4 @@ Para más información, consulte [sp_delete_jobserver (Transact-SQL)](https://ms
     GO  
     ```  
   
-Para más información, consulte [sp_add_jobserver (Transact-SQL)](https://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286).  
-  
+Para más información, consulte [sp_add_jobserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md).  

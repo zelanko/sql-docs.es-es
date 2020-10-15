@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9604b8c236411355cac4142e00f85689c4d2825
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ec14803552fe5773c80c8277ee59d78cb66ed69
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88315281"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036028"
 ---
 # <a name="miscellaneous-files"></a>archivos varios
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Los archivos que son externos a los proyectos se conocen como *archivos varios*. Cuando hay una solución abierta, puede abrir y modificar estos archivos varios relacionados con el proyecto. Un archivo forma parte del grupo de archivos varios si su extensión no está asociada al editor de código del proyecto. Por ejemplo, en un proyecto de scripts de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los archivos con la extensión .txt o .mdx se tratarán como archivos varios. En un proyecto MDX, los archivos con la extensión .txt o .sql se tratarán como archivos varios. Para asociar una extensión de archivo a un editor de código, consulte [Asociar extensiones de archivo a un editor de código](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+Los archivos que son externos a los proyectos se conocen como *archivos varios*. Cuando hay una solución abierta, puede abrir y modificar estos archivos varios relacionados con el proyecto. Un archivo forma parte del grupo de archivos varios si su extensión no está asociada al editor de código del proyecto. Por ejemplo, en un proyecto de scripts de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los archivos con la extensión .txt o .mdx se tratarán como archivos varios. En un proyecto MDX, los archivos con la extensión .txt o .sql se tratarán como archivos varios. Para asociar una extensión de archivo a un editor de código, consulte [Asociar extensiones de archivo a un editor de código](../scripting/associate-file-extensions-to-a-code-editor.md).  
   
 Existen diversas razones por las que resulta útil poder agregar archivos varios a un proyecto. Puede tener un archivo que no es necesariamente un script reconocido pero que forma parte del desarrollo de la solución. Entre los ejemplos comunes se incluyen notas o instrucciones de desarrollo, archivos de datos y fragmentos de código.  
   
@@ -37,4 +37,3 @@ Los archivos varios ofrecen flexibilidad. Por ejemplo, imagine que tiene un proy
 [Archivos que administran soluciones y proyectos](../../ssms/solution/files-that-manage-solutions-and-projects.md)  
 [Soluciones &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [Proyectos &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
-  

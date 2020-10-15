@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f2d9867ebad010ea8e518f3faee29041eebd79a8
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 1d36936a0dc921a02897bcf7f9a9bfceb6766293
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670798"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956786"
 ---
 # <a name="cab-downloads-for-offline-installation-of-cumulative-updates-for-sql-server-machine-learning-services"></a>Descargas de archivos CAB para la instalación sin conexión de actualizaciones acumulativas de SQL Server Machine Learning Services
 
@@ -108,9 +108,9 @@ Los archivos CAB se enumeran en orden cronológico inverso. Cuando descargue los
 | | Servidor de Python    |[SPS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2071421&clcid=1033)| Los binarios del paquete están ahora firmados.  |
 |**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| No existe ningún cambio con respecto a las versiones anteriores. |
-| | R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| Contiene una corrección para actualizar un [R Server con operaciones independientes](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), como se instala a través de la configuración del SQL Server. Use la CAB CU13 y siga [estas instrucciones](sql-machine-learning-standalone-windows-install.md#apply-cu) para aplicar la actualización. |
+| | R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| Contiene una corrección para actualizar un [R Server con operaciones independientes](/machine-learning-server/what-is-operationalization), como se instala a través de la configuración del SQL Server. Use la CAB CU13 y siga [estas instrucciones](sql-machine-learning-standalone-windows-install.md#apply-cu) para aplicar la actualización. |
 | | Microsoft Python Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| No existe ningún cambio con respecto a las versiones anteriores. |
-| | Servidor de Python    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| Contiene una corrección para actualizar un [Python Server con operaciones independientes](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), como se instala a través de la configuración del SQL Server. Use la CAB CU13 y siga [estas instrucciones](sql-machine-learning-standalone-windows-install.md#apply-cu) para aplicar la actualización. |
+| | Servidor de Python    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| Contiene una corrección para actualizar un [Python Server con operaciones independientes](/machine-learning-server/what-is-operationalization), como se instala a través de la configuración del SQL Server. Use la CAB CU13 y siga [estas instrucciones](sql-machine-learning-standalone-windows-install.md#apply-cu) para aplicar la actualización. |
 |**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)-[CU12](https://support.microsoft.com/help/4464082)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| No existe ningún cambio con respecto a las versiones anteriores. |
 | | R Server      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| Correcciones menores.|
@@ -140,12 +140,12 @@ Los archivos CAB se enumeran en orden cronológico inverso. Cuando descargue los
 | | Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
 | | R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
 | | Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| No existe ningún cambio con respecto a las versiones anteriores. |
-| | Servidor de Python    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| Serialización del modelo de Python en revoscalepy con la función [rx_serialize_model function](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/>Compatibilidad de la [puntuación nativa](../predictions/native-scoring-predict-transact-sql.md), además de mejoras en la [ puntuación en tiempo real](../predictions/real-time-scoring.md). 
+| | Servidor de Python    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| Serialización del modelo de Python en revoscalepy con la función [rx_serialize_model function](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/>Compatibilidad de la [puntuación nativa](../predictions/native-scoring-predict-transact-sql.md), además de mejoras en la [ puntuación en tiempo real](../predictions/real-time-scoring.md). 
 |**[SQL Server 2017 CU1](https://support.microsoft.com/help/4038634)-[CU2](https://support.microsoft.com/help/4052574)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)| No existe ningún cambio con respecto a las versiones anteriores. |
 | | R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 | | Microsoft Python Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| No existe ningún cambio con respecto a las versiones anteriores. | 
-| | Servidor de Python    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | Agrega rx_create_col_info para devolver información del esquema. <br/>Mejoras en [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) para admitir escenarios paralelos mediante el contexto de cálculo de `RxLocalParallel`.|
+| | Servidor de Python    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | Agrega rx_create_col_info para devolver información del esquema. <br/>Mejoras en [rx_exec](/machine-learning-server/python-reference/revoscalepy/rx-exec) para admitir escenarios paralelos mediante el contexto de cálculo de `RxLocalParallel`.|
 |**Versión inicial** |  |  |
 | | Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 | | R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
@@ -202,7 +202,7 @@ Para SQL Server 2016 R Services, las versiones de línea base son la versión RT
 > 
 > Al instalar SQL Server 2016 SP1 CU4 o SP1 CU5 sin conexión, descargue SRO_3.2.2.16000_1033.cab. Si descargó SRO_3.2.2.13000_1033.cab de FWLINK 831785 como se indica en el cuadro de diálogo de instalación, cambie el nombre del archivo a SRO_3.2.2.16000_1033.cab antes de instalar la actualización acumulativa.
 
-Si quiere ver el código fuente de Microsoft R, puede descargarlo como archivo en formato .tar: [Descargar los instaladores de R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
+Si quiere ver el código fuente de Microsoft R, puede descargarlo como archivo en formato .tar: [Descargar los instaladores de R Server](/machine-learning-server/install/r-server-install-windows#download)
 
 ::: moniker-end
 

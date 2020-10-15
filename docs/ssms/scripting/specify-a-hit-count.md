@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d83f361efd4d822456366133729759cb16c18647
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 56af9dbb3c2245bc3b45d8dde24ae5be169f886d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901417"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036288"
 ---
 # <a name="specify-a-hit-count"></a>Especificar un número de llamadas
 
@@ -47,7 +47,7 @@ Un número de llamadas al punto de interrupción es un contador que el depurador
   
  Si desea realizar un seguimiento del número de veces que se ejecuta un punto de interrupción sin disponer de la ejecución de detención de punto de interrupción, especifique un número de llamadas con un valor muy alto para que nunca se produzca la detención de punto de interrupción.  
   
- La acción predeterminada para un punto de interrupción es que se detenga la ejecución cuando se hayan satisfecho el número de llamadas y la condición de punto de interrupción. Para obtener información sobre cómo especificar otras acciones, vea [Especificar una acción del punto de interrupción](../../relational-databases/scripting/specify-a-breakpoint-action.md).  
+ La acción predeterminada para un punto de interrupción es que se detenga la ejecución cuando se hayan satisfecho el número de llamadas y la condición de punto de interrupción. Para obtener información sobre cómo especificar otras acciones, vea [Especificar una acción del punto de interrupción](./specify-a-breakpoint-action.md).  
   
 #### <a name="to-specify-a-hit-count"></a>Para especificar un número de llamadas  
   
@@ -78,6 +78,5 @@ Un número de llamadas al punto de interrupción es un contador que el depurador
 4.  Haga clic en **Aceptar** o en **Cancelar** para salir del cuadro de diálogo.  
   
 ## <a name="see-also"></a>Consulte también  
- [Especificar una condición de punto de interrupción](../../relational-databases/scripting/specify-a-breakpoint-condition.md)  
-  
+ [Especificar una condición de punto de interrupción](./specify-a-breakpoint-condition.md)  
   

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ea886eed26a2f88711d1405b5130570c09c87d6c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 576a19cf5a86893c248f11897f9a2d83a80598bc
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180509"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956976"
 ---
 # <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>Instalación de SQL Server Machine Learning Services con Python y R en una máquina virtual de Azure
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -30,9 +30,9 @@ Siga estos pasos:
 
 ## <a name="provision-sql-server-virtual-machine-in-azure"></a>Aprovisionamiento de una máquina virtual de SQL Server en Azure
 
-Para obtener instrucciones paso a paso, consulte [Aprovisionamiento de una máquina virtual Windows con SQL Server en Azure Portal](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision). 
+Para obtener instrucciones paso a paso, consulte [Aprovisionamiento de una máquina virtual Windows con SQL Server en Azure Portal](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision). 
 
-El paso [Configuración de SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) es donde se agrega Machine Learning Services a la instancia.
+El paso [Configuración de SQL Server](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) es donde se agrega Machine Learning Services a la instancia.
 
 <a name="firewall"></a>
 

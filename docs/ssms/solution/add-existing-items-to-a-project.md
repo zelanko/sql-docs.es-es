@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3744d99ede7e4f50e7fb4393d8e58cff314f4f06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4231ae6339e40f40ef1626748553c6fd68f6f6b7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480134"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036068"
 ---
 # <a name="add-existing-items-to-a-project"></a>Agregar elementos existentes a un proyecto
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Agregue elementos nuevos a un proyecto para ampliar la funcionalidad de la aplicación. Un elemento existente puede ser una consulta o un archivo del tipo varios. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tiene dos tipos de proyectos: proyecto de script de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proyecto de script de Analysis Services. El tipo de proyecto determina los archivos de consulta que se pueden agregar al proyecto. Por ejemplo, se puede agregar una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] (un archivo con una extensión .sql) a un proyecto de script de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pero no a un proyecto de script de Analysis Services. Para asociar extensiones de archivo adicionales a un tipo de proyecto, consulte [Asociar extensiones de archivo a un editor de código](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+Agregue elementos nuevos a un proyecto para ampliar la funcionalidad de la aplicación. Un elemento existente puede ser una consulta o un archivo del tipo varios. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tiene dos tipos de proyectos: proyecto de script de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proyecto de script de Analysis Services. El tipo de proyecto determina los archivos de consulta que se pueden agregar al proyecto. Por ejemplo, se puede agregar una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] (un archivo con una extensión .sql) a un proyecto de script de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pero no a un proyecto de script de Analysis Services. Para asociar extensiones de archivo adicionales a un tipo de proyecto, consulte [Asociar extensiones de archivo a un editor de código](../scripting/associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>Para agregar una consulta existente o un archivo del tipo archivos varios a un proyecto  
   
@@ -71,4 +71,3 @@ Agregue elementos nuevos a un proyecto para ampliar la funcionalidad de la aplic
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)  
 [Agregar nuevos elementos a un proyecto](../../ssms/solution/add-new-items-to-a-project.md)  
 [Quitar o eliminar un elemento o un proyecto](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
-  

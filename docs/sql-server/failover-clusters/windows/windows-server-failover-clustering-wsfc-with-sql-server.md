@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9854bef628a04871e0c173847651df0b64c83088
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3340ba57a0b316c9a58fbf1b0c65d7ca01f3e1ee
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896663"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988135"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Clústeres de conmutación por error de Windows Server con SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85896663"
   
 -   **Coordinación de conmutación por error.** Cada uno de los recursos se configura para ser hospedado en un nodo principal y se pueden transferir automática o manualmente a uno o varios nodos secundarios. Una directiva de conmutación por error basada en el estado controla la transferencia automática de la propiedad de recursos entre los nodos. Los nodos y las aplicaciones hospedadas son informadas cuando se produce la conmutación por error para puedan reaccionar correctamente.  
   
- Para más información, consulte: [Failover Clustering Overview - Windows Server](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)(Introducción a los clústeres de conmutación por error - Windows Server).  
+ Para más información, consulte: [Failover Clustering Overview - Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))(Introducción a los clústeres de conmutación por error - Windows Server).  
   
 ##  <a name="sql-server-always-on-technologies-and-wsfc"></a><a name="AlwaysOnWsfcTech"></a> Tecnologías de SQL Server AlwaysOn y WSFC  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* es una solución de alta disponibilidad y recuperación ante desastres que aprovecha las ventajas de WSFC. Las características de Always On proporcionan soluciones integradas y flexibles que aumentan la disponibilidad de las aplicaciones, proporcionan mejores réditos en inversiones de hardware y simplifican la implementación y administración de alta disponibilidad.  
@@ -85,7 +85,7 @@ ms.locfileid: "85896663"
 >  Para más información, consulte: [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="instance-level-high-availability-with-always-on-failover-cluster-instances"></a>Alta disponibilidad en el nivel de instancia con instancias de clúster de conmutación por error AlwaysOn  
- Una *instancia de clúster de conmutación por error* (FCI) de Always On es una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está instalada en los nodos de un WSFC. Este tipo de instancia depende de los recursos de almacenamiento y el nombre de red virtual. El almacenamiento puede usar Canal de fibra, iSCSI, FCoE o SAS para almacenamiento en disco compartido o usar almacenamiento conectado localmente con [Espacios de almacenamiento directo (S2D)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview). El recurso de nombre de red virtual depende de una o más direcciones IP virtuales, cada una en una subred diferente. El servicio SQL Server y el servicio del Agente SQL Server también son recursos, y ambos dependen de los recursos de nombre de red virtual y almacenamiento.  
+ Una *instancia de clúster de conmutación por error* (FCI) de Always On es una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está instalada en los nodos de un WSFC. Este tipo de instancia depende de los recursos de almacenamiento y el nombre de red virtual. El almacenamiento puede usar Canal de fibra, iSCSI, FCoE o SAS para almacenamiento en disco compartido o usar almacenamiento conectado localmente con [Espacios de almacenamiento directo (S2D)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview). El recurso de nombre de red virtual depende de una o más direcciones IP virtuales, cada una en una subred diferente. El servicio SQL Server y el servicio del Agente SQL Server también son recursos, y ambos dependen de los recursos de nombre de red virtual y almacenamiento.  
   
  En caso de conmutación por error, el servicio de WSFC transfiere la propiedad de los recursos de la instancia a un nodo de conmutación por error designado. La instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vuelve a iniciarse en el nodo de conmutación por error y las bases de datos se recuperan de la forma habitual. En cualquier momento determinado, solo un nodo del clúster puede hospedar la FCI y los recursos subyacentes.  
   
@@ -175,13 +175,13 @@ ms.locfileid: "85896663"
   
 -   [Tecnologías de Windows Server: clústeres de conmutación por error](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
 
--   [Información general de los Espacios de almacenamiento directo \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
+-   [Información general de los Espacios de almacenamiento directo \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 
 -   [Clústeres de conmutación por error de Windows Server 2008 R2](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
 -   [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Cmdlet de clúster de conmutación por error Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Cmdlet de clúster de conmutación por error Get-ClusterLog](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))  
   
 ## <a name="see-also"></a>Consulte también  
  [Instancias de clúster de conmutación por error de AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
@@ -190,4 +190,3 @@ ms.locfileid: "85896663"
  [Directiva de conmutación por error para instancias de clústeres de conmutación por error](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [Recuperación ante desastres del clúster WSFC mediante cuórum forzado (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
  [SQL Server 2016 Supports Windows Server 2016 Storage Spaces Direct](https://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/) (SQL Server 2016 admite ahora Espacios de almacenamiento directo en Windows Server 2016)
-  

@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35bd9f8d1870c45b5c2b401639e261806e9d3f91
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: ad70e5f88163668c8b0802b6b66996e608f0ffd9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902100"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036178"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL Debugger - Information (Depurador de Transact-SQL: Información)
 
@@ -70,10 +70,10 @@ En el modo de depurador, éste abre dos ventanas en la parte inferior de la vent
   
  Puede establecer los valores de datos de las variables en las ventanas **Variables locales**, **Inspección**o **Inspección rápida** ; para ello, haga clic con el botón derecho en la fila y, después, seleccione **Editar valor**. La columna **Valor** de la ventana **Variables locales** , la ventana **Inspección** y el cuadro de diálogo **Inspección rápida** admiten visualizadores de texto, de datos XML y HTML. Los visualizadores se representan mediante una sugerencia de datos de lupa en el extremo derecho de la ventana **Valores** . Puede usar los visualizadores para ver texto, valores de datos XML o HTML en presentaciones que hagan coincidir los tipos de valores, por ejemplo, ver archivos XML en la ventana de un explorador.  
   
- En modo de depuración, al mover el puntero sobre un identificador, aparece la ventana emergente **Quick Info** con el nombre de la expresión y su valor actual. Para obtener más información, vea [Información rápida &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md).  
+ En modo de depuración, al mover el puntero sobre un identificador, aparece la ventana emergente **Quick Info** con el nombre de la expresión y su valor actual. Para obtener más información, vea [Información rápida &#40;IntelliSense&#41;](./quick-info-intellisense.md).  
   
 ## <a name="breakpoints"></a>Puntos de interrupción  
- Puede utilizar la ventana **Puntos de interrupción** para ver y administrar los puntos de interrupción establecidos actualmente. Para obtener más información, vea [Avanzar paso a paso por el código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md).  
+ Puede utilizar la ventana **Puntos de interrupción** para ver y administrar los puntos de interrupción establecidos actualmente. Para obtener más información, vea [Avanzar paso a paso por el código Transact-SQL](./step-through-transact-sql-code.md).  
   
 ## <a name="call-stacks"></a>Pilas de llamadas  
  La ventana **Pila de llamadas** muestra la ubicación de ejecución actual, así como información sobre el paso de la ejecución desde la ventana del editor original a través de cualquier módulo de [!INCLUDE[tsql](../../includes/tsql-md.md)] (funciones, procedimientos almacenados o desencadenadores) hasta llegar a la ubicación de ejecución actual. Todas las filas de la ventana **Pila de llamadas** se denominan marco de pila y representan cualquiera de los siguientes elementos:  
@@ -104,13 +104,12 @@ En el modo de depurador, éste abre dos ventanas en la parte inferior de la vent
  En el modo de depuración, las pestañas **Resultados** y **Mensajes** continúan estando activas en el Editor de consultas. La pestaña **Resultados** continúa mostrando los conjuntos de resultados de las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan durante una sesión de depuración. La pestaña **Mensajes** continúa mostrando los mensajes del sistema, como *xx* filas afectadas y el resultado de las instrucciones PRINT y RAISERROR.  
   
 ## <a name="see-also"></a>Consulte también  
- [Ventana de locales](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [Ventana de inspección](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [Cuadro de diálogo Inspección rápida](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Ventana de puntos de interrupción](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)   
- [Ventana de pila de llamadas](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [Ventana de subprocesos](../../relational-databases/scripting/transact-sql-debugger-threads-window.md)   
- [Resultados (ventana)](../../relational-databases/scripting/transact-sql-debugger-output-window.md)   
- [Depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
+ [Ventana de locales](./transact-sql-debugger-locals-window.md)   
+ [Ventana de inspección](./transact-sql-debugger-watch-window.md)   
+ [Cuadro de diálogo Inspección rápida](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Ventana de puntos de interrupción](./transact-sql-debugger-breakpoints-window.md)   
+ [Ventana de pila de llamadas](./transact-sql-debugger-call-stack-window.md)   
+ [Ventana de subprocesos](./transact-sql-debugger-threads-window.md)   
+ [Resultados (ventana)](./transact-sql-debugger-output-window.md)   
+ [Depurador de Transact-SQL](./transact-sql-debugger.md)  
   

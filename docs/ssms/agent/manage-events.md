@@ -20,18 +20,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 98b162787254ed49ed64e5acd38d1ff8cb13f84f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41519f278ae684c58fabb693d677ad79373a726a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418121"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037341"
 ---
 # <a name="manage-events"></a>Administrar eventos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
+> En [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 Puede reenviar todos los mensajes de eventos que tengan o superen un nivel de gravedad de error específico a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto se denomina *reenvío de eventos*. El servidor de reenvío es un servidor dedicado que también puede ser un servidor maestro. Puede utilizar el reenvío de eventos para centralizar la administración de alertas para un grupo de servidores, con lo que se reduce la carga de trabajo de los servidores con un alto grado de utilización.  
   
@@ -86,7 +86,7 @@ A continuación se presentan tareas habituales para administrar eventos en un en
   
 -   [SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
--   [Transact-SQL](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
+-   [Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)  
   
 ## <a name="running-event-triggered-jobs"></a>Ejecutar trabajos desencadenados por eventos  
 Puede definir la ejecución de un trabajo en respuesta a una alerta. Por ejemplo, puede ejecutar un trabajo que solucione o diagnostique más exhaustivamente un problema detectado mediante la alerta.  
@@ -95,5 +95,4 @@ Puede definir la ejecución de un trabajo en respuesta a una alerta. Por ejemplo
 > Dado que un trabajo puede activar un evento, tenga cuidado de no crear un bucle recursivo de trabajos y alertas.  
   
 ## <a name="see-also"></a>Consulte también  
-[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/44bee7d9-7517-4071-99be-8b36f979c7cc)  
-  
+[sp_add_notification (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-sysmessages-transact-sql.md)  

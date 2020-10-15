@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bf9391bfb9a705379caa6c9f34ae752d2dcc3c6
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: e40a80f58bcc3eb2210ebb127248746e8a45a4f1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767106"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935531"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Copias de seguridad y restauración de aplicaciones de servicio de SharePoint de Reporting Services
 
@@ -72,9 +72,9 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
   
  Para obtener más información, consulte los siguientes temas en la documentación de SharePoint:  
   
- [Copia de seguridad de una aplicación de servicio (SharePoint Foundation 2010) en la documentación de SharePoint](https://msdn.microsoft.com/library/ee748601.aspx).  
+ [Copia de seguridad de una aplicación de servicio (SharePoint Foundation 2010) en la documentación de SharePoint](/previous-versions/office/sharepoint-foundation-2010/ee748601(v=office.14)).  
   
- [Copia de seguridad de una aplicación de servicio (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
+ [Copia de seguridad de una aplicación de servicio (SharePoint Server 2010)](/SharePoint/administration/back-up-a-service-application)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Comprobación de la cuenta de ejecución y autenticación de la base de datos
 
@@ -126,9 +126,9 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
   
  Para obtener más información, consulte los siguientes temas en la documentación de SharePoint:  
   
- [Restauración de una aplicación de servicio (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx).  
+ [Restauración de una aplicación de servicio (SharePoint Foundation 2010)](/previous-versions/office/sharepoint-foundation-2010/ee748615(v=office.14)).  
   
- [Restauración de una aplicación de servicio (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
+ [Restauración de una aplicación de servicio (SharePoint Server 2010)](/SharePoint/administration/restore-a-service-application).  
 
 ### <a name="restore-the-encryption-keys-using-sharepoint-central-administration"></a>Restauración de las claves de cifrado mediante Administración central de SharePoint
 

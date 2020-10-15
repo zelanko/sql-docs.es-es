@@ -18,18 +18,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 27c19395f8962cd994ea82e0d52ede9a0131fb16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d331ee59e933f6a9b06ea3c7280b5529f0604a37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492229"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037358"
 ---
 # <a name="handle-multiple-job-steps"></a>Controlar varios pasos del trabajo
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
+> En [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 Si el trabajo está formado por varios pasos, debe especificar el orden de ejecución de los pasos del trabajo. Esto se denomina *control de flujo.* En cualquier momento puede agregar nuevos pasos del trabajo y reorganizar el flujo de los pasos; los cambios se aplicarán la próxima vez que se ejecute el trabajo. Esta ilustración muestra el control de flujo de un trabajo de copia de seguridad de una base de datos.  
   
@@ -52,8 +52,7 @@ Los pasos del trabajo deben ser independientes. Es decir, un trabajo no puede pa
 ## <a name="see-also"></a>Consulte también  
 [sp_add_job](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
 [sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
-[sysjobs (Transact-SQL)](https://msdn.microsoft.com/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  
+[sysjobs (Transact-SQL)](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
 [sysjobsteps](../../relational-databases/system-tables/dbo-sysjobsteps-transact-sql.md)  
 [Implementar trabajos](../../ssms/agent/implement-jobs.md)  
 [Administrar pasos de trabajo](../../ssms/agent/manage-job-steps.md)  
-  

@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b55dcfbdc7172e545c93e9878a18ee5826eb43f0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45c136d29261b2ba4ce12185a7a9e437147f990b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468674"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037938"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementar la seguridad del Agente SQL Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
+> En [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente le permite al administrador de la base de datos ejecutar cada paso de trabajo en un contexto seguro que solo tiene los permisos necesarios para realizar ese paso de trabajo, que está determinado por un servidor proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para establecer los permisos para un paso de trabajo concreto, cree un proxy que disponga de los permisos necesarios y, a continuación, asigne ese proxy al paso de trabajo. Se puede especificar un servidor proxy en más de un paso de trabajo. Para los pasos de trabajo que necesitan los mismos permisos se utiliza el mismo proxy.  
   
@@ -82,7 +82,6 @@ Siga estas instrucciones para mejorar la seguridad de la implementación del Age
   
 ## <a name="see-also"></a>Consulte también  
 [Usar los roles predefinidos](../../reporting-services/security/role-definitions-predefined-roles.md)  
-[sp_addrolemember (Transact-SQL)](https://msdn.microsoft.com/a583c087-bdb3-46d2-b9e5-3921b3e6d10b)  
-[sp_droprolemember (Transact-SQL)](https://msdn.microsoft.com/c2f19ab1-e742-4d56-ba8e-8ffd40cf4925)  
-[Seguridad y protección (motor de base de datos)](https://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7)  
-  
+[sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  
+[sp_droprolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)  
+[Seguridad y protección (motor de base de datos)](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  

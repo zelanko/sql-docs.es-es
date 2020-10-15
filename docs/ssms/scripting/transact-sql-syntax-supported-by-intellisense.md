@@ -16,19 +16,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8609537fdd61fb40ee88c0e1cb3c05b21a7e5e47
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: d7525f558f3afd86beedde300b078c82ce0e6206
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901012"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036108"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxis de Transact-SQL compatible con IntelliSense
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   En este tema se describen las instrucciones y los elementos de sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] que IntelliSense admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="statements-supported-by-intellisense"></a>Instrucciones admitidas por IntelliSense  
- En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], IntelliSense solamente admite las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de uso más frecuente. Algunas condiciones generales del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pueden impedir el funcionamiento de IntelliSense. Para obtener más información, vea [Solución de problemas IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md).  
+ En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], IntelliSense solamente admite las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de uso más frecuente. Algunas condiciones generales del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pueden impedir el funcionamiento de IntelliSense. Para obtener más información, vea [Solución de problemas IntelliSense &#40;SQL Server Management Studio&#41;](./troubleshooting-intellisense.md).  
   
 > [!NOTE]  
 >  IntelliSense no está disponible para objetos de base de datos cifrados, como funciones definidas por el usuario o procedimientos almacenados cifrados. La ayuda sobre parámetros y la información rápida no están disponibles para los parámetros de los procedimientos almacenados extendidos y los tipos definidos por el usuario de la integración con CLR.  
@@ -166,5 +166,4 @@ SELECT
 ```  
   
  Después de escribir `SELECT`, IntelliSense enumera **PrimaryKeyCol**, **FirstNameCol**y **LastNameCol** como posibles elementos en la lista de selección, aunque no se haya ejecutado el script y `MyTable` no exista todavía en `MyTestDB`.  
-  
   

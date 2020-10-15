@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 5b75fa312f06fa91d7ffbe9a4a4226f0e3852449
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9bdbf68766e6c271f17254afc4262de341deaeb3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480181"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037604"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Crear un servidor registrado (SQL Server Management Studio)
 
@@ -33,7 +33,7 @@ En este tema se describe cómo guardar la información de conexión para los ser
   
 -   Grupos de servidores locales  
   
-     Use los grupos de servidores locales para conectar fácilmente con los servidores que administra con frecuencia. Tanto los servidores locales como los no locales se registran en grupos de servidores locales. Los grupos de servidores locales son únicos para cada usuario. Para obtener información sobre cómo compartir la información de los servidores registrados, vea [Exportar información de servidores registrados &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md) e [Importar información de servidores registrados &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md).  
+     Use los grupos de servidores locales para conectar fácilmente con los servidores que administra con frecuencia. Tanto los servidores locales como los no locales se registran en grupos de servidores locales. Los grupos de servidores locales son únicos para cada usuario. Para obtener información sobre cómo compartir la información de los servidores registrados, vea [Exportar información de servidores registrados &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md) e [Importar información de servidores registrados &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md).  
   
     > [!NOTE]  
     >  Recomendamos que, siempre que sea posible, se utilice la autenticación de Windows.  
@@ -98,7 +98,7 @@ En este tema se describe cómo guardar la información de conexión para los ser
      Haga clic aquí para guardar la configuración del servidor registrado.  
   
 ## <a name="multiserver-queries"></a>Consultas multiservidor  
- La ventana del Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puede conectarse a varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y consultarlas al mismo tiempo. Los resultados que devuelve la consulta se pueden combinar en un único panel de resultados o se pueden devolver en paneles de resultados independientes. Si se desea, el Editor de consultas puede incluir las columnas que proporcionan el nombre del servidor que generó cada fila y también el inicio de sesión que se usó para conectarse al servidor que proporcionó cada fila. Para obtener más información sobre cómo ejecutar consultas multiservidor, vea [Ejecutar instrucciones con varios servidores simultáneamente &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md).  
+ La ventana del Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puede conectarse a varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y consultarlas al mismo tiempo. Los resultados que devuelve la consulta se pueden combinar en un único panel de resultados o se pueden devolver en paneles de resultados independientes. Si se desea, el Editor de consultas puede incluir las columnas que proporcionan el nombre del servidor que generó cada fila y también el inicio de sesión que se usó para conectarse al servidor que proporcionó cada fila. Para obtener más información sobre cómo ejecutar consultas multiservidor, vea [Ejecutar instrucciones con varios servidores simultáneamente &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md).  
   
  Para ejecutar las consultas con todos los servidores de un grupo de servidores locales, haga clic con el botón derecho en el grupo de servidores, haga clic en **Conectar** y, después, haga clic en **Nueva consulta**. Cuando las consultas se ejecuten en la nueva ventana del Editor de consultas, se ejecutarán con todos los servidores del grupo utilizando la información de conexión almacenada incluido el contexto de autenticación del usuario. Los servidores registrados con la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pero que no guarden la contraseña no podrán conectarse.  
   
@@ -106,7 +106,6 @@ En este tema se describe cómo guardar la información de conexión para los ser
   
 ## <a name="see-also"></a>Consulte también  
  [Ocultar objetos del sistema en el Explorador de objetos](../object/hide-system-objects-in-object-explorer.md)   
- [Exportar información de servidores registrados &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
- [Importar información de servidores registrados &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
-  
+ [Exportar información de servidores registrados &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md)   
+ [Importar información de servidores registrados &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)  
   

@@ -1,54 +1,50 @@
 ---
 title: Ejecutar Windows PowerShell desde SQL Server Management Studio | Microsoft Docs
 description: Obtenga información sobre cómo iniciar una sesión de Windows PowerShell desde el Explorador de objetos en SQL Server Management Studio, con la ruta de acceso preestablecida en la ubicación de los objetos que prefiera.
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: 1f841825-da1f-4062-9a81-3cdbab03845b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e244789ced3150c02a07749884dc5f3f0a77b9c
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.custom: ''
+ms.date: 03/14/2017
+ms.openlocfilehash: c074b0f0ed5f5b041a8a4c4ed341837fec2b1926
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714213"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006169"
 ---
 # <a name="run-windows-powershell-from-sql-server-management-studio"></a>Ejecutar Windows PowerShell desde SQL Server Management Studio
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Puede iniciar sesiones de Windows PowerShell desde el **Explorador de objetos** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] inicia Windows PowerShell, carga el módulo **SqlServer** y establece el contexto de ruta de acceso al nodo asociado en el árbol del **Explorador de objetos**.  
-  
 
-> [!NOTE]
-> Hay dos módulos de SQL Server PowerShell: **SqlServer** y **SQLPS**. El módulo **SQLPS** está incluido en la instalación de SQL Server (por motivos de compatibilidad con versiones anteriores), pero ya no se actualiza. El módulo de PowerShell más actualizado es **SqlServer**. El módulo **SqlServer** contiene versiones actualizadas de los cmdlets en **SQLPS**, así como nuevos cmdlets para admitir las características más recientes de SQL.  
-> Las versiones anteriores del módulo **SqlServer** *estaban incluidas* en SQL Server Management Studio (SSMS), pero solo con las versiones 16.x de SSMS. Para usar PowerShell con SSMS 17.0 y versiones posteriores, debe tener el módulo **SqlServer** instalado desde la Galería de PowerShell.
-> Para instalar el módulo **SqlServer**, consulte [Instalar SQL Server PowerShell](download-sql-server-ps-module.md).
-
-
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 Al especificar la ejecución de PowerShell para un objeto en el **Explorador de objetos**, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] inicia una sesión de Windows PowerShell en la que los complementos PowerShell de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se han cargado y registrado. La ruta de acceso para la sesión está preestablecida en la ubicación del objeto en el que hizo clic con el botón derecho en el Explorador de objetos. Por ejemplo, si hace clic con el botón derecho en el objeto de base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] en el Explorador de objetos y selecciona **Iniciar PowerShell**, la ruta de acceso de Windows PowerShell se establece en lo siguiente:  
-  
-```  
+
+```powershell
 SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>  
-```  
+```
+
+## <a name="run-powershell"></a>Ejecutar PowerShell
+
+### <a name="to-run-powershell-from-sql-server-management-studio"></a>Para ejecutar PowerShell desde SQL Server Management Studio
+
+1. Abra el **Explorador de objetos**.
+
+2. Navegue al nodo del objeto en el que trabajará.
+
+3. Haga clic con el botón derecho en el objeto y seleccione **Iniciar PowerShell**.
+
+## <a name="permissions"></a>Permisos
+
+Cuando se abre desde [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], PowerShell no se ejecuta con privilegios de Administrador, lo que puede impedir algunas actividades, como las llamadas a WMI.  
   
-## <a name="run-powershell"></a>Ejecutar PowerShell  
- **Para ejecutar PowerShell desde SQL Server Management Studio**  
-  
-1.  Abra el **Explorador de objetos**.  
-  
-2.  Navegue al nodo del objeto en el que trabajará.  
-  
-3.  Haga clic con el botón derecho en el objeto y seleccione **Iniciar PowerShell**.  
-  
-## <a name="permissions"></a>Permisos  
- Cuando se abre desde [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], PowerShell no se ejecuta con privilegios de Administrador, lo que puede impedir algunas actividades, como las llamadas a WMI.  
-  
-## <a name="see-also"></a>Consulte también  
- [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  
+## <a name="see-also"></a>Consulte también
+
+- [SQL Server PowerShell](sql-server-powershell.md)

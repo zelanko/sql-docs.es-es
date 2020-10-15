@@ -21,12 +21,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 9e71aa6719c06dd181d756ebb1ee5e14e47ba96f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093441"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038989"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Administrar el editor y el modo de vista
 
@@ -91,7 +91,7 @@ El editor permite controlar la vista del código de diferentes maneras.
  Cuando el modo de espacio virtual no está habilitado, el cursor salta del final de una línea al primer carácter de la siguiente y viceversa.  
   
 ## <a name="displaying-line-numbers"></a>mostrar números de línea  
- Se puede activar la numeración de líneas en el código. Los números de línea son muy útiles para navegar por el código. Para obtener más información, vea [Navegar por código y texto](../../relational-databases/scripting/navigate-code-and-text.md).  
+ Se puede activar la numeración de líneas en el código. Los números de línea son muy útiles para navegar por el código. Para obtener más información, vea [Navegar por código y texto](./navigate-code-and-text.md).  
   
 > [!NOTE]  
 >  Aunque se active la numeración de líneas, el documento no se imprimirá con los números de línea. Para que se impriman, debe activar la casilla **Números de línea** en el comando **Configurar página** del menú **Archivo** .  
@@ -122,5 +122,4 @@ El editor permite controlar la vista del código de diferentes maneras.
 #### <a name="to-hide-all-the-tool-windows-at-once"></a>Para ocultar todas las ventanas de herramientas a la vez  
   
 1.  En el menú **Ventana** , active **Ocultar todo automáticamente** .  
-  
   

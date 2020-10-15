@@ -16,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: dffd92620f8975b41f8ea8c13a956c3984e56ea3
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1c017a50c2c5806012547d87fd67786e8121510a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480117"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038149"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Generar proyectos de bases de datos mediante SQL Server Management Studio
 
@@ -68,6 +68,5 @@ El Explorador de soluciones es una herramienta para los programadores que crean 
 Una solución consta de uno o más proyectos de script. Un proyecto está formado por uno o más scripts o conexiones. Un proyecto también puede incluir archivos que no sean scripts.  
   
 ## <a name="see-also"></a>Consulte también  
-[Usar SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
+[Usar SQL Server Management Studio](./sql-server-management-studio-ssms.md)  
 [Soluciones &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
-  

@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
-ms.openlocfilehash: 627eff46acaae38b675814e84ea76e7a7ea64f2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91a18087a9bf3f844988dec16e84a1cdbbfb1948
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417961"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037584"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>Ejecutar instrucciones en varios servidores simultáneamente
 
@@ -30,7 +30,7 @@ En este tema se describe cómo consultar al mismo tiempo varios servidores en [!
 
 Los resultados que devuelve la consulta se pueden combinar en un único panel de resultados o en paneles de resultados independientes. El conjunto de resultados puede incluir columnas adicionales para el nombre de servidor y el inicio de sesión que usa la consulta en cada servidor. Los Servidores de administración central y los servidores secundarios se pueden registrar únicamente utilizando la autenticación de Windows. Los servidores de los grupos de servidores locales se pueden registrar con la autenticación de Windows o con la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-> **NOTA:** Antes de ejecutar los procedimientos siguientes, cree un Servidor de administración central y un grupo de servidores. Para obtener más información, vea [Crear un servidor de administración central y un grupo de servidores &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md).  
+> **NOTA:** Antes de ejecutar los procedimientos siguientes, cree un Servidor de administración central y un grupo de servidores. Para obtener más información, vea [Crear un servidor de administración central y un grupo de servidores &#40;SQL Server Management Studio&#41;](./create-a-central-management-server-and-server-group.md).  
 
   
 ##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
@@ -63,5 +63,4 @@ Los resultados que devuelve la consulta se pueden combinar en un único panel de
   
 ## <a name="see-also"></a>Consulte también  
  [Administrar varios servidores mediante Servidores de administración central](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
-  
   

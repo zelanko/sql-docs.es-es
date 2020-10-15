@@ -16,25 +16,25 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4777fbe03e20a4c021f3ca6a91ebc06cf625dc13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 493c6ad3ef82eb8f69356ea8698808eddb3bc02f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88371531"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035127"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Crear un trabajo maestro del Agente SQL Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
+> En [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 En este tema se describe cómo crear un trabajo maestro del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de empezar  
   
 ### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Limitaciones y restricciones  
-Los cambios en los trabajos principales del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se deben transmitir a todos los servidores de destino implicados. Dado que los servidores de destino no descargan inicialmente un trabajo hasta que se especifican dichos destinos, [!INCLUDE[msCoName](../../includes/msconame_md.md)] recomienda completar todos los pasos y programaciones de un trabajo concreto antes de especificar los servidores de destino. De lo contrario, debe solicitar manualmente que los servidores de destino vuelvan a descargar el trabajo modificado, ejecutando el procedimiento almacenado **sp_post_msx_operation** o modificando el trabajo mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para más información, consulte [sp_post_msx_operation (Transact-SQL)](https://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf) o [Modificar un trabajo](../../ssms/agent/modify-a-job.md).  
+Los cambios en los trabajos principales del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se deben transmitir a todos los servidores de destino implicados. Dado que los servidores de destino no descargan inicialmente un trabajo hasta que se especifican dichos destinos, [!INCLUDE[msCoName](../../includes/msconame_md.md)] recomienda completar todos los pasos y programaciones de un trabajo concreto antes de especificar los servidores de destino. De lo contrario, debe solicitar manualmente que los servidores de destino vuelvan a descargar el trabajo modificado, ejecutando el procedimiento almacenado **sp_post_msx_operation** o modificando el trabajo mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para más información, consulte [sp_post_msx_operation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md) o [Modificar un trabajo](../../ssms/agent/modify-a-job.md).  
   
 ### <a name="security"></a><a name="Security"></a>Seguridad  
   
@@ -123,13 +123,12 @@ Si se producen errores en los pasos de trabajo que utilizan cuentas de proxy dur
   
 Para más información, consulte:  
   
--   [sp_add_job (Transact-SQL)](https://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
+-   [sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
   
--   [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)  
+-   [sp_add_jobstep (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
   
--   [sp_add_schedule (Transact-SQL)](https://msdn.microsoft.com/9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7)  
+-   [sp_add_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
--   [sp_attach_schedule (Transact-SQL)](https://msdn.microsoft.com/80c80eaf-cf23-4ed8-b8dd-65fe59830dd1)  
+-   [sp_attach_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
--   [sp_add_jobserver (Transact-SQL)](https://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286)  
-  
+-   [sp_add_jobserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)  

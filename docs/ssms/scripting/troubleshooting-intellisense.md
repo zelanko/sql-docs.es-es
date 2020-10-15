@@ -16,12 +16,12 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 613633dced2e5e906ad5d676e05b519e5f1708a5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: decdf70e29d907e8f95b7e16cbd88ac94e16b857
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901870"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036088"
 ---
 # <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>Identificación de problemas con IntelliSense: SQL Server Management Studio (SSMS)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "88901870"
   
      La mayoría de las características de IntelliSense funcionan automáticamente de forma predeterminada. No obstante, se pueden deshabilitar todas.  
   
-     Es posible usar las características de IntelliSense aunque la finalización de instrucciones automática esté deshabilitada. Para obtener más información, vea [Configurar IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md).  
+     Es posible usar las características de IntelliSense aunque la finalización de instrucciones automática esté deshabilitada. Para obtener más información, vea [Configurar IntelliSense &#40;SQL Server Management Studio&#41;](./configure-intellisense-sql-server-management-studio.md).  
   
 ## <a name="database-engine-query-intellisense"></a>IntelliSense en las consultas de Database Engine  
  Los problemas siguientes se aplican al Editor de consultas de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] :  
   
--   La funcionalidad IntelliSense del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] no es compatible con todos los elementos de sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] . La ayuda sobre parámetros no es compatible con los parámetros de algunos objetos, como los procedimientos almacenados extendidos. Para obtener más información, vea [Sintaxis de Transact-SQL compatible con IntelliSense](../../relational-databases/scripting/transact-sql-syntax-supported-by-intellisense.md).  
+-   La funcionalidad IntelliSense del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] no es compatible con todos los elementos de sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] . La ayuda sobre parámetros no es compatible con los parámetros de algunos objetos, como los procedimientos almacenados extendidos. Para obtener más información, vea [Sintaxis de Transact-SQL compatible con IntelliSense](./transact-sql-syntax-supported-by-intellisense.md).  
   
 -   IntelliSense solamente está disponible cuando el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] está conectado a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior. IntelliSense no está disponible cuando el Editor de consultas está conectado a versiones anteriores del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -70,5 +70,4 @@ ms.locfileid: "88901870"
 -   Las listas de finalización no incluyen los objetos de base de datos para los que no tiene permisos. IntelliSense marca las referencias a los objetos para los que tiene permisos. Por ejemplo, si abre un script que ha escrito otra persona, cualquier referencia a los objetos para los que esa persona tenga permisos y usted no se marca como incorrecta.  
   
 -   Las listas de finalización podrían dejar de funcionar si pierde la conexión a la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Vuelva a conectarse a la instancia.  
-  
   

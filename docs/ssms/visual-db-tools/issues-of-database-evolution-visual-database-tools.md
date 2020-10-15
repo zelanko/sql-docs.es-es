@@ -14,12 +14,12 @@ ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 88f2c0cff6bd33bf5327c7c919370015873700ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d42c0bb0c18b7917ef0e8c8a29e9522e744ce2d2
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88314631"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037788"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>Problemas de evolución de bases de datos (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,6 +36,5 @@ Si cambia la estructura de una base de datos implementada, debe tener especial c
 Independientemente de la manera en que se modifique el diseño de base de datos, debe conservar un historial de las modificaciones. Una posibilidad es conservar scripts SQL para todas las modificaciones que haya realizado en la base de datos de producción.  
   
 ## <a name="see-also"></a>Consulte también  
-[Trabajar con restricciones](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Trabajar con restricciones](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
 [Entornos multiusuario &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
-  

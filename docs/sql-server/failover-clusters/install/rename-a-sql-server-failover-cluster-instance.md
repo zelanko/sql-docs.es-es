@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6144c7ef647f9108f9ac6619d971696b643e7648
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: bbea3e2cf7d8a8eaf3ab62b20e0dd0472053def4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115753"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988382"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Cambiar el nombre de una instancia de clúster de conmutación por error de SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "91115753"
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servicio del Agente:** compruebe y realice las acciones adicionales siguientes para el Servicio Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
--   Corrija la configuración del Registro si el Agente SQL se configura para el reenvío de eventos. Para obtener más información, vea [Designar un servidor de reenvío de eventos &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
+-   Corrija la configuración del Registro si el Agente SQL se configura para el reenvío de eventos. Para obtener más información, vea [Designar un servidor de reenvío de eventos &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
 -   Corregir los nombres de instancia de los servidores de destino (TSX) y el servidor maestro (MSX) cuando se cambie el nombre de red en clúster o equipos. Para obtener más información, vea los temas siguientes:  
   
@@ -84,5 +84,4 @@ ms.locfileid: "91115753"
   
 ## <a name="see-also"></a>Consulte también  
  [Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
-  
   

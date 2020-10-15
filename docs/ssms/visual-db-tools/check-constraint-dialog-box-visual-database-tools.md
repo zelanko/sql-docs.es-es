@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: c210bb02d44b22727b74cb49e635b47e6d1f3dba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b37e339dc13577bd30491f1c155ebb8114868d60
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491755"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038969"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Restricción CHECK (cuadro de diálogo, Visual Database Tools)
 
@@ -44,7 +44,7 @@ Elimina la restricción seleccionada de la tabla. Para cancelar la adición de u
 Se expande para mostrar el campo de la propiedad **Expresión** .  
   
 **Expression**  
-Muestra la expresión de la restricción CHECK seleccionada. En las restricciones nuevas, debe especificar la expresión antes de salir del cuadro. También puede editar las restricciones CHECK existentes. Para más información, consulte [Trabajar con restricciones](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
+Muestra la expresión de la restricción CHECK seleccionada. En las restricciones nuevas, debe especificar la expresión antes de salir del cuadro. También puede editar las restricciones CHECK existentes. Para más información, consulte [Trabajar con restricciones](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
 **Categoría Identidad**  
 Se expande para mostrar las propiedades de **Nombre** y **Descripción**.  
@@ -69,5 +69,5 @@ Indica si se exigirá la restricción cuando un agente de replicación realice u
   
 ## <a name="see-also"></a>Consulte también
 
-[Trabajar con restricciones](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)
+[Trabajar con restricciones](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 [Índices o claves (cuadro de diálogo, Visual Database Tools)](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)

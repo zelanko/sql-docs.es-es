@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b46b73ad594ac54b244a6f9977d7c3801b0d2ce2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02a59706342a9f97d47358102169665c4c41d6dc
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463137"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035028"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
+> En [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 En este tema se describe cómo eliminar un registro de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -87,10 +87,10 @@ A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modi
     GO  
     ```  
   
-Para más información, consulte [sp_delete_jobsteplog (Transact-SQL)](https://msdn.microsoft.com/e9ef4c99-abde-4038-b6a3-a25dcbaf0958).  
+Para más información, consulte [sp_delete_jobsteplog (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md).  
   
 ## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Usar Objetos de administración de SQL Server  
-Use los métodos **DeleteJobStepLogs** de la clase **Job** mediante el lenguaje de programación de su elección, como Visual Basic, Visual C# o PowerShell. Para más información, consulte[Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
+Use los métodos **DeleteJobStepLogs** de la clase **Job** mediante el lenguaje de programación de su elección, como Visual Basic, Visual C# o PowerShell. Para más información, consulte[Objetos de administración de SQL Server (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
   
 ```  
 -- Uses PowerShell to delete all job step log files that have ID values larger than 5.  
@@ -98,4 +98,3 @@ $srv = new-object Microsoft.SqlServer.Management.Smo.Server("(local)")
 $jb = $srv.JobServer.Jobs["Test Job"]  
 $jb.DeleteJobStepLogs(5)  
 ```  
-  

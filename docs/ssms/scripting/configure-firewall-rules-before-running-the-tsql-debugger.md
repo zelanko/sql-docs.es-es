@@ -23,12 +23,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09732c9089781026239c300dd53f51108d3e149a
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 18ddcd8e2671416af4af22ee324caedd296b89bf
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901981"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039089"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurar reglas de firewall antes de ejecutar al depurador de TSQL
 
@@ -170,8 +170,8 @@ Todos los intentos de iniciar el depurador de [!INCLUDE[tsql](../../includes/tsq
 
 ## <a name="see-also"></a>Consulte también
 
-- [Depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Ejecutar el depurador de Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)
-- [Avanzar paso a paso por el código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Ver información del depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Depurador de Transact-SQL](./transact-sql-debugger.md)
+- [Ejecutar el depurador de Transact-SQL](./run-the-transact-sql-debugger.md)
+- [Avanzar paso a paso por el código Transact-SQL](./step-through-transact-sql-code.md)
+- [Ver información del depurador de Transact-SQL](./transact-sql-debugger-information.md)
+- [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)

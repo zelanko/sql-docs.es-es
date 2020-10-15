@@ -8,16 +8,16 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 07b140aceae2eae1a63b826b0bb4f95c8cfc515b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 36d4581756cd89e016658f8e415aaec6fbe9a35b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990358"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988011"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>Conexión de instancias de SQL Server a Azure Arc a gran escala
 
-Se pueden conectar varias instancias de SQL Server instaladas en varias máquinas Windows o Linux a Azure Arc mediante el mismo [script que se ha generado para una sola máquina](connect.md). El script conectará y registrará cada máquina y las instancias de SQL Server instaladas en él en Azure Arc. Para obtener la mejor experiencia, se recomienda usar una [entidad de servicio](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals) de Azure Active Directory. Una entidad de servicio es una identidad de administración limitada especial a la que solo se concede el permiso mínimo necesario a fin de conectar máquinas a Azure y crear los recursos de Azure para un servidor habilitado para Azure Arc y un servidor de SQL Server habilitado para Azure Arc. Es más seguro que usar una cuenta con más privilegios, como un Administrador de inquilinos, y sigue nuestros procedimientos recomendados de seguridad de control de acceso.  
+Se pueden conectar varias instancias de SQL Server instaladas en varias máquinas Windows o Linux a Azure Arc mediante el mismo [script que se ha generado para una sola máquina](connect.md). El script conectará y registrará cada máquina y las instancias de SQL Server instaladas en él en Azure Arc. Para obtener la mejor experiencia, se recomienda usar una [entidad de servicio](/azure/active-directory/develop/app-objects-and-service-principals) de Azure Active Directory. Una entidad de servicio es una identidad de administración limitada especial a la que solo se concede el permiso mínimo necesario a fin de conectar máquinas a Azure y crear los recursos de Azure para un servidor habilitado para Azure Arc y un servidor de SQL Server habilitado para Azure Arc. Es más seguro que usar una cuenta con más privilegios, como un Administrador de inquilinos, y sigue nuestros procedimientos recomendados de seguridad de control de acceso.  
 
 Los métodos de instalación para instalar y configurar el agente Connected Machine requieren que el método automatizado que se use tenga permisos de administrador en las máquinas. En Linux, mediante la cuenta raíz y, en Windows, como miembro del grupo local de administradores.
 

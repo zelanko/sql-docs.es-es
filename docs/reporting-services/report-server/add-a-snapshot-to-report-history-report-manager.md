@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 1effcdd44d04b3125cdeaf9983372cdcb00bd429
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 549333b7556e3537fd8a6a628738b0c0f87a1da9
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245738"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935322"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>Agregar una instantánea al historial de informes
 
@@ -71,7 +71,7 @@ Las instantáneas de informe no se guardan con un formato de representación con
 - [Configurar las propiedades de ejecución de un informe &#40;Administrador de informes&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Limitar el historial de informe &#40;Administrador de informes&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Programaciones](../../reporting-services/subscriptions/schedules.md)   
-- [Administrador de informes &#40;Modo nativo de SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [Administrador de informes &#40;Modo nativo de SSRS&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end
 
@@ -160,6 +160,6 @@ Las instantáneas de informe no se guardan con un formato de representación con
 - [Configuración de las propiedades de ejecución de un informe (portal web)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Limitar el historial de informe (portal web)](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Programaciones](../../reporting-services/subscriptions/schedules.md)   
-- [Portal web &#40;modo nativo de SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [Portal web &#40;modo nativo de SSRS&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end

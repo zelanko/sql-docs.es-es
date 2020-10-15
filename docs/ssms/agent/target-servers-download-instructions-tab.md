@@ -14,18 +14,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7729eb764558d1f672cfd3f3bb1a5bc32e3e3712
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cd3683f46ac0f7f3d2264d01684288a304faa394
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463047"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038120"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Servidores de destino (pestaña Descargar instrucciones)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
+> En [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 Utilice esta página para mostrar y actualizar las instrucciones de descarga de uno o más servidores de destino.  
   
@@ -62,4 +62,3 @@ Borra el estado de la instrucción de descarga seleccionada.
   
 ## <a name="see-also"></a>Consulte también  
 [Administración automatizada en una empresa](../../ssms/agent/automated-administration-across-an-enterprise.md)  
-  

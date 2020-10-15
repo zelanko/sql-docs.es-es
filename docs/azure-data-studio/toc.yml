@@ -14,7 +14,7 @@
       href: quickstart-sql-server.md
     - name: Conectar y consultar Azure SQL Database
       href: quickstart-sql-database.md
-    - name: Conectar y consultar Azure SQL Data Warehouse
+    - name: Conectar y consultar Azure Synapse Analytics
       href: quickstart-sql-dw.md
     - name: Conexión a PostgreSQL y consulta
       href: quickstart-postgres.md
@@ -130,7 +130,7 @@
       href: code-snippets.md
     - name: Recursos de SQL Azure del explorador
       href: azure-resource-explorer.md
-    - name: Accesos directos del teclado
+    - name: Métodos abreviados de teclado
       href: keyboard-shortcuts.md
     - name: Recopilación de datos de uso
       href: usage-data-collection.md

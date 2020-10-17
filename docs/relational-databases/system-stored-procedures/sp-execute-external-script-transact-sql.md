@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7953c9aafda19182395311b7adc648c04d5c1f39
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810201"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155074"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ El **sp_execute_external_script** procedimiento almacenado ejecuta un script pro
 
 Por Machine Learning Services, [Python](../../machine-learning/concepts/extension-python.md) y [R](../../machine-learning/concepts/extension-r.md) son lenguajes admitidos. En el caso de las extensiones de lenguaje, se admite Java pero debe definirse con [Create external Language](../../t-sql/statements/create-external-language-transact-sql.md).
 
-Para ejecutar **sp_execute_external_script**, primero debe instalar Machine Learning Services o las extensiones de lenguaje. Para obtener más información, consulte [instalación de SQL Server Machine Learning Services (Python y R) en Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) y [Linux](../../linux/sql-server-linux-setup-machine-learning.md), o [instalación de extensiones de lenguaje de SQL Server en Windows](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md) y [Linux](../../linux/sql-server-linux-setup-language-extensions.md).
+Para ejecutar **sp_execute_external_script**, primero debe instalar Machine Learning Services o las extensiones de lenguaje. Para obtener más información, consulte [instalación de SQL Server Machine Learning Services (Python y R) en Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) y [Linux](../../linux/sql-server-linux-setup-machine-learning.md), o [instalación de extensiones de lenguaje de SQL Server en Windows](../../language-extensions/install/windows-java.md) y [Linux](../../linux/sql-server-linux-setup-language-extensions-java.md).
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` Una lista de valores para los parámetros de entrada utilizados por el script externo.  
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 > [!IMPORTANT]
 > El árbol de consultas se controla mediante el aprendizaje automático de SQL y los usuarios no pueden realizar operaciones arbitrarias en la consulta.
@@ -322,7 +322,7 @@ Para generar un modelo similar mediante Python, tendría que cambiar el identifi
 
 Para puntuar, también puede usar la función nativa [PREDICT](../../t-sql/queries/predict-transact-sql.md), que es normalmente más rápida porque evita llamar al runtime de Python o R.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 + [Aprendizaje automático de SQL](../../machine-learning/index.yml)
 + [Extensiones de lenguaje de SQL Server](../../language-extensions/language-extensions-overview.md). 

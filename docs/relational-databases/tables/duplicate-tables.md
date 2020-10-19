@@ -1,8 +1,8 @@
 ---
-description: Estructuras de tablas duplicadas
-title: Estructuras de tablas duplicadas | Microsoft Docs
+description: Cree una copia duplicada de una tabla sin los datos de fila.
+title: Estructuras de tablas duplicadas | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/05/2020
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,17 +18,17 @@ ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb4e0ebc6160dce0a1f6db3ee4d59141712e78a6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a8faa1aab3237152934f0ce9eb4cb9ce541d5d3d
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725026"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765807"
 ---
-# <a name="duplicate-table-structures"></a>Estructuras de tablas duplicadas
+# <a name="duplicate-tables"></a>Estructuras de tablas duplicadas
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-  Puede duplicar una tabla existente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] si crea una nueva tabla y, a continuación, copia la información de columna de una tabla existente.  
+Puede duplicar una tabla existente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] si crea una nueva tabla y, a continuación, copia la información de columna de una tabla existente.  
   
 > [!IMPORTANT]  
 >  Esta operación solo duplica la estructura de la tabla, pero no duplica ninguna fila de la tabla.  
@@ -85,5 +85,3 @@ ms.locfileid: "91725026"
 4.  Quite las columnas que no se necesiten en la nueva tabla.  
   
 5.  Haga clic en **Ejecutar**.  
-  
-  

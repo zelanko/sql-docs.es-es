@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 70358a9ba4fc5cb9d9b326119b488efe6af3a9f5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480957"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868190"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -810,7 +810,7 @@ GO
 ## <a name="dynamic-locking"></a><a name="dynamic_locks"></a> Bloqueo dinámico
  La utilización de bloqueos de bajo nivel, como los de fila, aumenta la simultaneidad reduciendo la probabilidad de que dos transacciones soliciten bloqueos de los mismos datos al mismo tiempo. También aumenta el número de bloqueos y los recursos necesarios para administrarlos. Los bloqueos de alto nivel de tabla o página producen una sobrecarga menor, pero a costa de reducir la simultaneidad.  
   
- ![lockcht](../relational-databases/media/lockcht.png) 
+ ![Costo de bloqueo frente a costo de simultaneidad](../relational-databases/media/lockcht.png) 
   
  El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utiliza una estrategia de bloqueo dinámico para determinar los bloqueos que son más eficaces. El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] determina automáticamente los bloqueos más apropiados cuando se ejecuta la consulta, basándose en las características del esquema y de la consulta. Por ejemplo, para reducir la sobrecarga de bloqueos, el optimizador puede decidir la realización de bloqueos de página en un índice al realizar un recorrido del índice.  
   
@@ -940,7 +940,7 @@ ORDER BY [Date] DESC
 
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
-![system_health_qry](../relational-databases/media/system_health_qry.png)
+![system_health_xevent_query_result](../relational-databases/media/system_health_qry.png)
 
 En el ejemplo siguiente se muestra el resultado, después de hacer clic en el primer vínculo del resultado anterior:
 
@@ -2080,8 +2080,15 @@ GO
   
 -   Tenga acceso a la menor cantidad de datos posible en una transacción.  
     Así reduce el número de filas bloqueadas y, por lo tanto, disminuye el conflicto entre transacciones.  
+    
+-   Evite las sugerencias de bloqueo pesimistas, como "holdlock", siempre que sea posible. 
+    Las sugerencias como HOLDLOCK o el nivel de aislamiento SERIALIZABLE pueden provocar que los procesos esperen incluso en bloqueos compartidos y que se reduzca la simultaneidad.
+
+-   Evite el uso de transacciones implícitas cuando tales transacciones implícitas puedan presentar un comportamiento imprevisible debido a su naturaleza. Consulte [Transacciones implícitas y prevención de problemas de simultaneidad y de recursos](#implicit-transactions-and-avoiding-concurrency-and-resource-problems).
+
+-   Diseñe índices con un [factor de relleno](indexes/specify-fill-factor-for-an-index.md) reducido. El hecho de reducir el factor de relleno puede ayudarle a evitar o disminuir la fragmentación de las páginas de índice y, por tanto, reducir los tiempos de búsqueda de índices, especialmente cuando se recuperan del disco. Para ver información sobre la fragmentación de los datos e índices de una tabla o vista, puede usar sys.dm_db_index_physical_stats. 
   
-#### <a name="avoiding-concurrency-and-resource-problems"></a>Evitar problemas de simultaneidad y de recursos  
+#### <a name="implicit-transactions-and-avoiding-concurrency-and-resource-problems"></a>Transacciones implícitas y prevención de problemas de simultaneidad y de recursos  
  Para evitar los problemas de simultaneidad y de recursos, administre cuidadosamente las transacciones implícitas. Cuando utilice transacciones implícitas, la siguiente instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] después de `COMMIT` o `ROLLBACK` inicia automáticamente una nueva transacción. Esto puede hacer que se abra una nueva transacción mientras la aplicación examina los datos o, incluso, cuando pide una entrada del usuario. Tras concluir la última transacción necesaria para proteger las modificaciones de los datos, desactive las transacciones implícitas hasta que se necesite de nuevo una transacción para proteger las modificaciones de los datos. Este proceso permite que el [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilice el modo de confirmación automática mientras la aplicación examina los datos y obtiene la entrada del usuario.  
   
  Además, cuando el nivel de aislamiento de instantánea está habilitado, aunque una transacción nueva no mantenga bloqueos, una transacción de larga duración impedirá que las versiones anteriores se eliminen de `tempdb`.  
@@ -2112,8 +2119,8 @@ GO
  Puede que deba utilizar la instrucción KILL. Sin embargo, utilice esta instrucción con sumo cuidado, especialmente cuando se estén ejecutando procesos críticos. Para obtener más información, consulte [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md).  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Lecturas adicionales   
-[Overhead of Row Versioning](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)  (Sobrecarga de las versiones de fila)  
+[Overhead of Row Versioning](/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)  (Sobrecarga de las versiones de fila)  
 [Eventos extendidos](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      
-[Funciones y vistas de administración dinámica relacionadas con transacciones &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)     
+[Funciones y vistas de administración dinámica relacionadas con transacciones &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)

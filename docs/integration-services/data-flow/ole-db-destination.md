@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 91f2323a61440792654b341364efb79506c5cdd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa8723e3db746c614d3a9e44c37ea702506d2c45
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477797"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987665"
 ---
 # <a name="ole-db-destination"></a>Destino de OLE DB
 
@@ -96,7 +96,7 @@ ms.locfileid: "88477797"
   
 |Opción de carga rápida|Descripción|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Especifica el tamaño en kilobytes para insertar. La opción tiene el formulario **KILOBYTES_PER_BATCH** = \<positive integer value**>**.|  
+|KILOBYTES_PER_BATCH|Especifica el tamaño en kilobytes para insertar. La opción tiene la forma **KILOBYTES_PER_BATCH** =  *\<positive integer value>* .|  
 |FIRE_TRIGGERS|Especifica si se activan los desencadenadores en la tabla de inserción. La opción tiene la forma **FIRE_TRIGGERS**. La presencia de la opción indica que se activan los desencadenadores.|  
 |ORDER|Especifica cómo se ordenan los datos de entrada. La opción tiene el formulario ORDER \<column name> ASC&#124;DESC. Se puede enumerar cualquier cantidad de columnas (el orden es opcional). Si se omite el orden, la operación de inserción presupone que los datos no están ordenados.<br /><br /> Nota: El rendimiento puede mejorar si se utiliza la opción ORDER para ordenar los datos de entrada según el índice clúster de la tabla.|  
   

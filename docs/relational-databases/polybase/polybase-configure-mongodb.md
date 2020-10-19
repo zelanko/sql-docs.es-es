@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7592100b7f8faec7dcfba35977e6b1cb5865854c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ab1ef128b86f3426193b648c41f6cac6b324e71
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741764"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834047"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurar PolyBase para acceder a datos externos en MongoDB
 
@@ -49,6 +49,10 @@ En esta sección se utilizan los siguientes comandos de Transact-SQL:
     */
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
+    
+   > [!IMPORTANT] 
+   > El conector ODBC de MongoDB para PolyBase solo admite la autenticación básica, no la autenticación Kerberos.    
+    
 1. Cree un origen de datos externo con [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
     ```sql
@@ -72,7 +76,9 @@ En esta sección se utilizan los siguientes comandos de Transact-SQL:
     ```
 
 >[!IMPORTANT] 
->Una vez que se haya creado un origen de datos externos, se puede usar el comando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) para crear una tabla consultable a través de ese origen. 
+>Una vez que se haya creado un origen de datos externos, se puede usar el comando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) para crear una tabla consultable a través de ese origen.
+>
+>Para obtener un ejemplo, vea [Crear una tabla externa para MongoDB](../../t-sql/statements/create-external-table-transact-sql.md#k-create-an-external-table-for-mongodb).
 
 ## <a name="flattening"></a>Acoplamiento
 El acoplamiento está habilitado para los datos anidados y repetidos de las colecciones de documentos de MongoDB. El usuario debe habilitar `create an external table` y especificar explícitamente un esquema relacional mediante colecciones de documentos de MongoDB que podrían tener datos anidados o repetidos. Los tipos de datos JSON anidados o repetidos se acoplarán del siguiente modo:

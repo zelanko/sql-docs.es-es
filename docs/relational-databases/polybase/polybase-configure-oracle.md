@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 322c858a9b20548662136e395c0db1c76171f5fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c2d0edde6ca50074f05ff51eca0de38ec947f31a
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85740952"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834030"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracled"></a>Configurar PolyBase para acceder a datos externos en Oracle
 
@@ -49,6 +49,9 @@ En esta sección se utilizan los siguientes comandos de Transact-SQL:
     */
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
+    
+   > [!IMPORTANT] 
+   > El conector ODBC de Oracle para PolyBase solo admite la autenticación básica, no la autenticación Kerberos. 
 
 1. Cree un origen de datos externo con [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 

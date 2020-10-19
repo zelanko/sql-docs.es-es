@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: ec09eca0568d1213fce850362be7c889af3a3258
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 31ce6dbde09a9be1a69e6f024dc885f5cd38dfc8
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722228"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833803"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Configurar PolyBase para obtener acceso a datos externos en Teradata
 
@@ -52,6 +52,9 @@ En esta sección se utilizan los siguientes comandos de Transact-SQL:
     */
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
+
+   > [!IMPORTANT] 
+   > El conector de ODBC de Teradata para PolyBase solo admite la autenticación básica, no la autenticación Kerberos.
 
 1. Cree un origen de datos externo con [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 

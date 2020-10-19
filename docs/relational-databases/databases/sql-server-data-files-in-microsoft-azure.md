@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5314f43ea17351f54cf1815346a0820cc5cd77e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5aed55fa41bfd3998b4580e5ee0b66a35997b942
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715487"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987595"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Archivos de datos de SQL Server en Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -177,25 +177,28 @@ Para obtener más información, consulte [Manage anonymous read access to contai
   
  **Errores de base de datos:**  
   
-1.  *Errores al crear una base de datos*   
-    Resolución: Consulte las instrucciones de la lección 4 del [Tutorial: Uso del servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
+**Errores al crear una base de datos** Resolución: Consulte las instrucciones de la lección 4 del [Tutorial: Uso del servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
   
-2.  *Errores al ejecutar la instrucción Alter*   
-    Resolución: asegúrese de ejecutar la instrucción ALTER DATABASE cuando la base de datos esté en línea. Cuando copie archivos de datos en Azure Storage, cree siempre un blob en páginas y no un blob en bloques. De lo contrario, ALTER DATABASE no se ejecutará correctamente. Consulte las instrucciones de la lección 7 del [Tutorial: Uso del servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+**Errores al ejecutar la instrucción ALTER** Solución: asegúrese de ejecutar la instrucción ALTER DATABASE cuando la base de datos esté en línea. Cuando copie archivos de datos en Azure Storage, cree siempre un blob en páginas y no un blob en bloques. De lo contrario, ALTER DATABASE no se ejecutará correctamente. Consulte las instrucciones de la lección 7 del [Tutorial: Uso del servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Código de error 5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"*   
+**Código de error 5120: no se puede abrir el archivo físico "%.\*ls"; Error del sistema operativo %d: "%ls"**   
 
-    Resolución: Actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el Servidor A está en línea con un archivo de base de datos activo y el Servidor B se inicia accidentalmente y tiene también una base de datos que apunta al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos y se generará un error con un código *5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"* .  
+Resolución: Actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el Servidor A está en línea con un archivo de base de datos activo y el Servidor B se inicia accidentalmente y tiene también una base de datos que apunta al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos y se generará un error con un código *5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"* .  
   
-     Para resolver este problema, determine en primer lugar si necesita que el Servidor A obtenga acceso al archivo de base de datos de Azure Storage o no. Si no es así, quite las conexiones entre el Servidor A y los archivos de base de datos de Azure Storage. Para ello, siga estos pasos.  
-  
-    1.  Establezca la ruta de acceso de ServidorA en una carpeta local mediante la instrucción ALTER DATABASE.  
-  
-    2.  Ponga la base de datos sin conexión en el ServidorA.  
-  
-    3.  Luego copie los archivos de base de datos de Azure Storage en la carpeta local del Servidor A. Esto garantiza que el Servidor A siga conservando localmente una copia de la base de datos.  
-  
-    4.  Ponga la base de datos en línea.  
+Para resolver este problema, determine en primer lugar si necesita que el Servidor A obtenga acceso al archivo de base de datos de Azure Storage o no. Si no es así, quite las conexiones entre el Servidor A y los archivos de base de datos de Azure Storage. Para ello, siga estos pasos.  
+
+1.  Establezca la ruta de acceso de ServidorA en una carpeta local mediante la instrucción ALTER DATABASE.  
+
+2.  Ponga la base de datos sin conexión en el ServidorA.  
+
+3.  Luego copie los archivos de base de datos de Azure Storage en la carpeta local del Servidor A. Esto garantiza que el Servidor A siga conservando localmente una copia de la base de datos.  
+
+4.  Ponga la base de datos en línea.
+
+**Código de error 833: las solicitudes de E/S están tardando más de 15 segundos en completarse** 
+   
+   Este error indica que el sistema de almacenamiento no puede satisfacer las demandas de la carga de trabajo de SQL Server. Reduzca la actividad de E/S de la capa de aplicación, o bien aumente la capacidad de rendimiento en la capa de almacenamiento. Para obtener más información, vea el [error 833](../errors-events/mssqlserver-833-database-engine-error.md). Si los problemas de rendimiento persisten, valore la posibilidad de mover archivos a una capa de almacenamiento diferente, como Premium o UltraSSD. Con respecto a SQL Server en máquinas virtuales de Azure, consulte la [optimización el rendimiento de almacenamiento](/azure/virtual-machines/premium-storage-performance).
+
 
 ## <a name="next-steps"></a>Pasos siguientes  
   

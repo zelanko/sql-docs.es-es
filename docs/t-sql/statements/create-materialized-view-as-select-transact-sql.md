@@ -38,16 +38,16 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: bd7a5056761f6b249caea00463637c90f8ba5a49
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: cda76ce52f9b14c732cb4effb95c3ff523dd460b
+ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671158"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847345"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 En este artículo se explica la instrucción CREATE MATERIALIZED VIEW AS SELECT de T-SQL en [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] para soluciones en desarrollo. En el artículo también se proporcionan ejemplos de código.
 
@@ -113,6 +113,11 @@ Cuando se usan los agregados MIN/MAX en la lista SELECT de la definición de la 
 
 Las vistas materializadas en el almacenamiento de datos de Azure son similares a las vistas indexadas de SQL Server.Comparte casi las mismas restricciones que la vista indizada (consulte [Crear vistas indizadas](/sql/relational-databases/views/create-indexed-views) para obtener más información), salvo que una vista materializada admite las funciones de agregado.   
 
+>[!Note]
+>Aunque CREATE MATERIALIZED VIEW no admite COUNT, DISTINCT, COUNT (expresión DISTINCT) ni COUNT_BIG (expresión DISTINCT), las consultas SELECT con estas funciones se pueden seguir beneficiando de las vistas materializadas para obtener un rendimiento más rápido, ya que el optimizador de Synapse SQL puede volver a escribir automáticamente dichas agregaciones en la consulta del usuario para que coincidan con las vistas materializadas existentes.  Para obtener más información, consulte la sección ejemplo de este artículo. 
+
+En CREATE MATERIALIZED VIEW AS SELECT no se admite APPROX_COUNT_DISTINCT.
+
 La vista materializada solo admite CLUSTERED COLUMNSTORE INDEX. 
 
 Una vista materializada no puede hacer referencia a otras vistas.  
@@ -146,6 +151,49 @@ Para averiguar si una instrucción SQL puede beneficiarse de una nueva vista mat
 ## <a name="permissions"></a>Permisos
 
 Se necesitan los permisos 1) REFERENCES y CREATE VIEW o 2) CONTROL en el esquema en que se crea la vista. 
+
+## <a name="example"></a>Ejemplo
+A. En este ejemplo se muestra cómo el optimizador de Synapse SQL usa automáticamente vistas materializadas para ejecutar una consulta y mejorar el rendimiento, incluso cuando la consulta usa funciones no admitidas en CREATE MATERIALIZED VIEW, como COUNT (expresión DISTINCT). Una consulta que se usa y tarda varios segundos en completarse ahora finaliza en subsegundos sin ningún cambio en la consulta del usuario.   
+
+``` sql 
+
+-- Create a table with ~536 million rows
+create table t(a int not null, b int not null, c int not null) with (distribution=hash(a), clustered columnstore index);
+
+insert into t values(1,1,1);
+
+declare @p int =1;
+while (@P < 30)
+    begin
+    insert into t select a+1,b+2,c+3 from t;  
+    select @p +=1;
+end
+
+-- A SELECT query with COUNT_BIG (DISTINCT expression) took multiple seconds to complete and it reads data directly from the base table a. 
+select a, count_big(distinct b) from t group by a;
+
+-- Create two materialized views, not using COUNT_BIG(DISTINCT expression).
+create materialized view V1 with(distribution=hash(a)) as select a, b from dbo.t group by a, b;
+
+-- Clear all cache.
+
+DBCC DROPCLEANBUFFERS;
+DBCC freeproccache;
+
+-- Check the estimated execution plan in SQL Server Management Studio.  It shows the SELECT query is first step (GET operator) is to read data from the materialized view V1, not from base table a.
+select a, count_big(distinct b) from t group by a;
+
+-- Now execute this SELECT query.  This time it took sub-second to complete because Synapse SQL engine automatically matches the query with materialized view V1 and uses it for faster query execution.  There was no change in the user query.
+
+DECLARE @timerstart datetime2, @timerend datetime2;
+SET @timerstart = sysdatetime();
+
+select a, count_big(distinct b) from t group by a;
+
+SET @timerend = sysdatetime()
+select DATEDIFF(ms,@timerstart,@timerend);
+
+```
 
   
 ## <a name="see-also"></a>Consulte también

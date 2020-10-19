@@ -2,7 +2,7 @@
 title: Configuración de la administración extensible de claves de Cifrado de datos transparente (TDE) con Azure Key Vault
 description: Instale y configure el conector de SQL Server para Azure Key Vault.
 ms.custom: seo-lt-2019
-ms.date: 08/12/2020
+ms.date: 10/08/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: e5b18c46f602d24339c092b8f3e622b2a915baeb
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+author: Rupp29
+ms.author: arupp
+ms.openlocfilehash: e3b12ed6d4f28ce04c1ceac5960ae564368d9a9a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042896"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866602"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>Configuración de Administración extensible de claves de TDE de SQL Server mediante Azure Key Vault
 
@@ -34,7 +34,7 @@ Antes de empezar a usar Azure Key Vault con la instancia de SQL Server, asegúr
   
 - Debe tener una suscripción de Azure.
   
-- Instale [Azure PowerShell, versión 5.2.0 o posterior](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+- Instale [Azure PowerShell, versión 5.2.0 o posterior](/powershell/azure/).  
 
 - Cree una instancia de Azure Active Directory (Azure AD).
 
@@ -61,7 +61,7 @@ Para conceder permisos de acceso a la instancia de SQL Server al almacén de cl
 
       ![Captura de pantalla del panel "Todos los servicios de Azure"](../../../relational-databases/security/encryption/media/ekm/ekm-part1-select-aad.png)  
 
-1. Siga estos pasos para registrar una aplicación con Azure Active Directory. (Para obtener instrucciones detalladas paso a paso, vea la sección "Get an identity for the application" (Obtención de una identidad para la aplicación) de la [entrada de blog de Azure Key Vault](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)).
+1. Siga estos pasos para registrar una aplicación con Azure Active Directory. (Para obtener instrucciones detalladas paso a paso, vea la sección "Get an identity for the application" (Obtención de una identidad para la aplicación) de la [entrada de blog de Azure Key Vault](/archive/blogs/kv/azure-key-vault-step-by-step)).
 
     a. En el panel **Información general de Azure Active Directory**, seleccione en **Registros de aplicaciones**.
 
@@ -85,7 +85,7 @@ Para conceder permisos de acceso a la instancia de SQL Server al almacén de cl
 
     f. En el panel **Certificados y secretos**, en **"Valor"** , seleccione el botón **Copiar** situado junto al valor del secreto de cliente que se va a usar para crear una clave asimétrica en SQL Server.
 
-    ![Captura de pantalla del panel "Certificados y secretos"](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
+    ![Captura de pantalla del valor del secreto](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
 
     g. En el panel de la izquierda, seleccione **Información general** y, después en el cuadro **Id. de aplicación (cliente)** , copie el valor que se va a usar para crear una clave asimétrica en SQL Server.
 
@@ -160,7 +160,7 @@ El motor de base de datos de SQL Server usa el almacén de claves y la clave qu
 > [!IMPORTANT]
 > La suscripción en la que se crea el almacén de claves debe estar en la misma instancia predeterminada de Azure AD en la que se haya creado la entidad de servicio de Azure AD. Si quiera usar otra instancia de Azure AD que no sea la predeterminada para crear una entidad de servicio para el Conector de SQL Server, debe cambiar la instancia predeterminada de Azure AD en la cuenta de Azure antes de crear el almacén de claves. Para obtener información sobre cómo cambiar la instancia predeterminada de Azure AD por la que quiere usar, vea la sección "Preguntas más frecuentes" de [Mantenimiento y solución de problemas del Conector de SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB).  
   
-1. Instale e inicie sesión en [Azure PowerShell 5.2.0 o una versión posterior](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) con el comando siguiente:  
+1. Instale e inicie sesión en [Azure PowerShell 5.2.0 o una versión posterior](/powershell/azure/) con el comando siguiente:  
   
     ```powershell  
     Connect-AzAccount  
@@ -266,7 +266,7 @@ Para garantizar una recuperación rápida de las claves y la capacidad de accede
 
 - Cree la clave de cifrado localmente en un dispositivo de módulo de seguridad de hardware (HSM) local. Asegúrese de usar una clave RSA 2048 asimétrica, para que sea compatible con SQL Server.
 - Importe la clave de cifrado al almacén de claves de Azure. Este proceso se describe en las secciones siguientes.
-- Antes de usar la clave por primera vez en el almacén de claves de Azure, cree una copia de seguridad de la clave. Para obtener más información, vea el comando [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
+- Antes de usar la clave por primera vez en el almacén de claves de Azure, cree una copia de seguridad de la clave. Para obtener más información, vea el comando [Backup-AzureKeyVaultKey]().
 - Siempre que realice cambios en la clave (por ejemplo, si agrega ACL, etiquetas o atributos de clave), asegúrese de realizar otra copia de seguridad de la clave del almacén de claves de Azure.
 
   > [!NOTE]
@@ -339,8 +339,8 @@ Descargue el conector de SQL Server desde el [Centro de descarga de Microsoft](h
 > - Las versiones 1.0.0.440 y anteriores del conector de SQL Server se han reemplazado y ya no se admiten en entornos de producción, y se siguen las instrucciones de la página [Mantenimiento y solución de problemas del Conector de SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) en [Actualización del conector de SQL Server](sql-server-connector-maintenance-troubleshooting.md#upgrade-of--connector).
 > - A partir de la versión 1.0.3.0, el conector de SQL Server notifica los mensajes de error pertinentes a los registros de eventos de Windows para la solución de problemas.
 > - A partir de la versión 1.0.4.0, hay compatibilidad con las nubes de Azure privadas, entre las que se incluyen Azure China, Azure Alemania y Azure Government.
-> - Hay un cambio importante en la versión 1.0.5.0, relacionado con el algoritmo de huella digital. Puede experimentar un error de restauración de base de datos después de actualizar a la versión 1.0.5.0. Para más información, consulte el [artículo 447099 de KB](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
-> - **A partir de la versión 1.0.7.0, el conector de SQL Server admite el filtrado de mensajes y la lógica de reintento de solicitud de red.**
+> - Hay un cambio importante en la versión 1.0.5.0, relacionado con el algoritmo de huella digital. Puede experimentar un error de restauración de base de datos después de actualizar a la versión 1.0.5.0. Para obtener más información, vea el [artículo de KB 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
+> - **A partir de la versión 1.0.5.0 (marca de tiempo: septiembre de 2020), el Conector de SQL Server admite el filtrado de mensajes y la lógica de reintento de solicitud de red.**
   
   ![Captura de pantalla del Asistente para la instalación de Conector de SQL Server](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   

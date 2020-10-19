@@ -2,7 +2,7 @@
 title: Mantenimiento y solución de problemas del Conector de SQL Server
 description: Obtenga información sobre las instrucciones de mantenimiento y los pasos de solución de problemas comunes para el Conector de SQL Server.
 ms.custom: seo-lt-2019
-ms.date: 07/25/2019
+ms.date: 10/08/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 35ac4ad2bd6ee621973d4f999b32ec6b8099bfb7
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 4c8a74d33e75ab19b283f3b9d1bfdaf47dc69240
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042776"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869267"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Conector de SQL Server, apéndice
 
@@ -30,10 +30,10 @@ ms.locfileid: "90042776"
 ### <a name="key-rollover"></a>Sustitución incremental de claves  
   
 > [!IMPORTANT]  
-> El conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere que el nombre de clave solo use los caracteres "a-z", "A-Z", "0-9" y "-", con un límite de 26 caracteres.   
+> El conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere que el nombre de clave solo use los caracteres "a-z", "A-Z", "0-9" y "-", con un límite de 26 caracteres.
 > No funcionará el uso de diferentes versiones de claves bajo el mismo nombre de clave en el Almacén de claves de Azure con el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para girar una clave de Azure Key Vault que está usando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se debe crear una clave con un nombre de clave nuevo.  
   
- Normalmente se necesita crear versiones de las claves asimétricas de servidor para cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cada 1 o 2 años. Es importante tener en cuenta que aunque el Almacén de claves permite versiones de clave, los clientes no deben usar esta característica para implementar el control de versiones. El conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se puede ocupar de los cambios en la versión de clave del Almacén de claves. Para implementar el control de versiones de claves, el cliente debe crear una nueva clave en el Almacén de claves y volver a cifrar la clave de cifrado de datos en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+ Normalmente, es necesario crear versiones de las claves asimétricas de servidor para el cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cada uno o dos años. Es importante tener en cuenta que aunque el Almacén de claves permite versiones de clave, los clientes no deben usar esta característica para implementar el control de versiones. El conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se puede ocupar de los cambios en la versión de clave del Almacén de claves. Para implementar el control de versiones de claves, cree una nueva clave en Key Vault y vuelva a cifrar la clave de cifrado de datos en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
  Para TDE, así es cómo se lograría:  
   
@@ -98,60 +98,59 @@ ms.locfileid: "90042776"
 
 Las versiones 1.0.0.440 y anteriores se han reemplazado y ya no se admiten en entornos de producción. Las versiones 1.0.1.0 y posteriores se admiten en los entornos de producción. Use las instrucciones siguientes para actualizar a la versión más reciente disponible en el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=45344).
 
-Si actualmente usa la versión 1.0.1.0 o posterior, siga estos pasos para actualizar a la versión más reciente del Conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Estas instrucciones evitan la necesidad de reiniciar la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
- 
-1. Instale la versión más reciente del Conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde el [Centro de descargas de Microsoft](https://www.microsoft.com/download/details.aspx?id=45344). En el asistente de instalación, guarde el archivo DLL nuevo en una ruta de acceso a archivo distinta de la ruta de acceso a archivo del DLL del Conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] original. Por ejemplo, la nueva ruta de acceso archivo podría ser la siguiente: `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
- 
-1. En la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ejecute el siguiente comando Transact-SQL para dirigir la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la versión nueva del Conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :
+### <a name="upgrade"></a>Actualizar
 
-    ```sql
-    ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov
-    FROM FILE =
-    'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll'
-    GO  
-    ```
+1. Detenga el servicio SQL Server mediante el Administrador de configuración de SQL Server.
+1. Desinstale la versión anterior mediante Panel de control\Programas\Programas y características.
+    1. Nombre de la aplicación: Conector de SQL Server para Azure Key Vault
+    1. Versión: 15.0.300.96 (o anterior)
+    1. Fecha del archivo DLL: 30/01/2018 15:00 (o anterior)
+1. Instale (actualice) un nuevo Conector de SQL Server para Microsoft Azure Key Vault.
+    1. Versión: 15.0.2000.367
+    1. Fecha del archivo DLL: 11/09/2020 5:17
+1. Inicie el servicio SQL Server.
+1. Pruebe que se pueda a las bases de datos cifradas.
 
-Si actualmente usa la versión 1.0.0.440 o anterior, siga estos pasos para actualizar a la versión más reciente del Conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
-  
-1. Detenga la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-  
-1. Detenga el servicio del conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
-  
-1. Desinstalar el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la característica Programas y características de Windows.  
-  
-     (Como alternativa, puede cambiar el nombre de la carpeta en la que se encuentra el archivo DLL). El nombre predeterminado de la carpeta es "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para Microsoft Azure Key Vault".  
-  
-1. Instale la versión más reciente del conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde el Centro de descargas de Microsoft.  
-  
-1. Reinicie la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-  
-1. Ejecute la siguiente instrucción para modificar el proveedor de EKM y comenzar a usar la versión más reciente del conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Asegúrese de que la ruta del archivo apunte a donde descargó la versión más reciente. (Se puede omitir este paso si se instala la nueva versión en la misma ubicación que la versión original).
-  
-    ```sql  
-    ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov
-    FROM FILE =
-    'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
-    GO  
-    ```  
-  
+### <a name="rollback"></a>Reversión
+
+1. Detenga el servicio SQL Server mediante el Administrador de configuración de SQL Server.
+
+1. Desinstale la nueva versión mediante Panel de control\Programas\Programas y características.
+    1. Nombre de la aplicación: Conector de SQL Server para Azure Key Vault
+    1. Versión: 15.0.2000.367
+    1. Fecha del archivo DLL: 11/09/2020 5:17
+
+1. Instale la versión anterior del Conector de SQL Server para Microsoft Azure Key Vault.
+    1. Versión: 15.0.300.96
+    1. Fecha del archivo DLL: 30/01/2018 15:00
+1. Inicie el servicio SQL Server.
+
 1. Compruebe que las bases de datos con TDE sean accesibles.  
   
-1. Después de comprobar que la actualización funciona, puede eliminar la antigua carpeta del conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (si decide cambiar el nombre en lugar de desinstalar en el paso 3).  
+1. Después de comprobar que la actualización funciona, puede eliminar la antigua carpeta del conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (si decide cambiar el nombre en lugar de desinstalar en el paso 3).
+
+### <a name="older-versions-of-the-sql-server-connector"></a>Versiones anteriores del Conector de SQL Server
   
+Vínculos profundos a versiones anteriores del Conector de SQL Server
+
+- Corriente: [1.0.5.0 (versión 15.0.2000.367); fecha de archivo del 11 de septiembre de 2020](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/1033_15.0.2000.367/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- [1.0.5.0 (versión 15.0.300.96); fecha de archivo del 30 de enero de 2018](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/ENU/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- [1.0.4.0 (versión 13.0.811.168)](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+
 ### <a name="rolling-the-ssnoversion-service-principal"></a>Puesta en marcha de la entidad de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa entidades de servicio creadas en Azure Active Directory como credenciales para acceder al Almacén de claves.  La entidad de servicio tiene identificador de cliente y clave de autenticación.  Una credencial de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configura con el **nombre de almacén**, el **identificador de cliente**y la **clave de autenticación**.  La **clave de autenticación** es válida durante un determinado período de tiempo (uno o dos años).   Antes de que expire el período de tiempo se debe generar una nueva clave en Azure AD para la entidad de servicio.  Después, la credencial debe cambiarse en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantiene una caché para la credencial en la sesión actual, por lo que cuando se cambia una credencial, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] se debe reiniciar.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa entidades de servicio creadas en Azure Active Directory como credenciales para acceder al Almacén de claves. La entidad de servicio tiene identificador de cliente y clave de autenticación. Una credencial de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configura con el **nombre de almacén**, el **identificador de cliente**y la **clave de autenticación**. La **clave de autenticación** es válida durante un determinado período de tiempo (uno o dos años). Antes de que expire el período de tiempo se debe generar una nueva clave en Azure AD para la entidad de servicio. Después, la credencial debe cambiarse en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantiene una caché para la credencial en la sesión actual, por lo que cuando se cambia una credencial, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] se debe reiniciar.  
   
 ### <a name="key-backup-and-recovery"></a>Copia de seguridad y recuperación de claves
 
 Se debe realizar una copia de seguridad del almacén de claves con cierta frecuencia. Si se pierde una clave asimétrica en el almacén, se puede restaurar desde la copia de seguridad. La clave debe restaurarse con el mismo nombre que antes, que es lo que hará el comando de PowerShell Restore (consulte los pasos siguientes).  
-Si el almacén se ha perdido, tendrá que volver a crear un almacén y restaurar la clave asimétrica en el almacén usando el mismo nombre que antes. El nombre del almacén puede ser diferente (o el mismo que antes). También debe establecer los permisos de acceso en el nuevo almacén para conceder a la entidad de servicio de SQL Server el acceso necesario para los escenarios de cifrado de SQL Server y ajustar la credencial de SQL Server para que se refleje el nuevo nombre del almacén .
+Si el almacén se ha perdido, tendrá que volver a crear un almacén y restaurar la clave asimétrica en el almacén usando el mismo nombre que antes. El nombre del almacén puede ser diferente (o el mismo que antes). Debe establecer los permisos de acceso en el nuevo almacén para conceder a la entidad de servicio de SQL Server el acceso necesario a los escenarios de cifrado de SQL Server y ajustar la credencial de SQL Server para que se refleje el nuevo nombre del almacén.
 
 En resumen, estos son los pasos:  
   
 - Realice una copia de seguridad de la clave del almacén (con el cmdlet de PowerShell Backup-AzureKeyVaultKey).  
-- En caso de error del almacén, cree un nuevo almacén en la misma región geográfica*. El usuario que crea esto debería estar en el mismo directorio predeterminado que el programa de instalación de la entidad de servicio para SQL Server.  
-- Restaure la clave en el nuevo almacén (mediante el cmdlet Restore-AzureKeyVaultKey de PowerShell; esto restaura la clave con el mismo nombre que antes). Si ya existe una clave con el mismo nombre, se producirá un error en la restauración.  
+- En caso de error del almacén, cree un nuevo almacén en la misma región geográfica. El usuario que crea el almacén debería estar en el mismo directorio predeterminado que el programa de instalación de la entidad de servicio para SQL Server.  
+- Restaure la clave en el nuevo almacén mediante el cmdlet Restore-AzureKeyVaultKey de PowerShell, que restaura la clave con el mismo nombre que antes. Si ya existe una clave con el mismo nombre, se producirá un error en la restauración.  
 - Conceda permisos a la entidad de servicio de SQL Server para que use este nuevo almacén.
 - Modifique la credencial de SQL Server que usa el motor de base de datos para reflejar el nuevo nombre de almacén (si es necesario).  
   
@@ -176,7 +175,7 @@ El conector se comunica con dos puntos de conexión, que deben estar permitidos.
 - *.vault.azure.net/* :443
 
 **¿Cómo conectarse a Azure Key Vault a través de un servidor proxy HTTP(S)?**
-El conector usa la configuración de proxy de Internet Explorer. Esta configuración se puede controlar a través de la [directiva de grupo](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/) o a través del registro, pero es importante tener en cuenta que no son opciones de configuración de todo el sistema y deben estar destinadas a la cuenta de servicio que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si un administrador de bases de datos ve o edita la configuración en Internet Explorer, solo afectará a la cuenta del administrador de la base de datos en lugar del motor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. No se recomienda iniciar sesión en el servidor de forma interactiva mediante la cuenta de servicio y esta opción está bloqueada en muchos entornos seguros. Los cambios en la configuración de proxy configurado pueden requerir que se reinicie la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que surtan efecto, ya que se almacenan en caché cuando el conector intenta conectarse por primera vez a un almacén de claves.
+El conector usa la configuración de proxy de Internet Explorer. Esta configuración se puede controlar por medio de la [directiva de grupo](/archive/blogs/askie/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available) o el registro, pero es importante tener en cuenta que no son opciones de configuración de todo el sistema y deben estar destinadas a la cuenta de servicio que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si un administrador de bases de datos ve o edita la configuración en Internet Explorer, solo afectará a la cuenta del administrador de la base de datos en lugar del motor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. No se recomienda iniciar sesión en el servidor de forma interactiva mediante la cuenta de servicio; esta opción está bloqueada en muchos entornos seguros. Los cambios en la configuración de proxy configurado pueden requerir que se reinicie la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que surtan efecto, ya que se almacenan en caché cuando el conector intenta conectarse por primera vez a un almacén de claves.
 
 **¿Cuáles son los niveles de permiso mínimos necesarios para cada paso de configuración en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Aunque puede realizar todos los pasos de configuración como miembro del rol fijo de servidor sysadmin, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] le anima a minimizar los permisos que usa. En la lista siguiente se define el nivel de permiso mínimo para cada acción.  
@@ -193,10 +192,10 @@ El conector usa la configuración de proxy de Internet Explorer. Esta configurac
 
 **¿Cómo puedo cambiar el Active Directory predeterminado para que mi almacén de claves se cree en la misma suscripción y Active Directory de la entidad de servicio que creé para el Conector de [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] ?**
 
-![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
+![Pasos para cambiar el directorio predeterminado de AAD](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
 1. Vaya al portal clásico de Azure: [https://manage.windowsazure.com](https://manage.windowsazure.com).  
-2. En el menú de la izquierda, desplácese hacia abajo y seleccione **Configuración**.
+2. Seleccione **Configuración** en el menú izquierdo.
 3. Seleccione la suscripción a Azure que usa actualmente y haga clic en **Editar directorio** en los comandos que aparecen en la parte inferior de la pantalla.
 4. En la ventana emergente, use el menú desplegable **Directorio** para seleccionar el Active Directory que desea usar. Esto lo convertirá en el directorio predeterminado.
 5. Asegúrese de ser el administrador global del Active Directory recién seleccionado. Si no es el administrador global, podría perder permisos de administración después del cambio de directorios.
@@ -205,10 +204,11 @@ El conector usa la configuración de proxy de Internet Explorer. Esta configurac
     > [!NOTE] 
     > Puede que no tenga los permisos para realmente cambiar el directorio predeterminado de la suscripción a Azure. En este caso, cree la entidad de servicio de AAD dentro del directorio predeterminado para que esté en el mismo directorio que Azure Key Vault que se usará más adelante.
 
-Para más información sobre Active Directory, consulte [Asociación de las suscripciones de Azure con Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/).
+Para más información sobre Active Directory, consulte [Asociación de las suscripciones de Azure con Azure Active Directory](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory).
   
-##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> C. Explicación de los códigos de error para el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- **Códigos de error del proveedor:**  
+##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> C. Explicación de los códigos de error para el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+
+**Códigos de error del proveedor:**  
   
 Código de error  |Símbolo  |Descripción
 ---------|---------|---------  
@@ -358,7 +358,7 @@ Código de error  |Símbolo  |Descripción
 
 Si no ve el código de error en esta tabla, estas son algunas razones más por las que se puede estar produciendo el error:
   
-- No dispone de acceso a Internet y no puede acceder a la instancia de Azure Key Vault. Compruebe la conexión a Internet.  
+- Es posible que no disponga de acceso a Internet y no pueda acceder a Azure Key Vault. Compruebe la conexión a Internet.  
   
 - Es posible que el servicio del Almacén de claves de Azure esté fuera de servicio. Vuelva a intentarlo en otro momento.  
   
@@ -405,9 +405,9 @@ SQL Server Version  |Vínculo de instalación redistribuible
   
  Documentación del Almacén de claves de Azure:  
   
-- [¿Qué es Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
+- [¿Qué es Azure Key Vault?](/azure/key-vault/general/basic-concepts)  
   
-- [Introducción al Almacén de claves de Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
+- [Introducción al Almacén de claves de Azure](/azure/key-vault/general/overview)  
   
 - Referencia de [cmdlets del Almacén de claves de Azure](/powershell/module/azurerm.keyvault/) de PowerShell  
   

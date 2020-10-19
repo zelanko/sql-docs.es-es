@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/10/2020
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: 641896fb407beabdedbd30d98cc8d94d16d31efe
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cc5f77d8590434d8d8d03e5ef8ab68365be3c4ca
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991896"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784778"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "88991896"
 
 Agrega metadatos sobre la clasificación de confidencialidad a una o varias columnas de base de datos. La clasificación puede incluir una etiqueta de confidencialidad y un tipo de información.
 
-Para SQL Server, se incluyó por primera vez en SQL Server 2019.
+En el caso de SQL Server, se incluyeron por primera vez en SQL Server 2012.
 
 La clasificación de datos confidenciales en su entorno de base de datos le ayuda a lograr mayor visibilidad y una mejor protección. Puede encontrar información adicional en [Clasificación y detección de datos de Azure SQL Database](https://aka.ms/sqlip).
 

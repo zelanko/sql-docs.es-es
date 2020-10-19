@@ -17,16 +17,16 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cbc395652b7c829fe3694bf5d040a319073e958
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470375"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891015"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es compatible con la creación de particiones de tabla e índice. Los datos de tablas e índices con particiones se dividen en unidades que pueden propagarse por más de un grupo de archivos de la base de datos. Los datos se dividen en sentido horizontal, de forma que los grupos de filas se asignan a particiones individuales. Las particiones de un índice o una tabla deben encontrarse en la misma base de datos. La tabla o el índice se tratarán como una sola entidad lógica cuando se realicen consultas o actualizaciones en los datos. Antes de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, las tablas e índices con particiones no estaban disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es compatible con la creación de particiones de tabla e índice. Los datos de tablas e índices con particiones se dividen en unidades que pueden propagarse por más de un grupo de archivos de la base de datos. Los datos se dividen en sentido horizontal, de forma que los grupos de filas se asignan a particiones individuales. Las particiones de un índice o una tabla deben encontrarse en la misma base de datos. La tabla o el índice se tratarán como una sola entidad lógica cuando se realicen consultas o actualizaciones en los datos. Antes de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, las tablas e índices con particiones no estaban disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite hasta 15.000 particiones de forma predeterminada. En versiones anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], el número de particiones se limitaba a 1000 de forma predeterminada. En sistemas basados en x86, es posible crear una tabla o un índice con más de 1000 particiones, aunque no se admite.  
@@ -48,7 +48,7 @@ Además, la partición permite mejorar el rendimiento habilitando la extensión 
 Los siguientes términos son aplicables para las particiones de tablas e índices.  
   
 ### <a name="partition-function"></a>Función de partición  
-Una función de partición define la forma de asignar las filas de una tabla o un índice a un conjunto de particiones a partir de los valores de una determinada columna, denominada columna de partición. Es decir, la función de partición define el número de particiones que la tabla tendrá y cómo se definen los límites de las particiones. Por ejemplo, dada una tabla con datos de pedidos de ventas, puede crear doce particiones (mensuales) de la tabla tomando como base una columna **datetime** , por ejemplo una fecha de ventas.  
+Una función de partición define la forma de asignar las filas de una tabla o un índice a un conjunto de particiones a partir de los valores de una determinada columna, denominada columna de partición. Cada valor de la columna de partición es una entrada a la función de partición, que devuelve un valor de partición. La función de partición define el número de particiones y los límites de las particiones que tendrá la tabla. Por ejemplo, dada una tabla con datos de pedidos de ventas, puede crear doce particiones (mensuales) de la tabla tomando como base una columna **datetime** , por ejemplo una fecha de ventas.  
   
 ### <a name="partition-scheme"></a>Esquema de partición 
 Objeto de base de datos que asigna las particiones de una función de partición a un conjunto de grupos de archivos. La principal razón para colocar las particiones en distintos grupos de archivos es garantizar que se puedan realizar operaciones de copia de seguridad en particiones de forma independiente. Esto se debe a que se pueden realizar copias de seguridad en grupos de archivos individuales.  
@@ -129,9 +129,8 @@ De este modo, el optimizador de consultas puede procesar la combinación con may
  Puede encontrar las siguientes notas del producto en la tabla con particiones y estrategias e implementaciones de índices útiles.  
 -   [Estrategias de la tabla con particiones e índices con SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
 -   [Cómo implementar una ventana automática deslizante](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [Carga masiva en una tabla con particiones](https://msdn.microsoft.com/library/cc966380.aspx)    
--   [Proyecto REAL: Ciclo de vida de datos: la creación de particiones](https://technet.microsoft.com/library/cc966424.aspx)    
--   [Mejoras de procesamiento de consultas en las tablas e índices con particiones](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [Carga masiva en una tabla con particiones](/previous-versions/sql/sql-server-2005/administrator/cc966380(v=technet.10))    
+-   [Proyecto REAL: Ciclo de vida de datos: la creación de particiones](/previous-versions/sql/sql-server-2005/administrator/cc966424(v=technet.10))    
+-   [Mejoras de procesamiento de consultas en las tablas e índices con particiones](/previous-versions/sql/sql-server-2008-r2/ms345599(v=sql.105))    
 -   [Los 10 mejores procedimientos recomendados para compilar un almacenamiento de datos relacionales a gran escala](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf) en el manual _SQLCAT's Guide to: Relational Engineering_
-  
   

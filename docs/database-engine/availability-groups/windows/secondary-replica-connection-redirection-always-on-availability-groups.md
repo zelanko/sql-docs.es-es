@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d3d1b76144de526146e4938ad655d990b443e1c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 691b3c495db0280b2ae1f50b2d877677c66dc768
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669909"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866554"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Redireccionamiento de la conexión de lectura/escritura de réplicas de secundaria a principal (grupos de disponibilidad AlwaysOn)
 
@@ -89,7 +89,7 @@ En este ejemplo, un grupo de disponibilidad tiene tres réplicas:
 
 En la siguiente imagen se representa el grupo de disponibilidad.
 
-![Grupo de disponibilidad original](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
+![Grupo de disponibilidad con réplica principal, secundaria y secundaria asincrónica](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
 
 El siguiente script de Transact-SQL crea este grupo de disponibilidad. En este ejemplo, cada réplica especifica `READ_WRITE_ROUTING_URL`.
 ```sql
@@ -144,18 +144,13 @@ GO
 
 En el diagrama siguiente, una aplicación cliente se conecta a COMPUTER02 con `ApplicationIntent=ReadWrite`. La conexión se redirige a la réplica principal. 
 
-![Grupo de disponibilidad original](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
+![La conexión al segundo equipo se redirige a la réplica principal.](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
 
 La réplica secundaria redirige las llamadas de lectura/escritura a la réplica principal. Una conexión de lectura/escritura a cualquier réplica se redirigirá a la réplica principal. 
 
 En el diagrama siguiente, la réplica principal se ha conmutado por error de forma manual a COMPUTER02. Una aplicación cliente se conecta a COMPUTER01 con `ApplicationIntent=ReadWrite`. La conexión se redirige a la réplica principal. 
 
-![Grupo de disponibilidad original](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
-
-
-## <a name="sql-server-instance-offline"></a>Instancia de SQL Server sin conexión
-
-Si la instancia de SQL Server especificada en la cadena de conexión no está disponible (sufre una interrupción), se producirá un error en la conexión, independientemente de la función que desempeñe la réplica en el servidor de destino. Para evitar un tiempo de inactividad prolongado de la aplicación, configure un `FailoverPartner` alternativo en la cadena de conexión. La aplicación tiene que implementar una lógica de reintento para dar cabida a las réplicas principales y secundarias que no están en línea durante la conmutación por error real. Para obtener información sobre las cadenas de conexión, consulte [Propiedad SqlConnection.ConnectionString](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring).
+![La conexión se redirige a la nueva réplica principal en el segundo equipo.](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
 
 ## <a name="see-also"></a>Consulte también
 

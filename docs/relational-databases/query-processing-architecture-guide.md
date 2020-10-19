@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 49fd020cbbe8162dd82b51ab4743730a85762598
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: b06b51e5c8f1cbe7d542c8ecf04df0ded859d775
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603374"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892445"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ Los pasos básicos que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ut
 - Expresiones aritméticas, como 1+1, 5/3*2, que solo incluyen constantes.
 - Expresiones lógicas, como 1=1 y 1>2 AND 3>4, que solo incluyen constantes.
 - Funciones integradas que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera que pueden doblarse, incluidas `CAST` y `CONVERT`. Por lo general, una función intrínseca puede doblarse si se trata de una función exclusiva de sus entradas y no contiene ninguna otra información contextual, como opciones SET, configuración de idioma, opciones de la base de datos y claves de cifrado. Las funciones no deterministas no pueden doblarse. Excepto algunas excepciones, las funciones deterministas integradas pueden doblarse.
-- Métodos deterministas de tipos definidos por el usuario CLR y funciones deterministas definidas por el usuario CLR con valores escalares (empezando por [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Para obtener más información, vea [Doblado constante para las funciones y métodos definidos por el usuario CLR](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15).
+- Métodos deterministas de tipos definidos por el usuario CLR y funciones deterministas definidas por el usuario CLR con valores escalares (empezando por [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Para obtener más información, vea [Doblado constante para las funciones y métodos definidos por el usuario CLR](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014?view=sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
 
 > [!NOTE] 
 > Los tipos de objetos grandes constituyen una excepción. Si el tipo de salida del proceso de doblado es un tipo de objeto grande (text,ntext, image, nvarchar(max), varchar(max), varbinary(max) o XML), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no dobla la expresión.
@@ -1030,7 +1030,7 @@ Entre las construcciones que impiden el paralelismo se incluyen las siguientes:
     Para obtener más información sobre los cursores, vea [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
     
 -   **Consultas recursivas**        
-    Para obtener más información sobre la recursión, vea [Instrucciones para definir y usar expresiones de tabla comunes recursivas](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) y [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx) (La recursión en T-SQL).
+    Para obtener más información sobre la recursión, vea [Instrucciones para definir y usar expresiones de tabla comunes recursivas](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) y [Recursion in T-SQL](/previous-versions/sql/legacy/aa175801(v=sql.80)) (La recursión en T-SQL).
 
 -   **Funciones con valores de tabla de múltiples instrucciones (MSTVF)**         
     Para obtener más información sobre las MSTVF, vea [Creación de funciones definidas por el usuario (motor de base de datos)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
@@ -1270,7 +1270,8 @@ Cuando es posible, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] insert
 En [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], se ha perfeccionado el rendimiento del procesamiento de las consultas en tablas con particiones en muchos planes paralelos, se ha modificado la forma de representación de los planes paralelos y en serie, y se ha mejorado la información sobre la creación de particiones que los planes de ejecución en tiempo de compilación y en tiempo de ejecución proporcionan. En este tema se describen estas mejoras y se proporcionan consejos sobre la interpretación de los planes de ejecución de consultas sobre tablas e índices con particiones, así como las prácticas recomendadas para la mejora del rendimiento de las consultas en objetos con particiones. 
 
 > [!NOTE]
-> Las tablas e índices con particiones solo se admiten en las ediciones Enterprise, Developer y Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+> Hasta [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], las tablas e índices con particiones solo se admiten en las ediciones Enterprise, Developer y Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].   
+> A partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, las tablas e índices con particiones también se admiten en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition. 
 
 ### <a name="new-partition-aware-seek-operation"></a>Nueva operación de búsqueda orientada a particiones
 
@@ -1435,7 +1436,7 @@ Para mejorar el rendimiento de las consultas que tienen acceso a una cantidad gr
 * Utilice un servidor con procesadores rápidos y tantos núcleos de procesador como pueda permitirse, con el fin de sacar partido de la capacidad de procesamiento de las consultas en paralelo.
 * Asegúrese de que el servidor dispone de un ancho banda de controlador de E/S suficiente. 
 * Cree un índice clúster en cada tabla grande con particiones para sacar partido de las optimizaciones de examen de los árboles B.
-* Siga los procedimientos recomendados de las notas del producto, en [The Data Loading Performance Guide](https://msdn.microsoft.com/library/dd425070.aspx) (Guía sobre el rendimiento de carga de datos), cuando cargue grandes volúmenes de datos en tablas con particiones.
+* Siga los procedimientos recomendados de las notas del producto, en [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)) (Guía sobre el rendimiento de carga de datos), cuando cargue grandes volúmenes de datos en tablas con particiones.
 
 ### <a name="example"></a>Ejemplo
 

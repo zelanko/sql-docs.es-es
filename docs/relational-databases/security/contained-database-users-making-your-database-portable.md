@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a76bc720df1808290a09e2cec5fad1c0667ae389
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 935729861e3cd2a1119290cab46eaa76a1b36621
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988797"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864043"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Usuarios de base de datos independiente: hacer que la base de datos sea portátil
 
@@ -41,7 +41,7 @@ ms.locfileid: "87988797"
 
  En el modelo de usuario de base de datos independiente, el inicio de sesión en la base de datos maestra no está presente. En su lugar, el proceso de autenticación se produce en la base de datos de usuario y el usuario de base de datos de la base de datos de usuario no tiene asociado ningún inicio de sesión en la base de datos maestra. El modelo de usuario de base de datos independiente admite tanto la autenticación de Windows como la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y se puede usar tanto en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Para conectarse como un usuario de base de datos independiente, la cadena de conexión siempre debe contener un parámetro para la base de datos de usuario de modo que la [!INCLUDE[ssDE](../../includes/ssde-md.md)] sepa qué base de datos es responsable de la administración del proceso de autenticación. La actividad del usuario de base de datos independiente se limita a la autenticación de base de datos, por lo que al conectarse como un usuario de base de datos independiente, la cuenta de usuario de base de datos debe crearse independientemente en cada base de datos que el usuario necesitará. Para cambiar las bases de datos, los usuarios de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] deben crear una nueva conexión. Los usuarios de base de datos independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden cambiar bases de datos si hay un usuario idéntico en otra base de datos.  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] admiten las identidades de Azure Active Directory como usuarios de base de datos independiente. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] admite usuarios de base de datos independientes que usan autenticación de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , pero [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] no. Para más información, consulte [Usar la autenticación de Azure Active Directory para autenticación con SQL](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Al utilizar la autenticación de Active Directory de Azure, las conexiones de SSMS se pueden realizar mediante autenticación universal de Active Directory.  Los administradores pueden configurar la autenticación universal para requerir Multi-Factor Authentication, que comprueba la identidad mediante una llamada de teléfono, un mensaje de texto, una tarjeta inteligente con pin o una notificación de aplicación móvil. Para obtener más información, consulte [Compatibilidad de SSMS con Azure AD MFA con SQL Database y SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] admiten las identidades de Azure Active Directory como usuarios de base de datos independiente. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] admite usuarios de base de datos independientes que usan autenticación de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , pero [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] no. Para más información, consulte [Usar la autenticación de Azure Active Directory para autenticación con SQL](/azure/azure-sql/database/authentication-aad-overview). Al utilizar la autenticación de Active Directory de Azure, las conexiones de SSMS se pueden realizar mediante autenticación universal de Active Directory.  Los administradores pueden configurar la autenticación universal para requerir Multi-Factor Authentication, que comprueba la identidad mediante una llamada de teléfono, un mensaje de texto, una tarjeta inteligente con pin o una notificación de aplicación móvil. Para obtener más información, consulte [Compatibilidad de SSMS con Azure AD MFA con SQL Database y SQL Data Warehouse](/azure/azure-sql/database/authentication-mfa-ssms-overview).  
   
  Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], dado que el nombre de la base de datos siempre se requiere en la cadena de conexión, no se necesitan cambios en la cadena de conexión cuando se cambia desde el modelo tradicional al modelo de usuario de base de datos independiente. Para las conexiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el nombre de la base de datos debe agregarse a la cadena de conexión si no está ya presente.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "87988797"
   
  Para obtener más información sobre las reglas de firewall de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , vea los temas siguientes:  
   
-- [Firewall de Azure SQL Database](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
-- [Cómo: Configurar los valores del firewall (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+- [Firewall de Azure SQL Database](/previous-versions/azure/ee621782(v=azure.100))  
+- [Cómo: Configurar los valores del firewall (Azure SQL Database)](/previous-versions/azure/jj553530(v=azure.100))  
 - [sp_set_firewall_rule &#40;Base de datos SQL de Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 - [sp_set_database_firewall_rule &#40;Base de datos SQL de Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
   
@@ -79,24 +79,34 @@ ms.locfileid: "87988797"
 
 Azure SQL Managed Instance se comporta como SQL Server local en el contexto de las bases de datos independientes. Asegúrese de cambiar el contexto de la base de datos de la base de datos maestra a la de usuario al crear el usuario contenido. Además, no debería haber ninguna conexión activa con la base de datos de usuario al establecer la opción de contención. 
 
-Por ejemplo: 
+
+Por ejemplo:
+
+> [!WARNING]
+> Antes de ejecutar el siguiente script, asegúrese de que no haya otras conexiones activas en la base de datos de Instancia administrada. El script puede afectar a otros procesos que se están ejecutando en la base de datos.
 
 ```sql
 Use MASTER;
 GO 
 
 ALTER DATABASE Test
-SET containment=partial
+SET RESTRICTED_USER
+WITH ROLLBACK IMMEDIATE;
 
+ALTER DATABASE Test
+SET containment=partial;
+
+ALTER DATABASE Test
+SET MULTI_USER;
 
 USE Test;  
-GO  
+GO 
+
 CREATE USER Carlo  
 WITH PASSWORD='Enterpwdhere*'  
 
-
 SELECT containment_desc FROM sys.databases
-WHERE name='test'
+WHERE name='Test'
 ```
 
   
@@ -115,5 +125,4 @@ WHERE name='test'
  [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)   
  [Prácticas recomendadas de seguridad con bases de datos independientes](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [Conexión a SQL Database mediante autenticación de Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
-  
+ [Conexión a SQL Database mediante autenticación de Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview)  

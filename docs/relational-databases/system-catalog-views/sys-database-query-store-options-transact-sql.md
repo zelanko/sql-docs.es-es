@@ -1,6 +1,6 @@
 ---
-description: Sys. database_query_store_options (Transact-SQL)
-title: Sys. database_query_store_options (Transact-SQL) | Microsoft Docs
+description: sys.database_query_store_options (Transact-SQL)
+title: sys.database_query_store_options (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/27/2020
 ms.prod: sql
@@ -22,14 +22,14 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f145ef3109ed9ba755ee006a218313d5a7956df4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d1c77693808a1571069e9b921e7efe017d55a514
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551535"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175918"
 ---
-# <a name="sysdatabase_query_store_options-transact-sql"></a>Sys. database_query_store_options (Transact-SQL)
+# <a name="sysdatabase_query_store_options-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Devuelve las opciones de Almacén de consultas para esta base de datos.  
@@ -42,7 +42,7 @@ ms.locfileid: "89551535"
 |**desired_state_desc**|**nvarchar(60)**|Descripción textual del modo de operación deseado de Almacén de consultas:<br />Apagado<br />READ_ONLY<br />READ_WRITE|  
 |**actual_state**|**smallint**|Indica el modo de operación de Almacén de consultas. Además de la lista de los Estados deseados requeridos por el usuario, el estado real puede ser un estado de error.<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = ERROR|  
 |**actual_state_desc**|**nvarchar(60)**|Descripción textual del modo de operación real de Almacén de consultas.<br />Apagado<br />READ_ONLY<br />READ_WRITE<br />ERROR<br /><br /> Hay situaciones en las que el estado real es diferente del estado deseado:<br />-Si la base de datos se establece en modo de solo lectura o si Almacén de consultas tamaño supera la cuota configurada, Almacén de consultas puede funcionar en modo de solo lectura aunque el usuario haya especificado la lectura y escritura.<br />-En escenarios extremos Almacén de consultas puede entrar en un estado de ERROR debido a errores internos. A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] , si esto sucede, se puede recuperar almacén de consultas ejecutando el `sp_query_store_consistency_check` procedimiento almacenado en la base de datos afectada. Si `sp_query_store_consistency_check` la ejecución no funciona, o si está usando [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , debe borrar los datos mediante la ejecución de `ALTER DATABASE [YourDatabaseName] SET QUERY_STORE CLEAR ALL;`|  
-|**readonly_reason**|**int**|Cuando se READ_WRITE la **desired_state_desc** y se READ_ONLY la **actual_state_desc** , **readonly_reason** devuelve un mapa de bits para indicar por qué el almacén de consultas está en modo de solo lectura.<br /><br /> **1** : la base de datos está en modo de solo lectura<br /><br /> **2** -la base de datos está en modo de usuario único<br /><br /> **4** -la base de datos está en modo de emergencia<br /><br /> **8** : la base de datos es una réplica secundaria (se aplica a Always on y a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] la replicación geográfica). Este valor solo se puede observar en réplicas secundarias **legibles**<br /><br /> **65536** -el almacén de consultas ha alcanzado el límite de tamaño establecido por la `MAX_STORAGE_SIZE_MB` opción. Para obtener más información acerca de esta opción, vea [Opciones de ALTER DATABASE set (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).<br /><br /> **131072** -el número de instrucciones diferentes en almacén de consultas ha alcanzado el límite de memoria interna. Considere la posibilidad de quitar las consultas que no necesite o actualizar a un nivel de servicio superior para habilitar la transferencia de Almacén de consultas al modo de lectura y escritura.<br />**Se aplica a:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> **262144** : el tamaño de los elementos en memoria que esperan ser persistentes en el disco ha alcanzado el límite de memoria interna. Almacén de consultas estará en modo de solo lectura temporalmente hasta que los elementos en memoria se conserven en el disco. <br />**Se aplica a:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> **524288** : la base de datos ha alcanzado el límite de tamaño de disco. Almacén de consultas forma parte de la base de datos de usuario, por lo que si no hay más espacio disponible para una base de datos, eso significa que Almacén de consultas ya no puede crecer.<br />**Se aplica a:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. <br /> <br /> Para volver a cambiar el modo de operaciones de Almacén de consultas a lectura y escritura, consulte la sección **comprobar almacén de consultas está recopilando datos de consulta continuamente** en [el almacén de consultas de prácticas recomendadas](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify).|  
+|**readonly_reason**|**int**|Cuando se READ_WRITE la **desired_state_desc** y se READ_ONLY la **actual_state_desc** , **readonly_reason** devuelve un mapa de bits para indicar por qué el almacén de consultas está en modo de solo lectura.<br /><br /> **1** : la base de datos está en modo de solo lectura<br /><br /> **2** -la base de datos está en modo de usuario único<br /><br /> **4** -la base de datos está en modo de emergencia<br /><br /> **8** : la base de datos es una réplica secundaria (se aplica a Always on y a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] la replicación geográfica). Este valor solo se puede observar en réplicas secundarias **legibles**<br /><br /> **65536** -el almacén de consultas ha alcanzado el límite de tamaño establecido por la `MAX_STORAGE_SIZE_MB` opción. Para obtener más información acerca de esta opción, vea [Opciones de ALTER DATABASE set (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).<br /><br /> **131072** -el número de instrucciones diferentes en almacén de consultas ha alcanzado el límite de memoria interna. Considere la posibilidad de quitar las consultas que no necesite o actualizar a un nivel de servicio superior para habilitar la transferencia de Almacén de consultas al modo de lectura y escritura.<br /><br /><br /> **262144** : el tamaño de los elementos en memoria que esperan ser persistentes en el disco ha alcanzado el límite de memoria interna. Almacén de consultas estará en modo de solo lectura temporalmente hasta que los elementos en memoria se conserven en el disco. <br /><br /><br /> **524288** : la base de datos ha alcanzado el límite de tamaño de disco. Almacén de consultas forma parte de la base de datos de usuario, por lo que si no hay más espacio disponible para una base de datos, eso significa que Almacén de consultas ya no puede crecer.<br /><br /> <br /> Para volver a cambiar el modo de operaciones de Almacén de consultas a lectura y escritura, consulte la sección **comprobar almacén de consultas está recopilando datos de consulta continuamente** en [el almacén de consultas de prácticas recomendadas](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify).|  
 |**current_storage_size_mb**|**bigint**|Tamaño de Almacén de consultas en el disco en megabytes.|  
 |**flush_interval_seconds**|**bigint**|El período de vaciado normal de Almacén de consultas datos en el disco en segundos. El valor predeterminado es **900** (15 min).<br /><br /> Cambie mediante la `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` instrucción.|  
 |**interval_length_minutes**|**bigint**|El intervalo de agregación de estadísticas en minutos. No se permiten valores arbitrarios. Use uno de los siguientes: 1, 5, 10, 15, 30, 60 y 1440 minutos. El valor predeterminado es de **60** minutos.|  
@@ -60,16 +60,16 @@ ms.locfileid: "89551535"
  Requiere el permiso `VIEW DATABASE STATE`.  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [Sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [Sys. query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [Sys. query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [Sys. query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys.query_context_settings &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_plan &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys.query_store_query &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query_text &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys.query_store_runtime_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [Sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [sys.query_store_runtime_stats_interval &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Sys. fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
+ [sys.fn_stmt_sql_handle_from_sql_stmt &#40;&#41;de Transact-SQL ](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [Procedimientos almacenados del almacén de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

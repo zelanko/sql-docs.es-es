@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8a0fcbcee1d17a98025a1c8adbc02c3409b1db06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0b20fde852e02662780f75bd14e4b9023e01d80
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389301"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192415"
 ---
 # <a name="entity-dependencies-explorer"></a>Explorador de dependencias de entidad
 
@@ -29,7 +29,7 @@ ms.locfileid: "88389301"
   
 Ayuda a responder a la pregunta "¿Quién consume mi entidad y cómo?". La vista es similar a la de la página del explorador de la jerarquía derivada, pero es más inclusiva. Muestra todas las relaciones de DBA, no solo las que se definen como parte de una jerarquía determinada. No se necesita una definición de jerarquía porque la estructura jerárquica mostrada se deduce simplemente de los DBA existentes.  
   
-En el menú de página del explorador, el elemento de menú de las dependencias de la entidad enumera todas las entidades en el modelo que dependen de, al menos, una entidad (es decir, al menos una entidad tiene un DBA que hace referencia a la entidad de la lista). El número de dependencias (directas e indirectas) se muestra junto al nombre de la entidad y la lista está ordenada por este número con las entidades a las que se les hace más referencia en la parte superior. La siguiente captura de pantalla, tomada del modelo de cliente de los [datos de ejemplo](https://msdn.microsoft.com/library/master-data-services-sample.aspx), muestra que 7 entidades hacen referencia a la entidad BigArea (directa o indirectamente):  
+En el menú de página del explorador, el elemento de menú de las dependencias de la entidad enumera todas las entidades en el modelo que dependen de, al menos, una entidad (es decir, al menos una entidad tiene un DBA que hace referencia a la entidad de la lista). El número de dependencias (directas e indirectas) se muestra junto al nombre de la entidad y la lista está ordenada por este número con las entidades a las que se les hace más referencia en la parte superior. La siguiente captura de pantalla, tomada del modelo de cliente de los [datos de ejemplo](./sql-server-samples-model-deployment-packages-mds.md), muestra que 7 entidades hacen referencia a la entidad BigArea (directa o indirectamente):  
   
 ![MDS_EntityDependencies_Menu.jpg](../master-data-services/media/mds-entitydependencies-menu-jpg.jpg)  
     
@@ -47,5 +47,3 @@ La vista se puede modificar por completo, al igual que en la página del explora
   
   
   
-  
-

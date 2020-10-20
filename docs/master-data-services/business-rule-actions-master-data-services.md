@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 056335a32c0e7f1ae02979190cdf64b0829177df
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 18f95be4c33c1d9695a16f7183407e177bc02925
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813689"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193677"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Acciones de reglas de negocios (Master Data Services)
 
@@ -53,7 +53,7 @@ ms.locfileid: "85813689"
 |---------------------|-----------------|  
 |**es obligatorio**|El atributo seleccionado **es obligatorio**, lo cual indica que no puede ser NULL ni estar vacío.<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
 |**no es válido**|El atributo seleccionado **no es válido**.<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
-|**debe contener el patrón**|El atributo seleccionado **debe contener el patrón** que se ha especificado. Use expresiones regulares de .NET Framework para especificar el patrón.<br /><br /> Para obtener más información acerca de las expresiones regulares, vea [elementos del lenguaje de expresiones regulares](https://go.microsoft.com/fwlink/?LinkId=164401) en MSDN Library.<br /><br /> Esta acción es válida para los valores de texto y vínculo.|  
+|**debe contener el patrón**|El atributo seleccionado **debe contener el patrón** que se ha especificado. Use expresiones regulares de .NET Framework para especificar el patrón.<br /><br /> Para obtener más información acerca de las expresiones regulares, vea [elementos del lenguaje de expresiones regulares](/dotnet/standard/base-types/regular-expression-language-quick-reference) en MSDN Library.<br /><br /> Esta acción es válida para los valores de texto y vínculo.|  
 |**debe ser único**|El atributo seleccionado **debe ser único** de forma independiente o en combinación con atributos definidos.<br /><br /> **Procedimiento recomendado** : combine esta acción con una condición obligatoria para asegurarse de la validez de los campos de índice en los sistemas de suscripción.<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.<br /><br /> **NOTA**: Si el primer atributo es de tipo DateTime, no se puede usar en combinación con un atributo de tipo Numeric o Text. Si el primer atributo es de tipo Numeric, no se puede usar en combinación con un atributo de tipo DateTime.|  
 |**debe tener uno de los siguientes valores**|El atributo seleccionado **debe tener uno de los valores** especificados en una lista.<br /><br /> Esta acción es válida para los valores de texto.|  
 |**debe ser mayor que**|El atributo seleccionado **debe ser mayor que** un atributo determinado, un valor de atributo concreto o estar en blanco.<br /><br /> Esta acción es válida para los valores de texto, número y fecha.|  
@@ -70,11 +70,10 @@ ms.locfileid: "85813689"
   
 |Nombre de la acción|Descripción|  
 |-----------------|-----------------|  
-|**iniciar flujo de trabajo**|Inicia un flujo de trabajo externo. Los datos que provocaron esta acción se pasan al flujo de trabajo. Para obtener más información, vea el artículo sobre [Integración del flujo de trabajo de SharePoint Master Data Services](https://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
+|**iniciar flujo de trabajo**|Inicia un flujo de trabajo externo. Los datos que provocaron esta acción se pasan al flujo de trabajo. Para obtener más información, vea el artículo sobre [Integración del flujo de trabajo de SharePoint Master Data Services](/previous-versions/sql/sql-server-2008-r2/gg690195(v=msdn.10)).<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Condiciones de reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Crear y publicar una regla de negocios &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
-  
   

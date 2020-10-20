@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 760fcc2212991f0841f4ded3dd2932e551c26060
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cdf362f2b45df7cb419d5dc5161cb3428de7e7bb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87948456"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192610"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Supervisar y solucionar problemas de objetos de base de datos administrados
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "87948456"
   
 |Evento|Descripción|  
 |-----------|-----------------|  
-|[Assembly Load (clase de eventos)](https://docs.microsoft.com/sql/relational-databases/event-classes/sql-server-event-class-reference)|Se utiliza para supervisar las solicitudes de carga de ensamblados (correctas y no realizadas).|  
+|[Assembly Load (clase de eventos)](../event-classes/sql-server-event-class-reference.md)|Se utiliza para supervisar las solicitudes de carga de ensamblados (correctas y no realizadas).|  
 |[SQL: BatchStarting (clase de eventos](../../relational-databases/event-classes/sql-batchstarting-event-class.md)), [SQL: BatchCompleted (clase de eventos](../../relational-databases/event-classes/sql-batchcompleted-event-class.md) )|Proporciona información sobre los lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se han iniciado o completado.|  
 |[SP: Starting (clase de eventos](../../relational-databases/event-classes/sp-starting-event-class.md)), [SP: Completed (clase de eventos](../../relational-databases/event-classes/sp-completed-event-class.md) )|Se utiliza para supervisar la ejecución de procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |[SQL: StmtStarting, clase de eventos](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [SQL: StmtCompleted (clase de eventos](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md) )|Se utiliza para supervisar la ejecución de rutinas de CLR y [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
@@ -59,15 +59,15 @@ ms.locfileid: "87948456"
 |Datos del catálogo|Descripción|  
 |------------------|-----------------|  
 |[Sys. Assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|Devuelve información sobre los ensamblados registrados en una base de datos.|  
-|[Sys. assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|Identifica ensamblados que hacen referencia a otros ensamblados.|  
+|[sys.assembly_references &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|Identifica ensamblados que hacen referencia a otros ensamblados.|  
 |[sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Devuelve información sobre cada función, procedimiento almacenado y desencadenador definidos en un ensamblado.|  
-|[Sys. assembly_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|Devuelve información sobre los archivos de ensamblado registrados en la base de datos.|  
-|[Sys. assembly_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|Identifica los tipos definidos por el usuario (UDT) definidos por un ensamblado.|  
-|[Sys. module_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql.md)|Identifica los ensamblados donde se definen los módulos CLR.|  
+|[sys.assembly_files &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|Devuelve información sobre los archivos de ensamblado registrados en la base de datos.|  
+|[sys.assembly_types &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|Identifica los tipos definidos por el usuario (UDT) definidos por un ensamblado.|  
+|[sys.module_assembly_usages &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql.md)|Identifica los ensamblados donde se definen los módulos CLR.|  
 |[sys.parameter_type_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)|Devuelve información sobre los parámetros que son tipos definidos por el usuario.|  
 |[sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)|Identifica el ensamblado donde se define un desencadenador CLR.|  
 |[sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)|Identifica los desencadenadores DDL en el nivel de servidor de un servidor, incluidos los desencadenadores CLR.|  
-|[Sys. type_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql.md)|Identifica los ensamblados donde se definen los tipos definidos por el usuario.|  
+|[sys.type_assembly_usages &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql.md)|Identifica los ensamblados donde se definen los tipos definidos por el usuario.|  
 |[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|Devuelve los tipos definidos por el usuario y de sistema registrados en la base de datos.|  
   
 ## <a name="dynamic-management-views"></a>Vistas de administración dinámica  
@@ -86,5 +86,4 @@ ms.locfileid: "87948456"
   
 ## <a name="see-also"></a>Consulte también  
  [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

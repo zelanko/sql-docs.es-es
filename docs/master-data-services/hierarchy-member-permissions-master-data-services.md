@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 32b74832ff779ed01cb6821512187cd79d7af896
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: e80ec1e7ffaa4f3bbce87363de109aa85132f74d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480677"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194074"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Permisos de miembros de la jerarquía (Master Data Services)
 
@@ -44,7 +44,7 @@ ms.locfileid: "89480677"
 |**Crear**|La creación de permisos no está disponible para los permisos de los miembros de jerarquías.|  
 |**Actualizar**|Se muestran los miembros, pero el usuario no puede cambiarlos. El usuario también puede mover los miembros en cualquier jerarquía explícita o colección a la que los miembros pertenezcan.|  
 |**Eliminar**|Se muestran los miembros, y el usuario puede eliminarlos.|  
-|**Denegar**|Los miembros no se muestran.|  
+|**Deny**|Los miembros no se muestran.|  
   
  En la pestaña **Miembros de la jerarquía** , los permisos que asigne no surtirán efecto inmediatamente. La frecuencia con la que se aplican permisos depende de la **configuración del intervalo de procesamiento de la seguridad de los miembros** en la tabla de configuración del sistema en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Puede aplicar permisos de los miembros de forma inmediata si sigue los pasos descritos en [Aplicar inmediatamente los permisos de los miembros &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "89480677"
 -   Si un nodo de la jerarquía tiene asignada cualquier combinación de permisos **Create** / **Read** / **Update** / **Delete** y otro nodo tiene asignados permisos **denegar** , se deniega el acceso a los miembros del nodo.  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [Security Improvements](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)(Mejoras de seguridad), en msdn.com.  
+ Entrada de blog, [Security Improvements](/archive/blogs/e7/improvements-to-autoplay)(Mejoras de seguridad), en msdn.com.  
   
 ## <a name="see-also"></a>Consulte también  
  [Asignar permisos de miembro de jerarquía &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
@@ -72,5 +72,4 @@ ms.locfileid: "89480677"
  [Miembros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [Jerarquías &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
  [Aplicar inmediatamente los permisos de los miembros &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 759feb8b64a06e6238d338d4d619dd1433819dda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7929238ecb672dd6c537772dafb15422ca52bce3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387541"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196059"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 
@@ -39,7 +39,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
  *Set_Expression2*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La función **Crossjoin** devuelve el producto cruzado de dos o más conjuntos especificados. El orden de las tuplas en el conjunto resultante depende del orden de los conjuntos que deben unirse y del orden de sus miembros. Por ejemplo, cuando el primer conjunto consta de {x1, x2,..., x*n*} y el segundo conjunto consta de {Y1, Y2,..., y*n*}, el producto cruzado de estos conjuntos es:  
   
  {(x1, Y1), (x1, Y2),..., (x1, y*n*), (x2, Y1), (x2, y2),...,  
@@ -47,7 +47,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
  (x2, y*n*),..., (x*n*, Y1), (x*n*, Y2),..., (xn, y*n*)}  
   
 > [!IMPORTANT]  
->  Si los conjuntos de la combinación cruzada están compuestos por tuplas de diferentes jerarquías de atributo de la misma dimensión, esta función solo devolverá aquellas tuplas que realmente existen. Para obtener más información, vea [conceptos clave de MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
+>  Si los conjuntos de la combinación cruzada están compuestos por tuplas de diferentes jerarquías de atributo de la misma dimensión, esta función solo devolverá aquellas tuplas que realmente existen. Para obtener más información, vea [conceptos clave de MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
 ## <a name="examples"></a>Ejemplos  
  La consulta siguiente muestra ejemplos simples del uso de la función Crossjoin en los ejes de columnas y filas de una consulta:  
@@ -130,5 +130,4 @@ WHERE (Measures.[Internet Sales Amount],
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

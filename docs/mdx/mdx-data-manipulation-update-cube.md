@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 142783612b495d7968fec1574e182654ac83fb64
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: e4ee6d69057745486ed72f00721f9ab38833ca2e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480675"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196980"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Manipulación de datos de MDX: UPDATE CUBE
 
 
-  La instrucción UPDATE CUBE se emplea para reescribir datos en cualquier celda de un cubo que se agrega a su primario mediante la agregación SUM. Para obtener más información y un ejemplo, vea "Descripción de las asignaciones" en esta entrada de blog: [compilar una aplicación de reescritura con Analysis Services (blog)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services).  
+  La instrucción UPDATE CUBE se emplea para reescribir datos en cualquier celda de un cubo que se agrega a su primario mediante la agregación SUM. Para obtener más información y un ejemplo, vea "Descripción de las asignaciones" en esta entrada de blog: [compilar una aplicación de reescritura con Analysis Services (blog)](/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,7 +53,7 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  Expresión numérica MDX (Expresiones multidimensionales) válida que devuelve un valor decimal entre 0 y 1.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Puede actualizar el valor de una celda hoja o de una celda no hoja especificada de un cubo, asignando opcionalmente el valor de una celda no hoja especificada a través de las celdas hoja dependientes. La celda especificada por la expresión de tupla puede ser cualquier celda válida del espacio multidimensional (es decir, la celda no tiene que ser una celda hoja). Sin embargo, la celda se debe agregar con la función [SUM](../mdx/sum-mdx.md) Aggregate y no debe incluir un miembro calculado en la tupla que se usa para identificar la celda.  
   
  Puede ser útil pensar en la instrucción **Update Cube** como una subrutina que generará automáticamente una serie de operaciones de reescritura de celda individuales en celdas hoja y no hoja que se acumularán en una suma especificada.  
@@ -110,5 +110,4 @@ Weight_Expression = <leaf cell value> / <existing value>
 ## <a name="see-also"></a>Consulte también  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Instrucciones de manipulación de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
   

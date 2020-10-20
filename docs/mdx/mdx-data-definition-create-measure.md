@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cdbee6f6ede5e46926f1a8189792d86cf9e99f5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d352a12a4567fc88d2d037862c4cab2f1cd20fe0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387271"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193967"
 ---
 # <a name="mdx-data-definition---create-measure"></a>Definición de datos de MDX: CREATE MEASURE
 
@@ -40,14 +40,13 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
  *DAX_Expression*  
  Expresión DAX válida que devuelve un solo valor escalar.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El *Measure_Name*  debe ir entre paréntesis.  
   
- La instrucción CREATE MEASURE solo se puede usar dentro de una definición de script MDX; Vea el [elemento MdxScript &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/assl/objects/mdxscript-element-assl?view=asallproducts-allversions).  
+ La instrucción CREATE MEASURE solo se puede usar dentro de una definición de script MDX; Vea el [elemento MdxScript &#40;ASSL&#41;](/analysis-services/assl/objects/mdxscript-element-assl?view=asallproducts-allversions).  
   
- También puede definir un miembro calculado para su uso en una sola consulta. Para definir un miembro calculado limitado a una sola consulta, use la cláusula WITH de la instrucción SELECT. Para obtener más información, vea [crear medidas en MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-building-measures).  
+ También puede definir un miembro calculado para su uso en una sola consulta. Para definir un miembro calculado limitado a una sola consulta, use la cláusula WITH de la instrucción SELECT. Para obtener más información, vea [crear medidas en MDX](/analysis-services/multidimensional-models/mdx/mdx-building-measures).  
   
 ## <a name="see-also"></a>Consulte también  
  [Instrucciones de definición de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

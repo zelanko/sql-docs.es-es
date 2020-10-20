@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ceea117b0b266fdc7649e8e786b034039fae3507
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: a6cc30d907d6b8c0c14d177106da3457eb828bef
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522009"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194104"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidad y recuperación ante desastres para Master Data Services
 
@@ -91,7 +91,7 @@ Como se muestra en la figura 1 de la sección anterior, la solución descrita en
 
 WSFC es una característica que sirve para mejorar la alta disponibilidad de aplicaciones y servicios. Consta de un grupo de instancias independientes de Windows Server, donde se ejecuta el Servicio de clúster de conmutación por error de Microsoft. Las instancias de Windows Server (o, como se denominan a veces, "nodos") están conectadas para que se puedan comunicar entre ellas y se puedan detectar errores. WSFC ofrece funcionalidades de detección de errores y de conmutación por error. Si se produce un error en un nodo o servicio del clúster, se detectará el error y otro nodo empezará a proporcionar de forma automática o manual los servicios hospedados en el nodo erróneo. Por lo tanto, los usuarios solo experimentarán una interrupción mínima en los servicios y se mejorará la disponibilidad de estos.  
 
-### <a name="prerequisites"></a>Requisitos previos
+### <a name="prerequisites"></a>Prerrequisitos
 
 El sistema operativo Windows Server debe estar instalado en todas las instancias y se debe haber revisado todas las actualizaciones.
 
@@ -184,9 +184,9 @@ Notas:
 
 - Es posible que la característica WSFC no esté disponible en todas las ediciones de Windows Server. Asegúrese de que su edición cuenta con esta característica.
 
-- Asegúrese de que cuenta con los permisos adecuados para configurar WSFC en Active Directory. Si hay algún problema, vea [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (Guía paso a paso de clústeres de conmutación por error: Configurar cuentas en Active Directory).
+- Asegúrese de que cuenta con los permisos adecuados para configurar WSFC en Active Directory. Si hay algún problema, vea [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10)) (Guía paso a paso de clústeres de conmutación por error: Configurar cuentas en Active Directory).
 
-Para obtener más información detallada sobre WSFC, vea [Failover Clusters](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx) (Clústeres de conmutación por error).
+Para obtener más información detallada sobre WSFC, vea [Failover Clusters](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732488(v=ws.10)) (Clústeres de conmutación por error).
 
 ## <a name="sql-server-always-on-availability-group"></a>SQL Server Always On grupo de disponibilidad
 
@@ -208,7 +208,7 @@ Un AG proporciona disponibilidad en el nivel de base de datos. Los grupos de dis
 
 FCI proporcionan alta disponibilidad en el nivel de instancia. El servicio de SQL Server y sus servicios relacionados se registran como recursos en WSFC. Además, la solución FCI requiere un almacenamiento en disco compartido simétrico, como los recursos compartidos de archivos SAN o SMB, que tienen que estar disponibles para todos los nodos en el clúster de WFC.
    
-### <a name="prerequisites"></a>Requisitos previos
+### <a name="prerequisites"></a>Prerrequisitos
 
 - Instale SQL Server en todos los nodos. Para obtener más información, vea [Instalar SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).
 
@@ -394,5 +394,4 @@ En estas notas del producto, hemos aprendido a configurar y configurar la base d
 
 ¿Le ha resultado útil este documento? Envíenos sus comentarios haciendo clic en **Comentarios** en la parte superior del artículo. 
 
-Sus comentarios nos ayudarán a mejorar la calidad de las notas del producto que publiquemos. 
-
+Sus comentarios nos ayudarán a mejorar la calidad de las notas del producto que publiquemos.

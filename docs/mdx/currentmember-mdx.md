@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e04dd1146bc55d8d68475770a9077fc8d962b56d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5778a8b1d56fa568fe97dba104c1b46da1a005cf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471877"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196049"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 
@@ -32,7 +32,7 @@ Hierarchy_Expression.CurrentMember
  *Hierarchy_Expression*  
  Expresión MDX válida que devuelve una jerarquía.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  En cada paso de una iteración en un conjunto de miembros de jerarquía, el miembro con el que se está trabajando es el miembro actual. La función **CurrentMember** devuelve ese miembro.  
   
 > [!IMPORTANT]  
@@ -75,7 +75,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- El miembro actual cambia en una jerarquía que se utiliza en un eje en una consulta. Por lo tanto, el miembro actual de otras jerarquías de la misma dimensión que no se utilizan en un eje también puede cambiar; Este comportamiento se denomina "auto-EXISTS" y se pueden encontrar más detalles en [conceptos clave de MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Por ejemplo, la consulta siguiente muestra cómo el miembro actual en la jerarquía Calendar Year de la dimensión Date cambia con el miembro actual en la jerarquía Calendar, cuando el último se muestra en el eje de filas:  
+ El miembro actual cambia en una jerarquía que se utiliza en un eje en una consulta. Por lo tanto, el miembro actual de otras jerarquías de la misma dimensión que no se utilizan en un eje también puede cambiar; Este comportamiento se denomina "auto-EXISTS" y se pueden encontrar más detalles en [conceptos clave de MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Por ejemplo, la consulta siguiente muestra cómo el miembro actual en la jerarquía Calendar Year de la dimensión Date cambia con el miembro actual en la jerarquía Calendar, cuando el último se muestra en el eje de filas:  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -119,5 +119,4 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

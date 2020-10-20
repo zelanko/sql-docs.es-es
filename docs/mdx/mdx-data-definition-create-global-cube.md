@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1bc5a787f6bc1b214aa60ef54b5b8172f07c11a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a041e8dac7459e1f0322bd8492b5e5737ae80691
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494868"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195641"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Definición de datos de MDX: CREATE GLOBAL CUBE
 
 
-  Crea y rellena un cubo guardado de forma local basado en un subcubo de un cubo del servidor. No es necesaria una conexión al servidor para conectarse al cubo almacenado de forma local. Para obtener más información acerca de los cubos locales, vea [cubos locales &#40;Analysis Services-&#41;de datos multidimensionales ](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
+  Crea y rellena un cubo guardado de forma local basado en un subcubo de un cubo del servidor. No es necesaria una conexión al servidor para conectarse al cubo almacenado de forma local. Para obtener más información acerca de los cubos locales, vea [cubos locales &#40;Analysis Services-&#41;de datos multidimensionales ](/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -114,7 +114,7 @@ FROM source_cube_name (<param list>)
  \<level type>  
  Especificación válida únicamente para la definición de la dimensión derivada.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Un cubo local se define en términos de las medidas y definiciones que lo definen. Existen dos tipos de dimensiones.  
   
 -   Dimensiones de origen: son dimensiones que formaban parte de uno o varios cubos de origen  
@@ -200,5 +200,4 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ## <a name="see-also"></a>Consulte también  
  [Instrucciones de definición de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [Instrucción CREATE SESSION CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24f8ade9255543fcb1d2c23b7959a5def93b21dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34da0a8cc7f2b6aa069a45e0366d361b06102feb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477027"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193947"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Definición de datos de MDX: SUBCUBE
 
@@ -38,7 +38,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Consulte [instrucción select &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md) para obtener una explicación detallada de la sintaxis de las instrucciones SELECT y la cláusula **Nonvisual** .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cuando se excluyen los miembros predeterminados de la definición de un subcubo, las coordenadas cambian a su vez. Para los atributos que pueden agregarse, el miembro predeterminado se mueve al miembro [Todos]. Para los atributos que no pueden agregarse, el miembro predeterminado se mueve a un miembro que existe en el subcubo. En la tabla siguiente se ofrece un ejemplo de subcubo y las combinaciones de miembros predeterminados.  
   
 |Miembro predeterminado original|Puede agregarse|Subselección|Miembro predeterminado revisado|  
@@ -53,7 +53,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Los objetos de sesión creados en el contexto de un área de subcubo se quitan cuando se quita el subcubo.  
   
- Para obtener más información acerca de los subcubos, vea [generar subcubos en mdx &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx).  
+ Para obtener más información acerca de los subcubos, vea [generar subcubos en mdx &#40;mdx&#41;](/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx).  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente crea un subcubo que limita el espacio aparente del cubo a los miembros que existen con el país Canadá. A continuación, utiliza la función **Members** para devolver todos los miembros del nivel Country de la jerarquía definida por el usuario Geography, que devuelve solo el país de Canadá.  
@@ -90,7 +90,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  Produce los resultados siguientes:  
   
-|Tipo de negocio + categoría|All Products|Accessories|Clothing|  
+|Tipo de negocio + categoría|All Products|Accesorios|Ropa|  
 |-|-|-|-|  
 |All Resellers|$2.031.079,39|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$767.388,52|$175,002.81|$592,385.71|  
@@ -118,7 +118,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  Produce los resultados diferentes siguientes:  
   
-|Tipo de negocio + categoría|All Products|Accessories|Clothing|  
+|Tipo de negocio + categoría|All Products|Accesorios|Ropa|  
 |-|-|-|-|  
 |All Resellers|$80,450,596.98|$571,297.93|$1,777,840.84|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
@@ -127,9 +127,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  La columna [All Products] y la fila [All Resellers] contienen los totales de todos los miembros y no solo de los que están visibles.  
   
 ## <a name="see-also"></a>Consulte también  
- [Conceptos clave de &#40;MDX Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [Conceptos clave de &#40;MDX Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Instrucciones de scripting de MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [DROP subcube, instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
  [SELECT &#40;Instrucción, MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
-  
   

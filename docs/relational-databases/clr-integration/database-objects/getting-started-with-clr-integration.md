@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc5169c81b53f45ca036b064b47d370f21ec2e32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c307172d7bf8b258cbd56b4ef4abfe6704750358
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885924"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192365"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introducción a la integración CLR
 
@@ -90,7 +90,7 @@ End Class
   
 ```  
   
-Este programa simple contiene un solo método estático en una clase pública. Este método usa dos nuevas clases, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** y **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, para crear objetos de base de datos administrados con el fin de generar un mensaje de texto simple. El método también asigna la cadena "Hello World!" como el valor de un parámetro de salida. Este método puede declararse como un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, ejecutarse del mismo modo que un procedimiento almacenado de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+Este programa simple contiene un solo método estático en una clase pública. Este método usa dos nuevas clases, **[SqlContext](/dotnet/api/microsoft.sqlserver.server.sqlcontext)** y **[SqlPipe](/dotnet/api/microsoft.sqlserver.server.sqlpipe)**, para crear objetos de base de datos administrados con el fin de generar un mensaje de texto simple. El método también asigna la cadena "Hello World!" como el valor de un parámetro de salida. Este método puede declararse como un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, ejecutarse del mismo modo que un procedimiento almacenado de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 Compile este programa como una biblioteca, cárguelo en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y ejecútelo como un procedimiento almacenado.  
   
@@ -138,7 +138,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
-Una vez creado el procedimiento, podrá ejecutarse como un procedimiento almacenado normal escrito en [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Ejecute el siguiente comando:  
+Una vez creado el procedimiento, podrá ejecutarse como un procedimiento almacenado normal escrito en [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Ejecute el comando siguiente:  
   
 ```sql
 DECLARE @J nchar(25)  
@@ -175,7 +175,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
 
 Para obtener más información sobre la integración de CLR en SQL Server, consulte los siguientes artículos:
 
-- [Procedimientos almacenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)
+- [Procedimientos almacenados de CLR](/dotnet/framework/data/adonet/sql/clr-stored-procedures)
 - [Extensiones específicas en proceso de SQL Server a ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)
 - [Depurar objetos de base de datos CLR](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)
 - [Seguridad de la integración CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3d52751978dbe2973ecab9506094fad6a6f6c29a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9ad1f77a8e023d55a34e64d6c40ad956b0dac92
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471777"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193495"
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxis de MDX)
 
@@ -72,7 +72,7 @@ ms.locfileid: "88471777"
   
 -   NOT  
   
--   AND  
+-   y  
   
 -   XOR  
   
@@ -83,7 +83,7 @@ ms.locfileid: "88471777"
 ### <a name="determining-results"></a>Determinar los resultados  
  Cuando se combinan expresiones simples para crear una más compleja, el tipo de datos del valor resultante viene determinado por la combinación de las reglas de los operadores con las reglas de precedencia para los tipos de datos.  
   
- Si el resultado es un carácter o un valor de Unicode, la intercalación del resultado viene determinada por la combinación de las reglas de los operadores con las reglas de precedencia de intercalación. Para obtener más información acerca de las intercalaciones, consulte [idiomas e Intercalaciones &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
+ Si el resultado es un carácter o un valor de Unicode, la intercalación del resultado viene determinada por la combinación de las reglas de los operadores con las reglas de precedencia de intercalación. Para obtener más información acerca de las intercalaciones, consulte [idiomas e Intercalaciones &#40;Analysis Services&#41;](/analysis-services/languages-and-collations-analysis-services).  
   
  También hay reglas que determinan la precisión, escala y longitud del resultado basándose en la precisión, escala y longitud de las expresiones sencillas.  
   
@@ -93,13 +93,12 @@ ms.locfileid: "88471777"
 |Tipo original|Tipo necesario|Conversión|  
 |-------------------|-----------------|----------------|  
 |Nivel|Set|\<level>. Members|  
-|Hierarchy|Member|\<hierarchy>. DefaultMember|  
-|Member|Tuple|(\<Member>)|  
-|Tuple|Member|\<tuple>. Item (0)|  
+|Jerarquía|Miembro|\<hierarchy>. DefaultMember|  
+|Miembro|Tuple|(\<Member>)|  
+|Tuple|Miembro|\<tuple>. Item (0)|  
 |Tuple|Escalar|\<tuple>. valor|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [Elementos de la sintaxis de MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
   

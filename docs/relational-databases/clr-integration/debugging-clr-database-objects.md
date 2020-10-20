@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a6e723c8ad5ff8c97a3b57edb554092211da4d7
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 1be293f98a3b78280b16f80ab7dcfcb656f7e0ec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785167"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196922"
 ---
 # <a name="how-to-debug-clr-database-objects"></a>Cómo depurar objetos de base de datos CLR
 
@@ -43,11 +43,11 @@ Las restricciones siguientes se aplican durante la depuración:
   
 Debido a las restricciones anteriores, se recomienda que el código [!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR se depure en un servidor de prueba y no en un servidor de producción.  
   
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 La depuración en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sigue un modelo por conexión. Un depurador solo puede detectar y depurar actividades en la conexión de cliente a la que está adjuntado. Dado que la funcionalidad del depurador no está limitada por el tipo de conexión, se pueden depurar flujos TDS y conexiones HTTP. Sin embargo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite la depuración de conexiones existentes. La depuración admite todas las características habituales de depuración dentro de rutinas que se ejecutan en el servidor. La interacción entre un depurador y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se produce mediante un modelo de objetos componentes (COM) distribuido.  
   
-Para obtener más información y escenarios sobre la depuración de procedimientos almacenados, funciones, desencadenadores, tipos definidos por el usuario y agregados administrados, vea [SQL Server depuración de base de datos de integración CLR](https://go.microsoft.com/fwlink/?LinkId=120378) en la documentación de Visual Studio.  
+Para obtener más información y escenarios sobre la depuración de procedimientos almacenados, funciones, desencadenadores, tipos definidos por el usuario y agregados administrados, vea [SQL Server depuración de base de datos de integración CLR](/previous-versions/ms165050(v=vs.100)) en la documentación de Visual Studio.  
   
 El protocolo de red TCP/IP debe estar habilitado en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fin de utilizar Visual Studio para el desarrollo remoto, la depuración y el desarrollo. Para obtener más información acerca de cómo habilitar el protocolo TCP/IP en el servidor, vea [configurar protocolos de cliente](../../database-engine/configure-windows/configure-client-protocols.md).  
   
@@ -60,7 +60,7 @@ Siga los pasos que se indican a continuación para depurar un objeto de base de 
 2. Crear un nuevo tipo de CLR de SQL (C#):
 
    1. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y seleccione **Agregar**, **nuevo elemento.**... 
-   1. En la ventana **Agregar nuevo elemento** , seleccione **procedimiento almacenado de c# de SQL**CLR, **función definida por el usuario de SQL CLR c#**, **tipo definido por el usuario de SQL CLR c#**, **desencadenador de c# de SQL**CLR, agregado de c# de **SQL CLR**o **clase**.
+   1. En la ventana **Agregar nuevo elemento** , seleccione **procedimiento almacenado de c# de SQL**CLR, **SQL CLR C# User-Defined función**, **SQL CLR C# User-Defined tipo**, **desencadenador de c# de SQL CLR**, **agregado de c# de SQL CLR**o **clase**.
    1. Especifique un nombre para el archivo de origen del nuevo tipo y, a continuación, seleccione **Agregar**.
 
 3. Agregue código para el nuevo tipo al editor de texto. Para ver el código de ejemplo de un procedimiento almacenado de ejemplo, consulte la sección ejemplo siguiente de este artículo.
@@ -116,6 +116,6 @@ EXEC GetVersion
 
 ## <a name="next-steps"></a>Pasos siguientes
   
-Para obtener más información sobre cómo depurar código administrado con Visual Studio, vea [depurar código administrado](https://go.microsoft.com/fwlink/?LinkId=120377) en la documentación de Visual Studio.  
+Para obtener más información sobre cómo depurar código administrado con Visual Studio, vea [depurar código administrado](/visualstudio/debugger/debugging-managed-code) en la documentación de Visual Studio.  
 
 Para obtener más información, vea conceptos de programación de la [integración de Common Language Runtime](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eece81e68356cea179d068e52a4f269fe81e0222
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 291e7b047acf9fbbab86f2cca63f319595f87d2f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487408"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193927"
 ---
 # <a name="configuring-data-sources"></a>Configurar orígenes de datos
 La información sobre los orígenes de datos se almacena en el registro del sistema. Los usuarios modifican la información del origen de datos a través de un programa de administración. Puede ser el administrador ODBC, el dispositivo del panel de control ODBC o un programa de administración escrito por un desarrollador de aplicaciones o controladores.  
   
- Puede usar comandos de PowerShell para modificar los orígenes de datos. Para obtener más información sobre estos comandos de PowerShell, vea [comandos de PowerShell de componentes de Windows Data Access](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+ Puede usar comandos de PowerShell para modificar los orígenes de datos. Para obtener más información sobre estos comandos de PowerShell, vea [comandos de PowerShell de componentes de Windows Data Access](/previous-versions/windows/desktop/jj134064(v=vs.85)).  
   
 > [!NOTE]  
 >  Esta sección es específica de las plataformas de® de Microsoft Windows. La forma en que se configuran los orígenes de datos en otras plataformas es específica de la plataforma.  

@@ -1,6 +1,6 @@
 ---
 description: Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC
-title: Desarrollar el reconocimiento del grupo de conexiones en un controlador ODBC | Microsoft Docs
+title: Desarrollar Connection-Pool reconocimiento en un controlador ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 519a2b64f6a5330b8c8fde458323c6c900941025
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f22be001a7434c13158deae8677b8c7bcb2f0630
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476277"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192315"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC
 En este tema se describen los detalles del desarrollo de un controlador ODBC que contiene información acerca de cómo el controlador debe proporcionar los servicios de agrupación de conexiones.  
   
-## <a name="enabling-driver-aware-connection-pooling"></a>Habilitar la agrupación de conexiones compatible con controladores  
+## <a name="enabling-driver-aware-connection-pooling"></a>Habilitar la agrupación de conexiones de Driver-Aware  
  Un controlador debe implementar las siguientes funciones de la interfaz del proveedor de servicios ODBC (SPI):  
   
 -   SQLSetConnectAttrForDbcInfo  
@@ -68,7 +68,7 @@ En este tema se describen los detalles del desarrollo de un controlador ODBC que
 ## <a name="the-connection-rating"></a>La clasificación de conexión  
  En comparación con el establecimiento de una nueva conexión, puede obtener un mejor rendimiento restableciendo parte de la información de conexión (como la base de datos) en una conexión agrupada. Por lo tanto, es posible que no desee que el nombre de la base de datos esté en el conjunto de atributos clave. De lo contrario, puede tener un grupo independiente para cada base de datos, que puede no ser bueno en las aplicaciones de nivel medio, donde los clientes usan varias cadenas de conexión diferentes.  
   
- Siempre que se reutiliza una conexión que tiene algún atributo que no coincide, se deben restablecer los atributos no coincidentes en función de la nueva solicitud de aplicación, de modo que la conexión devuelta sea idéntica a la solicitud de la aplicación (vea la descripción del atributo SQL_ATTR_DBC_INFO_TOKEN en la [función SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)). Sin embargo, el restablecimiento de estos atributos puede reducir el rendimiento. Por ejemplo, restablecer una base de datos requiere una llamada de red al servidor. Por lo tanto, vuelva a usar una conexión que tenga una coincidencia perfecta, si hay alguna disponible.  
+ Siempre que se reutiliza una conexión que tiene algún atributo que no coincide, se deben restablecer los atributos no coincidentes en función de la nueva solicitud de aplicación, de modo que la conexión devuelta sea idéntica a la solicitud de la aplicación (vea la descripción del atributo SQL_ATTR_DBC_INFO_TOKEN en la [función SQLSetConnectAttr](../syntax/sqlsetconnectattr-function.md)). Sin embargo, el restablecimiento de estos atributos puede reducir el rendimiento. Por ejemplo, restablecer una base de datos requiere una llamada de red al servidor. Por lo tanto, vuelva a usar una conexión que tenga una coincidencia perfecta, si hay alguna disponible.  
   
  Una función de clasificación en el controlador puede evaluar una conexión existente con una nueva solicitud de conexión. Por ejemplo, la función de clasificación del controlador puede determinar:  
   

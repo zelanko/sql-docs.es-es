@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 78e1bc6056906130422db0aa69aff60977af1d0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3b0943d8e493edf60cc491ca8fa7af1447b59ee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387531"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196017"
 ---
 # <a name="expressions-mdx"></a>Expresiones (MDX)
 
@@ -86,6 +86,5 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia del lenguaje MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
-  
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   

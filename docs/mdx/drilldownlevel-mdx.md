@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bc939e8aa055a2a36216a6c94fd032e561cbabf5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bd1f2214820a1795ae8d279c88a0d86c2ca5843
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484008"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194017"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -42,7 +42,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Include_Calc_Members*  
  (Opcional). Marca que indica si se deben incluir en el nivel de detalle los miembros calculados, si existen.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La función **DrilldownLevel** devuelve un conjunto de miembros secundarios en un orden jerárquico, basado en los miembros incluidos en el conjunto especificado. El orden se mantiene entre los miembros originales del conjunto especificado, aunque todos los miembros secundarios incluidos en el conjunto de resultados de la función se incluyen inmediatamente bajo su miembro primario.  
   
  Si hay una estructura de datos jerárquica de varios niveles, puede elegir de forma explícita un nivel en el que aumentar los detalles. Hay dos métodos, que se excluyen mutuamente, de especificar el nivel. El primer enfoque consiste en establecer el argumento **Level_Expression** mediante una expresión MDX que devuelve el nivel, un enfoque alternativo consiste en especificar el argumento de **Índice** mediante una expresión numérica que especifica el nivel por número.  
@@ -53,7 +53,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  Si no se especifica una expresión de nivel ni un valor de índice, la función crea un conjunto en orden jerárquico mediante la recuperación de los elementos secundarios de solo aquellos miembros que se encuentran en el nivel más bajo de la primera dimensión a la que se hace referencia en el conjunto especificado.  
   
- La consulta de la propiedad XMLA MdpropMdxDrillFunctions permite comprobar el nivel de compatibilidad que el servidor proporciona para las funciones de perforación. para más información, consulte [las propiedades XMLA compatibles &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ La consulta de la propiedad XMLA MdpropMdxDrillFunctions permite comprobar el nivel de compatibilidad que el servidor proporciona para las funciones de perforación. para más información, consulte [las propiedades XMLA compatibles &#40;&#41;XMLA ](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="examples"></a>Ejemplos  
  Puede probar los ejemplos siguientes en la ventana de consulta MDX de SSMS, utilizando el cubo de Adventure Works.  
@@ -119,5 +119,4 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0317d67b62efb84a0447543ca59836da6717f33
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d2a604bd27145b839476c75ea443d680e78c464
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483908"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196991"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definición de datos de MDX: CREATE MEMBER
 
@@ -47,10 +47,10 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  *Property_Value*  
  Expresión escalar válida que define el valor de la propiedad de miembro calculado.  
   
-## <a name="remarks"></a>Observaciones  
- La instrucción CREATE MEMBER define los miembros calculados disponibles durante la sesión y que, por lo tanto, se pueden utilizar en varias consultas mientras la sesión esté activa. Para obtener más información, vea [crear miembros calculados de ámbito de sesión &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
+## <a name="remarks"></a>Comentarios  
+ La instrucción CREATE MEMBER define los miembros calculados disponibles durante la sesión y que, por lo tanto, se pueden utilizar en varias consultas mientras la sesión esté activa. Para obtener más información, vea [crear Session-Scoped miembros calculados &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
   
- También puede definir un miembro calculado para su uso en una sola consulta. Para definir un miembro calculado limitado a una sola consulta, use la cláusula WITH de la instrucción SELECT. Para obtener más información, vea [crear miembros calculados de ámbito de consulta &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
+ También puede definir un miembro calculado para su uso en una sola consulta. Para definir un miembro calculado limitado a una sola consulta, use la cláusula WITH de la instrucción SELECT. Para obtener más información, vea [crear Query-Scoped miembros calculados &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
   
  *Property_Name* puede hacer referencia a propiedades de miembro calculadas estándar u opcionales. Las propiedades de miembro estándares se indican más adelante, en este mismo tema. Los miembros calculados creados con CREATE MEMBER sin un valor de **sesión** tienen ámbito de sesión. Además, las cadenas incluidas en las definiciones del miembro calculado se delimitan mediante comillas dobles. Este método es distinto del definido por OLE DB, en el que las cadenas deben delimitarse con comillas simples.  
   
@@ -62,7 +62,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  Los miembros calculados pueden existir en cualquiera de los ámbitos que se incluyen en la siguiente tabla:  
   
  Ámbito de la consulta  
- La visibilidad y la duración del miembro calculado se limita a la consulta. El miembro calculado se define en una consulta individual. El ámbito de consulta prevalece sobre el ámbito de sesión. Para obtener más información, vea [crear miembros calculados de ámbito de consulta &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
+ La visibilidad y la duración del miembro calculado se limita a la consulta. El miembro calculado se define en una consulta individual. El ámbito de consulta prevalece sobre el ámbito de sesión. Para obtener más información, vea [crear Query-Scoped miembros calculados &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
   
  Ámbito de sesión  
  La visibilidad y duración del miembro calculado se limita a la sesión en la que se crea. (La duración es menor que la duración de la sesión si se emite una instrucción DROP MEMBER en el miembro calculado). La instrucción CREATE MEMBER crea un miembro calculado con ámbito de sesión.  
@@ -124,5 +124,4 @@ WHERE ProfitRatio
  [Instrucción DROP MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
  [Instrucción UPDATE MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-update-member.md)   
  [Instrucciones de definición de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

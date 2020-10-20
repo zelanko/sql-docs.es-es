@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 10a9aa360a50b43324ae9e41b77dee6ce84baf60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27755806802e5238329b4a9ecb49e6a9f6ad5ce2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483898"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196945"
 ---
 # <a name="mdx-syntax-elements-mdx"></a>Elementos de la sintaxis de MDX (MDX)
 
@@ -30,9 +30,8 @@ ms.locfileid: "88483898"
 |[Funciones](../mdx/functions-mdx-syntax.md)|Las funciones son elementos de sintaxis que toman cero, uno o más valores de entrada y devuelven un valor escalar o un objeto. Algunos ejemplos son la función [SUM](../mdx/sum-mdx.md) para agregar varios valores, la función [Members](../mdx/members-set-mdx.md) para devolver un conjunto de miembros de una dimensión o un nivel, etc.|  
 |[Comentarios](../mdx/comments-mdx-syntax.md)|Los comentarios son fragmentos de texto insertados en instrucciones o scripts MDX para explicar el objetivo de la instrucción. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no ejecuta Comentarios.|  
 |[Palabras clave reservadas](../mdx/reserved-keywords-mdx-syntax.md)|Las palabras clave reservadas son palabras que se han reservado para usarse con MDX y que no deberían utilizarse para nombres de objeto que se empleen en instrucciones MDX.|  
-|[Miembros, tuplas y conjuntos (MDX)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|Los miembros, las tuplas y los conjuntos son conceptos básicos de los datos multidimensionales que es imprescindible comprender antes de crear una consulta MDX.|  
+|[Miembros, tuplas y conjuntos (MDX)](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|Los miembros, las tuplas y los conjuntos son conceptos básicos de los datos multidimensionales que es imprescindible comprender antes de crear una consulta MDX.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de expresiones multidimensionales &#40;MDX&#41;](../mdx/multidimensional-expressions-mdx-reference.md)  
-  
   

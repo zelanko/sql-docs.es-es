@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 623d798a3794da7577cf036cb8a32b2cf9cd7b84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9660b546fbfa293cab2442db3546838dbde80467
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477017"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196748"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulación de datos de MDX: SELECT
 
@@ -110,14 +110,14 @@ FROM
  *MemberProperty_Name*  
  Cadena válida que representa una propiedad de miembro.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La expresión `<SELECT slicer axis clause>` debe contener miembros en dimensiones y jerarquías distintas a las referidas en las expresiones `<SELECT query axis clause>` especificadas.  
   
  Si se omite un atributo del cubo de las expresiones `<SELECT query axis clause>` y del valor `<SELECT slicer axis clause>` especificados, el miembro predeterminado del atributo se agrega implícitamente al eje segmentador.  
   
  La opción NON VISUAL en la instrucción subselect le permite filtrar los miembros manteniendo los totales verdaderos en lugar de los totales filtrados. Esto le permite consultar las diez primeras ventas (personas/productos/regiones) y obtener el verdadero total de ventas para todos los miembros consultados, en lugar del valor total de ventas para los diez primeros devueltos. Para obtener más información, vea la sección de ejemplos.  
   
- Los miembros calculados se pueden incluir en \<SELECT query axis clause> cada vez que se abra la conexión con el parámetro de cadena de conexión *subconsultas = 1*; vea [las propiedades de XMLA admitidas &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) y <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para el uso de parámetros. Se proporciona un ejemplo de miembros calculados en subselecciones.  
+ Los miembros calculados se pueden incluir en \<SELECT query axis clause> cada vez que se abra la conexión con el parámetro de cadena de conexión *subconsultas = 1*; vea [las propiedades de XMLA admitidas &#40;XMLA&#41;](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) y <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para el uso de parámetros. Se proporciona un ejemplo de miembros calculados en subselecciones.  
   
 ## <a name="autoexists"></a>autoexist  
  Cuando dos o más atributos de la dimensión se utilizan en una instrucción SELECT, Analysis Services evalúa las expresiones de los atributos para asegurarse de que los miembros de dichos atributos están correctamente delimitados a fin de cumplir los criterios de todos los demás atributos. Por ejemplo, supongamos que está trabajando con atributos de la dimensión Geography. Si tiene una expresión que devuelve todos los miembros del atributo City, y otra expresión que restringe a los miembros del atributo Country a todos los países de Europa, esto dará lugar a que los miembros de la ciudad se limiten solo a aquellas ciudades que pertenezcan a países de Europa. Esta característica de Analysis Services se denomina Autoexists y solamente se aplica a atributos de una misma dimensión. Autoexists solamente se aplica a atributos de una misma dimensión porque intenta impedir que los registros de la dimensión excluidos de una expresión de atributos se incluyan en las demás expresiones de atributos. Autoexists también puede entenderse como la intersección resultante de las distintas expresiones de atributos sobre los registros de la dimensión. Vea los ejemplos que se muestran a continuación:  
@@ -162,11 +162,11 @@ FROM
   
 |Nombre del modelo + medidas|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
-|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
+|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04 %**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
 |**Road-650**|**$7,442,141.81**|**$39,698.30**|**0,53 %**|  
-|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47%**|  
+|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47 %**|  
 |**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0,05%**|  
 |**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0,57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
@@ -213,11 +213,11 @@ FROM
   
 |Nombre del modelo + medidas|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
-|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
+|**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04 %**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
 |**Road-650**|**$7,442,141.81**|**$39,698.30**|**0,53 %**|  
-|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47%**|  
+|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47 %**|  
 |**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0,05%**|  
 |**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0,57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
@@ -246,14 +246,14 @@ FROM
   
 |Nombre del modelo + medidas|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
 |**Mountain-300**|**$1,907,249.38**|**$876.95**|**0,05%**|  
 |**Mountain-500**|**$1,067,327.31**|**$17,266.09**|**1,62%**|  
 |**Mountain-400-W**|**$592,450.05**|**$303.49**|**0,05%**|  
 |**LL Mountain Frame**|**$521,864.42**|**$252.41**|**0,05%**|  
-|**ML Mountain Frame-W**|**$482,953.16**|**$206,95**|**0,04%**|  
+|**ML Mountain Frame-W**|**$482,953.16**|**$206,95**|**0,04 %**|  
 |**ML Mountain Frame**|**$343,785.29**|**$161.82**|**0,05%**|  
 |**Women's Mountain Shorts**|**$260,304.09**|**$6,675.56**|**2,56%**|  
   
@@ -303,8 +303,8 @@ FROM
   
 |Nombre del modelo + medidas|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
   
  En los resultados anteriores, la segmentación arroja un resultado que solamente incluye los productos Preferred10Products que forman parte del grupo [Mountain] de [Product].[Product Line]; es el resultado esperado, porque Preferred10Products es una expresión constante.  
@@ -331,11 +331,11 @@ FROM
   
 |Nombre del modelo + medidas|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
   
- El comportamiento de autoexists se puede modificar mediante el parámetro autoexists = [1 | 2 | 3] en la cadena de conexión; vea [las propiedades XMLA admitidas &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) y <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para el uso de parámetros.  
+ El comportamiento de autoexists se puede modificar mediante el parámetro autoexists = [1 | 2 | 3] en la cadena de conexión; vea [las propiedades XMLA admitidas &#40;xmla&#41;](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) y <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para el uso de parámetros.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se devuelve la suma del `Measures.[Order Quantity]` miembro, agregada durante los primeros ocho meses del año 2003 que se encuentran en la `Date` dimensión, del cubo **Adventure Works** .  
@@ -394,7 +394,7 @@ WHERE
   
  Produce los siguientes resultados:  
   
-|Tipo de negocio + categoría|All Products|Accessories|Clothing|  
+|Tipo de negocio + categoría|All Products|Accesorios|Ropa|  
 |-|-|-|-|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
@@ -420,7 +420,7 @@ WHERE
   
  La consulta anterior genera los resultados siguientes:  
   
-|Tipo de negocio + categoría|All Products|Accessories|Clothing|  
+|Tipo de negocio + categoría|All Products|Accesorios|Ropa|  
 |-|-|-|-|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
@@ -455,9 +455,7 @@ WHERE
 |$80,450,596.98|$79.980.114,38|$470.482,60|0,58%|  
   
 ## <a name="see-also"></a>Consulte también  
- [Conceptos clave de &#40;MDX Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [Conceptos clave de &#40;MDX Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Instrucciones de manipulación de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [Restringir la consulta con ejes de consulta y segmentador &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
-  
-

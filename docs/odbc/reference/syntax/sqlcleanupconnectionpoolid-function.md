@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 12046405d10c41796b8ad989f746aaac242f430d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20ad05559aa172ff7e8937359bad93f85347a92a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448845"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193450"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>Función SQLCleanupConnectionPoolID
 **Conformidad**  
  Versión introducida: ODBC 3,81 Standards Compliance: ODBC  
   
  **Resumen**  
- **SQLCleanupConnectionPoolID** informa a un controlador de que se ha agotado el tiempo de espera de un ID. de grupo. Un identificador de grupo puede agotar el tiempo de espera cada vez que se agota el tiempo de espera de todas las conexiones de un grupo asociado a ese ID. de grupo. Consulte [agrupación en Microsoft Data Access Components](https://msdn.microsoft.com/library/ms810829.aspx) para obtener más información sobre el tiempo de espera de la conexión.  
+ **SQLCleanupConnectionPoolID** informa a un controlador de que se ha agotado el tiempo de espera de un ID. de grupo. Un identificador de grupo puede agotar el tiempo de espera cada vez que se agota el tiempo de espera de todas las conexiones de un grupo asociado a ese ID. de grupo. Consulte [agrupación en Microsoft Data Access Components](/previous-versions/ms810829(v=msdn.10)) para obtener más información sobre el tiempo de espera de la conexión.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,7 +51,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
   
  Una aplicación no puede recibir el mensaje de error devuelto por el controlador.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Se puede llamar a **SQLCleanupConnectionPoolID** en cualquier momento, pero el administrador de controladores garantiza que ningún otro subproceso llama a **SQLGetPoolID** simultáneamente y ningún otro subproceso está llamando a **SQLRateConnection** y **SQLPoolConnect** de forma simultánea con un token de información de conexión asignado a ese ID. de grupo. Por lo tanto, el controlador debe asegurarse de que esta función es segura para subprocesos.  
   
  Un controlador puede limpiar los recursos asociados con el identificador del grupo.  

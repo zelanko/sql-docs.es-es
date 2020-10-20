@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d636d13512993d64a9abd88e61412f76790c7590
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 4df36b6012cd6cbe0f2570bb678ebff02fa21dd5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823768"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195819"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalación y configuración de Master Data Services
 
@@ -110,12 +110,12 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
  Para obtener más información sobre la instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con el programa de instalación, consulte [Instalación de SQL Server 2016 desde el Asistente para la instalación &#40;programa de instalación&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
- Para obtener más información sobre la instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante un símbolo del sistema, consulte [Instalar SQL Server 2016 desde el símbolo del sistema](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Si se usa un símbolo del sistema, [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] está disponible como parámetro de característica.  
+ Para obtener más información sobre la instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante un símbolo del sistema, consulte [Instalar SQL Server 2016 desde el símbolo del sistema](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Si se usa un símbolo del sistema, [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] está disponible como parámetro de característica.  
   
  Para obtener una descripción breve con vínculos a información adicional sobre las tareas previas a la instalación, consulte [Instalar Master Data Services](../master-data-services/install-windows/install-master-data-services.md).  
   
 ##  <a name="setting-up-the-database-and-website"></a><a name="SetUpWeb"></a> Configurar la base de datos y el sitio web  
- **Para configurar la base de datos y el sitio web mediante[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
+ **Para configurar la base de datos y el sitio web mediante [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
 
  
 > [!WARNING]
@@ -130,9 +130,9 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
 3.  En la página **servidor de base de datos** , especifique la instancia de SQL Server. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]agrega compatibilidad con Instancia administrada de SQL Server. Establezca el valor de **SQL Server instancia** en el host de la instancia administrada. Por ejemplo: `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] agrega compatibilidad con Instancia administrada de SQL Server. Establezca el valor de **SQL Server instancia** en el host de la instancia administrada. Por ejemplo, `xxxxxx.xxxxxx.database.windows.net`.
 
-4. Seleccione el **tipo de autenticación** y, a continuación, haga clic en **conexión de prueba** para confirmar que puede conectarse a la base de datos con las credenciales del tipo de autenticación que ha seleccionado. Haga clic en **Next**.
+4. Seleccione el **tipo de autenticación** y, a continuación, haga clic en **conexión de prueba** para confirmar que puede conectarse a la base de datos con las credenciales del tipo de autenticación que ha seleccionado. Haga clic en **Siguiente**.
 
     >Para [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] , para conectarse a la instancia administrada, use uno de los siguientes tipos de autenticación:
     >
@@ -146,7 +146,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desmarque la casilla **Intercalación predeterminada de SQL Server** y haga clic en una o varias de las opciones disponibles, como **Distinguir mayúsculas de minúsculas**. Haga clic en **Next**.
+4.  Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desmarque la casilla **Intercalación predeterminada de SQL Server** y haga clic en una o varias de las opciones disponibles, como **Distinguir mayúsculas de minúsculas**. Haga clic en **Siguiente**.
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -294,5 +294,4 @@ Para obtener más información sobre la configuración de la página Configuraci
  [Master Data Manager aplicación Web](../master-data-services/master-data-manager-web-application.md)   
  [Página configuración de base de datos &#40;Administrador de configuración de Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [Novedades en Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
-  
   

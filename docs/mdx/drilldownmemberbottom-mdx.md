@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b55b71a77a8513619edfde723da0e9d761af3d19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb308c3fbdbcf9f13398a7d44c885069c1665db1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483988"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193987"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (MDX)
 
@@ -41,7 +41,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
- *Hierarchy*  
+ *Jerarquía*  
  Expresión MDX válida que devuelve una jerarquía.  
   
  *Recursiva*  
@@ -50,7 +50,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Include_Calc_Members*  
  Palabra clave para que los miembros calculados puedan estar incluidos en la obtención de detalles.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si se especifica una expresión numérica, la función **DrilldownMemberBottom** ordena, en orden ascendente, los elementos secundarios de cada miembro del primer conjunto, según el valor de la expresión numérica, según se ha evaluado sobre el conjunto de miembros secundarios. Si no se especifica una expresión numérica, la función clasifica, en orden ascendente, los elementos secundarios de cada miembro del primer conjunto de acuerdo con los valores de las celdas representadas por el conjunto de miembros secundarios, según determina el contexto de la consulta. Este comportamiento es similar a las funciones Tail (MDX) y BottomCount que devuelven un conjunto de miembros en orden natural, sin ninguna ordenación.  
   
  Después de la ordenación, la función **DrilldownMemberBottom** devuelve un conjunto que contiene los miembros primarios y el número de miembros secundarios, especificados en *Count,* con el valor más bajo y que están incluidos en ambos conjuntos.  
@@ -61,9 +61,8 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
   
  La función **DrilldownMemberBottom** es similar a la función [DrilldownMember](../mdx/drilldownmember-mdx.md) , pero en lugar de incluir todos los elementos secundarios de cada miembro del primer conjunto que también está presente en el segundo conjunto, la función **DrilldownMemberBottom** devuelve el número más bajo de miembros secundarios de cada miembro.  
   
- La consulta de la propiedad XMLA MdpropMdxDrillFunctions permite comprobar el nivel de compatibilidad que el servidor proporciona para las funciones de perforación. para más información, consulte [las propiedades XMLA compatibles &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ La consulta de la propiedad XMLA MdpropMdxDrillFunctions permite comprobar el nivel de compatibilidad que el servidor proporciona para las funciones de perforación. para más información, consulte [las propiedades XMLA compatibles &#40;&#41;XMLA ](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

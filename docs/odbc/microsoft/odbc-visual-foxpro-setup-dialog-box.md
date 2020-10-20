@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2083f76300ed19e047b0a138aed6c65ecef4da3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60d65d23a3a72f0194145c9a567f274e2e07ff74
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88340711"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194330"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Cuadro de diálogo de configuración de Visual FoxPro ODBC
 El cuadro de diálogo **configuración de ODBC para Visual FoxPro** le permite agregar o cambiar un origen de datos de Visual FoxPro.  
   
- Para descargar el controlador, consulte [el sitio de descarga del controlador ODBC de Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
+ Para descargar el controlador, consulte [el sitio de descarga del controlador ODBC de Visual FoxPro](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)).  
   
 ## <a name="dialog-box-options"></a>Opciones del cuadro de diálogo  
  **Nombre del origen de datos**  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 119ee04be796eb58e0661f02e001ac0b1a2e7a85
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f4b7f610ca23940c676befc107331b406c124cb2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812971"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197029"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importar datos de tablas (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "85812971"
   
 -   Debe tener permiso para insertar datos en STG. \<name> _Leaf, Stg. \<name> _Consolidated STG. \<name> _Relationship tabla en la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos.  
   
--   Debe tener permisos para ejecutar STG. udp_ \<name> _Leaf, Stg. udp \_ \<name> _Consolidated o el procedimiento almacenado stg. UDP \_ \<name> _Relationship en la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos.  
+-   Debe tener permisos para ejecutar el stg.udp_ \<name> _Leaf, Stg. udp \_ \<name> _Consolidated o el procedimiento almacenado stg. UDP \_ \<name> _Relationship en la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos.  
   
 -   El modelo no debe tener un estado de **Confirmado**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "85812971"
   
 2.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y conéctese a la instancia de Motor de base de datos de su base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-     Para obtener más información, vea [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
+     Para obtener más información, vea [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md).  
   
 3.  Importe datos en las tablas de almacenamiento provisional mediante el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Asistente para la importación y exportación.  
   
@@ -77,5 +77,4 @@ ms.locfileid: "85812971"
      En Master Data Manager, navegue hasta el área funcional **Explorador** correspondiente a su modelo y, a continuación, aplique reglas de negocios para validar los datos. Para obtener más información, consulte [Validar miembros específicos con las reglas de negocios &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md). También puede usar un procedimiento almacenado para validar los datos. Para obtener más información, consulte [Procedimiento almacenado de validación &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
      Al cargar datos usando tablas de almacenamiento provisional, los datos no se validan automáticamente con las reglas de negocios. Para obtener más información sobre qué es la validación y cuándo ocurre, consulte [Validación &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md).  
-  
   

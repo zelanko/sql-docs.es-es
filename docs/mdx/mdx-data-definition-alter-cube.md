@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 97d0653a08d2b08b0cafa5ae23b329c6193b5181
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 052d533e503f5b82f506ec119684acbbfe7cdd5f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480613"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192355"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definición de datos de MDX: ALTER CUBE
 
 
-  Altera la estructura de un cubo especificado, que normalmente se usa para admitir la reescritura en la dimensión. Para obtener más información sobre el uso de la escritura diferida en una aplicación, consulte esta entrada de blog: [compilar una aplicación de reescritura con Analysis Services (blog)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)  
+  Altera la estructura de un cubo especificado, que normalmente se usa para admitir la reescritura en la dimensión. Para obtener más información sobre el uso de la escritura diferida en una aplicación, consulte esta entrada de blog: [compilar una aplicación de reescritura con Analysis Services (blog)](/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)  
   
  Tenga en cuenta que las reescrituras en dimensiones simultáneas pueden producir un interbloqueo, donde la primera reescritura no se puede confirmar debido al bloqueo compartido que mantiene la segunda reescritura. En esta situación no se genera ningún error, pero ninguna de las operaciones puede progresar. Al final, ambas operaciones agotan el tiempo de espera y se revierten los cambios.  
   
@@ -114,7 +114,7 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  Expresión de cadena válida que proporciona un nombre de miembro o una clave de miembro.  
   
-### <a name="remarks"></a>Observaciones  
+### <a name="remarks"></a>Comentarios  
  Si no se utiliza la cláusula WITH DESCENDANTS, los elementos secundarios de un miembro quitado se convierten en elementos secundarios del elemento primario del miembro quitado. Si se utiliza la cláusula WITH DESCENDANTS, también se quitan todos los descendientes y sus filas de la tabla de dimensiones.  
   
 > [!NOTE]  
@@ -130,7 +130,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Expresión MDX válida que devuelve un miembro único.  
   
-### <a name="remarks"></a>Observaciones  
+### <a name="remarks"></a>Comentarios  
  La expresión MDX especificada puede ser estática o dinámica.  
   
 ## <a name="moving-a-dimension-member"></a>Mover un miembro de dimensión  
@@ -166,5 +166,4 @@ CELL CALCULATION Calculation_Name
   
 ## <a name="see-also"></a>Consulte también  
  [Instrucciones de definición de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

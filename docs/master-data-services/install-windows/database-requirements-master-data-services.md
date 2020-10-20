@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 893fdf2398788b318cd9f4f1e75ed833ea7bd4e8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f3e21ddbcf4d3599548a827e169f2c0d63f114e8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883856"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194429"
 ---
 # <a name="database-requirements-master-data-services"></a>Requisitos de base de datos (Master Data Services)
 
@@ -56,7 +56,7 @@ ms.locfileid: "85883856"
   
 -   Microsoft SQL Server 2008 R2 Developer (64 bits) x64  
   
- Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
+ Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). 
   
 ### <a name="operating-system"></a>Sistema operativo  
  Para obtener más información sobre los sistemas operativos Windows admitidos y otros requisitos del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], see [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
@@ -77,5 +77,4 @@ ms.locfileid: "85883856"
  [Master Data Services base de datos](../../master-data-services/master-data-services-database.md)   
  [Cuadro de diálogo conectar con una base de datos de Master Data Services](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
  [Asistente Crear base de datos &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
-  
   

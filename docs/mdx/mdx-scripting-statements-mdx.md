@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 633a44f28852898e2638438a5e8395d8d865fca3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a064bafb4e25ed84f2977c44d1ca74c3ba634804
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88341480"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196957"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>Instrucciones para scripting de MDX (MDX)
 
@@ -27,7 +27,7 @@ ms.locfileid: "88341480"
 |-----------|-----------------|  
 |[CALCULATE &#40;instrucción MDX&#41;](../mdx/mdx-scripting-calculate.md)|Calcula un subcubo y opcionalmente determina el orden de resolución de las dimensiones incluidas en el subcubo.|  
 |[Instrucción CASE &#40;MDX&#41;](../mdx/case-statement-mdx.md)|Permite obtener condicionalmente valores específicos de varias comparaciones.|  
-|[EXISTING &#40;Palabra clave, MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword)|Exige que un conjunto especificado se evalúe en el contexto actual.|  
+|[EXISTING &#40;Palabra clave, MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword)|Exige que un conjunto especificado se evalúe en el contexto actual.|  
 |[FREEZE &#40;Instrucción, MDX&#41;](../mdx/mdx-scripting-freeze.md)|Bloquea los valores de celda de un subcubo especificado a sus valores actuales.|  
 |[IF &#40;instrucción de MDX&#41;](../mdx/mdx-scripting-if.md)|Ejecuta una instrucción si la condición es true.|  
 |[SCOPE &#40;Instrucción, MDX&#41;](../mdx/mdx-scripting-scope.md)|Limita el ámbito de las instrucciones MDX especificadas a un subcubo especificado.|  
@@ -36,6 +36,5 @@ ms.locfileid: "88341480"
  [Referencia de instrucciones MDX &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
  [Instrucciones de definición de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [Instrucciones de manipulación de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Aspectos básicos de scripting MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)  
-  
+ [Aspectos básicos de scripting MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c69f0ed73b638fd17183c5efba1c1f5e8e3c74f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 88f297829a13c1b7d132230aebab76b9f546704d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756308"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192615"
 ---
 # <a name="deploying-clr-database-objects"></a>Implementar objetos de base de datos de CLR
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "85756308"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Para obtener más información sobre cómo crear los diferentes tipos de objetos de base de datos administrados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [funciones CLR definidas por](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)el usuario, [agregados definidos por el](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)usuario CLR, [tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procedimientos almacenados](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)CLR y [desencadenadores CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
+ Para obtener más información sobre cómo crear los diferentes tipos de objetos de base de datos administrados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [funciones de User-Defined](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)de CLR, [agregados de User-Defined](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)CLR, tipos de [User-Defined CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procedimientos almacenados CLR](/dotnet/framework/data/adonet/sql/clr-stored-procedures)y [desencadenadores CLR](/dotnet/framework/data/adonet/sql/clr-triggers).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Implementar el ensamblado en servidores de producción  
  Una vez probados y comprobados los objetos de base de datos de CLR en el servidor de prueba, pueden distribuirse a los servidores de producción. Para obtener más información sobre la depuración de objetos de base de datos administrados, vea [depurar objetos de base de datos CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  
@@ -93,11 +93,11 @@ ms.locfileid: "85756308"
   
 4.  En el panel **elegir opciones de script** , haga clic en **siguiente**o cambie las opciones y, a continuación, haga clic en **siguiente**.  
   
-5.  En el panel **elegir tipos de objeto** , elija el tipo de objeto de base de datos que se va a implementar. Haga clic en **Next**.  
+5.  En el panel **elegir tipos de objeto** , elija el tipo de objeto de base de datos que se va a implementar. Haga clic en **Siguiente**.  
   
 6.  Para cada tipo de objeto seleccionado en el panel **elegir tipos de objeto** , se muestra un panel **elegir \<type> ** . En este panel, puede elegir entre todas las instancias de ese tipo de objeto de base de datos registradas en la base de datos especificada. Seleccione uno o más objetos y haga clic en **siguiente**.  
   
-7.  El panel **Opciones de salida** aparece cuando se han seleccionado todos los tipos de objetos de base de datos deseados. Seleccione **script a archivo** y especifique una ruta de acceso de archivo para el script. Seleccione **Siguiente**. Revise sus selecciones y haga clic en **Finalizar**. El script de implementación se guardará en la ruta de acceso de archivo especificada.  
+7.  El panel **Opciones de salida** aparece cuando se han seleccionado todos los tipos de objetos de base de datos deseados. Seleccione **script a archivo** y especifique una ruta de acceso de archivo para el script. Seleccione **Next** (Siguiente). Revise sus selecciones y haga clic en **Finalizar**. El script de implementación se guardará en la ruta de acceso de archivo especificada.  
   
 ## <a name="post-deployment-scripts"></a>Scripts posteriores a la implementación  
  Puede ejecutar un script posterior a la implementación.  
@@ -108,5 +108,4 @@ ms.locfileid: "85756308"
   
 ## <a name="see-also"></a>Consulte también  
  [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

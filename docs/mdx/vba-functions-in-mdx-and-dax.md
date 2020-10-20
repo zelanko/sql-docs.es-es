@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 10658daae1321ac7e22af337ef946f5cfb6004cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dcbf0f0321ddc0c1959c4681c0b1dddf49c1aba
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429707"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192295"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funciones de VBA en MDX y DAX
 
 
-  Este documento contiene una referencia cruzada de todas las funciones de VBA disponibles en [Visual Basic para aplicaciones funciones](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) que se admiten en MDX; Además, la lista incluye una nota cuando hay una equivalencia funcional con el lenguaje DAX.  
+  Este documento contiene una referencia cruzada de todas las funciones de VBA disponibles en [Visual Basic para aplicaciones funciones](/office/vba/Language/Reference/functions-visual-basic-for-applications) que se admiten en MDX; Además, la lista incluye una nota cuando hay una equivalencia funcional con el lenguaje DAX.  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Referencia de funciones de Visual Basic para Aplicaciones  
   
@@ -68,8 +68,8 @@ ms.locfileid: "88429707"
 |FileAttr|No compatible||  
 |FileDateTime|No compatible||  
 |FileLen|No compatible||  
-|Filtrar|No compatible|**ADVERTENCIA** de MDX implementa una función diferente con el mismo nombre. la función FILTER (Set_Expression, Logical_Expression) devuelve el conjunto resultante de filtrar un conjunto especificado en función de una condición de búsqueda de los argumentos especificados.<br /><br /> **ADVERTENCIA** de DAX implementa una función diferente con el mismo nombre. la función FILTER ( \<table> , \<filter> ) devuelve una tabla que representa un subconjunto de otra tabla o expresión de los argumentos especificados|  
-|Corrección|Solo MDX||  
+|Filter|No compatible|**ADVERTENCIA** de MDX implementa una función diferente con el mismo nombre. la función FILTER (Set_Expression, Logical_Expression) devuelve el conjunto resultante de filtrar un conjunto especificado en función de una condición de búsqueda de los argumentos especificados.<br /><br /> **ADVERTENCIA** de DAX implementa una función diferente con el mismo nombre. la función FILTER ( \<table> , \<filter> ) devuelve una tabla que representa un subconjunto de otra tabla o expresión de los argumentos especificados|  
+|Fix|Solo MDX||  
 |Format (Visual Basic para Aplicaciones)|DAX, MDX||  
 |FormatCurrency|No compatible||  
 |FormatDateTime|No compatible||  
@@ -114,7 +114,7 @@ ms.locfileid: "88429707"
 |Mid|DAX, MDX||  
 |Minute|DAX, MDX||  
 |MIRR|Solo MDX||  
-|Month|DAX, MDX||  
+|Mes|DAX, MDX||  
 |MonthName|No compatible||  
 |MsgBox|No compatible||  
 |Ahora|DAX, MDX||  
@@ -137,7 +137,7 @@ ms.locfileid: "88429707"
 |Seek|No compatible||  
 |Sgn|DAX, MDX||  
 |Shell|No compatible||  
-|Seno|Solo MDX||  
+|Sin|Solo MDX||  
 |SLN|Solo MDX||  
 |Space|Solo MDX||  
 |Spc|No compatible||  
@@ -148,15 +148,15 @@ ms.locfileid: "88429707"
 |StrConv|Solo MDX||  
 |String|Solo MDX||  
 |StrReverse|No compatible||  
-|Modificador|Solo MDX||  
+|Conmutador|Solo MDX||  
 |SYD|Solo MDX||  
 |Pestaña|No compatible||  
 |Tan|Solo MDX||  
-|Tiempo|No compatible||  
-|Temporizador|Solo MDX||  
+|Time|No compatible||  
+|Timer|Solo MDX||  
 |TimeSerial|Solo MDX||  
 |TimeValue|DAX, MDX||  
-|Trim|DAX, MDX||  
+|Recortar|DAX, MDX||  
 |TypeName|Solo MDX||  
 |UBound|No compatible||  
 |UCase|Solo MDX||  
@@ -165,5 +165,4 @@ ms.locfileid: "88429707"
 |Día de la semana|DAX, MDX||  
 |WeekdayName|No compatible||  
 |Year|DAX, MDX||  
-  
   

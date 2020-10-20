@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5b3784e4af35afe5fdf0b84290cdf33fc8c77496
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05fefa983f3b58f8ca8be95772d3fbc49f3e9afb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430157"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194077"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
 
@@ -45,7 +45,7 @@ ms.locfileid: "88430157"
   
 -   **Administrador de conexiones de SAP BW**: el administrador de conexiones de SAP BW conecta un origen o un destino de SAP BW con un sistema SAP Netweaver BW versión 7.  
   
- Para obtener instrucciones sobre cómo configurar y utilizar el administrador de conexiones, el origen y el destino de SAP BW, vea las notas del producto, [Usar SQL Server Integration Services con SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897). Estas notas del producto también muestran cómo configurar los objetos necesarios en SAP BW.  
+ Para obtener instrucciones sobre cómo configurar y utilizar el administrador de conexiones, el origen y el destino de SAP BW, vea las notas del producto, [Usar SQL Server Integration Services con SAP BI 7.0](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100)). Estas notas del producto también muestran cómo configurar los objetos necesarios en SAP BW.  
   
 ## <a name="documentation"></a>Documentación  
  Este archivo de Ayuda de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW contiene los temas y las secciones siguientes:  
@@ -58,5 +58,4 @@ ms.locfileid: "88430157"
   
  [Ayuda F1 de Microsoft Connector for SAP BW](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
  Se describe la interfaz de usuario de los componentes de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW.  
-  
   

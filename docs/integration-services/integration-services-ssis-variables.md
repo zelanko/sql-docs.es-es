@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1dfeeecf62ad33ab5d2d66e0fdf454f89036d047
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449783"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193834"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables de Integration Services (SSIS)
 
@@ -50,7 +50,7 @@ ms.locfileid: "88449783"
 ## <a name="system-and-user-defined-variables"></a>Variables del sistema y definidas por el usuario  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite dos tipos de variables: variables definidas por el usuario y variables del sistema. Las variables definidas por el usuario son definidas por los desarrolladores de paquetes y las variables del sistema son definidas por [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Puede crear la cantidad de variables definidas por el usuario que requiera un paquete, pero no puede crear variables del sistema adicionales.  
   
- Todas las variables (del sistema y definidas por el usuario) se pueden usar en los enlaces de parámetros que usa la tarea Ejecutar SQL para asignar variables a parámetros en instrucciones SQL. Para más información, vea [Tarea Ejecutar SQL](../integration-services/control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ Todas las variables (del sistema y definidas por el usuario) se pueden usar en los enlaces de parámetros que usa la tarea Ejecutar SQL para asignar variables a parámetros en instrucciones SQL. Para más información, vea [Tarea Ejecutar SQL](../integration-services/control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](./control-flow/execute-sql-task.md).  
   
 > [!NOTE]  
 >  Los nombres de variables definidas por el usuario y variables del sistema distinguen mayúsculas y minúsculas.  
@@ -79,7 +79,7 @@ ms.locfileid: "88449783"
   
  Hay disponible un conjunto diferente de variables del sistema para diferentes tipos de contenedor. Para obtener más información sobre las variables del sistema usadas por paquetes y sus elementos, vea [System Variables](../integration-services/system-variables.md).  
   
- Para obtener más información sobre escenarios de uso real para variables, vea [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Para obtener más información sobre escenarios de uso real para variables, vea [Usar variables en paquetes]().  
   
 ## <a name="properties-of-variables"></a>Propiedades de las variables  
  Puede configurar variables definidas por el usuario estableciendo las siguientes propiedades en la ventana **Variables** o en la ventana **Propiedades** . Algunas propiedades solo están disponibles en la ventana Propiedades.  
@@ -114,7 +114,7 @@ ms.locfileid: "88449783"
   
  Una variable se crea dentro del ámbito de un paquete o dentro del ámbito de un contenedor, tarea o controlador de evento en el paquete. Dado que el contenedor del paquete se encuentra en la parte superior de la jerarquía de contenedores, las variables con ámbito de paquete funcionan como variables globales y pueden ser usadas por todos los contenedores en el paquete. De manera similar, las variables definidas dentro del ámbito de un contenedor, como el contenedor de bucles For, pueden ser usadas por todas las tareas o contenedores dentro del contenedor de bucles For.  
   
- Si un paquete ejecuta otros paquetes mediante la tarea Ejecutar paquete, las variables definidas en el ámbito del paquete que llama o la tarea Ejecutar paquete se pueden poner a disposición del paquete llamado usando el tipo de configuración de variable de paquete primario. Para más información, consulte [Package Configurations](../integration-services/packages/package-configurations.md).  
+ Si un paquete ejecuta otros paquetes mediante la tarea Ejecutar paquete, las variables definidas en el ámbito del paquete que llama o la tarea Ejecutar paquete se pueden poner a disposición del paquete llamado usando el tipo de configuración de variable de paquete primario. Para más información, consulte [Package Configurations](./packages/legacy-package-deployment-ssis.md).  
   
 **IncludeInDebugDump**  
  Indica si el valor variable está incluido en los archivos de volcado de depuración.  
@@ -159,13 +159,13 @@ Una variable tiene opciones para establecer el valor de la variable y el tipo de
   
  **Expresiones de flujo de datos** Use variables para proporcionar los valores de las expresiones utilizadas por las transformaciones Columna derivada y División condicional para llenar columnas o dirigir filas de datos a distintas salidas de transformación. Por ejemplo, la expresión `@varSalutation + LastName`concatena el valor de la variable `VarSalutation` y el de la columna `LastName` . La expresión `Income < @HighIncome`dirige a un resultado las filas de datos cuyo valor de la columna `Income` es menor que el valor de la variable `HighIncome` . Para obtener más información, vea [Transformación Columna derivada](../integration-services/data-flow/transformations/derived-column-transformation.md), [Transformación División condicional](../integration-services/data-flow/transformations/conditional-split-transformation.md) y [Expresiones de Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
- **Expresiones de restricción de precedencia** Se deben proporcionar valores para su uso en restricciones de precedencia para determinar si se ejecuta el ejecutable restringido. Las expresiones se pueden usar con un resultado de la ejecución (satisfactoria, errónea, terminada), o en lugar de un resultado de la ejecución. Por ejemplo, si la expresión `@varMax > @varMin`se evalúa como **true**, se ejecuta el ejecutable. Para obtener más información, vea [Agregar expresiones a las restricciones de precedencia](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
+ **Expresiones de restricción de precedencia** Se deben proporcionar valores para su uso en restricciones de precedencia para determinar si se ejecuta el ejecutable restringido. Las expresiones se pueden usar con un resultado de la ejecución (satisfactoria, errónea, terminada), o en lugar de un resultado de la ejecución. Por ejemplo, si la expresión `@varMax > @varMin`se evalúa como **true**, se ejecuta el ejecutable. Para obtener más información, vea [Agregar expresiones a las restricciones de precedencia](./control-flow/precedence-constraints.md).  
   
- **Parámetros y códigos de retorno** Se deben proporcionar valores para los parámetros de entrada, o almacenar los valores de los parámetros de salida y los códigos de retorno. Para ello, se asignan las variables a los parámetros y códigos de retorno. Por ejemplo, si se establece la variable `varProductId` en 23 y se ejecuta la instrucción SQL `SELECT * from Production.Product WHERE ProductID = ?`, la consulta recupera el producto cuyo `ProductID` sea 23. Para más información, vea [Tarea Ejecutar SQL](../integration-services/control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ **Parámetros y códigos de retorno** Se deben proporcionar valores para los parámetros de entrada, o almacenar los valores de los parámetros de salida y los códigos de retorno. Para ello, se asignan las variables a los parámetros y códigos de retorno. Por ejemplo, si se establece la variable `varProductId` en 23 y se ejecuta la instrucción SQL `SELECT * from Production.Product WHERE ProductID = ?`, la consulta recupera el producto cuyo `ProductID` sea 23. Para más información, vea [Tarea Ejecutar SQL](../integration-services/control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](./control-flow/execute-sql-task.md).  
   
  **Expresiones del bucle For** Se deben proporcionar valores para su uso en las expresiones de inicialización, evaluación y asignación del bucle For. Por ejemplo, si la variable `varCount` es 2 y `varMaxCount` es 10, la expresión de inicialización es `@varCount`, la expresión de evaluación es  `@varCount < @varMaxCount`y la expresión de asignación es `@varCount =@varCount +1`, el bucle se repite 8 veces. Para más información, vea [Contenedor de bucles For](../integration-services/control-flow/for-loop-container.md).  
   
- **Configuraciones de variables de paquete primario** Los valores de los paquetes primarios se deben pasar a los paquetes secundarios. Los paquetes secundarios pueden tener acceso a las variables del paquete primario utilizando configuraciones de variables de paquete primario. Por ejemplo, si el paquete secundario debe usar los mismos datos que el paquete primario, el secundario puede definir una configuración de variables de paquete primario que especifique una variable establecida por la función GETDATE en el paquete primario. Para obtener más información, consulte [Execute Package Task](../integration-services/control-flow/execute-package-task.md) y [Package Configurations](../integration-services/packages/package-configurations.md).  
+ **Configuraciones de variables de paquete primario** Los valores de los paquetes primarios se deben pasar a los paquetes secundarios. Los paquetes secundarios pueden tener acceso a las variables del paquete primario utilizando configuraciones de variables de paquete primario. Por ejemplo, si el paquete secundario debe usar los mismos datos que el paquete primario, el secundario puede definir una configuración de variables de paquete primario que especifique una variable establecida por la función GETDATE en el paquete primario. Para obtener más información, consulte [Execute Package Task](../integration-services/control-flow/execute-package-task.md) y [Package Configurations](./packages/legacy-package-deployment-ssis.md).  
   
  **Tarea Script y componente de script** Se debe proporcionar a la tarea Script o al componente de script una lista de variables de solo lectura o lectura/escritura, actualizar las variables de lectura/escritura del script y, después, usar los valores actualizados dentro o fuera del script. Por ejemplo, en el código `numberOfCars = CType(Dts.Variables("NumberOfCars").Value, Integer)`, la variable de script `numberOfCars` se actualiza con el valor de la variable `NumberOfCars`. Para más información, consulte [Using Variables in the Script Task](../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md).  
 
@@ -189,7 +189,7 @@ Una variable tiene opciones para establecer el valor de la variable y el tipo de
   
 6.  Opcionalmente, haga clic en el icono **Opciones de cuadrícula** , seleccione las columnas adicionales que desee mostrar en el cuadro de diálogo **Opciones de cuadrícula de variables** y haga clic en **Aceptar**.  
   
-7.  O bien, establezca las propiedades de una variable. Para obtener más información, vea [Establecer las propiedades de una variable definida por el usuario](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f).  
+7.  O bien, establezca las propiedades de una variable. Para obtener más información, vea [Establecer las propiedades de una variable definida por el usuario]().  
   
 8.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
 
@@ -320,9 +320,9 @@ Utilice el cuadro de diálogo **Agregar variable** para especificar las propieda
 8.  Para guardar el paquete actualizado, en el menú **Archivo** , haga clic en **Guardar los elementos seleccionados**.  
 
 ## <a name="update-a-variable-dynamically-with-configurations"></a>Actualización dinámica de una variable mediante configuraciones  
- Para actualizar dinámicamente las variables, puede crear configuraciones para las variables, implementar las configuraciones con el paquete y después, actualizar los valores de las variables en el archivo de configuración al implementar los paquetes. El paquete utiliza los valores actualizados de las variables en tiempo de ejecución. Para obtener más información, vea [Crear configuraciones de paquetes](../integration-services/packages/create-package-configurations.md).  
+ Para actualizar dinámicamente las variables, puede crear configuraciones para las variables, implementar las configuraciones con el paquete y después, actualizar los valores de las variables en el archivo de configuración al implementar los paquetes. El paquete utiliza los valores actualizados de las variables en tiempo de ejecución. Para obtener más información, vea [Crear configuraciones de paquetes](./packages/legacy-package-deployment-ssis.md).  
 
 ## <a name="related-tasks"></a>Related Tasks  
  [Uso de los valores de variables y parámetros en un paquete secundario](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
- [Asignar parámetros de consulta a variables en un componente de flujo de datos](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
+ [Asignar parámetros de consulta a variables en un componente de flujo de datos](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)

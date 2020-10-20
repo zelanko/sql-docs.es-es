@@ -31,12 +31,12 @@ ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7c01e9612661d80294cb92e0348428e469b5b2f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: b40f7e725c4f0a413963e772a741b56aabb65140
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226955"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196841"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -117,7 +117,7 @@ BEGIN TRANSACTION inicia una transacción local para la conexión que emite la i
   
  Se puede anidar BEGIN TRAN *new_name* WITH MARK en una transacción existente que no esté marcada. De ese modo, *new_name* se convierte en el nombre de marca de la transacción, aunque esa transacción ya tenga uno. En el siguiente ejemplo, `M2` es el nombre de la marca.  
   
-```  
+```sql  
 BEGIN TRAN T1;  
 UPDATE table1 ...;  
 BEGIN TRAN M2 WITH MARK;  
@@ -152,7 +152,7 @@ COMMIT TRAN T1;
 
 En este ejemplo se usa AdventureWorks. 
 
-```
+```sql
 BEGIN TRANSACTION;  
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
@@ -164,9 +164,8 @@ COMMIT;
 
 En el ejemplo siguiente se muestra el efecto de revertir una transacción. En este ejemplo, la instrucción ROLLBACK revertirá la instrucción INSERT, pero la tabla creada seguirá existiendo.
 
-```
- 
-CREATE TABLE ValueTable (id int);  
+```sql
+CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  
        INSERT INTO ValueTable VALUES(2);  
@@ -179,7 +178,7 @@ ROLLBACK;
 
 En el siguiente ejemplo se muestra cómo asignar un nombre a una transacción.  
   
-```  
+```sql
 DECLARE @TranName VARCHAR(20);  
 SELECT @TranName = 'MyTransaction';  
   
@@ -197,7 +196,7 @@ GO
 
 En el siguiente ejemplo se muestra cómo marcar una transacción. Se marca la transacción `CandidateDelete`.  
   
-```  
+```sql  
 BEGIN TRANSACTION CandidateDelete  
     WITH MARK N'Deleting a Job Candidate';  
 GO  

@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea7d90c70b68111e6ed9f1f63986c955f7bb1055
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dec4eb37c00e524c019b07de3943efd4137e7ab9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459210"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194957"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -112,7 +112,7 @@ WAITFOR
 ### <a name="a-using-waitfor-time"></a>A. Usar WAITFOR TIME  
  En el ejemplo siguiente se ejecuta el procedimiento almacenado `sp_update_job` en la base de datos msdb a las 10:20 p.m. (`22:20`).  
   
-```  
+```sql  
 EXECUTE sp_add_job @job_name = 'TestJob';  
 BEGIN  
     WAITFOR TIME '22:20';  
@@ -125,7 +125,7 @@ GO
 ### <a name="b-using-waitfor-delay"></a>B. Usar WAITFOR DELAY  
  En el ejemplo siguiente se ejecuta el procedimiento almacenado después de un retardo de dos horas.  
   
-```  
+```sql  
 BEGIN  
     WAITFOR DELAY '02:00';  
     EXECUTE sp_helpdb;  
@@ -136,7 +136,7 @@ GO
 ### <a name="c-using-waitfor-delay-with-a-local-variable"></a>C. Usar WAITFOR DELAY con una variable local  
  En el ejemplo siguiente se muestra cómo se puede utilizar una variable local con la opción `WAITFOR DELAY`. Este procedimiento almacenado espera durante un período de tiempo variable y, después, devuelve información al usuario como el número transcurrido de horas, minutos y segundos.  
   
-```  
+```sql  
 IF OBJECT_ID('dbo.TimeDelay_hh_mm_ss','P') IS NOT NULL  
     DROP PROCEDURE dbo.TimeDelay_hh_mm_ss;  
 GO  
@@ -145,7 +145,7 @@ CREATE PROCEDURE dbo.TimeDelay_hh_mm_ss
     @DelayLength char(8)= '00:00:00'  
     )  
 AS  
-DECLARE @ReturnInfo varchar(255)  
+DECLARE @ReturnInfo VARCHAR(255)  
 IF ISDATE('2000-01-01 ' + @DelayLength + '.000') = 0  
     BEGIN  
         SELECT @ReturnInfo = 'Invalid time ' + @DelayLength   

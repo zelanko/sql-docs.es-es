@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fa9fc496d10a189d75686e3c72f2453b89184626
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 411fe456ae96afdd5a01c0d6cb649035e121fb1b
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785135"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115648"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Conceptos básicos sobre disponibilidad de SQL Server en implementaciones de Linux
 
@@ -216,7 +216,7 @@ El uso de máquinas virtuales para poner en marcha implementaciones de [!INCLUDE
 En lo que respecta a los grupos de disponibilidad y las instancias de clúster de conmutación por error virtualizados, asegúrese de que la antiafinidad de los nodos de un clúster de Pacemaker determinado está establecida. Cuando se configuran para alta disponibilidad en una configuración de grupo de disponibilidad o de instancia de clúster de conmutación por error, las máquinas virtuales que hospedan [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] nunca deben ejecutarse en el mismo host de hipervisor. Por ejemplo, si se implementa una instancia de clúster de conmutación por error de dos nodos, debe haber *como mínimo* tres hosts de hipervisor para que haya algún sitio al que las máquinas virtuales que hospedan un nodo puedan ir en caso de que se produzca un error en el host, sobre todo cuando se usan características como Migración en vivo o vMotion.
 
 Para más información, vea:
--   Documentación de Hyper-V: [Uso de la agrupación en clústeres invitados para alta disponibilidad](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
+-   Documentación de Hyper-V: [Uso de la agrupación en clústeres invitados para alta disponibilidad](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn440540(v=ws.11))
 -   Notas del producto (redactadas para implementaciones basadas en Windows, si bien la mayoría de los conceptos son válidos en este caso también): [Planeación de implementaciones de SQL Server críticas y de alta disponibilidad con VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 ### <a name="networking"></a>Redes

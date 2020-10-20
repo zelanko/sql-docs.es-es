@@ -19,19 +19,20 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 828963dabc79c53c831efd3c2acac797d109555d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42f8148fa7d0a648bd7ad34ee766ff2a4488dceb
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763559"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115750"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bases de datos con Copias de seguridad y restauración
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede crear una base de datos nueva restaurando una copia de seguridad de una base de datos de usuario creada utilizando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior. Sin embargo, las copias de seguridad de las bases de datos **maestra**, **modelo** y **msdb** creadas utilizando una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pueden restaurarse con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Asimismo, las copias de seguridad de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no se pueden restaurar con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
->**IMPORTANTE:** SQL Server 2016 usa una ruta de acceso predeterminada distinta de la de versiones anteriores. Por lo tanto, para restaurar copias de seguridad de una base de datos creadas en la ubicación predeterminada de versiones anteriores es preciso utilizar la opción MOVE. Para obtener información acerca de la nueva ruta de acceso predeterminada, vea [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Para obtener más información acerca de cómo mover archivos de base de datos, vea el apartado "Mover los archivos de base de datos" que figura más adelante en este tema.  
+> [!IMPORTANT]
+> SQL Server 2016 usa una ruta de acceso predeterminada distinta de la de versiones anteriores. Por lo tanto, para restaurar copias de seguridad de una base de datos creadas en la ubicación predeterminada de versiones anteriores es preciso utilizar la opción MOVE. Para obtener información acerca de la nueva ruta de acceso predeterminada, vea [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Para obtener más información acerca de cómo mover archivos de base de datos, vea el apartado "Mover los archivos de base de datos" que figura más adelante en este tema.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Pasos generales para usar copias de seguridad y restauración para copiar una base de datos  
  Cuando se usan copias de seguridad y restauración para copiar una base de datos a otra versión de SQL Server, los equipos de origen y de destino pueden ser de cualquier plataforma en la que se ejecute SQL Server.  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f5f18f3306256906d6c419957aa3d97d3506e7d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425887"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197147"
 ---
 # <a name="script-task"></a>Tarea Script
 
@@ -79,15 +79,15 @@ ms.locfileid: "88425887"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea los temas siguientes:  
   
--   [Editor de la tarea Script &#40;página General&#41;](../../integration-services/control-flow/script-task-editor-general-page.md)  
+-   [Editor de la tarea Script &#40;página General&#41;]()  
   
--   [Editor de la tarea Script &#40;página Script&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
+-   [Editor de la tarea Script &#40;página Script&#41;]()  
   
 -   [Página Expresiones](../../integration-services/expressions/expressions-page.md)  
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="configuring-the-script-task-programmatically"></a>Configurar la tarea Script mediante programación  
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, vea el tema siguiente:  
@@ -123,7 +123,7 @@ ms.locfileid: "88425887"
   
  Una vez haya creado un script para la tarea, no podrá cambiar el valor de la propiedad **ScriptLanguage** .  
   
- Para establecer el lenguaje de scripting predeterminado para la tarea Script, utilice la opción **Lenguaje de scripting** en la página **General** del cuadro de diálogo **Opciones** . Para obtener más información, vea [General Page](../../integration-services/control-flow/script-task-editor-general-page.md).  
+ Para establecer el lenguaje de scripting predeterminado para la tarea Script, utilice la opción **Lenguaje de scripting** en la página **General** del cuadro de diálogo **Opciones** . Para obtener más información, vea [General Page]().  
   
  **EntryPoint**  
  Especifique el método que el tiempo de ejecución de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] llama como punto de entrada en el código de la tarea Script. El método especificado debe estar en la clase ScriptMain del proyecto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). La clase ScriptMain es la clase predeterminada que las plantillas del script generan.  
@@ -148,5 +148,4 @@ ms.locfileid: "88425887"
 ## <a name="related-content"></a>Contenido relacionado  
   
 -   Artículo técnico [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Enviar un mensaje de correo electrónico con una notificación de entrega en C#) en shareourideas.com  
-  
   

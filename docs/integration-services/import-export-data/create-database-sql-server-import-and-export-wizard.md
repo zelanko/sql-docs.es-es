@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c9788c6a7e23759352f22acd543358305ad0a9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db38bcb37a0b7167a7d4c27b62a34438d77c343
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477297"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195894"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Crear base de datos (Asistente para importación y exportación de SQL Server)
 
@@ -29,7 +29,7 @@ Si selecciona **Nuevo** en la página **Seleccionar un destino** para crear una 
 En el cuadro de diálogo **Crear base de datos** del asistente solo se proporcionan las opciones básicas disponibles para crear una base de datos de SQL Server. Para ver y configurar todas las opciones de una base de datos nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear la base de datos o configurarla una vez la haya creado el asistente. 
 
 > [!NOTE]
-> Si busca información sobre la instrucción CREATE DATABASE de [!INCLUDE[tsql](../../includes/tsql-md.md)] y no sobre el cuadro de diálogo **Crear base de datos** del Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+> Si busca información sobre la instrucción CREATE DATABASE de [!INCLUDE[tsql](../../includes/tsql-md.md)] y no sobre el cuadro de diálogo **Crear base de datos** del Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-transact-sql.md).  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>Captura de pantalla de la página Crear base de datos  
 En la siguiente captura de pantalla se muestra el cuadro de diálogo **Crear base de datos** del asistente.  
@@ -89,8 +89,7 @@ Para obtener información detallada sobre estos requisitos, vea [Identificadores
  Especifique un número de megabytes por el cual el archivo de registro puede aumentar de tamaño.  
 
 ### <a name="more-info"></a>Más información
-Para obtener más información sobre las opciones de tamaño de archivo que aparecen en esta página, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). 
+Para obtener más información sobre las opciones de tamaño de archivo que aparecen en esta página, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-transact-sql.md). 
 
-## <a name="whats-next"></a>A continuación  
- Después de proporcionar un nombre para la base de datos que creará el asistente y de hacer clic en **Aceptar**, el cuadro de diálogo **Crear base de datos** mostrará la página **Seleccionar un destino** . Para más información, vea [Elegir un destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
-
+## <a name="whats-next"></a>¿Qué sigue?  
+ Después de proporcionar un nombre para la base de datos que creará el asistente y de hacer clic en **Aceptar**, el cuadro de diálogo **Crear base de datos** mostrará la página **Seleccionar un destino** . Para más información, vea [Elegir un destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).

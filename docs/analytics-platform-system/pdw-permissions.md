@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 499ac56d8a462f62dac92b97654a9ace12bd356e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289693"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257451"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Administración de permisos en almacenamiento de datos paralelos
 En este artículo se describen los requisitos y las opciones para administrar los permisos de base de datos para PDW de SQL Server.
@@ -48,9 +48,9 @@ En el ejemplo siguiente se muestra un método común y recomendado para la confi
 
 5.  Conceda permisos a los roles de base de datos definidos por el usuario.
 
-Los inicios de sesión son objetos de nivel de servidor y se pueden enumerar mediante la visualización de [Sys. server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Solo se pueden conceder permisos de nivel de servidor a las entidades de seguridad de servidor.
+Los inicios de sesión son objetos de nivel de servidor y se pueden mostrar mediante la visualización de [Sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Solo se pueden conceder permisos de nivel de servidor a las entidades de seguridad de servidor.
 
-Los usuarios y los roles de base de datos son objetos de nivel de base de datos y se pueden enumerar mediante la visualización de [Sys. database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Solo se pueden conceder permisos de nivel de base de datos a las entidades de seguridad de base de datos.
+Los usuarios y los roles de base de datos son objetos de nivel de base de datos y se pueden enumerar mediante la visualización de [Sys.database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Solo se pueden conceder permisos de nivel de base de datos a las entidades de seguridad de base de datos.
 
 ## <a name="default-permissions"></a><a name="BackupTypes"></a>Permisos predeterminados
 En la lista siguiente se describen los permisos predeterminados:
@@ -84,7 +84,7 @@ Todos los nuevos inicios de sesión de aplicación pertenecen automáticamente a
 El hecho de que un inicio de sesión tenga permiso para realizar una acción específica dependerá de los permisos concedidos o denegados para iniciar sesión, el usuario y los roles de los que es miembro el usuario. Los permisos de nivel de servidor (como **crear inicio de sesión** y **ver estado del servidor**) están disponibles para las entidades de seguridad de nivel de servidor (inicios de sesión). Los permisos de nivel de base de datos (como **Select** from a TABLE o **Execute** on a procedure) están disponibles para las entidades de seguridad de nivel de base de datos (usuarios y roles de base de datos).
 
 ### <a name="implicit-and-explicit-permissions"></a>Permisos implícitos y explícitos
-Un *permiso explícito* es un permiso **GRANT** o **DENY** concedido a una entidad de seguridad mediante una instrucción **GRANT** o **DENY**. Los permisos de nivel de base de datos se muestran en la vista [Sys. database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) . Los permisos de nivel de servidor se enumeran en la vista [Sys. server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) .
+Un *permiso explícito* es un permiso **GRANT** o **DENY** concedido a una entidad de seguridad mediante una instrucción **GRANT** o **DENY**. Los permisos de nivel de base de datos se muestran en la vista [Sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) . Los permisos de nivel de servidor se muestran en la vista [Sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) .
 
 Un *permiso implícito* es un permiso **Grant** o **Deny** que ha heredado una entidad de seguridad (rol de servidor o inicio de sesión). Los permisos se pueden heredar de las siguientes maneras.
 
@@ -229,7 +229,7 @@ GRANT CONTROL SERVER TO Fay;
 Cada inicio de sesión que se puede conectar a PDW de SQL Server es miembro del rol de servidor **Public** . Todos los inicios de sesión heredan los permisos concedidos a **Public** en cualquier objeto. Asigne solo permisos **públicos** en un objeto cuando desee que el objeto esté disponible para todos los usuarios. No se puede cambiar la pertenencia al rol **Public** .
 
 > [!NOTE]
-> **Public** se implementa de manera diferente que otros roles. Dado que todas las entidades de seguridad de servidor son miembros de Public, la pertenencia del rol **Public** no aparece en la DMV **Sys. server_role_members** .
+> **Public** se implementa de manera diferente que otros roles. Dado que todas las entidades de seguridad de servidor son miembros de Public, la pertenencia del rol **Public** no aparece en la DMV **Sys.server_role_members** .
 
 ### <a name="fixed-server-roles-vs-granting-permissions"></a>Roles fijos de servidor frente a permisos de concesión
 El sistema de los roles fijos de servidor y los roles fijos de base de datos es un sistema heredado originado en los 1980. Los roles fijos todavía se admiten y son útiles en entornos donde hay pocos usuarios y las necesidades de seguridad son sencillas. A partir de SQL Server 2005, se ha creado un sistema más detallado de concesión de permisos. Este nuevo sistema es más granular y ofrece muchas más opciones para conceder y denegar permisos. La complejidad adicional del sistema más granular dificulta el aprendizaje, pero la mayoría de los sistemas empresariales deben conceder permisos en lugar de usar los roles fijos. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  -->

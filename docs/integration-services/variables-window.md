@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ad545578e9d3baf019be37b1bc9c7969df5ee1ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa326be8b57eed58f0aa52876d0d32b889320c58
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495108"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193747"
 ---
 # <a name="variables-window"></a>Ventana Variables
 
@@ -50,7 +50,7 @@ ms.locfileid: "88495108"
  Seleccione una variable en la lista y, luego, haga clic en **Eliminar variable**.  
   
  **Opciones de cuadrícula**  
- Haga clic para abrir el cuadro de diálogo **Opciones de la cuadrícula de variables** , donde puede cambiar la selección de la columna y aplicar filtros a la ventana **Variables** . Para más información, consulte [Opciones de la cuadrícula de variables](../integration-services/variable-grid-options.md).  
+ Haga clic para abrir el cuadro de diálogo **Opciones de la cuadrícula de variables** , donde puede cambiar la selección de la columna y aplicar filtros a la ventana **Variables** . Para más información, consulte [Opciones de la cuadrícula de variables]().  
   
  **Nombre**  
  Escriba el nombre de la variable. Puede actualizar el nombre de la variable para las variables definidas por el usuario.  
@@ -116,8 +116,7 @@ ms.locfileid: "88495108"
   
 ## <a name="see-also"></a>Consulte también  
  [Variables de Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   
- [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Usar variables en paquetes](./integration-services-ssis-variables.md)   
  [Expresiones de Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Generar archivos de volcado para la ejecución de paquetes](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
-  
   

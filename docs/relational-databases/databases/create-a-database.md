@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 463f442c15fdd6bfa29e97c650d5b7d8ee95fe91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4fddf58b0f7473ea2ae46812d9908dcbbafb7b66
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631024"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195730"
 ---
 # <a name="create-a-database"></a>Crear una base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo crear una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
 > [!NOTE]
-> Para crear una base de datos en Azure SQL Database mediante T-SQL, vea [CREATE DATABASE (Azure SQL Database)](https://docs.microsoft.com/sql/t-sql/statements/create-database-azure-sql-database).
+> Para crear una base de datos en Azure SQL Database mediante T-SQL, vea [CREATE DATABASE (Azure SQL Database)](../../t-sql/statements/create-database-transact-sql.md).
   
  **En este tema**  
   
@@ -134,12 +134,11 @@ LOG ON
 GO  
 ```  
   
- Para obtener más ejemplos, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Para obtener más ejemplos, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Agregar archivos de datos o de registro a una base de datos](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
-  
   

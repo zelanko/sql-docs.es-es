@@ -26,12 +26,12 @@ ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21ea1933bc37001040beb6007fb877fa8765a24c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e5b3519a18f8729920e307ddd895d34a2449d93
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467697"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194975"
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88467697"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 EXISTS ( subquery )  
 ```  
   
@@ -63,7 +63,7 @@ EXISTS ( subquery )
 ### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>A. Utilizar NULL en una subconsulta para seguir devolviendo un conjunto de resultados  
  En el ejemplo siguiente se devuelve un conjunto de resultados con `NULL` especificado en la subconsulta, que se sigue evaluando como TRUE al utilizar `EXISTS`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name   
@@ -75,7 +75,7 @@ ORDER BY Name ASC ;
 ### <a name="b-comparing-queries-by-using-exists-and-in"></a>B. Comparar consultas mediante EXISTS e IN  
  En el ejemplo siguiente se comparan dos consultas que son semánticamente equivalentes. En la primera consulta se utiliza `EXISTS` y en la segunda `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -90,7 +90,7 @@ GO
   
  En la siguiente consulta se usa `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -118,7 +118,7 @@ Willis                                             Johnson
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>C. Comparar consultas mediante EXISTS y = ANY  
  En el ejemplo siguiente se muestran dos consultas para buscar tiendas cuyo nombre sea el mismo que el de un proveedor. En la primera consulta se usa `EXISTS` y en la segunda, `=``ANY`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -132,7 +132,7 @@ GO
   
  En la siguiente consulta se usa `= ANY`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -146,7 +146,7 @@ GO
 ### <a name="d-comparing-queries-by-using-exists-and-in"></a>D. Comparar consultas mediante EXISTS e IN  
  En el siguiente ejemplo se muestran consultas para buscar empleados de departamentos que comiencen por `P`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -165,7 +165,7 @@ GO
   
  En la siguiente consulta se usa `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -183,7 +183,7 @@ GO
 ### <a name="e-using-not-exists"></a>E. Utilizar NOT EXISTS  
  NOT EXISTS funciona de forma contraria a EXISTS. La cláusula WHERE de NOT EXISTS se cumple si la subconsulta no devuelve ninguna fila. En el siguiente ejemplo se buscan empleados que no sean de departamentos cuyos nombres empiecen por `P`.  
   
-```  
+```sql  
 SELECT p.FirstName, p.LastName, e.JobTitle  
 FROM Person.Person AS p   
 JOIN HumanResources.Employee AS e  
@@ -304,7 +304,7 @@ Peng                           Wu                             Quality Assurance 
 ### <a name="f-using-exists"></a>F. Usar EXISTS  
  En el siguiente ejemplo se identifica si alguna fila de la tabla `ProspectiveBuyer` podría coincidir con alguna fila de la tabla `DimCustomer`. La consulta devolverá filas solo cuando los valores tanto de `LastName` como de `BirthDate` en ambas tablas coincidan.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  
@@ -318,7 +318,7 @@ WHERE EXISTS
 ### <a name="g-using-not-exists"></a>G. Utilizar NOT EXISTS  
  NOT EXISTS funciona de forma contraria a EXISTS. La cláusula WHERE de NOT EXISTS se cumple si la subconsulta no devuelve ninguna fila. En el siguiente ejemplo se hallan las filas de la tabla `DimCustomer` en las que ni `LastName` ni `BirthDate` coinciden con los valores de ninguna de las entradas de la tabla `ProspectiveBuyers`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  

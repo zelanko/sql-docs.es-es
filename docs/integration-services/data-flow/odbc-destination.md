@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 80b988844668fbc5ea1e06af2852ffc9bc1a7785
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04bf343142c1e89affe6ebb056f09771226da6e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392111"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194795"
 ---
 # <a name="odbc-destination"></a>Destino ODBC
 
@@ -35,7 +35,7 @@ ms.locfileid: "88392111"
  El destino ODBC tiene una salida normal y una salida de error.  
   
 ##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> Opciones de carga  
- El destino ODBC puede usar uno de dos módulos de de carga de acceso. Establezca el modo en el [Editor de orígenes ODBC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md). Los dos modos son:  
+ El destino ODBC puede usar uno de dos módulos de de carga de acceso. Establezca el modo en el [Editor de orígenes ODBC &#40;página Administrador de conexiones&#41;](./odbc-source.md). Los dos modos son:  
   
 -   **Lote**: en este modo, el destino ODBC intenta usar el método más eficaz de inserción en función de las capacidades del proveedor ODBC percibidas. Para la mayoría de los proveedores ODBC modernos, esto significaría preparar una instrucción INSERT con parámetros y usar después un enlace de parámetros de matriz en las filas (donde el tamaño de la matriz está controlado por la propiedad **BatchSize** ). Si selecciona **Lote** y el proveedor no admite este método, el destino ODBC cambia automáticamente los modificadores al modo **Fila a fila** .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88392111"
   
 -   Columnas estándar de datos de salida.  
   
- Según la configuración del comportamiento de los errores, el destino ODBC permite devolver los errores (conversión de datos, truncamiento) que aparecerán durante el proceso de extracción en la salida de error. Para obtener más información, vea [Editor de origen de ODBC &#40;página Salida de error&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md).  
+ Según la configuración del comportamiento de los errores, el destino ODBC permite devolver los errores (conversión de datos, truncamiento) que aparecerán durante el proceso de extracción en la salida de error. Para obtener más información, vea [Editor de origen de ODBC &#40;página Salida de error&#41;](./odbc-source.md).  
   
 ## <a name="parallelism"></a>Paralelismo  
  No hay límite en el número de componentes de destino ODBC que se pueden ejecutar en paralelo en la misma tabla o en tablas diferentes, en el mismo equipo o en equipos diferentes (que no sean los límites normales de la sesión global).  
@@ -67,11 +67,11 @@ ms.locfileid: "88392111"
   
  Para obtener más información, vea uno de los siguientes temas:  
   
--   [Editor de destino de ODBC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [Editor de destino de ODBC &#40;página Administrador de conexiones&#41;]()  
   
--   [Editor de destino de ODBC &#40;página Asignaciones&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [Editor de destino de ODBC &#40;página Asignaciones&#41;]()  
   
--   [Editor de destinos de ODBC &#40;página Salida de error&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [Editor de destinos de ODBC &#40;página Salida de error&#41;]()  
   
  El cuadro de diálogo **Editor avanzado** contiene las propiedades que se pueden establecer mediante programación.  
   
@@ -185,4 +185,3 @@ ms.locfileid: "88392111"
   
 #### <a name="redirect-flow"></a>Redirigir fila  
  La fila que está produciendo el error o el truncamiento se dirige a la salida de error del destino de ODBC. Para obtener más información, vea Destino de ODBC.  
-  

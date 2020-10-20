@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: f7de3c86cf58a9e4173ef170dff07db61f06f7f9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8d71c814adf1843a6fb6237f7767e1d9f540e7e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522349"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196359"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Tutorial: Configuración de Escalabilidad horizontal de Integration Services (SSIS)
 
@@ -76,7 +76,7 @@ Para instalar la característica de patrón de escalabilidad horizontal, use el 
 
 ### <a name="install-scale-out-master-from-the-command-prompt"></a>Instalar el patrón de escalabilidad horizontal desde el símbolo del sistema
 
-Siga las instrucciones descritas en [Instalar SQL Server desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Configure los parámetros del patrón de escalabilidad horizontal siguiendo estos pasos:
+Siga las instrucciones descritas en [Instalar SQL Server desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Configure los parámetros del patrón de escalabilidad horizontal siguiendo estos pasos:
  
 1.  Agregar `IS_Master` al parámetro `/FEATURES`
 
@@ -131,7 +131,7 @@ Para instalar la característica de trabajador de escalado horizontal, use el As
 
 ### <a name="install-scale-out-worker-from-the-command-prompt"></a>Instalar el trabajador de escalabilidad horizontal desde el símbolo del sistema
 
-Siga las instrucciones descritas en [Instalar SQL Server desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Configure los parámetros del trabajador de escalabilidad horizontal siguiendo estos pasos:
+Siga las instrucciones descritas en [Instalar SQL Server desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Configure los parámetros del trabajador de escalabilidad horizontal siguiendo estos pasos:
 
 1.  Agregue IS_Worker al parámetro `/FEATURES`.
 

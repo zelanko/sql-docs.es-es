@@ -16,16 +16,16 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0939dd9a38e049fc0db732c1635fdb73b686f04
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: a5eca8f5329c6d4727c622c78d7b66000ad50935
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809551"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006218"
 ---
 # <a name="spatial-data-types-overview"></a>Información general de los tipos de datos espaciales
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 Hay dos tipos de datos espaciales. El tipo de datos **geometry** admite datos planares o euclidianos (planisferio). El tipo de datos **geometry** se ajusta tanto a las *características simples de Open Geospatial Consortium (OGC) para la especificación SQL* versión 1.1.0 como a SQL MM (estándar ISO).
 Además, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el tipo de datos **geography**, que almacena datos elipsoidales (tierra redonda), como coordenadas de latitud y longitud GPS.

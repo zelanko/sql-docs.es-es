@@ -20,12 +20,12 @@ ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67977deba00a1df52a9264256b83f6e57bc49ed5
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 7cd3bfc9b136dac41352d2be594e7d1e3099bd37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116131"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035948"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Funciones de intercalación: COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,8 +51,8 @@ La propiedad de intercalación. El argumento *propiedad* tiene un tipo de datos 
   
 |Nombre de propiedad|Descripción|  
 |---|---|
-|**CodePage**|La página de códigos no Unicode de la intercalación. Se trata del juego de caracteres usado con los datos **varchar**. Vea [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/library/cc194886.aspx) (Apéndice G: tablas de asignaciones DBCS/Unicode) y [Appendix H Code Pages](https://msdn.microsoft.com/library/cc195051.aspx) (Apéndice H: páginas de código) para traducir estos valores y ver sus asignaciones de caracteres.<br /><br />Tipo de datos base: **int**|  
-|**LCID**|Identificador de configuración regional de Windows de la intercalación. Se trata de la referencia cultural usada en las reglas de ordenación y comparación. Vea [LCID Structure](https://msdn.microsoft.com/library/cc233968.aspx) (Estructura de LCID) para traducir estos valores (primero hay que convertirlos a **varbinary**).<br /><br />Tipo de datos base: **int**|  
+|**CodePage**|La página de códigos no Unicode de la intercalación. Se trata del juego de caracteres usado con los datos **varchar**. Vea [Appendix G DBCS/Unicode Mapping Tables](/previous-versions/cc194886(v=msdn.10)) (Apéndice G: tablas de asignaciones DBCS/Unicode) y [Appendix H Code Pages](/previous-versions/cc195051(v=msdn.10)) (Apéndice H: páginas de código) para traducir estos valores y ver sus asignaciones de caracteres.<br /><br />Tipo de datos base: **int**|  
+|**LCID**|Identificador de configuración regional de Windows de la intercalación. Se trata de la referencia cultural usada en las reglas de ordenación y comparación. Vea [LCID Structure](/openspecs/windows_protocols/ms-lcid/63d3d639-7fd2-4afb-abbe-0d5b5551eef8) (Estructura de LCID) para traducir estos valores (primero hay que convertirlos a **varbinary**).<br /><br />Tipo de datos base: **int**|  
 |**ComparisonStyle**|Estilo de comparación de Windows de la intercalación. Devuelve 0 en las intercalaciones binarias, tanto (\_BIN) como (\_BIN2), así como cuando todas las propiedades distinguen mayúsculas y minúsculas, como (\_CS\_AS\_KS\_WS), (\_CS\_AS\_KS\_WS\_SC) y (\_CS\_AS\_KS\_WS\_VSS). Valores de máscara de bits:<br /><br /> Omitir mayúsculas y minúsculas: 1<br /><br /> Omitir acento: 2<br /><br /> Omitir Kana: 65536<br /><br /> Omitir ancho: 131 072<br /><br /> Nota: La opción de distinción de selector de variación (\_VSS) no se representa en este valor, aunque afecta al comportamiento de las comparaciones.<br /><br />Tipo de datos base: **int**|  
 |**Versión**|La versión de la intercalación. Devuelve un valor entre 0 y 3.<br /><br /> Las intercalaciones con "140" en el nombre devuelven 3.<br /><br /> Las intercalaciones con "100" en el nombre devuelven 2.<br /><br /> Las intercalaciones con "90" en el nombre devuelven 1.<br /><br /> Todas las demás intercalaciones devuelven 0.<br /><br />Tipo de datos base: **tinyint**|  
   
@@ -86,5 +86,3 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')
 ## <a name="see-also"></a>Vea también
 [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
   
-  
-

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e5eab167ddaa471ac0bddbd4b048b38e040b62e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28d2bac4024f067f4c3eb07318a47ef0d91fd171
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484608"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194290"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
@@ -46,7 +46,7 @@ ms.locfileid: "88484608"
   
  Al enviar o recibir mensajes, la tarea Cola de mensajes usa uno de estos cuatro tipos de mensajes: archivo de datos, cadena, mensaje de cadena para variable o variable. El tipo de mensaje Mensaje de cadena para variable solamente se puede usar al recibir mensajes.  
   
- La tarea usa el administrador de conexiones MSMQ para conectarse a una cola de mensajes. Para más información, vea [Administrador de conexiones MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md). Para obtener más información acerca de Message Queue Server, vea [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
+ La tarea usa el administrador de conexiones MSMQ para conectarse a una cola de mensajes. Para más información, vea [Administrador de conexiones MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md). Para obtener más información acerca de Message Queue Server, vea [MSDN Library](../../sql-server/index.yml).  
   
  La tarea Cola de mensajes exige que se instale el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Algunos componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que puede seleccionar para su instalación en la página **Componentes para instalar** o **Selección de características** del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalan un subconjunto parcial de componentes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Estos componentes resultan útiles para tareas específicas, pero la funcionalidad de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] estará limitada. Por ejemplo, la opción [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] instala los componentes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se necesitan para diseñar un paquete, pero no se instala el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y, por tanto, la tarea Cola de mensajes no es funcional. Para garantizar la instalación completa de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], debe seleccionar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en la página **Componentes para instalar** . Para más información sobre cómo instalar y ejecutar la tarea Cola de mensajes, vea [Instalar Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "88484608"
  Para obtener información sobre cómo establecer estas propiedades mediante programación, vea la documentación de la clase **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** en la Guía del desarrollador.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- Para más información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Para más información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Establecer las propiedades de tareas o contenedores](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
 ## <a name="message-queue-task-editor-general-page"></a>Editor de la tarea Cola de mensajes (página General)
   Utilice la página **General** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para asignar un nombre y describir la tarea Cola de mensajes, especificar el formato del mensaje e indicar si la tarea envía o recibe o mensajes.  
@@ -123,7 +123,7 @@ ms.locfileid: "88484608"
  **MSMQConnection**  
  Seleccione un administrador de conexiones MSMQ existente o haga clic en \<**New connection...**> para crear uno.  
   
- **Temas relacionados**: [Administrador de conexiones MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Editor del administrador de conexiones MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+ **Temas relacionados**: [Administrador de conexiones MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Editor del administrador de conexiones MSMQ](../connection-manager/msmq-connection-manager.md)  
   
  **Mensaje**  
  Especifique si la tarea Cola de mensajes envía o recibe mensajes. Si selecciona **Enviar mensaje**, la página Enviar se agrega a la lista del panel izquierdo del cuadro de diálogo. Si selecciona **Recibir mensaje**, se agrega la página Recibir. De forma predeterminada, este valor está establecido en **Enviar mensaje**.  
@@ -233,7 +233,7 @@ ms.locfileid: "88484608"
  **Variable**  
  Escriba el nombre de la variable o haga clic en \<**New variable...**> para configurar una nueva variable.  
   
- **Temas relacionados:** [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Temas relacionados:** [Agregar variable](../integration-services-ssis-variables.md)  
   
 #### <a name="filter-dynamic-options"></a>Opciones dinámicas de Filtro  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88484608"
  **Variable**  
  Escriba el nombre de la variable para conservar el mensaje recibido, o haga clic en \<**New variable...**> y, después, configure una nueva variable.  
   
- **Temas relacionados:** [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Temas relacionados:** [Agregar variable](../integration-services-ssis-variables.md)  
   
 ## <a name="select-variables"></a>Seleccionar variables
   Utilice el cuadro de diálogo **Seleccionar variables** para especificar las variables que se van a utilizar en una operación de envío de mensaje en la tarea Cola de mensajes. La lista **Variables disponibles** incluye las variables definidas por el usuario y de sistema que se encuentran en el ámbito de la tarea Cola de mensaje o en su contenedor principal. La tarea utiliza las variables de la lista **Variables seleccionadas** .  
@@ -299,9 +299,8 @@ ms.locfileid: "88484608"
  **Nueva variable**  
  Cree una nueva variable.  
   
- **Temas relacionados:** [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Temas relacionados:** [Agregar variable](../integration-services-ssis-variables.md)  
 ## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
-  
   

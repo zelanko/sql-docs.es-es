@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.openlocfilehash: 2a9c81bf046d30bd997409389ca91d213a01437f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d0a90d6346e4d56516f452b949449b2483fada7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893072"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115423"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Descripción de las características de rendimiento de SQL Server en Linux
 
@@ -158,7 +158,7 @@ SQL Server admite de forma nativa los procedimientos almacenados y compilados qu
 Para obtener más información sobre OLTP en memoria, vea los temas siguientes:
 
 - [Inicio rápido 1: Tecnologías de OLTP en memoria para acelerar el rendimiento de Transact-SQL](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
-- [Migrar a OLTP en memoria](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
+- [Migrar a OLTP en memoria](../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)
 - [Tabla temporal y variable de tabla más rápidas con optimización para memoria](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [Supervisar y solucionar problemas de uso de memoria](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
 - [In-Memory OLTP (optimización In-Memory)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)

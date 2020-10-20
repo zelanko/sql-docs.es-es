@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e42ce0876a6354056ae13daea43878a231bd5306
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2daa8d7b168266ac56d1047eca2aa9408ebfe25
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361811"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196685"
 ---
 # <a name="compound-operators-transact-sql"></a>Operadores compuestos (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88361811"
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] proporciona los operadores compuestos siguientes:  
   
-|Operator|Más información|Acción|  
+|Operador|Más información|Acción|  
 |--------------|------------------------------|------------|  
 |+=|[+= &#40;Asignación de suma&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|Agrega una cantidad al valor original y establece este en el resultado de la operación.|  
 |-=|[-= &#40;Subtract Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md) (-= [Asignación de resta] [Transact-SQL])|Resta una cantidad del valor original y establece este en el resultado de la operación.|  
@@ -43,8 +43,7 @@ ms.locfileid: "88361811"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
+```syntaxsql
 expression operator expression  
 ```  
   
@@ -63,42 +62,41 @@ expression operator expression
 ## <a name="examples"></a>Ejemplos  
  En los ejemplos siguientes, se muestran las operaciones compuestas.  
   
-```  
-DECLARE @x1 int = 27;  
+```sql  
+DECLARE @x1 INT = 27;  
 SET @x1 += 2 ;  
 SELECT @x1 AS Added_2;  
   
-DECLARE @x2 int = 27;  
+DECLARE @x2 INT = 27;  
 SET @x2 -= 2 ;  
 SELECT @x2 AS Subtracted_2;  
   
-DECLARE @x3 int = 27;  
+DECLARE @x3 INT = 27;  
 SET @x3 *= 2 ;  
 SELECT @x3 AS Multiplied_by_2;  
   
-DECLARE @x4 int = 27;  
+DECLARE @x4 INT = 27;  
 SET @x4 /= 2 ;  
 SELECT @x4 AS Divided_by_2;  
   
-DECLARE @x5 int = 27;  
+DECLARE @x5 INT = 27;  
 SET @x5 %= 2 ;  
 SELECT @x5 AS Modulo_of_27_divided_by_2;  
   
-DECLARE @x6 int = 9;  
+DECLARE @x6 INT = 9;  
 SET @x6 &= 13 ;  
 SELECT @x6 AS Bitwise_AND;  
   
-DECLARE @x7 int = 27;  
+DECLARE @x7 INT = 27;  
 SET @x7 ^= 2 ;  
 SELECT @x7 AS Bitwise_Exclusive_OR;  
   
-DECLARE @x8 int = 27;  
+DECLARE @x8 INT = 27;  
 SET @x8 |= 2 ;  
 SELECT @x8 AS Bitwise_OR;  
-  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Operadores bit a bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   

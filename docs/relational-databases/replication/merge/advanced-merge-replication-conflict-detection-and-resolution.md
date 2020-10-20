@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a031fdb7c4a71c26990d26a524e5a75ac784565
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a894198a994f98f9bcb2586c9b1b6a1428f562c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901875"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867914"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replicación de mezcla avanzada: detección y resolución de conflictos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +124,7 @@ Resolución de conflictos de replicación de mezcla
  La forma más directa de ver los conflictos consiste en usar el Visor de conflictos de replicación, disponible en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] también proporciona procedimientos almacenados que permiten consultar tablas de conflictos). El Visor de conflictos y el Solucionador interactivo son herramientas parecidas, pero el Solucionador interactivo permite solucionar los conflictos cuando se realiza la sincronización, mientras que el Visor de conflictos está diseñado para ver los conflictos después de haberlos resuelto. Si los metadatos en conflicto aún están disponibles en las tablas del sistema (los metadatos en conflicto se conservan, de forma predeterminada, durante 14 días), puede reemplazar el resultado de la resolución de conflictos en el Visor de conflictos, pero si se requiere con frecuencia una intervención directa, debe considerar la posibilidad de utilizar el Solucionador interactivo.  
   
 > [!NOTE]  
->  Los conflictos que implican registros lógicos no se muestran en el Visor de conflictos. Para ver información acerca de estos conflictos, utilice procedimientos almacenados de replicación. Para obtener más información, vea [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  Los conflictos que implican registros lógicos no se muestran en el Visor de conflictos. Para ver información acerca de estos conflictos, utilice procedimientos almacenados de replicación. Para obtener más información, vea [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md).  
   
  El Visor de conflictos muestra información de tres tablas del sistema:  
   
@@ -148,9 +148,8 @@ Resolución de conflictos de replicación de mezcla
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Ver y resolver conflictos de datos para publicaciones de mezcla &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Programación de la replicación de [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
+-   Programación de la replicación de [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Sincronizar datos](../../../relational-databases/replication/synchronize-data.md)  
-  
   

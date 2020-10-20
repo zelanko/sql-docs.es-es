@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c3306032f1ee69b99a2b7fd3c080003a93644ac3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bbda2ed08797343b328cf5764a5e73dc9b418e3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457017"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195851"
 ---
 # <a name="ssis-designer"></a>Diseñador SSIS
 
@@ -93,7 +93,7 @@ ms.locfileid: "88457017"
 ### <a name="event-handlers-tab"></a>Pestaña Controladores de eventos  
  Los eventos de un paquete se generan en la superficie de diseño de la pestaña **Controladores de eventos** . En la pestaña **Controladores de eventos** , se selecciona el paquete u objeto de paquete para el cual desea crear un controlador de eventos y después se selecciona el evento que se debe asociar con el controlador de eventos. Un controlador de eventos tiene un flujo de control y flujos de datos opcionales.  
   
- Para obtener más información, consulte [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
+ Para obtener más información, consulte [Add an Event Handler to a Package](./integration-services-ssis-event-handlers.md).  
   
 ### <a name="package-explorer-tab"></a>Pestaña Explorador de paquetes  
  Los paquetes pueden ser complejos e incluir muchas tareas, administradores de conexión, variables y otros elementos. La vista de explorador del paquete le permite ver una lista completa de elementos de paquete.  
@@ -108,7 +108,7 @@ ms.locfileid: "88457017"
 #### <a name="connection-managers-area"></a>Área de administradores de conexión  
  Los administradores de conexión utilizados por un paquete se agregan y modifican en el área **Administradores de conexión** . [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye administradores de conexión para conectarse a una serie de orígenes de datos, como archivos de texto, bases de datos OLE DB y proveedores .NET.  
   
- Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) y [Crear administradores de conexiones](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) y [Crear administradores de conexiones](./connection-manager/integration-services-ssis-connections.md).  
  
 ## <a name="control-flow-tab"></a>Pestaña Flujo de control
 Utilice la pestaña **Flujo de control** del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] para genera el flujo de control en un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -191,5 +191,4 @@ Los paquetes utilizan administradores de conexión para conectar con orígenes d
   
 ## <a name="see-also"></a>Consulte también  
  [Interfaz de usuario de Integration Services](../integration-services/integration-services-user-interface.md)  
-  
   

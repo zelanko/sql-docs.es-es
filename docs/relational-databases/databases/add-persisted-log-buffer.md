@@ -19,12 +19,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: cf3289d9d233da56c22739d3912045c2cdaa7554
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c80562f844c096bd836d9db8f57ae408c6602d3d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476254"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196219"
 ---
 # <a name="add-persisted-log-buffer-to-a-database"></a>Adición de búfer de registro persistente a una base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,6 +83,6 @@ Se aplican las condiciones normales de restauración. Si el búfer de registro p
   
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Cómo funciona (solo se ejecuta más rápido): Almacenamiento en caché del final del registro de SQL Server de memoria no volátil](https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/)
+- [Cómo funciona (solo se ejecuta más rápido): Almacenamiento en caché del final del registro de SQL Server de memoria no volátil](/archive/blogs/bobsql/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm)
 - [Datos expuestos: Latencia y durabilidad con SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Latency-and-Durability-with-SQL-Server-2016)
-- [Aceleración de latencia de confirmación de transacciones con memoria de clase de almacenamiento en Windows Server 2016/SQL Server 2016 SP1](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)
+- [Aceleración de latencia de confirmación de transacciones con memoria de clase de almacenamiento en Windows Server 2016/SQL Server 2016 SP1](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1)

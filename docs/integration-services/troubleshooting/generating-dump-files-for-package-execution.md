@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: edff307773f51fab064c47e7d4ff45e1161d18f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d213c8849c23ec1cb57e2628403542a31655a495
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913771"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193777"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generar archivos de volcado para la ejecución de paquetes
 
@@ -35,7 +35,7 @@ En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede crear ar
   
      Llame a este procedimiento almacenado para hacer que se detenga un paquete en ejecución y crear un archivo de volcado.  
   
- Si usa el modelo de implementación de paquetes, puede crear archivos de volcado de depuración mediante la utilidad **dtexec** o la utilidad **dtutil** para especificar una opción de volcado de depuración en la línea de comandos. Para obtener más información, consulte [dtexec Utility](../../integration-services/packages/dtexec-utility.md) y [dtutil Utility](../../integration-services/dtutil-utility.md). Para más información sobre el modelo de implementación de paquetes, consulte [Implementación de proyectos y paquetes de Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213290.aspx) y [Implementación de paquetes heredada &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
+ Si usa el modelo de implementación de paquetes, puede crear archivos de volcado de depuración mediante la utilidad **dtexec** o la utilidad **dtutil** para especificar una opción de volcado de depuración en la línea de comandos. Para obtener más información, consulte [dtexec Utility](../../integration-services/packages/dtexec-utility.md) y [dtutil Utility](../../integration-services/dtutil-utility.md). Para más información sobre el modelo de implementación de paquetes, consulte [Implementación de proyectos y paquetes de Integration Services (SSIS)](../packages/deploy-integration-services-ssis-projects-and-packages.md) y [Implementación de paquetes heredada &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
   
 ## <a name="debug-dump-file-format"></a>Formato de los archivos de volcado de depuración  
  Cuando se especifica una opción de volcado de depuración, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea los archivos de volcado de depuración siguientes:  
@@ -55,4 +55,4 @@ En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede crear ar
 |Mensajes recientes|Mensajes recientes emitidos por el sistema. Incluye la fecha y hora, el tipo, la descripción y el identificador de subproceso de cada mensaje.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description: Falta el componente, no está registrado, no puede actualizarse o faltan interfaces necesarias. La información de contacto para este componente es "".|  
   
 ## <a name="related-information"></a>Información relacionada  
-[Ejecutar paquete (cuadro de diálogo)](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+[Ejecutar paquete (cuadro de diálogo)](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)

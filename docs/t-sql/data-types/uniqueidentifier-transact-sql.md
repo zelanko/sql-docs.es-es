@@ -21,12 +21,12 @@ ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3efeffa1d628395824893bb2c0ae9d546347f79d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 1e91b310355bf42e465989e84d93f6f292fa853d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115352"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037478"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ El tipo **uniqueidentifier** se considera un tipo de carácter para la conversi�
 
 Estas herramientas y características no son compatibles con el tipo de datos `uniqueidentifier`:
 - PolyBase
-- [herramienta de carga dwloader](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader) para almacenamiento de datos paralelos
+- [herramienta de carga dwloader](../../analytics-platform-system/dwloader.md) para almacenamiento de datos paralelos
 
 ## <a name="examples"></a>Ejemplos  
 En el ejemplo siguiente se convierte un valor `uniqueidentifier` a un tipo de datos `char`.
@@ -86,5 +86,4 @@ String                                       TruncatedValue
 [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
-  
   

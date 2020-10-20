@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17650c2fd72996ea0d8f0eb080fbc170d779fdbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0af6a36d456b52791f2cafccc9c017f644893975
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495742"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194667"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Transformación Balanced Data Distributor
 
@@ -42,6 +42,5 @@ ms.locfileid: "88495742"
  Tenga en cuenta que si el cuello de botella en un paquete de SSIS se debe a la velocidad a la que se pueden leer los datos del origen, el componente BDD no ayuda a mejorar el rendimiento. Si el cuello de botella en un paquete de SSIS se debe a que el destino no admite paralelismo, el BDD no es útil; sin embargo, puede realizar todas las transformaciones en paralelo y usar la transformación Unión de todo para combinar los datos de salida que salen de las diferentes rutas de acceso de los resultados de la transformación BDD antes de enviar los datos al destino.  
   
 > [!IMPORTANT]  
->   El [Vídeo de Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278) en TechNet Library muestra una presentación con una demostración de cómo usar la transformación.  
-  
+>   El [Vídeo de Balanced Data Distributor](/previous-versions/dn912438(v=msdn.10)) en TechNet Library muestra una presentación con una demostración de cómo usar la transformación.  
   

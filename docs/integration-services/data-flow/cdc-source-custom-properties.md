@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 05315d64b3edfdc994141f6480f81960af39ed01
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3614980c2ff0fc20b1dce923e7b7df40a5b99d98
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457457"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196479"
 ---
 # <a name="cdc-source-custom-properties"></a>Propiedades personalizadas del origen de CDC
 
@@ -29,11 +29,10 @@ ms.locfileid: "88457457"
 |-------------------|---------------|-----------------|  
 |Conexión|Conexión ADO.Net|Conexión ADO.Net en la base de datos CDC de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para el acceso a las tablas de cambios.|  
 |StateVariable|String|Variable de paquete de cadena SSIS que mantiene el estado CDC de la ejecución CDC actual.|  
-|CdcProcessingMode|Integer (enumeración)|Este modo determina cómo se trata el procesamiento. Las opciones posibles son **Todo**, **Todo con valores antiguos**, **Neto**, **Neto con máscara de actualización**y **Neto con combinación**.<br /><br /> Los modos que comienzan por Todo devuelven todos los cambios y los modos que comienzan por Neto devuelven solo los cambios netos.<br /><br /> Las tablas sin una clave principal pueden tener solo valores TODO.<br /><br /> **Neto con máscara de actualización** agrega columnas booleanas con el patrón de nombre **__$\<column-name>\__Changed** que indica las columnas cambiadas en la fila de cambio actual.<br /><br /> Para obtener información adicional sobre los valores de esta propiedad, vea [Editor de origen de CDC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md).|  
+|CdcProcessingMode|Integer (enumeración)|Este modo determina cómo se trata el procesamiento. Las opciones posibles son **Todo**, **Todo con valores antiguos**, **Neto**, **Neto con máscara de actualización**y **Neto con combinación**.<br /><br /> Los modos que comienzan por Todo devuelven todos los cambios y los modos que comienzan por Neto devuelven solo los cambios netos.<br /><br /> Las tablas sin una clave principal pueden tener solo valores TODO.<br /><br /> **Neto con máscara de actualización** agrega columnas booleanas con el patrón de nombre **__$\<column-name>\__Changed** que indica las columnas cambiadas en la fila de cambio actual.<br /><br /> Para obtener información adicional sobre los valores de esta propiedad, vea [Editor de origen de CDC &#40;página Administrador de conexiones&#41;](./cdc-source.md).|  
 |CaptureInstance|String|Nombre de la instancia de captura CDC con la tabla CDC que se va a leer. Una tabla de origen capturada puede tener una o dos instancias capturadas para controlar que la transición de una definición de tabla a través de los cambios en el esquema se realice sin problemas. Si se define más de una instancia de captura para la tabla de origen que se va a capturar, seleccione aquí la instancia de captura que desee usar. El nombre predeterminado de la instancia de captura para una tabla [schema].[table] es \<schema>_\<table>, pero los nombres de instancia de captura reales en uso podrían ser distintos. La tabla real desde la que se lee es la tabla **cdc.\<capture-instance>_CT**.|  
 |ReprocessingIndicator|Boolean|Valor que especifica si se debe agregar la columna **__$reprocessing** . Esta columna de salida especial permite al desarrollador de SSIS controlar los errores de coherencia de forma diferente cuando se trabaja en el intervalo de procesamiento inicial.<br /><br /> Si es **true**, se agrega la columna  **__$reprocessing** .<br /><br /> El valor de esta columna es **true** cuando el intervalo de procesamiento CDC se solapa con el intervalo de procesamiento inicial (el intervalo de LSN que se corresponde al periodo de la carga inicial) o cuando un intervalo de procesamiento CDC se vuelve a procesar tras un error en una ejecución anterior. Con esta columna de indicador, el desarrollador de SSIS puede controlar los errores de manera diferente a cuando se vuelven a procesar los cambios (por ejemplo, se pueden omitir acciones como la eliminación de una fila que no existe o una inserción que causó un error en una clave duplicada).<br /><br /> El valor predeterminado es **false**.|  
 |CommandTimeout|Entero|Este valor indica el tiempo de espera (en segundos) que se usará al comunicarse con la base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Se utiliza este valor siempre que el tiempo de respuesta de la base de datos sea muy breve y el valor predeterminado (30 segundos) no sea suficiente.|  
   
  Para obtener más información acerca del origen de CDC, vea [CDC Source](../../integration-services/data-flow/cdc-source.md).  
-  
   

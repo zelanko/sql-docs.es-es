@@ -19,12 +19,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 79e33cb5b5bea6c3eb264052dade0a3906a44efb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9eb0bd04dc50aac286b72983ee4b3d196f04c60c
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006540"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175907"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86006540"
  
  Para descubrir qué impide el truncamiento del registro en un caso determinado, use las columnas **log_reuse_wait** y **log_reuse_wait_desc** de la vista de catálogo **sys.database**. Para obtener más información, vea [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Para obtener la descripción de los factores que pueden retrasar el truncamiento del registro, vea [Registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
-> **IMPORTANTE:**  
+> [!IMPORTANT]  
 >  Si la base de datos estaba en recuperación cuando se produjo el error 9002, una vez resuelto el problema, recupere la base de datos mediante [ALTER DATABASE *nombre_de_base_de_datos* SET ONLINE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  Las alternativas de respuesta ante un registro de transacciones lleno incluyen:  
@@ -61,8 +61,8 @@ ms.locfileid: "86006540"
   
  **Para crear una copia de seguridad del registro de transacciones**  
   
-> **IMPORTANTE**  
->  Si la base de datos está dañada, vea [Copias del final del registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+> [!IMPORTANT]  
+> Si la base de datos está dañada, vea [Copias del final del registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
 -   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
@@ -74,7 +74,8 @@ ms.locfileid: "86006540"
 ### <a name="move-the-log-file-to-a-different-disk"></a>Mover el archivo de registro a otro disco  
  Si no puede liberar suficiente espacio en la unidad de disco que contiene el archivo de registro, considere la posibilidad de desplazarlo a otra unidad con suficiente espacio.  
   
-> **IMPORTANTE:** Los archivos de registro no se deben almacenar en sistemas de archivo comprimidos.  
+> [!IMPORTANT]
+> Los archivos de registro no se deben almacenar en sistemas de archivo comprimidos.  
   
  **Mover un archivo de registro**  
   
@@ -91,7 +92,8 @@ ms.locfileid: "86006540"
   
 -   Habilitar el crecimiento automático utilizando la instrucción ALTER DATABASE para establecer un incremento de tamaño distinto de cero para la opción FILEGROWTH.  
   
-> **NOTA** En cualquier caso, si se alcanzó el límite del tamaño actual, aumente el valor MAXSIZE.  
+> [!NOTE]
+> En cualquier caso, si se ha alcanzado el límite del tamaño actual, aumente el valor MAXSIZE.  
   
 ### <a name="add-a-log-file-on-a-different-disk"></a>Agregar un archivo de registro en otro disco  
  Agregue un nuevo archivo de registro a la base de datos en otro disco que tenga suficiente espacio mediante ALTER DATABASE <nombreDeBaseDeDatos> ADD LOG FILE.  

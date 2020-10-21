@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7dea5e9016b9168131c5b809e9f1776dbbd1236
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449829"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193863"
 ---
 # <a name="integration-services-ssis-packages"></a>paquetes de Integration Services (SSIS)
 
@@ -61,7 +61,7 @@ ms.locfileid: "88449829"
 ### <a name="configurations"></a>Configuraciones  
  Una configuración es un conjunto de pares propiedad-valor que define las propiedades del paquete y sus tareas, contenedores, variables, conexiones y controladores de eventos cuando se ejecuta el paquete. El uso de configuraciones permite actualizar propiedades sin modificar el paquete. Cuando se ejecuta el paquete, se carga la información de configuración y se actualizan los valores de las propiedades. Por ejemplo, una configuración puede actualizar la cadena de conexión de la conexión.  
   
- La configuración se guarda y se implementa con el paquete cuando se instala el paquete en otro equipo. Los valores de la configuración pueden actualizarse cuando se instala el paquete para ofrecer compatibilidad con un entorno diferente. Para obtener más información, vea [Crear configuraciones de paquetes](../integration-services/packages/create-package-configurations.md).  
+ La configuración se guarda y se implementa con el paquete cuando se instala el paquete en otro equipo. Los valores de la configuración pueden actualizarse cuando se instala el paquete para ofrecer compatibilidad con un entorno diferente. Para obtener más información, vea [Crear configuraciones de paquetes](./packages/legacy-package-deployment-ssis.md).  
   
 ### <a name="logging-and-log-providers"></a>Registro y proveedores de registro  
  Un registro es un conjunto de datos sobre el paquete que se recopilan cuando se ejecuta el paquete. Por ejemplo, un registro puede proporcionar la hora de inicio y la hora de finalización de la ejecución de un paquete. Un proveedor de registro define el tipo de destino y el formato que el paquete y sus contenedores y tareas pueden utilizar para registrar información de tiempo de ejecución. Los registros están asociados con un paquete, pero las tareas y los contenedores del paquete pueden registrar información en cualquier registro de paquete. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye diversos proveedores de registro integrados para el registro. Por ejemplo, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye proveedores de registro para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y archivos de texto. También puede crear proveedores de registro personalizados y usarlos para el registro. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
@@ -117,5 +117,4 @@ ms.locfileid: "88449829"
 -   [Crear paquetes en herramientas de datos de SQL Server](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 -   Vea [Building Packages Programmatically](../integration-services/building-packages-programmatically/building-packages-programmatically.md) (Generación de paquetes mediante programación) en la Guía del desarrollador. 
-  
   

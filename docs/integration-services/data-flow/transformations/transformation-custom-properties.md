@@ -42,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1219bf8b502d7e91194b3413910aa7ae16ec09c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed5b4ad8fb62b326f48c85dced98fdb2686750c4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425697"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194627"
 ---
 # <a name="transformation-custom-properties"></a>Propiedades personalizadas de transformación
 
@@ -56,9 +56,9 @@ ms.locfileid: "88425697"
 
   Además de las propiedades que son comunes a la mayoría de los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], muchos objetos de flujo de datos tienen propiedades personalizadas que son específicas del objeto. Estas propiedades personalizadas solo están disponibles en tiempo de ejecución y no se incluyen en la documentación de referencia de la programación administrada de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
- En este tema se enumeran y describen las propiedades personalizadas de las diversas transformaciones de flujo de datos. Para obtener información sobre las propiedades comunes a la mayor parte de los objetos de flujo de datos, vea [Propiedades comunes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ En este tema se enumeran y describen las propiedades personalizadas de las diversas transformaciones de flujo de datos. Para obtener información sobre las propiedades comunes a la mayor parte de los objetos de flujo de datos, vea [Propiedades comunes](../set-the-properties-of-a-data-flow-component.md).  
   
- Algunas propiedades de transformaciones se pueden establecer mediante expresiones de propiedad. Para obtener más información, vea [Propiedades de flujo de datos que se pueden establecer utilizando expresiones](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
+ Algunas propiedades de transformaciones se pueden establecer mediante expresiones de propiedad. Para obtener más información, vea [Propiedades de flujo de datos que se pueden establecer utilizando expresiones](/previous-versions/sql/sql-server-2016/ms136104(v=sql.130)).  
   
 ## <a name="transformations-with-custom-properties"></a>Transformaciones con propiedades personalizadas  
 
@@ -159,7 +159,7 @@ ms.locfileid: "88425697"
 |ValidateExternalMetadata|Boolean|Indica si la Transformación de caché se valida con los orígenes de datos externos en tiempo de diseño. Si la propiedad está establecida en **False**, la validación en los orígenes de datos externos se produce en tiempo de ejecución.<br /><br /> El valor predeterminado es **True**.|  
 |AvailableInputColumns|String|Lista de columnas de entrada disponibles.|  
 |InputColumns|String|Lista de las columnas de entrada seleccionadas.|  
-|CacheColumnName|String|Especifica el nombre de la columna que está asignada a una columna de entrada seleccionada.<br /><br /> El nombre de la columna en la propiedad CacheColumnName debe coincidir con el nombre de la columna correspondiente que se muestra en la página **Columnas** del **Editor del administrador de conexiones de caché**.<br /><br /> Para obtener más información, vea [Editor del administrador de conexiones de caché](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).|  
+|CacheColumnName|String|Especifica el nombre de la columna que está asignada a una columna de entrada seleccionada.<br /><br /> El nombre de la columna en la propiedad CacheColumnName debe coincidir con el nombre de la columna correspondiente que se muestra en la página **Columnas** del **Editor del administrador de conexiones de caché**.<br /><br /> Para obtener más información, vea [Editor del administrador de conexiones de caché](../../connection-manager/cache-connection-manager.md).|  
   
 ##  <a name="character-map-transformation-custom-properties"></a><a name="charmap"></a> Propiedades personalizadas de la transformación Mapa de caracteres  
  La transformación Mapa de caracteres tiene solo las propiedades comunes a todos los componentes de flujo de datos en el nivel de componente.  
@@ -211,7 +211,7 @@ ms.locfileid: "88425697"
   
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|Valor que indica si la columna usa las rutinas de análisis más rápidas que no distinguen la configuración regional y permiten un análisis rápido que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona, o las rutinas de análisis estándar, que sí distinguen la configuración regional. El valor predeterminado de esta propiedad es **False**. Para obtener más información, consulte [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) y [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Conversión de datos**, pero se puede definir con el **Editor avanzado**.|  
+|FastParse|Boolean|Valor que indica si la columna usa las rutinas de análisis más rápidas que no distinguen la configuración regional y permiten un análisis rápido que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona, o las rutinas de análisis estándar, que sí distinguen la configuración regional. El valor predeterminado de esta propiedad es **False**. Para obtener más información, consulte [Fast Parse](../parsing-data.md) y [Standard Parse](../parsing-data.md). .<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Conversión de datos**, pero se puede definir con el **Editor avanzado**.|  
 |SourceInputColumnLineageId|Entero|**LineageID** de la columna de entrada que es el origen de la columna de salida.|  
   
  La entrada, las columnas de entrada y la salida de transformación Conversión de datos no tienen ninguna propiedad personalizada.  
@@ -370,7 +370,7 @@ ms.locfileid: "88425697"
 |DefaultCodePage|Entero|Página de códigos predeterminada que se usa cuando no hay información disponible de la misma en el origen de datos.|  
 |MaxMemoryUsage|Entero|Tamaño máximo permitido de la caché para la tabla de búsqueda. El valor predeterminado de esta propiedad es **25**, lo que significa que el tamaño de la memoria caché no tiene límite.|  
 |MaxMemoryUsage64|Entero|Tamaño de caché máximo para la tabla de búsqueda en un equipo de 64 bits.|  
-|NoMatchBehavior|Integer (enumeración)|Valor que especifica si las filas que no tienen entradas coincidentes del conjunto de datos de referencia se tratan como errores.<br /><br /> Cuando la propiedad se establece en **Tratar filas sin entradas coincidentes como errores** (0), las filas sin entradas coincidentes se tratan como errores. Puede especificar lo que debería pasar cuando se produce este tipo de error con la página **Salida de error** del cuadro de diálogo **Editor de transformación Búsqueda** . Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).<br /><br /> Cuando la propiedad está establecida en **Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes** (1), las filas no se tratan como errores.<br /><br /> El valor predeterminado es **Tratar filas sin entradas coincidentes como errores** (0).|  
+|NoMatchBehavior|Integer (enumeración)|Valor que especifica si las filas que no tienen entradas coincidentes del conjunto de datos de referencia se tratan como errores.<br /><br /> Cuando la propiedad se establece en **Tratar filas sin entradas coincidentes como errores** (0), las filas sin entradas coincidentes se tratan como errores. Puede especificar lo que debería pasar cuando se produce este tipo de error con la página **Salida de error** del cuadro de diálogo **Editor de transformación Búsqueda** . Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](./lookup-transformation.md).<br /><br /> Cuando la propiedad está establecida en **Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes** (1), las filas no se tratan como errores.<br /><br /> El valor predeterminado es **Tratar filas sin entradas coincidentes como errores** (0).|  
 |ParameterMap|String|Lista delimitada por puntos y comas de identificadores de linaje que se asignan a los parámetros que se usan en la instrucción **SqlCommand** .|  
 |ReferenceMetadataXML|String|Metadatos para las columnas en la tabla de búsqueda que la transformación copia en su salida.|  
 |SqlCommand|String|La instrucción SELECT que rellena la tabla de búsqueda.|  
@@ -656,8 +656,7 @@ ms.locfileid: "88425697"
   
 ## <a name="see-also"></a>Consulte también  
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Propiedades comunes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
- [Propiedades de la ruta de acceso](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [Propiedades de flujo de datos que se pueden establecer utilizando expresiones](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
-  
+ [Propiedades comunes](../set-the-properties-of-a-data-flow-component.md)   
+ [Propiedades de la ruta de acceso](../integration-services-paths.md)   
+ [Propiedades de flujo de datos que se pueden establecer utilizando expresiones](/previous-versions/sql/sql-server-2016/ms136104(v=sql.130))  
   

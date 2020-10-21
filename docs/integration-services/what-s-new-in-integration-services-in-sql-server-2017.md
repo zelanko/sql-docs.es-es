@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b7d0f0a75c924151b2548a71a2f52389abc95577
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3275ee19e271c6d9d98e7ad432ad3a772283b583
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456917"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193732"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novedades de Integration Services en SQL Server 2017
 
@@ -78,7 +78,7 @@ Ahora puede desarrollar proyectos y paquetes de SSIS para las versiones de SQL S
 -   Se mejoró el rendimiento de inicio de sesión en SSISDB para ejecuciones de paquetes en Escalabilidad horizontal. Ahora, los registros de mensaje del evento y de contexto del mensaje se escriben en SSISDB por lotes en lugar de uno a uno. A continuación se muestran algunas notas adicionales sobre esta mejora:        
     - Actualmente, en algunos informes de la versión actual de SQL Server Management Studio (SSMS) no se muestran estos registros para las ejecuciones en Escalabilidad horizontal. Prevemos que se admitirán en la próxima versión de SSMS. Los informes afectados incluyen el informe *Todas las conexiones*, el informe *Contexto de error* y la sección *Información de conexión* en el Panel Servicio de integración.
     - Se agregó la nueva columna **event_message_guid**. Utilice esta columna para combinar las vistas [catalog].[event_message_context] y [catalog].[event_messages] en lugar de usar **event_message_id** al consultar estos registros de ejecuciones en Escalabilidad horizontal.
--   Para obtener la aplicación de administración para Escalabilidad horizontal de SSIS, [descargue SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 o una versión posterior.
+-   Para obtener la aplicación de administración para Escalabilidad horizontal de SSIS, [descargue SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 17.1 o una versión posterior.
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-20"></a>Novedades de SSIS en SQL Server 2017 CTP 2.0
 
@@ -113,4 +113,3 @@ Para obtener más información, consulte [Escalado horizontal de Integration Ser
 ### <a name="support-for-microsoft-dynamics-online-resources"></a>Compatibilidad con recursos de Microsoft Dynamics Online
 
 El origen OData y el administrador de conexiones OData ahora admiten la conexión a fuentes de OData de Microsoft Dynamics AX Online y Microsoft Dynamics CRM Online.
-

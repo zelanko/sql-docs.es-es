@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d212a870d0b66108cb1b905249fc8ba2a611a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26f08ee42a1fae6ac5a5d3a50d8b32282c2a2fde
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477769"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192702"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Crear e implementar una memoria caché para la transformación Búsqueda
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477769"
   
  La transformación Búsqueda realiza búsquedas mediante la combinación de datos de las columnas de entrada procedentes de un origen de datos conectado con columnas de un conjunto de datos de referencia.  
   
- Se crea un archivo caché mediante un administrador de conexiones de caché y una transformación de caché. Para obtener más información, consulte [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) y [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md).  
+ Se crea un archivo caché mediante un administrador de conexiones de caché y una transformación de caché. Para obtener más información, consulte [Cache Connection Manager](../../connection-manager/cache-connection-manager.md) y [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md).  
   
  Para obtener más información acerca de la transformación Búsqueda y de los archivos caché, vea [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -65,11 +65,11 @@ ms.locfileid: "88477769"
     > [!NOTE]  
     >  Cuando la transformación Búsqueda se configura para utilizar un administrador de conexiones de caché, a las columnas de entrada solo se les puede asignar las columnas de índice del conjunto de datos de referencia. Asimismo, todas las columnas de índice deben estar asignadas.  
   
-     Para obtener más información, vea [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).  
+     Para obtener más información, vea [Cache Connection Manager Editor](../../connection-manager/cache-connection-manager.md).  
   
 7.  Configure la transformación de caché según sea necesario.  
   
-     Para obtener más información, vea [Editor de transformación Caché &#40;página Administrador de conexiones&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) y [Editor de transformación Caché &#40;página Asignaciones&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+     Para obtener más información, vea [Editor de transformación Caché &#40;página Administrador de conexiones&#41;](./cache-transform.md) y [Editor de transformación Caché &#40;página Asignaciones&#41;](./cache-transform.md).  
   
 8.  Ejecute el paquete.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88477769"
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que contiene el paquete con el que desea trabajar y ábralo.  
   
-2.  Opcionalmente, puede crear una configuración de paquetes. Para obtener más información, vea [Crear configuraciones de paquetes](../../../integration-services/packages/create-package-configurations.md).  
+2.  Opcionalmente, puede crear una configuración de paquetes. Para obtener más información, vea [Crear configuraciones de paquetes](../../packages/legacy-package-deployment-ssis.md).  
   
 3.  Haga lo siguiente para agregar el archivo caché al proyecto:  
   
@@ -89,13 +89,12 @@ ms.locfileid: "88477769"
   
      El archivo aparece en la carpeta **Varios** del Explorador de soluciones.  
   
-4.  Configure el proyecto para crear una utilidad de implementación y, a continuación, genere el proyecto. Para más información, consulte [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md).  
+4.  Configure el proyecto para crear una utilidad de implementación y, a continuación, genere el proyecto. Para más información, consulte [Create a Deployment Utility](../../packages/legacy-package-deployment-ssis.md).  
   
      Se crea un archivo de manifiesto, \<*project name*>.SSISDeploymentManifest.xml, que enumera los archivos varios del proyecto, los paquetes y las configuraciones del paquete.  
   
-5.  Implemente el paquete en el sistema de archivos. Para más información, consulte [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
+5.  Implemente el paquete en el sistema de archivos. Para más información, consulte [Deploy Packages by Using the Deployment Utility](../../packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Crear una utilidad de implementación](../../../integration-services/packages/create-a-deployment-utility.md)  
-  
+ [Crear una utilidad de implementación](../../packages/legacy-package-deployment-ssis.md)  
   

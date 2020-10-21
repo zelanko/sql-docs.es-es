@@ -24,12 +24,12 @@ ms.assetid: 1f05474c-0377-48cb-b567-9d85d0c40479
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fa9e30938b77a27441e41999d5b65ddc3580a55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e1f67d02775cd1531d2a78e680d3a357514c70d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445522"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193365"
 ---
 # <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;= (Menor o igual que) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88445522"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 expression <= expression  
 ```  
   
@@ -60,14 +60,13 @@ expression <= expression
 ### <a name="a-using--in-a-simple-query"></a>A. Usar <= en una consulta simple  
  En el ejemplo siguiente se devuelven todas las filas de la tabla `HumanResources.Department` que tienen un valor en `DepartmentID` que es menor o igual que el valor 3.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
 FROM HumanResources.Department  
 WHERE DepartmentID <= 3  
 ORDER BY DepartmentID;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

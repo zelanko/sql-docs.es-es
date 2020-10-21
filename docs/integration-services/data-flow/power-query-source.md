@@ -16,12 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 966371e30811f82f9be25711f9bf600bbddbcc8d
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: fc7f3e5ef6561338f6177f1810f6af2b92c7064a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522907"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192691"
 ---
 # <a name="power-query-source-preview"></a>Origen de Power Query (versión preliminar)
 
@@ -30,7 +30,7 @@ ms.locfileid: "87522907"
 En este artículo se describe cómo configurar las propiedades del origen de Power Query del flujo de datos de SQL Server Integration Services (SSIS). Power Query es una tecnología que permite conectarse a varios orígenes de datos y transformar datos mediante Excel o Power BI Desktop. Para obtener más información, consulte el artículo [Power Query - Descripción general y aprendizaje](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d). El script generado que genera Power Query se puede copiar y pegar en el origen de Power Query del flujo de datos de SSIS para configurarlo.
   
 > [!NOTE]
-> En la versión preliminar actual, el origen de Power Query solo se puede usar en SQL Server 2017/2019 y Azure-SSIS Integration Runtime (IR) de Azure Data Factory (ADF). Puede descargar e instalar el origen de Power Query más reciente para SQL Server 2017/2019 desde [aquí](https://www.microsoft.com/download/details.aspx?id=100619). El origen de Power Query para Azure-SSIS IR ya está preinstalado. Para aprovisionar Azure-SSIS IR, lea el artículo de [aprovisionamiento de SSIS en ADF](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+> En la versión preliminar actual, el origen de Power Query solo se puede usar en SQL Server 2017/2019 y Azure-SSIS Integration Runtime (IR) de Azure Data Factory (ADF). Puede descargar e instalar el origen de Power Query más reciente para SQL Server 2017/2019 desde [aquí](https://www.microsoft.com/download/details.aspx?id=100619). El origen de Power Query para Azure-SSIS IR ya está preinstalado. Para aprovisionar Azure-SSIS IR, lea el artículo de [aprovisionamiento de SSIS en ADF](/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="configure-the-power-query-source"></a>Configuración del origen de Power Query
 
@@ -70,7 +70,7 @@ En el **Editor del administrador de conexiones de Power Query**, deberá especif
 
 ![Tipos del Editor del administrador de conexiones del origen de PQ](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
-Algunos de estos orígenes (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata** y **Sybase**) requieren más instalaciones de controladores ADO.NET que pueden obtenerse en el artículo de [requisitos previos de Power Query](/power-bi/desktop-data-source-prerequisites). Puede usar la interfaz de configuración personalizada para instalarlos en Azure-SSIS IR. Consulte el artículo de [personalización de Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+Algunos de estos orígenes (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata** y **Sybase**) requieren más instalaciones de controladores ADO.NET que pueden obtenerse en el artículo de [requisitos previos de Power Query](/power-bi/desktop-data-source-prerequisites). Puede usar la interfaz de configuración personalizada para instalarlos en Azure-SSIS IR. Consulte el artículo de [personalización de Azure-SSIS IR](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
 En **Ruta de acceso del origen de datos**, puede especificar propiedades específicas del origen de datos que forman una cadena de conexión sin la información de autenticación. Por ejemplo, la ruta de acceso del origen de datos **SQL** tiene el formato `<Server>;<Database>`. Puede seleccionar el botón **Editar** para asignar valores a propiedades específicas del origen de datos que forman la ruta de acceso.
 
@@ -82,9 +82,9 @@ Finalmente, en **Tipo de autenticación**, puede seleccionar **Anónimo**/**Aute
 
 ### <a name="current-limitations"></a>Limitaciones actuales
 
--   El origen de datos de **Oracle** no se puede usar actualmente en Azure-SSIS IR, dado que el controlador ADO.NET de Oracle no se puede instalar ahí; de modo que, instálelo y use por ahora el origen de datos **ODBC** para conectarse a Oracle. Para más información, consulte el ejemplo **ORACLE STANDARD ODBC** del artículo sobre la [personalización de Azure SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+-   El origen de datos de **Oracle** no se puede usar actualmente en Azure-SSIS IR, dado que el controlador ADO.NET de Oracle no se puede instalar ahí; de modo que, instálelo y use por ahora el origen de datos **ODBC** para conectarse a Oracle. Para más información, consulte el ejemplo **ORACLE STANDARD ODBC** del artículo sobre la [personalización de Azure SSIS IR](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
 -   El origen de datos **web** no se puede usar actualmente en Azure-SSIS IR con instalaciones personalizadas; por lo tanto, úselo por ahora en Azure-SSIS IR sin ellas.
 
 ## <a name="next-steps"></a>Pasos siguientes
-Obtenga información sobre cómo ejecutar paquetes SSIS en Azure-SSIS IR como actividades de primera clase en canalizaciones ADF. Consulte el artículo de [ejecución del entorno de ejecución de actividades de paquetes SSiS](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+Obtenga información sobre cómo ejecutar paquetes SSIS en Azure-SSIS IR como actividades de primera clase en canalizaciones ADF. Consulte el artículo de [ejecución del entorno de ejecución de actividades de paquetes SSiS](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).

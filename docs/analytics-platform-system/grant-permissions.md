@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289703"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257478"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Conceder permisos de T-SQL para almacenamiento de datos paralelos
 Conceda permisos de T-SQL para operaciones de base de datos en almacenamiento de datos paralelos.
@@ -63,7 +63,7 @@ En esta sección se describe cómo conceder permisos a los inicios de sesión de
   
 **Usar la consola de administración**  
   
-Para usar la consola de administración, un inicio de sesión requiere el permiso servidor **View Server State** . La siguiente instrucción SQL concede el permiso **View Server State** al inicio de `KimAbercrombie` sesión para que Kim pueda usar la consola de administración para supervisar el dispositivo PDW de SQL Server.  
+Para usar la consola de administración, un inicio de sesión requiere el permiso servidor **View Server State** . La siguiente instrucción SQL concede el permiso **View Server State** al inicio de sesión para `KimAbercrombie` que Kim pueda usar la consola de administración para supervisar el dispositivo PDW de SQL Server.  
   
 ```sql  
 USE master;  
@@ -133,7 +133,7 @@ Si el destino de los datos es otro PDW de SQL Server, el usuario debe tener **CR
 ## <a name="grant-permissions-to-manage-databases"></a>Conceder permisos para administrar bases de datos
 En esta sección se describe cómo conceder permisos a un usuario de base de datos para administrar una base de datos en el dispositivo PDW de SQL Server.  
   
-En algunas situaciones, una compañía asigna un administrador a una base de datos. El administrador controla el acceso que tienen otros inicios de sesión a la base de datos, así como los datos y los objetos de la base de datos. Para administrar todos los objetos, roles y usuarios de una base de datos, conceda al usuario el permiso **control** en la base de datos. La instrucción siguiente concede al usuario `KimAbercrombie`el permiso de **control** en la base de datos **AdventureWorksPDW2012** .  
+En algunas situaciones, una compañía asigna un administrador a una base de datos. El administrador controla el acceso que tienen otros inicios de sesión a la base de datos, así como los datos y los objetos de la base de datos. Para administrar todos los objetos, roles y usuarios de una base de datos, conceda al usuario el permiso **control** en la base de datos. La instrucción siguiente concede al usuario el permiso de **control** en la base de datos **AdventureWorksPDW2012** `KimAbercrombie` .  
   
 ```sql
 USE AdventureWorksPDW2012;  
@@ -164,7 +164,7 @@ GRANT ALTER ANY LOGIN TO KimAbercrombie;
 ```  
   
 ### <a name="grant-permissions-to-manage-login-sessions"></a>Conceder permisos para administrar sesiones de inicio de sesión  
-Para poder ver todas las sesiones en el servidor, se necesita el permiso **View Server State** . La capacidad de finalizar las sesiones de otros inicios de sesión requiere el permiso **ALTER any Connection** . En el ejemplo siguiente se `KimAbercrombie` usa el inicio de sesión creado anteriormente.  
+Para poder ver todas las sesiones en el servidor, se necesita el permiso **View Server State** . La capacidad de finalizar las sesiones de otros inicios de sesión requiere el permiso **ALTER any Connection** . En el ejemplo siguiente se usa el `KimAbercrombie` Inicio de sesión creado anteriormente.  
   
 ```sql  
 -- Grant permissions to view sessions and queries  
@@ -175,7 +175,7 @@ GRANT ALTER ANY CONNECTION TO KimAbercrombie;
 ```  
   
 ### <a name="grant-permission-to-manage-database-users"></a>Conceder permiso para administrar usuarios de base de datos  
-La creación y eliminación de usuarios de base de datos requiere el permiso **ALTER any User** . La administración de los usuarios existentes requiere el permiso **ALTER any User** o el permiso **ALTER** en dicho usuario. En el ejemplo siguiente se `KimAbercrombie` usa el inicio de sesión creado anteriormente.  
+La creación y eliminación de usuarios de base de datos requiere el permiso **ALTER any User** . La administración de los usuarios existentes requiere el permiso **ALTER any User** o el permiso **ALTER** en dicho usuario. En el ejemplo siguiente se usa el `KimAbercrombie` Inicio de sesión creado anteriormente.  
   
 ```sql  
 -- Create a user  
@@ -188,7 +188,7 @@ GRANT ALTER ANY USER TO KimAbercrombie;
 ```  
   
 ### <a name="grant-permisson-to-manage-database-roles"></a>Conceder el permiso para administrar roles de base de datos  
-Crear y quitar roles de base de datos definidos por el usuario requiere el permiso **ALTER any role** . En el ejemplo siguiente se `KimAbercrombie` usa el inicio de sesión y el uso creados anteriormente.  
+Crear y quitar roles de base de datos definidos por el usuario requiere el permiso **ALTER any role** . En el ejemplo siguiente se usa el `KimAbercrombie` Inicio de sesión y el uso creados anteriormente.  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -221,7 +221,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 El dispositivo PDW de SQL Server se puede supervisar mediante la consola de administración de o las vistas del sistema de PDW de SQL Server. Los inicios de sesión requieren el permiso **View Server State** en el nivel de servidor para supervisar el dispositivo. Los inicios de sesión requieren el permiso **ALTER any Connection** para finalizar las conexiones mediante la consola de administración de o el comando **Kill** . Para obtener información sobre los permisos necesarios para usar la consola de administración, consulte [conceder permisos para usar la consola de administración &#40;PDW de SQL Server&#41;](#grant-permissions-to-use-the-admin-console).  
   
 ### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views"></a><a name="PermsAdminConsole"></a>Conceder permiso para supervisar el dispositivo mediante las vistas del sistema  
-Las siguientes instrucciones SQL crean un inicio de `monitor_login` sesión denominado y concede el permiso **View Server State** al `monitor_login` inicio de sesión.  
+Las siguientes instrucciones SQL crean un inicio de sesión denominado `monitor_login` y concede el permiso **View Server State** al `monitor_login` Inicio de sesión.  
   
 ```sql  
 USE master;  
@@ -232,7 +232,7 @@ GO
 ```  
   
 ### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views-and-to-terminate-connections"></a>Conceder permiso para supervisar el dispositivo mediante las vistas del sistema y para finalizar las conexiones  
-Las siguientes instrucciones SQL crean un inicio de `monitor_and_terminate_login` sesión denominado y conceden los permisos **View Server State** y **ALTER any Connection** al `monitor_and_terminate_login` inicio de sesión.  
+Las siguientes instrucciones SQL crean un inicio de sesión denominado `monitor_and_terminate_login` y conceden los permisos **View Server State** y **ALTER any Connection** al `monitor_and_terminate_login` Inicio de sesión.  
   
 ```sql  
 USE master;  
@@ -245,7 +245,7 @@ GO
   
 Para crear inicios de sesión de administrador, consulte [roles fijos de servidor](pdw-permissions.md#fixed-server-roles).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [CREATE USER](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  

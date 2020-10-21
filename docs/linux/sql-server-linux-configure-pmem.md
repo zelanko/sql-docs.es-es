@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 146ab5788e29045a55e6251be01e061f52d7bbb8
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: c6f791cf96520f46c37bb061f30ac7df962695e5
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088942"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115694"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Configuración de la memoria persistente (PMEM) para SQL Server en Linux
 
@@ -87,7 +87,7 @@ mount -o dax,noatime /dev/pmem0 /mnt/dax
 
 Una vez que el dispositivo se haya configurado con `ndctl`, creado y montado, puede colocar archivos de base de datos en él o crear una base de datos.
 
-Dado que los dispositivos PMEM son aptos para O_DIRECT (E/S directa), considere la posibilidad de habilitar la marca de seguimiento 3979 para deshabilitar el mecanismo de vaciado forzado. Para obtener más información, vea [Soporte técnico de FUA](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Los elementos internos de acceso a la unidad forzada se describen aquí [componentes internos de FUA](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/).
+Dado que los dispositivos PMEM son aptos para O_DIRECT (E/S directa), considere la posibilidad de habilitar la marca de seguimiento 3979 para deshabilitar el mecanismo de vaciado forzado. Para obtener más información, vea [Soporte técnico de FUA](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Los elementos internos de acceso a la unidad forzada se describen aquí [componentes internos de FUA](/archive/blogs/bobsql/sql-server-on-linux-forced-unit-access-fua-internals).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

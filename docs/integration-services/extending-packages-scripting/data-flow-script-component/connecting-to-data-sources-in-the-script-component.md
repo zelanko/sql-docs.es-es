@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b647745e46b2326ab247cd2ef67ec480835dc16e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 960ad33c2b4b166caa01205721101eafdc71e380
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430277"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193087"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Conectarse a orígenes de datos del componente de script
 
@@ -27,7 +27,7 @@ ms.locfileid: "88430277"
 
   Un administrador de conexiones es una unidad práctica que encapsula y almacena la información necesaria para conectarse a un origen de datos de un tipo determinado. Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
- Para hacer que los administradores de conexiones existentes estén disponibles para el acceso por parte del script personalizado del componente de origen o de destino, haga clic en los botones **Agregar** y **Quitar** de la página **Administradores de conexiones** del **Editor de transformación Script**. Sin embargo, debe escribir su propio código personalizado para cargar o guardar los datos y posiblemente para abrir y cerrar la conexión al origen de datos. Para obtener más información acerca de la página **Administradores de conexiones** del **Editor de transformación Script**, vea [Configurar el componente de script en el editor de componentes de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) y [Editor de transformación Script &#40;página Administradores de conexiones&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  
+ Para hacer que los administradores de conexiones existentes estén disponibles para el acceso por parte del script personalizado del componente de origen o de destino, haga clic en los botones **Agregar** y **Quitar** de la página **Administradores de conexiones** del **Editor de transformación Script**. Sin embargo, debe escribir su propio código personalizado para cargar o guardar los datos y posiblemente para abrir y cerrar la conexión al origen de datos. Para obtener más información acerca de la página **Administradores de conexiones** del **Editor de transformación Script**, vea [Configurar el componente de script en el editor de componentes de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) y [Editor de transformación Script &#40;página Administradores de conexiones&#41;](../../data-flow/transformations/script-component.md).  
   
  El componente de script crea una clase de colección **Connections** en el elemento de proyecto **ComponentWrapper** que contiene un descriptor de acceso fuertemente tipado para cada administrador de conexiones que tiene el mismo nombre que el propio administrador de conexiones. Esta colección se expone mediante la propiedad **Connections** de la clase **ScriptMain**. La propiedad de descriptor de acceso devuelve una referencia al administrador de conexiones como una instancia de <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100>. Por ejemplo, si ha agregado un administrador de conexiones denominado `MyADONETConnection` en la página Administradores de conexión del cuadro de diálogo, puede obtener una referencia a dicho administrador en el script agregando el código siguiente:  
   
@@ -61,6 +61,5 @@ ms.locfileid: "88430277"
   
 ## <a name="see-also"></a>Consulte también  
  [Conexiones de Integration Services &#40;SSIS&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Crear administradores de conexiones](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
-  
+ [Crear administradores de conexiones](../../connection-manager/integration-services-ssis-connections.md)  
   

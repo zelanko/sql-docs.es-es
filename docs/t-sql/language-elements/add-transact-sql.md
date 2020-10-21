@@ -25,12 +25,12 @@ ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12b531d2f8615e9ff2cb9bbfc33973e6aab5d33f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28cca0a52c68716f363003d486f4c2f6a199fd16
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361881"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197009"
 ---
 # <a name="-addition-transact-sql"></a>+ (Suma) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88361881"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 expression + expression  
 ```  
   
@@ -59,7 +59,7 @@ expression + expression
 ### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>A. Utilizar el operador de suma para calcular el número total de horas que cada empleado ha dejado de trabajar  
  En este ejemplo se calcula el número total de horas que cada empleado ha dejado de trabajar; para ello, se suma el número de horas usadas como vacaciones y el número de horas usadas como baja por enfermedad.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, VacationHours, SickLeaveHours,   
@@ -73,10 +73,9 @@ GO
 ### <a name="b-using-the-addition-operator-to-add-days-to-date-and-time-values"></a>B. Utilizar el operador de suma para sumar días a valores de fecha y hora  
  En este ejemplo se suma un número de días a una fecha `datetime`.  
   
-```  
-  
+```sql
 SET NOCOUNT ON  
-DECLARE @startdate datetime, @adddays int;  
+DECLARE @startdate DATETIME, @adddays INT;  
 SET @startdate = 'January 10, 1900 12:00 AM';  
 SET @adddays = 5;  
 SET NOCOUNT OFF;  
@@ -97,8 +96,8 @@ Start Date                  Add Date
 ### <a name="c-adding-character-and-integer-data-types"></a>C. Sumar tipos de datos character e integer  
  En el siguiente ejemplo se suma un valor de tipo de datos **int** y un valor de tipo character por medio de la conversión del tipo de datos character a **int**. Si existe un carácter no válido en la cadena **char**, el [!INCLUDE[tsql](../../includes/tsql-md.md)] devuelve un error.  
   
-```  
-DECLARE @addvalue int;  
+```sql  
+DECLARE @addvalue INT;  
 SET @addvalue = 15;  
 SELECT '125127' + @addvalue;  
 ```  
@@ -117,7 +116,7 @@ SELECT '125127' + @addvalue;
 ### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D. Usar el operador de suma para calcular el número total de horas que cada empleado ha dejado de trabajar  
  En el siguiente ejemplo se calcula el número total de horas que cada empleado ha dejado de trabajar; para ello, se suma el número de horas usadas como vacaciones y el número de horas usadas como baja por enfermedad y los resultados se ordenan de manera ascendente.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, VacationHours, SickLeaveHours,   

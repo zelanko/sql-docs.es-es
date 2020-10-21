@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c82c79bcf0b1494890055c098e6c7efdbc733ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6dc0705d65cf77dc0aa1f334fee2d78d2ca2e400
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733868"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193453"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar el almacén de administración de datos (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85733868"
  Utilice esta página para seleccionar un servidor de bases de datos y un almacén de administración de datos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El almacén de administración de datos es una base de datos relacional que almacenará los datos recopilados.  
   
 > [!NOTE]  
->  Debe tener el nivel de permisos adecuado para crear el almacén de administración de datos en el servidor. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). También debe tener el nivel de permisos adecuado para crear inicios de sesión para los roles del almacén de administración de datos.  
+>  Debe tener el nivel de permisos adecuado para crear el almacén de administración de datos en el servidor. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-transact-sql.md). También debe tener el nivel de permisos adecuado para crear inicios de sesión para los roles del almacén de administración de datos.  
   
  **Nombre del servidor**  
  Especifica el nombre del servidor que hospedará el almacén de administración de datos.  
@@ -139,5 +139,4 @@ ms.locfileid: "85733868"
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   
  [Administrar la recopilación de datos](../../relational-databases/data-collection/manage-data-collection.md)  
-  
   

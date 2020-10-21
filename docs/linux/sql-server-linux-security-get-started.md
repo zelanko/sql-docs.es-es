@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 031005dcb6a5353e9e4f0b73a7a45d667d2212e7
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 4a9137ad71947d222d246df046c6ab573fb4500d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088812"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115818"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Tutorial sobre las características de seguridad de SQL Server en Linux
 
@@ -250,7 +250,7 @@ SQL Server programa las operaciones de cifrado y descifrado en subprocesos que 
 > [!WARNING]
 >  Los archivos de copia de seguridad de las bases de datos que tienen habilitado TDE también se cifran mediante la clave de cifrado de la base de datos. Como consecuencia, al restaurar estas copias de seguridad debe estar disponible el certificado que protege la clave de cifrado de la base de datos. Esto significa que, además de hacer copias de seguridad de la base de datos, tiene que asegurarse de que mantiene copias de seguridad de los certificados del servidor para evitar la pérdida de datos. Si el certificado deja de estar disponible, perderá los datos. Para obtener más información, consulte [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
 
-Para obtener más información sobre TDE, vea [Cifrado de datos transparente (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
+Para obtener más información sobre TDE, vea [Cifrado de datos transparente (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md).   
 
 
 ## <a name="configure-backup-encryption"></a>Configuración del cifrado de copia de seguridad

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ba01a1c05c9ea83babc36e5c639a4a4fa20a70d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c96209a528c2256126155f393cf2e80378e0b62
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88348601"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194738"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>Propiedades personalizadas del destino SQL Server Compact Edition
 
@@ -35,7 +35,6 @@ ms.locfileid: "88348601"
   
  Para obtener más información, vea [Destino de SQL Server Compact Edition](../../integration-services/data-flow/sql-server-compact-edition-destination.md).  
   
-## <a name="see-also"></a>Vea también  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+## <a name="see-also"></a>Consulte también  
+ [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   

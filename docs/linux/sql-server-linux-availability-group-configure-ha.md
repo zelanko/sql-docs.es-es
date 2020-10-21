@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: cfe799e9a0abb8731642ee8b2d8d293c8a8851a2
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 03c9c90f1c9382c85141853ff19cc5d76b40f093
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784854"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115943"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configuración de un grupo de disponibilidad AlwaysOn de SQL Server para alta disponibilidad en Linux
 
@@ -80,7 +80,7 @@ Para más información, vea [Alta disponibilidad y protección de datos para las
 >[!NOTE]
 >Los grupos de disponibilidad pueden incluir más réplicas sincrónicas o asincrónicas. 
 
-Cree el grupo de disponibilidad para alta disponibilidad en Linux. Use [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/create-availability-group-transact-sql) con `CLUSTER_TYPE = EXTERNAL`. 
+Cree el grupo de disponibilidad para alta disponibilidad en Linux. Use [CREATE AVAILABILITY GROUP](../t-sql/statements/create-availability-group-transact-sql.md) con `CLUSTER_TYPE = EXTERNAL`. 
 
 * Grupo de disponibilidad: `CLUSTER_TYPE = EXTERNAL`. Especifica que una entidad de clúster externa administra el grupo de disponibilidad. Pacemaker es un ejemplo de entidad de clúster externa. Cuando el tipo de clúster del grupo de disponibilidad es externo, 
 

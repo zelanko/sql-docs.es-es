@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2a8c0bb1cb003605ec863b41e2194bad4e3cf3e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d95b3894351d156444b22e5b20c4cf5ed259990
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393571"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196513"
 ---
 # <a name="for-loop-container"></a>Contenedor de bucles For
 
@@ -67,9 +67,9 @@ ms.locfileid: "88393571"
   
 2.  Agregue tareas y contenedores al contenedor de bucles For. Para más información, vea [Agregar o eliminar tareas o contenedores en un flujo de control](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
-3.  Conecte tareas y contenedores en el contenedor de bucles For mediante restricciones de precedencia. Para más información, vea [Conectar tareas y contenedores mediante una restricción de precedencia predeterminada](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75).  
+3.  Conecte tareas y contenedores en el contenedor de bucles For mediante restricciones de precedencia. Para más información, vea [Conectar tareas y contenedores mediante una restricción de precedencia predeterminada](./precedence-constraints.md).  
   
-4.  Configure el contenedor de bucles For. Para más información, vea [Configurar un contenedor de bucles For](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
+4.  Configure el contenedor de bucles For. Para más información, vea [Configurar un contenedor de bucles For]().  
 
 ##  <a name="configure-the-for-loop-container"></a>Configurar el contenedor de bucles Para
 En este procedimiento se describe cómo configurar un contenedor de bucles For mediante el cuadro de diálogo **Editor de bucles For** .  
@@ -122,7 +122,7 @@ Use la página **Bucle For** del cuadro de diálogo **Editor de bucles For** par
   
  Al especificar una variable en una expresión, el nombre de la variable debe venir precedido por el signo (@). Por ejemplo, en el caso de una variable llamada **Counter**, escriba @Counter en la expresión utilizada por el contenedor de bucles Para. Si se incluye la propiedad de espacio de nombres en la variable, debe escribir la variable y el espacio de nombres entre paréntesis. Por ejemplo, en el caso de una variable **Counter** en el espacio de nombres **MyNamespace**, escriba [@MyNamespace::Counter].  
   
- Las variables que usa el contenedor de bucles For se deben definir en el ámbito del contenedor de bucles For o en el ámbito de cualquier contenedor que se encuentre más arriba en la jerarquía de contenedores de paquetes. Por ejemplo, un contenedor de bucles For puede usar variables definidas en su ámbito y también variables definidas en el ámbito de paquetes. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Las variables que usa el contenedor de bucles For se deben definir en el ámbito del contenedor de bucles For o en el ámbito de cualquier contenedor que se encuentre más arriba en la jerarquía de contenedores de paquetes. Por ejemplo, un contenedor de bucles For puede usar variables definidas en su ámbito y también variables definidas en el ámbito de paquetes. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](../integration-services-ssis-variables.md).  
   
  La gramática de expresiones de [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona un conjunto completo de operadores y funciones para implementar expresiones complejas usadas para la evaluación, inicialización o asignación. Para más información, vea [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
@@ -130,5 +130,4 @@ Use la página **Bucle For** del cuadro de diálogo **Editor de bucles For** par
 ## <a name="see-also"></a>Consulte también  
  [Flujo de control](../../integration-services/control-flow/control-flow.md)   
  [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  
-  
   

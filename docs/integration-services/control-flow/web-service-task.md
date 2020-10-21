@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cecf1f8803b0180ef6127cde203659be26f3c6c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ff964cda9e4e9687a61d50db7c7d53c6e9e24ab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477907"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196019"
 ---
 # <a name="web-service-task"></a>Tarea Servicio web
 
@@ -52,7 +52,7 @@ ms.locfileid: "88477907"
   
  El archivo WSDL enumera los métodos que ofrece el servicio web, los parámetros de entrada que requieren los métodos, las respuestas que devuelven los métodos, y cómo comunicarse con el servicio web.  
   
- Si el método usa parámetros de entrada, la tarea Servicio web requiere valores de parámetros. Por ejemplo, un método de servicio web que recomienda el largo de los esquíes que debe comprar de acuerdo con su altura requiere que se proporcione su altura como parámetro de entrada. Los valores de parámetros se pueden proporcionar mediante cadenas que se definen en la tarea o mediante variables definidas en el ámbito de la tarea o en un contenedor principal. La ventaja de utilizar variables es que permiten actualizar dinámicamente los valores de parámetros mediante configuraciones de paquetes o scripts. Para obtener más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Configuraciones de paquetes](../../integration-services/packages/package-configurations.md).  
+ Si el método usa parámetros de entrada, la tarea Servicio web requiere valores de parámetros. Por ejemplo, un método de servicio web que recomienda el largo de los esquíes que debe comprar de acuerdo con su altura requiere que se proporcione su altura como parámetro de entrada. Los valores de parámetros se pueden proporcionar mediante cadenas que se definen en la tarea o mediante variables definidas en el ámbito de la tarea o en un contenedor principal. La ventaja de utilizar variables es que permiten actualizar dinámicamente los valores de parámetros mediante configuraciones de paquetes o scripts. Para obtener más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Configuraciones de paquetes](../packages/legacy-package-deployment-ssis.md).  
   
  Muchos métodos de servicio web no usan parámetros de entrada. Por ejemplo, un método de servicio web que obtiene los nombres de los presidentes nacidos en el mes en curso no requiere un parámetro de entrada porque el servicio web puede determinar localmente cuál es el mes en curso.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88477907"
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configuración mediante programación de la tarea Servicio web  
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en uno de los temas siguientes:  
@@ -93,7 +93,7 @@ ms.locfileid: "88477907"
 > [!IMPORTANT]  
 >  El administrador de conexiones HTTP solo es compatible con la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
   
- **Temas relacionados:**  [Administrador de conexiones HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **Temas relacionados:**  [Administrador de conexiones HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../connection-manager/http-connection-manager.md)  
   
  **WSDLFile**  
  Escriba la ruta de acceso completa de un archivo WSDL local del equipo, o bien haga clic en el botón Examinar **(…)** y busque el archivo.  
@@ -176,13 +176,13 @@ ms.locfileid: "88477907"
  **Archivo**  
  Seleccione un administrador de conexiones de archivos de la lista o haga clic en \<**New Connection...**> para crear uno.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../connection-manager/file-connection-manager.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = Variable  
  **Variable**  
  Seleccione una variable de la lista o haga clic en \<**New Variable...**> para crear una.  
   
- **Temas relacionados:**  [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Temas relacionados:**  [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](../integration-services-ssis-variables.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Vídeo [ How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=259642) (Procedimiento para llamar a un servicio web con la tarea Servicio web [vídeo de SQL Server]), en technet.microsoft.com.  
+ Vídeo [ How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](/previous-versions/dn912438(v=msdn.10)) (Procedimiento para llamar a un servicio web con la tarea Servicio web [vídeo de SQL Server]), en technet.microsoft.com.

@@ -1,5 +1,6 @@
 ---
-title: Crear un miembro hoja (Master Data Services) | Microsoft Docs
+description: Crear un miembro hoja (Master Data Services)
+title: Crear un miembro hoja
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a7204fb8183ed84390bd3eaec38b16833dd8eb2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1f5436cf2d553209a80ae5f9bb9f32b3df1c7d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257822"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Crear un miembro hoja (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cree un miembro hoja si desea agregar datos maestros al sistema. Si desea agregar datos de forma masiva, use tablas de almacenamiento provisional. Para obtener más información, consulte [Importar datos de tablas &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
+  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cree un miembro hoja si desea agregar datos maestros al sistema. Si desea agregar datos de forma masiva, use tablas de almacenamiento provisional. Para obtener más información, consulte  [importar datos de tablas &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
  También puede usar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] para importar datos.  
   
@@ -58,10 +59,10 @@ ms.locfileid: "67906743"
   
 7.  Opcional. En el cuadro **Anotaciones** , escriba un comentario sobre los motivos por los que se agregó el miembro. Todos los usuarios que tienen acceso al miembro pueden ver la anotación.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
-## <a name="see-also"></a>Vea también  
- [Crear un miembro consolidado &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cree un miembro consolidado &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   
  [Miembros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: Eliminar usuarios o grupos (Master Data Services) | Microsoft Docs
+description: Eliminar usuarios o grupos (Master Data Services)
+title: Eliminar usuarios o grupos
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 81b16bc5b2bc8f2158a82733fb96f5144b7d15f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48ddbf53a44bf0d34abe725595bba255e6fa4fae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92258079"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>Eliminar usuarios o grupos (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Elimine los usuarios o los grupos que ya no desee que tengan acceso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
@@ -53,7 +54,7 @@ ms.locfileid: "67906275"
   
 5.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Seguridad &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

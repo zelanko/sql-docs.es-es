@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e029637f90afbb27e4b27c79c8a515a2e3aad823
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5c1bb607326233dccdafa8fc57e3ce9d32cf20c9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430787"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195367"
 ---
 # <a name="oracle-destination"></a>Destino de Oracle
 
@@ -200,7 +200,7 @@ Use la página Salida de error del cuadro de diálogo Editor de destino de Oracl
 **Comportamiento de error**
 
 Seleccione la forma en la que el origen de Oracle debe controlar los errores de un flujo: omitir el error, redirigir la fila o hacer que el componente no funcione.
-**Sección relacionada**: [Control de errores en los datos](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**Sección relacionada**: [Control de errores en los datos](./error-handling-in-data.md?view=sql-server-2017)
 
 **Truncamiento**
 

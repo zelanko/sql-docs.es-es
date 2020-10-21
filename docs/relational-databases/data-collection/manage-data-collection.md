@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1056cfe7d80bdf97c97c344d3b9f3dfc4dc6fdcd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 754aff825e0da8fd888deafb927936599a4d8631
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494719"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196769"
 ---
 # <a name="manage-data-collection"></a>Administrar la recopilación de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "88494719"
   
 >**IMPORTANTE:** A diferencia de los procedimientos almacenados normales, los procedimientos almacenados del recopilador usan parámetros con establecimiento estricto de tipos y no admiten la conversión automática de tipos de datos. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devuelve un error.  
   
- Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear y ejecutar los ejemplos de código que se proporcionan. Para obtener más información, vea [Explorador de objetos](../../ssms/object/object-explorer.md). Como alternativa, puede crear la consulta en cualquier editor y guardarla en un archivo de texto con la extensión de nombre de archivo .sql. Puede ejecutar la consulta desde el símbolo del sistema de Windows mediante la utilidad **sqlcmd** . Para obtener más información, vea [Usar la utilidad sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
+ Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear y ejecutar los ejemplos de código que se proporcionan. Para obtener más información, vea [Explorador de objetos](../../ssms/object/object-explorer.md). Como alternativa, puede crear la consulta en cualquier editor y guardarla en un archivo de texto con la extensión de nombre de archivo .sql. Puede ejecutar la consulta desde el símbolo del sistema de Windows mediante la utilidad **sqlcmd** . Para obtener más información, vea [Usar la utilidad sqlcmd](../../ssms/scripting/sqlcmd-use-the-utility.md).  
   
 ### <a name="stored-procedures-and-views"></a>Procedimientos almacenados y vistas  
  **Trabajar con el recopilador de datos**  
@@ -174,7 +174,6 @@ ms.locfileid: "88494719"
   
 ## <a name="see-also"></a>Consulte también  
  [Ejecutar un procedimiento almacenado](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [Usar SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
+ [Usar SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)  
-  
   

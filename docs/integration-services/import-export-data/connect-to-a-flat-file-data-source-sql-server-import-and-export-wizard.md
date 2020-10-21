@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea6e8b6a3628fb0f8d93aaa6b8775999b0481266
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbbd57a1f195b3e2363357e653ff77129bb9f224
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495658"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195199"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Conexión a un origen de datos de archivo plano (Asistente para importación y exportación de SQL Server)
 
@@ -261,7 +261,7 @@ En la página **Vista previa**, compruebe que la lista de columnas y los datos d
  **Actualizar**  
  Al hacer clic en **Actualizar**, verá el efecto de cambiar el número de filas que se van a omitir. Este botón solo se hace visible después de cambiar otras opciones de conexión.  
  
-Para obtener más información sobre la página **Vista previa**, consulte la siguiente página de referencia de Integration Services: [Editor del administrador de conexiones de archivos planos &#40;página Vista previa&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md).
+Para obtener más información sobre la página **Vista previa**, consulte la siguiente página de referencia de Integration Services: [Editor del administrador de conexiones de archivos planos &#40;página Vista previa&#41;](../connection-manager/flat-file-connection-manager.md).
 
 ## <a name="connect-to-a-flat-file-destination"></a>Conexión a un destino de archivo plano
 Para un destino de archivo plano, solo hay una página de opciones, como se muestra en la siguiente captura de pantalla. Busque y seleccione el archivo y compruebe la configuración en la sección **Formato**.
@@ -303,4 +303,3 @@ Para un destino de archivo plano, solo hay una página de opciones, como se mues
 ## <a name="see-also"></a>Consulte también
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) (Selección de un origen de datos)  
 [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md) (Selección de un destino)
-

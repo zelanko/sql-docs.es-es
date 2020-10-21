@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d40072ea8b347001feba5d74e6e08c8c4c8ae340
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 49f47819a6ca128ce45f950c9cd6881e325bec59
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88089035"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115608"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>Inicio rápido: Ejecutar SQL Server en la nube
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-En este inicio rápido, instalará SQL Server en Red Hat Enterprise Linux (RHEL), en SUSE Linux Enterprise Server (SLES) o en Ubuntu en la nube que prefiera. Vaya a [Aprovisionamiento de una máquina virtual Linux con SQL Server en Azure Portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json) para ejecutar SQL Server en Linux en Azure.
+En este inicio rápido, instalará SQL Server en Red Hat Enterprise Linux (RHEL), en SUSE Linux Enterprise Server (SLES) o en Ubuntu en la nube que prefiera. Vaya a [Aprovisionamiento de una máquina virtual Linux con SQL Server en Azure Portal](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%252fsql%252ftoc%252ftoc.json) para ejecutar SQL Server en Linux en Azure.
 
 > [!NOTE]
 > Si elige ejecutar una edición de pago de SQL Server, deberá traer su propia licencia (BYOL).

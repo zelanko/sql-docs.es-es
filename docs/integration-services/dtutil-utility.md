@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae472556993fafc52719fcf929bf88c35098e196
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41d40f419497ccb2917052ac477c888a9338c135
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392161"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195267"
 ---
 # <a name="dtutil-utility"></a>dtutil, utilidad
 
@@ -268,7 +268,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  El hash utilizado en este ejemplo no es real.  
   
- Para obtener más información, vea la sección CertMgr en este artículo sobre [la firma y la comprobación de código con Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100).  
+ Para obtener más información, vea la sección CertMgr en este artículo sobre [la firma y la comprobación de código con Authenticode](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537364(v=vs.85)).  
   
 ### <a name="encrypt-examples"></a>Ejemplos de cifrado  
  El siguiente ejemplo cifra el archivo PackageToEncrypt.dtsx basado en un archivo en el archivo EncryptedPackage.dts basado en un archivo, utilizando el cifrado de todo el paquete con una contraseña. La contraseña que se utiliza para el cifrado es *EncPswd*.  
@@ -279,5 +279,4 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
   
 ## <a name="see-also"></a>Consulte también  
 [Ejecutar paquetes de Integration Services (SSIS)](../integration-services/packages/run-integration-services-ssis-packages.md)  
-  
   

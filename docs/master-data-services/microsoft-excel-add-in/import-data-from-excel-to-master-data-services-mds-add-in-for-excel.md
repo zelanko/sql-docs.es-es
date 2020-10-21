@@ -1,6 +1,7 @@
 ---
-title: Importación de datos de Excel en Master Data Services (complemento MDS para Excel) | Microsoft Docs
-ms.custom: microsoft-excel-add-in
+description: Importación de datos de Excel en Master Data Services (complemento MDS para Excel)
+title: Importar datos de Excel
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 093f8a471210b73b8c3cdaf1b2bb083b31980c52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a06d8338f334074ede68f34c8145f0d8fecb529f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257752"
 ---
 # <a name="import-data-from-excel-to-master-data-services-mds-add-in-for-excel"></a>Importación de datos de Excel en Master Data Services (complemento MDS para Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede publicar los datos en el repositorio MDS cuando termine de trabajar en Excel y desee guardar los cambios para que otros usuarios tengan acceso a ellos.  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68092278"
   
 -   La hoja de cálculo activa debe contener datos administrados por MDS y debe haber realizado cambios o adiciones a los datos administrados por MDS.  
   
--   Si agrega miembros, no tiene que especificar un valor de **Código** si los códigos para la entidad se generan automáticamente. Para obtener más información, consulte [Creación automática de código &#40;Master Data Services&#41;](../../master-data-services/automatic-code-creation-master-data-services.md).  
+-   Si agrega miembros, no tiene que especificar un valor de **Código** si los códigos para la entidad se generan automáticamente. Para obtener más información, consulte [creación automática de código &#40;Master Data Services&#41;](../../master-data-services/automatic-code-creation-master-data-services.md).  
   
 ### <a name="to-publish-data-to-the-mds-repository"></a>Publicar datos en el repositorio MDS  
   
@@ -52,8 +53,8 @@ ms.locfileid: "68092278"
 ## <a name="next-steps"></a>Pasos siguientes  
  [Aplicar reglas de negocios &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>Vea también  
- [Información general: importación de datos desde Excel &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)   
+## <a name="see-also"></a>Consulte también  
+ [Información general: importar datos desde Excel &#40;Complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)   
  [Validar datos &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   
   

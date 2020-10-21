@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fddf4562e1d2899e667f245b32309617c4147b29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f4d8059ee7e0e2f9d466289f4b40f9f51ff950
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495760"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194687"
 ---
 # <a name="cache-transform"></a>Transformación de caché
 
@@ -33,7 +33,7 @@ ms.locfileid: "88495760"
   
  Puede usar el Administrador de conexiones de caché si desea configurar la transformación Búsqueda para que se ejecute en modo de caché completa. En este modo, el conjunto de datos de referencia se carga en la memoria caché antes de que se ejecute la transformación Búsqueda.  
   
- Para obtener instrucciones sobre cómo configurar la transformación Búsqueda en modo de caché completa con el Administrador de conexiones de caché y la transformación de caché, vea [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md).  
+ Para obtener instrucciones sobre cómo configurar la transformación Búsqueda en modo de caché completa con el Administrador de conexiones de caché y la transformación de caché, vea [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md).  
   
  Para obtener más información acerca del almacenamiento en memoria caché del conjunto de datos de referencia, vea [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88495760"
   
  En un paquete único, solo una transformación de caché puede escribir datos en el mismo administrador de conexiones de caché. Si el paquete contiene varias transformaciones de caché, la primera transformación de caché a la que se llama cuando se ejecuta el paquete escribe los datos en el administrador de conexiones. Las operaciones de escritura de las transformaciones de caché posteriores producirán errores.  
   
- Para obtener más información, vea [Administrador de conexiones de caché](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ Para obtener más información, vea [Administrador de conexiones de caché](../../connection-manager/cache-connection-manager.md).  
   
 ## <a name="configuration-of-the-cache-transform"></a>Configuración de la transformación de caché  
  Puede configurar el administrador de conexiones de caché para guardar los datos en un archivo caché (.caw).  
@@ -65,7 +65,7 @@ ms.locfileid: "88495760"
 ## <a name="cache-transformation-editor-connection-manager-page"></a>Editor de transformación Caché (página Administrador de conexiones)
   Use la pestaña **Administrador de conexiones** del cuadro de diálogo **Editor de transformación Caché** para seleccionar un administrador de conexiones de caché existente o crear uno nuevo.  
   
- Para obtener más información acerca del administrador de conexiones de caché, vea [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ Para obtener más información acerca del administrador de conexiones de caché, vea [Cache Connection Manager](../../connection-manager/cache-connection-manager.md).  
   
 ### <a name="options"></a>Opciones  
  **Cache connection manager**  
@@ -80,5 +80,4 @@ ms.locfileid: "88495760"
 ## <a name="see-also"></a>Consulte también  
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)  
-  
   

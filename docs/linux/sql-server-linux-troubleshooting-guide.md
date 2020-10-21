@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 144da58b008e79e368e3505b7aebb2cb8e4d7035
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088761"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115806"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Solución de problemas de SQL Server en Linux
 
@@ -42,11 +42,11 @@ Si tiene dificultades para conectarse a la instancia de SQL Server de Linux, hay
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > Las máquinas virtuales de Azure son una excepción a esta técnica. En este caso, [busque la dirección IP pública de la máquina virtual en Azure Portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
+   > Las máquinas virtuales de Azure son una excepción a esta técnica. En este caso, [busque la dirección IP pública de la máquina virtual en Azure Portal](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
 
 - Si procede, compruebe que ha abierto el puerto de SQL Server (valor predeterminado 1433) en el firewall.
 
-- En el caso de las máquinas virtuales de Azure, compruebe que tiene una [regla de grupo de seguridad de red para el puerto predeterminado de SQL Server](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
+- En el caso de las máquinas virtuales de Azure, compruebe que tiene una [regla de grupo de seguridad de red para el puerto predeterminado de SQL Server](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
 
 - Compruebe que el nombre de usuario y la contraseña no contienen errores tipográficos ni espacios adicionales, y que el uso de mayúsculas sea correcto.
 
@@ -90,7 +90,7 @@ Puede detener o reiniciar el servicio SQL Server según sea necesario mediante l
    ```
 
 > [!TIP]
-> Para obtener más sugerencias para la solución de problemas de Docker, vea [Solución de problemas de contenedores de Docker de SQL Server](sql-server-linux-configure-docker.md#troubleshooting).
+> Para obtener más sugerencias para la solución de problemas de Docker, vea [Solución de problemas de contenedores de Docker de SQL Server](./sql-server-linux-docker-container-troubleshooting.md).
 
 ## <a name="access-the-log-files"></a>Acceso a los archivos de registro
    
@@ -109,7 +109,7 @@ Si lo prefiere, también puede usar el comando siguiente para convertir los arch
    ```
 ## <a name="extended-events"></a>Eventos extendidos
 
-Los eventos extendidos se pueden consultar con un comando SQL.  [Aquí](https://technet.microsoft.com/library/bb630282.aspx) encontrará más información sobre los eventos extendidos:
+Los eventos extendidos se pueden consultar con un comando SQL.  [Aquí](../relational-databases/extended-events/extended-events.md) encontrará más información sobre los eventos extendidos:
 
 ## <a name="crash-dumps"></a>Volcados de memoria 
 
@@ -197,7 +197,7 @@ Hay muchos factores que afectan al rendimiento, como el diseño de la base de da
 
 - [Almacén de consultas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [Vistas de administración dinámica del sistema (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [Panel de rendimiento en SQL Server Management Studio](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
+- [Panel de rendimiento en SQL Server Management Studio](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in)
 
 ## <a name="common-issues"></a>Problemas comunes
 

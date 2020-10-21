@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b19fb7a9ab60f5f89a12ab3311c39f0611d233f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45181333134ff1150d4a121bf3201e78b1c2fde0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477877"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194205"
 ---
 # <a name="raw-file-source"></a>archivo sin formato, origen
 
@@ -49,7 +49,7 @@ ms.locfileid: "88477877"
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propiedades personalizadas de archivo sin formato](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -67,5 +67,4 @@ ms.locfileid: "88477877"
 ## <a name="see-also"></a>Vea también  
  [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
-  
   

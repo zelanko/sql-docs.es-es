@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d70dc722250d33de52bf8d1f13d1ab06083108
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392121"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194786"
 ---
 # <a name="odbc-source"></a>Origen ODBC
 
@@ -51,7 +51,7 @@ ms.locfileid: "88392121"
   
 -   Columnas estándar de datos de salida.  
   
- Según la configuración del comportamiento de los errores, el origen ODBC permite devolver los errores (conversión de datos, truncamiento) que aparecerán durante el proceso de extracción en la salida de error. Para obtener más información, vea [Editor de destino de ODBC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
+ Según la configuración del comportamiento de los errores, el origen ODBC permite devolver los errores (conversión de datos, truncamiento) que aparecerán durante el proceso de extracción en la salida de error. Para obtener más información, vea [Editor de destino de ODBC &#40;página Administrador de conexiones&#41;](./odbc-destination.md).  
   
 ## <a name="data-type-support"></a>Compatibilidad con tipos de datos  
  Para obtener información sobre los tipos de datos admitidos por el origen ODBC, vea Conector para conectividad abierta de base de datos (ODBC).  
@@ -195,5 +195,4 @@ ms.locfileid: "88392121"
   
 #### <a name="redirect-flow"></a>Redirigir fila  
  La fila que está produciendo el error o el truncamiento se dirige a la salida de error del origen de ODBC.  
-  
   

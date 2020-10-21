@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0f2d241fa54c59eed331c1377f828aec980691e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4d9e438aaef2df393a73e7050265b3f24ecf2d5b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430207"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196415"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Comenzar con este sencillo ejemplo del Asistente para importación y exportación
 
@@ -25,7 +25,7 @@ ms.locfileid: "88430207"
 Para obtener información acerca de lo que puede esperar del Asistente para importación y exportación de SQL Server, siga los pasos de este escenario común: importar datos desde una hoja de cálculo de Excel a una base de datos de SQL Server. Incluso si piensa utilizar un origen y un destino diferentes, este tema le muestra la mayoría de conocimientos necesarios para ejecutar el asistente.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Requisito previo: ¿Está instalado el asistente en el equipo?
-Si quiere ejecutar el asistente, pero no tiene [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado en el equipo, puede instalar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la instalación de SQL Server Data Tools (SSDT). Para obtener más información, vea [Descargar SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Si quiere ejecutar el asistente, pero no tiene [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado en el equipo, puede instalar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la instalación de SQL Server Data Tools (SSDT). Para obtener más información, vea [Descargar SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>Datos de origen de Excel para este ejemplo
 Estos son los datos de origen que se van a copiar: una pequeña tabla de dos columnas en la hoja de cálculo WizardWalkthrough del libro de Excel WizardWalkthrough.xlsx.

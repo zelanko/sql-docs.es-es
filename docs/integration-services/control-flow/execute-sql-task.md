@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6138e30bf4794fff847dd7a0750d59c8d8fb884a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8155db361eeffd3b84ba1aadf313ecef4652e9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394171"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196547"
 ---
 # <a name="execute-sql-task"></a>Tarea Ejecutar SQL
 
@@ -69,7 +69,7 @@ ms.locfileid: "88394171"
 >  Es posible que la tarea Ejecutar SQL no pueda analizar correctamente instrucciones SQL válidas escritas fuera de dicha tarea.  
   
 > [!NOTE]  
->  La tarea Ejecutar SQL usa el valor de enumeración de ParseMode **RecognizeAll** . Para obtener más información, vea [Espacio de nombres ManagedBatchParser](https://go.microsoft.com/fwlink/?LinkId=223617).  
+>  La tarea Ejecutar SQL usa el valor de enumeración de ParseMode **RecognizeAll** . Para obtener más información, vea [Espacio de nombres ManagedBatchParser](/dotnet/api/managedbatchparser).  
   
 ## <a name="send-multiple-statements-in-a-batch"></a>Enviar varias instrucciones en un lote  
  Si incluye varias instrucciones en una tarea Ejecutar SQL, puede agruparlas y ejecutarlas como un lote. Para indicar el final de un lote, utilice el comando GO. Todas las instrucciones SQL entre dos comandos GO se envían en un lote al proveedor OLE DB para que se ejecuten. El comando SQL puede incluir varios lotes separados por comandos GO.  
@@ -115,7 +115,7 @@ ms.locfileid: "88394171"
 ## <a name="general-page---execute-sql-task-editor"></a>Página general: Editor de la tarea Ejecutar SQL
  Use la página **General** del cuadro de diálogo **Editor de la tarea Ejecutar SQL** para configurar la tarea Ejecutar SQL y proporcionar la instrucción SQL de ejecución de la tarea.  
 
-Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis, vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis, vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](../../t-sql/language-reference.md).  
   
 ### <a name="static-options"></a>Opciones estáticas  
  **Nombre**  
@@ -186,19 +186,19 @@ Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis
  **SQLStatement**  
  Escriba la instrucción SQL que quiere ejecutar en el cuadro de opción, o bien haga clic en el botón Examinar […] para escribir la instrucción SQL en el cuadro de diálogo **Escribir consulta SQL**; también puede hacer clic en **Generar consulta** para escribir la instrucción en el cuadro de diálogo **Generador de consultas**.  
   
- **Temas relacionados:** [Generador de consultas](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **Temas relacionados:** [Generador de consultas](../integration-services-ssis-queries.md)  
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Conexión de archivos  
  **FileConnection**  
  Seleccione un administrador de conexiones de archivos existente o haga clic en \<**New connection...**> para crear uno nuevo.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../connection-manager/file-connection-manager.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
  Seleccione una variable existente o haga clic en \<**New variable...**> para crear una nueva.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](../integration-services-ssis-variables.md)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Página Asignación de parámetros: Editor de la tarea Ejecutar SQL
 Use la página **Asignación de parámetros** del cuadro de diálogo **Editor de la tarea Ejecutar SQL** para asignar variables a los parámetros de la instrucción SQL.  
@@ -385,7 +385,7 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
 |Tipo de conexión|Sintaxis de EXEC|  
 |---------------------|-----------------|  
 |EXCEL y OLE DB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Para obtener más información sobre la sintaxis de la llamada ODBC, consulte el tema sobre [Parámetros de procedimientos](https://go.microsoft.com/fwlink/?LinkId=89462), en la Referencia del programador de ODBC de MSDN Library.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Para obtener más información sobre la sintaxis de la llamada ODBC, consulte el tema sobre [Parámetros de procedimientos](../../odbc/reference/develop-app/procedure-parameters.md), en la Referencia del programador de ODBC de MSDN Library.|  
 |ADO|Si IsQueryStoredProcedure se establece en **False**, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Si IsQueryStoredProcedure se establece en **True**, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Si IsQueryStoredProcedure se establece en **False**, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Si IsQueryStoredProcedure se establece en **True**, `uspGetBillOfMaterials`|  
   
@@ -448,7 +448,7 @@ En esta sección se describe cómo utilizar una instrucción SQL con parámetros
     |ODBC|1, 2, 3…|  
     |EXCEL y OLE DB|0, 1, 2, 3…|  
   
-10. En la lista **Nombre de variable** , seleccione una variable. Para más información, vea [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+10. En la lista **Nombre de variable** , seleccione una variable. Para más información, vea [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](../integration-services-ssis-variables.md).  
   
 11. En la lista **Dirección** , especifique si el parámetro es una entrada, una salida o un valor devuelto.  
   
@@ -474,7 +474,7 @@ En esta sección se describe cómo utilizar una instrucción SQL con parámetros
 |Tipo de conexión|Sintaxis de EXEC|  
 |---------------------|-----------------|  
 |EXCEL y OLE DB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Para obtener más información sobre la sintaxis de la llamada ODBC, consulte el tema sobre [Parámetros de procedimientos](https://go.microsoft.com/fwlink/?LinkId=89462), en la Referencia del programador de ODBC de MSDN Library.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Para obtener más información sobre la sintaxis de la llamada ODBC, consulte el tema sobre [Parámetros de procedimientos](../../odbc/reference/develop-app/procedure-parameters.md), en la Referencia del programador de ODBC de MSDN Library.|  
 |ADO|Si IsQueryStoreProcedure se establece en **False**, `EXEC ? = myStoredProcedure 1`<br /><br /> Si IsQueryStoreProcedure se establece en **True**, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Establecer IsQueryStoreProcedure en **True**.<br /><br /> `myStoredProcedure`|  
   
@@ -557,7 +557,7 @@ En esta sección se describe cómo crear una asignación entre un conjunto de re
   
 8.  Para agregar una asignación de conjunto de resultados, haga clic en **Agregar**.  
   
-9. En la lista **Nombre de variable** , seleccione una variable o cree una variable nueva. Para más información, vea [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+9. En la lista **Nombre de variable** , seleccione una variable o cree una variable nueva. Para más información, vea [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](../integration-services-ssis-variables.md).  
   
 10. En la lista **Nombre del resultado** , opcionalmente, modifique el nombre del conjunto de resultados.  
   
@@ -579,5 +579,4 @@ En esta sección se describe cómo crear una asignación entre un conjunto de re
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
-|**ExecuteSQLExecutingQuery**|Proporciona información sobre las fases de ejecución de la instrucción SQL. Las entradas de registro se escriben cuando la tarea adquiere una conexión con la base de datos, cuando la tarea comienza a preparar la instrucción SQL y una vez que se completa la ejecución de la instrucción SQL. La entrada del registro para la fase de preparación incluye la instrucción SQL que utiliza la tarea.|  
-
+|**ExecuteSQLExecutingQuery**|Proporciona información sobre las fases de ejecución de la instrucción SQL. Las entradas de registro se escriben cuando la tarea adquiere una conexión con la base de datos, cuando la tarea comienza a preparar la instrucción SQL y una vez que se completa la ejecución de la instrucción SQL. La entrada del registro para la fase de preparación incluye la instrucción SQL que utiliza la tarea.|

@@ -1,5 +1,6 @@
 ---
-title: Usuarios y grupos (Master Data Services) | Microsoft Docs
+title: Usuarios y grupos
+description: Averigüe cómo conceder acceso a la aplicación Web de Master Data Manager. Un usuario debe tener una cuenta adecuada.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f52031d8dead33601dd9f60e5475da53b0b9c9d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0136c2fe08e59169eda2b41a0557b7fd66c3e437
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92258060"
 ---
 # <a name="users-and-groups-master-data-services"></a>Usuarios y grupos (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Para tener acceso a la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] un usuario debe tener una cuenta de dominio de Windows o una cuenta en el equipo servidor donde se instale [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para conceder acceso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] puede:  
   
@@ -39,12 +40,12 @@ ms.locfileid: "68102579"
   
  Si un usuario o grupo necesita tener acceso a otras áreas funcionales, se debe asignar al usuario o grupo acceso al área funcional específica.  
   
-## <a name="best-practice"></a>Práctica recomendada  
+## <a name="best-practice"></a>Procedimiento recomendado  
  Para simplificar la administración, cree grupos y asigne a cada uno permiso a las áreas funcionales y a los objetos de modelo. Puede agregar usuarios a los grupos y quitarlos a continuación sin tener acceso a la interfaz de usuario de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  
   
  No asigne ningún permiso adicional a ningún usuario individual y no incluya usuarios en varios grupos que tengan acceso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Además, no use los permisos de miembros de la jerarquía a menos que desee que un grupo tenga limitado el acceso a miembros concretos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar un usuario &#40;Master Data Services&#41;](../master-data-services/add-a-user-master-data-services.md)   
  [Agregar un grupo &#40;Master Data Services&#41;](../master-data-services/add-a-group-master-data-services.md)   
  [Eliminar usuarios o grupos &#40;Master Data Services&#41;](../master-data-services/delete-users-or-groups-master-data-services.md)   

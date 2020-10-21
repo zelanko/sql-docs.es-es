@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e69c2b63e617e37fcd4dec1b7589e9b1808fefce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ce27ef50da9b1c72bc3b620dda61e6c1c925d14
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88348451"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195967"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Agrupación aproximada, transformación
 
@@ -44,7 +44,7 @@ ms.locfileid: "88348451"
   La transformación Agrupación aproximada realiza tareas de limpieza de datos, identificando filas de datos que probablemente se van a duplicar y seleccionando una fila de datos canónica para utilizarla en la normalización de los datos.  
   
 > [!NOTE]  
->   Para obtener información más detallada acerca de la transformación Agrupación aproximada, incluyendo las limitaciones de rendimiento y memoria, vea las notas del producto [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
+>   Para obtener información más detallada acerca de la transformación Agrupación aproximada, incluyendo las limitaciones de rendimiento y memoria, vea las notas del producto [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90)).  
   
  La transformación de Búsqueda aproximada requiere una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para crear las tablas temporales de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que necesita el algoritmo de la transformación para realizar su trabajo. La conexión debe establecerla un usuario que tenga permiso para crear tablas en la base de datos.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88348451"
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -184,5 +184,4 @@ ms.locfileid: "88348451"
 ## <a name="see-also"></a>Vea también  
  [Transformación Búsqueda aproximada](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

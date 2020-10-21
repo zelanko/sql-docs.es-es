@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ff8e4b35d30e9b2504dd128ca9694007647f5eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7aa2c4e59ced60c31467b13a4de154887c84f52
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477936"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195417"
 ---
 # <a name="transfer-logins-task"></a>Tarea Transferir inicios de sesión
 
@@ -40,7 +40,7 @@ ms.locfileid: "88477936"
  La tarea Transferir inicios de sesión no indica el progreso incremental de la transferencia; solo indica 0% y 100%.  
   
 ## <a name="execution-value"></a>Valor de ejecución  
- El valor de ejecución, que se define en la propiedad **ExecutionValue** de la tarea, devuelve el número de inicios de sesión transferidos. Si se asigna una variable definida por el usuario a la propiedad **ExecValueVariable** de la tarea Transferir inicios de sesión, se puede conseguir que la información sobre la transferencia de inicios de sesión esté disponible para otros objetos del paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ El valor de ejecución, que se define en la propiedad **ExecutionValue** de la tarea, devuelve el número de inicios de sesión transferidos. Si se asigna una variable definida por el usuario a la propiedad **ExecValueVariable** de la tarea Transferir inicios de sesión, se puede conseguir que la información sobre la transferencia de inicios de sesión esté disponible para otros objetos del paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](../integration-services-ssis-variables.md).  
   
 ## <a name="log-entries"></a>Entradas del registro  
  La tarea Transferir inicios de sesión incluye las siguientes entradas del registro personalizadas:  
@@ -79,7 +79,7 @@ ms.locfileid: "88477936"
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-logins-task"></a>Configuración mediante programación de la tarea Transferir inicios de sesión  
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en el tema siguiente:  
@@ -140,4 +140,3 @@ ms.locfileid: "88477936"
   
  **CopySids**  
  Seleccione esta opción si los identificadores de seguridad asociados a los inicios de sesión deben copiarse al servidor de destino. **CopySids** debe establecerse en **True** si la tarea Transferir inicios de sesión se utiliza junto con la tarea Transferir bases de datos. De lo contrario, la base de datos transferida no reconocerá los inicios de sesión copiados.  
-  

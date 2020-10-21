@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ba92220b368e1ef7ee1218d972e6113e1378d27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d82aae4ee0195adca300d16bf9f2a2217c40a38c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430657"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194597"
 ---
 # <a name="deploy-packages-with-ssis"></a>Implementar paquetes con SSIS
 
@@ -37,9 +37,9 @@ ms.locfileid: "88430657"
     
 Primero, realizará tareas para preparar la implementación. Creará un nuevo proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y agregará paquetes y archivos de datos existentes al proyecto. No creará nuevos paquetes desde el principio; solamente trabajará con paquetes completados creados exclusivamente para este tutorial. En este tutorial no modificará la funcionalidad de los paquetes; no obstante, después de agregar los paquetes al proyecto, puede resultar útil abrirlos en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] y revisar el contenido de cada paquete. Mediante el examen de los paquetes, conocerá las dependencias de los paquetes como los archivos de registro y otras características interesantes de los mismos.    
     
-Antes de llevar a cabo la implementación, también actualizará los paquetes para utilizar configuraciones. Las configuraciones permiten la actualización de las propiedades de los paquetes y los objetos de paquete en tiempo de ejecución. En este tutorial utilizará configuraciones para actualizar las cadenas de conexión de archivos de registro y de texto, y las ubicaciones de los archivos XML y XSD que usa el paquete. Para obtener más información, consulte [Configuraciones de paquetes](../integration-services/packages/package-configurations.md) y [Crear configuraciones de paquetes](../integration-services/packages/create-package-configurations.md).    
+Antes de llevar a cabo la implementación, también actualizará los paquetes para utilizar configuraciones. Las configuraciones permiten la actualización de las propiedades de los paquetes y los objetos de paquete en tiempo de ejecución. En este tutorial utilizará configuraciones para actualizar las cadenas de conexión de archivos de registro y de texto, y las ubicaciones de los archivos XML y XSD que usa el paquete. Para obtener más información, consulte [Configuraciones de paquetes](./packages/legacy-package-deployment-ssis.md) y [Crear configuraciones de paquetes](./packages/legacy-package-deployment-ssis.md).    
     
-Después de comprobar que los paquetes funcionan correctamente en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], creará el paquete de implementación que se usará para instalar los paquetes. El paquete de implementación contendrá los archivos de paquete y otros elementos que ha agregado al proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , las dependencias del paquete que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye automáticamente y la utilidad de implementación que ha generado. Para más información, consulte [Create a Deployment Utility](../integration-services/packages/create-a-deployment-utility.md).    
+Después de comprobar que los paquetes funcionan correctamente en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], creará el paquete de implementación que se usará para instalar los paquetes. El paquete de implementación contendrá los archivos de paquete y otros elementos que ha agregado al proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , las dependencias del paquete que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye automáticamente y la utilidad de implementación que ha generado. Para más información, consulte [Create a Deployment Utility](./packages/legacy-package-deployment-ssis.md).    
     
 A continuación, copiará el paquete de implementación en el equipo de destino y ejecutará el Asistente para la instalación de paquetes para instalar los paquetes y las dependencias de paquete. Los paquetes se instalarán en la base de datos msdb de SQL Server, y los archivos auxiliares y de ayuda se instalarán en el sistema de archivos. Puesto que los paquetes implementados utilizan configuraciones, actualizará la configuración para que use nuevos valores que permitirán que los paquetes se ejecuten correctamente en el nuevo entorno.    
     
@@ -98,5 +98,3 @@ En esta lección, generará una utilidad de implementación y comprobará que el
     
 [Lección 3: Instalación de paquetes SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
 En esta lección, copiará el paquete de implementación en el equipo de destino, instalará los paquetes y, a continuación, los ejecutará.    
-    
-

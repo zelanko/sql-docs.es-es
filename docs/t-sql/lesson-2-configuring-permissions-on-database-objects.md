@@ -13,12 +13,12 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 195390d76716bcad18df884491fa07335c70665b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15986ee3b8407a62fc4ed40a49c043921fe34588
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88306635"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035859"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>Lección 2: Configuración de permisos en objetos de base de datos
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -30,11 +30,11 @@ La concesión de acceso de usuario a una base de datos implica tres pasos. Prime
 ## <a name="prerequisites"></a>Requisitos previos
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, así como acceso a una instancia de SQL Server. 
 
-- Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 
 Si no tiene acceso a ninguna instancia de SQL Server, seleccione su plataforma en uno de los vínculos siguientes. Si elige la autenticación de SQL, use sus credenciales de inicio de sesión de SQL Server.
 - **Windows**: [Descargar SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS**: [Descargar SQL Server 2017 en Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+- **macOS**: [Descargar SQL Server 2017 en Docker](../linux/quickstart-install-connect-docker.md).
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -111,4 +111,3 @@ En el siguiente artículo se muestra cómo quitar objetos de base de datos cread
 Vaya al siguiente artículo para más información:
 > [!div class="nextstepaction"]
 >[Pasos siguientes](lesson-3-deleting-database-objects.md)
-  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7d8ed9805a62095f732f3f4621d3c133793ac7bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a04463a998cec2903fb11c530144a103d296a6a9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477642"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193195"
 ---
 # <a name="merge-transformation"></a>Mezclar, transformación
 
@@ -64,7 +64,7 @@ ms.locfileid: "88477642"
   
  Para obtener más información acerca de las propiedades que puede establecer mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "88477642"
 >  La transformación Mezclar requiere datos ordenados para sus entradas. Para obtener más información sobre este importante requisito, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
 ### <a name="options"></a>Opciones  
- **Nombre de columna de salida**  
+ **Nombre de la columna de salida**  
  Especifique el nombre de la columna de salida.  
   
  **Entrada de Mezclar 1**  
@@ -91,10 +91,9 @@ ms.locfileid: "88477642"
  **Entrada de Mezclar 2**  
  Seleccione la columna que desea mezclar como Entrada de Mezclar 2.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Transformación Combinación de mezcla](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Transformación Unión de todo](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

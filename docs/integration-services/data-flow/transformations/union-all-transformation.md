@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cb32c68f05e4be6b25d0fc20ae088aa6760bfd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59756c7690301d35a1ad53b9db5bde441ce74c24
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425627"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194620"
 ---
 # <a name="union-all-transformation"></a>Unión de todo, transformación
 
@@ -47,7 +47,7 @@ ms.locfileid: "88425627"
 ## <a name="configuration-of-the-union-all-transformation"></a>Configuración de la transformación Unión de todo  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información acerca de las propiedades que puede establecer mediante programación, vea [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ Para obtener más información acerca de las propiedades que puede establecer mediante programación, vea [Common Properties](../set-the-properties-of-a-data-flow-component.md).  
   
  Para obtener más información sobre cómo establecer valores de propiedades, haga clic en uno de los temas siguientes:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "88425627"
   Use el cuadro de diálogo **Editor de transformación Unión de todo** para combinar varios conjuntos de filas de entrada en un solo conjunto de filas de salida. Al incluir la transformación Unión de todo en un flujo de datos, puede combinar datos de varios flujos, crear conjuntos de datos complejos anidando transformaciones Unión de todo y volver a combinar filas después de corregir errores en los datos.  
   
 ### <a name="options"></a>Opciones  
- **Nombre de columna de salida**  
+ **Nombre de la columna de salida**  
  Escriba un alias para cada columna. El valor predeterminado es el nombre de la columna de entrada de la primera entrada (referencia); no obstante, puede elegir un nombre descriptivo único.  
   
  **Entrada de Unión de todo 1**  
@@ -68,5 +68,4 @@ ms.locfileid: "88425627"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Combinar datos mediante la transformación Unión de todo](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
-  
   

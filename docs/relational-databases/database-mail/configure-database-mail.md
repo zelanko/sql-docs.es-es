@@ -40,12 +40,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ecf2233470afe15337c41a0a6051b41f18e0f40f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: daf9915e1aff8cf800fbc68929e7efdd6f95f4a2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421089"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192602"
 ---
 # <a name="configure-database-mail"></a>Configuración de Correo electrónico de base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -440,7 +440,7 @@ ms.locfileid: "88421089"
  **mailitem_id** del mensaje de correo electrónico de prueba.  
   
  **Solución de problemas**  
- Haga clic para abrir los Libros en pantalla en el tema [Solucionar problemas del Correo electrónico de base de datos](https://msdn.microsoft.com/library/ms188663.aspx).  
+ Haga clic para abrir los Libros en pantalla en el tema [Solucionar problemas del Correo electrónico de base de datos](/previous-versions/sql/sql-server-2008-r2/ms188663(v=sql.105)).  
   
  [Asistente para configuración de Correo electrónico de base de datos](#DBWizard)  
   
@@ -460,5 +460,4 @@ ms.locfileid: "88421089"
 6.  Ejecute el script para crear la configuración.  
   
 7.  El script no garantiza el acceso al perfil para los usuarios de la base de datos. Por lo tanto, de forma predeterminada, solo pueden utilizar el perfil los miembros del rol fijo de seguridad **sysadmin** . Para obtener más información sobre cómo conceder acceso a los perfiles, vea [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md).  
-  
   

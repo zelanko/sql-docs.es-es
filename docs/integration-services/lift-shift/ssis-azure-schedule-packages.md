@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 42624909f59c1e25d8c75b99c60c19da8b04da85
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 7c61b1b032ef4ff08301c91f080f188d89e2aadc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989978"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195177"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Programar la ejecución de paquetes de SQL Server Integration Services (SSIS) implementados en Azure
 
@@ -44,13 +44,13 @@ Esta característica require SQL Server Management Studio versión 17.7 o superi
 
 ## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> Programar un paquete con trabajos elásticos de SQL Database
 
-Para obtener más información acerca de los trabajos elásticos en SQL Database, consulte [Administración de bases de datos escaladas horizontalmente en la nube](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+Para obtener más información acerca de los trabajos elásticos en SQL Database, consulte [Administración de bases de datos escaladas horizontalmente en la nube](/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Prerequisites
 
 Para poder usar trabajos elásticos para programar paquetes SSIS almacenados en la base de datos del catálogo de SSISDB en un servidor Azure SQL Database, debe realizar las acciones siguientes:
 
-1.  Instale y configure los componentes de trabajos de Elastic Database. Para obtener más información, consulte [Información general sobre la instalación de trabajos de Elastic Database](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
+1.  Instale y configure los componentes de trabajos de Elastic Database. Para obtener más información, consulte [Información general sobre la instalación de trabajos de Elastic Database](/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Cree credenciales de ámbito de base de datos que los trabajos puedan usar para enviar comandos a la base de datos del catálogo de SSIS. Para obtener más información, vea [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) [CREAR CREDENCIAL DE ÁMBITO DE BASE DE DATOS (Transact-SQL)].
 
@@ -166,17 +166,17 @@ Puede programar un paquete de manera indirecta mediante un desencadenador para e
 
 Para programar una canalización de Azure Data Factory, use uno de los desencadenadores siguientes:
 
-- [Desencadenador de programación](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+- [Desencadenador de programación](/azure/data-factory/how-to-create-schedule-trigger)
 
-- [Desencadenador de ventana de saltos de tamaño constante](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+- [Desencadenador de ventana de saltos de tamaño constante](/azure/data-factory/how-to-create-tumbling-window-trigger)
 
-- [Desencadenador basado en eventos](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+- [Desencadenador basado en eventos](/azure/data-factory/how-to-create-event-trigger)
 
 Para ejecutar un paquete SSIS como parte de una canalización Azure Data Factory, use una de las siguientes actividades:
 
-- [Ejecutar una actividad de paquete SSIS](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+- [Ejecutar una actividad de paquete SSIS](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
 
-- [Actividad de procedimiento almacenado](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+- [Actividad de procedimiento almacenado](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

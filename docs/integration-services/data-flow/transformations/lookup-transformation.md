@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f6daf6002a66dcffc032e9953cf400f91d725d91
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: b3c2abcfbb15fa1d2adcd6683e2c2ead5e4572f1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480914"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193227"
 ---
 # <a name="lookup-transformation"></a>Transformación de búsqueda
 
@@ -38,7 +38,7 @@ ms.locfileid: "89480914"
 
   La transformación Búsqueda realiza búsquedas mediante la combinación de datos de columnas de entrada con columnas de un conjunto de datos de referencia. La búsqueda se utiliza para tener acceso a información adicional en una tabla relacionada que está basada en valores de columnas comunes.  
   
- El conjunto de datos de referencia puede ser un archivo caché, una tabla o una vista existente, una tabla nueva o el resultado de una consulta SQL. La transformación Búsqueda utiliza un administrador de conexiones OLE DB o un administrador de conexiones de caché para conectar con el conjunto de datos de referencia. Para obtener más información, vea [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) y [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ El conjunto de datos de referencia puede ser un archivo caché, una tabla o una vista existente, una tabla nueva o el resultado de una consulta SQL. La transformación Búsqueda utiliza un administrador de conexiones OLE DB o un administrador de conexiones de caché para conectar con el conjunto de datos de referencia. Para obtener más información, vea [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) y [Cache Connection Manager](../../connection-manager/cache-connection-manager.md).  
   
  Puede configurar la transformación Búsqueda de las siguientes maneras:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "89480914"
   
  A continuación se describen otras ventajas relacionadas con guardar la memoria caché en un archivo:  
   
--   ***El archivo caché se puede compartir entre varios paquetes. Para más información, vea***  [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***El archivo caché se puede compartir entre varios paquetes. Para más información, vea***  [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
 -   El archivo caché se puede implementar con un paquete. ***De esta forma, podrá utilizar los datos en varios equipos.*** Para obtener información, vea [Cómo crear e implementar una memoria caché para la transformación Búsqueda](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -108,7 +108,7 @@ ms.locfileid: "89480914"
   
      Esta opción de almacenamiento en caché es compatible con la opción de almacenamiento en caché completa disponible para la transformación Búsqueda en [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)].  
   
--   El conjunto de datos de referencia se genera a partir de un origen de datos conectado al flujo de datos o de un archivo caché, y se carga en la memoria caché antes de que se ejecute la transformación Búsqueda. Para tener acceso al conjunto de datos puede usar el administrador de conexiones de caché o la transformación Caché. Para obtener más información, consulte [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) y [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md).  
+-   El conjunto de datos de referencia se genera a partir de un origen de datos conectado al flujo de datos o de un archivo caché, y se carga en la memoria caché antes de que se ejecute la transformación Búsqueda. Para tener acceso al conjunto de datos puede usar el administrador de conexiones de caché o la transformación Caché. Para obtener más información, consulte [Cache Connection Manager](../../connection-manager/cache-connection-manager.md) y [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md).  
   
 -   El conjunto de datos de referencia se genera mediante una tabla, vista o consulta SQL durante la ejecución de la transformación Búsqueda. Las filas con entradas coincidentes en el conjunto de datos de referencia y las que no tienen entradas coincidentes se cargan en la memoria caché.  
   
@@ -127,15 +127,15 @@ ms.locfileid: "89480914"
   
 -   [Implementar una búsqueda en modo No hay caché o Caché parcial](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [Implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones OLE DB](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Vídeo, [Cómo implementar una transformación Búsqueda en modo de memoria caché completa (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031), en msdn.microsoft.com  
+-   Vídeo, [Cómo implementar una transformación Búsqueda en modo de memoria caché completa (vídeo de SQL Server)](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100)), en msdn.microsoft.com  
   
 -   Entrada de blog, [Prácticas recomendadas para utilizar los modos de caché de la transformación Búsqueda](https://go.microsoft.com/fwlink/?LinkId=146623)(en inglés), en blogs.msdn.com  
   
@@ -198,7 +198,7 @@ ms.locfileid: "89480914"
  Seleccione una tabla o vista de la lista o cree una tabla haciendo clic en **Nueva**.  
   
 > [!NOTE]  
->  Si especifica una instrucción SQL en la página **Avanzadas** del **Editor de transformación Búsqueda**, esa instrucción SQL invalida y reemplaza el nombre de tabla seleccionado aquí. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Avanzadas&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md).  
+>  Si especifica una instrucción SQL en la página **Avanzadas** del **Editor de transformación Búsqueda**, esa instrucción SQL invalida y reemplaza el nombre de tabla seleccionado aquí. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Avanzadas&#41;]().  
   
  **Nuevo**  
  Permite crear una tabla con el cuadro de diálogo **Crear tabla** .  
@@ -270,7 +270,7 @@ ms.locfileid: "89480914"
  Modifique la instrucción SQL que se utiliza para generar el conjunto de datos de referencia.  
   
 > [!NOTE]  
->  La instrucción SQL opcional que se especifica en esta página invalida y reemplaza el nombre de tabla que se especificó en la página **Conexión** del **Editor de transformación Búsqueda**. Para más información, vea [Editor de transformación Búsqueda &#40;página Conexión&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
+>  La instrucción SQL opcional que se especifica en esta página invalida y reemplaza el nombre de tabla que se especificó en la página **Conexión** del **Editor de transformación Búsqueda**. Para más información, vea [Editor de transformación Búsqueda &#40;página Conexión&#41;]().  
   
  **Establecer parámetros**  
  Asigne columnas de entrada a parámetros mediante el cuadro de diálogo **Establecer parámetros de consulta** .  
@@ -283,5 +283,4 @@ ms.locfileid: "89480914"
  [Transformación Búsqueda de términos](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

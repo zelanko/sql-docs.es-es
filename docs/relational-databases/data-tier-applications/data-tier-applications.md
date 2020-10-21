@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8d4425da7d337a6628ae6197bedbe03d84897910
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b13b4fcc5fd0071a5b008f4fa8186379ffecf41
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386941"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193055"
 ---
 # <a name="data-tier-applications"></a>Aplicaciones de capa de datos
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "88386941"
 -   **UPGRADE**: se puede actualizar una base de datos mediante un DACPAC. La actualización se admite incluso en las bases de datos no registradas previamente como aplicaciones de capa de datos, pero como resultado de la actualización, la base de datos se registrará implícitamente.  
   
 ## <a name="bacpac"></a>BACPAC  
- Un BACPAC es un archivo de Windows con una extensión .bacpac que encapsula el esquema y los datos de una base de datos. El caso de uso principal de un BACPAC es mover una base de datos de un servidor a otro (o [migrar una base de datos de un servidor local a la nube](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)) y almacenar una base de datos existente en un formato abierto.  
+ Un BACPAC es un archivo de Windows con una extensión .bacpac que encapsula el esquema y los datos de una base de datos. El caso de uso principal de un BACPAC es mover una base de datos de un servidor a otro (o [migrar una base de datos de un servidor local a la nube](/azure/azure-sql/database/migrate-to-database-from-sql-server)) y almacenar una base de datos existente en un formato abierto.  
  Similar al DACPAC, el formato de archivo BACPAC es abierto: el contenido del esquema del BACPAC es idéntico al del DACPAC. Los datos de un BACPAC se almacenan en formato JSON.  
   
  DACPAC y BACPAC son similares pero se dirigen a escenarios diferentes. Un DACPAC está dirigido a la captura y la implementación del esquema, incluida la actualización de una base de datos existente. El caso de uso principal de un BACPAC es implementar un esquema estrictamente definido en entornos de implementación, pruebas y producción. Y también a la inversa: capturar el esquema de producción y aplicarlo a entornos de pruebas y desarrollo.  
@@ -130,6 +130,5 @@ ms.locfileid: "88386941"
 |Describe cómo usar un asistente para implementar una base de datos existente. El asistente usa DAC para realizar la implementación.|[Implementar una base de datos mediante una DAC](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
 ## <a name="see-also"></a>Consulte también  
- [Compatibilidad de DAC con las versiones y objetos de SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
-  
+ [Compatibilidad de DAC con las versiones y objetos de SQL Server](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
   

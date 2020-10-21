@@ -22,12 +22,12 @@ ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa1c1cb27204fc6da21fa3841a2a32ba530c808c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 889d6d6c8b76c57b906cd0a6a87e250619084322
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422469"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193286"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (Concatenación de cadenas) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88422469"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 expression + expression  
 ```  
   
@@ -51,7 +51,7 @@ expression + expression
  Debe utilizarse una conversión explícita a datos caracteres cuando se concatenan cadenas binarias y cualesquiera caracteres entre las cadenas binarias. En el ejemplo siguiente se muestra cuándo se debe usar `CONVERT` o `CAST` con la concatenación binaria y cuándo no es necesario usar `CONVERT` o `CAST`.  
   
 ```sql
-DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
+DECLARE @mybin1 VARBINARY(5), @mybin2 VARBINARY(5)  
 SET @mybin1 = 0xFF  
 SET @mybin2 = 0xA5  
 -- No CONVERT or CAST function is required because this example   
@@ -59,12 +59,11 @@ SET @mybin2 = 0xA5
 SELECT @mybin1 + @mybin2  
 -- A CONVERT or CAST function is required because this example  
 -- concatenates two binary strings plus a space.  
-SELECT CONVERT(varchar(5), @mybin1) + ' '   
-   + CONVERT(varchar(5), @mybin2)  
+SELECT CONVERT(VARCHAR(5), @mybin1) + ' '   
+   + CONVERT(VARCHAR(5), @mybin2)  
 -- Here is the same conversion using CAST.  
-SELECT CAST(@mybin1 AS varchar(5)) + ' '   
-   + CAST(@mybin2 AS varchar(5))  
-  
+SELECT CAST(@mybin1 AS VARCHAR(5)) + ' '   
+   + CAST(@mybin2 AS VARCHAR(5))  
 ```  
   
 ## <a name="result-types"></a>Tipos de resultado  
@@ -94,7 +93,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ```sql  
 -- Uses AdventureWorks  
   
-SELECT 'The order is due on ' + CONVERT(varchar(12), DueDate, 101)  
+SELECT 'The order is due on ' + CONVERT(VARCHAR(12), DueDate, 101)  
 FROM Sales.SalesOrderHeader  
 WHERE SalesOrderID = 50001;  
 GO  
@@ -139,12 +138,12 @@ GO
 En el siguiente ejemplo se concatenan varias cadenas para formar una cadena larga y, luego, se intenta calcular la longitud de la cadena final. La longitud final del conjunto de resultados es 16 000, porque la evaluación de la expresión comienza por la izquierda, esto es, @x + @z + @y = > (@x + @z) + @y. En este caso, el resultado de (@x + @z) se trunca a 8000 bytes y, luego, @y se suma al conjunto de resultados, lo que hace que la longitud final de la cadena sea 16 000. Como @y es una cadena de tipo de valor grande, no se produce ningún truncamiento.
 
 ```sql
-DECLARE @x varchar(8000) = replicate('x', 8000)
-DECLARE @y varchar(max) = replicate('y', 8000)
-DECLARE @z varchar(8000) = replicate('z',8000)
+DECLARE @x VARCHAR(8000) = REPLICATE('x', 8000)
+DECLARE @y VARCHAR(max) = REPLICATE('y', 8000)
+DECLARE @z VARCHAR(8000) = REPLICATE('z',8000)
 SET @y = @x + @z + @y
 -- The result of following select is 16000
-SELECT len(@y) AS y
+SELECT LEN(@y) AS y
 GO
 ```
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

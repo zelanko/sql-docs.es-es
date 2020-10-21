@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 05d28638ebb8981c0ccce4e6bb38ab7179565d00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d271139edbde0f1c67467b6fe880f916fb6c5142
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495625"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193119"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Crear una transformación asincrónica con el componente de script
 
@@ -53,7 +53,7 @@ ms.locfileid: "88495625"
   
  En la página **Columnas de entrada** del **Editor de transformación Script**, la lista de columnas muestra las columnas disponibles de la salida del componente de nivel superior en el flujo de datos. Seleccione las columnas que desee transformar o las columnas a través de las que desee pasar. Marque todas las columnas que desee transformar en contexto como de columnas de lectura/escritura.  
   
- Para obtener más información acerca de la página **Columnas de entrada** del **Editor de transformación Script**, vea [Script Transformation Editor &#40;Input Columns Page&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md) (Editor de transformación Script [página Columnas de entrada]).  
+ Para obtener más información acerca de la página **Columnas de entrada** del **Editor de transformación Script**, vea [Script Transformation Editor &#40;Input Columns Page&#41;](../data-flow/transformations/script-component.md) (Editor de transformación Script [página Columnas de entrada]).  
   
 ### <a name="configuring-inputs-outputs-and-output-columns"></a>Configurar entradas, salidas y columnas de salidas  
  Un componente de transformación admite una o más salidas.  
@@ -70,7 +70,7 @@ ms.locfileid: "88495625"
   
 -   Es posible que desee agregar más columnas para incluir información adicional. Debe escribir su propio código para rellenar de datos las columnas adicionales. Para obtener información sobre cómo reproducir el comportamiento de una salida de error estándar, consulte [Simulating an Error Output for the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md) (Simulación de una salida de error para el componente de script).  
   
- Para obtener más información acerca de la página **Entradas y salidas** del **Editor de transformación Script**, vea [Script Transformation Editor &#40;Inputs and Outputs Page&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md) (Editor de transformación Script [página Entradas y salidas]).  
+ Para obtener más información acerca de la página **Entradas y salidas** del **Editor de transformación Script**, vea [Script Transformation Editor &#40;Inputs and Outputs Page&#41;](../data-flow/transformations/script-component.md) (Editor de transformación Script [página Entradas y salidas]).  
   
 ### <a name="adding-variables"></a>Agregar variables  
  Si hay variables existentes cuyos valores quiere usar en el script, puede agregarlas en los campos de propiedades ReadOnlyVariables y ReadWriteVariables de la página **Script** del **Editor de transformación Script**.  
@@ -79,7 +79,7 @@ ms.locfileid: "88495625"
   
  Para obtener información general sobre la forma de usar variables con el componente de script, vea [Using Variables in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md) (Uso de variables con el componente de script).  
   
- Para obtener más información acerca de la página **Script** del **Editor de transformación Script**, vea [Script Transformation Editor &#40;Script Page&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md) (Editor de transformación Script [página Script]).  
+ Para obtener más información acerca de la página **Script** del **Editor de transformación Script**, vea [Script Transformation Editor &#40;Script Page&#41;](../data-flow/transformations/script-component.md) (Editor de transformación Script [página Script]).  
   
 ## <a name="scripting-an-asynchronous-transformation-component-in-code-design-mode"></a>Crear script de un componente de transformación asincrónica en el modo de diseño de código  
  Después de haber configurado todos los metadatos para el componente, puede escribir un script personalizado. En la página **Script** del **Editor de transformación Script**, haga clic en **Editar script** para abrir el IDE de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA), donde puede agregar el script personalizado. El lenguaje de scripting que utilice dependerá de si ha seleccionado [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# como lenguaje de script para la propiedad **ScriptLanguage** en la página **Script**.  
@@ -238,5 +238,4 @@ public class ScriptMain:
  [Understanding Synchronous and Asynchronous Transformations](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)  (Descripción de las transformaciones sincrónicas y asincrónicas)  
  [Crear una transformación sincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
  [Desarrollar un componente de transformación personalizado con salidas asincrónicas](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  
-  
   

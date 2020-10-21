@@ -19,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b89c02db6622381f8f8104068e85004b6cd0d94
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: b5f27289f3363ea503e365c9398d387dcb71222b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227369"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195512"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -194,8 +194,8 @@ Debe pertenecer al rol public. Todos los usuarios pueden usar SET **@** _variabl
 ### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>A. Imprimir el valor de una variable inicializada con SET  
 En el siguiente ejemplo se crea la variable `@myvar`, se le asigna un valor de cadena y se imprime el valor de `@myvar`.  
   
-```  
-DECLARE @myvar char(20);  
+```sql  
+DECLARE @myvar CHAR(20);  
 SET @myvar = 'This is a test';  
 SELECT @myvar;  
 GO  
@@ -204,10 +204,10 @@ GO
 ### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>B. Utilizar en una instrucción SELECT una variable local a la que se ha asignado un valor con SET  
 En el ejemplo siguiente se crea una variable local llamada `@state` que después se usa en una instrucción `SELECT` para buscar todos los nombres y apellidos de los empleados residentes en el estado de `Oregon`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @state char(25);  
+DECLARE @state CHAR(25);  
 SET @state = N'Oregon';  
 SELECT RTRIM(FirstName) + ' ' + RTRIM(LastName) AS Name, City  
 FROM HumanResources.vEmployee  
@@ -217,15 +217,15 @@ WHERE StateProvinceName = @state;
 ### <a name="c-using-a-compound-assignment-for-a-local-variable"></a>C. Utilizar una asignación compuesta para una variable local  
 Los dos ejemplos los siguientes producen el mismo resultado. Crean una variable local denominada `@NewBalance`, la multiplican por 10 y muestran el nuevo valor de la variable local en una instrucción `SELECT`. El segundo ejemplo utiliza a un operador de asignación compuesta.  
   
-```  
+```sql  
 /* Example one */  
-DECLARE  @NewBalance  int ;  
+DECLARE  @NewBalance  INT ;  
 SET  @NewBalance  =  10;  
 SET  @NewBalance  =  @NewBalance  *  10;  
 SELECT  @NewBalance;  
   
 /* Example Two */  
-DECLARE @NewBalance int = 10;  
+DECLARE @NewBalance INT = 10;  
 SET @NewBalance *= 10;  
 SELECT @NewBalance;  
 ```  
@@ -233,7 +233,7 @@ SELECT @NewBalance;
 ### <a name="d-using-set-with-a-global-cursor"></a>D. Utilizar SET con un cursor global  
 En el ejemplo siguiente se crea una variable local y después se establece en la variable de cursor el nombre del cursor global.  
   
-```  
+```sql  
 DECLARE my_cursor CURSOR GLOBAL   
 FOR SELECT * FROM Purchasing.ShipMethod  
 DECLARE @my_variable CURSOR ;  
@@ -248,7 +248,7 @@ DEALLOCATE my_cursor;
 ### <a name="e-defining-a-cursor-by-using-set"></a>E. Definir un cursor con SET  
 En el ejemplo siguiente se usa la instrucción `SET` para definir un cursor.  
   
-```  
+```sql  
 DECLARE @CursorVar CURSOR;  
   
 SET @CursorVar = CURSOR SCROLL DYNAMIC  
@@ -272,10 +272,10 @@ DEALLOCATE @CursorVar;
 ### <a name="f-assigning-a-value-from-a-query"></a>F. Asignar un valor desde una consulta  
 En el ejemplo siguiente se utiliza una consulta para asignar un valor a una variable.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @rows int;  
+DECLARE @rows INT;  
 SET @rows = (SELECT COUNT(*) FROM Sales.Customer);  
 SELECT @rows;  
 ```  
@@ -283,7 +283,7 @@ SELECT @rows;
 ### <a name="g-assigning-a-value-to-a-user-defined-type-variable-by-modifying-a-property-of-the-type"></a>G. Asignar un valor a una variable de tipo definido por el usuario mediante la modificación de una propiedad del tipo  
 El ejemplo siguiente establece un valor para el tipo definido por el usuario `Point` a través de la modificación del valor de la propiedad `X` del tipo.  
   
-```  
+```sql  
 DECLARE @p Point;  
 SET @p.X = @p.X + 1.1;  
 SELECT @p;  
@@ -293,7 +293,7 @@ GO
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. Asignar un valor a una variable de tipo definido por el usuario mediante la invocación de un método del tipo  
 En el siguiente ejemplo se establece un valor para el tipo definido por el usuario **point** a través de la invocación del método `SetXY` del tipo.  
   
-```  
+```sql  
 DECLARE @p Point;  
 SET @p=point.SetXY(23.5, 23.5);  
 ```  
@@ -301,8 +301,8 @@ SET @p=point.SetXY(23.5, 23.5);
 ### <a name="i-creating-a-variable-for-a-clr-type-and-calling-a-mutator-method"></a>I. Crear una variable para un tipo CLR y llamar a un método mutador  
 En el ejemplo siguiente se crea una variable para el tipo `Point` y, a continuación, se ejecuta un método mutador en `Point`.  
   
-```  
-CREATE ASSEMBLY mytest from 'c:\test.dll' WITH PERMISSION_SET = SAFE  
+```sql  
+CREATE ASSEMBLY mytest FROM 'c:\test.dll' WITH PERMISSION_SET = SAFE  
 CREATE TYPE Point EXTERNAL NAME mytest.Point  
 GO  
 DECLARE @p Point = CONVERT(Point, '')  
@@ -314,20 +314,19 @@ SET @p.SetXY(22, 23);
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>J. Imprimir el valor de una variable inicializada con SET  
 En el siguiente ejemplo se crea la variable `@myvar`, se le asigna un valor de cadena y se imprime el valor de `@myvar`.  
   
-```  
-DECLARE @myvar char(20);  
+```sql  
+DECLARE @myvar CHAR(20);  
 SET @myvar = 'This is a test';  
-SELECT top 1 @myvar FROM sys.databases;  
-  
+SELECT TOP 1 @myvar FROM sys.databases;
 ```  
   
 ### <a name="k-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>K. Utilizar en una instrucción SELECT una variable local a la que se ha asignado un valor con SET  
 En el siguiente ejemplo se crea una variable local llamada `@dept` que después se usa en una instrucción `SELECT` para buscar el nombre y apellido de todos los empleados que trabajan en el departamento de `Marketing`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @dept char(25);  
+DECLARE @dept CHAR(25);  
 SET @dept = N'Marketing';  
 SELECT RTRIM(FirstName) + ' ' + RTRIM(LastName) AS Name  
 FROM DimEmployee   
@@ -337,15 +336,15 @@ WHERE DepartmentName = @dept;
 ### <a name="l-using-a-compound-assignment-for-a-local-variable"></a>L. Utilizar una asignación compuesta para una variable local  
 Los dos ejemplos los siguientes producen el mismo resultado. Crean una variable local denominada `@NewBalance`, la multiplican por `10` y muestran el nuevo valor de la variable local en una instrucción `SELECT`. El segundo ejemplo utiliza a un operador de asignación compuesta.  
   
-```  
+```sql  
 /* Example one */  
-DECLARE  @NewBalance  int ;  
+DECLARE  @NewBalance INT;  
 SET  @NewBalance  =  10;  
 SET  @NewBalance  =  @NewBalance  *  10;  
-SELECT  TOP 1 @NewBalance FROM sys.tables;  
+SELECT TOP 1 @NewBalance FROM sys.tables;  
   
 /* Example Two */  
-DECLARE @NewBalance int = 10;  
+DECLARE @NewBalance INT = 10;  
 SET @NewBalance *= 10;  
 SELECT TOP 1 @NewBalance FROM sys.tables;  
 ```  
@@ -353,10 +352,10 @@ SELECT TOP 1 @NewBalance FROM sys.tables;
 ### <a name="m-assigning-a-value-from-a-query"></a>M. Asignar un valor desde una consulta  
 En el ejemplo siguiente se utiliza una consulta para asignar un valor a una variable.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @rows int;  
+DECLARE @rows INT;  
 SET @rows = (SELECT COUNT(*) FROM dbo.DimCustomer);  
 SELECT TOP 1 @rows FROM sys.tables;  
 ```  

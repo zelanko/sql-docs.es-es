@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8cb194e8da7b64bef3cf6f33e65a5a5ee1ab136c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 481f534c719d188d108ee1d9edd0776ee8b2bc9d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457103"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192459"
 ---
 # <a name="performance-counters"></a>Contadores de rendimiento
 
@@ -76,7 +76,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   Herramienta, [SSIS Performance Visualization for Business Intelligence Development Studio (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146626)(Visualización del rendimiento de SSIS para Business Intelligence Development Studio (proyecto CodePlex)), en codeplex.com.  
   
--   Vídeo, [Medir y conocer el rendimiento de los paquetes SSIS en la empresa (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=150497), en msdn.microsoft.com.  
+-   Vídeo, [Medir y conocer el rendimiento de los paquetes SSIS en la empresa (vídeo de SQL Server)](/previous-versions/sql/sql-server-2008/dd795223(v=sql.100)), en msdn.microsoft.com.  
   
 -   Artículo de soporte técnico, [El contador de rendimiento de SSIS ya no está disponible en el monitor de rendimiento después de actualizar a Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319), en support.microsoft.com.  
 
@@ -122,4 +122,4 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  Debe iniciar el servicio Registros y alertas de rendimiento con una cuenta local o de dominio que sea miembro del grupo Administradores.  
 
 ## <a name="see-also"></a>Consulte también  
- [Ejecución de proyectos y paquetes](../packages/run-integration-services-ssis-packages.md) [Eventos registrados por un paquete de Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+ [Ejecución de proyectos y paquetes](../packages/run-integration-services-ssis-packages.md) [Eventos registrados por un paquete de Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9eb09d094ff5ce907479dacd848ca2a6010cee92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa0bf307931b25b72a56e069e9f1c45b9e6c8b5d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392921"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192787"
 ---
 # <a name="transfer-error-messages-task"></a>Tarea Transferir mensajes de error
 
@@ -53,7 +53,7 @@ ms.locfileid: "88392921"
  La tarea Transferir mensajes de error no indica el progreso incremental de la transferencia de mensajes de error; solo indica 0% y 100%.  
   
 ## <a name="execution-value"></a>Valor de ejecución  
- El valor de ejecución, que se define en la propiedad **ExecutionValue** de la tarea, devuelve el número de mensajes de error transferidos. Si asigna una variable definida por el usuario a la propiedad **ExecValueVariable** de la tarea Transferir mensajes de error, puede hacer que la información de la transferencia del mensaje de error esté disponible para otros objetos del paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ El valor de ejecución, que se define en la propiedad **ExecutionValue** de la tarea, devuelve el número de mensajes de error transferidos. Si asigna una variable definida por el usuario a la propiedad **ExecValueVariable** de la tarea Transferir mensajes de error, puede hacer que la información de la transferencia del mensaje de error esté disponible para otros objetos del paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Usar variables en paquetes](../integration-services-ssis-variables.md).  
   
 ## <a name="log-entries"></a>Entradas del registro  
  La tarea Transferir mensajes de error incluye las siguientes entradas del registro personalizadas:  
@@ -81,7 +81,7 @@ ms.locfileid: "88392921"
 ## <a name="related-tasks"></a>Related Tasks  
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   
--   [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Establecer las propiedades de tareas o contenedores](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="transfer-error-messages-task-editor-general-page"></a>Editor de la tarea Transferir mensajes de error (página General)
   Utilice la página **General** del cuadro de diálogo **Editor de la tarea Transferir mensajes de error** para nombrar y describir la tarea Transferir mensajes de error. La tarea Transferir mensajes de error transfiere uno o más mensajes de error definidos por el usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
@@ -134,5 +134,4 @@ ms.locfileid: "88392921"
 ## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
-  
   

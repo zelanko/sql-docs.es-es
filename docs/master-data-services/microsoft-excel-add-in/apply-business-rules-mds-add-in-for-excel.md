@@ -1,5 +1,6 @@
 ---
-title: Aplicar reglas de negocios (complemento MDS para Excel) | Microsoft Docs
+description: Aplicar reglas de negocios (complemento MDS para Excel)
+title: Aplicar reglas de negocios
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: cd106345-f561-4966-88d3-a69139b2bd78
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 75bbf9f18a6cbc7dd8ef78ff63e505299cf596c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 582c3245d69d1a2bc92b3a4ab3442797116571d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257602"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>Aplicar reglas de negocios (complemento MDS para Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] , puede aplicar reglas de negocios cuando desee validar datos y confirmar que son válidos. Puede corregir validaciones y volver a publicar los datos.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "67988143"
   
 2.  Los datos se validan comparándolos con las reglas de negocios y se muestran dos columnas de estado. Si estas columnas no se muestran automáticamente, en el grupo **Publicar y validar** , haga clic en **Mostrar estado** para verlas.  
   
-## <a name="see-also"></a>Vea también  
- [Información general: Importar datos desde Excel &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general: Importación de datos desde Excel &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

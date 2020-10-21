@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 973c8eb74a26047dfa8472497e403385e3678326
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b342052d848597a7422adf5594e25a2b799c7b3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445419"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193284"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Instrucciones de utilidades de SQL Server: GO
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88445419"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 GO [count]  
 ```  
   
@@ -57,7 +57,7 @@ GO [count]
   
  Los usuarios deben seguir las reglas de los lotes. Por ejemplo, la ejecución de un procedimiento almacenado después de la primera instrucción de un lote debe incluir la palabra clave EXECUTE. El ámbito de las variables locales (definidas por el usuario) está limitado a un lote y no es posible referirse a ellas después del comando GO.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyMsg VARCHAR(50)  
@@ -81,7 +81,7 @@ GO
   
  No use un punto y coma como terminador de instrucción después de GO.
  
-```
+```sql
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
@@ -93,21 +93,21 @@ GO;
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se crean dos lotes. El primer lote solo contiene una instrucción `USE AdventureWorks2012` para establecer el contexto de base de datos. Las instrucciones restantes utilizan una variable local. Por lo tanto, es necesario agrupar todas las declaraciones de variable locales en un único lote. Esto se logra al no usar el comando `GO` hasta después de la última instrucción que hace referencia a la variable.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @NmbrPeople int  
+DECLARE @NmbrPeople INT  
 SELECT @NmbrPeople = COUNT(*)  
 FROM Person.Person;  
 PRINT 'The number of people as of ' +  
-      CAST(GETDATE() AS char(20)) + ' is ' +  
-      CAST(@NmbrPeople AS char (10));  
+      CAST(GETDATE() AS CHAR(20)) + ' is ' +  
+      CAST(@NmbrPeople AS CHAR(10));  
 GO  
 ```  
   
  En el siguiente ejemplo ejecutan las instrucciones del lote dos veces.  
   
-```  
+```sql  
 SELECT DB_NAME();  
 SELECT USER_NAME();  
 GO 2  

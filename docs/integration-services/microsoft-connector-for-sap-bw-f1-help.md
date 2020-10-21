@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f52bd1f1c56a8f9dc84b1474bf4447c6311cb508
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 47492f6f626f3848c90a6448629e754efca17d43
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430167"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194069"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Ayuda F1 de Microsoft Connector 1.1 for SAP BW
 
@@ -37,7 +37,7 @@ ms.locfileid: "88430167"
   
 ### <a name="sap-bw-connection-manager-f1-help"></a>Ayuda F1 del administrador de conexiones de SAP BW  
   
--   [Editor del administrador de conexiones SAP BW](../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
+-   [Editor del administrador de conexiones SAP BW](./connection-manager/sap-bw-connection-manager.md)  
   
 ### <a name="sap-bw-source-f1-help"></a>Ayuda F1 del origen de SAP BW  
   
@@ -83,7 +83,6 @@ ms.locfileid: "88430167"
   
 -   [Crear InfoPackage](../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Componentes de Microsoft Connector for SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
   

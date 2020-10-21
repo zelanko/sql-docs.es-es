@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c20e9a830439e8065a1bbccfe7d25540c9ae639
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06e9cacfa5514648fc69bff0148a4448af536de0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430857"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194215"
 ---
 # <a name="flat-file-custom-properties"></a>Propiedades personalizadas de archivo plano
 
@@ -40,7 +40,7 @@ ms.locfileid: "88430857"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|FastParse|Boolean|Valor que indica si la columna usa las rutinas de análisis más rápidas que no distinguen la configuración regional y permiten un análisis rápido que DTS proporciona, o las rutinas de análisis estándar que sí distinguen la configuración regional. Para obtener más información, consulte [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) y [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). El valor predeterminado de esta propiedad es **False**.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de origen de archivos planos**, pero se puede establecer mediante el **Editor avanzado**.|  
+|FastParse|Boolean|Valor que indica si la columna usa las rutinas de análisis más rápidas que no distinguen la configuración regional y permiten un análisis rápido que DTS proporciona, o las rutinas de análisis estándar que sí distinguen la configuración regional. Para obtener más información, consulte [Fast Parse](./parsing-data.md) y [Standard Parse](./parsing-data.md). El valor predeterminado de esta propiedad es **False**.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de origen de archivos planos**, pero se puede establecer mediante el **Editor avanzado**.|  
   
  Para más información, consulte [Flat File Source](../../integration-services/data-flow/flat-file-source.md).  
   
@@ -60,6 +60,5 @@ ms.locfileid: "88430857"
  Para más información, consulte [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   

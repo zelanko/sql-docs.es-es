@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ba6441215b1f1462195b83a99ce040da11d694fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d98fda12251dafb69ab3738ea90f1eaf0298df46
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457327"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192705"
 ---
 # <a name="partition-processing-destination"></a>Destino de procesamiento de particiones
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  El destino de procesamiento de particiones carga y procesa una partición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para más información sobre particiones, vea [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
+  El destino de procesamiento de particiones carga y procesa una partición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para más información sobre particiones, vea [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
   
  El destino de procesamiento de particiones incluye las siguientes características:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88457327"
   
 -   Asignación de columnas de entrada para columnas de particiones.  
   
- Para más información sobre el procesamiento de objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services).  
+ Para más información sobre el procesamiento de objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services).  
   
 > [!NOTE]  
 >  Las tareas aquí descritas no se aplican a los modelos tabulares de Analysis Services.  No se pueden asignar las columnas de entrada a las de partición para los modelos tabulares. En su lugar puede usar la tarea Ejecutar DDL de Analysis Services [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) para procesar la partición.  
@@ -184,4 +184,4 @@ ms.locfileid: "88457327"
  Seleccione una ruta de acceso para el registro de errores.  
   
 ## <a name="see-also"></a>Consulte también  
- [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)

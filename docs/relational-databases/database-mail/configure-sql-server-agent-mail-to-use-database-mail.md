@@ -13,12 +13,12 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 318ba0af0be327cbe938fd9498dcbce9e418650d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44252fa011dcdeaca457d6aa7f9819f581dbeb11
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385811"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192585"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurar el Agente SQL Server para que use el Correo electrónico de base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88385811"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
   > [!NOTE]
-  > El Agente SQL de Instancia administrada siempre se configura para usar Correo electrónico de base de datos, por lo que este contenido no es aplicable en Instancia administrada. En Instancia administrada necesita tener un perfil que se debe llamar **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** para enlazar el Agente SQL con Correo electrónico de base de datos. 
+  > El Agente SQL de Instancia administrada siempre se configura para usar Correo electrónico de base de datos, por lo que este contenido no es aplicable en Instancia administrada. En Instancia administrada necesita tener un perfil que se debe llamar **[AzureManagedInstance_dbmail_profile](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** para enlazar el Agente SQL con Correo electrónico de base de datos. 
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
@@ -81,5 +81,4 @@ ms.locfileid: "88385811"
 -   [Operadores](../../ssms/agent/operators.md)  
   
      Los operadores son alias de personas o grupos que pueden recibir la notificación electrónica  
-  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a09f79c3e5dec6c181855119e36ff0d4f0d7210e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66a40af981670fd30f8ff6d20c34364ba084e3dd
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899631"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115548"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configuración de opciones de SQL Server con variables de entorno en Linux
 
@@ -128,7 +128,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> El proceso para ejecutar las ediciones de producción en contenedores es ligeramente diferente. Para obtener más información, vea [Run production container image](sql-server-linux-configure-docker.md#production) (Ejecutar imágenes de contenedor de producción).
+> El proceso para ejecutar las ediciones de producción en contenedores es ligeramente diferente. Para obtener más información, vea [Run production container image](./sql-server-linux-docker-container-deployment.md#production) (Ejecutar imágenes de contenedor de producción).
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->

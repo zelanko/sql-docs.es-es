@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 6da4e6ea9ecb867ab35c6e8c8fb6d5a85b2b7431
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4f6031cd363db4ae3c26511daf91811c3d133d1e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915331"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192549"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Ejecutar paquetes de SQL Server Integration Services (SSIS) implementados en Azure
 
@@ -74,11 +74,11 @@ Para obtener más información, vea los ejemplos siguientes:
 
 ## <a name="run-a-package-with-the-execute-ssis-package-activity"></a><a name="exec_activity"></a> Ejecutar un paquete con la actividad Ejecutar paquete de SSIS
 
-Para obtener más información, vea [Ejecutar un paquete SSIS con la actividad Ejecutar paquete de SSIS en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+Para obtener más información, vea [Ejecutar un paquete SSIS con la actividad Ejecutar paquete de SSIS en Azure Data Factory](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
 
 ## <a name="run-a-package-with-the-stored-procedure-activity"></a><a name="sproc_activity"></a> Ejecutar un paquete con la actividad de procedimiento almacenado
 
-Para obtener más información, vea [Ejecutar un paquete SSIS con la actividad de procedimiento almacenado en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+Para obtener más información, vea [Ejecutar un paquete SSIS con la actividad de procedimiento almacenado en Azure Data Factory](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

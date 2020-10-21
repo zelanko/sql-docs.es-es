@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 52d895380cb76a094b46787b1cbc16cfac6ce39f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea62ec35accc4f808fdbd1b2ff4319c0b44cdcc5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487228"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195749"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extraer una DAC de una base de datos
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88487228"
  Puede extraer una DAC de las bases de datos que residen en instancias de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 o posterior. Si el proceso de extracción se ejecuta en una base de datos que se implementó a partir de una DAC, solo las definiciones de los objetos de la base de datos se extraen. El proceso no hace referencia a la DAC registrada en **msdb** (**maestra** en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). El proceso de extracción no registra la definición de DAC en la instancia actual del motor de base de datos. Para obtener más información sobre el registro de una DAC, vea [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md).  
   
 ##  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
- Una DAC se puede extraer solo de una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior. No puede extraer ninguna DAC si la base de datos tiene objetos que no se admiten en una DAC o usuarios contenidos. Para obtener más información acerca de los objetos admitidos por una DAC, vea [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
+ Una DAC se puede extraer solo de una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior. No puede extraer ninguna DAC si la base de datos tiene objetos que no se admiten en una DAC o usuarios contenidos. Para obtener más información acerca de los objetos admitidos por una DAC, vea [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)).  
   
 ##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  La extracción de una DAC requiere al menos permisos ALTER ANY LOGIN y VIEW DEFINITION en el ámbito de la base de datos, así como permisos SELECT en **sys.sql_expression_dependencies**. La extracción de una DAC la pueden realizar los miembros del rol fijo de servidor securityadmin que sean también miembros del rol fijo de base de datos database_owner en la base de datos de la que se extrae la DAC. Los miembros del rol fijo de servidor sysadmin o de la cuenta de administrador del sistema de SQL Server integrada denominada **sa** también pueden extraer una DAC.  
@@ -163,5 +163,4 @@ $extractionunit.Extract($dacpacPath)
   
 ## <a name="see-also"></a>Vea también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-  
   

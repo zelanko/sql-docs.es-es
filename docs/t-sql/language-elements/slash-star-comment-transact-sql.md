@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 481701a7d2167e1d45f5aa77f715a380a63e97af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 161c90803b636ff8aacd67f773c739b0d0153150
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459238"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195438"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>Barra diagonal y asterisco (comentario de bloque) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88459238"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
+```syntaxsql
 /*  
 text_of_comment  
 */  
@@ -61,8 +60,8 @@ text_of_comment
   
  Por ejemplo, el código siguiente genera un error.  
   
-```  
-DECLARE @comment AS varchar(20);  
+```sql  
+DECLARE @comment AS VARCHAR(20);  
 GO  
 /*  
 SELECT @comment = '/*';  
@@ -73,21 +72,20 @@ GO
   
  Para solucionar este error, realice el cambio siguiente.  
   
-```  
-DECLARE @comment AS varchar(20);  
+```sql  
+DECLARE @comment AS VARCHAR(20);  
 GO  
 /*  
 SELECT @comment = '/*';  
 */ */  
 SELECT @@VERSION;  
 GO  
-  
 ```  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se utilizan comentarios para explicar la finalidad de la sección del código.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 /*  

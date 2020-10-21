@@ -12,12 +12,12 @@ ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 142ebd04c32491a800dbc7651fe91fbcdd715a56
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f8d77853846a18bd310d8afa58101cf66a24475b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059253"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92258092"
 ---
 # <a name="sp_pdw_database_encryption-azure-synapse-analytics"></a>sp_pdw_database_encryption (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -46,7 +46,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Notas  
  Cuando TDE se habilita mediante **sp_pdw_database_encryption**, la base de datos Tempdb se quita, se vuelve a crear y se cifra. Por ese motivo, el TDE no se puede habilitar en un dispositivo mientras haya otras sesiones activas mediante tempdb. La habilitación o deshabilitación de TDE en un dispositivo es una acción que cambia el estado del dispositivo, en la mayoría de los casos se espera que se realice una vez en la duración del dispositivo y que se ejecute cuando no haya tráfico en el dispositivo.  
   
 ## <a name="permissions"></a>Permisos  
@@ -59,8 +59,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 EXEC sys.sp_pdw_database_encryption 1;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [sp_pdw_database_encryption_regenerate_system_keys &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
  [sp_pdw_log_user_data_masking &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-  
   

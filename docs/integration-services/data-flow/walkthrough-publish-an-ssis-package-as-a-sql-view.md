@@ -1,5 +1,5 @@
 ---
-description: 'Tutorial: Publicar un paquete SSIS como una vista SQL'
+description: 'Tutorial: Publicación de un paquete SSIS como una vista SQL'
 title: 'Tutorial: Publicar un paquete SSIS como una vista SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1df84869443257dbfc73d5ef3984f3e37a15b6c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8a02e714f78f830da467cb35cf227d73e3a6277
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425647"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194583"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Tutorial: Publicar un paquete SSIS como una vista SQL
 
@@ -256,7 +256,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
  El valor de Timeout indica el número de segundos que el proveedor OLE DB para SSIS puede esperar antes de que lleguen datos nuevos procedentes del paquete SSIS. El valor predeterminado es 60 segundos. Se puede especificar un valor entero de tiempo de espera de entre 20 y 32 000.  
   
- Los parámetros contienen el valor tanto de los parámetros de paquete como de los parámetros del proyecto. Las reglas de los parámetros son las mismas que las de los parámetros de [DTExec](https://msdn.microsoft.com/library/hh231187.aspx).  
+ Los parámetros contienen el valor tanto de los parámetros de paquete como de los parámetros del proyecto. Las reglas de los parámetros son las mismas que las de los parámetros de [DTExec](../packages/dtexec-utility.md).  
   
  En la siguiente lista se especifican los caracteres especiales que se pueden usar en la cláusula de consulta:  
   
@@ -270,6 +270,5 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 ## <a name="see-also"></a>Consulte también  
  [Destino de streaming de datos](../../integration-services/data-flow/data-streaming-destination.md)   
- [Configuración del destino de streaming de datos](../../integration-services/data-flow/configure-data-streaming-destination.md)  
-  
+ [Configuración del destino de streaming de datos](./data-streaming-destination.md)  
   

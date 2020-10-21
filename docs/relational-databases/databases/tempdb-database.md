@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30e481590a41e5c5670360bac265a0d7656fff9f
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: c49e89d9ed81950d0c8781d39c57eef3e408482b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024347"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195564"
 ---
 # <a name="tempdb-database"></a>tempdb [base de datos]
 
@@ -40,9 +40,9 @@ La base de datos del sistema `tempdb` es un recurso global disponible para todos
   > [!IMPORTANT]
   > Los grupos elásticos y las bases de datos únicas de Azure SQL Database admiten tablas temporales globales y procedimientos almacenados temporales globales que se almacenan en `tempdb` y que tienen como ámbito el nivel de base de datos. 
   >
-  > Las tablas temporales globales y los procedimientos almacenados temporales globales se comparten entre todos los usuarios en la misma base de datos SQL. Las sesiones de usuario de otras bases de datos no pueden acceder a tablas temporales globales. Para obtener más información, vea [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database) (Tablas temporales globales con ámbito de base de datos [Azure SQL Database]). [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) admite los mismos objetos temporales que SQL Server.
+  > Las tablas temporales globales y los procedimientos almacenados temporales globales se comparten entre todos los usuarios en la misma base de datos SQL. Las sesiones de usuario de otras bases de datos no pueden acceder a tablas temporales globales. Para obtener más información, vea [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database) (Tablas temporales globales con ámbito de base de datos [Azure SQL Database]). [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) admite los mismos objetos temporales que SQL Server.
   >
-  > En el caso de los grupos elásticos y las bases de datos únicas de Azure SQL Database, solo se aplican la base de datos maestra y la base de datos `tempdb`. Para obtener más información, vea la [Qué es un servidor de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Para obtener una explicación de `tempdb` en el contexto de los grupos elásticos y las bases de datos únicas de Azure SQL Database, consulte [Base de datos tempdb en SQL Database](#tempdb-database-in-sql-database). 
+  > En el caso de los grupos elásticos y las bases de datos únicas de Azure SQL Database, solo se aplican la base de datos maestra y la base de datos `tempdb`. Para obtener más información, vea la [Qué es un servidor de Azure SQL Database](/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Para obtener una explicación de `tempdb` en el contexto de los grupos elásticos y las bases de datos únicas de Azure SQL Database, consulte [Base de datos tempdb en SQL Database](#tempdb-database-in-sql-database). 
   >
   > En el caso de Azure SQL Managed Instance, se aplican todas las bases de datos del sistema.
 
@@ -149,7 +149,7 @@ Para obtener una descripción de estas opciones de la base de datos, vea [Opcion
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>tamaños de tempdb para los niveles de servicio basado en núcleo virtual
 
-Vea [Límites de recursos basados en núcleos virtuales](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits).
+Vea [Límites de recursos basados en núcleos virtuales](/azure/sql-database/sql-database-vcore-resource-limits).
 
 ## <a name="restrictions"></a>Restricciones
 
@@ -223,7 +223,7 @@ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], se optimiza el re
 - Todas las asignaciones de `tempdb` usarán extensiones uniformes. [La marca de seguimiento 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) ya no es necesaria.  
 - Para el grupo de archivos principal, la propiedad `AUTOGROW_ALL_FILES` se activa y la propiedad no se puede modificar.
 
-Para obtener más información acerca de las mejoras de rendimiento en `tempdb`, consulte el artículo del blog [TEMPDB: archivos y marcas de seguimiento y actualizaciones: ¡a por ello!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/).
+Para obtener más información acerca de las mejoras de rendimiento en `tempdb`, consulte el artículo del blog [TEMPDB: archivos y marcas de seguimiento y actualizaciones: ¡a por ello!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Metadatos tempdb optimizados para memoria
 La contención de metadatos en `tempdb` ha sido históricamente un cuello de botella en la escalabilidad para muchas cargas de trabajo que se ejecutan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] presenta una nueva característica que forma parte de la familia de características de [base de datos en memoria](../in-memory-database.md): metadatos de tempdb optimizados para memoria. 
@@ -355,4 +355,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
 [Mover archivos de base de datos](../../relational-databases/databases/move-database-files.md)    
-  

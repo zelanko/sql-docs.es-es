@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa8723e3db746c614d3a9e44c37ea702506d2c45
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: cdf54622b3db05b661f5c71c3f3b6a2e67fbd1ff
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987665"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195387"
 ---
 # <a name="ole-db-destination"></a>Destino de OLE DB
 
@@ -39,7 +39,7 @@ ms.locfileid: "91987665"
   El destino de OLE DB carga datos en una serie de bases de datos compatibles con OLE DB que usan una tabla o vista de base de datos o un comando SQL. Por ejemplo, un origen de OLE DB puede cargar datos en tablas en bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Si el origen de datos es [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, el origen de datos requiere un administrador de conexiones distinto al de las versiones anteriores de Excel. Para más información, vea [Conectarse a un libro de Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+>  Si el origen de datos es [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, el origen de datos requiere un administrador de conexiones distinto al de las versiones anteriores de Excel. Para más información, vea [Conectarse a un libro de Excel](../load-data-to-from-excel-with-ssis.md).  
   
  El destino de OLE DB proporciona cinco modos diferentes de acceso a los datos para cargar datos:  
   
@@ -112,7 +112,7 @@ ms.locfileid: "91987665"
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propiedades personalizadas de OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -126,7 +126,7 @@ ms.locfileid: "91987665"
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de OLE DB** para seleccionar la conexión OLE DB del destino. Esta página también permite seleccionar una tabla o vista de la base de datos.  
   
 > [!NOTE]  
->  Si el origen de datos es [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, el origen de datos requiere un administrador de conexiones distinto al de las versiones anteriores de Excel. Para más información, vea [Conectarse a un libro de Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+>  Si el origen de datos es [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, el origen de datos requiere un administrador de conexiones distinto al de las versiones anteriores de Excel. Para más información, vea [Conectarse a un libro de Excel](../load-data-to-from-excel-with-ssis.md).  
   
 > [!NOTE]  
 >  La propiedad **CommandTimeout** del destino de OLE DB no está disponible en el **Editor de destino de OLE DB**, pero se puede establecer mediante el **Editor avanzado**. Además, ciertas opciones de carga rápida solo están disponibles en el **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre el destino de OLE DB en [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
@@ -147,7 +147,7 @@ ms.locfileid: "91987665"
 |------------|-----------------|  
 |Tabla o vista|Carga los datos en una tabla o vista del destino OLE DB.|  
 |Carga rápida de tabla o vista|Carga los datos en una tabla o vista del destino OLE DB y utiliza la opción de carga rápida. Para obtener más información acerca de los modos de acceso a datos de carga rápida, optimizados para inserciones masivas, vea [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
-|Variable de nombre de tabla o nombre de vista|Especifique el nombre de la tabla o vista de una variable.<br /><br /> **Información relacionada**: [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Variable de nombre de tabla o nombre de vista|Especifique el nombre de la tabla o vista de una variable.<br /><br /> **Información relacionada**: [Usar variables en paquetes](../integration-services-ssis-variables.md)|  
 |Carga rápida de variable de nombre de tabla o nombre de vista|Especifica el nombre de la tabla o la vista en una variable y utiliza la opción de carga rápida para cargar los datos. Para obtener más información acerca de los modos de acceso a datos de carga rápida, optimizados para inserciones masivas, vea [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
 |Comando SQL|Carga los datos en el destino OLE DB mediante una consulta SQL.|  
   
@@ -309,5 +309,4 @@ ms.locfileid: "91987665"
  [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
-  
   

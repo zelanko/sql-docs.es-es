@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2523c8ac095a576d243aef661092e7939e27863b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c67835df192436ce3b8264849589a1db3f66fee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487672"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192385"
 ---
 # <a name="ssis-toolbox"></a>Cuadro de herramientas de SSIS
 
@@ -34,7 +34,7 @@ ms.locfileid: "88487672"
  > [!NOTE]
 > Si no ve el cuadro de herramientas, vaya a VER -> Otras ventanas -> Cuadro de herramientas de SSIS.
  
-Puede obtener más información acerca de un componente del cuadro de herramientas si hace clic en el mismo componente; así podrá ver una descripción en la parte inferior del cuadro de herramientas. En el caso de algunos componentes, también es posible obtener acceso a ejemplos que muestran cómo configurarlos y utilizarlos. Los ejemplos están disponibles en [MSDN](https://go.microsoft.com/fwlink/?LinkId=259189). Para tener acceso a los ejemplos desde el **Cuadro de herramientas de SSIS**, haga clic en el vínculo **Buscar muestras** que aparece debajo de la descripción.  
+Puede obtener más información acerca de un componente del cuadro de herramientas si hace clic en el mismo componente; así podrá ver una descripción en la parte inferior del cuadro de herramientas. En el caso de algunos componentes, también es posible obtener acceso a ejemplos que muestran cómo configurarlos y utilizarlos. Los ejemplos están disponibles en [MSDN](/samples/browse/). Para tener acceso a los ejemplos desde el **Cuadro de herramientas de SSIS**, haga clic en el vínculo **Buscar muestras** que aparece debajo de la descripción.  
   
 > [!NOTE]
 > No se pueden *quitar* los componentes instalados del cuadro de herramientas.  
@@ -65,5 +65,4 @@ Puede obtener más información acerca de un componente del cuadro de herramient
   
 ## <a name="refresh-the-ssis-toolbox"></a>Actualizar el cuadro de herramientas de SSIS  
   
-1.  Haga clic con el botón derecho en el cuadro de herramientas de SSIS y, después, haga clic en **Actualizar cuadro de herramientas**.  
-
+1.  Haga clic con el botón derecho en el cuadro de herramientas de SSIS y, después, haga clic en **Actualizar cuadro de herramientas**.

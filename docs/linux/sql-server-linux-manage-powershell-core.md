@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: fed5ca919a78f3051ba7677f46f786b7c62f9b27
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: d9df9281926008ddac99b6827c41a0b6e73b2290
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088858"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115603"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>Administración de SQL Server en Linux con PowerShell Core
 
@@ -21,16 +21,16 @@ En este artículo se presenta [SQL Server PowerShell](../powershell/sql-server-p
 
 ## <a name="cross-platform-editor-options"></a>Opciones de editor multiplataforma
 
-Todos los pasos de PowerShell Core que se indican a continuación funcionarán en un terminal normal, o bien se pueden ejecutar desde un terminal en VS Code o Azure Data Studio.  Tanto VS Code como Azure Data Studio están disponibles en macOS y Linux.  Para obtener más información sobre Azure Data Studio, consulte esta [guía de inicio rápido](https://docs.microsoft.com/sql/azure-data-studio/quickstart-sql-server).  También puede considerar la posibilidad de usar la [extensión de PowerShell](https://docs.microsoft.com/sql/azure-data-studio/powershell-extension).
+Todos los pasos de PowerShell Core que se indican a continuación funcionarán en un terminal normal, o bien se pueden ejecutar desde un terminal en VS Code o Azure Data Studio.  Tanto VS Code como Azure Data Studio están disponibles en macOS y Linux.  Para obtener más información sobre Azure Data Studio, consulte esta [guía de inicio rápido](../azure-data-studio/quickstart-sql-server.md).  También puede considerar la posibilidad de usar la [extensión de PowerShell](../azure-data-studio/extensions/powershell-extension.md).
 
 ## <a name="installing-powershell-core"></a>Instalación de PowerShell Core
 
 Para obtener más información sobre la instalación de PowerShell Core en varias plataformas compatibles y experimentales, consulte los siguientes artículos:
 
-- [Instalación de PowerShell Core en Windows](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
-- [Instalación de PowerShell Core en Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [Instalación de PowerShell Core en macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
-- [Instalación de PowerShell Core en ARM](https://docs.microsoft.com/powershell/scripting/install/powershell-core-on-arm?view=powershell-6)
+- [Instalación de PowerShell Core en Windows](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
+- [Instalación de PowerShell Core en Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [Instalación de PowerShell Core en macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [Instalación de PowerShell Core en ARM](/powershell/scripting/install/powershell-core-on-arm?view=powershell-6)
 
 ## <a name="install-the-sqlserver-module"></a>Instalación del módulo SqlServer
 
@@ -108,7 +108,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## <a name="using-the-sql-server-powershell-provider"></a>Usar el proveedor de SQL Server PowerShell
 
-Otra opción para conectarse a la instancia de SQL Server es usar el [proveedor de SQL Server PowerShell](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  El uso de este proveedor permite navegar por la instancia de SQL Server como si estuviera navegando por la estructura de árbol en el Explorador de objetos, pero en el cmdline.  De forma predeterminada, este proveedor se presenta como un PSDrive denominado `SQLSERVER:\` que puede usar para conectar y navegar instancias de SQL Server a las que tiene acceso su cuenta de dominio.  Consulte los [pasos de configuración](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) para obtener información sobre cómo configurar la autenticación de Active Directory para SQL Server en Linux.
+Otra opción para conectarse a la instancia de SQL Server es usar el [proveedor de SQL Server PowerShell](../powershell/sql-server-powershell-provider.md).  El uso de este proveedor permite navegar por la instancia de SQL Server como si estuviera navegando por la estructura de árbol en el Explorador de objetos, pero en el cmdline.  De forma predeterminada, este proveedor se presenta como un PSDrive denominado `SQLSERVER:\` que puede usar para conectar y navegar instancias de SQL Server a las que tiene acceso su cuenta de dominio.  Consulte los [pasos de configuración](./sql-server-linux-active-directory-auth-overview.md#configuration-steps) para obtener información sobre cómo configurar la autenticación de Active Directory para SQL Server en Linux.
 
 También puede usar la autenticación de SQL con el proveedor de SQL Server PowerShell. Para ello, use el cmdlet `New-PSDrive` para crear un nuevo PSDrive y proporcione las credenciales adecuadas para conectarse.
 
@@ -198,7 +198,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>Exploración de los cmdlets disponibles actualmente en PS Core
-Aunque el módulo SqlServer actualmente tiene 109 cmdlets disponibles en Windows PowerShell, solo 62 de 109 están disponibles en PSCore. A continuación se incluye una lista completa con los 62 cmdlets disponibles actualmente.  Para obtener documentación detallada de todos los cmdlets del módulo SqlServer, vea la [referencia de cmdlets](https://docs.microsoft.com/powershell/module/sqlserver/) de SqlServer.
+Aunque el módulo SqlServer actualmente tiene 109 cmdlets disponibles en Windows PowerShell, solo 62 de 109 están disponibles en PSCore. A continuación se incluye una lista completa con los 62 cmdlets disponibles actualmente.  Para obtener documentación detallada de todos los cmdlets del módulo SqlServer, vea la [referencia de cmdlets](/powershell/module/sqlserver/) de SqlServer.
 
 El siguiente comando le mostrará todos los cmdlets disponibles en la versión de PowerShell que está usando.
 
@@ -272,4 +272,4 @@ SELECT Name
 - Convert-UrnToPath
 
 ## <a name="see-also"></a>Consulte también
-- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
+- [SQL Server PowerShell](../powershell/sql-server-powershell.md)

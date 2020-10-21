@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d54d80276714bdc1427c2c01be0f9620acc32c8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0136b994f064a01a66d4c0884499172b1dab894b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392651"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197215"
 ---
 # <a name="integration-services-tasks"></a>Tareas de Integration Services
 
@@ -79,7 +79,7 @@ ms.locfileid: "88392651"
   
  Para obtener más información sobre cómo agregar una tarea a un paquete mediante programación, vea [Agregar tareas mediante programación](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md).  
   
- Cada tarea puede configurarse individualmente a través de los cuadros de diálogo personalizados para cada tarea proporcionados por el diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a través de la ventana Propiedades incluida en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En un paquete, se pueden incluir varias tareas del mismo tipo (por ejemplo, seis tareas Ejecutar SQL) y cada tarea se puede configurar de una manera diferente. Para obtener más información, vea [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Cada tarea puede configurarse individualmente a través de los cuadros de diálogo personalizados para cada tarea proporcionados por el diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a través de la ventana Propiedades incluida en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En un paquete, se pueden incluir varias tareas del mismo tipo (por ejemplo, seis tareas Ejecutar SQL) y cada tarea se puede configurar de una manera diferente. Para obtener más información, vea [Establecer las propiedades de tareas o contenedores](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
 ## <a name="tasks-connections-and-groups"></a>Grupos y conexiones de tareas  
  Si una tarea contiene más de una tarea, dichas tareas se conectan y ordenan en el flujo de control mediante restricciones de precedencia. Para obtener más información, vea [Restricciones de precedencia](../../integration-services/control-flow/precedence-constraints.md).  
@@ -88,5 +88,4 @@ ms.locfileid: "88392651"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Agregar o eliminar tareas o contenedores en un flujo de control](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  
   

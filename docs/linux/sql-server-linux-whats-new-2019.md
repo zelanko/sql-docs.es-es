@@ -7,12 +7,12 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9610ca6f434f78d332eb85fbf4ed71a4d477946a
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: d0cd1e6c7af5fd4d2f8742e88b4b8853645fe5a7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442899"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115465"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Novedades de SQL Server 2019 en Linux
 
@@ -42,7 +42,7 @@ Las actualizaciones se han realizado en SQL Server 2019 en Linux:
 | PolyBase en Linux | [Instale PolyBase](../relational-databases/polybase/polybase-linux-setup.md) en Linux para conectores que no son Hadoop.<br/><br/>[Asignación del tipo de PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Compatibilidad con Captura de datos modificados (CDC) | Captura de datos modificados (CDC) ahora es compatible con Linux para SQL Server 2019. |
 | Registro de contenedor de Microsoft | Ahora [Registro de contenedor de Microsoft](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) reemplaza a Docker Hub para nuevas imágenes de contenedor de Microsoft oficiales, incluido [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
-| Contenedores no raíz | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] presenta la capacidad de crear contenedores más seguros mediante el inicio del proceso de [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] como un usuario no raíz de forma predeterminada. Vea [Compilación y ejecución de contenedores de SQL Server como un usuario no raíz](sql-server-linux-configure-docker.md#buildnonrootcontainer) para más información. |
+| Contenedores no raíz | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] presenta la capacidad de crear contenedores más seguros mediante el inicio del proceso de [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] como un usuario no raíz de forma predeterminada. Vea [Compilación y ejecución de contenedores de SQL Server como un usuario no raíz](./sql-server-linux-docker-container-security.md#buildnonrootcontainer) para más información. |
 
 ## <a name="next-steps"></a>Pasos siguientes
 

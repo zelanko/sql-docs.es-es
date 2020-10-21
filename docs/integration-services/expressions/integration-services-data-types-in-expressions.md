@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f1812ac61d34e5d2d25738cffed0b5caf117ee82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6dd901474ae9c866a7f0ac67b70b2a40a3611c4a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425537"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196429"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de datos de Integration Services en las expresiones
 
@@ -135,12 +135,11 @@ ms.locfileid: "88425537"
  Los resultados de muchas operaciones y funciones tienen tipos de datos predeterminados. Pueden ser el tipo de datos del argumento o el tipo de datos al que el evaluador de expresiones convierte el resultado. Por ejemplo, el resultado de un operador lógico OR (||) es siempre un valor booleano, el resultado de la función ABS es el tipo de datos numérico del argumento y el resultado de la multiplicación es el tipo de datos numérico más pequeño que puede contener el resultado sin perder información. Para más información sobre los tipos de datos de los resultados, vea [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [utilizar una expresión en un componente de flujo de datos](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [utilizar una expresión en un componente de flujo de datos](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
 -   Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](https://go.microsoft.com/fwlink/?LinkId=746575), en pragmaticworks.com  
   
 -   Artículo técnico, sobre [ejemplos de expresiones SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  
-  
   

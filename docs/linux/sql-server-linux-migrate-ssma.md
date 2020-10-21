@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.openlocfilehash: ced5df4a63cf6fbfed9e47a59a5c7f626de3874b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 661fbd184750fbb912ef44d28c7d6cdf2d68c917
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882713"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115833"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant-ssma"></a>Automatización de la migración de bases de datos a Linux con SQL Server Migration Assistant (SSMA)
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-En este artículo se presenta [SQL Server Migration Assistant (SSMA)](https://msdn.microsoft.com/library/mt613434.aspx), que ayuda a migrar con facilidad bases de datos a SQL Server en Linux desde Microsoft Access, DB2, MySQL, Oracle y Sybase. SSMA es una aplicación Windows, así que úsela cuando tenga un equipo Windows que pueda conectarse a una instancia remota de SQL Server en Linux. 
+En este artículo se presenta [SQL Server Migration Assistant (SSMA)](../ssma/sql-server-migration-assistant.md), que ayuda a migrar con facilidad bases de datos a SQL Server en Linux desde Microsoft Access, DB2, MySQL, Oracle y Sybase. SSMA es una aplicación Windows, así que úsela cuando tenga un equipo Windows que pueda conectarse a una instancia remota de SQL Server en Linux. 
 
 SSMA admite varias bases de datos de origen, como Oracle, MySQL, Sybase, DB2 y Microsoft Access para SQL Server en Linux, y ayuda a automatizar tareas de migración como:
 
@@ -37,9 +37,8 @@ Para empezar, descargue SQL Server Migration Assistant (SSMA) para la base de da
 - [SSMA para Oracle](https://aka.ms/ssmafororacle)
 - [SSMA para Sybase ASE](https://aka.ms/ssmaforsybase) 
 
-Luego, siga los pasos de [SQL Server Migration Assistant (SSMA)](https://msdn.microsoft.com/library/mt613434.aspx) para migrar la base de datos de origen a SQL Server en Linux.
+Luego, siga los pasos de [SQL Server Migration Assistant (SSMA)](../ssma/sql-server-migration-assistant.md) para migrar la base de datos de origen a SQL Server en Linux.
 
 ## <a name="see-also"></a>Consulte también
 - [Blog de migración de datos de Microsoft](https://blogs.msdn.microsoft.com/datamigration)
-- [Blog de SQL Server Migration Assistant (SSMA)](https://blogs.msdn.microsoft.com/ssma/)
-
+- [Blog de SQL Server Migration Assistant (SSMA)](/archive/blogs/ssma/)

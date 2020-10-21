@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7b24e6085e255e6e6a66d499b6c23e4cba91cf7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0994268d1e6ba95e7f4f3bc1bbe3875ec4f57358
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392551"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197189"
 ---
 # <a name="maintenance-cleanup-task"></a>tarea, Limpieza de mantenimiento
 
@@ -47,10 +47,9 @@ ms.locfileid: "88392551"
 -   [Tarea Limpieza de mantenimiento &#40;Plan de mantenimiento&#41;](../../relational-databases/maintenance-plans/maintenance-cleanup-task-maintenance-plan.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- Para obtener información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Para obtener información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Establecer las propiedades de tareas o contenedores](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
-  
   

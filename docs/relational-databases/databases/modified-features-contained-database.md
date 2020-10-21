@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5726487c9582a7f99b26154bdb92fa61647b1190
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ddfed49481df7de8c63db08c8a184247c30857a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465417"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194315"
 ---
 # <a name="modified-features-contained-database"></a>Características modificadas (base de datos contenida)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88465417"
  La sintaxis de ALTER DATABASE cuando se utiliza fuera de una base de datos contenida difiere de la que se usa para bases de datos dependientes. Estos cambios impiden cruzar el límite de la base de datos. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="create-database"></a>CREATE DATABASE  
- La sintaxis de CREATE DATABASE para una base de datos contenida difiere de que se usa para una base de datos dependiente. Vea [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) para obtener más información sobre los nuevos requisitos de sintaxis y valores permitidos.  
+ La sintaxis de CREATE DATABASE para una base de datos contenida difiere de que se usa para una base de datos dependiente. Vea [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) para obtener más información sobre los nuevos requisitos de sintaxis y valores permitidos.  
   
 ## <a name="temporary-tables"></a>Tablas temporales  
  Las tablas temporales locales se permiten en una base de datos independiente, pero su comportamiento difiere del de las tablas temporales locales en bases de datos dependientes. En las bases de datos dependientes, los datos de las tablas temporales se intercalan en la intercalación de **tempdb**. En una base de datos independiente, los datos de las tablas temporales se intercalan en la intercalación de la base de datos independiente.  
@@ -55,5 +55,4 @@ ms.locfileid: "88465417"
 ## <a name="see-also"></a>Vea también  
  [Intercalaciones de bases de datos independientes](../../relational-databases/databases/contained-database-collations.md)   
  [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)  
-  
   

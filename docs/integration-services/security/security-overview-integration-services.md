@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e45f6fc97531038c7d1d16c34eb18fc19d189cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d663d75f7588ad91973f3bce5f416136bc5583e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487690"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193792"
 ---
 # <a name="security-overview-integration-services"></a>Información general sobre seguridad (Integration Services)
 
@@ -100,7 +100,7 @@ ms.locfileid: "88487690"
   
  Si almacena las configuraciones en el sistema de archivos en lugar de en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no olvide asegurar las carpetas que contienen los archivos de configuración de paquetes.  
   
- Para obtener más información acerca de las configuraciones, vea [Package Configurations](../../integration-services/packages/package-configurations.md).  
+ Para obtener más información acerca de las configuraciones, vea [Package Configurations](../packages/legacy-package-deployment-ssis.md).  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>Controlar el acceso al servicio Integration Services  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa el servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para mostrar los paquetes almacenados. Restrinja el acceso a los equipos que ejecutan el servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para evitar que los usuarios no autorizados tengan acceso a la información sobre los paquetes almacenados en equipos locales y remotos, y obtengan información privada.  
@@ -121,7 +121,7 @@ ms.locfileid: "88487690"
 ### <a name="configuration-files"></a>Archivos de configuración  
  Si una configuración contiene información confidencial, como información de inicio de sesión o de la contraseña, puede guardar la configuración en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o usar una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que ha almacenado los archivos y para permitir el acceso solo a determinadas cuentas. Por lo general, otorgará acceso a las cuentas a las que permite ejecutar paquetes, y a las cuentas que administran paquetes y que solucionan problemas de paquetes, que pueden incluir la revisión del contenido de archivos de configuración, de punto de comprobación y de registro. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona el almacenamiento más seguro dado que ofrece protección en los niveles de servidor y base de datos. Para guardar configuraciones en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilice el tipo de configuración [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para guardar configuraciones en el sistema de archivos, utilice el tipo de configuración XML.  
   
- Para más información, vea [Configuraciones de paquetes](../../integration-services/packages/package-configurations.md), [Crear configuraciones de paquetes](../../integration-services/packages/create-package-configurations.md)y [Consideraciones de seguridad para una instalación de SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
+ Para más información, vea [Configuraciones de paquetes](../packages/legacy-package-deployment-ssis.md), [Crear configuraciones de paquetes](../packages/legacy-package-deployment-ssis.md)y [Consideraciones de seguridad para una instalación de SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ### <a name="checkpoint-files"></a>punto de comprobación, archivos  
  De igual modo, si el archivo de punto de comprobación que utiliza el paquete incluye información confidencial, debe utilizar una lista de control de acceso (ACL) para asegurar la ubicación o carpeta en la que ha almacenado el archivo. Los archivos de punto de comprobación guardan la información de estado actual acerca del progreso del paquete y los valores actuales de las variables. Por ejemplo, el paquete puede incluir una variable personalizada que contiene un número de teléfono. Para obtener más información, vea [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
@@ -147,4 +147,4 @@ ms.locfileid: "88487690"
   
 -   [Firmar un paquete mediante un certificado digital](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [Establecer o cambiar el nivel de protección de los paquetes](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+-   [Establecer o cambiar el nivel de protección de los paquetes](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)

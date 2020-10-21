@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b4887fd9ea7151c75940d919bcec128e4933f05b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 8064836dcfe27a19339363301b876ab723b78294
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89479599"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193155"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Desarrollar objetos personalizados para Integration Services
 
@@ -113,10 +113,9 @@ ms.locfileid: "89479599"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Entrada de Blog, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references (El proceso de compilación de la solución de Visual Studio muestra una advertencia acerca de la dependencia indirecta del ensamblado de .NET Framework debido a referencias SSIS)](https://docs.microsoft.com/archive/blogs/jason_howell/visual-studio-2010-solution-build-process-give-a-warning-about-indirect-dependency-on-the-net-framework-assembly-due-to-ssis-references) en blogs.msdn.com.  
+-   Entrada de Blog, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references (El proceso de compilación de la solución de Visual Studio muestra una advertencia acerca de la dependencia indirecta del ensamblado de .NET Framework debido a referencias SSIS)](/archive/blogs/jason_howell/visual-studio-2010-solution-build-process-give-a-warning-about-indirect-dependency-on-the-net-framework-assembly-due-to-ssis-references) en blogs.msdn.com.  
   
 ## <a name="see-also"></a>Consulte también  
  [Conservar objetos personalizados](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   
  [Generar, implementar y depurar objetos personalizados](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
-  
   

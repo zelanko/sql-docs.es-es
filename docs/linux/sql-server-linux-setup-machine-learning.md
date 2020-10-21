@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed29244d06e0fcf08c5f56af59c3e1f9feeb2883
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6efa57a482943b6dbef2ebecdc0668dac017a01a
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178262"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115771"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Instalación de SQL Server Machine Learning Services (Python y R) en Linux
 
@@ -47,7 +47,7 @@ En este artículo se le guiará por la instalación de [SQL Server Machine Lear
 
 * Debe tener una herramienta para ejecutar comandos de T-SQL. 
 
-  * Puede usar [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), una herramienta de base de datos gratuita que se ejecuta en Linux, Windows y macOS.
+  * Puede usar [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), una herramienta de base de datos gratuita que se ejecuta en Linux, Windows y macOS.
 
 ## <a name="package-list"></a>Lista de paquetes
 
@@ -439,4 +439,4 @@ Los desarrolladores de Python pueden aprender a usar Python con SQL Server con e
 Los desarrolladores de R pueden empezar con algunos ejemplos sencillos y conocer los aspectos básicos del funcionamiento de R con SQL Server. Para conocer el siguiente paso, vea los vínculos siguientes:
 
 + [Inicio rápido: Ejecutar R en T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Tutorial: Análisis en base de datos para desarrolladores de R](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Análisis en base de datos para desarrolladores de R](../machine-learning/tutorials/r-taxi-classification-introduction.md)

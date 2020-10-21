@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6bf07a7c949c76ebeae0d17b632d47e4a87fce1b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 128510b920e171b39bddacebca89624289d67213
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178250"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115754"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>Instalación de SQL Server Machine Learning Services (Python y R) en Docker
 
@@ -93,7 +93,7 @@ Complete los pasos siguientes para compilar la imagen de Docker:
    ```
   
    > [!NOTE]
-   > El proceso para ejecutar ediciones de producción de SQL Server en contenedores es ligeramente diferente. Para obtener más información, consulte [Configuración de imágenes de contenedor de SQL Server en Docker](sql-server-linux-configure-docker.md). Si usa los mismos nombres y puertos de contenedor, el resto de este tutorial funciona con los contenedores de producción.
+   > El proceso para ejecutar ediciones de producción de SQL Server en contenedores es ligeramente diferente. Para obtener más información, consulte [Configuración de imágenes de contenedor de SQL Server en Docker](./sql-server-linux-docker-container-deployment.md). Si usa los mismos nombres y puertos de contenedor, el resto de este tutorial funciona con los contenedores de producción.
 
 2. Para ver los contenedores de Docker, ejecute el comando `docker ps`:
 
@@ -101,7 +101,7 @@ Complete los pasos siguientes para compilar la imagen de Docker:
    sudo docker ps -a
    ```
 
-3. Si en la columna **ESTADO** se muestra el estado **Activo**, SQL Server se ejecuta en el contenedor y escucha en el puerto especificado en la columna **PUERTOS**. Si la columna **ESTADO** de su contenedor de SQL Server muestra **Cerrado**, consulte la [sección Solución de problemas de la guía de configuración](sql-server-linux-configure-docker.md#troubleshooting).
+3. Si en la columna **ESTADO** se muestra el estado **Activo**, SQL Server se ejecuta en el contenedor y escucha en el puerto especificado en la columna **PUERTOS**. Si la columna **ESTADO** de su contenedor de SQL Server muestra **Cerrado**, consulte la [sección Solución de problemas de la guía de configuración](./sql-server-linux-docker-container-troubleshooting.md).
 
  
     Salida:
@@ -130,4 +130,4 @@ Los desarrolladores de Python pueden aprender a usar Python con SQL Server con e
 Los desarrolladores de R pueden empezar con algunos ejemplos sencillos y conocer los aspectos básicos del funcionamiento de R con SQL Server. Para conocer el siguiente paso, vea los vínculos siguientes:
 
 + [Inicio rápido: Ejecutar R en T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Tutorial: Análisis en base de datos para desarrolladores de R](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Análisis en base de datos para desarrolladores de R](../machine-learning/tutorials/r-taxi-classification-introduction.md)

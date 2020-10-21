@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d1d5d09d0c41de51d545ca68aa4509f8a6b240f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0405dabd99568e09bc07502544db5a181bf357a5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487786"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192425"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identificar el origen de paquetes con firmas digitales
 
@@ -71,7 +71,7 @@ ms.locfileid: "88487786"
 |3|Bloquear las firmas no válidas, las que no sean de confianza y los paquetes sin firmar.<br /><br /> Este valor también bloquea las firmas generadas automáticamente.|  
   
 > [!NOTE]  
->  El valor recomendado para **BlockedSignatureStates** es 3. Este valor proporciona la protección óptima frente a paquetes sin firmar o firmas que no son válidas o no son de confianza. No obstante, es posible que el valor recomendado no sea adecuado para todas las circunstancias. Para obtener más información sobre la firma de activos digitales, vea el tema de[introducción a la firma de código](https://go.microsoft.com/fwlink/?LinkId=51414)en MSDN Library.  
+>  El valor recomendado para **BlockedSignatureStates** es 3. Este valor proporciona la protección óptima frente a paquetes sin firmar o firmas que no son válidas o no son de confianza. No obstante, es posible que el valor recomendado no sea adecuado para todas las circunstancias. Para obtener más información sobre la firma de activos digitales, vea el tema de[introducción a la firma de código](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85))en MSDN Library.  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>Para implementar una directiva de firma para paquetes  
   
@@ -104,11 +104,11 @@ ms.locfileid: "88487786"
   
     -   Obtener un certificado de una entidad de certificación pública comercial que se dedique a emitirlos.  
   
-    -   Obtener un certificado de un servidor de certificados que permita a una organización emitir certificados internamente. Tiene que agregar el certificado raíz utilizado para firmar dicho certificado al almacén **Entidades de certificación raíz de confianza** . Para ello, puede utilizar el complemento Certificados de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC). Para obtener más información, vea el tema "[Certificate Services](https://go.microsoft.com/fwlink/?LinkId=100755)" en MSDN Library.  
+    -   Obtener un certificado de un servidor de certificados que permita a una organización emitir certificados internamente. Tiene que agregar el certificado raíz utilizado para firmar dicho certificado al almacén **Entidades de certificación raíz de confianza** . Para ello, puede utilizar el complemento Certificados de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC). Para obtener más información, vea el tema "[Certificate Services](/windows/win32/seccrypto/certificate-services)" en MSDN Library.  
   
-    -   Crear su propio certificado solo con fines de pruebas. La herramienta Creación de certificados (Makecert.exe) genera certificados X.509 solo a efectos de pruebas. Para obtener más información, vea el tema "[Herramienta Creación de certificados (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)" en MSDN Library.  
+    -   Crear su propio certificado solo con fines de pruebas. La herramienta Creación de certificados (Makecert.exe) genera certificados X.509 solo a efectos de pruebas. Para obtener más información, vea el tema "[Herramienta Creación de certificados (Makecert.exe)](/previous-versions/dotnet/netframework-2.0/bfsktky3(v=vs.80))" en MSDN Library.  
   
-     Para obtener más información sobre los certificados, vea la Ayuda en pantalla para el complemento Certificados. Para obtener más información sobre cómo firmar activos digitales, vea el tema "[Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)" en MSDN Library.  
+     Para obtener más información sobre los certificados, vea la Ayuda en pantalla para el complemento Certificados. Para obtener más información sobre cómo firmar activos digitales, vea el tema "[Signing and Checking Code with Authenticode](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537364(v=vs.85))" en MSDN Library.  
   
 -   Asegurarse de que el certificado se ha habilitado para la firma de código. Para determinar si un certificado está habilitado para la firma de código, revise las propiedades del certificado en el complemento Certificados.  
   
@@ -153,5 +153,4 @@ ms.locfileid: "88487786"
 ## <a name="see-also"></a>Vea también  
  [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Información general sobre seguridad &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
-  
   

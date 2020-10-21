@@ -9,18 +9,18 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d9ba741433cf5e010861dd3096ac9bf8b4f1707
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: fb7f365fdbf4421093c11b5223bb3c1036a8d911
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227167"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956395"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Instalación de un entorno de ejecución personalizado de R para SQL Server
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-En este artículo se describe cómo instalar un entorno de ejecución personalizado para ejecutar scripts de R con SQL Server. El entorno de ejecución personalizado para R se puede usar en los escenarios siguientes:
+En este artículo se describe cómo instalar un entorno de ejecución personalizado para ejecutar scripts de R con SQL Server. El tiempo de ejecución personalizado usa la tecnología de extensión de lenguaje basada en un marco de extensibilidad para ejecutar código externo. El entorno de ejecución personalizado para R se puede usar en los escenarios siguientes:
 
 + Una instalación de SQL Server con el marco de extensibilidad.
 
@@ -71,7 +71,7 @@ Las extensiones de lenguaje usan el marco de extensibilidad para ejecutar códig
     + Servicios de Motor de base de datos
     + Machine Learning Services y extensiones de lenguaje
 
-1. Cuando finalice la instalación, si el programa indica que se reinicie el equipo, hágalo. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información, vea [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. Cuando finalice la instalación, si el programa indica que se reinicie el equipo, hágalo. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información, vea [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ## <a name="install-r"></a>Instalar R
 

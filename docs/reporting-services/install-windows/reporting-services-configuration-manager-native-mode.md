@@ -1,6 +1,6 @@
 ---
-description: Administrador de configuración de Reporting Services (modo nativo)
-title: Administrador de configuración de Reporting Services (modo nativo) | Microsoft Docs
+description: Administrador de configuración del servidor de informes (modo nativo)
+title: Administrador de configuración del servidor de informes (modo nativo) | Microsoft Docs
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03df504d7ffc4c104db9673995fa58e455961ef5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff3c1f00f91da57f91bdd0c7738929b1f5362f60
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454587"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891325"
 ---
-# <a name="reporting-services-configuration-manager-native-mode"></a>Administrador de configuración de Reporting Services (modo nativo)
+# <a name="report-server-configuration-manager-native-mode"></a>Administrador de configuración del servidor de informes (modo nativo)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -30,7 +30,7 @@ Utilice el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../inc
 > [!NOTE]
 > La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016. A partir de la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no está diseñado para administrar servidores de informes en modo de SharePoint. El modo de SharePoint se administra y se configura mediante scripts de Administración central de SharePoint y scripts PowerShell.  
   
-##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a> Escenarios para usar el Administrador de configuración de Reporting Services  
+##  <a name="scenarios-to-use-report-server-configuration-manager"></a><a name="bkmk_scenarios"></a> Escenarios para usar Administrador de configuración del servidor de informes  
  Puede usar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para realizar las tareas siguientes:  
   
 -   Configurar la cuenta del servicio del servidor de informes La cuenta se configura inicialmente durante la instalación, pero se puede modificar utilizando el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si se actualiza la contraseña o se desea utilizar otra cuenta.  
@@ -63,19 +63,19 @@ Para utilizar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../
 
 - Para poder conectarse a una instancia del servidor de informes remota y configurarla, debe habilitar las llamadas remotas de Instrumentación de administración de Windows (WMI) para atravesar Firewall de Windows. Para obtener más información, vea [Configurar un servidor de informes para la administración remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).
 
-El Administrador de configuración de Reporting Services se instala automáticamente al instalar SQL Server Reporting Services.
+El Administrador de configuración del servidor de informes se instala automáticamente al instalar SQL Server Reporting Services.
 
-##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> Para iniciar el Administrador de configuración de Reporting Services
+##  <a name="to-start-the-report-server-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a> Para iniciar el Administrador de configuración del servidor de informes
 
 1.  Use el paso siguiente correspondiente a su versión de Microsoft Windows:
 
-    - En la pantalla de inicio de Windows, escriba **Administrador** y seleccione **Administrador de configuración de Reporting Services** en los resultados de búsqueda.
+    - En la pantalla de inicio de Windows, escriba **Informes** y seleccione **Administrador de configuración del servidor de informes** en los resultados de búsqueda.
 
     - Haga clic en **Iniciar**, seleccione **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y después **Herramientas de configuración**.
 
          Si desea configurar una instancia del servidor de informes desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], abra la carpeta de programas correspondiente a esa versión. Por ejemplo, seleccione [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] en lugar de [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] para abrir las herramientas de configuración de los componentes de servidor de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] .
 
-         Seleccione **Administrador de configuración de Reporting Services**.
+         Seleccione **Administrador de configuración del servidor de informes**.
 
 2. Se abre el cuadro de diálogo **Conexión de configuración de Reporting Services** para que seleccione la instancia del servidor de informes que desea configurar. Seleccione **Conectar**.
 

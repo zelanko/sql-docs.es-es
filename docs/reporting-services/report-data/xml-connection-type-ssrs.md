@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 120e99440b77a27be4f83f8e4355a4ec75cab7bb
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c4bbc8f1c5b96f659936cb955c1f6f31bd0ef0da
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458512"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933444"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexión XML (SSRS)
   Para incluir los datos de un origen de datos XML en el informe, deberá tener un conjunto de datos basado en un origen de datos de informe de tipo XML. Este tipo de origen de datos integrado se basa en la extensión de datos XML. Utilice este tipo de origen de datos para conectarse y recuperar datos de documentos XML, servicios web o XML incrustado en la consulta.  
@@ -45,7 +45,7 @@ ms.locfileid: "86458512"
   
 -   Usuario actual de Windows (lo que se conoce también como seguridad integrada).  
   
--   No se necesitan credenciales. Si no especifica credenciales, se utilizará el acceso anónimo. Asegúrese de haber definido la cuenta de ejecución desatendida para que el servidor de informes se conecte a un origen de datos externo. La extensión de procesamiento de datos XML no pasa credenciales a la dirección URL de destino ni al servicio web; la conexión no se realizará correctamente a menos que haya definido la cuenta de ejecución desatendida. Para obtener más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+-   No se necesitan credenciales. Si no especifica credenciales, se utilizará el acceso anónimo. Asegúrese de haber definido la cuenta de ejecución desatendida para que el servidor de informes se conecte a un origen de datos externo. La extensión de procesamiento de datos XML no pasa credenciales a la dirección URL de destino ni al servicio web; la conexión no se realizará correctamente a menos que haya definido la cuenta de ejecución desatendida. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  Las credenciales almacenadas o solicitadas no están admitidas. Recuerde que si deshabilita la seguridad integrada de Windows, no podrá usarla para recuperar datos. Si especifica credenciales almacenadas o solicitadas, se producirá un error en tiempo de ejecución.  
   

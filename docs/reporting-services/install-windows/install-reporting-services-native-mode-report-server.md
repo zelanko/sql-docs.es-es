@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2c05251bb8ac19f3c4594a263c7b108a8dbc90a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b741c74a2cc614ecab4e866f9bcfe26618133aa4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498090"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891905"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Instalación del servidor de informes en modo nativo de Reporting Services 2016
 
@@ -58,7 +58,7 @@ El programa de instalación instala las siguientes características de [!INCLUDE
 
 - Información de conexión, también conocida como el nombre del origen de datos (DSN) para las bases de datos del servidor de informes.
 
- El programa de instalación no configura la cuenta de ejecución desatendida, el correo electrónico del servidor de informes, la copia de seguridad de las claves de cifrado ni una implementación escalada. Puede usar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar estas propiedades. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+ El programa de instalación no configura la cuenta de ejecución desatendida, el correo electrónico del servidor de informes, la copia de seguridad de las claves de cifrado ni una implementación escalada. Puede usar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar estas propiedades. Para más información, vea [Administrador de configuración del servidor de informes &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 ## <a name="when-to-install-the-default-configuration-for-native-mode"></a><a name="bkmk_whentoinstalldefaultconfig"></a> Cuándo instalar la configuración predeterminada en el modo nativo
 

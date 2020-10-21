@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9b1d3357fe25ffd65492ba21b5dd74c819a66b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bcc9b0f7303a24bdd02d959e9b30044f3da26f2
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426307"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080674"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -92,7 +92,7 @@ Si los resultados que devuelve esta consulta se recuperan con **sqlsrv_fetch_obj
 SELECT SCOPE_IDENTITY() AS PictureID
 ```
   
-## <a name="example"></a>Ejemplo  
+## <a name="object-example"></a>Ejemplo de objeto  
 En el siguiente ejemplo se recupera cada fila de un conjunto de resultados como un objeto PHP. En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ``` 
@@ -131,7 +131,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Ejemplo  
+## <a name="class-example"></a>Ejemplo de clase  
 En el ejemplo siguiente se recupera cada fila de un conjunto de resultados como una instancia de la clase *Product* definida en la secuencia de comandos. En el ejemplo se recupera información del producto de las tablas *Purchasing.PurchaseOrderDetail* y *Production.Product* de la base de datos AdventureWorks para productos que tienen una fecha de vencimiento especificada (*DueDate*) y una cantidad mantenida en existencias (*StockQty*) inferior a un valor determinado. En el ejemplo se resaltan algunas de las reglas que se aplican cuando se especifica una clase en una llamada a **sqlsrv_fetch_object**:  
   
 -   La variable *$product* es una instancia de la clase *Product* , ya que se especificó "Product" con el parámetro *$className* y existe la clase *Product* .  

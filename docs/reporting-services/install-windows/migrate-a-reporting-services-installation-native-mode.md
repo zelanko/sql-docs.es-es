@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d45e00b7d99f87ec3edc9bdd123d5392412dcf73
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454585"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934840"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar una instalación de Reporting Services (modo nativo)
 
@@ -122,7 +122,7 @@ Para obtener más información sobre los cambios en SQL Server Reporting Service
 
  Antes de instalar una instancia nueva de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], no olvide hacer una copia de seguridad de todos los archivos de la instalación actual.  
   
-1. Realice una copia de seguridad de la clave de cifrado de la base de datos del servidor de informes. Este paso es esencial para que la migración se realice correctamente. Más adelante en el proceso de migración, debe restaurarla para que el servidor de informes recupere el acceso a los datos cifrados. Para realizar una copia de seguridad de la clave, use el Administrador de configuración de Reporting Services.  
+1. Realice una copia de seguridad de la clave de cifrado de la base de datos del servidor de informes. Este paso es esencial para que la migración se realice correctamente. Más adelante en el proceso de migración, debe restaurarla para que el servidor de informes recupere el acceso a los datos cifrados. Para realizar una copia de seguridad de la clave, use el Administrador de configuración del servidor de informes.  
   
 2. Haga una copia de seguridad de la base de datos del servidor de informes mediante uno de los métodos admitidos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea las instrucciones sobre cómo hacer una copia de seguridad de la base de datos del servidor de informes en [Mover las bases de datos del servidor de informes a otro equipo &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
@@ -202,7 +202,7 @@ Para obtener más información sobre los cambios en SQL Server Reporting Service
   
 1. Averigüe los ensamblados son compatibles o si es necesario volver a compilarlos.
 
-    * Las extensiones de seguridad personalizadas se deben volver a escribir con la interfaz [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx).
+    * Las extensiones de seguridad personalizadas se deben volver a escribir con la interfaz [IAuthenticationExtension2](/dotnet/api/microsoft.reportingservices.interfaces.iauthenticationextension2).
   
     * Las extensiones de representación personalizadas para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se deben reescribir con el Modelo de objetos de representación (ROM).  
   
@@ -237,15 +237,15 @@ Para obtener más información sobre los cambios en SQL Server Reporting Service
 > [!IMPORTANT]
 >  Si cualquiera de los servidores de informes de la implementación escalada está en línea y no se ha migrado, podría encontrar una excepción *rsInvalidReportServerDatabase* porque use un esquema más antiguo al conectarse a los actualizados.  
 
-Si el servidor de informes que se ha migrado está configurado como la base de datos compartida para una implementación escalada, tendrá que eliminar todas las claves de cifrado antiguas de la tabla **Claves** de la base de datos **ReportServer**, antes de configurar el servicio del servidor de informes. Si no se quitan las claves, el servidor de informes migrado intentará inicializarse en modo de implementación escalada. Para obtener más información, vea [Agregar y quitar claves de cifrado para implementaciones escaladas &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) y [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+Si el servidor de informes que se ha migrado está configurado como la base de datos compartida para una implementación escalada, tendrá que eliminar todas las claves de cifrado antiguas de la tabla **Claves** de la base de datos **ReportServer**, antes de configurar el servicio del servidor de informes. Si no se quitan las claves, el servidor de informes migrado intentará inicializarse en modo de implementación escalada. Para obtener más información, vea [Agregar y quitar claves de cifrado para implementaciones escaladas &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) y [Configurar y administrar claves de cifrado &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
 
 Las claves de escalamiento no se pueden eliminar utilizando el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las claves antiguas se deben eliminar de la tabla **Keys** de la base de datos **ReportServer** con SQL Server Management Studio. Elimine todas las filas de la tabla Keys. Esta acción borra la tabla y la prepara para restaurar únicamente la clave simétrica, como se documenta en los pasos siguientes.  
 
 Antes de eliminar las claves, se recomienda hacer primero una copia de seguridad de la clave de cifrado simétrica. Puede utilizar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para hacer una copia de seguridad de la clave. Abra Configuration Manager, haga clic en la pestaña Claves de cifrado y, después, haga clic en el botón **Copia de seguridad** . También puede crear scripts de comandos WMI para hacer una copia de seguridad de la clave de cifrado. Para obtener más información sobre WMI, vea [Método BackupEncryptionKey &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md).  
   
-1. Inicie el Administrador de configuración de Reporting Services y conéctese a la instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que ha instalado. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1. Inicie el Administrador de configuración del servidor de informes y conéctese a la instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que ha instalado. Para más información, vea [Administrador de configuración del servidor de informes &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2. Configure las direcciones URL del servidor de informes y el portal web. Para obtener más información, vea [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+2. Configure las direcciones URL del servidor de informes y el portal web. Para más información, vea [Configurar una dirección URL &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
 3. Seleccione la base de datos del servidor de informes existente de la instalación anterior y configúrela. Si la configuración se realiza correctamente, los servicios del servidor de informes se reinician y, una vez realizada la conexión a la base de datos del servidor de informes, la base de datos se actualiza de forma automática a SQL Server Reporting Services. Para obtener más información sobre cómo ejecutar el Asistente para cambiar bases de datos que se usa para crear o seleccionar una base de datos del servidor de informes, vea [Crear una base de datos del servidor de informes de modo nativo](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
@@ -300,6 +300,6 @@ Una vez que haya migrado correctamente el servidor de informes a una nueva insta
 * [Base de datos del servidor de informes](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 * [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 * [Compatibilidad con versiones anteriores de Reporting Services](../../reporting-services/reporting-services-backward-compatibility.md)   
-* [Administrador de configuración de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+* [Administrador de configuración del servidor de informes](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

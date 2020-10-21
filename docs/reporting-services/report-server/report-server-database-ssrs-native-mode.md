@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1a4bfe8c47361793dde026d61fb5fb7bdf0e709c
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 9b5f4230aacedcff2ecdffedb943ae39097fc1d4
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547287"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934991"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Base de datos del servidor de informes (Modo nativo de SSRS)
   Un servidor de informes es un servidor sin estado que usa el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] para almacenar metadatos y definiciones de objeto. Una instalación en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] emplea dos bases de datos para separar los requisitos de almacenamiento persistente de datos de los de almacenamiento temporal. Las bases de datos se crean juntas y se enlazan mediante el nombre. De forma predeterminada, los nombres de base de datos son **ReportServer** y **ReportServerTempDB**, respectivamente.  
@@ -37,7 +37,7 @@ ms.locfileid: "84547287"
   
  Todos los accesos a una base de datos del servidor de informes deben controlarse a través del servidor de informes. Para acceder al contenido de una base de datos del servidor de informes se pueden usar herramientas de administración del servidor de informes (como el portal web y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) o interfaces de programación, como el acceso URL, el servicio web del servidor de informes o el proveedor de Instrumental de administración de Windows (WMI).  
   
- La conexión a la base de datos del servidor de informes se define generalmente a través del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . No obstante, se puede definir durante la instalación si decide instalar la configuración predeterminada. Para más información sobre la conexión del servidor de informes a la base de datos, vea [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ La conexión a la base de datos del servidor de informes se define generalmente a través del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . No obstante, se puede definir durante la instalación si decide instalar la configuración predeterminada. Para más información sobre la conexión del servidor de informes a la base de datos, vea [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="report-server-database"></a>Base de datos del servidor de informes  
  La base de datos del servidor de informes es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde se almacena el siguiente contenido:  
@@ -65,9 +65,9 @@ ms.locfileid: "84547287"
   
 ## <a name="see-also"></a>Consulte también  
  [Hospedar una base de datos del servidor de informes en un clúster de conmutación por error de SQL Server](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
- [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Servidor de informes de Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [Administrar una base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
- [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Crear una base de datos del servidor de informes &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
  [Operaciones de copia de seguridad y restauración de Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
   

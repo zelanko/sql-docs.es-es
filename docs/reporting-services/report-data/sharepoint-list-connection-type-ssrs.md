@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d01a7cdd6d81d0c27e9c8d8562f71f5605ed4df2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 369f8962752bcdc67c407b561400138f3c179abe
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396694"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935330"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo de conexión de lista de SharePoint (SSRS)
 
@@ -68,7 +68,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
  En el caso de una tecnología de SharePoint configurada para funcionar sin un servidor de informes (modo local), esta opción no se admite. Para obtener más información sobre el modo local, vea [Informes en modo local frente al modo conectado en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
  **No se necesitan credenciales (No usar credenciales):**  
- Para usar esta opción, la cuenta de ejecución desatendida debe estar configurada en el servidor de informes. Para obtener más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Para usar esta opción, la cuenta de ejecución desatendida debe estar configurada en el servidor de informes. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  Para obtener información sobre la compatibilidad con la autenticación basada en notificaciones en la pila de Microsoft BI, vea [Usar autenticación basada en notificaciones en la pila de Microsoft BI](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   

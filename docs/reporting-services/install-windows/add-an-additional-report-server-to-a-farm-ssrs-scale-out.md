@@ -9,12 +9,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b2b69bf8be4eef05ae8bb332afb4078eb1bca404
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 689d304798da13a8c8647598ac13d9ca232c6bfc
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418681"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934704"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Agregar un servidor de informes adicional a una granja de servidores (escalado horizontal de SSRS)
 
@@ -26,7 +26,7 @@ ms.locfileid: "88418681"
 > [!TIP]  
 >  A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , no se usa el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para agregar servidores y escalar horizontalmente los servidores de informes. Los productos de SharePoint administran el escalado horizontal de servicios de informes a medida que los servidores SharePoint con el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se agregan a la granja.  
   
- Para obtener más información sobre cómo escalar horizontalmente los servidores de informes en modo nativo, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+ Para aprender a escalar horizontalmente los servidores de informes en modo nativo, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ##  <a name="load-balancing"></a><a name="bkmk_loadbalancing"></a> Equilibrio de carga  
  SharePoint administra automáticamente el equilibrio de carga de las aplicaciones de servicios de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a menos que el entorno tenga una solución personalizada o de terceros para el equilibrio de carga. El comportamiento predeterminado de equilibrio de carga de SharePoint consiste en que cada aplicación de servicios de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se equilibrará en todos los servidores de aplicaciones que ha iniciado el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para comprobar si el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está instalado y se ha iniciado, haga clic en **Administrar servicios en el servidor** en Administración central de SharePoint.  
@@ -81,7 +81,7 @@ The Reporting Services Web Service is not enabled. Configure at least one instan
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Agregar un servidor web o de aplicaciones a la granja de servidores en SharePoint 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
-[Agregar un servidor web o de aplicaciones a la granja de servidores en SharePoint 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
+[Agregar un servidor web o de aplicaciones a la granja de servidores en SharePoint 2016](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)  
+[Agregar un servidor web o de aplicaciones a la granja de servidores en SharePoint 2013](/SharePoint/install/add-web-or-application-server-to-the-farm)
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

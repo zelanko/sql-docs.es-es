@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f07e5cbcbe3604f140f197d64c4666d992f8112e
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244561"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934860"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar información de credenciales y conexión para los orígenes de datos de informes
   Un servidor de informes utiliza credenciales para conectarse a orígenes de datos externos que proporcionan contenido a informes o información de destinatarios a una suscripción controlada por datos. Puede especificar credenciales que utilicen la autenticación de Windows, la autenticación de la base de datos, la autenticación personalizada o que no utilicen autenticación. Al enviar una solicitud de conexión a través de la red, el servidor de informes suplantará una cuenta de usuario o una cuenta de ejecución desatendida. Para obtener más información acerca del contexto de seguridad en el que se realiza una solicitud de conexión, vea [Configuración de orígenes de datos y conexiones de red](#DataSourceConfigurationConnections) más adelante en este tema.  
@@ -49,7 +49,7 @@ ms.locfileid: "75244561"
   
      La primera vez que guarda en, publica en o va a un servidor de informes o un sitio de SharePoint, es posible que necesite escribir sus credenciales. Las credenciales que escribe se utilizan hasta el final de la sesión en el Generador de informes. Si decide guardar las credenciales, se almacenan con seguridad en el equipo junto con su configuración de usuario. En las siguientes sesiones del Generador de informes, se usan las credenciales guardadas para conectar con el mismo servidor de informes o con el sitio de SharePoint. El administrador del servidor de informes o el administrador de SharePoint especifica qué tipo de credenciales hay que utilizar.  
   
--   Las credenciales del origen de datos que escriba en la página [Propiedades del origen de datos (cuadro de diálogo), Credenciales &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) de un origen de datos incrustados.  
+-   Las credenciales del origen de datos que escriba en la página [Propiedades del origen de datos (cuadro de diálogo), Credenciales &#40;Generador de informes&#41;](/previous-versions/sql/) de un origen de datos incrustados.  
   
      El servidor de informes utiliza estas credenciales para realizar una conexión de datos al origen de datos externo. Para algunos tipos de orígenes de datos, las credenciales pueden estar almacenadas con seguridad en el servidor de informes. Estas credenciales permiten a otros usuarios ejecutar el informe sin proporcionar las credenciales para la conexión de datos subyacente.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75244561"
   
      Para los orígenes de datos compartidos, utilice la opción **Guardar mi contraseña** para guardar localmente las credenciales con sus valores de usuario en su equipo. El Generador de informes utiliza las credenciales guardadas cada vez que se realiza una conexión al origen de datos externo correspondiente.  
   
- Para más información, vea [Propiedades del origen de datos (cuadro de diálogo), General &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) y [Mostrar la vista previa de informes en el Generador de informes](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ Para más información, vea [Propiedades del origen de datos (cuadro de diálogo), General &#40;Generador de informes&#41;](/previous-versions/sql/) y [Mostrar la vista previa de informes en el Generador de informes](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="using-remote-data-sources"></a>Usar orígenes de datos remotos  
  Si el informe recupera datos de un servidor de bases de datos remoto, compruebe lo siguiente:  
@@ -142,7 +142,7 @@ ms.locfileid: "75244561"
   
 -   El informe es un subinforme que utiliza las credenciales del informe primario.  
   
- En estas condiciones, el servidor de informes se conecta a un origen de datos remoto utilizando una cuenta de ejecución desatendida que debe definirse de antemano. Dado que el servidor de informes no se conecta a un servidor remoto mediante sus credenciales de servicio, debe especificar una cuenta para que el servidor pueda realizar la conexión. Para más información sobre cómo crear esta cuenta, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ En estas condiciones, el servidor de informes se conecta a un origen de datos remoto utilizando una cuenta de ejecución desatendida que debe definirse de antemano. Dado que el servidor de informes no se conecta a un servidor remoto mediante sus credenciales de servicio, debe especificar una cuenta para que el servidor pueda realizar la conexión. Para más información sobre cómo crear esta cuenta, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="user-name-and-password-login"></a>Inicio de sesión con nombre de usuario y contraseña  
  Cuando se selecciona la opción **Usar este nombre de usuario y esta contraseña**, debe especificarse un nombre de usuario y una contraseña para obtener acceso al origen de datos. En el caso de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , las credenciales podrían servir para iniciar sesión en la base de datos. Las credenciales se pasan al origen de datos externo para su autenticación.  
@@ -165,5 +165,4 @@ ms.locfileid: "75244561"
  [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Administrar orígenes de datos de informe](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Configuración de propiedades de origen de datos para un informe](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
-  
   

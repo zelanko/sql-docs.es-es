@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d91801bd8fa23cdb14112c98af6584d9a7b9250
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c5d469cdf48a6c03a332a370e4c2b173ae7d18d1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934260"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934681"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Comparación de los servidores de informes de Reporting Services nativos y de SharePoint
 
@@ -40,7 +40,7 @@ Un servidor de informes de Reporting Services se ejecuta en uno de dos modos de 
   
  Un servidor de informes de Reporting Services admite dos modos de implementación de las instancias del servidor de informes:  
   
--   **Modo nativo**: incluido el modo nativo con elementos web de SharePoint, donde un servidor de informes se ejecuta como un servidor de aplicaciones que proporciona todas las funcionalidades de procesamiento y administración exclusivamente a través de los componentes de Reporting Services. Para configurar un servidor de informes en modo nativo se usa el administrador de configuración de Reporting Services y SQL Server Management Studio.  
+-   **Modo nativo**: incluido el modo nativo con elementos web de SharePoint, donde un servidor de informes se ejecuta como un servidor de aplicaciones que proporciona todas las funcionalidades de procesamiento y administración exclusivamente a través de los componentes de Reporting Services. Para configurar un servidor de informes en modo nativo se usa el Administrador de configuración del servidor de informes y SQL Server Management Studio.  
   
 -   **Modo de SharePoint**: donde un servidor de informes se instala como parte de una granja de servidores de SharePoint.  Implemente y configure el modo de SharePoint mediante comandos de PowerShell o páginas de administración de contenido de SharePoint.  
   
@@ -137,8 +137,8 @@ Un servidor de informes de Reporting Services se ejecuta en uno de dos modos de 
   
 |Tarea|Vínculo|  
 |----------|----------|  
-|Revisar los requisitos de hardware y software.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
-|Instale Reporting Services en modo de SharePoint.|[Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)|  
+|Revisar los requisitos de hardware y software.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](/previous-versions/sql/sql-server-2016/jj714188(v=sql.130)).|  
+|Instale Reporting Services en modo de SharePoint.|[Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](../install-windows/install-the-first-report-server-in-sharepoint-mode.md)|  
 |Explica cómo ajustar la configuración de memoria para el servicio web del servidor de informes y el servicio de Windows.|[Configuración de la memoria disponible para las aplicaciones del servidor de informes](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |Explica los pasos recomendados para configurar el servidor de informes para la administración remota.|[Configuración de un servidor de informes para la administración remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |Proporciona instrucciones para configurar la disponibilidad de **Mis informes** en una instancia del servidor de informes nativo.|[Habilitar y deshabilitar Mis informes](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

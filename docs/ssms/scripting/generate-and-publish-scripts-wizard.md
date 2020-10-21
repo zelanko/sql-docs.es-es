@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901368"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039026"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Asistente generar y publicar scripts
 
@@ -57,7 +57,7 @@ ms.locfileid: "88901368"
 
 Puede usar el **Asistente Generar y publicar scripts** para crear scripts con el fin de transferir una base de datos entre instancias de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Puede generar scripts para una base de datos en una instancia del motor de base de datos en la red local o a partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Los scripts generados se pueden ejecutar en otra instancia del motor de base de datos o [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. También puede usar el asistente para publicar el contenido de una base de datos directamente en un servicio web creado usando Database Publishing Services. Es posible crear scripts para una base de datos completa o limitarlos a objetos específicos.
 
-Para un tutorial más detallado sobre cómo usar el Asistente para generar y publicar scripts, consulte [Tutorial: Asistente para generar scripts](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
+Para un tutorial más detallado sobre cómo usar el Asistente para generar y publicar scripts, consulte [Tutorial: Asistente para generar scripts](../tutorials/scripting-ssms.md#script-databases).
 
 ## <a name="before-you-begin"></a>Antes de empezar
 
@@ -130,7 +130,7 @@ Use esta página para especificar si desea que el asistente guarde los scripts e
 
 ![Guardar como cuaderno](media/generate-and-publish-scripts-wizard/save.png)
 
-- **[Guardar como cuaderno](../../azure-data-studio/notebooks-guidance.md)** : guarde el script en uno o varios archivos .sql. Seleccione el botón Examinar ( **…** ) para especificar el nombre y la ubicación del archivo.
+- **[Guardar como cuaderno](../../azure-data-studio/notebooks/notebooks-guidance.md)** : guarde el script en uno o varios archivos .sql. Seleccione el botón Examinar ( **…** ) para especificar el nombre y la ubicación del archivo.
 
 - **Guardar como archivo de script**: guarde el script en uno o varios archivos .sql. Seleccione el botón Examinar ( **…** ) para especificar el nombre y la ubicación del archivo. Active la casilla **Sobrescribir el archivo existente** para reemplazar el archivo si ya existe uno con el mismo nombre. Seleccione la opción de un **archivo de script único** o un **archivo de script por objeto** para especificar cómo se deben generar los scripts. Seleccione **Texto Unicode** o **Texto ANSI** para especificar el tipo de texto que se debe usar en el script.
 
@@ -246,7 +246,7 @@ Use esta página para supervisar el progreso del asistente a medida que se produ
 
 Si todos los valores de configuración son correctos, la configuración finaliza correctamente.
 
-## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Generar scripts en el Almacenamiento de datos SQL de Azure
+## <a name="generating-scripts-on-azure-synapse-analytics"></a>Generación de scripts en Azure Synapse Analytics
 
 Si la sintaxis generada al usar "Script como..." no se parece a la sintaxis de [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] o si recibe un mensaje de error, es posible que deba configurar las opciones de scripting de SQL Server Management Studio en [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
 

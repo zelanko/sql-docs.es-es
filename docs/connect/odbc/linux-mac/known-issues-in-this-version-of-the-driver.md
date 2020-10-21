@@ -10,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6729d46fe498c6efe8e49f941c0ef1b007870b2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: af611dcc4ca45ae18d650af6248b0f53ab8bcb0b
+ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727406"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847305"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Problemas conocidos del controlador ODBC en Linux y macOS
 
@@ -33,7 +33,7 @@ Se irán publicando más problemas en el [blog de controladores de SQL Server](
 
 - Si la codificación del cliente es UTF-8, el administrador de controladores no siempre convierte correctamente de UTF-8 a UTF-16. Actualmente, se producen daños en los datos cuando uno o varios caracteres de la cadena no son caracteres UTF-8 válidos. Los caracteres ASCII se asignan correctamente. El administrador de controladores intenta realizar esta conversión al llamar a las versiones de SQLCHAR de la API de ODBC (por ejemplo, SQLDriverConnectA). El Administrador de controladores no intentará realizar esta conversión al llamar a las versiones de SQLWCHAR de la API de ODBC (por ejemplo, SQLDriverConnectW).  
 
-- El parámetro *ColumnSize* de **SQLBindParameter** hace referencia al número de caracteres en el tipo SQL, mientras que *BufferLength* es el número de bytes en el búfer de la aplicación. Pero si el tipo de datos de SQL es `varchar(n)` o `char(n)`, la aplicación enlaza el parámetro como SQL_C_CHAR o SQL_C_VARCHAR y la codificación de caracteres del cliente es UTF-8, es posible que obtenga un error "Datos tipo String, se truncarán por la derecha" del controlador, aunque el valor de *ColumnSize* se corresponda con el tamaño del tipo de datos del servidor. Este error se produce porque las conversiones entre las codificaciones de caracteres pueden cambiar la longitud de los datos. Por ejemplo, un carácter de apóstrofo derecho (U+2019) codificado en CP-1252 como 0x92 de un solo byte, pero en UTF-8 como la secuencia de 3 bytes 0xe2 0x80 0x99.
+- El parámetro *ColumnSize* de **SQLBindParameter** hace referencia al número de caracteres en el tipo SQL, mientras que *BufferLength* es el número de bytes en el búfer de la aplicación. Pero si el tipo de datos de SQL es `varchar(n)` o `char(n)`, la aplicación enlaza el parámetro como SQL_C_CHAR para el tipo C y SQL_CHAR o SQL_VARCHAR para el tipo SQL, y la codificación de caracteres del cliente es UTF-8, es posible que obtenga un error "Datos tipo String, se truncarán por la derecha" del controlador, aunque el valor de *ColumnSize* se corresponda con el tamaño del tipo de datos del servidor. Este error se produce porque las conversiones entre las codificaciones de caracteres pueden cambiar la longitud de los datos. Por ejemplo, un carácter de apóstrofo derecho (U+2019) codificado en CP-1252 como 0x92 de un solo byte, pero en UTF-8 como la secuencia de 3 bytes 0xe2 0x80 0x99.
 
 Por ejemplo, si la codificación es UTF-8 y especifica 1 para *BufferLength* y *ColumnSize* en **SQLBindParameter** para un parámetro de salida, y luego intenta recuperar el carácter anterior almacenado en una columna `char(1)` en el servidor (mediante CP-1252), el controlador intenta convertirlo a la codificación UTF-8 de 3 bytes, pero no puede ajustar el resultado en un búfer de 1 byte. En la otra dirección, el controlador compara *ColumnSize* con *BufferLength* en **SQLBindParameter** antes de realizar la conversión entre las diferentes páginas de códigos del cliente y el servidor. Dado que un parámetro *ColumnSize* con un valor de 1 es inferior a uno *BufferLength* con, por ejemplo, un valor de 3, el controlador generará un error. Para evitar este error, asegúrese de que la longitud de los datos después de la conversión se ajuste a la columna o al búfer especificados. El parámetro*ColumnSize* no puede ser superior a 8000 para el tipo `varchar(n)`.
 

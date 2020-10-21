@@ -1,5 +1,5 @@
 ---
-title: Notas de la versión
+title: Notas de la versión de Azure Data Studio
 description: Este artículo contiene notas de las versiones de Azure Data Studio desde noviembre de 2017 hasta el momento actual. Muchos de los problemas resumidos incluyen vínculos para obtener detalles adicionales.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -8,17 +8,32 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 09/30/2020
-ms.openlocfilehash: 1d23774a2e722c85593af0238ef924569585ff62
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.date: 10/14/2020
+ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725106"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059193"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión de Azure Data Studio
 
 **[Descargue e instale la versión más reciente](./download-azure-data-studio.md)** .
+
+## <a name="october-2020"></a>Octubre de 2020
+
+14 de octubre de 2020 &nbsp; / &nbsp; versión: 1.23.0
+
+&nbsp;
+
+| Change | Detalles |
+| ------ | ------- |
+| Azure SQL Edge | Compatibilidad con objetos de Azure SQL Edge. |
+| Correcciones de errores | Para obtener una la lista completa de las correcciones, vea [Correcciones y problemas en GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is:issue+milestone:%22October+2020+Release%22+is:closed). |
+| Bases de datos| Compatibilidad con la misma referencia de base de datos. |
+| Actualizaciones de extensiones | [Azure Arc](extensions/azure-arc-extension.md)</br>[azdata](../azdata/install/deploy-install-azdata.md)</br>[Machine Learning](extensions/machine-learning-extension.md)</br>[Kusto (KQL)](extensions/kusto-extension.md)</br>[Comparación de esquemas](extensions/schema-compare-extension.md)</br>Evaluación de SQL</br>[Proyectos de SQL Database](extensions/sql-database-project-extension.md)</br>[Importación de SQL Server](extensions/sql-server-import-extension.md) |
+| Nuevas características de implementación | Se han agregado las implementaciones de Azure SQL Database y VM. |
+| PowerShell | Se ha agregado compatibilidad con streaming de resultados del kernel de PowerShell. |
 
 ## <a name="september-2020-hotfix"></a>Septiembre de 2020 (revisión)
 
@@ -68,8 +83,8 @@ ms.locfileid: "91725106"
 
 | Change | Detalles |
 | :----- | :------ |
-| Corrección del error #11372. Al arrastrar y colocar una tabla en el Explorador de objetos, los nombres de tabla se ajustan de manera incorrecta. | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
-| Corrección del error #11356. El tema oscuro es ahora el tema predeterminado. | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| Corrección del error #11372. Al arrastrar y colocar una tabla en el Explorador de objetos, los nombres de tabla se ajustan de manera incorrecta. | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372) |
+| Corrección del error #11356. El tema oscuro es ahora el tema predeterminado. | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356) |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>Problema conocido
@@ -90,7 +105,6 @@ ms.locfileid: "91725106"
 | Icono de la cuenta de Azure agregado a la barra de actividades | Ahora los usuarios pueden ver fácilmente dónde iniciar sesión en Azure |
 | Problemas y errores resueltos | Para obtener una la lista completa de las correcciones, vea [Correcciones y problemas en GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed). |
 | &nbsp; | &nbsp; |
-
 
 ## <a name="june-2020"></a>Junio de 2020
 
@@ -882,7 +896,7 @@ La *versión preliminar pública de diciembre* incluye varias correcciones de er
 
 | Change | Detalles |
 | :----- | :------ |
-| El cuadro de diálogo Crear regla de firewall ahora está disponible para ayudarle a conectarse a Azure SQL Database y Azure SQL Data Warehouse. | &nbsp; |
+| El cuadro de diálogo Crear regla de firewall ahora está disponible para poder conectarse a Azure SQL Database y Azure Synapse Analytics. | &nbsp; |
 | Se ha agregado el programa de instalación de Windows y los paquetes de instalación de Linux DEB y RPM. | &nbsp; |
 | Administración del editor de objetos visuales del panel. | &nbsp; |
 | Comandos *Crear script como ALTER* y *Script como ejecutar*. | &nbsp; |
@@ -904,7 +918,7 @@ Para empezar, vea una de las siguientes guías de inicio rápido:
 
 - [Conectar y consultar SQL Server](quickstart-sql-server.md)
 - [Conectar y consultar Azure SQL Database](quickstart-sql-database.md)
-- [Conectar y consultar almacenamiento de datos de Azure](quickstart-sql-dw.md)
+- [Conectar y hacer consultas en Azure Synapse Analytics](quickstart-sql-dw.md)
 
 Colaboración en Azure Data Studio:
 

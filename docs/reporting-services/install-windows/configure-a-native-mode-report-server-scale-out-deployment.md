@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8e9e8fab90a0c2f21ae29d113ea896b471177f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7730435d762d6e9e9bc4690dbdc644f0801fe20a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460007"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890875"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo
 
@@ -62,7 +62,7 @@ Para SQL Server 2016 Reporting Services y versiones anteriores, los servidores d
   
          Para evitar que se produzcan errores de compatibilidad de base de datos al conectar las instancias del servidor a la base de datos compartida, asegúrese de que la versión de todas las instancias sea la misma. Por ejemplo, si crea la base de datos del servidor de informes con una instancia del servidor de informes de SQL Server 2016, todas las demás instancias de la misma implementación también deben ser de SQL Server 2016.  
   
-    -   Use el Administrador de configuración de Reporting Services con el fin de conectarse a cada uno de los servidores de informes para la base de datos compartida. Solo puede configurar y conectarse a un servidor de informes a la vez.  
+    -   Use el Administrador de configuración del servidor de informes con el fin de conectarse a cada uno de los servidores de informes para la base de datos compartida. Solo puede configurar y conectarse a un servidor de informes a la vez.  
   
     -   Utilice la herramienta Configuración de Reporting Services para completar la ampliación escalada uniendo instancias nuevas del servidor de informes a la primera instancia ya conectada a la base de datos de servidor de informes.  
   

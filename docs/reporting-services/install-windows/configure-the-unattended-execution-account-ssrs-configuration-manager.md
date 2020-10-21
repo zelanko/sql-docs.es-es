@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 616397e2032ca5855f9213073f495f1f7ec163db
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866322"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933549"
 ---
-# <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)
+# <a name="configure-the-unattended-execution-account-report-server-configuration-manager"></a>Configurar la cuenta de ejecución desatendida (Administrador de configuración del servidor de informes)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una cuenta especial que se utiliza para el procesamiento de informes en modo desatendido y para enviar solicitudes de conexión a través de la red. La cuenta se utiliza de las formas siguientes:  
   
 -   Envíe las solicitudes de conexión a través de la red para los informes que usen la autenticación de base de datos, o conéctese a los orígenes de datos de informe externos que no requieran ni usen autenticación. Para más información, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).
@@ -41,7 +41,7 @@ ms.locfileid: "74866322"
   
  Para especificar la cuenta, puede utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o la utilidad **rsconfig** . La forma más fácil de configurar la cuenta de ejecución en modo desatendido es ejecutar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y especificar las credenciales en la página Cuenta de ejecución.  
   
-1.  Inicie la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese a la instancia del servidor de informes que desee configurar. Para obtener instrucciones, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Inicie la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese a la instancia del servidor de informes que desee configurar. Para obtener instrucciones, vea [Administrador de configuración del servidor de informes &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  En la página Cuenta de ejecución, seleccione **Especificar una cuenta de ejecución**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74866322"
   
 3.  Escriba el siguiente comando para configurar la cuenta de una instancia de servidor de informes local:  
   
-     **rsconfig -e -u\<dominio/nombreDeUsuario> -p\<password>**  
+     **rsconfig -e -u\<domain/username> -p\<password>**  
   
  **rsconfig -e** admite argumentos adicionales. Para obtener más información sobre la sintaxis y para ver ejemplos de comandos, consulte [rsconfig (utilidad) (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md).
  
@@ -106,6 +106,6 @@ ms.locfileid: "74866322"
  La información de cuenta se quita del archivo RSReportServer.config.  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrador de configuración de Reporting Services (Modo nativo de SSRS)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Administrador de configuración del servidor de informes (modo nativo de SSRS)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

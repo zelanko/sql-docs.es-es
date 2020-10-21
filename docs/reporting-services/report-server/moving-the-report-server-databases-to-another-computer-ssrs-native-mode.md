@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 762bee43a32bed19b5646ad982467c67c933ed85
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c8d602417a7423655ef5800d081432499d2761aa
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254584"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891695"
 ---
 # <a name="moving-report-server-databases-to-another-computer-ssrs-native-mode"></a>Movimiento de las bases de datos del servidor de informes a otro equipo (modo nativo de SSRS)
 
@@ -222,7 +222,7 @@ GO
 [Iniciar y detener el servicio del servidor de informes](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
 [Configurar una conexión a la base de datos del servidor de informes](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Configurar la cuenta de ejecución desatendida](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
-[Administrador de configuración de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Administrador de configuración del servidor de informes](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [Utilidad rsconfig](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
 [Configurar y administrar las claves de cifrado](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [Base de datos del servidor de informes](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  

@@ -1,6 +1,6 @@
 ---
 title: Información general de las herramientas de SQL
-description: Las herramientas de administración y consulta SQL para SQL Server, Azure SQL (base de datos de Azure SQL, instancia administrada de Azure SQL, máquinas virtuales de SQL) y Azure SQL Data Warehouse.
+description: Las herramientas de administración y consulta SQL para SQL Server, Azure SQL (base de datos de Azure SQL, instancia administrada de Azure SQL, máquinas virtuales de SQL) y Azure Synapse Analytics.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1c46afa8b1edbbb548c5367197327de72e2acd27
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 668ab3177cb49cfcbafc81500325740c941046d0
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603513"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006629"
 ---
 # <a name="sql-tools-overview"></a>Información general de las herramientas de SQL
 
@@ -37,7 +37,7 @@ Las herramientas siguientes proporcionan una interfaz gráfica de usuario (GUI).
 | Herramienta | Descripción | Sistema operativo |
 |:--|:--|:--|
 | [ **![Imagen de ADS](../tools/media/overview-sql-tools/azure-data-studio.svg)</br></br>Azure Data Studio**](../azure-data-studio/download.md) | Un editor ligero que puede ejecutar consultas SQL a petición, ver y guardar resultados como texto, JSON o Excel. Edite los datos, organice sus conexiones de bases de datos favoritas y examine los objetos de base de datos en una experiencia de exploración de objetos conocida. | **Windows</br>macOS</br>Linux** |
-| [ **![Imagen de SSMS](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) | Administre una instancia de SQL Server o una base de datos con compatibilidad completa con GUI. Acceda, configure, administre y desarrolle todos los componentes de SQL Server, Azure SQL Database y SQL Data Warehouse. Proporciona una única utilidad integral que combina un amplio grupo de herramientas gráficas con una serie de editores de script enriquecidos que permiten a desarrolladores y administradores de bases de datos de todos los niveles acceder a SQL. | **Windows** |
+| [ **![Imagen de SSMS](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) | Administre una instancia de SQL Server o una base de datos con compatibilidad completa con GUI. Acceda, configure, administre y desarrolle todos los componentes de SQL Server, Azure SQL Database y Azure Synapse Analytics. Proporciona una única utilidad integral que combina un amplio grupo de herramientas gráficas con una serie de editores de script enriquecidos que permiten a desarrolladores y administradores de bases de datos de todos los niveles acceder a SQL. | **Windows** |
 | [ **![Imagen de SSDT](../tools/media/overview-sql-tools/ssdt.svg)</br>SQL Server Data Tools (SSDT)** ](../ssdt/download-sql-server-data-tools-ssdt.md) | Una herramienta de desarrollo moderna para crear bases de datos relacionales de SQL Server, bases de datos de Azure SQL, modelos de datos de Analysis Services (AS), paquetes de Integration Services (IS) e informes de Reporting Services (RS). Gracias a SSDT, puede diseñar e implementar cualquier tipo de contenido de SQL Server con la misma facilidad con la que desarrollaría una aplicación en **[Visual Studio](https://visualstudio.microsoft.com/downloads/)** . | **Windows** |
 | [ **![Imagen de VS Code](../tools/media/overview-sql-tools/visual-studio-code.svg)</br></br>Visual Studio Code**](https://code.visualstudio.com/) | La **[extensión mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)** para Visual Studio Code es la extensión oficial de SQL Server que admite conexiones a SQL Server y la experiencia de edición enriquecida para T-SQL en Visual Studio Code. Escriba scripts T-SQL en un editor ligero. | **Windows</br>macOS</br>Linux** |
 

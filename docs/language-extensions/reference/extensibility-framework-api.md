@@ -4,24 +4,24 @@ titleSuffix: SQL Server Language Extensions
 description: Puede usar el marco de extensibilidad para escribir extensiones de lenguaje de programación para SQL Server. La API Extensibility Framework para Microsoft SQL Server se puede usar con una extensión de lenguaje para interactuar con SQL Server e intercambiar datos.
 author: dphansen
 ms.author: davidph
-ms.date: 04/09/2020
+ms.date: 10/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 3cc4e75f044476579859443b6a7407d01c3e92ea
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765774"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956866"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>API Extensibility Framework para SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Puede usar el marco de extensibilidad para escribir extensiones de lenguaje de programación para SQL Server. La API Extensibility Framework para Microsoft SQL Server se puede usar con una extensión de lenguaje para interactuar con SQL Server e intercambiar datos.
 
-Como autor de extensiones de lenguaje, puede usar esta referencia junto con la [extensión del lenguaje Java para SQL Server](../how-to/extensibility-sdk-java-sql-server.md) de código abierto para entender cómo utilizar la API para escribir extensiones de lenguaje propias. Puede encontrar el código fuente de la extensión del lenguaje Java en [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
+Como autor de extensiones de lenguaje, puede usar esta referencia junto con las extensiones de código abierto para entender cómo usar la API para escribir las suyas propias. Puede encontrar el código fuente de las extensiones de lenguaje en [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
 
 Busque la información sobre la sintaxis y los argumentos relativos a todas las funciones de la API siguientes.
 
@@ -36,7 +36,7 @@ Se realizará el seguimiento de todas las salidas de la extensión a los flujos 
 
 ## <a name="init"></a>Init
 
-A esta función solo se llama una vez, y se usa para inicializar el entorno de ejecución. Por ejemplo, la extensión de Java inicializa la JVM.
+A esta función solo se llama una vez, y se usa para inicializar el entorno de ejecución. 
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -638,3 +638,5 @@ SQLRETURN UninstallExternalLibrary(
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [SDK de extensibilidad de Microsoft para Java para SQL Server](../how-to/extensibility-sdk-java-sql-server.md)
+- [Tiempo de ejecución personalizado de Python](../../machine-learning/install/custom-runtime-python.md)
+- [Tiempo de ejecución personalizado de R](../../machine-learning/install/custom-runtime-r.md).

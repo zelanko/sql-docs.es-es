@@ -1,20 +1,20 @@
 ---
 title: Implementación múltiple en el dominio de Active Directory
 titleSuffix: SQL Server Big Data Cluster
-description: Obtenga información sobre la implementación de un clúster de macrodatos de SQL Server en el dominio de Active Directory.
-author: mihaelablendea
-ms.author: mihaelab
+description: Aprenda a implementar varios clústeres de macrodatos de SQL Server en un único dominio de Active Directory.
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9617e4a447db1d2cef3aa9e6afc7927eb007a981
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d5c30e4c3d7c3188920ecd15104b20a5472e306
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730945"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892505"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>Implementación de varios [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en el mismo dominio de Active Directory
 

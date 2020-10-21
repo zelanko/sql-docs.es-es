@@ -9,12 +9,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4217e2be765e29fe58ff423be8632f7e18e1b2eb
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 28cfd7e9a78646527bb8c0508535a1475159e35c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834516"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891085"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Notas de la versión para los Clústeres de macrodatos de SQL Server 2019
 
@@ -93,7 +93,7 @@ Versión de actualización acumulativa 6 (CU6) para SQL Server 2019.
 Esta versión incluye mejoras y correcciones menores. En los siguientes artículos se incluye información relacionada con estas actualizaciones:
 
 - [Administración del acceso al clúster de macrodatos en el modo de Active Directory](manage-user-access.md)
-- [Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en el modo de Active Directory](deploy-active-directory.md)
+- [Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en el modo de Active Directory](active-directory-deploy.md)
 - [Implementación de clústeres de macrodatos de SQL Server con alta disponibilidad](deployment-high-availability.md)
 - [Configuración de un clúster de macrodatos de SQL Server](configure-cluster.md)
 - [Configuración de Apache Spark y Apache Hadoop en clústeres de macrodatos](configure-spark-hdfs.md)
@@ -175,11 +175,11 @@ Versión de distribución general 1 (GDR1) de SQL Server 2019, presenta la dis
 
 - **Versiones afectadas**: con la actualización acumulativa actual
 
-- **Problema e impacto en el cliente**: durante una actualización, sparkhead devuelve el error 404.
+- **Problema e impacto en el cliente**: Durante una actualización, `sparkhead` devuelve un error 404.
 
 - **Solución alternativa**: antes de actualizar BDC, asegúrese de que no haya trabajos por lotes o sesiones de Livy activos. Siga las instrucciones de [Actualización desde una versión compatible](deployment-upgrade.md#upgrade-from-supported-release) para evitar esto. 
 
-   Si Livy devuelve un error 404 durante el proceso de actualización, reinicie el servidor de Livy en ambos nodos de sparkhead. Por ejemplo:
+   Si Livy devuelve un error 404 durante el proceso de actualización, reinicie el servidor Livy en ambos nodos `sparkhead`. Por ejemplo:
 
    ```console
    kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy

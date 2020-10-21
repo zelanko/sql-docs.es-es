@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ded33f50037c510fadd5016ffe2c72f664e70e12
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 9a815f72ef466442c601d0720243f9476a0cfc95
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646233"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081674"
 ---
 # <a name="pdo__construct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -54,7 +54,7 @@ Si, por cualquier motivo, se produce un error en PDO::__construct, se genera una
   
 En la versión 2.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], se agregó compatibilidad con PDO.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example-with-database"></a>Ejemplo con base de datos  
 En este ejemplo se muestra cómo conectarse a un servidor mediante la autenticación de Windows y especificar una base de datos.  
   
 ```  
@@ -70,7 +70,7 @@ En este ejemplo se muestra cómo conectarse a un servidor mediante la autenticac
 ?>  
 ```  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example-without-database"></a>Ejemplo sin base de datos  
 En este ejemplo se muestra cómo conectarse a un servidor especificando la base de datos más adelante.  
   
 ```  

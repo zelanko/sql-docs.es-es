@@ -1,21 +1,21 @@
 ---
-title: Conexión de bucle invertido de SQL en Pyrhon y R
-description: Obtenga información sobre cómo usar una conexión de bucle invertido para volver a conectar con SQL Server a través de ODBC a fin de leer o escribir datos de un script de Python o R ejecutado desde sp_execute_external_script.
+title: Conexión de bucle invertido de SQL en Python y R
+description: Obtenga información sobre cómo usar una conexión de bucle invertido para volver a conectar con SQL Server a través de ODBC a fin de leer o escribir datos de un script de Python o R ejecutado desde sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 08/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 21c32a27a94dcf8a1981f1fde2eb4db0b71b1b8a
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: a732734e256d553c4917545d24021b02d7232b01
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714143"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988483"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Conexión de bucle invertido con SQL Server desde un script de Python o R
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -48,7 +48,7 @@ Este es un ejemplo de la cadena de conexión de bucle invertido en Linux:
 
 La dirección del servidor, la ubicación del archivo de certificado de cliente y la ubicación del archivo de clave de cliente son únicas para cada `sp_execute_external_script` y se pueden obtener mediante el uso de la API **rx_get_sql_loopback_connection_string()** para Python o **rxGetSqlLoopbackConnectionString()** para R.
 
-Para obtener más información sobre los atributos de la cadena de conexión, consulte [Palabras clave y atributos de DSN y de la cadena de conexión](https://docs.microsoft.com/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) para Microsoft ODBC Driver for SQL Server.
+Para obtener más información sobre los atributos de la cadena de conexión, consulte [Palabras clave y atributos de DSN y de la cadena de conexión](../../connect/odbc/dsn-connection-string-attribute.md?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) para Microsoft ODBC Driver for SQL Server.
 
 ## <a name="generate-connection-string-with-revoscalepy-for-python"></a>Generación de una cadena de conexión con revoscalepy para Python
 

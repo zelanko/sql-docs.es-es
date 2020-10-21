@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4915343cf9ed7ebf730ac11360f10271c59e92c3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 62334a277bc169350af4db1c2961595178e733a6
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634828"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081764"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Procedimientos: Conexión con la autenticación de Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ Debe utilizarse la autenticación de Windows para conectarse a SQL Server siempr
   
 Si no considera la autenticación de Windows una opción práctica, consulte [Procedimientos: Conexión mediante la autenticación de SQL Server](how-to-connect-using-sql-server-authentication.md).  
   
-## <a name="example"></a>Ejemplo  
+## <a name="sqlsrv-example"></a>Ejemplo de SQLSRV  
 Mediante el uso del controlador SQLSRV de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], en el ejemplo siguiente se utiliza la autenticación de Windows para conectarse a una instancia local de SQL Server. Cuando se establece la conexión, en el servidor se realiza una consulta del inicio de sesión del usuario que está accediendo a la base de datos.  
   
 En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan al explorador cuando se ejecuta el ejemplo en el explorador.  
@@ -81,7 +81,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Ejemplo  
+## <a name="pdo_sqlsrv-example"></a>Ejemplo de PDO_SQLSRV  
 En el ejemplo siguiente se utiliza el controlador PDO_SQLSRV para realizar la misma tarea que en el ejemplo anterior.  
   
 ```  

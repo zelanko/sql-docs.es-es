@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1fb2cb13055a53ba12a500b1a552e6fc2cdb431c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: b146a03031f71b9385d5a51d161b822bd4ed832f
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392813"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081804"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Procedimientos: Realización de consultas con parámetros
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ En el resto del contenido de este tema se describen las consultas con parámetro
 > [!NOTE]  
 > Los parámetros se enlazan de forma implícita mediante **sqlsrv_prepare**. Es decir, si una consulta con parámetros se prepara mediante **sqlsrv_prepare** y se actualizan los valores de la matriz de parámetros, se usarán los valores actualizados en la siguiente ejecución de la consulta. Consulte el segundo ejemplo de este tema para obtener información más detallada.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="query-example"></a>Ejemplo de consulta  
 En el ejemplo siguiente se actualiza la cantidad en un id. de producto especificado en la tabla *Production.ProductInventory* de la base de datos de AdventureWorks. La cantidad y el id. de producto son parámetros de la consulta UPDATE.  
   
 Después, en el ejemplo, se realiza una consulta en la base de datos para comprobar que la cantidad se ha actualizado correctamente. El id. de producto es un parámetro de la consulta SELECT.  
@@ -113,7 +113,7 @@ sqlsrv_close( $conn);
   
 En el ejemplo anterior se usa la función **sqlsrv_query** para ejecutar consultas. Esta función es adecuada para ejecutar consultas únicas, puesto que realiza los procesos de preparación y ejecución de la instrucción. Para volver a ejecutar una consulta con otros valores de parámetro, es mejor hacerlo con la combinación de **sqlsrv_prepare**/**sqlsrv_execute**. A continuación, encontrará un ejemplo en el que se vuelve a ejecutar una consulta con distintos valores de parámetros.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="prepare-example"></a>Ejemplo de preparación  
 En el ejemplo siguiente se muestra el enlace implícito de variables cuando se usa la función **sqlsrv_prepare** . En el ejemplo se insertan varios pedidos de ventas en la tabla *Sales.SalesOrderDetail* . La matriz *$params* se enlaza a la instrucción ( *$stmt*) cuando se llama a **sqlsrv_prepare**. Antes de cada ejecución de una consulta que inserta un nuevo pedido de ventas en la tabla, la matriz *$params* se actualiza con los nuevos valores correspondientes a los detalles del pedido de ventas. En la siguiente ejecución de la consulta se utilizan los nuevos valores de parámetro.  
   
 En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  

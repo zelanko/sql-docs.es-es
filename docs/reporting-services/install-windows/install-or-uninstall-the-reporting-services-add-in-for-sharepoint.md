@@ -10,12 +10,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc01d1323d3145b16c9a6317509e72715f5a12ce
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286249"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890862"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>Instalación o desinstalación del complemento Reporting Services para SharePoint (SSRS)
 
@@ -53,7 +53,7 @@ ms.locfileid: "79286249"
 ##  <a name="overview-of-the-installation-methods"></a><a name="bkmk_3ways_to_install"></a> Información general de los métodos de instalación  
  El complemento de SQL Server 2016 Reporting Services para productos de SharePoint se puede instalar con uno de los dos métodos siguientes:  
   
--   **Asistente para la instalación:** ![Nota:](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") En SQL Server 2016, el complemento se puede instalar con el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elija **Complemento de Reporting Services para productos de SharePoint** en la página **Selección de características** del asistente.  
+-   **Asistente para la instalación:** ![Nota:](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") En SQL Server 2016, el complemento se puede instalar con el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elija **Complemento de Reporting Services para productos de SharePoint** en la página **Selección de características** del asistente.  
   
 -   **rsSharepoint.msi:** el complemento se puede instalar directamente desde el disco de instalación o descargarse e instalarse. rsSharepoint.msi admite la instalación desde una interfaz gráfica de usuario y desde una línea de comandos. Debe ejecutar el archivo .msi con privilegios de administrador; para ello, primero abra una ventana del símbolo del sistema con permisos elevados y, a continuación, ejecute rsSharepoint.msi desde la línea de comandos. Para obtener más información, vea [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
@@ -213,7 +213,7 @@ Rssharepoint.msi /?
     ```  
   
 ##  <a name="setup-log-files"></a><a name="bkmk_logfiles"></a> Archivos de registro del programa de instalación  
- Cuando se ejecuta el programa de instalación, la información se guarda en un archivo de registro en la carpeta **%temp%** del usuario que instaló el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo, **c:\Usuarios\\<nombreDeUsuario\>\AppData\Local\Temp**. El nombre de archivo es **RS_SP_\<número>.log** (por ejemplo, **RS_SP_0.log**). Los errores que aparecen en el registro empiezan con la cadena "SSRSCustomActionError".  
+ Cuando se ejecuta el programa de instalación, la información se guarda en un archivo de registro en la carpeta **%temp%** del usuario que instaló el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo, **c:\Usuarios\\<nombreDeUsuario\>\AppData\Local\Temp**. El nombre de archivo es **RS_SP_\<number>.log** (por ejemplo, **RS_SP_0.log**). Los errores que aparecen en el registro empiezan con la cadena "SSRSCustomActionError".  
   
 > [!NOTE]  
 >  AppData es una carpeta oculta en el sistema operativo Windows. Puede que necesite modificar la configuración de carpetas del Explorador de Windows para poder ver carpetas y archivos ocultos.  

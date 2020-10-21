@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c1103f32d08335e2f2dfc6c302db0b62ff93b3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f152bf79c030fee3ce480d455c54fbdfad4b719
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373472"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935486"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protección ampliada para la autenticación con Reporting Services
 
@@ -154,7 +154,7 @@ SSRS admite y aplica la protección ampliada que se ha habilitado en el sistema 
 |ComputerNamePhysicalDnsHostname|El nombre del host DNS del equipo local. Si el equipo local es un nodo de un clúster, se usa el nombre del host DNS del equipo local, no el nombre del servidor virtual de clústeres.|  
 |ComputerNamePhysicalNetBIOS|El nombre NetBIOS del equipo local. Si el equipo local es un nodo de un clúster, se usa el nombre NetBIOS del equipo local, no el nombre del servidor virtual de clústeres.|  
   
-Para más información, vea [Registrar un nombre principal de servicio &#40;SPN&#41; para un servidor de informes](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) y [Acerca de las reservas y el registro de reservas de URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
+Para más información, vea [Registrar un nombre principal de servicio &#40;SPN&#41; para un servidor de informes](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) y [Acerca de las reservas y el registro de reservas de URL &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
   
 ## <a name="next-steps"></a>Pasos siguientes
 

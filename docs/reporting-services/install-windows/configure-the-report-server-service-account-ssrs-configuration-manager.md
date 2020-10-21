@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 06/09/2020
-ms.openlocfilehash: 20a1d961035974c3c268be3e727133d731f673c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: b0e5df690fd141a60a81a64c0d0a4ce9a72723ee
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042856"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935453"
 ---
-# <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar la cuenta de servicio del servidor de informes (Administrador de configuración de SSRS)
+# <a name="configure-the-report-server-service-account-report-server-configuration-manager"></a>Configurar la cuenta de servicio del servidor de informes (Administrador de configuración del servidor de informes)
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se implementa como un servicio único que contiene el servicio web del servidor de informes, el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]y una aplicación de procesamiento en segundo plano que se usa para el procesamiento programado de informes y la entrega de suscripciones. En este tema se explica cómo se configura inicialmente la cuenta de servicio y cómo modificar la cuenta o la contraseña con la herramienta Configuración de Reporting Services.  
   
@@ -99,7 +99,7 @@ Las siguientes directrices y los vínculos de esta sección pueden ayudarle a el
   
 ## <a name="updating-an-expired-password"></a>Actualizar una contraseña que ha expirado
 
- Si el servicio Servidor de informes se ejecuta en una cuenta de dominio y la contraseña expira antes de que se pueda actualizar en el Administrador de configuración de Reporting Services, el servicio no se inicia hasta que se especifique una contraseña nueva.  
+ Si el servicio Servidor de informes se ejecuta en una cuenta de dominio y la contraseña expira antes de que se pueda actualizar en el Administrador de configuración del servidor de informes, el servicio no se inicia hasta que se especifique una contraseña nueva.  
   
  Si la contraseña de la cuenta de servicio del [!INCLUDE[ssDE](../../includes/ssde-md.md)] expira, se producirá el error **rsReportServerDatabaseUnavailable** al intentar conectarse al servidor de informes. Restablecer la contraseña resuelve este error.  
   
@@ -115,5 +115,4 @@ Las siguientes directrices y los vínculos de esta sección pueden ayudarle a el
   
 ## <a name="next-steps"></a>Pasos siguientes
 
- [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Administrador de configuración del servidor de informes &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

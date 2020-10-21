@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 88c6ae8820997bf1544ac497df6cb251c215a1ac
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: da34a74163bae218b13d8f95ebcf5797731790ac
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603496"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006457"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Orígenes de datos admitidos por Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera datos de informe de orígenes de datos mediante un nivel de datos modular y extensible que usa extensiones de procesamiento de datos. Para recuperar datos de informe de un origen de datos, debe seleccionar una extensión de procesamiento de datos que admita el tipo de origen de datos, la versión del software que se ejecuta en el origen de datos y la plataforma del origen de datos ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]de 32 ó 64 bits).  
@@ -157,7 +157,7 @@ ms.locfileid: "91603496"
   
  Si usa el diseñador de consultas en el modo gráfico, la consulta se analiza y es posible que se vuelva a escribir. También se dispone de un diseñador de consultas basado en texto para escribir consultas. Use el diseñador de consultas basado en texto si quiere controlar la sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] exacta que se usa para una consulta.   
   
- Los datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SQL Data Warehouse y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se recuperan de forma similar, pero hay algunos requisitos que solo se aplican a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Para obtener más información, vea [Tipo de conexión SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
+ Los datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], Azure Synapse Analytics y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se recuperan de forma similar, pero hay algunos requisitos que solo se aplican a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Para obtener más información, vea [Tipo de conexión SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
   
  [Volver a la tabla de orígenes de datos](#DataSourcesTable)  
   
@@ -171,7 +171,7 @@ Este origen de datos está en desuso. Use el tipo de origen de datos de SQL Serv
   
  Este proveedor de datos usa el modelo de objetos ADOMD.NET para crear consultas con XML for Analysis (XMLA) versión 1.1. Los resultados se devuelven como un conjunto de filas planas. Para más información, vea [Tipo de conexión de Analysis Services para MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Interfaz de usuario del Diseñador de consultas MDX de Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) e [Interfaz de usuario del Diseñador de consultas DMX de Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md). 
  
- Para orígenes de datos de Azure Analysis Services y conjuntos de datos de Power BI Premium, tenga en cuenta que debe tener deshabilitada la autenticación multifactor para las credenciales que se usan para conectarse al origen de datos. Si necesita habilitar la autenticación multifactor en el entorno, revise <a href="https://docs.microsoft.com/azure/active-directory/conditional-access/overview">Acceso condicional de Azure Active Directory</a> como opción para deshabilitarla para las credenciales que se usan en el origen de datos.
+ Para orígenes de datos de Azure Analysis Services y conjuntos de datos de Power BI Premium, tenga en cuenta que debe tener deshabilitada la autenticación multifactor para las credenciales que se usan para conectarse al origen de datos. Si necesita habilitar la autenticación multifactor en el entorno, revise <a href="/azure/active-directory/conditional-access/overview">Acceso condicional de Azure Active Directory</a> como opción para deshabilitarla para las credenciales que se usan en el origen de datos.
   
  Al conectarse a un origen de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], la extensión de procesamiento de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite parámetros de varios valores y asigna propiedades de celda y de miembro a las propiedades extendidas admitidas por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obtener más información, vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
@@ -240,7 +240,7 @@ Para instalar las herramientas de cliente de Oracle, puede hacer lo siguiente.
   
  Esta extensión admite los parámetros con nombre. En Oracle versión 11g o posterior, se admiten los parámetros de varios valores. En el caso de los parámetros sin nombre dependientes de la posición, use la extensión de procesamiento de datos OLE DB con el proveedor de datos Proveedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para Oracle. Para obtener más información acerca de la configuración de Oracle como un origen de datos, vea [Cómo utilizar Reporting Services para configurar y obtener acceso a orígenes de datos de Oracle](https://support.microsoft.com/kb/834305). Para obtener más información acerca de la configuración de permisos adicionales, vea la página en que se describe [cómo agregar permisos para la entidad de seguridad NETWORK SERVICE](https://support.microsoft.com/kb/870668) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
- Puede recuperar datos de procedimientos almacenados con varios parámetros de entrada, pero el procedimiento almacenado debe devolver solo un cursor de salida. Para obtener más información, vea [Devolver resultados con cursores REF CURSOR de Oracle](https://docs.microsoft.com/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) en "Recuperación de datos mediante DataReader".
+ Puede recuperar datos de procedimientos almacenados con varios parámetros de entrada, pero el procedimiento almacenado debe devolver solo un cursor de salida. Para obtener más información, vea [Devolver resultados con cursores REF CURSOR de Oracle](/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) en "Recuperación de datos mediante DataReader".
   
  Para obtener más información, vea [Tipo de conexión de Oracle &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md). Para obtener más información sobre el diseñador de consultas asociado, vea [Interfaz de usuario del diseñador gráfico de consultas](../../reporting-services/report-data/graphical-query-designer-user-interface.md).  
   
@@ -317,5 +317,4 @@ Para instalar las herramientas de cliente de Oracle, puede hacer lo siguiente.
  [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).
-  
   

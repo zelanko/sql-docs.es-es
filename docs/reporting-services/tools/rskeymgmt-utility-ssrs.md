@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3acdc15b2d5eaf5e8e38e0929757fd44157a148
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a38fe4c1a8b627b5a45e30254f8eeac62f4452ad
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916273"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988141"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt (utilidad) (SSRS)
   Extrae, restaura, crea y elimina la clave simétrica usada para proteger contra el acceso no autorizado los datos importantes del servidor de informes. Esta utilidad también se usa para unir instancias del servidor de informes en una implementación de ampliación horizontal. Una *implementación escalada del servidor de informes* se refiere a varias instancias del servidor de informes que comparten una sola base de datos de servidor de informes.  
@@ -129,7 +129,7 @@ rskeymgmt -a -f a:\backupkey\keys -p <password>
 ```  
   
 #### <a name="deleting-encryption-keys-and-encrypted-content"></a>Eliminar claves de cifrado y contenido cifrado  
- Este ejemplo muestra cómo eliminar todas las claves de cifrado almacenadas en un servidor de informes. Si la instalación es una implementación de ampliación horizontal del servidor de informes, las claves de cifrado de todas las instancias del servidor de informes que se incluyen en la implementación se eliminarán. Al eliminar una clave de cifrado también se eliminan los valores de cifrado existentes en la base de datos del servidor de informes. Para más información sobre el contenido cifrado, vea [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
+ Este ejemplo muestra cómo eliminar todas las claves de cifrado almacenadas en un servidor de informes. Si la instalación es una implementación de ampliación horizontal del servidor de informes, las claves de cifrado de todas las instancias del servidor de informes que se incluyen en la implementación se eliminarán. Al eliminar una clave de cifrado también se eliminan los valores de cifrado existentes en la base de datos del servidor de informes. Para más información sobre el contenido cifrado, vea [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
 ```  
 rskeymgmt -d  
@@ -171,12 +171,11 @@ rskeymgmt -r <installationID>
   
  La utilidad **rskeymgmt** se usa para administrar el conjunto de claves que se define durante la instalación o durante la inicialización. Conecta con el servicio Servidor de informes de Windows local mediante un punto final de llamada a procedimiento remoto (RPC). El servicio Servidor de informes de Windows debe estar en ejecución para que esta utilidad funcione.  
   
- Para más información sobre las claves de cifrado, vea [Configurar y administrar las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Para más información sobre las claves de cifrado, vea [Configurar y administrar las claves de cifrado &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Inicializar un servidor de informes &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](https://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
+ [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](/previous-versions/sql/sql-server-2016/ms181357(v=sql.130))   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Utilidades del símbolo del sistema del servidor de informes &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
-  
+ [Configurar y administrar claves de cifrado &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

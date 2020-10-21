@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70dde30aeade9841a317bc8a2b9db418ba5ccd79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 508743337b7de7b6655b66d718b8bad02882b4a1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418621"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935433"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Agregar y quitar claves de cifrado para implementaciones escaladas
   Puede ejecutar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en un modelo de implementación escalada; para ello, configure varios servidores de informes para que utilicen una base de datos del servidor de informes compartida. La pertenencia a una implementación escalada se basa en si el servidor de informes almacena una clave de cifrado en la base de datos del servidor de informes. Se puede controlar la pertenencia a una implementación escalada agregando y quitando claves de cifrado para instancias de servidor de informes específicas. Si va a quitar nodos de la implementación, puede hacerlo en cualquier orden. Si va a agregar nodos, debe incluir cualquier nueva instancia de servidor de informes que forme parte de la implementación.  
   
 ## <a name="using-the-reporting-services-configuration-tool-to-configure-scale-out-deployment"></a>Usar la herramienta de configuración de Reporting Services para configurar una implementación escalada  
- La manera más sencilla de configurar una implementación escalada es utilizar la herramienta de configuración de Reporting Services. Para más información e instrucciones paso a paso, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+ La manera más sencilla de configurar una implementación escalada es utilizar la herramienta de configuración de Reporting Services. Para más información e instrucciones paso a paso, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="using-rskeymgmt-to-configure-scale-out-deployment"></a>Usar Rskeymgmt para configurar una implementación escalada  
  Emplee la utilidad **rskeymgmt** para inicializar una instancia de servidor de informes de forma que utilice una base de datos de servidor de informes compartida. Para agregar un servidor de informes a una implementación escalada, es necesario inicializar el servidor de informes. La inicialización requiere permisos de administrador. Debe disponer de credenciales de administrador del equipo remoto que hospeda el servidor de informes que va a combinar en la implementación.  
@@ -62,7 +62,7 @@ ms.locfileid: "88418621"
  En estos pasos se explica cómo quitar el servidor de informes de una implementación escalada, pero con ellos no se desinstala la instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] del servidor de informes. Después de quitar el servidor de informes de la implementación escalada, puede desinstalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] del servidor si ya no necesita [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en ese servidor. Para información, vea [Desinstalar una instancia existente de SQL Server (programa de instalación)](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Configurar y administrar claves de cifrado &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Inicialización de un servidor de informes &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

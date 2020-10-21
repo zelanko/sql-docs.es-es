@@ -9,17 +9,17 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ca8827f5dcee9b25d873ac7fed83679480bedb44
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: d02217eaae3cf402a1ccb6e08780f4e9406d446f
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227269"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956397"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Instalación de un entorno de ejecución personalizado de Python para SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-En este artículo se describe cómo instalar un entorno de ejecución personalizado para ejecutar scripts de Python con SQL Server. El entorno de ejecución personalizado para Python se puede usar en los escenarios siguientes:
+En este artículo se describe cómo instalar un entorno de ejecución personalizado para ejecutar scripts de Python con SQL Server. El tiempo de ejecución personalizado usa la tecnología de extensión de lenguaje basada en un marco de extensibilidad para ejecutar código externo. El entorno de ejecución personalizado para Python se puede usar en los escenarios siguientes:
 
 + Una instalación de SQL Server con el marco de extensibilidad.
 
@@ -29,6 +29,8 @@ En este artículo se describe cómo instalar un entorno de ejecución personaliz
 
 > [!NOTE]
 > En este artículo se describe cómo instalar un entorno de ejecución personalizado para Python en Windows. Para instalar en Linux, consulte [Instalación de un entorno de ejecución personalizado de Python para SQL Server en Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
+
+
 
 ## <a name="pre-install-checklist"></a>Lista de comprobación previa a la instalación
 
@@ -73,14 +75,14 @@ Las extensiones de lenguaje usan el marco de extensibilidad para ejecutar códig
     + Servicios de Motor de base de datos
     + Machine Learning Services y extensiones de lenguaje
 
-1. Cuando finalice la instalación, si el programa indica que se reinicie el equipo, hágalo. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información, vea [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. Cuando finalice la instalación, si el programa indica que se reinicie el equipo, hágalo. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información, vea [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 
 ## <a name="install-python-37"></a>Instalación de Python 3.7 
 
 Instale [Python 3.7]( https://www.python.org/downloads/release/python-379/) y agréguelo a la ruta de acceso.
 
-![Agregar Python 3.7 a la ruta de acceso.](../install/media/python-379.png) **Actualizar imagen: nota**
+![Agregar Python 3.7 a la ruta de acceso.](../install/media/python-379.png) 
 
 
 #### <a name="install-pandas"></a>Instalación de pandas
@@ -105,7 +107,7 @@ Si PYTHONHOME ya existe, seleccione **Editar** para que apunte a la ubicación d
 
 ## <a name="grant-access-to-the-custom-python-installation-folder"></a>Concesión de acceso a la carpeta de instalación personalizada de Python
 
-Ejecute los siguientes comandos **icacls** desde un nuevo símbolo del sistema con privilegios *elevados* para conceder acceso de lectura y ejecución al **servicio SQL Server Launchpad** y SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**). El nombre de usuario del servicio Launchpad tiene el formato `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` es el nombre de la instancia de SQL Server. Estos comandos concederán acceso de forma recursiva a todos los archivos y carpetas en la ruta de acceso de directorio especificada.
+Ejecute los siguientes comandos **icacls** desde un nuevo símbolo del sistema con privilegios *elevados* para conceder acceso de lectura y ejecución al **servicio SQL Server Launchpad** y SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**). El nombre de usuario del servicio Launchpad (`NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME`) es el nombre de la instancia de SQL Server. Estos comandos concederán acceso de forma recursiva a todos los archivos y carpetas en la ruta de acceso de directorio especificada.
 
 Anexe el nombre de la instancia a `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`). En este ejemplo, INSTANCENAME es la instancia predeterminada `MSSQLSERVER`.
 
@@ -138,7 +140,7 @@ Descargue el [archivo ZIP que contiene la extensión del lenguaje Python para Wi
 
 ## <a name="register-external-language"></a>Registrar lenguaje externo
 
-Registre esta extensión del lenguaje Python con [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) para cada base de datos en la que desea usarla. Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) para conectarse a SQL Server y ejecute el siguiente comando T-SQL. Modifique la ruta de acceso de esta instrucción para reflejar la ubicación del archivo ZIP de la extensión de lenguaje descargado (python-lang-extension.zip).
+Registre esta extensión del lenguaje Python con [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) para cada base de datos en la que desea usarla. Use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) para conectarse a SQL Server y ejecute el siguiente comando T-SQL. Modifique la ruta de acceso de esta instrucción para reflejar la ubicación del archivo ZIP de la extensión de lenguaje descargado (python-lang-extension.zip).
 
 > [!NOTE]
 > Python es una palabra reservada. Use un nombre diferente para el lenguaje externo, por ejemplo, "myPython".
@@ -284,7 +286,7 @@ Descargue el [archivo ZIP que contiene la extensión del lenguaje Python para Li
 
 ## <a name="register-external-language"></a>Registrar lenguaje externo
 
-Registre esta extensión del lenguaje Python con [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) para cada base de datos en la que desea usarla. Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) para conectarse a SQL Server y ejecute el siguiente comando T-SQL. 
+Registre esta extensión del lenguaje Python con [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) para cada base de datos en la que desea usarla. Use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) para conectarse a SQL Server y ejecute el siguiente comando T-SQL. 
 Modifique la ruta de acceso de esta instrucción para reflejar la ubicación del archivo ZIP de la extensión de lenguaje descargado (python-lang-extension.zip).
 
 > [!NOTE]
@@ -302,7 +304,7 @@ GO
 
 Se puede ejecutar un script externo en Python mediante la ejecución del procedimiento almacenado [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) en SQL Server. 
 
-Para habilitar los scripts externos, ejecute los siguientes comandos SQL con [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), conectado a SQL Server.
+Para habilitar los scripts externos, ejecute los siguientes comandos SQL con [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md), conectado a SQL Server.
 
 ```sql
 sp_configure 'external scripts enabled', 1;

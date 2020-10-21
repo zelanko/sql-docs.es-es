@@ -1,19 +1,19 @@
 ---
 title: Reconciliación de DNS de Active Directory y Kubernetes en implementaciones de clústeres de macrodatos
-description: Administración del acceso al clúster de macrodatos
-author: mihaelablendea
-ms.author: mihaelab
+description: Configuración de reconciliación DNS para el clúster de macrodatos de SQL Server en el modo de Active Directory
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 07/06/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 411d713734db080b036a98bd18b0618326dbd70f
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 63a5c53e64ece7650e65414fd24ddd82d6da5324
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279438"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892465"
 ---
 # <a name="active-directory-and-kubernetes-dns-reconciliation-in-big-data-clusters-deployments"></a>Reconciliación de DNS de Active Directory y Kubernetes en implementaciones de clústeres de macrodatos
 
@@ -53,7 +53,7 @@ Como resultado de este principio de diseño, el clúster de macrodatos no tendr�
 
 ### <a name="no-duplication-of-records"></a>Sin duplicación de registros
 
-Registros DNS internos en varios lugares. El único almacenamiento de estos registros es CoreDNS de Kubernetes. El CoreDNS interno del clúster de macrodatos realizará una reescritura computacional y un reenvío de las consultas de DNS a CoreDNS de Kubernetes.
+Registros DNS internos en varios lugares. El único almacenamiento de estos registros es CoreDNS de Kubernetes. El CoreDNS interno de BDC realizará una reescritura computacional y un reenvío de las consultas de DNS a CoreDNS de Kubernetes.
 
 ### <a name="computational-rewriting"></a>Reescritura computacional
 
@@ -89,6 +89,6 @@ Una vez eliminado el clúster de macrodatos, no hay ningún trabajo dinámico ad
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Implementación del clúster de macrodatos de SQL Server en el modo de Active Directory](deploy-active-directory.md)
+- [Implementación del clúster de macrodatos de SQL Server en el modo de Active Directory](active-directory-deploy.md)
 - [Administración del acceso al clúster de macrodatos en el modo de Active Directory](active-directory-objects.md)
 - [Implementación de varios clústeres de macrodatos de SQL Server en el mismo dominio de Active Directory](active-directory-deployment-background.md)

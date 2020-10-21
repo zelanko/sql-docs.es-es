@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 38d897f60b5e3ed9278214c8dae8525c72668e20
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4b52e3df054a0c13846741237000855c079c842b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727365"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005898"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server en Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Los controladores ODBC de Microsoft para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] son controladores ODBC independientes que proporcionan una interfaz de programación de aplicaciones (API) que implementa las interfaces ODBC estándar en Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
-Microsoft ODBC Driver for SQL Server puede usarse para crear nuevas aplicaciones. También se pueden actualizar las aplicaciones más antiguas que usen actualmente un controlador ODBC anterior. El Controlador ODBC de SQL Server admite conexiones a Azure SQL Database, Azure SQL Data Warehouse y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+Microsoft ODBC Driver for SQL Server puede usarse para crear nuevas aplicaciones. También se pueden actualizar las aplicaciones más antiguas que usen actualmente un controlador ODBC anterior. El Controlador ODBC de SQL Server admite conexiones a Azure SQL Database, Azure Synapse Analytics y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
 ## <a name="summary"></a>Resumen
 

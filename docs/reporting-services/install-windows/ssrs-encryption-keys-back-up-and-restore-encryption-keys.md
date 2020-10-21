@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5da541204707bc3ad3b47a8ade5f1f1af6506ad5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa300420df785fa27eacb68ae5090cd042f1ddbb
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454578"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933760"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Claves de cifrado de SSRS: copia de seguridad y restauración de claves de cifrado
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88454578"
   
  Es necesario restaurar la copia de seguridad de la clave de cifrado cuando se produce alguno de los siguientes eventos:  
   
--   Cambio de nombre de la cuenta de servicio de Windows del servidor de informes o restablecimiento de la contraseña. Cuando se usa el Administrador de configuración de Reporting Services, la creación de una copia de seguridad de la clave forma parte de la operación de cambio del nombre de la cuenta de servicio.  
+-   Cambio de nombre de la cuenta de servicio de Windows del servidor de informes o restablecimiento de la contraseña. Cuando se usa el Administrador de configuración del servidor de informes, la creación de una copia de seguridad de la clave forma parte de la operación de cambio del nombre de la cuenta de servicio.  
   
     > [!NOTE]
     > Restablecer la contraseña no es lo mismo que cambiarla. Para restablecer una contraseña se requiere permiso para sobrescribir la información de cuenta en el controlador de dominio. El administrador del sistema es quien restablece una contraseña cuando el usuario la olvida o no conoce una contraseña determinada. Solo los restablecimientos de contraseña requieren la restauración de la clave simétrica. El cambio que se realiza periódicamente de una contraseña de cuenta no requiere que se restablezca la clave simétrica.  
@@ -47,7 +47,7 @@ ms.locfileid: "88454578"
 
  La copia de seguridad de la clave simétrica es un proceso que escribe la clave en el archivo que se especifique y después la codifica mediante la contraseña que se proporcione. La clave simétrica no puede almacenarse nunca en un estado no cifrado, por lo que debe proporcionar una contraseña para cifrarla cuando la guarde en disco. Una vez creado el archivo, debe almacenarlo en una ubicación segura **y recordar la contraseña** que se usa para desbloquearlo. Para hacer copia de seguridad de la clave simétrica, puede usar las siguientes herramientas:  
   
- **Modo nativo** : el Administrador de configuración de Reporting Services o la utilidad **rskeymgmt** .  
+ **Modo nativo:** el Administrador de configuración del servidor de informes o la utilidad **rskeymgmt**.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -58,7 +58,7 @@ ms.locfileid: "88454578"
 
 ::: moniker-end
   
-##  <a name="back-up-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> Hacer copia de seguridad de las claves de cifrado - Administrador de configuración de Reporting Services (modo nativo)  
+##  <a name="back-up-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> Copia de seguridad de las claves de cifrado - Administrador de configuración del servidor de informes (modo nativo)  
   
 1.  Inicie el Administrador de configuración del servidor de informes y, a continuación, conéctese a la instancia del servidor de informes que desea configurar.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "88454578"
   
 -   Se eliminan los datos de la clave simétrica anteriormente almacenada (por ejemplo, la información de la clave que se encontraba en la base de datos del servidor de informes desde una implementación anterior).  
   
- Para restaurar la clave de cifrado, debe tener una copia de la clave de cifrado en el archivo. También debe conocer la contraseña que desbloquea la copia almacenada. Si conoce la clave y la contraseña, puede ejecutar la herramienta de configuración de Reporting Services o la utilidad **rskeymgmt** para restaurar la clave. La clave simétrica debe ser la misma que bloquea y desbloquea los datos cifrados almacenados actualmente en la base de datos del servidor de informes. Si restaura una copia que no es válida, el servidor de informes no puede obtener acceso a los datos cifrados almacenados actualmente en la base de datos del servidor de informes. Si esto sucede, es posible que deba eliminar todos los valores cifrados cuando no pueda restaurar una clave válida. Si por algún motivo no puede restaurar la clave de cifrado (por ejemplo, si no tiene una copia de seguridad), debe eliminar la clave existente y el contenido cifrado. Para más información, vea [Claves de cifrado de SSRS: eliminar y volver a crear las claves de cifrado](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Para obtener más información sobre la creación de claves simétrica, vea [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Para restaurar la clave de cifrado, debe tener una copia de la clave de cifrado en el archivo. También debe conocer la contraseña que desbloquea la copia almacenada. Si conoce la clave y la contraseña, puede ejecutar la herramienta de configuración de Reporting Services o la utilidad **rskeymgmt** para restaurar la clave. La clave simétrica debe ser la misma que bloquea y desbloquea los datos cifrados almacenados actualmente en la base de datos del servidor de informes. Si restaura una copia que no es válida, el servidor de informes no puede obtener acceso a los datos cifrados almacenados actualmente en la base de datos del servidor de informes. Si esto sucede, es posible que deba eliminar todos los valores cifrados cuando no pueda restaurar una clave válida. Si por algún motivo no puede restaurar la clave de cifrado (por ejemplo, si no tiene una copia de seguridad), debe eliminar la clave existente y el contenido cifrado. Para más información, vea [Eliminación y recreación de claves de cifrado &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Para más información sobre la creación de claves simétricas, vea [Inicializar un servidor de informes &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-###  <a name="restore-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> Restaurar las claves de cifrado - Administrador de configuración de Reporting Services (modo nativo)  
+###  <a name="restore-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> Restaurar las claves de cifrado - Administrador de configuración del servidor de informes (modo nativo)  
   
-1.  Inicie el Administrador de configuración de Reporting Services y, a continuación, conéctese a la instancia del servidor de informes que desea configurar.  
+1.  Inicie el Administrador de configuración del servidor de informes y, a continuación, conéctese a la instancia del servidor de informes que desea configurar.  
   
 2.  En la página Claves de cifrado, seleccione **Restaurar**.  
   
@@ -112,6 +112,6 @@ ms.locfileid: "88454578"
     ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurar y administrar claves de cifrado &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

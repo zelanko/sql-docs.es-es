@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 90485210bbc0fe657516306dd433f3241b5c90c9
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989438"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005980"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notas de la versión de SqlPackage.exe
 
@@ -51,7 +51,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Always Encrypted | Se ha agregado compatibilidad con la importación y exportación de enclave seguro para SQL Server 2019. |
 | Implementación | Se ha agregado compatibilidad para omitir las tablas habilitadas para la captura de datos modificados al exportar desde Azure SQL Database. |
 | Implementación | Se ha agregado compatibilidad con la opción de índice OPTIMIZE_FOR_SEQUENTIAL_KEY en Azure SQL Database. |
-| Implementación | Se ha agregado compatibilidad con las columnas de identidad para Azure SQL Data Warehouse. | 
+| Implementación | Se ha agregado compatibilidad con las columnas de identidad para Azure Synapse Analytics. | 
 | Ayuda | Se ha generado la versión de sqlpackage en la ayuda (/?) y la compatibilidad con el parámetro /version. | 
 
 ### <a name="fixes"></a>Correcciones
@@ -63,12 +63,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Implementación | Se ha corregido el registro de dacpac al implementar para .NET Core. | 
 | Implementación | Se ha corregido sqlpackage en el control de .NET Core del parámetro /accessToken (/at). | 
 | Implementación | Se permiten las instrucciones ALTER TABLE en procedimientos almacenados como instrucciones de nivel no superior. | 
-| Implementación | Se ha corregido la validación de las vistas materializadas de Azure SQL Data Warehouse para que no distinga entre mayúsculas y minúsculas. | 
+| Implementación | Se ha corregido la validación de las vistas materializadas de Azure Synapse Analytics para que no distinga entre mayúsculas y minúsculas. | 
 
 ### <a name="known-issues"></a>Problemas conocidos
 | Característica | Detalles |
 | :------ | :------ |
-| Implementación | Todavía no se admite la característica Administración de cargas de trabajo de Azure SQL Data Warehouse (Grupos de cargas de trabajo y Clasificadores de cargas de trabajo). | 
+| Implementación | Todavía no se admite la característica Administración de cargas de trabajo de Azure Synapse Analytics (Grupos de cargas de trabajo y Clasificadores de cargas de trabajo). | 
 
 ## <a name="1851-sqlpackage"></a>sqlpackage 18.5.1
 
@@ -96,14 +96,14 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="features"></a>Características
 | Característica | Detalles |
 | :------ | :------ |
-| Implementación | La clasificación de confidencialidad de datos ahora es compatible con SQL Server 2008 y versiones posteriores, Azure SQL Database y Azure SQL Data Warehouse |
-| Implementación | Adición de compatibilidad de Azure SQL Data Warehouse con restricciones de tabla |
-| Implementación | Adición de compatibilidad de Azure SQL Data Warehouse con el índice de almacén de columnas agrupado ordenado |
+| Implementación | La clasificación de confidencialidad de datos ahora es compatible con SQL Server 2008 y versiones posteriores, Azure SQL Database y Azure Synapse Analytics |
+| Implementación | Adición de compatibilidad de Azure Synapse Analytics para restricciones de tabla |
+| Implementación | Adición de compatibilidad de Azure Synapse Analytics para el índice de almacén de columnas agrupado ordenado |
 | Implementación | Adición de compatibilidad con el origen de datos externo (para Oracle, Teradata, MongoDB/CosmosDB, ODBC, clúster de macrodatos) y la tabla externa para el clúster de macrodatos de SQL Server 2019 |
 | Implementación | Adición de la instancia de SQL Database Edge como edición compatible |
 | Implementación | Compatibilidad con nombres de servidor de Instancia administrada con el formato "\<server>.\<dnszone>.base_de_datos.windows.net" |
-| Implementación | Adición de compatibilidad con el comando de copia en Azure SQL Data Warehouse |
-| Implementación | Adición de la opción de implementación "IgnoreTablePartitionOptions" durante la publicación para evitar que se vuelva a crear la tabla cuando se produzcan cambios en la función de partición en la tabla para Azure SQL Data Warehouse |
+| Implementación | Adición de compatibilidad con el comando copy en Azure Synapse Analytics |
+| Implementación | Adición de la opción de implementación "IgnoreTablePartitionOptions" durante la publicación para evitar que se vuelva a crear la tabla cuando se produzcan cambios en la función de partición en la tabla para Azure Synapse Analytics |
 | .NET Core | Adición de compatibilidad con Microsoft.Data.SqlClient en la versión de .NET Core de sqlpackage |
 | &nbsp; | &nbsp; |
 
@@ -114,9 +114,9 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Implementación | Corrección de la generación de instrucciones GRANT para los permisos AlterAnyDatabaseScopedConfiguration y AlterAnySensitivityClassification |
 | Implementación | Corrección del permiso de script externo que no se reconoce |
 | Implementación | Corrección de la propiedad insertada: la adición implícita de la propiedad no debe mostrarse en la diferencia, pero la mención explícita debe mostrarse a través del script |
-| Implementación | Resolución de un problema que causaba que, al cambiar una tabla a la que se hacía referencia con una vista materializada (MV), se generasen instrucciones Alter View no admitidas en estas vistas en Azure SQL Data Warehouse |
-| Implementación | Corrección de errores de publicación al agregar una columna a una tabla con datos en Azure SQL Data Warehouse |
-| Implementación | Corrección del script de actualización que debería trasladar los datos a una nueva tabla al cambiar el tipo de columna de distribución (escenario de pérdida de datos) en Azure SQL Data Warehouse |
+| Implementación | Resolución de un problema que causaba que, al cambiar una tabla a la que se hacía referencia con una vista materializada (MV), se generasen instrucciones Alter View no admitidas en estas vistas en Azure Synapse Analytics |
+| Implementación | Corrección de errores de publicación al agregar una columna a una tabla con datos en Azure Synapse Analytics |
+| Implementación | Corrección del script de actualización que debería trasladar los datos a una nueva tabla al cambiar el tipo de columna de distribución (escenario de pérdida de datos) en Azure Synapse Analytics |
 | ScriptDom | Corrección del error ScriptDom donde no se podían reconocer las restricciones insertadas definidas después de un índice insertado |
 | ScriptDom | Corrección del paréntesis de cierre que faltaba en ScriptDom SYSTEM_TIME en una instrucción por lotes |
 | Always Encrypted | Corrección de la tabla #tmpErrors que no se puede quitar si sqlpackage se vuelve a conectar y la tabla temporal ya no existe porque desaparece cuando la conexión termina |
@@ -164,7 +164,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Característica | Detalles |
 | :------ | :------ |
-| Implementación | Se agregó compatibilidad para implementar en Azure SQL Data Warehouse (disponibilidad general). | 
+| Implementación | Se agregó compatibilidad para implementar en Azure Synapse Analytics (GA). | 
 | Plataforma | sqlpackage .NET Core en disponibilidad general para macOS, Linux y Windows. | 
 | Seguridad | Se quitó la firma de código SHA1. |
 | Implementación | Se agregó compatibilidad para las nuevas ediciones de base de datos de Azure: GeneralPurpose, BusinessCritical, Hyperscale |
@@ -203,7 +203,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Característica | Detalles |
 | :------ | :------ |
-| Implementación | Se agregó compatibilidad para implementar en Azure SQL Data Warehouse (versión preliminar). | 
+| Implementación | Se agregó compatibilidad para implementar en Azure Synapse Analytics (versión preliminar). | 
 | Implementación | Se agregó el parámetro /p:DatabaseLockTimeout=(INT32 '60') a sqlpackage. | 
 | Implementación | Se agregó el parámetro /p:LongRunningCommandTimeout=(INT32) a sqlpackage. |
 | Exportar/Extraer | Se agregó el parámetro /p:TempDirectoryForTableData=(STRING) a sqlpackage. |

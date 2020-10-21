@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ea0b098296ef5e4617fffc1f172ecdb30a94d0e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: df897731d0172a2d496446e3ee6a12d6320a0d0b
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248109"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934745"
 ---
 # <a name="url-access-ssrs"></a>Acceso URL (SSRS)
   El acceso URL del servidor de informes de SQL Server Reporting Services (SSRS) permite enviar comandos a un servidor de informes a través de una solicitud URL. Por ejemplo, puede personalizar la representación de un informe en una biblioteca de SharePoint o un servidor de informes en modo nativo. Es posible que haya visto el informe usando un conjunto específico de valores de parámetro de informe o tal vez haya consultado una determina página de su interés. Puede encapsular esta información en la dirección URL usando los parámetros de acceso URL predefinidos. Puede personalizar más el modo en el que el servidor de informes procesa el informe incorporando parámetros sobre los formatos de representación o sobre la apariencia del visor de informes. Puede pegar esta dirección URL directamente en un mensaje de correo electrónico o una página web para permitir que otras personas tengan acceso al informe del mismo modo en el explorador.  
@@ -57,7 +57,7 @@ reportpath
   
 ### <a name="syntax-description"></a>Descripción de la sintaxis  
  *rswebserviceurl*  
- Dirección URL del servicio web del servidor de informes. Para el modo nativo, es la dirección URL del servicio web de la instancia del servidor de informes configurada en el Administrador de configuración de Reporting Services (vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Por ejemplo:  
+ Dirección URL del servicio web del servidor de informes. Para el modo nativo, es la dirección URL del servicio web de la instancia del servidor de informes configurada en el Administrador de configuración de Reporting Services (vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración del servidor de informes&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Por ejemplo:  
   
 ```  
 https://myrshost/reportserver  

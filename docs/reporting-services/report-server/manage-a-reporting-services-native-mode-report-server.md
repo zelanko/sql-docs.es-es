@@ -13,37 +13,37 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09eac58c362b4fd6c561fd3188d265d1bb39464
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 8e6fe5d4571ea8cd276da46f8c89688cd310da07
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547960"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935112"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Administrar un servidor de informes en modo nativo de Reporting Services
-  Esta sección contiene procedimientos para configurar una instancia de servidor de informes en modo nativo utilizando el Administrador de configuración de Reporting Services.  
+  Esta sección contiene procedimientos para configurar una instancia del servidor de informes en modo nativo usando el Administrador de configuración del servidor de informes.  
   
 ## <a name="in-this-section"></a>En esta sección  
  Los temas de esta sección se organizan en categorías para que pueda encontrar las instrucciones que desea más fácilmente. La primera sección contiene los temas para las tareas de configuración básicas para un servidor de informes en modo nativo. La segunda sección contiene temas de configuración avanzados. La tercera sección contiene temas para configurar un servidor de informes de manera que se ejecute en modo integrado de SharePoint.  
   
 ### <a name="basic-configuration"></a>Configuración básica  
- [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Administrador de configuración del servidor de informes &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  Proporciona los pasos para iniciar la herramienta de configuración de Reporting Services.  
   
- [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
+ [Configurar una cuenta de servicio &#40;Administrador de configuración del servidor de informes&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  Explica cómo especificar la información de cuenta y contraseña para el servicio Servidor de informes.  
   
  [Registrar un nombre principal de servicio &#40;SPN&#41; para un servidor de informes](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
  Explica cómo registrar manualmente un SPN para un servidor de informes que se ejecuta en una cuenta de usuario de dominio en una red que utiliza la autenticación Kerberos.  
   
- [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Configuración de una URL &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
  Explica cómo establecer una o varias direcciones URL que se usan para tener acceso al servicio web del servidor de informes y el portal web.  
   
- [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
+ [Crear una base de datos del servidor de informes en modo nativo &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  Proporciona los pasos para crear una base de datos de servidor de informes. Este paso es necesario para implementar una instalación de Reporting Services.  
   
 ### <a name="advanced-or-optional-configuration"></a>Configuración avanzada u opcional  
- [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Configuración de una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Proporciona los pasos para configurar varios servidores de informes para compartir una base de datos del servidor de informes.  
   
  [Entrega por correo electrónico en Reporting Services](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)   

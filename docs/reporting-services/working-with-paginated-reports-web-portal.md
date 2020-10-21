@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d5c5a6a7b1bd60f066c13a2b06e65dc6ef5f053
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b07d50a9f885d6440f9cfd0a5bb47b3017d5f114
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243584"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935409"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Trabajar con informes paginados (portal web)
 
@@ -117,7 +117,7 @@ También puede elegir el tipo de credenciales, como la autenticación de Windows
   
 Esto hace que no sea necesario proporcionar las credenciales del origen de datos. Si un origen de datos necesita un inicio de sesión de usuario, esta opción no tendrá ningún efecto. Elija esta opción solo si la conexión al origen de datos no requiere credenciales de usuario.  
   
-Para usar esta opción, debe haber configurado previamente la cuenta de ejecución desatendida para el servidor de informes. La cuenta de ejecución desatendida se usa para conectarse a los orígenes de datos externos cuando otros orígenes de credenciales no están disponibles. Si especifica esta opción y la cuenta no está configurada, se producirá un error en la conexión al origen de datos del informe y no se producirá el procesamiento de informes. Para más información sobre esta cuenta, vea [Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+Para usar esta opción, debe haber configurado previamente la cuenta de ejecución desatendida para el servidor de informes. La cuenta de ejecución desatendida se usa para conectarse a los orígenes de datos externos cuando otros orígenes de credenciales no están disponibles. Si especifica esta opción y la cuenta no está configurada, se producirá un error en la conexión al origen de datos del informe y no se producirá el procesamiento de informes. Para más información sobre esta cuenta, vea [Configurar la cuenta de ejecución desatendida (Administrador de configuración del servidor de informes)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="subscriptions"></a>Suscripciones  
 Una suscripción de Reporting Services es una configuración que entrega un informe a una hora concreta o a raíz de un evento. Lo hace en el formato de archivo que especifique. Por ejemplo, todos los miércoles, se guarda el informe VentasMensuales en formato de documento Microsoft Word en un recurso compartido de archivos. Las suscripciones se pueden utilizar para programar y automatizar la entrega de un informe con un conjunto concreto de valores de parámetros de informes. Para más información, vea [Trabajar con suscripciones](working-with-subscriptions-web-portal.md).

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - azure active directory, authentication, access token
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b0d644d362ad4105c4e0b4f0db8d50c92a7e8b1
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f7abb90d32f93975c9a984670ca450dc791a46ae
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726896"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004555"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Conectar mediante autenticación de Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](/azure/active-directory/active-directory-whatis) (Azure AD) es una tecnología de administración de identificador de usuario central que funciona como alternativa a la [autenticación de SQL Server](how-to-connect-using-sql-server-authentication.md). Azure AD permite las conexiones a Microsoft Azure SQL Database y SQL Data Warehouse con identidades federadas en Azure AD mediante un nombre de usuario y una contraseña, Autenticación integrada de Windows o un token de acceso de Azure AD. Los controladores PHP para SQL Server ofrecen compatibilidad parcial con estas características.
+[Azure Active Directory](/azure/active-directory/active-directory-whatis) (Azure AD) es una tecnología de administración de identificador de usuario central que funciona como alternativa a la [autenticación de SQL Server](how-to-connect-using-sql-server-authentication.md). Azure AD permite las conexiones a Microsoft Azure SQL Database y Azure Synapse Analytics con identidades federadas en Azure AD mediante un nombre de usuario y una contraseña, Autenticación integrada de Windows o un token de acceso de Azure AD. Los controladores PHP para SQL Server ofrecen compatibilidad parcial con estas características.
 
 Para usar Azure AD, use las palabras clave **Authentication** o **AccessToken** (se excluyen mutuamente), tal como se muestra en la siguiente tabla. Para obtener detalles más técnicos, consulte [Uso de Azure Active Directory con el controlador ODBC](../odbc/using-azure-active-directory.md).
 

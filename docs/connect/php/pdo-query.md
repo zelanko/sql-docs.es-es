@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8f194c043ded9b8f663a6bcbfdb77ef408461468
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 851452d2fa7df6cab7771da294e01fea926b7af3
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726796"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081854"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,7 +62,7 @@ Si no se recuperan todos los datos de un conjunto de resultados, la siguiente ll
   
 En la versión 2.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], se agregó compatibilidad con PDO.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="query-example"></a>Ejemplo de consulta  
 En este ejemplo se muestran varias consultas.  
   
 ```  
@@ -118,7 +118,7 @@ $stmt = null;
 ?>  
 ```
 
-## <a name="example"></a>Ejemplo
+## <a name="sql_variant-example"></a>Ejemplo de Sql_variant
 Este ejemplo de código muestra cómo crear una tabla de tipos [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) y capturar los datos insertados.
 
 ```

@@ -1,5 +1,5 @@
 ---
-description: Configurar una dirección URL (Administrador de configuración de SSRS)
+description: Configuración de una URL (Administrador de configuración del servidor de informes)
 title: Configuración de una dirección URL (Configuration Manager) | Microsoft Docs
 ms.date: 05/26/2016
 ms.prod: reporting-services
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ea8162493584be5d4cb9d312c57af16ff40d08a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0ff8cd92d090424bbf7a17315dc09dfb7b8a06f
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427097"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934786"
 ---
-# <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar una dirección URL (Administrador de configuración de SSRS)
+# <a name="configure-a-url--report-server-configuration-manager"></a>Configuración de una URL (Administrador de configuración del servidor de informes)
   Para poder usar el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o el servicio web del servidor de informes, debe configurar al menos una dirección URL para cada aplicación. Configurar las direcciones URL es obligatorio si ha instalado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de "solo archivos" (es decir, al seleccionar la opción **Install but do not configure the server (Instalar pero no configurar el servidor)** en la página Opciones de instalación del servidor de informes del Asistente para la instalación). Si instaló [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada, las direcciones URL ya están configuradas para cada aplicación.  
   
  Utilice la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar las direcciones URL. Todas las partes de la dirección URL se definen en esta herramienta. A diferencia de las versiones anteriores, los sitios web de Internet Information Services (IIS) ya no proporcionan acceso a las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
@@ -32,7 +32,7 @@ ms.locfileid: "88427097"
   
 -   Establecer propiedades avanzadas de las direcciones URL para definir más direcciones URL.  
   
- Para obtener más información sobre cómo se almacenan y mantienen las direcciones URL o sobre problemas de interoperabilidad, consulte [Acerca de las reservas y el registro de reservas de URL (Administrador de configuración de SSRS)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Instalar Reporting Services e Internet Information Services en paralelo (modo nativo de SSRS)](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). Para revisar ejemplos de direcciones URL que suelen usarse en una instalación de Reporting Services, vea [Ejemplos de direcciones URL](#URLExamples) en este tema.  
+ Para más información sobre cómo se almacenan y mantienen las direcciones URL o sobre problemas de interoperabilidad, vea [Acerca de las reservas y el registro de reservas de URL &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Instalar Reporting Services e Internet Information Services en paralelo &#40;modo nativo de SSRS&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). Para revisar ejemplos de direcciones URL que suelen usarse en una instalación de Reporting Services, vea [Ejemplos de direcciones URL](#URLExamples) en este tema.  
   
 ## <a name="prerequisites"></a>Prerrequisitos  
  Antes de crear o modificar una dirección URL, recuerde los puntos siguientes:  
@@ -45,7 +45,7 @@ ms.locfileid: "88427097"
   
 -   Elija una hora en la que haya poca actividad con los informes. Cada vez que la reserva de direcciones URL cambie, puede esperar que los dominios de aplicación para el servicio web del servidor de informes y el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] se puedan reciclar.  
   
--   Para obtener información general de la construcción de la dirección URL y el uso de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
+-   Para obtener información general de la construcción de la dirección URL y el uso de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
 ### <a name="to-configure-a-url-for-the-report-server-web-service"></a>Para configurar una dirección URL para el servicio web del servidor de informes  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88427097"
   
 9. Haga clic en **Aplicar** para crear la dirección URL.  
   
-10. Pruebe la dirección URL haciendo clic en el vínculo en la sección **Direcciones URL** de la página. Observe que la base de datos del servidor de informes debe crearse y configurarse para poder probar la dirección URL. Para más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+10. Pruebe la dirección URL haciendo clic en el vínculo en la sección **Direcciones URL** de la página. Observe que la base de datos del servidor de informes debe crearse y configurarse para poder probar la dirección URL. Para más información, vea [Crear una base de datos del servidor de informes en modo nativo &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]
 >  Si tiene enlaces TLS y reservas de direcciones URL existentes y desea cambiar el enlace TLS para, por ejemplo, usar otro certificado o encabezado de host, se recomienda que complete los pasos siguientes por orden:  
@@ -161,7 +161,7 @@ ms.locfileid: "88427097"
 6.  Para probar la dirección URL, abra una ventana del explorador y escriba la dirección URL.  
   
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>Direcciones URL para varias instancias del servidor de informes en el mismo equipo  
- Si está reservando direcciones URL para varias instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debería seguir las convenciones de nomenclatura para poder evitar conflictos de nombres. Para obtener más información, vea [Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).  
+ Si está reservando direcciones URL para varias instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debería seguir las convenciones de nomenclatura para poder evitar conflictos de nombres. Para más información, vea [Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).  
   
 ##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> Ejemplos de configuraciones de direcciones URL  
  En la lista siguiente se muestran algunos ejemplos de la apariencia que puede tener una dirección URL del servidor de informes:  
@@ -192,6 +192,6 @@ ms.locfileid: "88427097"
   
 -   `https://www.adventure-works.com:8080/reports`  
   
-## <a name="see-also"></a>Consulte también  
- [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+## <a name="see-also"></a>Consulte también
+
+ [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Administrador de configuración del servidor de informes &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

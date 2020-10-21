@@ -1,6 +1,6 @@
 ---
 title: Configuración de la suscripción y una cuenta de recurso compartido de archivos (Administrador de configuración) | Microsoft Docs
-description: En la página Configuración de suscripción del Administrador de configuración de Reporting Services, configure una cuenta de recurso compartido de archivos para servidores de informes en modo nativo y suscripciones de recurso compartido de archivos.
+description: En la página Configuración de suscripción del Administrador de configuración del servidor de informes, configure una cuenta de recurso compartido de archivos para servidores de informes en modo nativo y suscripciones de recurso compartido de archivos.
 ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,14 +11,14 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05441d59b725a172fddfb83ae116cda2d3ca5596
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866278"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935556"
 ---
-# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>Configuración de la suscripción y una cuenta de recurso compartido de archivos (Administrador de configuración de SSRS)
+# <a name="subscription-settings-and-a-file-share-account-report-server-configuration-manager"></a>Configuración de la suscripción y una cuenta de recurso compartido de archivos (Administrador de configuración del servidor de informes)
   En la página **Configuración de suscripción** del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , configure una cuenta de recurso compartido de archivos para servidores de informes en modo nativo y suscripciones de recurso compartido de archivos. La cuenta de recurso compartido de archivos permite usar un único conjunto de credenciales en varias suscripciones que entregan informes a un recurso compartido de archivos. Cuando sea el momento de cambiar las credenciales, solamente deberá configurar el cambio en la cuenta de recurso compartido de archivos, con lo que no será necesario actualizar cada una de las suscripciones.  
   
  Con las suscripciones de recurso compartido de archivos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] existen dos flujos de trabajo:  

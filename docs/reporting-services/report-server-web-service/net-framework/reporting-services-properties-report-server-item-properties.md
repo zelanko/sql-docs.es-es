@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1cd71f267fb6e249116cda4ba9c54069e8ee570
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b368b02ebfe37e63b4d02e6e69d6eed2bdb831ea
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509647"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934587"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Propiedades de Reporting Services: propiedades de los elementos del servidor de informes
   Las propiedades de los elementos son específicas de los elementos de la base de datos del servidor de informes. Tales elementos incluyen informes, informes vinculados, carpetas, recursos, modelos y orígenes de datos.  
@@ -59,7 +59,7 @@ ms.locfileid: "79509647"
 |**Lenguaje**|Lenguaje utilizado en un informe. El valor es un código de idioma definido en la especificación del Grupo de trabajo de ingeniería de Internet (IETF) RFC1766. La primera parte es una designación de dos caracteres del lenguaje de bajo nivel. La segunda parte se separa con un guión y designa la variación o dialecto del lenguaje. Si no se especifica un valor en el elemento **Style** asociado al elemento **Body** en la definición de informe, el valor predeterminado es el lenguaje del servidor de informes.|  
 |**ReportProcessingTimeout**|Tiempo de espera, en segundos, para un informe individual. Si se establece este valor, el servidor de informes intenta detener el procesamiento de un informe cuando ha transcurrido el tiempo especificado. Los valores válidos para esta propiedad van desde **-1** a **2** **147** **483** **647**. Si el valor es **-1**, no se agota el tiempo de espera del informe durante el procesamiento. Si el valor es **null**, el valor de propiedad del sistema **ReportProcessingTimeout** se usa para el tiempo de espera del procesamiento del informe. El valor predeterminado es **null**. Para más información, vea [Propiedades del sistema del servidor de informes](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|Fecha y hora cuando una instantánea de informe se creó por última vez para un informe.|  
-|**CanRunUnattended**|Valor que indica si un informe se puede ejecutar de forma desatendida. Si esta propiedad se establece en **true**, se definen valores predeterminados para los parámetros de informe y las credenciales del origen de datos se almacenan con el informe, o la opción de recuperación de credenciales se establece en **None**. Si esta propiedad se establece en **false**, no se cumplen los requisitos previos para ejecutar un informe desatendido. Vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) para más información.|  
+|**CanRunUnattended**|Valor que indica si un informe se puede ejecutar de forma desatendida. Si esta propiedad se establece en **true**, se definen valores predeterminados para los parámetros de informe y las credenciales del origen de datos se almacenan con el informe, o la opción de recuperación de credenciales se establece en **None**. Si esta propiedad se establece en **false**, no se cumplen los requisitos previos para ejecutar un informe desatendido. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración del servidor de informes&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
 |**HasParameterDefaultValues**|Valor que indica si el informe tiene establecidos los valores predeterminados válidos para todos los parámetros de informe. El valor también es **true** si un informe no tiene los parámetros de informe. Si esta propiedad se establece en **false**, uno o más parámetros de informe no tienen un valor predeterminado válido.|  
 |**HasDataSourceCredentials**|Un valor que indica que la opción de recuperación de credenciales establecida para todos los orígenes de datos asociados al informe es **None** o **Store**. Si esta propiedad se establece en **false**, una opción de recuperación de credenciales establecida para uno de los orígenes de datos asociados al informe es **Integrated** o **Prompt**.|  
 |**IsSnapshotExecution**|Valor que indica si el informe es una instantánea.|  

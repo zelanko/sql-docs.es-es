@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 0cec5d79b62307053c3733f805101dd4638ba94e
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 09/24/2019
+ms.openlocfilehash: 7f032d870952cdadbde79dbf56f4c63ae351d6e9
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746155"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081574"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Control de código fuente en Azure Data Studio
 
@@ -22,12 +22,12 @@ Azure Data Studio admite Git para el control de código fuente y de versiones.
 
 ## <a name="git-support-in-azure-data-studio"></a>Compatibilidad de Git en Azure Data Studio
 
-Azure Data Studio se entrega con un administrador de control de código fuente (SCM) de Git, pero sigue siendo necesario [instalar Git (versión 2.0.0 o posterior)](https://git-scm.com/download) para que estas características estén disponibles. 
+Azure Data Studio se entrega con un administrador de control de código fuente (SCM) de Git, pero sigue siendo necesario [instalar Git (versión 2.0.0 o posterior)](https://git-scm.com/download) para que estas características estén disponibles.
 
 ## <a name="open-an-existing-git-repository"></a>Apertura de un repositorio de Git existente
 
 1. En el menú **Archivo**, seleccione **Abrir carpeta...**
-2. Vaya a la carpeta que contiene los archivos a los que Git realiza un seguimiento y haga clic en **Seleccionar carpeta**. Aquí puede seleccionar las subcarpetas de su repositorio local.
+2. Vaya a la carpeta que contiene los archivos a los que Git realiza un seguimiento y elija **Seleccionar carpeta**. Aquí puede seleccionar las subcarpetas de su repositorio local.
 
 ## <a name="initialize-a-new-git-repository"></a>Inicialización de un nuevo repositorio de Git
 

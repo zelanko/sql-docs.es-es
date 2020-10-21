@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8fa55524aa371e65f747ee0f53d6ef2b666f8519
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 9d445092d609be13cca75c06e49f3ae76b51851b
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458177"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935499"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Tipo de conexión Almacenamiento de datos paralelo de SQL Server (SSRS)
 
@@ -49,7 +49,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Utilizar un nombre de usuario y una contraseña almacenados. Para negociar el salto doble que se produce cuando la base de datos que contiene los datos de informe es distinta del servidor de informes, seleccione opciones para utilizar las credenciales como credenciales de Windows. Puede también decidir suplantar al usuario autenticado tras la conexión al origen de datos.  
   
--   No se necesitan credenciales. Para usar esta opción, debe tener la cuenta de ejecución desatendida configurada en el servidor de informes. Para obtener más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
+-   No se necesitan credenciales. Para usar esta opción, debe tener la cuenta de ejecución desatendida configurada en el servidor de informes. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
   
  Para más información, consulte [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Especificar información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -79,7 +79,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  El diseñador gráfico de consultas usado por [!INCLUDE[ssDW](../../includes/ssdw-md.md)] proporciona compatibilidad integrada con las agrupaciones y agregados para ayudar a los usuarios a escribir consultas que solo recuperen datos de resumen. Las características de lenguaje de [!INCLUDE[DWsql](../../includes/dwsql-md.md)] son: la cláusula GROUP BY, la palabra clave DISTINCT y agregados, como SUM y COUNT. El diseñador de consultas basado en texto es totalmente compatible con el lenguaje de [!INCLUDE[DWsql](../../includes/dwsql-md.md)] , incluidas las agrupaciones y los agregados.  
   
- Para obtener más información sobre [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Referencia de Transact-SQL (motor de base de datos)](../../t-sql/transact-sql-reference-database-engine.md).  
+ Para obtener más información sobre [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Referencia de Transact-SQL (motor de base de datos)](../../t-sql/language-reference.md).  
   
 ###  <a name="using-query-type-text"></a><a name="QueryText"></a> Usar consultas de tipo Texto  
  En el diseñador de consultas basado en texto, escriba comandos de [!INCLUDE[DWsql](../../includes/dwsql-md.md)] para definir los datos de un conjunto de datos. Las consultas que se utilizan para recuperar datos de [!INCLUDE[ssDW](../../includes/ssdw-md.md)] son las mismas que las que se utilizan para recuperar datos de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no se están ejecutando dentro de una aplicación de [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . Por ejemplo, la siguiente consulta [!INCLUDE[DWsql](../../includes/dwsql-md.md)] selecciona todos los nombres de todos los empleados que son asistentes de marketing:  

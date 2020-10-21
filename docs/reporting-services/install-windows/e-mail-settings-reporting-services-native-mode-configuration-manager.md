@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71c58ed673834c0226f9998b80fa4b12f14538e0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866008"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892085"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Configuración de correo electrónico: Modo nativo de Reporting Services (Administrador de configuración)
 SQL Server Reporting Services incluye una extensión de entrega por correo electrónico para distribuir informes por correo electrónico. Según cómo defina la suscripción del correo electrónico, una entrega podría estar compuesta de una notificación, un vínculo, datos adjuntos o un informe incrustado. La extensión de entrega por correo electrónico funciona con la tecnología de servidor de correo existente. El servidor de correo debe ser un servidor SMTP o un reenviador. El servidor de informes se conecta a un servidor SMTP a través de bibliotecas de Collaboration Data Objects (CDO), cdosys.dll, que el sistema operativo proporciona.
 
-La extensión de entrega por correo electrónico del servidor de informes no está configurada de manera predeterminada. Debe utilizar el Administrador de configuración de Reporting Services para configurar dicha extensión mínimamente. Para establecer propiedades avanzadas, debe editar el archivo RSReportServer.config. Si no puede configurar el servidor de informes para que utilice esta extensión, puede entregar los informes en una carpeta compartida. Para obtener más información, vea Entrega a recursos compartidos en Reporting Services.
+La extensión de entrega por correo electrónico del servidor de informes no está configurada de manera predeterminada. Debe usar el Administrador de configuración del servidor de informes para configurar la extensión mínimamente. Para establecer propiedades avanzadas, debe editar el archivo RSReportServer.config. Si no puede configurar el servidor de informes para que utilice esta extensión, puede entregar los informes en una carpeta compartida. Para obtener más información, vea Entrega a recursos compartidos en Reporting Services.
 
 ## <a name="configuration-requirements"></a>Requisitos de configuración
 
@@ -41,16 +41,16 @@ Para poder utilizar la entrega por correo electrónico del servidor de informes,
 
 Para configurar un servidor de informes para la entrega por correo electrónico, siga este procedimiento:
 
-- Use el Administrador de configuración de Reporting Services si solo va a especificar un servidor SMTP y una cuenta de usuario que tenga permiso para enviar correo electrónico. Ésta es la configuración mínima necesaria para configurar la extensión de entrega por correo electrónico del servidor de informes.
+- Use el Administrador de configuración del servidor de informes si solo va a especificar un servidor SMTP y una cuenta de usuario que tenga permiso para enviar correo electrónico. Ésta es la configuración mínima necesaria para configurar la extensión de entrega por correo electrónico del servidor de informes.
 
 - (Opcionalmente) Utilice un procesador de texto para especificar valores adicionales en el archivo RSreportserver.config. Este archivo contiene toda la configuración para la distribución del correo electrónico del servidor de informes. Si utiliza un servidor SMTP adicional o limita la entrega de correo electrónico a hosts específicos, debe configurar opciones adicionales en estos archivos. Para obtener más información sobre cómo buscar y modificar archivos de configuración, consulte [Modificar un archivo de configuración de Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).
 
 > [!NOTE] 
 > Las opciones de correo electrónico del servidor de informes se basan en CDO. Si desea obtener más detalles acerca de opciones específicas, puede consultar la documentación de producción de CDO.
 
-## <a name="configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Configurar el correo electrónico del servidor de informes mediante el Administrador de configuración de Reporting Services
+## <a name="configure-report-server-e-mail-using-the-report-server-configuration-manager"></a><a name="rsconfigman"/>Configurar el correo electrónico del servidor de informes mediante el Administrador de configuración del servidor de informes
 
-1. Inicie el Administrador de configuración de Reporting Services y conéctese a la instancia del servidor de informes
+1. Inicie el Administrador de configuración del servidor de informes y conéctese a la instancia del servidor de informes.
 
 2. En **Dirección del remitente**, indique la dirección de correo electrónico que se va a usar en el campo **De:** de un mensaje de correo electrónico generado. 
 
@@ -137,12 +137,12 @@ Entre los demás valores que se utilizan para un servicio SMTP remoto se incluye
 
 - `<SMTPServerPort>` está configurado para el puerto 25 de manera predeterminada.
 - `<SMTPAuthenticate>` especifica cómo se conecta el servidor de informes al servidor SMTP remoto. El valor predeterminado es **0** (o sin autenticación). En tal caso, la conexión se realiza a través de un acceso anónimo. En función de su configuración de dominio, es posible que el servidor de informes y el servidor SMTP tengan que ser miembros del mismo dominio.
-- Para enviar correo electrónico a listas de distribución restringidas (por ejemplo, listas de distribución que acepten mensajes entrantes solo de cuentas autenticadas), establezca `<SMTPAuthenticate>` en **1** o en **2**. Si se establece en **1**, también necesitará establecer `<SendUserName>` y `<SendPassword>`. Se recomienda hacerlo a través del Administrador de configuración de Reporting Services, dado que cifrará los valores de `<SendUserName>` y `<SendPassword>`.
+- Para enviar correo electrónico a listas de distribución restringidas (por ejemplo, listas de distribución que acepten mensajes entrantes solo de cuentas autenticadas), establezca `<SMTPAuthenticate>` en **1** o en **2**. Si se establece en **1**, también necesitará establecer `<SendUserName>` y `<SendPassword>`. Se recomienda hacerlo a través del Administrador de configuración del servidor de informes, ya que cifrará los valores de `<SendUserName>` y `<SendPassword>`.
 
 ### <a name="to-configure-a-remote-smtp-service-for-the-report-server"></a>Para configurar un servicio SMTP remoto para el servidor de informes
 
 > [!NOTE] 
-> Se recomienda configurar el servidor de correo con el Administrador de configuración de Reporting Services.
+> Se recomienda configurar el servidor de correo con el Administrador de configuración del servidor de informes.
 
 1. Compruebe que el servicio Servidor de informes de Windows disponga de permisos **Send As** para el servidor SMTP.
 
@@ -154,7 +154,7 @@ Entre los demás valores que se utilizan para un servicio SMTP remoto se incluye
      
 5. En `<SMTPServer>`, escriba el nombre del servidor SMTP. Este valor puede ser una dirección IP, un nombre UNC de un equipo de la intranet corporativa o un nombre de dominio completo.
 
-6. Establezca `<SendUsing>` en un valor de **2** para usar la cuenta de servicio para el servidor de informes. Establezca `<SendUsing>` en un valor de **1** para la autenticación básica. Si se establece en **1**, también habrá que proporcionar un valor para `<SendUserName>` y `<SendPassword>`. Si quiere que esos valores se cifren, establezca la autenticación en el Administrador de configuración de Reporting Services.
+6. Establezca `<SendUsing>` en un valor de **2** para usar la cuenta de servicio para el servidor de informes. Establezca `<SendUsing>` en un valor de **1** para la autenticación básica. Si se establece en **1**, también habrá que proporcionar un valor para `<SendUserName>` y `<SendPassword>`. Si quiere que esos valores se cifren, establezca la autenticación en el Administrador de configuración del servidor de informes.
 
 7. Establezca `<SMTPAuthenticate>` en un valor de **1** Si establece `<SendUsing>` en 1 o en 2.
 
@@ -222,7 +222,7 @@ La conexión entre el servidor de informes y un servidor o reenviador SMTP local
 17. Guarde el archivo.
   
 ## <a name="see-also"></a>Consulte también  
-[Administrador de configuración de Reporting Services (modo nativo)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[Administrador de configuración del servidor de informes (modo nativo)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [El archivo de configuración RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   

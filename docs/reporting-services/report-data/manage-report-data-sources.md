@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a433169d694f9f2d71a049c906267a64b6c0756
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 85f40936b589ac5a1f90ec47a81756998c5e9db7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458262"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934926"
 ---
 # <a name="manage-report-data-sources"></a>Administrar orígenes de datos de informe
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], los informes, los modelos de informe y las suscripciones controladas por datos recuperan datos desde orígenes de datos externos. Para conectarse a un origen de datos externo, un servidor de informes utiliza la información de conexión de origen de datos cuya definición o referencia se halla en el informe, el modelo o la suscripción. Las propiedades de conexión de origen de datos siempre se definen con el informe o modelo al crearlo, pero se pueden administrar independientemente una vez que el informe o el modelo se publican en un servidor de informes.  
@@ -62,17 +62,17 @@ ms.locfileid: "86458262"
 |----------|----------|----------|  
 |Ver ejemplos de cadenas de conexión.||[Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Elegir un enfoque para obtener las credenciales para conectarse a un origen de datos.||[Especificación de información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)|  
-|Agregar propiedades de conexión de origen de datos a un archivo de definición de informe (.rdl).|Diseñador de informes|[Crear un origen de datos incrustado o compartido &#40;SSRS&#41;](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
+|Agregar propiedades de conexión de origen de datos a un archivo de definición de informe (.rdl).|Diseñador de informes|[Crear un origen de datos incrustado o compartido &#40;SSRS&#41;](/previous-versions/sql/)|  
 |Agregar y establecer un vínculo con un archivo origen de datos compartido (.rds) en el proyecto de informe.|Diseñador de informes|[Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Crear una lista predefinida de orígenes de datos que los usuarios pueden seleccionar en tiempo de ejecución. Cuando un usuario solicita un informe, el informe proporciona una lista de orígenes de datos. El usuario debe seleccionar qué origen de datos ha de utilizar antes de ejecutar el informe. Para agregar una lista de selección de orígenes de datos a un informe, ha de utilizar una expresión.<br /><br /> Esto se conoce como conexión dinámica de origen de datos.|Diseñador de informes|[Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Crear un elemento de origen de datos compartido en un servidor de informes.|[Creación, modificación y eliminación de orígenes de datos compartidos](create-modify-and-delete-shared-data-sources-ssrs.md) |  
 |Almacenar credenciales como requisito previo para crear suscripciones o instantáneas de informe.|El portal web|[Almacenamiento de las credenciales en un origen de datos de Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
 |Modificar las propiedades de conexión de origen de datos en un informe publicado.|El portal web|[Configuración de propiedades de origen de datos para un informe](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
-|Crear un elemento de origen de datos compartido en un servidor de informes.|Sitio de SharePoint|[Crear y administrar orígenes de datos compartidos &#40;Reporting Services en el modo integrado de SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)|  
+|Crear un elemento de origen de datos compartido en un servidor de informes.|Sitio de SharePoint|[Crear y administrar orígenes de datos compartidos &#40;Reporting Services en el modo integrado de SharePoint&#41;](/previous-versions/sql/)|  
 |Usar la información de conexión .odc existente con un informe.|Sitio de SharePoint|[Usar una conexión de datos de Office &#40;.odc&#41; con informes &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
->  Administrar las conexiones de un origen de datos con los orígenes de datos de informe no equivale a administrar la conexión del servidor de informes con la base de datos del servidor de informes. Para más información sobre la conexión de un servidor de informes con su almacén de datos interno, vea [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+>  Administrar las conexiones de un origen de datos con los orígenes de datos de informe no equivale a administrar la conexión del servidor de informes con la base de datos del servidor de informes. Para más información sobre la conexión de un servidor de informes con su almacén de datos interno, vea [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Enlazar un informe o un modelo con un origen de datos compartido &#40;SSRS&#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
@@ -80,5 +80,4 @@ ms.locfileid: "86458262"
  [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
-  
   

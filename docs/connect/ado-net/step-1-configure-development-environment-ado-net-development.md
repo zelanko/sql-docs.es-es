@@ -11,12 +11,12 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: dde55bd4afd162869606e336126c32c274ea7445
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2e9f0619f26abf8b077059c7e12c7fc34c51a2e6
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633322"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081304"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>Paso 1: Configuración del entorno de desarrollo para el desarrollo de ADO.NET
 
@@ -30,7 +30,7 @@ En el ejemplo de código actual se usa ADO.NET del .NET Framework, para Windows
 
 ### <a name="adonet-for-windows"></a>ADO.NET, para Windows
 
-- ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Para descargar e instalar .NET Framework, incluido ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Flecha de descarga dentro de círculo](../../ssms/media/download-icon.png)[Para descargar e instalar .NET Framework, incluido ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 - Instale Visual Studio Community o un entorno de desarrollo integrado (IDE) similar para escribir y compilar código fuente de C#. Microsoft ahora ofrece Visual Studio Community *gratis*.  
     - [Descargar Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs)  
@@ -41,4 +41,4 @@ En el ejemplo de código actual se usa ADO.NET del .NET Framework, para Windows
 
 Los vínculos para descargar .NET Core, para una variedad de sistemas operativos, están disponibles en:
 
-- ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Para descargar e instalar .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Flecha de descarga dentro de círculo](../../ssms/media/download-icon.png)[Para descargar e instalar .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

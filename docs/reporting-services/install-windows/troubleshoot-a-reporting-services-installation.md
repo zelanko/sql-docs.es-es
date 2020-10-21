@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3d3bf132fb869ac2273a1db76dd34c4f24970ad
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: c082a4dc31ffcbed20a4b5c855346dd8d52f2056
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569895"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935099"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Solución de problemas en una instalación de Reporting Services
 
@@ -53,7 +53,7 @@ ms.locfileid: "89569895"
   
 ##  <a name="troubleshoot-problems-with-sharepoint-mode-installations"></a><a name="bkmk_tshoot_sharepoint"></a> Solucionar los problemas de las instalaciones en modo de SharePoint  
   
--   [El Administrador de configuración de Reporting Services no se inicia](#bkmk_configmanager_notstart)  
+-   [El Administrador de configuración del servidor de informes no se inicia](#bkmk_configmanager_notstart)  
   
 -   [No ve el servicio SQL Server Reporting Services en Administración central de SharePoint después de instalar SQL Server 2016 SSRS en modo de SharePoint](#bkmk_no_ssrs_service)  
   
@@ -69,13 +69,13 @@ ms.locfileid: "89569895"
   
 -   [Ve un mensaje de error que indica que RS_SHP no se admite con PREPAREIMAGE](#bkmk_RS_SHP_notsupported)  
 
-### <a name="reporting-services-configuration-manager-does-not-start"></a><a name="bkmk_configmanager_notstart"></a> El Administrador de configuración de Reporting Services no se inicia
+### <a name="report-server-configuration-manager-does-not-start"></a><a name="bkmk_configmanager_notstart"></a> El Administrador de configuración del servidor de informes no se inicia
 
  **Descripción:** este problema se debe al diseño de SQL Server 2012 y versiones posteriores. Reporting Services está estructurado para la arquitectura de servicios de SharePoint. El Administrador de configuración ya no es necesario para configurar y administrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint.  
   
  **Solución alternativa:** use la Administración central de SharePoint para configurar un servidor de informes en modo de SharePoint. Para obtener más información, vea [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="you-do-not-see-the-sql-server-reporting-services-service-in-sharepoint-central-administration-after-installing-sql-server-2016-ssrs-in-sharepoint-mode"></a><a name="bkmk_no_ssrs_service"></a> No ve el servicio SQL Server Reporting Services en Administración central de SharePoint después de instalar SQL Server 2016 SSRS en modo de SharePoint  
  **Descripción:** si, después de haber instalado correctamente SQL Server 2016 Reporting Services en el modo de SharePoint y el complemento de SQL Server 2016 Reporting Services para SharePoint 2013/2016, no ve "SQL Server Reporting Services" en los dos menús siguientes, significa que el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no se ha registrado:  
@@ -104,7 +104,7 @@ ms.locfileid: "89569895"
   
 2.  Compruebe el estado del servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] como "**Iniciado**" en la página: Administración central de SharePoint 2013/2016 -> "**Administración de aplicaciones**" -> página "**Administrar servicios en el servidor**"  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="reporting-services-powershell-cmdlets-are-not-available-and-commands-are-not-recognized"></a><a name="bkmk_cmdlets_not_recognized"></a> Los cmdlets de PowerShell de Reporting Services no están disponibles y no se reconocen los comandos  
  **Descripción:** al intentar ejecutar un cmdlet de PowerShell de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], aparece un mensaje de error similar al siguiente:  
@@ -125,7 +125,7 @@ ms.locfileid: "89569895"
   
 -   [Instalación del primer servidor de informes en modo de SharePoint](install-the-first-report-server-in-sharepoint-mode.md)  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="you-see-an-error-message-indicating-the-url-is-not-configured"></a><a name="bkmk_URL_not_configured"></a> Aparece un mensaje de error que indica que la dirección URL no está configurada  
  **Descripción:** verá un mensaje de error similar al siguiente:  
@@ -148,7 +148,7 @@ ms.locfileid: "89569895"
   
 -   Administrar una aplicación de servicio.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="setup-fails-on-a-computer-with-sharepoint-installed-but-it-is-not-configured"></a><a name="bkmk_sharepoint_not_confiugred"></a> El programa de instalación produce errores en un equipo con SharePoint instalado pero que no está configurado  
  **Descripción** : si selecciona instalar el modo SharePoint de Reporting Services en un equipo que tiene SharePoint instalado pero no configurado, verá un mensaje similar al siguiente y la instalación se detendrá:  
@@ -159,20 +159,20 @@ ms.locfileid: "89569895"
   
  **Más información:** al instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una instalación de SharePoint existente, el programa de instalación intenta instalar e iniciar el servicio de SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si SharePoint no está configurado, la instalación del servicio da error e impide que el programa de instalación se complete.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="sharepoint-central-administration-page-is-blank"></a><a name="bkmk_central_admin_blank"></a> La página Administración central de SharePoint está en blanco  
  **Descripción:** pudo instalar SharePoint 2013/2016 correctamente, sin errores de instalación. Sin embargo, al ir a Administración Central, solo ve una página en blanco:  
   
  **Solución alternativa:** este problema no es específico de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , sino que está relacionado con la configuración de permisos de la instalación de SharePoint global. Estas son algunas sugerencias:  
   
--   Revise el artículo de SharePoint sobre los entornos de desarrollo. [Configurar un entorno de desarrollo general para SharePoint](https://msdn.microsoft.com/library/ee554869)  
+-   Revise el artículo de SharePoint sobre los entornos de desarrollo. [Configurar un entorno de desarrollo general para SharePoint](/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint)  
   
 -   Revisar la exposición en el foro: [Administración central devuelve una página en blanco después de la instalación en Windows 7](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   La cuenta de servicio que usa para los servicios de SharePoint, como el Servicio de Administración central de SharePoint 2013/2016, debería tener los privilegios de administrador en el sistema operativo local.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="you-see-an-error-message-when-you-try-to-create-a-new-report-builder-report"></a><a name="bkmk_reportbuilder_newreport_error"></a> Ve un mensaje de error al intentar crear un nuevo informe del Generador de informes  
  **Descripción:** ve un mensaje de error similar al siguiente al intentar crear un informe del Generador de informes dentro de una biblioteca de documentos:  
@@ -181,7 +181,7 @@ ms.locfileid: "89569895"
   
  **Solución alternativa:** compruebe que tiene una aplicación de servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y que está configurada correctamente. Para obtener más información, vea [Instalación del primer servidor de informes en modo de SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="you-see-an-error-message-that-rs_shp-is-not-supported-with-prepareimage"></a><a name="bkmk_RS_SHP_notsupported"></a> Ve un mensaje de error que indica que RS_SHP no se admite con PREPAREIMAGE  
  **Descripción:** al intentar ejecutar PREPAREIMAGE para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], aparece un mensaje de error similar al siguiente:  
@@ -190,7 +190,7 @@ ms.locfileid: "89569895"
   
  **Solución alternativa:** no hay ninguna. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no admite SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no admite SYSPREP.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
 
 ::: moniker-end
   
@@ -245,7 +245,7 @@ ms.locfileid: "89569895"
  Después de reparar la instancia de 64 bits o volver a agregar las claves del Registro de forma manual, puede usar el Monitor de rendimiento para configurar los objetos de rendimiento de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que quiera supervisar.  
   
 ###  <a name="reportserverexternalurl-and-passthroughcookies-configuration-properties-are-not-configured-after-an-upgrade-from-sql-server-2005"></a><a name="ConfigPropsMissing"></a> Las propiedades de configuración ReportServerExternalURL y PassThroughCookies no están configuradas después de actualizar SQL Server 2005  
- Al actualizar desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], el proceso de actualización no configura las propiedades de configuración **ReportServerExternalURL** y **PassThroughCookies** . **ReportServerExternalURL** es una propiedad opcional y se debe establecer únicamente si usa elementos web de SharePoint 2.0 y desea que los usuarios puedan recuperar un informe y abrirlo en una nueva ventana del explorador. Para más información sobre **ReportServerExternalURL**, vea [Direcciones URL en archivos de configuración &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). **PassThroughCookies** solo se requiere cuando se usa el método de autenticación personalizada. Para más información sobre **PassThroughCookies**, vea [Configurar el portal web para pasar cookies de autenticación personalizada](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
+ Al actualizar desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], el proceso de actualización no configura las propiedades de configuración **ReportServerExternalURL** y **PassThroughCookies** . **ReportServerExternalURL** es una propiedad opcional y se debe establecer únicamente si usa elementos web de SharePoint 2.0 y desea que los usuarios puedan recuperar un informe y abrirlo en una nueva ventana del explorador. Para más información sobre **ReportServerExternalURL**, vea [Direcciones URL en archivos de configuración &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). **PassThroughCookies** solo se requiere cuando se usa el método de autenticación personalizada. Para más información sobre **PassThroughCookies**, vea [Configurar el portal web para pasar cookies de autenticación personalizada](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
   
 > [!NOTE]  
 >  Al utilizar la autenticación personalizada, se recomienda que migre la instalación en lugar de actualizarla. Para más información sobre cómo migrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Migrar una instalación de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
@@ -274,8 +274,7 @@ ms.locfileid: "89569895"
   
 -   Wiki de TechNet: [Solución de problemas de SQL Server Reporting Services (SSRS) en el modo integrado de SharePoint 2010](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [Preguntas y respuestas de Microsoft: SQL Server Reporting Services](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html)  
+-   [Preguntas y respuestas de Microsoft: SQL Server Reporting Services](/answers/topics/sql-server-reporting-services.html)  
   
 -   ¿Tiene algún comentario o más preguntas? Visite [UserVoice de Microsoft SQL Server](https://feedback.azure.com/forums/908035-sql-server).  
-  
   

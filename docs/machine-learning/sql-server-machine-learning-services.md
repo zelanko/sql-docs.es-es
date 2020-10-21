@@ -8,13 +8,13 @@ ms.date: 06/19/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: be0e80a5d6a54726fd77b753c9910764bf5f600d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 31d95c5881c68e6e897c18a935e4fa85799be60c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180382"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892135"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>¿Qué es SQL Server Machine Learning Services (Python y R)?
 [!INCLUDE [SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -45,15 +45,23 @@ Machine Learning Services usa un marco de extensibilidad para ejecutar scripts d
 ## <a name="get-started-with-machine-learning-services"></a>Introducción a Machine Learning Services
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-1. [Instale Machine Learning Services de SQL Server en Windows](install/sql-machine-learning-services-windows-install.md) o [en Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). También puede usar [Machine Learning Services en clústeres de macrodatos](../big-data-cluster/machine-learning-services.md).
+1. [Instale Machine Learning Services de SQL Server en Windows](install/sql-machine-learning-services-windows-install.md) o [en Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). También puede usar [Machine Learning Services en clústeres de macrodatos](../big-data-cluster/machine-learning-services.md) y [Machine Learning Services en Azure SQL Managed Instance \(versión preliminar\)](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 1. Configure las herramientas de desarrollo. Puede [ejecutar scripts de Python y R en cuadernos de Azure Data Studio](install/sql-machine-learning-azure-data-studio.md). También puede ejecutar T-SQL en [Azure Data Studio](../azure-data-studio/what-is.md).
 
 1. Escriba su primer script de Python o R.
 
-    + [Tutoriales de Python para aprendizaje automático de SQL](tutorials/python-tutorials.md)
-    + [Tutoriales de R para aprendizaje automático de SQL](tutorials/r-tutorials.md)
+   + [Tutoriales de Python para aprendizaje automático de SQL](tutorials/python-tutorials.md)
+   + [Tutoriales de R para aprendizaje automático de SQL](tutorials/r-tutorials.md)
 ::: moniker-end
+
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
++ Escriba su primer script de Python o R.
+
+   + [Tutoriales de Python para aprendizaje automático de SQL](tutorials/python-tutorials.md)
+   + [Tutoriales de R para aprendizaje automático de SQL](tutorials/r-tutorials.md)
+::: moniker-end
+
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 1. [Instale Machine Learning Services de SQL Server en Windows](install/sql-machine-learning-services-windows-install.md).
 
@@ -61,8 +69,8 @@ Machine Learning Services usa un marco de extensibilidad para ejecutar scripts d
 
 1. Escriba su primer script de Python o R.
 
-    + [Tutoriales de Python para aprendizaje automático de SQL](tutorials/python-tutorials.md)
-    + [Tutoriales de R para aprendizaje automático de SQL](tutorials/r-tutorials.md)
+   + [Tutoriales de Python para aprendizaje automático de SQL](tutorials/python-tutorials.md)
+   + [Tutoriales de R para aprendizaje automático de SQL](tutorials/r-tutorials.md)
 ::: moniker-end
 
 <a name="versions"></a>
@@ -76,7 +84,7 @@ A continuación se muestran las versiones de Python y R incluidas en Machine Lea
 | SQL Server 2017 | 3.5.2 | 3.3.3 |
 | SQL Server 2019 | 3.7.3 | 3.5.2 |
 
-Para la versión de R en SQL Server 2016, vea la [sección Versión de R de ¿Qué es R Services?](r/sql-server-r-services.md?view=sql-server-2016#version)
+Para la versión de R en SQL Server 2016, vea la [sección Versión de R de ¿Qué es R Services?](r/sql-server-r-services.md?view=sql-server-2016&preserve-view=true#version)
 
 <a name="packages"></a>
 

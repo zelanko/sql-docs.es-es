@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa84b420b4100e74a9e57047f1bfbbd386fa5fa6
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 266db3efac0fb737ccb36900ef3b27f24c8c8888
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435309"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081684"
 ---
 # <a name="understanding-data-type-conversions"></a>Descripción de las conversiones de tipos de datos
 
@@ -28,7 +28,7 @@ Para facilitar la conversión de tipos de datos del lenguaje de programación Ja
 
 Según los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el siguiente gráfico contiene el mapa de conversión del controlador JDBC para los métodos get\<Type>() de la clase [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), así como las conversiones admitidas para los métodos get\<Type> de la clase [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).
 
-![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
+![Matriz de conversión de tipos de JDBC a SQL Server](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
 Los métodos de captador del controlador JDBC admiten tres categorías de conversiones:
 

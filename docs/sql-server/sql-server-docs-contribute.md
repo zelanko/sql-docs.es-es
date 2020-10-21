@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97b9d710ef77a7555d4e9bbe16157469ceaa4b74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a268ef27e1f2e5337e2325fb464656e255b454c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480617"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005837"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Cómo colaborar en la documentación de SQL Server
 
@@ -34,7 +34,7 @@ El equipo de contenido de SQL valida todas las contribuciones públicas para mej
 
 ## <a name="edit-in-your-browser"></a><a id="githubui"></a> Edición en el navegador
 
-Puede realizar modificaciones sencillas en el contenido de SQL Server en el explorador y, después, enviarlas a Microsoft. Para más información, puede ver la [Guía para colaboradores de Microsoft Docs: información general](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). 
+Puede realizar modificaciones sencillas en el contenido de SQL Server en el explorador y, después, enviarlas a Microsoft. Para más información, puede ver la [Guía para colaboradores de Microsoft Docs: información general](/contribute/#quick-edits-to-existing-documents). 
 
 El proceso se resume en los pasos siguientes: 
 
@@ -59,10 +59,10 @@ Otra opción de edición consiste en bifurcar el repositorio **sql-docs** o **az
 
 Para colaborar con este método, consulte los siguientes artículos:
 
-- [Creación de una cuenta de GitHub](https://docs.microsoft.com/contribute/get-started-setup-github)
-- [Instalación de herramientas de creación de contenido](https://docs.microsoft.com/contribute/get-started-setup-tools)
-- [Configuración local de un repositorio de Git](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Uso de herramientas para la colaboración](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
+- [Creación de una cuenta de GitHub](/contribute/get-started-setup-github)
+- [Instalación de herramientas de creación de contenido](/contribute/get-started-setup-tools)
+- [Configuración local de un repositorio de Git](/contribute/get-started-setup-local)
+- [Uso de herramientas para la colaboración](/contribute/how-to-write-workflows-major)
 
 Si envía una solicitud de incorporación de cambios con cambios importantes en la documentación, recibirá un comentario en GitHub en el que se le pedirá que envíe un **contrato de licencia de colaboración (CLA)** en línea. Debe cumplimentar el formulario en línea para que se pueda aceptar la solicitud de incorporación de cambios.
 
@@ -107,13 +107,13 @@ Para buscar el archivo de inclusión applies-to correcto para su artículo, apli
 - Para obtener una lista de los archivos de inclusión más utilizados, vea ["Applies to" e "Includes" de SQL](applies-to-includes.md).
 - Consulte otros artículos que aborden la misma función o una tarea relacionada. Si edita ese mismo artículo, puede copiar el Markdown del vínculo del archivo de inclusión applies-to (puede cancelar la edición sin enviarla).
 - Busque el directorio [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) de los archivos que contienen el texto "applies-to". Puede usar el botón **Find** (Buscar) en GitHub para filtrar rápidamente. Haga clic en el archivo para ver cómo se representa.
-- Preste atención a la convención de nomenclatura. Si hay x en el nombre, suelen ser marcadores de posición que indican la falta de compatibilidad de un servicio. Por ejemplo, **appliesto-xx-xxxx-asdw-xxx-md.md** indica compatibilidad con solo Azure SQL Data Warehouse, porque solo se especifica **asdw** y los demás campos contienen x.
+- Preste atención a la convención de nomenclatura. Si hay x en el nombre, suelen ser marcadores de posición que indican la falta de compatibilidad de un servicio. Por ejemplo, **appliesto-xx-xxxx-asdw-xxx-md.md** indica compatibilidad solo con Azure Synapse Analytics, porque solo se especifica **asdw** y los demás campos contienen x.
 - Algunos archivos de inclusión especifican un número de versión, como **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**. Use estos archivos de inclusión únicamente si sabe que la característica se ha introducido con una versión específica de SQL Server.
 
 ## <a name="contributor-resources"></a>Recursos para los colaboradores
 
-- [Guía del colaborador de docs.microsoft.com](https://docs.microsoft.com/contribute/)
-- [Guía de estilo de Microsoft](https://docs.microsoft.com/teamblog/style-guide)
+- [Guía del colaborador de docs.microsoft.com](/contribute/)
+- [Guía de estilo de Microsoft](/teamblog/style-guide)
 - [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/) (Conceptos básicos de Markdown)
 
 > [!TIP]

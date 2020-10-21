@@ -165,11 +165,11 @@
         - name: Referencia de operadores DMX
           href: ../dmx/data-mining-extensions-dmx-operator-reference.md
           items:
-            - name: + (Sumar)
+            - name: + (agregar)
               href: ../dmx/add-dmx.md
-            - name: '- (Restar)'
+            - name: '- (restar)'
               href: ../dmx/subtract-dmx.md
-            - name: '* (Multiplicar)'
+            - name: '* (multiplicar)'
               href: ../dmx/multiply-dmx.md
             - name: (Dividir) (DMX)
               href: ../dmx/divide-dmx.md
@@ -177,7 +177,7 @@
               href: ../dmx/less-than-dmx.md
             - name: '> (Mayor que)'
               href: ../dmx/greater-than-dmx.md
-            - name: = (Igual a)
+            - name: '= (Igual a)'
               href: ../dmx/equal-to-dmx.md
             - name: <> (No es igual a)
               href: ../dmx/not-equal-to-dmx.md

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6371d142609b095eb6d30fcdac63cb051db22c4f
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: e74e08146ea4c92f23ba17816738122147150e7b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85218223"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257125"
 ---
 # <a name="non-root-big-data-clusters-containers"></a>Contenedores de Clústeres de macrodatos no raíz
 
@@ -47,7 +47,7 @@ Como consecuencia de que los servicios en el BDC se ejecuten como usuarios no ra
 
 Azure Data Studio controla de forma transparente el cambio de credenciales para la conexión realizada a la puerta de enlace a fin de habilitar la experiencia de exploración de HDFS en el Explorador de objetos o enviar trabajos de Spark a través de cuadernos. Instale la [versión más reciente de la compilación Azure Data Studio Insiders](../azure-data-studio/download-azure-data-studio.md#download-insiders-build-of-azure-data-studio). Esta compilación incluye los cambios necesarios para este caso de uso.
 
-Para otros escenarios en los que debe proporcionar credenciales para acceder al servicio a través de la puerta de enlace (por ejemplo, el inicio de sesión con `azdata`, el acceso a los paneles web de Spark), tendrá que asegurarse de que se usen las credenciales correctas. Si el destino es un clúster existente implementado antes de CU5, seguirá usando el nombre de usuario `root` para conectarse a la puerta de enlace, incluso después de actualizar el clúster a CU5. Si implementa un nuevo clúster mediante la compilación CU5, iniciará sesión con el nombre de usuario correspondiente a la variable de entorno `AZDATA_USERNAME`.
+Para otros escenarios en los que debe proporcionar credenciales para acceder al servicio a través de la puerta de enlace (por ejemplo, el inicio de sesión con [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], el acceso a los paneles web de Spark), tendrá que asegurarse de que se usen las credenciales correctas. Si el destino es un clúster existente implementado antes de CU5, seguirá usando el nombre de usuario `root` para conectarse a la puerta de enlace, incluso después de actualizar el clúster a CU5. Si implementa un nuevo clúster mediante la compilación CU5, iniciará sesión con el nombre de usuario correspondiente a la variable de entorno `AZDATA_USERNAME`.
 
 ## <a name="configuration-file-switches"></a>Modificadores del archivo de configuración
 

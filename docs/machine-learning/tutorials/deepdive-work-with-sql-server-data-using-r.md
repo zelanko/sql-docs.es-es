@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fa8f5eab0c6d86f843d0f0c90ad49276e659171
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7223e1b1289d3cb2ea87763e693f65c3479afcdd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178652"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194507"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Creación de una base de datos y permisos (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Este es el tutorial 1 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Este es el tutorial 1 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-En este tutorial se describe cómo crear una base de datos de SQL Server y cómo establecer los permisos necesarios para completar los demás tutoriales de esta serie. Use [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) u otro editor de consultas para completar las tareas siguientes:
+En este tutorial se describe cómo crear una base de datos de SQL Server y cómo establecer los permisos necesarios para completar los demás tutoriales de esta serie. Use [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) u otro editor de consultas para completar las tareas siguientes:
 
 > [!div class="checklist"]
 > * Crear una base de datos para almacenar los datos destinados a entrenar y puntuar dos modelos de R
@@ -94,11 +94,11 @@ En esta sección se enumeran algunos problemas comunes que podrían surgir duran
 
 - **¿Cómo puedo confirmar la conectividad de la base de datos y comprobar consultas de SQL?**
   
-    Antes de ejecutar código de R con el servidor, quizás le interese comprobar que se puede tener acceso a la base de datos desde el entorno de desarrollo de R. Tanto [Explorador de servidores en Visual Studio](https://docs.microsoft.com/previous-versions/x603htbk(v=vs.140)) como [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) son herramientas gratuitas con características eficaces de administración y conectividad de base de datos.
+    Antes de ejecutar código de R con el servidor, quizás le interese comprobar que se puede tener acceso a la base de datos desde el entorno de desarrollo de R. Tanto [Explorador de servidores en Visual Studio](/previous-versions/x603htbk(v=vs.140)) como [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) son herramientas gratuitas con características eficaces de administración y conectividad de base de datos.
   
-    Si no quiere instalar herramientas adicionales de administración de bases de datos, puede crear una conexión de prueba a la instancia de SQL Server mediante el [Administrador de orígenes de datos ODBC](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator?view=sql-server-2017) en el Panel de control. Si la base de datos está configurada correctamente y escribe el nombre de usuario y la contraseña correctos, verá la base de datos que acaba de crear y podrá seleccionarla como la base de datos predeterminada.
+    Si no quiere instalar herramientas adicionales de administración de bases de datos, puede crear una conexión de prueba a la instancia de SQL Server mediante el [Administrador de orígenes de datos ODBC](../../odbc/admin/odbc-data-source-administrator.md?view=sql-server-2017) en el Panel de control. Si la base de datos está configurada correctamente y escribe el nombre de usuario y la contraseña correctos, verá la base de datos que acaba de crear y podrá seleccionarla como la base de datos predeterminada.
   
-    Algunos de los motivos comunes de los errores de conexión pueden ser que la conexión remota no esté habilitada para el servidor y que el protocolo de canalizaciones con nombre no esté habilitado. Encontrará más sugerencias para la solución de problemas en este artículo: [Solucionar problemas de conexión al motor de base de datos de SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
+    Algunos de los motivos comunes de los errores de conexión pueden ser que la conexión remota no esté habilitada para el servidor y que el protocolo de canalizaciones con nombre no esté habilitado. Encontrará más sugerencias para la solución de problemas en este artículo: [Solucionar problemas de conexión al motor de base de datos de SQL Server](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
   
 - **¿Por qué el nombre de la tabla tiene como prefijo "datareader"?**
   

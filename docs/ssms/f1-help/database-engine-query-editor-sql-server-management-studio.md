@@ -7,7 +7,12 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.tsqlquery.f1
-- sql23.swb.tsqlresults.f1
+- sql13.swb.tsqlresults.f1
+- sql13.swb.query.advanced.f1
+- sql13.swb.query.ansi.f1
+- sql13.swb.query.general.f1
+- sql13.swb.query.general.f1
+- sql13.swb.sqleditors.multiserverresultssettings
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -38,12 +43,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 3ba349fc37aa4aae0aea7af7000380d1de031091
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 219ebb8a431b997951b22d443877dfb751665384
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035473"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344071"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>Editor de consultas de SQL Server Management Studio (SSMS)
 
@@ -300,8 +305,8 @@ Si el motor de búsqueda de ayuda no encuentra un tema con una palabra clave de 
 | Arrastrar el texto desde una ubicación en un script y colocarlo en una nueva ubicación.| [Arrastrar y colocar texto](../scripting/drag-and-drop-text.md) |
 | Establecer los marcadores para encontrar más fácilmente fragmentos de código importantes. | [Administrar marcadores](../scripting/manage-bookmarks.md) |
 | Imprimir los scripts o los resultados en una ventana o cuadrícula.| [Imprimir código y resultados](../scripting/print-code-and-results.md) |
-| Ver y usar las características básicas del editor de consultas de MDX. | [Crear scripts de Analysis Services](/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
-| Ver y usar las características básicas del editor de consultas DMX. | [Crear una consulta DMX](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
+| Ver y usar las características básicas del editor de consultas de MDX. | [Crear scripts de Analysis Services](/analysis-services/instances/create-analysis-services-scripts-in-management-studio) |
+| Ver y usar las características básicas del editor de consultas DMX. | [Crear una consulta DMX](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio) |
 | Ver y usar las características básicas del editor XML/A. | [Editor XML](../scripting/xml-editor-sql-server-management-studio.md) |
 | Usar las características sqlcmd en el editor de consultas del motor de base de datos.| [Editar scripts SQLCMD](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
 | Usar los fragmentos de código del editor de consultas del motor de base de datos. Los fragmentos son plantillas para instrucciones o bloques que se usan habitualmente, y se pueden personalizar o ampliar para incluir fragmentos específicos del sitio.| [Fragmentos de código de T-SQL](../scripting/add-transact-sql-snippets.md) |

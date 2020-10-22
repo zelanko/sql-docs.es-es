@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 870ff07f771f06acfb24e9883477b177af36d425
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725876"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257215"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Procedimientos para implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes
 
@@ -23,7 +23,7 @@ ms.locfileid: "91725876"
 Un clúster de macrodatos de SQL Server se implementa como contenedores de Docker en un clúster de Kubernetes. Esta es una introducción a los pasos de instalación y configuración:
 
 - Configure un clúster de Kubernetes en una sola máquina virtual, un clúster de máquinas virtuales, en Azure Kubernetes Service (AKS), Red Hat OpenShift o Red Hat OpenShift en Azure (ARO).
-- Instale la herramienta de configuración de clúster `azdata` en el equipo cliente.
+- Instale la herramienta de configuración de clúster [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] en el equipo cliente.
 - Implemente un clúster de macrodatos de SQL Server en un clúster de Kubernetes.
 
 ## <a name="supported-platforms"></a>Plataformas compatibles
@@ -77,7 +77,7 @@ Si implementa en AKS, no es necesario realizar ninguna configuración de almacen
 
 Antes de implementar un clúster de macrodatos de SQL Server 2019, [instale primero las herramientas de macrodatos](deploy-big-data-tools.md):
 
-- `azdata`
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]
 - `kubectl`
 - Azure Data Studio
 - [Extensión de virtualización de datos](../azure-data-studio/extensions/data-virtualization-extension.md) para Azure Data Studio
@@ -91,10 +91,10 @@ En las secciones siguientes se proporcionan más detalles sobre cómo configurar
 
 ## <a name="default-configurations"></a><a id="configfile"></a> Configuraciones predeterminadas
 
-Las opciones de implementación del clúster de macrodatos se definen en archivos de configuración JSON. Puede iniciar la personalización de la implementación del clúster desde los perfiles de implementación integrados que están disponibles en `azdata`. 
+Las opciones de implementación del clúster de macrodatos se definen en archivos de configuración JSON. Puede iniciar la personalización de la implementación del clúster desde los perfiles de implementación integrados que están disponibles en [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. 
 
 > [!NOTE]
-> Las imágenes de contenedor necesarias para la implementación de clústeres de macrodatos se hospedan en el Registro de contenedor de Microsoft (`mcr.microsoft.com`) en el repositorio `mssql/bdc`. De forma predeterminada, esta configuración ya está incluida en el archivo de configuración `control.json` en cada uno de los perfiles de implementación que se incluyen con `azdata`. Además, la etiqueta de imagen de contenedor de cada versión también se rellena previamente en el mismo archivo de configuración. Si necesita extraer las imágenes de contenedor en un registro de contenedor privado propio y modificar la configuración del repositorio o el registro de contenedores, siga las instrucciones del artículo [Instalación sin conexión](deploy-offline.md).
+> Las imágenes de contenedor necesarias para la implementación de clústeres de macrodatos se hospedan en el Registro de contenedor de Microsoft (`mcr.microsoft.com`) en el repositorio `mssql/bdc`. De forma predeterminada, esta configuración ya está incluida en el archivo de configuración `control.json` en cada uno de los perfiles de implementación que se incluyen con [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Además, la etiqueta de imagen de contenedor de cada versión también se rellena previamente en el mismo archivo de configuración. Si necesita extraer las imágenes de contenedor en un registro de contenedor privado propio y modificar la configuración del repositorio o el registro de contenedores, siga las instrucciones del artículo [Instalación sin conexión](deploy-offline.md).
 
 Ejecute este comando para encontrar las plantillas disponibles:
 
@@ -117,7 +117,7 @@ Las plantillas siguientes están disponibles desde SQL Server 2019 CU5:
 
 Puede implementar un clúster de macrodatos mediante la ejecución de `azdata bdc create`. Esto le pedirá que elija una de las configuraciones predeterminadas y después le guiará por la implementación.
 
-La primera vez que ejecute `azdata`, debe incluir `--accept-eula=yes` para aceptar el contrato de licencia para el usuario final (CLUF).
+La primera vez que ejecute [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], debe incluir `--accept-eula=yes` para aceptar el contrato de licencia para el usuario final (CLUF).
 
 ```bash
 azdata bdc create --accept-eula=yes
@@ -176,7 +176,7 @@ Las siguientes variables de entorno se usan para la configuración de seguridad 
 |---|---|---|
 | `AZDATA_USERNAME` | Obligatorio |El nombre de usuario para el administrador de clústeres de macrodatos de SQL Server. En la instancia maestra de SQL Server se crea un inicio de sesión de sysadmin con el mismo nombre. Como procedimiento de seguridad recomendado, la cuenta `sa` está deshabilitada. <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
 | `AZDATA_PASSWORD` | Obligatorio |La contraseña para la cuenta de usuario que se ha creado antes. En los clústeres implementados antes de SQL Server 2019 CU5, se usa la misma contraseña para el usuario `root`, a fin de proteger la puerta de enlace Knox y HDFS. |
-| `ACCEPT_EULA`| Obligatorio para el primer uso de `azdata`| Establecido en "Sí". Cuando se establece como una variable de entorno, aplica el CLUF a SQL Server y `azdata`. Si no se establece como variable de entorno, puede incluir `--accept-eula=yes` en el primer uso del comando `azdata`.|
+| `ACCEPT_EULA`| Obligatorio para el primer uso de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]| Establecido en "Sí". Cuando se establece como una variable de entorno, aplica el CLUF a SQL Server y [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Si no se establece como variable de entorno, puede incluir `--accept-eula=yes` en el primer uso del comando [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].|
 | `DOCKER_USERNAME` | Opcional | Nombre de usuario para acceder a las imágenes de contenedor en caso de que se almacenen en un repositorio privado. Consulte el tema [Implementaciones sin conexión](deploy-offline.md) para obtener más información sobre cómo usar un repositorio privado de Docker para la implementación del clúster de macrodatos.|
 | `DOCKER_PASSWORD` | Opcional |Contraseña para acceder al repositorio privado anterior. |
 
@@ -424,7 +424,7 @@ Sql: ready                                                                      
 > [!IMPORTANT]
 > Cuando se usa el parámetro `--all`, la salida de estos comandos contiene direcciones URL a los paneles de Kibana y Grafana para un análisis más detallado.
 
-Además de usar `azdata`, también puede utilizar Azure Data Studio para buscar información de los puntos de conexión y el estado. Para obtener más información sobre cómo ver el estado del clúster con `azdata` y Azure Data Studio, vea [Procedimientos para ver el estado de un clúster de macrodatos](view-cluster-status.md).
+Además de usar [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], también puede utilizar Azure Data Studio para buscar información de los puntos de conexión y el estado. Para obtener más información sobre cómo ver el estado del clúster con [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] y Azure Data Studio, vea [Procedimientos para ver el estado de un clúster de macrodatos](view-cluster-status.md).
 
 ## <a name="connect-to-the-cluster"></a><a id="connect"></a> Conexión al clúster
 

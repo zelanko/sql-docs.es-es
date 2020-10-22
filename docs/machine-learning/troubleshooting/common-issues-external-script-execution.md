@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e814e135c7e7054231aea3988a30afe755e1fc9d
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 0e2fb03c2b4b79db7d97a3ad66d46d79e669983c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570297"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194527"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Solución de problemas con el servicio Launchpad y la ejecución de scripts externos en SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -23,7 +23,7 @@ En este artículo se proporcionan instrucciones para solucionar problemas relaci
 
 ## <a name="determine-whether-launchpad-is-running"></a>Determinación de si Launchpad se está ejecutando
 
-1. Abra el panel **Servicios** (Services.msc). O bien, desde la línea de comandos, escriba **SQLServerManager13.msc** o **SQLServerManager14.msc** para abrir el [Administrador de configuración de SQL Server](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
+1. Abra el panel **Servicios** (Services.msc). O bien, desde la línea de comandos, escriba **SQLServerManager13.msc** o **SQLServerManager14.msc** para abrir el [Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md).
 
 2. Tome nota de la cuenta de servicio en la que se ejecuta Launchpad. Cada instancia en la que R o Python estén habilitados debe tener su propia instancia del servicio Launchpad. Por ejemplo, el servicio de una instancia con nombre podría ser similar a _MSSQLLaunchpad$NombreInstancia_.
 
@@ -121,7 +121,7 @@ Para conceder los permisos necesarios a la nueva cuenta de servicio, use la apli
 
 Si ha instalado y habilitado el aprendizaje automático, pero recibe este error al intentar ejecutar un script de R o Python, es posible que el servicio Launchpad de la instancia haya dejado de ejecutarse.
 
-1. Desde un símbolo del sistema de Windows, abra el Administrador de configuración de SQL Server. Para obtener más información, vea [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
+1. Desde un símbolo del sistema de Windows, abra el Administrador de configuración de SQL Server. Para obtener más información, vea [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
 2. Haga clic con el botón derecho en la instancia de SQL Server Launchpad y, después, seleccione **Propiedades**.
 
@@ -223,7 +223,7 @@ Si el volumen donde está instalando R no admite los nombres de archivo cortos, 
 
 Como solución alternativa, puede habilitar la notación 8.3 en el volumen donde estén instalados SQL Server y R Services. Después, debe proporcionar el nombre corto del directorio de trabajo en el archivo de configuración de R Services.
 
-1. Para habilitar la notación 8.3, ejecute la utilidad fsutil con el argumento *8dot3name*, como se muestra aquí: [fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
+1. Para habilitar la notación 8.3, ejecute la utilidad fsutil con el argumento *8dot3name*, como se muestra aquí: [fsutil 8dot3name](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff621566(v=ws.11)).
 
 2. Una vez que se haya habilitado la notación 8.3, abra el archivo RLauncher.config y apunte la propiedad de `WORKING_DIRECTORY`. Para más información sobre cómo encontrar este archivo, vea [Solución de problemas de recopilación de datos para Machine Learning](data-collection-ml-troubleshooting-process.md).
 

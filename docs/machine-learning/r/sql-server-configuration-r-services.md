@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f9d4d3eab9f8f6d1d19b107eaf3825e9488df382
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: feaa53fa47591ecdb3f1f0bc66ab390def8fbbb1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180478"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195779"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuración de SQL Server para su uso con R
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "88180478"
 Este artículo es el segundo de una serie de cuatro artículos en los que se describe la optimización del rendimiento de R Services, en función de dos casos prácticos.  En este artículo se proporcionan instrucciones sobre la configuración de hardware y de red del equipo que se usa para ejecutar SQL Server R Services. También contiene información sobre las formas de configurar la instancia, la base de datos o las tablas de SQL Server que se usarán en una solución. Dado que el uso de NUMA en SQL Server disipa la línea entre optimizaciones de hardware y de base de datos, en una tercera sección se describe detalladamente cómo lograr la afinidad de CPU y la regulación de recursos.
 
 > [!TIP]
-> Si no está familiarizado con SQL Server, le recomendamos encarecidamente que revise también la guía de optimización del rendimiento de SQL Server: [Supervisión y optimización del rendimiento](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance)
+> Si no está familiarizado con SQL Server, le recomendamos encarecidamente que revise también la guía de optimización del rendimiento de SQL Server: [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 
 ## <a name="hardware-optimization"></a>Optimización de hardware
 
@@ -149,7 +149,7 @@ FROM sys.dm_os_memory_clerks
 
 Si la consultar devuelve solamente un único nodo de memoria (nodo 0), significará que no dispone de NUMA de hardware, o que el hardware está configurado como intercalado (no NUMA). SQL Server omite el NUMA de hardware también cuando hay cuatro CPU o menos, o si al menos un nodo tiene una sola CPU.
 
-Si el equipo tiene varios procesadores, pero no tiene hardware de NUMA, también puede usar [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server) para subdividir las CPU en grupos más pequeños.  En SQL Server 2016 y SQL Server 2017, la característica Soft-NUMA se habilita automáticamente al iniciar el servicio de SQL Server.
+Si el equipo tiene varios procesadores, pero no tiene hardware de NUMA, también puede usar [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) para subdividir las CPU en grupos más pequeños.  En SQL Server 2016 y SQL Server 2017, la característica Soft-NUMA se habilita automáticamente al iniciar el servicio de SQL Server.
 
 Cuando Soft-NUMA está habilitado, SQL Server administra los nodos automáticamente; sin embargo, para optimizar cargas de trabajo específicas, puede deshabilitar la _afinidad flexible_ y configurar manualmente la afinidad de la CPU de los nodos de Soft-NUMA. Esto le reportará un mayor control sobre qué cargas de trabajo se asignan a los nodos, especialmente si usa una edición de SQL Server que admite la regulación de recursos. Al especificar la afinidad de la CPU y alinear los grupos de recursos con grupos de CPU, puede reducir la latencia y asegurarse de que los procesos relacionados se realizan en el mismo nodo NUMA.
 
@@ -164,7 +164,7 @@ Para más información, incluido código de ejemplo, vea este tutorial: [Sugeren
 
 **Otros recursos:**
 
-+ [Soft-NUMA en SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-NUMA en SQL Server](../../database-engine/configure-windows/soft-numa-sql-server.md)
     
     Cómo asignar nodos de Soft-NUMA a las CPU
 
@@ -178,7 +178,7 @@ Un punto débil de R es que se suele procesar en una sola CPU, lo que constituy
 
 Existen varias maneras de mejorar el rendimiento de la ingeniería de características. Se puede optimizar el código de R y mantener la extracción de características dentro del proceso de modelado, o bien trasladar el proceso de ingeniería de características a SQL.
 
-- Usar R. Se define una función y, después, se pasa como argumento a [rxTransform](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxtransform) durante el entrenamiento. Si el modelo admite el procesamiento en paralelo, la tarea de ingeniería de características se puede procesar con varias CPU. Con este método, el equipo de ciencia de datos observó una mejora del rendimiento del 16 % en cuanto a tiempo de puntuación, pero se necesita un modelo que admita la paralelización y una consulta que se pueda ejecutar mediante un plan paralelo.
+- Usar R. Se define una función y, después, se pasa como argumento a [rxTransform](/r-server/r-reference/revoscaler/rxtransform) durante el entrenamiento. Si el modelo admite el procesamiento en paralelo, la tarea de ingeniería de características se puede procesar con varias CPU. Con este método, el equipo de ciencia de datos observó una mejora del rendimiento del 16 % en cuanto a tiempo de puntuación, pero se necesita un modelo que admita la paralelización y una consulta que se pueda ejecutar mediante un plan paralelo.
 
 - Usar R con un contexto de cálculo de SQL. En un entorno de varios procesadores con recursos aislados disponibles para la ejecución de lotes independientes, se puede lograr una mayor eficacia si se aíslan las consultas SQL usadas en cada lote para extraer datos de las tablas y restringir los datos en el mismo grupo de cargas de trabajo. Los métodos que se usan para aislar los lotes incluyen la creación de particiones y el uso de PowerShell para ejecutar consultas independientes en paralelo.
 

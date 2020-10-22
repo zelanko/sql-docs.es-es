@@ -11,12 +11,12 @@ ms.reviewer: garye, davidph
 ms.date: 05/26/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f9179c69b5c559578a44e50ffbe2e3b685e4a837
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 93eecbaaa68e788e69997942d5bf91b5a545c520
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173287"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193717"
 ---
 # <a name="tutorial-develop-a-predictive-model-in-r-with-sql-machine-learning"></a>Tutorial: Desarrollo de un modelo predictivo en R con el aprendizaje automático de SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -70,7 +70,7 @@ En la [parte cuatro](r-predictive-model-deploy.md), aprenderá a almacenar el mo
 
 * RODBC: este controlador se usa en los scripts de R que va a desarrollar en este tutorial. Si aún no está instalado, instálelo con el comando `install.packages("RODBC")` de R. Para obtener más información sobre RODBC, vea [CRAN: paquete RODBC](https://CRAN.R-project.org/package=RODBC).
 
-* Herramienta de consultas SQL: en este tutorial, se da por hecho que usa [Azure Data Studio](../../azure-data-studio/what-is.md). Para más información, vea [Uso de cuadernos en Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+* Herramienta de consultas SQL: en este tutorial, se da por hecho que usa [Azure Data Studio](../../azure-data-studio/what-is.md). Para más información, vea [Uso de cuadernos en Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 
 ## <a name="restore-the-sample-database"></a>Restauración de la base de datos de ejemplo
 

@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 664deeae61b664d3818f7d748ad6177b79917d86
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e53accf27dbc3c573596c5ebaf1d83667480a34e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178812"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196289"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>Creación de objetos de datos de SQL Server con RxSqlServerData (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Este es el tutorial 2 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Este es el tutorial 2 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
 Este tutorial es una continuación de la creación de bases de datos: agregar tablas y cargar datos. Si un administrador de base de datos (DBA) ha creado la base de datos e inicia sesión en el [tutorial dos](deepdive-work-with-sql-server-data-using-r.md), puede agregar tablas mediante un IDE de R como RStudio o una herramienta integrada como **Rgui**.
 
@@ -103,7 +103,7 @@ Como ya se ha definido la cadena de conexión y otros parámetros como variables
 
 Ahora que ha creado las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede cargar los datos en ellas mediante la correspondiente función **Rx** .
 
-El paquete **RevoScaleR** contiene funciones específicas de los tipos de orígenes de datos. Con datos de texto, utilice [RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata) para generar el objeto de origen de datos. Existen funciones adicionales para crear objetos de origen de datos a partir de datos de Hadoop, datos ODBC y así sucesivamente.
+El paquete **RevoScaleR** contiene funciones específicas de los tipos de orígenes de datos. Con datos de texto, utilice [RxTextData](/machine-learning-server/r-reference/revoscaler/rxtextdata) para generar el objeto de origen de datos. Existen funciones adicionales para crear objetos de origen de datos a partir de datos de Hadoop, datos ODBC y así sucesivamente.
 
 > [!NOTE]
 > En esta sección, debe tener permisos para **Ejecutar DDL** en la base de datos.
@@ -116,7 +116,7 @@ El paquete **RevoScaleR** contiene funciones específicas de los tipos de oríge
     ccFraudCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudSmall.csv")
     ```
   
-    Observe la llamada a **rxGetOption**, que es el método GET asociado a [rxOptions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxoptions) en **RevoScaleR**. Use esta utilidad para establecer y mostrar opciones relacionadas con contextos de proceso locales y remotos, como el directorio compartido predeterminado o el número de procesadores (núcleos) que se utilizarán en los cálculos.
+    Observe la llamada a **rxGetOption**, que es el método GET asociado a [rxOptions](/machine-learning-server/r-reference/revoscaler/rxoptions) en **RevoScaleR**. Use esta utilidad para establecer y mostrar opciones relacionadas con contextos de proceso locales y remotos, como el directorio compartido predeterminado o el número de procesadores (núcleos) que se utilizarán en los cálculos.
     
     Esta llamada en particular obtiene los ejemplos de la biblioteca correcta, independientemente de dónde se ejecute el código. Por ejemplo, pruebe a ejecutar la función en SQL Server y en su equipo de desarrollo para ver cómo difieren las rutas de acceso.
   
@@ -137,7 +137,7 @@ El paquete **RevoScaleR** contiene funciones específicas de los tipos de oríge
   
     Puede ver que, aunque los objetos de datos de R se han creado en el área de trabajo local, las tablas no se han creado en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Además, tampoco se ha cargado ningún dato del archivo de texto en la variable de R.
   
-4. Inserte los datos llamando a la función [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep).
+4. Inserte los datos llamando a la función [rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep).
   
     ```R
     rxDataStep(inData = inTextData, outFile = sqlFraudDS, overwrite = TRUE)
@@ -188,7 +188,7 @@ De nuevo, si la conexión se ha realizado correctamente, debería ver un mensaje
 
 ## <a name="more-about-rxdatastep"></a>Más información sobre rxDataStep
 
-[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) es una función eficaz que puede realizar varias transformaciones en una trama de datos de R. También puede usar rxDataStep para convertir los datos en la representación requerida por el destino: en este caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+[rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) es una función eficaz que puede realizar varias transformaciones en una trama de datos de R. También puede usar rxDataStep para convertir los datos en la representación requerida por el destino: en este caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 Opcionalmente, puede especificar transformaciones en los datos mediante funciones de R en los argumentos para **rxDataStep**. Más adelante en este tutorial se ofrecen ejemplos de estas operaciones.
 

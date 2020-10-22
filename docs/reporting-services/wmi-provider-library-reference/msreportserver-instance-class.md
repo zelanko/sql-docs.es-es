@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_Instance, clase
 title: Clase MSReportServer_Instance | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 92b678e0b9cc07cacfc6501b75b3e9d5c2889e12
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ffcef1c806b8a02b84a30e56c81c25edcd0fc7da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92255820"
 ---
 # <a name="msreportserver_instance-class"></a>MSReportServer_Instance, clase
   La clase MSReportServer_Instance proporciona la información básica necesaria para que un cliente se conecte a un servidor de informes instalado.  
@@ -47,6 +48,6 @@ public class MSReportServer_Instance
  **Plataforma:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
- [Miembros MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+ [Miembros de MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

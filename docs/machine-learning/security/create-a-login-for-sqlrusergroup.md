@@ -8,17 +8,17 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8273250360c9e60aae8ac1ae19ccebf4d76d8598
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: fcdb8353abe029291352f031d5261849514ef8fd
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180435"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92195759"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Creación de un inicio de sesión para SQLRUserGroup
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Cree un [inicio de sesión en SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) para [SQLRUserGroup](../concepts/security.md#sqlrusergroup) cuando una [conexión de bucle invertido](../../machine-learning/concepts/security.md#implied-authentication) del script especifique una *conexión de confianza* y la identidad que se usa para ejecutar un objeto que contiene el código sea una cuenta de usuario de Windows.
+Cree un [inicio de sesión en SQL Server](../../relational-databases/security/authentication-access/create-a-login.md) para [SQLRUserGroup](../concepts/security.md#sqlrusergroup) cuando una [conexión de bucle invertido](../../machine-learning/concepts/security.md#implied-authentication) del script especifique una *conexión de confianza* y la identidad que se usa para ejecutar un objeto que contiene el código sea una cuenta de usuario de Windows.
 
 Las conexiones de confianza son aquellas que tienen `Trusted_Connection=True` en la cadena de conexión. Cuando SQL Server recibe una solicitud que especifica una conexión de confianza, comprueba si la identidad del usuario actual de Windows tiene un inicio de sesión. En el caso de los procesos externos que se ejecutan como una cuenta de trabajo (como MSSQLSERVER01 de **SQLRUserGroup**), se produce un error en la solicitud, ya que esas cuentas no tienen un inicio de sesión de forma predeterminada.
 

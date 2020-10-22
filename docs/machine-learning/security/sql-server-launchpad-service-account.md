@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 38b00fd3a5f300a4038c6c302c1311a2f135d97b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: f9a089bb123698a8a06c92bb1a95e8b2c3956907
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180412"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193045"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Configuración del servicio de SQL Server Launchpad
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -27,16 +27,16 @@ Para obtener más información, vea las secciones de Launchpad en [Arquitectura 
 
 De forma predeterminada, SQL Server Launchpad está configurado para ejecutarse con **NT Service\MSSQLLaunchpad**, que se aprovisiona con todos los permisos necesarios para ejecutar scripts externos. Si se quitan los permisos de esta cuenta, puede ser que Launchpad no se pueda iniciar o no pueda acceder a la instancia de SQL Server donde se deben ejecutar los scripts externos.
 
-Si modifica la cuenta de servicio, asegúrese de usar la [consola de la directiva de seguridad local](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings).
+Si modifica la cuenta de servicio, asegúrese de usar la [consola de la directiva de seguridad local](/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings).
 
 En la tabla siguiente se muestran los permisos necesarios para esta cuenta.
 
 | Configuración de directiva de grupo | Nombre invariable |
 |----------------------|---------------|
-| [Ajustar las cuotas de memoria de un proceso](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
-| [Omisión de la comprobación transversal](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
-| [Iniciar sesión como servicio](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
-| [Reemplazar un token de nivel de proceso](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
+| [Ajustar las cuotas de memoria de un proceso](/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
+| [Omisión de la comprobación transversal](/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
+| [Iniciar sesión como servicio](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
+| [Reemplazar un token de nivel de proceso](/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
 
 Para más información sobre los permisos para ejecutar servicios de SQL Server, vea [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 

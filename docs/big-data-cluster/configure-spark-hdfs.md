@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 53d7b050fe1269f704a38ca5542c0dae6fdfd0f7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1e5d0941256fbb1e167f65489e250eed9c9b895a
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725006"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257225"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>Configuración de Apache Spark y Apache Hadoop en clústeres de macrodatos
 
@@ -155,5 +155,5 @@ Las configuraciones solo se pueden especificar en el nivel de categoría. Para e
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Propiedades de configuración de Apache Spark y Apache Hadoop (HDFS).](reference-config-spark-hadoop.md)
-- [Referencia de `azdata`](../azdata/reference/reference-azdata.md)
+- [Referencia de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/reference/reference-azdata.md)
 - [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 09bdea851ed3b9efeca1c69a09c12108706bbb22
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f9623feab13740d9b328d97a248742711871ffa3
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896504"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115488"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Procedimiento para empezar a desarrollar aplicaciones para SQL Server en Linux
 
@@ -24,7 +24,7 @@ Puede crear aplicaciones que se conecten a SQL Server en Linux y lo usen desde 
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
-> Estas mismas opciones de desarrollo también le permiten tener SQL Server como destino en otras plataformas. Las aplicaciones pueden tener SQL Server como destino en ejecución de forma local o en la nube, en Linux, Windows o Docker en macOS. O bien, puede tener Azure SQL Database y Azure SQL Data Warehouse como destino.
+> Estas mismas opciones de desarrollo también le permiten tener SQL Server como destino en otras plataformas. Las aplicaciones pueden tener SQL Server como destino en ejecución de forma local o en la nube, en Linux, Windows o Docker en macOS. O bien puede tener Azure SQL Database y Azure Synapse Analytics como destino.
 
 ## <a name="try-the-tutorials"></a>Prueba de los tutoriales
 
@@ -62,7 +62,7 @@ Vea los siguientes temas para obtener más información:
 
 Puede usar la nueva [extensión mssql](https://aka.ms/mssql-marketplace) para [Visual Studio Code](https://code.visualstudio.com) en Linux, macOS y Windows. Para consultar un tutorial detallado, vea el siguiente tutorial:
 
-- [Usar Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Usar Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 
 También puede usar las nuevas herramientas de línea de comandos que son nativas para Linux. Entre estas herramientas se incluyen las siguientes:
 

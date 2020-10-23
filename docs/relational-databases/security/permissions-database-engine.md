@@ -20,19 +20,20 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 42c08d58ed1f5688d66ff6e903c27ba360d6a2d0
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009397"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081954"
 ---
 # <a name="permissions-database-engine"></a>Permisos (motor de base de datos)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Todos los elementos protegibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen permisos asociados que se pueden conceder a una entidad de seguridad. Los permisos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se administran en el nivel de servidor asignados a los inicios de sesión y roles de servidor, y en el nivel de base de datos asignados a usuarios de base de datos y roles base de datos. El modelo para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tiene el mismo sistema para los permisos de base de datos, pero los permisos de nivel de servidor no están disponibles. Este tema contiene una lista completa de los permisos. Para una implementación típica de los permisos, consulte [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-El número total de permisos para [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] es 237. La mayoría de los permisos se aplica a todas las plataformas, pero otros no. Por ejemplo, no se pueden conceder permisos de nivel de servidor en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y algunos permisos solo tienen sentido en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] expuso 230 permisos. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] expuso 219 permisos. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] expuso 214 permisos. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] expuso 195 permisos. El tema [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) especifica qué temas se encuentran en las versiones recientes.
+El número total de permisos para [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] es 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] expone 254 permisos. La mayoría de los permisos se aplica a todas las plataformas, pero otros no. Por ejemplo, no se pueden conceder permisos de nivel de servidor en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y algunos permisos solo tienen sentido en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] expuso 238 permisos. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] expuso 230 permisos. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] expuso 219 permisos. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] expuso 214 permisos. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] expuso 195 permisos. El tema [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) especifica qué temas se encuentran en las versiones recientes.
 
 Una vez que comprenda los permisos, aplique los permisos de nivel de servidor a los inicios de sesión y usuarios de permisos de nivel de base de datos con las instrucciones [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)y [DENY](../../t-sql/statements/deny-transact-sql.md) . Por ejemplo:   
 ```sql

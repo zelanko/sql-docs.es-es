@@ -12,17 +12,19 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e712528cc3716f054b498e4f322c64ea4873918d
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 590c559b283a91a7b6c4ecde7b455287d2f3b3bb
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670671"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005802"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>Configuración de una máquina virtual de Azure como una réplica secundaria en un grupo de disponibilidad
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Use el Asistente para agregar réplica de Azure para que le ayude a crear una nueva VM de Azure en una TI híbrida y a configurarla como una réplica secundaria para un grupo de disponibilidad AlwaysON nuevo o existente.  
-  
+
+>  [!IMPORTANT]  
+>  Azure tiene dos modelos de implementación diferentes para crear y trabajar con recursos: Resource Manager y el clásico. En este artículo se trata el modelo de implementación clásico. Microsoft recomienda que las implementaciones más recientes usen el modelo de Resource Manager. Los pasos de este artículo no son aplicables si va a implementar la máquina virtual de Azure con el modelo de Resource Manager.   
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  Si nunca ha agregado una réplica de disponibilidad a un grupo de disponibilidad, vea las secciones "Instancias del servidor" y "Grupos y réplicas de disponibilidad" en [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
@@ -47,6 +49,12 @@ ms.locfileid: "91670671"
  También se necesita el permiso CONTROL ON ENDPOINT si desea permitir que el asistente Agregar réplica a grupo de disponibilidad administre el extremo de creación de reflejo de la base de datos.  
   
 ##  <a name="using-the-add-azure-replica-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Usar el Asistente para agregar réplica de Azure (SQL Server Management Studio)  
+
+>  [!IMPORTANT]  
+>  El Asistente para agregar réplicas de Azure solo es compatible con las máquinas virtuales creadas con el modelo de implementación clásica. Las nuevas implementaciones de máquinas virtuales deben utilizar el último modelo de Resource Manager. Si usa máquinas virtuales con Resource Manager, debe agregar manualmente la réplica secundaria de Azure mediante comandos de Transact-SQL (algo que no se muestra aquí). Este Asistente no funcionará en el escenario de Resource Manager. 
+>
+>  El Asistente para agregar réplicas de Azure no está disponible en las versiones más recientes (versiones 18.x y 17.x) de SQL Server Management Studio.
+        
  El Asistente para agregar réplica de Azure se puede iniciar desde [Especificar la página de réplicas](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md). Hay dos formas de llegar a esta opción:  
   
 -   [Usar el Asistente para grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  

@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f87cf70ebcb3a491d31fc7523ac6a4c0a7889a2f
-ms.sourcegitcommit: 49dab56fc71dc394f4dde9962ec44d99cc15027c
+ms.openlocfilehash: 25afd0615066472ce8e7a63b757576b50629e15f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84158624"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194254"
 ---
 # <a name="database-engine-errors"></a>Errores del motor de base de datos
 
@@ -1625,7 +1625,8 @@ ORDER BY message_id
 |    3280    |    16    |    No    |    No se pueden realizar copias de seguridad en dispositivos sin formato. '%ls' es un dispositivo sin formato.    |
 |    3281    |    10    |    No    |    Se liberó '%ls' y se inició el rebobinado.    |
 |    3283    |    16    |    No    |    No se pudo inicializar correctamente el archivo "%ls". Examine los registros de errores para obtener más detalles.    |
-|    3284    |    16    |    No    |    La marca de archivo del dispositivo '%ls' no está alineada. Emita de nuevo la instrucción Restore con el mismo tamaño de bloque usado para crear el conjunto de copia de seguridad: '%d' parece un valor posible.    |
+|    3284    |    16    |    No    |    La marca de archivo del dispositivo '%ls' no está alineada. Emita de nuevo la instrucción Restore con el mismo tamaño de bloque usado para crear el conjunto de copia de seguridad: "%d" parece un valor posible.    |
+|    3285    |    10    |    Sí    |    Parece que la marca de archivo del dispositivo "%ls" no está alineada. La operación de restauración continuará usando E/S menos eficaz.  Para evitar esto, emita de nuevo la instrucción Restore con el mismo tamaño de bloque usado para crear el conjunto de copia de seguridad: "%d" parece un valor posible.    |
 |    3301    |    21    |    Sí    |    El registro de transacciones contiene un registro (logop %d) no válido. El registro está dañado. Restaure la base de datos a partir de una copia de seguridad completa o repare la base de datos.    |
 |    3302    |    21    |    Sí    |    Hubo un error durante la acción de rehacer las operaciones registradas en la base de datos '%.*ls' al no alcanzar el final de registro en la entrada de registro con Id. %S_LSN. Esto indica daños alrededor de la entrada de registro con Id. %S_LSN. Restaure la base de datos a partir de una copia de seguridad completa o repare la base de datos.    |
 |    [3313](mssqlserver-3313-database-engine-error.md)    |    21    |    Sí    |    Durante la puesta al día de una operación registrada en la base de datos '%.*ls', se produjo un error en la entrada de registro con id. %S_LSN. Normalmente, el error específico se registra antes como un error en el servicio Registro de eventos de Windows. Restaure la base de datos a partir de una copia de seguridad completa o repare la base de datos.    |
@@ -3465,7 +3466,7 @@ ORDER BY message_id
 |    7802    |    16    |    No    |    Las funciones que tienen el tipo de valor devuelto "%.*ls" no son compatibles con la invocación SOAP.    |
 |    7803    |    15    |    No    |    No se puede usar la cláusula %.*ls en la instrucción %.* ls.    |
 |    7804    |    15    |    No    |    %.*ls y %.* ls no pueden compartir el mismo valor.    |
-|    7805    |    16    |    No    |    No se puede poner un prefijo de esquema como "https://" al parámetro SITE. Los valores válidos para SITE son {"*" | 100% + | "site_name"}.    |
+|    7805    |    16    |    No    |    No se puede poner un prefijo de esquema como "https://" al parámetro SITE. Los valores válidos para SITE son {"*" | "+" | "site_name"}.    |
 |    7806    |    16    |    No    |    La dirección URL especificada por el extremo '%.*ls' está ya registrada para recibir solicitudes o está reservada para que la utilice otro servicio.    |
 |    7807    |    16    |    No    |    Error ('0x%x') al intentar registrar el extremo '%.*ls'.    |
 |    7808    |    10    |    No    |    No se pudo cancelar el registro del extremo '%.*ls'.    |
@@ -4630,14 +4631,14 @@ ORDER BY message_id
 |    9983    |    16    |    No    |    El valor '%ls' para el componente de texto completo '%ls' supera la longitud permitida (%d caracteres). Reduzca la longitud del valor.    |
 |    9984    |    10    |    No    |    Informativo: se pausó el rellenado de %ls de texto completo para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d").    |
 |    9998    |    16    |    No    |    No se puede agregar la columna '%.*ls' al índice de texto completo. Los índices de texto completo están limitados a 1024 columnas. Cuando cree un índice de texto completo, agregue menos columnas.    |
-|    9\.999    |    16    |    No    |    La columna "%.*ls" de la tabla "%.* ls" no se puede usar para búsqueda de texto completo porque es un conjunto de columnas dispersas.    |
+|    9.999    |    16    |    No    |    La columna "%.*ls" de la tabla "%.* ls" no se puede usar para búsqueda de texto completo porque es un conjunto de columnas dispersas.    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
 ## <a name="errors-10000-to-10999"></a>Errores 10000 a 10999
 
 | Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
-|    10 000    |    16    |    No    |    Error desconocido del proveedor.    |
+|    10000    |    16    |    No    |    Error desconocido del proveedor.    |
 |    [10001](mssqlserver-10001-database-engine-error.md)    |    16    |    No    |    El proveedor informó de un error grave inesperado.    |
 |    10002    |    16    |    No    |    El proveedor no implementó la funcionalidad.    |
 |    [10003](mssqlserver-10003-database-engine-error.md)    |    16    |    No    |    Memoria insuficiente para el proveedor.    |
@@ -9110,4 +9111,4 @@ ORDER BY message_id
 ## <a name="see-also"></a>Consulte también
 
 [Descripción de errores del motor de base de datos](../../relational-databases/errors-events/understanding-database-engine-errors.md)
-[Causa y resolución de errores del motor de base de datos](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)
+[Causa y resolución de errores del motor de base de datos](/previous-versions/sql/sql-server-2016/ms365262(v=sql.130))

@@ -12,21 +12,21 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d7aada1fca725dde6247e621a1ed6ca190c99f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 759d76a49f095c9ba28a1a1a5b6503442ccaef88
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455469"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006378"
 ---
 # <a name="circularstring"></a>CircularString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Una **CircularString** es una colección con cero o más segmentos de arco circular continuos. Un segmento de arco circular es un segmento curvado definido por tres puntos en un plano bidimensional; el primer punto no puede ser igual que el tercero. Si los tres puntos de un segmento de arco circular son colineales, el segmento de arco se trata como un segmento de línea.  
   
 ## <a name="circularstring-instances"></a>Instancias de CircularString  
  En el dibujo siguiente se muestran instancias válidas de **CircularString** :  
   
- ![5ff17e34-b578-4873-9d33-79500940d0bc](../../relational-databases/spatial/media/5ff17e34-b578-4873-9d33-79500940d0bc.gif)
+ ![Ejemplos de CircularString](../../relational-databases/spatial/media/5ff17e34-b578-4873-9d33-79500940d0bc.gif)
   
 ### <a name="accepted-instances"></a>Instancias aceptadas  
  La instancia **CircularString** se acepta si está vacía o contiene un número impar de puntos, n, donde n > 1. Se aceptan las siguientes instancias de **CircularString** .  

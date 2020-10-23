@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6df2cae92398fdffafd4ef0e998c6f26a8103991
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 409e87d937641386747ccf5210551aadb3f5b761
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869454"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195567"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -104,7 +104,7 @@ En este ejemplo, el estado de error de autenticación es 8. Esto indica que la c
 > Cuando se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el modo de autenticación de Windows y posteriormente se cambia al modo de autenticación de Windows y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el inicio de sesión **sa** está deshabilitado inicialmente. Esto provoca el estado de error 7: "Error de inicio de sesión del usuario 'sa'". Para habilitar el inicio de sesión **sa**, vea [Cambiar el modo de autenticación del servidor](~/database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## <a name="user-action"></a>Acción del usuario  
-Si intenta establecer conexión usando la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], compruebe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado en modo de autenticación mixto.  
+Si intenta establecer conexión usando la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], compruebe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado en modo de autenticación mixto. Para obtener más información sobre cómo cambiar el modo de autenticación de SQL Server, revise [Cambio del modo de autenticación del servidor](https://docs.microsoft.com/sql/database-engine/configure-windows/change-server-authentication-mode).
   
 Si intenta establecer conexión usando la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], compruebe que el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existe y que lo ha escrito correctamente.  
   

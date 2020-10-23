@@ -33,12 +33,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc39fbcb191810f7e357167f15c4d0ca084711d8
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 325e6d949cfede5bec7ccdb958dac2c82e9d9efa
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688666"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005590"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -119,13 +119,17 @@ En este documento solo se enumeran los argumentos pertenecientes a SQL Graph. Pa
  *table_constraint*   
  Especifica las propiedades de una restricción PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION o CHECK, o bien una definición DEFAULT agregada a una tabla.
  
+ > [!NOTE]   
+ > La restricción CONNECTION solo se aplica a un tipo de tabla perimetral.
+ 
  ON { esquema_de_partición | grupo_de_archivos | "default" }    
  Especifica el esquema de partición o el grupo de archivos en que se almacena la tabla. Si se especifica esquema_de_partición, la tabla será una tabla con particiones cuyas particiones se almacenan en un conjunto de uno o más grupos de archivos especificados en esquema_de_partición. Si se especifica grupo_de_archivos, la tabla se almacena en el grupo de archivos indicado. El grupo de archivos debe existir en la base de datos. Si se especifica "default", o bien si ON no se especifica en ninguna parte, la tabla se almacena en el grupo de archivos predeterminado. El mecanismo de almacenamiento de una tabla según se especifica en CREATE TABLE no se puede modificar posteriormente.
 
  ON {esquema_de_partición | grupo_de_archivos | "default"}    
  También se puede especificar en una restricción PRIMARY KEY o UNIQUE. Estas restricciones crean índices. Si se especifica grupo_de_archivos, el índice se almacena en el grupo de archivos con nombre. Si se especifica "default", o bien si ON no se especifica en ninguna parte, el índice se almacena en el mismo grupo de archivos que la tabla. Si la restricción PRIMARY KEY o UNIQUE crea un índice clúster, las páginas de datos de la tabla se almacenan en el mismo grupo de archivos que el índice. Si se especifica CLUSTERED o la restricción crea un índice agrupado, y se especifica un valor esquema_de_partición distinto del valor esquema_de_partición o grupo_de_archivos de la definición de tabla, o viceversa, únicamente se respeta la definición de restricción y se omite el resto.
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Observaciones
+
 No se admite la creación de una tabla temporal como una tabla de nodo o perimetral.  
 
 No se admite la creación de una tabla de nodo o perimetral como una tabla temporal.
@@ -163,6 +167,16 @@ En el ejemplo siguiente se muestra cómo se crean tablas `EDGE`.
 ```sql
  -- Create a likes edge table, this table does not have any user defined attributes   
  CREATE TABLE likes AS EDGE;
+```
+
+En el ejemplo siguiente se modela una regla por la que **solo** las personas pueden ser amigas de otras personas, lo que significa que este borde no permite hacer referencia a ningún nodo distinto de Person.
+
+```
+/* Create friend edge table with CONSTRAINT, restricts for nodes and it direction */
+CREATE TABLE dbo.FriendOf(
+  CONSTRAINT cnt_Person_FriendOf_Person
+    CONNECTION (dbo.Person TO dbo.Person) 
+)AS EDGE;
 ```
 
 

@@ -23,18 +23,18 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], MERGE statement
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c0e716d7405580dcda3cd4f3aa4d175141469b2b
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+author: XiaoyuMSFT
+ms.author: XiaoyuL
+ms.openlocfilehash: 86f620b1c99345134a0768574d44da2bbae11c6b
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227312"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098854"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 Ejecuta operaciones de inserción, actualización o eliminación en una tabla de destino a partir de los resultados de una combinación con una tabla de origen. Por ejemplo, sincronice dos tablas mediante la inserción, actualización o eliminación de las filas de una tabla según las diferencias que se encuentren en la otra.  
   
@@ -52,6 +52,8 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
+
+-- SQL Server and Azure SQL Database
 [ WITH <common_table_expression> [,...n] ]  
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
@@ -96,9 +98,25 @@ MERGE
 <clause_search_condition> ::=  
     <search_condition> 
 ```  
-  
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+```syntaxsql
+-- MERGE (Preview) for Azure Synapse Analytics 
+[ WITH <common_table_expression> [,...n] ]  
+MERGE
+    [ INTO ] <target_table> [ [ AS ] table_alias ]  
+    USING <table_source> [ [ AS ] table_alias ]
+    ON <merge_search_condition>  
+    [ WHEN MATCHED [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]  
+    [ WHEN NOT MATCHED [ BY TARGET ] [ AND <clause_search_condition> ]  
+        THEN <merge_not_matched> ]  
+    [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]
+    [ OPTION ( <query_hint> [ ,...n ] ) ]
+;  -- The semi-colon is required, or the query will return syntax  error. 
+```
+ 
 ## <a name="arguments"></a>Argumentos
 
 WITH \<common_table_expression>  
@@ -212,6 +230,16 @@ Especifica las condiciones de búsqueda para especificar \<merge_search_conditio
 Especifica el patrón de coincidencia de gráficos. Para obtener más información sobre los argumentos de esta cláusula, vea [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
 ## <a name="remarks"></a>Observaciones
+>[!NOTE]
+> En Azure Synapse Analytics, el comando MERGE (versión preliminar) tiene las siguientes diferencias en comparación con SQL Server y Azure SQL Database.  
+> - Una actualización MERGE se implementa como un par de eliminación e inserción. El recuento de filas afectado de una actualización MERGE incluye las filas eliminadas e insertadas. 
+> - En esta tabla se describe la compatibilidad de las tablas con distintos tipos de distribución:
+
+>|MERGE CLAUSE en Azure Synapse Analytics|Tabla de distribución TARGET admitida| Tabla de distribución SOURCE admitida|Comentario|  
+>|-----------------|---------------|-----------------|-----------|  
+>|**WHEN MATCHED**| HASH, ROUND_ROBIN, REPLICATE |Todos los tipos de distribución||  
+>|**NOT MATCHED BY TARGET**|HASH |Todos los tipos de distribución|Use UPDATE/DELETE FROM…JOIN para sincronizar dos tablas. |
+>|**NOT MATCHED BY SOURCE**|Todos los tipos de distribución|Todos los tipos de distribución|Use UPDATE/DELETE FROM…JOIN para sincronizar dos tablas.||  
 
 Al menos se debe especificar una de las tres cláusulas MATCHED, pero se pueden especificar en cualquier orden. Una variable no puede actualizarse más de una vez en la misma cláusula MATCHED.  
   
@@ -224,7 +252,8 @@ Cuando se usa después de MERGE, [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql
 MERGE es una palabra clave totalmente reservada cuando el nivel de compatibilidad de la base de datos se establece en 100 o superior. La instrucción MERGE también está disponible en los niveles de compatibilidad 90 y 100 de la base de datos; sin embargo, la palabra clave no se reserva completamente cuando el nivel de compatibilidad se establece en 90.  
   
 No use la instrucción **MERGE** cuando se usa la replicación de actualización en cola. **MERGE** y el desencadenador de actualización en cola no son compatibles. Reemplace la instrucción **MERGE** con una instrucción de inserción o de actualización.  
-  
+
+
 ## <a name="trigger-implementation"></a>Implementación de desencadenadores
 
 Para cada acción de inserción, actualización o eliminación especificada en la instrucción MERGE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activa los desencadenadores AFTER correspondientes definidos en la tabla de destino, pero no garantiza qué acción activará los desencadenadores primero o último. Los desencadenadores definidos para la misma acción cumplen el orden que especifique. Para más información sobre cómo establecer el orden de activación de los desencadenadores, vea [Especificar el primer y el último desencadenador](../../relational-databases/triggers/specify-first-and-last-triggers.md).  
@@ -483,9 +512,6 @@ GO
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. Usar MERGE para realizar una operación INSERT o UPDATE en una tabla perimetral de destino en una base de datos de gráficos
 
 En este ejemplo, se crean las tablas de nodo `Person` y `City`, así como una tabla perimetral `livesIn`. Utilice la instrucción MERGE en la tabla perimetral `livesIn` para insertar una fila nueva si aún no existe el perímetro entre `Person` y `City`. Si ya existe el perímetro, simplemente se actualiza el atributo StreetAddress en la tabla perimetral `livesIn`.
-
-> [!NOTE]
-> El ejemplo siguiente se aplica a SQL Server a partir de la versión 2019.
 
 ```sql
 -- CREATE node and edge tables

@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: 0772efddcd9743f23e1658c5e29e12310b029275
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: fa517d2ee19d4adc5a6d9acff56ed6f240acc1ee
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818201"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005780"
 ---
 # <a name="what-is-polybase"></a>¿Qué es PolyBase?
 
@@ -60,11 +60,11 @@ PolyBase proporciona estas mismas funcionalidades para los siguientes productos 
 
 - SQL Server 2016 y versiones posteriores (solo Windows)
 - Analytics Platform System (anteriormente Almacenamiento de datos paralelos)
-- Azure SQL Data Warehouse
+- Azure Synapse Analytics
 
 ### <a name="azure-integration"></a>Integración con Azure
 
-Con la ayuda de PolyBase, las consultas T-SQL también pueden importar y exportar datos desde Azure Blob Storage. Además, PolyBase permite a Azure SQL Data Warehouse importar y exportar datos desde Azure Data Lake Store y Azure Blob Storage.
+Con la ayuda de PolyBase, las consultas T-SQL también pueden importar y exportar datos desde Azure Blob Storage. Además, PolyBase permite a Azure Synapse Analytics importar y exportar datos desde Azure Data Lake Store y Azure Blob Storage.
 
 ## <a name="why-use-polybase"></a>Por qué usar PolyBase
 

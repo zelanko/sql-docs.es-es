@@ -17,12 +17,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e02e5e2e6449a1c8c62072d0cd5a86d44cdf22ce
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891015"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005995"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,9 +40,12 @@ ms.locfileid: "91891015"
   
 -   Se puede mejorar el rendimiento de las consultas, en función de los tipos de consultas que se suelen ejecutar y de la configuración del hardware. Por ejemplo, el optimizador de consultas puede procesar consultas de combinación de igualdad entre dos o más tablas con particiones más rápidamente cuando las columnas de partición son las mismas que las columnas en las que se combinan las tablas. Consulte la sección [Consultas](#queries) a continuación para más información.
   
-Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza una ordenación de los datos para operaciones de E/S, los ordena primero por partición. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene acceso a una unidad cada vez y esto podría reducir el rendimiento. Para mejorar el rendimiento de la ordenación de los datos, cree franjas de los archivos de datos de las particiones en más de un disco configurando una RAID. De este modo, aunque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siga ordenando los datos por partición, puede tener acceso a todas las unidades de cada partición al mismo tiempo.  
+Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza una ordenación de los datos para operaciones de E/S, los ordena primero por partición. Para mejorar el rendimiento de la ordenación de los datos, cree franjas de los archivos de datos de las particiones en más de un disco configurando una RAID. De este modo, aunque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siga ordenando los datos por partición, puede tener acceso a todas las unidades de cada partición al mismo tiempo.  
   
 Además, la partición permite mejorar el rendimiento habilitando la extensión de bloqueo en el nivel de partición y no en toda la tabla. Esto puede reducir la contención en la tabla por bloqueo. Para reducir la contención de bloqueo y permitir la extensión de bloqueo a la partición, establezca la opción `LOCK_ESCALATION` de la instrucción `ALTER TABLE` en AUTO. 
+
+> [!TIP]
+> Las particiones de una tabla o un índice se pueden colocar en un grupo de archivos; por ejemplo, el grupo de archivos `PRIMARY` o en varios grupos de archivos. Cuando se usa el almacenamiento en capas, el uso de varios grupos de archivos permite asignar particiones específicas a capas de almacenamiento concretas. Todas las demás ventajas de las particiones se aplican independientemente del número de grupos de archivos usados o de la colocación de particiones en grupos de archivos específicos.
   
 ## <a name="components-and-concepts"></a>Componentes y conceptos  
 Los siguientes términos son aplicables para las particiones de tablas e índices.  
@@ -114,6 +117,8 @@ Si ejecuta con frecuencia consultas que implican una combinación de igualdad en
 -  Definen el mismo número de particiones.
 -  Definen los mismos valores de límite para las particiones.
 De este modo, el optimizador de consultas puede procesar la combinación con mayor rapidez, porque las propias particiones se pueden combinar. Si una consulta combina dos tablas que no están colocadas o no tienen particiones en el campo de combinación, la presencia de particiones puede ralentizar el procesamiento de consultas en lugar de acelerarlo.
+
+Para obtener más información sobre el control de particiones en el procesamiento de consultas, vea [Mejoras de procesamiento de consultas en las tablas e índices con particiones](../../relational-databases/query-processing-architecture-guide.md#query-processing-enhancements-on-partitioned-tables-and-indexes).
 
 ## <a name="behavior-changes-in-statistics-computation-during-partitioned-index-operations"></a>Cambios de comportamiento en el cálculo de estadísticas durante operaciones de índice con particiones  
  A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las estadísticas no se crean examinando todas las filas de la tabla cuando se crea o se vuelve a generar un índice con particiones. En su lugar, el optimizador de consultas usa el algoritmo de muestreo predeterminado para generar estadísticas. Después de actualizar una base de datos con índices con particiones, puede observar una diferencia en los datos del histograma para estos índices. Este cambio de comportamiento puede no afectar al rendimiento de las consultas. Para obtener estadísticas sobre índices con particiones examinando todas las filas de la tabla, use `CREATE STATISTICS` o `UPDATE STATISTICS` con la cláusula `FULLSCAN`.  

@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c576e23b52c4e9f34e803474a67967440b4cd2e
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 6286c5804c30e021c794e8ecf69bdb328ab8db38
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024521"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037078"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
@@ -73,7 +73,7 @@ Crea una función definida por el usuario en [!INCLUDE[ssNoVersion](../../includ
 > [!NOTE]
 >
 > - En este tema se describe la integración de CLR de .NET Framework en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La integración de CLR no se aplica a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-> - Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vea [CREATE FUNCTION ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/statements/create-function-sql-data-warehouse.md).
+> - Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], consulte [CREATE FUNCTION (Azure Synapse Analytics)](../../t-sql/statements/create-function-sql-data-warehouse.md).
 
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

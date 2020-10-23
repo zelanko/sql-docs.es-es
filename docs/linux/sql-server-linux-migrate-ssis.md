@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e513f6783e827617a8c0cc4a1fa0ea4644dcb6e7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088875"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115848"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extracción, transformación y carga de datos en Linux con SSIS
 
@@ -21,7 +21,7 @@ ms.locfileid: "88088875"
 
 En este artículo se describe cómo ejecutar paquetes de SQL Server Integration Services (SSIS) en Linux. SSIS resuelve problemas de integración de datos complejos mediante la extracción de datos de varios orígenes y formatos, así como la transformación y limpieza de los datos y la carga de datos en varios destinos. 
 
-Los paquetes SSIS que se ejecutan en Linux pueden conectarse a Microsoft SQL Server en ejecución en Windows en el entorno local o en la nube, en Linux o en Docker. También pueden conectarse a Azure SQL Database, Azure SQL Data Warehouse, orígenes de datos ODBC, archivos planos y otros orígenes de datos, incluidos orígenes ADO.NET, archivos XML y servicios OData.
+Los paquetes SSIS que se ejecutan en Linux pueden conectarse a Microsoft SQL Server en ejecución en Windows en el entorno local o en la nube, en Linux o en Docker. También pueden conectarse a Azure SQL Database, Azure Synapse Analytics, orígenes de datos ODBC, archivos planos y otros orígenes de datos, incluidos orígenes ADO.NET, archivos XML y servicios OData.
 
 Para obtener más información sobre las capacidades de SSIS, vea [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
@@ -94,7 +94,7 @@ Para obtener más información sobre SSIS en Linux, consulte las siguientes entr
 
 ## <a name="more-info-about-ssis"></a>Más información sobre SSIS
 
-Microsoft SQL Server Integration Services (SSIS) es una plataforma que permite generar soluciones de integración de datos de alto rendimiento, entre las que se incluyen paquetes de extracción, transformación y carga de datos (ETL) para el almacenamiento de datos. Para obtener más información sobre SSIS, vea [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services).
+Microsoft SQL Server Integration Services (SSIS) es una plataforma que permite generar soluciones de integración de datos de alto rendimiento, entre las que se incluyen paquetes de extracción, transformación y carga de datos (ETL) para el almacenamiento de datos. Para obtener más información sobre SSIS, vea [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
 SSIS incluye las características siguientes:
 - Herramientas y asistentes gráficos para compilar y depurar paquetes en Windows

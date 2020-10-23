@@ -14,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffc15af15be20b4ba1bbcd5566c5e63ac0d7226f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c24de4dba33fce34eb88333b8c877d13a4a1ebb0
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490932"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006592"
 ---
 # <a name="json-data-in-sql-server"></a>Datos JSON en SQL Server
 
@@ -194,7 +194,7 @@ El resultado de esta consulta se muestra en la tabla siguiente:
 ### <a name="convert-sql-server-data-to-json-or-export-json"></a>Convertir datos de SQL Server a JSON o exportar JSON
 
 >[!NOTE]
->No se admite la conversión de datos de Azure SQL Data Warehouse a JSON ni la exportación de JSON.
+>No se admite la conversión de datos de Azure Synapse Analytics a JSON ni la exportación de JSON.
 
 Para dar formato JSON a los datos de SQL Server o a los resultados de las consultas, agregue la cláusula **FOR JSON** a una instrucción **SELECT** . Use **FOR JSON** para delegar en SQL Server la aplicación de formato de los resultados de JSON de las aplicaciones cliente. Para obtener más información, consulte [Dar formato JSON a los resultados de consulta con FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   

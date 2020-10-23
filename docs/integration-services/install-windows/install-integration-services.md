@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86ef2c561979d7f2578863f35366ee33cb21dcdc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 613546be790bac993f1242c6bfba470e95eb8685
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915889"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197053"
 ---
 # <a name="install-integration-services-ssis"></a>Instalar Integration Services (SSIS)
 
@@ -115,7 +115,7 @@ Para una instalación completa de [!INCLUDE[ssISnoversion](../../includes/ssisno
 
 - **SQL Server Data Tools (SSDT)** . Hemos dejado de usar el instalador independiente de SSDT para Visual Studio 2019. Para Visual Studio 2019, puede obtener la extensión del diseñador SSIS desde [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
 
-- **Feature Pack de Integration Services para Azure**. Para descargar e instalar el Feature Pack, vea [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://docs.microsoft.com/sql/integration-services/azure-feature-pack-for-integration-services-ssis?view=sql-server-2017) (Feature Pack de Microsoft SQL Server 2017 Integration Services para Azure). Al instalar el Feature Pack, los paquetes se conectan a los servicios de almacenamiento y análisis de la nube de Azure, incluidos los servicios siguientes:
+- **Feature Pack de Integration Services para Azure**. Para descargar e instalar el Feature Pack, vea [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](../azure-feature-pack-for-integration-services-ssis.md?view=sql-server-2017) (Feature Pack de Microsoft SQL Server 2017 Integration Services para Azure). Al instalar el Feature Pack, los paquetes se conectan a los servicios de almacenamiento y análisis de la nube de Azure, incluidos los servicios siguientes:
 
   - Azure Blob Storage.
 
@@ -123,7 +123,7 @@ Para una instalación completa de [!INCLUDE[ssISnoversion](../../includes/ssisno
 
   - Azure Data Lake Store.
 
-  - Azure SQL Data Warehouse.
+  - Azure Synapse Analytics.
 
   - Azure Data Lake Storage (Gen2).
 

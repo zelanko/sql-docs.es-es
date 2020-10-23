@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 47eb4bb9e66f7f4fa9a84b694ebd8915f0c60d31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 510c39bb15235b37a23894a4ff5e3bef9c2f51f5
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459730"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081794"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88459730"
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
-FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )  
+FORMATMESSAGE ( { msg_number  | ' msg_string ' | @msg_variable} , [ param_value [ ,...n ] ] )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -52,6 +52,11 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Es una cadena entre comillas simples que contiene marcadores de posición de valor de parámetro. El mensaje de error puede tener 2.047 caracteres como máximo. Si el mensaje contiene más de 2.048 caracteres, solamente aparecerán los 2.044 primeros y se agregarán puntos suspensivos para indicar que el mensaje se ha truncado. Tenga en cuenta que los parámetros de sustitución utilizan más caracteres de lo que muestra la salida debido al comportamiento del almacenamiento interno.  Para más información sobre la estructura de una cadena de mensaje y el uso de parámetros en la cadena, vea la descripción del argumento *msg_str* en [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
+
+ *@msg_variable*  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+  
+ Es una variable nvarchar o varchar que contiene una cadena que cumple con los criterios de *msg_string* anteriores.  
   
  *param_value*  
  Valor de parámetro que se utiliza en el mensaje. Puede ser más de un valor. Los valores se deben especificar en el orden en el que las variables de marcador de posición aparezcan en el mensaje. El número máximo de valores es 20.  

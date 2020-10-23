@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1699ac4a2ad49a6a65fafed6a75c71585514de51
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: dcad505d75528f17c65263f3b3a68defdcb6fb30
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868055"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005574"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Uso de un archivo de formato para la importación en bloque de datos (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,9 +33,9 @@ En este tema se describe cómo usar un archivo de formato en operaciones de impo
   * SQLCHAR o SQLVARYCHAR (los datos se envían a la página de códigos del cliente o a la página de códigos implícita por la intercalación).
   * SQLNCHAR o SQLNVARCHAR (los datos se envían como Unicode).
   * SQLBINARY o SQLVARYBIN (los datos se envían sin realizar ninguna conversión).
-* Azure SQL Database y Almacenamiento de datos SQL de Azure solo admiten [bcp](../../tools/bcp-utility.md).  Para información adicional, consulte:
-  * [Carga de datos en Azure SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
-  * [Carga de datos de SQL Server en Azure SQL Data Warehouse (archivos planos)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+* Azure SQL Database y Azure Synapse Analytics solo admiten [bcp](../../tools/bcp-utility.md).  Para información adicional, consulte:
+  * [Carga de datos en Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [Carga de datos de SQL Server en Azure Synapse Analytics (archivos planos)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
   * [Migración de los datos](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-develop)
 
 ## <a name="example-test-conditions"></a>Condiciones de prueba de ejemplo

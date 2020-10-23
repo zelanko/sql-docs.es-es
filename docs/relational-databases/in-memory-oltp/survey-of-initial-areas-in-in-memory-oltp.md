@@ -12,12 +12,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92be3a1844fde38aca090dd8032736f34fe99361
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 4ed52b1ddfe0a55a4a443dd865f980367b90f973
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866676"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005679"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Encuesta de áreas iniciales de OLTP en memoria
 
@@ -72,8 +72,8 @@ El análisis en memoria hace referencia a instrucciones SELECT de SQL que agrega
 Hay dos escenarios principales:  
   
 - El*análisis operativo por lotes* hace referencia a los procesos de agregación que se ejecutan cuando finaliza el horario laboral o bien en hardware secundario que tiene copias de los datos transaccionales.  
-  - El[Almacenamiento de datos SQL de Azure](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) también está relacionado con el análisis operativo por lotes.  
-- El*análisis operativo en tiempo real* hace referencia a los procesos de agregación que se ejecutan en horario laboral y en el hardware principal que se usa para cargas de trabajo transaccionales.  
+  - [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) también se asocia con el análisis operativo por lotes.  
+- El *análisis operativo en tiempo real* hace referencia a los procesos de agregación que se ejecutan en horario laboral y en el hardware principal que se usa para cargas de trabajo transaccionales.  
   
   
 El presente artículo se centra en OLTP y no en el análisis. Para obtener información sobre cómo los índices de almacén de columnas llevan el análisis a SQL, vea:  

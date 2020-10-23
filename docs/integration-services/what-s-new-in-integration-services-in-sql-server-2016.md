@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16844bfb5c173fdb6527777950a8d80f1b177994
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: a458d0bcf700341951d79c775fb06fde37585362
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480837"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193743"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novedades de Integration Services en SQL Server 2016
 
@@ -112,7 +112,7 @@ Estas nuevas funcionalidades requieren SQL Server Data Tools (SSDT) versión 17.
         
         -   [Se lanzó la compatibilidad con Azure Data Lake Store](#datalakestore)
         
-        -   [Se lanzó la compatibilidad con Azure SQL Data Warehouse](#sqldwupload)
+        -   [Compatibilidad con Azure Synapse Analytics publicada](#sqldwupload)
   
 -   **Facilidad de uso y productividad**  
   
@@ -309,7 +309,7 @@ Con SQL Server 2016 Service Pack 1 instalado, el origen OData y el administrador
 
 La versión más reciente de Azure Feature Pack incluye un administrador, origen y destino de conexiones para mover los datos hacia y desde Azure Data Lake Store. Para más información, consulte [Azure Feature Pack para Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
 
-#### <a name="support-for-azure-sql-data-warehouse-released"></a><a name="sqldwupload"></a> Se lanzó la compatibilidad con Azure SQL Data Warehouse
+#### <a name="support-for-azure-synapse-analytics-released"></a><a name="sqldwupload"></a> Compatibilidad con Azure Synapse Analytics publicada
 
 La versión más reciente de Azure Feature Pack incluye la tarea de carga de Azure SQL DW para rellenar con datos SQL Data Warehouse. Para más información, consulte [Azure Feature Pack para Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
 
@@ -376,4 +376,4 @@ La versión más reciente de Azure Feature Pack incluye la tarea de carga de Azu
 
 ## <a name="see-also"></a>Consulte también  
  [Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Características compatibles con las ediciones de SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+ [Características compatibles con las ediciones de SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)

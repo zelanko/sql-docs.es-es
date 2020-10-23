@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 137a4156dde6cfe89ff76998b383fb4ab17ea672
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 2f52e71caddf2c2c7800e094ba3e40905a8d8833
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891345"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005707"
 ---
 # <a name="polybase-transact-sql-reference"></a>Referencia de Transact-SQL de PolyBase
 
@@ -121,7 +121,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Crear tablas externas para Almacenamiento de blobs de Azure  
-Se aplica a: SQL Server (a partir de 2016), Azure SQL Data Warehouse, Almacenamiento de datos paralelos
+Se aplica a: SQL Server (a partir de la versión 2016), Azure Synapse Analytics, Almacenamiento de datos en paralelo
 
 **1. Crear credencial con ámbito de base de datos**  
 
@@ -196,7 +196,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Crear tablas externas para Azure Data Lake Store
-Se aplica a: Azure SQL Data Warehouse
+Se aplica a: Azure Synapse Analytics
 
 Para obtener más información, vea [Carga de datos de Azure Data Lake Store](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
 

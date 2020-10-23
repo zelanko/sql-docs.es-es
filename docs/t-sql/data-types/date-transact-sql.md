@@ -23,12 +23,12 @@ ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fdec32c3c5b23da531b78100e41cf426f357cbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d6246c3b8318ae2596dfd1f4240692be7941e49
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468304"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175955"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 
@@ -65,7 +65,7 @@ En las tablas siguientes se muestran los formatos de literales de cadena válido
   
 |Alfabético|Descripción|  
 |------------------|-----------------|  
-|mes [dd][,] aaaa<br /><br /> mes dd[,] [aa<br /><br /> mes aaaa [dd]<br /><br /> [dd] mes[,] aaaa<br /><br /> dd mes[,][aa]aa<br /><br /> dd [aa]aa mes<br /><br /> [dd] aaaa mes<br /><br /> aaaa mes [dd]<br /><br /> aaaa [dd] mes|**mes** representa el nombre completo del mes o la abreviatura del mes en el idioma actual. Las comas son opcionales y se omite el uso de mayúsculas.<br /><br /> Para evitar ambigüedades, use años de cuatro dígitos.<br /><br /> Si falta el día, se usará el primer día del mes.|  
+|mes [dd][,] aaaa<br /><br /> mes dd[,] [aa]<br /><br /> mes aaaa [dd]<br /><br /> [dd] mes[,] aaaa<br /><br /> dd mes[,][aa]aa<br /><br /> dd [aa]aa mes<br /><br /> [dd] aaaa mes<br /><br /> aaaa mes [dd]<br /><br /> aaaa [dd] mes|**mes** representa el nombre completo del mes o la abreviatura del mes en el idioma actual. Las comas son opcionales y se omite el uso de mayúsculas.<br /><br /> Para evitar ambigüedades, use años de cuatro dígitos.<br /><br /> Si falta el día, se usará el primer día del mes.|  
   
 |ISO 8601|Descripción|  
 |--------------|----------------|  

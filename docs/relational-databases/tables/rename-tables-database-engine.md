@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5f00ffc9ce946c3c6116ba85af0c4ff7c82405b
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 87a05942a1061db1f074266d0b5df3b1797f5e73
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645804"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006126"
 ---
 # <a name="rename-tables-database-engine"></a>Cambiar el nombre a las tablas (motor de base de datos)
 
@@ -29,7 +29,7 @@ ms.locfileid: "88645804"
 
 Cambie el nombre de una tabla en SQL Server o Azure SQL Database.
 
-Para cambiar el nombre de una tabla en Azure SQL Data Warehouse o en Almacenamiento de datos paralelos, use la instrucción [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) de Transact-SQL. 
+Para cambiar el nombre de una tabla en Azure Synapse Analytics o en Almacenamiento de datos paralelos, use la instrucción [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) de Transact-SQL. 
   
 > [!CAUTION]  
 >  Piénselo bien antes de cambiar el nombre de una tabla. Si las consultas, vistas, funciones definidas por el usuario, procedimientos almacenados o programas existentes hacen referencia a esta tabla, la modificación del nombre hará que estos objetos dejen de ser válidos.  

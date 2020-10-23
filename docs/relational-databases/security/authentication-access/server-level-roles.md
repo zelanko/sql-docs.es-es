@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f185faf3ef585c1f76b3c1dea605632cedf7bd1b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 976bfdb47aae7037e3a7636299ff98e4a1424944
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869028"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004279"
 ---
 # <a name="server-level-roles"></a>Roles de nivel de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91869028"
   
  Puede agregar entidades de seguridad de nivel de servidor (inicios de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], cuentas de Windows y grupos de Windows) a los roles de nivel de servidor. Cada miembro de un rol fijo de servidor puede agregar otros inicios de sesión a ese mismo rol. Los miembros de roles de servidor definidos por el usuario no pueden agregar otras entidades de seguridad de servidor al rol.  
 > [!NOTE]
->  Los permisos de nivel de servidor no están disponible en SQL Database ni en SQL Data Warehouse. Para más información sobre SQL Database, vea [Control y concesión de acceso a bases de datos](/azure/sql-database/sql-database-manage-logins).
+>  Los permisos de nivel de servidor no están disponibles en SQL Database ni en Azure Synapse Analytics. Para más información sobre SQL Database, vea [Control y concesión de acceso a bases de datos](/azure/sql-database/sql-database-manage-logins).
   
 ## <a name="fixed-server-level-roles"></a>Roles fijos de nivel de servidor  
  En la tabla siguiente se muestran los roles fijos de nivel de servidor y sus capacidades.  

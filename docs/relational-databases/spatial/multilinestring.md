@@ -14,15 +14,15 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7193675df9f142977325a1c198343497b9b7501
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6caab752b3edc7c56d127fb3a378a9a5a69a18b7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403273"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006297"
 ---
 # <a name="multilinestring"></a>MultiLineString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
    A **MultiLineString** es una colección de cero o más instancias de **geometry** o **geographyLineString**.  
   
 ## <a name="multilinestring-instances"></a>Instancias de MultiLineString  
@@ -45,7 +45,7 @@ ms.locfileid: "88403273"
 -   La figura 6 es una instancia de **MultiLineString** sencilla y cerrada. Está cerrada porque lo están todos sus elementos. Es sencilla porque ninguno de sus elementos forma parte de una intersección con los interiores.  
   
 ### <a name="accepted-instances"></a>Instancias aceptadas  
- Para que se acepte una instancia de **MultiLineString** , debe estar vacío o estar formada solo por instancias de **LineString** aceptadas. Para obtener más información sobre instancias **LineString** aceptadas, vea [LineString](../../relational-databases/spatial/linestring.md). A continuación se enumeran ejemplos de instancias **MultiLineString** aceptadas.  
+ Para que se acepte una instancia de **MultiLineString**, debe estar vacío o estar formada solo por instancias de **LineString** aceptadas. Para obtener más información sobre instancias **LineString** aceptadas, vea [LineString](../../relational-databases/spatial/linestring.md). A continuación se enumeran ejemplos de instancias **MultiLineString** aceptadas.  
   
 ```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  

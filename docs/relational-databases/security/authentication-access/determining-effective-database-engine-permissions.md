@@ -15,12 +15,12 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e3c6120613ee79acb8219f35678f17fd9239962a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005625"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006599"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinar los permisos efectivos del motor de base de datos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ En este artículo se describe cómo determinar quién tiene permisos para varios
 
 Los roles fijos de servidor y los roles fijos de base de datos tienen permisos preconfigurados que no se pueden cambiar. Para determinar quién es miembro del rol fijo de servidor, ejecute la siguiente consulta:    
 > [!NOTE]
->  No se aplica a SQL Database ni a SQL Data Warehouse, donde el permiso de nivel de servidor no está disponible. La columna `is_fixed_role` de `sys.server_principals` se agregó en SQL Server 2012. No es necesaria para las versiones anteriores de SQL Server.  
+>  No se aplica a SQL Database ni a Azure Synapse Analytics, donde el permiso de nivel de servidor no está disponible. La columna `is_fixed_role` de `sys.server_principals` se agregó en SQL Server 2012. No es necesaria para las versiones anteriores de SQL Server.  
 > ```sql
 > SELECT SP1.name AS ServerRoleName, 
 >  isnull (SP2.name, 'No members') AS LoginName   
@@ -107,7 +107,7 @@ Recuerde que es posible que un usuario de Windows sea miembro de más de un grup
 
 La consulta siguiente devuelve una lista de los permisos que se han concedido o denegado en el nivel de servidor. Esta consulta debe ejecutarse en la base de datos maestra.   
 > [!NOTE]
->  Los permisos de nivel de servidor se no se pueden conceder ni consultar en la base de datos SQL o SQL Data Warehouse.   
+>  Los permisos de nivel de servidor se no se pueden conceder ni consultar en la base de datos SQL o Azure Synapse Analytics.   
 > ```sql
 > SELECT pr.type_desc, pr.name, 
 >  isnull (pe.state_desc, 'No permission statements') AS state_desc, 

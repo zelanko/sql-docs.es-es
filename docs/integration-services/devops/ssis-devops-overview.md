@@ -9,18 +9,18 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 1cc68be44a45ece8ad844585162b0cff651ae487
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823487"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194088"
 ---
-# <a name="sql-server-integration-services-ssis-devops-tools"></a>Herramientas de DevOps para SQL Server Integration Services
+# <a name="sql-server-integration-services-ssis-devops-tools-azure-devops-extension"></a>Extensión de Azure DevOps para las herramientas de DevOps para SQL Server Integration Services (SSIS)
 
 La extensión [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) está disponible en el marketplace de **Azure DevOps**.
 
-Si no dispone de ninguna organización de **Azure DevOps**, primero debe registrarse en [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops) y, después, agregar la extensión **SSIS DevOps Tools** siguiendo [estos pasos](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension).
+Si no dispone de ninguna organización de **Azure DevOps**, primero debe registrarse en [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops) y, después, agregar la extensión **SSIS DevOps Tools** siguiendo [estos pasos](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension).
 
 Las **herramientas de DevOps de SSIS** incluyen la tarea **de compilación de SSIS**, la tarea de la versión **de implementación de SSIS** y la **tarea de configuración de catálogo de SSIS**.
 
@@ -58,13 +58,13 @@ Nombre de la configuración del proyecto que se va a usar para la compilación. 
 
 #### <a name="output-path"></a>Ruta de acceso de resultados
 
-Ruta de acceso de una carpeta independiente para guardar los resultados de la compilación, que se pueden publicar como artefactos de compilación a través de una [tarea de publicación de artefactos de compilación](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops).
+Ruta de acceso de una carpeta independiente para guardar los resultados de la compilación, que se pueden publicar como artefactos de compilación a través de una [tarea de publicación de artefactos de compilación](/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops).
 
 ### <a name="limitations-and-known-issues"></a>Limitaciones y problemas conocidos
 
 - La tarea de compilación de SSIS se basa en Visual Studio y en el diseñador de SSIS, que es obligatorio en los agentes de compilación. Por lo tanto, para ejecutar la tarea de compilación de SSIS en la canalización, debe elegir **vs2017-win2016** para los agentes hospedados en Microsoft o bien instalar Visual Studio y el diseñador de SSIS (ya sea VS2017 + SSDT2017 o VS2019 + la extensión de proyectos de SSIS) en agentes autohospedados.
 
-- Para compilar proyectos de SSIS mediante el uso de componentes integrados (incluido Azure Feature Pack de SSIS y otros componentes de terceros), los componentes integrados deben instalarse en el equipo en el que se ejecuta el agente de canalización.  Para el agente hospedado por Microsoft, el usuario puede agregar una [tarea PowerShell Script](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) o una [Command Line Script](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) para descargar e instalar los componentes antes de que se ejecute la tarea de compilación de SSIS. A continuación se muestra el script de PowerShell de ejemplo para instalar Azure Feature Pack: 
+- Para compilar proyectos de SSIS mediante el uso de componentes integrados (incluido Azure Feature Pack de SSIS y otros componentes de terceros), los componentes integrados deben instalarse en el equipo en el que se ejecuta el agente de canalización.  Para el agente hospedado por Microsoft, el usuario puede agregar una [tarea PowerShell Script](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) o una [Command Line Script](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) para descargar e instalar los componentes antes de que se ejecute la tarea de compilación de SSIS. A continuación se muestra el script de PowerShell de ejemplo para instalar Azure Feature Pack: 
 
 ```powershell
 wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
@@ -172,7 +172,7 @@ Consulte los detalles sobre cómo [definir el archivo JSON de configuración](#d
 
 Ruta de acceso del archivo JSON de configuración del catálogo de SSIS. Esta propiedad solo es visible cuando se selecciona "Ruta de acceso al archivo" como origen del archivo de configuración.
 
-Para usar [variables de canalización](/azure/devops/pipelines/process/variables) en el archivo JSON de configuración, debe agregar una [tarea de transformación de archivo](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) antes de esta para reemplazar los valores de configuración con variables de canalización. Para obtener más información, vea [Sustitución de variables JSON](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution).
+Para usar [variables de canalización](/azure/devops/pipelines/process/variables) en el archivo JSON de configuración, debe agregar una [tarea de transformación de archivo](/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) antes de esta para reemplazar los valores de configuración con variables de canalización. Para obtener más información, vea [Sustitución de variables JSON](/azure/devops/pipelines/tasks/transforms-variable-substitution?tabs=Classic&view=azure-devops#json-variable-substitution).
 
 #### <a name="inline-configuration-json"></a>Archivo JSON de configuración insertado
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 447304bf0927b08e76a668e93ca750f3f8bfc779
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1d4c924652ec21ab4ed8e7c79d01d7f36835715b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896282"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006558"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Copia masiva de datos con bcp en SQL Server en Linux
 
@@ -21,7 +21,7 @@ ms.locfileid: "85896282"
 
 En este artículo se muestra cómo usar la utilidad de línea de comandos [bcp](../tools/bcp-utility.md) para realizar una copia masiva datos entre una instancia de SQL Server en Linux y un archivo de datos en un formato especificado por el usuario.
 
-Puede usar `bcp` para importar un número elevado de filas en tablas de SQL Server o para exportar datos de tablas de SQL Server a archivos de datos. Excepto cuando se usa con la opción queryout, `bcp` no requiere ningún conocimiento de Transact-SQL. La utilidad de línea de comandos `bcp` funciona con Microsoft SQL Server en un entorno local o en la nube, en Linux, Windows o Docker y Azure SQL Database y Azure SQL Data Warehouse.
+Puede usar `bcp` para importar un número elevado de filas en tablas de SQL Server o para exportar datos de tablas de SQL Server a archivos de datos. Excepto cuando se usa con la opción queryout, `bcp` no requiere ningún conocimiento de Transact-SQL. La utilidad de línea de comandos `bcp` funciona con Microsoft SQL Server en un entorno local o en la nube, en Linux, Windows o Docker y Azure SQL Database y Azure Synapse Analytics.
 
 En este artículo aprenderá a:
 - Importación de datos en una tabla mediante el comando `bcp in`

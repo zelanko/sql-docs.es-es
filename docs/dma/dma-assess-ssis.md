@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1dcae45aef82859a961202ff30c3daca18e909b8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 20f216b920eb16651ca0d06a6b8090e431f8c592
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726318"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439409"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Realización de una evaluación de migración del servicio de integración de SQL Server con Data Migration Assistant
 
@@ -55,12 +55,12 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
 1. Opta Escriba una ruta de acceso a la carpeta que contenga paquetes SSIS.
 1. Opta Escriba la contraseña de cifrado del paquete si procede.
 1. Haga clic en **conectar** con el servidor SQL Server de origen.
-  ![Agregar origen](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+  ![Captura de pantalla que muestra el panel conectar a un servidor con la opción escriba una ruta de acceso a la carpeta que contiene paquetes SSIS y escriba la contraseña de cifrado del paquete si es aplicable.](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
 
 ## <a name="add-sources-to-assess"></a>Agregar orígenes para evaluar
 
 1. Seleccione los tipos de almacenamiento de paquetes SSIS que desea evaluar y, a continuación, seleccione **Agregar**.
-![Agregar origen](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
+![Captura de pantalla que muestra el panel agregar orígenes.](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. Seleccione **Agregar orígenes** para abrir el menú contextual de conexión si necesita evaluar varias carpetas.
 1. Haga clic en **Iniciar evaluación**.
   ![Iniciar evaluación](media/dma-assess-ssis/dma-assess-ssis-assess.png)

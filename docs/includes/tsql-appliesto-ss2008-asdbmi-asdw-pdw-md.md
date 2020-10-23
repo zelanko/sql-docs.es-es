@@ -4,11 +4,11 @@ ms.service: sql
 ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
-ms.openlocfilehash: 4d98e2977076f09f79d76b4ffacca1e55ea20b51
-ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
+ms.openlocfilehash: aa095d855556ffc458685aa0e675346aed3ca098
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84124449"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92438313"
 ---
-<Token>**se aplica a:** ![ Sí ](media/yes-icon.png) SQL Server ![ sí ](media/yes-icon.png) Azure SQL instancia administrada ![ sí ](media/yes-icon.png) Azure Synapse Analytics (SQL DW) ![ sí ](media/yes-icon.png) almacenamiento de datos paralelos</Token>
+<Token>**se aplica a:** :::image type="icon" source="media/yes-icon.png"::: SQL Server :::image type="icon" source="media/yes-icon.png"::: Azure SQL instancia administrada ![ sí ](media/yes-icon.png) :::image type="icon" source="media/yes-icon.png"::: almacenamiento de datos paralelos de Azure Synapse Analytics (SQL DW) </Token>

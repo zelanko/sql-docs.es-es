@@ -1,6 +1,6 @@
 ---
 description: sys.dm_xtp_gc_queue_stats (Transact-SQL)
-title: Sys. dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 5431cba1f886aee939d9a70d9b05fd65398184ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f1c2a816af4936d51473cd9770e6c52f46f277fa
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539250"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439489"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "89539250"
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|Identificador único de la cola.|  
 |total_enqueues|**bigint**|El número total de elementos de trabajo de la recolección de elementos no utilizados puestos en esta cola desde que se inició el servidor.|  
@@ -55,7 +55,7 @@ ms.locfileid: "89539250"
 ## <a name="user-scenario"></a>Escenario de usuario  
  Este resultado muestra que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en 4 núcleos o que se ha establecido afinidad para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en 4 núcleos:  
   
- Este resultado muestra que no hay elementos de trabajo en las colas que se van a procesar. Para la cola 0, los elementos de trabajo totales que se quitan de la cola desde que se inicia SQL son 15 625 y la profundidad máxima de cola fue 215 625.  
+ Este resultado muestra que no hay elementos de trabajo en las colas que se van a procesar. En la cola 0, el total de elementos de trabajo que se han quitado de la cola desde el inicio de SQL es 15625 y la profundidad de cola máxima es 15625.  
   
 ```  
 queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth  last_service_ticks  

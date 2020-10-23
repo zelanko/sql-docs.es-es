@@ -3,21 +3,21 @@ title: Concesión de permisos para la ejecución de scripts de Python y R
 description: Obtenga información sobre cómo puede conceder a los usuarios permiso para ejecutar scripts de Python y R externos en SQL Server Machine Learning Services y proporcionar permisos de lectura, escritura o lenguaje de definición de datos (DDL) a las bases de datos.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/03/2020
+ms.date: 10/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019, contperfq4
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5c961c2c4df15fdff7b1e2f3d5b1815c50d69771
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 7c7fa9d7702fb93fd4fe8334f873eb1b66c0f61d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180410"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115283"
 ---
 # <a name="grant-users-permission-to-execute-python-and-r-scripts-with-sql-server-machine-learning-services"></a>Concesión de permisos de usuario para ejecutar scripts de Python y R con SQL Server Machine Learning Services
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Obtenga información sobre cómo puede conceder a los usuarios permiso para ejecutar scripts de Python y R externos en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) y proporcionar permisos de lectura, escritura o lenguaje de definición de datos (DDL) a las bases de datos.
 

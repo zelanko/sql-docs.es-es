@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4bde49046ab8d4f4ea7217970ec85c7a7966f487
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 65a7c0afc57cc29d8ec5df7beb4c3107470e2d31
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765334"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257265"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>¿Qué es la implementación de la aplicación en un clúster de macrodatos?
 
@@ -78,7 +78,7 @@ allowedCapabilities:
 ## <a name="how-to-work-with-application-deployment"></a>Cómo trabajar con la implementación de la aplicación
 
 Las dos interfaces principales de la implementación de la aplicación son las siguientes: 
-- [Interfaz de línea de comandos`azdata`](app-create.md)
+- [Interfaz de línea de comandos[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](app-create.md)
 - [Extensión de Visual Studio Code y Azure Data Studio](app-deployment-extension.md)
 
 También es posible ejecutar una aplicación mediante un servicio web de RESTful. Para más información, consulte [Consumo de aplicaciones en clústeres de macrodatos](app-consume.md).

@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6aa01e932003fb1ca650e4b7bf135ff8266b6457
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 058012d828dd9f6f327354809be4dfe67021744b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725856"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257195"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Cómo actualizar los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -57,16 +57,16 @@ En esta sección se explica cómo actualizar un clúster de macrodatos de SQL S
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-1. Actualice `azdata`.
+1. Actualice [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
-   Siga las instrucciones para instalar `azdata`. 
+   Siga las instrucciones para instalar [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. 
    - [Windows Installer](../azdata/install/deploy-install-azdata-installer.md)
    - [Linux con apt](../azdata/install/deploy-install-azdata-linux-package.md)
    - [Linux con yum](../azdata/install/deploy-install-azdata-yum.md)
    - [Linux con zypper](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
-   >Si `azdata` se instaló con `pip`, debe quitarlo manualmente antes de realizar la instalación con Windows Installer o el administrador de paquetes de Linux.
+   >Si [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] se instaló con `pip`, debe quitarlo manualmente antes de realizar la instalación con Windows Installer o el administrador de paquetes de Linux.
 
 1. Actualice el clúster de macrodatos.
 
@@ -131,7 +131,7 @@ No se admite la actualización local desde una compilación de CTP o de versión
 
 ### <a name="backup-and-delete-the-old-cluster"></a>Copia de seguridad del clúster anterior y eliminación
 
-No hay ninguna actualización local para los clústeres de macrodatos implementados antes del lanzamiento de SQL Server 2019 GDR1. Actualmente, la única manera de actualizar un clúster de macrodatos a una nueva versión es quitarlo manualmente y volver a crearlo. Cada versión tiene una versión única de `azdata` que no es compatible con la anterior. Además, si se descarga una imagen de contenedor más reciente en un clúster implementado con una versión anterior distinta, es posible que la imagen más reciente no sea compatible con las imágenes anteriores del clúster. La imagen más reciente se extrae si se usa la etiqueta de imagen `latest` en el archivo de configuración de implementación para la configuración del contenedor. De forma predeterminada, cada versión tiene una etiqueta de imagen específica que corresponde a la versión de lanzamiento de SQL Server. Para actualizar a la versión más reciente, siga estos pasos:
+No hay ninguna actualización local para los clústeres de macrodatos implementados antes del lanzamiento de SQL Server 2019 GDR1. Actualmente, la única manera de actualizar un clúster de macrodatos a una nueva versión es quitarlo manualmente y volver a crearlo. Cada versión tiene una versión única de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] que no es compatible con la anterior. Además, si se descarga una imagen de contenedor más reciente en un clúster implementado con una versión anterior distinta, es posible que la imagen más reciente no sea compatible con las imágenes anteriores del clúster. La imagen más reciente se extrae si se usa la etiqueta de imagen `latest` en el archivo de configuración de implementación para la configuración del contenedor. De forma predeterminada, cada versión tiene una etiqueta de imagen específica que corresponde a la versión de lanzamiento de SQL Server. Para actualizar a la versión más reciente, siga estos pasos:
 
 1. Antes de eliminar el clúster anterior, realice una copia de seguridad de los datos en la instancia maestra de SQL Server y en HDFS. En la instancia maestra de SQL Server, puede usar [Copia de seguridad y restauración de SQL Server](data-ingestion-restore-database.md). En HDFS, se [pueden copiar los datos con `curl`](data-ingestion-curl.md).
 
@@ -142,18 +142,18 @@ No hay ninguna actualización local para los clústeres de macrodatos implementa
    ```
 
    > [!Important]
-   > Use la versión de `azdata` que coincida con el clúster. No elimine un clúster anterior con la versión más reciente de `azdata`.
+   > Use la versión de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] que coincida con el clúster. No elimine un clúster anterior con la versión más reciente de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
    > [!Note]
    > La emisión de un comando de `azdata bdc delete` resultará en la eliminación de todos los objetos creados en el espacio de nombres identificado con el nombre del clúster de macrodatos, pero no del espacio de nombres en sí. El espacio de nombres se puede volver a utilizar para las implementaciones posteriores, siempre y cuando esté vacío y no se haya creado ninguna otra aplicación dentro del mismo.
 
-1. Desinstale la versión anterior de `azdata`.
+1. Desinstale la versión anterior de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
    ```powershell
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. Instale la última versión de `azdata`. Los comandos siguientes instalan `azdata` desde la versión más reciente:
+1. Instale la última versión de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Los comandos siguientes instalan [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] desde la versión más reciente:
 
    **Windows:**
 
@@ -168,11 +168,11 @@ No hay ninguna actualización local para los clústeres de macrodatos implementa
    ```
 
    > [!IMPORTANT]
-   > La ruta de acceso a la versión `n-1` de `azdata` cambia en cada versión. Aunque se haya instalado anteriormente `azdata`, se debe volver a instalar desde la ruta de acceso más reciente antes de crear el clúster nuevo.
+   > La ruta de acceso a la versión `n-1` de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] cambia en cada versión. Aunque se haya instalado anteriormente [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], se debe volver a instalar desde la ruta de acceso más reciente antes de crear el clúster nuevo.
 
 ### <a name="verify-the-azdata-version"></a><a id="azdataversion"></a> Comprobar la versión de azdata
 
-Antes de implementar un nuevo clúster de macrodatos, compruebe que se está usando la versión más reciente de `azdata` con el parámetro `--version`:
+Antes de implementar un nuevo clúster de macrodatos, compruebe que se está usando la versión más reciente de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] con el parámetro `--version`:
 
 ```bash
 azdata --version
@@ -180,7 +180,7 @@ azdata --version
 
 ### <a name="install-the-new-release"></a>Instalar la nueva versión
 
-Después de quitar el clúster de macrodatos anterior e instalar la versión de `azdata` más reciente, implemente el nuevo clúster de macrodatos con las instrucciones de implementación actuales. Para obtener más información, vea [Cómo implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes](deployment-guidance.md). Luego, restaure las bases de datos o los archivos necesarios.
+Después de quitar el clúster de macrodatos anterior e instalar la versión de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] más reciente, implemente el nuevo clúster de macrodatos con las instrucciones de implementación actuales. Para obtener más información, vea [Cómo implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes](deployment-guidance.md). Luego, restaure las bases de datos o los archivos necesarios.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

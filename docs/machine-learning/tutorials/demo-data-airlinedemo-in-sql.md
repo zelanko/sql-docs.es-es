@@ -10,19 +10,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e00d3814b20f774568da007ba1e60f6784b1c9fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ec47525a79738eafc2746808a669ee50df0363a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484078"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194497"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Datos de demostración de la llegada de vuelos de líneas aéreas para tutoriales de Python y R de SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 En este ejercicio, va a crear una base de datos de SQL Server para almacenar los datos importados de los conjuntos de datos de demostración de líneas aéreas integradas en R o Python. Las distribuciones de R y Python proporcionan datos equivalentes, que puede importar a una base de datos de SQL Server mediante Management Studio.
 
-Para completar este ejercicio, debe tener [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) u otra herramienta que pueda ejecutar consultas de T-SQL.
+Para completar este ejercicio, debe tener [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) u otra herramienta que pueda ejecutar consultas de T-SQL.
 
 Entre los tutoriales y las guías de inicio rápido que usan este conjunto de datos se incluyen los siguientes:
 

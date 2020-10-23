@@ -9,12 +9,12 @@ ms.date: 06/01/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2de422caf8567f1473d1436a27a094fef9144085
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: d631a74bc71c814a70ef0ecfa33485ee4631ccd4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206049"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257084"
 ---
 # <a name="troubleshoot-pyspark-notebook"></a>Solución de problemas del cuaderno `pyspark`
 
@@ -30,7 +30,7 @@ Para solucionar problemas relativos a la sesión de PySpark de forma eficaz, rec
 
 En los pasos de solución de problemas se requiere lo siguiente:
 
-1. `azdata` instalado y con la configuración establecida correctamente en el clúster.
+1. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] instalado y con la configuración establecida correctamente en el clúster.
 2. Familiaridad con la ejecución de comandos de Linux y algunas aptitudes de solución de problemas de registro.
 
 ## <a name="troubleshooting-steps"></a>Pasos para solucionar problemas
@@ -127,7 +127,7 @@ En los pasos de solución de problemas se requiere lo siguiente:
 
 1. Comprobar el id. de la aplicación y los registros de application_master individuales y de contenedor.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Comprobación de la id. de la aplicación":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Celda con errores":::
 
 1. Revisar los registros de aplicaciones de YARN.
 
@@ -165,7 +165,7 @@ En los pasos de solución de problemas se requiere lo siguiente:
 
 1. Revisar la interfaz de usuario de SPARK.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Interfaz de usuario de Spark":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Celda con errores":::
 
    Explore en profundidad las tareas de las fases en busca de errores.
 

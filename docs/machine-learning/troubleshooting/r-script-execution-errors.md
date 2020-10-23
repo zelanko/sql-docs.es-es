@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 1a9a7dc3b4df2738d775cbb08ef8a7c547ec21aa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569935"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196339"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>Errores comunes de scripting de R en SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ Sin embargo, a veces es posible que un código que funciona perfectamente en un 
 
 2. Revise los mensajes para ver si los datos de entrada o los datos de salida contienen columnas con tipos de datos incompatibles o no admitidos. Por ejemplo, las consultas en una base de datos SQL suelen devolver GUID o ROWGUID, y no se admiten. Para obtener más información, consulte [Bibliotecas de R y tipos de datos](../r/r-libraries-and-data-types.md).
 
-3. Revise las páginas de ayuda de las funciones individuales de R para determinar si se admiten todos los parámetros para el contexto de cálculo de SQL Server. Para obtener ayuda sobre ScaleR, use los comandos de ayuda de R en línea o consulte [Referencia de paquete](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
+3. Revise las páginas de ayuda de las funciones individuales de R para determinar si se admiten todos los parámetros para el contexto de cálculo de SQL Server. Para obtener ayuda sobre ScaleR, use los comandos de ayuda de R en línea o consulte [Referencia de paquete](/r-server/r-reference/revoscaler/revoscaler).
 
 Si el tiempo de ejecución de R funciona pero el script devuelve errores, se recomienda que intente depurar el script en un entorno de desarrollo de R dedicado, como Herramientas de R para Visual Studio.
 

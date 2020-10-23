@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fbd7b7f6c286a3d782ed8a40441260f3faea248e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 544991790a86e1738474b7b71c39bcbcb7fc395a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035368"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412511"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -46,6 +46,7 @@ ms.locfileid: "92035368"
 |classifier_name|**sysname**|Para las solicitudes que usan recursos, el nombre del clasificador utilizado para asignar recursos e importancia.||
 |resource_allocation_percentage|**decimal (5, 2)**|La cantidad de recursos asignados a la solicitud.</br>Se aplica a: Azure Synapse Analytics|
 |result_cache_hit|**int**|Detalla si una consulta completada ha utilizado caché de conjunto de resultados.  </br>Se aplica a: Azure Synapse Analytics| 1 = acierto de caché de conjunto de resultados </br> 0 = error de caché de conjunto de resultados </br> Valores enteros negativos = motivos por los que no se ha usado el almacenamiento en caché del conjunto de resultados.  Vea la sección Comentarios para obtener más información.|
+|comando2|**nvarchar9max)**|Contiene el texto completo de la solicitud enviado por el usuario. Contiene consultas que tienen más de 4000 caracteres.|Cualquier consulta o texto de solicitud válido. NULL = las consultas que tienen una longitud de 4000 caracteres o menos, para estas consultas, el texto completo se puede encontrar en la columna de comandos.|
 ||||
   
 ## <a name="remarks"></a>Observaciones 

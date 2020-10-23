@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb7f365fdbf4421093c11b5223bb3c1036a8d911
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8f3ee552c2e58fa295d4a0094430bfca4ef3dcac
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956395"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155082"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Instalación de un entorno de ejecución personalizado de R para SQL Server
 
@@ -37,7 +37,7 @@ Antes de instalar un entorno de ejecución personalizado de R, instale lo siguie
 
 + [SQL Server 2019 para Windows (actualización acumulativa 3 o posterior)](../../database-engine/install-windows/install-sql-server.md).
 
-+ [Extensiones de lenguaje de SQL Server en Windows con el marco de extensibilidad](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md).
++ [Extensiones de lenguaje de SQL Server en Windows con el marco de extensibilidad](../../language-extensions/install/windows-java.md).
 
 + [R versión 3.3 o posterior](https://cran.r-project.org/).
 
@@ -196,7 +196,7 @@ Antes de instalar un entorno de ejecución personalizado de R, instale lo siguie
 + [SQL Server 2019 para Linux (actualización acumulativa 3 o posterior)](../../linux/sql-server-linux-setup.md).
 Antes de instalar SQL Server en Linux, debe configurar un repositorio de Microsoft. Para más información, consulte [Configuración de repositorios](../../linux/sql-server-linux-change-repo.md).
 
-+ [Extensiones de lenguaje de SQL Server en Linux con el marco de extensibilidad](../../linux/sql-server-linux-setup-language-extensions.md).
++ [Extensiones de lenguaje de SQL Server en Linux con el marco de extensibilidad](../../linux/sql-server-linux-setup-language-extensions-java.md).
 
 + [R versión 3.3 o posterior](https://cran.r-project.org/).
 

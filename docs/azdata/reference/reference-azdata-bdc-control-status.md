@@ -9,16 +9,16 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba0a23c99606066d5814af304d53cf056255958e
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: c5e12fa1e6d2bb132512cc8c587d9de09e4c1cf4
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914594"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358623"
 ---
 # <a name="azdata-bdc-control-status"></a>azdata bdc control status
 
-Se aplica a `azdata`
+Se aplica a [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
 En el siguiente artículo se proporciona una referencia de los comandos **sql** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md).
 

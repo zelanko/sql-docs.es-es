@@ -8,16 +8,16 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d312a74a8920031015e0a985d8b30933cfc039a
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: bbe54a44113ebadc07c837887f0d92e7bfb44cb4
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956851"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115406"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>Supervisar instrucciones de T-SQL PREDICT con eventos extendidos en SQL Server Machine Learning Services
-[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Obtenga información sobre cómo usar eventos extendidos para supervisar y solucionar problemas de instrucciones de T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md) en SQL Server Machine Learning Services.
 
@@ -25,22 +25,22 @@ Obtenga información sobre cómo usar eventos extendidos para supervisar y soluc
 
 Los siguientes eventos extendidos están disponibles en todas las versiones de SQL Server que admiten instrucciones de T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md). 
 
-|name |object_type|description| 
-|----|----|----|
-|predict_function_completed |event  |Detalles del tiempo de ejecución integrado|
-|predict_model_cache_hit |event|Se produce cuando se recupera un modelo de la caché del modelo de la función PREDICT. El uso de este evento junto con otros eventos predict_model_cache_* permite solucionar problemas causados por la caché del modelo de la función PREDICT.|
-|predict_model_cache_insert |event  |   Se produce cuando se inserta un modelo en la caché del modelo de la función PREDICT. El uso de este evento junto con otros eventos predict_model_cache_* permite solucionar problemas causados por la caché del modelo de la función PREDICT.    |
-|predict_model_cache_miss   |event|Se produce cuando no se encuentra un modelo en la caché del modelo de la función PREDICT. Las apariciones frecuentes de este evento podrían indicar que SQL Server necesita más memoria. El uso de este evento junto con otros eventos predict_model_cache_* permite solucionar problemas causados por la caché del modelo de la función PREDICT.|
-|predict_model_cache_remove |event| Se produce cuando se quita un modelo de la caché del modelo para la función PREDICT. El uso de este evento junto con otros eventos predict_model_cache_* permite solucionar problemas causados por la caché del modelo de la función PREDICT.|
+| name                       | object_type | description |
+|----------------------------|-------------|-------------|
+| predict_function_completed | event       | Detalles del tiempo de ejecución integrado|
+| predict_model_cache_hit    | event       | Se produce cuando se recupera un modelo de la caché del modelo de la función PREDICT. El uso de este evento junto con otros eventos predict_model_cache_* permite solucionar problemas causados por la caché del modelo de la función PREDICT.|
+| predict_model_cache_insert | event       | Se produce cuando se inserta un modelo en la caché del modelo de la función PREDICT. El uso de este evento junto con otros eventos predict_model_cache_* permite solucionar problemas causados por la caché del modelo de la función PREDICT.   |
+| predict_model_cache_miss   | event       | Se produce cuando no se encuentra un modelo en la caché del modelo de la función PREDICT. Las apariciones frecuentes de este evento podrían indicar que SQL Server necesita más memoria. El uso de este evento junto con otros eventos predict_model_cache_* permite solucionar problemas causados por la caché del modelo de la función PREDICT.|
+| predict_model_cache_remove | event       | Se produce cuando se quita un modelo de la caché del modelo para la función PREDICT. El uso de este evento junto con otros eventos predict_model_cache_* permite solucionar problemas causados por la caché del modelo de la función PREDICT.|
 
 ## <a name="query-for-related-events"></a>Consultar eventos relacionados
 
 Para ver una lista de todas las columnas devueltas para estos eventos, ejecute la siguiente consulta en SQL Server Management Studio:
 
 ```sql
-SELECT * 
-FROM sys.dm_xe_object_columns 
-WHERE object_name LIKE `predict%'
+SELECT *
+FROM sys.dm_xe_object_columns
+WHERE object_name LIKE 'predict%'
 ```
 
 ## <a name="examples"></a>Ejemplos

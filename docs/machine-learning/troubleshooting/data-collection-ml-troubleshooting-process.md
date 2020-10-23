@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e0f7cf6f904768f8394b690c1a45d3cfb4c9bd71
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: cf9cf80d6ced7cfcfefecbff4f31095f82e04e1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173476"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194517"
 ---
 # <a name="collect-data-to-troubleshoot-sql-machine-learning"></a>Recopilación de datos para la solución de problemas de aprendizaje automático en SQL
 
@@ -36,7 +36,7 @@ Según cuál sea la edición de SQL Server que use, es posible que algunas func
 
 En general, la versión de Microsoft R que se instala al seleccionar la característica R Services o la característica Machine Learning Services viene determinada por el número de compilación de SQL Server. Si aplica una actualización o una revisión en SQL Server, deberá hacer lo propio también con sus componentes de R.
 
-Para obtener una lista de las versiones y vínculos a las descargas de componentes de R, vea [Instalación de componentes de Machine Learning en equipos sin acceso a Internet](/sql/machine-learning/install/sql-ml-component-install-without-internet-access). En los equipos con acceso a Internet, la versión de R que se necesita se identifica e instala automáticamente.
+Para obtener una lista de las versiones y vínculos a las descargas de componentes de R, vea [Instalación de componentes de Machine Learning en equipos sin acceso a Internet](../install/sql-ml-component-install-without-internet-access.md). En los equipos con acceso a Internet, la versión de R que se necesita se identifica e instala automáticamente.
 
 Los componentes de R Server se pueden actualizar de forma independiente del motor de base de datos de SQL Server, en un proceso conocido como enlace. Por lo tanto, la versión de R que use al ejecutar el código de R en SQL Server podría variar en función de la versión instalada de SQL Server y, también, de si migró el servidor a la versión más reciente de R.
 

@@ -9,16 +9,16 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 01e6cd577892a1d6738afdc1fdf3b2518a23a5f3
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 794c7be56eaa0591d120b4fea40a725fdeecaac1
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914409"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358113"
 ---
 # <a name="azdata-sql"></a>sql de azdata
 
-Se aplica a `azdata`
+Se aplica a [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
 En el siguiente artículo se proporciona una referencia de los comandos **sql** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md).
 

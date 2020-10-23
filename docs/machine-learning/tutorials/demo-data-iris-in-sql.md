@@ -11,12 +11,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e5a1f9c36b6dc59988951a693be05b4e10e580f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22695214f9f3b375d285a8b3bb03bc1471535b17
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495008"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192382"
 ---
 # <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>Datos de demostración de Iris para tutoriales de Python y R con aprendizaje automático de SQL Server
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -130,7 +130,7 @@ Puede obtener datos de iris integrados desde R o Python. Puede usar Python o R p
     EXEC dbo.get_iris_dataset;
     ```
 
-    Si no está familiarizado con T-SQL, tenga en cuenta que la instrucción INSERT solo agrega nuevos datos, pero no comprueba si hay datos existentes ni elimina y vuelve a recompilar la tabla. Para que no se hagan varias copias de los mismos datos en una tabla, puede ejecutar esta instrucción primero: `TRUNCATE TABLE iris_data`. Con la instrucción [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) de T-SQL se eliminan los datos existentes, pero se mantiene intacta la estructura de la tabla.
+    Si no está familiarizado con T-SQL, tenga en cuenta que la instrucción INSERT solo agrega nuevos datos, pero no comprueba si hay datos existentes ni elimina y vuelve a recompilar la tabla. Para que no se hagan varias copias de los mismos datos en una tabla, puede ejecutar esta instrucción primero: `TRUNCATE TABLE iris_data`. Con la instrucción [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md) de T-SQL se eliminan los datos existentes, pero se mantiene intacta la estructura de la tabla.
 
 ## <a name="query-the-data"></a>Consultar los datos
 

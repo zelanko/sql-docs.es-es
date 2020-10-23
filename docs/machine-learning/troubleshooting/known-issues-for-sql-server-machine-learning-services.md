@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e756203bb9eba1ec4646ff3e40686cd3838a0dbf
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: c0089390202f6bebfc0ecce8b41b70adee7348c6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059563"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196352"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Problemas conocidos de SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -136,7 +136,7 @@ Al ejecutar el código de R en un contexto de proceso de SQL Server 2016, es p
 Este mensaje se muestra si alguna de las dos indicaciones siguientes es verdadera:
 
 + Ha instalado R Server (independiente) en un equipo cliente mediante el asistente para la instalación de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-+ Ha instalado Microsoft R Server mediante el [instalador de Windows independiente](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
++ Ha instalado Microsoft R Server mediante el [instalador de Windows independiente](/machine-learning-server/install/r-server-install-windows).
 
 Para asegurarse de que el servidor y el cliente usan la misma versión, es posible que tenga que usar un _enlace_, compatible con Microsoft R Server 9.0 y versiones posteriores, para actualizar los componentes de R en instancias de SQL Server 2016. Para determinar si la compatibilidad con las actualizaciones está disponible para su versión de R Services, consulte [Actualización de una instancia de R Services con SqlBindR.exe](../install/upgrade-r-and-python.md).
 
@@ -254,7 +254,7 @@ Puede usar una de las siguientes opciones:
 
 ### <a name="15-installation-or-upgrade-error-on-fips-enabled-servers"></a>15. Error de instalación o actualización en los servidores habilitados para FIPS
 
-Si instala SQL Server 2019 con la característica **Machine Learning Services y extensiones de lenguaje** o actualiza la instancia de SQL Server en un servidor habilitado para el [estándar federal de procesamiento de información (FIPS)](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing), recibirá el siguiente error:
+Si instala SQL Server 2019 con la característica **Machine Learning Services y extensiones de lenguaje** o actualiza la instancia de SQL Server en un servidor habilitado para el [estándar federal de procesamiento de información (FIPS)](/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing), recibirá el siguiente error:
 
 > *Error al instalar la característica de extensibilidad con el siguiente mensaje de error: AppContainer Creation Failed with error message NONE, state This implementation is not part of the Windows Platform FIPS validated cryptographic algorithms.* (No se pudo crear AppContainer con el mensaje de error: NINGUNO; estado: Esta implementación no forma parte de los algoritmos criptográficos validados por Windows Platform FIPS).
 
@@ -268,7 +268,7 @@ Deshabilite FIPS antes de instalar SQL Server 2019 con la característica **Mi
 
 En esta sección se incluyen problemas conocidos que son específicos de la ejecución de R en SQL Server, así como algunos problemas relacionados con las bibliotecas y herramientas de R publicadas por Microsoft, incluida RevoScaleR.
 
-Para consultar otros problemas conocidos que pueden afectar a las soluciones de R, vea el sitio de [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues).
+Para consultar otros problemas conocidos que pueden afectar a las soluciones de R, vea el sitio de [Machine Learning Server](/machine-learning-server/resources-known-issues).
 
 ### <a name="1-access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>1. Advertencia de acceso denegado al ejecutar scripts de R en SQL Server en una ubicación no predeterminada
 
@@ -288,7 +288,7 @@ Al pasar un modelo con un formato serializado a una instancia de SQL Server rem
 
 > *Error in memDecompress(data, type = decompress) internal error -3 in memDecompress(2).* [Error en memDecompress(data, type = decompress); error interno -3 en memDecompress(2)].
 
-Este error se produce si ha guardado el modelo con una versión reciente de la función de serialización [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel), pero la instancia de SQL Server donde se deserializa el modelo tiene una versión anterior de las API de RevoScaleR, de SQL Server 2017 CU2 o versiones anteriores.
+Este error se produce si ha guardado el modelo con una versión reciente de la función de serialización [rxSerializeModel](/machine-learning-server/r-reference/revoscaler/rxserializemodel), pero la instancia de SQL Server donde se deserializa el modelo tiene una versión anterior de las API de RevoScaleR, de SQL Server 2017 CU2 o versiones anteriores.
 
 Como solución alternativa, puede actualizar la instancia de SQL Server 2017 a CU3 o una versión posterior.
 
@@ -300,7 +300,7 @@ En otras palabras, use la misma versión de RevoScaleR para las operaciones de s
 
 Si crea un modelo mediante un método de árbol de decisión o de bosque de decisión y especifica la velocidad de aprendizaje, podría ver resultados incoherentes al usar `sp_rxpredict` o la función `PREDICT` de SQL, en comparación con el uso de `rxPredict`.
 
-La causa es un error en la API que procesa modelos serializados y se limita al parámetro `learningRate`: por ejemplo, en [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees).
+La causa es un error en la API que procesa modelos serializados y se limita al parámetro `learningRate`: por ejemplo, en [rxBTrees](/machine-learning-server/r-reference/revoscaler/rxbtrees).
 
 Este problema se soluciona en una próxima versión de servicio.
 
@@ -396,7 +396,7 @@ Para enviar datos de cadena no ASCII de [!INCLUDE[ssNoVersion](../../includes/ss
 
 Cuando se devuelve desde R un tipo de datos binarios (el tipo de datos **raw** de R), el valor debe enviarse en la trama de datos de salida.
 
-Con tipos de datos que no sean **raw**, puede devolver valores de parámetro con los resultados del procedimiento almacenado si agrega la palabra clave OUTPUT. Para obtener más información, vea [Parámetros](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters).
+Con tipos de datos que no sean **raw**, puede devolver valores de parámetro con los resultados del procedimiento almacenado si agrega la palabra clave OUTPUT. Para obtener más información, vea [Parámetros](../../relational-databases/stored-procedures/parameters.md).
 
 Si quiere usar varios conjuntos de salida que incluyan valores de tipo **raw**, una posible solución alternativa es realizar varias llamadas del procedimiento almacenado o enviar los conjuntos de resultados a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante ODBC.
 
@@ -544,7 +544,7 @@ Si ejecuta un script de R con `sp_execute_external_script` se permiten los tipos
 
 ## <a name="python-script-execution-issues"></a>Problemas con la ejecución del script de Python
 
-En esta sección se incluyen problemas conocidos que son específicos de la ejecución de Python en SQL Server, así como algunos problemas relacionados con los paquetes de Python publicados por Microsoft, incluidos [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) y [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
+En esta sección se incluyen problemas conocidos que son específicos de la ejecución de Python en SQL Server, así como algunos problemas relacionados con los paquetes de Python publicados por Microsoft, incluidos [revoscalepy](/r-server/python-reference/revoscalepy/revoscalepy-package) y [microsoftml](/r-server/python-reference/microsoftml/microsoftml-package).
 
 ### <a name="1-call-to-pretrained-model-fails-if-path-to-model-is-too-long"></a>1. Se produce un error en la llamada a un modelo entrenado previamente si la ruta de acceso al modelo es demasiado larga
 
@@ -554,12 +554,12 @@ Hay varias soluciones posibles:
 
 + Al instalar los modelos entrenados previamente, elija una ubicación personalizada.
 + Si es posible, instale la instancia de SQL Server en una ruta de instalación personalizada con una ruta de acceso más corta, como C:\SQL\MSSQL14.MSSQLSERVER.
-+ Use la utilidad de Windows [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) para crear un vínculo físico que asigne el archivo de modelo a una ruta de acceso más corta.
++ Use la utilidad de Windows [Fsutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc788097(v=ws.11)) para crear un vínculo físico que asigne el archivo de modelo a una ruta de acceso más corta.
 + Actualice a la versión de servicio más reciente.
 
 ### <a name="2-error-when-saving-serialized-model-to-sql-server"></a>2. Error al guardar el modelo serializado en SQL Server
 
-Al pasar un modelo a una instancia de SQL Server remota e intentar leer el modelo binario con la función `rx_unserialize` en [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), puede obtener el error: 
+Al pasar un modelo a una instancia de SQL Server remota e intentar leer el modelo binario con la función `rx_unserialize` en [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), puede obtener el error: 
 
 > *NameError: name 'rx_unserialize_model' is not defined* (NameError: no se ha definido el nombre "rx_unserialize_model")
 

@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 98c7f5b8c7cc634212769f910152322a94054d66
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 18cd0c279493dcb41d043d3f76d6debe71eb402c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178562"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194486"
 ---
 # <a name="python-tutorial-train-and-save-a-python-model-using-t-sql"></a>Tutorial de Python: Entrenar y guardar un modelo de Python mediante T-SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -145,7 +145,7 @@ Para que sea más fácil volver a entrenar el modelo según los nuevos datos, aj
 
 Este procedimiento almacenado usa el nuevo paquete **revoscalepy**, que es un nuevo paquete de Python. Contiene objetos, transformaciones y algoritmos similares a los proporcionados para el paquete **RevoScaleR** del lenguaje R. 
 
-Al usar **revoscalepy**, puede crear contextos de proceso remotos, trasladar datos entre contextos de proceso, transformar datos y entrenar modelos predictivos mediante algoritmos populares, como regresión logística y lineal, árboles de decisión, etc. Para más información, vea [Módulo revoscalepy en SQL Server](../python/ref-py-revoscalepy.md) y [Referencia de funciones de revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
+Al usar **revoscalepy**, puede crear contextos de proceso remotos, trasladar datos entre contextos de proceso, transformar datos y entrenar modelos predictivos mediante algoritmos populares, como regresión logística y lineal, árboles de decisión, etc. Para más información, vea [Módulo revoscalepy en SQL Server](../python/ref-py-revoscalepy.md) y [Referencia de funciones de revoscalepy](/r-server/python-reference/revoscalepy/revoscalepy-package).
 
 1. En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra una nueva ventana **Consulta** y ejecute esta instrucción para crear el procedimiento almacenado _TrainTipPredictionModelRxPy_.  Como el procedimiento almacenado ya incluye una definición de los datos de entrada, no es necesario proporcionar una consulta de entrada.
 

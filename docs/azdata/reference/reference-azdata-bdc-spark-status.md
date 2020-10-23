@@ -9,16 +9,16 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da13babdf51bc1b4f7e1afa297e7712994932c64
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 886057d9ced9b00b6b1c11f01464f0eb268fcabd
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914570"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358414"
 ---
 # <a name="azdata-bdc-spark-status"></a>azdata bdc spark status
 
-Se aplica a `azdata`
+Se aplica a [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
 En el siguiente artículo se proporciona una referencia de los comandos **sql** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md).
 

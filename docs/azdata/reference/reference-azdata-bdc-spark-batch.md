@@ -9,16 +9,16 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c997c7886d04971fc9ee373cbf8675235b2391ee
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 74968c1efd64ecc382b7a0ab9669a983bb442ef7
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866857"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358512"
 ---
 # <a name="azdata-bdc-spark-batch"></a>azdata bdc spark batch
 
-Se aplica a `azdata`
+Se aplica a [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
 En el siguiente artículo se proporciona una referencia de los comandos **sql** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md).
 

@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: da92713dbf514e2500d0d5f8eb3e776523830041
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 1d83caf3f80369da449175fca78a47677e10e861
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891355"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098814"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Asignaciones de tipos de datos entre Python y SQL Server
-[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 En este artículo se enumeran los tipos de datos admitidos y las conversiones de tipos de datos que se realizan cuando se usa la característica de integración de Python en SQL Server Machine Learning Services.
 

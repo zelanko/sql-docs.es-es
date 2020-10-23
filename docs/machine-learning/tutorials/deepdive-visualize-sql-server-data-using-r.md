@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 23f3eb157a76a9a197cf0f15a72ae0e51f7cf13b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5d38c5de712b5e2f770f0129d6657cd330921608
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180392"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196277"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualizar datos de SQL Server mediante R (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Este es el tutorial 6 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Este es el tutorial 6 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
 En este tutorial, usará funciones de R para ver la distribución de valores de la columna *creditLine* por género.
 
@@ -84,13 +84,13 @@ En este momento, las modificaciones solo afectan al objeto de origen de datos en
 
 ## <a name="visualize-data-using-rxhistogram"></a>Visualización de los datos mediante rxHistogram
 
-1. Use el siguiente código de R para llamar a la función [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) y pasar una fórmula y un origen de datos. Puede ejecutar esto localmente en primer lugar para ver los resultados esperados y cuánto tarda.
+1. Use el siguiente código de R para llamar a la función [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) y pasar una fórmula y un origen de datos. Puede ejecutar esto localmente en primer lugar para ver los resultados esperados y cuánto tarda.
   
     ```R
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-    De manera interna, **rxHistogram** llama a la función [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) , que se incluye en el paquete **RevoScaleR** . **rxCube** genera una única lista (o trama de datos) que contiene una columna para cada variable que se ha especificado en la fórmula, además de una columna de recuentos.
+    De manera interna, **rxHistogram** llama a la función [rxCube](/machine-learning-server/r-reference/revoscaler/rxcube) , que se incluye en el paquete **RevoScaleR** . **rxCube** genera una única lista (o trama de datos) que contiene una columna para cada variable que se ha especificado en la fórmula, además de una columna de recuentos.
     
 2. Ahora, establezca el contexto de proceso en el equipo remoto de SQL Server y ejecute **rxHistogram** de nuevo.
   
@@ -108,7 +108,7 @@ En este momento, las modificaciones solo afectan al objeto de origen de datos en
 
 Los gráficos de dispersión se suelen usar durante la exploración de datos para comparar la relación entre dos variables. Puede usar paquetes de R integrados con este fin; las funciones de **RevoScaleR** proporcionarán las entradas.
 
-1. Llame a la función [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) para calcular la media de *fraudRisk* de cada combinación de *numTrans* y *numIntlTrans*:
+1. Llame a la función [rxCube](/machine-learning-server/r-reference/revoscaler/rxcrosstabs) para calcular la media de *fraudRisk* de cada combinación de *numTrans* y *numIntlTrans*:
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
@@ -118,7 +118,7 @@ Los gráficos de dispersión se suelen usar durante la exploración de datos par
   
     El valor devuelto predeterminado de **rxCube** es un *objeto rxCube* que representa una tabulación cruzada. 
   
-2. Llame a la función [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) para convertir los resultados en una trama de datos que pueda usarse fácilmente en una de las funciones de trazado estándar de R.
+2. Llame a la función [rxResultsDF](/machine-learning-server/r-reference/revoscaler/rxresultsdf) para convertir los resultados en una trama de datos que pueda usarse fácilmente en una de las funciones de trazado estándar de R.
   
     ```R
     cubePlot <- rxResultsDF(cube1)
@@ -142,7 +142,7 @@ Los gráficos de dispersión se suelen usar durante la exploración de datos par
   
 En este análisis rápido puede ver que aumenta el riesgo de fraude tanto en el número de transacciones como en el número de transacciones internacionales.
 
-Para más información sobre la función **rxCube** y las referencias cruzadas, vea [Resúmenes de datos mediante RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
+Para más información sobre la función **rxCube** y las referencias cruzadas, vea [Resúmenes de datos mediante RevoScaleR](/machine-learning-server/r/how-to-revoscaler-data-summaries).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

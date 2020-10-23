@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
-ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
+ms.openlocfilehash: 0437880dbcf3bef50184daa9e52f8eba2a7e31b4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89875564"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257185"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Realización de una implementación sin conexión de un clúster de macrodatos de SQL Server
 
@@ -77,7 +77,6 @@ Las siguientes imágenes de contenedor de clúster de macrodatos son necesarias 
 - **mssql-monitor-influxdb**
 - **mssql-monitor-kibana**
 - **mssql-monitor-telegraf**
-- **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
 - **mssql-server-controller**
@@ -121,7 +120,7 @@ Puede usar un script de Python automatizado que extraiga automáticamente todas 
 
 ## <a name="install-tools-offline"></a>Instalación de herramientas sin conexión
 
-Las implementaciones de clústeres de macrodatos requieren varias herramientas, como **Python**, `azdata` y **kubectl**. Siga estos pasos para instalar estas herramientas en un servidor sin conexión.
+Las implementaciones de clústeres de macrodatos requieren varias herramientas, como **Python**, [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] y **kubectl**. Siga estos pasos para instalar estas herramientas en un servidor sin conexión.
 
 ### <a name="install-python-offline"></a><a id="python"></a> Instalación de Python sin conexión
 
@@ -143,7 +142,7 @@ Las implementaciones de clústeres de macrodatos requieren varias herramientas, 
 
 ### <a name="install-azdata-offline"></a><a id="azdata"></a> Instalación de azdata sin conexión
 
-1. En una máquina con acceso a Internet y [Python](https://wiki.python.org/moin/BeginnersGuide/Download), ejecute el comando siguiente para descargar todos los paquetes `azdata` en la carpeta actual.
+1. En una máquina con acceso a Internet y [Python](https://wiki.python.org/moin/BeginnersGuide/Download), ejecute el comando siguiente para descargar todos los paquetes [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] en la carpeta actual.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
@@ -167,7 +166,7 @@ Para instalar **kubectl** en un equipo sin conexión, siga estos pasos.
 
 ## <a name="deploy-from-private-repository"></a>Implementación desde un repositorio privado
 
-Para implementar desde el repositorio privado, siga los pasos de la [guía de implementación](deployment-guidance.md), pero use un archivo de configuración de implementación personalizado que especifique la información del repositorio privado de Docker. Los siguientes comandos de `azdata` muestran cómo cambiar la configuración de Docker de un archivo de configuración de la implementación personalizado denominado `control.json`:
+Para implementar desde el repositorio privado, siga los pasos de la [guía de implementación](deployment-guidance.md), pero use un archivo de configuración de implementación personalizado que especifique la información del repositorio privado de Docker. Los siguientes comandos de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] muestran cómo cambiar la configuración de Docker de un archivo de configuración de la implementación personalizado denominado `control.json`:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"

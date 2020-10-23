@@ -1,4 +1,5 @@
 ---
+description: Propiedad de versión (WMI MSReportServer_ConfigurationSetting)
 title: Propiedad Version (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 60c7c5b3e49dff88ff6f55c3f97052c7ae38ef92
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 97625bae09124de613728dcbde0a50adb3959e27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92255832"
 ---
 # <a name="configurationsetting-property---version"></a>Propiedad ConfigurationSetting - Version
   Devuelve la versión del servidor de informes en formato Major.Minor.Build.Revision. Solo lectura.  
@@ -30,7 +31,7 @@ Public Dim Version As String
 public string Version;  
 ```  
   
-## <a name="property-value"></a>Valor de la propiedad  
+## <a name="property-value"></a>Valor de propiedad  
  **string** que contiene la versión del servidor de informes.  
   
 ## <a name="example-code"></a>Código de ejemplo  
@@ -40,6 +41,6 @@ public string Version;
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
- [Miembros MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+ [Miembros de MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

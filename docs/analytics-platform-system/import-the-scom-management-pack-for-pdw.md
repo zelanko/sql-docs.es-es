@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 770359a9ddb04eb8aaf45af7dd5b95447c30f264
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401083"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523872"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importar el módulo de administración de SCOM-Analytics Platform System
 Siga estos pasos para importar los módulos de administración de System Center Operations Manager (SCOM) para Analytics Platform System (APS). Los módulos de administración son necesarios para supervisar el almacenamiento de datos paralelos de SCOM. 
@@ -50,7 +50,7 @@ Los módulos de administración deben estar instalados. Consulte [instalación d
   
 7.  Haga clic en **Instalar**.  
   
-    ![Haga clic en instalar](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
+    ![Captura de pantalla que muestra el Asistente para importar módulos de administración en el paso seleccionar módulos de administración con la opción de instalación en un círculo rojo.](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
 8.  Cuando haya terminado, haga clic en **cerrar**.  
   
@@ -70,7 +70,7 @@ Los módulos de administración deben estar instalados. Consulte [instalación d
   
 4.  Haga clic en **Instalar**.  
   
-    ![Haga clic en instalar](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
+    ![Otra captura de pantalla del Asistente para importar módulos de administración en el paso seleccionar módulos de administración con la opción de instalación en un círculo rojo.](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
 5.  Haga clic en **Cerrar**.  
   

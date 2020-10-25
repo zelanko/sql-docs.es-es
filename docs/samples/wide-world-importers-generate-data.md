@@ -1,7 +1,7 @@
 ---
 title: Generar datos en ejemplos de SQL WideWorldImporters
 description: Use estas instrucciones SQL para generar e importar datos de ejemplo hasta la fecha actual de las bases de datos de ejemplo WideWorldImporters.
-ms.date: 04/04/2018
+ms.date: 10/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 2936ac69cc4053e68fc92d2bb5c2cae95ac68673
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: f60ad250ea68f58a98fb93da9f3c5853ad68bd47
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942196"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523940"
 ---
 # <a name="wideworldimporters-data-generation"></a>Generación de datos de WideWorldImporters
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +39,12 @@ Para generar datos de ejemplo hasta la fecha actual:
             @AreDatesPrinted = 1;
     ```
 
-    Esta instrucción agrega datos de ventas y compra de ejemplo a la base de datos hasta la fecha actual. Muestra el progreso de la generación de datos por día. La generación de datos puede tardar unos 10 minutos para cada año que necesite datos. Debido a un factor aleatorio en la generación de datos, existen algunas diferencias en los datos que se generan entre ejecuciones.
+    Esta instrucción agrega datos de ventas y compra de ejemplo a la base de datos hasta la fecha actual. Muestra el progreso de la generación de datos por día. Debido a un factor aleatorio en la generación de datos, existen algunas diferencias en los datos que se generan entre ejecuciones.
 
     Para aumentar o disminuir la cantidad de datos generados para pedidos por día, cambie el valor del parámetro `@AverageNumberOfCustomerOrdersPerDay` . Use los parámetros `@SaturdayPercentageOfNormalWorkDay` y `@SundayPercentageOfNormalWorkDay` para determinar el volumen de los días del fin de semana.
+
+> [!TIP]
+> Forzar la [durabilidad diferida](../relational-databases/logs/control-transaction-durability.md) en la base de datos puede mejorar la velocidad de generación de datos, especialmente cuando el registro de transacciones de la base de datos se encuentra en un subsistema de almacenamiento de latencia alta. Tenga en cuenta las posibles implicaciones de [pérdida de datos](../relational-databases/logs/control-transaction-durability.md#bkmk_DataLoss) al usar la durabilidad diferida y considere la posibilidad de habilitar la durabilidad diferida para la duración de la generación de datos.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>Importar datos generados en WideWorldImportersDW
 

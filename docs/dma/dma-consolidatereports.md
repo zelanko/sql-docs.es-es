@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 03ea9cc4d6b7842739f4431fea2e9a418e0f3f9e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727806"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523922"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluación de una empresa y consolidación de informes de evaluación con DMA.
 
@@ -96,7 +96,7 @@ Cree una base de datos denominada **EstateInventory** y una tabla denominada **D
 - DatabaseName
 - AssessmentFlag
 
-![SQL Server el contenido de la tabla](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
+![Captura de pantalla de un SQL Server contenido de la tabla si utiliza una tabla de SQL Server.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 Si esta base de datos no se encuentra en el equipo de herramientas, asegúrese de que el equipo de herramientas tenga conectividad de red a esta instancia de SQL Server.
 
@@ -110,10 +110,10 @@ Cree una base de datos denominada **EstateInventory** y una tabla denominada **I
 
 - nombreDeServidor
 - InstanceName
-- Port
+- Puerto
 - AssessmentFlag
 
-![SQL Server el contenido de la tabla](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+![Captura de pantalla de un SQL Server contenido de la tabla si se usa un inventario de instancia.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
 
 ## <a name="running-a-scaled-assessment"></a>Ejecución de una evaluación escalada
 
@@ -274,7 +274,7 @@ Esta sección es la parte principal del informe, que muestra la preparación de 
 
 - InstanceDatabase
 - ChangeCategory
-- Título
+- Title
 - ObjectType
 - ImpactedObjectName
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9d764f4f2e56137dc89f346c6235d0978ef82a9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8c283777fea2999d7948a3282b623cd92f0baf54
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542126"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907391"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Vistas de esquema de información del sistema (Transact-SQL)
 
@@ -42,7 +42,7 @@ Una vista de esquema de información es uno de los diversos métodos que proporc
 |Base de datos|Catálogo|
 |Schema|Schema|
 |Object|Object|
-|tipo de datos definido por el usuario|Domain|
+|tipo de datos definido por el usuario|Dominio|
 
 Esta asignación entre convenciones de nomenclaturas se aplica a las siguientes vistas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibles con ISO.
 
@@ -100,6 +100,12 @@ SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
+
+## <a name="permissions"></a>Permisos  
+La visibilidad de los metadatos en las vistas de esquema de información se limita a los elementos protegibles a los que pertenece un usuario o en los que el usuario tiene algún permiso. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+
+> [!NOTE]  
+> Las vistas de esquema de información se definen en todo el servidor y, por lo tanto, no se pueden denegar en el contexto de una base de datos de usuario. Para REVOCAr o denegar el acceso (SELECT), debe usarse la base de datos maestra. De forma predeterminada, el rol Public tiene permiso SELECT en todas las vistas de esquema de información, pero el contenido está limitado a las reglas de visibilidad de los metadatos.
 
 ## <a name="see-also"></a>Consulte también
 

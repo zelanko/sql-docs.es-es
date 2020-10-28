@@ -47,12 +47,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7d731d320c51b70bf73ea76361f9dba283ea38c
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 7cae0c24080a5905cc5ed249c8c3be431bf96f78
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024494"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300315"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 
@@ -194,12 +194,12 @@ ALTER INDEX { index_name | ALL }
 |REORGANIZE PARTITION = *partition_number*|Índice sin particiones, índice XML, índice espacial o índice deshabilitado|  
 |IGNORE_DUP_KEY = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice de almacén de columnas: **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |ONLINE = ON|Índice XML<br /><br /> Índice espacial<br /><br /> Índice de almacén de columnas: **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|RESUMABLE = ON| Índices reanudables no compatibles con la palabra clave **All**. <br /><br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |   
+|RESUMABLE = ON| Índices reanudables no compatibles con la palabra clave **All** . <br /><br /> **Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |   
   
 > [!WARNING]
 > Para saber más sobre las operaciones de índices que pueden realizarse en línea, vea [Directrices para operaciones de índices en línea](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
 
- Si se especifica ALL con PARTITION = *partition_number*, es necesario alinear todos los índices. Esto significa que se crean particiones basadas en las funciones de partición equivalentes. Si se utiliza ALL con PARTITION, todas las particiones de índice con el mismo parámetro *partition_number* se vuelven a generar u organizar. Para obtener más información acerca de los índices con particiones, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Si se especifica ALL con PARTITION = *partition_number* , es necesario alinear todos los índices. Esto significa que se crean particiones basadas en las funciones de partición equivalentes. Si se utiliza ALL con PARTITION, todas las particiones de índice con el mismo parámetro *partition_number* se vuelven a generar u organizar. Para obtener más información acerca de los índices con particiones, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  *database_name*  
  Es el nombre de la base de datos.  
@@ -212,11 +212,11 @@ ALTER INDEX { index_name | ALL }
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] admite el formato de nombre de tres partes database_name.[schema_name].table_or_view_name, donde database_name es la base de datos actual o database_name es tempdb y table_or_view_name empieza por #.  
   
- REBUILD [ WITH **(** \<rebuild_index_option> [ **,** ... *n*] **)** ]  
+ REBUILD [ WITH **(** \<rebuild_index_option> [ **,** ... *n* ] **)** ]  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
-Especifica que el índice se volverá a generar con unas columnas, un tipo de índice, un atributo de unicidad y un criterio de ordenación idénticos. Esta cláusula es equivalente a [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). REBUILD habilita un índice deshabilitado. Cuando se regenera un índice clúster, no se vuelven a generar los índices no clúster asociados, a menos que se especifique la palabra clave ALL. Si no se especifican las opciones de índice, se aplican los valores de las opciones de índice existentes que hay almacenados en [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md). Para las opciones de índice cuyos valores no estén almacenados en **sys.indexes**, se aplica el valor predeterminado indicado en la definición del argumento de la opción.  
+Especifica que el índice se volverá a generar con unas columnas, un tipo de índice, un atributo de unicidad y un criterio de ordenación idénticos. Esta cláusula es equivalente a [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). REBUILD habilita un índice deshabilitado. Cuando se regenera un índice clúster, no se vuelven a generar los índices no clúster asociados, a menos que se especifique la palabra clave ALL. Si no se especifican las opciones de índice, se aplican los valores de las opciones de índice existentes que hay almacenados en [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md). Para las opciones de índice cuyos valores no estén almacenados en **sys.indexes** , se aplica el valor predeterminado indicado en la definición del argumento de la opción.  
   
  Si se especifica ALL y la tabla base es un montón, la operación de regeneración no tiene ningún efecto sobre la tabla. Se regeneran los índices no clúster asociados a la tabla.  
   
@@ -235,7 +235,7 @@ Para obtener más información, vea [Reorganizar y volver a generar índices](..
   
 PARTITION  
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Especifica que solamente se va a volver a generar o a reorganizar una partición de un índice. No es posible especificar PARTITION si *index_name* no es un índice con particiones.  
   
@@ -246,15 +246,15 @@ PARTITION
   
  *partition_number*  
    
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Es el número de partición de un índice con particiones que se va a volver a generar o a reorganizar. *partition_number* es una expresión constante que puede hacer referencia a variables. Estas incluyen variables o funciones de tipo definido por el usuario y funciones definidas por el usuario, pero no pueden hacer referencia a una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *partition_number* debe existir; de lo contrario, se producirá un error en la instrucción.  
   
  WITH **(** \<single_partition_rebuild_index_option> **)**  
    
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- `SORT_IN_TEMPDB`, `MAXDOP` y `DATA_COMPRESSION` son las opciones que se pueden especificar cuando se vuelve a generar una partición única (PARTITION = *partition_number*). No es posible especificar índices XML en una operación para volver a generar una partición única.  
+ `SORT_IN_TEMPDB`, `MAXDOP` y `DATA_COMPRESSION` son las opciones que se pueden especificar cuando se vuelve a generar una partición única (PARTITION = *partition_number* ). No es posible especificar índices XML en una operación para volver a generar una partición única.  
   
  DISABLE  
  Marca el índice como deshabilitado y no disponible para el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cualquier índice puede estar deshabilitado. La definición de índice de un índice deshabilitado se conserva en el catálogo del sistema sin datos del índice subyacente. La deshabilitación de un índice clúster evita que los usuarios obtengan acceso a los datos de la tabla subyacente. Para habilitar un índice, utilice ALTER INDEX REBUILD o CREATE INDEX WITH DROP_EXISTING. Para más información, vea [Habilitar índices y restricciones](../../relational-databases/indexes/disable-indexes-and-constraints.md) y [Deshabilitar índices y restricciones](../../relational-databases/indexes/enable-indexes-and-constraints.md).  
@@ -313,44 +313,44 @@ COMPRESS_ALL_ROW_GROUPS ofrece una manera de forzar a los grupos de filas delta 
 
 Para obtener más información, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
 
-SET **(** \<set_index option> [ **,** ... *n*] **)**  
+SET **(** \<set_index option> [ **,** ... *n* ] **)**  
  Especifica las opciones del índice sin volver a generar ni organizar el índice. No es posible especificar SET para un índice deshabilitado.  
   
 PAD_INDEX = { ON | OFF }  
    
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
 
  Especifica el relleno del índice. El valor predeterminado es OFF.  
   
  ACTIVAR  
  El porcentaje de espacio disponible especificado por FILLFACTOR se aplica a páginas de nivel intermedio del índice. Si no se especifica FILLFACTOR al mismo tiempo que PAD_INDEX se establece en ON, se usa el valor de factor de relleno almacenado en [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
- No se especifica OFF ni *fillfactor*.  
+ No se especifica OFF ni *fillfactor* .  
  Las páginas de nivel intermedio se rellenan casi al máximo. Esto deja suficiente espacio para al menos una fila del tamaño máximo que puede tener el índice, según el conjunto de claves de las páginas intermedias.  
   
  Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 FILLFACTOR = *fillfactor*  
  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ **Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Especifica un porcentaje que indica cuánto debe llenar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] el nivel hoja de cada página de índice durante la creación o modificación de los índices. *fillfactor* debe ser un valor entero comprendido entre 1 y 100. El valor predeterminado es 0. Los valores de fill factor 0 y 100 son idénticos.  
   
  Un valor FILLFACTOR explícito solo se aplica la primera vez que se crea o se vuelve a generar el índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] no mantiene dinámicamente el porcentaje especificado de espacio disponible de las páginas. Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
- Para ver el valor de factor de relleno, use **sys.indexes**.  
+ Para ver el valor de factor de relleno, use **sys.indexes** .  
   
 > [!IMPORTANT]
 > La creación o modificación de un índice clúster con un valor FILLFACTOR afecta a la cantidad de espacio de almacenamiento que ocupan los datos, dado que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] vuelve a distribuir los datos cuando crea el índice clúster.  
   
  SORT_IN_TEMPDB = { ON | **OFF** }  
  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- Especifica si los resultados de ordenación se almacenan en **tempdb**. El valor predeterminado es desactivado, excepto para la Hiperescala de Azure SQL Database. Para todas las operaciones de recompilación de índices en Hiperescala, SORT_IN_TEMPDB está siempre activado, independientemente de la opción especificada, a menos que se use la recompilación de índices reanudables.  
+ Especifica si los resultados de ordenación se almacenan en **tempdb** . El valor predeterminado es desactivado, excepto para la Hiperescala de Azure SQL Database. Para todas las operaciones de recompilación de índices en Hiperescala, SORT_IN_TEMPDB está siempre activado, independientemente de la opción especificada, a menos que se use la recompilación de índices reanudables.  
   
  ACTIVAR  
- Los resultados de ordenación intermedios utilizados para generar el índice se almacenan en **tempdb**. Si **tempdb** se encuentra en un conjunto de discos distinto al de la base de datos de usuario, se puede reducir el tiempo necesario para crear un índice. Sin embargo, esto aumenta la cantidad de espacio en disco utilizado durante la generación del índice.  
+ Los resultados de ordenación intermedios utilizados para generar el índice se almacenan en **tempdb** . Si **tempdb** se encuentra en un conjunto de discos distinto al de la base de datos de usuario, se puede reducir el tiempo necesario para crear un índice. Sin embargo, esto aumenta la cantidad de espacio en disco utilizado durante la generación del índice.  
   
  Apagado  
  Los resultados de orden intermedios se almacenan en la misma base de datos que el índice.  
@@ -390,9 +390,9 @@ FILLFACTOR = *fillfactor*
   
 STATISTICS_INCREMENTAL = { ON | **OFF** }  
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Cuando se establece en **ON**, se crean estadísticas por cada partición. Cuando se establece en **OFF**, se quita el árbol de estadísticas y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recalcula las estadísticas. El valor predeterminado es **OFF**.  
+Cuando se establece en **ON** , se crean estadísticas por cada partición. Cuando se establece en **OFF** , se quita el árbol de estadísticas y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recalcula las estadísticas. El valor predeterminado es **OFF** .  
   
  Si no se admiten las estadísticas por partición, la opción se omite y se genera una advertencia. Las estadísticas incrementales no se admiten para los siguientes tipos de estadísticas:  
   
@@ -425,14 +425,14 @@ Los índices, incluidos los índices de las tablas temp globales, se pueden volv
 - Índice de una tabla temporal local
 - Índice clúster único inicial en una vista
 - Índices de almacén de columnas
-- Índice clúster, si la tabla subyacente contiene tipos de datos LOB (**image**, **ntext**, **text**) y tipos de datos espaciales
-- Las columnas **varchar(max)** y **varbinary(max)** no pueden formar parte de un índice. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cuando una tabla contiene columnas **varchar(max)** o **varbinary(max)** , puede crearse o volver a crearse un índice agrupado que contiene otras columnas con la opción **ONLINE**. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] no permite la opción **ONLINE** cuando la tabla contiene columnas **varchar(max)** o **varbinary(max)**
+- Índice clúster, si la tabla subyacente contiene tipos de datos LOB ( **image** , **ntext** , **text** ) y tipos de datos espaciales
+- Las columnas **varchar(max)** y **varbinary(max)** no pueden formar parte de un índice. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cuando una tabla contiene columnas **varchar(max)** o **varbinary(max)** , puede crearse o volver a crearse un índice agrupado que contiene otras columnas con la opción **ONLINE** . [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] no permite la opción **ONLINE** cuando la tabla contiene columnas **varchar(max)** o **varbinary(max)**
 
 Para más información, vea [Cómo funcionan las operaciones de índice en línea](../../relational-databases/indexes/how-online-index-operations-work.md).
 
-RESUMABLE **=** { ON | **OFF**}
+RESUMABLE **=** { ON | **OFF** }
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 
  Especifica si una operación de índice en línea se puede reanudar.
 
@@ -440,9 +440,9 @@ RESUMABLE **=** { ON | **OFF**}
 
  OFF: la operación de índice no se puede reanudar.
 
-MAX_DURATION **=** *time* [**MINUTES**] se usa con **RESUMABLE = ON** (requiere **ONLINE = ON**).
+MAX_DURATION **=** *time* [ **MINUTES** ] se usa con **RESUMABLE = ON** (requiere **ONLINE = ON** ).
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Indica el tiempo (valor entero especificado en minutos) durante el cual se ejecuta una operación de índice en línea reanudable antes de ponerse en pausa. 
 
@@ -454,7 +454,7 @@ Indica el tiempo (valor entero especificado en minutos) durante el cual se ejecu
 
 ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Especifica si se permiten los bloqueos de fila. El valor predeterminado es ON.  
   
@@ -466,7 +466,7 @@ ALLOW_ROW_LOCKS **=** { **ON** | OFF }
   
 ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Especifica si se permiten bloqueos de página. El valor predeterminado es ON.  
   
@@ -481,13 +481,13 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
 
  OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica si se deben optimizar la contención de inserción de la última página. El valor predeterminado es OFF. Consulte la sección [Claves secuenciales](./create-index-transact-sql.md#sequential-keys) de la página CREATE INDEX para obtener más información.
 
  MAXDOP **=** max_degree_of_parallelism  
  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Reemplaza la opción de configuración de **max_degree_of_parallelism** mientras dure la operación de índice. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
@@ -508,7 +508,7 @@ Especifica si se deben optimizar la contención de inserción de la última pág
  Para obtener más información, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
-> Las operaciones de índices en paralelo no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Las operaciones de índices en paralelo no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }  
 
@@ -534,13 +534,13 @@ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }
   
  COLUMNSTORE  
    
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Solo se aplica a los índices de almacén de columnas, incluidos los clúster y no clúster. COLUMNSTORE especifica que se descomprima el índice o las particiones especificadas comprimidas con la opción COLUMNSTORE_ARCHIVE. Cuando se restablecen los datos, seguirán estando comprimidos con la compresión de almacén de columnas que se usa para todos los índices de almacén de columnas.  
   
  COLUMNSTORE_ARCHIVE  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Solo se aplica a los índices de almacén de columnas, incluidos los clúster y no clúster. COLUMNSTORE_ARCHIVE comprimirá aún más la partición especificada a un tamaño mínimo. Esto se puede usar para el archivado o para otras situaciones que requieran un tamaño de almacenamiento mínimo y pueda permitirse más tiempo para el almacenamiento y recuperación.  
   
@@ -548,7 +548,7 @@ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }
   
  ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...n] **)**  
     
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  Especifica las particiones a las que se aplica el valor DATA_COMPRESSION. Si el índice no tiene particiones, el argumento ON PARTITIONS generará un error. Si no se proporciona la cláusula ON PARTITIONS, la opción DATA_COMPRESSION se aplica a todas las particiones de un índice con particiones.  
   
@@ -572,7 +572,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 ```  
   
  ONLINE **=** { ON  | **OFF** } \<as applies to single_partition_rebuild_index_option>  
- Especifica si un índice o una partición de índice de una tabla subyacente se puede regenerar en línea o sin conexión. Si **REBUILD** se realiza en línea (**ON**), los datos de esta tabla están disponibles para las consultas y la modificación de datos durante la operación de índice.  El valor predeterminado es **OFF**.  
+ Especifica si un índice o una partición de índice de una tabla subyacente se puede regenerar en línea o sin conexión. Si **REBUILD** se realiza en línea ( **ON** ), los datos de esta tabla están disponibles para las consultas y la modificación de datos durante la operación de índice.  El valor predeterminado es **OFF** .  
   
  ACTIVAR  
  Los bloqueos de tabla de larga duración no se mantienen durante la operación de indización. Durante la fase principal de la operación de índice, solo se mantiene un bloqueo preventivo en la tabla de origen. Se necesita un bloqueo S en la tabla al inicio de la regeneración del índice y un bloqueo Sch-M en la tabla al final de la regeneración del índice en línea. Aunque ambos bloqueos son bloqueos de metadatos cortos, especialmente el bloqueo Sch-M debe esperar a que todas las transacciones de bloqueo se completen. Durante el tiempo de espera, bloqueo Sch-M bloquea las demás transacciones que esperen a este bloqueo al tener acceso a la misma tabla.  
@@ -583,21 +583,21 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  Apagado  
  Los bloqueos de tabla se aplican durante la operación de índice. Esto evita que todos los usuarios tengan acceso a la tabla subyacente durante la operación.  
   
- WAIT_AT_LOW_PRIORITY solo se usa con **ONLINE=ON**.  
+ WAIT_AT_LOW_PRIORITY solo se usa con **ONLINE=ON** .  
  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Una recompilación de índices en línea tiene que esperar a las operaciones de bloqueo en esta tabla. **WAIT_AT_LOW_PRIORITY** indica que la operación de regeneración de índice en línea esperará a los bloqueos de prioridad baja, de forma que otras operaciones podrán continuar mientras la operación de generación de índice en línea está en espera. La omisión de la opción **WAIT AT LOW PRIORITY** equivale a WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutos, ABORT_AFTER_WAIT = NONE). Para más información, vea [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
   
- MAX_DURATION = *time* [**MINUTES**]  
+ MAX_DURATION = *time* [ **MINUTES** ]  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
- El tiempo de espera (valor entero especificado en minutos) que esperarán con prioridad baja los bloqueos de la operación de recompilación de índices en línea cuando se ejecuta el comando DDL. Si la operación se bloquea durante el tiempo de **MAX_DURATION**, se ejecutará una de las acciones **ABORT_AFTER_WAIT**. El tiempo de **MAX_DURATION** siempre es en minutos y la palabra **MINUTES** puede omitirse.  
+ El tiempo de espera (valor entero especificado en minutos) que esperarán con prioridad baja los bloqueos de la operación de recompilación de índices en línea cuando se ejecuta el comando DDL. Si la operación se bloquea durante el tiempo de **MAX_DURATION** , se ejecutará una de las acciones **ABORT_AFTER_WAIT** . El tiempo de **MAX_DURATION** siempre es en minutos y la palabra **MINUTES** puede omitirse.  
  
- ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
+ ABORT_AFTER_WAIT = [ **NONE** | **SELF** | **BLOCKERS** } ]  
    
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Ninguno  
  Se continúa esperando al bloqueo con prioridad normal.  
@@ -606,35 +606,35 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  Cierra la operación DDL de regeneración del índice en línea que se está ejecutando actualmente sin realizar ninguna acción.  
   
  BLOCKERS  
- Elimine todas las transacciones de usuario que bloqueen la operación DDL de regeneración de índice en línea de forma que la operación pueda continuar. Para la opción **BLOCKERS**, es necesario que el inicio de sesión tenga el permiso **ALTER ANY CONNECTION**.  
+ Elimine todas las transacciones de usuario que bloqueen la operación DDL de regeneración de índice en línea de forma que la operación pueda continuar. Para la opción **BLOCKERS** , es necesario que el inicio de sesión tenga el permiso **ALTER ANY CONNECTION** .  
  
  RESUME 
  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
 
 Reanudar una operación de índice que se haya pausado manualmente o debido a un error.
 
 MAX_DURATION se usa con **RESUMABLE=ON**
  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 El tiempo (valor entero especificado en minutos) durante el cual se ejecuta la operación de índice en línea reanudable después de reanudarse. Cuando este tiempo expira, se pone en pausa la operación reanudable si todavía se está ejecutando.
 
-WAIT_AT_LOW_PRIORITY se usa con **RESUMABLE=ON** y **ONLINE = ON**.  
+WAIT_AT_LOW_PRIORITY se usa con **RESUMABLE=ON** y **ONLINE = ON** .  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  Para reanudar una regeneración de índice en línea después de una pausa es necesario esperar a las operaciones de bloqueo de esta tabla. **WAIT_AT_LOW_PRIORITY** indica que la operación de regeneración de índice en línea esperará a los bloqueos de prioridad baja, de forma que otras operaciones podrán continuar mientras la operación de generación de índice en línea está en espera. La omisión de la opción **WAIT AT LOW PRIORITY** equivale a WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutos, ABORT_AFTER_WAIT = NONE). Para más información, vea [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 PAUSE
  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
 Pausa una operación de regeneración de índice en línea reanudable.
 
 ABORT
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 
 Anular una operación de índice que está ejecutándose o en pausa y que se había declarado como reanudable. Tendrá que ejecutar explícitamente un comando **ABORT** para terminar una operación de regeneración de índice reanudable. La ejecución de una operación de índice reanudable no termina cuando esta da error o se pone en pausa, sino que la operación se queda en un estado de pausa indefinido.
   
@@ -666,14 +666,14 @@ Para obtener más información, vea [Reorganizar y volver a generar índices](..
 > En una tabla de [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] con un índice de almacén de columnas agrupadas ordenado, `ALTER INDEX REORGANIZE` no reordenará los datos. Para reordenar los datos, use `ALTER INDEX REBUILD`.
   
 ## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> Deshabilitar índices  
-Al deshabilitar un índice, se impide que el usuario tenga acceso al mismo y, en el caso de los índices clúster, a los datos de la tabla subyacente. La definición de índice permanece en el catálogo del sistema. La deshabilitación de un índice no clúster o agrupado en una vista elimina físicamente los datos del índice. La deshabilitación de un índice clúster evita el acceso a los datos, aunque éstos permanecen en el árbol b hasta que el índice se quita o se vuelve a generar. Para ver el estado de un índice habilitado o deshabilitado, realice una consulta en la columna **is_disabled** de la vista de catálogo **sys.indexes**.  
+Al deshabilitar un índice, se impide que el usuario tenga acceso al mismo y, en el caso de los índices clúster, a los datos de la tabla subyacente. La definición de índice permanece en el catálogo del sistema. La deshabilitación de un índice no clúster o agrupado en una vista elimina físicamente los datos del índice. La deshabilitación de un índice clúster evita el acceso a los datos, aunque éstos permanecen en el árbol b hasta que el índice se quita o se vuelve a generar. Para ver el estado de un índice habilitado o deshabilitado, realice una consulta en la columna **is_disabled** de la vista de catálogo **sys.indexes** .  
   
 Si una tabla se encuentra en una publicación de replicación transaccional, no puede deshabilitar ningún índice que esté asociado con las columnas de clave principal. Estos índices son necesarios para la replicación. Para deshabilitar un índice, primero debe quitar la tabla de la publicación. Para obtener más información sobre la creación de publicaciones, vea [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
 Use las instrucciones `ALTER INDEX REBUILD` o `CREATE INDEX WITH DROP_EXISTING` para habilitar el índice. No es posible volver a generar un índice clúster deshabilitado si la opción ONLINE está establecida en ON. Para obtener más información, vea [Deshabilitar índices y restricciones](../../relational-databases/indexes/disable-indexes-and-constraints.md).  
   
 ## <a name="setting-options"></a>Configurar opciones  
-Puede establecer las opciones `ALLOW_ROW_LOCKS`, `ALLOW_PAGE_LOCKS`, `OPTIMIZE_FOR_SEQUENTIAL_KEY`, `IGNORE_DUP_KEY` y `STATISTICS_NORECOMPUTE` para un índice especificado sin volver a generar o reorganizar ese índice. Los valores modificados se aplican inmediatamente al índice. Para ver estos valores, use **sys.indexes**. Para obtener más información, consulte [Establecer opciones de índice](../../relational-databases/indexes/set-index-options.md).  
+Puede establecer las opciones `ALLOW_ROW_LOCKS`, `ALLOW_PAGE_LOCKS`, `OPTIMIZE_FOR_SEQUENTIAL_KEY`, `IGNORE_DUP_KEY` y `STATISTICS_NORECOMPUTE` para un índice especificado sin volver a generar o reorganizar ese índice. Los valores modificados se aplican inmediatamente al índice. Para ver estos valores, use **sys.indexes** . Para obtener más información, consulte [Establecer opciones de índice](../../relational-databases/indexes/set-index-options.md).  
   
 ### <a name="row-and-page-locks-options"></a>Opciones de bloqueo de fila y página  
 Si `ALLOW_ROW_LOCKS = ON` y `ALLOW_PAGE_LOCK = ON`, se permiten los bloqueos de nivel de fila, página y tabla al obtener acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] elige el bloqueo apropiado y puede cambiar de escala el bloqueo: de un bloqueo de fila o página a un bloqueo de tabla.  
@@ -703,11 +703,11 @@ Se producirá un error en todas las operaciones de índice en línea que se real
 
 ### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a> Operaciones de índice reanudable
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 ONLINE INDEX REBUILD se especifica como reanudable mediante la opción RESUMABLE = ON. 
 -  La opción RESUMABLE no se conserva en los metadatos de un índice dado y solo se aplica a la duración de una instrucción DDL actual. Por tanto, la cláusula RESUMABLE = ON debe especificarse explícitamente para habilitar la capacidad de reanudación.
--  La opción MAX_DURATION es compatible con la opción RESUMABLE = ON o la opción del argumento **low_priority_lock_wait**. 
+-  La opción MAX_DURATION es compatible con la opción RESUMABLE = ON o la opción del argumento **low_priority_lock_wait** . 
    -  MAX_DURATION para la opción RESUMABLE especifica el intervalo de tiempo para regenerar un índice. Una vez pasado este tiempo, la operación de regeneración de índice se pausa o completa su ejecución. El usuario decide cuándo se puede reanudar una recompilación de un índice en pausa. El valor **time** en minutos para MAX_DURATION debe ser mayor que 0 minutos o menor o igual que una semana (7 \* 24 \* 60 = 10080 minutos). Si se hace una pausa larga en una operación de índice puede afectar al rendimiento de DML en una tabla específica, así como a la capacidad de disco de base de datos, dado que ambos índices, el original y el que se acaba de crear, necesitan espacio en disco y deben actualizarse durante las operaciones de DML. Si se omite la opción MAX_DURATION, la operación de índice continuará hasta su finalización o hasta que se produzca un error. 
    -  La opción del argumento \<low_priority_lock_wait> le permite decidir cómo puede continuar la operación de índice cuando se bloquea en el bloqueo SCH-M.
  
@@ -716,7 +716,7 @@ ONLINE INDEX REBUILD se especifica como reanudable mediante la opción RESUMABLE
 -  El comando DDL con RESUMABLE=ON no se puede ejecutar dentro de una transacción explícita (no puede formar parte del bloque begin tran ... commit).
 -  Solo se pueden reanudar aquellas operaciones de índice que estén en pausa.
 -  Cuando se reanuda una operación de índice que está en pausa, se puede cambiar el valor de MAXDOP a un nuevo valor.  Si MAXDOP no se especifica cuando se reanuda una operación de índice que está en pausa, se toma el último valor MAXDOP. Si la opción MAXDOP no se especifica en absoluto para la operación de regeneración de índice, se toma el valor predeterminado.
-- Para pausar inmediatamente la operación de índice, puede detener el comando en curso (Ctrl+C) o puede ejecutar el comando ALTER INDEX PAUSE o el comando KILL *session_id*. Una vez que el comando está en pausa, se puede reanudar mediante la opción RESUME.
+- Para pausar inmediatamente la operación de índice, puede detener el comando en curso (Ctrl+C) o puede ejecutar el comando ALTER INDEX PAUSE o el comando KILL *session_id* . Una vez que el comando está en pausa, se puede reanudar mediante la opción RESUME.
 -  El comando ABORT termina la sesión que hospedaba la regeneración de índice original y anula la operación de índice.  
 -  No se necesita ningún recurso adicional para la regeneración de índice reanudable, excepto para:
    -    el espacio adicional necesario para mantener el índice que se está generando, incluida la hora en que se pausó el índice;
@@ -737,7 +737,7 @@ Abajo se detallan las funciones que se deshabilitan para las operaciones de rege
   
  ### <a name="wait_at_low_priority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY con operaciones de índice en línea  
   
- Para ejecutar la instrucción DDL para regenerar el índice en línea, todas las transacciones activas de bloqueo que se ejecutan en una tabla determinada deben completarse. Cuando la regeneración de índice en línea se ejecuta, bloquea todas las nuevas transacciones que están listas para iniciar la ejecución en esta tabla. Aunque la vigencia del bloqueo para volver a generar el índice en línea es muy corta, si se espera a que las transacciones abiertas en una tabla dada se completen y se bloquean las nuevas transacciones que se inician, se podría afectar significativamente al rendimiento, produciendo un retraso o un tiempo de espera en la carga de trabajo y se limitaría mucho el acceso a la tabla base. Con la opción **WAIT_AT_LOW_PRIORITY**, el DBA puede administrar los bloqueos S-lock y Sch-M necesarios para las regeneraciones de índice en línea y seleccionar una de las tres opciones. En los tres casos, si durante el tiempo de espera ( (MAX_DURATION = n [minutos]) ) no hay actividades de bloqueo, la regeneración de índice en línea se ejecuta inmediatamente sin esperar y la instrucción DDL se completa.  
+ Para ejecutar la instrucción DDL para regenerar el índice en línea, todas las transacciones activas de bloqueo que se ejecutan en una tabla determinada deben completarse. Cuando la regeneración de índice en línea se ejecuta, bloquea todas las nuevas transacciones que están listas para iniciar la ejecución en esta tabla. Aunque la vigencia del bloqueo para volver a generar el índice en línea es muy corta, si se espera a que las transacciones abiertas en una tabla dada se completen y se bloquean las nuevas transacciones que se inician, se podría afectar significativamente al rendimiento, produciendo un retraso o un tiempo de espera en la carga de trabajo y se limitaría mucho el acceso a la tabla base. Con la opción **WAIT_AT_LOW_PRIORITY** , el DBA puede administrar los bloqueos S-lock y Sch-M necesarios para las regeneraciones de índice en línea y seleccionar una de las tres opciones. En los tres casos, si durante el tiempo de espera ( (MAX_DURATION = n [minutos]) ) no hay actividades de bloqueo, la regeneración de índice en línea se ejecuta inmediatamente sin esperar y la instrucción DDL se completa.  
   
 ## <a name="spatial-index-restrictions"></a>Restricciones de los índices espaciales  
  Cuando se regenera un índice espacial, la tabla de usuario subyacente no está disponible mientras dura esta operación, porque el índice espacial tiene un bloqueo del esquema.  
@@ -944,7 +944,7 @@ SELECT * FROM sys.column_store_row_groups;
  Los resultados de la instrucción SELECT muestran que el grupo de filas es COMPRESSED, lo que significa que los segmentos de la columna del grupo de filas ahora están comprimidos y .almacenados en el almacén de columnas.  
   
 ### <a name="f-rebuild-a-partition-of-a-clustered-columnstore-index-offline"></a>F. Regenerar una partición de un índice de almacén de columnas agrupado sin conexión  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
+ **Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
  
  Para regenerar una partición de un índice de almacén de columnas agrupado de gran tamaño, use ALTER INDEX REBUILD con la opción de partición. En este ejemplo se regenera la partición 12. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], se recomienda reemplazar REBUILD con REORGANIZE.  
   
@@ -1000,7 +1000,7 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
 ### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. Volver a generar todos los índices de una tabla y especificar opciones  
  En el siguiente ejemplo se especifica la palabra clave ALL. Esto vuelve a generar todos los índices asociados a la tabla Production.Product en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Se especifican tres opciones.  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
 ```sql  
 ALTER INDEX ALL ON Production.Product  
@@ -1009,7 +1009,7 @@ REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON, STATISTICS_NORECOMPUTE = ON)
   
 El ejemplo siguiente agrega la opción ONLINE, incluida la opción de bloqueo de prioridad baja, y agrega la opción de compresión de fila.  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
 ```sql  
 ALTER INDEX ALL ON Production.Product  
@@ -1033,7 +1033,7 @@ ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE
 ### <a name="d-setting-options-on-an-index"></a>D. Establecer opciones en un índice  
  En el siguiente ejemplo se establecen varias opciones en el índice `AK_SalesOrderHeader_SalesOrderNumber` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
 ```sql  
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON  
@@ -1088,7 +1088,7 @@ GO
 ### <a name="h-rebuilding-a-partitioned-index"></a>H. Volver a generar un índice con particiones  
  En el siguiente ejemplo se vuelve a generar una única partición, el número de partición `5`, del índice con particiones `IX_TransactionHistory_TransactionDate` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La partición 5 se vuelve a generar en línea y el tiempo de espera de 10 minutos para el bloqueo de prioridad baja se aplica independientemente a cada bloqueo adquirido por la operación de regeneración de índice. Si, durante este tiempo, el bloqueo no se puede obtener para completar la regeneración del índice, la instrucción de operación de la regeneración se anula.  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
 ```sql  
 -- Verify the partitioned indexes.  
@@ -1118,7 +1118,7 @@ Para obtener más ejemplos de compresión de datos, vea [Compresión de datos](.
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. Regeneración de índice reanudable en línea
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
 
  En estos ejemplos se muestra cómo usar la regeneración de índice reanudable en línea. 
 
@@ -1170,4 +1170,3 @@ Para obtener más ejemplos de compresión de datos, vea [Compresión de datos](.
 [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)   
 [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
 [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    
-  

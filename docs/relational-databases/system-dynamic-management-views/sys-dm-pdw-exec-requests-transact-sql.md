@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 544991790a86e1738474b7b71c39bcbcb7fc395a
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: f62aebfe079ed8a701301ca7d5d3a5c70127407a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412511"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678898"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,14 +41,14 @@ ms.locfileid: "92412511"
 |database_id|**int**|Identificador de la base de datos utilizada por el contexto explícito (por ejemplo, USE DB_X).|Vea ID en [Sys. databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |command|**nvarchar(4000)**|Contiene el texto completo de la solicitud enviado por el usuario.|Cualquier consulta o texto de solicitud válido. Las consultas que tienen más de 4000 bytes se truncan.|  
 |resource_class|**nvarchar (20)**|Grupo de cargas de trabajo que se usa para esta solicitud. |Clases de recursos estáticos</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Clases de recursos dinámicos</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|La importancia del establecimiento de la solicitud ejecutada a las.  Esta es la importancia relativa de una solicitud en este grupo de cargas de trabajo y entre grupos de cargas de trabajo para los recursos compartidos.  La importancia especificada en el clasificador invalida la configuración de importancia del grupo de cargas de trabajo.</br>Se aplica a: Azure Synapse Analytics|NULL</br>low</br>below_normal</br>normal (valor predeterminado)</br>above_normal</br>high|
-|group_name|**sysname** |En el caso de las solicitudes que usan recursos, group_name es el nombre del grupo de cargas de trabajo en el que se ejecuta la solicitud.  Si la solicitud no emplea recursos, group_name es NULL.</br>Se aplica a: Azure Synapse Analytics|
+|importance|**nvarchar(128)**|La importancia del establecimiento de la solicitud ejecutada a las.  Esta es la importancia relativa de una solicitud en este grupo de cargas de trabajo y entre grupos de cargas de trabajo para los recursos compartidos.  La importancia especificada en el clasificador invalida la configuración de importancia del grupo de cargas de trabajo.</br>Se aplica a: Azure SQL Data Warehouse|NULL</br>low</br>below_normal</br>normal (valor predeterminado)</br>above_normal</br>high|
+|group_name|**sysname** |En el caso de las solicitudes que usan recursos, group_name es el nombre del grupo de cargas de trabajo en el que se ejecuta la solicitud.  Si la solicitud no emplea recursos, group_name es NULL.</br>Se aplica a: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|Para las solicitudes que usan recursos, el nombre del clasificador utilizado para asignar recursos e importancia.||
-|resource_allocation_percentage|**decimal (5, 2)**|La cantidad de recursos asignados a la solicitud.</br>Se aplica a: Azure Synapse Analytics|
-|result_cache_hit|**int**|Detalla si una consulta completada ha utilizado caché de conjunto de resultados.  </br>Se aplica a: Azure Synapse Analytics| 1 = acierto de caché de conjunto de resultados </br> 0 = error de caché de conjunto de resultados </br> Valores enteros negativos = motivos por los que no se ha usado el almacenamiento en caché del conjunto de resultados.  Vea la sección Comentarios para obtener más información.|
-|comando2|**nvarchar9max)**|Contiene el texto completo de la solicitud enviado por el usuario. Contiene consultas que tienen más de 4000 caracteres.|Cualquier consulta o texto de solicitud válido. NULL = las consultas que tienen una longitud de 4000 caracteres o menos, para estas consultas, el texto completo se puede encontrar en la columna de comandos.|
+|resource_allocation_percentage|**decimal (5, 2)**|La cantidad de recursos asignados a la solicitud.</br>Se aplica a: Azure SQL Data Warehouse|
+|result_cache_hit|**int**|Detalla si una consulta completada ha utilizado caché de conjunto de resultados.  </br>Se aplica a: Azure SQL Data Warehouse| 1 = acierto de caché de conjunto de resultados </br> 0 = error de caché de conjunto de resultados </br> Valores enteros negativos = motivos por los que no se ha usado el almacenamiento en caché del conjunto de resultados.  Vea la sección Comentarios para obtener más información.|
+|client_correlation_id|**nvarchar(255)**|Nombre opcional definido por el usuario para una sesión de cliente.  Para establecer para una sesión, llame a sp_set_session_context ' client_correlation_id ', ' <CorrelationIDName> '.  Ejecute `SELECT SESSION_CONTEXT(N'client_correlation_id')` para recuperar su valor.|
 ||||
-  
+
 ## <a name="remarks"></a>Observaciones 
  Para obtener información acerca de las filas máximas retenidas en esta vista, consulte la sección de metadatos en el tema [límites de capacidad](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
@@ -57,18 +57,17 @@ El valor entero negativo de la columna result_cache_hit es un valor de mapa de b
 |Value            |Descripción  |  
 |-----------------|-----------------|  
 |**1**|Acierto de caché de conjunto de resultados|  
-|**0x00** (**0**)|Error de caché de conjunto de resultados|  
-|-**0x01** (**-1**)|El almacenamiento en caché del conjunto de resultados está deshabilitado en la base de datos.|  
-|-**0x02** (**-2**)|El almacenamiento en caché del conjunto de resultados está deshabilitado en la sesión. | 
-|-**0x04** (**-4**)|El almacenamiento en caché del conjunto de resultados está deshabilitado debido a que no hay orígenes de datos para la consulta.|  
-|-**0x08** (**-8**)|El almacenamiento en caché del conjunto de resultados está deshabilitado debido a predicados de seguridad de nivel de fila.|  
-|-**0x10** (**-16**)|El almacenamiento en caché del conjunto de resultados está deshabilitado debido al uso de la tabla del sistema, la tabla temporal o la tabla externa en la consulta.|  
-|-**0x20** (**-32**)|El almacenamiento en caché del conjunto de resultados está deshabilitado porque la consulta contiene constantes de tiempo de ejecución, funciones definidas por el usuario o funciones no deterministas.|  
-|-**0x40**(**-64**)|El almacenamiento en caché del conjunto de resultados está deshabilitado porque el tamaño estimado del conjunto de resultados es >10 GB.|  
-|-**0x80**(**-128**) |El almacenamiento en caché del conjunto de resultados está deshabilitado porque el conjunto de resultados contiene filas con un tamaño grande (>64 KB).|  
-|-**0x100**(**-256**) |El almacenamiento en caché del conjunto de resultados está deshabilitado debido al uso del enmascaramiento dinámico de datos granular.|  
+|**0x00** ( **0** )|Error de caché de conjunto de resultados|  
+|-**0x01** ( **-1** )|El almacenamiento en caché del conjunto de resultados está deshabilitado en la base de datos.|  
+|-**0x02** ( **-2** )|El almacenamiento en caché del conjunto de resultados está deshabilitado en la sesión. | 
+|-**0x04** ( **-4** )|El almacenamiento en caché del conjunto de resultados está deshabilitado debido a que no hay orígenes de datos para la consulta.|  
+|-**0x08** ( **-8** )|El almacenamiento en caché del conjunto de resultados está deshabilitado debido a predicados de seguridad de nivel de fila.|  
+|-**0x10** ( **-16** )|El almacenamiento en caché del conjunto de resultados está deshabilitado debido al uso de la tabla del sistema, la tabla temporal o la tabla externa en la consulta.|  
+|-**0x20** ( **-32** )|El almacenamiento en caché del conjunto de resultados está deshabilitado porque la consulta contiene constantes de tiempo de ejecución, funciones definidas por el usuario o funciones no deterministas.|  
+|-**0x40** ( **-64** )|El almacenamiento en caché del conjunto de resultados está deshabilitado porque el tamaño estimado del conjunto de resultados es >10 GB.|  
+|-**0x80** ( **-128** ) |El almacenamiento en caché del conjunto de resultados está deshabilitado porque el conjunto de resultados contiene filas con un tamaño grande (>64 KB).|  
+|-**0x100** ( **-256** ) |El almacenamiento en caché del conjunto de resultados está deshabilitado debido al uso del enmascaramiento dinámico de datos granular.|  
 
-  
 ## <a name="permissions"></a>Permisos
 
  Requiere el permiso VIEW SERVER STATE.  
@@ -82,4 +81,4 @@ El valor entero negativo de la columna result_cache_hit es un valor de mapa de b
   
 ## <a name="see-also"></a>Consulte también
 
- [Azure Synapse Analytics y vistas de administración dinámica de almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+ [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

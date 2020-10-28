@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7c6ae2579cad1a04239f6d4abc4691982a49d0ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff8efe5476597a85a26034cc278730c2d867ddae
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547555"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300237"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Uno o más parámetros en el agregado definido por el usuario. El usuario debe proporcionar un valor del parámetro cuando se ejecute la función de agregado. Especifique un nombre de parámetro con una arroba ( **@** ) como primer carácter. El nombre del parámetro debe cumplir las mismas reglas para [identifiers](../../relational-databases/databases/database-identifiers.md). Los parámetros son locales para la función.  
   
  *system_scalar_type*  
- Es cualquiera de los tipos de datos escalares del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contienen el valor del parámetro de entrada o el valor devuelto. Todos los tipos de datos escalares se pueden usar como parámetros para un agregado definido por el usuario, excepto **text**, **ntext** e **image**. No se pueden especificar tipos no escalares, como **cursor** y **table**.  
+ Es cualquiera de los tipos de datos escalares del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contienen el valor del parámetro de entrada o el valor devuelto. Todos los tipos de datos escalares se pueden usar como parámetros para un agregado definido por el usuario, excepto **text** , **ntext** e **image** . No se pueden especificar tipos no escalares, como **cursor** y **table** .  
   
  *udt_schema_name*  
  Es el nombre del esquema al que pertenece el tipo definido por el usuario CLR. Si no se especifica, [!INCLUDE[ssDE](../../includes/ssde-md.md)] hace referencia a *udt_type_name* en el siguiente orden:  
@@ -79,10 +79,10 @@ EXTERNAL NAME assembly_name [ .class_name ]
 -   El esquema **dbo** de la base de datos actual.  
   
  *udt_type_name*  
- Es el nombre de un tipo definido por el usuario CLR que ya está creado en la base de datos actual. Si no se especifica *udt_schema_name*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da por supuesto que el tipo pertenece al esquema del usuario actual.  
+ Es el nombre de un tipo definido por el usuario CLR que ya está creado en la base de datos actual. Si no se especifica *udt_schema_name* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da por supuesto que el tipo pertenece al esquema del usuario actual.  
   
  *nombre_del_ensamblado* [ **.** _nombre_de_la_clase_ ]  
- Especifica el ensamblado que se va a vincular con la función de agregado definida por el usuario y, opcionalmente, el nombre del esquema al que pertenece el ensamblado y el nombre de la clase del ensamblado que implementa el agregado definido por el usuario. El ensamblado debe haberse creado con antelación en la base de datos mediante una instrucción CREATE ASSEMBLY. *class_name* debe ser un identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y coincidir con el nombre de una clase que exista en el ensamblado. *class_name* puede ser un nombre completo de espacio de nombres si el lenguaje de programación usado para escribir la clase usa espacios de nombres, como C#. Si no se especifica *class_name*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que es el mismo que *aggregate_name*.  
+ Especifica el ensamblado que se va a vincular con la función de agregado definida por el usuario y, opcionalmente, el nombre del esquema al que pertenece el ensamblado y el nombre de la clase del ensamblado que implementa el agregado definido por el usuario. El ensamblado debe haberse creado con antelación en la base de datos mediante una instrucción CREATE ASSEMBLY. *class_name* debe ser un identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y coincidir con el nombre de una clase que exista en el ensamblado. *class_name* puede ser un nombre completo de espacio de nombres si el lenguaje de programación usado para escribir la clase usa espacios de nombres, como C#. Si no se especifica *class_name* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que es el mismo que *aggregate_name* .  
   
 ## <a name="remarks"></a>Observaciones  
  De manera predeterminada, la capacidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de ejecutar código CLR está desactivada. Puede crear, modificar y quitar objetos de base de datos que hacen referencia a módulos de código administrado, pero el código de estos módulos no se ejecutará en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a menos que la opción [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) esté habilitada con [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
@@ -93,7 +93,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Requiere premisos CREATE AGGREGATE y REFERENCES en el ensamblado que se especifica en la cláusula EXTERNAL NAME.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se da por supuesto que una aplicación de ejemplo StringUtilities.csproj está compilada. Para más información, vea [Ejemplo de funciones de la utilidad String](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
+ En el ejemplo siguiente se da por supuesto que una aplicación de ejemplo StringUtilities.csproj está compilada. Para más información, vea [Ejemplo de funciones de la utilidad String](/previous-versions/sql/sql-server-2016/ff878119(v=sql.130)).  
   
  En el ejemplo se crea un agregado `Concatenate`. Antes de crear el agregado, el ensamblado `StringUtilities.dll` se registra en la base de datos local.  
   
@@ -120,5 +120,4 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
-  
   

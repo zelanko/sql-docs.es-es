@@ -21,12 +21,12 @@ ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 165af0a279cf9b7e19cc7c5dbf7a20ca51272661
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d8b8fc08aaf5f083d22938adf37c356c445d4b6f
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549464"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300595"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -223,9 +223,9 @@ RETURNS return_data_type
 >  No se respeta ANSI_WARNINGS al pasar parámetros de un procedimiento almacenado, una función definida por el usuario o al declarar y establecer variables en una instrucción de lote. Por ejemplo, si una variable se define como **char(3)** y después se establece en un valor de más de tres caracteres, los datos se truncan hasta el tamaño definido y la instrucción INSERT o UPDATE se ejecuta correctamente.  
   
  [ *type_schema_name.* ] *parameter_data_type*  
- Es el tipo de datos del parámetro y, de forma opcional, el esquema al que pertenece. Para las funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], se permiten todos los tipos de datos, incluidos los tipos definidos por el usuario CLR, a excepción del tipo de datos **timestamp**. Para las funciones CLR, se permiten todos los tipos de datos, incluidos los tipos CLR definidos por el usuario, a excepción de los tipos de datos **text**, **ntext**, **image** y **timestamp**. Los tipos de datos no escalares, **cursor** y **table**, no se pueden especificar como tipos de datos de parámetro en funciones [!INCLUDE[tsql](../../includes/tsql-md.md)] ni en funciones CLR.  
+ Es el tipo de datos del parámetro y, de forma opcional, el esquema al que pertenece. Para las funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], se permiten todos los tipos de datos, incluidos los tipos definidos por el usuario CLR, a excepción del tipo de datos **timestamp** . Para las funciones CLR, se permiten todos los tipos de datos, incluidos los tipos CLR definidos por el usuario, a excepción de los tipos de datos **text** , **ntext** , **image** y **timestamp** . Los tipos de datos no escalares, **cursor** y **table** , no se pueden especificar como tipos de datos de parámetro en funciones [!INCLUDE[tsql](../../includes/tsql-md.md)] ni en funciones CLR.  
   
- Si no se especifica *type_schema_name*, [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] busca *parameter_data_type* en este orden:  
+ Si no se especifica *type_schema_name* , [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] busca *parameter_data_type* en este orden:  
   
 -   El esquema que contiene los nombres de los tipos de datos del sistema de SQL Server.  
   
@@ -234,7 +234,7 @@ RETURNS return_data_type
 -   El esquema **dbo** de la base de datos actual.  
   
  [ **=** _default_ ]  
- Es un valor predeterminado para el parámetro. Si se define un valor *default*, la función se puede ejecutar sin especificar un valor para ese parámetro.  
+ Es un valor predeterminado para el parámetro. Si se define un valor *default* , la función se puede ejecutar sin especificar un valor para ese parámetro.  
   
 > [!NOTE]  
 >  Se pueden especificar valores predeterminados de parámetros para las funciones CLR, excepto para los tipos de datos **varchar(max)** y **varbinary(max)** .  
@@ -242,7 +242,7 @@ RETURNS return_data_type
  Cuando un parámetro de la función tiene un valor predeterminado, se debe especificar la palabra clave DEFAULT al llamar a la función para recuperar el valor predeterminado. Este comportamiento es distinto del uso de parámetros con valores predeterminados en los procedimientos almacenados, donde la omisión del parámetro implica especificar el valor predeterminado.  
   
  *return_data_type*  
- Es el valor devuelto de una función escalar definida por el usuario. Para las funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], se permiten todos los tipos de datos, incluidos los tipos definidos por el usuario CLR, a excepción del tipo de datos **timestamp**. Para las funciones CLR, se permiten todos los tipos de datos, incluidos los tipos CLR definidos por el usuario, a excepción de los tipos de datos **text**, **ntext**, **image** y **timestamp**. Los tipos de datos no escalares, **cursor** y **table**, no se pueden especificar como tipos de datos devueltos en funciones [!INCLUDE[tsql](../../includes/tsql-md.md)] ni en funciones CLR.  
+ Es el valor devuelto de una función escalar definida por el usuario. Para las funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], se permiten todos los tipos de datos, incluidos los tipos definidos por el usuario CLR, a excepción del tipo de datos **timestamp** . Para las funciones CLR, se permiten todos los tipos de datos, incluidos los tipos CLR definidos por el usuario, a excepción de los tipos de datos **text** , **ntext** , **image** y **timestamp** . Los tipos de datos no escalares, **cursor** y **table** , no se pueden especificar como tipos de datos devueltos en funciones [!INCLUDE[tsql](../../includes/tsql-md.md)] ni en funciones CLR.  
   
  *function_body*  
  Especifica que una serie de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)], que juntas no producen ningún efecto secundario (como modificar una tabla), definen el valor de la función. *function_body* solamente se usa en funciones escalares y en funciones con valores de tabla de múltiples instrucciones.  
@@ -264,7 +264,7 @@ RETURNS return_data_type
  *select-stmt*  
  Es la instrucción SELECT individual que define el valor devuelto de una función insertada con valores de tabla.  
   
- EXTERNAL NAME \<method_specifier>*nombre_ensamblado.nombre_clase*.*nombre_método*  
+ EXTERNAL NAME \<method_specifier>*nombre_ensamblado.nombre_clase* . *nombre_método*  
  **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica el método de un ensamblado que se enlaza a la función. *assembly_name* debe coincidir con un ensamblado existente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos actual con la visibilidad activada. *class_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como clase en el ensamblado. Si la clase tiene un nombre completo de espacio de nombres que usa un punto ( **.** ) para separar las partes del espacio de nombres, el nombre de la clase debe delimitarse mediante paréntesis ( **[]** ) o comillas ( **""** ). *method_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como método estático en la clase especificada.  
@@ -275,10 +275,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
- _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
+ _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ... *n* ] **)**  
  Define el tipo de datos de tabla para una función [!INCLUDE[tsql](../../includes/tsql-md.md)]. La declaración de tabla incluye definiciones de columna y restricciones de columna o de tabla.  
   
-\< clr_table_type_definition \> **(** { *nombre_columna**tipo_datos* } [ **,** ...*n* ] **)** **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Versión preliminar en algunas regiones](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition \> **(** { *nombre_columna**tipo_datos* } [ **,** ... *n* ] **)** **Se aplica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ( [Versión preliminar en algunas regiones](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)).  
   
  Define los tipos de datos de tabla para una función CLR. La declaración de tabla solamente incluye nombres de columna y tipos de datos.  
   
@@ -331,13 +331,13 @@ Para obtener una lista de las condiciones que se deben cumplir para poder enlaza
   
 **\< column_definition >::=**
   
- Define el tipo de datos de tabla. La declaración de tabla incluye definiciones de columna y restricciones. En las funciones CLR, solo se pueden especificar *column_name* y *data_type*.  
+ Define el tipo de datos de tabla. La declaración de tabla incluye definiciones de columna y restricciones. En las funciones CLR, solo se pueden especificar *column_name* y *data_type* .  
   
  *column_name*  
  Es el nombre de una columna de la tabla. Los nombres de columna se deben ajustar a las reglas para los identificadores y deben ser únicos en la tabla. *column_name* puede tener entre 1 y 128 caracteres.  
   
  *data_type*  
- Especifica el tipo de datos de la columna. En las funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], se permiten todos los tipos de datos, incluidos los tipos CLR definidos por el usuario, a excepción de **timestamp**. Para las funciones CLR, se permiten todos los tipos de datos, incluidos los tipos CLR definidos por el usuario, a excepción de **text**, **ntext**, **image**, **char**, **varchar**, **varchar(max)** y **timestamp**. El tipo no escalar **cursor** no se puede especificar como tipo de datos de columna en funciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o CLR.  
+ Especifica el tipo de datos de la columna. En las funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], se permiten todos los tipos de datos, incluidos los tipos CLR definidos por el usuario, a excepción de **timestamp** . Para las funciones CLR, se permiten todos los tipos de datos, incluidos los tipos CLR definidos por el usuario, a excepción de **text** , **ntext** , **image** , **char** , **varchar** , **varchar(max)** y **timestamp** . El tipo no escalar **cursor** no se puede especificar como tipo de datos de columna en funciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o CLR.  
   
  DEFAULT *constant_expression*  
  Especifica el valor suministrado para la columna cuando no se ha especificado explícitamente un valor durante una inserción. *constant_expression* es una constante, un valor NULL o un valor de función del sistema. Se pueden aplicar definiciones con el valor DEFAULT a cualquier columna, excepto las que incluyen la propiedad IDENTITY. No se puede especificar DEFAULT para las funciones CLR con valores de tabla.  
@@ -345,17 +345,17 @@ Para obtener una lista de las condiciones que se deben cumplir para poder enlaza
  COLLATE *collation_name*  
  Especifica la intercalación de la columna. Si no se especifica, se asigna a la columna la intercalación predeterminada de la base de datos. El nombre de intercalación puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Para obtener una lista y más información, vea [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) y [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
- La cláusula COLLATE se puede usar para cambiar únicamente las intercalaciones de las columnas con tipos de datos **char**, **varchar**, **nchar** y **nvarchar**.  
+ La cláusula COLLATE se puede usar para cambiar únicamente las intercalaciones de las columnas con tipos de datos **char** , **varchar** , **nchar** y **nvarchar** .  
   
  No se puede especificar COLLATE para las funciones con valores de tabla CLR.  
   
  ROWGUIDCOL  
- Indica que la nueva columna es una columna de identificador único global de fila. Solo se puede designar una columna **uniqueidentifier** por tabla como columna ROWGUIDCOL. La propiedad ROWGUIDCOL únicamente se puede asignar a una columna **uniqueidentifier**.  
+ Indica que la nueva columna es una columna de identificador único global de fila. Solo se puede designar una columna **uniqueidentifier** por tabla como columna ROWGUIDCOL. La propiedad ROWGUIDCOL únicamente se puede asignar a una columna **uniqueidentifier** .  
   
  La propiedad ROWGUIDCOL no exige que los valores almacenados en la columna sean únicos. Del mismo modo, tampoco genera automáticamente valores para nuevas filas insertadas en la tabla. Si desea generar valores únicos para cada columna, use la función NEWID en instrucciones INSERT. Puede especificar un valor predeterminado; sin embargo, no puede especificar NEWID como valor predeterminado.  
   
  IDENTITY  
- Indica que la nueva columna es una columna de identidad. Cuando se agrega una nueva fila a la tabla, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un valor incremental único para la columna. Las columnas de identidad se utilizan normalmente junto con las restricciones PRIMARY KEY como identificadores de fila exclusivos de la tabla. La propiedad IDENTITY se puede asignar a columnas **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)** . Solo se puede crear una columna de identidad para cada tabla. Las restricciones DEFAULT y los valores predeterminados enlazados no se pueden utilizar en las columnas de identidad. Se debe especificar los dos argumentos, *seed* e *increment*, o ninguno. Si no se especifica ninguno, el valor predeterminado es (1,1).  
+ Indica que la nueva columna es una columna de identidad. Cuando se agrega una nueva fila a la tabla, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un valor incremental único para la columna. Las columnas de identidad se utilizan normalmente junto con las restricciones PRIMARY KEY como identificadores de fila exclusivos de la tabla. La propiedad IDENTITY se puede asignar a columnas **tinyint** , **smallint** , **int** , **bigint** , **decimal(p,0)** o **numeric(p,0)** . Solo se puede crear una columna de identidad para cada tabla. Las restricciones DEFAULT y los valores predeterminados enlazados no se pueden utilizar en las columnas de identidad. Se debe especificar los dos argumentos, *seed* e *increment* , o ninguno. Si no se especifica ninguno, el valor predeterminado es (1,1).  
   
  No se puede especificar IDENTITY para las funciones CLR con valores de tabla.  
   
@@ -443,5 +443,4 @@ Para obtener una lista de las condiciones que se deben cumplir para poder enlaza
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)   
  [Realizar cambios de esquema en bases de datos de publicaciones](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
   

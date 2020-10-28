@@ -18,12 +18,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 61ece1ff1d43d0a60d136ce140bcc6e1ae8f8259
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: d2a53c17787810aa3ebdd47c64810caab42844c2
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688398"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300447"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -37,7 +37,7 @@ Modifica el contenido de una biblioteca de paquetes externa existente.
 
 ::: moniker range="=azuresqldb-mi-current"
 > [!NOTE]
-> En Azure SQL Managed Instance, puede modificar una biblioteca si la quita y después usa **sqlmlutils** para instalar la versión modificada. Para obtener más información sobre **sqlmlutils**, vea [Instalación de paquetes de Python con sqlmlutils](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current) e [Instalación de nuevos paquetes de R con sqlmlutils](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=%2Fazure%2Fazure-sql%2Fmanaged-instance%2Fcontext%2Fml-context&view=azuresqldb-mi-current).
+> En Azure SQL Managed Instance, puede modificar una biblioteca si la quita y después usa **sqlmlutils** para instalar la versión modificada. Para obtener más información sobre **sqlmlutils** , vea [Instalación de paquetes de Python con sqlmlutils](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current) e [Instalación de nuevos paquetes de R con sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -202,7 +202,7 @@ Especifica el lenguaje del paquete. El valor puede ser **R** o **Python** en Azu
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **language**
 
-Especifica el lenguaje del paquete. El valor puede ser **R**, **Python** o el nombre de un lenguaje externo (consulte [CREAR LENGUAJE EXTERNO](create-external-language-transact-sql.md)).
+Especifica el lenguaje del paquete. El valor puede ser **R** , **Python** o el nombre de un lenguaje externo (consulte [CREAR LENGUAJE EXTERNO](create-external-language-transact-sql.md)).
 ::: moniker-end
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -221,7 +221,7 @@ Para el lenguaje Python, el paquete en un archivo .whl o .zip se debe preparar c
 
 La instrucción `ALTER EXTERNAL LIBRARY` solo carga los bits de biblioteca en la base de datos. La biblioteca modificada se instala cuando un usuario ejecuta código en el [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) que llama a la biblioteca.
 
-Varios paquetes, denominados *paquetes del sistema*, se instalan previamente en una instancia de SQL. El usuario no puede agregar, actualizar ni quitar paquetes del sistema.
+Varios paquetes, denominados *paquetes del sistema* , se instalan previamente en una instancia de SQL. El usuario no puede agregar, actualizar ni quitar paquetes del sistema.
 
 ## <a name="permissions"></a>Permisos
 
@@ -278,4 +278,4 @@ Para el lenguaje Python, el ejemplo también funciona si se reemplaza `'R'` con 
 [CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md) 
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)

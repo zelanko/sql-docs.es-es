@@ -14,12 +14,12 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8a655a2226ff7104fa7649ce851cbf9bd6da9355
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 571771403d665bd6d668fcce7037e06db6ffa33d
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037058"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300648"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -106,8 +106,8 @@ RETURNS TABLE
  *parameter_data_type*  
  Es el tipo de datos del parámetro. En las funciones de [!INCLUDE[tsql](../../includes/tsql-md.md)], se permiten todos los tipos de datos escalares admitidos en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. El tipo de datos timestamp (rowversion) no es un tipo admitido.  
   
- [ =*default* ]  
- Es un valor predeterminado para el parámetro. Si se define un valor *default*, la función se puede ejecutar sin especificar un valor para ese parámetro.  
+ [ = *default* ]  
+ Es un valor predeterminado para el parámetro. Si se define un valor *default* , la función se puede ejecutar sin especificar un valor para ese parámetro.  
   
  Cuando un parámetro de la función tiene un valor predeterminado, se debe especificar la palabra clave DEFAULT al llamar a la función para recuperar el valor predeterminado. Este comportamiento es distinto del uso de parámetros con valores predeterminados en los procedimientos almacenados, donde la omisión del parámetro implica especificar el valor predeterminado.  
   
@@ -122,11 +122,11 @@ RETURNS TABLE
  *scalar_expression*  
  Especifica el valor escalar que devuelve la función escalar.  
 
- *select_stmt* **SE APLICA A**: Azure Synapse Analytics  
+ *select_stmt* **SE APLICA A** : Azure Synapse Analytics  
  Es la instrucción SELECT individual que define el valor devuelto de una función con valores de tabla insertados (versión preliminar).
 
- TABLE **SE APLICA A**: Azure Synapse Analytics  
- Especifica que el valor devuelto de la función con valores de tabla (TVF) es una tabla. Solamente se pueden pasar constantes y @*local_variables* a las TVF.
+ TABLE **SE APLICA A** : Azure Synapse Analytics  
+ Especifica que el valor devuelto de la función con valores de tabla (TVF) es una tabla. Solamente se pueden pasar constantes y @ *local_variables* a las TVF.
 
  En las funciones con valores de tabla insertados (versión preliminar), el valor devuelto de TABLE se define mediante una única instrucción SELECT. Las funciones insertadas no tienen variables devueltas asociadas.
   
@@ -244,13 +244,13 @@ RETURN
 );
 GO
 ```
-A continuación, se puede llamar a la función para devolver todos los objetos de vista (**V**) con:
+A continuación, se puede llamar a la función para devolver todos los objetos de vista ( **V** ) con:
 ```sql
 select * from dbo.ModulesByType('V');
 ```
 
 ### <a name="b-combining-results-of-an-inline-table-valued-function-preview"></a>B. Combinación de los resultados de una función con valores de tabla insertados (versión preliminar)
- En este sencillo ejemplo se usa la función con valores de tabla insertados creada anteriormente para mostrar cómo se pueden combinar sus resultados con otras tablas mediante CROSS APPLY. Aquí se seleccionan todas las columnas de sys.objects y los resultados de `ModulesByType` de todas las filas que coincidan con la columna *type*. Para obtener más información sobre cómo usar APPLY, vea [Cláusula FROM más JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).
+ En este sencillo ejemplo se usa la función con valores de tabla insertados creada anteriormente para mostrar cómo se pueden combinar sus resultados con otras tablas mediante CROSS APPLY. Aquí se seleccionan todas las columnas de sys.objects y los resultados de `ModulesByType` de todas las filas que coincidan con la columna *type* . Para obtener más información sobre cómo usar APPLY, vea [Cláusula FROM más JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).
 
 ```sql
 SELECT * 
@@ -260,8 +260,8 @@ GO
 ```
   
 ## <a name="see-also"></a>Consulte también  
- [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
- [DROP FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
+ [ALTER FUNCTION (SQL Server PDW)](/previous-versions/sql/)   
+ [DROP FUNCTION (SQL Server PDW)](/previous-versions/sql/)  
   
   
 

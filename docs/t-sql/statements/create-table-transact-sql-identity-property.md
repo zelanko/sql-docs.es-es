@@ -22,12 +22,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ebc5291ae6be0de2c1ea8961e05c4238db17b2d
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 8f9508420a8f629a189a1d623e5ac1d310a7f940
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688851"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257762"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (propiedad)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -45,6 +45,8 @@ ms.locfileid: "90688851"
 IDENTITY [ (seed , increment) ]
 ```  
   
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
@@ -68,12 +70,12 @@ IDENTITY [ (seed , increment) ]
   
  La propiedad de identidad de una columna no garantiza lo siguiente:  
   
--   **Uniqueness of the value** (Unicidad del valor): La unicidad debe aplicarse mediante una restricción **PRIMARY KEY** o **UNIQUE**, o mediante un índice **UNIQUE**. - 
+-   **Uniqueness of the value** (Unicidad del valor): La unicidad debe aplicarse mediante una restricción **PRIMARY KEY** o **UNIQUE** , o mediante un índice **UNIQUE** . - 
  
 > [!NOTE]
-> Azure Synapse Analytics no admite **PRIMARY KEY**, la restricción **UNIQUE** ni el índice **UNIQUE**. Consulte [Uso de IDENTITY para crear claves suplentes en el grupo de SQL de Synapse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key) para obtener más información.
+> Azure Synapse Analytics no admite **PRIMARY KEY** , la restricción **UNIQUE** ni el índice **UNIQUE** . Consulte [Uso de IDENTITY para crear claves suplentes en el grupo de SQL de Synapse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key) para obtener más información.
 
--   **Consecutive values within a transaction** (Valores consecutivos en una transacción): No se garantiza que una transacción que inserta varias filas obtenga valores consecutivos para las filas porque podrían producirse otras inserciones simultáneas en la tabla. Si los valores deben ser consecutivos, la transacción debe usar un bloqueo exclusivo en la tabla o usar el nivel de aislamiento **SERIALIZABLE**.  
+-   **Consecutive values within a transaction** (Valores consecutivos en una transacción): No se garantiza que una transacción que inserta varias filas obtenga valores consecutivos para las filas porque podrían producirse otras inserciones simultáneas en la tabla. Si los valores deben ser consecutivos, la transacción debe usar un bloqueo exclusivo en la tabla o usar el nivel de aislamiento **SERIALIZABLE** .  
   
 -   **Consecutive values after server restart or other failures** (Valores consecutivos después de un reinicio del servidor u otros errores) -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría almacenar en memoria caché los valores de identidad por motivos de rendimiento y algunos de los valores asignados podrían perderse durante un error de la base de datos o un reinicio del servidor. Esto puede tener como resultado espacios en el valor de identidad al insertarlo. Si no es aceptable que haya espacios, la aplicación debe usar mecanismos propios para generar valores de clave. El uso de un generador de secuencias con la opción **NOCACHE** puede limitar los espacios a transacciones que nunca se llevan a cabo.  
   

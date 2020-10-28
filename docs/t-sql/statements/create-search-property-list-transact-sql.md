@@ -15,6 +15,7 @@ f1_keywords:
 - CREATE_SEARCH_PROPERTY_TSQL
 - CREATE SEARCH PROPERTY
 - CREATE SEARCH PROPERTY LIST
+- sql13.swb.spl.newsearchpropertylist.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2b347260ffc65ddf640678aed8d2728a087f981
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 22ae11a8e37109e7ba90e2b02e9e4351510f9ae7
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688881"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344081"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,15 +55,15 @@ CREATE SEARCH PROPERTY LIST new_list_name
  Es el nombre de la nueva lista de propiedades de búsqueda. *new_list_name* es un identificador con un máximo de 128 caracteres. *new_list_name* debe ser único entre todas las listas de propiedades de la base de datos actual y cumplir las reglas de los identificadores. *new_list_name* se usará cuando se cree el índice de texto completo.  
   
  *database_name*  
- Es el nombre de la base de datos donde se encuentra la lista de propiedades especificada por *source_list_name*. Si no se especifica, *database_name* usa de manera predeterminada la base de datos actual.  
+ Es el nombre de la base de datos donde se encuentra la lista de propiedades especificada por *source_list_name* . Si no se especifica, *database_name* usa de manera predeterminada la base de datos actual.  
   
- *database_name* debe especificar el nombre de una base de datos existente. El inicio de sesión de la conexión actual debe estar asociado a un identificador de usuario existente en la base de datos especificada por *database_name*. También debe tener los [permisos](#Permissions) necesarios en la base de datos.  
+ *database_name* debe especificar el nombre de una base de datos existente. El inicio de sesión de la conexión actual debe estar asociado a un identificador de usuario existente en la base de datos especificada por *database_name* . También debe tener los [permisos](#Permissions) necesarios en la base de datos.  
   
  *source_list_name*  
- Especifica que la nueva lista de propiedades se crea copiando una lista de propiedades existente desde *database_name*. Si *source_list_name* no existe, CREATE SEARCH PROPERTY LIST produce un error. *new_list_name* hereda las propiedades de búsqueda de *source_list_name*.  
+ Especifica que la nueva lista de propiedades se crea copiando una lista de propiedades existente desde *database_name* . Si *source_list_name* no existe, CREATE SEARCH PROPERTY LIST produce un error. *new_list_name* hereda las propiedades de búsqueda de *source_list_name* .  
   
  AUTHORIZATION *owner_name*  
- Especifica el nombre de un usuario o rol que posea la lista de propiedades. *owner_name* debe ser el nombre de un rol del que el usuario actual sea miembro, o bien el usuario actual debe tener el permiso IMPERSONATE sobre *owner_name*. Si no se especifica, la propiedad se otorga al usuario actual.  
+ Especifica el nombre de un usuario o rol que posea la lista de propiedades. *owner_name* debe ser el nombre de un rol del que el usuario actual sea miembro, o bien el usuario actual debe tener el permiso IMPERSONATE sobre *owner_name* . Si no se especifica, la propiedad se otorga al usuario actual.  
   
 > [!NOTE]  
 >  El propietario se puede cambiar usando la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)][ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  

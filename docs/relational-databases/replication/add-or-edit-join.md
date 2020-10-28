@@ -10,15 +10,16 @@ ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.addeditjoin.f1
+- sql13.sql13.swb.agdashboard.arp4joinstate.issues.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 30d6302a53101e41c85292b776b1128421520e95
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 549970e81b86a8331c2d41afc3b01fab3eb7160b
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423639"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300741"
 ---
 # <a name="add-or-edit-join"></a>Agregar o editar combinaciones
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,15 +40,15 @@ ms.locfileid: "88423639"
   
 1.  **Compruebe la tabla filtrada y seleccione la tabla combinada**  
   
-    -   Si está agregando una nueva combinación, compruebe que la tabla del cuadro de texto **Tabla filtrada** es correcta (si no es así, haga clic en **Cancelar**, seleccione la tabla correcta en la página **Filtrar filas de tabla** y, luego, haga clic en **Agregar combinación** para volver a este cuadro de diálogo). A continuación, seleccione una tabla de la lista desplegable **Tabla combinada** .  
+    -   Si está agregando una nueva combinación, compruebe que la tabla del cuadro de texto **Tabla filtrada** es correcta (si no es así, haga clic en **Cancelar** , seleccione la tabla correcta en la página **Filtrar filas de tabla** y, luego, haga clic en **Agregar combinación** para volver a este cuadro de diálogo). A continuación, seleccione una tabla de la lista desplegable **Tabla combinada** .  
   
     -   Si está editando una combinación existente, los nombres de las tablas ya estarán especificados y no se podrán cambiar. Para cambiar las tablas implicadas en la combinación, debe eliminar el filtro de combinación existente en la página **Filtrar filas de tabla** y crear una nueva combinación entre otras tablas.  
   
 2.  **Cree la instrucción de combinación**  
   
-    -   Si está agregando una nueva combinación, seleccione **Usar generador de instrucciones para crear la instrucción** o **Escribir instrucción de combinación manualmente**. Si empieza a escribir la combinación manualmente, no podrá utilizar el generador.  
+    -   Si está agregando una nueva combinación, seleccione **Usar generador de instrucciones para crear la instrucción** o **Escribir instrucción de combinación manualmente** . Si empieza a escribir la combinación manualmente, no podrá utilizar el generador.  
   
-         Si selecciona utilizar el generador, utilice las columnas de la cuadrícula (**Conjunción**, **Columna de tabla filtrada**, **Operador**y **Columna de tabla combinada**) para generar una instrucción de combinación. Cada columna de la cuadrícula contiene un cuadro de lista desplegable que le permite seleccionar dos columnas y un operador ( **=** , **<>** , **<=** , **\<**, **>=** , **>** , **like**). Los resultados se muestran en el área de texto **Vista previa** . Si la combinación implica a más de un par de columnas, seleccione una conjunción (**AND** u **OR**) de la columna **Conjunción** y, a continuación, escriba dos o más columnas y otro operador.  
+         Si selecciona utilizar el generador, utilice las columnas de la cuadrícula ( **Conjunción** , **Columna de tabla filtrada** , **Operador** y **Columna de tabla combinada** ) para generar una instrucción de combinación. Cada columna de la cuadrícula contiene un cuadro de lista desplegable que le permite seleccionar dos columnas y un operador ( **=** , **<>** , **<=** , **\<**, **>=** , **>** , **like** ). Los resultados se muestran en el área de texto **Vista previa** . Si la combinación implica a más de un par de columnas, seleccione una conjunción ( **AND** u **OR** ) de la columna **Conjunción** y, a continuación, escriba dos o más columnas y otro operador.  
   
          Si selecciona escribir la instrucción manualmente, escriba la instrucción de combinación en el área de texto **Instrucción de combinación** . Utilice los cuadros de lista **Columna de tabla filtrada** y **Columnas de tabla combinada** para arrastrar y colocar columnas en el área de texto **Instrucción de combinación** .  
   
@@ -55,12 +56,12 @@ ms.locfileid: "88423639"
   
 3.  **Especifique las opciones de combinación**  
 
-    -   Si la columna en la que combina la tabla filtrada es única, seleccione **Clave única**. El proceso de mezcla dispone de optimizaciones de rendimiento especiales si la columna es exclusiva.  
+    -   Si la columna en la que combina la tabla filtrada es única, seleccione **Clave única** . El proceso de mezcla dispone de optimizaciones de rendimiento especiales si la columna es exclusiva.  
   
         > [!CAUTION]  
         >  Al seleccionar esta opción indica que la relación entre la tabla principal y la secundaria de un filtro de combinación es de uno a uno o de uno a varios. Seleccione esta opción únicamente si tiene una restricción en la columna combinada en la tabla primaria que garantiza la exclusividad. Si la opción no se establece correctamente, se podría producir la no convergencia de datos.  
   
-    -   Solo para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. De manera predeterminada, la replicación de mezcla procesa los cambios fila a fila durante la sincronización. Para hacer que los cambios relacionados se procesen como una unidad, seleccione **Registro lógico**. Esta opción solo está disponible si se cumplen los requisitos del artículo y de la publicación para utilizar registros lógicos. Para obtener más información, consulte la sección "Consideraciones para el uso de registros lógicos" en el tema [Agrupar cambios en filas relacionadas con registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   Solo para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. De manera predeterminada, la replicación de mezcla procesa los cambios fila a fila durante la sincronización. Para hacer que los cambios relacionados se procesen como una unidad, seleccione **Registro lógico** . Esta opción solo está disponible si se cumplen los requisitos del artículo y de la publicación para utilizar registros lógicos. Para obtener más información, consulte la sección "Consideraciones para el uso de registros lógicos" en el tema [Agrupar cambios en filas relacionadas con registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  Una vez agregado o editado un filtro, haga clic en **Aceptar** para guardar los cambios y cerrar el cuadro de diálogo. El filtro que ha especificado se analiza y se ejecuta según la tabla de la cláusula SELECT. Si la instrucción de filtro contiene errores de sintaxis u otros problemas, se le notificará y podrá modificar dicha instrucción.  
   

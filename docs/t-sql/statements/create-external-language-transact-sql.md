@@ -10,20 +10,20 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 24bdf85af4a165a77694af5e65c262fdf5b97edd
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 3e97f98a4e9080ceffdf4925c4467bfc27fc40d9
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136393"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300149"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Registra las extensiones de lenguaje externo en la base de datos desde la secuencia de bytes o la ruta de acceso de archivo especificada. Esta instrucción actúa como un mecanismo genérico para que el administrador de base de datos pueda registrar las extensiones del lenguaje externo nuevo en cualquier plataforma de sistema operativo compatible con SQL Server. Para obtener más información, consulte las [extensiones de lenguaje](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
+Registra las extensiones de lenguaje externo en la base de datos desde la secuencia de bytes o la ruta de acceso de archivo especificada. Esta instrucción actúa como un mecanismo genérico para que el administrador de base de datos pueda registrar las extensiones del lenguaje externo nuevo en cualquier plataforma de sistema operativo compatible con SQL Server. Para obtener más información, consulte las [extensiones de lenguaje](../../language-extensions/language-extensions-overview.md).
 
 > [!NOTE]
-> **R** y **Python** son nombres reservados y no se puede crear ningún lenguaje externo con esos nombres. Para obtener más información sobre cómo usar **R** y **Python**, consulte [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/).
+> **R** y **Python** son nombres reservados y no se puede crear ningún lenguaje externo con esos nombres. Para obtener más información sobre cómo usar **R** y **Python** , consulte [SQL Server Machine Learning Services](../../machine-learning/index.yml).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -109,7 +109,7 @@ Este parámetro es necesario para escenarios de sistemas operativos híbridos. E
 
 ## <a name="permissions"></a>Permisos
 
-Requiere el permiso `CREATE EXTERNAL LANGUAGE`. De forma predeterminada, cualquier usuario que tenga **dbo** y sea miembro del rol **db_owner** tiene permisos para crear un lenguaje externo. Para todos los demás usuarios, debe concederles explícitamente permiso con una instrucción [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) y especificando CREATE EXTERNAL LANGUAGE como privilegio.
+Requiere el permiso `CREATE EXTERNAL LANGUAGE`. De forma predeterminada, cualquier usuario que tenga **dbo** y sea miembro del rol **db_owner** tiene permisos para crear un lenguaje externo. Para todos los demás usuarios, debe concederles explícitamente permiso con una instrucción [GRANT](./grant-database-permissions-transact-sql.md) y especificando CREATE EXTERNAL LANGUAGE como privilegio.
 
 Para modificar una biblioteca, se necesita el permiso `ALTER ANY EXTERNAL LANGUAGE`.
 
@@ -153,7 +153,7 @@ GO
 ```
 ### <a name="c-grant-permissions-to-execute-external-script"></a>C. Conceder permisos para ejecutar un script externo
 
-En el ejemplo siguiente se concede acceso a la entidad **mylogin** para que ejecute scripts mediante el lenguaje externo de **Java**.
+En el ejemplo siguiente se concede acceso a la entidad **mylogin** para que ejecute scripts mediante el lenguaje externo de **Java** .
 
 ```sql
 GRANT EXECUTE EXTERNAL SCRIPT ON EXTERNAL LANGUAGE ::Java 
@@ -166,4 +166,4 @@ TO mylogin;
 [ALTER EXTERNAL LANGUAGE (Transact-SQL)](alter-external-language-transact-sql.md)  
 [DROP EXTERNAL LANGUAGE (Transact-SQL)](drop-external-language-transact-sql.md)  
 [sys.external_languages](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)  
-[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)  
+[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)

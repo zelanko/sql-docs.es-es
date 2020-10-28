@@ -19,12 +19,12 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f1aff8d7d8496604983c54099f818e98fffbf18
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 462c857e6067e6431248e86edb72d007e56d84e7
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493077"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734611"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -44,13 +44,13 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
   
 ## <a name="arguments"></a>Argumentos  
  [ @key =] N'key '  
- La clave que se establece, de tipo **sysname**. El tamaño máximo de la clave es de 128 bytes.  
+ La clave que se establece, de tipo **sysname** . El tamaño máximo de la clave es de 128 bytes.  
   
  [ @value =] ' valor '  
- Valor de la clave especificada, de tipo **sql_variant**. Si se establece un valor NULL, se libera la memoria. El tamaño máximo es 8.000 bytes.  
+ Valor de la clave especificada, de tipo **sql_variant** . Si se establece un valor NULL, se libera la memoria. El tamaño máximo es 8.000 bytes.  
   
  [ @read_only =] {0 | 1}  
- Marca de tipo **bit**. Si es 1, el valor de la clave especificada no se puede cambiar de nuevo en esta conexión lógica. Si es 0 (valor predeterminado), el valor se puede cambiar.  
+ Marca de tipo **bit** . Si es 1, el valor de la clave especificada no se puede cambiar de nuevo en esta conexión lógica. Si es 0 (valor predeterminado), el valor se puede cambiar.  
   
 ## <a name="permissions"></a>Permisos  
  Cualquier usuario puede establecer un contexto de sesión para su sesión.  
@@ -58,12 +58,12 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
 ## <a name="remarks"></a>Observaciones  
  Al igual que otros procedimientos almacenados, solo se pueden pasar como parámetros los literales y las variables (no las llamadas a expresiones o funciones).  
   
- El tamaño total del contexto de la sesión está limitado a 1 MB. Si establece un valor que hace que se supere este límite, se producirá un error en la instrucción. Puede supervisar el uso de memoria global en [Sys. dm_os_memory_objects &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
+ El tamaño total del contexto de la sesión está limitado a 1 MB. Si establece un valor que hace que se supere este límite, se producirá un error en la instrucción. Puede supervisar el uso de memoria global en [sys.dm_os_memory_objects &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
- Puede supervisar el uso general de memoria consultando [Sys. dm_os_memory_cache_counters &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) como se indica a continuación: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ Puede supervisar el uso general de memoria consultando [sys.dm_os_memory_cache_counters &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) como se indica a continuación: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se muestra cómo establecer y devolver una clave de contexto de sesión denominada Language con un valor de English.  
+A. En el ejemplo siguiente se muestra cómo establecer y devolver una clave de contexto de sesión denominada Language con un valor de English.  
   
 ```  
 EXEC sys.sp_set_session_context @key = N'language', @value = 'English';  
@@ -75,12 +75,22 @@ SELECT SESSION_CONTEXT(N'language');
 ```  
 EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;  
 ```  
-  
+
+B. En el ejemplo siguiente se muestra cómo establecer y recuperar una clave de contexto de sesión denominada client_correlation_id con un valor de 12323ad.
+```
+-- set value
+EXEC sp_set_session_context 'client_correlation_id', '12323ad'; 
+
+--check value
+SELECT SESSION_CONTEXT(N'client_correlation_id');
+
+```
+
 ## <a name="see-also"></a>Consulte también  
- [CURRENT_TRANSACTION_ID &#40;&#41;de Transact-SQL ](../../t-sql/functions/current-transaction-id-transact-sql.md)   
+ [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [SESSION_CONTEXT &#40;&#41;de Transact-SQL ](../../t-sql/functions/session-context-transact-sql.md)   
  [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md)   
- [CONTEXT_INFO &#40;&#41;de Transact-SQL ](../../t-sql/functions/context-info-transact-sql.md)   
+ [CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)   
  [SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)  
   
   

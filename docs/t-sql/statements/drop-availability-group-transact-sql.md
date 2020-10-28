@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e6a2cb161ae00d9f77d50c7a702183927cc169d8
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: d2335b8015f0eb88821e94231ac8cf48d9bc0471
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380214"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300383"
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,12 +64,12 @@ DROP AVAILABILITY GROUP group_name
     > [!IMPORTANT]  
     >  Evite quitar un grupo de disponibilidad cuando el clúster de Clústeres de conmutación por error de Windows Server (WSFC) no tiene quórum. Si debe quitar un grupo de disponibilidad mientras el clúster no tiene quórum, el grupo de disponibilidad de metadatos que se almacena en el clúster no se quita. Cuando el clúster recupere el quórum, necesitará volver a quitar el grupo de disponibilidad para quitarlo del clúster de WSFC.  
   
--   En una réplica secundaria, **DROP AVAILABILITY GROUP** solo se debe usar en caso de emergencia. Esto se debe a que al quitar un grupo de disponibilidad este se queda sin conexión. Si quita el grupo de disponibilidad de una réplica secundaria, la réplica principal no puede determinar si el estado **OFFLINE** se ha debido a la pérdida del quórum, a una conmutación por error forzada o a un comando **DROP AVAILABILITY GROUP**. La réplica principal cambia al estado **RESTORING** para evitar una posible situación de división de cerebro. Para obtener más información, vea [How It Works: DROP AVAILABILITY GROUP Behaviors (Cómo funciona: comportamientos de DROP AVAILABILITY GROUP)](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (blog de los ingenieros de SQL Server de CSS).  
+-   En una réplica secundaria, **DROP AVAILABILITY GROUP** solo se debe usar en caso de emergencia. Esto se debe a que al quitar un grupo de disponibilidad este se queda sin conexión. Si quita el grupo de disponibilidad de una réplica secundaria, la réplica principal no puede determinar si el estado **OFFLINE** se ha debido a la pérdida del quórum, a una conmutación por error forzada o a un comando **DROP AVAILABILITY GROUP** . La réplica principal cambia al estado **RESTORING** para evitar una posible situación de división de cerebro. Para obtener más información, vea [How It Works: DROP AVAILABILITY GROUP Behaviors (Cómo funciona: comportamientos de DROP AVAILABILITY GROUP)](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (blog de los ingenieros de SQL Server de CSS).  
   
 ## <a name="security"></a>Seguridad  
   
 ### <a name="permissions"></a>Permisos  
- Se requiere el permiso **ALTER AVAILABILITY GROUP** en el grupo de disponibilidad, el permiso **CONTROL AVAILABILITY GROUP**, el permiso **ALTER ANY AVAILABILITY GROUP** o el permiso **CONTROL SERVER**. Para quitar un grupo de disponibilidad que no se encuentre hospedado en la instancia del servidor local se necesita el permiso **CONTROL SERVER** o el permiso **CONTROL** en ese grupo de disponibilidad.  
+ Se requiere el permiso **ALTER AVAILABILITY GROUP** en el grupo de disponibilidad, el permiso **CONTROL AVAILABILITY GROUP** , el permiso **ALTER ANY AVAILABILITY GROUP** o el permiso **CONTROL SERVER** . Para quitar un grupo de disponibilidad que no se encuentre hospedado en la instancia del servidor local se necesita el permiso **CONTROL SERVER** o el permiso **CONTROL** en ese grupo de disponibilidad.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se quita el grupo de disponibilidad `AccountsAG`.  
@@ -80,11 +80,10 @@ DROP AVAILABILITY GROUP AccountsAG;
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
--   [How It Works: DROP AVAILABILITY GROUP Behaviors (Cómo funciona: comportamientos de DROP AVAILABILITY GROUP)](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (blog de los ingenieros de SQL Server de CSS)  
+-   [How It Works: DROP AVAILABILITY GROUP Behaviors (Cómo funciona: comportamientos de DROP AVAILABILITY GROUP)](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (blog de los ingenieros de SQL Server de CSS)  
   
 ## <a name="see-also"></a>Consulte también  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Quitar un grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
-  
   

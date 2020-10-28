@@ -2,6 +2,7 @@
 title: Cifrar una columna de datos | Microsoft Docs
 description: Obtenga información sobre cómo cifrar una columna de datos mediante el cifrado simétrico en SQL Server con Transact-SQL, que a veces se conoce como cifrado de nivel de columna o de nivel de celda.
 ms.custom: ''
+titleSuffix: SQL Server & Azure Synapse Analytics & Azure SQL Database & SQL Managed Instance
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,14 +18,15 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 90987ec581d734116f386e1a0f3bfd72e4bf15b6
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 882a99eafed8c913ef0edef213b09ef23a0990f7
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091753"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439339"
 ---
 # <a name="encrypt-a-column-of-data"></a>Cifrar una columna de datos
+
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
   En este artículo se describe cómo cifrar una columna de datos utilizando el cifrado simétrico en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A veces, esto se conoce como cifrado de nivel de columna, o cifrado de nivel de celda. Esta característica se encuentra en versión preliminar para Azure Synapse Analytics (SQL DW).
@@ -55,11 +57,11 @@ Realice siempre una copia de seguridad de la clave maestra de base de datos. Par
 
 ### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Para cifrar una columna de datos usando el cifrado simétrico que incluye un autenticador  
   
-1. En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. En el **Explorador de objetos** , conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. En la barra de Estándar, haga clic en **Nueva consulta**.  
+2. En la barra de Estándar, haga clic en **Nueva consulta** .  
   
-3. Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
+3. Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar** .  
 
     ```sql
     USE AdventureWorks2012;  
@@ -113,11 +115,11 @@ Realice siempre una copia de seguridad de la clave maestra de base de datos. Par
   
 ### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Para cifrar una columna de datos usando un cifrado simétrico simple  
   
-1. En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. En el **Explorador de objetos** , conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. En la barra de Estándar, haga clic en **Nueva consulta**.  
+2. En la barra de Estándar, haga clic en **Nueva consulta** .  
   
-3. Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
+3. Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar** .  
   
     ```sql
     USE AdventureWorks2012;  

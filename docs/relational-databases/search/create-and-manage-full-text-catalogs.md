@@ -1,11 +1,13 @@
 ---
+title: Crear y administrar catálogos de texto completo
 description: Crear y administrar catálogos de texto completo
-title: Creación y administración de catálogos de texto completo | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
 ms.topic: conceptual
+f1_keywords:
+- sql13.swb.fulltextsearch.ftcatalog.general.f1
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
@@ -14,14 +16,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f95811113261f10701e0fcfc41c70e348891f6a9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ff19e0cd9ef6b88dae2410edbc4cae74e911c1a0
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868093"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344007"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Crear y administrar catálogos de texto completo
+
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Un catálogo de texto completo es un contenedor lógico para un grupo de índices de texto completo. Tendrá que crear un catálogo de texto completo antes de poder crear un índice de texto completo.
 
@@ -40,11 +43,11 @@ GO
 ``` 
 
 ### <a name="create-a-full-text-catalog-with-management-studio"></a>Crear un catálogo de texto completo con Management Studio
-1.  En el Explorador de objetos, expanda el servidor, expanda **Bases de datos**y, después, expanda la base de datos en la que quiere crear el catálogo de texto completo.  
+1.  En el Explorador de objetos, expanda el servidor, expanda **Bases de datos** y, después, expanda la base de datos en la que quiere crear el catálogo de texto completo.  
   
-2.  Expanda **Almacenamiento** y, a continuación, haga clic con el botón secundario en **Catálogos de texto completo**.  
+2.  Expanda **Almacenamiento** y, a continuación, haga clic con el botón secundario en **Catálogos de texto completo** .  
   
-3.  Seleccione **Nuevo catálogo de texto completo**.  
+3.  Seleccione **Nuevo catálogo de texto completo** .  
   
 4.  En el cuadro de diálogo **Nuevo catálogo de texto completo** , especifique la información del catálogo que va a volver a crear. Para obtener más información, vea [Búsqueda de texto completo](../../t-sql/statements/create-fulltext-catalog-transact-sql.md).  
   
@@ -83,27 +86,27 @@ En la siguiente tabla se muestran las propiedades relacionadas con los catálogo
 Ejecute la instrucción de Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
 ../../t-sql/statements/alter-fulltext-catalog-transact-sql.md) o realice las siguientes tareas en SQL Server Management Studio (SSMS).
 
-1.  En SSMS, en el Explorador de objetos, expanda el servidor, expanda **Bases de datos**y, después, expanda la base de datos que contiene el catálogo de texto completo que quiere volver a generar.  
+1.  En SSMS, en el Explorador de objetos, expanda el servidor, expanda **Bases de datos** y, después, expanda la base de datos que contiene el catálogo de texto completo que quiere volver a generar.  
   
-2.  Expanda **Almacenamiento** y, a continuación, expanda **Catálogos de texto completo**.  
+2.  Expanda **Almacenamiento** y, a continuación, expanda **Catálogos de texto completo** .  
   
-3.  Haga clic con el botón derecho en el nombre del catálogo de texto completo que quiere volver a generar y seleccione **Volver a generar**.  
+3.  Haga clic con el botón derecho en el nombre del catálogo de texto completo que quiere volver a generar y seleccione **Volver a generar** .  
   
-4.  Ante la pregunta **¿Quiere eliminar el catálogo de texto completo y volver a generarlo?**, haga clic en **Aceptar**.  
+4.  Ante la pregunta **¿Quiere eliminar el catálogo de texto completo y volver a generarlo?** , haga clic en **Aceptar** .  
   
-5.  En el cuadro de diálogo **Volver a generar el catálogo de texto completo** , haga clic en **Cerrar**.  
+5.  En el cuadro de diálogo **Volver a generar el catálogo de texto completo** , haga clic en **Cerrar** .  
    
 ##  <a name="rebuild-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a> Recompilar todos los catálogos de texto completo para una base de datos  
 
-1.  En SSMS, en el Explorador de objetos, expanda el servidor, expanda **Bases de datos**y, después, expanda la base de datos que contiene los catálogos de texto completo que quiere volver a generar.  
+1.  En SSMS, en el Explorador de objetos, expanda el servidor, expanda **Bases de datos** y, después, expanda la base de datos que contiene los catálogos de texto completo que quiere volver a generar.  
   
-2.  Expanda **Almacenamiento** y, a continuación, haga clic con el botón secundario en **Catálogos de texto completo**.  
+2.  Expanda **Almacenamiento** y, a continuación, haga clic con el botón secundario en **Catálogos de texto completo** .  
   
-3.  Seleccione **Volver a generar todo**.  
+3.  Seleccione **Volver a generar todo** .  
   
-4.  Ante la pregunta **¿Quiere eliminar todos los catálogos de texto completo y volver a generarlos?**, haga clic en **Aceptar**.  
+4.  Ante la pregunta **¿Quiere eliminar todos los catálogos de texto completo y volver a generarlos?** , haga clic en **Aceptar** .  
   
-5.  En el cuadro de diálogo **Volver a generar todos los catálogos de texto completo** , haga clic en **Cerrar**.  
+5.  En el cuadro de diálogo **Volver a generar todos los catálogos de texto completo** , haga clic en **Cerrar** .  
   
   
   
@@ -112,13 +115,13 @@ Ejecute la instrucción de Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
 Ejecute la instrucción de Transact-SQL [DROP FULLTEXT CATALOG](
 ../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) o realice las siguientes acciones en SQL Server Management Studio (SSMS).
 
-1.  En SSMS, en el Explorador de objetos, expanda el servidor, expanda **Bases de datos**y expanda la base de datos que contiene el catálogo de texto completo que quiere quitar.  
+1.  En SSMS, en el Explorador de objetos, expanda el servidor, expanda **Bases de datos** y expanda la base de datos que contiene el catálogo de texto completo que quiere quitar.  
   
-2.  Expanda **Almacenamiento** y, a continuación, **Catálogos de texto completo**.  
+2.  Expanda **Almacenamiento** y, a continuación, **Catálogos de texto completo** .  
   
-3.  Haga clic con el botón derecho en el catálogo de texto completo que quiere quitar y seleccione **Eliminar**.  
+3.  Haga clic con el botón derecho en el catálogo de texto completo que quiere quitar y seleccione **Eliminar** .  
   
-4.  En el cuadro de diálogo **Eliminar objetos** , haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **Eliminar objetos** , haga clic en **Aceptar** .  
 
 ## <a name="next-step"></a>Paso siguiente
 [Crear y administrar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md)

@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d879b6a7be0b279ab34dfa9a66bf3a8cbe58330e
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 1421ba7d2f03ecdf6f8a687e4e6d662702fe464a
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024389"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300433"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -136,7 +136,7 @@ Especifica el nombre del nuevo índice.
   
 Si la tabla ya tiene un índice clúster de almacén de columnas, puede especificar el mismo nombre que el índice existente o puede usar la opción DROP EXISTING para especificar uno nuevo.  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
+ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*
 
 Especifica el nombre de una, dos o tres partes de la tabla que se almacenará como un índice clúster de almacén de columnas. Si la tabla es un montón o un índice clúster, se convierte de almacén de filas en un almacén de columnas. Si la tabla ya es un almacén de columnas, esta instrucción vuelve a compilar el índice clúster de almacén de columnas. Para convertir a un índice ordenado de almacén de columnas agrupado, el índice existente debe ser un índice de almacén de columnas agrupado.
   
@@ -219,11 +219,11 @@ Crea un índice no clúster de almacén de columnas en memoria en una tabla de a
 *index_name*  
    Especifica el nombre del índice. *index_name* debe ser único en la tabla, pero no es necesario que sea único en la base de datos. Los nombres de índice deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- **(** _column_  [ **,** ...*n* ] **)**  
+ **(** _column_  [ **,** ... *n* ] **)**  
     Especifica las columnas que se van a almacenar. Un índice no clúster de almacén de columnas está limitado a 1024 columnas.  
    Cada columna debe ser de un tipo de datos compatible con los índices de almacén de columnas. Vea [Limitaciones y restricciones](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) para obtener una lista de los tipos de datos admitidos.  
 
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
    Especifica el nombre de una, dos o tres partes de la tabla que contiene el índice.  
 
 #### <a name="with-options"></a>Opciones de WITH
@@ -243,7 +243,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    Para obtener más información, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
->  Las operaciones de índices en paralelo no están disponibles en todas las ediciones de [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Las operaciones de índices en paralelo no están disponibles en todas las ediciones de [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 ###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
 - `ON` especifica que el índice de almacén de columnas permanece en línea y disponible mientras se compila la nueva copia del índice.
@@ -380,8 +380,8 @@ Si la tabla subyacente tiene una columna con un tipo de datos no admitido para l
 -   No puede tener más de 1024 columnas.
 -   No se pueden crear como índice basado en restricciones. Se pueden tener restricciones únicas, restricciones de clave principal y restricciones de clave externa en una tabla con un índice de almacén de columnas. Las restricciones se aplican siempre con un índice de almacén de filas. Las restricciones no se pueden aplicar con un índice de almacén de columnas (agrupado o no agrupado).
 -   No puede incluir ninguna columna dispersa.  
--   No se pueden modificar mediante la instrucción **ALTER INDEX**. Para cambiar el índice no clúster, debe quitar y volver a crear el índice de almacén de columnas en su lugar. Puede usar **ALTER INDEX** para deshabilitar y volver a compilar un índice de almacén de columnas.  
--   No se pueden crear mediante la palabra clave **INCLUDE**.  
+-   No se pueden modificar mediante la instrucción **ALTER INDEX** . Para cambiar el índice no clúster, debe quitar y volver a crear el índice de almacén de columnas en su lugar. Puede usar **ALTER INDEX** para deshabilitar y volver a compilar un índice de almacén de columnas.  
+-   No se pueden crear mediante la palabra clave **INCLUDE** .  
 -   No pueden incluir las palabras clave **ASC** ni **DESC** para ordenar el índice. Los índices de almacén de columnas se ordenan de acuerdo con los algoritmos de compresión. La ordenación eliminaría muchas mejoras de rendimiento.  
 -   No se pueden incluir columnas de objetos grandes (LOB) de tipo nvarchar(max), varchar(max) y varbinary(max) en índices no clúster de almacén de columnas. Solo los índices clúster de almacén de columnas admiten tipos LOB, a partir de la versión [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y Azure SQL Database configurados en el nivel Premium, nivel estándar (S3 y posteriores) y en todos los niveles de ofertas de núcleo virtual. Tenga en cuenta que las versiones anteriores no admiten tipos LOB en los índices clúster y no clúster de almacén de columnas.
 
@@ -782,5 +782,3 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER ( PRODUCTKEY,SHIPDATE );
 WITH (DROP_EXISTING = ON)
 ```
-
-

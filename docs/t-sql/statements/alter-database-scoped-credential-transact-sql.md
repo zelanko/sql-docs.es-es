@@ -18,12 +18,12 @@ ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 21b259f692a324e163ed74b32366f6c8ec21a90f
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 00cfd711ce130fa9c90c11000a6853082494e9bd
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688353"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300303"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,17 +45,17 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  Especifica el nombre de la credencial de ámbito de base de datos que se va a modificar.  
   
- IDENTITY **='***identity_name***'**  
- Especifica el nombre de la cuenta que se utilizará para conectarse fuera del servidor. Para importar un archivo de Azure Blob Storage, el nombre de identidad debe ser `SHARED ACCESS SIGNATURE`.  Para saber más sobre las firmas de acceso compartido, vea [Uso de firmas de acceso compartido (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
+ IDENTITY **=' ***identity_name*** '**  
+ Especifica el nombre de la cuenta que se utilizará para conectarse fuera del servidor. Para importar un archivo de Azure Blob Storage, el nombre de identidad debe ser `SHARED ACCESS SIGNATURE`.  Para saber más sobre las firmas de acceso compartido, vea [Uso de firmas de acceso compartido (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1).  
     
   
- SECRET **='***secret***'**  
+ SECRET **=' ***secret*** '**  
  Especifica el secreto necesario para la autenticación de salida. *secret* es necesario para importar un archivo de Azure Blob Storage. *secret* puede ser opcional para otros fines.   
 > [!WARNING]
 >  El valor de clave SAS debe empezar con un signo de interrogación (“?”). Cuando use la clave SAS, debe quitar el símbolo “?” inicial. Si no lo hace, puede que se bloquee su trabajo.    
   
 ## <a name="remarks"></a>Observaciones  
- Cuando se cambia una credencial de ámbito de base de datos, se restablecen los valores de *identity_name* y *secret*. Si no se especifica el argumento opcional SECRET, el valor del secreto almacenado se establecerá en NULL.  
+ Cuando se cambia una credencial de ámbito de base de datos, se restablecen los valores de *identity_name* y *secret* . Si no se especifica el argumento opcional SECRET, el valor del secreto almacenado se establecerá en NULL.  
   
  El secreto está cifrado mediante la clave maestra de servicio. Si se vuelve a generar la clave maestra de servicio, el secreto se vuelve a cifrar utilizando la nueva clave maestra de servicio.  
   
@@ -90,5 +90,4 @@ GO
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
-  
   

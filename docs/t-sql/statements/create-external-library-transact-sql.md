@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b25b64b9e6cde8f7546ca21f7c3383460b3e1fce
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: d484d2e95f3b2f0030744a87f00c7dc3f220aa40
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688492"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300231"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -41,7 +41,7 @@ Carga los archivos de paquete de R, Python o Java en una base de datos desde la 
 Carga los archivos de paquete de R o Python en una base de datos desde la ruta de acceso de archivo o la secuencia de bytes especificada. Esta instrucción actúa como un mecanismo genérico para que el administrador de la base de datos cargue los artefactos necesarios. 
 
 > [!NOTE]
-> En Azure SQL Managed Instance, puede usar **sqlmlutils** para instalar una biblioteca. Para obtener información detallada, vea [Instalación de paquetes de Python con sqlmlutils](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-python-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current) e [Instalación de nuevos paquetes de R con sqlmlutils](https://docs.microsoft.com/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=%2Fazure%2Fazure-sql%2Fmanaged-instance%2Fcontext%2Fml-context&view=azuresqldb-mi-current).
+> En Azure SQL Managed Instance, puede usar **sqlmlutils** para instalar una biblioteca. Para obtener información detallada, vea [Instalación de paquetes de Python con sqlmlutils](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current) e [Instalación de nuevos paquetes de R con sqlmlutils](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -150,7 +150,7 @@ WITH ( LANGUAGE = <language> )
 
 Las bibliotecas cargadas en la instancia pueden ser públicas o privadas. Si es un miembro de `dbo` quien ha creado la biblioteca, esta será pública y se podrá compartir con todos los usuarios. En caso contrario, será privada exclusivamente del usuario.
 
-Los nombres de biblioteca deben ser únicos dentro del contexto de un usuario o propietario específico. Por ejemplo, dos usuarios, **RUser1** y **RUser2**, pueden cargar individualmente y por separado la biblioteca de R `ggplot2`. Sin embargo, si **RUser1** desea cargar una versión más reciente de `ggplot2`, la segunda instancia debe llamarse de forma diferente o debe reemplazar la biblioteca existente.
+Los nombres de biblioteca deben ser únicos dentro del contexto de un usuario o propietario específico. Por ejemplo, dos usuarios, **RUser1** y **RUser2** , pueden cargar individualmente y por separado la biblioteca de R `ggplot2`. Sin embargo, si **RUser1** desea cargar una versión más reciente de `ggplot2`, la segunda instancia debe llamarse de forma diferente o debe reemplazar la biblioteca existente.
 
 Los nombres de biblioteca no se pueden asignar de forma arbitraria; el nombre de biblioteca debe ser el mismo que el nombre necesario para cargar la biblioteca en el script externo.
 
@@ -160,7 +160,7 @@ Especifica el nombre del usuario o rol que es propietario de la biblioteca exter
 
 Las bibliotecas que pertenecen al propietario de la base de datos se consideran globales en la base de datos y en tiempo de ejecución. Dicho de otro modo, los propietarios de bases de datos pueden crear bibliotecas que contienen un conjunto común de bibliotecas o paquetes que se comparten entre varios usuarios. Cuando un usuario distinto del usuario `dbo` crea una biblioteca externa, esta es privada exclusivamente de ese usuario.
 
-Cuando el usuario **RUser1** ejecuta un script externo, el valor de `libPath` puede contener varias rutas de acceso. La primera ruta de acceso es siempre la ruta de acceso a la biblioteca compartida creada por el propietario de la base de datos. La segunda parte de `libPath` especifica la ruta de acceso que contiene paquetes cargados individualmente por **RUser1**.
+Cuando el usuario **RUser1** ejecuta un script externo, el valor de `libPath` puede contener varias rutas de acceso. La primera ruta de acceso es siempre la ruta de acceso a la biblioteca compartida creada por el propietario de la base de datos. La segunda parte de `libPath` especifica la ruta de acceso que contiene paquetes cargados individualmente por **RUser1** .
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
@@ -231,11 +231,11 @@ La instrucción `CREATE EXTERNAL LIBRARY` carga los bits de biblioteca en la bas
 
 Las bibliotecas cargadas en la instancia pueden ser públicas o privadas. Si es un miembro de `dbo` quien ha creado la biblioteca, esta será pública y se podrá compartir con todos los usuarios. En caso contrario, será privada exclusivamente del usuario.
 
-Varios paquetes, denominados *paquetes del sistema*, se instalan previamente en una instancia de SQL. El usuario no puede agregar, actualizar ni quitar paquetes del sistema.
+Varios paquetes, denominados *paquetes del sistema* , se instalan previamente en una instancia de SQL. El usuario no puede agregar, actualizar ni quitar paquetes del sistema.
 
 ## <a name="permissions"></a>Permisos
 
-Requiere el permiso `CREATE EXTERNAL LIBRARY`. De forma predeterminada, cualquier usuario que tenga **dbo** y sea miembro del rol **db_owner** tiene permisos para crear una biblioteca externa. Para todos los demás usuarios, debe concederles explícitamente permiso con una instrucción [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) y especificando CREATE EXTERNAL LIBRARY como privilegio.
+Requiere el permiso `CREATE EXTERNAL LIBRARY`. De forma predeterminada, cualquier usuario que tenga **dbo** y sea miembro del rol **db_owner** tiene permisos para crear una biblioteca externa. Para todos los demás usuarios, debe concederles explícitamente permiso con una instrucción [GRANT](./grant-database-permissions-transact-sql.md) y especificando CREATE EXTERNAL LIBRARY como privilegio.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 En SQL Server 2019, además del permiso “CREATE EXTERNAL LIBRARY”, el usuario también necesita el permiso de referencia en un lenguaje externo para poder crear bibliotecas externas para dicho lenguaje.
@@ -400,4 +400,4 @@ library(packageA)
 [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)

@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 560c5c4c3888c36ef77030db2151f09a47b1dcc0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: cfca6f2f7e40593e4480c90ecf543eb39fc810be
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834217"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300934"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* Especifica el nombre de la credencial con ámbito de base de datos que se va a crear. *credential_name* no puede comenzar por el signo de almohadilla (#). Las credenciales del sistema comienzan por ##.
 
-IDENTITY **="** _nombre\_identidad_ **"** Especifica el nombre de la cuenta que se va a usar para conectarse fuera del servidor. Para importar un archivo desde Azure Blob Storage usando una clave compartida, el nombre de identidad debe ser `SHARED ACCESS SIGNATURE`. Para cargar datos en SQL DW, se puede usar cualquier valor válido para la identidad. Para saber más sobre las firmas de acceso compartido, vea [Uso de firmas de acceso compartido (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Cuando use Kerberos (Windows Active Directory o MIT KDC), no use el nombre de dominio en el argumento IDENTITY. Solamente debe usar el nombre de la cuenta.
+IDENTITY **="** _nombre\_identidad_ **"** Especifica el nombre de la cuenta que se va a usar para conectarse fuera del servidor. Para importar un archivo desde Azure Blob Storage usando una clave compartida, el nombre de identidad debe ser `SHARED ACCESS SIGNATURE`. Para cargar datos en SQL DW, se puede usar cualquier valor válido para la identidad. Para saber más sobre las firmas de acceso compartido, vea [Uso de firmas de acceso compartido (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). Cuando use Kerberos (Windows Active Directory o MIT KDC), no use el nombre de dominio en el argumento IDENTITY. Solamente debe usar el nombre de la cuenta.
 
 > [!IMPORTANT]
 > Los conectores ODBC de SQL, Oracle, Teradata y MongoDB para PolyBase solo admiten la autenticación básica, no la autenticación Kerberos.
@@ -85,7 +85,7 @@ Estas son algunas aplicaciones de credenciales con ámbito de base de datos:
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usa las credenciales con ámbito de base de datos para escribir archivos de eventos extendidos en el almacenamiento de blobs de Azure.
 
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usa credenciales con ámbito de base de datos para grupos elásticos. Para obtener más información, vea [Tame explosive growth with elastic databases](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) (Control del crecimiento explosivo con bases de datos elásticas).
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usa credenciales con ámbito de base de datos para grupos elásticos. Para obtener más información, vea [Tame explosive growth with elastic databases](/azure/azure-sql/database/elastic-pool-overview) (Control del crecimiento explosivo con bases de datos elásticas).
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) utilizan credenciales con ámbito de base de datos para acceder a los datos desde el almacenamiento de blobs de Azure. Para obtener más información, consulte [Ejemplos de acceso masivo a datos en Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
 
@@ -127,7 +127,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 En el ejemplo siguiente se genera una credencial con ámbito de base de datos que se puede usar para crear un [origen de datos externo](../../t-sql/statements/create-external-data-source-transact-sql.md), que PolyBase puede usar en [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].
 
 Azure Data Lake Store usa una aplicación de Azure Active Directory para la autenticación de servicio a servicio.
-[Cree una aplicación AAD](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) y documente su client_id, OAuth_2.0_Token_EndPoint y la clave antes de intentar crear una credencial con ámbito de base de datos.
+[Cree una aplicación AAD](/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) y documente su client_id, OAuth_2.0_Token_EndPoint y la clave antes de intentar crear una credencial con ámbito de base de datos.
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.
@@ -148,4 +148,4 @@ WITH
 - [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)
 - [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)
 - [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)
-- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
+- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)

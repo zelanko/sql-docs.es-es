@@ -24,12 +24,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d33d1b9e1369128bc3eeae3df1ca48c4dbbb69e8
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 8b41f37f996015de4b853c9443ef700b16242b44
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227099"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300836"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,10 +59,10 @@ SET ANSI_WARNINGS ON
   
 -   Si es ON y aparecen valores NULL en funciones de agregado, como SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP o COUNT, se genera un mensaje de advertencia. Si es OFF, no se genera ninguna advertencia.  
   
--   Si es ON, los errores de división por cero y desbordamiento aritmético hacen que la instrucción se revierta y que se genere un mensaje de error. Si es OFF, los errores de división por cero y de desbordamiento aritmético hacen que se devuelvan valores NULL. El comportamiento por el que un error de división por cero o desbordamiento aritmético hace que se devuelvan valores NULL tiene lugar cuando se intenta ejecutar una operación INSERT o UPDATE en una columna de tipo **character**, Unicode o **binary**, en la que la longitud del nuevo valor excede el tamaño máximo de la columna. Si SET ANSI_WARNINGS es ON, se cancelan INSERT o UPDATE, tal y como especifica el estándar ISO. No se tienen en cuenta los espacios en blanco a la derecha en las columnas de carácter ni los valores NULL a la derecha en las columnas binarias. Cuando es OFF, los datos se truncan para ajustarlos al tamaño de la columna y la instrucción se ejecuta correctamente.  
+-   Si es ON, los errores de división por cero y desbordamiento aritmético hacen que la instrucción se revierta y que se genere un mensaje de error. Si es OFF, los errores de división por cero y de desbordamiento aritmético hacen que se devuelvan valores NULL. El comportamiento por el que un error de división por cero o desbordamiento aritmético hace que se devuelvan valores NULL tiene lugar cuando se intenta ejecutar una operación INSERT o UPDATE en una columna de tipo **character** , Unicode o **binary** , en la que la longitud del nuevo valor excede el tamaño máximo de la columna. Si SET ANSI_WARNINGS es ON, se cancelan INSERT o UPDATE, tal y como especifica el estándar ISO. No se tienen en cuenta los espacios en blanco a la derecha en las columnas de carácter ni los valores NULL a la derecha en las columnas binarias. Cuando es OFF, los datos se truncan para ajustarlos al tamaño de la columna y la instrucción se ejecuta correctamente.  
   
 > [!NOTE]  
-> Cuando se produce un truncamiento en alguna conversión desde o hacia datos **binary** o **varbinary**, no se emite ningún error ni advertencia, independientemente de las opciones SET.  
+> Cuando se produce un truncamiento en alguna conversión desde o hacia datos **binary** o **varbinary** , no se emite ningún error ni advertencia, independientemente de las opciones SET.  
   
 > [!NOTE]  
 > No se respeta ANSI_WARNINGS al pasar parámetros de un procedimiento almacenado, una función definida por el usuario o al declarar y establecer variables en una instrucción de lote. Por ejemplo, si una variable se define como **char(3)** y después se establece en un valor de más de tres caracteres, los datos se truncan hasta el tamaño definido y la instrucción INSERT o UPDATE se ejecuta correctamente.  
@@ -76,7 +76,7 @@ ANSI_WARNINGS debe ser ON al crear o manipular índices en columnas calculadas o
 > [!IMPORTANT]
 > ANSI_WARNINGS debe establecerse en ON para ejecutar consultas distribuidas.  
   
-Los clientes, como el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Microsoft JDBC Driver para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establecen automáticamente ANSI_WARNINGS en ON con una marca de conexión. Esta opción se puede configurar en los orígenes de datos ODBC, en los atributos de conexión de ODBC, establecidos en la aplicación antes de conectar. El valor predeterminado de SET ANSI_WARNINGS es OFF en las conexiones desde aplicaciones DB-Library. Para más información, vea [LOGIN7](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) en las especificaciones del protocolo de flujo TDS. 
+Los clientes, como el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Microsoft JDBC Driver para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establecen automáticamente ANSI_WARNINGS en ON con una marca de conexión. Esta opción se puede configurar en los orígenes de datos ODBC, en los atributos de conexión de ODBC, establecidos en la aplicación antes de conectar. El valor predeterminado de SET ANSI_WARNINGS es OFF en las conexiones desde aplicaciones DB-Library. Para más información, vea [LOGIN7](/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) en las especificaciones del protocolo de flujo TDS. 
 
 Cuando ANSI_DEFAULTS es ON, se habilita ANSI_WARNINGS.  
   
@@ -188,5 +188,4 @@ DROP TABLE T1;
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
-  
   

@@ -1,2 +1,2 @@
-  \<*unidad*>:\Archivos de programa\Microsoft SQL Server\\*nnn*\\
+  \<*drive*>:\Archivos de programa\Microsoft SQL Server\\*nnn*\\
    

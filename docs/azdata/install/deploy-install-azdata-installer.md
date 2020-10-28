@@ -1,7 +1,7 @@
 ---
-title: Instalación de azdata con Windows Installer
+title: Instalación de la CLI de Azure Data (azdata) con Windows Installer
 titleSuffix: ''
-description: Obtenga información sobre cómo instalar la herramienta azdata con el instalador.
+description: Aprenda a instalar la herramienta de la CLI de Azure Data (azdata) con el instalador.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,14 +9,14 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b36b69206f6a50c3c24a5ed059f52a7f2edd6c68
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 9dd953a78a992a9a5fed7135ae0aee02f88e4de9
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784740"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257498"
 ---
-# <a name="install-azdata-with-windows-installer"></a>Instalación de `azdata` con Windows Installer
+# <a name="install-azure-data-cli-azdata-with-windows-installer"></a>Instalación de [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] con Windows Installer
 
 [!INCLUDE [azdata](../../includes/applies-to-version/azdata.md)]
 
@@ -44,4 +44,4 @@ El programa que se va a desinstalar se denomina `Azdata CLI`. Seleccione esta ap
 
 Para obtener más información sobre los clústeres de macrodatos, vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
 
-Use azdata con [servicios de datos habilitados para Azure Arc](/azure/azure-arc/data/).
+Use `azdata` con los [servicios de datos habilitados para Azure Arc](/azure/azure-arc/data/).

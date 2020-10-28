@@ -1,25 +1,25 @@
 ---
-title: Instalación de azdata
+title: Instalación de la CLI de Azure Data (azdata)
 titleSuffix: ''
-description: Obtenga información sobre cómo instalar la herramienta azdata.
+description: Aprenda a instalar la herramienta de la CLI de Azure Data (azdata).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 83da4e1554e1a6fa112c6fc8f629d30cbcb97d4d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 82aa3a2795328804a10a76e9ecd8af80f3bf7152
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725263"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257429"
 ---
-# <a name="install-azdata"></a>Instalar `azdata`
+# <a name="install-azure-data-cli-azdata"></a>Instalar [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
-`azdata` es una utilidad de línea de comandos escrita en Python para arrancar los servicios de datos y administrarlos mediante las API REST. 
+[!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] es una utilidad de línea de comandos escrita en Python para arrancar los servicios de datos y administrarlos mediante las API REST. 
 
 ## <a name="find-latest-version"></a>Búsqueda de la versión más reciente
 

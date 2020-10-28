@@ -3,24 +3,24 @@ title: Consultar datos externos en Oracle
 titleSuffix: SQL Server big data clusters
 description: En este tutorial, se muestra cómo consultar datos de Oracle desde un clúster de macrodatos de SQL Server 2019. Cree una tabla externa sobre datos en Oracle y, después, ejecute una consulta.
 author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ''
-ms.date: 08/21/2019
+ms.author: dacoelho
+ms.reviewer: mikeray
+ms.date: 10/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7695cf6d88fd05fdbffba28663c910889797ace9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48d7fb0f41446fa54f1376a9a84f7dbff7017960
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772847"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196090"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutorial: consultar Oracle desde un clúster de macrodatos de SQL Server
+# <a name="tutorial-query-oracle-from-sql-server-big-data-cluster"></a>Tutorial: Consulta Oracle desde Clústeres de macrodatos de SQL Server
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-En este tutorial, se muestra cómo consultar datos de Oracle desde un clúster de macrodatos de SQL Server 2019. Para ejecutar este tutorial, necesita acceder a un servidor de Oracle. Si no tiene acceso, este tutorial puede proporcionarle una idea general de cómo funciona la virtualización de datos para orígenes de datos externos en un clúster de macrodatos de SQL Server.
+En este tutorial, se muestra cómo consultar datos de Oracle desde un clúster de macrodatos de SQL Server 2019. Para ejecutar este tutorial, necesita acceder a un servidor de Oracle. Se requiere una cuenta de usuario de Oracle con privilegios de lectura para el objeto externo. Se admite la autenticación de usuario de proxy de Oracle. Si no tiene acceso, este tutorial puede proporcionarle una idea general de cómo funciona la virtualización de datos para orígenes de datos externos en un clúster de macrodatos de SQL Server.
 
 En este tutorial, aprenderá a:
 
@@ -67,7 +67,7 @@ El primer paso es crear un origen de datos externo que pueda acceder al servidor
 
 1. En Azure Data Studio, conéctese a la instancia maestra de SQL Server del clúster de macrodatos. Para obtener más información, vea [Conectarse a una instancia maestra de SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Haga doble clic en la conexión de la ventana **Servidores** para mostrar el panel del servidor de la instancia maestra de SQL Server. Seleccione **Nueva consulta**.
+1. Haga doble clic en la conexión de la ventana **Servidores** para mostrar el panel del servidor de la instancia maestra de SQL Server. Seleccione **Nueva consulta** .
 
    ![Consultar una instancia maestra de SQL Server](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
@@ -90,6 +90,30 @@ El primer paso es crear un origen de datos externo que pueda acceder al servidor
    ```sql
    CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
    WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',CREDENTIAL = [OracleCredential]);
+   ```
+
+### <a name="optional-oracle-proxy-authentication"></a>Opcional: autenticación de proxy de Oracle
+
+Oracle admite la autenticación de proxy para proporcionar un control de acceso específico. Un usuario de proxy se conecta a la base de datos de Oracle con sus credenciales y suplanta a otro usuario en la base de datos. 
+
+Un usuario de proxy se puede configurar para tener acceso limitado en comparación con el usuario que se va a suplantar. Por ejemplo, se puede permitir a un usuario de proxy conectarse mediante un rol de base de datos específico del usuario que se va a suplantar. La identidad del usuario que se conecta a la base de datos de Oracle a través del usuario de proxy se conserva en la conexión, incluso si varios usuarios se conectan mediante la autenticación de proxy. Esto permite a Oracle aplicar el control de acceso y auditar las acciones realizadas en nombre del usuario real.
+
+Si su escenario requiere el uso de un usuario de proxy de Oracle, __reemplace los pasos 4 y 5 anteriores por lo siguiente__ .
+
+4. Cree una credencial con ámbito de la base de datos para conectarse al servidor de Oracle. Proporcione las credenciales de usuario de proxy de Oracle adecuadas para el servidor de Oracle en la instrucción siguiente.
+
+   ```sql
+   CREATE DATABASE SCOPED CREDENTIAL [OracleProxyCredential]
+   WITH IDENTITY = '<oracle_proxy_user,nvarchar(100),SYSTEM>', SECRET = '<oracle_proxy_user_password,nvarchar(100),manager>';
+   ```
+
+5. Cree un origen de datos externo que apunte al servidor de Oracle.
+
+   ```sql
+   CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
+   WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',
+   CONNECTION_OPTIONS = 'ImpersonateUser=% CURRENT_USER',
+   CREDENTIAL = [OracleProxyCredential]);
    ```
 
 ## <a name="create-an-external-table"></a>Crear una tabla externa

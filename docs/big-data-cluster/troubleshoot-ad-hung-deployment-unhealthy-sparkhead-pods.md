@@ -9,12 +9,12 @@ ms.date: 08/20/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a51f5efc0c4c9cd2a341efd158b271853c0fb936
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 521efff2d77f2d0b6423b61c9b9b74e507764ff0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898725"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257105"
 ---
 # <a name="ad-mode-deployment-hangs--unhealthy-sparkhead-pods"></a>Problema de implementación en modo de Active Directory: pods `sparkhead` incorrectos
 
@@ -101,12 +101,12 @@ Extraiga los registros y búsquelos.
 `\mssql-cluster\control-<identifier>\controller\control-<identifier>-controller-stdout.log`.
 
 > [!TIP]
-> Hay varias formas de recopilar los registros. En lugar de copiar los registros con `azdata`, puede usar un cuaderno en Azure Data Studio.
+> Hay varias formas de recopilar los registros. En lugar de copiar los registros con [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], puede usar un cuaderno en Azure Data Studio.
 > En Azure Data Studio, conéctese al clúster de Kubernetes y ejecute un cuaderno de solución de problemas adecuado. A continuación, se muestran ejemplos de cuadernos.
 >
 > - TSG027: observación de la implementación del clúster
 > - TSG061: obtención del final de todos los registros de contenedor de los pods del espacio de nombres del BDC
-> - TSG001: ejecución de registros de copia `azdata`
+> - TSG001: Ejecución de `azdata copy-logs`
 >
   
 ## <a name="inspect-the-logs"></a>Inspección de los registros

@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 890b029833e7d34da7663b9f0e6ccfa63195c6d5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8e91315b5ec79c136b4d84a7fbc36a707cc3d82f
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725089"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257316"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-clusters"></a>Cómo implementar una aplicación en Clústeres de macrodatos de SQL Server
 
@@ -32,23 +32,23 @@ En este artículo se describe cómo implementar y administrar scripts de R y Pyt
 - Compatibilidad con el hospedaje de más tipos de aplicación: SQL Server Integration Services (SSIS) y MLeap.
 - [Extensión de Visual Studio Code](app-deployment-extension.md) para administrar la implementación de aplicaciones.
 
-Las aplicaciones se implementan y administran mediante la utilidad de línea de comandos `azdata`. En este artículo se proporcionan ejemplos de cómo implementar aplicaciones desde la línea de comandos. Para obtener información sobre cómo usar esto en Visual Studio Code, consulte [Extensión de Visual Studio Code](app-deployment-extension.md).
+Las aplicaciones se implementan y administran mediante [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. En este artículo se proporcionan ejemplos de cómo implementar aplicaciones desde la línea de comandos. Para obtener información sobre cómo usar esto en Visual Studio Code, consulte [Extensión de Visual Studio Code](app-deployment-extension.md).
 
 Se admiten los siguientes tipos de aplicaciones:
 
-- **Python**: uno de los lenguajes de programación generales más populares para varios roles, como ingenieros de datos, científicos de datos o ingenieros de DevOps, admite numerosos escenarios, como limpieza y transformación de datos, automatización, creación de prototipos y, en cierta medida, también se usa cada vez más para programar aplicaciones de nivel empresarial junto con plataformas de desarrollo web como Flask y Django para resolver diferentes requisitos empresariales.  
-- **R**: otro lenguaje de programación popular para la ingeniería de datos y los científicos de datos. En comparación con Python, R es un lenguaje de programación con un enfoque más específico sobre la informática estadística y los gráficos.  
+- **Python** : uno de los lenguajes de programación generales más populares para varios roles, como ingenieros de datos, científicos de datos o ingenieros de DevOps, admite numerosos escenarios, como limpieza y transformación de datos, automatización, creación de prototipos y, en cierta medida, también se usa cada vez más para programar aplicaciones de nivel empresarial junto con plataformas de desarrollo web como Flask y Django para resolver diferentes requisitos empresariales.  
+- **R** : otro lenguaje de programación popular para la ingeniería de datos y los científicos de datos. En comparación con Python, R es un lenguaje de programación con un enfoque más específico sobre la informática estadística y los gráficos.  
 - **SQL Server Integration Services (SSIS)** : estas soluciones de integración de datos de alto rendimiento para compilar y depurar paquetes ETL, utilizan el formato de archivo de paquete de servicios de transformación de datos (DTSX), que es un formato de archivo basado en XML que almacena las instrucciones para el procesamiento de la migración de datos entre bases de datos y la integración de orígenes de datos externos.   
-- **MLeap**: es un formato de serialización común y proporciona todo lo necesario para ejecutar y serializar canalizaciones SparkML y otras que se pueden cargar en tiempo de ejecución para procesar las tareas de puntuación de ML casi en tiempo real y próximas a los datos.  
+- **MLeap** : es un formato de serialización común y proporciona todo lo necesario para ejecutar y serializar canalizaciones SparkML y otras que se pueden cargar en tiempo de ejecución para procesar las tareas de puntuación de ML casi en tiempo real y próximas a los datos.  
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
 - [Clúster de macrodatos de SQL Server 2019](deployment-guidance.md)
-- [Utilidad de línea de comandos azdata](../azdata/install/deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>Capacidades
 
-En SQL Server 2019, puede crear, eliminar, describir, inicializar, enumerar, ejecutar y actualizar la aplicación. En la tabla siguiente se describen los comandos de implementación de aplicaciones que puede usar con **azdata**.
+En SQL Server 2019, puede crear, eliminar, describir, inicializar, enumerar, ejecutar y actualizar la aplicación. En la tabla siguiente se describen los comandos de implementación de aplicaciones que puede usar con **azdata** .
 
 |Get-Help |Descripción |
 |:---|:---|
@@ -114,7 +114,7 @@ spec.yaml
 
 ## <a name="create-an-app"></a>Creación de una aplicación
 
-Para crear una aplicación, use `azdata` con el comando `app create`. Estos archivos residen localmente en el equipo desde el que va a crear la aplicación.
+Para crear una aplicación, use [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] con el comando `app create`. Estos archivos residen localmente en el equipo desde el que va a crear la aplicación.
 
 Use la sintaxis siguiente para crear una nueva aplicación en el clúster de macrodatos:
 

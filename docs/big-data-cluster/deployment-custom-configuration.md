@@ -9,18 +9,18 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48a2c99a029517ebbab24b017bbaeba906b1c6cb
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cef348aee2b917b0a6afd61d30b5e4f7fa7da665
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725870"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257207"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configuración de opciones de implementación de recursos y servicios de clúster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Partiendo de un conjunto predefinido de perfiles de configuración integrados en la herramienta de administración `azdata`, la configuración predeterminada se puede modificar fácilmente para satisfacer de mejor forma los requisitos de carga de trabajo de BDC. La estructura de los archivos de configuración permite actualizar de forma granular la configuración de cada servicio del recurso.
+Partiendo de un conjunto predefinido de perfiles de configuración integrados en la herramienta de administración [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], la configuración predeterminada se puede modificar fácilmente para satisfacer de mejor forma los requisitos de carga de trabajo de BDC. La estructura de los archivos de configuración permite actualizar de forma granular la configuración de cada servicio del recurso.
 
 Vea este vídeo de 13 minutos para información general sobre la configuración de los clústeres de macrodatos:
 
@@ -312,7 +312,7 @@ También puede cambiar la clase de almacenamiento y las características que se 
 > [!TIP]
 > Para obtener más información sobre la configuración de almacenamiento, vea [Persistencia de datos con clústeres de macrodatos de SQL Server en Kubernetes](concept-data-persistence.md).
 
-En primer lugar, cree un archivo patch.json como se muestra a continuación para ajustar la configuración de *almacenamiento*.
+En primer lugar, cree un archivo patch.json como se muestra a continuación para ajustar la configuración de *almacenamiento* .
 
 ```json
 {
@@ -648,7 +648,7 @@ Para deshabilitar la ejecución del contenedor de Elasticsearch en modo privileg
 }
 ```
 
-`control.json` se puede editar manualmente y agregar la sección anterior a `spec`, o también puede crear un archivo de revisión `elasticsearch-patch.json` como el que se indica a continuación y usar la CLI de `azdata` para aplicar dicha revisión al archivo `control.json`:
+`control.json` se puede editar manualmente y agregar la sección anterior a `spec`, o también puede crear un archivo de revisión `elasticsearch-patch.json` como el que se indica a continuación y usar [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] para aplicar dicha revisión al archivo `control.json`:
 
 ```json
 {
@@ -677,8 +677,8 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 ## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>Activación y desactivación de la recopilación de métricas de pods y nodos
 
-En SQL Server 2019 CU5 se han habilitado dos modificadores de características para controlar la recopilación de métricas de pods y nodos. Si usa soluciones distintas para la supervisión de la infraestructura de Kubernetes, y quiere desactivar la recopilación de métricas integradas para pods y nodos de host, establezca *allowNodeMetricsCollection* y *allowPodMetricsCollection* en *false* en el archivo de configuración de implementación de *control.json*. En el caso de entornos OpenShift, esta configuración se establece en *false* de forma predeterminada en los perfiles de implementación integrados, ya que la recopilación de métricas de pods y nodos requiere capacidades con privilegios.
-Ejecute este comando para actualizar los valores de esta configuración en el archivo de configuración personalizado mediante la CLI de *azdata*:
+En SQL Server 2019 CU5 se han habilitado dos modificadores de características para controlar la recopilación de métricas de pods y nodos. Si usa soluciones distintas para la supervisión de la infraestructura de Kubernetes, y quiere desactivar la recopilación de métricas integradas para pods y nodos de host, establezca *allowNodeMetricsCollection* y *allowPodMetricsCollection* en *false* en el archivo de configuración de implementación de *control.json* . En el caso de entornos OpenShift, esta configuración se establece en *false* de forma predeterminada en los perfiles de implementación integrados, ya que la recopilación de métricas de pods y nodos requiere capacidades con privilegios.
+Ejecute este comando para actualizar los valores de esta configuración en el archivo de configuración personalizado mediante la CLI de *azdata* :
 
 ```bash
  azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"

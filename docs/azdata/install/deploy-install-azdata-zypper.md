@@ -1,7 +1,7 @@
 ---
-title: Instalación de azdata con zypper
+title: Instalación de la CLI de Azure Data (azdata) con zypper
 titleSuffix: ''
-description: Obtenga información sobre cómo instalar la herramienta azdata con zypper.
+description: Aprenda a instalar la herramienta de la CLI de Azure Data (azdata) con zypper.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,14 +9,14 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ec87d5739e3707c056f7945a2c882eb00700464d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d43a1f9c65aa17fae3d262a51f45105b5f583cdd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725269"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257518"
 ---
-# <a name="install-azdata-with-zypper"></a>Instale `azdata` con zypper
+# <a name="install-azure-data-cli-azdata-with-zypper"></a>Instale [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] con zypper
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
@@ -30,7 +30,7 @@ Para las distribuciones de Linux con `zypper`, hay un paquete para `azdata-cli`.
 ## <a name="install-with-zypper"></a>Instalación con zypper
 
 >[!IMPORTANT]
->El paquete RPM de `azdata-cli` depende del paquete python3. En su sistema, esta puede ser una versión de Python anterior al requisito de *Python 3.6.x*. Si esto supone un problema, busque un paquete de python3 de reemplazo o siga las instrucciones de instalación manual que usan [`pip`](../install/deploy-install-azdata-pip.md).
+>El paquete RPM de `azdata-cli` depende del paquete python3. En su sistema, esta puede ser una versión de Python anterior al requisito de *Python 3.6.x* . Si esto supone un problema, busque un paquete de python3 de reemplazo o siga las instrucciones de instalación manual que usan [`pip`](../install/deploy-install-azdata-pip.md).
 
 1. Instale las dependencias necesarias para instalar `azdata-cli`.
 

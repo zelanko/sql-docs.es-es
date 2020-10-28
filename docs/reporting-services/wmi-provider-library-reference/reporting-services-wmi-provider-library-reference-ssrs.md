@@ -1,5 +1,6 @@
 ---
-title: Referencia de la biblioteca de proveedores WMI de Reporting Services (SSRS) | Microsoft Docs
+description: Referencia de la biblioteca de proveedores WMI de Reporting Services (SSRS)
+title: Referencia de la biblioteca de proveedores WMI de Reporting Services | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17ba711d-7eff-4423-9168-63dc425a3428
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: af3b51f934b9b0221747116772af7a747813e70f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 88c12fdc3748b89ad3daba6fcdf5fcd22cdabaf9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92255597"
 ---
 # <a name="reporting-services-wmi-provider-library-reference-ssrs"></a>Referencia de la biblioteca de proveedores WMI de Reporting Services (SSRS)
   El proveedor de Instrumental de administración de Windows (WMI) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite operaciones de WMI que le permiten escribir scripts y código para modificar la configuración del servidor de informes y del Administrador de informes.  
@@ -27,7 +28,7 @@ ms.locfileid: "65571060"
  Por ejemplo, si quiere cambiar si se usará la seguridad integrada cuando el servidor de informes se conecte a la base de datos del servidor de informes, cree una instancia de la clase MSReportServer_ConfigurationSetting y use la propiedad DatabaseIntegratedSecurity de la instancia del servidor de informes. Las clases que se muestran en la tabla siguiente representan los componentes  de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las clases se definen en los espacios de nombres [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)] o [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)] . Cada una de las clases admite las operaciones de la lectura y escritura. Las operaciones de creación no se admiten.  
   
 ## <a name="classes"></a>Clases  
- [Clase MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-class.md)  
+ [MSReportServer_Instance, clase](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-class.md)  
  Proporciona la información básica requerida para que un cliente se conecte a un servidor de informes instalado.  
   
  [Clase MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  

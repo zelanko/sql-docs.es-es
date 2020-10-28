@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f0d19589c057df0af9ffea711edd8963bc381e2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e3be3a3ea0d3f3b3d452bfea058ff85dd8a9141
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730685"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257255"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>Conceptos de seguridad para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -37,7 +37,7 @@ Los puntos de conexión de los clústeres externos admiten la autenticación de 
 
 Un clúster de macrodatos consta de cinco puntos de entrada.
 
-* Instancia maestra: punto de conexión TDS para acceder a la Instancia maestra de SQL Server en el clúster mediante las herramientas de las bases de datos y aplicaciones como SSMS o Azure Data Studio. Al usar los comandos de HDFS o SQL Server de azdata, la herramienta se conecta al resto de puntos de conexión, en función de la operación.
+* Instancia maestra: punto de conexión TDS para acceder a la Instancia maestra de SQL Server en el clúster mediante las herramientas de las bases de datos y aplicaciones como SSMS o Azure Data Studio. Al usar los comandos de HDFS o SQL Server de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], la herramienta se conecta al resto de puntos de conexión, en función de la operación.
 
 * Puerta de enlace para acceder a archivos HDFS, Spark (Knox): punto de conexión HTTPS para acceder a servicios como webHDFS y Spark.
 
@@ -59,16 +59,23 @@ Hay dos niveles de comprobaciones de la autorización en el clúster para admini
 
 Un clúster de macrodatos seguro implica una compatibilidad consistente y coherente con los escenarios de autenticación y autorización, tanto en SQL Server como en HDFS/Spark. La autenticación es el proceso de comprobar la identidad de un usuario o servicio y asegurarse de que es quien dice ser. La autorización se refiere a la concesión o denegación de acceso a recursos específicos en función de la identidad del usuario que lo solicita. Este paso se realiza después de que un usuario se identifica a través de la autenticación.
 
-La autorización en el contexto de macrodatos se suele realizar mediante listas de control de acceso (ACL), que asocian las identidades de usuario a permisos específicos. HDFS admite la autorización limitando el acceso a las API de servicio, los archivos HDFS y la ejecución de trabajos.
+La autorización en el contexto de macrodatos se realiza mediante listas de control de acceso (ACL), que asocian las identidades de usuario a permisos específicos. HDFS admite la autorización limitando el acceso a las API de servicio, los archivos HDFS y la ejecución de trabajos.
 
-## <a name="encryption-and-other-security-mechanisms"></a>Cifrado y otros mecanismos de seguridad
+## <a name="encryption-in-flight-and-other-security-mechanisms"></a>Cifrado en movimiento y otros mecanismos de seguridad
 
 El cifrado de la comunicación entre los clientes y los puntos de conexión externos, así como entre los componentes dentro del clúster, se protege con TLS/SSL, mediante certificados.
 
 Todas las comunicaciones de SQL Server a SQL Server, como la de la instancia maestra SQL con un grupo de datos, se protegen mediante inicios de sesión SQL.
 
 > [!IMPORTANT]
->  Los clústeres de macrodatos usan etcd para almacenar las credenciales. Como procedimiento recomendado, debe asegurarse de que el clúster de Kubernetes está configurado para usar el cifrado de etcd en reposo. De forma predeterminada, los secretos almacenados en etcd no están cifrados. En la documentación de Kubernetes se proporcionan detalles sobre esta tarea administrativa: https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ y https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+>  Los clústeres de macrodatos usan `etcd` para almacenar las credenciales. Como procedimiento recomendado, debe asegurarse de que el clúster de Kubernetes está configurado para usar el cifrado de `etcd` en reposo. De manera predeterminada, los secretos almacenados en `etcd` no están cifrados. En la documentación de Kubernetes se proporcionan detalles sobre esta tarea administrativa: https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ y https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+
+## <a name="data-encryption-at-rest"></a>Cifrado de datos en reposo
+
+La funcionalidad de cifrado en reposo de Clústeres de macrodatos de SQL Server admite el escenario principal de cifrado de nivel de aplicación para los componentes de HDFS y SQL Server. Consulte el artículo [Conceptos y guía de configuración del cifrado en reposo](encryption-at-rest-concepts-and-configuration.md) para ver una guía de uso completa de las características.
+
+> [!IMPORTANT]
+> Se recomienda el cifrado de volumen para todas las implementaciones de Clústeres de macrodatos de SQL Server. También se deben cifrar los volúmenes de almacenamiento proporcionados por el cliente en los clústeres de Kubernetes, como un enfoque integral del cifrado de datos en reposo. La funcionalidad de cifrado en reposo de Clústeres de macrodatos de SQL Server es un nivel de seguridad adicional que proporciona el cifrado de nivel de aplicación de los archivos de registro y datos de SQL Server y la compatibilidad con las zonas de cifrado de HDFS.
 
 
 ## <a name="basic-administrator-login"></a>Inicio de sesión básico de administrador

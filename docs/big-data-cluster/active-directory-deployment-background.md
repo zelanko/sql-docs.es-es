@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d5c30e4c3d7c3188920ecd15104b20a5472e306
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: a2b95ef0934c1eb01944df562c4c34cd73d8e0d0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892505"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257345"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>Implementación de varios [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en el mismo dominio de Active Directory
 
@@ -140,7 +140,7 @@ No es necesario, pero es recomendable. Proporcionar unidades organizativas indep
 
 ### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>¿Cómo revertir al comportamiento anterior a CU5?
 
-Puede haber escenarios en los que no pueda adaptar el parámetro `subdomain` recientemente introducido. Por ejemplo, debe implementar una versión anterior a CU5 y ya se ha actualizado la CLI de `azdata`. Esto es muy improbable, pero si necesita revertir al comportamiento anterior a CU5, puede establecer el parámetro `useSubdomain` en `false` en la sección de Active Directory de `control.json`.
+Puede haber escenarios en los que no pueda adaptar el parámetro `subdomain` recientemente introducido. Por ejemplo, debe implementar una versión anterior a CU5 y ya se ha actualizado [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Esto es muy improbable, pero si necesita revertir al comportamiento anterior a CU5, puede establecer el parámetro `useSubdomain` en `false` en la sección de Active Directory de `control.json`.
 
 En el siguiente ejemplo se establece `useSubdomain` en `false` para este escenario.
 

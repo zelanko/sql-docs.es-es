@@ -1,80 +1,90 @@
 ---
-title: Configuración de la evaluación de SQL de SQL Server habilitado para Azure Arc
-titleSuffix: ''
-description: Configuración de la evaluación a petición de la instancia de SQL Server habilitada para Azure Arc
+title: Configuración de SQL Assessment a petición en una la instancia de SQL Server habilitado para Azure Arc
+description: Configuración de SQL Assessment a petición en una la instancia de SQL Server habilitado para Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 41a7f1f4edc247f211ee5b3cdcaddfd139c5027c
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 459a49a4f2ed41b8e9d95c805431ff2c29a770fa
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988021"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257997"
 ---
-# <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Configuración de la evaluación de SQL a petición de la instancia de SQL Server habilitada para Azure Arc
+# <a name="configure-sql-assessment-on-an-azure-arc-enabled-sql-server-instance"></a>Configuración de SQL Assessment en una instancia de SQL Server habilitado para Azure Arc
 
-Puede habilitar la evaluación de SQL para las instancias de SQL Server siguiendo estos pasos.
+SQL Assessment proporciona un mecanismo para evaluar la configuración de SQL Server. En este artículo se proporcionan instrucciones para usar SQL Assessment en una instancia de SQL Server habilitado para Azure Arc.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* La instancia de SQL Server está conectada a Azure Arc. Siga estas instrucciones para la [incorporación de la instancia de SQL Server a SQL Server habilitado para Arc](connect.md).
+* La instancia de SQL Server debe estar conectada a Azure Arc. Para obtener instrucciones, consulte el artículo [Conexión de la instancia de SQL Server a Azure Arc](connect.md).
 
-* La extensión de MMA está instalada y configurada en la máquina. Siga estas instrucciones para la [Instalación de Microsoft Monitoring Agent (MMA)](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma). Para obtener más información, vea [Agente de Log Analytics](/azure/azure-monitor/platform/log-analytics-agent).
+* La extensión Microsoft Monitoring Agent (MMA) debe estar instalada y configurada en el equipo. Consulte el artículo [Instalación de MMA](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma) para obtener instrucciones. También puede obtener más información en el artículo [Agente de Log Analytics](/azure/azure-monitor/platform/log-analytics-agent).
 
-* SQL Server tiene el [protocolo TCP/IP habilitado](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
+* La instancia de SQL Server debe tener [habilitado el protocolo TCP/IP](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
-* El [explorador de SQL Server](../../tools/configuration-manager/sql-server-browser-service.md) se ejecuta en caso de que trabaje con una instancia con nombre de SQL Server.
+* El [servicio del explorador de SQL Server](../../tools/configuration-manager/sql-server-browser-service.md) se ejecuta en caso de que trabaje con una instancia con nombre de SQL Server.
 
-* Ha revisado el documento de SQL Server en [Requisitos previos de las evaluaciones a petición del Centro de servicios](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
+* Asegúrese de revisar el documento de SQL Server en [Requisitos previos de las evaluaciones a petición del Centro de servicios](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
 
-## <a name="enable-on-demand-sql-assessment"></a>Habilitación de SQL Assessment a petición
+## <a name="run-on-demand-sql-assessment"></a>Ejecución de SQL Assessment a petición
 
-1. Abra el recurso de SQL Server: Azure Arc y seleccione __Environment Health__ (Estado del entorno) en el menú izquierdo.
+1. Abra el recurso de SQL Server: Azure Arc y seleccione **Estado del entorno** en el menú izquierdo.
 
-   ![Selección de SQL Assessment](media/assess/sql-assessment-heading-sql-server-arc.png)
+   > [!div class="mx-imgBorder"]
+   > [ ![Captura de pantalla que muestra la pantalla Estado del entorno de un recurso de SQL Server-Azure Arc.](media/assess/sql-assessment-heading-sql-server-arc.png) ](media/assess/sql-assessment-heading-sql-server-arc.png#lightbox)
 
-1. Especifique un directorio de trabajo en la máquina de recopilación de datos. De forma predeterminada, se usará `C:\sql_assessment\work_dir`. Durante la recopilación y el análisis, los datos se almacenan temporalmente en esa carpeta. Si la carpeta no existe, se creará automáticamente.
+1. Especifique un directorio de trabajo en la máquina de recopilación de datos. De forma predeterminada, se usa `C:\sql_assessment\work_dir`. Durante la recopilación y el análisis, los datos se almacenan temporalmente en esa carpeta. Si la carpeta no existe, se crea automáticamente.
 
-1. Haga clic en __Descargar script de configuración__ y copie el script descargado en la máquina de destino.
+1. Seleccione **Descargar script de configuración** . Copie el script descargado en la máquina de destino.
 
-1. Inicie una instancia de administrador de __powershell.exe__ y realice una de las acciones siguientes: 
-   * Si utiliza una cuenta de dominio, ejecute los comandos siguientes. Se le pedirá la cuenta de usuario y la contraseña. 
+1. Abra una instancia de administrador de **powershell.exe** y ejecute uno de los siguientes bloques de código:
+
+   * _Cuenta de dominio_ :  se le pedirá la cuenta de usuario y la contraseña.
 
       ```powershell
       Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
       & '.\AddSqlAssessment.ps1'
       ```
 
-    * Si utiliza una cuenta de MSA, ejecute los comandos siguientes.
+   * _Cuenta de servicio administrada (MSA)_
 
       ```powershell
       Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
       & '.\AddSqlAssessment.ps1' -ManagedServiceAccountName <MSA account name>
       ```
 
+> [!NOTE]
+> El script programa una tarea denominada *SQLAssessment* , que desencadena la recopilación de datos. Esta tarea se ejecuta en un plazo de una hora después de ejecutar el script. A continuación, se repite cada siete días.
+
+> [!TIP]
+> Puede modificar la tarea para que se ejecute en una fecha y hora diferentes, o incluso forzarla para que se ejecute inmediatamente. En la biblioteca del programador de tareas, busque **Microsoft** > **Operations Management Suite** > **AOI\*\*\***  > **Assessments** > **SQLAssessment** .
+
+## <a name="view-sql-assessment-results"></a>Visualización de resultados de SQL Assessment
+
+* En el panel _Estado del entorno_ , seleccione el botón **View SQL Assessment results** (Ver resultados de SQL Assessment).
+
    > [!NOTE]
-   > El script programará una tarea llamada *SQLAssessment* para que se ejecute en un plazo de una hora después de ejecutar el script anterior y, después, cada 7 días. La tarea se puede modificar para que se ejecute en otras fecha y hora, o incluso forzarse a ejecutarse inmediatamente desde la biblioteca del programador de tareas > Microsoft > Operations Management Suite > AOI*** > Evaluaciones > SQLAssessment. Esta tarea desencadena la recopilación de datos.
+   > El botón **View SQL Assessment results** (Ver resultados de SQL Assessment) en la hoja Estado del entorno está deshabilitado hasta que los resultados estén listos en Log Analytics. Este proceso puede tardar hasta dos horas después de procesar los archivos de datos en el equipo de destino.
 
-## <a name="view-the-assessment-results"></a>Visualización de los resultados de la evaluación
+   > [!div class="mx-imgBorder"]
+   > [ ![Captura de pantalla que muestra los resultados de SQL Assessment.](media/assess/sql-assessment-results.png) ](media/assess/sql-assessment-results.png#lightbox)
 
-El botón __View SQL assessment result__ (Ver el resultado de la evaluación de SQL) en la hoja _Environment Health_ (Estado del entorno) está deshabilitado hasta que los resultados estén listos en Log Analytics. Una vez que el botón esté activado, puede hacer clic en él para ver los resultados. Puede tardar hasta dos horas en que se muestren los resultados en Log Analytics una vez procesados los archivos de datos en la máquina de destino.
+* Puede ver el estado del procesamiento de datos en la máquina de recopilación mediante la comprobación de los archivos en la carpeta de trabajo. Una vez completada la tarea programada, debería ver varios archivos con el prefijo _new._ en el directorio de trabajo.
 
-![Resultados de la evaluación de SQL](media/assess/sql-assessment-results.png)
+   > [!div class="mx-imgBorder"]
+   > [ ![Captura de pantalla que muestra una ventana del administrador de archivos que muestra nuevos archivos de datos en la carpeta de trabajo.](media/assess/sql-assessment-data-files-ready.png) ](media/assess/sql-assessment-data-files-ready.png#lightbox)
 
-Puede ver el estado del procesamiento de datos en la máquina de recopilación mediante la comprobación de los archivos en la carpeta de trabajo. Una vez completada la tarea programada, debería ver varios archivos con el prefijo _new._ en el directorio de trabajo:
+* Microsoft Monitoring Agent examina la carpeta de trabajo cada 15 minutos. Busca archivos _new.*_ y envía los datos al área de trabajo Log Analytics. Una vez que MMA carga el archivo, cambia de prefijo de _new._ a _processed._
 
-![Archivos de datos listos](media/assess/sql-assessment-data-files-ready.png)
-
-Microsoft Monitoring Agent examina la carpeta de trabajo cada 15 minutos para buscar archivos _new.*_ y envía los datos al área de trabajo de Log Analytics. Una vez cargado el archivo, el prefijo cambiará de _new._ a _processed._ :
-
-![Archivos de datos procesados](media/assess/sql-assessment-data-files-processed.png)
+   > [!div class="mx-imgBorder"]
+   > ![Captura de pantalla que muestra una ventana del administrador de archivos con archivos de datos procesados](media/assess/sql-assessment-data-files-processed.png).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información, vea el documento de SQL Server en [Requisitos previos de las evaluaciones a petición del Centro de servicios](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
+* Para obtener más información, vea el documento de requisitos previos en [Evaluaciones a petición del Centro de servicios](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
 
-Para obtener soporte técnico completo del SQL Assessment a petición, se requiere una suscripción de soporte técnico de tipo Premier o unificado. Consulte [Soporte técnico Premier de Microsoft Azure](https://azure.microsoft.com/support/plans/premier) para obtener más información.
+* Para obtener soporte técnico completo de la característica SQL Assessment a petición, se requiere una suscripción de soporte técnico de tipo Premier o unificado. Consulte [Soporte técnico Premier de Microsoft Azure](https://azure.microsoft.com/support/plans/premier) para obtener más información.

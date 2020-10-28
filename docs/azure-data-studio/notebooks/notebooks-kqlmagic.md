@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: 61b87d2dae44f30f84b513f6809ba8597de7712f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 7f77f26ffbaa0dab14e41654fdcddda3dd4ab278
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226975"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300488"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Kqlmagic en Azure Data Studio
 
@@ -31,7 +31,7 @@ En este artículo se muestra cómo crear y ejecutar un cuaderno en Azure Data St
 
 Todos los pasos de esta sección se ejecutan en un cuaderno de Azure Data Studio.
 
-1. Cree un cuaderno y cambie el **Kernel** a *Python 3*.
+1. Cree un cuaderno y cambie el **Kernel** a *Python 3* .
 
    ![Nuevo cuaderno](media/notebooks-kqlmagic/install-new-notebook.png)
 
@@ -71,7 +71,7 @@ Todos los pasos de esta sección se ejecutan en un cuaderno de Azure Data Studio
    ```
 
    > [!Note]
-   > Si `Samples@help` solicita una contraseña, puede dejarla en blanco y presionar **Entrar**.
+   > Si `Samples@help` solicita una contraseña, puede dejarla en blanco y presionar **Entrar** .
 
    ![Ayuda](media/notebooks-kqlmagic/install-help.png)
 
@@ -90,7 +90,7 @@ En esta sección se explica cómo ejecutar el análisis de datos mediante Kqlmag
    > [!Note]
    > Cada vez que cree un cuaderno en Azure Data Studio, debe cargar la extensión Kqlmagic.
 
-1. Compruebe que el **Kernel** está establecido en *Python 3*.
+1. Compruebe que el **Kernel** está establecido en *Python 3* .
 
    ![Cambio de kernel](media/notebooks-kqlmagic/change-kernel.png)
 
@@ -112,7 +112,7 @@ En esta sección se explica cómo ejecutar el análisis de datos mediante Kqlmag
     > Si usa su propio clúster de ADX, debe incluir la región en la cadena de conexión de la siguiente manera:   
     ```%kql azuredataexplorer://code;cluster='mycluster.westus';database='mykustodb'```
 
-   Utilice Inicio de sesión del dispositivo para autenticarse. Copie el código de la salida y seleccione **Autenticar**, lo que abre un explorador donde tiene que pegar el código. Cuando se haya autenticado correctamente, puede volver a Azure Data Studio para continuar con el resto del script.
+   Utilice Inicio de sesión del dispositivo para autenticarse. Copie el código de la salida y seleccione **Autenticar** , lo que abre un explorador donde tiene que pegar el código. Cuando se haya autenticado correctamente, puede volver a Azure Data Studio para continuar con el resto del script.
 
    ![Autenticación en Azure Data Explorer](media/notebooks-kqlmagic/ade-auth.png)
 
@@ -157,7 +157,7 @@ Consulte datos mediante el [operador “render”](/azure/data-explorer/kusto/qu
 
 ### <a name="load-and-authenticate-kqlmagic-for-application-insights"></a><a name="appin-load-auth"></a> Carga y autenticación de Kqlmagic para Application Insights
 
-1. Compruebe que el **Kernel** está establecido en *Python 3*.
+1. Compruebe que el **Kernel** está establecido en *Python 3* .
 
    ![Kernel](media/notebooks-kqlmagic/change-kernel.png)
 
@@ -212,7 +212,7 @@ Consulte datos mediante el [operador “render”](/azure/data-explorer/kusto/qu
 
 ### <a name="load-and-authenticate-kqlmagic-for-azure-monitor-logs"></a><a name="aml-load-auth"></a> Carga y autenticación de Kqlmagic para registros de Azure Monitor
 
-1. Compruebe que el **Kernel** está establecido en *Python 3*.
+1. Compruebe que el **Kernel** está establecido en *Python 3* .
 
    ![Change](media/notebooks-kqlmagic/change-kernel.png)
 
@@ -254,8 +254,10 @@ Consulte datos mediante el [operador “render”](/azure/data-explorer/kusto/qu
 
 Obtenga más información sobre los cuadernos y Kqlmagic:
 
+- [Extensión Kusto (KQL) para Azure Data Studio (versión preliminar)](https://docs.microsoft.com/sql/azure-data-studio/extensions/kusto-extension)
+- [Creación y ejecución de un cuaderno de Kusto (KQL) (versión preliminar)](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-kusto-kernel)
 - [Uso de Jupyter Notebook y una extensión Kqlmagic para analizar datos en Azure Data Explorer](/azure/data-explorer/Kqlmagic)
-- [Extensión (magic) en Jupyter Notebook y Jupyter Lab, que habilita la experiencia del cuaderno al trabajar con datos de Kusto, Application Insights y LogAnalytics](https://github.com/Microsoft/jupyter-Kqlmagic)
+- [Extensión (Magic) en Jupyter Notebook y Jupyter Lab](https://github.com/Microsoft/jupyter-Kqlmagic), que habilita la experiencia del cuaderno al trabajar con datos de Kusto, Application Insights y LogAnalytics.
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
 - [Uso de cuadernos en Azure Data Studio](./notebooks-guidance.md)

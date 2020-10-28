@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ca15786b88c62b41202310bd537a3224ddea458e
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 1583ab8c54d16d7bcf129e401c2e540fabb342b3
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934885"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155099"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>Novedades de las extensiones de lenguaje de SQL Server
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -32,7 +32,7 @@ Se han agregado funcionalidades de [extensiones de lenguaje](language-extensions
 
 Para obtener más información sobre todas las características de esta versión, consulte [Novedades de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) y [Notas de la versión de SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md).
 
-- La instancia predeterminada de Java Runtime en Windows y Linux es Open Zulu JRE y se incluye con la instalación de [Extensiones de lenguaje de SQL Server en Windows](install/install-sql-server-language-extensions-on-windows.md) y la instalación de [Extensiones de lenguaje de SQL Server en Linux](../linux/sql-server-linux-setup-language-extensions.md).
+- La instancia predeterminada de Java Runtime en Windows y Linux es Open Zulu JRE y se incluye con la instalación de [Extensiones de lenguaje de SQL Server en Windows](install/windows-java.md) y la instalación de [Extensiones de lenguaje de SQL Server en Linux](../linux/sql-server-linux-setup-language-extensions-java.md).
 - [Tipos de datos de Java](how-to/java-to-sql-data-types.md) admitidos.
 - [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) para registrar un lenguaje externo (por ejemplo, Java) en SQL Server.
 - [SDK de extensibilidad de Microsoft para Java](how-to/extensibility-sdk-java-sql-server.md).
@@ -41,4 +41,4 @@ Para obtener más información sobre todas las características de esta versión
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-+ Instalación de [extensiones de lenguaje de SQL Server en Windows](install/install-sql-server-language-extensions-on-windows.md) o [en Linux](../linux/sql-server-linux-setup-language-extensions.md)
++ Instale [extensiones de lenguaje de SQL Server en Windows](install/windows-java.md) o [en Linux](../linux/sql-server-linux-setup-language-extensions-java.md).

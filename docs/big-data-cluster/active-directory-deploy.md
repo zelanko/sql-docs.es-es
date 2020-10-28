@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb42be7b0affc351a013e29af9370d1a109e3d93
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 48dde8000274ea74df1c6095714b54669c5becdd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898751"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257295"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>Implementación del clúster de macrodatos de SQL Server en el modo de Active Directory
 
@@ -50,7 +50,7 @@ La integración de AD necesita los parámetros siguientes. Agregue estos paráme
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: lista de FQDN del controlador de dominio. El FQDN contiene el nombre de host o de la máquina del controlador de dominio. Si tiene varios controladores de dominio, aquí se puede proporcionar una lista. Ejemplo: `HOSTNAME.CONTOSO.LOCAL`.
 
   > [!IMPORTANT]
-  > Cuando hay varios controladores de dominio que atienden a un dominio, utilice el controlador de dominio principal (PDC) como primera entrada en la lista de `domainControllerFullyQualifiedDns` de la configuración de seguridad. Para obtener el nombre del PDC, escriba `netdom query fsmo` en el símbolo del sistema y luego presione **Entrar**.
+  > Cuando hay varios controladores de dominio que atienden a un dominio, utilice el controlador de dominio principal (PDC) como primera entrada en la lista de `domainControllerFullyQualifiedDns` de la configuración de seguridad. Para obtener el nombre del PDC, escriba `netdom query fsmo` en el símbolo del sistema y luego presione **Entrar** .
 
 - **Parámetro opcional** `security.activeDirectory.realm`: en la mayoría de casos, el dominio es igual al nombre de dominio. En los casos en los que no sean iguales, use este parámetro para definir el nombre del dominio (por ejemplo, `CONTOSO.LOCAL`). El valor proporcionado para este parámetro debe ser completo.
 
@@ -77,7 +77,7 @@ A fin de obtener información detallada sobre cómo actualizar los grupos de AD 
   >Cree estos grupos en AD antes de comenzar la implementación. Si el ámbito de cualquiera de estos grupos de AD es el dominio local, se produce un error en la implementación.
 
   >[!IMPORTANT]
-  >Si los usuarios del dominio cuentan con muchas pertenencias a grupos, debe ajustar los valores de la configuración de puerta de enlace `httpserver.requestHeaderBuffer` (el valor predeterminado es `8192`) y la configuración de HDFS `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (el valor predeterminado es `10`), mediante el archivo de configuración personalizado de implementación *bdc.json*. Se trata de un procedimiento recomendado para evitar los tiempos de espera de conexión a las respuestas de puerta de enlace o HTTP con un código de estado 431 (*Campos del encabezado de solicitud demasiado grandes*). Esta es una sección del archivo de configuración que muestra cómo definir los valores de esta configuración y cuáles son los valores recomendados para un número mayor de pertenencias de grupo:
+  >Si los usuarios del dominio cuentan con muchas pertenencias a grupos, debe ajustar los valores de la configuración de puerta de enlace `httpserver.requestHeaderBuffer` (el valor predeterminado es `8192`) y la configuración de HDFS `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (el valor predeterminado es `10`), mediante el archivo de configuración personalizado de implementación *bdc.json* . Se trata de un procedimiento recomendado para evitar los tiempos de espera de conexión a las respuestas de puerta de enlace o HTTP con un código de estado 431 ( *Campos del encabezado de solicitud demasiado grandes* ). Esta es una sección del archivo de configuración que muestra cómo definir los valores de esta configuración y cuáles son los valores recomendados para un número mayor de pertenencias de grupo:
 
 ```json
 {
@@ -119,7 +119,7 @@ A fin de obtener información detallada sobre cómo actualizar los grupos de AD 
 
 En la tabla siguiente se muestra el modelo de autorización para la administración de aplicaciones:
 
-|   Roles autorizados   |   comando azdata   |
+|   Roles autorizados   |   El comando [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]   |
 |----------------------|--------------------|
 |   appOwner           | azdata app create  |
 |   appOwner           | azdata app update  |
@@ -134,7 +134,7 @@ En la tabla siguiente se muestra el modelo de autorización para la administraci
   >El valor que se pasa a través de la configuración de subdominio no es un nuevo dominio de AD, sino solo un dominio DNS que el clúster de BDC usa internamente.
 
   >[!IMPORTANT]
-  >Debe instalar o actualizar la versión más reciente de la **CLI de azdata** a partir de la versión SQL Server 2019 CU5 para aprovechar estas capacidades nuevas e implementar varios clústeres de macrodatos en el mismo dominio.
+  >Debe instalar o actualizar la versión más reciente de **[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]** a partir de la versión SQL Server 2019 CU5 para aprovechar estas capacidades nuevas e implementar varios clústeres de macrodatos en el mismo dominio.
 
   Vea [Concepto: Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en modo de Active Directory](active-directory-deployment-background.md) para obtener más información sobre la implementación de varios clústeres de macrodatos en el mismo dominio de Active Directory.
 
@@ -151,7 +151,7 @@ Si aún no ha inicializado el archivo de configuración de la implementación, p
 azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 ```
 
-Para establecer los parámetros anteriores en el archivo `control.json`, use los siguientes comandos de `azdata`. Los comandos reemplazan la configuración y proporcionan sus propios valores antes de que se realice la implementación.
+Para establecer los parámetros anteriores en el archivo `control.json`, use los siguientes comandos de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Los comandos reemplazan la configuración y proporcionan sus propios valores antes de que se realice la implementación.
 
 > [!IMPORTANT]
 > En la versión SQL Server 2019 CU2, la estructura de la sección de configuración de seguridad del perfil de implementación ha cambiado ligeramente y todos los valores relacionados con Active Directory están en el nuevo directorio `activeDirectory` en el árbol de JSON, bajo `security`, en el archivo `control.json`.
@@ -213,7 +213,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoin
 Puede encontrar un script de ejemplo aquí para la [implementación de un clúster de macrodatos de SQL Server en un clúster de Kubernetes de un solo nodo (kubeadm) con integración de AD](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm-ad).
 
 > [!Note]
-> Puede haber escenarios en los que no pueda adaptar el parámetro `subdomain` recientemente introducido. Por ejemplo, debe implementar una versión anterior a CU5 y ya se ha actualizado la **CLI de azdata**. Esto es muy improbable, pero si necesita revertir al comportamiento anterior a CU5, puede establecer el parámetro `useSubdomain` en `false` en la sección Active Directory de `control.json`.  Este es el comando para hacerlo:
+> Puede haber escenarios en los que no pueda adaptar el parámetro `subdomain` recientemente introducido. Por ejemplo, debe implementar una versión anterior a CU5 y ya se ha actualizado **[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]** . Esto es muy improbable, pero si necesita revertir al comportamiento anterior a CU5, puede establecer el parámetro `useSubdomain` en `false` en la sección Active Directory de `control.json`.  Este es el comando para hacerlo:
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.useSubdomain=false"
@@ -221,7 +221,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.act
 
 Ahora debe haber establecido todos los parámetros necesarios para una implementación del BDC con la integración de Active Directory.
 
-Ahora puede implementar el clúster de BDC integrado con Active Directory mediante el comando `azdata` y el perfil de implementación kubeadm-prod. Para obtener la documentación completa sobre cómo implementar [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], visite [Procedimiento para implementar clústeres de macrodatos de SQL Server en Kubernetes](deployment-guidance.md).
+Ahora puede implementar el clúster de BDC integrado con Active Directory mediante el comando [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] y el perfil de implementación kubeadm-prod. Para obtener la documentación completa sobre cómo implementar [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], visite [Procedimiento para implementar clústeres de macrodatos de SQL Server en Kubernetes](deployment-guidance.md).
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>Comprobación de la entrada de DNS inverso para el controlador de dominio
 

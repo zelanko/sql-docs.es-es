@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 6513c3333bb852b0d899b785073f4ecbc31daab3
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 3e088597a52a9f220c0aecb62c66df085b287955
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956959"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115508"
 ---
 # <a name="get-python-package-information"></a>Obtención de información de paquetes de Python
 
@@ -61,6 +61,11 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH override;
 ```
 
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+> [!IMPORTANT]
+> En Azure SQL Managed Instance, la ejecución de los comandos sp_configure y RECONFIGURE desencadena un reinicio de SQL Server para que la configuración de RG surta efecto. Esto puede generar unos segundos de no disponibilidad.
+::: moniker-end
+
 Ejecute la instrucción SQL siguiente si quiere comprobar la biblioteca predeterminada de la instancia actual. En este ejemplo se devuelve la lista de carpetas incluidas en la variable `sys.path` de Python. La lista incluye el directorio actual y la ruta de acceso de la biblioteca estándar.
 
 ```sql
@@ -105,17 +110,13 @@ Al seleccionar la opción de lenguaje de Python durante la instalación, se inst
 En el siguiente script de ejemplo se muestra una lista de todos los paquetes de Python instalados en la instancia de SQL Server.
 
 ```sql
-EXECUTE sp_execute_external_script 
-  @language = N'Python', 
+EXECUTE sp_execute_external_script
+  @language = N'Python',
   @script = N'
 import pkg_resources
-import pandas as pd
-installed_packages = pkg_resources.working_set
-installed_packages_list = sorted(["%s==%s" % (i.key, i.version) for i in installed_packages])
-df = pd.DataFrame(installed_packages_list)
-OutputDataSet = df
-'
-WITH RESULT SETS (( PackageVersion nvarchar (150) ))
+import pandas
+OutputDataSet = pandas.DataFrame(sorted([(i.key, i.version) for i in pkg_resources.working_set]))'
+WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128)));
 ```
 
 ## <a name="find-a-single-python-package"></a>Búsqueda de un único paquete de Python

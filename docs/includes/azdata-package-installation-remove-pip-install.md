@@ -4,16 +4,16 @@ ms.prod: sql
 ms.topic: include
 ms.date: 01/07/2020
 ms.author: mikeray
-ms.openlocfilehash: 401d214495cd8df8ec3401c0b18db8ebe8773226
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c15fb58bb076724402ab72f81e58ce46c8b7b1e
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75721542"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257428"
 ---
 ### <a name="pythonpip-installation"></a>Instalación de Python/Pip
 
-Puede instalar `azdata` en Linux con yum, apt o zypper, o en MacOS con los administradores de paquetes de instalación de Homebrew. Antes de que estos administradores de paquetes estuvieran disponibles, la instalación requería Python y pip.
+Puede instalar [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] en Linux con yum, apt o zypper, o en MacOS con los administradores de paquetes de instalación de Homebrew. Antes de que estos administradores de paquetes estuvieran disponibles, la instalación requería Python y pip.
 
 >[!IMPORTANT]
 >Antes de continuar, debe quitar cualquier instalación de `azdata` que se haya instalado en el sistema de Python global. Los nuevos instaladores o paquetes nativos agregan `azdata` a la ruta de acceso y es imposible saber qué es lo que ocurre primero.

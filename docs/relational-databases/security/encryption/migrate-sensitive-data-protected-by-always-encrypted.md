@@ -14,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22ad17c49a2f084453c87f26b9c782404f93483d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 435c9e512278d3954c46e543ab6d68610f1cbdfc
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784026"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679263"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Carga masiva de datos cifrados en columnas con Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ Para cargar datos cifrados sin tener que volver realizar comprobaciones de metad
 ## <a name="data-migration-scenarios"></a>Escenarios de migración de datos  
 En la siguiente tabla se muestra la configuración recomendada adecuada para varios escenarios de migración.  
  
-![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
+![Captura de pantalla de una tabla en la que se muestra la configuración recomendada adecuada para varios escenarios de migración.](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>Carga masiva de datos cifrados  
 Utilice el siguiente proceso para cargar datos cifrados.  
@@ -58,7 +58,7 @@ En el siguiente escenario se muestra cómo importar datos de forma incorrecta po
 
 1.  El valor de la opción se establece en ON para un usuario.  
  
-2.  El usuario ejecuta la aplicación que se conecta a la base de datos. La aplicación utiliza las API de operaciones masiva para insertar valores de texto sin formato en las columnas cifradas. La aplicación espera que un controlador cliente con Always Encrypted cifre los datos durante la inserción. Pero la aplicación no está configurada correctamente, por lo que termina usando un controlador que no admite Always Encrypted o la cadena de conexión no contiene **column encryption setting=enabled**.  
+2.  El usuario ejecuta la aplicación que se conecta a la base de datos. La aplicación utiliza las API de operaciones masiva para insertar valores de texto sin formato en las columnas cifradas. La aplicación espera que un controlador cliente con Always Encrypted cifre los datos durante la inserción. Pero la aplicación no está configurada correctamente, por lo que termina usando un controlador que no admite Always Encrypted o la cadena de conexión no contiene **column encryption setting=enabled** .  
 
 3.  La aplicación envía los valores de texto no cifrado al servidor. Como las comprobaciones de metadatos criptográficos se deshabilitan en el servidor para el usuario, dicho servidor permite que los datos incorrectos (texto no cifrado en lugar de texto cifrado correctamente) se inserten en una columna cifrada.  
  

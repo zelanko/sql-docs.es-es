@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d19b9d31caf45a5438bf03fcab675ad9ebe5cf71
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 2eb908b1d63b70453aeff0e650f93b7c4e794520
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867947"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679257"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Errores comunes en el cifrado de datos transparente con claves administradas por el cliente en Azure Key Vault
 
@@ -62,7 +62,7 @@ En esta sección, se muestran los pasos para resolver los errores más comunes.
 
 **Mensaje de error**
 
-_401 AzureKeyVaultNoServerIdentity: la identidad del servidor no se ha configurado correctamente en el servidor. Póngase en contacto con el soporte técnico_.
+_401 AzureKeyVaultNoServerIdentity: la identidad del servidor no se ha configurado correctamente en el servidor. Póngase en contacto con el soporte técnico_ .
 
 **Detección**
 
@@ -80,7 +80,7 @@ Use el comando o el cmdlet siguiente para configurar una identidad de Azure AD 
 
 - CLI de Azure: [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) con la opción `--assign_identity`.
 
-En Azure Portal, vaya al almacén de claves y, luego, a **Directivas de acceso**. Siga estos pasos: 
+En Azure Portal, vaya al almacén de claves y, luego, a **Directivas de acceso** . Siga estos pasos: 
 
  1. Use el botón **Agregar nuevo** para agregar la AppId del servidor que creó en el paso anterior. 
  1. Asigne los permisos de clave siguientes: obtención, encapsulado y desencapsulado. 
@@ -95,7 +95,7 @@ Para más información, consulte [Asignar una entidad de Azure AD al servidor](
 
 **Mensaje de error**
 
-_503 AzureKeyVaultConnectionFailed: la operación no ha podido completarse en el servidor debido a que se ha producido un error al intentar conectarse a Azure Key Vault_.
+_503 AzureKeyVaultConnectionFailed: la operación no ha podido completarse en el servidor debido a que se ha producido un error al intentar conectarse a Azure Key Vault_ .
 
 **Detección**
 
@@ -126,9 +126,9 @@ Confirme que el almacén de claves está disponible:
 
 **Mensajes de error**
 
-_404 ServerKeyNotFound: no se ha encontrado la clave de servidor solicitada en la suscripción actual_. 
+_404 ServerKeyNotFound: no se ha encontrado la clave de servidor solicitada en la suscripción actual_ . 
 
-_409 ServerKeyDoesNotExists: la clave del servidor no existe_.
+_409 ServerKeyDoesNotExists: la clave del servidor no existe_ .
 
 **Detección**
 
@@ -147,7 +147,7 @@ Confirme que el protector de TDE está presente en Key Vault:
 
 **Mensaje de error**
 
-_401 AzureKeyVaultMissingPermissions: el servidor no encuentra los permisos necesarios en Azure Key Vault_.
+_401 AzureKeyVaultMissingPermissions: el servidor no encuentra los permisos necesarios en Azure Key Vault_ .
 
 **Detección**
 
@@ -159,9 +159,9 @@ Para identificar el URI de clave y el almacén de claves:
 
 Confirme que la instancia de SQL Server lógica tiene permisos para el almacén de claves y los permisos correctos para acceder a la clave:
 
-- En Azure Portal, vaya al almacén de claves > **Directivas de acceso**. Busque la AppId de la instancia de SQL Server lógica.  
+- En Azure Portal, vaya al almacén de claves > **Directivas de acceso** . Busque la AppId de la instancia de SQL Server lógica.  
 - Si está la AppId, asegúrese de que tiene los permisos de clave siguientes: obtención, encapsulado y desencapsulado.
-- Si la AppId no está, agréguela con el botón **Agregar nuevo**. 
+- Si la AppId no está, agréguela con el botón **Agregar nuevo** . 
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>Obtención del estado de TDE del registro de actividad
 

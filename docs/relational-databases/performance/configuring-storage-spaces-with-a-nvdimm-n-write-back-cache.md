@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 438bb53d76763ecb7179638591f0353cb1bedf6f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 7f95a343074ce2fb9f7f54c3121b0db6beafe34d
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891895"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679229"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Configuring Storage Spaces with a NVDIMM-N write-back cache (Configuración de espacios de almacenamiento con una caché con reescritura de NVDIMM-N)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "91891895"
 Get-PhysicalDisk | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Get-PhysicalDisk](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
+ ![Captura de pantalla de una ventana de Windows Powershell en la que se muestra la salida del cmdlet Get-PhysicalDisk.](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
   
 > [!NOTE]  
 >  Con los dispositivos de NVDIMM-N, ya no necesitará seleccionar específicamente los dispositivos que pueden ser destinos de memoria caché con reescritura.  
@@ -47,7 +47,7 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Seleccionar FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Seleccionar FriendlyName")  
+ ![Captura de pantalla de una ventana de Windows Powershell en la que se muestra la salida del cmdlet $pd.](../../relational-databases/performance/media/select-friendlyname.png "Seleccionar FriendlyName")  
   
 ## <a name="creating-the-storage-pool"></a>Crear el grupo de almacenamiento  
  Al usar la variable $pd que contiene los discos físicos, es sencillo crear el grupo de almacenamiento mediante el cmdlet New-StoragePool de PowerShell.  
@@ -56,7 +56,7 @@ $pd | Select FriendlyName, MediaType, BusType
 New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName NVDIMM_Pool -PhysicalDisks $pd  
 ```  
   
- ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
+ ![Captura de pantalla de una ventana de Windows Powershell en la que se muestra la salida del cmdlet New-StoragePool.](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
   
 ## <a name="creating-the-virtual-disk-and-volume"></a>Crear el disco virtual y el volumen  
  Ahora que se ha creado un grupo, el siguiente paso es delimitar un disco virtual y aplicarle formato. En este caso, solo se creará un disco virtual y el cmdlet New-Volume de PowerShell puede usarse para simplificar este proceso:  
@@ -65,15 +65,15 @@ New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName N
 New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyName Log_Space -Size 300GB -FileSystem NTFS -AccessPath S: -ResiliencySettingName Mirror  
 ```  
   
- ![New-Volume](../../relational-databases/performance/media/new-volume.png "New-Volume")  
+ ![Captura de pantalla de una ventana de Windows Powershell en la que se muestra la salida del cmdlet New-Volume.](../../relational-databases/performance/media/new-volume.png "New-Volume")  
   
  El disco virtual se ha creado, inicializado y se le ha aplicado formato con NTFS. La siguiente captura de pantalla muestra que tiene un tamaño de 300 GB y un tamaño de memoria caché de escritura de 1 GB, que se hospedará en los NVDIMM-N.  
   
- ![Get-VirtualDisk](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
+ ![Captura de pantalla de una ventana de Windows Powershell en la que se muestra la salida del cmdlet Get-VirtualDisk.](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
   
  Ahora puede ver este nuevo volumen en su servidor. Ahora puede usar esta unidad para el registro de transacciones de SQL Server.  
   
- ![Unidad Log_Space](../../relational-databases/performance/media/log-space-drive.png "Unidad Log_Space")  
+ ![Captura de pantalla de una ventana del Explorador de archivos en la página Este equipo en la que se muestra la unidad Log_Space.](../../relational-databases/performance/media/log-space-drive.png "Unidad Log_Space")  
   
 ## <a name="see-also"></a>Consulte también  
  [Espacios de almacenamiento en Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   

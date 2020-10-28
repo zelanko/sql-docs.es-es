@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 9ab42b6628f34c020d02dcffac130601dddb1938
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 8c48facb150d527cc1c03c0d5cd9ca0849a889f0
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784803"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679268"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad
 
@@ -62,8 +62,8 @@ Un grupo de disponibilidad con tres réplicas sincrónicas puede proporcionar pr
 |Comportamiento de la disponibilidad |Escalado de lectura|Alta disponibilidad y </br> protección de datos | Protección de los datos|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|Interrupción principal |Conmutación por error automática. La nueva réplica principal es de L/E. |Conmutación por error automática. La nueva réplica principal es de L/E. |Conmutación por error automática. La nueva réplica principal no está disponible para todas las transacciones de usuario hasta que la réplica principal anterior se recupere y una al grupo de disponibilidad como réplica secundaria. |
-|Interrupción de réplica secundaria  | La réplica principal es de L/E. No se produce una conmutación automática por error si la réplica principal presenta errores. |La réplica principal es de L/E. No se produce una conmutación automática por error si la réplica principal también presenta errores. | La réplica principal no está disponible para transacciones de usuario. |
+|Interrupción principal |Conmutación por error automática. La nueva réplica principal es de L/E. |Conmutación por error automática. La nueva réplica principal es de L/E. |Conmutación por error automática. La nueva réplica principal no está disponible para todas las transacciones de usuario hasta que la réplica principal anterior se recupere y una al grupo de disponibilidad como réplica secundaria. |
+|Interrupción de réplica secundaria  | La réplica principal es de L/E. No se produce una conmutación automática por error si la réplica principal presenta errores. |La réplica principal es de L/E. No se produce una conmutación automática por error si la réplica principal también presenta errores. | La réplica principal no está disponible para transacciones de usuario. |
 
 <sup>\*</sup> Valor predeterminado
 
@@ -81,7 +81,7 @@ Un grupo de disponibilidad con dos réplicas sincrónicas proporciona protecció
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Interrupción principal | Conmutación por error manual. Es posible que haya pérdida de datos. La nueva réplica principal es de L/E.| Conmutación por error automática. La nueva réplica principal no está disponible para todas las transacciones de usuario hasta que la réplica principal anterior se recupere y una al grupo de disponibilidad como réplica secundaria.|
-|Interrupción de réplica secundaria  |La réplica principal es de L/E, la ejecución se expone a pérdida de datos. |La réplica principal no está disponible para transacciones de usuario hasta que se recupere la réplica secundaria.|
+|Interrupción de réplica secundaria  |La réplica principal es de L/E, la ejecución se expone a pérdida de datos. |La réplica principal no está disponible para transacciones de usuario hasta que se recupere la réplica secundaria.|
 
 <sup>\*</sup> Valor predeterminado
 
@@ -99,7 +99,7 @@ Un grupo de disponibilidad con dos (o más) réplicas sincrónicas y una réplic
 En el diagrama de grupo de disponibilidad, una réplica principal envía los datos de configuración a la réplica secundaria y a la réplica de solo configuración. La réplica secundaria también recibe datos de usuario. La réplica de solo configuración no recibe datos de usuario. La réplica secundaria está en modo de disponibilidad sincrónica. La réplica de solo configuración no contiene las bases de datos de los metadatos del grupo de disponibilidad, solo metadatos sobre el grupo de disponibilidad. Los datos de configuración de la réplica de solo configuración se confirman sincrónicamente.
 
 > [!NOTE]
-> Un grupo de disponibilidad con una réplica de solo configuración es nuevo para SQL Server 2017 CU1. Todas las instancias de SQL Server en el grupo de disponibilidad deben ser de SQL Server 2017 CU1 o posterior. 
+> Un grupo de disponibilidad con una réplica de solo configuración es nuevo para SQL Server 2017 CU1. Todas las instancias de SQL Server en el grupo de disponibilidad deben ser de SQL Server 2017 CU1 o posterior. 
 
 El valor predeterminado para `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` es 0. En la tabla siguiente se describe la disponibilidad de este comportamiento. 
 
@@ -107,9 +107,9 @@ El valor predeterminado para `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` es 0.
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Interrupción principal | Conmutación por error automática. La nueva réplica principal es de L/E. | Conmutación por error automática. La nueva réplica principal no está disponible para transacciones de usuario. |
-|Interrupción de la réplica secundaria | La réplica principal es de L/E, la ejecución se expone a pérdida de datos (si se produce un error en la réplica principal y no se puede recuperar). No se produce una conmutación automática por error si la réplica principal también presenta errores. | La réplica principal no está disponible para transacciones de usuario. No hay ninguna réplica a la que realizar la conmutación por error si también se produce un error en la réplica principal. |
-|Interrupción de la réplica de solo configuración | La réplica principal es de L/E. No se produce una conmutación automática por error si la réplica principal también presenta errores. | La réplica principal es de L/E. No se produce una conmutación automática por error si la réplica principal también presenta errores. |
-|Interrupción de réplicas secundarias y de solo configuración de replicación sincrónica| La réplica principal no está disponible para transacciones de usuario. Sin conmutación automática por error. | La réplica principal no está disponible para transacciones de usuario. No se produce ninguna réplica en la conmutación por error en caso de que sea la réplica principal. |
+|Interrupción de la réplica secundaria | La réplica principal es de L/E, la ejecución se expone a pérdida de datos (si se produce un error en la réplica principal y no se puede recuperar). No se produce una conmutación automática por error si la réplica principal también presenta errores. | La réplica principal no está disponible para transacciones de usuario. No hay ninguna réplica a la que realizar la conmutación por error si también se produce un error en la réplica principal. |
+|Interrupción de la réplica de solo configuración | La réplica principal es de L/E. No se produce una conmutación automática por error si la réplica principal también presenta errores. | La réplica principal es de L/E. No se produce una conmutación automática por error si la réplica principal también presenta errores. |
+|Interrupción de réplicas secundarias y de solo configuración de replicación sincrónica| La réplica principal no está disponible para transacciones de usuario. Sin conmutación automática por error. | La réplica principal no está disponible para transacciones de usuario. No se produce ninguna réplica en la conmutación por error en caso de que sea la réplica principal. |
 
 <sup>\*</sup> Valor predeterminado
 

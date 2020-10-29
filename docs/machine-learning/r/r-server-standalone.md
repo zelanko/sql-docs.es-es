@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 342c9bd2f83fed2b74cbce1f5ea7b7d942e9fd63
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 95b00aff6a4a42ff0bc0cc01d6e4933f8ef6ceae
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956916"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793802"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>¿Qué son Machine Learning Server (independiente) o R Server en SQL Server?
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -80,7 +80,7 @@ Elija el mejor lenguaje para la tarea. R es la mejor opción para los cálculos 
 
 ### <a name="step-4-operationalize-your-solution"></a>Paso 4: puesta en funcionamiento de la solución
 
-Los servidores independientes pueden usar la funcionalidad de [operacionalización](//machine-learning-server/what-is-operationalization) de [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) que no son de la marca SQL. Puede configurar un servidor independiente para la operacionalización, lo que le ofrece estas ventajas: implementar y hospedar el código como servicios web, ejecutar diagnósticos y probar la capacidad del servicio web.
+Los servidores independientes pueden usar la funcionalidad de [operacionalización](/machine-learning-server/what-is-operationalization) de [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) que no son de la marca SQL. Puede configurar un servidor independiente para la operacionalización, lo que le ofrece estas ventajas: implementar y hospedar el código como servicios web, ejecutar diagnósticos y probar la capacidad del servicio web.
 
 ### <a name="step-5-maintain-your-server"></a>Paso 5: mantenimiento del servidor
 

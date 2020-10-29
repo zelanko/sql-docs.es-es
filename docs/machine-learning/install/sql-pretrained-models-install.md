@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a509b16abc2c52f504cf3783f5fb22370faaef94
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956756"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793752"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instalación de modelos de aprendizaje automático entrenados previamente en SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -27,7 +27,7 @@ Para usar los modelos previamente entrenados, llame a las funciones que se enume
 
 | Función de R (MicrosoftML) | Función de Python (microsoftml) | Uso |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](//machine-learning-server/python-reference/microsoftml/get-sentiment) | Genera una puntuación de opinión positiva-negativa sobre las entradas de texto. |
+| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](/machine-learning-server/python-reference/microsoftml/get-sentiment) | Genera una puntuación de opinión positiva-negativa sobre las entradas de texto. |
 | [featurizeImage](/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](/machine-learning-server/python-reference/microsoftml/featurize-image) | Extrae información de texto de entradas de archivo de imagen. |
 
 ## <a name="prerequisites"></a>Prerrequisitos
@@ -73,11 +73,11 @@ Si los modelos ya están instalados, vaya al [paso de validación](#verify) para
 
 ## <a name="download-the-installation-script"></a>Descargue el script de instalación.
 
-Haga clic en [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) para descargar el archivo **Install-MLModels.ps1**.
+Haga clic en [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) para descargar el archivo **Install-MLModels.ps1** .
 
 ## <a name="execute-with-elevated-privileges"></a>Ejecución con privilegios elevados
 
-1. Inicie PowerShell. En la barra de tareas, haga clic con el botón derecho en el icono del programa PowerShell y seleccione **Ejecutar como administrador**.
+1. Inicie PowerShell. En la barra de tareas, haga clic con el botón derecho en el icono del programa PowerShell y seleccione **Ejecutar como administrador** .
 2. Escriba una ruta de acceso completa al archivo de script de instalación e incluya el nombre de la instancia. Asumiendo la carpeta descargas y una instancia predeterminada, el comando podría ser similar al siguiente:
 
    ```powershell
@@ -196,7 +196,7 @@ El siguiente vínculo incluye el código de ejemplo que invoca los modelos previ
 
 ## <a name="research-and-resources"></a>Investigación y recursos
 
-Actualmente, los modelos que están disponibles son modelos de red neuronal profunda (DNN) para el análisis de sentimiento y la clasificación de imágenes. Todos los modelos entrenados previamente se entrenaron mediante el uso del [kit de herramientas de red computacional de Microsoft](https://cntk.ai/Features/Index.html) o **CNTK**.
+Actualmente, los modelos que están disponibles son modelos de red neuronal profunda (DNN) para el análisis de sentimiento y la clasificación de imágenes. Todos los modelos entrenados previamente se entrenaron mediante el uso del [kit de herramientas de red computacional de Microsoft](https://cntk.ai/Features/Index.html) o **CNTK** .
 
 La configuración de cada red se basó en las siguientes implementaciones de referencia:
 

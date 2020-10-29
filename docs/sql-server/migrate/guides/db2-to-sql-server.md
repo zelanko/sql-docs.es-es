@@ -13,15 +13,15 @@ helpviewer_keywords:
 - maximum number of processors supported
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 016d0e1a48e9f14356cae9dd4915fedd2b45374b
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 4a4aa024d94908800c020fdc5d2362d48d03becd
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92258006"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734657"
 ---
 # <a name="migration-guide-db2-to-sql-server"></a>Guía de migración: DB2 para SQL Server
-[!INCLUDE[sqlserver](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
 Con esta guía de migración aprenderá a migrar bases de datos de usuario de DB2 a SQL Server mediante SQL Server Migration Assistant para DB2. 
 
@@ -161,49 +161,6 @@ Para obtener más ayuda, consulte los siguientes recursos, que se desarrollaron 
 |[Escalado puro de DB2 LUW en Azure: guía de instalación](https://github.com/Microsoft/DataMigrationTeam/blob/master/Whitepapers/DB2%20PureScale%20on%20Azure.pdf)|Esta guía sirve como punto de partida para un plan de implementación de DB2. Aunque sus requisitos empresariales varíen, se aplica el mismo patrón básico. Este patrón de arquitectura también se puede utilizar para aplicaciones OLAP en Azure.|
 
 Estos recursos se desarrollaron como parte del programa Ninja SQL de datos, que está patrocinado por el equipo de ingeniería de grupos de datos de Azure. El objetivo principal del programa Ninja SQL de datos es lograr y acelerar la modernización compleja, y competir por las oportunidades de migración de las plataformas de datos a la de Azure, de Microsoft. Si cree que su organización estaría interesada en participar en el programa Ninja SQL de datos, póngase en contacto con su equipo de cuentas y pídale que le envíe una nominación.
-
-## <a name="partners"></a>Asociados
-
-Los siguientes asociados también pueden ofrecer métodos de migración alternativos: 
-
-:::row:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/blitzz-logo.png" alt-text="Especifique los detalles del proyecto y seleccione Aceptar para guardarlos.":::](https://www.blitzz.io/product)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/blueprint-logo.png" alt-text="Especifique los detalles del proyecto y seleccione Aceptar para guardarlos.":::](https://bpcs.com/what-we-do)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/cognizant-logo.png" alt-text="Especifique los detalles del proyecto y seleccione Aceptar para guardarlos.":::](https://www.cognizant.com/partners/microsoft)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/dxc-logo.png" alt-text="Especifique los detalles del proyecto y seleccione Aceptar para guardarlos.":::](https://www.dxc.technology/application_services/offerings/139843/142343-application_services_for_microsoft_azure)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/hvr-logo.png" alt-text="Especifique los detalles del proyecto y seleccione Aceptar para guardarlos.":::](https://www.hvr-software.com/solutions/azure-data-integration/)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/infosys-logo.png" alt-text="Especifique los detalles del proyecto y seleccione Aceptar para guardarlos.":::](https://www.infosys.com/services/)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column span="":::
-     [:::image type="content" source="media/db2-to-sql-server/ispirer-logo.png" alt-text="Especifique los detalles del proyecto y seleccione Aceptar para guardarlos.":::](https://www.ispirer.com/blog/migration-to-the-microsoft-technology-stack)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/querysurge-logo.png" alt-text="Especifique los detalles del proyecto y seleccione Aceptar para guardarlos.":::](https://www.querysurge.com/company/partners/microsoft)
-   :::column-end:::
-   :::column span="":::
-     [:::image type="content" source="media/db2-to-sql-server/scalability-experts-logo.png" alt-text="Especifique los detalles del proyecto y seleccione Aceptar para guardarlos.":::](http://www.scalabilityexperts.com/products/index.html)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column span="":::
-     [:::image type="content" source="media/db2-to-sql-server/wipro-logo.png" alt-text="Especifique los detalles del proyecto y seleccione Aceptar para guardarlos.":::](https://www.wipro.com/analytics/)
-   :::column-end:::
-:::row-end:::
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -15,12 +15,12 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51728a73872bed843c8ea34190be21a19906cd1b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1d8686e1502fab121e49abed19f8f01488d22b7
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462807"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439359"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Cómo representa combinaciones el Diseñador de consultas y vistas (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,26 +41,26 @@ La forma del icono situado en el centro de la línea de combinación indica cóm
   
 |**Icono de línea de combinación**|**Descripción**|  
 |----------------------|-------------------|  
-|![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbih.gif "Icono de Visual Database Tools")|Combinación interna (creada mediante un signo igual).|  
-|![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbii.gif "Icono de Visual Database Tools")|Combinación interna basada en el operador "mayor que".|  
-|![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbij.gif "Icono de Visual Database Tools")|Combinación externa en la que se incluirán todas las filas de la tabla representada a la izquierda, incluso si no tienen coincidencias en la tabla relacionada.|  
-|![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbik.gif "Icono de Visual Database Tools")|Combinación externa en la que se incluirán todas las filas de la tabla representada a la derecha, incluso si no tienen coincidencias en la tabla relacionada.|  
-|![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbil.gif "Icono de Visual Database Tools")|Combinación externa completa en la que se incluirán todas las filas de ambas tablas, incluso si no tienen coincidencias en la tabla relacionada.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbih.gif":::|Combinación interna (creada mediante un signo igual).|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbii.gif":::|Combinación interna basada en el operador "mayor que".|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbij.gif":::|Combinación externa en la que se incluirán todas las filas de la tabla representada a la izquierda, incluso si no tienen coincidencias en la tabla relacionada.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbik.gif":::|Combinación externa en la que se incluirán todas las filas de la tabla representada a la derecha, incluso si no tienen coincidencias en la tabla relacionada.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbil.gif":::|Combinación externa completa en la que se incluirán todas las filas de ambas tablas, incluso si no tienen coincidencias en la tabla relacionada.|  
   
 Los símbolos situados en los extremos de la línea de combinación indican el tipo de combinación. La tabla siguiente muestra los tipos de combinaciones y los iconos que aparecen en los extremos de la línea de combinación.  
   
 |**Icono situado en los extremos de la línea de combinación**|**Tipo de combinación**|  
 |---------------------------------|--------------------|  
-|![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbim.gif "Icono de Visual Database Tools")|Combinación uno a uno.|  
-|![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbin.gif "Icono de Visual Database Tools")|Combinación uno a varios.|  
-|![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbio.gif "Icono de Visual Database Tools")|El Diseñador de consultas y vistas no puede determinar el tipo de combinación. Esta situación ocurre con más frecuencia cuando ha creado una combinación de forma manual.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbim.gif":::|Combinación uno a uno.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbin.gif":::|Combinación uno a varios.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbio.gif":::|El Diseñador de consultas y vistas no puede determinar el tipo de combinación. Esta situación ocurre con más frecuencia cuando ha creado una combinación de forma manual.|  
   
 ## <a name="sql-pane"></a>panel SQL  
 Una combinación puede expresarse de varias maneras en una instrucción SQL. La sintaxis exacta depende de la base de datos que esté utilizando y de la forma en que haya definido la combinación.  
   
 Las opciones de sintaxis para combinar tablas incluyen:  
   
--   **Calificador JOIN para la cláusula FROM**.   Las palabras clave INNER y OUTER especifican el tipo de combinación. Esta sintaxis es estándar para SQL ANSI 92.  
+-   **Calificador JOIN para la cláusula FROM** .   Las palabras clave INNER y OUTER especifican el tipo de combinación. Esta sintaxis es estándar para SQL ANSI 92.  
   
     Por ejemplo, si combina las tablas `publishers` y `pub_info` según la columna `pub_id` de cada tabla, la instrucción SQL resultante podría tener el siguiente aspecto:  
   
@@ -72,7 +72,7 @@ Las opciones de sintaxis para combinar tablas incluyen:
   
     Si crea una combinación externa, aparecen las palabras LEFT OUTER o RIGHT OUTER en lugar de la palabra INNER.  
   
--   **La cláusula WHERE compara columnas de ambas tablas**.   Aparecerá una cláusula WHERE si la base de datos no admite la sintaxis JOIN, o si la especificó el usuario. Si la combinación se crea en la cláusula WHERE, ambos nombres de tabla aparecen en la cláusula FROM.  
+-   **La cláusula WHERE compara columnas de ambas tablas** .   Aparecerá una cláusula WHERE si la base de datos no admite la sintaxis JOIN, o si la especificó el usuario. Si la combinación se crea en la cláusula WHERE, ambos nombres de tabla aparecen en la cláusula FROM.  
   
     Por ejemplo, la instrucción siguiente combina las tablas `publishers` y `pub_info` .  
   

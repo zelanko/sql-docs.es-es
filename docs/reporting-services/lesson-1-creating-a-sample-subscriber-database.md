@@ -10,10 +10,10 @@ ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a62e0e1c47cd6df4d2d5e4f28b35294af694a824
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
+ms.lasthandoff: 10/22/2020
 ms.locfileid: "87243276"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lección 1: Creación de una base de datos de suscriptor de ejemplo
@@ -28,7 +28,7 @@ En esta lección se da por hecho que está usando [!INCLUDE[ssManStudioFull_md](
   
 2.  Haga clic con el botón derecho en Bases de datos y seleccione **Nueva base de datos...** .  
   
-3.  En el cuadro de diálogo Nueva base de datos, en **Nombre de la base de datos**, escriba *Subscribers*. 
+3.  En el cuadro de diálogo Nueva base de datos, en **Nombre de la base de datos** , escriba *Subscribers* . 
 4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  Haga clic en el botón **Nueva consulta** de la barra de herramientas.  

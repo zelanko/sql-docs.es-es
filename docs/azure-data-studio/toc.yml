@@ -7,7 +7,7 @@
 - name: Información general
   items:
     - name: Azure Data Studio
-      href: what-is.md
+      href: what-is-azure-data-studio.md
 - name: Guías de inicio rápido
   items:
     - name: Conectar y consultar SQL Server

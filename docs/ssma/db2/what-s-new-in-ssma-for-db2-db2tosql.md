@@ -4,22 +4,34 @@ description: Obtenga información sobre los cambios en SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 9/28/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 8f84892230de6e7070933657cd25636a2fc697d8
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: b35e5a01f28feb8b5dd42f592cf2c310d6c410f3
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498228"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036031"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Novedades de SSMA para DB2 (DB2ToSQL)
 
 En este artículo se enumeran los cambios de SQL Server Migration Assistant (SSMA) para DB2 en cada versión.
+
+## <a name="ssma-v815"></a>SSMA v 8.15
+
+Además de varias mejoras de accesibilidad, la versión v 8.15 de SSMA para DB2 contiene los siguientes cambios:
+
+* Corrección de la conversión de `MIN` / `MAX` funciones de agregado con argumentos de fecha y hora
+* Corregir el error en la `VARCHAR_FORMAT` función de emulación cuando `DD` se usa el marcador de posición
+* Mejorar las asignaciones de tipos para el `TIME` tipo de datos
+* Mejorar la conversión `ROUND` de `TRUNC` funciones y con argumentos numéricos
+* Remodernización de los informes de evaluación para trabajar en exploradores modernos
+* Usar autoridad proporcionada por la base de datos para la autenticación de Azure AD
+* Mejorar la nomenclatura de las instrucciones cargadas desde archivos
 
 ## <a name="ssma-v814"></a>SSMA v 8.14
 
@@ -94,7 +106,7 @@ Además, SSMA para DB2 ahora proporciona:
 
 Además de un conjunto de correcciones diseñado para mejorar la facilidad de uso y el rendimiento, la versión v 8.6 de SSMA para DB2 se ha mejorado agregando una configuración que permite a los usuarios omitir las propiedades extendidas de SSMA en el código convertido.
 
-Para aprovechar este valor, en SSMA para DB2, vaya a **herramientas**  >  **configuración del proyecto**  >  **General**  >  **conversión**general y, a continuación, en **varios**, actualice el valor de la opción **omitir propiedades extendidas** a **sí**.
+Para aprovechar este valor, en SSMA para DB2, vaya a **herramientas**  >  **configuración del proyecto**  >  **General**  >  **conversión** general y, a continuación, en **varios** , actualice el valor de la opción **omitir propiedades extendidas** a **sí** .
 
 ![Omitir la configuración de propiedades extendidas](../db2/media/ssma-omit-extended-properties.png)
 
@@ -168,7 +180,7 @@ La versión 8.0 de SSMA para DB2 se ha mejorado para proporcionar soluciones de 
 
   ![Proyecto de MI de SQL](../media/ssma-newproject-sqldbmi.png)
 
-* **Asesor de corrección**posterior a la conversión. Obtenga más información [aquí](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
+* **Asesor de corrección** posterior a la conversión. Obtenga más información [aquí](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
 * Selección preliminar de base de datos/esquema.
 
@@ -196,7 +208,7 @@ La versión v 7.9 de SSMA para DB2 contiene los siguientes cambios:
 
 La versión v 7.8 de SSMA para DB2 contiene los siguientes cambios:
 
-* Cambiar la asignación de tipos resaltada en la *configuración del proyecto*.
+* Cambiar la asignación de tipos resaltada en la *configuración del proyecto* .
 * La capacidad de los usuarios de deshabilitar la telemetría.
 
 ## <a name="ssma-v77"></a>SSMA v 7.7

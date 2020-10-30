@@ -4,22 +4,30 @@ description: Obtenga información sobre los cambios en SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 9/28/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 75a82f8f87997dfa028a5e0b1ee7bae73c3913e6
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: efd716c1e41597e276c4b33bb19122d70b91dd03
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497882"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036041"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novedades de SSMA para MySQL (MySQLToSql)
 
 En este artículo se enumeran los cambios de SQL Server Migration Assistant (SSMA) para MySQL en cada versión.
+
+## <a name="ssma-v815"></a>SSMA v 8.15
+
+Además de varias mejoras de accesibilidad, la versión v 8.15 de SSMA para MySQL contiene los cambios siguientes:
+
+* Remodernización de los informes de evaluación para trabajar en exploradores modernos
+* Usar autoridad proporcionada por la base de datos para la autenticación de Azure AD
+* Mejorar la nomenclatura de las instrucciones cargadas desde archivos
 
 ## <a name="ssma-v814"></a>SSMA v 8.14
 
@@ -75,7 +83,7 @@ Además, SSMA para MySQL ahora proporciona conversión para la `LIMIT` cláusula
 
 Además de un conjunto de correcciones diseñado para mejorar la facilidad de uso y el rendimiento, la versión v 8.6 de SSMA para MySQL se ha mejorado agregando una configuración que permite a los usuarios omitir las propiedades extendidas de SSMA en el código convertido.
 
-Para aprovechar esta configuración, en SSMA para MySQL, vaya a **herramientas**  >  **configuración del proyecto**  >  **General**  >  **conversión**general y, a continuación, en **varios**, actualice el valor de la opción **omitir propiedades extendidas** a **sí**.
+Para aprovechar esta configuración, en SSMA para MySQL, vaya a **herramientas**  >  **configuración del proyecto**  >  **General**  >  **conversión** general y, a continuación, en **varios** , actualice el valor de la opción **omitir propiedades extendidas** a **sí** .
 
 ![Omitir la configuración de propiedades extendidas](../mysql/media/ssma-omit-extended-properties.png)
 
@@ -129,7 +137,7 @@ La versión v 8.0 de SSMA para MySQL se ha mejorado con las correcciones de dest
 
   ![Proyecto de MI de SQL](../media/ssma-newproject-sqldbmi.png)
 
-* **Asesor de corrección**posterior a la conversión. Obtenga más información [aquí](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
+* **Asesor de corrección** posterior a la conversión. Obtenga más información [aquí](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
 * Selección preliminar de base de datos/esquema.
 
@@ -315,14 +323,14 @@ La versión 2010 de julio de SSMA para MySQL contiene las siguientes caracterís
   
 **5. mejoras en la migración de datos:**  
   
-* Compatibilidad con la migración de datos mediante motores de migración de datos del lado servidor y del lado cliente
+* Compatibilidad con la migración de datos mediante motores de migración de datos Server-Side y Client-Side
 * Compatibilidad con la migración de datos espaciales
 * SQL personalizado para la migración de datos para tablas
   
 **6. SSMA para la consola de MySQL:**  
   
 * Característica de la consola de soporte para SSMA para MySQL  
-* Compatibilidad con la interfaz de nivel de script  
+* Compatibilidad con la interconexión de Script-Level  
   
 ## <a name="january-2010"></a>2010 de enero
 

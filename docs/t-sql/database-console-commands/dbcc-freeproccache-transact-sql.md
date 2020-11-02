@@ -26,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44c696a3c912f52fef2ca5d5ece3411e59dba5d3
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 51c7252e957a9f19d83c6d2b840f91a7261af02b
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957019"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639008"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,17 +43,16 @@ Quita todos los elementos de la memoria caché del plan, quita un plan concreto 
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>Sintaxis
+## <a name="syntax"></a>Sintaxis  
+Sintaxis para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
-Sintaxis de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]:
-
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
 Sintaxis para [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
   
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 
      [ WITH NO_INFOMSGS ]   
 [;]  
@@ -95,7 +94,11 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## <a name="remarks"></a>Comentarios  
 Use DBCC FREEPROCCACHE con precaución para borrar la caché del plan. Borrar la memoria caché (de plan) de procedimientos hace que todos los planes se expulsen y las ejecuciones de consultas entrantes compilarán un nuevo plan, en lugar de volver a usar alguno de los planes previamente almacenados en caché. 
 
-Como consecuencia, el rendimiento de las consultas puede disminuir de manera repentina y temporal a medida que el número de compilaciones nuevas vaya aumentando. Para cada almacén de caché borrado de la caché del plan, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la caché del plan) debidas a operaciones "DBCC FREEPROCCACHE" o "DBCC FREESYSTEMCACHE"". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
+Como consecuencia, el rendimiento de las consultas puede disminuir de manera repentina y temporal a medida que el número de compilaciones nuevas vaya aumentando. Para cada almacén de caché borrado de la caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo:
+
+> `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.` 
+
+Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
 
 Las siguientes operaciones de reconfiguración también borran la caché de procedimientos:
 -   access check cache bucket count  
@@ -182,7 +185,7 @@ DBCC FREEPROCCACHE WITH NO_INFOMSGS;
 ```  
   
 ### <a name="c-clearing-all-cache-entries-associated-with-a-resource-pool"></a>C. Borrar todas las entradas de caché asociadas a un grupo de recursos  
-En el ejemplo siguiente se borran todas las entradas de caché asociadas a un grupo de recursos de servidor especificado. Primero, se consulta la vista `sys.dm_resource_governor_resource_pools` para obtener el valor de *pool_name*.
+En el ejemplo siguiente se borran todas las entradas de caché asociadas a un grupo de recursos de servidor especificado. Primero, se consulta la vista `sys.dm_resource_governor_resource_pools` para obtener el valor de *pool_name* .
   
 ```sql  
 SELECT * FROM sys.dm_resource_governor_resource_pools;  

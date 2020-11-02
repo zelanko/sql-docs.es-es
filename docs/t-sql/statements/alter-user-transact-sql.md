@@ -26,12 +26,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca728137fc4fb76ae4109233b43732a3befbfca6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ecb1710f992535ca4e6ebca3a3f825c5e1bffc9a
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478998"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496971"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -51,7 +51,7 @@ Cambia el nombre de un usuario de base de datos o cambia su esquema predetermina
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instancia administrada de <br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [Instancia administrada de SQL](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -93,16 +93,16 @@ NAME = newUserName
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } especifica el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos de este usuario. El establecimiento del esquema predeterminado en NULL quita un esquema predeterminado de un grupo de Windows. La opción NULL no se puede utilizar con un usuario de Windows.
 
- PASSWORD **=** '*password*'  **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ PASSWORD **=** ' *password* '  **Se aplica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
  Especifica la contraseña del usuario que se está cambiando. En las contraseñas se distingue entre mayúsculas y minúsculas.
 
 > [!NOTE]
 > Esta opción solo está disponible para los usuarios contenidos. Para más información, vea [Bases de datos independientes](../../relational-databases/databases/contained-databases.md) y [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
 
- OLD_PASSWORD **=** _'oldpassword'_ **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ OLD_PASSWORD **=** _'oldpassword'_ **Se aplica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
- La contraseña de usuario actual que se reemplazará por '*password*'. En las contraseñas se distingue entre mayúsculas y minúsculas. Para cambiar una contraseña se pide *OLD_PASSWORD*, a menos que tenga el permiso **ALTER ANY USER**. Al pedir que se especifique *OLD_PASSWORD*, se impide que los usuarios con el permiso **IMPERSONATION** puedan cambiar la contraseña.
+ La contraseña de usuario actual que se reemplazará por ' *password* '. En las contraseñas se distingue entre mayúsculas y minúsculas. Para cambiar una contraseña se pide *OLD_PASSWORD* , a menos que tenga el permiso **ALTER ANY USER** . Al pedir que se especifique *OLD_PASSWORD* , se impide que los usuarios con el permiso **IMPERSONATION** puedan cambiar la contraseña.
 
 > [!NOTE]
 > Esta opción solo está disponible para los usuarios contenidos.
@@ -114,7 +114,7 @@ NAME = newUserName
 > [!NOTE]
 > Esta opción solo se puede especificar en una base de datos independiente y solo para los usuarios independientes.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y posterior, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Se aplica a** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y posterior, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Suprime las comprobaciones de metadatos criptográficos en el servidor en operaciones de copia masiva. De esta manera, el usuario puede copiar los datos de forma masiva entre tablas o bases de datos, sin descifrar los datos. El valor predeterminado es OFF.
 
@@ -125,14 +125,14 @@ NAME = newUserName
 
  El esquema predeterminado será el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos de este usuario de base de datos. A menos que se especifique lo contrario, el esquema predeterminado será el propietario de los objetos creados por este usuario de base de datos.
 
- Si el usuario tiene un esquema predeterminado, se utilizará dicho esquema. Si el usuario no tiene un esquema predeterminado, pero es miembro de un grupo con un esquema predeterminado, se utilizará el esquema predeterminado del grupo. Si el usuario no tiene un esquema predeterminado y es miembro de varios grupos, el esquema predeterminado para el usuario será el del grupo de Windows con el principal_id mínimo y un esquema predeterminado establecido explícitamente. Si no se puede determinar ningún esquema predeterminado para un usuario, se utilizará el esquema **dbo**.
+ Si el usuario tiene un esquema predeterminado, se utilizará dicho esquema. Si el usuario no tiene un esquema predeterminado, pero es miembro de un grupo con un esquema predeterminado, se utilizará el esquema predeterminado del grupo. Si el usuario no tiene un esquema predeterminado y es miembro de varios grupos, el esquema predeterminado para el usuario será el del grupo de Windows con el principal_id mínimo y un esquema predeterminado establecido explícitamente. Si no se puede determinar ningún esquema predeterminado para un usuario, se utilizará el esquema **dbo** .
 
  DEFAULT_SCHEMA puede establecerse en un esquema que no existe actualmente en la base de datos. Por tanto, puede asignar un DEFAULT_SCHEMA a un usuario antes de crear el esquema.
 
  No se puede especificar DEFAULT_SCHEMA para un usuario asignado a un certificado o una clave asimétrica.
 
 > [!IMPORTANT]
-> El valor de DEFAULT_SCHEMA se omite si el usuario es un miembro del rol fijo de servidor **sysadmin**. Todos los miembros del rol fijo de servidor **sysadmin** tienen un esquema predeterminado `dbo`.
+> El valor de DEFAULT_SCHEMA se omite si el usuario es un miembro del rol fijo de servidor **sysadmin** . Todos los miembros del rol fijo de servidor **sysadmin** tienen un esquema predeterminado `dbo`.
 
  Solo puede cambiar el nombre de un usuario que está asignado a un grupo o inicio de sesión de Windows cuando el SID del nuevo nombre de usuario coincide con el SID registrado en la base de datos. Esta comprobación ayuda a evitar la suplantación de inicios de sesión de Windows en la base de datos.
 
@@ -226,7 +226,7 @@ GO
         **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
-        [Instancia administrada de <br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [Instancia administrada de SQL](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -288,21 +288,21 @@ ALTER USER userName
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } especifica el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos de este usuario. El establecimiento del esquema predeterminado en NULL quita un esquema predeterminado de un grupo de Windows. La opción NULL no se puede utilizar con un usuario de Windows.
 
- PASSWORD **=** '*password*'  **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ PASSWORD **=** ' *password* '  **Se aplica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
  Especifica la contraseña del usuario que se está cambiando. En las contraseñas se distingue entre mayúsculas y minúsculas.
 
 > [!NOTE]
 > Esta opción solo está disponible para los usuarios contenidos. Para más información, vea [Bases de datos independientes](../../relational-databases/databases/contained-databases.md) y [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
 
- OLD_PASSWORD **=** _'oldpassword'_ **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ OLD_PASSWORD **=** _'oldpassword'_ **Se aplica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y posterior, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
- La contraseña de usuario actual que se reemplazará por '*password*'. En las contraseñas se distingue entre mayúsculas y minúsculas. Para cambiar una contraseña se pide *OLD_PASSWORD*, a menos que tenga el permiso **ALTER ANY USER**. Al pedir que se especifique *OLD_PASSWORD*, se impide que los usuarios con el permiso **IMPERSONATION** puedan cambiar la contraseña.
+ La contraseña de usuario actual que se reemplazará por ' *password* '. En las contraseñas se distingue entre mayúsculas y minúsculas. Para cambiar una contraseña se pide *OLD_PASSWORD* , a menos que tenga el permiso **ALTER ANY USER** . Al pedir que se especifique *OLD_PASSWORD* , se impide que los usuarios con el permiso **IMPERSONATION** puedan cambiar la contraseña.
 
 > [!NOTE]
 > Esta opción solo está disponible para los usuarios contenidos.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y posterior, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **Se aplica a** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y posterior, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Suprime las comprobaciones de metadatos criptográficos en el servidor en operaciones de copia masiva. De esta manera, el usuario puede copiar los datos de forma masiva entre tablas o bases de datos, sin descifrar los datos. El valor predeterminado es OFF.
 
@@ -313,14 +313,14 @@ ALTER USER userName
 
  El esquema predeterminado será el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos de este usuario de base de datos. A menos que se especifique lo contrario, el esquema predeterminado será el propietario de los objetos creados por este usuario de base de datos.
 
- Si el usuario tiene un esquema predeterminado, se utilizará dicho esquema. Si el usuario no tiene un esquema predeterminado, pero es miembro de un grupo con un esquema predeterminado, se utilizará el esquema predeterminado del grupo. Si el usuario no tiene un esquema predeterminado y es miembro de varios grupos, el esquema predeterminado para el usuario será el del grupo de Windows con el principal_id mínimo y un esquema predeterminado establecido explícitamente. Si no se puede determinar ningún esquema predeterminado para un usuario, se utilizará el esquema **dbo**.
+ Si el usuario tiene un esquema predeterminado, se utilizará dicho esquema. Si el usuario no tiene un esquema predeterminado, pero es miembro de un grupo con un esquema predeterminado, se utilizará el esquema predeterminado del grupo. Si el usuario no tiene un esquema predeterminado y es miembro de varios grupos, el esquema predeterminado para el usuario será el del grupo de Windows con el principal_id mínimo y un esquema predeterminado establecido explícitamente. Si no se puede determinar ningún esquema predeterminado para un usuario, se utilizará el esquema **dbo** .
 
  DEFAULT_SCHEMA puede establecerse en un esquema que no existe actualmente en la base de datos. Por tanto, puede asignar un DEFAULT_SCHEMA a un usuario antes de crear el esquema.
 
  No se puede especificar DEFAULT_SCHEMA para un usuario asignado a un certificado o una clave asimétrica.
 
 > [!IMPORTANT]
-> El valor de DEFAULT_SCHEMA se omite si el usuario es un miembro del rol fijo de servidor **sysadmin**. Todos los miembros del rol fijo de servidor **sysadmin** tienen un esquema predeterminado `dbo`.
+> El valor de DEFAULT_SCHEMA se omite si el usuario es un miembro del rol fijo de servidor **sysadmin** . Todos los miembros del rol fijo de servidor **sysadmin** tienen un esquema predeterminado `dbo`.
 
  Solo puede cambiar el nombre de un usuario que está asignado a un grupo o inicio de sesión de Windows cuando el SID del nuevo nombre de usuario coincide con el SID registrado en la base de datos. Esta comprobación ayuda a evitar la suplantación de inicios de sesión de Windows en la base de datos.
 
@@ -411,7 +411,7 @@ GO
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Instancia administrada de <br />SQL Database \*_**
+        **_\* SQL Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -476,7 +476,7 @@ ALTER USER userName
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } especifica el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos de este usuario. El establecimiento del esquema predeterminado en NULL quita un esquema predeterminado de un grupo de Windows. La opción NULL no se puede utilizar con un usuario de Windows.
 
- PASSWORD **=** '*password*'
+ PASSWORD **=** ' *password* '
 
  Especifica la contraseña del usuario que se está cambiando. En las contraseñas se distingue entre mayúsculas y minúsculas.
 
@@ -485,7 +485,7 @@ ALTER USER userName
 
  OLD_PASSWORD **=** _'oldpassword'_
 
- La contraseña de usuario actual que se reemplazará por '*password*'. En las contraseñas se distingue entre mayúsculas y minúsculas. Para cambiar una contraseña se pide *OLD_PASSWORD*, a menos que tenga el permiso **ALTER ANY USER**. Al pedir que se especifique *OLD_PASSWORD*, se impide que los usuarios con el permiso **IMPERSONATION** puedan cambiar la contraseña.
+ La contraseña de usuario actual que se reemplazará por ' *password* '. En las contraseñas se distingue entre mayúsculas y minúsculas. Para cambiar una contraseña se pide *OLD_PASSWORD* , a menos que tenga el permiso **ALTER ANY USER** . Al pedir que se especifique *OLD_PASSWORD* , se impide que los usuarios con el permiso **IMPERSONATION** puedan cambiar la contraseña.
 
 > [!NOTE]
 > Esta opción solo está disponible para los usuarios contenidos.
@@ -508,14 +508,14 @@ ALTER USER userName
 
  El esquema predeterminado será el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos de este usuario de base de datos. A menos que se especifique lo contrario, el esquema predeterminado será el propietario de los objetos creados por este usuario de base de datos.
 
- Si el usuario tiene un esquema predeterminado, se utilizará dicho esquema. Si el usuario no tiene un esquema predeterminado, pero es miembro de un grupo con un esquema predeterminado, se utilizará el esquema predeterminado del grupo. Si el usuario no tiene un esquema predeterminado y es miembro de varios grupos, el esquema predeterminado para el usuario será el del grupo de Windows con el principal_id mínimo y un esquema predeterminado establecido explícitamente. Si no se puede determinar ningún esquema predeterminado para un usuario, se utilizará el esquema **dbo**.
+ Si el usuario tiene un esquema predeterminado, se utilizará dicho esquema. Si el usuario no tiene un esquema predeterminado, pero es miembro de un grupo con un esquema predeterminado, se utilizará el esquema predeterminado del grupo. Si el usuario no tiene un esquema predeterminado y es miembro de varios grupos, el esquema predeterminado para el usuario será el del grupo de Windows con el principal_id mínimo y un esquema predeterminado establecido explícitamente. Si no se puede determinar ningún esquema predeterminado para un usuario, se utilizará el esquema **dbo** .
 
  DEFAULT_SCHEMA puede establecerse en un esquema que no existe actualmente en la base de datos. Por tanto, puede asignar un DEFAULT_SCHEMA a un usuario antes de crear el esquema.
 
  No se puede especificar DEFAULT_SCHEMA para un usuario asignado a un certificado o una clave asimétrica.
 
 > [!IMPORTANT]
-> El valor de DEFAULT_SCHEMA se omite si el usuario es un miembro del rol fijo de servidor **sysadmin**. Todos los miembros del rol fijo de servidor **sysadmin** tienen un esquema predeterminado `dbo`.
+> El valor de DEFAULT_SCHEMA se omite si el usuario es un miembro del rol fijo de servidor **sysadmin** . Todos los miembros del rol fijo de servidor **sysadmin** tienen un esquema predeterminado `dbo`.
 
  Solo puede cambiar el nombre de un usuario que está asignado a un grupo o inicio de sesión de Windows cuando el SID del nuevo nombre de usuario coincide con el SID registrado en la base de datos. Esta comprobación ayuda a evitar la suplantación de inicios de sesión de Windows en la base de datos.
 
@@ -555,15 +555,15 @@ Estas notas se aplican a la autenticación como usuarios de Windows que se han f
 - Compruebe que el tipo indicado del inicio de sesión sea `E` o `X`.
 - La opción PASSWORD no se puede usar en usuarios de Azure AD.
 - En todos los casos de migración, los roles y permisos de usuarios o grupos de Windows se transferirán automáticamente a los nuevos usuarios o grupos de Azure AD.
-- Una nueva extensión de sintaxis, **FROM EXTERNAL PROVIDER**, está disponible para modificar los usuarios y grupos de Windows de SQL en el entorno local a usuarios y grupos de Azure AD. El dominio de Windows debe estar federado con Azure AD y todos los miembros del dominio de Windows deben estar en Azure AD cuando se use esa extensión. La sintaxis de **FROM EXTERNAL PROVIDER** se aplica a Azure SQL Managed Instance y debe usarse en caso de que los usuarios de Windows no dispongan de inicios de sesión en la instancia de SQL original y deban asignarse a usuarios de base de datos de Azure AD independientes.
+- Una nueva extensión de sintaxis, **FROM EXTERNAL PROVIDER** , está disponible para modificar los usuarios y grupos de Windows de SQL en el entorno local a usuarios y grupos de Azure AD. El dominio de Windows debe estar federado con Azure AD y todos los miembros del dominio de Windows deben estar en Azure AD cuando se use esa extensión. La sintaxis de **FROM EXTERNAL PROVIDER** se aplica a Azure SQL Managed Instance y debe usarse en caso de que los usuarios de Windows no dispongan de inicios de sesión en la instancia de SQL original y deban asignarse a usuarios de base de datos de Azure AD independientes.
 - En este caso, el valor userName permitido puede ser:
-- Un usuario de Windows (_domain\user_).
-- Un grupo de Windows (_MyWidnowsGroup_).
-- Un alias de Windows (_MyWindowsAlias_).
+- Un usuario de Windows ( _domain\user_ ).
+- Un grupo de Windows ( _MyWidnowsGroup_ ).
+- Un alias de Windows ( _MyWindowsAlias_ ).
 - El resultado del comando ALTER reemplaza el valor userName anterior por el nombre correspondiente que se encuentra en Azure AD en función del SID original del valor userName anterior. El nombre modificado se sustituye y almacena en los metadatos de la base de datos:
-- (_domain\user_) se reemplazará por Azure AD user@domain.com.
-- (_domain\\MyWidnowsGroup_) se reemplazará por el grupo de Azure AD.
-- (_MyWindowsAlias_) permanecerá sin cambios, pero se comprobará el SID de este usuario en Azure AD.
+- ( _domain\user_ ) se reemplazará por Azure AD user@domain.com.
+- ( _domain\\MyWidnowsGroup_ ) se reemplazará por el grupo de Azure AD.
+- ( _MyWindowsAlias_ ) permanecerá sin cambios, pero se comprobará el SID de este usuario en Azure AD.
 
 > [!NOTE]
 > Si no se encuentra el SID del usuario original convertido en objectID en Azure AD, se producirá un error en el comando ALTER USER.
@@ -679,7 +679,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instancia administrada de <br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [Instancia administrada de SQL](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -724,14 +724,14 @@ ALTER USER userName
 
  El esquema predeterminado será el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos de este usuario de base de datos. A menos que se especifique lo contrario, el esquema predeterminado será el propietario de los objetos creados por este usuario de base de datos.
 
- Si el usuario tiene un esquema predeterminado, se utilizará dicho esquema. Si el usuario no tiene un esquema predeterminado, pero es miembro de un grupo con un esquema predeterminado, se utilizará el esquema predeterminado del grupo. Si el usuario no tiene un esquema predeterminado y es miembro de varios grupos, el esquema predeterminado para el usuario será el del grupo de Windows con el principal_id mínimo y un esquema predeterminado establecido explícitamente. Si no se puede determinar ningún esquema predeterminado para un usuario, se utilizará el esquema **dbo**.
+ Si el usuario tiene un esquema predeterminado, se utilizará dicho esquema. Si el usuario no tiene un esquema predeterminado, pero es miembro de un grupo con un esquema predeterminado, se utilizará el esquema predeterminado del grupo. Si el usuario no tiene un esquema predeterminado y es miembro de varios grupos, el esquema predeterminado para el usuario será el del grupo de Windows con el principal_id mínimo y un esquema predeterminado establecido explícitamente. Si no se puede determinar ningún esquema predeterminado para un usuario, se utilizará el esquema **dbo** .
 
  DEFAULT_SCHEMA puede establecerse en un esquema que no existe actualmente en la base de datos. Por tanto, puede asignar un DEFAULT_SCHEMA a un usuario antes de crear el esquema.
 
  No se puede especificar DEFAULT_SCHEMA para un usuario asignado a un certificado o una clave asimétrica.
 
 > [!IMPORTANT]
-> El valor de DEFAULT_SCHEMA se omite si el usuario es un miembro del rol fijo de servidor **sysadmin**. Todos los miembros del rol fijo de servidor **sysadmin** tienen un esquema predeterminado `dbo`.
+> El valor de DEFAULT_SCHEMA se omite si el usuario es un miembro del rol fijo de servidor **sysadmin** . Todos los miembros del rol fijo de servidor **sysadmin** tienen un esquema predeterminado `dbo`.
 
  La cláusula WITH LOGIN habilita la reasignación de un usuario a un inicio de sesión diferente. Los usuarios sin inicio de sesión, los usuarios asignados a un certificado y los usuarios asignados a una clave asimétrica no se pueden reasignar con esta cláusula. Solo se pueden reasignar usuarios de SQL y usuarios (o grupos) de Windows. La cláusula WITH LOGIN no se puede utilizar para cambiar el tipo de usuario, como cambiar una cuenta de Windows a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -804,7 +804,7 @@ GO
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instancia administrada de <br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [Instancia administrada de SQL](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -849,14 +849,14 @@ ALTER USER userName
 
  El esquema predeterminado será el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos de este usuario de base de datos. A menos que se especifique lo contrario, el esquema predeterminado será el propietario de los objetos creados por este usuario de base de datos.
 
- Si el usuario tiene un esquema predeterminado, se utilizará dicho esquema. Si el usuario no tiene un esquema predeterminado, pero es miembro de un grupo con un esquema predeterminado, se utilizará el esquema predeterminado del grupo. Si el usuario no tiene un esquema predeterminado y es miembro de varios grupos, el esquema predeterminado para el usuario será el del grupo de Windows con el principal_id mínimo y un esquema predeterminado establecido explícitamente. Si no se puede determinar ningún esquema predeterminado para un usuario, se utilizará el esquema **dbo**.
+ Si el usuario tiene un esquema predeterminado, se utilizará dicho esquema. Si el usuario no tiene un esquema predeterminado, pero es miembro de un grupo con un esquema predeterminado, se utilizará el esquema predeterminado del grupo. Si el usuario no tiene un esquema predeterminado y es miembro de varios grupos, el esquema predeterminado para el usuario será el del grupo de Windows con el principal_id mínimo y un esquema predeterminado establecido explícitamente. Si no se puede determinar ningún esquema predeterminado para un usuario, se utilizará el esquema **dbo** .
 
  DEFAULT_SCHEMA puede establecerse en un esquema que no existe actualmente en la base de datos. Por tanto, puede asignar un DEFAULT_SCHEMA a un usuario antes de crear el esquema.
 
  No se puede especificar DEFAULT_SCHEMA para un usuario asignado a un certificado o una clave asimétrica.
 
 > [!IMPORTANT]
-> El valor de DEFAULT_SCHEMA se omite si el usuario es un miembro del rol fijo de servidor **sysadmin**. Todos los miembros del rol fijo de servidor **sysadmin** tienen un esquema predeterminado `dbo`.
+> El valor de DEFAULT_SCHEMA se omite si el usuario es un miembro del rol fijo de servidor **sysadmin** . Todos los miembros del rol fijo de servidor **sysadmin** tienen un esquema predeterminado `dbo`.
 
  La cláusula WITH LOGIN habilita la reasignación de un usuario a un inicio de sesión diferente. Los usuarios sin inicio de sesión, los usuarios asignados a un certificado y los usuarios asignados a una clave asimétrica no se pueden reasignar con esta cláusula. Solo se pueden reasignar usuarios de SQL y usuarios (o grupos) de Windows. La cláusula WITH LOGIN no se puede utilizar para cambiar el tipo de usuario, como cambiar una cuenta de Windows a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 

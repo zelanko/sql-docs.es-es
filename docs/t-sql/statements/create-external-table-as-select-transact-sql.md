@@ -21,12 +21,12 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bbb0773d4c89b7b9879b0ff250e9ffaf6e465654
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 1085686f4c83198a043855e701ec2ef38d17541f
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024357"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496943"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -63,9 +63,9 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="arguments"></a>Argumentos
  **[ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*** es el nombre de entre una y tres partes de la tabla que se va a crear en la base de datos. En el caso de una tabla externa, solo los metadatos de la tabla se almacenan en la base de datos relacional. 
 
- **LOCATION =  '*hdfs_folder*'** especifica dónde se deben escribir los resultados de la instrucción SELECT en el origen de datos externo. La ubicación es un nombre de carpeta y puede incluir opcionalmente una ruta de acceso relativa a la carpeta raíz del clúster de Hadoop o Blob Storage. PolyBase creará la ruta de acceso y la carpeta si aún no existen.
+ **LOCATION =  ' *hdfs_folder* '** especifica dónde se deben escribir los resultados de la instrucción SELECT en el origen de datos externo. La ubicación es un nombre de carpeta y puede incluir opcionalmente una ruta de acceso relativa a la carpeta raíz del clúster de Hadoop o Blob Storage. PolyBase creará la ruta de acceso y la carpeta si aún no existen.
 
-Los archivos externos escriben en *hdfs_folder* y se denominan *QueryID_date_time_ID.format*, donde *ID* es un identificador incremental y *format*, el formato de los datos exportados. Un ejemplo es QID776_20160130_182739_0.orc.
+Los archivos externos escriben en *hdfs_folder* y se denominan *QueryID_date_time_ID.format* , donde *ID* es un identificador incremental y *format* , el formato de los datos exportados. Un ejemplo es QID776_20160130_182739_0.orc.
 
  **DATA_SOURCE = *external_data_source_name*** especifica el nombre del objeto de origen de datos externo que contiene la ubicación en donde se almacenan (o se almacenarán) los datos externos. La ubicación es un clúster de Hadoop o una instancia de Azure Blob Storage. Para crear un origen de datos externo, use[CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -77,18 +77,18 @@ Los archivos externos escriben en *hdfs_folder* y se denominan *QueryID_date_tim
 
    - **REJECT_TYPE = **value** | percentage** aclara si la opción REJECT_VALUE se especifica como un valor literal o como un porcentaje.
 
-      - **Value** se usa si REJECT_VALUE es un valor literal, no un porcentaje. La base de datos detendrá la importación de filas del archivo de datos externos cuando el número de filas con errores supere el valor de *reject_value*.
+      - **Value** se usa si REJECT_VALUE es un valor literal, no un porcentaje. La base de datos detendrá la importación de filas del archivo de datos externos cuando el número de filas con errores supere el valor de *reject_value* .
 
         Por ejemplo, si REJECT_VALUE = 5 y REJECT_TYPE = valor, la base de datos detendrá la importación de filas cuando 5 filas no se hayan podido importar.
 
-      - **Percentage** se usa si REJECT_VALUE es un porcentaje, no un valor literal. La base de datos detendrá la importación de filas del archivo de datos externos cuando el valor de *percentage* de las filas con errores supere el valor de *reject_value*. El porcentaje de filas con errores se calcula a intervalos.
+      - **Percentage** se usa si REJECT_VALUE es un porcentaje, no un valor literal. La base de datos detendrá la importación de filas del archivo de datos externos cuando el valor de *percentage* de las filas con errores supere el valor de *reject_value* . El porcentaje de filas con errores se calcula a intervalos.
 
    - **REJECT_SAMPLE_VALUE = *reject_sample_value*** es necesario cuando REJECT_TYPE = percentage. Especifica el número de filas para intentar importarlas antes de que la base de datos recalcule el porcentaje de filas con error.
 
-      Por ejemplo, si REJECT_SAMPLE_VALUE = 1000, la base de datos calculará el porcentaje de filas con errores después de haber intentado importar 1000 filas desde el archivo de datos externos. Si el porcentaje de filas con errores es inferior al valor de *reject_value*, la base de datos intentará cargar otro 1000 filas. La base de datos seguirá recalculando el porcentaje de filas con errores después de intentar importar cada 1000 filas más.
+      Por ejemplo, si REJECT_SAMPLE_VALUE = 1000, la base de datos calculará el porcentaje de filas con errores después de haber intentado importar 1000 filas desde el archivo de datos externos. Si el porcentaje de filas con errores es inferior al valor de *reject_value* , la base de datos intentará cargar otro 1000 filas. La base de datos seguirá recalculando el porcentaje de filas con errores después de intentar importar cada 1000 filas más.
 
      > [!NOTE]
-     >  Puesto que la base de datos calcula el porcentaje de filas con errores a intervalos, el porcentaje real de filas con errores puede llegar a superar el valor de *reject_value*.
+     >  Puesto que la base de datos calcula el porcentaje de filas con errores a intervalos, el porcentaje real de filas con errores puede llegar a superar el valor de *reject_value* .
 
      **Ejemplo:**
 
@@ -108,9 +108,9 @@ Los archivos externos escriben en *hdfs_folder* y se denominan *QueryID_date_tim
 
  Para ejecutar este comando, el *usuario de base de datos* necesita todos estos permisos o pertenencias a grupos:
 
-- Permiso **ALTER SCHEMA** en el esquema local que va a contener la nueva tabla o pertenencia al rol fijo de base de datos **db_ddladmin**.
-- Permiso **CREATE TABLE** o pertenencia al rol fijo de base de datos **db_ddladmin**.
-- Permiso **SELECT** en cualquier objeto al que se haga referencia en *select_criteria*.
+- Permiso **ALTER SCHEMA** en el esquema local que va a contener la nueva tabla o pertenencia al rol fijo de base de datos **db_ddladmin** .
+- Permiso **CREATE TABLE** o pertenencia al rol fijo de base de datos **db_ddladmin** .
+- Permiso **SELECT** en cualquier objeto al que se haga referencia en *select_criteria* .
 
  El inicio de sesión necesita todos estos permisos:
 
@@ -136,7 +136,7 @@ Los archivos externos escriben en *hdfs_folder* y se denominan *QueryID_date_tim
 
  La definición y el nombre de tabla externa se almacenan en los metadatos de la base de datos. Los datos se almacenan en el origen de datos externo.
 
- Los archivos externos se denominan *QueryID_date_time_ID.format*, donde *ID* es un identificador incremental y *format* es el formato de los datos exportados. Un ejemplo es QID776_20160130_182739_0.orc.
+ Los archivos externos se denominan *QueryID_date_time_ID.format* , donde *ID* es un identificador incremental y *format* es el formato de los datos exportados. Un ejemplo es QID776_20160130_182739_0.orc.
 
  La instrucción CREATE EXTERNAL TABLE AS SELECT siempre crea una tabla sin particiones, incluso si la tabla de origen tiene particiones.
 
@@ -175,7 +175,7 @@ CREATE EXTERNAL TABLE AS SELECT en archivos ORC o de Parquet provocará errores 
 - /r
 - /n
 
-Para usar CREATE EXTERNAL TABLE AS SELECT con estos caracteres, primero debe aplicar esta instrucción a los datos en archivos de texto delimitados donde puede convertirlos en archivos ORC o de Parquet mediante una herramienta externa.
+Para usar CREATE EXTERNAL TABLE AS SELECT con estos caracteres, primero debe ejecutar esta instrucción para exportar los datos a archivos de texto delimitados donde puede convertirlos en archivos ORC o de Parquet mediante una herramienta externa.
 
 ## <a name="locking"></a>Bloqueo
  Toma un bloqueo compartido en el objeto SCHEMARESOLUTION.
@@ -186,7 +186,7 @@ Para usar CREATE EXTERNAL TABLE AS SELECT con estos caracteres, primero debe apl
 
  En el siguiente ejemplo se crea una tabla externa denominada `hdfsCustomer`, usando para ello los datos y las definiciones de columna de la tabla de origen `dimCustomer`.
 
- La definición de tabla se almacena en la base de datos y los resultados de la instrucción SELECT se exportan al archivo "/pdwdata/customer.tbl" en el origen de datos externo de Hadoop *customer_ds*. El archivo tiene un formato acorde al formato de archivo externo *customer_ff*.
+ La definición de tabla se almacena en la base de datos y los resultados de la instrucción SELECT se exportan al archivo "/pdwdata/customer.tbl" en el origen de datos externo de Hadoop *customer_ds* . El archivo tiene un formato acorde al formato de archivo externo *customer_ff* .
 
  La base de datos genera el nombre de archivo, que contiene el identificador de la consulta para que sea más fácil establecer una correlación entre el archivo y la consulta que lo generó.
 

@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8baedeb74c111207f55e7d2c77ee44a9c6eef27a
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: d749835aa5a71aa99cd0f8f417b7e0ace68b467f
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688288"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496859"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opciones File y Filegroup de ALTER DATABASE (Transact-SQL)
 
@@ -66,7 +66,7 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Instancia administrada de <br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
+        [Instancia administrada de SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
     :::column-end:::
 :::row-end:::
 
@@ -139,7 +139,7 @@ REMOVE FILE *logical_file_name* Quita la descripción del archivo lógico de una
 *logical_file_name* Es el nombre lógico utilizado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se hace referencia al archivo.
 
 > [!WARNING]
-> La eliminación de un archivo de base de datos que tenga asociadas copias de seguridad de `FILE_SNAPSHOT` se realizará correctamente, pero no se eliminarán las instantáneas asociadas para, así, evitar que se invaliden las copias de seguridad que hagan referencia al archivo de base de datos. El archivo se truncará, pero no se eliminará físicamente con el fin de mantener intactas las copias de seguridad de FILE_SNAPSHOT. Para más información, consulte [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores)
+> La eliminación de un archivo de base de datos que tenga asociadas copias de seguridad de `FILE_SNAPSHOT` se realizará correctamente, pero no se eliminarán las instantáneas asociadas para, así, evitar que se invaliden las copias de seguridad que hagan referencia al archivo de base de datos. El archivo se truncará, pero no se eliminará físicamente con el fin de mantener intactas las copias de seguridad de FILE_SNAPSHOT. Para más información, consulte [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores)
 
 MODIFY FILE Especifica el archivo que se debe modificar. Solo se puede cambiar una propiedad \<filespec> cada vez. NAME se debe especificar siempre en \<filespec> para identificar el archivo que se va a modificar. Si se especifica SIZE, el nuevo tamaño debe ser mayor que el tamaño actual del archivo.
 
@@ -180,7 +180,7 @@ NEWNAME *new_logical_file_name* Especifica un nombre lógico nuevo para el archi
 
 FILENAME { **"** _os\_file\_name_ **"** | **"** _filestream\_path_ **"** | **"** _memory\_optimized\_data\_path_ **"** } Especifica el nombre de archivo (físico) del sistema operativo.
 
-"*os_file_name*"Para un grupo de archivos estándar (ROWS), se trata de la ruta de acceso y el nombre de archivo que utiliza el sistema operativo al crear el archivo. El archivo debe residir en el servidor donde esté instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La ruta especificada debe existir antes de ejecutar la instrucción ALTER DATABASE.
+" *os_file_name* "Para un grupo de archivos estándar (ROWS), se trata de la ruta de acceso y el nombre de archivo que utiliza el sistema operativo al crear el archivo. El archivo debe residir en el servidor donde esté instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La ruta especificada debe existir antes de ejecutar la instrucción ALTER DATABASE.
 
 > [!NOTE]
 > Los parámetros `SIZE`, `MAXSIZE` y `FILEGROWTH` no puede establecerse cuando se especifica una ruta de acceso UNC para el archivo.
@@ -211,7 +211,7 @@ SIZE *size* Especifica el tamaño de archivo. SIZE no se aplica a los grupos de 
 
 Cuando se especifica con ADD FILE, *size* es el tamaño inicial del archivo. Si se especifica con MODIFY FILE, *size* es el nuevo tamaño de archivo y debe ser mayor que el tamaño de archivo actual.
 
-Cuando no se suministra *size* para el archivo principal, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el tamaño del archivo principal de la base de datos **modelo**. Cuando se especifica un archivo de datos secundario o un archivo de registro, pero no se especifica *size* para el archivo, [!INCLUDE[ssDE](../../includes/ssde-md.md)] hace que el tamaño del archivo sea 1 MB.
+Cuando no se suministra *size* para el archivo principal, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el tamaño del archivo principal de la base de datos **modelo** . Cuando se especifica un archivo de datos secundario o un archivo de registro, pero no se especifica *size* para el archivo, [!INCLUDE[ssDE](../../includes/ssde-md.md)] hace que el tamaño del archivo sea 1 MB.
 
 Se pueden utilizar los sufijos KB, MB, GB y TB para especificar kilobytes, megabytes, gigabytes o terabytes. El valor predeterminado es MB. Especifique un número entero y no incluya decimales. Para especificar una fracción de un megabyte, convierta el valor en kilobytes multiplicando el número por 1024. Por ejemplo, especifique 1536 KB en lugar de 1,5 MB (1,5 x 1024 = 1536).
 
@@ -221,9 +221,9 @@ Se pueden utilizar los sufijos KB, MB, GB y TB para especificar kilobytes, megab
 > - Cuando se especifica una ruta de acceso UNC para el archivo
 > - Para grupos de archivos `FILESTREAM` y `MEMORY_OPTIMIZED_DATA`
 
-MAXSIZE { *max_size*| UNLIMITED } Especifica el tamaño de archivo máximo que puede alcanzar el archivo.
+MAXSIZE { *max_size* | UNLIMITED } Especifica el tamaño de archivo máximo que puede alcanzar el archivo.
 
-*max_size* Es el tamaño máximo del archivo. Se pueden utilizar los sufijos KB, MB, GB y TB para especificar kilobytes, megabytes, gigabytes o terabytes. El valor predeterminado es MB. Especifique un número entero y no incluya decimales. Si no se especifica *max_size*, el tamaño de archivo aumenta hasta que el disco esté lleno.
+*max_size* Es el tamaño máximo del archivo. Se pueden utilizar los sufijos KB, MB, GB y TB para especificar kilobytes, megabytes, gigabytes o terabytes. El valor predeterminado es MB. Especifique un número entero y no incluya decimales. Si no se especifica *max_size* , el tamaño de archivo aumenta hasta que el disco esté lleno.
 
 UNLIMITED Especifica que el archivo crecerá hasta que el disco esté lleno. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si se especifica un crecimiento ilimitado para un archivo de registro, su tamaño máximo será de 2 TB, y para un archivo de datos será de 16 TB. No hay un tamaño máximo cuando esta opción se especifica para un contenedor de FILESTREAM. Continúa creciendo hasta que el disco se completa.
 
@@ -269,11 +269,11 @@ CONTAINS FILESTREAM Especifica que el grupo de archivos almacena objetos binario
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores)
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores)
 
 Especifica que el grupo de archivos almacena los datos optimizados para memoria en el sistema de archivos. Para obtener más información, vea [OLTP en memoria (optimización en memoria)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Solo se permite un grupo de archivos `MEMORY_OPTIMIZED_DATA` por base de datos. Para crear tablas optimizadas para memoria, el grupo de archivos no puede estar vacío. Debe haber al menos un archivo. *filegroup_name* hace referencia a una ruta de acceso. La ruta de acceso hasta la última carpeta debe existir y la última carpeta no debe existir.
 
-REMOVE FILEGROUP Quitar grupo de archivos *filegroup_name* Quita un grupo de archivos de la base de datos. El grupo de archivos no se puede quitar a menos que esté vacío. Quita todos los archivos del primer grupo de archivos. Para más información, vea "REMOVE FILE *logical_file_name*" anteriormente en este tema.
+REMOVE FILEGROUP Quitar grupo de archivos *filegroup_name* Quita un grupo de archivos de la base de datos. El grupo de archivos no se puede quitar a menos que esté vacío. Quita todos los archivos del primer grupo de archivos. Para más información, vea "REMOVE FILE *logical_file_name* " anteriormente en este tema.
 
 > [!NOTE]
 > A menos que el recolector de elementos no utilizados de FILESTREAM haya quitado todos los archivos de un contenedor de FILESTREAM, la operación `ALTER DATABASE REMOVE FILE` para quitar un contenedor de FILESTREAM no se ejecutará correctamente y devolverá un error. Vea la sección [Quitar un contenedor de FILESTREAM](#removing-a-filestream-container) más adelante en este tema.
@@ -282,17 +282,17 @@ MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT |
 
 \<filegroup_updatability_option> Establece la propiedad de solo lectura o solo lectura/escritura para el grupo de archivos.
 
-DEFAULT Cambia el grupo de archivos predeterminado de la base de datos a *filegroup_name*. Solo un grupo de archivos de la base de datos puede ser el grupo de archivos predeterminado. Para más información, consulte [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).
+DEFAULT Cambia el grupo de archivos predeterminado de la base de datos a *filegroup_name* . Solo un grupo de archivos de la base de datos puede ser el grupo de archivos predeterminado. Para más información, consulte [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).
 
-NAME = *new_filegroup_name* Cambia el nombre del grupo de archivos a *new_filegroup_name*.
+NAME = *new_filegroup_name* Cambia el nombre del grupo de archivos a *new_filegroup_name* .
 
-AUTOGROW_SINGLE_FILE **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores)
+AUTOGROW_SINGLE_FILE **Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores)
 
 Cuando un archivo del grupo de archivos alcanza el umbral de crecimiento automático, solo ese archivo crece. Este es el valor predeterminado.
 
 AUTOGROW_ALL_FILES
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores)
+**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores)
 
 Cuando un archivo del grupo de archivos alcanza el umbral de crecimiento automático, crecen todos los archivos del grupo de archivos.
 
@@ -686,7 +686,7 @@ GO
         [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Instancia administrada de <br />SQL Database \*_**<br />&nbsp;
+        **_\* SQL Managed Instance \*_**<br />&nbsp;
     :::column-end:::
 :::row-end:::
 
@@ -776,13 +776,13 @@ SIZE *size* Especifica el tamaño de archivo.
 
 Cuando se especifica con ADD FILE, *size* es el tamaño inicial del archivo. Si se especifica con MODIFY FILE, *size* es el nuevo tamaño de archivo y debe ser mayor que el tamaño de archivo actual.
 
-Cuando no se suministra *size* para el archivo principal, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el tamaño del archivo principal de la base de datos **modelo**. Cuando se especifica un archivo de datos secundario o un archivo de registro, pero no se especifica *size* para el archivo, [!INCLUDE[ssDE](../../includes/ssde-md.md)] hace que el tamaño del archivo sea 1 MB.
+Cuando no se suministra *size* para el archivo principal, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el tamaño del archivo principal de la base de datos **modelo** . Cuando se especifica un archivo de datos secundario o un archivo de registro, pero no se especifica *size* para el archivo, [!INCLUDE[ssDE](../../includes/ssde-md.md)] hace que el tamaño del archivo sea 1 MB.
 
 Se pueden utilizar los sufijos KB, MB, GB y TB para especificar kilobytes, megabytes, gigabytes o terabytes. El valor predeterminado es MB. Especifique un número entero y no incluya decimales. Para especificar una fracción de un megabyte, convierta el valor en kilobytes multiplicando el número por 1024. Por ejemplo, especifique 1536 KB en lugar de 1,5 MB (1,5 x 1024 = 1536).
 
-MAXSIZE { *max_size*| UNLIMITED } Especifica el tamaño de archivo máximo que puede alcanzar el archivo.
+MAXSIZE { *max_size* | UNLIMITED } Especifica el tamaño de archivo máximo que puede alcanzar el archivo.
 
-*max_size* Es el tamaño máximo del archivo. Se pueden utilizar los sufijos KB, MB, GB y TB para especificar kilobytes, megabytes, gigabytes o terabytes. El valor predeterminado es MB. Especifique un número entero y no incluya decimales. Si no se especifica *max_size*, el tamaño de archivo aumenta hasta que el disco esté lleno.
+*max_size* Es el tamaño máximo del archivo. Se pueden utilizar los sufijos KB, MB, GB y TB para especificar kilobytes, megabytes, gigabytes o terabytes. El valor predeterminado es MB. Especifique un número entero y no incluya decimales. Si no se especifica *max_size* , el tamaño de archivo aumenta hasta que el disco esté lleno.
 
 UNLIMITED Especifica que el archivo crecerá hasta que el disco esté lleno. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si se especifica un crecimiento ilimitado para un archivo de registro, su tamaño máximo será de 2 TB, y para un archivo de datos será de 16 TB.
 
@@ -813,15 +813,15 @@ GO
 ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_fg;
 ```
 
-REMOVE FILEGROUP Quitar grupo de archivos *filegroup_name* Quita un grupo de archivos de la base de datos. El grupo de archivos no se puede quitar a menos que esté vacío. Quita todos los archivos del primer grupo de archivos. Para más información, vea "REMOVE FILE *logical_file_name*" anteriormente en este tema.
+REMOVE FILEGROUP Quitar grupo de archivos *filegroup_name* Quita un grupo de archivos de la base de datos. El grupo de archivos no se puede quitar a menos que esté vacío. Quita todos los archivos del primer grupo de archivos. Para más información, vea "REMOVE FILE *logical_file_name* " anteriormente en este tema.
 
 MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Modifica el grupo de archivos al establecer el estado en READ_ONLY o READ_WRITE, lo que convierte al grupo de archivos en predeterminado para la base de datos o cambia el nombre del grupo de archivos.
 
 \<filegroup_updatability_option> Establece la propiedad de solo lectura o solo lectura/escritura para el grupo de archivos.
 
-DEFAULT Cambia el grupo de archivos predeterminado de la base de datos a *filegroup_name*. Solo un grupo de archivos de la base de datos puede ser el grupo de archivos predeterminado. Para más información, consulte [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).
+DEFAULT Cambia el grupo de archivos predeterminado de la base de datos a *filegroup_name* . Solo un grupo de archivos de la base de datos puede ser el grupo de archivos predeterminado. Para más información, consulte [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).
 
-NAME = *new_filegroup_name* Cambia el nombre del grupo de archivos a *new_filegroup_name*.
+NAME = *new_filegroup_name* Cambia el nombre del grupo de archivos a *new_filegroup_name* .
 
 AUTOGROW_SINGLE_FILE
 

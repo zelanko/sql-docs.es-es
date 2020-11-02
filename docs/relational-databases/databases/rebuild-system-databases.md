@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: 2365440fd87789a30e67c8c5effcbf0e85b8bc24
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210630"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638998"
 ---
 # <a name="rebuild-system-databases"></a>Volver a generar bases de datos del sistema
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -107,10 +107,10 @@ ms.locfileid: "91210630"
     |--------------------|-----------------|  
     |/QUIET o /Q|Especifica que el programa de instalación se ejecute sin ninguna interfaz de usuario.|  
     |/ACTION=REBUILDDATABASE|Especifica que el programa de instalación vuelva a crear las bases de datos del sistema.|  
-    |/INSTANCENAME=*InstanceName*|Es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para la instancia predeterminada, escriba MSSQLSERVER.|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|Especifica las cuentas individuales o de grupos de Windows que se agregarán al rol fijo de servidor **sysadmin** . Si especifica varias cuentas, sepárelas con un espacio en blanco. Escriba, por ejemplo, **BUILTIN\Administrators MyDomain\MyUser**. Cuando está especificando una cuenta que contiene un espacio en blanco dentro del nombre, agregue la cuenta entre comillas tipográficas. Escriba, por ejemplo, **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*StrongPassword* ]|Especifica la contraseña de la cuenta **sa** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este parámetro es obligatorio si la instancia usa el modo Autenticación mixta (autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows).<br /><br /> **&#42;&#42; Nota de seguridad &#42;&#42;** La cuenta **sa** es una cuenta conocida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y suele ser el objetivo de usuarios malintencionados. Es muy importante que use una contraseña segura en el inicio de sesión de **sa** .<br /><br /> No especifique este parámetro para el modo Autenticación de Windows.|  
-    |[ /SQLCOLLATION=*CollationName* ]|Especifica una nueva intercalación de nivel de servidor. Este parámetro es opcional. Cuando no se especifica, se usa la intercalación actual del servidor.<br /><br /> **\*\* Importante \*\*** Al cambiar la intercalación de nivel de servidor, no se cambia la de las bases de datos de usuario existentes. Todas las bases de datos de usuario nuevas usarán la nueva intercalación de manera predeterminada.<br /><br /> Para obtener más información, vea [Configurar o cambiar la intercalación del servidor](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
+    |/INSTANCENAME= *InstanceName*|Es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para la instancia predeterminada, escriba MSSQLSERVER.|  
+    |/SQLSYSADMINACCOUNTS= *accounts*|Especifica las cuentas individuales o de grupos de Windows que se agregarán al rol fijo de servidor **sysadmin** . Si especifica varias cuentas, sepárelas con un espacio en blanco. Escriba, por ejemplo, **BUILTIN\Administrators MyDomain\MyUser** . Cuando está especificando una cuenta que contiene un espacio en blanco dentro del nombre, agregue la cuenta entre comillas tipográficas. Escriba, por ejemplo, **NT AUTHORITY\SYSTEM** .|  
+    |[ /SAPWD= *StrongPassword* ]|Especifica la contraseña de la cuenta **sa** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este parámetro es obligatorio si la instancia usa el modo Autenticación mixta (autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows).<br /><br /> **&#42;&#42; Nota de seguridad &#42;&#42;** La cuenta **sa** es una cuenta conocida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y suele ser el objetivo de usuarios malintencionados. Es muy importante que use una contraseña segura en el inicio de sesión de **sa** .<br /><br /> No especifique este parámetro para el modo Autenticación de Windows.|  
+    |[ /SQLCOLLATION= *CollationName* ]|Especifica una nueva intercalación de nivel de servidor. Este parámetro es opcional. Cuando no se especifica, se usa la intercalación actual del servidor.<br /><br /> **\*\* Importante \*\*** Al cambiar la intercalación de nivel de servidor, no se cambia la de las bases de datos de usuario existentes. Todas las bases de datos de usuario nuevas usarán la nueva intercalación de manera predeterminada.<br /><br /> Para obtener más información, vea [Configurar o cambiar la intercalación del servidor](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=númeroDeArchivos ]|Especifica el número de archivos de datos de tempdb. Este valor se puede aumentar hasta 8 o hasta el número de núcleos, lo que sea mayor.<br /><br /> Valor predeterminado: 8 o el número de núcleos, lo que sea menor.|  
     |[ /SQLTEMPDBFILESIZE=tamañoDeArchivoEnMB ]|Especifica el tamaño inicial en MB de cada archivo de datos de tempdb. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 8|  
     |[ /SQLTEMPDBFILEGROWTH=tamañoDeArchivoEnMB ]|Especifica el incremento de crecimiento de archivo en MB de cada archivo de datos de tempdb. El valor 0 indica que el crecimiento automático está desactivado y no se permite más espacio. El programa de instalación permite que el tamaño alcance los 1024 MB.<br /><br /> Valor predeterminado: 64|  
@@ -149,15 +149,15 @@ ms.locfileid: "91210630"
   
 1.  Inicie el programa de instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (setup.exe) desde los discos de distribución.  
   
-2.  En el área de navegación izquierda, haga clic en **Mantenimiento**y, a continuación, en **Reparar**.  
+2.  En el área de navegación izquierda, haga clic en **Mantenimiento** y, a continuación, en **Reparar** .  
   
 3.  Las rutinas de archivo y de reglas auxiliares del programa de instalación se ejecutan para asegurarse de que el sistema tiene instalados los requisitos previos y que el equipo supera las reglas de validación del programa de instalación. Haga clic en **Aceptar** o en **Instalar** para continuar.  
   
-4.  En la página Seleccionar instancia, seleccione la instancia que desea reparar y, a continuación, haga clic en **Siguiente**.  
+4.  En la página Seleccionar instancia, seleccione la instancia que desea reparar y, a continuación, haga clic en **Siguiente** .  
   
-5.  Las reglas de reparación se ejecutarán para validar la operación. Para continuar, haga clic en **Siguiente**.  
+5.  Las reglas de reparación se ejecutarán para validar la operación. Para continuar, haga clic en **Siguiente** .  
   
-6.  En la página **Listo para reparar** , haga clic en **Reparar**. La página Operación completada indica que la operación ha finalizado.  
+6.  En la página **Listo para reparar** , haga clic en **Reparar** . La página Operación completada indica que la operación ha finalizado.  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> Crear una base de datos msdb  
 
@@ -190,11 +190,11 @@ ms.locfileid: "91210630"
   
 10. Haga una copia de seguridad de la base de datos **msdb** .  
 
-##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> Volver a generar la base de datos Tempdb  
+##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a>Regeneración de la base de datos tempdb  
 
 Si la base de datos **tempdb** está dañada y el motor de base de datos no se inicia, puede volver a generar **tempdb** sin necesidad de volver a generar todas las bases de datos del sistema.
   
-1. Cambie el nombre de los archivos Tempdb.mdf y Templog.ldf actuales, si existen. 
+1. Cambie el nombre de los archivos tempdb.mdf y templog.ldf actuales, si existen. 
 1. Inicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un símbolo del sistema con el comando siguiente. 
 
    ```sql
@@ -209,7 +209,7 @@ Si la base de datos **tempdb** está dañada y el motor de base de datos no se i
 1. Conéctese al servidor mediante **sqlcmd** y, a continuación, use el siguiente procedimiento almacenado para restablecer el estado de la base de datos tempdb.
 
    ```sql
-   exec master..sp_resetstatus Tempdb
+   exec master..sp_resetstatus tempdb
    ```
 
 1. Pulse CTRL+C en la ventana del símbolo del sistema para detener el servidor.

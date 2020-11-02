@@ -8,17 +8,18 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
-ms.date: 09/22/2020
-ms.openlocfilehash: 65006891a6633a75482f9a32c328dea0d8bf76fc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.date: 10/22/2020
+ms.openlocfilehash: bd361913ac7f094e217b6b75163a0dd96d97d7e2
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123483"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496747"
 ---
 # <a name="sql-database-projects-extension-preview"></a>Extensión SQL Database Projects (versión preliminar)
 
 SQL Database Projects (versión preliminar) es una extensión para desarrollar bases de datos SQL en un entorno de desarrollo basado en proyectos. 
+
 
 ## <a name="features"></a>Características
 
@@ -32,14 +33,18 @@ SQL Database Projects (versión preliminar) es una extensión para desarrollar 
 8. Implementación de un solo proyecto.
 9. Carga de los detalles de conexión (autenticación de Windows de SQL) y las variables SQLCMD del perfil de implementación.
 
+Vea este vídeo breve de 10 minutos para obtener una introducción a la extensión SQL Database Projects en Azure Data Studio:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Build-SQL-Database-Projects-Easily-in-Azure-Data-Studio/player?WT.mc_id=dataexposed-c9-niner]
+
 ## <a name="install-the-sql-database-projects-extension"></a>Instalación de la extensión SQL Database Projects
 
-1. Abra el administrador de extensiones para tener acceso a las extensiones disponibles.  Para ello, seleccione el icono de extensiones o **Extensiones** en el menú **Vista**.
-2. Para identificar la extensión *SQL Database Projects*, escriba todo el nombre o parte de él en el cuadro de búsqueda de extensiones. Seleccione una extensión disponible para ver sus detalles.
+1. Abra el administrador de extensiones para tener acceso a las extensiones disponibles.  Para ello, seleccione el icono de extensiones o **Extensiones** en el menú **Vista** .
+2. Para identificar la extensión *SQL Database Projects* , escriba todo el nombre o parte de él en el cuadro de búsqueda de extensiones. Seleccione una extensión disponible para ver sus detalles.
 
    ![Instalación de la extensión](media/sql-database-projects-extension/install-database-projects.png)
 
-3. Seleccione la extensión que quiera e **instálela**.
+3. Seleccione la extensión que quiera e **instálela** .
 4. Seleccione **Recargar** para habilitar la extensión (solo es necesario la primera vez que se instala una extensión).
 5. Seleccione el icono de archivos en la barra de actividades o **Explorer** (Explorador) en el menú **View** (Ver). Ahora hay disponible un viewlet nuevo para **Projects** (Proyectos).
 

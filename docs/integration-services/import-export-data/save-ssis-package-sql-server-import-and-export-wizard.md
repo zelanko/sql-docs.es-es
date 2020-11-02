@@ -12,19 +12,19 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 379973cb0174e25a91b6a3dfb0ed7cc319efd842
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc69ad61d1f2eb025d4a5fcae317ba787da61860
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346821"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439309"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Guardar el paquete SSIS (Asistente para importación y exportación de SQL Server)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Si en la página **Guardar y ejecutar el paquete** especificó que quiere guardar la configuración como un paquete de SQL Server Integration Services (SSIS), el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra **Guardar el paquete SSIS**. En esta página, especifique opciones adicionales para guardar el paquete que creó el asistente.  
+  Si en la página **Guardar y ejecutar el paquete** especificó que quiere guardar la configuración como un paquete de SQL Server Integration Services (SSIS), el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra **Guardar el paquete SSIS** . En esta página, especifique opciones adicionales para guardar el paquete que creó el asistente.  
 
 Las opciones que se ven en la página **Guardar el paquete SSIS** dependen de la elección realizada anteriormente en la página **Guardar y ejecutar paquete** para guardar el paquete en SQL Server o en el sistema de archivos. Para echar otro vistazo a la página **Guardar y ejecutar paquete** , vea [Guardar y ejecutar paquete](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
@@ -47,14 +47,14 @@ En la captura de pantalla siguiente se muestra la primera parte de la página **
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>Captura de pantalla: guardar el paquete en SQL Server
 
- La siguiente captura de pantalla muestra la página **Guardar el paquete SSIS** del asistente si seleccionó la opción **SQL Server** en la página **Guardar y ejecutar el paquete**. 
+ La siguiente captura de pantalla muestra la página **Guardar el paquete SSIS** del asistente si seleccionó la opción **SQL Server** en la página **Guardar y ejecutar el paquete** . 
   
-![Guardar el paquete SSIS del Asistente para importar y exportar](../../integration-services/import-export-data/media/save-package2.png "Guardar el paquete SSIS del Asistente para importar y exportar")  
+![Captura de pantalla en la que se muestra la página Guardar el paquete SSIS del Asistente para importación y exportación si seleccionó la opción SQL Server en la página Guardar y ejecutar el paquete.](../../integration-services/import-export-data/media/save-package2.png "Guardar el paquete SSIS del Asistente para importar y exportar")  
 
 ## <a name="options-to-specify-target--sql-server"></a>Opciones que hay que especificar (Destino = SQL Server) 
 
  > [!NOTE]
- > El asistente guarda el paquete en la base de datos **msdb** de la tabla **sysssispackages**. Esta opción **no** guarda el paquete en la base de datos del catálogo de SSIS (SSISDB).  
+ > El asistente guarda el paquete en la base de datos **msdb** de la tabla **sysssispackages** . Esta opción **no** guarda el paquete en la base de datos del catálogo de SSIS (SSISDB).  
  
  **Nombre del servidor**  
  Especifique o seleccione el nombre del servidor de destino.  
@@ -73,14 +73,14 @@ Si ha especificado la autenticación de SQL Server, escriba la contraseña.
     
 ## <a name="screen-shot---save-the-package-in-the-file-system"></a>Captura de pantalla: guardar el paquete en el sistema de archivos
  
-La siguiente captura de pantalla muestra la página **Guardar el paquete SSIS** del asistente si seleccionó la opción **Sistema de archivos** en la página **Guardar y ejecutar el paquete**. 
+La siguiente captura de pantalla muestra la página **Guardar el paquete SSIS** del asistente si seleccionó la opción **Sistema de archivos** en la página **Guardar y ejecutar el paquete** . 
   
-![Guardar el paquete SSIS del Asistente para importar y exportar](../../integration-services/import-export-data/media/save-package1.png "Guardar el paquete SSIS del Asistente para importar y exportar")  
+![Captura de pantalla en la que se muestra la página Guardar el paquete SSIS del Asistente para importación y exportación si seleccionó la opción Sistema de archivos en la página Guardar y ejecutar el paquete.](../../integration-services/import-export-data/media/save-package1.png "Guardar el paquete SSIS del Asistente para importar y exportar")  
 
 ## <a name="options-to-specify-target--file-system"></a>Opciones que hay que especificar (Destino = Sistema de archivos)
 
  **Nombre de archivo**  
- Para seleccionar un destino, escriba la ruta de acceso y el nombre del archivo de destino o use el botón **Examinar**.  
+ Para seleccionar un destino, escriba la ruta de acceso y el nombre del archivo de destino o use el botón **Examinar** .  
   
 > [!TIP]
 > Asegúrese de especificar una carpeta de destino mediante su escritura o exploración. Si solo escribe el nombre de archivo sin una ruta de acceso, no sabrá dónde guarda el paquete el asistente. Además, el Asistente puede intentar guardar el paquete en una ubicación donde no tiene permiso para guardar un archivo, con lo que se genera un error.  
@@ -88,12 +88,12 @@ La siguiente captura de pantalla muestra la página **Guardar el paquete SSIS** 
 >  Recuerde dónde guarda el archivo de paquete.  
   
  **Browse**  
- Opcionalmente, examine para seleccionar la ruta de acceso del archivo de destino en el cuadro de diálogo **Guardar paquete**.  
+ Opcionalmente, examine para seleccionar la ruta de acceso del archivo de destino en el cuadro de diálogo **Guardar paquete** .  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>Acerca de las dos páginas de opciones para guardar el paquete  
  La página **Guardar el paquete SSIS** es una de las dos páginas en las que se seleccionan opciones para guardar el paquete SSIS.  
   
--   En la página anterior, **Guardar y ejecutar paquete**, elija si quiere guardar el paquete en SQL Server o como un archivo. También puede seleccionar la configuración de seguridad para el paquete guardado. Para echar otro vistazo a la página **Guardar y ejecutar paquete** , vea [Guardar y ejecutar paquete](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
+-   En la página anterior, **Guardar y ejecutar paquete** , elija si quiere guardar el paquete en SQL Server o como un archivo. También puede seleccionar la configuración de seguridad para el paquete guardado. Para echar otro vistazo a la página **Guardar y ejecutar paquete** , vea [Guardar y ejecutar paquete](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
   
 -   En la página actual, proporcione un nombre para el paquete y más información sobre dónde guardarlo.  
  
@@ -104,7 +104,7 @@ La siguiente captura de pantalla muestra la página **Guardar el paquete SSIS** 
   
 -   Para ejecutar un paquete desde la línea de comandos o desde un archivo por lotes, vea [Utilidad dtexec](../../integration-services/packages/dtexec-utility.md).  
   
--   Si guardó el paquete en SQL Server en la base de datos **msdb** , conéctese con el servicio de Integration Services. Luego, en SQL Server Management Studio, en el Explorador de objetos, vaya a **Paquetes almacenados | MSDB**, haga clic con el botón derecho en el paquete y seleccione **Ejecutar paquete**.
+-   Si guardó el paquete en SQL Server en la base de datos **msdb** , conéctese con el servicio de Integration Services. Luego, en SQL Server Management Studio, en el Explorador de objetos, vaya a **Paquetes almacenados | MSDB** , haga clic con el botón derecho en el paquete y seleccione **Ejecutar paquete** .
 
 -   Si guardó el paquete en el sistema de archivos, vea [Ejecutar paquetes de Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md) para ejecutar el paquete en el entorno de desarrollo. Para poder abrirlo y ejecutarlo, tiene que agregar el paquete a un proyecto de Integration Services.  
 
@@ -112,7 +112,7 @@ La siguiente captura de pantalla muestra la página **Guardar el paquete SSIS** 
  Para más información sobre cómo personalizar el paquete guardado, vea [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
   
 ## <a name="whats-next"></a>A continuación  
- Después de especificar opciones adicionales para guardar el paquete, la página siguiente es **Complete el asistente**. En esta página, revise las opciones seleccionadas en el asistente y luego inicie la operación. Para obtener más información, vea [Finalización del asistente](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
+ Después de especificar opciones adicionales para guardar el paquete, la página siguiente es **Complete el asistente** . En esta página, revise las opciones seleccionadas en el asistente y luego inicie la operación. Para obtener más información, vea [Finalización del asistente](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
  
 ## <a name="see-also"></a>Vea también  
 [Guardar paquetes](../../integration-services/save-packages.md)  

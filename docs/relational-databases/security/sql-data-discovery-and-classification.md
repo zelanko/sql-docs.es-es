@@ -11,30 +11,30 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 90c219cd2e1034df4cc714247ae8d983bf54ff01
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ed1b0cb22d26895d5b01e59d36ede00f44ce4cd1
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867764"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439494"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Clasificación y detección de datos de SQL
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-La clasificación y detección de datos cuenta con una nueva herramienta integrada en [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) para **detectar**, **clasificar**, **etiquetar** y **notificar** los datos confidenciales de las bases de datos.
+La clasificación y detección de datos cuenta con una nueva herramienta integrada en [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) para **detectar** , **clasificar** , **etiquetar** y **notificar** los datos confidenciales de las bases de datos.
 La detección y clasificación de la información más confidencial (empresarial, financiera, sanitaria, etc.) pueden desempeñar un papel fundamental en el estado de protección de la información de la organización. Puede servir como infraestructura para lo siguiente:
 * Ayudar a cumplir los estándares de privacidad de datos.
 * Controlar el acceso a bases de datos o columnas que contienen datos altamente confidenciales y aumentar su seguridad.
 
 > [!NOTE]
-> La clasificación y detección de datos se **admite para SQL Server 2012 y versiones posteriores, y se puede usar con [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) o versiones posteriores**. Para Azure SQL Database, vea [Clasificación y detección de datos de Azure SQL Database](/azure/sql-database/sql-database-data-discovery-and-classification/).
+> La clasificación y detección de datos se **admite para SQL Server 2012 y versiones posteriores, y se puede usar con [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) o versiones posteriores** . Para Azure SQL Database, vea [Clasificación y detección de datos de Azure SQL Database](/azure/sql-database/sql-database-data-discovery-and-classification/).
 
 ## <a name="overview"></a><a id="subheading-1"></a>Información general
 La clasificación y detección de datos incluye un conjunto de servicios avanzados que forman un nuevo paradigma de Information Protection de SQL destinado a proteger los datos, no solo la base de datos:
 
-* **Detección y recomendaciones**: el motor de clasificación examina la base de datos e identifica las columnas que contienen datos potencialmente confidenciales. Después, proporciona una manera sencilla de revisar y aplicar las recomendaciones de clasificación apropiadas, así como de clasificar las columnas de forma manual.
-* **Etiquetado**: las etiquetas de clasificación de confidencialidad se pueden etiquetar de forma persistente en columnas.
-* **Visibilidad**: el estado de clasificación de la base de datos puede consultarse en un informe detallado que se puede imprimir o exportar para su uso con fines de cumplimiento y auditoría, así como para otras necesidades.
+* **Detección y recomendaciones** : el motor de clasificación examina la base de datos e identifica las columnas que contienen datos potencialmente confidenciales. Después, proporciona una manera sencilla de revisar y aplicar las recomendaciones de clasificación apropiadas, así como de clasificar las columnas de forma manual.
+* **Etiquetado** : las etiquetas de clasificación de confidencialidad se pueden etiquetar de forma persistente en columnas.
+* **Visibilidad** : el estado de clasificación de la base de datos puede consultarse en un informe detallado que se puede imprimir o exportar para su uso con fines de cumplimiento y auditoría, así como para otras necesidades.
 
 ## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="subheading-2"></a>Detectar, clasificar y etiquetar columnas confidenciales
 En la sección siguiente se describen los pasos necesarios para detectar, clasificar y etiquetar las columnas que contienen datos confidenciales en la base de datos, así como para ver el estado de clasificación actual de la base de datos y exportar informes.
@@ -49,47 +49,47 @@ La clasificación incluye dos atributos de metadatos:
 
 2. En el Explorador de objetos de SSMS, haga clic con el botón derecho en la base de datos que quiere clasificar y seleccione **Tareas** > **Detección y clasificación de datos** > **Clasificación de datos...** .
 
-   ![Panel de navegación][0]
+   ![Captura de pantalla en el que se muestra el Explorador de objetos de SSMS con la opción Tareas > Detección y clasificación de datos > Clasificar datos… seleccionada.][0]
 
-3. El motor de clasificación examina la base de datos en busca de columnas que contengan datos potencialmente confidenciales y proporciona una lista de **clasificaciones de columna recomendadas**:
+3. El motor de clasificación examina la base de datos en busca de columnas que contengan datos potencialmente confidenciales y proporciona una lista de **clasificaciones de columna recomendadas** :
 
     * Para ver la lista de clasificaciones de columna recomendadas, haga clic en el cuadro de notificación de recomendaciones en la parte superior o en el panel de recomendaciones en la parte inferior de la ventana:
 
-        ![Panel de navegación][2]
+        ![Captura de pantalla en la que se muestra una notificación en la que se indica lo siguiente: Hemos encontrado 39 columnas con recomendaciones de clasificación. Haga clic aquí para verlas.][2]
 
-        ![Panel de navegación][3]
+        ![Captura de pantalla en la que se muestra una notificación en la que se indica lo siguiente: 39 columnas con recomendaciones de clasificación. Haga clic para verlas.][3]
 
     * Revise la lista de recomendaciones:
         * Para aceptar una recomendación para una columna específica, active la casilla en la columna izquierda de la fila correspondiente. También puede marcar *todas las recomendaciones* como aceptadas. Para ello, active la casilla del encabezado de la tabla de recomendaciones.
 
         * También puede cambiar el tipo de información y la etiqueta de confidencialidad recomendados mediante los cuadros desplegables.        
 
-        ![Panel de navegación][4]
+        ![Captura de pantalla en la que se muestra la lista de recomendaciones.][4]
 
     * Para aplicar las recomendaciones seleccionadas, haga clic en el botón azul **Accept selected recommendations** (Aceptar recomendaciones seleccionadas).
 
-        ![Panel de navegación][5]
+        ![Captura de pantalla del botón Aceptar las recomendaciones seleccionadas.][5]
 
 4. También puede **clasificar manualmente** las columnas como alternativa a la clasificación basada en recomendaciones, o además de ella:
 
     * Haga clic en **Agregar clasificación** en el menú superior de la ventana.
 
-        ![Panel de navegación][6]
+        ![Captura de pantalla en la que se muestra el menú superior con la opción Agregar clasificación resaltada.][6]
 
     * En la ventana contextual que se abre, seleccione el esquema > tabla > columna que quiera clasificar, así como el tipo de información y la etiqueta de confidencialidad. Después, haga clic en el botón azul **Agregar clasificación** situado en la parte inferior de la ventana contextual.
 
-        ![Panel de navegación][7]
+        ![Captura de pantalla en la que se muestra la ventana contextual Agregar clasificación.][7]
 
 5. Para completar la clasificación y etiquetar de forma persistente las columnas de la base de datos con los nuevos metadatos de clasificación, haga clic en **Guardar** en el menú superior de la ventana.
 
-    ![Panel de navegación][8]
+    ![Captura de pantalla en la que se muestra el menú superior con la opción Guardar resaltada.][8]
 
 
 6. Para generar un informe con un resumen completo del estado de clasificación de la base de datos, haga clic en **Ver informe** en el menú superior de la ventana. (También puede generar un informe mediante SSMS. Haga clic con el botón derecho en la base de datos en la que quiera generar el informe y elija **Tareas** > **Detección y clasificación de datos** > **Generar informe...** ).
 
-    ![Panel de navegación][9]
+    ![Captura de pantalla en la que se muestra el menú superior con la opción Ver informe resaltada.][9]
 
-    ![Panel de navegación][10]
+    ![Captura de pantalla en la que se muestra el informe de clasificación de datos de SQL.][10]
 
 ## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>Administración de la directiva de Information Protection con SSMS
 
@@ -97,15 +97,15 @@ Puede administrar la directiva de Information Protection mediante [SSMS 18.4](.
 
 1. En SQL Server Management Studio (SSMS), conéctese a SQL Server.
 
-2. En el Explorador de objetos de SSMS, haga clic con el botón derecho en una de las bases de datos y elija **Tareas** > **Detección y clasificación de datos**.
+2. En el Explorador de objetos de SSMS, haga clic con el botón derecho en una de las bases de datos y elija **Tareas** > **Detección y clasificación de datos** .
 
    Las siguientes opciones de menú permiten administrar la directiva de Information Protection:
 
-* **Establecer archivo de directiva de Information Protection**: usa la directiva de Information Protection tal y como se define en el archivo JSON seleccionado.
+* **Establecer archivo de directiva de Information Protection** : usa la directiva de Information Protection tal y como se define en el archivo JSON seleccionado.
 
-* **Exportar directiva de Information Protection**: exporta la directiva de Information Protection a un archivo JSON.
+* **Exportar directiva de Information Protection** : exporta la directiva de Information Protection a un archivo JSON.
 
-* **Restablecer directiva de Information Protection**: restablece la directiva de Information Protection predeterminada.
+* **Restablecer directiva de Information Protection** : restablece la directiva de Information Protection predeterminada.
 
 > [!IMPORTANT]
 > El archivo de directiva de Information Protection no se almacena en SQL Server.
@@ -116,7 +116,7 @@ Puede administrar la directiva de Information Protection mediante [SSMS 18.4](.
 SQL Server 2019 presenta la vista de catálogo del sistema [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md). Esta vista devuelve los tipos de información y las etiquetas de confidencialidad. 
 
 > [!NOTE]
-> Esta vista requiere el permiso **VIEW ANY SENSITIVITY CLASSIFICATION**. Para obtener más información, consulte [Metadata Visibility Configuration](./metadata-visibility-configuration.md?view=sql-server-ver15).
+> Esta vista requiere el permiso **VIEW ANY SENSITIVITY CLASSIFICATION** . Para obtener más información, consulte [Metadata Visibility Configuration](./metadata-visibility-configuration.md?view=sql-server-ver15).
 
 En las instancias de SQL Server 2019, consulte `sys.sensitivity_classifications` para revisar todas las columnas clasificadas con sus clasificaciones correspondientes. Por ejemplo: 
 

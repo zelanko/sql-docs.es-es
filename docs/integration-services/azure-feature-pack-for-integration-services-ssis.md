@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e1a3bcdf7a5ade98e659b376e7ad3845e64875c3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 63e40e66003737798c444f220058feceab69411a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727624"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678919"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack para Integration Services (SSIS)
 
@@ -112,17 +112,17 @@ Se han probado las siguientes compilaciones de Java.
 
 1. Descargue y extraiga el paquete ZIP de instalación.
 2. Desde el símbolo del sistema, ejecute `sysdm.cpl`.
-3. En la pestaña **Avanzadas**, haga clic en **Variables de entorno**.
-4. En la sección **Variables del sistema**, haga clic en **Nueva**.
-5. Escriba `JAVA_HOME` para el **Nombre de variable**.
-6. Seleccione **Examinar directorio**, vaya a la carpeta extraída y seleccione la subcarpeta `jre`.
+3. En la pestaña **Avanzadas** , haga clic en **Variables de entorno** .
+4. En la sección **Variables del sistema** , haga clic en **Nueva** .
+5. Escriba `JAVA_HOME` para el **Nombre de variable** .
+6. Seleccione **Examinar directorio** , vaya a la carpeta extraída y seleccione la subcarpeta `jre`.
    Luego seleccione **Aceptar** y el campo **Valor de la variable** se rellena de forma automática.
-7. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Nueva variable del sistema**.
-8. Seleccione **Aceptar** para cerrar el cuadro de diálogo **Variables de entorno**.
-9. Seleccione **Aceptar** para cerrar el cuadro de diálogo **Propiedades del sistema**.
+7. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Nueva variable del sistema** .
+8. Seleccione **Aceptar** para cerrar el cuadro de diálogo **Variables de entorno** .
+9. Seleccione **Aceptar** para cerrar el cuadro de diálogo **Propiedades del sistema** .
 
 > [!TIP]
-> Si usa el formato de Parquet y recibe un error que dice que se ha producido un error al invocar Java, con el mensaje: **java.lang.OutOfMemoryError:Java heap space**, puede agregar una variable de entorno *`_JAVA_OPTIONS`* para ajustar el tamaño mínimo y máximo del montón de JVM.
+> Si usa el formato de Parquet y recibe un error que dice que se ha producido un error al invocar Java, con el mensaje: **java.lang.OutOfMemoryError:Java heap space** , puede agregar una variable de entorno *`_JAVA_OPTIONS`* para ajustar el tamaño mínimo y máximo del montón de JVM.
 >
 >![montón de jvm](media/azure-feature-pack-jvm-heap-size.png)
 >
@@ -149,7 +149,7 @@ powershell.exe -file install_openjdk.ps1
 ~~~
 
 > [!TIP]
-> Si usa el formato de Parquet y recibe un error que dice que se ha producido un error al invocar Java, con el mensaje: **java.lang.OutOfMemoryError:Java heap space**, puede agregar un comando en *`main.cmd`* para ajustar el tamaño mínimo y máximo del montón de JVM. Ejemplo:
+> Si usa el formato de Parquet y recibe un error que dice que se ha producido un error al invocar Java, con el mensaje: **java.lang.OutOfMemoryError:Java heap space** , puede agregar un comando en *`main.cmd`* para ajustar el tamaño mínimo y máximo del montón de JVM. Ejemplo:
 > ~~~
 > setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
 > ~~~
@@ -180,18 +180,18 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 5.  Utilice la tarea de descarga de blobs de HDInsight de Azure para descargar los datos de salida de Pig o Hive del almacenamiento de blobs de Azure.
 
-![SSIS-AzureConnector-BigDataScenario](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
+![Captura de pantalla en la que se muestra el escenario de macrodatos del conector de Azure en SSIS.](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
  
 ## <a name="scenario-managing-data-in-the-cloud"></a>Escenario: Administración de datos en la nube
  Use el destino de blobs de Azure en un paquete de SSIS para escribir los datos de salida en Almacenamiento de blobs de Azure o para utilizar el origen de blobs de Azure para leer datos desde un Almacenamiento de blobs de Azure.
 
-![SSIS-AzureConnector-CloudArchive-1](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
+![Captura de pantalla en la que se muestra el flujo de datos desde el origen de OLE DB hasta el destino de blob de Azure.](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
  
- ![SSIS-AzureConnector-CloudArchive-2](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
+ ![Captura de pantalla en la que se muestra el flujo de datos desde el origen de blob de Azure hasta el destino de OLE DB.](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
 
  Utilice el contenedor de bucles Foreach con el enumerador de blobs de Azure para procesar los datos de varios archivos de blob.
 
-![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
+![Captura de pantalla en la que se muestra el contenedor de bucles Foreach de la pestaña Flujo de control.](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
 
 ## <a name="release-notes"></a>Notas de la versión
 

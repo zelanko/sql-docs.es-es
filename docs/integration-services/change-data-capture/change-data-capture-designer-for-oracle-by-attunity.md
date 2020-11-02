@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b8f93db32602579feaff3a3230739f6fa2621fd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd8252fab91afb8b9a457f0c05f76bb8b77ecf78
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484724"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255722"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Diseñador de captura de datos modificados para Oracle de Attunity
 
@@ -33,7 +33,11 @@ ms.locfileid: "88484724"
   
 -   Editor de propiedades de instancia CDC: este cuadro de diálogo se emplea para editar cualquier instancia de servicio CDC de Oracle existente. Para obtener información acerca de cómo editar las propiedades de la instancia CDC, vea [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
   
- El servicio y el diseñador de captura de datos modificados para Oracle de Attunity de Microsoft para Microsoft SQL Server 2016 forman parte de SQL Server 2016 Feature Pack. Descargue los componentes del Feature Pack, en la [página web de SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ Descargue Microsoft Change Data Capture Designer para Oracle de Attunity para la versión de SQL Server correspondiente de los vínculos siguientes:
+
+- [Feature pack de CDC Designer/Service para Oracle de Attunity de Microsoft SQL Server 2016 Integration Services](https://www.microsoft.com/download/details.aspx?id=55802)
+- [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
+- [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303) 
   
 ## <a name="in-this-documentation"></a>En esta documentación  
   

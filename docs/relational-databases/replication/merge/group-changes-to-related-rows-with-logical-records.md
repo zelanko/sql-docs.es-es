@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da2699b397d7c5440adc9cdddb3e2b4c1b239fe7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ec09eb43fdd00d57860abf1f40e5010084eded97
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866992"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524038"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Agrupar cambios en filas relacionadas con registros lógicos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "91866992"
   
  ![Tres registros lógicos de tabla, solo con los nombres de columna](../../../relational-databases/replication/merge/media/logical-records-01.gif "Tres registros lógicos de tabla, solo con los nombres de columna")  
   
- La tabla **Customers** es la tabla primaria en esta relación y tiene una columna de clave principal, **CustID**. La tabla **Orders** tiene una columna de clave principal, **OrderID**, con una restricción de clave externa en la columna **CustID** que hace referencia a la columna **CustID** de la tabla **Customers** . De la misma forma, la tabla **OrderItems** tiene una columna de clave principal, **OrderItemID**, con una restricción de clave externa en la columna **OrderID** que hace referencia a la columna **OrderID** de la tabla **Orders** .  
+ La tabla **Customers** es la tabla primaria en esta relación y tiene una columna de clave principal, **CustID** . La tabla **Orders** tiene una columna de clave principal, **OrderID** , con una restricción de clave externa en la columna **CustID** que hace referencia a la columna **CustID** de la tabla **Customers** . De la misma forma, la tabla **OrderItems** tiene una columna de clave principal, **OrderItemID** , con una restricción de clave externa en la columna **OrderID** que hace referencia a la columna **OrderID** de la tabla **Orders** .  
   
  En este ejemplo, un registro lógico está formado por todas las filas de la tabla **Orders** relacionadas con un solo valor **CustID** y todas las filas de la tabla **OrderItems** relacionadas con esas filas en la tabla **Orders** . En este diagrama se muestran todas las filas de las tres tablas que se incluyen en el registro lógico para Customer2:  
   
- ![Tres registros lógicos de tabla con valores](../../../relational-databases/replication/merge/media/logical-records-02.gif "Tres registros lógicos de tabla con valores")  
+ ![Primera captura de pantalla de tres registros lógicos de tabla con valores.](../../../relational-databases/replication/merge/media/logical-records-02.gif "Tres registros lógicos de tabla con valores")  
   
  Para definir una relación lógica entre artículos, vea [Definir una relación de registros lógicos entre artículos de tabla de mezcla](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "91866992"
 ### <a name="the-application-of-changes-as-a-unit"></a>Aplicación de cambios como una unidad  
  Si se utilizan registros lógicos y se interrumpe el proceso de mezcla, como ocurre en el caso de que se termine la conexión, se revierte el conjunto de cambios relacionados replicados parcialmente. Por ejemplo, considere el caso en el que un suscriptor agrega un nuevo pedido con **OrderID** = 6 y dos filas nuevas a la tabla **OrderItems** con **OrderItemID** = 10 y **OrderItemID** = 11 para **OrderID** = 6.  
   
- ![Tres registros lógicos de tabla con valores](../../../relational-databases/replication/merge/media/logical-records-04.gif "Tres registros lógicos de tabla con valores")  
+ ![Segunda captura de pantalla de tres registros lógicos de tabla con valores.](../../../relational-databases/replication/merge/media/logical-records-04.gif "Tres registros lógicos de tabla con valores")  
   
  Si no se utilizan registros lógicos y el proceso de replicación se interrumpe después de finalizar la fila **Orders** para **OrderID** = 6 pero antes de finalizar **OrderItems** 10 y 11, el valor de **OrderTotal** para **OrderID** = 6 no será coherente con la suma de los valores **OrderAmount** de las filas **OrderItems** . Si se utilizan registros lógicos, la fila **Orders** para **OrderID** = 6 no se confirma hasta que se repliquen los cambios de **OrderItems** relacionados.  
   
@@ -131,11 +131,11 @@ ms.locfileid: "91866992"
   
      ![Tabla secundaria con más de una tabla primaria](../../../relational-databases/replication/merge/media/logical-records-03.gif "Tabla secundaria con más de una tabla primaria")  
   
-     No puede utilizar un registro lógico para representar las tres tablas en esta relación, ya que las filas de **ClassMembers** no están asociadas con una sola fila de clave principal. Las tablas **Classes** y **ClassMembers** pueden formar un registro lógico, al igual que las tablas **ClassMembers** y **Students**, pero no las tres juntas.  
+     No puede utilizar un registro lógico para representar las tres tablas en esta relación, ya que las filas de **ClassMembers** no están asociadas con una sola fila de clave principal. Las tablas **Classes** y **ClassMembers** pueden formar un registro lógico, al igual que las tablas **ClassMembers** y **Students** , pero no las tres juntas.  
   
 -   La publicación no puede contener relaciones circulares de filtros de combinación.  
   
-     Siguiendo el ejemplo de las tablas **Customers**, **Orders**y **OrderItems**, no puede utilizar registros lógicos si la tabla **Orders** también tiene una restricción de clave externa que hace referencia a la tabla **OrderItems** .  
+     Siguiendo el ejemplo de las tablas **Customers** , **Orders** y **OrderItems** , no puede utilizar registros lógicos si la tabla **Orders** también tiene una restricción de clave externa que hace referencia a la tabla **OrderItems** .  
   
 ## <a name="performance-implications-of-logical-records"></a>Consecuencias de los registros lógicos en el rendimiento  
  La característica de registros lógicos tiene un costo en rendimiento. Si no se utilizan registros lógicos, el agente de replicación puede procesar todos los cambios para un artículo determinado a la vez, y como los cambios se aplican fila por fila, los requisitos de bloqueo y registro de transacciones necesarios para aplicar los cambios son mínimos.  

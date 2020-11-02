@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 05f9a1bad426ad38b832597876522e67d1f01d73
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3a268de26245955dd6be838e822f1cb84b693324
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537064"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497018"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidad de las tablas con optimización para memoria
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89537064"
 ### <a name="the-data-file"></a>Archivo de datos.  
  Un archivo de datos contiene filas de una o más tablas optimizadas para memoria que se han insertado mediante varias transacciones como parte de las operaciones INSERT o UPDATE. Por ejemplo, una fila puede ser de una tabla T1 optimizada para memoria y la siguiente puede ser de una tabla T2 optimizada para memoria. Las filas se anexan al archivo de datos en el orden de las transacciones del registro de transacciones, con lo que el acceso a los datos es secuencial. Esto permite un mejor rendimiento de la E/S del orden de magnitud en comparación con la E/S aleatoria.  
   
- Una vez que el archivo de datos está lleno, las filas insertadas por las nuevas transacciones se almacenan en otro archivo de datos. Con el tiempo, las filas de las tablas optimizadas para memoria perdurables se almacenan en uno de varios archivos de datos y cada archivo de datos contiene filas de un intervalo disjunto pero contiguo de transacciones. Por ejemplo, un archivo de datos con una marca de tiempo de confirmación de transacción en el intervalo de (100, 200) tiene todas las filas insertadas por transacciones cuya marca de tiempo de confirmación es mayor que 100 y menor o igual que 200. La marca de tiempo de confirmación es un número de aumento regular asignado a una transacción cuando está lista para confirmarse. Cada transacción tiene una marca de tiempo única de confirmación.  
+ Una vez que el archivo de datos está lleno, las filas insertadas por las nuevas transacciones se almacenan en otro archivo de datos. Con el tiempo, las filas de las tablas optimizadas para memoria perdurables se almacenan en uno de varios archivos de datos y cada archivo de datos que contiene filas forma un intervalo disjunto pero contiguo de transacciones. Por ejemplo, un archivo de datos con una marca de tiempo de confirmación de transacción en el intervalo de (100, 200) tiene todas las filas insertadas por transacciones cuya marca de tiempo de confirmación es mayor que 100 y menor o igual que 200. La marca de tiempo de confirmación es un número de aumento regular asignado a una transacción cuando está lista para confirmarse. Cada transacción tiene una marca de tiempo única de confirmación.  
   
  Cuando se elimina o actualiza una fila, no se quita ni se cambia en su lugar en el archivo de datos sino que las filas eliminadas se registran en otro tipo de archivo: el archivo delta. Se procesan las operaciones de actualización como una tupla de las operaciones de eliminación e inserción para cada fila. Esto elimina la E/S aleatoria en el archivo de datos.  
  

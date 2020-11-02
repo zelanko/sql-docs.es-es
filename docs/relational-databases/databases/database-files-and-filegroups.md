@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 787d6d914cd290f7edc3847663690b63f58babeb
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: b9a4fc2995b0442f46794ad8ad226b48bfa4726b
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192285"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497004"
 ---
 # <a name="database-files-and-filegroups"></a>Archivos y grupos de archivos de base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "92192285"
 |Secundario|Archivos de datos opcionales definidos por el usuario. Los datos se pueden distribuir en varios discos colocando cada archivo en una unidad de disco distinta. La extensión de nombre de archivo recomendada para los archivos de datos secundarios es .ndf.|  
 |Registro de transacciones|El registro contiene la información que se utiliza para recuperar la base de datos. Cada base de datos debe tener al menos un archivo de registro. La extensión recomendada para los nombres de archivos de registro es .ldf.|  
   
- Por ejemplo, una base de datos sencilla denominada **Ventas** tiene un archivo principal que contenga todos los datos y objetos y un archivo de registro con la información del registro de transacciones. Puede crearse una base de datos más compleja, **Pedidos**, compuesta por un archivo principal y cinco archivos secundarios. Los datos y objetos de la base de datos se reparten entre los seis archivos, y cuatro archivos de registro adicionales contienen la información del registro de transacciones.  
+ Por ejemplo, una base de datos sencilla denominada **Ventas** tiene un archivo principal que contenga todos los datos y objetos y un archivo de registro con la información del registro de transacciones. Puede crearse una base de datos más compleja, **Pedidos** , compuesta por un archivo principal y cinco archivos secundarios. Los datos y objetos de la base de datos se reparten entre los seis archivos, y cuatro archivos de registro adicionales contienen la información del registro de transacciones.  
   
  De forma predeterminada, los datos y los registros de transacciones se colocan en la misma unidad y ruta de acceso para manipular los sistemas de disco único, pero puede que esta opción no resulte óptima para los entornos de producción. Se recomienda colocar los archivos de datos y de registro en distintos discos.  
 
@@ -212,6 +212,7 @@ Recomendaciones para trabajar con archivos y grupos de archivos:
 - Disponga en grupos de archivos distintos las diferentes tablas que se utilicen en las mismas consultas de combinación. Este paso mejorará el rendimiento debido a la búsqueda de datos combinados que realizan las operaciones de E/S en paralelo en los discos.
 - Distribuya en grupos de archivos distintos las tablas de acceso frecuente y los índices no clúster que pertenezcan a esas tablas. Utilizar grupos de archivos distintos mejorará el rendimiento debido a las operaciones de E/S en paralelo que se realizan si los archivos se encuentran en discos físicos distintos.
 - No coloque los archivos de registro de transacción en el mismo disco físico con los demás archivos y grupos de archivos.
+- Si necesita extender un volumen o una partición en la que residan los archivos de base de datos mediante herramientas como [Diskpart](/windows-server/administration/windows-commands/diskpart), debe realizar una copia de seguridad de todas las bases de datos de usuario y del sistema y detener los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] primero. Además, una vez que los volúmenes de disco se extiendan correctamente, considere la posibilidad de ejecutar el comando [`DBCC CHECKDB`](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) para garantizar la integridad física de todas las bases de datos que residen en cada volumen.
 
 Para obtener más recomendaciones sobre la administración del archivo de registro de transacciones, vea [Administrar el tamaño del archivo de registro de transacciones](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 

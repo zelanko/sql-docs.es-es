@@ -146,7 +146,7 @@ Una de las ventajas de los grupos de disponibilidad es que tanto la alta disponi
  
 Fuera de un grupo de disponibilidad con un tipo de clúster Ninguno, un grupo de disponibilidad requiere que todas las réplicas formen parte del mismo clúster subyacente, ya sea WSFC o Pacemaker. Esto significa que, en la figura anterior, el clúster WSFC se ajusta para funcionar en dos centros de datos diferentes, lo cual agrega complejidad independientemente de la plataforma (Windows Server o Linux). El ajuste de clústeres a distancia aumenta la complejidad. Introducido en SQL Server 2016, un grupo de disponibilidad distribuido permite que un grupo de disponibilidad abarque grupos de disponibilidad configurados en clústeres diferentes. Esto elimina la necesidad de que todos los nodos participen en el mismo clúster, lo que facilita en gran medida la configuración de la recuperación ante desastres. Para obtener más información sobre los grupos de disponibilidad distribuidos, consulte [Grupos de disponibilidad distribuidos](../database-engine/availability-groups/windows/distributed-availability-groups.md).
 
-![Grupo de disponibilidad distribuido](media/sql-server-ha-story/image11.png)
+![Diagrama de un grupo de disponibilidad distribuido.](media/sql-server-ha-story/image11.png)
  
 ### <a name="always-on-failover-cluster-instances"></a>Instancias de clúster de conmutación por error de AlwaysOn
 
@@ -216,7 +216,7 @@ Antes de tratar los escenarios de interoperabilidad y multiplataforma, es necesa
 
 Los grupos de disponibilidad distribuidos están diseñados para abarcar las configuraciones de grupo de disponibilidad, con independencia de que los dos clústeres subyacentes debajo de los grupos de disponibilidad sean dos clústeres WSFC diferentes, distribuciones de Linux, o uno esté en un clúster WSFC y otro en Linux. Un grupo de disponibilidad distribuido será el método principal de contar con una solución multiplataforma. Un grupo de disponibilidad distribuido es también la solución principal para las migraciones del tipo de una conversión desde una infraestructura de SQL Server basada en Windows Server a otra basada en Linux, en caso de que sea esto lo que quiere hacer su empresa. Como se mencionó anteriormente, los grupos de disponibilidad, y especialmente los grupos de disponibilidad distribuidos, minimizarán el tiempo durante el que una aplicación podría estar no disponible para su uso. A continuación se muestra un ejemplo de un grupo de disponibilidad distribuido que abarca un clúster WSFC y Pacemaker.
 
-![Grupo de disponibilidad distribuido](media/sql-server-ha-story/image9.png)
+![Diagrama en el que se muestra un grupo de disponibilidad distribuido que abarca un clúster WSFC y Pacemaker.](media/sql-server-ha-story/image9.png)
  
 Si se configura un grupo de disponibilidad con un clúster de tipo Ninguno, este puede abarcar Windows Server y Linux, así como varias distribuciones de Linux. Puesto que esta no es una auténtica configuración de alta disponibilidad, no debe utilizarse para las implementaciones críticas, sino para escenarios de escala de lectura o de migración o actualización.
 
@@ -233,7 +233,7 @@ Desde su introducción en SQL Server 2012, las réplicas secundarias han podido 
 
 El escalado de copias legibles de una base de datos a través de grupos de disponibilidad apareció por primera vez con los grupos de disponibilidad distribuidos en SQL Server 2016. Esto permitió a las empresas contar con copias de solo lectura de la base de datos no solo localmente, sino también a nivel regional y mundial con una cantidad mínima de configuración, y reducir el tráfico de red y la latencia gracias a que las consultas se ejecutan localmente. Cada réplica principal de un grupo de disponibilidad puede inicializar dos otros grupos de disponibilidad, incluso si no es la copia de lectura/escritura completa, por lo que cada grupo de disponibilidad distribuido puede admitir hasta 27 copias de los datos que son legibles. 
 
-![Grupo de disponibilidad distribuido](media/sql-server-ha-story/image11.png)
+![Diagrama en el que se muestra un grupo de disponibilidad distribuido relacionado con el escalado de lectura.](media/sql-server-ha-story/image11.png)
 
 A partir de SQL Server 2017, es posible crear una solución de solo lectura casi en tiempo real con la configuración de grupos de disponibilidad con un clúster de tipo Ninguno. Si el objetivo radica en utilizar grupos de disponibilidad para las réplicas secundarias legibles y no en la disponibilidad, esta opción elimina la complejidad de utilizar un clúster WSFC o Pacemaker, y ofrece las ventajas legibles de un grupo de disponibilidad en un método de implementación más sencillo. 
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 82315c744073fa5f497f0aaf78eb6dedc04126a9
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866692"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679044"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Consulta de columnas mediante Always Encrypted con Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ En esta sección se describe cómo recuperar los datos almacenados en columnas c
 ### <a name="example"></a>Ejemplo
 Suponiendo que `SSN` es una columna cifrada de la tabla `Patients` , la consulta que aparece a continuación recuperará los valores binarios de texto cifrado, si Always Encrypted está deshabilitado para la conexión de base de datos.   
 
-![always-encrypted-ads-query-ciphertext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
+![Captura de pantalla de la consulta SELECT * FROM [dbo].[Patients] y de los resultados de dicha consulta, que se muestran como valores binarios de texto cifrado.](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
  
 ## <a name="retrieving-plaintext-values-stored-in-encrypted-columns"></a>Recuperación de los valores de texto no cifrado almacenados en columnas cifradas    
 En esta sección se describe cómo recuperar los datos almacenados en columnas cifradas como texto cifrado.
@@ -52,7 +52,7 @@ En esta sección se describe cómo recuperar los datos almacenados en columnas c
 ### <a name="example"></a>Ejemplo
 Suponiendo que SSN es una columna cifrada de la tabla `Patients`, la consulta que se muestra a continuación devolverá valores de texto no cifrado si Always Encrypted está habilitado para la conexión de base de datos y si tiene acceso a la clave maestra de columna configurada para la columna `SSN`.   
 
-![always-encrypted-ads-query-plaintext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
+![Captura de pantalla de la consulta SELECT * FROM [dbo].[Patients] y de los resultados de dicha consulta, que se muestran como valores de texto sin formato.](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
  
 ## <a name="sending-plaintext-values-targeting-encrypted-columns"></a>Envío de valores de texto no cifrado con columnas cifradas como destino       
 En esta sección se describe cómo ejecutar una consulta que envía valores que tienen como destino una columna cifrada. Por ejemplo, una consulta que inserta un valor almacenado en una columna cifrada, lo actualiza o filtra por este valor:
@@ -71,7 +71,7 @@ En esta sección se describe cómo ejecutar una consulta que envía valores que 
 ### <a name="example"></a>Ejemplo
 Suponiendo que `SSN` sea una columna de `char(11)` cifrada en la tabla `Patients`, el script siguiente intentará buscar una fila que contenga `'795-73-9838'` en la columna SSN. Los resultados se devuelven si Always Encrypted está habilitado para la conexión de base de datos, la parametrización de Always Encrypted está habilitada para la ventana de consulta y tiene acceso a la clave maestra de columna configurada para la columna `SSN`.   
 
-![always-encrypted-ads-query-parameters](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
+![Captura de pantalla de la consulta DECLARE @SSN char(11) = '795-73-9838' SELECT * FROM [dbo].[Patients] WHERE [SSN] = @SSN y de los resultados de dicha consulta.](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
 
 ## <a name="permissions-for-querying-encrypted-columns"></a>Permisos para consultar columnas cifradas
 
@@ -80,7 +80,7 @@ Para ejecutar en columnas cifradas, incluidas las consultas que recuperan datos 
 Además de los permisos anteriores, para descifrar cualquier resultado de consulta o para cifrar cualquier parámetro de consulta (generados por la parametrización de las variables Transact-SQL), también debe tener acceso a la clave maestra de columna que protege las columnas de destino:
 
 - **Almacén de certificados, equipo local:** debe tener acceso de **Lectura** al certificado que se usa como una clave maestra de columna, o bien ser el administrador del equipo.   
-- **Azure Key Vault:** necesita los permisos **get**, **unwrapKey** y **verify** en el almacén de claves que contiene la clave maestra de columna.
+- **Azure Key Vault:** necesita los permisos **get** , **unwrapKey** y **verify** en el almacén de claves que contiene la clave maestra de columna.
 
 Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
@@ -98,15 +98,15 @@ Puede habilitar o deshabilitar Always Encrypted al conectarse a una base de dato
 - [Inicio rápido: Uso de Azure Data Studio para conectarse a una base de datos de Azure SQL y consultarla](../../../azure-data-studio/quickstart-sql-database.md)
 
 Para habilitar (deshabilitar) Always Encrypted:
-1. En el cuadro de diálogo **Conexión**, haga clic en **Avanzada...** .
-2. Para habilitar Always Encrypted para la conexión, establezca el campo **Always Encrypted** en **Habilitado**. Para deshabilitar Always Encrypted, deje en blanco el valor del campo **Always Encrypted** o establézcalo en **Deshabilitado**.
-3. Si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] y la instancia de SQL Server está configurada con un enclave seguro, puede especificar un protocolo de enclave y una dirección URL de atestación de enclave. Si la instancia de SQL Server no usa un enclave seguro, asegúrese de dejar en blanco los campos **Protocolo de atestación** y **Dirección URL de certificación enclave**. Para más información, consulte [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md).
-4. Haga clic en **Aceptar** para cerrar las **Propiedades avanzadas**.
+1. En el cuadro de diálogo **Conexión** , haga clic en **Avanzada...** .
+2. Para habilitar Always Encrypted para la conexión, establezca el campo **Always Encrypted** en **Habilitado** . Para deshabilitar Always Encrypted, deje en blanco el valor del campo **Always Encrypted** o establézcalo en **Deshabilitado** .
+3. Si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] y la instancia de SQL Server está configurada con un enclave seguro, puede especificar un protocolo de enclave y una dirección URL de atestación de enclave. Si la instancia de SQL Server no usa un enclave seguro, asegúrese de dejar en blanco los campos **Protocolo de atestación** y **Dirección URL de certificación enclave** . Para más información, consulte [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md).
+4. Haga clic en **Aceptar** para cerrar las **Propiedades avanzadas** .
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
+![Vídeo breve en el que se muestran los pasos a seguir para habilitar Always Encrypted para la conexión.](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
 
 > [!TIP]
-> Para alternar entre la habilitación y la deshabilitación de Always Encrypted en una ventana de consulta existente, haga clic en **Desconectar** y en **Conectar**, y complete los pasos anteriores para volver a conectarse a la base de datos con los valores del campo **Always Encrypted** de su elección. 
+> Para alternar entre la habilitación y la deshabilitación de Always Encrypted en una ventana de consulta existente, haga clic en **Desconectar** y en **Conectar** , y complete los pasos anteriores para volver a conectarse a la base de datos con los valores del campo **Always Encrypted** de su elección. 
 
 > [!NOTE] 
 > El botón **Cambiar conexión** de una ventana de consulta no admite actualmente la alternancia entre la habilitación y la deshabilitación de Always Encrypted.
@@ -129,12 +129,12 @@ Parametrización de Always Encrypted está deshabilitada de manera predeterminad
 
 A fin de habilitar o deshabilitar la Parametrización para Always Encrypted, realice lo siguiente:
 
-1. Seleccione **Archivo** > **Preferencias** > **Configuración** (**Código** > **Preferencias** > **Configuración** en Mac).
-2. Vaya a **Datos** > **Microsoft SQL Server**.
-3. Seleccione o anule la selección de **Habilitar parametrización de Always Encrypted**.
-4. Cierre la ventana **Configuración**.
+1. Seleccione **Archivo** > **Preferencias** > **Configuración** ( **Código** > **Preferencias** > **Configuración** en Mac).
+2. Vaya a **Datos** > **Microsoft SQL Server** .
+3. Seleccione o anule la selección de **Habilitar parametrización de Always Encrypted** .
+4. Cierre la ventana **Configuración** .
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
+![Vídeo breve en el que se muestra cómo habilitar o deshabilitar la parametrización para Always Encrypted.](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
 
 > [!NOTE]
 > Parametrización de Always Encrypted funciona solo en una consulta que use conexiones de base de datos con Always Encrypted habilitado (consulte [Habilitación y deshabilitación de Always Encrypted para una conexión de base de datos](#enabling-and-disabling-always-encrypted-for-a-database-connection)). Ninguna variable Transact-SQL se parametrizará si la ventana de consulta usa una conexión de base de datos sin tener habilitado Always Encrypted.
@@ -180,11 +180,11 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 Azure Data Studio usa IntelliSense para notificar qué variables se pueden parametrizar correctamente y cuáles son los intentos de parametrización que presentan error (y el motivo).   
 
-Una declaración de una variable que se puede parametrizar correctamente está marcada con un mensaje de información subrayado en la ventana de consulta. Si mantiene el cursor sobre una instrucción de declaración que se ha marcado con un mensaje de información subrayado, verá el mensaje que contiene los resultados del proceso de parametrización, incluidos los valores de las propiedades clave del objeto [Clase de SqlParameter](/dotnet/api/microsoft.data.sqlclient.sqlparameter) resultante (la variable se asigna a lo siguiente: [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale) y [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue). También puede ver la lista completa de todas las variables que se han parametrizado correctamente en la vista **Problemas**. Para abrir la vista **Problemas**, seleccione **Ver** > **Problemas**.    
+Una declaración de una variable que se puede parametrizar correctamente está marcada con un mensaje de información subrayado en la ventana de consulta. Si mantiene el cursor sobre una instrucción de declaración que se ha marcado con un mensaje de información subrayado, verá el mensaje que contiene los resultados del proceso de parametrización, incluidos los valores de las propiedades clave del objeto [Clase de SqlParameter](/dotnet/api/microsoft.data.sqlclient.sqlparameter) resultante (la variable se asigna a lo siguiente: [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale) y [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue). También puede ver la lista completa de todas las variables que se han parametrizado correctamente en la vista **Problemas** . Para abrir la vista **Problemas** , seleccione **Ver** > **Problemas** .    
 
 
 
-Si Azure Data Studio ha intentado parametrizar una variable, pero la parametrización ha producido un error, la declaración de la variable se marcará con un carácter de subrayado de error. Si mantiene el puntero sobre una instrucción de declaración que se marcó con un carácter de subrayado de error, recibirá los resultados del error. También podrá ver la lista completa de errores de parametrización de todas las variables en la vista **Problemas**.
+Si Azure Data Studio ha intentado parametrizar una variable, pero la parametrización ha producido un error, la declaración de la variable se marcará con un carácter de subrayado de error. Si mantiene el puntero sobre una instrucción de declaración que se marcó con un carácter de subrayado de error, recibirá los resultados del error. También podrá ver la lista completa de errores de parametrización de todas las variables en la vista **Problemas** .
 
  
 > [!NOTE]

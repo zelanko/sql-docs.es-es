@@ -13,12 +13,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
 ms.date: 06/12/2020
-ms.openlocfilehash: b2d4364d01b871364fda3ac42d98536e99269c29
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 004a7b0a50a657632bb2b9970f0558857d416494
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763952"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257981"
 ---
 # <a name="xp_cmdshell-server-configuration-option"></a>Opción de configuración del servidor xp_cmdshell
 
@@ -29,9 +29,12 @@ En este artículo se describe cómo habilitar la opción de configuración **xp_
 Antes de habilitar esta opción, es importante tener en cuenta las posibles implicaciones de seguridad.
 
 - El código recién desarrollado no debe usar el procedimiento almacenado **xp_cmdshell** y, por lo general, se debe dejar deshabilitado.
-- Algunas aplicaciones heredadas requieren la habilitación de **xp_cmdshell**. Si no se pueden modificar para evitar el uso de este procedimiento almacenado, puede habilitarlo como se describe a continuación.
+- Algunas aplicaciones heredadas requieren la habilitación de **xp_cmdshell** . Si no se pueden modificar para evitar el uso de este procedimiento almacenado, puede habilitarlo como se describe a continuación.
 
-Si necesita habilitar **xp_cmdshell**, puede usar la [administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) o ejecutar el procedimiento almacenado del sistema **sp_configure** como se muestra en el ejemplo de código siguiente:  
+> [!NOTE]  
+> Si debe usar **xp_cmdshell** , como procedimiento recomendado de seguridad, se aconseja habilitarlo únicamente mientras dure la tarea que lo requiere.
+
+Si necesita habilitar **xp_cmdshell** , puede usar la [administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) o ejecutar el procedimiento almacenado del sistema **sp_configure** como se muestra en el ejemplo de código siguiente:  
   
 ``` sql
 -- To allow advanced options to be changed.  

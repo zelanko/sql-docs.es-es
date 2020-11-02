@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32d0e4ea4ca6457701ae5ed4710d5213b3fe164c
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725955"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679015"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar el conector de SQL Server con características de cifrado de SQL)
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ Después de completar las partes I a IV del tema Setup Steps for Extensible Key 
  
 Necesitará crear una credencial y un inicio de sesión, además de una clave de cifrado de base de datos, que cifrará los datos y registros de la base de datos. Para cifrar una base de datos, es necesario tener el permiso **CONTROL** en la base de datos. En el siguiente gráfico se muestra la jerarquía de la clave de cifrado al usar el Almacén de claves de Azure.  
   
- ![Jerarquía&#45;de&#45;claves&#45;de&#45;EKM&#45;con&#45;AKV](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
+ ![Diagrama en el que se muestra la jerarquía de la clave de cifrado al usar Azure Key Vault.](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
 1.  **Crear una credencial de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el motor de base de datos que se usará para TDE**  
   
@@ -50,13 +50,13 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
      Modifique el script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] siguiente como se indica a continuación:  
   
     -   Edite el argumento `IDENTITY` (`ContosoDevKeyVault`) para dirigirlo a Azure Key Vault.
-        - Si usa la **versión global de Azure**, reemplace el argumento `IDENTITY` por el nombre de Azure Key Vault de la parte II.
+        - Si usa la **versión global de Azure** , reemplace el argumento `IDENTITY` por el nombre de Azure Key Vault de la parte II.
         - Si usa **nube pública de Azure** (por ejemplo, Azure Government, Azure China, 21Vianet o Azure Germany), reemplace el argumento `IDENTITY` por el URI de almacén que se devolvió en la parte II, paso 3. No incluya "https://" en el URI de almacén.   
   
     -   Reemplace la primera parte del argumento `SECRET` con el **id. de cliente** de Azure de la parte I. En este ejemplo, el **id. de cliente** es `EF5C8E094D2A4A769998D93440D8115D`.
   
         > [!IMPORTANT]  
-        >  Debe quitar los guiones de **Client ID**.  
+        >  Debe quitar los guiones de **Client ID** .  
   
     -   Complete la segunda parte del argumento `SECRET` con el **secreto de cliente** de la parte 1. En este ejemplo, el **secreto de cliente** de la parte 1 es `ReplaceWithAADClientSecret`. 
   
@@ -116,13 +116,13 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
     GO  
     ```  
   
-     Con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], compruebe que se ha activado TDE conectándose a la base de datos con el Explorador de objetos. Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y haga clic en **Administrar cifrado de base de datos**.  
+     Con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], compruebe que se ha activado TDE conectándose a la base de datos con el Explorador de objetos. Haga clic con el botón derecho en la base de datos, seleccione **Tareas** y haga clic en **Administrar cifrado de base de datos** .  
   
-     ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
+     ![Captura de pantalla en la que se muestra la sección Explorador de objetos con la opción Tareas > Administrar cifrado de base de datos seleccionada.](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
      En el cuadro de diálogo **Administrar cifrado de base de datos** , confirme que TDE está activado y qué clave asimétrica está cifrando la DEK.  
   
-     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
+     ![Captura de pantalla del cuadro de diálogo Administrar cifrado de base de datos con la opción Activar cifrado de base de datos seleccionada y con un mensaje en amarillo que indica "Now TDE is turned on" (Ahora el TDE está activado).](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   
      También puede ejecutar el siguiente script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Un estado de cifrado de 3 indica que la base de datos está cifrada.  
   
@@ -149,15 +149,15 @@ El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] necesita las credenciales al a
      Modifique el script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] siguiente como se indica a continuación:  
   
     -   Edite el argumento `IDENTITY` (`ContosoDevKeyVault`) para dirigirlo a Azure Key Vault.
-        - Si usa la **versión global de Azure**, reemplace el argumento `IDENTITY` por el nombre de Azure Key Vault de la parte II.
+        - Si usa la **versión global de Azure** , reemplace el argumento `IDENTITY` por el nombre de Azure Key Vault de la parte II.
         - Si usa **nube pública de Azure** (por ejemplo, Azure Government, Azure China, 21Vianet o Azure Germany), reemplace el argumento `IDENTITY` por el URI de almacén que se devolvió en la parte II, paso 3. No incluya "https://" en el URI de almacén.    
   
     -   Reemplace la primera parte del argumento `SECRET` con el **id. de cliente** de Azure de la parte I. En este ejemplo, el **id. de cliente** es `EF5C8E094D2A4A769998D93440D8115D`.  
   
         > [!IMPORTANT]  
-        >  Debe quitar los guiones de **Client ID**.  
+        >  Debe quitar los guiones de **Client ID** .  
   
-    -   Complete la segunda parte del argumento `SECRET` con el **secreto de cliente** de la parte I. En este ejemplo, el **secreto de cliente** de la parte I es `Replace-With-AAD-Client-Secret`. La cadena final para el argumento `SECRET` será una secuencia larga de letras y números, *sin guiones*.   
+    -   Complete la segunda parte del argumento `SECRET` con el **secreto de cliente** de la parte I. En este ejemplo, el **secreto de cliente** de la parte I es `Replace-With-AAD-Client-Secret`. La cadena final para el argumento `SECRET` será una secuencia larga de letras y números, *sin guiones* .   
   
         ```sql  
         USE master;  

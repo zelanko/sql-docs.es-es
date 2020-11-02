@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 8babcb8b849360ba4a025d62a8e89f5ad92175c2
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: c9ac655959814370058059e86814d4ae1abcbc9a
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115950"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496996"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Inicio rápido: Instalación de SQL Server y creación de una base de datos en SUSE Linux Enterprise Server
 
@@ -43,14 +43,14 @@ En este inicio rápido, instalará SQL Server 2019 en SUSE Linux Enterprise Se
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Debe tener un equipo SLES v12 SP2 con **al menos 2 GB** de memoria. El sistema de archivos debe ser **XFS** o **EXT4**. No se admiten otros sistemas de archivos, como **BTRFS**.
+Debe tener un equipo SLES v12 SP2 con **al menos 2 GB** de memoria. El sistema de archivos debe ser **XFS** o **EXT4** . No se admiten otros sistemas de archivos, como **BTRFS** .
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Debe tener un equipo SLES v12 SP2, SP3, SP4 o SP5 con **al menos 2 GB** de memoria. El sistema de archivos debe ser **XFS** o **EXT4**. No se admiten otros sistemas de archivos, como **BTRFS**.
+Debe tener un equipo SLES v12 SP2, SP3, SP4 o SP5 con **al menos 2 GB** de memoria. El sistema de archivos debe ser **XFS** o **EXT4** . No se admiten otros sistemas de archivos, como **BTRFS** .
 
 ::: moniker-end
 
@@ -66,9 +66,9 @@ Para conocer otros requisitos del sistema, vea [Requisitos del sistema para SQL 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a name="install-sql-server"></a><a id="install"></a>Instalar SQL Server
+## <a name="install-sql-server-2017"></a><a id="install"></a>Instalación de SQL Server 2017
 
-Para configurar SQL Server en SLES, ejecute los siguientes comandos en un terminal para instalar el paquete **mssql-server**:
+Para configurar SQL Server 2017 en SLES, ejecute los siguientes comandos en un terminal para instalar el paquete **mssql-server** :
 
 1. Descargue el archivo de configuración del repositorio de SLES de Microsoft SQL Server 2017.
 
@@ -119,7 +119,7 @@ Para configurar SQL Server en SLES, ejecute los siguientes comandos en un termi
    systemctl status mssql-server
    ```
 
-6. Si planea conectarse de forma remota, es posible que también tenga que abrir el puerto TCP de SQL Server (valor predeterminado: 1433) en el firewall. Si usa el firewall de SUSE, tiene que editar el archivo de configuración **/etc/sysconfig/SuSEfirewall2**. Modifique la entrada **FW_SERVICES_EXT_TCP** para incluir el número de puerto de SQL Server.
+6. Si planea conectarse de forma remota, es posible que también tenga que abrir el puerto TCP de SQL Server (valor predeterminado: 1433) en el firewall. Si usa el firewall de SUSE, tiene que editar el archivo de configuración **/etc/sysconfig/SuSEfirewall2** . Modifique la entrada **FW_SERVICES_EXT_TCP** para incluir el número de puerto de SQL Server.
 
    ```
    FW_SERVICES_EXT_TCP="1433"
@@ -131,9 +131,9 @@ En este momento, SQL Server se está ejecutando en el equipo SLES y está listo
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a name="install-sql-server"></a><a id="install"></a>Instalar SQL Server
+## <a name="install-sql-server-2019"></a><a id="install"></a>Instalación de SQL Server 2019
 
-Para configurar SQL Server en SLES, ejecute los siguientes comandos en un terminal para instalar el paquete **mssql-server**:
+Para configurar SQL Server 2019 en SLES, ejecute los siguientes comandos en un terminal para instalar el paquete **mssql-server** :
 
 1. Descargue el archivo de configuración del repositorio de SLES de Microsoft SQL Server 2019:
 
@@ -146,9 +146,9 @@ Para configurar SQL Server en SLES, ejecute los siguientes comandos en un termi
    ```bash
    sudo zypper --gpg-auto-import-keys refresh 
    ```
-   
+
    Para asegurarse de que la clave de firma de paquetes de Microsoft está instalada en el sistema, use el siguiente comando para importar la clave: 
-   
+
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
@@ -174,7 +174,7 @@ Para configurar SQL Server en SLES, ejecute los siguientes comandos en un termi
    systemctl status mssql-server
    ```
 
-6. Si planea conectarse de forma remota, es posible que también tenga que abrir el puerto TCP de SQL Server (valor predeterminado: 1433) en el firewall. Si usa el firewall de SUSE, tiene que editar el archivo de configuración **/etc/sysconfig/SuSEfirewall2**. Modifique la entrada **FW_SERVICES_EXT_TCP** para incluir el número de puerto de SQL Server.
+6. Si planea conectarse de forma remota, es posible que también tenga que abrir el puerto TCP de SQL Server (valor predeterminado: 1433) en el firewall. Si usa el firewall de SUSE, tiene que editar el archivo de configuración **/etc/sysconfig/SuSEfirewall2** . Modifique la entrada **FW_SERVICES_EXT_TCP** para incluir el número de puerto de SQL Server.
 
    ```
    FW_SERVICES_EXT_TCP="1433"
@@ -202,7 +202,7 @@ Para crear una base de datos, necesita conectarse con una herramienta que pueda 
    sudo zypper install -y mssql-tools unixODBC-devel
    ```
 
-1. Por comodidad, agregue `/opt/mssql-tools/bin/` a la variable de entorno **PATH**. De este modo, podrá ejecutar las herramientas sin especificar la ruta de acceso completa. Ejecute los comandos siguientes para modificar la variable **PATH**, tanto para las sesiones de inicio de sesión como para las sesiones interactivas o sin inicio de sesión:
+1. Por comodidad, agregue `/opt/mssql-tools/bin/` a la variable de entorno **PATH** . De este modo, podrá ejecutar las herramientas sin especificar la ruta de acceso completa. Ejecute los comandos siguientes para modificar la variable **PATH** , tanto para las sesiones de inicio de sesión como para las sesiones interactivas o sin inicio de sesión:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile

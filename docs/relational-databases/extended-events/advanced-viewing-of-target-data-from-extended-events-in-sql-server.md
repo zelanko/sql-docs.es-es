@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 225de42adb409ef908544bb51c4d523452554838
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 174873d62a2c90ba6309f9063294a27517326d62
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869311"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523996"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)
 
@@ -76,9 +76,9 @@ Para obtener documentación sobre los eventos extendidos específicos de Base de
 Por lo general, el acceso a las opciones avanzadas se logra por medio de uno de los siguientes métodos:
 
 
-- El menú habitual de **Archivo** > **Abrir** > **Archivo**.
-- Haciendo clic con el botón derecho en **Administración** Eventos extendidos **en el** > **Explorador de objetos**.
-- El menú especial **Eventos extendidos**y la barra de herramientas especial para eventos extendidos.
+- El menú habitual de **Archivo** > **Abrir** > **Archivo** .
+- Haciendo clic con el botón derecho en **Administración** Eventos extendidos **en el** > **Explorador de objetos** .
+- El menú especial **Eventos extendidos** y la barra de herramientas especial para eventos extendidos.
 - Haciendo clic con el botón derecho en el panel con pestañas que muestra los datos de destino.
 
 
@@ -92,11 +92,11 @@ Existen varias maneras de incorporar datos de destino del archivo event_file a l
 
 
 - Cada vez que se inicia la sesión de eventos, el sistema inserta un número entero grande al nuevo nombre de archivo para que ese nombre de archivo sea único y diferente de la ocasión anterior en que se inició la sesión.
-  - *Ejemplo*: Checkpoint_Begins_ES_0_131103935140400000.xel
+  - *Ejemplo* : Checkpoint_Begins_ES_0_131103935140400000.xel
 
 
 - El contenido de un .XEL no es texto sin formato que puede verse con Notepad.exe.
-  - Si quiere, puede agregar varios archivos .XEL al mismo tiempo usando el menú **Archivo** > **Abrir** > **Combinar archivos de eventos extendidos**.
+  - Si quiere, puede agregar varios archivos .XEL al mismo tiempo usando el menú **Archivo** > **Abrir** > **Combinar archivos de eventos extendidos** .
 
 
 
@@ -119,7 +119,7 @@ SSMS puede mostrar datos procedentes de cualquier destino. Pero la forma en que 
 ### <a name="b1-open-xel-with-menu-file--open--file"></a>B.1 Abrir el archivo .XEL con el menú Archivo > Abrir > archivo
 
 
-Puede abrir un archivo .XEL concreto con el menú estándar **Archivo** > **Abrir** > **Archivo**.
+Puede abrir un archivo .XEL concreto con el menú estándar **Archivo** > **Abrir** > **Archivo** .
 
 También puede arrastrarlo y colocarlo en la barra de pestañas de la interfaz de usuario de SSMS.
 
@@ -133,7 +133,7 @@ La opción **Ver datos de destino** muestra los datos que se han capturado hasta
 
 En el panel del **Explorador de objetos** puede expandir los nodos y, luego, hacer clic con el botón derecho en:
 
-- **Administración** > **Eventos extendidos** > **Sesiones** >  *[su sesión]*  >  *[su nodo de destino]*  > **Ver datos de destino**.
+- **Administración** > **Eventos extendidos** > **Sesiones** >  *[su sesión]*  >  *[su nodo de destino]*  > **Ver datos de destino** .
 
 
 Los datos de destino se muestran en un panel con pestañas en SSMS. Esto se refleja en el siguiente ejemplo.
@@ -153,7 +153,7 @@ Los datos de destino se muestran en un panel con pestañas en SSMS. Esto se refl
 Cuando la sesión de eventos está activa, puede que quiera ver los datos de eventos en tiempo real, a medida que el destino los vaya recibiendo.
 
 
-- **Administración** > **Eventos extendidos** > **Sesiones** >  *[su sesión]*  > **Observar datos en directo**.
+- **Administración** > **Eventos extendidos** > **Sesiones** >  *[su sesión]*  > **Observar datos en directo** .
 
 
 ![su sesión > Observar datos en directo](../../relational-databases/extended-events/media/xevents-ssms-ui55-watchlivedata.png)
@@ -186,8 +186,8 @@ Una vez que tenemos los datos de destino en SSMS, se pueden exportar a diversos 
 
     ![Exportación de datos en pantalla: Eventos extendidos > Exportar a > (.csv, .xel o a una tabla)](../../relational-databases/extended-events/media/xevents-ssms-ui75-menuextevent-exportto-xel.png)
 
-2. Haga clic en el nuevo elemento de menú **Eventos extendidos**.
-3. Haga clic en **Exportar a**y, después, elija un formato.
+2. Haga clic en el nuevo elemento de menú **Eventos extendidos** .
+3. Haga clic en **Exportar a** y, después, elija un formato.
 
 
 
@@ -238,7 +238,7 @@ La opción **Elegir columnas** permite controlar qué columnas de datos se muest
 - En el menú contextual de un encabezado en la presentación de datos.
 
 
-Al hacer clic en **Elegir columnas**, se abre un cuadro de diálogo con el mismo nombre.
+Al hacer clic en **Elegir columnas** , se abre un cuadro de diálogo con el mismo nombre.
 
 
 ![Cuadro de diálogo Elegir columnas, también con opciones de Combinar columnas](../../relational-databases/extended-events/media/xevents-ssms-ui35-choosecolumns.png)
@@ -271,7 +271,7 @@ Los filtros de visualización de SSMS son los siguientes:
 - Un filtro de *valores de columna* .
 
 
-La relación entre el filtro de tiempo y el filtro de columnas es un valor booleano '*AND*'.
+La relación entre el filtro de tiempo y el filtro de columnas es un valor booleano ' *AND* '.
 
 
 ![Filtros de rango de tiempo y de columnas en el cuadro de diálogo Filtros](../../relational-databases/extended-events/media/xevents-ssms-ui45-filters.png)
@@ -288,9 +288,9 @@ Agrupar filas con valores coincidentes en una misma columna es el primer paso pa
 #### <a name="d41-grouping"></a>D.4.1 Agrupación
 
 
-En la barra de herramientas de eventos extendidos, el botón **Agrupación** abre un cuadro de diálogo que sirve para agrupar los datos recogidos en una columna determinada. En la siguiente captura de pantalla se muestra un cuadro de diálogo en el que los datos se agrupan por la columna *name*.
+En la barra de herramientas de eventos extendidos, el botón **Agrupación** abre un cuadro de diálogo que sirve para agrupar los datos recogidos en una columna determinada. En la siguiente captura de pantalla se muestra un cuadro de diálogo en el que los datos se agrupan por la columna *name* .
 
-![Barra de herramientas > botón Agrupación y, después, cuadro de diálogo Agrupación](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
+![Captura de pantalla en la que se muestran la barra de herramientas con la opción Agrupación seleccionada y el cuadro de diálogo Agrupación.](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
 
 Tras realizar la agrupación, la presentación de datos adquiere un nuevo aspecto, como se aprecia aquí.
 
@@ -301,13 +301,13 @@ Tras realizar la agrupación, la presentación de datos adquiere un nuevo aspect
 #### <a name="d42-aggregation"></a>D.4.2 Agregación
 
 
-Una vez agrupados los datos mostrados, puede pasar a agregar datos en otras columnas.  En la siguiente captura de pantalla se muestran los datos agrupados agregados por *count*.
+Una vez agrupados los datos mostrados, puede pasar a agregar datos en otras columnas.  En la siguiente captura de pantalla se muestran los datos agrupados agregados por *count* .
 
-![Barra de herramientas > botón Agregación y, después, cuadro de diálogo Agregación](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
+![Captura de pantalla en la que se muestran la barra de herramientas con la opción Agregación seleccionada y el cuadro de diálogo Agregación.](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
 
 Tras realizar la agregación, la presentación de datos adquiere un nuevo aspecto, como se aprecia aquí.
 
-![Barra de herramientas > botón Agregación y, después, cuadro de diálogo Agregación](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
+![Captura de pantalla en la que se muestra que se ha agregado un valor de recuento.](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
 
 
 

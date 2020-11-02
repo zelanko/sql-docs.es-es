@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac19c1c8e0dfc2e8a8cf4711400eb3c5cb29b5f2
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 3800029fb04f058f6f2a0f00ed3f859d1385782e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784833"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523900"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configuración del grupo de disponibilidad de SQL Server Always On en Windows y Linux (multiplataforma)
 
@@ -69,7 +69,7 @@ Los pasos para crear el AG son los mismos que los pasos para crear un AG para ca
 
    En la siguiente imagen se muestra este paso al completo.
 
-   ![Habilitación de grupos de disponibilidad Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
+   ![Captura de pantalla de una ventana de Git Bash en la que se muestra el comando.](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
 1. Configure el archivo de hosts en ambos servidores o registre los nombres de servidor con DNS.
 
@@ -110,7 +110,7 @@ Los pasos para crear el AG son los mismos que los pasos para crear un AG para ca
 
    En el diagrama siguiente, la propiedad y el grupo están configurados correctamente para el certificado y la clave.
 
-   ![Habilitación de grupos de disponibilidad Linux](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
+   ![Captura de pantalla de una ventana de Git Bash en la que se muestran los archivos .cer y .pvk en la carpeta /var/opt/mssql/data.](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
 1. En la réplica secundaria, cree un inicio de sesión y una contraseña de base de datos y cree una clave maestra.

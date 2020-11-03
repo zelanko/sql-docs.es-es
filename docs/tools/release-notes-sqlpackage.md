@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 90485210bbc0fe657516306dd433f3241b5c90c9
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: d78df7ed144c1cb94f486a20bd65ffc9c1c9cafb
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005980"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496700"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notas de la versión de SqlPackage.exe
 
@@ -57,7 +57,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>Correcciones
 | Característica | Detalles |
 | :------ | :------ | 
-| Implementación | Se ha corregido un script de implementación incorrecto generado al establecer como destino Instancia administrada de Azure SQL Database como un usuario que no es sysadmin.  | 
+| Implementación | Se ha corregido un script de implementación incorrecto generado al establecer como destino Azure SQL Managed Instance como un usuario que no es sysadmin.  | 
 | Implementación | Se han corregido los colaboradores de implementación de carga al ejecutar acciones de script. | 
 | Ayuda | Se ha generado un tiempo transcurrido correcto en sqlpackage cuando la operación tarda más de 1 día. | 
 | Implementación | Se ha corregido el registro de dacpac al implementar para .NET Core. | 

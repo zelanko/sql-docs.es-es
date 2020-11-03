@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed45f77f509d3206340a2f52e6d3b31ac6824d87
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79447982"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907193"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Agregar visualizaciones a informes móviles de Reporting Services
 Los gráficos son una parte esencial de la visualización de datos. Obtenga más información sobre los gráficos que puede utilizar en los informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para cubrir una variedad de escenarios. 
@@ -39,15 +39,15 @@ Cada métrica individual o valor mostrados en un gráfico se conoce como una ser
 ### <a name="change-aggregation"></a>Cambiar agregación 
 Para campos numéricos en gráficos, la agregación predeterminada es sumar. Puede cambiarla a media, recuento, mínimo, máximo, primero, último.
 
-* Haga clic en la pestaña **Datos** y, en **Propiedades de los datos**, seleccione **Opciones** junto al campo numérico y, después, seleccione otra agregación.
+* Haga clic en la pestaña **Datos** y, en **Propiedades de los datos** , seleccione **Opciones** junto al campo numérico y, después, seleccione otra agregación.
 
 ### <a name="set-or-clear-filters"></a>Establecer o borrar filtros
 
 Si agrega un navegador para filtrar el informe móvil, puede decidir los gráficos que quiere filtrar.
 
-1. Seleccione la pestaña **Datos** y, en **Propiedades de los datos**, elija **Opciones**.
+1. Seleccione la pestaña **Datos** y, en **Propiedades de los datos** , elija **Opciones**.
 
-2. En **Filtrado por**, verá navegadores que puede seleccionar o desactivar.
+2. En **Filtrado por** , verá navegadores que puede seleccionar o desactivar.
 
 Para más información, vea [Agregar navegadores para filtrar un informe móvil](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md).
    
@@ -55,7 +55,7 @@ Para más información, vea [Agregar navegadores para filtrar un informe móvil]
   
 El gráfico de tiempo es el gráfico más básico en [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]. El eje de hora (y fecha) del gráfico se establecerá automáticamente en el primer campo de fecha y hora válido de la tabla de datos.  
 
-![mobile-report-time-chart](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
+![Captura de pantalla del gráfico de tiempo de un informe móvil.](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
 
 1. Arrastre un **Gráfico de tiempo** desde la pestaña **Diseño** a la superficie de diseño y cambie su tamaño.
 
@@ -65,27 +65,27 @@ El gráfico de tiempo es el gráfico más básico en [!INCLUDE[SS_MobileReptPub_
 
 3. En el panel **Propiedades de los datos** , **Serie principal** es **SimulatedTable**. Seleccione la flecha en el cuadro y seleccione la tabla.
 
-5. Si establece **Estructura de datos** en **Por columnas** (en la pestaña **Diseño** > panel **Propiedades de los elementos visuales**), en el panel **Propiedades de los datos** puede seleccionar varias columnas o valores numéricos.
+5. Si establece **Estructura de datos** en **Por columnas** (en la pestaña **Diseño** > panel **Propiedades de los elementos visuales** ), en el panel **Propiedades de los datos** puede seleccionar varias columnas o valores numéricos.
 
-   Si establece **Estructura de datos** en **Por filas**(en el panel **Propiedades de los datos** ), puede seleccionar un **Campo de nombre de serie** y una columna de valores numéricos.
+   Si establece **Estructura de datos** en **Por filas** (en el panel **Propiedades de los datos** ), puede seleccionar un **Campo de nombre de serie** y una columna de valores numéricos.
    
 Para más información, vea [Agrupar datos por columnas o filas](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md).
   
 ## <a name="category-charts"></a>Gráficos de categoría  
   
-Al contrario que en un gráfico de tiempo, en un gráfico de categoría se agrupa en un campo distinto de un campo de hora y fecha en el eje X. Esta agrupación, denominada *coordinada de categoría*, tiene que estar en un campo de cadena, no en un campo numérico.
+Al contrario que en un gráfico de tiempo, en un gráfico de categoría se agrupa en un campo distinto de un campo de hora y fecha en el eje X. Esta agrupación, denominada *coordinada de categoría* , tiene que estar en un campo de cadena, no en un campo numérico.
 
-![mobile-report-category-chart](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
+![Captura de pantalla del gráfico de categoría de un informe móvil.](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
 
 1. Arrastre un **Gráfico de categoría** desde la pestaña **Diseño** hasta la superficie de diseño, cambie su tamaño y, si es necesario, [obtenga datos de este](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
 
-2. Seleccione la pestaña **Datos** y, en el panel **Propiedades de los datos** , en **Coordinada de categoría**, seleccione una tabla y un campo por el que agrupar. Este campo estará en el eje X del gráfico resultante.
+2. Seleccione la pestaña **Datos** y, en el panel **Propiedades de los datos** , en **Coordinada de categoría** , seleccione una tabla y un campo por el que agrupar. Este campo estará en el eje X del gráfico resultante.
 
-3. En **Serie principal**, seleccione la tabla y los campos numéricos que se agregarán para cada categoría. 
+3. En **Serie principal** , seleccione la tabla y los campos numéricos que se agregarán para cada categoría. 
   
 ## <a name="totals-charts"></a>Gráfico de valores totales  
 
-![mobile-report-totals-chart](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
+![Captura de pantalla del gráfico de valores totales de un informe móvil.](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
   
 El gráfico de totales cumple dos objetivos distintos: 
 * Presenta varias series (solo la suma o el total de la serie principal definida). 
@@ -97,11 +97,11 @@ Para más información, vea [Agrupar datos por columnas o filas](../../reporting
   
 Los gráficos de tiempo, categoría y totales también están disponibles como *gráficos de comparación*. En un diagrama de comparación, puede especificar no solo una serie principal, sino también una segunda serie de comparación. Las series principales de comparación se pueden mostrar de tres formas distintas.
 
-![mobile-report-comparison-time-chart](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
+![Captura de pantalla del gráfico de tiempo de comparación de un informe móvil.](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
 
 1. Arrastre uno de los **Gráficos de comparación** (tiempo, categoría o totales) desde la pestaña **Diseño** a la superficie de diseño, cambie su tamaño y, si es necesario, [obtenga datos de este](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
 
-2. En el panel **Propiedades de los elementos visuales** , en **Visualización de serie**, seleccione una de las opciones siguientes: 
+2. En el panel **Propiedades de los elementos visuales** , en **Visualización de serie** , seleccione una de las opciones siguientes: 
    * Barra o barra delgada
    * Línea o barra
    * Barra o área de pasos 
@@ -110,26 +110,26 @@ En gráficos de comparación, puede elegir tener los mismos colores de gráfico 
 
 * En el panel **Propiedades de los elementos visuales** , establezca la opción **Volver a usar los colores en las series de comparación** en **Activado**.
 
-   Si se establece en **Activado**, la paleta de colores se reiniciará entre dibujar la serie principal y la de comparación para que coincidan los valores relacionados de la serie principal y la de comparación. 
+   Si se establece en **Activado** , la paleta de colores se reiniciará entre dibujar la serie principal y la de comparación para que coincidan los valores relacionados de la serie principal y la de comparación. 
 
-   Si se establece en **Desactivado**, la paleta de colores continuará su giro normal al dibujar la serie principal después de la serie de comparación, evitando una coordinación de color posiblemente errónea entre los dos conjuntos de series.  
+   Si se establece en **Desactivado** , la paleta de colores continuará su giro normal al dibujar la serie principal después de la serie de comparación, evitando una coordinación de color posiblemente errónea entre los dos conjuntos de series.  
   
 ## <a name="pie-and-funnel-charts"></a>Gráficos circulares y gráficos de embudo  
   
 Los gráficos circulares y de embudo se encuentran entre los más sencillos para las visualizaciones. Puede estructurar los datos por filas o columnas. 
 * Los **gráficos circulares** en informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] pueden ser circulares, de anillos o de anillos con un total en el centro. Los gráficos circulares son adecuados para mostrar el tamaño relativo de las diferentes partes de un total. Si hay demasiados segmentos, puede resultar difícil verlos.
-* Los**gráficos de embudo** suelen usarse para mostrar las fases de un proceso, como ventas.
+* Los **gráficos de embudo** suelen usarse para mostrar las fases de un proceso, como ventas.
 
-![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
+![Captura de pantalla del gráfico de embudo de un informe móvil.](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
 
 ### <a name="structure-pie-and-funnel-chart-data-by-rows-or-by-columns"></a>Datos de gráfico circular de estructura y gráfico de embudo por filas o por columnas
 1. Arrastre un **gráfico circular** o un **gráfico de embudo** desde la pestaña **Diseño** hasta la superficie de diseño, cambie su tamaño y, si es necesario, [obtenga datos de este](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
-2. En el panel **Propiedades de los elementos visuales** , en **Estructura de datos**, seleccione una de estas opciones:
+2. En el panel **Propiedades de los elementos visuales** , en **Estructura de datos** , seleccione una de estas opciones:
    * **Por columnas**
    * **Por filas**
-3. Si ha seleccionado **Por columnas**, seleccione la pestaña **Datos** y, en el panel **Propiedades de los datos** , en **Serie principal**, seleccione la tabla y todos los campos que quiera agregar en el gráfico circular o en el gráfico de embudo. Los nombres de campos se usarán para etiquetar cada una de las áreas del gráfico resultante.
+3. Si ha seleccionado **Por columnas** , seleccione la pestaña **Datos** y, en el panel **Propiedades de los datos** , en **Serie principal** , seleccione la tabla y todos los campos que quiera agregar en el gráfico circular o en el gráfico de embudo. Los nombres de campos se usarán para etiquetar cada una de las áreas del gráfico resultante.
 
-   Si ha seleccionado **Por filas**, seleccione la pestaña **Datos** y, en el panel **Propiedades de los datos** , en **Columna de categoría**, seleccione la tabla y la columna con los valores que quiera usar para agrupar y asignar etiquetas en el gráfico circular. En Columna de serie principal, seleccione un campo numérico para los valores del gráfico.
+   Si ha seleccionado **Por filas** , seleccione la pestaña **Datos** y, en el panel **Propiedades de los datos** , en **Columna de categoría** , seleccione la tabla y la columna con los valores que quiera usar para agrupar y asignar etiquetas en el gráfico circular. En Columna de serie principal, seleccione un campo numérico para los valores del gráfico.
 
 Para más información, vea [Agrupar datos por columnas o filas](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md). 
 
@@ -137,7 +137,7 @@ Para más información, vea [Agrupar datos por columnas o filas](../../reporting
   
 Los gráficos de rectángulos muestran métricas al aplicar sus valores en el tamaño y color de los iconos en una cuadrícula rectangular. 
 
-![mobile-report-group-treemap](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
+![Captura de pantalla del gráfico de rectángulos de un informe móvil.](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
 
 1. Arrastre un **gráfico de rectángulos** desde la pestaña **Diseño** hasta la superficie de diseño, cambie su tamaño y, si es necesario, [obtenga datos de este](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
 2.  Seleccione la pestaña **Datos** y, en el panel **Propiedades de los datos** : 
@@ -175,15 +175,15 @@ Los gráficos de cascada son una buena opción en estos casos:
 
 1. Arrastre un **Gráfico de cascada** desde la pestaña **Diseño** hasta la superficie de diseño, cambie su tamaño y, si es necesario, [obtenga datos de este](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
 
-    ![mobile-report-waterfall-chart-icon](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
+    ![Captura de pantalla del icono del gráfico de cascada de un informe móvil.](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
     
-2.  Seleccione la pestaña **Datos** y, en el panel **Propiedades de datos** , seleccione un campo de categoría en los datos para **Category Coordinate**(Coordenada de categoría) y un campo numérico para **Serie principal**: 
+2.  Seleccione la pestaña **Datos** y, en el panel **Propiedades de datos** , seleccione un campo de categoría en los datos para **Category Coordinate** (Coordenada de categoría) y un campo numérico para **Serie principal** : 
 
-    ![mobile-report-waterfall-data](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
+    ![Captura de pantalla de los datos en cascada de un informe móvil.](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
     
 3. Seleccione la pestaña **Diseño** para ver el gráfico de cascada en la vista previa.
 
-   ![mobile-report-waterfall-chart](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
+   ![Captura de pantalla del gráfico de cascada de un informe móvil.](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
    
    Los meses con pérdidas, como febrero, junio y julio, se muestran en rojo. 
    Los meses con ganancias, como septiembre, octubre y noviembre, se muestran en verde. 

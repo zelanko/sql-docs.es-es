@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b42c68daa49145ba4703c8cd141dc433aa7d64df
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 149c074b0aacc56f192b27cfea0894fe2cd73778
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448322"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907303"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Agregar obtención de detalles de un informe para dispositivos móviles a otros informes para dispositivos móviles o direcciones URL
 Puede agregar obtención de detalles desde cualquier cuadrícula de datos, de gráfico o de medidor de un informe para dispositivos móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] a otro informe para dispositivos móviles o dirección URL personalizada. 
@@ -23,11 +23,11 @@ Una *obtención de detalles*  es un vínculo de un informe de origen que abre ot
   
 Cuando se ve un informe para dispositivos móviles de origen en el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y se selecciona un elemento con un destino de obtención de detalles, se irá a dicho destino, sea este otro informe para dispositivos móviles o una dirección URL.  
 
-Los elementos de informe con obtención de detalles, en una dirección URL o en otro informe móvil, tienen el icono de obtención de detalles ![mobile-report-drill-through-icon](../../reporting-services/mobile-reports/media/mobile-report-drill-through-icon.png) en la esquina superior derecha.
+Los elementos de informe con obtención de detalles, en una dirección URL o en otro informe móvil, tienen el icono :::image type="icon" source="../../reporting-services/mobile-reports/media/mobile-report-drill-through-icon.png":::.
 
-![mobile-report-gauge-drill-through](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png) 
+![Captura de pantalla de un medidor de informe móvil con una obtención de detalles.](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png)
 
->**Sugerencia**: Antes de nada, cree el informe de destino y guárdelo en un portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Si tiene previsto pasar parámetros desde el informe de origen, agregue dichos parámetros también al informe de destino. De este modo, podrá definir la obtención de detalles desde el informe de origen al informe de destino. [Agregar parámetros a un informe para dispositivos móviles](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
+>**Sugerencia** : antes de nada, cree el informe de destino y guárdelo en un portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Si tiene previsto pasar parámetros desde el informe de origen, agregue dichos parámetros también al informe de destino. De este modo, podrá definir la obtención de detalles desde el informe de origen al informe de destino. [Agregar parámetros a un informe para dispositivos móviles](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
  
 ## <a name="set-up-drillthrough-to-a-mobile-report"></a>Configurar la obtención de detalles de un informe para dispositivos móviles  
 
@@ -38,11 +38,11 @@ Los elementos de informe con obtención de detalles, en una dirección URL o en 
 2. En el panel **Propiedades de los elementos visuales** , seleccione **Obtener detalles del destino** > **Informe para dispositivos móviles**.  
 3. Seleccione el servidor y el informe para dispositivos móviles de destino.  
 
-   >Nota: Si el informe para dispositivos móviles de destino no está en el mismo servidor que el informe para dispositivos móviles de origen, conéctese con dirección URL personalizada en su lugar, como se explica en la siguiente sección.  
+   >Nota: si el informe para dispositivos móviles de destino no está en el mismo servidor que el informe para dispositivos móviles de origen, conéctese con dirección URL personalizada en su lugar, como se explica en la siguiente sección.  
  
 4. Tras seleccionar un informe para dispositivos móviles de destino, se muestran los parámetros de entrada disponibles, incluidas las propiedades que se pueden enlazar a controles de navegador y los parámetros configurados en los conjuntos de datos del informe para dispositivos móviles de destino.  
 
-   ![mobile-report-drillthrough-target](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-target.PNG)
+   ![Captura de pantalla del cuadro de diálogo Configurar informe de destino que muestra los parámetros del informe disponibles.](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-target.PNG)
    
    *Propiedades de obtención de detalles del informe para dispositivos móviles de destino*  
   
@@ -53,9 +53,9 @@ Los elementos de informe con obtención de detalles, en una dirección URL o en 
 1. En la vista Diseño del [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], seleccione una visualización que admita la obtención de detalles de destinos.    
 2. En el panel **Propiedades de los elementos visuales** , seleccione **Obtener detalles del destino** > **Dirección URL personalizada**.  Se abrirá el cuadro de diálogo de configuración de la obtención de detalles.  
   
-3. En **Establecer la URL de obtención de detalles**, escriba la dirección URL de destino a la que se irá cuando se haga clic en la visualización. Seleccione también algunos de los **Parámetros disponibles** indicados a la derecha. En el siguiente panel se muestra una vista previa de la dirección URL personalizada combinada con parámetros resueltos de ejemplo (si se incluyen).  
+3. En **Establecer la URL de obtención de detalles** , escriba la dirección URL de destino a la que se irá cuando se haga clic en la visualización. Seleccione también algunos de los **Parámetros disponibles** indicados a la derecha. En el siguiente panel se muestra una vista previa de la dirección URL personalizada combinada con parámetros resueltos de ejemplo (si se incluyen).  
   
-   ![mobile-report-drillthrough-url](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
+   ![Captura de pantalla del cuadro de diálogo Establecer la URL de obtención de detalles.](../../reporting-services/mobile-reports/media/mobile-report-drillthrough-url.PNG)
   
    *Obtención de detalles de propiedades de dirección URL personalizada*  
   
@@ -69,7 +69,7 @@ Si no va a establecer un valor predeterminado para el informe de destino, consid
 
 1. En el portal web, seleccione el botón de puntos suspensivos (...) en el informe de destino que quiera ocultar y seleccione Administrar.
 
-2. En **Propiedades**, seleccione **Ocultar en la vista de mosaico**.
+2. En **Propiedades** , seleccione **Ocultar en la vista de mosaico**.
 
 Puede elegir ver los elementos ocultos en el portal web: 
 

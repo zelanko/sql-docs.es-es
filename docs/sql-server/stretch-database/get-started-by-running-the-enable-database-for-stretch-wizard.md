@@ -22,12 +22,12 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6b06f82e5c51aa1c3843abec0daa7d3bebabe40a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9356ae3c4783df003233c4db7ab4bbaf9501a2d
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454369"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523956"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Introducción mediante la ejecución del Asistente para Habilitar base de datos para Stretch
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88454369"
   
 1.  En SQL Server Management Studio, en el Explorador de objetos, seleccione la base de datos en la que desea habilitar Stretch.  
   
-2.  Haga clic con el botón derecho y seleccione **Tareas**; después, seleccione **Stretch**y, por último, **Habilitar** para iniciar el asistente.  
+2.  Haga clic con el botón derecho y seleccione **Tareas** ; después, seleccione **Stretch** y, por último, **Habilitar** para iniciar el asistente.  
   
 ##  <a name="introduction"></a><a name="Intro"></a> Introducción  
  Consulte la finalidad del asistente y los requisitos previos.  
@@ -69,7 +69,7 @@ Las tablas con muchas filas aparecen en la parte superior de la lista ordenada. 
 |**Nombre**|Especifica el nombre de la tabla de la base de datos.|  
 |(sin título)|Un símbolo en esta columna puede representar una advertencia que no le impide habilitar la tabla seleccionada para Stretch. También puede representar un problema de bloqueo que le impide habilitar la tabla seleccionada para Stretch; por ejemplo, porque la tabla usa un tipo de datos no compatible. Mantenga el mouse encima del símbolo para que se muestren más detalles al respecto como información sobre herramientas. Para obtener más información, vea [Limitaciones del área expuesta y problemas de bloqueo de Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).|  
 |**Stretched (Extendida)**|Indica si ya se ha habilitado la tabla para Stretch.|  
-|**Migrar**|Puede migrar una tabla completa (**Toda la tabla**) o puede especificar un filtro en una columna existente de la tabla. Si quiere usar una función de filtro diferente para seleccionar las filas que se van a migrar, ejecute la instrucción ALTER TABLE para especificar la función de filtro después de que salga del asistente. Para obtener más información sobre la función de filtro, vea [Select rows to migrate by using a filter function (Seleccionar las filas que se van a migrar mediante una función de filtro)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Para obtener más información sobre cómo aplicar la función, vea [Enable Stretch Database for a table (Habilitar Stretch Database para una tabla)](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) o [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).|  
+|**Migrar**|Puede migrar una tabla completa ( **Toda la tabla** ) o puede especificar un filtro en una columna existente de la tabla. Si quiere usar una función de filtro diferente para seleccionar las filas que se van a migrar, ejecute la instrucción ALTER TABLE para especificar la función de filtro después de que salga del asistente. Para obtener más información sobre la función de filtro, vea [Select rows to migrate by using a filter function (Seleccionar las filas que se van a migrar mediante una función de filtro)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Para obtener más información sobre cómo aplicar la función, vea [Enable Stretch Database for a table (Habilitar Stretch Database para una tabla)](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) o [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).|  
 |**Filas**|Especifica el número de filas de la tabla.|  
 |**Tamaño (KB)**|Especifica el tamaño de la tabla en kB.|  
   
@@ -82,7 +82,7 @@ Las tablas con muchas filas aparecen en la parte superior de la lista ordenada. 
   
 2.  En el cuadro de diálogo **Seleccionar filas para ajustar** , seleccione **Elegir filas**.  
   
-3.  En el **Campo de nombre**, proporcione un nombre para la función de filtro.  
+3.  En el **Campo de nombre** , proporcione un nombre para la función de filtro.  
   
 4.  Para la cláusula **Where** , elija una columna de la tabla, seleccione un operador y proporcione un valor.  
   
@@ -138,7 +138,7 @@ Si quiere usar un tipo de función de filtro diferente para seleccionar las fila
   
         2.  Seleccione el método de autenticación.  
   
-            -   Si selecciona **Autenticación de SQL Server**, proporcione el inicio de sesión y la contraseña del administrador.  
+            -   Si selecciona **Autenticación de SQL Server** , proporcione el inicio de sesión y la contraseña del administrador.  
   
             -   Seleccione **Autenticación integrada de Active Directory** a fin de utilizar una cuenta de servicio federado para que SQL Server se comunique con el servidor remoto de Azure. Si el servidor seleccionado no está integrado en Azure Active Directory, esta opción no aparece.
   
@@ -149,11 +149,11 @@ Si quiere usar un tipo de función de filtro diferente para seleccionar las fila
   
  Si ya existe una clave maestra de base de datos, escriba la contraseña para esta.  
   
- ![Página de credenciales seguras del Asistente para Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Página de credenciales seguras del Asistente para Stretch Database")  
+ ![Captura de pantalla que muestra la página Secure credentials (Proteger las credenciales) del asistente para Stretch Database con el cuadro de texto Contraseña vacío.](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Página de credenciales seguras del Asistente para Stretch Database")  
   
  Si la base de datos no tiene una clave maestra existente, escriba una contraseña segura para crear una clave maestra de base de datos.  
   
- ![Página de credenciales seguras del Asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Página de credenciales seguras del Asistente para Stretch Database")  
+ ![Captura de pantalla que muestra la página Secure credentials (Proteger las credenciales) del asistente para Stretch Database con los cuadros de texto Nueva contraseña y Confirmar contraseña rellenados.](../../relational-databases/tables/media/stretch-wizard-6.png "Página de credenciales seguras del Asistente para Stretch Database")  
   
  Para obtener más información sobre la clave maestra de base de datos, vea [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) y [Crear la clave maestra de una base de datos](../../relational-databases/security/encryption/create-a-database-master-key.md). Para obtener más información sobre la credencial que crea el asistente, vea [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   

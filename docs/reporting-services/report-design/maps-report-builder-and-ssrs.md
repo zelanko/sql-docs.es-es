@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b3c37e642ba5c9d570fc754f5eca3ab0b57d24a
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 9e6dde5a520b845cac47fbfd3c4820d35958c9ba
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881914"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907273"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Generador de informes y SSRS)
   Para visualizar datos comerciales con un fondo geográfico, puede agregar un mapa a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . El tipo de mapa que seleccione dependerá de qué información desee comunicar en el informe. Puede agregar un mapa que solo muestre las ubicaciones, un mapa de burbujas que varíe el tamaño de la burbuja en función del número de casas de un área, un mapa de marcadores que varíe el estilo de marcador según el producto más rentable de cada almacén o un mapa de líneas que muestre las rutas entre los almacenes.  
@@ -58,7 +58,7 @@ ms.locfileid: "84881914"
  Para visualizar los datos de un mapa, los datos analíticos y los datos espaciales deben tener una relación. Cuando los datos espaciales y los datos analíticos proceden del mismo origen, la relación se conoce. Cuando proceden de orígenes diferentes, debe especificar campos coincidentes para relacionarlos.  
   
 ### <a name="spatial-data"></a>Datos espaciales  
- Los datos espaciales están compuestos de conjuntos de coordenadas. Los datos espaciales de un origen de datos pueden ser un único punto, varios puntos, una única línea, varias líneas o un conjunto de polígonos. Cada conjunto de coordenadas define un *elemento de mapa*, por ejemplo, un polígono que representa el contorno de un condado, una línea que representa un camino o un punto que representa la ubicación de una ciudad.  
+ Los datos espaciales están compuestos de conjuntos de coordenadas. Los datos espaciales de un origen de datos pueden ser un único punto, varios puntos, una única línea, varias líneas o un conjunto de polígonos. Cada conjunto de coordenadas define un *elemento de mapa* , por ejemplo, un polígono que representa el contorno de un condado, una línea que representa un camino o un punto que representa la ubicación de una ciudad.  
   
  Los datos espaciales se basan en uno de los sistemas de coordenadas siguientes:  
   
@@ -138,7 +138,7 @@ ms.locfileid: "84881914"
  En este ejemplo, el nombre de la ciudad por sí solo no es suficiente para identificar la población de forma unívoca. Por ejemplo, hay muchas ciudades denominadas Albany en los Estados Unidos. Para denominar una ciudad concreta, debe especificar el área además del nombre de la ciudad.  
   
 ##  <a name="understanding-the-map-viewport"></a><a name="Viewport"></a> Descripción de la ventanilla de mapa  
- Después de especificar los datos de un mapa para un informe, puede limitar el área de presentación del mapa especificando una *ventanilla*del mapa. De forma predeterminada, la ventanilla es la misma área que todo el mapa. Para recortar el mapa, puede especificar el centro, el nivel de zoom y las coordenadas máxima y mínima que definen el área que desea incluir en el informe. Para mejorar la presentación del mapa en el informe, puede mover las leyendas, escala de distancia y escala de colores fuera de la ventanilla. La figura siguiente muestra una ventanilla:  
+ Después de especificar los datos de un mapa para un informe, puede limitar el área de presentación del mapa especificando una *ventanilla* del mapa. De forma predeterminada, la ventanilla es la misma área que todo el mapa. Para recortar el mapa, puede especificar el centro, el nivel de zoom y las coordenadas máxima y mínima que definen el área que desea incluir en el informe. Para mejorar la presentación del mapa en el informe, puede mover las leyendas, escala de distancia y escala de colores fuera de la ventanilla. La figura siguiente muestra una ventanilla:  
   
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
@@ -180,7 +180,7 @@ ms.locfileid: "84881914"
   
  Para trabajar con capas, seleccione un mapa en la superficie de diseño del informe para mostrar el panel Mapa. El panel Mapa muestra la lista de capas definidas para el mapa. Utilice este panel para seleccionar una capa y cambiar las opciones, cambiar el orden del dibujo de capas, agregar una capa o ejecutar el Asistente para capas de mapa, ocultar o mostrar una capa, y cambiar el centro de la vista y el nivel de zoom para la ventanilla de mapa. La figura siguiente muestra una ventanilla:  
   
- ![rsMapLayerZone](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![Captura de pantalla de la sección Capas de mapa que señala las opciones relativas a la barra de herramientas de una capa, así como la visibilidad, el nombre y el tipo de capa. Además, se muestran las opciones del tipo de origen de datos espaciales, del nivel de ajuste de zoom y del ajuste del centro de vista.](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  Para obtener más información sobre las capas de mapa, vea [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

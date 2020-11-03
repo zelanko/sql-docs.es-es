@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a4c032315ef6fb17578ffcdfc7116f3a93293ac8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862947"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793822"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>¿Qué son las Actualizaciones de seguridad extendidas para SQL Server?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -56,7 +56,7 @@ Si migra sus cargas de trabajo a Azure Virtual Machines (IaaS), tendrá acceso a
 
 Las instancias de Azure Virtual Machines que ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en **Windows Server 2008 R2 y versiones superiores** recibirán las ESU de manera automática a través de los canales de actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existentes cuando la máquina virtual se configura para usar la [aplicación automatizada de revisiones](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
 
-Las máquinas virtuales (VM) de Azure que ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en **Windows Server 2008** o las que ***no* se han configurado para las [revisiones automatizadas](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** tendrán que descargar e implementar manualmente las revisiones de ESU como se describe en la sección [entornos locales o entornos hospedados](#on-premises-or-hosted-environments).
+Las máquinas virtuales (VM) de Azure que ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en **Windows Server 2008** o las que **_no_ se han configurado para las [revisiones automatizadas](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** tendrán que descargar e implementar manualmente las revisiones de ESU como se describe en la sección [entornos locales o entornos hospedados](#on-premises-or-hosted-environments).
 
 ### <a name="on-premises-or-hosted-environments"></a>Entornos locales o entornos hospedados
 Si tiene Software Assurance, puede comprar una suscripción Actualización de seguridad extendida (ESU) hasta tres años después de la fecha del fin del soporte técnico, en virtud de un Contrato Enterprise (EA), un Contrato Enterprise Subscription (SCE) o una Inscripción para soluciones de educación (EES). Solo puede comprar ESU solo para los servidores que tenga que proteger. Las ESU se pueden comprar directamente desde Microsoft o desde un asociado de licencia de Microsoft. 
@@ -84,18 +84,18 @@ Para crear el registro de SQL Server, siga estos pasos:
 1. Escriba `SQL Server registry` en el cuadro de búsqueda.  
 1. Elija la opción **Registro de SQL Server** publicada por [!INCLUDE[msCoName](../../includes/msconame-md.md)] y, luego, seleccione **Crear**. 
 
-   ![Elegir el servicio del registro de SQL Server](media/sql-server-extended-security-updates/sql-server-registry-service.png)
+   ![Captura de pantalla de Azure Portal que muestra cómo crear un registro de SQL Server.](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
-1. En **Detalles del proyecto**, elija su suscripción en el menú desplegable. Luego, elija un **grupo de recursos** existente o seleccione **Crear nuevo** para crear un grupo de recursos para el servicio del registro de SQL Server nuevo. 
-1. En **Detalles del servicio**, especifique un nombre y una región para el recurso del **registro de SQL Server** nuevo: 
+1. En **Detalles del proyecto** , elija su suscripción en el menú desplegable. Luego, elija un **grupo de recursos** existente o seleccione **Crear nuevo** para crear un grupo de recursos para el servicio del registro de SQL Server nuevo. 
+1. En **Detalles del servicio** , especifique un nombre y una región para el recurso del **registro de SQL Server** nuevo: 
 
-   ![Elegir el servicio del registro de SQL Server](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
+   ![Captura de pantalla del registro de SQL Server que muestra la pestaña Conceptos básicos.](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
 1. Seleccione **Revisar y crear** para revisar los detalles del **registro de SQL Server**. Seleccione **Crear** una vez que se pase la validación. 
 
 ## <a name="register-instances-for-esus"></a>Registro de instancias para las Actualizaciones de seguridad extendidas
 
-Una vez implementado el recurso del **registro de SQL Server**, puede elegir registrar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [única](#single-sql-server-instance), o bien puede registrar varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera [masiva](#multiple-sql-server-instances-in-bulk). Es necesario que haya al menos una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrada en el ámbito del registro de SQL Server para poder descargar cualquier paquete de ESU. 
+Una vez implementado el recurso del **registro de SQL Server** , puede elegir registrar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [única](#single-sql-server-instance), o bien puede registrar varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera [masiva](#multiple-sql-server-instances-in-bulk). Es necesario que haya al menos una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrada en el ámbito del registro de SQL Server para poder descargar cualquier paquete de ESU. 
 
 ### <a name="single-sql-server-instance"></a>Instancia de SQL Server única
 
@@ -103,11 +103,11 @@ Para registrar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 
 1. Inicie sesión en el [Portal de Azure](https://portal.azure.com). 
 1. Vaya al recurso del **registro de SQL Server**. 
-1. Seleccione **+ Registrar** en el panel de **información general**: 
+1. Seleccione **+ Registrar** en el panel de **información general** : 
 
    ![Elegir Registrar para registrar una instancia única de SQL Server](media/sql-server-extended-security-updates/register-single-sql-server-instance.png)
 
-1. Proporcione la información necesaria tal como se detalla en esta tabla y, luego, seleccione **Registrar**: 
+1. Proporcione la información necesaria tal como se detalla en esta tabla y, luego, seleccione **Registrar** : 
 
    |**Valor**| **Descripción**|
    | :-------| :------------- |
@@ -123,7 +123,7 @@ Para registrar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 
    <sup>1</sup> Solo es necesario para las máquinas virtuales de Azure. 
 
-La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recién registrada ahora está visible en la sección **Register SQL Server instances** (Registrar instancias de SQL Server) del panel de **información general**: 
+La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recién registrada ahora está visible en la sección **Register SQL Server instances** (Registrar instancias de SQL Server) del panel de **información general** : 
 
 ![Instancias de SQL Server registradas](media/sql-server-extended-security-updates/registered-sql-instance.png)
 
@@ -135,7 +135,7 @@ Las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] múl
 
 1. Inicie sesión en el [Portal de Azure](https://portal.azure.com). 
 1. Vaya al recurso del **registro de SQL Server**. 
-1. Seleccione **Bulk Register** (Registro masivo) en el panel de **información general**:  
+1. Seleccione **Bulk Register** (Registro masivo) en el panel de **información general** :  
 
    ![Elija el registro masivo para registrar varias instancias de SQL Server](media/sql-server-extended-security-updates/bulk-register-sql-server-instances.png)
 
@@ -223,7 +223,7 @@ Para configurar la redundancia regional, siga estos pasos:
 1. Cree el segundo servicio de **registro de SQL Server** en la segunda región y, a continuación, registre de forma masiva el otro archivo csv. Por ejemplo, cree el segundo servicio de **registro de SQL Server** en la región **Este de EE. UU.** y registre de forma masiva los servidores SQL Server con el archivo upload2.csv. 
 
 
-Una vez que los datos se han registrado con dos diferentes recursos de **registro de SQL Server**, podrá descargar actualizaciones de seguridad desde cualquiera de las regiones, en función de la disponibilidad del servicio. 
+Una vez que los datos se han registrado con dos diferentes recursos de **registro de SQL Server** , podrá descargar actualizaciones de seguridad desde cualquiera de las regiones, en función de la disponibilidad del servicio. 
 
 
 ## <a name="faq"></a>Preguntas más frecuentes
@@ -323,7 +323,7 @@ Si quiere consejos sobre cómo optimizar el rendimiento de [!INCLUDE[ssNoVersion
 - [Página de Fin del soporte técnico de SQL Server 2008 / 2008 R2](https://aka.ms/sqleos)
 - [Preguntas más frecuentes sobre las Actualizaciones de seguridad extendidas](https://aka.ms/sqleosfaq)
 - [Centro de respuestas de seguridad de Microsoft (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
-- [Administración de las actualizaciones de Windows con Azure Automation](/azure/automation/automation-tutorial-update-management)
+- [Administración de las actualizaciones de Windows con Azure Automation](/azure/automation/update-management/overview)
 - [Aplicación de revisiones automatizada de SQL Server](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
 - [Guía de migración de datos de Microsoft](https://datamigration.microsoft.com/)
 - [Azure Migrate: opciones de migración mediante lift-and-shift para migrar SQL Server 2008 / 2008 R2 actual a una máquina virtual de Azure](https://azure.microsoft.com/services/azure-migrate/)

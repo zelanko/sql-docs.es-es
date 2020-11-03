@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17294f4e7f26b3402655e0033cddedeb7bc69a3c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5fef66452820975107e06e20a4085978163d957d
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448457"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907103"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>Conservar el formato de fecha para Analysis Services en los informes para dispositivos móviles
 Agregue una medida a un conjunto de datos compartido en el Generador de informes para que las fechas de los orígenes de datos de [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] conserven su tipo de datos en el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)].
@@ -31,11 +31,11 @@ Para solucionar esto, agregue un miembro calculado al crear un conjunto de datos
  
    [Internet Sales].[Ship Date].CurrentMember.MemberValue
    
-   ![ssas-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-calculated-member-report-builder.png)
+   ![Captura de pantalla del cuadro de diálogo Generador de miembros calculados tras llamar al cuadro de texto Expresión.](../../reporting-services/mobile-reports/media/ssas-calculated-member-report-builder.png)
    
 2. Ahora puede anexar este miembro calculado al conjunto de columnas; para ello, arrástrelo desde la lista de miembros calculados en la parte inferior izquierda y colóquelo en la cuadrícula de columnas de la derecha.  
 
-   ![ssas-query-designer-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
+   ![Captura de pantalla del diseñador de consultas tras llamar la sección de miembros calculados.](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
    
 ### <a name="see-also"></a>Consulte también
 

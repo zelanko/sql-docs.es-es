@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 970b049ec7933af9fab1d213d7441f101e01f7c1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 563dc8fbbb7f866dd91f7a982813fe2e5b0a2e83
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765694"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907363"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Persistencia de los datos con un clúster de macrodatos de SQL Server en Kubernetes
 
@@ -36,7 +36,7 @@ Estos son algunos aspectos importantes que se deben tener en cuenta al planear l
 
 - Al calcular los requisitos de tamaño del bloque de almacenamiento, debe tener en cuenta el factor de replicación con el que se configura HDFS.  El factor de replicación se puede configurar en el momento de la implementación en el archivo de configuración de implementación del clúster. El valor predeterminado para los perfiles de desarrollo y pruebas (es decir, `aks-dev-test` o `kubeadm-dev-test`) es 2, y para los perfiles que se recomiendan para las implementaciones de producción (es decir, `kubeadm-prod`) el valor predeterminado es 3. Como procedimiento recomendado, configure la implementación de producción de un clúster de macrodatos con un factor de replicación de al menos 3 para HDFS. El valor del factor de replicación afectará al número de instancias del bloque de almacenamiento: como mínimo, debe implementar tantas instancias del bloque de almacenamiento como el valor del factor de replicación. Además, debe ajustar el tamaño del almacenamiento en consecuencia, y la cuenta de los datos que se replican en HDFS tantas veces como el valor del factor de replicación. Puede encontrar más información sobre la replicación de datos en HDFS [aquí](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication). 
 
-- A partir de la versión SQL Server 2019 CU1, la configuración de almacenamiento no se puede modificar después de la implementación. Esta limitación le impide no solo modificar el tamaño de la demanda de volumen persistente de cada instancia, sino también realizar operaciones de escalado posteriores a la implementación. Por lo tanto, es muy importante que planee el diseño del almacenamiento antes de implementar un clúster de macrodatos.
+- A partir de la versión 2019 CU1 de SQL Server, los clústeres de macrodatos no habilitan una experiencia para actualizar la opción de configuración de almacenamiento posterior a la implementación. Esta limitación le impide usar las operaciones de los clústeres de macrodatos para modificar el tamaño de la demanda de volumen persistente de cada instancia o escalar un grupo tras la implementación. Por lo tanto, es muy importante que planee el diseño del almacenamiento antes de implementar un clúster de macrodatos. Sin embargo, puede expandir el tamaño del volumen persistente directamente con las API de Kubernetes. En este caso, los metadatos del clúster de macrodatos no se actualizarán y verá incoherencias con respecto a los tamaños de volumen en los metadatos del clúster de configuración.
 
 - Al implementar en Kubernetes como aplicaciones en contenedor y usar características como conjuntos con estado y almacenamiento persistente, Kubernetes garantiza que los pods se van a reiniciar en caso de haya problemas de estado y, asimismo, que van a estar asociados al mismo almacenamiento persistente. Con todo, si se produce un error de nodo y el pod debe reiniciarse en otro nodo, existe un mayor riesgo de que no esté disponible si el almacenamiento es local para el nodo con el error. Para reducir este riesgo, debe configurar más redundancia y habilitar [características de alta disponibilidad](deployment-high-availability.md), o bien usar almacenamiento con redundancia remota. Aquí se muestra información general de las opciones de almacenamiento de diversos componentes en los clústeres de macrodatos:
 
@@ -71,7 +71,7 @@ De forma similar a otras personalizaciones, puede especificar opciones de config
     }
 ```
 
-La implementación del clúster de macrodatos usa el almacenamiento persistente para almacenar datos, metadatos y registros para distintos componentes. Puede personalizar el tamaño de las reclamaciones de volúmenes persistentes creadas como parte de la implementación. El procedimiento recomendado es usar clases de almacenamiento con una *directiva de reclamación de * [Conservar](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
+La implementación del clúster de macrodatos usa el almacenamiento persistente para almacenar datos, metadatos y registros para distintos componentes. Puede personalizar el tamaño de las reclamaciones de volúmenes persistentes creadas como parte de la implementación. El procedimiento recomendado es usar clases de almacenamiento con una *directiva de reclamación de* [Conservar](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
 
 > [!WARNING]
 > La ejecución sin almacenamiento persistente puede funcionar en un entorno de prueba, pero daría como resultado un clúster no funcional. Al reiniciarse el pod, los metadatos del clúster o los datos de usuario se pierden de forma permanente. No se recomienda ejecutar con esta configuración.

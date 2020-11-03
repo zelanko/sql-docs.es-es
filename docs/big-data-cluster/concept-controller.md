@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 97df8916b713feae56a7cd5344e7fbdc93038317
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 70ca43a017edaa760a5ffa999f40d99516f232bb
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358523"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914354"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>¿Qué es el controlador de un clúster de macrodatos de SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-El controlador hospeda la lógica básica para implementar y administrar un clúster de macrodatos. Se encarga de todas las interacciones con Kubernetes, las instancias de SQL Server que forman parte del clúster y otros componentes como HDFS y Spark.
+El controlador hospeda la lógica básica para implementar y administrar un clúster de macrodatos de SQL Server. Se encarga de todas las interacciones con Kubernetes, las instancias de SQL Server que forman parte del clúster y otros componentes como HDFS y Spark.
 
 El servicio del controlador proporciona la siguiente funcionalidad básica:
 

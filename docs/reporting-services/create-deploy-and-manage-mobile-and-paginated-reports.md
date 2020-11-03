@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e75947d7ea4b47c7c2fef3e37cfd6b5b73b48533
-ms.sourcegitcommit: 4231364ab5bc15b74952ca5d20508b7ba9ca347e
+ms.openlocfilehash: db705ffc6bd3f7f961ea569883b77934e9689f9f
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86291152"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679207"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>¿Qué es SQL Server Reporting Services (SSRS)?
 
@@ -54,7 +54,7 @@ Estos orígenes le mantendrán al día sobre las nuevas características de SQL 
 
 ## <a name="paginated-reports"></a>Informes paginados
 
-![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
+![Imagen de informes paginados en una pantalla de escritorio y en un dispositivo de tableta.](../reporting-services/media/ssrs-paginated-reports.png)
 
 Reporting Services está asociado con los informes paginados “tradicionales”, que son ideales para documentos de diseño fijo optimizados para la impresión, como los archivos PDF y Word.
 
@@ -67,7 +67,7 @@ Esta carga de trabajo esencial de BI sigue existiendo en la actualidad, por lo q
 
 ## <a name="mobile-reports"></a>Informes móviles
 
-![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
+![Imagen de informes móviles en una pantalla de escritorio y en un dispositivo de tableta.](../reporting-services/media/ssrs-mobile-reports.png)
 
 La informática móvil ha cambiado los dispositivos con los que tenemos que trabajar, por lo que, hoy en día, las personas tienen unas necesidades diferentes a la hora de crear informes. La experiencia de los informes de diseño fijo no funciona bien cuando se introducen tabletas y teléfonos. Algo diseñado para una pantalla ancha de PC no es una experiencia óptima en una pequeña pantalla de teléfono, no porque sea más pequeña, sino porque puede tener una orientación vertical u horizontal.
 
@@ -79,7 +79,7 @@ A medida que cree visualizaciones, el Publicador de informes móviles genera dat
 
 ## <a name="web-portal"></a>Portal web
 
-![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
+![Imagen del portal web en un equipo portátil.](../reporting-services/media/ssrs-web-portal.png)
 
 Para los usuarios finales de Reporting Services en modo nativo, la entrada principal es un portal web moderno que se puede ver en la mayoría de los exploradores. En el nuevo portal puede acceder a todos los informes paginados y móviles y KPI de Reporting Services. Los KPI pueden hacer que en el explorador aparezcan métricas empresariales clave para que pueda echarles un vistazo sin tener que abrir ningún informe.
 

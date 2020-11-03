@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5fc718243db6a816fb2a0593131362007facce89
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4013c119093adda0fbb721c376eef502a7b05a38
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462359"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907253"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Informes móviles de SQL Server: tutorial completo
 Recorra la creación de informes móviles para cualquier tamaño de pantalla con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] en el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y véalos en las aplicaciones móviles de Power BI.
@@ -78,10 +78,10 @@ Use una herramienta de cliente de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnov
    
 4. En el campo de nombre, escriba el nombre del servidor donde guardó el origen de datos, con el formato siguiente:   
    
-   Nombre: https://*localhost*/ReportServer  
+   Nombre: https:// *localhost* /ReportServer  
    Elementos de tipo: orígenes de datos (*.rsds)  
    
-5. Haga clic en **Abrir**y desplácese hasta el origen de datos que creó en ese servidor.  
+5. Haga clic en **Abrir** y desplácese hasta el origen de datos que creó en ese servidor.  
    
 6. Seleccione el origen de datos y haga clic nuevamente en **Abrir** .    
   
@@ -115,7 +115,7 @@ Puede crear KPI directamente en el portal web de [!INCLUDE[PRODUCT_NAME](../../i
      
 5. Elija la agregación de su preferencia. Los KPI solo muestran un número, por lo que se agregará el campo para que se muestre ese número.
 
-   ![reporting-services-kpi-pick-aggregation](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
+   ![Captura de pantalla de la sección Elegir un campo de AWSalesYTD que muestra la sección Agregación promedio.](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
 
 6. Haga clic en **OK**.
 
@@ -183,12 +183,12 @@ Cuando se abra [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)
   
 4. Seleccione el servidor y, luego, el conjunto de datos que creó.  
    
-3. Nuevamente en la pestaña **Datos** , en el panel **Propiedades de datos** , cambie **El tamaño representa**, **El color representa**y las otras propiedades a los campos de sus propios datos. 
+3. Nuevamente en la pestaña **Datos** , en el panel **Propiedades de datos** , cambie **El tamaño representa** , **El color representa** y las otras propiedades a los campos de sus propios datos. 
    
-   *  Los campos**El tamaño representa**, **El color representa**y **Valor central personalizado** deben tener valores numéricos. 
+   *  Los campos **El tamaño representa** , **El color representa** y **Valor central personalizado** deben tener valores numéricos. 
    *  **Agrupar por** es una categoría; por lo tanto, es un campo de texto.
    
-   ![ssrs-mobile-report-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
+   ![Captura de pantalla de la sección Propiedades de datos.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
    
 6. Seleccione **Vista previa** para ver el gráfico de rectángulos actualizados con los datos.  
 
@@ -200,19 +200,19 @@ Agreguemos un medidor para ver una comparación de las ventas anuales hasta la f
 
 2. Nuevamente, empieza por datos simulados. 
 
-   Tenga en cuenta que en **Propiedades de los elementos visuales**, de manera predeterminada **los valores altos son mejores**y la **Etiqueta de tipo delta** es un **porcentaje del destino**. Tiene **detenciones de rango** predeterminadas que puede cambiar, pero no lo haremos por el momento.
+   Tenga en cuenta que en **Propiedades de los elementos visuales** , de manera predeterminada **los valores altos son mejores** y la **Etiqueta de tipo delta** es un **porcentaje del destino**. Tiene **detenciones de rango** predeterminadas que puede cambiar, pero no lo haremos por el momento.
 
-   ![ssrs-mobile-report-donut-visual-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
+   ![Captura de pantalla de la sección Establecer rangos de las propiedades visuales de anillo del informe móvil.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
 3. En la pestaña **Datos** , seleccione la tabla con los datos y elija el campo **Valor principal** , además del campo con el que desea compararlo en **Valor de comparación**.
 
 4. Puede elegir agregaciones distintas para poner un número en **Valor principal** y otro en **Valor de comparación**. De manera predeterminada, es una suma.
 
-   ![ssrs-mobile-report-donut-sum](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
+   ![Captura de pantalla de las Opciones o Valor de comparación.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
 
 5. Seleccione **Vista previa** para saber cómo se verá. 
 
-   ![ssrs-mobile-report-donut-preview](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
+   ![Captura de pantalla de la vista previa de anillo del informe móvil.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
 
 ## <a name="add-a-selection-list-as-a-filter"></a>Agregar una lista de selección como filtro
 
@@ -220,11 +220,11 @@ Las listas de selección funcionan como segmentaciones en Power BI y Excel. Es p
 
 1. En la pestaña **Diseño** , arrastre una lista de selección a la derecha del gráfico de rectángulos y, luego, arrastre la esquina inferior derecha para que tenga dos cuadrados de ancho y la misma altura del lienzo, es decir, cinco cuadrados. 
 
-   ![ssrs-mobile-report-selection-list](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
+   ![Captura de pantalla de la lista de selección del informe móvil.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
 
-2. En la pestaña **Datos** , **Propiedades de datos**, establezca **Claves** y **Etiquetas** en el campo de los datos según el cual desea establecer el filtro.
+2. En la pestaña **Datos** , **Propiedades de datos** , establezca **Claves** y **Etiquetas** en el campo de los datos según el cual desea establecer el filtro.
 
-   ![ssrs-mobile-report-selection-list-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
+   ![Captura de pantalla de la sección de propiedades de datos en la lista de selección del informe móvil.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
    
 ## <a name="create-a-mobile-report-for-phones"></a>Crear un informe móvil para teléfonos  
   
@@ -232,7 +232,7 @@ Ahora que creó objetos visuales en el diseño maestro, puede crear un informe m
   
 1. En la esquina superior derecha, haga clic en el icono del lienzo > **Teléfono**.  
   
-2. En la pestaña Diseño, en **Instancias de control**, verá los dos gráficos que creó.   
+2. En la pestaña Diseño, en **Instancias de control** , verá los dos gráficos que creó.   
   
 3. Arrastre el gráfico de rectángulos al lienzo de teléfono para que tenga cuatro columnas de ancho y tres filas de alto.  
   

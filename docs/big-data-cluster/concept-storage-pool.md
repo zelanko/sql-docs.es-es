@@ -9,22 +9,22 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d810220e0bd1148d4f572638c3ac67d4c3b44c0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: e8bc204c3f93d4a4ebbd26876bc8c3e23bad8047
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257248"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914299"
 ---
-# <a name="what-is-the-storage-pool-big-data-clusters-2019"></a>¿Qué es el bloque de almacenamiento ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?
+# <a name="what-is-the-storage-pool-in-a-sql-server-big-data-cluster"></a>¿Qué es el grupo de almacenamiento en un clúster de macrodatos de SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-En este artículo se describe el papel del *bloque de almacenamiento de SQL Server* en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (BDC). En las secciones siguientes se describen la arquitectura y la funcionalidad de un bloque de almacenamiento de SQL.
+En este artículo se describe el papel del *grupo de almacenamiento de SQL Server* en un clúster de macrodatos de SQL Server. En las secciones siguientes se describen la arquitectura y la funcionalidad de un bloque de almacenamiento.
 
 ## <a name="storage-pool-architecture"></a>Arquitectura del bloque de almacenamiento
 
-El bloque de almacenamiento es el clúster de HDFS (Hadoop) local en el ecosistema de BDC de SQL Server. Proporciona almacenamiento persistente para datos no estructurados y semiestructurados. Los archivos de datos, como texto delimitado o Parquet, se pueden almacenar en el bloque de almacenamiento. Para conservar el almacenamiento, cada pod del grupo tiene un volumen persistente asociado. Los archivos del grupo de almacenamiento son accesibles a través de [PolyBase](../relational-databases/polybase/polybase-guide.md) mediante SQL Server o directamente con una puerta de enlace de Apache Knox.
+El bloque de almacenamiento es el clúster de HDFS (Hadoop) local en un clúster de macrodatos de SQL Server. Proporciona almacenamiento persistente para datos no estructurados y semiestructurados. Los archivos de datos, como texto delimitado o Parquet, se pueden almacenar en el bloque de almacenamiento. Para conservar el almacenamiento, cada pod del grupo tiene un volumen persistente asociado. Los archivos del grupo de almacenamiento son accesibles a través de [PolyBase](../relational-databases/polybase/polybase-guide.md) mediante SQL Server o directamente con una puerta de enlace de Apache Knox.
 
 Una configuración de HDFS clásica se compone de un conjunto de equipos de hardware estándar con almacenamiento asociado. Los datos se distribuyen en bloques por los nodos para la tolerancia a errores y aprovechan el procesamiento paralelo. Uno de los nodos del clúster funciona como nodo de nombre y contiene la información de metadatos sobre los archivos ubicados en los nodos de datos.
 

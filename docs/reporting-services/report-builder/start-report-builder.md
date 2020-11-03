@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bdb67ef174ec849233826b65a2d90f08e8e4eb7d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00a954a23cf9b17a58c3272a03222019400ae891
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290763"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907043"
 ---
 # <a name="start-report-builder"></a>Iniciar el Generador de informes
 
@@ -30,7 +30,7 @@ ms.locfileid: "80290763"
   
  La primera vez que inicie [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] desde el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo integrado de SharePoint, se le pedirá que lo descargue del Centro de descarga de Microsoft. 
  
-![generador-informes-obtener-generador-informes](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
+![Captura de pantalla del mensaje "Estamos abriendo el Generador de informes...".](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
  El usuario o un administrador también pueden [instalar el Generador de informes en el equipo desde el Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkID=219138). Vea "Instalación con Systems Manager Server" en [Instalar el Generador de informes](../../reporting-services/install-windows/install-report-builder.md) para obtener más detalles.
  
@@ -40,7 +40,7 @@ ms.locfileid: "80290763"
   
 ## <a name="to-start-ssrbnoversion-from-the-ssrsnoversion-web-portal"></a>Para iniciar [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] desde el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-1.  En el explorador web, escriba la dirección URL del servidor de informes en la barra de direcciones. De forma predeterminada, la dirección URL es https://\<*nombreDeServidor*>/reports.  
+1.  En el explorador web, escriba la dirección URL del servidor de informes en la barra de direcciones. De forma predeterminada, la dirección URL es https://\<*servername*>/reports.  
   
 2.  En la barra superior del portal web, seleccione **Nuevo** > **Informe paginado**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "80290763"
   
      Se abre [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] y puede crear un informe paginado o abrir un informe en el servidor de informes.  
   
-     **Nota** Si en el menú **Nuevo documento** no aparecen las opciones **Informe del Generador de informes**, **Modelo del Generador de informes**u **Origen de datos de informe**, será necesario agregar sus tipos de contenido a la biblioteca de SharePoint. Para obtener más información, vea [Add Reporting Services Content Types to a SharePoint Library (Agregar los tipos de contenido de Reporting Services a una biblioteca de SharePoint)](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+     **Nota** Si en el menú **Nuevo documento** no aparecen las opciones **Informe del Generador de informes** , **Modelo del Generador de informes** u **Origen de datos de informe** , será necesario agregar sus tipos de contenido a la biblioteca de SharePoint. Para obtener más información, vea [Add Reporting Services Content Types to a SharePoint Library (Agregar los tipos de contenido de Reporting Services a una biblioteca de SharePoint)](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
 
 ## <a name="next-steps"></a>Pasos siguientes
 

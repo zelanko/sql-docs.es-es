@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99e176988287a457738a05a4a7ab71653b281070
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95b153be1b4dc5a45effeb678ca0ccef83f06e6e
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448033"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907343"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>Creación de un informe móvil en pestañas con obtención de detalles
 Sepa cómo crear un informe móvil de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] que se vea y funcione como un informe en pestañas con obtención de detalles y parámetros.
 
 En este informe, por ejemplo, los medidores en la parte superior actúan como pestañas. Cuando haga clic en el medidor Transporte, los datos del resto del gráfico se filtran según los datos de transporte.
 
-![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/tabbed-mobile-report-web-viewer-transportation-complete.png)
+![Captura de pantalla que muestra un informe Finanzas - Transporte con el medidor de Transporte seleccionado.](../../reporting-services/mobile-reports/media/tabbed-mobile-report-web-viewer-transportation-complete.png)
 
 En segundo plano, realmente esto es un conjunto de cinco informes independientes, cada uno con un parámetro diferente que filtra el informe para que coincida con el medidor seleccionado en la parte superior del informe. Primero cree los cinco informes y, después, en cada uno de ellos, convierta los otros cuatro medidores en obtenciones de detalles.
 
@@ -37,11 +37,11 @@ Estos son los pasos para este ejemplo.
     * Storage
     * Gastos varios
 
-   ![01-Sales-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
+   ![Captura de pantalla de un informe denominado Ventas con cinco medidores.](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
     
 2. Establezca **Resaltar** en **Activado** para el medidor Ventas, de modo que contraste con el resto del informe: en este caso, blanco sobre negro.
 
-    ![01a-Sales-Accent-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
+    ![Captura de pantalla del medidor Ventas con una flecha roja que señala el control deslizante Resaltar en la posición On.](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
     
 3. Guárdelo en un servidor de informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
 
@@ -62,19 +62,19 @@ En esta sección, se establece cada medidor (excepto el medidor Sales) como obte
 
 1. En el informe Ventas, seleccione el medidor Transporte.
 
-    ![02-Sales-Create-DrillThrough-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
+    ![Captura de pantalla del informe Ventas con una flecha roja desde el medidor Transporte hasta la opción Obtener detalles del destino.](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
 
-2. Con la pestaña **Diseño** seleccionada, en el panel **Propiedades visuales**, seleccione **Obtener detalles del destino**.
+2. Con la pestaña **Diseño** seleccionada, en el panel **Propiedades visuales** , seleccione **Obtener detalles del destino**.
 
 3. Seleccione **Informe móvil**.
 
 4. Vaya al informe de destino de la obtención de detalles (en este caso, "Finanzas - Transporte") y selecciónelo.
 
-    ![03-Sales-Select-Dashboard-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
+    ![Captura de pantalla del cuadro de diálogo Abrir desde servidor con la opción Finanzas - Transporte seleccionada.](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
 
-5. En **Configurar informe de destino**, seleccione el parámetro para filtrar el informe y luego **Aplicar**.
+5. En **Configurar informe de destino** , seleccione el parámetro para filtrar el informe y luego **Aplicar**.
 
-   ![04-Sales-Apply-Parameters-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
+   ![Captura de pantalla de la sección Configurar informe de destino que muestra los parámetros del informe Finanzas - Transporte.](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
    
 6. Repita estos pasos para cada uno de los otros medidores del informe Ventas. 
 
@@ -92,11 +92,11 @@ En esta sección, se establece cada medidor (excepto el medidor Sales) como obte
 
 2. Tenga en cuenta que cada uno de los medidores tiene un icono de obtención de detalles en la esquina superior derecha.
 
-    ![Web-Viewer-drillthrough-icon-mobile-report-builder](../../reporting-services/mobile-reports/media/web-viewer-drillthrough-icon-mobile-report-builder.png)
+    ![Captura de pantalla del medidor Combustible.](../../reporting-services/mobile-reports/media/web-viewer-drillthrough-icon-mobile-report-builder.png)
 
 3. Seleccione uno de los medidores para ir al informe filtrado por los datos de ese medidor.
 
-   ![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
+   ![Captura de pantalla que muestra un informe Finanzas - Transporte con una flecha roja que señala el medidor Transporte en un cuadro rojo.](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
 
 ### <a name="see-also"></a>Consulte también
     

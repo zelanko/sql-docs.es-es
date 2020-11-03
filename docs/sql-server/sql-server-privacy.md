@@ -11,12 +11,12 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: e9e2619cf1bfc8994481c6f310977c77a7292911
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: f8356b5c07e6d85d9359276740fdd30adc200493
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603409"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793812"
 ---
 # <a name="sql-server-privacy-supplement"></a>Complemento de privacidad de SQL Server
 
@@ -54,11 +54,11 @@ Información relacionada con las credenciales que se usa para proteger inicios d
 |Estas credenciales nunca salen del equipo del usuario con los comentarios del usuario, a menos que el cliente las inserte manualmente. |Limitado al uso interno de Microsoft sin acceso de terceros. |Comentarios del usuario: máximo 1 año.|
 |&nbsp;|&nbsp;|&nbsp;|
 
-## <a name="customer-content"></a>Contenido de cliente
+## <a name="customer-data"></a>Datos del cliente
 
-El contenido de cliente se define como los datos almacenados en tablas de usuario, directa o indirectamente. Estos datos incluyen estadísticas o literales de usuario en los textos de consulta que pueden almacenarse en tablas de usuario.
+Los datos del cliente se definen como los datos almacenados en tablas de usuario, directa o indirectamente. Estos datos incluyen estadísticas o literales de usuario en los textos de consulta que pueden almacenarse en tablas de usuario.
 
-### <a name="examples-of-customer-content"></a>Ejemplos de contenido de cliente
+### <a name="examples-of-customer-data"></a>Ejemplos de datos del cliente
 
 - Valores de datos almacenados en las filas de cualquier tabla de usuario.
 - Objetos de estadísticas que contienen copias de valores en las filas de cualquier tabla de usuario.
@@ -69,16 +69,16 @@ El contenido de cliente se define como los datos almacenados en tablas de usuari
 |Escenario  |Restricciones de acceso               |Requisitos de retención |
 |---------|---------|---------|
 |Estos datos no salen del equipo del usuario con los datos de uso y diagnóstico. |- |- |
-|Los volcados de memoria pueden incluir contenido de cliente y pueden emitirse para Microsoft. |- |Volcados de memoria: máximo 30 días. |
-|Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: máximo 1 año. |
+|Los volcados de memoria pueden incluir datos del cliente y pueden emitirse para Microsoft. |- |Volcados de memoria: máximo 30 días. |
+|Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan datos del cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: máximo 1 año. |
 
-## <a name="end-user-identifiable-information-euii"></a>Información de identificación del usuario final (EUII)
+## <a name="personal-data"></a>Datos personales
 
 Datos recibidos de un usuario o generados a partir de su uso del producto.
 - Se pueden vincular a un usuario individual.
-- No tienen contenido.
+- No incluyen datos del cliente.
 
-### <a name="examples-of-end-user-identifiable-information"></a>Ejemplos de información de identificación del usuario final
+### <a name="examples-of-personal-data"></a>Ejemplos de datos personales
 
 - Identificación de interfaces. La dirección IP completa
 - Nombre del equipo
@@ -92,9 +92,9 @@ Datos recibidos de un usuario o generados a partir de su uso del producto.
 |Escenario  |Restricciones de acceso               |Requisitos de retención|
 |---------|---------|---------|
 |Estos datos no salen del equipo del usuario con los datos de uso y diagnóstico. |- |- |
-|Los volcados de memoria pueden incluir EUII y pueden emitirse para Microsoft. |- |Volcados de memoria: máximo 30 días |
+|Los volcados de memoria pueden incluir datos personales y emitirse para Microsoft. |- |Volcados de memoria: máximo 30 días |
 |Puede emitirse para Microsoft un identificador de cliente con el fin de ofrecer nuevas características híbridas y en la nube a las que se han suscrito los usuarios. |- |Actualmente no existe ninguna característica híbrida o en la nube de este tipo.|
-|Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente.|Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: máximo 1 año |
+|Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan datos del cliente.|Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: máximo 1 año |
 
 ## <a name="internet-based-services-data"></a>Datos de servicios basados en Internet
 
@@ -114,77 +114,68 @@ Datos necesarios para ofrecer servicios basados en Internet, según los término
 |Escenario  |Restricciones de acceso               |Requisitos de retención|
 |---------|---------|---------| 
 |Microsoft podría usarlos para mejorar las características y corregir errores de las características actuales. |Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original.  Por ejemplo, a través de paneles. |Mínimo 90 días, máximo 3 años. |
-|Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. |Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |
+|Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan datos del cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. |Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan datos del cliente. |
 |Los elementos de mapa de Power View y SQL Reporting Services podrían enviar datos para el uso de Mapas de Bing. |Limitado a datos de la sesión. |- |
 
-## <a name="organization-identifiable-information-oii"></a>Información de identificación de la organización (OII)
+## <a name="non-personal-data"></a>Datos no personales
 
-Datos recibidos de una organización o generados a partir de su uso del producto.
--   Vinculable a una organización.
--   No tienen contenido.
+1. Datos recibidos de una organización o generados a partir de su uso del producto. Se pueden vincular a una organización y no contienen datos de clientes.
 
-### <a name="examples-of-organization-identifiable-information"></a>Ejemplos de información de identificación de la organización
--   Nombre de la organización (ejemplo: Microsoft Corp.)
+   - Ejemplo
+     - Nombre de la organización (ejemplo: Microsoft Corp.)
 
-### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
-|Escenario  |Restricciones de acceso  |Requisitos de retención|
-|---------|---------|---------|
-| Microsoft puede recopilar datos de uso genérico de instancias de SQL Server que se ejecutan en Azure Virtual Machines con el fin de ofrecer a los clientes ventajas opcionales en Azure para usar SQL Server en Azure Virtual Machines. | Microsoft puede exponer los datos a los clientes, por ejemplo, a través de Azure Portal, para que aquellos clientes que ejecutan SQL Server en Azure Virtual Machines puedan acceder a ventajas específicas por ejecutar SQL Server en Azure. </br></br>Microsoft no usará estos datos a efectos de auditorías de licencias sin consentimiento previo del cliente. | Mínimo 90 días, máximo 3 años. |
+   - Escenarios de uso permitidos
 
-## <a name="system-metadata"></a>Metadatos del sistema
+     |Escenario  |Restricciones de acceso               |Requisitos de retención|
+     |---------|---------|---------|
+     | Microsoft puede recopilar datos de uso genérico de instancias de SQL Server que se ejecutan en Azure Virtual Machines con el fin de ofrecer a los clientes ventajas opcionales en Azure para usar SQL Server en Azure Virtual Machines. | Microsoft puede exponer los datos a los clientes, por ejemplo, a través de Azure Portal, para que aquellos clientes que ejecutan SQL Server en Azure Virtual Machines puedan acceder a ventajas específicas por ejecutar SQL Server en Azure. </br></br>Microsoft no usará estos datos a efectos de auditorías de licencias sin consentimiento previo del cliente. | Mínimo 90 días, máximo 3 años. |
 
-Datos generados durante el proceso de ejecución del servidor.  Los datos no incluyen contenido de cliente.
+2. Datos que describen o se usan para configurar servidores, bases de datos, tablas y otros recursos creados o proporcionados por los clientes. Incluyen la tabla de la base de datos y los nombres de columna, pero no el contenido de las filas de la base de datos u otros datos del cliente. Los clientes no deben incluir datos personales en esos campos ni crear aplicaciones diseñadas para almacenar datos personales en dichos campos. En el caso de los escenarios de uso que se indican a continuación, solo se usa el formato de hash para determinar los patrones de uso con el fin de mejorar el producto.
 
-### <a name="examples-of-system-metadata"></a>Ejemplos de metadatos del sistema
+   - Ejemplo
+      - Nombres de bases de datos de SQL Server
+      - Nombres de tablas y columnas
+      - Nombres de estadísticas
 
-La información siguiente se considera metadatos del sistema cuando no incluye contenido de cliente, metadatos del objeto, datos de control de acceso de cliente o EUII:
+    - Escenarios de uso permitidos
 
-- GUID de base de datos
-- Hash de nombre de equipo
-- Hash de nombre de instancia
-- Nombre de la aplicación
-- Datos de uso y comportamiento
-- Datos del Programa para la mejora de la experiencia del usuario de SQL (SQLCEIP)
-- Datos de configuración del servidor, por ejemplo, las opciones de sp_configure
-- Datos de configuración de características
-- Nombres de eventos y códigos de error
-- Configuración de hardware e identificación, por ejemplo, Fabricante OEM
+      > [!NOTE]
+      > Se aplica el algoritmo hash a todos los valores de metadatos antes de la colección.
+      >
 
-Microsoft examina los valores de nombre de aplicación establecidos por otros programas que usan SQL Server (por ejemplo, SharePoint o paquetes de aplicaciones de terceros), e incluye esta información en los metadatos del sistema enviados a Microsoft cuando los datos de uso están habilitados. Los clientes no deben incluir datos personales, como información de identificación del usuario final, en campos de metadatos de sistemas ni crear aplicaciones diseñadas para almacenar datos personales en dichos campos. 
+      |Escenario  |Restricciones de acceso               |Requisitos de retención|
+      |---------|---------|---------|
+      |Microsoft podría usarlos para mejorar las características y corregir errores de las características actuales. |Limitado al uso interno de Microsoft sin acceso de terceros. |Mínimo 90 días, máximo 3 años.|
 
-### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
+3. Datos que se generan durante el proceso de ejecución del servidor. No contiene datos de clientes, datos no personales, como se indica en el punto 1. o 2. (arriba), datos de control de acceso de clientes ni datos personales.
 
-|Escenario  |Restricciones de acceso  |Requisitos de retención|
-|---------|---------|---------|
-|Microsoft podría usarlos para mejorar las características y corregir errores de las características actuales.|Limitado al uso interno de Microsoft sin acceso de terceros. |Mínimo 90 días, máximo 3 años. |
-|Pueden usarse para realizar sugerencias para el cliente.  Por ejemplo, "En función de su uso del producto, considere la posibilidad de usar la característica *X*, ya que obtendría mejores resultados". |Microsoft puede exponer los datos al cliente original, por ejemplo, a través de paneles. |Registros de seguridad de datos de cliente: mínimo 3 años, máximo 6 años. |
-|Microsoft podría usarlos para la planeación de productos en el futuro. |Microsoft puede compartir esta información con otros proveedores de hardware y software para mejorar el funcionamiento de sus productos con software de Microsoft. |Mínimo 90 días, máximo 3 años.|
-|Microsoft podría usarlos para proporcionar servicios en la nube basados en los datos de uso y diagnóstico emitidos. Por ejemplo, a través de un panel de cliente en el que se muestra el uso de características en todas las instalaciones de SQL Server de una organización. |Microsoft puede exponer los datos al cliente original, por ejemplo, a través de paneles. |Mínimo 90 días, máximo 3 años. |
-|Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: máximo 1 año. |
-|Puede usar el nombre de la base de datos y el de la aplicación para asignar categorías conocidas a las bases de datos y aplicaciones, por ejemplo, para las que pueden estar ejecutando software proporcionado por Microsoft u otras empresas.|Limitado al uso interno de Microsoft sin acceso de terceros.|Mínimo 90 días, máximo 3 años. |
+   - Ejemplo
+     - GUID de base de datos
+     - Hash de nombre de equipo
+     - Hash de nombre de instancia
+     - Nombre de la aplicación
+     - Datos de uso y comportamiento
+     - Datos del Programa para la mejora de la experiencia del usuario de SQL (SQLCEIP)
+     - Datos de configuración del servidor, por ejemplo, las opciones de sp_configure
+     - Datos de configuración de características
+     - Nombres de eventos y códigos de error
+     - Configuración de hardware e identificación, por ejemplo, Fabricante OEM
 
-## <a name="object-metadata"></a>Metadatos de objetos
+   Microsoft examina los valores de nombre de aplicación establecidos por otros programas que usan SQL Server (por ejemplo, SharePoint o paquetes de aplicaciones de terceros), e incluye esta información en los campos de metadatos enviados a Microsoft cuando los datos de uso están habilitados. Los clientes no deben incluir datos personales en esos campos de metadatos ni crear aplicaciones diseñadas para almacenar datos personales en dichos campos.
 
-Datos que describen servidores, bases de datos, tablas y otros recursos o que se usan para configurarlos.  Los metadatos de objetos incluyen la tabla de la base de datos y los nombres de columna, pero no el contenido de las filas de la base de datos u otro contenido de cliente. Los clientes no deben incluir datos personales, como información de identificación del usuario final, en campos de metadatos de objetos ni crear aplicaciones diseñadas para almacenar datos personales en dichos campos. En el caso de los escenarios de uso que se indican a continuación, solo se usa el formato de hash para determinar los patrones de uso con el fin de mejorar el producto. 
+   - Escenarios de uso permitidos
 
-### <a name="examples-of-object-metadata"></a>Ejemplos de metadatos de objetos
+     |Escenario  |Restricciones de acceso               |Requisitos de retención|
+     |---------|---------|---------|
+     |Microsoft podría usarlos para mejorar las características y corregir errores de las características actuales.|Limitado al uso interno de Microsoft sin acceso de terceros. |Mínimo 90 días, máximo 3 años. |
+     |Pueden usarse para realizar sugerencias para el cliente.  Por ejemplo, "En función de su uso del producto, considere la posibilidad de usar la característica *X* , ya que obtendría mejores resultados". |Microsoft puede exponer los datos al cliente original, por ejemplo, a través de paneles. |Registros de seguridad de datos de cliente: mínimo 3 años, máximo 6 años. |
+     |Microsoft podría usarlos para la planeación de productos en el futuro. |Microsoft puede compartir esta información con otros proveedores de hardware y software para mejorar el funcionamiento de sus productos con software de Microsoft. |Mínimo 90 días, máximo 3 años.|
+     |Microsoft podría usarlos para proporcionar servicios en la nube basados en los datos de uso y diagnóstico emitidos. Por ejemplo, a través de un panel de cliente en el que se muestra el uso de características en todas las instalaciones de SQL Server de una organización. |Microsoft puede exponer los datos al cliente original, por ejemplo, a través de paneles. |Mínimo 90 días, máximo 3 años. |
+     |Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan datos del cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: máximo 1 año. |
+     |Puede usar el nombre de la base de datos y el de la aplicación para asignar categorías conocidas a las bases de datos y aplicaciones, por ejemplo, para las que pueden estar ejecutando software proporcionado por Microsoft u otras empresas.|Limitado al uso interno de Microsoft sin acceso de terceros.|Mínimo 90 días, máximo 3 años. |
 
-- Nombres de bases de datos de SQL Server
-- Nombres de tablas y columnas
-- Nombres de estadísticas
+## <a name="system-generated-logs-controls"></a>Controles de registros generados por el sistema
 
-### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
-
-> [!NOTE]
-> Se aplica el algoritmo hash a todos los valores de metadatos del objeto antes de la colección.
->
-
-|Escenario  |Restricciones de acceso               |Requisitos de retención|
-|---------|---------|---------|
-|Microsoft podría usarlos para mejorar las características y corregir errores de las características actuales. |Limitado al uso interno de Microsoft sin acceso de terceros. |Mínimo 90 días, máximo 3 años.|
-
-## <a name="telemetry-controls"></a>Controles de telemetría
-
-Puede consultar las instrucciones sobre cómo activar o desactivar la telemetría en un producto en esta página: https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft.
+Se puede hacer referencia a las instrucciones sobre cómo se pueden activar o desactivar los registros generados por el sistema en el producto aquí: [Configuración de la recopilación de datos de uso y diagnóstico para SQL Server (CEIP)](usage-and-diagnostic-data-configuration-for-sql-server.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

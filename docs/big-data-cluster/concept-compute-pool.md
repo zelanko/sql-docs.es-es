@@ -9,18 +9,18 @@ ms.date: 10/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9c3374b0820233e20ee73b85947ed2b8a61847c0
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: b07b1480412dc8dd67535f58fcc4d223a9e91baa
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866808"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914326"
 ---
-# <a name="what-are-compute-pools-sql-server-big-data-clusters"></a>¿Qué son los grupos de proceso en clústeres de macrodatos de SQL Server?
+# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>¿Qué son los grupos de proceso en un clúster de macrodatos de SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-En este artículo se describe la función de los *grupos de proceso de SQL Server* en clústeres de macrodatos de SQL Server. Los grupos de proceso proporcionan recursos computacionales de escalado horizontal para un clúster de macrodatos. Se usan para descargar el trabajo de cálculo o los conjuntos de resultados intermedios de la instancia maestra de SQL Server. En las secciones siguientes se describe la arquitectura, las funciones y los escenarios de uso de un grupo de proceso.
+En este artículo se describe el rol de los *grupos de proceso de SQL Server* en un clúster de macrodatos de SQL Server. Los grupos de proceso proporcionan recursos computacionales de escalado horizontal para un clúster de macrodatos de SQL Server. Se usan para descargar el trabajo de cálculo o los conjuntos de resultados intermedios de la instancia maestra de SQL Server. En las secciones siguientes se describe la arquitectura, las funciones y los escenarios de uso de un grupo de proceso.
 
 También puede ver este vídeo de 5 minutos para obtener una introducción a los grupos de proceso:
 
@@ -34,13 +34,13 @@ Un grupo de proceso se compone de uno o varios pods de proceso que se ejecutan e
 
 ## <a name="scale-out-groups"></a>Grupos de escalado horizontal
 
-Un grupo de proceso puede actuar como grupo de escalado horizontal de PolyBase para las consultas distribuidas en diferentes orígenes de datos externos, como SQL Server, Oracle, MongoDB, Teradata y HDFS. Mediante el uso de pods de proceso en Kubernetes, los clústeres de macrodatos pueden automatizar la creación y configuración de los pods de proceso para los grupos de escalado horizontal de PolyBase.
+Un grupo de proceso puede actuar como grupo de escalado horizontal de PolyBase para las consultas distribuidas en diferentes orígenes de datos externos, como SQL Server, Oracle, MongoDB, Teradata y HDFS. Mediante el uso de pods de proceso en Kubernetes, un clúster de macrodatos de SQL Server puede automatizar la creación y configuración de los pods de proceso para los grupos de escalado horizontal de PolyBase.
 
 ## <a name="compute-pool-scenarios"></a>Escenarios de grupos de proceso
 
 Estos son algunos escenarios en los que se usan grupos de proceso:
 
-- Cuando las consultas enviadas a la instancia maestra usan una o más tablas ubicadas en el [bloque de almacenamiento](concept-storage-pool.md).
+- Cuando las consultas enviadas a la instancia maestra usan una o más tablas ubicadas en el [grupo de almacenamiento](concept-storage-pool.md).
 
 - Cuando las consultas enviadas a la instancia maestra usan una o más tablas con distribución round robin ubicada en el [grupo de datos](concept-data-pool.md).
 

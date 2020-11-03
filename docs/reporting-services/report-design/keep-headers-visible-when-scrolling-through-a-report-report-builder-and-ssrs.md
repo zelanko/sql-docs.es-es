@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d846d6ce9a206dc632dec3033707b645bd7c1b55
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: ce0edeb4d0d78f43da0c510b09e74e7972f5d301
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255508"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907113"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Mantener visibles los encabezados al desplazarse a través de un informe (Generador de informes y SSRS)
   Para evitar que las etiquetas de fila y de columna se desplacen fuera de la vista después de representar un informe, puede inmovilizar los encabezados de fila o de columna.  
@@ -28,11 +28,11 @@ ms.locfileid: "84255508"
   
  En la ilustración siguiente se muestra una tabla.  
   
- ![Table](../../reporting-services/report-design/media/table.png "Tabla")  
+ ![Captura de pantalla de una tabla.](../../reporting-services/report-design/media/table.png "Tabla")  
   
  En la ilustración siguiente se muestra una matriz.  
   
- ![Matriz](../../reporting-services/report-design/media/matrix.png "Matrix")  
+ ![Captura de pantalla de una matriz.](../../reporting-services/report-design/media/matrix.png "Matrix")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -41,7 +41,7 @@ ms.locfileid: "84255508"
   
 1.  Haga clic con el botón derecho en la fila o columna o en el controlador de tabla de una región de datos Tablix y, después, haga clic en **Propiedades de Tablix**.  
   
-2.  En la pestaña **General** , bajo **Encabezados de fila** o **Encabezados de columna**, seleccione **El encabezado debe permanecer visible durante el desplazamiento**.  
+2.  En la pestaña **General** , bajo **Encabezados de fila** o **Encabezados de columna** , seleccione **El encabezado debe permanecer visible durante el desplazamiento**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

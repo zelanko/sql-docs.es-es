@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: abacde42f813a00ecc2f48edd8fc71d2b3a83020
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: 6068c871bd96908e501c552e0388050aedfa47bf
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681404"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907233"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>Mostrar valores de porcentaje en un gráfico circular (Generador de informes y SSRS)
 En informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], de forma predeterminada, la leyenda muestra las categorías. Es posible que también quiera ver porcentajes en la leyenda o los propios segmentos del gráfico circular.   
 
-![report-builder-pie-chart-preview-percents](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
+![Captura de pantalla de un gráfico circular que muestra los porcentajes de sus segmentos.](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
 
  El [Tutorial: Agregar un gráfico circular a un informe (Generador de informes)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md) le guía a lo largo del proceso de adición de porcentajes a segmentos del gráfico circular, si primero quiere probar esto con datos de ejemplo.
  
@@ -34,13 +34,13 @@ En informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversio
   
 4.  Escriba **#PERCENT** para la opción **Datos de etiqueta** .  
   
-5.  (Opcional) Para especificar el número de posiciones decimales que se deben mostrar en la etiqueta, escriba "#PERCENT{P*n*}", donde *n* es el número de posiciones decimales que se deben mostrar. Por ejemplo, para no mostrar ninguna posición decimal, escriba "#PERCENT{P0}".  
+5.  (Opcional) Para especificar el número de posiciones decimales que se deben mostrar en la etiqueta, escriba "#PERCENT{P *n* }", donde *n* es el número de posiciones decimales que se deben mostrar. Por ejemplo, para no mostrar ninguna posición decimal, escriba "#PERCENT{P0}".  
   
 ## <a name="to-display-percentage-values-in-the-legend-of-a-pie-chart"></a>Para mostrar los valores de porcentaje en la leyenda de un gráfico circular  
   
 1.  En la superficie de diseño, haga clic con el botón secundario en el gráfico circular y seleccione **Propiedades de la serie**. Aparece el cuadro de diálogo **Propiedades de la serie** .  
   
-2.  En **Leyenda**, escriba **#PERCENT** para la propiedad **Texto de leyenda personalizado** .  
+2.  En **Leyenda** , escriba **#PERCENT** para la propiedad **Texto de leyenda personalizado** .  
   
 ## <a name="see-also"></a>Consulte también  
 * [Tutorial: Agregar un gráfico circular a un informe (generador de informes)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)

@@ -4,30 +4,30 @@ titleSuffix: SQL machine learning
 description: Explore los datos de ejemplo y genere algunos trazados para preparar el uso de la clasificación binaria en R con el aprendizaje automático de SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a0cacd4beee72cef845fa161d1a1bcd0263a7e6b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193693"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412542"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>Tutorial de R: Explorar y visualizar datos
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 En la parte dos de esta serie de tutoriales de cinco partes, explorará los datos de ejemplo y generará algunos trazados. Más adelante, aprenderá a serializar objetos gráficos en Python y, después, a deserializarlos y a crear trazados.
 
-En la parte dos de este tutorial de cinco partes, revisará los datos de ejemplo y, luego, generará algunos trazados mediante [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) desde [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) y la función genérica [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) en R base.
+En la parte dos de este tutorial de cinco partes, revisará los datos de ejemplo y, luego, generará algunos trazados mediante las funciones genéricas `barplot` y `hist` en R base.
 
 Uno de los objetivos clave de este artículo es mostrar cómo llamar a las funciones de R desde [!INCLUDE[tsql](../../includes/tsql-md.md)] en los procedimientos almacenados y guardar los resultados en formatos de archivo de aplicación:
 
-+ Cree un procedimiento almacenado mediante **RxHistogram** para generar un trazado de R como datos varbinary. Use **bcp** para exportar el flujo binario a un archivo de imagen.
-+ Cree un procedimiento almacenado mediante **Hist** para generar un trazado y guardar los resultados como archivos JPG y PDF.
++ Cree un procedimiento almacenado mediante `barplot` para generar un trazado de R como datos varbinary. Use **bcp** para exportar el flujo binario a un archivo de imagen.
++ Cree un procedimiento almacenado mediante `hist` para generar un trazado y guardar los resultados como archivos JPG y PDF.
 
 > [!NOTE]
 > Dado que la visualización es una herramienta muy eficaz para comprender la distribución y la forma de datos, R proporciona una variedad de funciones y paquetes para generar histogramas, gráficos de dispersión, gráficos de cuadros y otros gráficos de exploración de datos. R normalmente crea imágenes con un dispositivo de R para la salida gráfica, que puede capturar y almacenar como un tipo de datos **varbinary** para la representación en la aplicación. También puede guardar las imágenes en cualquiera de los formatos de archivo admitidos (.JPG, .PDF, etc.).
@@ -51,7 +51,7 @@ En la [parte cinco](r-taxi-classification-deploy-model.md), aprenderá a poner e
 
 Desarrollar una solución de ciencia de datos incluye normalmente la exploración de datos intensivos y la visualización de datos. Así pues, primero revise los datos de ejemplo si no lo ha hecho ya, solo le llevará un minuto.
 
-En el conjunto de datos públicos original, los identificadores de taxis y los registros de viajes se proporcionaron en archivos independientes. En cambio, para facilitar el uso de los datos de ejemplo, los dos conjuntos de datos originales se han unido en las columnas _medallion_, _hack\_license_ y _pickup\_datetime_.  Los registros también se muestrearon para obtener solo un 1 % del número de registros original. El conjunto de datos muestreado resultante tiene 1 703 957 filas y 23 columnas.
+En el conjunto de datos públicos original, los identificadores de taxis y los registros de viajes se proporcionaron en archivos independientes. En cambio, para facilitar el uso de los datos de ejemplo, los dos conjuntos de datos originales se han unido en las columnas _medallion_ , _hack\_license_ y _pickup\_datetime_.  Los registros también se muestrearon para obtener solo un 1 % del número de registros original. El conjunto de datos muestreado resultante tiene 1 703 957 filas y 23 columnas.
 
 **Identificadores de taxis**
   
@@ -69,7 +69,7 @@ En el conjunto de datos públicos original, los identificadores de taxis y los r
   
   Este tutorial muestra solo la tarea de clasificación binaria; puede intentar crear modelos de las otras dos tareas de aprendizaje automático, regresión y clasificación de varias clases.
   
-+ Los valores usados para las columnas de etiqueta se basan en la columna _tip\_amount_, usando estas reglas de negocios:
++ Los valores usados para las columnas de etiqueta se basan en la columna _tip\_amount_ , usando estas reglas de negocios:
   
   |Nombre de columna derivada|Regla|
   |-|-|
@@ -83,14 +83,14 @@ En el conjunto de datos públicos original, los identificadores de taxis y los r
 > A partir de SQL Server 2019, el mecanismo de aislamiento requiere que se proporcionen los permisos adecuados para el directorio donde se almacena el archivo de trazado. Para más información sobre cómo establecer estos permisos, consulte la [sección sobre los permisos de archivo en SQL Server 2019 en Windows: Cambios de aislamiento para Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 
-Para crear el trazado, use [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram), una de las funciones mejoradas de R proporcionadas en [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler). Este paso representa un histograma en función de los datos de una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puede ajustar esta función en un procedimiento almacenado, **RxPlotHistogram**.
+Use la función `barplot` de R para crear el trazado. Este paso representa un histograma en función de los datos de una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puede ajustar esta función en un procedimiento almacenado, **RPlotHistogram**.
 
-1. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el Explorador de objetos, haga clic con el botón derecho en la base de datos **NYCTaxi_Sample** y seleccione **Nueva consulta**.
+1. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el Explorador de objetos, haga clic con el botón derecho en la base de datos **NYCTaxi_Sample** y seleccione **Nueva consulta**. O en Azure Data Studio, seleccione **Nuevo cuaderno** en el menú **Archivo** y conéctese a la base de datos.
 
-2. Pegue el siguiente script para crear un procedimiento almacenado que trace el histograma. Este ejemplo se denomina **RxPlotHistogram**.
+2. Pegue el siguiente script para crear un procedimiento almacenado que trace el histograma. Este ejemplo se denomina **RPlotHistogram**.
 
    ```sql
-   CREATE PROCEDURE [dbo].[RxPlotHistogram]
+   CREATE PROCEDURE [dbo].[RPlotHistogram]
    AS
    BEGIN
      SET NOCOUNT ON;
@@ -101,8 +101,7 @@ Para crear el trazado, use [rxHistogram](/machine-learning-server/r-reference/re
       image_file = tempfile();  
       jpeg(filename = image_file);  
       #Plot histogram  
-      rxHistogram(~tipped, data=InputDataSet, col=''lightgreen'',   
-      title = ''Tip Histogram'', xlab =''Tipped or not'', ylab =''Counts'');  
+      barplot(table(InputDataSet$tipped), main = "Tip Histogram", col="lightgreen", xlab="Tipped or not", ylab = "Counts", space=0)
       dev.off();  
       OutputDataSet <- data.frame(data=readBin(file(image_file, "rb"), what=raw(), n=1e6));  
       ',  
@@ -118,7 +117,7 @@ Entre los puntos clave que se deben comprender en este script se incluyen los si
   
 + Dentro del script de R, se define una variable (`image_file`) para almacenar la imagen.
 
-+ Se llama a la función **rxHistogram** de la biblioteca RevoScaleR para generar el trazado.
++ Se llama a la función `barplot` para generar el trazado.
   
 + El dispositivo de R está establecido en **desactivado** porque está ejecutando este comando como un script externo en SQL Server. Normalmente en R, al enviar un comando de trazado de alto nivel, R abre una ventana de gráficos, denominada *dispositivo*. Puede desactivar el dispositivo si está escribiendo en un archivo o controlando el resultado de otra manera.
   
@@ -131,7 +130,7 @@ El procedimiento almacenado devuelve la imagen como una secuencia de datos varbi
 1. En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ejecute la instrucción siguiente:
   
     ```sql
-    EXEC [dbo].[RxPlotHistogram]
+    EXEC [dbo].[RPlotHistogram]
     ```
   
     **Resultados**
@@ -141,7 +140,7 @@ El procedimiento almacenado devuelve la imagen como una secuencia de datos varbi
 2. Abra un símbolo del sistema de PowerShell y ejecute el siguiente comando con el nombre de instancia, el nombre de la base de datos, el nombre de usuario y las credenciales adecuados como argumentos. Para aquellos que usan identidades de Windows, puede reemplazar **-U** y **-P** con **-T**.
   
    ```powershell
-   bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
+   bcp "exec RPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
    ```
 
    > [!NOTE]
@@ -151,7 +150,7 @@ El procedimiento almacenado devuelve la imagen como una secuencia de datos varbi
 
    Pulse ENTRAR en cada aviso para aceptar los valores predeterminados, excepto estos cambios:
 
-   + En **prefix-length of field plot**, escriba 0.
+   + En **prefix-length of field plot** , escriba 0.
   
    + Escriba **Y** si quiere guardar los parámetros de salida para un uso posterior.
   
@@ -181,11 +180,11 @@ El procedimiento almacenado devuelve la imagen como una secuencia de datos varbi
   
    ![viajes de taxi con y sin propinas](media/rsql-devtut-tippedornot.jpg "viajes de taxi con y sin propinas")  
   
-## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>Creación de un procedimiento almacenado con Hist y varios formatos de salida
+## <a name="create-a-stored-procedure-using-hist"></a>Creación de un procedimiento almacenado con `hist`
 
 Normalmente, los científicos de datos generan varias visualizaciones de datos para obtener información sobre los datos desde distintas perspectivas. En este ejemplo, creará un procedimiento almacenado llamado **RPlotHist** para escribir histogramas, gráficos de dispersión y otros gráficos de R en formato .JPG y .PDF.
 
-Este procedimiento almacenado usa la función **Hist** para crear el histograma y exportar los datos binarios a formatos populares como .JPG, .PDF y .PNG. 
+Este procedimiento almacenado usa la función `hist` para crear el histograma y exportar los datos binarios a formatos populares como .JPG, .PDF y .PNG.
 
 1. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el Explorador de objetos, haga clic con el botón derecho en la base de datos **NYCTaxi_Sample** y seleccione **Nueva consulta**.
 
@@ -255,11 +254,13 @@ Este procedimiento almacenado usa la función **Hist** para crear el histograma 
    END
    ```
   
+Entre los puntos clave que se deben comprender en este script se incluyen los siguientes:
+
 + El resultado de la consulta SELECT en el procedimiento almacenado se almacena en la trama de datos predeterminada de R, `InputDataSet`. Se puede llamar a varias funciones de trazado de R para generar los archivos de gráficos reales. La mayoría de los scripts insertados de R representan las opciones de estas funciones de gráficos, como `plot` o `hist`.
   
-+ Todos los archivos se guardan en la carpeta local C:\temp\Plots. La carpeta de destino se define mediante los argumentos proporcionados para el script de R como parte del procedimiento almacenado.  Para cambiar la carpeta de destino, cambie el valor de la variable `mainDir`.
-
-+ Para generar los archivos en una carpeta diferente, cambie el valor de la variable `mainDir` en el script insertado de R en el procedimiento almacenado. También puede modificar el script para generar diferentes formatos, más archivos, etc.
++ El dispositivo de R está establecido en **desactivado** porque está ejecutando este comando como un script externo en SQL Server. Normalmente en R, al enviar un comando de trazado de alto nivel, R abre una ventana de gráficos, denominada *dispositivo*. Puede desactivar el dispositivo si está escribiendo en un archivo o controlando el resultado de otra manera.
+  
++ Todos los archivos se guardan en la carpeta local C:\temp\Plots. La carpeta de destino se define mediante los argumentos proporcionados para el script de R como parte del procedimiento almacenado. Para generar los archivos en una carpeta diferente, cambie el valor de la variable `mainDir` en el script insertado de R en el procedimiento almacenado. También puede modificar el script para generar diferentes formatos, más archivos, etc.
 
 ### <a name="execute-the-stored-procedure"></a>Ejecutar el procedimiento almacenado
 
@@ -270,7 +271,7 @@ EXEC RPlotHist
 ```
 
 **Resultados**
-    
+
 ```text
 STDOUT message(s) from external script:
 [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
@@ -282,13 +283,13 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 Los números de los nombres de archivo se generan de forma aleatoria para asegurarse de que no recibe un error al intentar escribir en un archivo existente.
 
-### <a name="view-output"></a>Ver salida 
+### <a name="view-output"></a>Ver salida
 
 Para ver el trazado, abra la carpeta de destino y revise los archivos creados por el código R en el procedimiento almacenado.
 
 1. Vaya a la carpeta indicada en el mensaje STDOUT (en el ejemplo, es C:\temp\plots\).
 
-2. Abra `rHistogram_Tipped.jpg` para mostrar el número de viajes en los que se ha recibido una propina frente a los viajes en los que no se ha recibido ninguna propina. (Este histograma es parecido al que ha generado en el paso anterior).
+2. Abra `rHistogram_Tipped.jpg` para mostrar el número de viajes que obtuvieron una propina frente a los que no obtuvieron propina (este histograma es similar al que ya generó en el paso anterior).
 
 3. Abra `rHistograms_Tip_and_Fare_Amount.pdf` para ver la distribución de las cantidades de las propinas, trazadas con respecto a los importes de las tarifas.
 

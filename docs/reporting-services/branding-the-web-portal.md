@@ -8,12 +8,12 @@ description: Aprenda a personalizar la apariencia del portal web para la empresa
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55b0557f6b6cf1a80219a492d4ce79a897be22ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2079a44a4b9f3977ae09f83685efa122e9467a96
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888123"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907213"
 ---
 # <a name="branding-the-web-portal"></a>Personalización de marca del portal web
 
@@ -85,7 +85,7 @@ Por ejemplo, si el archivo colors.json tiene los siguientes valores:
 "primaryContrast":"#ffffff"   
 ```
 
-La salida procesada buscaría la variable de LESS **\@primaryButtonBg** y vería que está asignada a una propiedad de JSON llamada **primary**, que en este ejemplo es #009900. Por lo tanto, generaría el CSS correcto.  
+La salida procesada buscaría la variable de LESS **\@primaryButtonBg** y vería que está asignada a una propiedad de JSON llamada **primary** , que en este ejemplo es #009900. Por lo tanto, generaría el CSS correcto.  
 
 ```css
     .btn-primary {   
@@ -98,8 +98,8 @@ Todos los botones principales se representarían en verde oscuro con el texto en
   
 Para Reporting Services, el archivo colors.json tiene dos categorías principales en las que se agrupan los elementos.  
   
-- **interface**: incluye los elementos específicos del portal web de Reporting Services.  
-- **theme**: incluye los elementos específicos de los informes móviles que cree.  
+- **interface** : incluye los elementos específicos del portal web de Reporting Services.  
+- **theme** : incluye los elementos específicos de los informes móviles que cree.  
   
 La sección interface se desglosa en las siguientes agrupaciones:  
   
@@ -116,7 +116,7 @@ La sección interface se desglosa en las siguientes agrupaciones:
 
 La primera vez que se conecte con el Publicador de informes móviles a un servidor que tenga implementado un paquete de marca, se agregará el tema a los temas disponibles en el menú de la esquina superior derecha de la aplicación.  
   
-![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
+![Captura de pantalla del cuadro de diálogo Elegir una paleta de colores.](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
 Después, puede usar este tema para los informes móviles que cree, aunque no estén destinados al mismo servidor donde tenga implementado el tema.   
   
@@ -134,15 +134,15 @@ Para agregar, descargar o quitar un paquete de marca, puede hacer lo siguiente:
   
 2.  Seleccione **Configuración del sitio**.  
   
-    ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
+    ![Captura de pantalla de la lista desplegable de configuración con la opción Configuración del sitio seleccionada.](../reporting-services/media/ssrsgearmenu.png)  
   
 3.  Seleccione la **personalización de marca**.  
   
-    ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
+    ![Captura de pantalla de la página Configuración del sitio con la opción Personalización de marca seleccionada.](../reporting-services/media/ssrsbranding.png) 
   
-En**Currently installed brand package** (Paquete de marca instalado actualmente) se mostrará el nombre del paquete que se ha cargado o Ninguno.  
+En **Currently installed brand package** (Paquete de marca instalado actualmente) se mostrará el nombre del paquete que se ha cargado o Ninguno.  
   
-La opción**Upload brand package** (Cargar paquete de marca) aplicará el paquete al portal web. Verá que los cambios surten efecto de inmediato.  
+La opción **Upload brand package** (Cargar paquete de marca) aplicará el paquete al portal web. Verá que los cambios surten efecto de inmediato.  
   
 También puede **descargarse** o **quitar** el paquete. Si quita el paquete, se restablecerá inmediatamente el portal web a la marca predeterminada.  
   
@@ -150,7 +150,7 @@ También puede **descargarse** o **quitar** el paquete. Si quita el paquete, se 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
-<SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
+<SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
     type="UniversalBrand"  
     version="2.0.2"  
     name="Multicolored example brand"  

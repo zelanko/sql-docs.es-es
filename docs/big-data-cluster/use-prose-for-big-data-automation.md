@@ -5,22 +5,24 @@ description: En este artículo se describe cómo usar el acelerador de código P
 author: dphansen
 ms.author: davidph
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 10/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: 9768c406ca94cd16e8e9075bd5247434b8359d5c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 3357757c0cca35be0b3410795cfd89ca75f34dc3
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725766"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638978"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Limpieza y transformación de datos mediante el acelerador de código PROSE
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-El acelerador de código PROSE genera código Python legible para las tareas de limpieza y transformación de datos. El código generado se puede combinar con el código escrito a mano de una manera fluida mientras se trabaja en un cuaderno dentro de Azure Data Studio. En este artículo se proporciona información general sobre cómo se puede usar el acelerador de código.
+El acelerador de código PROSE genera código Python legible para las tareas de limpieza y transformación de datos. El código generado se puede combinar con el código escrito a mano mientras se trabaja en un cuaderno dentro de Azure Data Studio.
+
+En este artículo se proporciona información general sobre cómo se puede usar el acelerador de código.
 
  > [!NOTE]
  > Program Synthesis using Examples, también conocido como PROSE, es una tecnología de Microsoft que genera código legible para personas mediante IA. Para ello, analiza la intención del usuario, así como de los datos, genera varios programas candidatos y selecciona el mejor programa mediante algoritmos de clasificación. Para obtener más información sobre la tecnología PROSE, visite [la página principal de PROSE](https://microsoft.github.io/prose/).
@@ -41,9 +43,11 @@ Para obtener información general sobre los métodos del acelerador de código, 
 
 ## <a name="reading-data-from-a-file-to-a-dataframe"></a>Lectura de datos de un archivo en un dataframe
 
-A menudo, la lectura de archivos en un dataframe implica el examen del contenido del archivo y la determinación de los parámetros correctos para pasarlos a una biblioteca de carga de datos. En función de la complejidad del archivo, la identificación de los parámetros correctos puede requerir varias iteraciones.
+La lectura de archivos en un dataframe implica el examen del contenido del archivo y la determinación de los parámetros correctos para pasarlos a una biblioteca de carga de datos.
 
-El acelerador de código PROSE resuelve este problema mediante el análisis de la estructura del archivo de datos y la generación automática de código para cargar el archivo. En la mayoría de los casos, el código generado analiza los datos correctamente. En algunas ocasiones, es posible que deba ajustar el código para satisfacer sus necesidades.
+En función de la complejidad del archivo, la identificación de los parámetros correctos puede requerir varias iteraciones.
+
+El acelerador de código PROSE resuelve este problema mediante el análisis de la estructura del archivo de datos y la generación automática de código para cargar el archivo. Normalmente, el código generado analiza los datos correctamente. En algunas ocasiones, es posible que deba ajustar el código para satisfacer sus necesidades.
 
 Considere el ejemplo siguiente:
 
@@ -90,9 +94,9 @@ El acelerador de código puede generar código para cargar archivos delimitados,
 
 ## <a name="fixing-data-types-in-a-dataframe"></a>Corrección de tipos de datos en un dataframe
 
-Es habitual tener un dataframe de Pandas o Pyspark con tipos de datos incorrectos. A menudo, esto sucede debido a la existencia de valores no conformes en una columna. Como resultado, los enteros se leen como valores float o cadenas, y las fechas se leen como cadenas. El esfuerzo necesario para corregir manualmente los tipos de datos es proporcional al número de columnas.
+Es habitual tener un dataframe de Pandas o Pyspark con tipos de datos incorrectos. El tipo de datos incorrecto sucede debido a la existencia de valores no conformes en una columna. Como resultado, los enteros se leen como valores float o cadenas, y las fechas se leen como cadenas. El esfuerzo necesario para corregir manualmente los tipos de datos es proporcional al número de columnas.
 
-En estas situaciones, puede utilizar `DetectTypesBuilder`. Analiza los datos y, en lugar de corregir los tipos de datos en forma de "caja negra", genera código para corregirlos. El código sirve como punto de partida. Puede revisarlos, utilizarlos o modificarlos según sea necesario.
+En estas situaciones, puede utilizar `DetectTypesBuilder`. Analiza los datos y genera código para corregir los tipos de datos. El código sirve como punto de partida. Puede revisarlos, utilizarlos o modificarlos según sea necesario.
 
 ```python
 import prose.codeaccelerator as cx
@@ -110,7 +114,7 @@ Para obtener más información, consulte la [documentación](/python/api/overvie
 
 ## <a name="identifying-patterns-in-strings"></a>Identificación de patrones en cadenas
 
-Otro escenario común es detectar patrones en una columna de cadena con el fin de limpiar o agrupar los valores. Por ejemplo, puede tener una columna de fecha con fechas en varios formatos distintos. Para normalizar los valores, quizá desee escribir instrucciones condicionales mediante expresiones regulares.
+p.
 
 
 |Row|Nombre                      |BirthDate      |

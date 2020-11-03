@@ -9,23 +9,23 @@ ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dfdd7600a08a78baa0b70f2048423f1632ebe2db
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: b1158cf4a88bb491b8ed1cb492eec1c3021cb6f9
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689437"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907063"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>Iniciar los valores del gráfico circular desde la parte superior del gráfico (Generador de informes y SSRS)
 En los gráficos circulares de los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , el primer valor del conjunto de datos se inicia de forma predeterminada en 90 grados desde la parte superior del círculo. 
 
-![generador-informes-gráfico-circular-inicia-en-90](../../reporting-services/media/report-builder-pie-chart-start-at-90.png)
+![Captura de pantalla del gráfico circular de un generador de informes con el conjunto de datos que se inicia en 90 grados.](../../reporting-services/media/report-builder-pie-chart-start-at-90.png)
 
 *Los valores del gráfico se inician en 90 grados.*
 
 En su lugar, es posible que le interese que el primer valor se inicie en la parte superior. 
 
-![generador-informes-gráfico-circular-inicia-parte-superior](../../reporting-services/media/report-builder-pie-chart-start-at-top.png)
+![Captura de pantalla del gráfico circular de un generador de informes con el conjunto de datos que se inicia desde la parte superior.](../../reporting-services/media/report-builder-pie-chart-start-at-top.png)
 
 *Los valores del gráfico se inician en la parte superior del gráfico.*
   
@@ -35,7 +35,7 @@ En su lugar, es posible que le interese que el primer valor se inicie en la part
   
 2.  Si el panel **Propiedades** no está abierto, en la pestaña **Ver** haga clic en **Propiedades**.  
   
-3.  En el panel **Propiedades** , en **Atributos personalizados**, cambie **PieStartAngle** de **0** a **270**.  
+3.  En el panel **Propiedades** , en **Atributos personalizados** , cambie **PieStartAngle** de **0** a **270**.  
   
 4.  Haga clic en **Ejecutar** para obtener una vista previa del informe.  
   

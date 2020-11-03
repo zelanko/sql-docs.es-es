@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 403e6b3873b93dace3f124eb5931143e8dd4b322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e346ff2f6d5b4951e7ce0e3af81914b15b34ac15
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448310"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907323"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Agregar cuadrículas de datos a informes para dispositivos móviles | Reporting Services
-A veces, la mejor forma de visualizar los datos es, simplemente, verlos. Obtenga más información sobre las tres *cuadrículas de datos*, o tablas, que existen para mostrar datos en el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]:
+A veces, la mejor forma de visualizar los datos es, simplemente, verlos. Obtenga más información sobre las tres *cuadrículas de datos* , o tablas, que existen para mostrar datos en el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]:
 * Cuadrícula de datos simple
 * Cuadrícula de datos del indicador
 * Cuadrícula de datos del gráfico
@@ -25,7 +25,7 @@ A veces, la mejor forma de visualizar los datos es, simplemente, verlos. Obtenga
 ## <a name="simple-data-grid"></a>Cuadrícula de datos simple
 La cuadrícula de datos simple, que es el elemento más básico, puede mostrar varias columnas de datos con formato y encabezados personalizados. 
 
-![mobile-report-simple-data-grid](../../reporting-services/mobile-reports/media/mobile-report-simple-data-grid.png)
+![Captura de pantalla de la cuadrícula de datos simple de un informe móvil.](../../reporting-services/mobile-reports/media/mobile-report-simple-data-grid.png)
 
 Después de agregar una cuadrícula de datos a la superficie de diseño, se puede conectar a los datos reales.
 
@@ -41,22 +41,22 @@ Después de agregar una cuadrícula de datos a la superficie de diseño, se pued
 ##  <a name="indicator-data-grid"></a>Cuadrícula de datos del indicador
 Puede agregar columnas con medidores en una cuadrícula de datos del indicador.
 
-![mobile-report-indicator-data-grid](../../reporting-services/mobile-reports/media/mobile-report-indicator-data-grid.png)
+![Captura de pantalla de la cuadrícula de datos del indicador en un informe móvil.](../../reporting-services/mobile-reports/media/mobile-report-indicator-data-grid.png)
 
 1. Arrastre una cuadrícula de datos del indicador desde la pestaña **Diseño** a la cuadrícula de diseño y dele el tamaño que quiera.
 
 2. En la pestaña **Datos** , en el panel **Columnas** , seleccione **Agregar columna de medidor**. 
 
-3. Seleccione **Opciones**y, luego, seleccione un **Tipo de indicador**. 
+3. Seleccione **Opciones** y, luego, seleccione un **Tipo de indicador**. 
 
-4. Establezca los campos **Valor** y **Comparación** y la **Dirección del valor**, exactamente a como lo haría con los [medidores que se agregan directamente a un informe para dispositivos móviles](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md).
+4. Establezca los campos **Valor** y **Comparación** y la **Dirección del valor** , exactamente a como lo haría con los [medidores que se agregan directamente a un informe para dispositivos móviles](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md).
 
 Automáticamente, la cuadrícula de datos incluirá en el medidor solo los datos específicos de esa fila de la cuadrícula de datos.  
 
 ## <a name="chart-data-grid"></a>Cuadrícula de datos del gráfico
 Puede agregar columnas con medidores o con gráficos a una cuadrícula de datos del gráfico. 
 
-![mobile-report-chart-data-grid](../../reporting-services/mobile-reports/media/mobile-report-chart-data-grid.png)
+![Captura de pantalla de la cuadrícula de datos del gráfico en un informe móvil.](../../reporting-services/mobile-reports/media/mobile-report-chart-data-grid.png)
 
 Cuando se agrega una columna de gráfico a una cuadrícula de datos, hay que agregar una tabla de datos aparte que proporcione datos relativos al gráfico en cada fila. Esta segunda tabla de datos debe compartir un campo con la tabla de datos principal para vincular cada fila a los datos de gráfico correspondientes. 
 
@@ -66,11 +66,11 @@ Cuando se agrega una columna de gráfico a una cuadrícula de datos, hay que agr
 
 3. Obtenga [datos de Excel o de un conjunto de datos compartido](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) para agregar una segunda tabla de datos que comparta un campo con la tabla de datos principal (si no lo ha hecho ya).
 
-4. En **Propiedades de los datos**, seleccione la tabla de datos principal en **Datos para la vista de cuadrícula**y, luego, seleccione la segunda tabla en **Datos de referencia para visualizaciones de gráficos**.
+4. En **Propiedades de los datos** , seleccione la tabla de datos principal en **Datos para la vista de cuadrícula** y, luego, seleccione la segunda tabla en **Datos de referencia para visualizaciones de gráficos**.
 
-5. Seleccione **Opciones**y, luego, seleccione un **Tipo de gráfico**.
+5. Seleccione **Opciones** y, luego, seleccione un **Tipo de gráfico**.
  
-6. Seleccione **Chart data field**(Campo de datos del gráfico), **Búsqueda de origen**y **Búsqueda de destino**. 
+6. Seleccione **Chart data field** (Campo de datos del gráfico), **Búsqueda de origen** y **Búsqueda de destino**. 
    Estas tres propiedades determinan el modo en el que la cuadrícula de datos proporciona datos a cada gráfico de la columna.
    
    *   **Búsqueda de origen** se establece en un campo en la tabla de datos de **Datos para la vista de cuadrícula**. Este campo actúa como un filtro por fila que se aplica a la tabla de datos de referencia del gráfico con el fin de proporcionar datos al gráfico incrustado para cada fila. 

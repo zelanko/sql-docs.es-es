@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 09a01937611b239aeb6db1df406fc057063eb634
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6d94fc2d85ac0012347cb55f4981a25ba107f5df
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115554"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679217"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Supervisar SQL Server Machine Learning Services mediante vistas de administración dinámica (DMV)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -251,8 +251,8 @@ La consulta devuelve las columnas siguientes:
 |--------------------------|--------------|
 | pool_name                | Nombre del grupo de recursos de servidor. Los grupos de recursos de SQL Server llevan el prefijo `SQL Server`, mientras que los grupos de recursos externos llevan el prefijo `External Pool`. |
 | total_cpu_usage_hours    | Uso acumulado de la CPU en milisegundos desde que se restablecieron las estadísticas del regulador de recursos. |
-| read_io_completed_total  | El total de operaciones de E/S de lectura completadas desde que se restablecieron las estadísticas del regulador de recursos.              |
-| write_io_completed_total | El total de operaciones de E/S de escritura completadas desde que se restablecieron las estadísticas del regulador de recursos.             |
+| read_io_completed_total  | Total de operaciones de E/S de lectura completadas desde que se restablecieron las estadísticas del regulador de recursos.              |
+| write_io_completed_total | Total de operaciones de E/S de escritura completadas desde que se restablecieron las estadísticas del regulador de recursos.             |
 
 ## <a name="installed-packages"></a>Paquetes instalados
 

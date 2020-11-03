@@ -26,19 +26,19 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3c5b3c399dfe95e1cbfa521e1a67044d4c5be8e
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: e33750c6c62b1de3b889399fca46dbf5aa83b3fd
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935214"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907283"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Agregar, cambiar o eliminar un mapa o una capa de mapa (Generador de informes y SSRS)
   Un mapa es una colección de capas. Al agregar un mapa a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , define la primera capa. Puede crear capas adicionales con el Asistente para capas de mapa.  
   
  La manera más fácil de agregar, quitar o cambiar las opciones de una capa es utilizar el asistente. También puede cambiar manualmente las opciones del panel Mapa. Para mostrar el panel **Mapa** , haga clic en el mapa en la superficie de diseño del informe. La figura siguiente muestra las partes del panel:  
   
- ![rsMapLayerZone](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![Captura de pantalla de la sección Capas de mapa que señala las opciones relativas a la barra de herramientas de una capa, así como la visibilidad, el nombre y el tipo de capa. Además, se muestran las opciones del tipo de origen de datos espaciales, del nivel de ajuste de zoom y del ajuste del centro de vista.](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  Las capas de mapa se dibujan desde la parte inferior a la superior en el orden en que aparecen en el panel Capa de mapa. En la figura anterior, la capa de mosaico se dibuja primero y en último lugar se dibuja la capa de polígono. Las capas que se dibujen después podrían ocultar los elementos de mapa de las capas que se dibujaron anteriormente. Puede cambiar el orden de las capas utilizando las teclas de dirección de la barra de herramientas del panel Mapa. Para mostrar u ocultar las capas, alterne el icono de visibilidad. Puede cambiar la transparencia de una capa en la página **Visibilidad** del cuadro de diálogo de propiedades de **Datos de la capa** .  
   
@@ -46,12 +46,12 @@ ms.locfileid: "91935214"
   
 |Símbolo|Descripción|Cuándo se usa|  
 |------------|-----------------|-----------------|  
-|![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Asistente para capas de mapa|Para agregar una capa con un asistente, haga clic en **Asistente para nueva capa**.|  
-|![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Agregar capa|Para agregar una capa manualmente, haga clic en **Agregar capa**y, a continuación, haga clic en el tipo de capa de mapa que desea agregar.|  
-|![rs_IconMapPolygonLayer](../../reporting-services/report-design/media/rs-iconmappolygonlayer.gif "rs_IconMapPolygonLayer")|Capa de polígono|Agregue una capa de mapa que muestre áreas o formas basadas en conjuntos de coordenadas de un polígono.|  
-|![rs_IconMapLineLayer](../../reporting-services/report-design/media/rs-iconmaplinelayer.gif "rs_IconMapLineLayer")|Capa de línea|Agregue una capa de mapa que muestre los trazados o rutas basados en conjuntos de coordenadas de una línea.|  
-|![rs_IconMapPointLayer](../../reporting-services/report-design/media/rs-iconmappointlayer.gif "rs_IconMapPointLayer")|Capa de punto|Agregue una capa de mapa que muestre las ubicaciones basadas en los conjuntos de coordenadas de un punto.|  
-|![rs_IconMapTileLayer](../../reporting-services/report-design/media/rs-iconmaptilelayer.gif "rs_IconMapTileLayer")|Capa de mosaico|Agregue una capa de mapa que muestre los mosaicos de Bing Maps que correspondan al área de la vista del mapa actual que se define en la ventanilla.|  
+|:::image type="icon" source="../../reporting-services/media/rs-iconmaplayerwizard.gif":::|Asistente para capas de mapa|Para agregar una capa con un asistente, haga clic en **Asistente para nueva capa**.|  
+|:::image type="icon" source="../../reporting-services/media/rs-iconmapaddlayer.gif":::|Agregar capa|Para agregar una capa manualmente, haga clic en **Agregar capa** y, a continuación, haga clic en el tipo de capa de mapa que desea agregar.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmappolygonlayer.gif":::|Capa de polígono|Agregue una capa de mapa que muestre áreas o formas basadas en conjuntos de coordenadas de un polígono.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmaplinelayer.gif":::|Capa de línea|Agregue una capa de mapa que muestre los trazados o rutas basados en conjuntos de coordenadas de una línea.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmappointlayer.gif":::|Capa de punto|Agregue una capa de mapa que muestre las ubicaciones basadas en los conjuntos de coordenadas de un punto.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmaptilelayer.gif":::|Capa de mosaico|Agregue una capa de mapa que muestre los mosaicos de Bing Maps que correspondan al área de la vista del mapa actual que se define en la ventanilla.|  
   
  En la parte inferior del panel Mapa es el área de la vista Mapa. Para cambiar las opciones de centro o zoom del mapa, utilice las teclas de dirección para ajustar el centro de la vista y el control deslizante para ajustar el nivel de zoom.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "91935214"
   
 ##  <a name="to-add-a-layer-from-the-map-layer-wizard"></a><a name="AddLayer"></a> Agregar una capa con el Asistente para capas de mapa  
   
--   De la Cinta de opciones, en el menú **Insertar** , haga clic en **Mapa**y, a continuación, haga clic en **Mapa Wizard.** . El asistente le permite agregar una capa al mapa existente. La mayor parte de las páginas son idénticas en el Asistente para mapas y el Asistente para capas de mapa.  
+-   De la Cinta de opciones, en el menú **Insertar** , haga clic en **Mapa** y, a continuación, haga clic en **Mapa Wizard.** . El asistente le permite agregar una capa al mapa existente. La mayor parte de las páginas son idénticas en el Asistente para mapas y el Asistente para capas de mapa.  
   
      Para obtener más información, vea [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -76,20 +76,20 @@ ms.locfileid: "91935214"
   
 1.  Haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  En la barra de herramientas, haga clic en el botón **Agregar capa** y, en la lista desplegable, haga clic en el tipo de capa que quiere agregar: **Punto**, **Línea** o **Polígono**.  
+2.  En la barra de herramientas, haga clic en el botón **Agregar capa** y, en la lista desplegable, haga clic en el tipo de capa que quiere agregar: **Punto** , **Línea** o **Polígono**.  
   
     > [!NOTE]  
     >  Aunque puede agregar una capa de mapa y configurarla manualmente, recomendamos utilizar el Asistente para capas de mapa si desea agregar capas nuevas. Para iniciar el asistente desde la barra de herramientas del panel Mapa, haga clic en el botón del Asistente para capas (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
 3.  Haga clic con el botón derecho en la capa y, después, haga clic en **Datos de la capa**.  
   
-4.  En **Usar datos espaciales de**, seleccione el origen de datos espaciales. Las opciones varían en función de la selección.  
+4.  En **Usar datos espaciales de** , seleccione el origen de datos espaciales. Las opciones varían en función de la selección.  
   
      Si desea ver los datos analíticos del informe en esta capa, haga lo siguiente:  
   
     1.  Haga clic en **Datos analíticos**.  
   
-    2.  En **Conjunto de datos analíticos**, haga clic en el nombre del conjunto de datos que contenga los datos analíticos y en los campos coincidentes para generar una relación entre datos analíticos y datos espaciales.  
+    2.  En **Conjunto de datos analíticos** , haga clic en el nombre del conjunto de datos que contenga los datos analíticos y en los campos coincidentes para generar una relación entre datos analíticos y datos espaciales.  
   
     3.  Haga clic en **Agregar**.  
   
@@ -125,11 +125,11 @@ ms.locfileid: "91935214"
   
 2.  Haga clic con el botón derecho en la capa y, después, haga clic en **Datos de la capa**.  
   
-3.  En **Usar datos espaciales de**, seleccione **Datos incrustado en informe**.  
+3.  En **Usar datos espaciales de** , seleccione **Datos incrustado en informe**.  
   
-4.  Para cargar los elementos de mapa de un informe existente o crearlos según un archivo ESRI, haga clic en **Examinar**, señale el archivo y, a continuación, haga clic en **Abrir**. Los elementos de mapa se incrustan en esta definición de informe. Los datos espaciales que señale deben coincidir con el tipo de capa. Por ejemplo, para una capa de punto, debe señalar datos espaciales que especifiquen conjuntos de coordenadas de punto.  
+4.  Para cargar los elementos de mapa de un informe existente o crearlos según un archivo ESRI, haga clic en **Examinar** , señale el archivo y, a continuación, haga clic en **Abrir**. Los elementos de mapa se incrustan en esta definición de informe. Los datos espaciales que señale deben coincidir con el tipo de capa. Por ejemplo, para una capa de punto, debe señalar datos espaciales que especifiquen conjuntos de coordenadas de punto.  
   
-5.  En **Campo espacial**, especifique el nombre del campo que contenga los datos espaciales. Puede que tenga que determinar este nombre desde el origen de datos espaciales.  
+5.  En **Campo espacial** , especifique el nombre del campo que contenga los datos espaciales. Puede que tenga que determinar este nombre desde el origen de datos espaciales.  
   
     > [!NOTE]  
     >  Si no sabe el nombre del campo y buscó un archivo de forma ESRI, use la opción **Vínculo a archivo de forma ESRI** en lugar de esta.  
@@ -142,9 +142,9 @@ ms.locfileid: "91935214"
   
 2.  Haga clic con el botón derecho en la capa y, después, haga clic en **Datos de la capa**.  
   
-3.  En **Usar datos espaciales de**, seleccione **Vínculo a archivo de forma ESRI**.  
+3.  En **Usar datos espaciales de** , seleccione **Vínculo a archivo de forma ESRI**.  
   
-4.  En **Nombre de archivo**, escriba la ubicación del archivo de forma ESRI o haga clic en **Examinar** para seleccionar un archivo de forma ESRI.  
+4.  En **Nombre de archivo** , escriba la ubicación del archivo de forma ESRI o haga clic en **Examinar** para seleccionar un archivo de forma ESRI.  
   
     > [!NOTE]  
     >  Si el archivo de forma está en el equipo local, los datos espaciales se incrustan en la definición de informe. Para recuperar los datos dinámicamente cuando se procesa el informe, debe cargar el archivo de forma ESRI .shp y su archivo auxiliar .dbf en el servidor de informes. Para obtener más información, vea [Cargar un archivo o un informe](../reports/upload-a-file-or-report-report-manager.md).  
@@ -157,11 +157,11 @@ ms.locfileid: "91935214"
   
 2.  Haga clic con el botón derecho en la capa y, después, haga clic en **Datos de la capa**.  
   
-3.  En **Usar los datos espaciales de**, seleccione **Campo espacial en un conjunto de datos**.  
+3.  En **Usar los datos espaciales de** , seleccione **Campo espacial en un conjunto de datos**.  
   
-4.  En **Nombre del conjunto de datos**, haga clic en el nombre de un conjunto de datos en el informe que contenga los datos espaciales que desea.  
+4.  En **Nombre del conjunto de datos** , haga clic en el nombre de un conjunto de datos en el informe que contenga los datos espaciales que desea.  
   
-5.  En **Nombre de campo espacial**, haga clic en el nombre del campo en el conjunto de datos que contenga los datos espaciales.  
+5.  En **Nombre de campo espacial** , haga clic en el nombre del campo en el conjunto de datos que contenga los datos espaciales.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -176,7 +176,7 @@ ms.locfileid: "91935214"
   
 3.  Haga clic con el botón derecho en la capa de mosaico en el panel Mapa y, después, haga clic en **Propiedades del mosaico**.  
   
-4.  En **Opciones de mosaico**, seleccione un estilo de mosaico. Si los mosaicos de Bing Maps están disponibles, la capa de la superficie de diseño se actualizará con el estilo que seleccione.  
+4.  En **Opciones de mosaico** , seleccione un estilo de mosaico. Si los mosaicos de Bing Maps están disponibles, la capa de la superficie de diseño se actualizará con el estilo que seleccione.  
   
     > [!NOTE]  
     >  Se puede agregar también una capa de mosaico al agregar una capa de polígono, línea o punto en el Asistente para mapas o en el Asistente para capas de mapa. En la página **Elegir opciones de datos espaciales y vista de mapa** , seleccione la opción **Agregar un fondo de Bing Maps a esta vista del mapa**.  
@@ -197,7 +197,7 @@ ms.locfileid: "91935214"
   
 3.  Haga clic en **Visibilidad**.  
   
-4.  En **Opciones de transparencia**, escriba un valor que represente la transparencia en porcentaje, por ejemplo **40**. Un transparencia de cero (0)% significa que la capa es opaca. Una transparencia de 100% significa que la capa no se verá en el informe.  
+4.  En **Opciones de transparencia** , escriba un valor que represente la transparencia en porcentaje, por ejemplo **40**. Un transparencia de cero (0)% significa que la capa es opaca. Una transparencia de 100% significa que la capa no se verá en el informe.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -209,7 +209,7 @@ ms.locfileid: "91935214"
   
 3.  Haga clic en **Visibilidad**.  
   
-4.  En **Opciones de transparencia**, escriba un valor que represente la transparencia en porcentaje, por ejemplo **40**.  
+4.  En **Opciones de transparencia** , escriba un valor que represente la transparencia en porcentaje, por ejemplo **40**.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

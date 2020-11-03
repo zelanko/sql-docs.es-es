@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a4dc5671d5a23448f3549e383b26097026cc021
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4e51e1a12f28ae18ff6ba833ace19a1a97ba72dd
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462069"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907244"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Recopilar segmentos pequeños en un gráfico circular (Generador de informes y SSRS)
 Los gráficos circulares con demasiados segmentos pueden parecer abarrotados. Aprenda a combinar muchos segmentos pequeños de un gráfico circular en un único segmento en informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
@@ -23,7 +23,7 @@ Los gráficos circulares con demasiados segmentos pueden parecer abarrotados. Ap
  
  El [Tutorial: Agregar un gráfico circular a un informe (Generador de informes)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md) le guía a lo largo del proceso de combinación de segmentos pequeños en uno solo, si primero quiere probar esto con datos de ejemplo.
  
- ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
+ ![Captura de pantalla del gráfico circular de un generador de informes que muestra el otro segmento.](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
  También puede recopilar sectores pequeños en un segundo gráfico circular al que se llamará desde un sector recopilado del primer gráfico circular. El segundo gráfico circular se dibuja a la derecha del gráfico circular original.  
   
@@ -40,7 +40,7 @@ Los gráficos circulares con demasiados segmentos pueden parecer abarrotados. Ap
   
 4.  Establezca la propiedad CollectedStyle en **SingleSlice**.  
 
-    ![report-builder-pie-chart-single-slice-property](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![Captura de pantalla del gráfico circular de un generador de informes que muestra cómo configurar una propiedad de segmento individual.](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
   
 5.  Establezca el valor del umbral de recopilación y el tipo de umbral. En los ejemplos siguientes se muestran formas habituales de establecer umbrales de recopilación.  
   
@@ -51,7 +51,7 @@ Los gráficos circulares con demasiados segmentos pueden parecer abarrotados. Ap
          Establezca la propiedad CollectedThreshold en **10**.  
   
         > [!NOTE]  
-        >  Si establece CollectedStyle en **SingleSlice**, CollectedThreshold en un valor mayor que **100** y CollectedThresholdUsePercent en **True**, el gráfico inicia una excepción, porque no puede calcular un porcentaje. Para resolver este problema, establezca CollectedThreshold en un valor menor que **100**.  
+        >  Si establece CollectedStyle en **SingleSlice** , CollectedThreshold en un valor mayor que **100** y CollectedThresholdUsePercent en **True** , el gráfico inicia una excepción, porque no puede calcular un porcentaje. Para resolver este problema, establezca CollectedThreshold en un valor menor que **100**.  
   
     -   **Por valor de datos.** Por ejemplo, para recopilar en un solo sector cualquier sector del gráfico circular que esté por debajo de 5000:  
   
@@ -69,7 +69,7 @@ Los gráficos circulares con demasiados segmentos pueden parecer abarrotados. Ap
   
 2.  Establezca la propiedad CollectedStyle en **CollectedPie**.  
   
-3.  Establezca la propiedad CollectedThreshold en un valor que represente el umbral de recopilación de los sectores pequeños en un solo sector. Cuando la propiedad CollectedStyle se establece en **CollectedPie**, la propiedad CollectedThresholdUsePercent siempre se establece en **True**y el umbral de recopilación siempre se mide como porcentaje.  
+3.  Establezca la propiedad CollectedThreshold en un valor que represente el umbral de recopilación de los sectores pequeños en un solo sector. Cuando la propiedad CollectedStyle se establece en **CollectedPie** , la propiedad CollectedThresholdUsePercent siempre se establece en **True** y el umbral de recopilación siempre se mide como porcentaje.  
   
 4.  (Opcional) Establezca las propiedades CollectedColor, CollectedLabel, CollectedLegendText y CollectedToolTip. El resto de las propiedades denominadas "Collected" no se aplican al gráfico circular recopilado.  
   

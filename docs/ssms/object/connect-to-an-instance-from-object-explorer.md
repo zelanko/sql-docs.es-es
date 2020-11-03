@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 700944b707416a89d16b5ce53eee471692779870
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: bd161a78bb0b5249d0ce6f802760acd2048014f6
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037658"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523984"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Conexión a SQL Server o Azure SQL Database
 
@@ -27,21 +27,21 @@ Para trabajar con servidores y bases de datos, primero debe conectarse al servid
   
 ## <a name="connecting-to-a-server"></a>Conectar a un servidor  
 
-1. En **Explorador de objetos**, haga clic en **Conectar > Motor de base de datos... **.
+1. En **Explorador de objetos** , haga clic en **Conectar > Motor de base de datos...**.
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![conectar](../media/connect-to-server/connect-db-engine.png)
 
-1. Rellene el formulario **Conectar al servidor** y haga clic en **Conectar**:
+1. Rellene el formulario **Conectar al servidor** y haga clic en **Conectar** :
 
    ![conectar con el servidor](../media/connect-to-server/connect.png)
 
-1. Si se está conectando a un servidor SQL de Azure, puede que se le pida que inicie sesión para crear una regla de firewall. Haga clic en **Iniciar sesión... **. Si no es así, vaya directamente al paso 6.
+1. Si se está conectando a un servidor SQL de Azure, puede que se le pida que inicie sesión para crear una regla de firewall. Haga clic en **Iniciar sesión...**. Si no es así, vaya directamente al paso 6.
 
-   ![firewall](../media/connect-to-server/firewall-rule-sign-in.png)
+   ![Captura de pantalla del cuadro de diálogo Nueva regla de firewall con la opción Iniciar sesión seleccionada.](../media/connect-to-server/firewall-rule-sign-in.png)
 
 1. Después de iniciar sesión correctamente, el formulario se rellenará automáticamente con la dirección IP específica. Si su dirección IP cambia con frecuencia, puede que sea más fácil conceder acceso a un intervalo. Seleccione la opción que sea más adecuada para su entorno. 
 
-   ![firewall](../media/connect-to-server/new-firewall-rule.png)
+   ![Captura de pantalla del cuadro de diálogo Nueva regla de firewall con las opciones Agregar la IP de mi cliente y Aceptar seleccionadas.](../media/connect-to-server/new-firewall-rule.png)
 
 1. Para crear la regla de firewall y conectarse al servidor, haga clic en **Aceptar**.
 

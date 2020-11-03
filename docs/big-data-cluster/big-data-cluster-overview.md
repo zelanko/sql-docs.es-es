@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bd3a092906bf2a7d46c7f343b7edf913bdd4d9cf
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765744"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914351"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -22,9 +22,7 @@ ms.locfileid: "88765744"
 
 A partir de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ahora permiten implementar clústeres escalables de contenedores de SQL Server, Spark y HDFS que se ejecutan en Kubernetes. Estos componentes se ejecutan en paralelo con objeto de que se puedan leer, escribir y procesar macrodatos de Transact-SQL o Spark, lo que permite combinar y analizar fácilmente los datos relacionales de alto valor con grandes volúmenes de datos.
 
-En [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] se introducen los clústeres de macrodatos de SQL Server.
-
-Use los clústeres de macrodatos de SQL Server para:
+Use [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] para:
 
 - [Implementación de clústeres escalables](./deploy-get-started.md) de contenedores de SQL Server, Spark y HDFS que se ejecutan en Kubernetes. 
 - Leer, escribir y procesar macrodatos desde Transact-SQL o Spark.
@@ -45,7 +43,7 @@ Los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)
 
 ### <a name="data-virtualization"></a>Virtualización de datos
 
-Al aprovechar [SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md), los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] pueden consultar orígenes de datos externos sin necesidad de mover o copiar los datos. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduce nuevos conectores para orígenes de datos.
+Al aprovechar [PolyBase](../relational-databases/polybase/polybase-guide.md), las instancias de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] pueden consultar orígenes de datos externos sin necesidad de mover o copiar los datos. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduce nuevos conectores para orígenes de datos.
 
 ![Virtualización de datos](media/big-data-cluster-overview/data-virtualization.png)
 
@@ -75,7 +73,7 @@ Puede usar [Azure Data Studio](../azure-data-studio/what-is.md) para realizar d
 - Fragmentos de código integrados para las tareas de administración comunes.
 - Capacidad de examinar HDFS, cargar archivos, obtener una vista previa de los archivos y crear directorios.
 - Capacidad para crear, abrir y ejecutar cuadernos compatibles con Jupyter.
-- Asistente para la virtualización de datos para simplificar la creación de orígenes de datos externos (habilitado por la **Extensión de virtualización de datos**).
+- Asistente para la virtualización de datos para simplificar la creación de orígenes de datos externos (habilitado por la **Extensión de virtualización de datos** ).
 
 ## <a name="architecture"></a><a id="architecture"></a> Arquitectura
 
@@ -96,7 +94,7 @@ En los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.
 
 ### <a name="big-data-clusters-architecture"></a>Arquitectura de clústeres de macrodatos
 
-En el diagrama siguiente se muestran los componentes de un clúster de macrodatos para SQL Server.
+En el diagrama siguiente se muestran los componentes de un clúster de macrodatos de SQL Server:
 
 ![Información general sobre la arquitectura](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
@@ -121,4 +119,4 @@ El grupo de almacenamiento consiste en módulos de almacenamiento que se compone
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para más información sobre cómo implementar clústeres de macrodatos de SQL Server, vea [Introducción a clústeres de macrodatos de SQL Server](deploy-get-started.md).
+Para obtener más información sobre la implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consulte [Introducción a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).

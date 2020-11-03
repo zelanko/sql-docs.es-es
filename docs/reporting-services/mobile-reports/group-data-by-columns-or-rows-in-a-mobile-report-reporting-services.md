@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f28c3feb8d8cd2fe68ab093241ac4390768b6487
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d775b0346ce2838abeec4bebce55762afd3b0adc
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448237"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907333"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Agrupar datos por columnas o por filas en un informe para dispositivos móviles | Reporting Services
 Los datos se pueden organizar por columnas o por filas en muchos tipos de gráficos del [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]. Siga el procedimiento detallado de este tema.
@@ -29,17 +29,17 @@ En los siguientes pasos se usa una tabla de comparación de valores totales con 
 
 2. Seleccione la pestaña **Datos** . Verá que la tabla SimulatedTable contiene una serie de columnas, de **Metric1** a **Metric5** y de **Comparison1** a **Comparison5**. 
 
-   ![mobile-report-data-group-column](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
+   ![Captura de pantalla de columnas con grupos de datos del informe móvil.](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
 
-3. En el panel **Propiedades de los datos** , **Serie principal** es **SimulatedTable**. Seleccione la flecha del cuadro junto a **Serie principal**y verá que las opciones de **Metric1** a **Metric5** están seleccionadas.
+3. En el panel **Propiedades de los datos** , **Serie principal** es **SimulatedTable**. Seleccione la flecha del cuadro junto a **Serie principal** y verá que las opciones de **Metric1** a **Metric5** están seleccionadas.
 
-   ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
+   ![Captura de pantalla de las opciones junto a la Serie principal.](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
    Del mismo modo, en **Serie de comparaciones** -- **Comparison1** a **Comparison5** están seleccionadas.
    
 4. Seleccione **Vista previa**.
 
-   ![mobile-report-chart-by-columns](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
+   ![Captura de pantalla de la vista previa del gráfico de los valores totales de comparaciones.](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
 
    Cada barra del gráfico representa una columna de la tabla. Las barras más gruesas son las columnas de las métricas y las más delgadas, las columnas de las comparaciones.
 
@@ -49,15 +49,15 @@ En los siguientes pasos se usa una tabla de comparación de valores totales con 
 
 7. Seleccione la pestaña **Datos** . Ahora la tabla SimulatedTable tiene una columna **Categoría** junto con las columnas **Métrica** y **Comparación** con las categorías de la A a la E. 
 
-   ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
+   ![Captura de pantalla de filas con grupos de datos del informe móvil.](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 
 8.  En el panel **Propiedades de los datos** , ahora hay un cuadro de columna de categoría que muestra la columna Categoría de SimulatedTable. En Serie principal, puede elegir la columna que se usará para los valores. De forma predeterminada, el [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] selecciona de Metric1 a Metric5 como series principales, y de Comparison1 a Comparison5 como series de comparación. 
 
-    ![mobile-report-properties-rows](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
+    ![Captura de pantalla de las opciones junto a la Serie de comparaciones.](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
 
 9. Seleccione **Vista previa**.
 
-   ![mobile-report-chart-by-rows](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
+   ![Captura de pantalla de la vista previa del gráfico de los valores totales de comparaciones actualizados.](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
 
    Ahora, cada barra del gráfico representa los valores de cada categoría en la columna Categoría.
 

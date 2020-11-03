@@ -9,38 +9,38 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d4e12a0322a35e96bd930c4fa6f1f852daf2bdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3000abfed5258f02d47148ce351a6390cb225c7
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258463"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678882"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lección 2: Especificación de información de conexión (Reporting Services)
 
 En la lección 1, agregó un informe paginado de [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] al proyecto Tutorial.
   
-En esta lección, va a definir un *origen de datos*, la información de conexión que el informe usa para acceder a los datos desde una base de datos relacional u otros orígenes.
+En esta lección, va a definir un *origen de datos* , la información de conexión que el informe usa para acceder a los datos desde una base de datos relacional u otros orígenes.
 
 Para este informe, va a agregar la base de datos de ejemplo AdventureWorks2016 como el origen de datos. En este tutorial se da por hecho que esta base de datos se encuentra en la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] instalada en el equipo local.  
 
 ## <a name="to-set-up-a-connection"></a>Para configurar una conexión  
 
-1. En el panel **Datos de informe**, seleccione **Nuevo** > **Origen de datos**. Si el panel **Datos de informe** no aparece, seleccione el menú **Ver** > **Datos de informe**.
+1. En el panel **Datos de informe** , seleccione **Nuevo** > **Origen de datos**. Si el panel **Datos de informe** no aparece, seleccione el menú **Ver** > **Datos de informe**.
 
-    ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
+    ![Captura de pantalla del panel Datos de informe con la selección Nuevo > Origen de datos.](media/ssrs-table-tutorial-2-new-data-source.png)
 
     El cuadro de diálogo **Propiedades de origen de datos** se abre y en él se muestra la sección **General**.
 
     ![Cuadro de diálogo Propiedades de origen de datos](media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png)
 
-2. En el cuadro de texto **Nombre**, escriba "AdventureWorks2016".
+2. En el cuadro de texto **Nombre** , escriba "AdventureWorks2016".
 
 3. Seleccione el botón de radio **Conexión insertada**.
 
-4. En el cuadro de selección desplegable **Tipo**, seleccione "Microsoft SQL Server".
+4. En el cuadro de selección desplegable **Tipo** , seleccione "Microsoft SQL Server".
   
-5. En el cuadro de texto **Cadena de conexión**, escriba la siguiente cadena:
+5. En el cuadro de texto **Cadena de conexión** , escriba la siguiente cadena:
 
     `Data source=localhost; initial catalog=AdventureWorks2016`
 
@@ -53,7 +53,7 @@ Para este informe, va a agregar la base de datos de ejemplo AdventureWorks2016 c
     >
     > Para más información sobre las cadenas de conexión, puede consultar la sección `See also` a continuación.
 
-6. Seleccione la pestaña **Credenciales** y, en la sección **Cambiar las credenciales utilizadas para conectarse al origen de datos**, seleccione el botón de radio **Usar autenticación de Windows (seguridad integrada)** .
+6. Seleccione la pestaña **Credenciales** y, en la sección **Cambiar las credenciales utilizadas para conectarse al origen de datos** , seleccione el botón de radio **Usar autenticación de Windows (seguridad integrada)** .
 
 7. Seleccione **Aceptar** para completar el proceso.
 

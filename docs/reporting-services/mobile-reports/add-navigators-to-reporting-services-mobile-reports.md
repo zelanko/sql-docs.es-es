@@ -9,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6749853bc1717077a4d65f4f27546c0fe260cdaf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 640f8a5b04f9045f905f86ef6d34924ea849bd80
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448200"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907100"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 En el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], se agregan *navegadores* para filtrar los datos de las visualizaciones por tiempo o por selección. 
 
 Los navegadores son similares a las segmentaciones en Power BI y las tablas dinámicas de Excel, pero también tienen algunos rasgos únicos.
 
-Los**navegadores basados en tiempo** filtran las tablas mediante la selección de las filas que se encuentran en un intervalo de tiempo específico. 
+Los **navegadores basados en tiempo** filtran las tablas mediante la selección de las filas que se encuentran en un intervalo de tiempo específico. 
 
-Los**navegadores basados en selección** filtran las tablas mediante la selección de aquellas filas que contienen un valor de columna concreto que coincide con el valor de clave seleccionado o, en el caso de los árboles jerárquicos, aquellas filas en las que un valor de columna concreto pertenece al subárbol del valor de clave seleccionado. Hay dos tipos de navegadores de selección:
+Los **navegadores basados en selección** filtran las tablas mediante la selección de aquellas filas que contienen un valor de columna concreto que coincide con el valor de clave seleccionado o, en el caso de los árboles jerárquicos, aquellas filas en las que un valor de columna concreto pertenece al subárbol del valor de clave seleccionado. Hay dos tipos de navegadores de selección:
 * Las listas de selección son tablas de una sola columna que se pueden usar para filtrar el informe móvil, similar a las segmentaciones en Power BI y Excel.
 * Las cuadrículas de cuadro de mandos también filtran el informe móvil y pueden contener 
   
@@ -42,7 +42,7 @@ De forma predeterminada, el navegador de tiempo filtra todos los elementos de vi
   
 Puede desconectar una visualización del navegador de tiempo.   
 1. Seleccione la visualización y, después, seleccione la pestaña **Datos** .  
-2. En **Propiedades de los datos**, seleccione **Opciones**.  
+2. En **Propiedades de los datos** , seleccione **Opciones**.  
 3. Desactive la casilla **Filtrado por** .  
   
    ![SSMRP_ClearTimeFilter](../../reporting-services/mobile-reports/media/ssmrp-cleartimefilter.png)  
@@ -53,25 +53,25 @@ La lista de selección filtra los datos de un informe móvil mediante la compara
 
 1. Desde la pestaña **Diseño** , arrastre **Lista de selección** a la superficie de diseño y cambie el tamaño de la forma que quiera.
 
-2. Seleccione la pestaña **Datos** y, en el panel **Propiedades de los datos** en **Claves**, seleccione la tabla y la columna que serán el filtro. 
+2. Seleccione la pestaña **Datos** y, en el panel **Propiedades de los datos** en **Claves** , seleccione la tabla y la columna que serán el filtro. 
 
-3. En **Etiquetas**, seleccione la columna con la etiqueta que se mostrará. La columna de clave y la columna de etiqueta pueden ser la misma.  
+3. En **Etiquetas** , seleccione la columna con la etiqueta que se mostrará. La columna de clave y la columna de etiqueta pueden ser la misma.  
   
    En el caso de datos jerárquicos de árbol, debe seleccionar una columna de clave principal.  
   
-4. Una vez configuradas las propiedades de los datos, en **Tables Filtered by Selection List**(Tablas filtradas por lista de selección), seleccione las tablas que se van a filtrar y la columna por la que se va a filtrar. Esta columna debe comparar los valores con la columna de clave de la lista de selección. 
+4. Una vez configuradas las propiedades de los datos, en **Tables Filtered by Selection List** (Tablas filtradas por lista de selección), seleccione las tablas que se van a filtrar y la columna por la que se va a filtrar. Esta columna debe comparar los valores con la columna de clave de la lista de selección. 
 
 Para cada visualización del informe móvil en la que quiere que la lista de selección actúe como filtro:
 
 1. Seleccione la visualización, seleccione la pestaña **Datos** y, en el panel **Propiedades de los datos** , seleccione **Opciones** junto al nombre del campo.
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![Captura de pantalla de las opciones de la columna de categoría expandidas con la opción de filtrar por estado o regiones seleccionada.](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
-2. En **Filtrado por**, seleccione la lista de selección.
+2. En **Filtrado por** , seleccione la lista de selección.
 
 Cuando se ve el informe móvil en vista previa o en el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y se selecciona un valor en la lista de selección, se filtran las demás visualizaciones del informe móvil.
 
-![mobile-report-selection-list-filtering](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
+![Captura de pantalla que muestra el informe móvil con la selección Washington en la lista de estados o regiones y los resultados de las ciudades de Washington que devuelve.](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
      
 ## <a name="scorecard-grid"></a>Cuadrícula de cuadro de mandos  
   
@@ -79,9 +79,9 @@ El filtro de cuadrícula de cuadro de mandos funciona de manera muy similar al f
 
 1. Desde la pestaña **Diseño** , arrastre **Cuadrícula de cuadro de mandos** a la superficie de diseño y cambie el tamaño de la forma que quiera.
 
-2. Seleccione la pestaña **Datos** y, en el panel **Propiedades de los datos** en **Claves**, seleccione la tabla y la columna que serán el filtro. 
+2. Seleccione la pestaña **Datos** y, en el panel **Propiedades de los datos** en **Claves** , seleccione la tabla y la columna que serán el filtro. 
 
-3. En **Etiquetas**, seleccione la columna con la etiqueta que se mostrará. La columna de clave y la columna de etiqueta pueden ser la misma.  
+3. En **Etiquetas** , seleccione la columna con la etiqueta que se mostrará. La columna de clave y la columna de etiqueta pueden ser la misma.  
   
 4. Para agregar un indicador de puntuación, seleccione **Agregar puntuación** en el panel **Columnas de datos**.   
   
@@ -96,13 +96,13 @@ El filtro de cuadrícula de cuadro de mandos funciona de manera muy similar al f
 
 7. Póngale el nombre que desee al indicador, elija la columna de origen en la tabla y seleccione cómo se le dará formato.  
 
-   ![mobile-report-scorecard-grid-data-properties](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
+   ![Captura de pantalla que muestra las opciones de una nueva puntuación disponibles.](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
 
-8. Una vez configuradas las propiedades de los datos, en **Tables Filtered by Selection List**(Tablas filtradas por lista de selección), seleccione las tablas que se van a filtrar y la columna por la que se va a filtrar. Esta columna debe comparar los valores con la columna de clave de la lista de selección. 
+8. Una vez configuradas las propiedades de los datos, en **Tables Filtered by Selection List** (Tablas filtradas por lista de selección), seleccione las tablas que se van a filtrar y la columna por la que se va a filtrar. Esta columna debe comparar los valores con la columna de clave de la lista de selección. 
 
 Cuando se ve el informe móvil en vista previa o en el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y se selecciona un valor en la cuadrícula de cuadro de mandos, se filtran las demás visualizaciones del informe móvil.
 
-![mobile-report-scorecard-grid](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
+![Captura de pantalla de la cuadrícula de cuadro de mandos de un informe móvil.](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
     
 ## <a name="set-which-visualizations-are-filtered"></a>Configurar qué visualizaciones se filtran  
   
@@ -112,9 +112,9 @@ Puede decidir qué visualizaciones del informe móvil filtrará un navegador:
 
 1. Seleccione la visualización, seleccione la pestaña **Datos** y, en el panel **Propiedades de los datos** , seleccione **Opciones** junto al nombre del campo.
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![Otra captura de pantalla de las opciones de la columna de categoría expandidas con la opción de filtrar por estado o regiones seleccionada.](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
-2. En **Filtrado por**, seleccione el navegador. Cada visualización se puede filtrar mediante varios navegadores.
+2. En **Filtrado por** , seleccione el navegador. Cada visualización se puede filtrar mediante varios navegadores.
   
 ## <a name="cascading-filters"></a>Filtros en cascada   
   

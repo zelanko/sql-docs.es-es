@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 456c50650afc01fc18465b0d96f3cfeb715ddecb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 204885c83b400be7f134a7c8a5e622f3c3488797
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448286"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907313"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Agregar medidores a informes para dispositivos móviles | Reporting Services
 Los medidores son los elementos visuales más básicos y más ampliamente usados en los informes para dispositivos móviles. Muestran un valor único de un conjunto de datos: solo el valor, o bien el valor comparado con un objetivo.
@@ -25,7 +25,7 @@ Los medidores son los elementos visuales más básicos y más ampliamente usados
   
 Todos los medidores del Publicador de informes móviles de SQL Server tienen al menos una propiedad en común: un valor principal, establecido en un campo numérico de una de las tablas de datos del informe para dispositivos móviles.  
 
-Todos los medidores, excepto el medidor de número, pueden mostrar también una comparación (o *valor diferencial*), esto es, la relación entre el valor principal y un valor de comparación. El valor de comparación suele ser el objetivo, mientras que el indicador es un indicador visual del progreso hacia ese objetivo, o el valor diferencial entre el valor real y el objetivo.
+Todos los medidores, excepto el medidor de número, pueden mostrar también una comparación (o *valor diferencial* ), esto es, la relación entre el valor principal y un valor de comparación. El valor de comparación suele ser el objetivo, mientras que el indicador es un indicador visual del progreso hacia ese objetivo, o el valor diferencial entre el valor real y el objetivo.
 
 Los medidores solo pueden representar un valor agregado de su valor principal y un valor agregado de su valor de comparación. Las agregaciones de medidor son estándar: suma, promedio, mínimo, máximo, etc. El valor de medidor predeterminado es una suma, que muestra el total de todos los valores incluidos en los datos filtrados actuales disponibles para el control de medidor. 
 
@@ -43,7 +43,7 @@ Los valores de medidor se pueden filtrar conectándolos a navegadores en el info
 
 4. [Opcional] Para cambiar la agregación, seleccione **Opciones** y, luego, seleccione otra agregación.
    
-   >**Nota**: Si cambia la agregación del valor principal, probablemente también quiera hacer lo propio con el valor de comparación, aunque en algunos casos se pueden combinar diferentes métodos de agregación.  
+   >**Nota** : Si cambia la agregación del valor principal, probablemente también quiera hacer lo propio con el valor de comparación, aunque en algunos casos se pueden combinar diferentes métodos de agregación.  
 
 ## <a name="filter-a-gauge"></a>Filtrar un medidor
   
@@ -53,7 +53,7 @@ Si el informe para dispositivos móviles tiene navegadores, puede enlazar un med
 
 2. En Filtrado por, seleccione el navegador en el que quiera filtrar el medidor.
 
-   ![mobile-report-gauge-navigator](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
+   ![Captura de pantalla de las opciones de Valor principal expandidas con la opción de filtrar por lista de producto seleccionada.](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
  
 ## <a name="set-visual-properties-for-a-gauge"></a>Establecer las propiedades visuales de un medidor
   
@@ -62,7 +62,7 @@ Además de las propiedades de datos que conectan elementos de medidor a campos d
 ### <a name="set-value-direction-high-or-low-is-better"></a>Establezca la dirección del valor: es mejor alta o baja
 * Seleccione un medidor y, en la pestaña **Diseño** , en el panel **Propiedades de los elementos visuales** , establezca **Dirección del valor** en **Los valores altos son mejores** o **Los valores bajos son mejores**. 
 
-La opción**Los valores altos son mejores** pone los valores positivos de color verde, lo que indica un cambio positivo deseable, o los valores bajos de color rojo, lo que indica un cambio negativo no deseable. 
+La opción **Los valores altos son mejores** pone los valores positivos de color verde, lo que indica un cambio positivo deseable, o los valores bajos de color rojo, lo que indica un cambio negativo no deseable. 
 
 Los colores de **Los valores altos son mejores** se establecen a la inversa.
 

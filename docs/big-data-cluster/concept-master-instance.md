@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f7199663209c2d9a0dc51baa0e6986f16722ef94
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57de001599923d46139883f2f8a691f9d682abf3
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773657"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914317"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>¿Cuál es la instancia maestra en un clúster de macrodatos de SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-En este artículo, se describe el rol de la *instancia maestra de SQL Server* en un clúster de macrodatos para SQL Server 2019. La instancia maestra es una instancia de SQL Server que se ejecuta en un clúster de macrodatos para administrar la conectividad, las consultas de escalabilidad horizontal, los metadatos y las bases de datos de usuario, así como los servicios de aprendizaje automático.
+En este artículo, se describe el rol de la *instancia maestra de SQL Server* en un clúster de macrodatos de SQL Server. La instancia maestra es una instancia de SQL Server que se ejecuta en un clúster de macrodatos de SQL Server para administrar la conectividad, las consultas de escalabilidad horizontal, los metadatos y las bases de datos de usuario, así como los servicios de aprendizaje automático.
 
 La instancia maestra de SQL Server proporciona las siguientes funciones:
 
@@ -36,8 +36,8 @@ La instancia maestra de SQL Server contiene el motor de consultas de escalado ho
 
 Además de las bases de datos del sistema de SQL Server estándar, la instancia maestra de SQL también contiene lo siguiente:
 
-- Una base de datos de metadatos que contiene metadatos de tablas HDFS.
-- Un mapa de particiones del plano de datos.
+- Base de datos de metadatos que contiene metadatos de tablas HDFS.
+- Mapa de particiones del plano de datos.
 - Detalles de las tablas externas que proporcionan acceso al plano de datos del clúster.
 - Orígenes de datos externos de PolyBase y tablas externas definidas en bases de datos de usuario.
 
@@ -51,9 +51,9 @@ Como parte del clúster de macrodatos de SQL Server, la característica Machine 
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Ventajas de Machine Learning Services en un clúster de macrodatos
 
-SQL Server 2019 permite encontrar fácilmente macrodatos para unirlos a los datos dimensionales que suelen almacenarse en la base de datos empresarial. Este valor de los macrodatos se incrementa en gran medida cuando no solo pertenece a una organización, sino que también se incluye en informes, paneles y aplicaciones. Al mismo tiempo, los científicos de datos pueden seguir usando las herramientas del ecosistema de Spark/HDFS y acceder fácilmente y en tiempo real a los datos en la instancia maestra de SQL Server y en orígenes de datos externos accesibles _mediante_ la instancia maestra de SQL Server.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] permite encontrar fácilmente macrodatos para unirlos a los datos dimensionales que suelen almacenarse en la base de datos empresarial. Este valor de los macrodatos se incrementa en gran medida cuando no solo pertenece a una organización, sino que también se incluye en informes, paneles y aplicaciones. Al mismo tiempo, los científicos de datos pueden seguir usando las herramientas del ecosistema de Spark/HDFS y acceder fácilmente y en tiempo real a los datos en la instancia maestra de SQL Server y en orígenes de datos externos accesibles _mediante_ la instancia maestra de SQL Server.
 
-Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], puede hacer más cosas con sus lagos de datos empresariales. Los desarrolladores y analistas de SQL Server pueden:
+Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], puede hacer más cosas con sus lagos de datos empresariales. Los desarrolladores y analistas de SQL Server pueden:
 
 * Crear aplicaciones que usen datos de lagos de datos empresariales.
 * Razonar sobre todos los datos con consultas Transact-SQL.

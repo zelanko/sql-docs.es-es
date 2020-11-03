@@ -10,16 +10,18 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 65a7c0afc57cc29d8ec5df7beb4c3107470e2d31
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: ac26973c4d1ff8b2a9e689f3aa372d3888f939d6
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257265"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914304"
 ---
-# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>¿Qué es la implementación de la aplicación en un clúster de macrodatos?
+# <a name="what-is-application-deployment-on-a-sql-server-big-data-cluster"></a>¿Qué es la implementación de la aplicación en un clúster de macrodatos de SQL Server?
 
-La implementación de la aplicación permite la implementación de aplicaciones en el clúster de macrodatos proporcionando interfaces para crear, administrar y ejecutar aplicaciones. Las aplicaciones implementadas en el clúster de macrodatos se benefician de la capacidad de cálculo del clúster y pueden tener acceso a los datos que están disponibles en el clúster. Esto aumenta la escalabilidad y el rendimiento de las aplicaciones, al tiempo que se administran las aplicaciones en las que residen los datos. Los tiempos de ejecución de aplicaciones compatibles en los Clústeres de macrodatos de SQL Server son R, Python, SSIS, MLeap.
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+La implementación de la aplicación permite la implementación de aplicaciones en un clúster de macrodatos de SQL Server proporcionando interfaces para crear, administrar y ejecutar aplicaciones. Las aplicaciones implementadas en un clúster de macrodatos de SQL Server se benefician de la capacidad de cálculo del clúster y pueden tener acceso a los datos que están disponibles en el clúster. Esto aumenta la escalabilidad y el rendimiento de las aplicaciones, al tiempo que se administran las aplicaciones en las que residen los datos. Los tiempos de ejecución de aplicaciones compatibles en los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] son R, Python, SSIS, MLeap.
 
 En las secciones siguientes se describe la arquitectura y las funciones de la implementación de la aplicación.
 
@@ -67,9 +69,9 @@ Además, **CAP_AUDIT_WRITE** es una capacidad opcional necesaria para permitir l
 ```yml
 ...
 allowedCapabilities:
-- SETUID
-- SETGID
-- CHOWN
+- SETUID
+- SETGID
+- CHOWN
 - SYS_PTRACE
 - AUDIT_WRITE
 ...

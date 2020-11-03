@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: En la parte cinco de esta serie de tutoriales de cinco partes, podrá usar scripts de R insertados en procedimientos almacenados de SQL con funciones de T-SQL con el aprendizaje automático de SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d5132b0616dd223e195f47b1333308a920fb2572
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e7657dcfe382ed87b31ca17e6c36d9019d1b84e2
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196283"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412523"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>Tutorial de R: Ejecución de predicciones en procedimientos almacenados de SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -24,9 +24,9 @@ En la parte cinco de esta serie de tutoriales de cinco partes, aprenderá a *usa
 
 En este artículo se muestran dos maneras de realizar la puntuación:
 
-+ **Modo de puntuación por lotes**: Use una consulta SELECT como entrada para el procedimiento almacenado. El procedimiento almacenado devuelve una tabla de observaciones correspondientes a los casos de entrada.
++ **Modo de puntuación por lotes** : Use una consulta SELECT como entrada para el procedimiento almacenado. El procedimiento almacenado devuelve una tabla de observaciones correspondientes a los casos de entrada.
 
-+ **Modo de puntuación individual**: pasar un conjunto de valores de parámetros individuales como entrada.  El procedimiento almacenado devuelve una sola fila o valor.
++ **Modo de puntuación individual** : pasar un conjunto de valores de parámetros individuales como entrada.  El procedimiento almacenado devuelve una sola fila o valor.
 
 En este artículo, hará lo siguiente:
 
@@ -44,39 +44,39 @@ En la [parte cuatro](r-taxi-classification-train-model.md), cargó los módulos 
 
 ## <a name="basic-scoring"></a>Puntuaciones básicas
 
-El procedimiento almacenado **RxPredict** muestra la sintaxis básica para ajustar una llamada RevoScaleR rxPredict en un procedimiento almacenado.
+El procedimiento almacenado **RPredict** muestra la sintaxis básica para ajustar una llamada de `PREDICT` en un procedimiento almacenado.
 
 ```sql
-CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
+CREATE PROCEDURE [dbo].[RPredict] (@model varchar(250), @inquery nvarchar(max))
 AS 
 BEGIN 
 
 DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);  
 EXEC sp_execute_external_script @language = N'R',
   @script = N' 
-    mod <- unserialize(as.raw(model)); 
-    print(summary(mod)) 
-    OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE); 
-    str(OutputDataSet) 
-    print(OutputDataSet) 
-    ', 
-  @input_data_1 = @inquery, 
+    mod <- unserialize(as.raw(model));
+    print(summary(mod))
+    OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));
+    str(OutputDataSet)
+    print(OutputDataSet)
+    ',
+  @input_data_1 = @inquery,
   @params = N'@model varbinary(max)',
   @model = @lmodel2 
-  WITH RESULT SETS ((Score float));
+  WITH RESULT SETS (("Score" float));
 END
 GO
 ```
 
 + La instrucción SELECT obtiene el modelo serializado de la base de datos y lo almacena en la variable de R `mod` para su posterior procesamiento con R.
 
-+ Los nuevos casos que se van a puntuar se obtienen de la consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] especificada en `@inquery`, el primer parámetro del procedimiento almacenado. Cuando se leen los datos de la consulta, las filas se guardan en la trama de datos predeterminada, `InputDataSet`. Esta trama de datos se pasa a la función [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) en [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler), que genera las puntuaciones.
++ Los nuevos casos que se van a puntuar se obtienen de la consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] especificada en `@inquery`, el primer parámetro del procedimiento almacenado. Cuando se leen los datos de la consulta, las filas se guardan en la trama de datos predeterminada, `InputDataSet`. Esta trama de datos se pasa a la función [PREDICT](/sql/t-sql/queries/predict-transact-sql) que genera las puntuaciones.
   
-  `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
+  `OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));`
   
   Como data.frame puede contener una sola fila, puede usar el mismo código para la puntuación individual o por lotes.
   
-+ El valor devuelto por la función `rxPredict` es un parámetro **float** que representa la probabilidad de que el taxista reciba una propina de cualquier importe.
++ El valor devuelto por la función `PREDICT` es un parámetro **float** que representa la probabilidad de que el taxista reciba una propina de cualquier importe.
 
 ## <a name="batch-scoring-a-list-of-predictions"></a>Puntuación por lotes (lista de predicciones)
 
@@ -101,16 +101,16 @@ Un escenario más común es generar predicciones para varias observaciones en el
    **Ejemplo de resultados**
 
    ```text
-   passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime   direct_distance
-   1  283 0.7 2013-03-27 14:54:50.000   0.5427964547
-   1  289 0.7 2013-02-24 12:55:29.000   0.3797099614
-   1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
+   passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime          direct_distance
+   1                 283                  0.7            2013-03-27 14:54:50.000   0.5427964547
+   1                 289                  0.7            2013-02-24 12:55:29.000   0.3797099614
+   1                 214                  0.7            2013-06-26 13:28:10.000   0.6970098661
    ```
 
-2. Cree un procedimiento almacenado llamado **RxPredictBatchOutput** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Cree un procedimiento almacenado llamado **RPredictBatchOutput** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
    ```sql
-   CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
+   CREATE PROCEDURE [dbo].[RPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
    AS
    BEGIN
    DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);
@@ -119,7 +119,7 @@ Un escenario más común es generar predicciones para varias observaciones en el
      @script = N'
        mod <- unserialize(as.raw(model));
        print(summary(mod))
-       OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);
+       OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));
        str(OutputDataSet)
        print(OutputDataSet)
      ',
@@ -138,13 +138,12 @@ Un escenario más común es generar predicciones para varias observaciones en el
    SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
    
    -- Call the stored procedure for scoring and pass the input data
-   EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
+   EXEC [dbo].[RPredictBatchOutput] @model = 'RTrainLogit_model', @inquery = @query_string;
    ```
   
 El procedimiento almacenado devuelve una serie de valores que representan la predicción para cada uno de las "Diez mejores carreras". Pero las mejores carreras de taxi también son viajes de un solo pasajero con un recorrido relativamente corto, por lo que es poco probable que el taxista reciba una propina.
 
 > [!TIP]
-> 
 > En lugar de devolver resultados de tipo "propina sí" y "propina no", también podría devolver la puntuación de probabilidad de la predicción y, después, aplicar una cláusula WHERE a los valores de la columna _Score_ para clasificar el resultado como "propina probable" o "propina improbable", con un valor de umbral como 0,5 o 0,7. Este paso no se incluye en el procedimiento almacenado, pero es fácil de implementar.
 
 ## <a name="single-row-scoring-of-multiple-inputs"></a>Puntuación de una sola fila de varias entradas
@@ -155,10 +154,10 @@ En esta sección, aprenderá a crear predicciones únicas mediante un procedimie
   
 Si llama al procedimiento almacenado desde una aplicación externa, asegúrese de que los datos coinciden con los requisitos del modelo de R. Esto puede incluir asegurarse de que los datos de entrada se pueden convertir a un tipo de datos R o validar el tipo y la longitud de los datos.
 
-1. Cree un procedimiento almacenado **RxPredictSingleRow**.
+1. Cree un procedimiento almacenado **RPredictSingleRow**.
   
    ```sql
-   CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+   CREATE PROCEDURE [dbo].[RPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
    AS
    BEGIN
    DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
@@ -168,7 +167,7 @@ Si llama al procedimiento almacenado desde una aplicación externa, asegúrese d
      @script = N'  
        mod <- unserialize(as.raw(model));  
        print(summary(mod));  
-       OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);  
+       OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));
        str(OutputDataSet);
        print(OutputDataSet); 
        ',  
@@ -183,7 +182,7 @@ Si llama al procedimiento almacenado desde una aplicación externa, asegúrese d
    Abra una nueva ventana **Consulta** para llamar al procedimiento almacenado, indicando valores en cada uno de los parámetros. Los parámetros representan las columnas de características usadas por el modelo y son obligatorios.
 
    ```sql
-   EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
+   EXEC [dbo].[RPredictSingleRow] @model = 'RTrainLogit_model',
    @passenger_count = 1,
    @trip_distance = 2.5,
    @trip_time_in_secs = 631,
@@ -196,7 +195,7 @@ Si llama al procedimiento almacenado desde una aplicación externa, asegúrese d
    Si lo prefiere, puede usar este método más breve compatible con [parámetros para un procedimiento almacenado](../../relational-databases/stored-procedures/specify-parameters.md):
   
    ```sql
-   EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+   EXEC [dbo].[RPredictSingleRow] 'RTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
    ```
 
 3. Los resultados indican que la probabilidad de obtener una propina es baja (cero) en estas diez mejores carreras, ya todas ellas son carreras donde viaja un único pasajero en una distancia relativamente corta.

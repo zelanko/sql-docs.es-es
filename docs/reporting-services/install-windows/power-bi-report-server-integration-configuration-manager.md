@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 66893eb9b35ac0635600d6628c3ef0121d5d37c9
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 47964ebf5702542452227589e1426948825cc216
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891305"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678877"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integración del servidor de informes de Power BI (Administrador de configuración)
 
@@ -89,7 +89,7 @@ Use la opción **Update Registration** (Actualizar el registro) si ha cambiado l
 
 - En la página **Integración de Power BI** , haga clic en **Actualizar registro**.
 
-     Se le pedirá que inicie sesión en Azure AD. La página se actualizará y verá la nueva dirección URL en la lista **Redirect URLs**(Direcciones URL de redireccionamiento).
+     Se le pedirá que inicie sesión en Azure AD. La página se actualizará y verá la nueva dirección URL en la lista **Redirect URLs** (Direcciones URL de redireccionamiento).
 
 ##  <a name="summary-of-the-power-bi-integration-and-pin-process"></a><a name="bkmk_integration_process"></a> Resumen del proceso de integración y anclaje de Power BI
 
@@ -129,7 +129,7 @@ En esta sección se resumen los pasos básicos y las tecnologías implicadas en 
 
 La segunda vez que un usuario ancle un elemento, se omitirán los pasos de 1 a 4. En su lugar, se recuperarán el identificador de la aplicación y las direcciones URL de la base de datos ReportServer y el flujo continuará con el paso 5.
 
-![ssRS-pin-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
+![Diagrama tras anclar un elemento de informe a un panel.](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
 
  **Cuando se active una suscripción para actualizar un icono del panel:**
 
@@ -143,7 +143,7 @@ La segunda vez que un usuario ancle un elemento, se omitirán los pasos de 1 a 4
 
 5. Si el token no es válido, se devuelve un error que se registra con el servidor de informes.  No se envía el estado ni otra información al panel.
 
-![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
+![Diagrama tras activar una suscripción para actualizar un icono del panel.](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 

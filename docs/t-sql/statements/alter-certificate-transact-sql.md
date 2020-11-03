@@ -24,12 +24,12 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: 37580f0069d4621f759d258e238ba3f8cf2d7d14
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: faee93b7e3185b11f2c603c0017f88f51f21f232
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688081"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067488"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -76,7 +76,7 @@ ALTER CERTIFICATE certificate_name
         DECRYPTION BY PASSWORD = '<key password>' )
 }  
 ```  
-  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -89,20 +89,20 @@ ALTER CERTIFICATE certificate_name
   
  WITH PRIVATE KEY Especifica que la clave privada del certificado se ha cargado en SQL Server.
 
- FILE ='*path_to_private_key*'  
+ FILE =' *path_to_private_key* '  
  Especifica la ruta de acceso completa a la clave privada, incluido el nombre de archivo. Este parámetro puede ser una ruta de acceso local o una ruta de acceso UNC a una ubicación de red. Se obtiene acceso a este archivo dentro del contexto de seguridad de la cuenta del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando utilice esta opción, asegúrese de que la cuenta de servicio tenga acceso al archivo especificado.
  
  Si solo se especifica un nombre de archivo, el archivo se guarda en la carpeta de datos de usuario predeterminada para la instancia. Esta carpeta puede (o no) ser la carpeta DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para LocalDB de SQL Server Express, la carpeta de datos de usuario predeterminada para la instancia es la ruta de acceso especificada por la variable de entorno `%USERPROFILE%` para la cuenta que ha creado la instancia.  
   
- BINARY ='*private_key_bits*'  
+ BINARY =' *private_key_bits* '  
  **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  Bits de clave privada especificados como una constante binaria. Estos bits pueden estar en forma cifrada. Si están cifrados, el usuario debe proporcionar una contraseña de descifrado. No se realizan comprobaciones de directiva de contraseña en esta contraseña. Los bits de clave privada deben tener el formato de archivo PVK.  
   
- DECRYPTION BY PASSWORD ='*current_password*'  
+ DECRYPTION BY PASSWORD =' *current_password* '  
  Especifica la contraseña necesaria para descifrar la clave privada.  
   
- ENCRYPTION BY PASSWORD ='*new_password*'  
+ ENCRYPTION BY PASSWORD =' *new_password* '  
  Especifica la contraseña que se usa para cifrar la clave privada del certificado en la base de datos. *new_password* debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Password Policy](../../relational-databases/security/password-policy.md).  
   
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  

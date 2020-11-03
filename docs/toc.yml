@@ -10180,6 +10180,8 @@
   items:
     - name: Información general
       href: sql-server/azure-arc/overview.md
+    - name: Notas de la versión
+      href: sql-server/azure-arc/release-notes.md
     - name: Conectar
       href: sql-server/azure-arc/connect.md
     - name: Conexión a escala

@@ -1,6 +1,6 @@
 ---
+title: Plan de mantenimiento (pestaña Diseño)
 description: Plan de mantenimiento (pestaña Diseño)
-title: Plan de mantenimiento (pestaña Diseño) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,19 +12,22 @@ f1_keywords:
 - sql13.swb.maint.maintplanproperties.optimizations.f1
 - sql13.swb.maint.planeditor.f1
 - sql13.swb.maint.subplaneditor.f1
+- Task.FileExtension
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e56d4d52cee3ac75354acd17d7496d062bc3ed73
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75cc3aaec07d038ed6218a7a20268e94f23d3949
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420879"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067334"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de mantenimiento (pestaña Diseño)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-   Use el **Plan de mantenimiento (pestaña Diseño)** para especificar las propiedades de un plan de mantenimiento y sus subplanes. Arrastre las tareas del cuadro de herramientas al diseñador de planes. Haga clic con el botón secundario en grupos de tareas para crear rutas de ejecución bifurcadas. Los planes de mantenimiento se guardan como paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se ejecutan mediante trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+ Use el **Plan de mantenimiento (pestaña Diseño)** para especificar las propiedades de un plan de mantenimiento y sus subplanes. Arrastre las tareas del cuadro de herramientas al diseñador de planes. Haga clic con el botón secundario en grupos de tareas para crear rutas de ejecución bifurcadas. Los planes de mantenimiento se guardan como paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se ejecutan mediante trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
  **Agregar subplán**  
@@ -60,7 +63,7 @@ ms.locfileid: "88420879"
  **Superficie del diseñador**  
  Diseña y mantiene los planes de mantenimiento. Utilice la superficie del diseñador para agregar o eliminar tareas de mantenimiento a un plan, especificar los vínculos de precedencia entre las tareas e indicar la bifurcación y el paralelismo de tareas.  
   
- Un vínculo de precedencia entre dos tareas establece una relación entre ellas. La segunda tarea (la *tarea dependiente*) solo se ejecuta si el resultado de la ejecución de la primera tarea (la *tarea precedente*) coincide con el criterio especificado. Por lo general, el resultado de la ejecución es **Correcto**, **Error**o **Conclusión**. La superficie del diseñador del plan de mantenimiento se basa en la superficie del diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Para obtener más información, vea [Restricciones de precedencia](../../integration-services/control-flow/precedence-constraints.md).  
+ Un vínculo de precedencia entre dos tareas establece una relación entre ellas. La segunda tarea (la *tarea dependiente* ) solo se ejecuta si el resultado de la ejecución de la primera tarea (la *tarea precedente* ) coincide con el criterio especificado. Por lo general, el resultado de la ejecución es **Correcto** , **Error** o **Conclusión**. La superficie del diseñador del plan de mantenimiento se basa en la superficie del diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Para obtener más información, vea [Restricciones de precedencia](../../integration-services/control-flow/precedence-constraints.md).  
   
  Como ejemplo, un tarea Desfragmentar índice puede especificarse para que solo se ejecute si ha finalizado correctamente una tarea Comprobar la integridad de la base de datos. La característica de vinculación de precedencia de la tarea también permite que el plan pueda hacer frente a condiciones de error. Por ejemplo, si la tarea Comprobar la integridad de la base de datos genera errores, una tarea Notificar al operador podría informar a un usuario u operador sobre la existencia del error.  
   
@@ -76,14 +79,14 @@ ms.locfileid: "88420879"
   
  Para especificar los vínculos de precedencia entre dos tareas, arrastre primero las tareas a la superficie de diseño y, a continuación, haga clic en la tarea que tiene lugar en primer lugar (la tarea precedente) y arrastre la flecha a la tarea dependiente. Cuando se ha establecido un vínculo de precedencia, el diseñador muestra una flecha de vinculación entre las dos tareas; la tarea precedente apunta a la tarea dependiente. De forma predeterminada, cuando un vínculo se establece por primera vez, la restricción del vínculo se establece de modo que la tarea dependiente solo se ejecuta si el resultado de la ejecución de la tarea precedente es **Correcto**.  
   
- Para cambiar las propiedades de un vínculo de precedencia, haga doble clic en el vínculo para iniciar el **Editor de restricciones de precedencia**. Este editor ofrece muchas opciones para especificar las condiciones lógicas que determinan si la tarea dependiente se ejecuta. Por ejemplo, el **resultado de la ejecución** puede establecerse en **Error**, en cuyo caso la tarea dependiente solo se ejecuta si la tarea precedente genera un error. Para cambiar la propiedad del resultado de la ejecución de un vínculo a **Correcto**, **Error**o **Conclusión**, también puede hacer clic con el botón derecho en el vínculo y luego seleccionar la opción deseada en el menú contextual.  
+ Para cambiar las propiedades de un vínculo de precedencia, haga doble clic en el vínculo para iniciar el **Editor de restricciones de precedencia**. Este editor ofrece muchas opciones para especificar las condiciones lógicas que determinan si la tarea dependiente se ejecuta. Por ejemplo, el **resultado de la ejecución** puede establecerse en **Error** , en cuyo caso la tarea dependiente solo se ejecuta si la tarea precedente genera un error. Para cambiar la propiedad del resultado de la ejecución de un vínculo a **Correcto** , **Error** o **Conclusión** , también puede hacer clic con el botón derecho en el vínculo y luego seleccionar la opción deseada en el menú contextual.  
   
- Para especificar la bifurcación de tareas, cree primero los vínculos de precedencia entre dos tareas. Luego, coloque otra tarea dependiente en la superficie de diseño que se ejecute si se obtiene un resultado diferente a la primera tarea dependiente. Haga clic en la tarea predecesora y arrastre la segunda flecha de la tarea precedente a la tarea dependiente. Para cambiar el resultado de la ejecución (**Correcto**, **Error**, **Conclusión**) que hace que una tarea dependiente se ejecute, haga doble clic en la flecha de vínculo y modifique el campo **Resultado de ejecución** . Como alternativa, haga clic con el botón secundario en el vínculo y seleccione el valor deseado del resultado de la ejecución en el menú contextual.  
+ Para especificar la bifurcación de tareas, cree primero los vínculos de precedencia entre dos tareas. Luego, coloque otra tarea dependiente en la superficie de diseño que se ejecute si se obtiene un resultado diferente a la primera tarea dependiente. Haga clic en la tarea predecesora y arrastre la segunda flecha de la tarea precedente a la tarea dependiente. Para cambiar el resultado de la ejecución ( **Correcto** , **Error** , **Conclusión** ) que hace que una tarea dependiente se ejecute, haga doble clic en la flecha de vínculo y modifique el campo **Resultado de ejecución** . Como alternativa, haga clic con el botón secundario en el vínculo y seleccione el valor deseado del resultado de la ejecución en el menú contextual.  
   
  Para especificar el paralelismo de la tarea, vincule dos o más tareas dependientes a una sola tarea precedente. Modifique las propiedades de los vínculos de precedencia, de forma que los vínculos que apuntan a las tareas dependientes que se ejecutan en paralelo tengan el mismo valor en los campos del resultado de la ejecución.  
   
 ## <a name="additional-features-available-from-the-shortcut-menu"></a>Características adicionales disponibles en el menú contextual  
- Para ver las opciones adicionales, seleccione una o más tareas en la superficie de diseño y, a continuación, haga clic con el botón secundario para abrir el menú contextual. Además de las opciones típicas **Cortar**, **Copiar**, **Pegar**, **Eliminar**y **Seleccionar todo**, están disponibles las siguientes opciones especiales para algunas tareas.  
+ Para ver las opciones adicionales, seleccione una o más tareas en la superficie de diseño y, a continuación, haga clic con el botón secundario para abrir el menú contextual. Además de las opciones típicas **Cortar** , **Copiar** , **Pegar** , **Eliminar** y **Seleccionar todo** , están disponibles las siguientes opciones especiales para algunas tareas.  
   
  **Agregar anotación**  
  Agrega una nota descriptiva al área de diseño.  

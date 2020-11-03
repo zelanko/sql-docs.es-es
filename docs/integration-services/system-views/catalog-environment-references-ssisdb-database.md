@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c0eb92cb3370343345a487b16852ec05dddf338a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 617f7b5132f6df2cd8acd02579512b880ece4ff2
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495305"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243652"
 ---
 # <a name="catalogenvironment_references-ssisdb-database"></a>catalog.environment_references (base de datos de SSISDB)
 
@@ -38,8 +38,10 @@ ms.locfileid: "88495305"
 |last_validation_time|**datatimeoffset(7)**|Hora de la última validación.|  
   
 ## <a name="remarks"></a>Observaciones  
- En esta vista se muestra una fila por cada referencia al entorno del catálogo.  
+- En esta vista se muestra una fila por cada referencia al entorno del catálogo.  
   
+- Un proyecto puede tener referencias de entorno absolutas o relativas. Las referencias relativas se refieren al entorno por nombre y requieren que resida en la misma carpeta que el proyecto. Las referencias absolutas hacen referencia al entorno por nombre y carpeta, y pueden hacer referencia a los entornos que residen en una carpeta diferente que el proyecto. Un proyecto puede hacer referencia a varios entornos.  
+
 ## <a name="permissions"></a>Permisos  
  Esta vista exige uno de los siguientes permisos:  
   
@@ -51,8 +53,4 @@ ms.locfileid: "88495305"
   
 > [!NOTE]  
 >  Si tiene permiso READ en un proyecto, también tendrá permiso READ en todos los paquetes y referencias de entorno asociados a ese proyecto. Se aplica la seguridad en el nivel de fila; solo se muestran las filas para las que disponga de permiso para ver.  
-  
-## <a name="remarks"></a>Observaciones  
- Un proyecto puede tener referencias de entorno absolutas o relativas. Las referencias relativas se refieren al entorno por nombre y requieren que resida en la misma carpeta que el proyecto. Las referencias absolutas hacen referencia al entorno por nombre y carpeta, y pueden hacer referencia a los entornos que residen en una carpeta diferente que el proyecto. Un proyecto puede hacer referencia a varios entornos.  
-  
   

@@ -29,12 +29,12 @@ ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest'
-ms.openlocfilehash: 1944728a05db49a194b2c1f070695fd16ee095d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06776d309042483f879dd3d31d9f6bae62119037
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479015"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067501"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
@@ -71,6 +71,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
         ENCRYPTION BY PASSWORD ='encryption_password'   
       )   
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -78,18 +79,18 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *certname*  
  Es el nombre del certificado del que se va a hacer una copia de seguridad.
 
- TO FILE = '*path_to_file*'  
+ TO FILE = ' *path_to_file* '  
  Especifica la ruta de acceso completa, incluido el nombre de archivo, al archivo en el que se almacenará el certificado. Esta ruta de acceso puede ser una ruta de acceso local o una ruta UNC a una ubicación de red. Si solo se especifica un nombre de archivo, el archivo se guardará en la carpeta de datos de usuario predeterminada de la instancia (que puede ser o no ser la carpeta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data). Para LocalDB de SQL Server Express, la carpeta de datos de usuario predeterminada de la instancia es la ruta de acceso especificada por la variable de entorno `%USERPROFILE%` para la cuenta que ha creado la instancia.  
 
  WITH PRIVATE KEY Especifica que la clave privada del certificado se tiene que guardar en un archivo. Esta cláusula es opcional.
 
- FILE = '*path_to_private_key_file*'  
+ FILE = ' *path_to_private_key_file* '  
  Especifica la ruta de acceso completa, incluido el nombre de archivo, al archivo en el que se almacenará la clave privada. Esta ruta de acceso puede ser una ruta de acceso local o una ruta UNC a una ubicación de red. Si solo se especifica un nombre de archivo, el archivo se guardará en la carpeta de datos de usuario predeterminada de la instancia (que puede ser o no ser la carpeta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data). Para LocalDB de SQL Server Express, la carpeta de datos de usuario predeterminada de la instancia es la ruta de acceso especificada por la variable de entorno `%USERPROFILE%` para la cuenta que ha creado la instancia.  
 
- ENCRYPTION BY PASSWORD = '*encryption_password*'  
+ ENCRYPTION BY PASSWORD = ' *encryption_password* '  
  Es la contraseña que se utiliza para cifrar la clave privada antes de escribir la clave en el archivo de copia de seguridad. La contraseña se somete a comprobaciones de complejidad.  
   
- DECRYPTION BY PASSWORD = '*decryption_password*'  
+ DECRYPTION BY PASSWORD = ' *decryption_password* '  
  Es la contraseña que se utiliza para descifrar la clave privada antes de realizar una copia de seguridad de la clave. Este argumento no es necesario si el certificado está cifrado con la clave maestra. 
   
 ## <a name="remarks"></a>Comentarios  

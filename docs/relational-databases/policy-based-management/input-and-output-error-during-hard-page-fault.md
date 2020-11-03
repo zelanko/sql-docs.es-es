@@ -20,7 +20,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/09/2020
 ms.locfileid: "91892475"
 ---
-# <a name="input-and-output-error-during-hard-page-fault"></a>Input and Output Error During Hard Page Fault
+# <a name="input-and-output-error-during-hard-page-fault"></a>Error de entrada y salida durante error grave de página
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta regla comprueba si el identificador EventId 51 se encuentra en el registro de eventos del sistema. Este error se debe a otro error de página en disco.  
   

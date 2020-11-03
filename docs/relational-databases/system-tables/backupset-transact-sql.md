@@ -21,12 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 783452973a10a8f692b7fe3a3406665a2ed0eb86
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e9f566216c0dfd9f30a35c9472db433ad71e2f3c
+ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544695"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93294396"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "89544695"
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]número de versión principal. Puede ser NULL.|  
 |**software_minor_version**|**tinyint**|Número de versión secundaria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede ser NULL.|  
 |**software_build_version**|**smallint**|Número de compilación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede ser NULL.|  
-|**time_zone**|**smallint**|Diferencia entre la hora local (en la que tiene lugar la operación de copia de seguridad) y la hora universal coordinada (UTC) en intervalos de 15 minutos. Los valores pueden variar entre -48 y +48, inclusive. El valor 127 indica que se desconoce la diferencia. Por ejemplo, -20 es la hora estándar del Este (EST) o cinco horas después de UTC. Puede ser NULL.|  
+|**time_zone**|**smallint**|Diferencia entre la hora local (donde se realiza la operación de copia de seguridad) y la hora universal coordinada (UTC) en intervalos de 15 minutos en el momento en que se inició la operación de copia de seguridad. Los valores pueden variar entre -48 y +48, inclusive. El valor 127 indica que se desconoce la diferencia. Por ejemplo, -20 es la hora estándar del Este (EST) o cinco horas después de UTC. Puede ser NULL.|  
 |**mtf_minor_version**|**tinyint**|Número de versión secundaria del formato de cinta de [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Puede ser NULL.|  
 |**first_lsn**|**numeric(25,0)**|Número de secuencia de registro de la primera entrada de registro del conjunto de copia de seguridad o de la más antigua. Puede ser NULL.|  
 |**last_lsn**|**numeric(25,0)**|Número de secuencia de registro de la siguiente entrada del registro después del conjunto de copia de seguridad. Puede ser NULL.|  
@@ -92,7 +92,7 @@ ms.locfileid: "89544695"
 |**is_copy_only**|**bit**|1 = Copia de seguridad de solo copia. Para obtener más información, vea [Copias de seguridad de solo copia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|Id. de la bifurcación de recuperación inicial. Esto corresponde a **FirstRecoveryForkID** de RESTORE HEADERONLY.<br /><br /> En las copias de seguridad de datos, **first_recovery_fork_guid** es igual a **last_recovery_fork_guid**.|  
 |**last_recovery_fork_guid**|**uniqueidentifier**|Id. de la bifurcación de recuperación final. Esto corresponde a **RecoveryForkID** de RESTORE HEADERONLY.<br /><br /> En las copias de seguridad de datos, **first_recovery_fork_guid** es igual a **last_recovery_fork_guid**.|  
-|**fork_point_lsn**|**numeric(25,0)**|Si **first_recovery_fork_guid** no es igual a **last_recovery_fork_guid**, es el número de secuencia de registro del punto de bifurcación. En caso contrario, el valor es NULL.|  
+|**fork_point_lsn**|**numeric(25,0)**|Si **first_recovery_fork_guid** no es igual a **last_recovery_fork_guid** , es el número de secuencia de registro del punto de bifurcación. En caso contrario, el valor es NULL.|  
 |**database_guid**|**uniqueidentifier**|Id. único de la base de datos. Esto corresponde a **BindingID** de RESTORE HEADERONLY. Cuando se restaura la base de datos, se asigna un valor nuevo.|  
 |**family_guid**|**uniqueidentifier**|Id. único de la base de datos original cuando se creó. Este valor permanece invariable cuando se restaura la base de datos, incluso con un nombre diferente.|  
 |**differential_base_lsn**|**numeric(25,0)**|LSN de base para copias de seguridad diferenciales. Para una copia de seguridad diferencial basada en único; los cambios con LSN mayor o igual que **differential_base_lsn** se incluyen en la copia de seguridad diferencial.<br /><br /> En el caso de una diferencia de base múltiple, el valor es NULL y el LSN base debe determinarse en el nivel de archivo (vea [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Para los tipos de copia de seguridad no diferenciales, el valor siempre es NULL.|  
@@ -102,7 +102,7 @@ ms.locfileid: "89544695"
 |**encryptor_thumbprint**|**varbinary(20)**|La huella digital del sistema de cifrado que se puede utilizar para encontrar el certificado o la clave asimétrica en la base de datos. Si la copia de seguridad no se cifró, este valor es NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Tipo de sistema de cifrado usado: certificado o clave asimétrica. . Si la copia de seguridad no se cifró, este valor es NULL.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  RESTOre VERIFYONLY de *backup_device* con LOADHISTORY rellena la columna de la tabla **backupmediaset** con los valores adecuados del encabezado de conjunto de medios.  
   
  Para reducir el número de filas de esta tabla y de otras tablas de historial y copia de seguridad, ejecute el [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) procedimiento almacenado.  

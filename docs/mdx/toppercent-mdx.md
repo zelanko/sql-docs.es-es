@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f275628747d0b17ede6c76f67961fe5233e788c4
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412870"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243544"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -52,7 +52,10 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
 > [!IMPORTANT]  
 >  Al igual que la función [BottomPercent](../mdx/bottompercent-mdx.md) , la función de **porcentaje** siempre rompe la jerarquía.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="examples"></a>Ejemplos  
+
+### <a name="a-return-toppercent"></a>A. Devolver el porcentaje
+
  En el ejemplo siguiente se devuelven las mejores ciudades que contribuyen a realizar el 10% principal de ventas de los distribuidores en la categoría Bike. El resultado se mostrará en orden descendente, empezando por la ciudad que tiene el valor de ventas más elevado.  
   
 ```  
@@ -89,8 +92,9 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ```  
   
-## <a name="example"></a>Ejemplo  
- El siguiente tutorial le ayudará a entender el efecto de los valores negativos en el *Numeric_Expression*. En primer lugar, crearemos cierto contexto donde podamos mostrar el comportamiento.  
+### <a name="b-understand-the-effect-of-negative-values"></a>B. Entender el efecto de los valores negativos
+
+ El siguiente tutorial le ayudará a entender el efecto de los valores negativos en el *Numeric_Expression* . En primer lugar, crearemos cierto contexto donde podamos mostrar el comportamiento.  
   
  La consulta siguiente devuelve una tabla con el importe de las ventas, el costo total del producto y el beneficio bruto de los distribuidores en orden descendente en función del beneficio. Tenga en cuenta que solo hay valores negativos en el beneficio; por tanto, la pérdida más pequeña aparece en la parte superior.  
   

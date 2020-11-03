@@ -1,6 +1,6 @@
 ---
 description: sys.trusted_assemblies (Transact-SQL)
-title: Sys. trusted_assemblies (Transact-SQL) | Microsoft Docs
+title: sys.trusted_assemblies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4eee138db35efe4b8f9b01f88d07b52141ab9a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4cbf5b3310d23f5bc3f488a536447d0dc3e92350
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475169"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243842"
 ---
 # <a name="systrusted_assemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -42,13 +42,15 @@ Contiene una fila para cada ensamblado de confianza del servidor.
 |created_by |nvarchar(128) |Nombre de inicio de sesión de la entidad de seguridad que agregó el ensamblado a la lista. |
 | | | |
 
-
+### <a name="permissions"></a>Permisos  
+ es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
+ 
 ## <a name="remarks"></a>Observaciones  
-
-Use la **necesidad de agregar sp_add_trusted_assembly** y **tener que agregar sys. trusted_assemblies** agregar o quitar ensamblados de `sys.trusted_assemblies` .
+Use **[Sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)** para agregar y **[Sys.sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)** para quitar ensamblados de `sys.trusted_assemblies` .
 
 ## <a name="see-also"></a>Consulte también  
-  [Sys. sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md) [Sys. sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) [Drop Assembly &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
+  [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)  
+  [sys.sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)  
+  [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
-

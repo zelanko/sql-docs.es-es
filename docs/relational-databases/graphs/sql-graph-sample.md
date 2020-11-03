@@ -15,24 +15,24 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eeb6cde4e4b24d9ef7b5e67de8bfd155808fd649
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 57051ece8e432ed56c2b376c6586ff5a147b25b6
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331055"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235557"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Crear una base de datos de grafos y ejecutar algunas consultas de coincidencia de patrones mediante T-SQL
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-En este ejemplo se proporciona un [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script para crear una base de datos de grafos con nodos y bordes y, a continuación, usar la nueva cláusula Match para que coincida con algunos patrones y recorrer el gráfico. Este script de ejemplo funcionará en Azure SQL Database y[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+En este ejemplo se proporciona un [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script para crear una base de datos de grafos con nodos y bordes y, a continuación, usar la nueva cláusula Match para que coincida con algunos patrones y recorrer el gráfico. Este script de ejemplo funcionará en Azure SQL Database y [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>Esquema de ejemplo
 
 En este ejemplo se crea un esquema de gráfico, como se muestra en la figura 1, para una red social hipotética que tiene los nodos People, restaurante y City. Estos nodos se conectan entre sí mediante el uso de amigos, me gusta, viven y se encuentran en los bordes.
 
-![persona-ciudades-restaurantes-tablas](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Ejemplo de base de datos de SQL Graph")  
+![Diagrama que muestra un esquema de ejemplo con los nodos restaurante, ciudad, persona y vive, ubicado, le gustan los bordes.](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Ejemplo de base de datos de SQL Graph")  
 Figura 1: esquema de ejemplo con los nodos restaurante, ciudad, persona y vive, ubicado, me gustan los bordes.
 
 ## <a name="sample-script"></a>Script de ejemplo
@@ -167,4 +167,4 @@ Este script usa la nueva sintaxis de T-SQL para crear tablas de nodos y perimetr
 |---  |---  |
 |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |Crear nodo de gráfico o tabla perimetral  |
 |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |Insertar en un nodo o una tabla perimetral  |
-|[COINCIDENCIA &#40;&#41;de Transact-SQL](../../t-sql/queries/match-sql-graph.md)  |Usar MATCH para que coincida con un patrón o atravesar el gráfico  |
+|[COINCIDENCIA &#40;&#41;de Transact-SQL ](../../t-sql/queries/match-sql-graph.md)  |Usar MATCH para que coincida con un patrón o atravesar el gráfico  |

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d676d32426678720f76de1ff04c355a54998dd1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c742ebd930066c4e242cabff781b0c61af5f566f
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408741"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235582"
 ---
 # <a name="sql-graph-architecture"></a>Arquitectura de SQL Graph  
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -31,7 +31,7 @@ Obtenga información sobre cómo se diseña SQL Graph. Conocer los aspectos bás
 Los usuarios pueden crear un grafo por cada base de datos. Un gráfico es una colección de tablas perimetrales y de nodo. Las tablas de nodo o perimetrales se pueden crear en cualquier esquema de la base de datos, pero todos pertenecen a un gráfico lógico. Una tabla de nodos es una colección de tipo de nodos similar. Por ejemplo, una tabla de nodos de persona contiene todos los nodos de persona que pertenecen a un gráfico. Del mismo modo, una tabla irregular es una colección de tipo de bordes similar. Por ejemplo, una tabla de borde de amigos contiene todos los bordes que conectan a una persona con otra persona. Como los nodos y los bordes se almacenan en tablas, la mayoría de las operaciones admitidas en las tablas normales se admiten en tablas de nodo o perimetrales. 
  
  
-![arquitectura de SQL-Graph](../../relational-databases/graphs/media/sql-graph-architecture.png "Arquitectura de base de datos de SQL Graph")   
+![Diagrama que muestra la arquitectura de base de datos de SQL Graph.](../../relational-databases/graphs/media/sql-graph-architecture.png "Arquitectura de base de datos de SQL Graph")   
 
 Figura 1: arquitectura de base de datos de SQL Graph
  
@@ -56,7 +56,7 @@ De forma similar a la `$node_id` columna, se recomienda que los usuarios creen u
 
 En la figura 2 se muestra cómo se almacenan en la base de datos las tablas perimetrales y de nodo. 
 
-![persona-Friends-tablas](../../relational-databases/graphs/media/person-friends-tables.png "Tablas de los límites de amigos y nodos de personas")   
+![Diagrama que muestra la representación de la tabla perimetral y el nodo.](../../relational-databases/graphs/media/person-friends-tables.png "Tablas de los límites de amigos y nodos de personas")   
 
 Figura 2: representación de la tabla perimetral y de nodo
 
@@ -150,7 +150,7 @@ Obtenga información sobre las [!INCLUDE[tsql-md](../../includes/tsql-md.md)] ex
 |Tarea   |Artículo relacionado  |Notas
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|La inserción en una tabla de nodos no es diferente a la inserción en una tabla relacional. Los valores de la `$node_id` columna se generan automáticamente. Si intenta insertar un valor en `$node_id` la `$edge_id` columna o, se producirá un error. Los usuarios deben proporcionar valores `$from_id` para `$to_id` las columnas y al insertarlos en una tabla irregular. `$from_id` y `$to_id` son los `$node_id` valores de los nodos a los que se conecta un borde determinado.  |
-|SUPRIMIR | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Los datos de las tablas perimetrales o de nodo se pueden eliminar de la misma manera que se eliminan de las tablas relacionales. Sin embargo, en esta versión, no hay ninguna restricción para asegurarse de que ningún borde señale a un nodo eliminado y la eliminación en cascada de los bordes, cuando no se admite la eliminación de un nodo. Se recomienda que cada vez que se elimine un nodo, también se eliminen todos los bordes de conexión a ese nodo, para mantener la integridad del gráfico.  |
+|DELETE | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Los datos de las tablas perimetrales o de nodo se pueden eliminar de la misma manera que se eliminan de las tablas relacionales. Sin embargo, en esta versión, no hay ninguna restricción para asegurarse de que ningún borde señale a un nodo eliminado y la eliminación en cascada de los bordes, cuando no se admite la eliminación de un nodo. Se recomienda que cada vez que se elimine un nodo, también se eliminen todos los bordes de conexión a ese nodo, para mantener la integridad del gráfico.  |
 |UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |Los valores de las columnas definidas por el usuario se pueden actualizar mediante la instrucción UPDATE. No se permite actualizar las columnas internas del gráfico, `$node_id` , `$edge_id` `$from_id` y `$to_id` .  |
 |MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` la instrucción se admite en un nodo o una tabla perimetral.  |
 

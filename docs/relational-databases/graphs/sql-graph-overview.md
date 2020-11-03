@@ -16,12 +16,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40acaf67fedc76495f52aced7b7d0f61b76cb530
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79ffa64e3a567a219e192c9108b04e2c96efaf5c
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494207"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235640"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Gráfico de procesamiento con SQL Server y Azure SQL Database
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -55,7 +55,7 @@ CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![persona-Friends-tablas](../../relational-databases/graphs/media/person-friends-tables.png "Tablas de los límites de amigos y nodos de personas")  
+![Diagrama que muestra los nodos y los bordes se almacenan como tablas.](../../relational-databases/graphs/media/person-friends-tables.png "Tablas de los límites de amigos y nodos de personas")  
 Los nodos y los bordes se almacenan como tablas  
 
 ### <a name="query-language-extensions"></a>Extensiones de lenguaje de consulta  

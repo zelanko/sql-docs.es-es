@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9eba640bc529487772510e06a7c66210be3e43a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59df65daf56708a2b30b1e0a75e554750e95cb47
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463444"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235192"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Introducción a SSMA para la consola de MySQL (MySQLToSQL)
 En esta sección se describe el procedimiento para iniciar y comenzar a usar la aplicación de consola de MySQL. Además, aquí se enumeran las convenciones que se usan en una ventana de salida de la consola de SSMA típica.  
@@ -26,7 +26,7 @@ En esta sección se describe el procedimiento para iniciar y comenzar a usar la 
 ## <a name="launching-ssma-console"></a>Inicio de la consola SSMA  
 Siga estos pasos para iniciar la aplicación de consola SSMA:  
   
-1.  Vaya a **Inicio** y seleccione **todos los programas**.  
+1.  Vaya a **Inicio** y seleccione **todos los programas** .  
   
 2.  Haga clic en el acceso directo del **símbolo del sistema de SQL Server Migration Assistant para MySQL** .  
   
@@ -52,7 +52,7 @@ Características adicionales:
 ## <a name="ssma-console-output-conventions"></a>Convenciones de salida de la consola SSMA  
 Al ejecutar los comandos y las opciones de script de SSMA, el programa de consola muestra los resultados y los mensajes (información, error, etc.) al usuario en la consola de o, si es necesario, redirige a un archivo de salida XML. Cada tipo de mensaje de la salida se indica mediante un color único. Por ejemplo, el mensaje de texto en color blanco denota los comandos del archivo de script; el color verde representa un mensaje para la entrada del usuario, etc.  
   
-![SSMAConsoleOutput_MySQL](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "SSMAConsoleOutput_MySQL")  
+![Captura de pantalla que muestra un ejemplo de salida de la consola de SSMA.](../../ssma/mysql/media/ssmaconsoleoutput_mysql.jpg "SSMAConsoleOutput_MySQL")  
   
 Interpretación de color de la salida de la consola en la tabla siguiente:  
   
@@ -65,6 +65,6 @@ Interpretación de color de la salida de la consola en la tabla siguiente:
 |Verde|Solicitar la entrada del usuario|  
 |Cian|Inicio, finalización y resultado de una operación|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Instalación de SSMA para MySQL](installing-ssma-for-mysql-mysqltosql.md)  
   

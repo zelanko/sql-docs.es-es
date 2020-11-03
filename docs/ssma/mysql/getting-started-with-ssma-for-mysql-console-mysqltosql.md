@@ -26,7 +26,7 @@ En esta sección se describe el procedimiento para iniciar y comenzar a usar la 
 ## <a name="launching-ssma-console"></a>Inicio de la consola SSMA  
 Siga estos pasos para iniciar la aplicación de consola SSMA:  
   
-1.  Vaya a **Inicio** y seleccione **todos los programas** .  
+1.  Vaya a **Inicio** y seleccione **todos los programas**.  
   
 2.  Haga clic en el acceso directo del **símbolo del sistema de SQL Server Migration Assistant para MySQL** .  
   

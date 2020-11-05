@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f1a924af8d72239e3d185e27c491ecd48d9f38ad
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bc1d2d3dc8b9763d19410b2a9773fb7766d22140
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547441"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364750"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,28 +41,31 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **All**.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su** valor predeterminado es **All**.  
   
-`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su**valor predeterminado es **All**.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su** valor predeterminado es **All**.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos del suscriptor. *subscriber_db* es de **tipo sysname y su**valor predeterminado es **All**.  
+`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos del suscriptor. *subscriber_db* es de **tipo sysname y su** valor predeterminado es **All**.  
   
-`[ @upload_first = ] 'upload_first'` Indica si se cargan los cambios en el suscriptor antes de que se reinicialice la suscripción. *upload_first* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si **es true**, los cambios se cargan antes de que se reinicialice la suscripción. Si **es false**, los cambios no se cargan.  
+`[ @upload_first = ] 'upload_first'` Indica si se cargan los cambios en el suscriptor antes de que se reinicialice la suscripción. *upload_first* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si **es true** , los cambios se cargan antes de que se reinicialice la suscripción. Si **es false** , los cambios no se cargan.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_reinitmergesubscription** se utiliza en la replicación de mezcla.  
   
  se puede llamar a **sp_reinitmergesubscription** desde el publicador para reinicializar las suscripciones de mezcla. También se recomienda volver a ejecutar el Agente de instantáneas.  
   
  Si se agrega, quita o modifica un filtro con parámetros, los cambios pendientes en el suscriptor no se pueden cargar en el publicador durante la reinicialización. Si desea cargar los cambios pendientes, sincronice todas las suscripciones antes de cambiar el filtro.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="examples"></a>Ejemplos  
+
+### <a name="a-reinitialize-the-push-subscription-and-lose-pending-changes"></a>A. Reinicializar la suscripción de extracción y perder los cambios pendientes
+
  [!code-sql[HowTo#sp_reinitmergepushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_1.sql)]  
   
-## <a name="example"></a>Ejemplo  
+### <a name="b-reinitialize-the-push-subscription-and-upload-pending-changes"></a>B. Reinicializar la suscripción de extracción y cargar los cambios pendientes
  [!code-sql[HowTo#sp_reinitmergepushsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_2.sql)]  
   
 ## <a name="permissions"></a>Permisos  

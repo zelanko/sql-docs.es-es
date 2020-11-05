@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1a185ef8fe998a614de8ca56451966894a461f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9ea62e350628099685b372362a3d6d075a90367b
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549960"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364850"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,17 +45,17 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_server = ] 'table_server'` Es el nombre del servidor vinculado cuya información de columna se va a devolver. *table_server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @table_server = ] 'table_server'` Es el nombre del servidor vinculado cuya información de columna se va a devolver. *table_server* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @table_name = ] 'table_name'` Es el nombre de la tabla para la que se va a devolver información de columna. *TABLE_NAME* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @table_name = ] 'table_name'` Es el nombre de la tabla para la que se va a devolver información de columna. *TABLE_NAME* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @table_schema = ] 'table_schema'` Es el nombre de esquema de la tabla para la que se va a devolver información de columna. *TABLE_SCHEMA* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @table_schema = ] 'table_schema'` Es el nombre de esquema de la tabla para la que se va a devolver información de columna. *TABLE_SCHEMA* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @table_catalog = ] 'table_catalog'` Es el nombre de catálogo de la tabla para la que se va a devolver información de columna. *TABLE_CATALOG* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @table_catalog = ] 'table_catalog'` Es el nombre de catálogo de la tabla para la que se va a devolver información de columna. *TABLE_CATALOG* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @column_name = ] 'column'` Es el nombre de la columna de base de datos para la que se va a proporcionar información. la *columna* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @column_name = ] 'column'` Es el nombre de la columna de base de datos para la que se va a proporcionar información. la *columna* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @ODBCVer = ] 'ODBCVer'` Es la versión de ODBC que se está utilizando. *ODBCVer* es de **tipo int**y su valor predeterminado es 2. Esto indica ODBC Versión 2. Los valores válidos son 2 ó 3. Para obtener información acerca de las diferencias de comportamiento entre las versiones 2 y 3, vea la especificación ODBC SQLColumns.  
+`[ @ODBCVer = ] 'ODBCVer'` Es la versión de ODBC que se está utilizando. *ODBCVer* es de **tipo int** y su valor predeterminado es 2. Esto indica ODBC Versión 2. Los valores válidos son 2 ó 3. Para obtener información acerca de las diferencias de comportamiento entre las versiones 2 y 3, vea la especificación ODBC SQLColumns.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -64,7 +64,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nombre del calificador de la tabla o vista. Varios productos DBMS admiten nombres de tres partes para las tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esta columna representa el nombre de base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
+|**TABLE_CAT**|**sysname**|Nombre del calificador de la tabla o vista. Varios productos DBMS admiten nombres de tres partes para las tablas ( _calificador_**.** _propietario_**.** _nombre_ ). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esta columna representa el nombre de base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nombre del propietario de la tabla o vista. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre del usuario de la base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla o vista. Este campo siempre devuelve un valor.|  
 |**COLUMN_NAME**|**sysname**|Nombre de columna para cada columna del **TABLE_NAME** devuelto. Este campo siempre devuelve un valor.|  
@@ -86,16 +86,15 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  Para obtener más información, vea la documentación de Microsoft ODBC.  
   
-## <a name="remarks"></a>Observaciones  
- **sp_columns_ex** se ejecuta consultando el conjunto de filas Columns de la interfaz **IDBSchemaRowset** del proveedor de OLE DB correspondiente a *table_server*. Los parámetros *TABLE_NAME*, *TABLE_SCHEMA*, *TABLE_CATALOG*y *Column* se pasan a esta interfaz para restringir las filas devueltas.  
+## <a name="remarks"></a>Comentarios  
+- **sp_columns_ex** se ejecuta consultando el conjunto de filas Columns de la interfaz **IDBSchemaRowset** del proveedor de OLE DB correspondiente a *table_server*. Los parámetros *TABLE_NAME* , *TABLE_SCHEMA* , *TABLE_CATALOG* y *Column* se pasan a esta interfaz para restringir las filas devueltas.  
   
- **sp_columns_ex** devuelve un conjunto de resultados vacío si el proveedor de OLE DB del servidor vinculado especificado no admite el conjunto de filas Columns de la interfaz **IDBSchemaRowset** .  
+- **sp_columns_ex** devuelve un conjunto de resultados vacío si el proveedor de OLE DB del servidor vinculado especificado no admite el conjunto de filas Columns de la interfaz **IDBSchemaRowset** .  
+  
+- **sp_columns_ex** sigue los requisitos de los identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
-  
-## <a name="remarks"></a>Observaciones  
- **sp_columns_ex** sigue los requisitos de los identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Ejemplos  
  El siguiente ejemplo devuelve el tipo de datos de la columna `JobTitle` de la tabla `HumanResources.Employee` en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] del servidor vinculado `Seattle1`.  

@@ -14,12 +14,12 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48823426052fec8f16989facc77a676ed8d3e2c6
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 6447c5088e0fd338618a4601abf47c8b3344d796
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868212"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364760"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Enviar datos como un parámetro con valores de tabla usando datos en ejecución (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -185,9 +185,9 @@ from @Items
     }  
     ```  
   
-## <a name="example"></a>Ejemplo  
+## <a name="examples"></a>Ejemplos  
   
-### <a name="description"></a>Descripción  
+### <a name="a-use-row-streaming-one-row-per-call"></a>A. Usar streaming de filas, una fila por llamada
  Este ejemplo muestra que puede usar el streaming de filas, una fila por llamada a SQLPutData, con ODBC TVP, de forma similar a como podría utilizar BCP.exe para cargar datos en una base de datos.  
   
  Antes de generar el ejemplo, cambie el nombre del servidor en la cadena de conexión.  
@@ -215,7 +215,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>Código  
+#### <a name="code"></a>Código  
   
 ```cpp
 #define UNICODE  
@@ -373,9 +373,7 @@ EXIT:
 }  
 ```  
   
-## <a name="example"></a>Ejemplo  
-  
-### <a name="description"></a>Descripción  
+### <a name="b-use-row-streaming-multiple-rows-per-call"></a>B. Usar streaming de filas, varias filas por llamada  
  Este ejemplo muestra que puede usar el streaming de filas, varias filas por llamada a SQLPutData, con ODBC TVP, de forma similar a como podría utilizar BCP.exe para cargar datos en una base de datos.  
   
  Antes de generar el ejemplo, cambie el nombre del servidor en la cadena de conexión.  
@@ -403,7 +401,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>Código  
+#### <a name="code"></a>Código  
   
 ```cpp
 #define UNICODE  

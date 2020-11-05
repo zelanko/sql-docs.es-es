@@ -1,6 +1,6 @@
 ---
 description: sys.dm_database_copies (Azure SQL Database)
-title: Sys. dm_database_copies (Azure SQL Database) | Microsoft Docs
+title: sys.dm_database_copies (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.service: sql-database
@@ -20,19 +20,19 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 178fda9bb96fc84acd1527f172c6a6728a1ec22e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: acdb347af36812095df03f61ae9f118493496e51
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543938"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364778"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL Database)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Devuelve información acerca de la copia de la base de datos.  
   
-Para devolver información sobre los vínculos de replicación geográfica, use las vistas [Sys. geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) o [Sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (disponibles en SQL Database V12).
+Para devolver información acerca de los vínculos de replicación geográfica, use las vistas [Sys.geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) o [Sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (disponibles en SQL Database V12).
   
   
 |Nombre de columna|Tipo de datos|Descripción|  
@@ -59,7 +59,7 @@ Para devolver información sobre los vínculos de replicación geográfica, use 
 ## <a name="permissions"></a>Permisos  
  Esta vista solo está disponible en la base de datos **maestra** para el inicio de sesión principal de nivel de servidor.  
   
-## <a name="remarks"></a>Observaciones  
- Puede usar la vista **Sys. dm_database_copies** en la base de datos **maestra** del servidor de origen o de destino [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Cuando la copia de la base de datos se completa correctamente y la nueva base de datos se vuelve a conectar, la fila de la vista **Sys. dm_database_copies** se quita automáticamente.  
+## <a name="remarks"></a>Comentarios  
+ Puede usar la vista de **Sys.dm_database_copies** en la base de datos **maestra** del servidor de origen o de destino [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Cuando la copia de la base de datos se completa correctamente y la nueva base de datos se vuelve a poner en línea, la fila de la vista **Sys.dm_database_copies** se quita automáticamente.  
   
   

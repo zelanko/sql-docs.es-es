@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da34a74163bae218b13d8f95ebcf5797731790ac
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 5b8fb15c2fb479471000fc9979c691761e4d81cd
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006457"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328562"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Orígenes de datos admitidos por Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera datos de informe de orígenes de datos mediante un nivel de datos modular y extensible que usa extensiones de procesamiento de datos. Para recuperar datos de informe de un origen de datos, debe seleccionar una extensión de procesamiento de datos que admita el tipo de origen de datos, la versión del software que se ejecuta en el origen de datos y la plataforma del origen de datos ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]de 32 ó 64 bits).  
@@ -88,7 +88,7 @@ ms.locfileid: "92006457"
   
 -   Nombre de la extensión de procesamiento de datos o proveedor de datos: la extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] u otro proveedor de datos que corresponde al tipo de origen de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] seleccionado. Esta columna responde a la pregunta: "Cuando selecciono un tipo de origen de datos, ¿qué extensión de procesamiento de datos o proveedor de datos correspondiente se usa?"  
   
--   Versión del proveedor de datos subyacente (opcional): algunos tipos de origen de datos admiten más de un proveedor de datos. Puede tratarse de distintas versiones del mismo proveedor o de distintas implementaciones por parte de terceros para un tipo de proveedor de datos. El nombre del proveedor suele aparecer en la cadena de conexión después de configurarse un origen de datos. Esta columna responde a la pregunta: "Después de seleccionar el tipo de origen de datos, ¿qué proveedor de datos se selecciona en el cuadro de diálogo **Propiedades de conexión**?"  
+-   Versión del proveedor de datos subyacente (opcional): algunos tipos de origen de datos admiten más de un proveedor de datos. Puede tratarse de distintas versiones del mismo proveedor o de distintas implementaciones por parte de terceros para un tipo de proveedor de datos. El nombre del proveedor suele aparecer en la cadena de conexión después de configurarse un origen de datos. Esta columna responde a la pregunta: "Después de seleccionar el tipo de origen de datos, ¿qué proveedor de datos se selecciona en el cuadro de diálogo **Propiedades de conexión** ?"  
   
 -   *\<platform>* del origen de datos: es la plataforma del origen de datos admitida por la extensión de procesamiento de datos o el proveedor de datos para el origen de datos de destino. Esta columna responde a la pregunta: "¿Puede esta extensión de procesamiento de datos o proveedor de datos recuperar datos de un origen de datos en este tipo de plataforma?"  
   
@@ -104,7 +104,7 @@ ms.locfileid: "92006457"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos relacional|OLEDB|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Extiende System.Data.OledbClient|Y|Y|SQL Server 2012 y versiones posteriores|Y|Y|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos relacional|[ODBC](#ODBC)|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Extiende System.Data.OdbcClient|Y|S|SQL Server 2012 y versiones posteriores|Y|S|  
 |[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Microsoft Azure SQL Database](#Azure)|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Extiende System.Data.SqlClient|N/D|N/A|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Y|S|
-|SQL Data Warehouse|[Microsoft Azure SQL Database](#Azure)|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Extiende System.Data.SqlClient|N/D|N/A|SQL Data Warehouse|Y|S| 
+|Azure Synapse Analytics|[Microsoft Azure SQL Database](#Azure)|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Extiende System.Data.SqlClient|N/D|N/A|Azure Synapse Analytics|Y|S| 
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] dispositivo|[Almacenamiento de datos paralelo de Microsoft](#PWD)|Extensión de procesamiento de datos [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en desuso|N/D|N/D|N/A|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|No|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos multidimensional o tabular|[Microsoft SQL Server Analysis Services](#AnalysisServices)|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Usa ADOMD.NET|Y|S|SQL Server 2012 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y versiones posteriores|Y|S|  
 |Conjunto de datos de Power BI Premium (a partir de Reporting Services 2019 y Power BI Report Server de enero de 2020) |[Microsoft SQL Server Analysis Services](#AnalysisServices)|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Usa ADOMD.NET|Y|S|SQL Server 2019 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y versiones posteriores|Y|S|
@@ -153,7 +153,7 @@ ms.locfileid: "92006457"
   
  En [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)], el diseñador gráfico de consultas asociado a esta extensión de datos es la Interfaz de usuario del Diseñador de consultas relacionales, no el Diseñador de Visual Database Tools que se usa con el tipo de origen de datos de **Microsoft SQL Server**.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] diferencia automáticamente entre los tipos de origen de datos de **Microsoft Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** y **Microsoft SQL Server**, y abre el diseñador gráfico de consultas asociado al tipo de origen de datos.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] diferencia automáticamente entre los tipos de origen de datos de **Microsoft Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** y **Microsoft SQL Server** , y abre el diseñador gráfico de consultas asociado al tipo de origen de datos.  
   
  Si usa el diseñador de consultas en el modo gráfico, la consulta se analiza y es posible que se vuelva a escribir. También se dispone de un diseñador de consultas basado en texto para escribir consultas. Use el diseñador de consultas basado en texto si quiere controlar la sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] exacta que se usa para una consulta.   
   
@@ -167,7 +167,7 @@ Este origen de datos está en desuso. Use el tipo de origen de datos de SQL Serv
  [Volver a la tabla de orígenes de datos](#DataSourcesTable)  
   
 ###  <a name="microsoft-sql-server-analysis-services-data-processing-extension"></a><a name="AnalysisServices"></a> Extensión de procesamiento de datos de Microsoft SQL Server Analysis Services  
- Al seleccionar el tipo de origen de datos **Microsoft SQL Server Analysis Services**, está seleccionando una extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que extiende el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Esta extensión de procesamiento de datos se compila de forma nativa y se ejecuta en plataformas basadas en x86 y x64.  
+ Al seleccionar el tipo de origen de datos **Microsoft SQL Server Analysis Services** , está seleccionando una extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que extiende el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Esta extensión de procesamiento de datos se compila de forma nativa y se ejecuta en plataformas basadas en x86 y x64.  
   
  Este proveedor de datos usa el modelo de objetos ADOMD.NET para crear consultas con XML for Analysis (XMLA) versión 1.1. Los resultados se devuelven como un conjunto de filas planas. Para más información, vea [Tipo de conexión de Analysis Services para MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Interfaz de usuario del Diseñador de consultas MDX de Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) e [Interfaz de usuario del Diseñador de consultas DMX de Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md). 
  
@@ -178,14 +178,14 @@ Este origen de datos está en desuso. Use el tipo de origen de datos de SQL Serv
  También puede crear modelos a partir de orígenes de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ###  <a name="ole-db-data-processing-extension"></a><a name="OLEDBAll"></a> OLE DB Data Processing Extension  
- La extensión de procesamiento de datos de OLE DB requiere la selección de una capa de proveedor de datos adicional basada en la versión del origen de datos que desee usar en el informe. Si no selecciona un proveedor de datos específico, se proporciona un proveedor predeterminado. Elija un proveedor de datos específico mediante el cuadro de diálogo **Propiedades de conexión**, al que se tiene acceso con el botón **Editar** de los cuadros de diálogo Origen de datos u Origen de datos compartido.  
+ La extensión de procesamiento de datos de OLE DB requiere la selección de una capa de proveedor de datos adicional basada en la versión del origen de datos que desee usar en el informe. Si no selecciona un proveedor de datos específico, se proporciona un proveedor predeterminado. Elija un proveedor de datos específico mediante el cuadro de diálogo **Propiedades de conexión** , al que se tiene acceso con el botón **Editar** de los cuadros de diálogo Origen de datos u Origen de datos compartido.  
   
  Para obtener más información sobre el Diseñador de consultas asociado de OLE DB, vea [Interfaz de usuario del diseñador gráfico de consultas](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Para obtener más información acerca de la compatibilidad específica con los proveedores OLE DB, vea [La herramienta de diseñador de Visual Studio .NET es compatible con proveedores OLE DB específicos](https://support.microsoft.com/default.aspx/kb/811241) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
  [Volver a la tabla de orígenes de datos](#DataSourcesTable)  
   
 ####  <a name="ole-db-for-sql-server"></a><a name="OLEDBSQL"></a> OLE DB para SQL Server  
- Al seleccionar el tipo de origen de datos **OLE DB**, está seleccionando una extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que extiende el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para OLE DB. Esta extensión de procesamiento de datos se compila de forma nativa y se ejecuta en plataformas basadas en x86 y x64.  
+ Al seleccionar el tipo de origen de datos **OLE DB** , está seleccionando una extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que extiende el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para OLE DB. Esta extensión de procesamiento de datos se compila de forma nativa y se ejecuta en plataformas basadas en x86 y x64.  
   
  Para obtener más información, vea [Tipo de conexión OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
   
@@ -214,7 +214,7 @@ Este origen de datos está en desuso. Use el tipo de origen de datos de SQL Serv
  [Volver a la tabla de orígenes de datos](#DataSourcesTable)  
   
 ###  <a name="odbc-data-processing-extension"></a><a name="ODBC"></a> ODBC Data Processing Extension  
- Al seleccionar el tipo de origen de datos **ODBC**, está seleccionando una extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que extiende el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para ODBC. Esta extensión de procesamiento de datos se compila de forma nativa y se ejecuta en plataformas basadas en x86 y [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] . Use esta extensión para conectarse y recuperar datos de cualquier origen de datos con un proveedor ODBC.  
+ Al seleccionar el tipo de origen de datos **ODBC** , está seleccionando una extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que extiende el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para ODBC. Esta extensión de procesamiento de datos se compila de forma nativa y se ejecuta en plataformas basadas en x86 y [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] . Use esta extensión para conectarse y recuperar datos de cualquier origen de datos con un proveedor ODBC.  
   
 > [!NOTE]  
 >  Aunque el proveedor de datos puede admitir que se obtenga una vista previa del informe en el cliente de creación de informes, no todos los proveedores de datos ODBC están diseñados para admitir informes publicados en un servidor de informes.  
@@ -230,7 +230,7 @@ Este origen de datos está en desuso. Use el tipo de origen de datos de SQL Serv
  [Volver a la tabla de orígenes de datos](#DataSourcesTable)  
   
 ###  <a name="oracle-data-processing-extension"></a><a name="OracleClient"></a> Extensión de procesamiento de datos de Oracle  
- Al seleccionar el tipo de origen de datos **Oracle**, se selecciona una extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que usa el proveedor de datos de Oracle directamente y ya no pasa por System.Data.OracleClient. Para recuperar los datos de informe de una base de datos de Oracle, el administrador debe instalar las herramientas cliente de Oracle. La versión de la aplicación cliente debe ser 11g o posterior. Estas herramientas deben estar instaladas en el cliente de creación de informes para obtener vistas previas de los informes y en el servidor de informes para ver los informes publicados.  
+ Al seleccionar el tipo de origen de datos **Oracle** , se selecciona una extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que usa el proveedor de datos de Oracle directamente y ya no pasa por System.Data.OracleClient. Para recuperar los datos de informe de una base de datos de Oracle, el administrador debe instalar las herramientas cliente de Oracle. La versión de la aplicación cliente debe ser 11g o posterior. Estas herramientas deben estar instaladas en el cliente de creación de informes para obtener vistas previas de los informes y en el servidor de informes para ver los informes publicados.  
  
 Para instalar las herramientas de cliente de Oracle, puede hacer lo siguiente.
  
@@ -249,7 +249,7 @@ Para instalar las herramientas de cliente de Oracle, puede hacer lo siguiente.
  [Volver a la tabla de orígenes de datos](#DataSourcesTable)  
   
 ###  <a name="teradata-data-processing-extension"></a><a name="Teradata"></a> Extensión de procesamiento de datos de Teradata  
- Al seleccionar el tipo de origen de datos **Teradata**, está seleccionando una extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que extiende el proveedor de datos de .NET Framework para Teradata. Para recuperar datos de informe de Teradata, el administrador del sistema debe instalar el proveedor de datos de .NET Framework para Teradata en el cliente de creación de informes para poder editar y obtener vistas previas de los informes en el cliente, y en el servidor de informes para ver los informes publicados.  
+ Al seleccionar el tipo de origen de datos **Teradata** , está seleccionando una extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que extiende el proveedor de datos de .NET Framework para Teradata. Para recuperar datos de informe de Teradata, el administrador del sistema debe instalar el proveedor de datos de .NET Framework para Teradata en el cliente de creación de informes para poder editar y obtener vistas previas de los informes en el cliente, y en el servidor de informes para ver los informes publicados.  
   
  En los proyectos de servidor de informes, no hay un diseñador gráfico de consultas disponible para esta extensión. Debe usar el diseñador de consultas basado en texto para crear las consultas.  
   

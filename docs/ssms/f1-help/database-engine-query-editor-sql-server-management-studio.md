@@ -6,13 +6,13 @@ ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- sql13.swb.tsqlquery.f1
-- sql13.swb.tsqlresults.f1
 - sql13.swb.query.advanced.f1
 - sql13.swb.query.ansi.f1
 - sql13.swb.query.general.f1
-- sql13.swb.query.general.f1
+- sql13.swb.query.grid.f1
 - sql13.swb.sqleditors.multiserverresultssettings
+- sql13.swb.tsqlquery.f1
+- sql13.swb.tsqlresults.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -43,12 +43,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 219ebb8a431b997951b22d443877dfb751665384
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.openlocfilehash: 7450a77549d05dab5a024b39be6d2b4aef6c09de
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344071"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364860"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>Editor de consultas de SQL Server Management Studio (SSMS)
 
@@ -70,7 +70,7 @@ Puede usar el editor de consultas para crear y ejecutar scripts que contengan in
 
 Cuando el Editor de consultas está abierto, la barra de herramientas del Editor SQL aparece con los botones siguientes.
 
-También puede agregar la barra de herramientas del Editor SQL seleccionando el menú **Ver** y, a continuación, las opciones **Barras de herramientas**y **Editor SQL**. Si agrega la barra de herramientas del Editor SQL cuando no está abierta ninguna ventana del Editor de consultas, no habrá ningún botón disponible.
+También puede agregar la barra de herramientas del Editor SQL seleccionando el menú **Ver** y, a continuación, las opciones **Barras de herramientas** y **Editor SQL**. Si agrega la barra de herramientas del Editor SQL cuando no está abierta ninguna ventana del Editor de consultas, no habrá ningún botón disponible.
 
 ![Barra de herramientas del editor](media/database-engine-query-editor-sql-server-management-studio/editor-toolbar.png)
 
@@ -158,7 +158,7 @@ También puede devolver los resultados a texto con Ctrl + D o en el [menú conte
 
 ### <a name="results-to-file-using-the-editor-toolbar"></a>Resultados a archivo mediante la barra de herramientas del editor
 
-Cuando se ejecuta la consulta, se abre el cuadro de diálogo **Guardar resultados** . En **Guardar en**, seleccione la carpeta en la que desea guardar el archivo. En **Nombre de archivo**, escriba el nombre del archivo y, luego, seleccione **Guardar** para guardar los resultados de la consulta como un archivo de **Informe** con la extensión .rpt. Para acceder a las opciones avanzadas, seleccione la flecha abajo en el botón **Guardar** y, luego, seleccione **Guardar con codificación**.
+Cuando se ejecuta la consulta, se abre el cuadro de diálogo **Guardar resultados** . En **Guardar en** , seleccione la carpeta en la que desea guardar el archivo. En **Nombre de archivo** , escriba el nombre del archivo y, luego, seleccione **Guardar** para guardar los resultados de la consulta como un archivo de **Informe** con la extensión .rpt. Para acceder a las opciones avanzadas, seleccione la flecha abajo en el botón **Guardar** y, luego, seleccione **Guardar con codificación**.
 
 También puede devolver los resultados a texto con Ctrl + Mayús + F o en el [menú contextual](#results-using-the-context-menu).
 
@@ -188,7 +188,7 @@ Abre un cuadro de diálogo que puede utilizar para especificar los valores de lo
 
 ## <a name="context-menu"></a>Menú contextual
 
-Puede acceder al menú contextual si *hace clic con el botón derecho* en cualquier parte del Editor de consultas. Las opciones del menú contextual son similares a las de la barra de herramientas del Editor SQL. Con el menú contextual, verá las mismas opciones que **Conectar** y **Ejecutar**, pero también obtiene otras opciones, como **Insertar fragmento de código** y **Envolver con**.
+Puede acceder al menú contextual si *hace clic con el botón derecho* en cualquier parte del Editor de consultas. Las opciones del menú contextual son similares a las de la barra de herramientas del Editor SQL. Con el menú contextual, verá las mismas opciones que **Conectar** y **Ejecutar** , pero también obtiene otras opciones, como **Insertar fragmento de código** y **Envolver con**.
 
 ![Opciones](media/database-engine-query-editor-sql-server-management-studio/context-menu.png)
 
@@ -206,13 +206,13 @@ Un fragmento de código "envolver con" es una plantilla que puede usar como punt
 
 Hay más opciones de **Conexión** en el menú contextual en comparación con las opciones de la barra de herramientas de SSMS.
 
-- **Conectar**: abre el cuadro de diálogo Conectar al servidor. Utilice este cuadro de diálogo para establecer una conexión a un servidor.
+- **Conectar** : abre el cuadro de diálogo Conectar al servidor. Utilice este cuadro de diálogo para establecer una conexión a un servidor.
 
-- **Desconectar**: desconecta el Editor de consultas actual del servidor.
+- **Desconectar** : desconecta el Editor de consultas actual del servidor.
 
-- **Desconectar todas las consultas**: desconecta todas las conexiones de consulta.
+- **Desconectar todas las consultas** : desconecta todas las conexiones de consulta.
 
-- **Cambiar conexión**: abre el cuadro de diálogo Conectar al servidor. Utilice este cuadro de diálogo para establecer una conexión a un servidor diferente.
+- **Cambiar conexión** : abre el cuadro de diálogo Conectar al servidor. Utilice este cuadro de diálogo para establecer una conexión a un servidor diferente.
 
 ### <a name="open-server-in-object-explorer-using-the-context-menu"></a>Apertura del servidor en el Explorador de objetos mediante el menú contextual
 
@@ -260,11 +260,11 @@ Incluye una ventana **Estadísticas de clientes** que contiene estadísticas sob
 
 Puede seleccionar cualquiera de las opciones de *Resultado* que prefiera en el menú contextual.
 
-- **Resultados a texto**: devuelve los resultados de la consulta como texto en la ventana **Resultados**.
+- **Resultados a texto** : devuelve los resultados de la consulta como texto en la ventana **Resultados**.
 
-- **Resultados a cuadrícula**: devuelve los resultados de la consulta como una o varias cuadrículas en la ventana **Resultados**.
+- **Resultados a cuadrícula** : devuelve los resultados de la consulta como una o varias cuadrículas en la ventana **Resultados**.
 
-- **Resultados a archivo**: cuando se ejecuta la consulta, se abre el cuadro de diálogo **Guardar resultados**. En **Guardar en**, seleccione la carpeta en la que desea guardar el archivo. En **Nombre de archivo**, escriba el nombre del archivo y, luego, seleccione **Guardar** para guardar los resultados de la consulta como un archivo de **Informe** con la extensión .rpt. Para acceder a las opciones avanzadas, seleccione la flecha abajo en el botón **Guardar** y, luego, seleccione **Guardar con codificación**.
+- **Resultados a archivo** : cuando se ejecuta la consulta, se abre el cuadro de diálogo **Guardar resultados**. En **Guardar en** , seleccione la carpeta en la que desea guardar el archivo. En **Nombre de archivo** , escriba el nombre del archivo y, luego, seleccione **Guardar** para guardar los resultados de la consulta como un archivo de **Informe** con la extensión .rpt. Para acceder a las opciones avanzadas, seleccione la flecha abajo en el botón **Guardar** y, luego, seleccione **Guardar con codificación**.
 
 ### <a name="properties-window-using-the-context-menu"></a>Ventana de propiedades mediante el menú contextual
 

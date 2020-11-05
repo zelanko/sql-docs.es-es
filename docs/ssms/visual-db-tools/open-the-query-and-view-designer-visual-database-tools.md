@@ -1,8 +1,6 @@
 ---
-description: Abrir el Diseñador de consultas y vistas (Visual Database Tools)
 title: Abrir el Diseñador de consultas y vistas
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+description: Abrir el Diseñador de consultas y vistas (Visual Database Tools)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -16,15 +14,19 @@ ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 56d9aec3b6768a45ddad6fec107fded037656eb1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: ea9bd06205846401d4e6bd65690f0af4e34bdf63
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88369291"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067362"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>Abrir el Diseñador de consultas y vistas (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/applies-to-version/sql-asdb.md)]
+
 El Diseñador de consultas y vistas se ejecuta cuando se abre la definición de una vista, cuando se muestran los resultados de una consulta o una vista, o cuando se crea o se abre una consulta. Se compone de cuatro paneles diferentes:  
   
 -   El panel Diagrama muestra una presentación gráfica de las tablas o de los objetos con valores de tabla que ha seleccionado en la conexión de datos. También muestra todas las relaciones de combinación entre ellos.  
@@ -43,7 +45,7 @@ El Diseñador de consultas y vistas se ejecuta cuando se abre la definición de 
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en la vista que desea abrir y, a continuación, haga clic en **Diseño** o en **Abrir vista**.  
   
-    Si elige **Diseño**, se abrirán los paneles del Diseñador de consultas y vistas en función de las opciones seleccionadas en el cuadro de diálogo **Opciones** . Si elige **Abrir vista**, se abre solo el panel Resultados de forma predeterminada.  
+    Si elige **Diseño** , se abrirán los paneles del Diseñador de consultas y vistas en función de las opciones seleccionadas en el cuadro de diálogo **Opciones** . Si elige **Abrir vista** , se abre solo el panel Resultados de forma predeterminada.  
   
 ### <a name="to-open-the-query-and-view-designer-for-an-existing-query"></a>Para abrir el Diseñador de consultas y vistas para una consulta existente  
   

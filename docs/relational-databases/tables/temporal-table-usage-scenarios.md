@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53d2ea62bebcce1df978a8b4e539c56408a9f673
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7e87d77eec096191c00a0ff7d68cd40dca713926
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809201"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243587"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Escenarios de uso de tablas temporales
 
@@ -33,7 +33,7 @@ Las tablas temporales con versión del sistema permiten planear escenarios de au
 El siguiente diagrama muestra a un escenario de una tabla Employee con una muestra de datos que incluye versiones de fila actuales (marcadas en color azul) e históricas (marcadas en color gris).
 La parte derecha del diagrama visualiza las versiones de fila en el eje de tiempo y cuáles son las filas seleccionadas con diferentes tipos de consulta en una tabla temporal con o sin la cláusula SYSTEM_TIME.
 
-![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
+![Diagrama que muestra el primer escenario de uso temporal.](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
 
 ### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>Habilitación del control de versiones del sistema en una nueva tabla para auditoría de datos
 
@@ -175,7 +175,7 @@ Ejemplos de escenarios reales que encajan bien en esta categoría son la adminis
 
 El diagrama siguiente muestra el modelo de datos simplificado utilizado para la administración de inventarios:
 
-![TemporalUsageInMemory](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
+![Diagrama que muestra el modelo de datos simplificado utilizado para la administración de inventarios.](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
 
 En el ejemplo de código siguiente se crea ProductInventory como una tabla temporal con versión del sistema en memoria con un índice de almacén de columnas agrupado en la tabla de historial (que realmente reemplaza al índice de almacén de filas que se crea de forma predeterminada):
 
@@ -261,7 +261,7 @@ END;
 
 El procedimiento almacenado spUpdateInventory inserta un nuevo producto en el inventario o actualiza la cantidad de productos para la ubicación específica. La lógica de negocios es muy sencilla y se centra en mantener la precisión del estado más reciente en todo momento incrementando o disminuyendo el campo Quantity a través de la actualización de la tabla, mientras que las tablas con versión del sistema agregan de forma transparente dimensión de historial a los datos, como se muestra en el diagrama siguiente.
 
-![TemporalUsageInMemory2b](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
+![Diagrama que muestra el uso temporal con el actual en memoria y el histórico en un almacén de columnas agrupado.](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
 
 Ahora, la consulta del estado más reciente puede realizarse eficazmente desde el módulo compilado de forma nativa:
 
@@ -295,7 +295,7 @@ SELECT * FROM vw_GetProductInventoryHistory
 
 El diagrama siguiente muestra el historial de datos de un producto que se puede representar fácilmente importando la vista anterior en Power Query, Power BI o una herramienta de inteligencia empresarial similar:
 
-![ProductHistoryOverTime](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
+![Diagrama que muestra el historial de datos de un producto.](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
 
 Las tablas temporales se pueden utilizar en este escenario para realizar otros tipos de análisis de viaje en el tiempo, como reconstruir el estado de AS OF del inventario a cualquier momento dado del pasado o comparar instantáneas que pertenecen a diferentes momentos en el tiempo.
 
@@ -348,7 +348,7 @@ SELECT * FROM vw_ProductInventoryDetails
 
 En la siguiente imagen se muestra el plan de ejecución generado para la consulta SELECT. Esto ilustra que el motor de SQL Server controla completamente toda la complejidad de trabajar con las relaciones temporales:
 
-![ASOFExecutionPlan](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
+![Diagrama que muestra el plan de ejecución generado para la consulta SELECT y que ilustra cómo el motor de SQL Server controla completamente toda la complejidad de trabajar con las relaciones temporales.](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
 
 Utilice el código siguiente para comparar el estado del inventario de productos entre dos momentos dados (hace un día y hace un mes):
 
@@ -390,7 +390,7 @@ CREATE TABLE [dbo].[Product]
 
 El diagrama siguiente muestra las compras a lo largo del tiempo:
 
-![TemporalAnomalyDetection](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
+![Diagrama que muestra las compras a lo largo del tiempo.](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
 
 Suponiendo que durante los días normales el número de productos comprados tiene una pequeña variación, la siguiente consulta identifica los valores atípicos de singleton. Se trata de ejemplos cuya diferencia en comparación con sus vecinos inmediatos es considerable (el doble), mientras que las muestras adyacentes no difieren significativamente (menos del 20 %):
 
@@ -466,7 +466,7 @@ No se necesita código adicional para mantener DVL durante el proceso de carga d
 
 La siguiente ilustración muestra cómo puede utilizar las tablas temporales en un escenario sencillo que implica 2 DVL (DimLocation y DimProduct) y una tabla de hechos.
 
-![TemporalSCD](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
+![Diagrama que muestra cómo puede utilizar las tablas temporales en un escenario sencillo que implica 2 DVL (DimLocation y DimProduct) y una tabla de hechos.](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
 
 Para poder utilizar las DVL en los informes, debe ajustar eficazmente las consultas. Por ejemplo, puede que le interese calcular la cantidad total de ventas y el promedio de productos vendidos per cápita durante los últimos seis meses. Observe que ambas métricas requieren la correlación de datos de la tabla de hechos y las dimensiones que podrían haber cambiado sus atributos importantes para el análisis (DimLocation.NumOfCustomers, DimProduct.UnitPrice). La siguiente consulta calcula correctamente las métricas requeridas:
 
@@ -539,13 +539,13 @@ Este procedimiento almacenado toma @EmployeeID y @versionNumber como parámetros
 
 La siguiente imagen muestra el estado de la fila antes y después de la invocación del procedimiento. El rectángulo rojo marca la versión de fila actual que no es correcta, mientras que el rectángulo verde marca la versión correcta del historial.
 
-![TemporalUsageRepair1](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
+![Captura de pantalla que muestra el estado de la fila antes y después de invocar el procedimiento.](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
 
 ```sql
 EXEC sp_RepairEmployeeRecord @EmployeeID = 1, @versionNumber = 1
 ```
 
-![TemporalUsageRepair2](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
+![Captura de pantalla que muestra la fila corregida.](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
 
 Este procedimiento almacenado de reparación puede definirse para aceptar una marca de tiempo exacta en lugar de la versión de fila. Restaurará la fila a cualquier versión que estuviera activa para el momento dado proporcionado (es decir, el momento dado AS OF).
 
@@ -567,11 +567,11 @@ UPDATE Employee
 
 Para el mismo ejemplo de datos la siguiente imagen ilustra el escenario de reparación con la condición de tiempo. Se resaltan el parámetro @asOf, la fila seleccionada en el historial que era real en el momento dado proporcionado y la nueva versión de fila en la tabla actual después de la operación de reparación:
 
-![TemporalUsageRepair3](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
+![Captura de pantalla que muestra el escenario de reparación con la condición de tiempo.](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
 
 La corrección de datos puede convertirse en parte de la carga de datos automatizada en el almacenamiento de datos y los sistemas de informes. Si un valor recién actualizado no es correcto entonces, en muchos escenarios, la restauración de la versión anterior del historial es una mitigación suficientemente buena. En el siguiente diagrama se muestra cómo se puede automatizar este proceso:
 
-![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
+![Diagrama que muestra cómo se puede automatizar el proceso.](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
 
 ## <a name="next-steps"></a>Pasos siguientes
 

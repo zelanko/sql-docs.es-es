@@ -21,12 +21,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d04e4fe2f3adc13b02b5aafb4f2cc49ab05d09d6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7353735a34874248e3796763c608bff24a83f649
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923683"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907383"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Agregar y quitar artículos de publicaciones existentes
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "86923683"
  Para agregar un artículo, es necesario agregar el artículo a la publicación, crear una instantánea nueva para la publicación y sincronizar la suscripción para aplicar el esquema y los datos para el nuevo artículo.  
   
 > [!NOTE]
->  Si se agrega un artículo a una publicación de combinación y ya hay un artículo que dependa de este nuevo artículo, debe especificar un orden de procesamiento para ambos artículos con el parámetro **\@processing_order** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) y [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Considere el caso siguiente: publica una tabla pero no publica una función a la que hace referencia la tabla. Si no publica la función, la tabla no se puede crear en el suscriptor. Al agregar la función a la publicación: especifique el valor **1** para el parámetro **\@processing_order** de **sp_addmergearticle** y el valor **2** para el parámetro **\@processing_order** de **sp_changemergearticle**; asimismo, debe especificar el nombre de la tabla para el parámetro **\@article**. Este orden de procesamiento garantiza que la función se cree en el suscriptor antes que la tabla que depende de él. Puede usar números distintos para cada artículo, siempre que el número de la función sea inferior al de la tabla.  
+>  Si se agrega un artículo a una publicación de combinación y ya hay un artículo que dependa de este nuevo artículo, debe especificar un orden de procesamiento para ambos artículos con el parámetro **\@processing_order** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) y [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Considere el caso siguiente: publica una tabla pero no publica una función a la que hace referencia la tabla. Si no publica la función, la tabla no se puede crear en el suscriptor. Al agregar la función a la publicación: especifique el valor **1** para el parámetro **\@processing_order** de **sp_addmergearticle** y el valor **2** para el parámetro **\@processing_order** de **sp_changemergearticle** ; asimismo, debe especificar el nombre de la tabla para el parámetro **\@article**. Este orden de procesamiento garantiza que la función se cree en el suscriptor antes que la tabla que depende de él. Puede usar números distintos para cada artículo, siempre que el número de la función sea inferior al de la tabla.  
   
 1.  Agregue uno o más artículos con uno de estos métodos:  
   
@@ -84,7 +84,7 @@ ms.locfileid: "86923683"
  Como se indicó antes, en algunos casos es necesario quitar, volver a crear y sincronizar las suscripciones después de quitar un artículo. Para obtener más información, consulte [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md) y [Sincronizar datos](../../../relational-databases/replication/synchronize-data.md).  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** o versiones posteriores y **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** o versiones posteriores admiten eliminar una tabla con el comando **DROP TABLE** DLL para artículos que participan en la replicación transaccional. Si un DROP TABLE DDL es compatible con las publicaciones, la operación DROP TABLE quitará la tabla de la publicación y la base de datos. El agente de registro del LOG enviará un comando de limpieza de la base de datos de distribución de la tabla quitada y realizará la limpieza de los metadatos del publicador. Si el registro del LOG no ha procesado todas las entradas del registro que hacen referencia a la tabla quitada, omitirá los comandos nuevos que estén asociados a la tabla quitada. Los registros ya procesados se entregarán a la base de datos de distribución. Se pueden aplicar a la base de datos del suscriptor si el agente de distribución los procesa antes de que el registro del LOG limpie los artículos obsoletos (quitados). La configuración **predeterminada** para todas las publicaciones de replicación transaccional es no admitir DROP TABLE DLL. En [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) se incluyen más detalles sobre esta mejora.
+ > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** o versiones posteriores y **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** o versiones posteriores permiten eliminar una tabla con el comando **DROP TABLE** DDL para artículos que participan en la replicación transaccional. Si un DROP TABLE DDL es compatible con las publicaciones, la operación DROP TABLE quitará la tabla de la publicación y la base de datos. El agente de registro del LOG enviará un comando de limpieza de la base de datos de distribución de la tabla quitada y realizará la limpieza de los metadatos del publicador. Si el registro del LOG no ha procesado todas las entradas del registro que hacen referencia a la tabla quitada, omitirá los comandos nuevos que estén asociados a la tabla quitada. Los registros ya procesados se entregarán a la base de datos de distribución. Se pueden aplicar a la base de datos del suscriptor si el agente de distribución los procesa antes de que el registro del LOG limpie los artículos obsoletos (quitados). La configuración **predeterminada** para todas las publicaciones de replicación transaccional es no admitir DROP TABLE DDL. En [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) se incluyen más detalles sobre esta mejora.
 
   
 ## <a name="see-also"></a>Consulte también  

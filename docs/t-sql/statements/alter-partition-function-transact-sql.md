@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 28d8fbb68542055be87ed8ebafd3d95b224ccf63
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d405c656af3265d09340ceeef42ac0423efd6a85
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544360"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734625"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,8 +73,8 @@ Si crea todas las particiones en el mismo grupo de archivos, ese grupo se asigna
 > [!NOTE]  
 >  Limitaciones con el índice de almacén de columnas: solo las particiones vacías se pueden dividir cuando existe un índice de almacén de columnas en la tabla. Tendrá que quitar o deshabilitar el índice de almacén de columnas antes de realizar esta operación.  
   
-MERGE [ RANGE ( *boundary_value*) ]  
-Quita una partición y combina cualquier valor que exista en la partición en una de las particiones restantes. RANGE (*boundary_value*) debe ser un valor de límite existente, en el que se combinan los valores de la partición quitada. Este argumento elimina el grupo de archivos que originalmente contenía el valor *boundary_value* del esquema de partición, a menos que lo use una partición restante o que esté marcado con la propiedad NEXT USED. La partición combinada se encuentra en el grupo de archivos que originalmente no contenía *boundary_value*. *boundary_value* es una expresión constante que puede hacer referencia a variables (incluidas las variables de tipos definidos por el usuario) o funciones (incluidas las funciones definidas por el usuario). No puede hacer referencia a una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* debe coincidir con el tipo de datos de su columna de partición correspondiente, o debe poder convertirse a dicho tipo de datos de forma implícita. Tampoco se puede truncar *boundary_value* durante la conversión implícita de forma que el tamaño y la escala del valor no coincidan con su correspondiente valor *input_parameter_type*.  
+MERGE [ RANGE ( *boundary_value* ) ]  
+Quita una partición y combina cualquier valor que exista en la partición en una de las particiones restantes. RANGE ( *boundary_value* ) debe ser un valor límite existente de la partición que se va a quitar. Este argumento elimina el grupo de archivos que originalmente contenía el valor *boundary_value* del esquema de partición, a menos que lo use una partición restante o que esté marcado con la propiedad NEXT USED. La partición combinada se encuentra en el grupo de archivos que originalmente no contenía *boundary_value*. *boundary_value* es una expresión constante que puede hacer referencia a variables (incluidas las variables de tipos definidos por el usuario) o funciones (incluidas las funciones definidas por el usuario). No puede hacer referencia a una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* debe coincidir con el tipo de datos de su columna de partición correspondiente, o debe poder convertirse a dicho tipo de datos de forma implícita. Tampoco se puede truncar *boundary_value* durante la conversión implícita de forma que el tamaño y la escala del valor no coincidan con su correspondiente valor *input_parameter_type*.  
   
 > [!NOTE]  
 >  Limitaciones con el índice de almacén de columnas: no se pueden combinar dos particiones no vacías que contengan un índice de almacén de columnas. Tendrá que quitar o deshabilitar el índice de almacén de columnas antes de realizar esta operación.  

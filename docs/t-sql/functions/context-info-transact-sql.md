@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad1dea00f71039a3dfb37386bfd7ebe63b53a6d6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 0a6ff9b888601403029ef8c830dd8dd674aa1f10
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990278"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235656"
 ---
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO  (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,8 +48,8 @@ CONTEXT_INFO()
 El valor **context_info**.
   
 Si **context_info** no se ha establecido:
--   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve NULL.  
--   En [!INCLUDE[ssSDS](../../includes/sssds-md.md)] devuelve un GUID único específico de sesión.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve NULL.  
+-   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] devuelve un GUID único específico de sesión.  
   
 ## <a name="remarks"></a>Observaciones  
 La característica de conjuntos de resultados activos múltiples (MARS) permite a las aplicaciones ejecutar varios lotes o solicitudes al mismo tiempo en la misma conexión. Cuando uno de los lotes de una conexión MARS ejecuta SET CONTEXT_INFO, la función `CONTEXT_INFO` devuelve el nuevo valor de contexto cuando la función `CONTEXT_INFO` se ejecuta en el mismo lote que la instrucción SET. Si la función `CONTEXT_INFO` se ejecuta en uno o más de los otros lotes de conexión, `CONTEXT_FUNCTION` no devuelve el nuevo valor a menos que esos lotes hayan comenzado después de completar el lote que ejecutó la instrucción SET.

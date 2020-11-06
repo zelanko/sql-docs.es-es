@@ -2,7 +2,7 @@
 title: Permisos (motor de base de datos) | Microsoft Docs
 description: Consulte esta lista completa de permisos de SQL Server para saber cuáles se aplican a las plataformas que usa.
 ms.custom: ''
-ms.date: 01/03/2017
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-author: VanMSFT
-ms.author: vanto
+author: AndreasWolter
+ms.author: anwolter
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42c08d58ed1f5688d66ff6e903c27ba360d6a2d0
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 5da1bad65cf04093be339e1f2e55bddd30efffbf
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081954"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243654"
 ---
 # <a name="permissions-database-engine"></a>Permisos (motor de base de datos)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "92081954"
 Todos los elementos protegibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen permisos asociados que se pueden conceder a una entidad de seguridad. Los permisos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se administran en el nivel de servidor asignados a los inicios de sesión y roles de servidor, y en el nivel de base de datos asignados a usuarios de base de datos y roles base de datos. El modelo para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tiene el mismo sistema para los permisos de base de datos, pero los permisos de nivel de servidor no están disponibles. Este tema contiene una lista completa de los permisos. Para una implementación típica de los permisos, consulte [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
 El número total de permisos para [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] es 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] expone 254 permisos. La mayoría de los permisos se aplica a todas las plataformas, pero otros no. Por ejemplo, no se pueden conceder permisos de nivel de servidor en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y algunos permisos solo tienen sentido en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] expuso 238 permisos. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] expuso 230 permisos. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] expuso 219 permisos. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] expuso 214 permisos. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] expuso 195 permisos. El tema [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) especifica qué temas se encuentran en las versiones recientes.
+Con la nueva versión se van a implementar nuevos permisos gradualmente. [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] expuso 238 permisos. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] expuso 230 permisos. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] expuso 219 permisos. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] expuso 214 permisos. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] expuso 195 permisos. El tema [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) especifica los permisos de las últimas versiones que son nuevos.
 
 Una vez que comprenda los permisos, aplique los permisos de nivel de servidor a los inicios de sesión y usuarios de permisos de nivel de base de datos con las instrucciones [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)y [DENY](../../t-sql/statements/deny-transact-sql.md) . Por ejemplo:   
 ```sql
@@ -364,7 +364,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Resumen del algoritmo de comprobación de permiso  
- Comprobar los permisos puede ser complejo. El algoritmo de comprobación de permiso incluye la superposición de la pertenencia a grupos y el encadenamiento de propiedad, tanto el permiso explícito como el implícito, y puede ser afectado por los permisos en las clases protegibles y que contienen la entidad protegible. El proceso general del algoritmo es reunir todos los permisos pertinentes. Si no se encuentra ningún bloqueo DENY, el algoritmo busca un permiso GRANT que proporcione el acceso suficiente. El algoritmo contiene tres elementos esenciales, el **contexto de seguridad**, el **espacio del permiso**y el **permiso necesario**.  
+ Comprobar los permisos puede ser complejo. El algoritmo de comprobación de permiso incluye la superposición de la pertenencia a grupos y el encadenamiento de propiedad, tanto el permiso explícito como el implícito, y puede ser afectado por los permisos en las clases protegibles y que contienen la entidad protegible. El proceso general del algoritmo es reunir todos los permisos pertinentes. Si no se encuentra ningún bloqueo DENY, el algoritmo busca un permiso GRANT que proporcione el acceso suficiente. El algoritmo contiene tres elementos esenciales, el **contexto de seguridad** , el **espacio del permiso** y el **permiso necesario**.  
   
 > [!NOTE]  
 >  No puede conceder, denegar ni revocar permisos a sa, dbo, al propietario de la entidad, information_schema, sys ni a usted mismo.  
@@ -406,7 +406,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
   
 3.  Agrega las identidades de nivel del servidor, de base de datos y de módulo firmado que se asocian al autor de las llamadas para crear el **contexto de seguridad**.  
   
-4.  Para ese **contexto de seguridad**, reúne todos los permisos que se conceden o deniegan para el **espacio del permiso**. El permiso se puede nombrar explícitamente como GRANT, GRANT WITH GRANT o DENY; o los permisos pueden ser un permiso GRANT o DENY implícito o inclusivo. Por ejemplo, el permiso CONTROL sobre un esquema implica CONTROL sobre una tabla. Asimismo, CONTROL sobre una tabla implica SELECT. Por consiguiente, si se otorgó CONTROL sobre el esquema, se otorgó SELECT sobre la tabla. Si se denegó CONTROL sobre la tabla, también se denegó SELECT sobre ella.  
+4.  Para ese **contexto de seguridad** , reúne todos los permisos que se conceden o deniegan para el **espacio del permiso**. El permiso se puede nombrar explícitamente como GRANT, GRANT WITH GRANT o DENY; o los permisos pueden ser un permiso GRANT o DENY implícito o inclusivo. Por ejemplo, el permiso CONTROL sobre un esquema implica CONTROL sobre una tabla. Asimismo, CONTROL sobre una tabla implica SELECT. Por consiguiente, si se otorgó CONTROL sobre el esquema, se otorgó SELECT sobre la tabla. Si se denegó CONTROL sobre la tabla, también se denegó SELECT sobre ella.  
   
     > [!NOTE]  
     >  Un permiso GRANT de nivel de columna invalida un permiso DENY en el nivel de objeto.  

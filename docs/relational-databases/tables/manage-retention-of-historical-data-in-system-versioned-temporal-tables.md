@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 322f977207bb593ddc6a4c8c78fae7621bd2aad4
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7d1c849a1828664fa24d8e2473dfe9c692c048cd
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810694"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243620"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Administración de la retención de datos históricos en las tablas temporales con versiones del sistema
 
@@ -72,7 +72,7 @@ Puede configurar una tabla de historial temporal para Stretch con el Asistente d
 
 El método más sencillo para los principiantes es usar el Asistente de Stretch para habilitar el ajuste para la base de datos completa y, después, seleccionar la tabla de historial temporal en el Asistente de Stretch (en este ejemplo se supone que ha configurado la tabla de departamento como una tabla temporal con versiones del sistema en una base de datos vacía). En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], no puede hacer clic con el botón derecho en la propia tabla de historial temporal y hacer clic en Stretch.
 
-1. Haga clic con el botón derecho en la base de datos y seleccione **Tareas**, seleccione **Stretch**y, después, haga clic en **Habilitar** para iniciar el asistente.
+1. Haga clic con el botón derecho en la base de datos y seleccione **Tareas** , seleccione **Stretch** y, después, haga clic en **Habilitar** para iniciar el asistente.
 2. En la ventana **Seleccionar tablas** , seleccione la casilla de la tabla de historial temporal y haga clic en Siguiente.
 
     ![Selección de la tabla de historial en la página Seleccionar tablas](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selección de la tabla de historial en la página Seleccionar tablas")
@@ -82,7 +82,7 @@ El método más sencillo para los principiantes es usar el Asistente de Stretch 
 4. En la ventana **Credenciales de seguridad** , proporcione una contraseña para la clave maestra de base de datos para proteger sus credenciales de base de datos de SQL Server de origen y haga clic en Siguiente.
 
     ![Página de credenciales seguras del Asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Página de credenciales seguras del Asistente para Stretch Database")
-5. En la ventana **Seleccionar dirección IP**, proporcione el intervalo de direcciones IP para SQL Server para que el servidor de Azure se comunique con SQL Server (si selecciona un servidor existente para el que ya existe una regla de firewall, simplemente haga clic en Siguiente aquí para usar la regla de firewall existente). Haga clic en **Siguiente** y, después, en **Finalizar** para habilitar Stretch Database y ajustar la tabla de historial temporal.
+5. En la ventana **Seleccionar dirección IP** , proporcione el intervalo de direcciones IP para SQL Server para que el servidor de Azure se comunique con SQL Server (si selecciona un servidor existente para el que ya existe una regla de firewall, simplemente haga clic en Siguiente aquí para usar la regla de firewall existente). Haga clic en **Siguiente** y, después, en **Finalizar** para habilitar Stretch Database y ajustar la tabla de historial temporal.
 
     ![Página Seleccionar dirección IP del Asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Página Seleccionar dirección IP del Asistente para Stretch Database")
 6. Cuando se complete el asistente, compruebe que se haya habilitado el ajuste correctamente para la base de datos. Vea los iconos del Explorador de objetos que indican que se ha ajustado la base de datos.
@@ -180,7 +180,7 @@ Una tarea de configuración de particiones crea la configuración inicial de par
 
 En la siguiente imagen se muestra la configuración inicial de la creación de particiones para mantener 6 meses de datos.
 
-![Partitioning](../../relational-databases/tables/media/partitioning.png "Creación de particiones")
+![Diagrama que muestra la configuración inicial de la creación de particiones de particiones para mantener seis meses de datos.](../../relational-databases/tables/media/partitioning.png "Creación de particiones")
 
 > [!NOTE]
 > Vea las consideraciones de rendimiento con las particiones de tabla siguientes para las implicaciones de rendimiento de uso de la opción RANGE LEFT frente a la opción RANGE RIGHT al configurar la creación de particiones.
@@ -189,7 +189,7 @@ La primera y última partición están "abiertas" en los límites inferior y sup
 
 La imagen siguiente muestra las tareas de mantenimiento periódico de la partición (vea los pasos detallados a continuación).
 
-![Partitioning2](../../relational-databases/tables/media/partitioning2.png "Partitioning2")
+![Diagrama que muestra las tareas periódicas de mantenimiento de partición.](../../relational-databases/tables/media/partitioning2.png "Partitioning2")
 
 Los pasos detallados para las tareas de mantenimiento periódico de la partición son:
 
@@ -323,7 +323,7 @@ Es importante realizar las operaciones MERGE y SPLIT RANGE para evitar cualquier
 
 Primero se va a explicar visualmente el significado de las opciones RANGE LEFT y RANGE RIGHT:
 
-![Partitioning3](../../relational-databases/tables/media/partitioning3.png "Partitioning3")
+![Diagrama que muestra las opciones RANGE LEFT y RANGE RIGHT.](../../relational-databases/tables/media/partitioning3.png "Partitioning3")
 
 Si se define una función de partición como RANGE LEFT, los valores especificados son los límites superiores de las particiones. Cuando utilice la opción RANGE RIGHT, los valores especificados son los límites inferiores de las particiones. Cuando utilice la operación MERGE RANGE para quitar un límite de la definición de la función de partición, la implementación subyacente también quita la partición que contiene el límite. Si esa partición no está vacía, los datos se moverán a la partición que resulta de la operación MERGE RANGE.
 
@@ -332,7 +332,7 @@ En el escenario de ventana deslizante, siempre quitamos el límite inferior de l
 - Caso RANGE LEFT: en el caso RANGE LEFT, el límite inferior de la partición pertenece a la partición 1, que está vacía (después de conmutar la partición), por lo que MERGE RANGE no causará ningún movimiento de datos.
 - Caso RANGE RIGHT: en el caso RANGE RIGHT, el límite inferior de la partición pertenece a la partición 2, que no está vacía ya que se ha supuesto que la partición 1 se había vaciado mediante la conmutación. En este caso, la opción MERGE RANGE provocará un movimiento de datos (los datos de la partición 2 se moverán a la partición 1). Para evitar esto, la opción RANGE RIGHT del escenario de ventana deslizante debe tener la partición 1, que siempre está vacía. Esto significa que si usamos la opción RANGE RIGHT, debemos crear y mantener una partición adicional en comparación con el caso de RANGE LEFT.
 
-**Conclusión**: el uso de RANGE LEFT en la partición deslizante es mucho más simple para la administración de la partición y evita el movimiento de datos. Sin embargo, la definición de los límites de partición con la opción RANGE RIGHT es un poco más simple, ya que no tiene que tratar con problemas de marca de tiempo de fecha y hora.
+**Conclusión** : el uso de RANGE LEFT en la partición deslizante es mucho más simple para la administración de la partición y evita el movimiento de datos. Sin embargo, la definición de los límites de partición con la opción RANGE RIGHT es un poco más simple, ya que no tiene que tratar con problemas de marca de tiempo de fecha y hora.
 
 ## <a name="using-custom-cleanup-script-approach"></a>Uso del enfoque de script de limpieza personalizado
 
@@ -344,7 +344,7 @@ La lógica de limpieza es la misma para todas las tablas temporales, por lo que 
 
 El siguiente diagrama muestra cómo debe organizarse la lógica de limpieza para una tabla única para reducir el impacto en las cargas de trabajo en ejecución.
 
-![CustomCleanUpScriptDiagram](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")
+![Diagrama que muestra cómo debe organizarse la lógica de limpieza de una tabla única para reducir el impacto en las cargas de trabajo en ejecución.](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")
 
 Estas son algunas directrices de alto nivel para implementar el proceso. Programe la lógica de limpieza para que se ejecute todos los días y realice la iteración sobre todas las tablas temporales que necesitan la limpieza de datos. Use el Agente SQL Server u otra herramienta para programar este proceso:
 

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: c01095e77fa974088f8a10669aecf1a8c53fd11d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 1cfc3dc5fa707a10f6adcf6e12122698ff4f9428
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943016"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524022"
 ---
 # <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>Uso del asistente para tablas externas con orígenes de datos ODBC
 
@@ -58,13 +58,13 @@ En este paso, especifique el origen de datos externo y los detalles de las crede
 
 El siguiente paso es configurar una credencial. Escriba un nombre para la credencial. Este nombre es la credencial de ámbito de base de datos que se usa para almacenar de forma segura la información de inicio de sesión del origen de datos externo que crea. Un ejemplo es `TestCred`. Escriba un nombre de usuario y una contraseña para conectarse al origen de datos.
 
-![Credenciales del origen de datos externo](media/data-virtualization/data-source-credentials.png)
+![Captura de pantalla que muestra el paso 3: Crear una conexión al origen de datos.](media/data-virtualization/data-source-credentials.png)
 
 ## <a name="external-data-table-mapping"></a>Asignación de tablas de datos externos
 
 En la siguiente página, seleccione las tablas para las que quiere crear vistas externas. Al seleccionar bases de datos principales, también se incluyen las tablas secundarias. Después de seleccionar las tablas, aparece una tabla de asignación a la derecha. En ella puede realizar cambios en los tipos. También puede cambiar el nombre de la propia tabla externa seleccionada.
 
-![Credenciales del origen de datos externo](media/data-virtualization/data-table-map.png)
+![Captura de pantalla que muestra el paso 4: Asignar los objetos de origen de datos a la tabla externa.](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >Para cambiar la vista de asignación, haga doble clic en otra tabla seleccionada.
@@ -78,11 +78,11 @@ Este paso muestra un resumen de las selecciones. Proporciona el nombre de las cr
 
 ![Pantalla de resumen](media/data-virtualization/virtualize-data-summary.png)
 
-Si selecciona **Crear**, ve el objeto de origen de datos externo creado en la base de datos de destino.
+Si selecciona **Crear** , ve el objeto de origen de datos externo creado en la base de datos de destino.
 
 ![Orígenes de datos externos](media/data-virtualization/external-data-sources.png)
 
-Si selecciona **Generar script**, ve la consulta T-SQL que se genera para crear el objeto de origen de datos externo.
+Si selecciona **Generar script** , ve la consulta T-SQL que se genera para crear el objeto de origen de datos externo.
 
 ![Generar script](media/data-virtualization/generated-script.png)
 

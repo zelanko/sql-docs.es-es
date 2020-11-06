@@ -8,17 +8,17 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
-ms.date: 09/22/2020
-ms.openlocfilehash: c6e4dd8869c9f26adb34c5acb965241ff9a2198e
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.date: 10/29/2020
+ms.openlocfilehash: 0c77b957f14401aec3130fa5fa4f78f0d34de9b5
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098704"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067207"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Extensión Kusto (KQL) para Azure Data Studio (versión preliminar)
 
-La extensión Kusto (KQL) para [Azure Data Studio](../what-is.md) permite conectarse a clústeres de [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) y realizar consultas.
+La extensión Kusto (KQL) para [Azure Data Studio](../what-is-azure-data-studio.md) permite conectarse a clústeres de [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) y realizar consultas.
 
 Los usuarios pueden escribir y ejecutar consultas de KQL, así como crear cuadernos con el [kernel de Kusto](../notebooks/notebooks-kusto-kernel.md) completado con IntelliSense.
 
@@ -55,7 +55,7 @@ Para instalar la extensión Kusto (KQL) en Azure Data Studio, siga los pasos q
 
 Busque el clúster de Azure Data Explorer en [Azure Portal](https://ms.portal.azure.com/#home) y luego busque el URI del clúster.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="Extensión Kusto":::
+:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="URI":::
 
 Pero puede empezar de inmediato con el clúster *help.kusto.windows.net*.
 
@@ -68,27 +68,27 @@ Para configurar un clúster de Azure Data Explorer al que conectarse, siga est
 1. Seleccione **Nueva conexión** en el panel **Conexiones**.
 
 2. Rellene la información de **Detalles de conexión**.
-    1. En **Tipo de conexión**, seleccione *Kusto*.
-    2. En **Clúster**, especifique el clúster de Azure Data Explorer.
+    1. En **Tipo de conexión** , seleccione *Kusto*.
+    2. En **Clúster** , especifique el clúster de Azure Data Explorer.
 
         > [!Note]
         > Al escribir el nombre del clúster, no incluya el prefijo `https://` ni una `/` final.
 
-    3. En **Tipo de autenticación**, use la cuenta predeterminada *Azure Active Directory - Universal con MFA*.
-    4. En **Cuenta**, use la información de la cuenta.
-    5. En **Base de datos**, use *Predeterminada*.
-    6. En **Grupo de servidores**, use *Predeterminado*.
+    3. En **Tipo de autenticación** , use la cuenta predeterminada *Azure Active Directory - Universal con MFA*.
+    4. En **Cuenta** , use la información de la cuenta.
+    5. En **Base de datos** , use *Predeterminada*.
+    6. En **Grupo de servidores** , use *Predeterminado*.
         1. Puede usar este campo para organizar los servidores de un grupo concreto.
     7. Deje en blanco el campo **Nombre (opcional)** .
         1. Puede usar este campo para asignar un alias al servidor.
 
-    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Extensión Kusto":::
+    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Detalles de conexión":::
 
 ## <a name="how-to-query-an-azure-data-explorer-database-in-azure-data-studio"></a>Consulta de una base de datos de Azure Data Explorer en Azure Data Studio
 
 Ahora que ha configurado una conexión al clúster de Azure Data Explorer, puede realizar consultas a las bases de datos mediante Kusto (KQL).
 
-Para crear una pestaña de nueva consulta, puede seleccionar **Archivo > Nueva consulta**, usar *Ctrl + N* o bien hacer clic con el botón derecho en la base de datos y seleccionar **Nueva consulta**.
+Para crear una pestaña de nueva consulta, puede seleccionar **Archivo > Nueva consulta** , usar *Ctrl + N* o bien hacer clic con el botón derecho en la base de datos y seleccionar **Nueva consulta**.
 
 Una vez abierta la pestaña de nueva consulta, escriba la consulta de Kusto.
 
@@ -120,23 +120,21 @@ Para cambiar la configuración de la extensión Kusto, siga los pasos que se ind
 
 La configuración de la extensión tiene este aspecto:
 
-:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Extensión Kusto":::
+:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Configuración de la extensión Kusto (KQL)":::
 
 ## <a name="sanddance-visualization"></a>Visualización de SandDance
 
 La [extensión SandDance](sanddance-extension.md) conjuntamente con la extensión Kusto (KQL) en Azure Data Studio aportan una visualización interactiva enriquecida. En el conjunto de resultados de consulta de KQL, seleccione el botón **Visualizador** para iniciar [SandDance](https://sanddance.js.org/).
 
-:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Extensión Kusto":::
+:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Visualización de SandDance":::
 
 ## <a name="known-issues"></a>Problemas conocidos
 
 | Detalles | Solución alternativa |
 |---------|------------|
-| [No funciona el viewlet de la conexión Kusto después de la recarga](https://github.com/microsoft/azuredatastudio/issues/12475). | N/D |
-| [No se puede volver a establecer la conexión automáticamente](https://github.com/microsoft/azuredatastudio/issues/11830). | Desconéctese del clúster de Azure Data Explorer y vuelva a conectarse. |
-| [Al actualizar el clúster de Kusto, la conexión no se vuelve a establecer correctamente](https://github.com/microsoft/azuredatastudio/issues/11824). | Desconéctese del clúster de Azure Data Explorer y vuelva a conectarse. |
-| [La conexión a un clúster debe mostrar el panel del clúster en lugar de la base de datos](https://github.com/microsoft/azuredatastudio/issues/12549) | N/D |
-| Para cada tabla de la base de datos del clúster de Azure Data solo hay una opción para **SELECT TOP 1000** en vez de **TAKE 10**. | N/D |
+| [El cambio de una conexión de una base de datos en una conexión de alias guardada en un cuaderno de Kusto se bloquea después de un error en la ejecución de la celda de código.](https://github.com/microsoft/azuredatastudio/issues/12384) | Cierre y vuelva a abrir el cuaderno y, después, conéctese al clúster correcto con la base de datos. |
+| [El cambio de una conexión de una base de datos en una conexión de alias no guardada no funciona en un cuaderno de Kusto.](https://github.com/microsoft/azuredatastudio/issues/12843) |Cree una nueva conexión en el viewlet Conexión y guárdela con un alias. Después, cree un nuevo cuaderno y conéctese a la última conexión guardada. | 
+| [La lista desplegable de bases de datos no se rellena cuando se crea una nueva conexión ADX en el cuaderno de Kusto.](https://github.com/microsoft/azuredatastudio/issues/12666) | Cree una nueva conexión en el viewlet Conexión y guárdela con un alias. Después, cree un nuevo cuaderno y conéctese a la última conexión guardada. |
 
 Puede enviar una [solicitud de característica](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) si quiere proporcionar comentarios al equipo de productos.  
 Puede informar de un [error](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) si quiere proporcionar comentarios al equipo de productos.

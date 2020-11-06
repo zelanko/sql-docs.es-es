@@ -8,12 +8,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b57aec5c6abc9bbeb6928c5310a3217957d2d02b
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 5e78e131e9a328a49bd63182e7ae74db54c50d92
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784904"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235646"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configuración de la instancia de clúster de conmutación por error: SMB; SQL Server en Linux
 
@@ -30,7 +30,7 @@ Aquí tiene algunas sugerencias y notas para usar SMB correctamente:
 - El recurso compartido de SMB debe tener alta disponibilidad.
 - La seguridad debe establecerse correctamente en el recurso compartido de SMB. A continuación se muestra un ejemplo de /etc/samba/smb.conf, donde SQLData1 es el nombre del recurso compartido.
 
-![05-smbsource][1]
+![Captura de pantalla que muestra que SQLData1 es el nombre del grupo.][1]
 
 ## <a name="instructions"></a>Instructions
 

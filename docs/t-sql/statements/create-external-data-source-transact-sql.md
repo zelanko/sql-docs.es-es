@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 562063245f2c8aaf5204385be20e6687554d5d46
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: f54f2fdce030f477a9e203daa837287dff86f107
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300184"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043850"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -119,7 +119,7 @@ Instrucciones y notas adicionales cuando se establece la ubicación:
 - Especifique `Driver={<Name of Driver>}` al conectarse a través de `ODBC`.
 - `wasbs` es opcional, pero se recomienda para acceder a las cuentas de Azure Storage, ya que se enviarán los datos mediante una conexión TLS/SSL segura.
 - Las API `abfs` o `abfss` no se admiten al acceder a las cuentas de Azure Storage.
-- No se admite la opción Espacio de nombres jerárquico para las cuentas de Azure Storage (V2). Asegúrese de que esta opción permanece **deshabilitada** .
+- No se admite la opción Espacio de nombres jerárquico para las cuentas de Azure Storage (V2). Asegúrese de que esta opción permanece **deshabilitada**.
 - Para garantizar que las consultas de PolyBase son correctas durante una conmutación por error del `Namenode` de Hadoop, considere la posibilidad de usar una dirección IP virtual para el `Namenode` del clúster de Hadoop. Si no, ejecute un comando [ALTER EXTERNAL DATA SOURCE][alter_eds] para que apunte a la nueva ubicación.
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
@@ -493,7 +493,7 @@ Especifica una credencial de ámbito de base de datos para la autenticación en 
 
 Instrucciones y notas adicionales cuando se crea una credencial:
 
-- Para cargar datos de Azure Storage a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use una clave de Azure Storage.
+- Para cargar datos de Azure Storage en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use una firma de acceso compartido (token de SAS).
 - `CREDENTIAL` solo se necesita si se han protegido los datos. `CREDENTIAL` no es necesario para los conjuntos de datos que permiten el acceso anónimo.
 - Cuando `TYPE` = `BLOB_STORAGE`, la credencial debe crearse mediante el uso de `SHARED ACCESS SIGNATURE` como identidad. Además, el token de SAS debe configurarse del modo siguiente:
   - Excluir el `?` inicial cuando se configura como secreto

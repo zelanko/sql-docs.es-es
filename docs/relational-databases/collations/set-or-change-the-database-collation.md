@@ -2,7 +2,7 @@
 description: Establecer o cambiar la intercalación de base de datos
 title: Establecer o cambiar la intercalación de base de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 10/27/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -14,12 +14,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32f5807bffcb74b3ca2c7c15ec294154530a9ad5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 9ea1926c2e54135277dd486976dda7ebe4ae6086
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193475"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907393"
 ---
 # <a name="set-or-change-the-database-collation"></a>Establecer o cambiar la intercalación de base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92193475"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Las intercalaciones exclusivas de Unicode de Windows solo se pueden usar con la cláusula COLLATE para aplicar intercalaciones a los tipos de datos **nchar**, **nvarchar**y **ntext** de nivel de columna y de nivel de datos de expresión. No se pueden utilizar con la cláusula COLLATE para cambiar la intercalación de una instancia de la base de datos o del servidor.  
+-   Las intercalaciones exclusivas de Unicode de Windows solo se pueden usar con la cláusula COLLATE para aplicar intercalaciones a los tipos de datos **nchar** , **nvarchar** y **ntext** de nivel de columna y de nivel de datos de expresión. No se pueden utilizar con la cláusula COLLATE para cambiar la intercalación de una instancia de la base de datos o del servidor.  
   
 -   Si la intercalación especificada o la intercalación usada por el objeto al que se hace referencia utiliza una página de códigos no admitida por Windows, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] muestra un error.  
 
@@ -60,18 +60,44 @@ Puede buscar los nombres de intercalación admitidos en [Nombre de intercalació
   
 Al modificar la intercalación de la base de datos también se cambian los siguientes elementos:  
   
--   Todas las columnas **char**, **varchar**, **text**, **nchar**, **nvarchar**o **ntext** de las tablas del sistema se cambian a la nueva intercalación.  
+-   Todas las columnas **char** , **varchar** , **text** , **nchar** , **nvarchar** o **ntext** de las tablas del sistema se cambian a la nueva intercalación.  
   
--   Todos los valores devueltos escalares y parámetros **char**, **varchar**, **text**, **nchar**, **nvarchar**o **ntext** existentes para los procedimientos almacenados y las funciones definidas por el usuario se cambian a la nueva intercalación.  
+-   Todos los valores devueltos escalares y parámetros **char** , **varchar** , **text** , **nchar** , **nvarchar** o **ntext** existentes para los procedimientos almacenados y las funciones definidas por el usuario se cambian a la nueva intercalación.  
   
--   Los tipos de datos del sistema **char**, **varchar**, **text**, **nchar**, **nvarchar**o **ntext** y todos los tipos de datos definidos por el usuario basados en estos tipos de datos del sistema se cambian a la nueva intercalación predeterminada.  
+-   Los tipos de datos del sistema **char** , **varchar** , **text** , **nchar** , **nvarchar** o **ntext** y todos los tipos de datos definidos por el usuario basados en estos tipos de datos del sistema se cambian a la nueva intercalación predeterminada.  
   
 Para cambiar la intercalación de cualquier objeto nuevo creado en una base de datos de usuario, utilice la cláusula `COLLATE` de la instrucción [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Esta instrucción **no modifica** la intercalación de las columnas de ninguna de las tablas definidas por el usuario existentes. Para modificarlas, use la cláusula `COLLATE` de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+
+> [!IMPORTANT]
+> El hecho de cambiar la intercalación de una base de datos o columnas individuales **no modifica** los datos subyacentes ya almacenados en tablas existentes. A menos que la aplicación controle explícitamente la conversión de datos y la comparación entre las distintas intercalaciones, se recomienda trasladar los datos existentes en la base de datos a la última intercalación. Esto elimina el riesgo de que las aplicaciones puedan modificar incorrectamente los datos, lo que puede causar resultados erróneos o una pérdida de datos silenciosa.   
+
+Si se cambia una intercalación de base de datos, solo las tablas nuevas heredarán la última intercalación de base de datos de forma predeterminada. Hay varias alternativas para convertir los datos existentes de la última intercalación:
+-  Convierta los datos en contexto. Para convertir la intercalación de una columna en una tabla existente, consulte [Establecer o cambiar la intercalación de columnas](../../relational-databases/collations/set-or-change-the-column-collation.md). Es fácil implementar esta operación, pero puede convertirse en un problema de bloqueo en el caso de las tablas grandes y las aplicaciones ocupadas. Vea el ejemplo siguiente de una conversión en contexto de la columna `MyString` en una nueva intercalación:
+
+   ```sql
+   ALTER TABLE dbo.MyTable
+   ALTER COLUMN MyString VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8;
+   ```
+
+-  Copie datos en tablas nuevas que utilicen la última intercalación y reemplace las tablas originales de la misma base de datos. Cree una nueva tabla en la base de datos actual que herede la intercalación de la base de datos y copie los datos entre la tabla anterior y la nueva. Ahora, quite la tabla original y cambie el nombre de la nueva por el nombre de la original. Esta operación es más rápida que una conversión en contexto, pero puede convertirse en un desafío al administrar esquemas complejos con dependencias como las restricciones de claves externas, las restricciones de claves principales y los desencadenadores. En caso de que las aplicaciones sigan cambiando los datos, también requeriría una sincronización de datos final entre la tabla original y la nueva antes del último cierre. Vea el ejemplo siguiente de una conversión de "copiar y reemplazar" de la columna `MyString` en una nueva intercalación:
+
+   ```sql
+   CREATE TABLE dbo.MyTable2 (MyString VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8); 
+   
+   INSERT INTO dbo.MyTable2 
+   SELECT * FROM dbo.MyTable; 
+   
+   DROP TABLE dbo.MyTable; 
+   
+   EXEC sp_rename 'dbo.MyTable2', 'dbo.MyTable’;
+   ```
+
+-  Copie los datos en una nueva base de datos que use la última intercalación y reemplace la base de datos original. Cree una nueva base de datos con la nueva intercalación y transfiera los datos de la base de datos original por medio de herramientas como [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o el asistente para importación y exportación de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Este es un enfoque más sencillo en el caso de esquemas complejos. En caso de que las aplicaciones sigan cambiando los datos, también requeriría una sincronización de datos final entre la tabla original y la nueva base de datos antes del último cierre.
   
 ###  <a name="security"></a><a name="Security"></a> Seguridad  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
- Para crear una base de datos, requiere el permiso `CREATE DATABASE` en la base de datos **maestra**, o bien requiere `CREATE ANY DATABASE` o el permiso `ALTER ANY DATABASE`.  
+ Para crear una base de datos, requiere el permiso `CREATE DATABASE` en la base de datos **maestra** , o bien requiere `CREATE ANY DATABASE` o el permiso `ALTER ANY DATABASE`.  
   
  Para cambiar la intercalación de una base de datos existente, requiere el permiso `ALTER` en la base de datos.  
   
@@ -79,7 +105,7 @@ Para cambiar la intercalación de cualquier objeto nuevo creado en una base de d
   
 #### <a name="to-set-or-change-the-database-collation"></a>Para establecer o cambiar la intercalación de base de datos  
   
-1.  En el **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expándala y, a continuación, expanda **Bases de datos**.  
+1.  En el **Explorador de objetos** , conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expándala y, a continuación, expanda **Bases de datos**.  
   
 2.  Si está creando una base de datos, haga clic con el botón derecho en **Bases de datos** y haga clic en **Nueva base de datos**. Si no quiere la intercalación predeterminada, haga clic en la página **Opciones** y seleccione una intercalación en la lista desplegable **Intercalación** .  
   

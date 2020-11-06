@@ -12,12 +12,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2e5fe98b5ec7d6fc141b41869e0caef7f6cb665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7e2aaa0e01a5ca5295bc9f315c44cd7358b1d9f
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408801"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036121"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Rendimiento de las consultas de índices de almacén de columnas
 
@@ -95,7 +95,7 @@ ms.locfileid: "88408801"
  Para más información sobre grupos de filas, vea [Directrices para diseñar índices de almacén de columnas](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).    
     
 ### <a name="batch-mode-execution"></a>Ejecución del modo por lotes    
- La ejecución del modo por lotes hace referencia al procesamiento de un conjunto de filas, normalmente hasta 900 filas juntas para obtener la eficacia de la ejecución. Por ejemplo, la consulta `SELECT SUM (Sales) FROM SalesData` agrega las ventas totales de la tabla SalesData. En la ejecución del modo por lotes, el motor de ejecución de consultas calcula el agregado en el grupo de 900 valores. Esto incluye metadatos, los costos de acceso y otros tipos de sobrecarga sobre todas las filas de un lote, en lugar de pagar el costo para cada fila. Por lo tanto, se reduce significativamente la ruta de acceso del código. El procesamiento de modo por lotes funciona en los datos comprimidos cuando sea posible y elimina algunos de los operadores de intercambio utilizados por el procesamiento del modo de fila. Esto acelera la ejecución de las consultas de análisis por órdenes de magnitud.    
+ La [ejecución del modo por lotes](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) hace referencia al procesamiento de un conjunto de filas, normalmente hasta 900 filas juntas, para obtener la eficacia de la ejecución. Por ejemplo, la consulta `SELECT SUM (Sales) FROM SalesData` agrega las ventas totales de la tabla SalesData. En la ejecución del modo por lotes, el motor de ejecución de consultas calcula el agregado en el grupo de 900 valores. Esto incluye metadatos, los costos de acceso y otros tipos de sobrecarga sobre todas las filas de un lote, en lugar de pagar el costo para cada fila. Por lo tanto, se reduce significativamente la ruta de acceso del código. El procesamiento de modo por lotes funciona en los datos comprimidos cuando sea posible y elimina algunos de los operadores de intercambio utilizados por el procesamiento del modo de fila. Esto acelera la ejecución de las consultas de análisis por órdenes de magnitud.    
     
  No todos los operadores de ejecución de consultas se pueden ejecutar en el modo por lotes. Por ejemplo, las operaciones de DML Insert, Delete o Update ejecutan una fila cada vez. Los operadores de modo por lote destinan operadores para la aceleración del rendimiento de las consultas como Scan, Join, Aggregate, sort, etc. Dado que el índice de almacén de columnas se introdujo en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], hay un esfuerzo sostenido para expandir los operadores que se pueden ejecutar en el modo por lotes. En la tabla siguiente se muestran los operadores que se ejecutan en el modo por lotes según la versión del producto.    
     
@@ -119,6 +119,8 @@ ms.locfileid: "88408801"
 |Agregados de ventana||N/D|N/D|sí|Nuevo operador en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
 <sup>1</sup> se aplica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] a los niveles Premium, Standard, S3 y superiores, a todos los niveles de núcleo virtual y a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+
+Para más información, vea la [Guía de arquitectura de procesamiento de consulta](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution).
     
 ### <a name="aggregate-pushdown"></a>Aplicación de agregados    
  Ruta de acceso de ejecución normal para el cálculo de agregados para capturar las filas calificadas desde el nodo SCAN y agregar los valores en el modo por lotes. Aunque esto proporciona un buen rendimiento, con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la operación de agregación se puede insertar en el nodo SCAN para mejorar el rendimiento del cálculo de la agregación mediante órdenes de magnitud en la parte superior de la ejecución en el modo por lotes una vez que se cumplan las condiciones siguientes: 

@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2dbc06494347c3c69798b5c45e779e0ebda6238
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: e982f8a8a2ee42c1ac2d84529a29842f8c4b4577
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810449"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235574"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guía de diseño y de arquitectura de índices de SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -107,7 +107,7 @@ Para obtener más información sobre los índices de texto completo, vea [Rellen
   
 -   Cree índices no clúster en las columnas que se usan con frecuencia en predicados y condiciones de combinación de las consultas. Estas son las columnas SARGable<sup>1</sup>. Sin embargo, debe evitar agregar columnas innecesarias. Si agrega demasiadas columnas de índice, puede reducir el espacio en disco y el rendimiento del mantenimiento del índice.  
   
--   La utilización de índices puede mejorar el rendimiento de las consultas, ya que los datos necesarios para satisfacer las necesidades de la consulta existen en el propio índice. Es decir, solo se requieren las páginas de índice, y no las páginas de datos de la tabla o el índice clúster, para recuperar los datos solicitados; por lo tanto, se reduce la E/S de disco global. Por ejemplo, una consulta de las columnas **a** y **b** en una tabla que tiene un índice compuesto creado en las columnas **a**, **b**y **c** puede recuperar los datos especificados del índice.  
+-   La utilización de índices puede mejorar el rendimiento de las consultas, ya que los datos necesarios para satisfacer las necesidades de la consulta existen en el propio índice. Es decir, solo se requieren las páginas de índice, y no las páginas de datos de la tabla o el índice clúster, para recuperar los datos solicitados; por lo tanto, se reduce la E/S de disco global. Por ejemplo, una consulta de las columnas **a** y **b** en una tabla que tiene un índice compuesto creado en las columnas **a** , **b** y **c** puede recuperar los datos especificados del índice.  
 
     > [!IMPORTANT]
     > Los índices de cobertura son la designación para un [índice no agrupado](#nonclustered-index-architecture) que resuelve uno o varios resultados de consulta similares directamente sin acceso a su tabla base y sin incurrir en búsquedas.
@@ -118,14 +118,14 @@ Para obtener más información sobre los índices de texto completo, vea [Rellen
   
 -   Analice el tipo de la consulta y cómo se utilizan las columnas en ella. Por ejemplo, una columna utilizada en una consulta de coincidencia exacta sería una buena candidata para un índice no clúster o clúster.
 
-<a name="sargable"></a><sup>1</sup> El término SARGable en las bases de datos relacionales se refiere a un predicado **S**earch **ARG**ument-**able** que puede usar un índice para acelerar la ejecución de la consulta.
+<a name="sargable"></a><sup>1</sup> El término SARGable en las bases de datos relacionales se refiere a un predicado **S** earch **ARG** ument- **able** que puede usar un índice para acelerar la ejecución de la consulta.
   
 ### <a name="column-considerations"></a>Consideraciones sobre columnas  
  Cuando diseñe un índice, tenga en cuenta las siguientes directrices acerca de las columnas:  
   
 -   Utilice una longitud corta en la clave de los índices clúster. Los índices clúster también mejoran si se crean en columnas únicas o que no admitan valores NULL.  
   
--   Las columnas de los tipos de datos **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** y **varbinary(max)** no pueden especificarse como columnas de clave de índice. En cambio, los tipos de datos **varchar(max)** , **nvarchar(max)** , **varbinary(max)** y **xml** pueden participar en un índice no agrupado como columnas de índice sin clave. Para obtener más información, vea la sección ['Índice con columnas incluidas](#Included_Columns)' en esta guía.  
+-   Las columnas de los tipos de datos **ntext** , **text** , **image** , **varchar(max)** , **nvarchar(max)** y **varbinary(max)** no pueden especificarse como columnas de clave de índice. En cambio, los tipos de datos **varchar(max)** , **nvarchar(max)** , **varbinary(max)** y **xml** pueden participar en un índice no agrupado como columnas de índice sin clave. Para obtener más información, vea la sección ['Índice con columnas incluidas](#Included_Columns)' en esta guía.  
   
 -   El tipo de datos **xml** solo puede ser una columna de clave en un índice XML. Para obtener más información, consulte [Índices XML &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). SQL Server 2012 SP1 presenta un nuevo tipo de índice XML denominado índice XML selectivo. Este nuevo índice puede mejorar el rendimiento de las consultas en datos almacenados como XML en SQL Server, lo que permitirá indizar mucho más rápidamente grandes cargas de trabajo de datos XML y mejorar la escalabilidad reduciendo los costos de almacenamiento del propio índice. Para obtener más información, consulte [Índices XML selectivos &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -192,7 +192,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  El siguiente plan de ejecución para esta consulta muestra que el optimizador de consultas utilizó un operador SORT para devolver el conjunto de resultados en el orden especificado mediante la cláusula ORDER BY.  
   
- ![IndexSort1](../relational-databases/media/indexsort1.gif)
+ ![Diagrama de un plan de ejecución para esta consulta que muestra que el optimizador de consultas ha utilizado un operador SORT para devolver el conjunto de resultados en el orden especificado mediante la cláusula ORDER BY.](../relational-databases/media/indexsort1.gif)
   
  Si se crea un índice con columnas de clave que coincidan con las de la cláusula ORDER BY de la consulta, se puede eliminar el operador SORT del plan de consultas y éste resulta más eficaz.  
   
@@ -204,7 +204,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Cuando se ejecuta de nuevo la consulta, el plan de consultas siguiente muestra que se ha eliminado el operador SORT y se utiliza el índice no clúster que se acaba de crear.  
   
- ![InsertSort2](../relational-databases/media/insertsort2.gif)
+ ![Diagrama de un plan de consultas que muestra que se ha eliminado el operador SORT y se ha utilizado el índice no clúster que se acaba de crear.](../relational-databases/media/insertsort2.gif)
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] puede moverse con la misma eficacia en cualquier dirección. Un índice definido como `(RejectedQty DESC, ProductID ASC)` se puede seguir utilizando para una consulta en la que se invierte la dirección de ordenación de las columnas en la cláusula ORDER BY. Por ejemplo, una consulta con la cláusula ORDER BY `ORDER BY RejectedQty ASC, ProductID DESC` puede utilizar el índice.  
   
@@ -322,7 +322,7 @@ Si el índice agrupado no se crea con la propiedad `UNIQUE`, el [!INCLUDE[ssDE](
   
  En esta ilustración se muestra la estructura de un índice clúster en una sola partición.  
  
- ![bokind2](../relational-databases/media/bokind2.gif)  
+ ![Diagrama que muestra la estructura de un índice agrupado en una sola partición.](../relational-databases/media/bokind2.gif)  
   
 ### <a name="query-considerations"></a>Consideraciones sobre consultas  
  Antes de crear índices clúster, debe conocer cómo se tiene acceso a los datos. Considere que utiliza un índice clúster en consultas que realizan lo siguiente:  
@@ -395,7 +395,7 @@ En función de los tipos de datos del índice no clúster, cada estructura de í
   
 En la siguiente ilustración se muestra la estructura de un índice no clúster en una sola partición.  
 
-![bokind1a](../relational-databases/media/bokind1a.gif)  
+![Diagrama que muestra la estructura de un índice no agrupado en una sola partición.](../relational-databases/media/bokind1a.gif)  
   
 ### <a name="database-considerations"></a>Consideraciones acerca de la base de datos  
  Tenga en cuenta las características de la base de datos al diseñar índices no clúster.  
@@ -476,11 +476,11 @@ Cuando diseñe índices no clúster con columnas incluidas tenga en cuenta las s
   
 -   Las columnas sin clave solo se pueden definir en índices no clúster en tablas o vistas indizadas.  
   
--   Se admiten todos los tipos de datos, a excepción de **text**, **ntext**e **image**.  
+-   Se admiten todos los tipos de datos, a excepción de **text** , **ntext** e **image**.  
   
 -   Las columnas calculadas que son deterministas, y precisas o imprecisas, pueden ser columnas incluidas. Para obtener más información, vea [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md).  
   
--   Al igual que con las columnas de clave, las columnas calculadas derivadas de los tipos de datos **image**, **ntext**y **text** pueden ser columnas sin clave (incluidas) siempre que se permita el tipo de datos de la columna calculada como columna de índice sin clave.  
+-   Al igual que con las columnas de clave, las columnas calculadas derivadas de los tipos de datos **image** , **ntext** y **text** pueden ser columnas sin clave (incluidas) siempre que se permita el tipo de datos de la columna calculada como columna de índice sin clave.  
   
 -   Los nombres de columna no se pueden especificar en la lista INCLUDE y en la lista de columnas de clave.  
   
@@ -503,7 +503,7 @@ Cuando diseñe índices no clúster con columnas incluidas tenga en cuenta las s
   
     -   Cambiar la nulabilidad de NOT NULL a NULL.  
   
-    -   Aumentar la longitud de las columnas **varchar**, **nvarchar**o **varbinary** .  
+    -   Aumentar la longitud de las columnas **varchar** , **nvarchar** o **varbinary** .  
   
         > [!NOTE]  
         >  También se aplican restricciones de modificación a las columnas de clave de índice.  
@@ -567,7 +567,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 ##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> Directrices generales para diseñar índices filtrados  
  Un índice filtrado es un índice no clúster optimizado, especialmente indicado para atender consultas que realizan selecciones a partir un subconjunto bien definido de datos. Utiliza un predicado de filtro para indizar una parte de las filas de la tabla. Un índice filtrado bien diseñado puede mejorar el rendimiento de las consultas y reducir los costos de almacenamiento del índice en relación con los índices de tabla completa, así como los costos de mantenimiento.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Se aplica a** : desde [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  Los índices filtrados pueden proporcionar las siguientes ventajas respecto a los índices de tabla completa:  
   
@@ -821,7 +821,7 @@ Para obtener más información, consulte [Guía de diseño de índices de almac�
 
 Todas las tablas optimizadas para memoria deben tener como mínimo un índice porque son los índices los que conectan las filas. En una tabla optimizada para memoria, todos los índices también son optimizados para memoria. Los índices de hash son uno de los tipos de índice posibles en una tabla optimizada para memoria. Para obtener más información, vea [Índices de tablas optimizadas para memoria](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**Se aplica a**: desde [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Se aplica a** : desde [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
 ### <a name="hash-index-architecture"></a>Arquitectura de los índices de hash
 Los índices de hash constan de una matriz de punteros, y cada elemento de la matriz se llama "cubo de hash".
@@ -913,7 +913,7 @@ Más adelante cuando las versiones anteriores ya no se necesiten, un subproceso 
 
 Los índices no agrupados son uno de los posibles tipos de índice de una tabla optimizada para memoria. Para obtener más información, vea [Índices de tablas optimizadas para memoria](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**Se aplica a**: desde [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Se aplica a** : desde [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>Arquitectura de los índices no agrupados en memoria
 

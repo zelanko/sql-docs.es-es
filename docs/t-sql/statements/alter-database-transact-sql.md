@@ -2,7 +2,7 @@
 description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: references_regions
-ms.date: 09/29/2020
+ms.date: 10/30/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73525f3a89fd0e132de819deefee840c8db8944a
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: c452310bbc2813cb3d11ced51f680c7a1f66e5e0
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92497035"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235392"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -68,23 +68,30 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
 
 ## <a name="overview-sql-server"></a>Introducción: SQL Server
 
-En SQL Server, esta instrucción modifica una base de datos o los archivos y grupos de archivos asociados a la base de datos. Agrega o quita archivos y grupos de archivos en una base de datos, cambia los atributos de una base de datos o de sus archivos y grupos de archivos, cambia la intercalación de base de datos y establece las opciones de base de datos. Las instantáneas de base de datos no se pueden modificar. Para modificar las opciones de base de datos asociadas a la replicación, utilice [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).
+En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta instrucción modifica una base de datos, o los archivos y grupos de archivos asociados a la base de datos. Agrega o quita archivos y grupos de archivos en una base de datos, cambia los atributos de una base de datos o de sus archivos y grupos de archivos, cambia la intercalación de base de datos y establece las opciones de base de datos. Las instantáneas de base de datos no se pueden modificar. Para modificar las opciones de base de datos asociadas a la replicación, utilice [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).
 
-Debido a su longitud, la sintaxis de ALTER DATABASE se divide en varios artículos.
+Debido a su longitud, la sintaxis `ALTER DATABASE` se divide en varios artículos.
 
-ALTER DATABASE En el artículo actual se proporciona la sintaxis e información relacionada para cambiar el nombre y la intercalación de una base de datos.
+ALTER DATABASE   
+En el artículo actual se proporciona la sintaxis e información relacionada para cambiar el nombre y la intercalación de una base de datos.
 
-[Opciones File y Filegroup de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) Proporciona la sintaxis e información relacionada para agregar y eliminar archivos y grupos de archivos de una base de datos y para cambiar los atributos de archivos y grupos de archivos.
+[Opciones File y Filegroup de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)   
+Proporciona la sintaxis e información relacionada para agregar y eliminar archivos y grupos de archivos de una base de datos y para cambiar los atributos de archivos y grupos de archivos.
 
-[Opciones SET de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) Proporciona la sintaxis e información relacionada para cambiar los atributos de una base de datos usando las opciones SET de ALTER DATABASE.
+[Opciones SET de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+Proporciona la sintaxis e información relacionada para cambiar los atributos de una base de datos usando las opciones SET de ALTER DATABASE.
 
-[ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) Proporciona la sintaxis de información relacionada de las opciones SET de ALTER DATABASE relacionadas con la creación de reflejo de la base de datos.
+[Creación de reflejo de la base de datos de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
+Proporciona la sintaxis e información relacionada de las opciones SET de ALTER DATABASE relacionadas con la creación de reflejo de la base de datos.
 
-[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) Proporciona la sintaxis e información relacionada de las opciones [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] de ALTER DATABASE para configurar una base de datos secundaria en una réplica secundaria de un grupo de disponibilidad AlwaysOn.
+[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
+Proporciona la sintaxis e información relacionada de las opciones [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] de ALTER DATABASE para configurar una base de datos secundaria en una réplica secundaria de un grupo de disponibilidad AlwaysOn.
 
-[Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) Proporciona la sintaxis e información relacionada de las opciones SET de ALTER DATABASE relacionadas con los niveles de compatibilidad de la base de datos.
+[Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
+Proporciona la sintaxis e información relacionada de las opciones SET de ALTER DATABASE relacionadas con los niveles de compatibilidad de la base de datos.
 
-[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) Proporciona la sintaxis relacionada con las configuraciones con ámbito de base de datos utilizadas para la configuración del nivel de base de datos individual, como los comportamientos relacionados con la optimización y la ejecución de consultas.
+[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+Proporciona la sintaxis relacionada con las configuraciones con ámbito de base de datos utilizadas para la configuración del nivel de base de datos individual, como los comportamientos relacionados con la optimización y la ejecución de consultas.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -140,27 +147,31 @@ ALTER DATABASE { database_name | CURRENT }
 > [!NOTE]
 > Esta opción no está disponible en las bases de datos independientes.
 
-CURRENT **Se aplica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores
+CURRENT   
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
 
 Designa que la base de datos actual en uso se debe modificar.
 
-MODIFY NAME **=** _new_database_name_ Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name* .
+MODIFY NAME **=** _new_database_name_   
+Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name*.
 
-COLLATE *collation_name* Especifica la intercalación de la base de datos. *collation_name* puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Si no se especifica, se asigna a la base de datos la intercalación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+COLLATE *collation_name*   
+Especifica la intercalación de la base de datos. *collation_name* puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Si no se especifica, se asigna a la base de datos la intercalación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > No se puede cambiar la intercalación después de crear la base de datos en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Al crear bases de datos con una intercalación diferente de la predeterminada, los datos de la base de datos siempre respetan la intercalación especificada. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], al crear una base de datos independiente, la información de catálogo interno se mantiene mediante la intercalación predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **Latin1_General_100_CI_AS_WS_KS_SC** .
+Al crear bases de datos con una intercalación diferente de la predeterminada, los datos de la base de datos siempre respetan la intercalación especificada. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], al crear una base de datos independiente, la información de catálogo interno se mantiene mediante la intercalación predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **Latin1_General_100_CI_AS_WS_KS_SC**.
 
 Para más información sobre los nombres de intercalación de Windows y de SQL, consulte [COLLATE](~/t-sql/statements/collations.md).
 
-**\<delayed_durability_option> ::=** 
-**Se aplica a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.
+**\<delayed_durability_option> ::=**    
+**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.
 
 Para más información, consulte [Opciones de ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) y [Controlar la durabilidad de las transacciones](../../relational-databases/logs/control-transaction-durability.md).
 
-**\<file_and_filegroup_options>::=** Para obtener más información, vea [Opciones File y Filegroup de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**\<file_and_filegroup_options>::=**    
+Para más información, consulte [Opciones File y Filegroup de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 ## <a name="remarks"></a>Observaciones
 
@@ -298,7 +309,7 @@ GO
         [Instancia administrada de SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
@@ -311,13 +322,16 @@ GO
 
 En Azure SQL Database, use esta instrucción para modificar una base de datos. Use esta instrucción para cambiar el nombre de una base de datos, cambiar el objetivo de edición y servicio de la base de datos, unir la base de datos a un grupo elástico o quitarla de uno, establecer las opciones de base de datos, agregar o quitar la base de datos como una base de datos secundaria en una relación de replicación geográfica y establecer el nivel de compatibilidad de base de datos.
 
-Debido a su longitud, la sintaxis de ALTER DATABASE se divide en varios artículos.
+Debido a su longitud, la sintaxis `ALTER DATABASE` se divide en varios artículos.
 
-ALTER DATABASE En el artículo actual se proporciona la sintaxis e información relacionada para cambiar el nombre y la intercalación de una base de datos.
+ALTER DATABASE   
+En el artículo actual se proporciona la sintaxis e información relacionada para cambiar el nombre y la intercalación de una base de datos.
 
-[Opciones SET de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls) Proporciona la sintaxis e información relacionada para cambiar los atributos de una base de datos usando las opciones SET de ALTER DATABASE.
+[Opciones SET de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls)    
+Proporciona la sintaxis e información relacionada para cambiar los atributos de una base de datos usando las opciones SET de ALTER DATABASE.
 
-[Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls) Proporciona la sintaxis e información relacionada de las opciones SET de ALTER DATABASE relacionadas con los niveles de compatibilidad de la base de datos.
+[Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls)   
+Proporciona la sintaxis e información relacionada de las opciones SET de ALTER DATABASE relacionadas con los niveles de compatibilidad de la base de datos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -403,18 +417,22 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>Argumentos
 
-*database_name* Es el nombre de la base de datos que se va a modificar.
+*database_name*   
+Es el nombre de la base de datos que se va a modificar.
 
-CURRENT designa que la base de datos actual en uso se debe modificar.
+CURRENT   
+Designa que la base de datos actual en uso se debe modificar.
 
-MODIFY NAME **=** _new_database_name_ Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name* . En el ejemplo siguiente se cambia el nombre de la base de datos `db1` a `db2`:
+MODIFY NAME **=** _new_database_name_   
+Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name*. En el ejemplo siguiente se cambia el nombre de la base de datos `db1` a `db2`:
 
 ```sql
 ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION **=** ["Basic" \| "Standard" \| "Premium" \| "GeneralPurpose" \| "BusinessCritical" \| "Hyperscale"]) Cambia el nivel de servicio de la base de datos.
+MODIFY (EDITION **=** ['Basic' \| 'Standard' \| 'Premium' \|'GeneralPurpose' \| 'BusinessCritical' \| 'Hyperscale'])   
+Cambia el nivel de servicio de la base de datos.
 
 En el ejemplo siguiente se cambia la edición a `Premium`:
 
@@ -426,12 +444,14 @@ ALTER DATABASE current
 > [!IMPORTANT]
 > Se produce un error en el cambio de EDITION si la propiedad MAXSIZE de la base de datos está establecida en un valor fuera del intervalo válido admitido por esa edición.
 
-MODIFY (BACKUP_STORAGE_REDUNDANCY **=** ['LOCAL' \| 'ZONE' \| 'GEO']) cambia la redundancia de almacenamiento de las copias de seguridad de restauración a un momento dado y de retención a largo plazo (si se configuran) de la base de datos. Los cambios se aplicarán a todas las copias de seguridad que se realicen en el futuro. Las copias de seguridad existentes seguirán usando la configuración anterior. 
+MODIFY (BACKUP_STORAGE_REDUNDANCY **=** ['LOCAL' \| 'ZONE' \| 'GEO'])   
+Cambia la redundancia de almacenamiento de copias de seguridad de restauración a un momento dado como las copias de seguridad de retención a largo plazo (si se configuran) de la base de datos. Los cambios se aplicarán a todas las copias de seguridad que se realicen en el futuro. Las copias de seguridad existentes seguirán usando la configuración anterior. 
 
 > [!IMPORTANT]
-> La opción BACKUP_STORAGE_REDUNDANCY para Azure SQL Database solo está disponible en la versión preliminar pública en la región Sudeste de Asia de Azure.  
+> La opción BACKUP_STORAGE_REDUNDANCY para Azure SQL Database solo está disponible en la versión preliminar pública en el Sur de Brasil y normalmente en la región Sudeste de Asia de Azure.  
 
-MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) Especifica el tamaño máximo de la base de datos. El tamaño máximo debe cumplir con el conjunto válido de valores de la propiedad EDITION de la base de datos. Cambiar el tamaño máximo de la base de datos puede causar que cambie también el valor de EDITION de la base de datos.
+MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)   
+Especifica el tamaño máximo de la base de datos. El tamaño máximo debe cumplir con el conjunto válido de valores de la propiedad EDITION de la base de datos. Cambiar el tamaño máximo de la base de datos puede causar que cambie también el valor de EDITION de la base de datos.
 
 > [!NOTE]
 > El argumento **MAXSIZE** no es aplicable a bases de datos únicas en el nivel de servicio Hyperscale. Las bases de datos de nivel de servicio Hyperscale crecen según sea necesario, hasta 100 TB. El servicio SQL Database agrega almacenamiento automáticamente; no es necesario establecer un tamaño máximo.
@@ -565,14 +585,15 @@ Las reglas siguientes se aplican a los argumentos MAXSIZE y EDITION:
 - Si se especifica EDITION pero no se especifica MAXSIZE, se usa el valor predeterminado de la edición. Por ejemplo, si EDITION está establecido en Standard y MAXSIZE no se especifica, el valor de MAXSIZE se establece automáticamente en 250 MB.
 - Si no se especifica MAXSIZE ni EDITION, este último se establece en De uso general y MAXSIZE se establece en 32 GB.
 
-MODIFY (SERVICE_OBJECTIVE = \<service-objective>) Especifica el tamaño de proceso (objetivo de servicio). En el ejemplo siguiente se cambia el objetivo de servicio de una base de datos Premium a `P6`:
+MODIFY (SERVICE_OBJECTIVE = \<service-objective>)   
+Especifica el tamaño de proceso (objetivo de servicio). En el ejemplo siguiente se cambia el objetivo de servicio de una base de datos Premium a `P6`:
 
 ```sql
 ALTER DATABASE current
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```
 
-SERVICE_OBJECTIVE
+SERVICE_OBJECTIVE   
 
 - **Solo bases de datos únicas y agrupadas**
 
@@ -588,13 +609,13 @@ SERVICE_OBJECTIVE
 
 Para conocer las descripciones de los objetivos de servicio y obtener más información sobre las combinaciones de tamaño, ediciones y objetivos de servicio, consulte [Niveles de servicio y niveles de rendimiento de Azure SQL Database](/azure/azure-sql/database/purchasing-models), [Límites de recursos de DTU](/azure/sql-database/sql-database-dtu-resource-limits) y [Límites de recursos del núcleo virtual](/azure/sql-database/sql-database-dtu-resource-limits). Se ha quitado la compatibilidad para los objetivos de servicio de PRS. Si tiene preguntas, use este alias de correo electrónico: premium-rs@microsoft.com.
 
-MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>) Para agregar una base de datos existente a un grupo elástico, establezca el valor SERVICE_OBJECTIVE de la base de datos en ELASTIC_POOL e indique el nombre del grupo. También se puede usar esta opción para cambiar la base de datos a un grupo elástico diferente dentro del mismo servidor. Para obtener más información, vea [Create and manage a SQL Database elastic pool](/azure/azure-sql/database/elastic-pool-overview) (Creación y administración de un grupo elástico de SQL Database). A fin de quitar una base de datos de un grupo elástico, use ALTER DATABASE para establecer el valor SERVICE_OBJECTIVE en un tamaño de proceso de base de datos única (objetivo de servicio).
+MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)   
+Para agregar una base de datos existente a un grupo elástico, establezca el valor SERVICE_OBJECTIVE de la base de datos en ELASTIC_POOL e indique el nombre del grupo. También se puede usar esta opción para cambiar la base de datos a un grupo elástico diferente dentro del mismo servidor. Para obtener más información, vea [Create and manage a SQL Database elastic pool](/azure/azure-sql/database/elastic-pool-overview) (Creación y administración de un grupo elástico de SQL Database). A fin de quitar una base de datos de un grupo elástico, use ALTER DATABASE para establecer el valor SERVICE_OBJECTIVE en un tamaño de proceso de base de datos única (objetivo de servicio).
 
 > [!NOTE]
 > No se pueden agregar bases de datos del nivel de servicio Hyperscale a un grupo elástico.
 
-ADD SECONDARY ON SERVER \<partner_server_name>
-
+ADD SECONDARY ON SERVER \<partner_server_name>   
 Crea una base de datos de replicación geográfica secundaria con el mismo nombre en un servidor asociado, lo que convierte a la base de datos local en una base de datos principal de replicación geográfica, y comienza a replicar los datos de forma asincrónica desde la base de datos principal a la nueva base de datos secundaria. Si ya existe una base de datos con el mismo nombre en la base de datos secundaria, se produce un error en el comando. El comando se ejecuta en la base de datos maestra en el servidor que hospeda la base de datos local que se convierte en la principal.
 
 > [!IMPORTANT]
@@ -603,7 +624,8 @@ Crea una base de datos de replicación geográfica secundaria con el mismo nombr
 > [!IMPORTANT]
 > De forma predeterminada, la base de datos secundaria se crea con la misma redundancia de almacenamiento de copia de seguridad que la de la base de datos principal o de origen. No se admite el cambio de la redundancia de almacenamiento de copia de seguridad al crear la base de datos secundaria a través de T-SQL. 
 
-WITH ALLOW_CONNECTIONS { **ALL** | NO } Cuando no se especifica ALLOW_CONNECTIONS, se establece en ALL de forma predeterminada. Si se establece en ALL, es una base de datos de solo lectura que permite la conexión de todos los inicios de sesión con los permisos adecuados.
+WITH ALLOW_CONNECTIONS { **ALL** | NO }   
+Cuando no se especifica ALLOW_CONNECTIONS, se establece en ALL de forma predeterminada. Si se establece en ALL, es una base de datos de solo lectura que permite la conexión de todos los inicios de sesión con los permisos adecuados.
 
 WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14`, `GP_Fsv2_16`, `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36`, `GP_Fsv2_72`, `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`, `GP_S_Gen5_18`, `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`, `BC_M_16`, `BC_M_18`, `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64`, `BC_M_128` }
 
@@ -779,17 +801,21 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
 
 ## <a name="overview-azure-sql-managed-instance"></a>Introducción: Instancia administrada de Azure SQL
 
-En Azure SQL Managed Instance, use esta instrucción para establecer las opciones de base de datos.
+En [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], use esta instrucción para establecer las opciones de base de datos.
 
-Debido a su longitud, la sintaxis de ALTER DATABASE se divide en varios artículos.
+Debido a su longitud, la sintaxis `ALTER DATABASE` se divide en varios artículos.
 
-ALTER DATABASE En el artículo actual se proporciona la sintaxis e información relacionada para establecer las opciones File y Filegroup, para establecer las opciones de base de datos y el nivel de compatibilidad de base de datos.  
+ALTER DATABASE   
+En el artículo actual se proporciona la sintaxis e información relacionada para establecer las opciones File y Filegroup, para establecer las opciones de base de datos y el nivel de compatibilidad de base de datos.  
   
-[Opciones File y Filegroup de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi) Proporciona la sintaxis e información relacionada para agregar y eliminar archivos y grupos de archivos de una base de datos y para cambiar los atributos de archivos y grupos de archivos.  
+[Opciones File y Filegroup de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi)   
+Proporciona la sintaxis e información relacionada para agregar y eliminar archivos y grupos de archivos de una base de datos y para cambiar los atributos de archivos y grupos de archivos.  
   
-[Opciones SET de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi) Proporciona la sintaxis e información relacionada para cambiar los atributos de una base de datos usando las opciones SET de ALTER DATABASE.  
+[Opciones SET de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi)   
+Proporciona la sintaxis e información relacionada para cambiar los atributos de una base de datos usando las opciones SET de ALTER DATABASE.  
   
-[Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi) Proporciona la sintaxis e información relacionada de las opciones SET de ALTER DATABASE relacionadas con los niveles de compatibilidad de la base de datos.  
+[Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)   
+Proporciona la sintaxis e información relacionada de las opciones SET de ALTER DATABASE relacionadas con los niveles de compatibilidad de la base de datos.  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -834,9 +860,11 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>Argumentos
 
-*database_name* Es el nombre de la base de datos que se va a modificar.
+*database_name*   
+Es el nombre de la base de datos que se va a modificar.
 
-CURRENT designa que la base de datos actual en uso se debe modificar.
+CURRENT   
+Designa que la base de datos actual en uso se debe modificar.
 
 ## <a name="remarks"></a>Observaciones
 
@@ -913,11 +941,12 @@ ALTER DATABASE WideWorldImporters
 
 ## <a name="overview-azure-synapse-analytics"></a>Introducción: Azure Synapse Analytics
 
-En Azure Synapse, "ALTER DATABASE" modifica el nombre, el tamaño máximo o el objetivo de servicio de una base de datos.
+En Azure Synapse, `ALTER DATABASE` modifica el nombre, el tamaño máximo o el objetivo de servicio de una base de datos.
 
-Debido a su longitud, la sintaxis de ALTER DATABASE se divide en varios artículos.
+Debido a su longitud, la sintaxis `ALTER DATABASE` se divide en varios artículos.
 
-[Opciones SET de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) Proporciona la sintaxis e información relacionada para cambiar los atributos de una base de datos usando las opciones SET de ALTER DATABASE.
+[Opciones SET de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+Proporciona la sintaxis e información relacionada para cambiar los atributos de una base de datos usando las opciones SET de ALTER DATABASE.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -984,11 +1013,14 @@ ALTER DATABASE { database_name | Current }
 
 ## <a name="arguments"></a>Argumentos
 
-*database_name* Especifica el nombre de la base de datos que se va a modificar.
+*database_name*   
+Especifica el nombre de la base de datos que se va a modificar.
 
-MODIFY NAME = *new_database_name* Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name* .
+MODIFY NAME = *new_database_name*   
+Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name*.
 
-MAXSIZE El valor predeterminado es 245, 760 GB (240 TB).
+MAXSIZE   
+El valor predeterminado es 245 760 GB (240 TB).
 
 **Se aplica a:** Optimizado para Compute Gen1
 
@@ -998,7 +1030,8 @@ El tamaño máximo permitido para la base de datos. La base de datos no puede su
 
 Tamaño máximo permitido para los datos de almacenamiento de filas de la base de datos. Los datos almacenados en tablas de almacenamiento de filas, en el almacén delta de un índice de almacén de columnas o en un índice no agrupado de un índice de almacén de columnas en clúster no pueden superar el valor de MAXSIZE. Los datos comprimidos en formato de almacén de columnas no tienen un límite de tamaño y no están restringidos por el valor de MAXSIZE.
 
-SERVICE_OBJECTIVE Especifica el tamaño de proceso (objetivo de servicio). Para más información sobre los objetivos de servicio para Azure Synapse, consulte [Unidades de almacenamiento de datos (DWU)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
+SERVICE_OBJECTIVE   
+Especifica el tamaño de proceso (objetivo de servicio). Para más información sobre los objetivos de servicio para Azure Synapse, consulte [Unidades de almacenamiento de datos (DWU)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="permissions"></a>Permisos
 
@@ -1011,7 +1044,7 @@ El propietario de la base de datos no puede modificarla a menos que sea miembro 
 
 ## <a name="general-remarks"></a>Notas generales
 
-La base de datos actual debe ser diferente de la base de datos que está modificando, por lo que **ALTER debe ejecutarse mientras se está conectado a la base de datos maestra** .
+La base de datos actual debe ser diferente de la base de datos que está modificando, por lo que **ALTER debe ejecutarse mientras se está conectado a la base de datos maestra**.
 
 COMPATIBILITY_LEVEL en SQL Analytics se establece en 130 de forma predeterminada y no se puede cambiar. Para más información, vea [Rendimiento de consultas mejorado con el nivel de compatibilidad 130 en Azure SQL Database](./alter-database-transact-sql-compatibility-level.md).
 
@@ -1030,7 +1063,7 @@ No es posible cambiar la intercalación de base de datos.
 
 ## <a name="examples"></a>Ejemplos
 
-Antes de ejecutar estos ejemplos, asegúrese de que la base de datos que está modificando no es la base de datos actual. La base de datos actual debe ser diferente de la base de datos que está modificando, por lo que **ALTER debe ejecutarse mientras se está conectado a la base de datos maestra** .
+Antes de ejecutar estos ejemplos, asegúrese de que la base de datos que está modificando no es la base de datos actual. La base de datos actual debe ser diferente de la base de datos que está modificando, por lo que **ALTER debe ejecutarse mientras se está conectado a la base de datos maestra**.
 
 ### <a name="a-change-the-name-of-the-database"></a>A. Cambiar el nombre de la base de datos
 
@@ -1114,31 +1147,40 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>Argumentos
 
-*database_name* El nombre de la base de datos que se va a modificar. Para mostrar una lista de bases de datos en el dispositivo, use [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
+*database_name*   
+Nombre de la base de datos que se va a modificar. Para mostrar una lista de bases de datos en el dispositivo, use [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-AUTOGROW = { ON | OFF } Actualiza la opción AUTOGROW. Cuando AUTOGROW es ON, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] aumenta automáticamente el espacio asignado para las tablas replicadas, tablas distribuidas y el registro de transacciones según sea necesario para adecuarse al crecimiento de los requisitos de almacenamiento. Cuando AUTOGROW es OFF, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] devuelve un error si las tablas replicadas, tablas distribuidas o el registro de transacciones supera la configuración de tamaño máximo.
+AUTOGROW = { ON | OFF }   
+Actualiza la opción AUTOGROW. Cuando AUTOGROW es ON, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] aumenta automáticamente el espacio asignado para las tablas replicadas, tablas distribuidas y el registro de transacciones según sea necesario para adecuarse al crecimiento de los requisitos de almacenamiento. Cuando AUTOGROW es OFF, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] devuelve un error si las tablas replicadas, tablas distribuidas o el registro de transacciones supera la configuración de tamaño máximo.
 
-REPLICATED_SIZE = *size* [GB] Especifica el nuevo tamaño máximo en gigabytes por nodo de ejecución para almacenar todas las tablas replicadas en la base de datos que se va a modificar. Si tiene planeado el espacio de almacenamiento del dispositivo, debe multiplicar REPLICATED_SIZE por el número de nodos de ejecución en el dispositivo.
+REPLICATED_SIZE = *tamaño* [GB]   
+Especifica el nuevo tamaño máximo en gigabytes por nodo de ejecución para almacenar todas las tablas replicadas en la base de datos que se va a modificar. Si tiene planeado el espacio de almacenamiento del dispositivo, debe multiplicar REPLICATED_SIZE por el número de nodos de ejecución en el dispositivo.
 
-DISTRIBUTED_SIZE = *size* [GB] Especifica el nuevo tamaño máximo en gigabytes por base de datos para almacenar todas las tablas distribuidas de la base de datos que se va a modificar. El tamaño se distribuye entre todos los nodos de ejecución en el dispositivo.
+DISTRIBUTED_SIZE = *tamaño* [GB]   
+Especifica el nuevo tamaño máximo en gigabytes por base de datos para almacenar todas las tablas distribuidas de la base de datos que se va a modificar. El tamaño se distribuye entre todos los nodos de ejecución en el dispositivo.
 
-LOG_SIZE = *size* [GB] Especifica el nuevo tamaño máximo en gigabytes por base de datos para almacenar todas los registros de transacciones de la base de datos que se va a modificar. El tamaño se distribuye entre todos los nodos de ejecución en el dispositivo.
+LOG_SIZE = *tamaño* [GB]   
+Especifica el nuevo tamaño máximo en gigabytes por base de datos para almacenar todas los registros de transacciones de la base de datos que se va a modificar. El tamaño se distribuye entre todos los nodos de ejecución en el dispositivo.
 
-ENCRYPTION { ON | OFF } Establece que la base de datos se cifre (ON) o no se cifre (OFF). Solo se puede configurar el cifrado para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] cuando [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) se haya establecido en **1** . Se debe crear una clave de cifrado de base de datos antes de poder configurar el cifrado de datos transparente. Para obtener más información sobre el cifrado de bases de datos, vea [Cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).
+ENCRYPTION { ON | OFF }   
+Establece que se cifre (ON) o no se cifre (OFF) la base de datos. Solo se puede configurar el cifrado para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] cuando [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) se haya establecido en **1**. Se debe crear una clave de cifrado de base de datos antes de poder configurar el cifrado de datos transparente. Para obtener más información sobre el cifrado de bases de datos, vea [Cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).
 
-SET AUTO_CREATE_STATISTICS { ON | OFF } Cuando se activa la opción automática de creación de estadísticas, AUTO_CREATE_STATISTICS, el optimizador de consultas crea las estadísticas en columnas individuales en el predicado de consulta, según sea necesario, para mejorar las estimaciones de cardinalidad para el plan de consulta. Estas estadísticas de columna única se crean en las columnas que aún no tienen un histograma en un objeto de estadísticas existente.
+SET AUTO_CREATE_STATISTICS { ON | OFF }   
+Cuando está activada la opción automática de creación de estadísticas, AUTO_CREATE_STATISTICS, el optimizador de consultas crea las estadísticas en columnas individuales en el predicado de consulta, según sea necesario, para mejorar las estimaciones de cardinalidad del plan de consulta. Estas estadísticas de columna única se crean en las columnas que aún no tienen un histograma en un objeto de estadísticas existente.
 
 El valor predeterminado es ON para las bases de datos creadas después de actualizar a AU7. El valor predeterminado es OFF para las bases de datos creadas antes de la actualización.
 
 Para obtener más información sobre las estadísticas, vea [Estadísticas](../../relational-databases/statistics/statistics.md).
 
-SET AUTO_UPDATE_STATISTICS { ON | OFF } Cuando se activa la opción automática de actualización de estadísticas, AUTO_UPDATE_STATISTICS, el optimizador de consultas determina cuándo es posible que las estadísticas queden obsoletas y las actualiza cuando una consulta las usa. Las estadísticas se vuelven obsoletas después de que las operaciones de inserción, actualización, eliminación o combinación cambien la distribución de los datos en la tabla o la vista indexada. El optimizador de consultas determina cuándo han podido quedar obsoletas las estadísticas contando el número de modificaciones de datos desde la actualización más reciente de las estadísticas, comparando el número de modificaciones con respecto a un umbral. El umbral se basa en el número de filas de la tabla o la vista indizada.
+SET AUTO_UPDATE_STATISTICS { ON | OFF }   
+Cuando está activada la opción automática de actualización de estadísticas, AUTO_UPDATE_STATISTICS, el optimizador de consultas determina cuándo las estadísticas pueden quedar obsoletas y las actualiza cuando una consulta las usa. Las estadísticas se vuelven obsoletas después de que las operaciones de inserción, actualización, eliminación o combinación cambien la distribución de los datos en la tabla o la vista indexada. El optimizador de consultas determina cuándo han podido quedar obsoletas las estadísticas contando el número de modificaciones de datos desde la actualización más reciente de las estadísticas, comparando el número de modificaciones con respecto a un umbral. El umbral se basa en el número de filas de la tabla o la vista indizada.
 
 El valor predeterminado es ON para las bases de datos creadas después de actualizar a AU7. El valor predeterminado es OFF para las bases de datos creadas antes de la actualización.
 
 Para obtener más información sobre las estadísticas, vea [Estadísticas](../../relational-databases/statistics/statistics.md).
 
-SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } La opción de actualización asincrónica de estadísticas, AUTO_UPDATE_STATISTICS_ASYNC, determina si el optimizador de consultas usa actualizaciones de estadísticas sincrónicas o asincrónicas. La opción AUTO_UPDATE_STATISTICS_ASYNC se aplica a los objetos de estadística creados para índices y columnas únicas de los predicados de consulta, así como a las estadísticas creadas con la instrucción CREATE STATISTICS.
+SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }   
+La opción de actualización asincrónica de estadísticas AUTO_UPDATE_STATISTICS_ASYNC determina si el Optimizador de consultas utiliza actualizaciones sincrónicas o asincrónicas de las estadísticas. La opción AUTO_UPDATE_STATISTICS_ASYNC se aplica a los objetos de estadística creados para índices y columnas únicas de los predicados de consulta, así como a las estadísticas creadas con la instrucción CREATE STATISTICS.
 
 El valor predeterminado es ON para las bases de datos creadas después de actualizar a AU7. El valor predeterminado es OFF para las bases de datos creadas antes de la actualización.
 

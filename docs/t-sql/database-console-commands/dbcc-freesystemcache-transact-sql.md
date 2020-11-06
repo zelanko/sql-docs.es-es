@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: f99d6e50aed43273dbcaa659f95a8bb8a1fe73d3
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: 0069e1fc2a6991df71291fd377aaa76e10f23256
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638988"
+ms.locfileid: "92734632"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,13 @@ DBCC FREESYSTEMCACHE
 ## <a name="arguments"></a>Argumentos
 ( 'ALL' [, _pool\_name_ ] )  
 ALL especifica todas las memorias caché compatibles.  
-_pool\_name_ especifica una caché del grupo de Resource Governor. Solo se liberarán las entradas asociadas a este grupo.  
+_pool\_name_ especifica una caché del grupo regulador de recursos. Solo se liberarán las entradas asociadas a este grupo. Para enumerar los nombres de grupo disponibles, ejecute:
+
+```sql
+SELECT name FROM sys.dm_os_memory_clerks
+```
+
+La mayoría de las cachés se pueden liberar individualmente con este comando, aunque no todas.
   
 MARK_IN_USE_FOR_REMOVAL  
 Libera asincrónicamente las entradas utilizadas actualmente de sus respectivas cachés después de que dejan de usarse. Después de ejecutar DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL, no se verán afectadas las nuevas entradas creadas en la caché.  
@@ -62,7 +68,7 @@ NO_INFOMSGS
 Suprime todos los mensajes de información.  
   
 ## <a name="remarks"></a>Observaciones  
-Al ejecutar DBCC FREESYSTEMCACHE se borra la caché de planes para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al borrar la caché de planes, se provoca una nueva compilación de todos los planes de ejecución próximos, lo que puede dar lugar a una reducción repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene el siguiente mensaje informativo: 
+Al ejecutar DBCC FREESYSTEMCACHE se borra la caché de planes para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al borrar la caché de planes, se provoca una nueva compilación de todos los planes de ejecución próximos, lo que puede dar lugar a una reducción repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene el siguiente mensaje informativo:
 
 >`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.`
 

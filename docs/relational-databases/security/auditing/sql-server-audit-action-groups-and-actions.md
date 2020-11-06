@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 51f971caef999424e002a49ab357e33fd1f0657a
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301904"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243578"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Grupos de acciones y acciones de SQL Server Audit
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "86301904"
 |BATCH_STARTED_GROUP|Este evento se desencadena cuando una operación de administración de transacciones, procedimiento almacenado o texto por lotes empieza a ejecutarse. Se genera antes de la ejecución, y se realiza una auditoría de todo el texto del procedimiento almacenado o del lote, tal cual se envíe desde el cliente. **Agregado en SQL Server 2019.**|  
 |BROKER_LOGIN_GROUP|Este evento se provoca para notificar mensajes de auditoría relacionados con la seguridad de transporte de Service Broker. Equivalente a [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md).|  
 |DATABASE_CHANGE_GROUP|Este evento se desencadena al crear, modificar o quitar una base de datos. Este evento se desencadena al crear, modificar o quitar cualquier base de datos. Equivalente a [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|Este evento se desencadena cuando el usuario de una base de datos independiente cierra la sesión de una base de datos.|  
+|DATABASE_LOGOUT_GROUP|Este evento se desencadena cuando el usuario de una base de datos independiente cierra la sesión de una base de datos equivalente a [Audit Logout Event Class](../../../relational-databases/event-classes/audit-logout-event-class.md).|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Este evento se provoca para notificar mensajes de auditoría relacionados con la seguridad de transporte en la creación de reflejo de la base de datos. Equivalente a [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).|  
 |DATABASE_OBJECT_ACCESS_GROUP|Este evento se desencadena siempre que se tenga acceso a los objetos de la base de datos tales como el tipo de mensaje, ensamblado o contrato. Este evento se desencadena para cualquier tipo de acceso a cualquier base de datos. Nota: Esto puede generar registros de auditoría de gran tamaño.<br /><br /> Equivalente a [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Este evento se desencadena al ejecutar una instrucción CREATE, ALTER o DROP en objetos de base de datos como, por ejemplo, esquemas. Este evento se desencadena al crear, modificar o quitar cualquier objeto de base de datos. Nota: Esto puede generar grandes cantidades de registros de auditoría.<br /><br /> Equivalente a [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
@@ -141,7 +141,7 @@ ms.locfileid: "86301904"
 |BATCH_COMPLETED_GROUP|Este evento se desencadena cuando una operación de administración de transacciones, procedimiento almacenado o texto por lotes termina de ejecutarse. Se genera cuando el lote se completa, y se realiza una auditoría de todo el texto del procedimiento almacenado o del lote, tal cual se envíe desde el cliente, incluido el resultado.|  
 |BATCH_STARTED_GROUP|Este evento se desencadena cuando una operación de administración de transacciones, procedimiento almacenado o texto por lotes empieza a ejecutarse. Se genera antes de la ejecución, y se realiza una auditoría de todo el texto del procedimiento almacenado o del lote, tal cual se envíe desde el cliente.|  
 |DATABASE_CHANGE_GROUP|Este evento se desencadena al crear, modificar o quitar una base de datos. Equivalente a [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|Este evento se desencadena cuando el usuario de una base de datos independiente cierra la sesión de una base de datos. Equivalente a la clase de eventos [Audit Backup and Restore](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
+|DATABASE_LOGOUT_GROUP|Este evento se desencadena cuando el usuario de una base de datos independiente cierra la sesión de una base de datos.|  
 |DATABASE_OBJECT_ACCESS_GROUP|Este evento se desencadena al tener acceso a objetos de bases de datos como certificados y claves asimétricas. Equivalente a [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Este evento se desencadena al ejecutar una instrucción CREATE, ALTER o DROP en objetos de base de datos como, por ejemplo, esquemas. Equivalente a [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Este evento se desencadena cuando se produce un cambio de propietario de los objetos en el ámbito de la base de datos. Equivalente a [Audit Database Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md).|  

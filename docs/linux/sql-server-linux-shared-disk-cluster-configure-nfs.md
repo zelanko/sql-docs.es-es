@@ -9,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 06cd2218a2a194ab3345fc9ed00ae40e17f0141d
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 218c4685b7305a1442f85e9b10da7144c6189ea3
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784881"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235666"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configuración de la instancia de clúster de conmutación por error: NFS: SQL Server en Linux
 
@@ -36,7 +36,7 @@ Al configurar las carpetas que se van a compartir en el servidor NFS, asegúrese
 
 Asegúrese de que los estándares de seguridad se aplican para el acceso. Al configurar la carpeta, asegúrese de que solo los servidores que participan en la FCI deben ver la carpeta NFS. A continuación se muestra un ejemplo de /etc/exports modificado en una solución NFS basada en Linux, donde la carpeta está restringida a FCIN1 y FCIN2.
 
-![05-nfsacl][1]
+![Captura de pantalla de un ejemplo de /etc/exports modificado en una solución NFS basada en Linux, donde la carpeta está restringida a FCIN1 y FCIN2.][1]
 
 ## <a name="instructions"></a>Instructions
 
@@ -132,7 +132,7 @@ Asegúrese de que los estándares de seguridad se aplican para el acceso. Al con
     mount
     ```
 
-    ![10-mountnoswitches][2]
+    ![Captura de pantalla del comando mount y la respuesta al comando en la que no se muestra ningún modificador.][2]
 
    * Cambie al usuario de mssql. No recibirá ninguna confirmación si se realiza correctamente.
 
@@ -228,7 +228,7 @@ Asegúrese de que los estándares de seguridad se aplican para el acceso. Al con
 
    * Para probar, cree una base de datos en esa carpeta. En el ejemplo siguiente se usa sqlcmd para crear una base de datos, cambiar el contexto a ella y comprobar que los archivos existen en el nivel del sistema operativo; después, se elimina la ubicación temporal. Puede usar SSMS.
 
-    ![15-createtestdatabase][4]
+    ![Captura de pantalla del comando sqlcmd y la respuesta al comando.][4]
  
    * Desmontaje del recurso compartido 
 

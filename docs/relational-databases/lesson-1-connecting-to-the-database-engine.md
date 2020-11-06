@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba85689470e29ee45390f6f59ad44ec222cdf945
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 6b1685a4d93d14b3cd49a4c9a4a031943a5b9f7e
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864057"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243844"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: Conexión al Motor de base de datos
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +41,11 @@ Las bases de datos de ejemplo y los ejemplos no están incluidos en [!INCLUDE[ss
 
 ##### <a name="to-start-sql-server-management-studio"></a>Para iniciar SQL Server Management Studio
 - En las versiones actuales de Windows, en la página de **inicio** , escriba SSMS y, después, haga clic en **Microsoft SQL Server Management Studio**.  
-- Si usa versiones anteriores de Windows, en el menú **Inicio** , seleccione **Todos los programas**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]y luego haga clic en **SQL Server Management Studio**.  
+- Si usa versiones anteriores de Windows, en el menú **Inicio** , seleccione **Todos los programas** , [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]y luego haga clic en **SQL Server Management Studio**.  
 
 ##### <a name="to-start-sql-server-configuration-manager"></a>Para iniciar el Administrador de configuración de SQL Server  
-- En las versiones actuales de Windows, en la página de **Inicio** , escriba **Administrador de configuración**y luego haga clic en **Administrador de configuración de SQL Server *versión* Administrador de configuración**.   
-- Si usa versiones anteriores de Windows, en el menú **Inicio** , seleccione **Todos los programas**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Herramientas de configuración**y, después, haga clic en **Administrador de configuración de SQL Server**.  
+- En las versiones actuales de Windows, en la página de **Inicio** , escriba **Administrador de configuración** y luego haga clic en **Administrador de configuración de SQL Server *versión* Administrador de configuración**.   
+- Si usa versiones anteriores de Windows, en el menú **Inicio** , seleccione **Todos los programas** , [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Herramientas de configuración** y, después, haga clic en **Administrador de configuración de SQL Server**.  
 
 ## <a name="connecting-with-management-studio"></a><a name="connect"></a>Conectarse a Management Studio  
 - Resulta sencillo conectarse a [!INCLUDE[ssDE](../includes/ssde-md.md)] desde herramientas que se ejecutan en el mismo equipo si conoce el nombre de la instancia y se conecta como miembro del grupo local Administradores del equipo. Los procedimientos siguientes deben realizarse en el mismo equipo en el que se hospeda [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -58,13 +58,13 @@ Las bases de datos de ejemplo y los ejemplos no están incluidos en [!INCLUDE[ss
 1.  Inicie una sesión en Windows como miembro del grupo Administradores y abra [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
 2.  En el cuadro de diálogo **Conectar con el servidor** , haga clic en **Cancelar**.  
 3.  Si Servidores registrados no aparece, en el menú **Ver** , haga clic en **Servidores registrados**.
-4.  Con **Motor de base de datos** seleccionado en la barra de herramientas Servidores registrados, expanda **Motor de base de datos**, haga clic con el botón derecho en **Grupos de servidores locales**, seleccione **Tareas**y, después, haga clic en **Registrar servidores locales**. Expanda **Grupos de servidores locales** para ver todas las instancias del [!INCLUDE[ssDE](../includes/ssde-md.md)] instalado en el equipo mostrado. La instancia predeterminada no tiene nombre y aparece como el nombre del equipo. Una instancia con nombre aparece como el nombre del equipo seguido de una barra inversa (\\) y del nombre de la instancia. En [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], la instancia se denomina *<nombre_equipo>* \sqlexpress, a no ser que se haya cambiado el nombre durante la instalación.  
+4.  Con **Motor de base de datos** seleccionado en la barra de herramientas Servidores registrados, expanda **Motor de base de datos** , haga clic con el botón derecho en **Grupos de servidores locales** , seleccione **Tareas** y, después, haga clic en **Registrar servidores locales**. Expanda **Grupos de servidores locales** para ver todas las instancias del [!INCLUDE[ssDE](../includes/ssde-md.md)] instalado en el equipo mostrado. La instancia predeterminada no tiene nombre y aparece como el nombre del equipo. Una instancia con nombre aparece como el nombre del equipo seguido de una barra inversa (\\) y del nombre de la instancia. En [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], la instancia se denomina *<nombre_equipo>* \sqlexpress, a no ser que se haya cambiado el nombre durante la instalación.  
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>Para comprobar que el motor de base de datos está en ejecución
 
 1.  En Servidores registrados, si el nombre de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene un punto verde con una flecha blanca junto al nombre, [!INCLUDE[ssDE](../includes/ssde-md.md)] está en ejecución y no es necesario realizar ninguna otra acción.  
 
-2.  Si el nombre de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene un punto rojo con un cuadrado blanco junto al nombre, [!INCLUDE[ssDE](../includes/ssde-md.md)] se encuentra detenido. Haga clic con el botón derecho en el nombre del [!INCLUDE[ssDE](../includes/ssde-md.md)], haga clic en **Control de servicios**y luego haga clic en **Iniciar**. Después de un cuadro de diálogo de confirmación, [!INCLUDE[ssDE](../includes/ssde-md.md)] debería iniciarse y el color del punto debería cambiar a verde con una flecha blanca.  
+2.  Si el nombre de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene un punto rojo con un cuadrado blanco junto al nombre, [!INCLUDE[ssDE](../includes/ssde-md.md)] se encuentra detenido. Haga clic con el botón derecho en el nombre del [!INCLUDE[ssDE](../includes/ssde-md.md)], haga clic en **Control de servicios** y luego haga clic en **Iniciar**. Después de un cuadro de diálogo de confirmación, [!INCLUDE[ssDE](../includes/ssde-md.md)] debería iniciarse y el color del punto debería cambiar a verde con una flecha blanca.  
 
 ##### <a name="to-connect-to-the-database-engine"></a>Para conectarse al motor de base de datos  
 
@@ -75,11 +75,11 @@ Se ha seleccionado al menos una cuenta de administrador al instalar [!INCLUDE[ss
 
 2.  Seleccione **Motor de base de datos**.
 
-![object-explorer](../relational-databases/media/object-explorer.png)
+![Captura de pantalla del Explorador de objetos que muestra la lista desplegable Conectar y la opción Motor de base de datos resaltada.](../relational-databases/media/object-explorer.png)
 
 3.  En el cuadro **Nombre del servidor** , escriba el nombre de la instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para la instancia predeterminada de SQL Server, el nombre de servidor es el nombre del equipo. Para una instancia con nombre de SQL Server, el nombre del servidor es _\<computer_name\>_ **\\** _\<instance_name\>_ , como **ACCTG_SRVR\SQLEXPRESS**. En la siguiente captura de pantalla se muestra la conexión a la instancia predeterminada (sin nombre) de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] en un equipo denominado "PracticeComputer". El usuario que ha iniciado sesión en Windows es Mary del dominio Contoso. Al usar la autenticación de Windows, no puede cambiar el nombre de usuario. 
 
-![connect-to-server](../relational-databases/media/connect-to-server.png)
+![Captura de pantalla del cuadro de diálogo Conectar al servidor con el cuadro de texto del nombre del servidor seleccionado.](../relational-databases/media/connect-to-server.png)
 
 4.  Haga clic en **Conectar**.
 
@@ -94,14 +94,14 @@ Ahora que se ha conectado a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 
 ##### <a name="create-a-windows-authentication-login"></a>Crear un inicio de sesión con autenticación de Windows 
 
-1.  En la tarea anterior, se conectó a [!INCLUDE[ssDE](../includes/ssde-md.md)] utilizando [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. En el Explorador de objetos, expanda la instancia del servidor, expanda **Seguridad**, haga clic con el botón derecho en **Inicios de sesión**y, después, haga clic en **Nuevo inicio de sesión**. Aparece el cuadro de diálogo **Inicio de sesión - Nuevo** .  
+1.  En la tarea anterior, se conectó a [!INCLUDE[ssDE](../includes/ssde-md.md)] utilizando [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. En el Explorador de objetos, expanda la instancia del servidor, expanda **Seguridad** , haga clic con el botón derecho en **Inicios de sesión** y, después, haga clic en **Nuevo inicio de sesión**. Aparece el cuadro de diálogo **Inicio de sesión - Nuevo** .  
 
 2.  En la página **General** , en el cuadro **Nombre de inicio de sesión** , escriba un inicio de sesión de Windows con el formato: `<domain>\\<login>`
 
-![new-login](../relational-databases/media/new-login.png)
+![Captura de pantalla del cuadro de diálogo Inicio de sesión - Nuevo con el cuadro de texto del nombre de inicio de sesión seleccionado.](../relational-databases/media/new-login.png)
 
 3.  En el cuadro **Base de datos predeterminada** , seleccione [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , si está disponible. Si no lo está, seleccione **master**.  
-4.  En la página **Roles del servidor** , si el nuevo inicio de sesión va a ser administrador, haga clic en **sysadmin**; de lo contrario, déjelo en blanco.  
+4.  En la página **Roles del servidor** , si el nuevo inicio de sesión va a ser administrador, haga clic en **sysadmin** ; de lo contrario, déjelo en blanco.  
 5.  En la página **Asignación de usuarios** , seleccione **Asignar** para la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , si está disponible. Si no lo está, seleccione **master**. Observe que el cuadro **Usuario** se ha rellenado con el inicio de sesión. Al cerrar el cuadro de diálogo, se creará el usuario en la base de datos.  
 6.  En el cuadro **Esquema predeterminado** , escriba **dbo** para asignar el inicio de sesión al esquema de propietario de base de datos.   
 7.  Acepte los valores predeterminados de los cuadros **Elementos protegibles** y **Estado** y haga clic en **Aceptar** para crear el inicio de sesión.  

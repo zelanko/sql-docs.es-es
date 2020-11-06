@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fea0c2df2ec25493e09214289802824ffe5f93ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19111422e69b2ce77f53e13bb6d1a450b4ef7692
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430247"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243693"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>Funciones - dm_execution_performance_counters
 
@@ -64,14 +64,18 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 |counter_name|**nvarchar(128)**|Nombre del contador.|Vea la sección **Comentarios** de los valores.|  
 |counter_value|**BigInt**|Valor devuelto por el contador.||  
   
-## <a name="example"></a>Ejemplo  
+## <a name="examples"></a>Ejemplos  
+
+### <a name="a-return-statistics-for-a-running-execution"></a>A. Devolver estadísticas para una ejecución en curso
+
  En el ejemplo siguiente, la función devuelve estadísticas para la ejecución actual con el identificador 34.  
   
 ```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
-## <a name="example"></a>Ejemplo  
+### <a name="b-return-statistics-for-all-running-executions"></a>B. Devolver estadísticas para todas las ejecuciones en curso
+
  En el ejemplo siguiente, la función devuelve estadísticas para todas las ejecuciones actuales en el servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], según sus permisos.  
   
 ```sql

@@ -10,12 +10,12 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9fe880bc4296985811d21b06b905b3ceb4bef58a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 121155e824df7bde4e8420eacdb2a56784864d62
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659479"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243630"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>Aplicaciones de copia de seguridad de SQL Server: Servicio de instantáneas de volumen (VSS) y objeto de escritura de SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,9 +29,9 @@ SQL Server permite crear instantáneas a partir de datos de SQL Server con el 
 
 ## <a name="definition-of-terms"></a>Definición de términos
 
-- **Interfaz de dispositivo virtual**: SQL Server ofrece una interfaz de programación de aplicaciones denominada interfaz de dispositivo virtual (VDI) que ayuda a los proveedores de software independientes a integrar SQL Server en sus productos ofreciendo la compatibilidad con las operaciones relativas a las copias de seguridad y restauración. Estas API están diseñadas para ofrecer una confiabilidad y un rendimiento máximos, así como para ser compatibles con todas las funciones relativas a las copias de seguridad y restauración de SQL Server, incluidas todas las capacidades de copias de seguridad interactivas y de instantáneas. Para obtener más información, consulte [Especificación de la interfaz de dispositivo de copia de seguridad virtual de SQL Server 2005](https://www.microsoft.com/download/details.aspx?id=17282). 
+- **Interfaz de dispositivo virtual** : SQL Server ofrece una interfaz de programación de aplicaciones denominada interfaz de dispositivo virtual (VDI) que ayuda a los proveedores de software independientes a integrar SQL Server en sus productos ofreciendo la compatibilidad con las operaciones relativas a las copias de seguridad y restauración. Estas API están diseñadas para ofrecer una confiabilidad y un rendimiento máximos, así como para ser compatibles con todas las funciones relativas a las copias de seguridad y restauración de SQL Server, incluidas todas las capacidades de copias de seguridad interactivas y de instantáneas. Para obtener más información, consulte [Especificación de la interfaz de dispositivo de copia de seguridad virtual de SQL Server 2005](https://www.microsoft.com/download/details.aspx?id=17282). 
 
-- **Solicitante**: proceso, ya sea automatizado o GUI, que solicita que se tomen uno o más conjuntos de instantáneas de uno o más volúmenes originales. En este documento, un solicitante también se usa para implicar una aplicación de copia de seguridad que está creando una instantánea de bases de datos de SQL Server.
+- **Solicitante** : proceso, ya sea automatizado o GUI, que solicita que se tomen uno o más conjuntos de instantáneas de uno o más volúmenes originales. En este documento, un solicitante también se usa para implicar una aplicación de copia de seguridad que está creando una instantánea de bases de datos de SQL Server.
 
 ## <a name="about-vss"></a>Acerca de VSS
 
@@ -53,7 +53,7 @@ VSS coordina las actividades de los siguientes componentes cooperativos:
 
 VSS proporciona coordinación entre estas entidades: 
 
-![Coordinaciones](media/sql-server-vss-writer-backup-guide/coordinations.png)
+![Diagrama que muestra cómo VSS proporciona coordinación entre estas entidades.](media/sql-server-vss-writer-backup-guide/coordinations.png)
 
 En este diagrama se muestran todos los componentes que participan en una actividad de instantánea de VSS habitual. En este escenario, SQL Server, incluido el objeto de escritura de SQL, actúa como escritor en uno de los cuadros de escritura.  Otros escritores de este tipo pueden ser Exchange Server, etc.
 
@@ -124,14 +124,14 @@ En el resto de este tema se da por supuesto que se usan copias de seguridad basa
 ## <a name="features-supported-by-sql-writer"></a>Características compatibles con el objeto de escritura de SQL
 
 
-- **Texto completo**: el objeto de escritura de SQL informa de los contenedores de catálogos de texto completo con especificaciones de archivo recursivas en los componentes de base de datos del documento de metadatos del escritor.  Se incluyen automáticamente en la copia de seguridad si se selecciona el componente de base de datos.
-- **Copias de seguridad y restauración diferenciales**: el objeto de escritura de SQL admite la copia de seguridad o restauración diferencial mediante dos mecanismos diferenciales de VSS, que son Archivo parcial y Archivo diferenciado por hora de última modificación.
-- **Archivo parcial**:   El objeto de escritura de SQL utiliza el mecanismo Archivo parcial de VSS para informar de los intervalos de bytes modificados en sus archivos de base de datos.  
-- **Archivo diferenciado por hora de última modificación**: el objeto de escritura de SQL utiliza el mecanismo Archivo diferenciado por hora de última modificación de VSS para informar de los archivos modificados en los catálogos de texto completo.
-- **Restauración con desplazamiento**: el objeto de escritura de SQL admite la nueva especificación de destino de VSS durante la restauración.  La nueva especificación de destino de VSS permite reubicar un archivo de registro o de base de datos, o un contenedor de catálogos de texto completo, como parte de la operación de restauración.
-- **Cambio de nombre de una base de datos**: es posible que un solicitante necesite restaurar una base de datos de SQL con un nombre nuevo, especialmente si la base de datos se va a restaurar en paralelo con la base de datos original. El objeto de escritura de SQL permite cambiar el nombre de una base de datos durante la operación de restauración, siempre y cuando la base de datos permanezca dentro de la instancia original de SQL.
-- **Copia de seguridad de solo copia**: en ocasiones, es necesario hacer una copia de seguridad que esté destinada a un propósito especial, por ejemplo, cuando se necesita hacer una copia de una base de datos con fines de prueba.  Esta copia de seguridad no debe afectar a los procedimientos de copia de seguridad y restauración generales de la base de datos. Con la opción COPY_ONLY se especifica que la copia de seguridad se hace "fuera de banda" y no debe afectar a la secuencia normal de copias de seguridad. El objeto de escritura de SQL admite el tipo de copia de seguridad de "solo copia" con instancias de SQL Server.
-- **Recuperación automática de instantánea de base de datos**:   normalmente, una instantánea de una base de datos de SQL Server obtenida mediante el marco de VSS se encuentra en un estado no recuperado. No se puede tener acceso de forma segura a los datos de la instantánea antes de pasar a través de la fase de recuperación para revertir las transacciones en curso y colocar la base de datos en un estado coherente. Es posible que una aplicación de copia de seguridad de VSS solicite la autorrecuperación de las instantáneas como parte del proceso de creación de instantáneas.
+- **Texto completo** : el objeto de escritura de SQL informa de los contenedores de catálogos de texto completo con especificaciones de archivo recursivas en los componentes de base de datos del documento de metadatos del escritor.  Se incluyen automáticamente en la copia de seguridad si se selecciona el componente de base de datos.
+- **Copias de seguridad y restauración diferenciales** : el objeto de escritura de SQL admite la copia de seguridad o restauración diferencial mediante dos mecanismos diferenciales de VSS, que son Archivo parcial y Archivo diferenciado por hora de última modificación.
+- **Archivo parcial** :   El objeto de escritura de SQL utiliza el mecanismo Archivo parcial de VSS para informar de los intervalos de bytes modificados en sus archivos de base de datos.  
+- **Archivo diferenciado por hora de última modificación** : el objeto de escritura de SQL utiliza el mecanismo Archivo diferenciado por hora de última modificación de VSS para informar de los archivos modificados en los catálogos de texto completo.
+- **Restauración con desplazamiento** : el objeto de escritura de SQL admite la nueva especificación de destino de VSS durante la restauración.  La nueva especificación de destino de VSS permite reubicar un archivo de registro o de base de datos, o un contenedor de catálogos de texto completo, como parte de la operación de restauración.
+- **Cambio de nombre de una base de datos** : es posible que un solicitante necesite restaurar una base de datos de SQL con un nombre nuevo, especialmente si la base de datos se va a restaurar en paralelo con la base de datos original. El objeto de escritura de SQL permite cambiar el nombre de una base de datos durante la operación de restauración, siempre y cuando la base de datos permanezca dentro de la instancia original de SQL.
+- **Copia de seguridad de solo copia** : en ocasiones, es necesario hacer una copia de seguridad que esté destinada a un propósito especial, por ejemplo, cuando se necesita hacer una copia de una base de datos con fines de prueba.  Esta copia de seguridad no debe afectar a los procedimientos de copia de seguridad y restauración generales de la base de datos. Con la opción COPY_ONLY se especifica que la copia de seguridad se hace "fuera de banda" y no debe afectar a la secuencia normal de copias de seguridad. El objeto de escritura de SQL admite el tipo de copia de seguridad de "solo copia" con instancias de SQL Server.
+- **Recuperación automática de instantánea de base de datos** :   normalmente, una instantánea de una base de datos de SQL Server obtenida mediante el marco de VSS se encuentra en un estado no recuperado. No se puede tener acceso de forma segura a los datos de la instantánea antes de pasar a través de la fase de recuperación para revertir las transacciones en curso y colocar la base de datos en un estado coherente. Es posible que una aplicación de copia de seguridad de VSS solicite la autorrecuperación de las instantáneas como parte del proceso de creación de instantáneas.
 
 Estas nuevas características y su uso se describen de manera más detallada en la sección Detalles de la opción Copias de seguridad y restauración, en este tema.
 
@@ -207,11 +207,11 @@ El documento de metadatos del escritor es un documento que contiene información
 Se trata de un documento XML creado por un escritor (objeto de escritura de SQL, en este caso) mediante la interfaz **IVssCreateWriterMetadata** y que contiene información sobre el estado y los componentes del escritor. Los detalles estructurales de un documento de metadatos del escritor se describen en la documentación de la API de VSS. A continuación se mencionan algunos de los detalles del documento de metadatos del objeto de escritura de SQL.
 
 - Información de identificación del escritor
-    - **Nombre del escritor**: L"SqlServerWriter"
-    - **Id. de clase del escritor**: 0xa65faa63, 0x5ea8, 0x4ebc, 0x9d, 0xbd, 0xa0, 0xc4, 0xdb, 0x26, 0x91 y 0x2a 
-    - **Id. de instancia del escritor**: L"SQL Server:SQLWriter" 
-    - **VSSUsageType**: VSS_UT_USERDATA 
-    - **VSSSourceType**: VSS_ST_TRANSACTEDDB 
+    - **Nombre del escritor** : L"SqlServerWriter"
+    - **Id. de clase del escritor** : 0xa65faa63, 0x5ea8, 0x4ebc, 0x9d, 0xbd, 0xa0, 0xc4, 0xdb, 0x26, 0x91 y 0x2a 
+    - **Id. de instancia del escritor** : L"SQL Server:SQLWriter" 
+    - **VSSUsageType** : VSS_UT_USERDATA 
+    - **VSSSourceType** : VSS_ST_TRANSACTEDDB 
 - Información del nivel del escritor: VSS_APP_BACK_END 
 - Especificación del método de restauración: VSS_RME_RESTORE_IF_CAN_REPLACE.
 - Esquema de copia de seguridad compatible (IVssCreateWriterMetadata::SetBackupSchema API)
@@ -222,11 +222,11 @@ Se trata de un documento XML creado por un escritor (objeto de escritura de SQL,
     - VSS_BS_WRITER_SUPPORTS_RESTORE_WITH_MOVE: admite la restauración "con desplazamiento".
     - VSS_BS_COPY: admite la opción de copia de seguridad de "solo copia".
 - Información de nivel de componente: contiene información específica del nivel de componente proporcionada por el objeto de escritura de SQL.
-   - **Tipo**: VSS_CT_FILEGROUP.
-   - **Nombre**: nombre del componente (nombre de la base de datos).
-   - **Ruta de acceso lógica**: corresponde a la instancia del servidor y tendrá el formato "servidor\nombre de la instancia" para las instancias con nombre y "servidor" para la predeterminada.
+   - **Tipo** : VSS_CT_FILEGROUP.
+   - **Nombre** : nombre del componente (nombre de la base de datos).
+   - **Ruta de acceso lógica** : corresponde a la instancia del servidor y tendrá el formato "servidor\nombre de la instancia" para las instancias con nombre y "servidor" para la predeterminada.
    - **Marcas de componentes**
-   - **VSS_CF_APP_ROLLBACK_RECOVERY**: indica que las instantáneas de SQL Server siempre requieren una fase de "recuperación" para que los archivos sean coherentes y se puedan utilizar en escenarios que no sean de copia de seguridad (es decir, escenario de reversión de aplicaciones).
+   - **VSS_CF_APP_ROLLBACK_RECOVERY** : indica que las instantáneas de SQL Server siempre requieren una fase de "recuperación" para que los archivos sean coherentes y se puedan utilizar en escenarios que no sean de copia de seguridad (es decir, escenario de reversión de aplicaciones).
    - Se puede seleccionar: true.
    - Se puede seleccionar para restauración: true. 
    - Métodos de restauración admitidos: VSS_RME_RESTORE_IF_CAN_REPLACE.
@@ -247,22 +247,22 @@ Las tareas previas a la copia de seguridad en VSS se centran en crear una instan
 Los solicitantes normalmente esperan en los escritores durante la preparación de la copia de seguridad y mientras se crea la instantánea. Si el objeto de escritura de SQL está participando en la operación de copia de seguridad, debe configurar sus archivos y también estar a punto para la copia de seguridad y la instantánea.
 
 #### <a name="prepare-for-backup"></a>Preparación para la copia de seguridad
-El solicitante deberá establecer el tipo de operación de copia de seguridad que se debe hacer (**IVssBackupComponents::SetBackupState**) y, a continuación, notificará a los escritores a través de VSS para preparar una operación de copia de seguridad con **IVssBackupComponents::PrepareForBackup**.
+El solicitante deberá establecer el tipo de operación de copia de seguridad que se debe hacer ( **IVssBackupComponents::SetBackupState** ) y, a continuación, notificará a los escritores a través de VSS para preparar una operación de copia de seguridad con **IVssBackupComponents::PrepareForBackup**.
 
 Al objeto de escritura de SQL se le concede acceso al documento Componentes de copias de seguridad, en el que se detallan las bases de datos de las que se debe hacer una copia de seguridad. Todos los volúmenes de copia de seguridad deben incluirse en el conjunto de instantáneas de volumen. El objeto de escritura de SQL detectará las bases de datos incompletas (con volúmenes de respaldo fuera del conjunto de instantáneas) y generará un error en la copia de seguridad durante el evento posterior a la instantánea.
 
-**Inicio de la instantánea**: el solicitante iniciará el proceso de instantáneas llamando a la interfaz DoSnapshotSet del marco de VSS.
+**Inicio de la instantánea** : el solicitante iniciará el proceso de instantáneas llamando a la interfaz DoSnapshotSet del marco de VSS.
 
-**Creación de la instantánea**: esta fase implica una serie de interacciones entre el marco de VSS y el objeto de escritura de SQL.
+**Creación de la instantánea** : esta fase implica una serie de interacciones entre el marco de VSS y el objeto de escritura de SQL.
 
-1. _Preparación para tomar la instantánea_: el objeto de escritura de SQL llamará a SQL Server con el fin de prepararse para la creación de instantáneas.
-1. _Inmovilización_: el objeto de escritura de SQL llamará a SQL Server para inmovilizar todas las E/S de base de datos para cada una de las bases de datos de las que se haga una copia de seguridad en la instantánea. Una vez que el evento de inmovilización vuelva al marco de VSS, VSS creará la instantánea.
-1. _Reanudación_: en este evento, el objeto de escritura de SQL llamará a las instancias de SQL Server para "reanudar" las operaciones de E/S normales.
+1. _Preparación para tomar la instantánea_ : el objeto de escritura de SQL llamará a SQL Server con el fin de prepararse para la creación de instantáneas.
+1. _Inmovilización_ : el objeto de escritura de SQL llamará a SQL Server para inmovilizar todas las E/S de base de datos para cada una de las bases de datos de las que se haga una copia de seguridad en la instantánea. Una vez que el evento de inmovilización vuelva al marco de VSS, VSS creará la instantánea.
+1. _Reanudación_ : en este evento, el objeto de escritura de SQL llamará a las instancias de SQL Server para "reanudar" las operaciones de E/S normales.
 
 
 La fase de creación de instantáneas es rápida (menos de 60 segundos) con el fin de evitar el bloqueo de todas las escrituras en la base de datos.
 
-**Posterior a la instantánea**: si es necesaria la autorrecuperación de la instantánea, el objeto de escritura de SQL realizará la autorrecuperación para cada base de datos que se haya seleccionado para figurar en la instantánea. Para obtener una explicación detallada, consulte Instantáneas recuperadas automáticamente.
+**Posterior a la instantánea** : si es necesaria la autorrecuperación de la instantánea, el objeto de escritura de SQL realizará la autorrecuperación para cada base de datos que se haya seleccionado para figurar en la instantánea. Para obtener una explicación detallada, consulte Instantáneas recuperadas automáticamente.
 
 #### <a name="actual-backup-of-files"></a>Copia de seguridad real de archivos
 
@@ -308,8 +308,8 @@ En la siguiente ilustración se muestra el diagrama de flujo de datos durante un
 
 En todos los escenarios de restauración basados en componentes de VSS, el objeto de escritura de SQL controla la restauración de bases de datos en dos fases distintas.
 
-- **Previa a la restauración**:  el objeto de escritura de SQL controla la validación, el cierre de identificadores de archivos, etc.
-- **Posterior a la restauración**:  el objeto de escritura de SQL conecta la base de datos y bloquea la recuperación, si es necesario.
+- **Previa a la restauración** :  el objeto de escritura de SQL controla la validación, el cierre de identificadores de archivos, etc.
+- **Posterior a la restauración** :  el objeto de escritura de SQL conecta la base de datos y bloquea la recuperación, si es necesario.
 
 Entre estas dos fases, la aplicación de copia de seguridad es responsable de mover los datos pertinentes en torno a SQL.
 
@@ -339,7 +339,7 @@ Se trata únicamente de una acción específica del solicitante. Es responsabili
 
 #### <a name="cleanup-and-termination"></a>Limpieza y finalización
 
-Una vez que todos los datos se hayan restaurado en los lugares correctos, una llamada de un solicitante para notificar que la operación de restauración se ha completado (**IvssBackupComponents::PostRestore**) permitirá que el objeto de escritura de SQL sepa que se pueden iniciar las acciones posteriores a la restauración.  En este momento, el objeto de escritura de SQL realizará la fase de puesta al día de la recuperación tras bloqueo. Si no se solicita la recuperación (es decir, si el solicitante no especifica SetAdditionalRestores(true)), la fase de reversión del paso de recuperación también se llevará a cabo durante esta fase.
+Una vez que todos los datos se hayan restaurado en los lugares correctos, una llamada de un solicitante para notificar que la operación de restauración se ha completado ( **IvssBackupComponents::PostRestore** ) permitirá que el objeto de escritura de SQL sepa que se pueden iniciar las acciones posteriores a la restauración.  En este momento, el objeto de escritura de SQL realizará la fase de puesta al día de la recuperación tras bloqueo. Si no se solicita la recuperación (es decir, si el solicitante no especifica SetAdditionalRestores(true)), la fase de reversión del paso de recuperación también se llevará a cabo durante esta fase.
 
 ## <a name="backup-and-restore-option-details"></a>Detalles de la opción Copias de seguridad y restauración
 
@@ -387,7 +387,7 @@ Si no se guardan metadatos de escritor (metadatos de copia de seguridad basados 
 
 El solicitante restaura las bases de datos de las que se ha hecho una copia de seguridad en modo basado en componentes, pero no se solicitan puestas al día. En este caso, SQL Server realizará la recuperación tras bloqueo en la base de datos como parte de la restauración.
 
-**Restauración completa con puestas al día adicionales**: el solicitante puede emitir una restauración especificando la opción SetAdditionalRestores (true).  Esta opción indica que el solicitante va a proceder con más restauraciones con puestas al día (como la restauración de registros, la restauración diferencial, etc.). Esto indica a SQL Server que no realice el paso de recuperación al final de la operación de restauración.
+**Restauración completa con puestas al día adicionales** : el solicitante puede emitir una restauración especificando la opción SetAdditionalRestores (true).  Esta opción indica que el solicitante va a proceder con más restauraciones con puestas al día (como la restauración de registros, la restauración diferencial, etc.). Esto indica a SQL Server que no realice el paso de recuperación al final de la operación de restauración.
 
 Esto solo es posible si los metadatos del escritor se guardaron durante la copia de seguridad y están disponibles para el objeto de escritura de SQL en el momento de la restauración. El servicio SQL Server debe estar en ejecución antes de que el solicitante indique a VSS que realice la actividad de restauración.
 
@@ -409,7 +409,7 @@ Una operación de copia de seguridad diferencial respalda solo los datos que han
 
 ### <a name="backup"></a>Copia de seguridad
 
-El solicitante puede emitir una copia de seguridad diferencial estableciendo la opción diferencial (**VSS_BT_DIFFERENTIAL**) en el documento Componentes de copias de seguridad (**IVssBackupComponents::SetBackupState**) al iniciar una operación de copia de seguridad con VSS.  El objeto de escritura de SQL pasará la información del archivo parcial (devuelta por SQL Server) a VSS.  El solicitante puede obtener esta información de archivo llamando a las API de VSS (**IVssComponent::GetPartialFile**). Esta información de archivo parcial permite que el solicitante elija solo los intervalos de bytes modificados para hacer una copia de seguridad de los archivos de base de datos.
+El solicitante puede emitir una copia de seguridad diferencial estableciendo la opción diferencial ( **VSS_BT_DIFFERENTIAL** ) en el documento Componentes de copias de seguridad ( **IVssBackupComponents::SetBackupState** ) al iniciar una operación de copia de seguridad con VSS.  El objeto de escritura de SQL pasará la información del archivo parcial (devuelta por SQL Server) a VSS.  El solicitante puede obtener esta información de archivo llamando a las API de VSS ( **IVssComponent::GetPartialFile** ). Esta información de archivo parcial permite que el solicitante elija solo los intervalos de bytes modificados para hacer una copia de seguridad de los archivos de base de datos.
 
 Durante la fase de tareas de copia de seguridad previa, el objeto de escritura de SQL se asegurará de que exista una única base diferencial para cada base de datos seleccionada.
 
@@ -522,12 +522,12 @@ La marca de tiempo de base se establece durante una copia de seguridad completa.
 
 La aplicación de copia de seguridad recuperará esta marca de tiempo de la copia de seguridad completa de base y hará que dicha marca esté disponible para el escritor llamando a **IVssComponent::GetBackupStamp()** con el fin de recuperar la marca de base de la copia de seguridad de base anterior.  A continuación, hará que esté disponible para el escritor llamando a **IVssBackupComponent::SetPreviousBackupStamp()** .  Seguidamente, el escritor recuperará la marca de tiempo llamando a **IVssComponent::GetPreviousBackupStamp()** y la traducirá en otra que se usará para **IVssComponent::AddDifferencedFilesByLastModifyTime()** .  
 
-**Responsabilidad de la aplicación de copia de seguridad durante la copia de seguridad diferencial**: durante una copia de seguridad diferencial, la aplicación de copia de seguridad es responsable de:
+**Responsabilidad de la aplicación de copia de seguridad durante la copia de seguridad diferencial** : durante una copia de seguridad diferencial, la aplicación de copia de seguridad es responsable de:
 
 - Hacer una copia de seguridad de cualquier archivo (todo el archivo) cuya marca de tiempo de última modificación sea mayor que la marca de tiempo especificada en la "hora de última modificación" del conjunto de archivos en el componente.
 - Realizar un seguimiento y detectar los archivos eliminados.  
 
-**Responsabilidades de la aplicación de copia de seguridad durante una restauración diferencial**: durante una restauración diferencial, la aplicación de copia de seguridad es responsable de:
+**Responsabilidades de la aplicación de copia de seguridad durante una restauración diferencial** : durante una restauración diferencial, la aplicación de copia de seguridad es responsable de:
 
 - Restaurar todos los archivos de los que se ha hecho una copia de seguridad, ya sea creando un archivo nuevo si aún no existe o sobrescribiendo uno existente.
 - Aumentar el tamaño del archivo antes de establecer el contenido si el archivo restaurado es mayor que el archivo existente.

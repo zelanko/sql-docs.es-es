@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
-ms.openlocfilehash: b92f19c74e5b5e3215836e174bf895f7cb61c36b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e661fee4e9b5afe5f78cae444ff8d6574a536bb9
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247444"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243784"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Uso de los KPI en Reporting Services
 
@@ -36,7 +36,7 @@ Si usa KPI en SQL Server Reporting Services, podrá visualizar rápidamente las 
 
 Un KPI solo utilizará la primera fila de datos de un conjunto de datos compartido. Asegúrese de que los datos que desea utilizar se encuentran en la primera fila. Para crear un conjunto de datos compartido, puede utilizar el Generador de informes o SQL Server Data Tools.  
   
-> **Nota**: El conjunto de datos no tiene que estar en la misma carpeta que el KPI.  
+> **Nota** : El conjunto de datos no tiene que estar en la misma carpeta que el KPI.  
   
 ## <a name="placement-of-kpis"></a>Ubicación de los KPI  
   
@@ -45,11 +45,11 @@ Los KPI pueden crearse en cualquier carpeta de su servidor de informes.  Antes d
   
 Después de determinar la ubicación de los KPI, vaya a la carpeta y seleccione **Nuevo** > **KPI** en el menú superior.  
   
-![rsCreateKPI1](../reporting-services/media/rscreatekpi1.png)  
+![Captura de pantalla en la que se muestra la lista desplegable Nuevo con la opción KPI destacada.](../reporting-services/media/rscreatekpi1.png)  
   
 Así se abrirá la pantalla **Nuevo KPI** .  
   
-![rsCreateKPI2](../reporting-services/media/rscreatekpi2.png)  
+![Captura de pantalla en la que se muestra la pantalla Nuevo KPI.](../reporting-services/media/rscreatekpi2.png)  
   
 Puede asignar valores estáticos o utilizar los datos de un conjunto de datos compartido. Al crear un nuevo KPI, se rellenará con un conjunto aleatorio de datos manuales.  
   
@@ -62,45 +62,45 @@ Puede asignar valores estáticos o utilizar los datos de un conjunto de datos co
 | Conjunto de tendencias | Valores numéricos separados por comas usados para la visualización de gráficos. También puede establecerse en una columna de un conjunto de datos con valores que representen la tendencia. |
 | Contenido relacionado | La capacidad de establecer un vínculo detallado. Este vínculo puede ser un informe móvil publicado en el portal o una dirección URL personalizada. |
   
-> **Advertencia**: Aunque puede usar el valor de palabra para el campo **Estado** en tiempo de diseño, debe utilizar el valor de número si va a actualizar un conjunto de datos. Si actualiza un conjunto de datos con el valor de palabra, en lugar del de número, se podría dañar los KPI en el servidor.  
+> **Advertencia** : Aunque puede usar el valor de palabra para el campo **Estado** en tiempo de diseño, debe utilizar el valor de número si va a actualizar un conjunto de datos. Si actualiza un conjunto de datos con el valor de palabra, en lugar del de número, se podría dañar los KPI en el servidor.  
 >
-> **Nota**: Los campos **Valor**, **Objetivo** y **Estado** solo pueden elegir un valor de la primera fila del resultado de un conjunto de datos. El campo **Trend set** (Conjunto de tendencias), sin embargo, puede elegir qué columna refleja la tendencia.  
+> **Nota** : Los campos **Valor** , **Objetivo** y **Estado** solo pueden elegir un valor de la primera fila del resultado de un conjunto de datos. El campo **Trend set** (Conjunto de tendencias), sin embargo, puede elegir qué columna refleja la tendencia.  
   
 Para usar datos de un conjunto de datos compartido, puede realizar los siguientes pasos:
   
-1. Cambie el valor del cuadro desplegable del campo de **Set manually**(Establecer manualmente), o **Not set**(No establecido), a **Dataset field**(Campo de conjunto de datos).  
+1. Cambie el valor del cuadro desplegable del campo de **Set manually** (Establecer manualmente), o **Not set** (No establecido), a **Dataset field** (Campo de conjunto de datos).  
   
-    ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
+    ![Captura de pantalla en la que se muestra la opción Valor establecida en Campo de conjunto de datos y el campo Seleccionar conjunto de datos en No establecido.](../reporting-services/media/rscreatekpi3.png)  
   
 2. Haga clic en los **puntos suspensivos (...)** en el cuadro de datos. Se abrirá la pantalla **Pick a Dataset** (Elegir un conjunto de datos).  
   
-    ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
+    ![Captura de pantalla de la sección Seleccionar un conjunto de datos con la opción Finance_KPI seleccionada.](../reporting-services/media/rscreatekpi4.png)  
   
 3. Seleccione el conjunto de datos que contenga los datos que desea mostrar.  
   
 4. Elija el campo que desea usar. Seleccione **Aceptar**.  
   
-    ![rsCreateKPI5](../reporting-services/media/rscreatekpi5.png)  
+    ![Captura de pantalla en la que se muestra la sección Seleccionar un campo de datos de Finance_KPI con la opción Sum_Amount seleccionada.](../reporting-services/media/rscreatekpi5.png)  
   
 5. Cambie **Value format** (Formato de valor) para que coincida con el formato del valor. En este ejemplo, el valor es una moneda.  
   
-    ![rsCreateKPI6](../reporting-services/media/rscreatekpi6.png)  
+    ![Captura de pantalla de la vista previa del KPI en la que se muestra la opción Formato de valor establecida en Moneda.](../reporting-services/media/rscreatekpi6.png)  
   
 6. Seleccione **Aplicar**.  
   
-    ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)
+    ![Captura de pantalla de los KPI en la que se muestra que hay dos elementos en Conjuntos de datos.](../reporting-services/media/rscreatekpi7.png)
 
 ## <a name="configuring-related-content"></a>Configuración de contenido relacionado
 
-Al elegir **Informe móvil**, puede elegir el destino en un cuadro de diálogo.
+Al elegir **Informe móvil** , puede elegir el destino en un cuadro de diálogo.
 
-   ![Informe móvil](media/rscreatekpi-related-content-mobile-report.png)
+   ![Captura de pantalla en la que se muestra la opción Contenido relacionado establecida en Informe móvil y la opción Seleccionar un informe móvil en No establecido.](media/rscreatekpi-related-content-mobile-report.png)
 
 Al hacer clic ahora en el KPI del portal, aparece una miniatura del informe móvil en el menú desplegable de contenido relacionado. Al hacer clic en esta miniatura, puede ir directamente a este informe.
 
 También puede especificar una dirección URL personalizada. Esta tarea puede ser cualquier cosa: un sitio web, un sitio de SharePoint, una dirección URL de un informe SSRS (que le permitiría pasar parámetros codificados de forma rígida).
 
-![Dirección URL personalizada](media/rscreatekpi-related-content-custom-url.png)
+![Captura de pantalla en la que se muestra la opción Contenido relacionado establecida en Dirección URL personalizada y la opción Escriba una dirección URL en http://.](media/rscreatekpi-related-content-custom-url.png)
 
 Al hacer clic ahora en el KPI, la dirección URL aparece en el contenido relacionado.
 
@@ -112,11 +112,11 @@ Para quitar un KPI, puede realizar los siguientes pasos.
   
 1. Haga clic en los **puntos suspensivos (...)** del KPI que quiera quitar. Seleccione **Administrar**.  
   
-    ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
+    ![Captura de pantalla del botón de puntos suspensivos de un KPI seleccionado y la opción ADMINISTRAR destacada.](../reporting-services/media/rsremovekpi1.png)  
   
 2. Seleccione **Eliminar**. Vuelva a seleccionar **Eliminar** en el cuadro de diálogo de confirmación.  
   
-    ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
+    ![Captura de pantalla de la opción Eliminar.](../reporting-services/media/rsremovekpi2.png)  
   
 ## <a name="refreshing-a-kpi"></a>Actualización de un KPI  
   

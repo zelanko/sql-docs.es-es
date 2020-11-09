@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ad3a09d742e18a3f9ab7ed304433fc1b59ce1fc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c17541ff08f136b3c8c26418117df63c71b9195b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247424"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243814"
 ---
 # <a name="working-with-snapshots-web-portal"></a>Trabajo con instantáneas (portal web)
 
@@ -31,7 +31,7 @@ Puede crear una instantánea de caché para que las propiedades de ejecución es
   
 Haga esto para crear una instantánea.  
   
-![ssRSWebPortal-report-caching4](../reporting-services/media/ssrswebportal-report-caching4.png)  
+![Captura de pantalla en la que se muestra la pantalla Almacenamiento en caché del cuadro de diálogo Editar Company Sales con tres círculos magenta con los números 1, 2 y 3, que designan los tres pasos que se encuentran debajo de la captura de pantalla.](../reporting-services/media/ssrswebportal-report-caching4.png)  
   
 1.  En la página **Almacenamiento en caché** , seleccione **Ejecutar siempre este informe según las instantáneas generadas previamente** para habilitar las opciones para crear una instantánea.  
   
@@ -49,7 +49,7 @@ El historial del informe siempre se ve en el contexto del informe desde el que s
   
 Para generar una instantánea del historial, el informe debe poder ejecutarse en modo desatendido, es decir, hay que usar credenciales almacenadas; los informes parametrizados deben contener valores predeterminados para todos los parámetros. Un historial de informe se puede generar manualmente o como una operación programada. Las propiedades del historial en el informe determinan las formas en que se puede crear el historial.  
   
-![ssRSWebPortal-historysnapshots1](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
+![Captura de pantalla en la que se muestra la pantalla Instantáneas del historial del cuadro de diálogo Editar Company Sales con tres círculos magenta con los números 1, 2 y 3, que designan los tres pasos que se encuentran debajo de la captura de pantalla.](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
    
 1.  Para crear una instantánea del historial, seleccione **+ Nueva instantánea del historial**. Esto hará que el informe se procese y se agregue una entrada a la lista.  
   
@@ -61,9 +61,9 @@ Para generar una instantánea del historial, el informe debe poder ejecutarse en
   
 Si selecciona **Programación y configuración** , dispondrá de más opciones para la retención de programación y el control de instantáneas creadas.  
   
-![ssRSWebPortal-historysnapshots2](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
+![Captura de pantalla en la que se muestran las secciones Programación y Avanzadas.](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
    
-Opcionalmente, puede crear una programación para que las instantáneas se creen. También puede impedir que otras personas creen instantáneas. Si desactiva **Permitir que los usuarios puedan crear instantáneas de forma manual** , el botón **+ Nueva instantánea del historial**se deshabilitará.  
+Opcionalmente, puede crear una programación para que las instantáneas se creen. También puede impedir que otras personas creen instantáneas. Si desactiva **Permitir que los usuarios puedan crear instantáneas de forma manual** , el botón **+ Nueva instantánea del historial** se deshabilitará.  
   
 También puede definir cómo prefiere conservar las instantáneas.  
   

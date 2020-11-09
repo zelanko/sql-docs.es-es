@@ -2,7 +2,7 @@
 title: Notas de la versión de ODBC Driver for SQL Server en Windows
 description: En este artículo sobre notas de la versión se describen los cambios de cada versión de Microsoft ODBC Driver para SQL Server en Windows.
 ms.custom: ''
-ms.date: 07/29/2020
+ms.date: 10/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: d066353c17822781c264388d284949b7b43391de
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 6c19be21aebb6a8480fb51f396530e6843ac2861
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87898816"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043812"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Notas de la versión de Microsoft ODBC Driver for SQL Server en Windows
 
@@ -169,6 +169,7 @@ Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/
 | Modo de autenticación de Azure Active Directory Managed dentity (del sistema y asignado por el usuario). | Consulte [Uso de Azure Active Directory con el controlador ODBC](../using-azure-active-directory.md). |
 | Capacidad de transmitir en secuencias los parámetros de entrada con columnas Always Encrypted. | Vea [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted) (Limitaciones del controlador ODBC al usar Always Encrypted). |
 | Transacciones distribuidas XA. | [Uso de las transacciones XA](../use-xa-with-dtc.md). |
+| Actualización de Visual C++ Redistributable | Se ha actualizado la dependencia en tiempo de ejecución a Visual C++ 2017 Redistributable ([descarga para 64 bits](https://aka.ms/vs/15/release/vc_redist.x64.exe); [descarga para 32 bits](https://aka.ms/vs/15/release/vc_redist.x86.exe)) |
 | Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 

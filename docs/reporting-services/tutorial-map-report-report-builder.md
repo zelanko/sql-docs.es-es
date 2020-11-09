@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b2778023aaa884849d174e27a4e81d0ebd48490
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 14efcfa864cde1fd932c92c79d802efcdd2118c4
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988410"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243682"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Informe de asignaciones (Generador de informes)
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , obtendrá información sobre las características de mapa que puede usar para mostrar datos en un fondo geográfico de un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -23,7 +23,7 @@ Los mapas están basados en datos espaciales que normalmente está compuestos de
   
 Para variar la apariencia de los elementos de mapa, especifique un campo que tenga valores que hagan coincidir los elementos de mapa con los datos analíticos de un conjunto de datos. También puede definir las reglas que varían el color, tamaño u otras propiedades basadas en rangos de datos.  
 
-![report-builder-map-final-map-only](../reporting-services/media/report-builder-map-final-map-only.png)
+![Captura de pantalla en la que se muestra un mapa de Report Builder.](../reporting-services/media/report-builder-map-final-map-only.png)
   
 En este tutorial, compilará un informe de mapa que muestre ubicaciones de almacenes en los condados del Estado de Nueva York.  
    
@@ -46,7 +46,7 @@ En esta sección, agregará un mapa al informe desde la galería de mapas. El ma
   
     Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
-    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
+    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos** , vaya al menú **Archivo** > **Nuevo**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -58,7 +58,7 @@ En esta sección, agregará un mapa al informe desde la galería de mapas. El ma
   
     El panel Vista previa del mapa muestra el mapa del condado de Nueva York.  
     
-    ![report-builder-map-ny-counties](../reporting-services/media/report-builder-map-ny-counties.png)
+    ![Captura de pantalla en la que se muestra el paso Elegir un origen de datos espaciales del asistente Nuevo mapa con Nueva York destacado en la sección Galería de mapas.](../reporting-services/media/report-builder-map-ny-counties.png)
   
 7.  Haga clic en **Next**.  
   
@@ -84,7 +84,7 @@ En esta sección, agregará un mapa al informe desde la galería de mapas. El ma
   
     -   Una escala de distancia que muestra kilómetros (km) y millas (mi).  
     
-    ![report-builder-map-choose-color-theme](../reporting-services/media/report-builder-map-choose-color-theme.png)
+    ![Captura de pantalla del paso Elegir tema de color y visualización de datos del asistente Nuevo mapa.](../reporting-services/media/report-builder-map-choose-color-theme.png)
   
 14. Haga clic en **Finalizar**  
   
@@ -103,7 +103,7 @@ En esta sección, agregará un mapa al informe desde la galería de mapas. El ma
 
 17. En la pestaña **Inicio** > **Ejecutar** para obtener una vista previa del informe.  
   
-    ![report-builder-map-first-preview](../reporting-services/media/report-builder-map-first-preview.png)
+    ![Captura de pantalla en la que se muestra una vista previa del mapa de Report Builder recién creado.](../reporting-services/media/report-builder-map-first-preview.png)
   
 El informe representado muestra el título del mapa, el mapa y la escala de distancia. Los condados están en una capa de polígono de mapa. Cada condado es un polígono que varía según el color de una paleta de colores, pero los colores no están asociados a ningún dato. La escala de distancia muestra las distancias en kilómetros y millas.  
   
@@ -121,9 +121,9 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
   
 2.  Haga doble clic en el mapa para mostrar el panel **Capas de mapa** . En la barra de herramientas, haga clic en el botón **Asistente para nueva capa** ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"). 
 
-    ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
+    ![Captura de pantalla en la que se muestra el panel Capas de mapa con el icono del asistente Nueva capa destacado.](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
-3.  En la página **Elegir un origen de datos espaciales** , seleccione **Consulta espacial de SQL Server**y haga clic en **Siguiente**.  
+3.  En la página **Elegir un origen de datos espaciales** , seleccione **Consulta espacial de SQL Server** y haga clic en **Siguiente**.  
   
 4.  En la página **Elija un conjunto de datos con datos espaciales de SQL Server** , haga clic en **Agregar un nuevo conjunto de datos con datos espaciales de SQL Server** > **Siguiente**.  
   
@@ -170,15 +170,15 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
 9. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ).  
   
     El conjunto de resultados contiene siete columnas que representan un conjunto de almacenes del estado de Nueva York que venden bienes de consumo. Aquí tiene una lista, con explicaciones de las que quizás no sean obvias: 
-    *   **StoreKey**: un identificador del almacén.  
+    *   **StoreKey** : un identificador del almacén.  
     *   **StoreName**.
-    *   **SellingArea**: el área disponible para la visualización del producto, que va de 138 a 342 metros cuadrados.
+    *   **SellingArea** : el área disponible para la visualización del producto, que va de 138 a 342 metros cuadrados.
     *   **City**.
     *   **County**.
-    *   **Ventas**: Ventas totales. 
-    *   **SpatialLocation**: ubicación en longitud y latitud. 
+    *   **Ventas** : Ventas totales. 
+    *   **SpatialLocation** : ubicación en longitud y latitud. 
 
-    ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
+    ![Captura de pantalla del paso Diseñar una consulta del asistente Nueva capa de mapa.](../reporting-services/media/report-builder-map-design-query.png) 
   
 10. Haga clic en **Next**.  
   
@@ -196,9 +196,9 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
   
 16. En la página **Elegir tema de color y visualización de datos** , seleccione **Usar tamaño de burbuja para visualizar datos**.  
   
-17. En **Campo de datos**, seleccione `[Sum(SellingArea)]` para variar los tamaños de burbuja según el tamaño del área que un almacén separa para mostrar productos.  
+17. En **Campo de datos** , seleccione `[Sum(SellingArea)]` para variar los tamaños de burbuja según el tamaño del área que un almacén separa para mostrar productos.  
   
-18. Seleccione **Mostrar etiquetas**y, en **Campo de datos**, seleccione `[City]`.
+18. Seleccione **Mostrar etiquetas** y, en **Campo de datos** , seleccione `[City]`.
 
 18. Haga clic en **Finalizar**  
   
@@ -206,15 +206,15 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
   
  19. Haga doble clic en el mapa para mostrar el panel **Capa de mapa** . El panel **Capa de mapa** muestra una nueva capa, PointLayer1, con el tipo de origen de datos espaciales **DataRegion**.  
   
-19. Agregue un título a la leyenda. En la leyenda, seleccione el texto **Título**, escriba **Área de visualización (metros cuadrados)** y pulse ENTRAR.  
+19. Agregue un título a la leyenda. En la leyenda, seleccione el texto **Título** , escriba **Área de visualización (metros cuadrados)** y pulse ENTRAR.  
   
-21. En el **panel Capas de mapa**, haga clic en la flecha situada junto a PointLayer1 y luego haga clic en **Propiedades del punto**.  
+21. En el **panel Capas de mapa** , haga clic en la flecha situada junto a PointLayer1 y luego haga clic en **Propiedades del punto**.  
 
-    ![report-builder-map-point-properties](../reporting-services/media/report-builder-map-point-properties.png)
+    ![Captura de pantalla del panel Capas de mapa en la que se muestra la opción Propiedades del punto.](../reporting-services/media/report-builder-map-point-properties.png)
   
 22. En la pestaña **Fuente** , elija el estilo **Negrita** y el tamaño **10pt**.
 
-    ![report-builder-map-point-properties-font](../reporting-services/media/report-builder-map-point-properties-font.png)
+    ![Captura de pantalla en la que se muestra la sección para cambiar las opciones de fuente, tamaño y color del cuadro de diálogo Propiedades de punto de mapa.](../reporting-services/media/report-builder-map-point-properties-font.png)
   
 23. En la pestaña **General** , seleccione **Inferior** en **Colocación**.
 
@@ -222,7 +222,7 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
   
 24. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
 
-    ![report-builder-map-city-names](../reporting-services/media/report-builder-map-city-names.png)
+    ![Captura de pantalla en la que se muestra una vista previa del mapa de Report Builder con los nombres de ciudades en una fuente negrita de 10 puntos.](../reporting-services/media/report-builder-map-city-names.png)
   
     El mapa muestra las ubicaciones de los almacenes del Estado de Nueva York. El tamaño de marcador para cada almacén se basa en el área de visualización. Se calcularon automáticamente para usted cinco rangos de área de presentación.
 
@@ -241,7 +241,7 @@ Use el Asistente para capas de mapa para agregar una capa de mapa que muestre un
   
 4.  En la página **Elija un conjunto de datos con datos espaciales de SQL Server** , haga clic en **Agregar un nuevo conjunto de datos con datos espaciales de SQL Server** y haga clic en **Siguiente**.  
   
-5.  En **Elegir una conexión con un origen de datos espaciales de SQL Server**, seleccione el origen de datos que ha usado en el primer procedimiento.  
+5.  En **Elegir una conexión con un origen de datos espaciales de SQL Server** , seleccione el origen de datos que ha usado en el primer procedimiento.  
   
 6.  Haga clic en **Next**.  
   
@@ -266,13 +266,13 @@ Use el Asistente para capas de mapa para agregar una capa de mapa que muestre un
   
 11. Haga clic en **Next**.  
   
-12. En la página **Elegir visualización de mapa** , haga clic en **Mapa de líneas básico**y, después, en **Siguiente**.  
+12. En la página **Elegir visualización de mapa** , haga clic en **Mapa de líneas básico** y, después, en **Siguiente**.  
   
-13. En **Elegir tema de color y visualización de datos**, seleccione la opción **Mapa de un color**. La ruta aparece en un color basado en el tema seleccionado.  
+13. En **Elegir tema de color y visualización de datos** , seleccione la opción **Mapa de un color**. La ruta aparece en un color basado en el tema seleccionado.  
   
 14. Haga clic en **Finalizar**  
 
-    ![report-builder-map-line](../reporting-services/media/report-builder-map-line.png)
+    ![Captura de pantalla en la que se muestra el mapa de Report Builder con una capa de línea.](../reporting-services/media/report-builder-map-line.png)
   
      El mapa muestra una nueva capa de línea con el tipo de origen de datos espaciales **DataRegion**. En este ejemplo, los datos espaciales proceden de un conjunto de datos, pero ningún dato analítico se asocia a la línea.  
 
@@ -281,7 +281,7 @@ Use el Asistente para capas de mapa para agregar una capa de mapa que muestre un
 
 15. Expanda la sección **Ver** y, después, expanda **Ver** para que pueda ver la propiedad **Zoom** . Establézcalo en **125**. 
 
-    ![report-builder-map-zoom](../reporting-services/media/report-builder-map-zoom.png)
+    ![Captura de pantalla en la que se muestra cómo ajustar el zoom del mapa de Report Builder.](../reporting-services/media/report-builder-map-zoom.png)
 
       Este es el porcentaje de zoom. En 125 %, debería ver el estado completo.
   
@@ -301,9 +301,9 @@ En esta sección, agregará una capa de mapa que muestre un fondo de mosaico de 
   
 4.  Haga clic en la flecha situada junto a TileLayer1 > **Propiedades del mosaico**.  
   
-5.  En la pestaña **General** , en **Tipo**, seleccione **Aéreo**. La vista aérea no contiene texto.  
+5.  En la pestaña **General** , en **Tipo** , seleccione **Aéreo**. La vista aérea no contiene texto.  
 
-    ![report-builder-map-bing-aerial](../reporting-services/media/report-builder-map-bing-aerial.png)
+    ![Captura de pantalla en la que se muestra la capa de mosaico aéreo de Mapas de Bing agregada al mapa de Report Builder.](../reporting-services/media/report-builder-map-bing-aerial.png)
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -320,7 +320,7 @@ En esta sección, para permitir que los elementos de una capa se muestren a trav
   
      La superficie de diseño muestra los condados como semitransparentes.  
 
-    ![report-builder-map-transparency](../reporting-services/media/report-builder-map-transparency.png)
+    ![Captura de pantalla en la que se muestra cómo establecer la transparencia de una capa del mapa de Report Builder.](../reporting-services/media/report-builder-map-transparency.png)
   
 ## <a name="6-vary-county-color-based-on-sales"></a><a name="Vary"></a>6. Variar los colores de condado de acuerdo con las ventas  
 Cada condado de la capa de polígono tiene un color diferente porque el procesador de informes asigna automáticamente un valor de color de la paleta de colores en función del tema que eligió en la última página del Asistente para mapas.  
@@ -336,21 +336,21 @@ Para variar las formas del condado por el color según los datos analíticos, de
   
 3.  Haga clic en la flecha situada junto a PolygonLayer1 y, después, haga clic en **Datos de la capa**. Se abre el cuadro de diálogo **Propiedades de capa de polígono de mapa** .  
   
-4.  En la pestaña **Datos analíticos** , en **Conjunto de datos analíticos**, seleccione DataSet1. El asistente ha creado este conjunto de datos al crear la consulta de datos espaciales para los condados.  
+4.  En la pestaña **Datos analíticos** , en **Conjunto de datos analíticos** , seleccione DataSet1. El asistente ha creado este conjunto de datos al crear la consulta de datos espaciales para los condados.  
   
-6.  En **Campos en los que establecer coincidencias**, haga clic en **Agregar**. Se agrega una nueva fila.  
+6.  En **Campos en los que establecer coincidencias** , haga clic en **Agregar**. Se agrega una nueva fila.  
   
-7.  En **Desde el conjunto de datos espaciales**, haga clic en COUNTYNAME.  
+7.  En **Desde el conjunto de datos espaciales** , haga clic en COUNTYNAME.  
   
-8.  En **Desde el conjunto de datos analíticos**, haga clic en [County].  
+8.  En **Desde el conjunto de datos analíticos** , haga clic en [County].  
 
-    ![report-builder-map-county-colors](../reporting-services/media/report-builder-map-county-colors.png)
+    ![Captura de pantalla en la que se muestra la pestaña Datos analíticos del cuadro de diálogo Propiedades de capa de polígono de mapa.](../reporting-services/media/report-builder-map-county-colors.png)
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. Obtenga una vista previa del informe.  
 
-    ![report-builder-map-county-highlight](../reporting-services/media/report-builder-map-county-highlight.png)
+    ![Captura de pantalla en la que se muestra una vista previa del mapa de Report Builder con determinados condados resaltados.](../reporting-services/media/report-builder-map-county-highlight.png)
   
 Al especificar un campo coincidente del origen de datos espaciales y el conjunto de datos analíticos, el procesador de informes puede agrupar los datos analíticos según los elementos de mapa. Un elemento de mapa enlazado a datos tiene una coincidencia correcta para los valores que especificó.  
   
@@ -367,7 +367,7 @@ Para crear una regla que varía el color de cada condado basándose en las venta
   
 3.  Seleccione **Visualizar datos mediante los rangos de colores**. La opción de la paleta se reemplaza con las opciones de color inicial, color intermedio y color final.  
   
-4.  Defina los valores de rango para las ventas de cada condado. En **Campo de datos**, en la lista desplegable, seleccione `[Sum(Sales)]`.  
+4.  Defina los valores de rango para las ventas de cada condado. En **Campo de datos** , en la lista desplegable, seleccione `[Sum(Sales)]`.  
   
 5.  Para cambiar el formato para mostrar la moneda en millares, cambie la expresión a la siguiente: `=Sum(Fields!Sales.Value)/1000`  
   
@@ -377,7 +377,7 @@ Para crear una regla que varía el color de cada condado basándose en las venta
   
     **Rojo** representa valores de ventas bajos, **Amarillo** representa valores de ventas intermedios y **Verde** representa valores de ventas altos. El procesador de informes calcula un rango de colores según estos valores y las opciones que elija en la página **Distribución** .  
     
-    ![report-builder-map-county-color-rules](../reporting-services/media/report-builder-map-county-color-rules.png)
+    ![Captura de pantalla en la que se muestra la sección Cambiar reglas de color para los polígonos del cuadro de diálogo Propiedades de reglas de color de mapa.](../reporting-services/media/report-builder-map-county-color-rules.png)
   
 8.  Haga clic en **Distribución**.  
   
@@ -387,15 +387,15 @@ Para crear una regla que varía el color de cada condado basándose en las venta
   
 11. Haga clic en **Leyenda**.  
   
-12. En **Opciones de escala de colores**, compruebe que la opción **Mostrar en escala de colores** está seleccionada.  
+12. En **Opciones de escala de colores** , compruebe que la opción **Mostrar en escala de colores** está seleccionada.  
   
-13. En **Mostrar en esta leyenda**, en la lista desplegable, seleccione la línea en blanco. Por ahora, mostrará los rangos de colores solo en la escala de colores.  
+13. En **Mostrar en esta leyenda** , en la lista desplegable, seleccione la línea en blanco. Por ahora, mostrará los rangos de colores solo en la escala de colores.  
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
 15. Obtenga una vista previa del informe.
 
-    ![report-builder-map-county-color-rule-preview](../reporting-services/media/report-builder-map-county-color-rule-preview.png)
+    ![Captura de pantalla en la que se muestra una vista previa del mapa de condados de Report Builder con reglas de color específicas aplicadas.](../reporting-services/media/report-builder-map-county-color-rule-preview.png)
   
     La escala de colores muestra cuatro colores: rojo, naranja, amarillo y verde. Cada color representa un rango de ventas que se calcula automáticamente de acuerdo con las ventas por condado.  
   
@@ -404,7 +404,7 @@ De forma predeterminada, los datos tienen un formato general. En esta sección, 
   
 1. Cambie a la vista de diseño.  
 
-2. Seleccione la escala de colores. En la pestaña **Inicio** > sección **Número**, haga clic en **Moneda**.  
+2. Seleccione la escala de colores. En la pestaña **Inicio** > sección **Número** , haga clic en **Moneda**.  
   
 4.  Aún en la sección **Número** , haga clic en el botón **Disminuir decimales** dos veces.  
   
@@ -418,7 +418,7 @@ De forma predeterminada, los datos tienen un formato general. En esta sección, 
 
 3. Cambie la propiedad TextColor a **Blanco**.  
 
-    ![report-builder-map-color-scale-title](../reporting-services/media/report-builder-map-color-scale-title.png)
+    ![Captura de pantalla en la que se muestra cómo configurar el título de una leyenda.](../reporting-services/media/report-builder-map-color-scale-title.png)
   
 8.  Obtenga una vista previa del informe.  
   
@@ -435,13 +435,13 @@ Puede configurar las opciones de presentación predeterminadas para todos los el
   
 3.  Haga clic en la flecha abajo en PolygonLayer1 y, a continuación, haga clic en **Propiedades del polígono**. 
 
-     ![report-builder-map-polygon-layer-properties](../reporting-services/media/report-builder-map-polygon-layer-properties.png)
+     ![Captura de pantalla en la que se muestra cómo seleccionar la opción Propiedades del polígono.](../reporting-services/media/report-builder-map-polygon-layer-properties.png)
 
      El cuadro de diálogo **Propiedades de polígono de mapa** se abre. Las opciones de presentación configuradas en este cuadro de diálogo se aplican a todos los polígonos de la capa antes de que se apliquen las opciones de presentación basadas en reglas.  
   
 4.  En la pestaña **Relleno** , compruebe que el estilo de relleno es **Sólido.** Los degradados y patrones se aplican a todos los colores.  
   
-6.  En **Color**, seleccione **Azul acero claro**.  
+6.  En **Color** , seleccione **Azul acero claro**.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -464,25 +464,25 @@ Para representar un nuevo almacén que aún no se ha generado, en esta sección 
   
 5.  Haga clic en la ubicación del mapa donde desee agregar un punto. En este tutorial, haga clic en una ubicación del condado de Oneida. Se agrega un punto marcado por un círculo a la capa en la ubicación en la que ha hecho clic. De forma predeterminada, el punto se selecciona.  
 
-    ![report-builder-map-custom-point](../reporting-services/media/report-builder-map-custom-point.png)
+    ![Captura de pantalla en la que se muestra cómo agregar un punto personalizado al mapa de Report Builder.](../reporting-services/media/report-builder-map-custom-point.png)
   
 6.  Haga clic con el botón derecho en el punto que ha agregado y, después, haga clic en **Propiedades de punto incrustado**.  
   
 7.  Seleccione **Invalidar opciones de punto para esta capa**. Aparecen páginas adicionales en el cuadro de diálogo. Los valores que establece aquí tienen prioridad sobre las opciones de presentación de la capa o sobre las reglas de color.  
 
-    ![report-builder-map-custom-point-general](../reporting-services/media/report-builder-map-custom-point-general.png)
+    ![Captura de pantalla en la que se muestra la sección Cambiar las opciones de punto incrustado del cuadro de diálogo Propiedades de punto incrustado de mapa.](../reporting-services/media/report-builder-map-custom-point-general.png)
   
-8.  En la pestaña **Marcador** , en **Tipo de marcador**, seleccione **Estrella**.  
+8.  En la pestaña **Marcador** , en **Tipo de marcador** , seleccione **Estrella**.  
 
 10. Cambie **Tamaño de marcador** a **18pt**.
   
-3.  En **Etiquetas** , en **Texto de etiqueta**, escriba **Nuevo almacén**.  
+3.  En **Etiquetas** , en **Texto de etiqueta** , escriba **Nuevo almacén**.  
   
-5.  En **Colocación**, haga clic en **Superior**.  
+5.  En **Colocación** , haga clic en **Superior**.  
 
 13. En la pestaña **Fuente** , elija el tamaño de fuente **10pt** y **Negrita**.
 
-    ![report-builder-map-custom-point-font](../reporting-services/media/report-builder-map-custom-point-font.png)
+    ![Captura de pantalla en la que se muestra la sección para cambiar las opciones de fuente, tamaño y color del cuadro de diálogo Propiedades de punto incrustado de mapa.](../reporting-services/media/report-builder-map-custom-point-font.png)
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -490,7 +490,7 @@ Para representar un nuevo almacén que aún no se ha generado, en esta sección 
   
 Aparece la etiqueta sobre la ubicación del almacén.  
 
-![report-builder-map-custom-point-new-store](../reporting-services/media/report-builder-map-custom-point-new-store.png)
+![Captura de pantalla en la que se muestra una vista previa del mapa de Report Builder con el nuevo almacén de punto personalizado destacado.](../reporting-services/media/report-builder-map-custom-point-new-store.png)
   
 ## <a name="8-center-and-resize-the-map"></a><a name="CenterView"></a>8. Centrar y cambiar el tamaño del mapa   
 En esta sección, aprenderá a cambiar el centro del mapa y otro método para cambiar el nivel de zoom.  
@@ -527,15 +527,15 @@ Este título aparecerá en la parte superior del informe. Cuando no hay ningún 
   
 1.  En la vista Diseño o Vista previa, en el menú **Archivo** > **Guardar como**.
  
-3.  En **Nombre**, escriba **Ventas de almacenes en Nueva York**.  
+3.  En **Nombre** , escriba **Ventas de almacenes en Nueva York**.  
 
 3. Guárdelo en el equipo local o en un servidor de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .
   
-4. Haga clic en **Save**(Guardar). 
+4. Haga clic en **Save** (Guardar). 
 
 Si lo guarda en un servidor de informes, puede verlo allí.
 
-![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
+![Captura de pantalla en la que se muestra el mapa de Report Builder completado en el portal.](../reporting-services/media/report-builder-map-in-portal.png) 
   
 ## <a name="next-steps"></a>Pasos siguientes  
 De esta forma se concluye el tutorial sobre cómo agregar un mapa a un informe.  

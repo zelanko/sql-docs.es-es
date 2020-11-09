@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: b44e664d75735a6283d12f218b904fbdd07ad481
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1af364896504dff41ab01095a69e8f581e792096
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396540"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243722"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novedades de SQL Server Reporting Services (SSRS)
 
@@ -29,7 +29,7 @@ Para obtener información sobre Power BI Report Server, vea [¿Qué es Power BI 
 
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
-**Descarga** ![descarga](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "descarga")
+**Descargar** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
 
 [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) está disponible para descarga en el Centro de descarga de Microsoft.
 
@@ -67,7 +67,7 @@ La versión recién publicada del Generador de informes es totalmente compatible
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
 
-**Descarga** ![descarga](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "descarga")
+**Descargar** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
 
 Para descargar SQL Server 2017 Reporting Services, vaya al **[Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)** .
 
@@ -117,7 +117,7 @@ Para crear informes móviles, necesita [!INCLUDE[SS_MobileReptPub_Short](../incl
 
 Para más información sobre el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)], consulte [Portal web (modo nativo de SSRS)](../reporting-services/web-portal-ssrs-native-mode.md).  
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
+![Captura de pantalla en la que se muestra el portal de SQL Server Reporting Services.](../reporting-services/media/ssrsportal.png "ssRSPortal")  
 
 #### <a name="custom-branding-for-the-ssrswebportal-non-markdown"></a>Personalización de marca para el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -129,7 +129,7 @@ Para más información sobre la personalización de marca, consulte [Personaliza
 
 Cree KPI directamente en el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] que sean contextuales a la carpeta actual. Al crear los KPI, puede elegir campos de conjunto de datos y resumir sus valores. También puede seleccionar contenido relacionado para profundizar y exponer más detalles.
 
-![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
+![Captura de pantalla en la que se muestran los KPI en el portal de SQL Server Reporting Services.](../reporting-services/media/ssrs-webportal-kpi.png)
 
 Para obtener más información, vea [Uso de los KPI en Reporting Services](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
 
@@ -194,13 +194,13 @@ Para más información sobre la compatibilidad de exploradores, vea [Compatibili
 
 ![nota](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") Las suscripciones de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administran la actualización y, después de anclar el elemento, se pueden modificar para configurar una programación de actualización distinta.
 
-![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
+![Captura de pantalla en la que se muestra el cuadro de diálogo Anclar a panel de Power BI.](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
 Para más información, vea [Integración de Power BI Report Server &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) y [Anclado de elementos de Reporting Services en paneles de Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
 **Representación y exportación de PowerPoint:** el formato de Microsoft PowerPoint (PPTX) es una extensión de representación de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] nueva. Puede exportar informes en formato PPTX desde las aplicaciones habituales, como el Generador de informes, el Diseñador de informes (en SSDT) y el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. A modo de ejemplo, en la imagen siguiente se muestra el menú Exportar en [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
 
-![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
+![Captura de pantalla en la que se muestra la lista desplegable Exportar con la opción de PowerPoint destacada.](../reporting-services/media/ssrs-export-powerpoint.png) 
 
 También puede seleccionar el formato PPTX para la salida de la suscripción y usar el acceso de dirección URL del servidor de informes para representar y exportar un informe. Por ejemplo, el siguiente comando de dirección URL de su explorador exporta un informe desde una instancia con nombre del servidor de informes.  
 
@@ -214,13 +214,13 @@ Para obtener más información, consulte [Export a Report Using URL Access](../r
 
 Para más información, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
-![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
+![Captura de pantalla del cuadro de diálogo Imprimir.](../reporting-services/media/ssrs-pdf-printing.png)
 
 ### <a name="subscription-improvements"></a>Mejoras en la suscripción  
 
 |Característica|Modo de servidor admitido|  
 |-------------|---------------------------|  
-|**Habilitar y deshabilitar suscripciones**. Hay opciones nuevas de interfaz de usuario para habilitar y deshabilitar rápidamente las suscripciones. Las suscripciones deshabilitadas mantienen sus otras propiedades de configuración, como la programación, y pueden habilitarse fácilmente.<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> Para obtener más información, consulte [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|en modo nativo|  
+|**Habilitar y deshabilitar suscripciones**. Hay opciones nuevas de interfaz de usuario para habilitar y deshabilitar rápidamente las suscripciones. Las suscripciones deshabilitadas mantienen sus otras propiedades de configuración, como la programación, y pueden habilitarse fácilmente.<br /><br /> ![Captura de pantalla en la que se muestran las opciones Habilitar, Deshabilitar y Eliminar.](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> Para obtener más información, consulte [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|en modo nativo|  
 |**Descripción de la suscripción**. Cuando crea una nueva suscripción, ahora puede incluir una descripción del informe como parte de las propiedades de la suscripción. La descripción se incluye en la página de resumen de la suscripción.|Modo nativo y SharePoint|  
 |**Cambiar el propietario de la suscripción**. Se ha mejorado la interfaz de usuario para poder cambiar rápidamente el propietario de una suscripción. Las versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] permiten a los administradores cambiar los propietarios de la suscripción con un script. A partir de la versión de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , puede cambiar los propietarios de la suscripción con la interfaz de usuario o con un script. El cambio del propietario de una suscripción es una tarea administrativa común cuando los usuarios dejan la organización o cuando cambian sus roles.|Modo nativo y SharePoint|  
 |**Credenciales compartidas para las suscripciones de recurso compartido de archivos**. Ahora existen dos flujos de trabajo con las suscripciones de recurso compartido de archivos de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :<br /><br /> Como novedad de esta versión, el administrador de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] puede configurar una única cuenta de recurso compartido de archivos, que se puede usar para varias suscripciones. La cuenta del recurso compartido de archivos está configurada en el administrador de configuración de modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]**Especificar una cuenta de recurso compartido de archivos**. En la página de configuración de la suscripción, los usuarios seleccionan **Usar la cuenta de recurso compartido de archivos**.<br /><br /> Configure las suscripciones individuales con credenciales específicas para el recurso compartido de archivos de destino.<br /><br /> También puede combinar los dos enfoques y definir que algunas suscripciones de recurso compartido de archivos usen la cuenta central de recurso compartido de archivos mientras otras suscripciones usen credenciales específicas.|en modo nativo|

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a924e8e6ed7a19904ddc9c8cded38683b849edeb
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245672"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043739"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Incorporación de un gráfico circular a un informe (Generador de informes)
 En este tutorial, creará un gráfico circular en un informe paginado de Reporting Services. Agregue porcentajes y combine segmentos pequeños en un único segmento.
@@ -23,7 +23,7 @@ Los gráficos circulares y de anillos muestran los datos como una proporción de
 
 En la siguiente ilustración se muestra el gráfico circular que creará. 
  
-![report-builder-pie-chart-final](../reporting-services/media/report-builder-pie-chart-final.png)
+![Captura de pantalla del gráfico circular de Report Builder.](../reporting-services/media/report-builder-pie-chart-final.png)
   
 Si hay demasiados puntos de datos en un gráfico circular, es posible que las etiquetas de los puntos de datos estén demasiado amontonadas y no puedan leerse. En ese caso, considere la posibilidad de combinar varios segmentos pequeños en un segmento mayor. Los gráficos circulares son más legibles al agregar los datos en algunos puntos de datos.  
  
@@ -43,13 +43,13 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
   
     Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
-    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
+    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos** , vaya al menú **Archivo** > **Nuevo**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
 3.  En el panel derecho, haga clic en **Asistente para gráficos**.  
   
-4.  En la página **Elegir un conjunto de datos** , haga clic en **Crear un conjunto de datos**y, después, haga clic en **Siguiente**.  
+4.  En la página **Elegir un conjunto de datos** , haga clic en **Crear un conjunto de datos** y, después, haga clic en **Siguiente**.  
   
 5.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos, y después haga clic en **Siguiente**. Puede que necesite escribir un nombre de usuario y contraseña.  
   
@@ -82,7 +82,7 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
 Podrá elegir entre varios tipos de gráfico predefinidos.  
 
   
-1.  En la página **Elegir un tipo de gráfico** , haga clic en **Circular**y, después, haga clic en **Siguiente**. Se abrirá la página **Organizar campos del gráfico** .  
+1.  En la página **Elegir un tipo de gráfico** , haga clic en **Circular** y, después, haga clic en **Siguiente**. Se abrirá la página **Organizar campos del gráfico** .  
   
     En la página **Organizar campos del gráfico** , arrastre el campo Product hasta el panel **Categorías** . Las categorías definen el número de segmentos del gráfico circular. En este ejemplo, habrá ocho segmentos, uno para cada producto.  
   
@@ -94,7 +94,7 @@ Podrá elegir entre varios tipos de gráfico predefinidos.
   
     El gráfico se agrega a la superficie de diseño. No ve los valores reales del gráfico circular, ve Product 1, Product 2, etc., para darle una idea del aspecto que tendrá el gráfico.  
     
-    ![report-builder-pie-chart-first-design](../reporting-services/media/report-builder-pie-chart-first-design.png)
+    ![Captura de pantalla del gráfico circular de Report Builder en la vista de diseño.](../reporting-services/media/report-builder-pie-chart-first-design.png)
   
 6.  Haga clic en el gráfico para mostrar las asas del gráfico. Arrastre la esquina inferior derecha del gráfico para hacerlo más grande. Observe que la superficie de diseño del informe también aumenta para adaptarse al tamaño del gráfico.  
   
@@ -102,7 +102,7 @@ Podrá elegir entre varios tipos de gráfico predefinidos.
   
 El informe muestra el gráfico circular con ocho segmentos, uno para cada producto. Ahora ve los productos reales y el tamaño de cada segmento representa las ventas de ese producto. Tres de los sectores son bastante finos.  
 
-![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
+![Captura de pantalla en la que se muestra una vista previa del gráfico circular de Report Builder.](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
 ## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. Mostrar porcentajes en cada sector  
 En cada sector del gráfico circular, puede mostrar un porcentaje de este sector respecto al círculo entero.  
@@ -116,12 +116,12 @@ En cada sector del gráfico circular, puede mostrar un porcentaje de este sector
   
 4.  En el cuadro **Datos de etiqueta** , seleccione **#PERCENT**.  
     
-5.  (Opcional) Para especificar el número de posiciones decimales que se deben mostrar en la etiqueta, en el cuadro **Datos de etiqueta** tras **#PERCENT**, escriba **{Pn}** , donde *n* es el número de posiciones decimales que se deben mostrar. Por ejemplo, para no mostrar ninguna posición decimal, escriba **#PERCENT{P0}** .  
+5.  (Opcional) Para especificar el número de posiciones decimales que se deben mostrar en la etiqueta, en el cuadro **Datos de etiqueta** tras **#PERCENT** , escriba **{Pn}** , donde *n* es el número de posiciones decimales que se deben mostrar. Por ejemplo, para no mostrar ninguna posición decimal, escriba **#PERCENT{P0}** .  
 
 6.  Para mostrar los valores como porcentajes, la propiedad UseValueAsLabel debe ser falsa. Si se le pide que establezca este valor en el cuadro de diálogo **Confirmar acción** , haga clic en **Sí**.  
   
     > [!NOTE]  
-    > La opción**Formato de número** del cuadro de diálogo **Propiedades de la etiqueta de la serie** no tiene ningún efecto al dar formato a los porcentajes. Esto aplica formato de porcentaje a las etiquetas, pero no calcula el porcentaje del gráfico circular que cada sector representa.  
+    > La opción **Formato de número** del cuadro de diálogo **Propiedades de la etiqueta de la serie** no tiene ningún efecto al dar formato a los porcentajes. Esto aplica formato de porcentaje a las etiquetas, pero no calcula el porcentaje del gráfico circular que cada sector representa.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -129,14 +129,14 @@ En cada sector del gráfico circular, puede mostrar un porcentaje de este sector
   
 El informe muestra el porcentaje de la totalidad para cada sector del gráfico circular.  
 
-![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
+![Captura de pantalla en la que se muestra una vista previa del gráfico circular de Report Builder con porcentajes en cada porción.](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
 ## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. Unir los sectores pequeños en un solo sector  
 Tres de los sectores del gráfico son bastante pequeños. Puede combinar varios segmentos pequeños en un segmento mayor "Otros" que represente los tres.  
 
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Si no ve el panel Propiedades, en la pestaña **Vista** > en el grupo **Mostrar u ocultar**, seleccione **Propiedades**.  
+2.  Si no ve el panel Propiedades, en la pestaña **Vista** > en el grupo **Mostrar u ocultar** , seleccione **Propiedades**.  
   
 3.  En la superficie de diseño, haga clic en cualquier sector del gráfico circular. Las propiedades de la serie se muestran en el panel de propiedades.  
   
@@ -144,7 +144,7 @@ Tres de los sectores del gráfico son bastante pequeños. Puede combinar varios 
   
 5.  Establezca la propiedad **CollectedStyle** en **SingleSlice**.  
 
-    ![report-builder-pie-chart-single-slice-property](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![Captura de pantalla en la que se muestra cómo establecer una propiedad de una única porción en el gráfico circular de Report Builder.](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
  
 6.  Compruebe que la propiedad **CollectedThreshold** esté establecida en 5.  
   
@@ -154,7 +154,7 @@ Tres de los sectores del gráfico son bastante pequeños. Puede combinar varios 
   
 En la leyenda, ahora ve la categoría "Otros". El nuevo sector del gráfico circular combina todos los sectores que estaban por debajo del 5% en un sector que es el 6% de todo el gráfico circular.  
 
-![generador-informes-gráfico-circular-inicia-en-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
+![Captura de pantalla en la que se muestra que el gráfico circular de Report Builder empieza en los 90 grados desde la parte superior del gráfico.](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
 ## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5. Iniciar los valores del gráfico circular desde la parte superior 
 
@@ -166,13 +166,13 @@ En esta sección, haremos que el primer valor se inicie en la parte superior.
 
 2. Seleccione el gráfico.
 
-3. En el panel Propiedades, en **Atributos personalizados**, cambie PieStartAngle de **0** a **270**.
+3. En el panel Propiedades, en **Atributos personalizados** , cambie PieStartAngle de **0** a **270**.
 
 4. Haga clic en **Ejecutar** para obtener una vista previa del informe.
 
 Ahora, los segmentos del gráfico circular están en orden alfabético, empezando en la parte superior y finalizando con el segmento "Otros".
 
-![generador-informes-gráfico-circular-inicia-parte-superior](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
+![Captura de pantalla en la que se muestra que el gráfico circular de Report Builder empieza en la parte superior.](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Agregar un título de informe  
   
@@ -182,7 +182,7 @@ Dado que el gráfico circular es la única visualización del informe, el gráfi
 
 2. En la superficie de diseño, haga clic en **Haga clic para agregar un título**.  
   
-2.  Escriba **Ventas de cámaras y cámaras de vídeo**, pulse ENTRAR y, después, escriba **Como porcentaje de ventas totales**, de modo que tenga este aspecto:  
+2.  Escriba **Ventas de cámaras y cámaras de vídeo** , pulse ENTRAR y, después, escriba **Como porcentaje de ventas totales** , de modo que tenga este aspecto:  
   
     **Ventas de cámaras y cámaras de vídeo**  
   
@@ -206,9 +206,9 @@ Dado que el gráfico circular es la única visualización del informe, el gráfi
   
 2.  En el menú **Archivo** , haga clic en **Guardar**.  
   
-3.  En **Nombre**, escriba **Gráfico circular de ventas**.  
+3.  En **Nombre** , escriba **Gráfico circular de ventas**.  
   
-4.  Haga clic en **Save**(Guardar).  
+4.  Haga clic en **Save** (Guardar).  
   
 El informe se guardará en el servidor de informes.  
   

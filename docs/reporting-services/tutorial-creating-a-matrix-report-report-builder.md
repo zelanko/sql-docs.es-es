@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4891a25815d1efb14f230cbab9bcaaa75cad0a16
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a0b49b2cf9ac1e131e74ba39c1430492823e39e5
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247454"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043789"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Crear un informe de matriz [Generador de informes]
 Este tutorial le enseña a crear un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con una matriz de datos de ventas de ejemplo en los grupos anidados de filas y columnas. 
 
 También creará un grupo de columnas adyacente, dará formato a columnas y girará el texto. En la siguiente ilustración se muestra un informe similar al que creará.  
   
-![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
+![Captura de pantalla de un informe de matriz de Report Builder.](../reporting-services/media/report-builder-matrix-tutorial.png)
    
 Tiempo estimado para completar este tutorial: 20 minutos.  
   
@@ -40,7 +40,7 @@ En esta sección, elegirá un origen de datos compartido, creará un conjunto de
   
     Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
-    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
+    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos** , vaya al menú **Archivo** > **Nuevo**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -120,11 +120,11 @@ Utilice el asistente para proporcionar un diseño inicial en el que mostrar los 
   
     Los pasos 5 y 6 especifican los datos que deben mostrarse en las celdas de datos de la matriz.
     
-    ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
+    ![Captura de pantalla en la que se muestra el asistente para organizar campos de Report Builder.](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
 7.  Haga clic en **Next**.  
   
-8.  En la página Elegir el diseño, en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
+8.  En la página Elegir el diseño, en **Opciones** , compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
 9. Compruebe que esté seleccionada la opción **Bloqueado, subtotal abajo** .  
   
@@ -136,7 +136,7 @@ Utilice el asistente para proporcionar un diseño inicial en el que mostrar los 
   
     La matriz se agrega a la superficie de diseño. El panel Grupos de filas muestra dos grupos de filas: Territory y SalesDate. El panel Grupos de columnas muestra dos grupos de columnas: Subcategory y Product. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
     
-    ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
+    ![Captura de pantalla en la que se muestran grupos de filas y de columnas de Report Builder.](../reporting-services/media/report-builder-row-and-column-groups.png)
   
 14. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
@@ -144,7 +144,7 @@ Utilice el asistente para proporcionar un diseño inicial en el que mostrar los 
 
 14. Expanda una subcategoría. Puede ver que el informe se amplía de forma rápida.
 
-![report-builder-expand-matrix](../reporting-services/media/report-builder-expand-matrix.png)
+![Captura de pantalla en la que se muestra un informe de matriz de Report Builder ampliado.](../reporting-services/media/report-builder-expand-matrix.png)
   
 ## <a name="3-format-data"></a><a name="FormatData"></a>3. Dar formato a datos  
 De forma predeterminada, los datos de resumen para el campo Sales muestran un número general y el campo SalesDate muestra información de fecha y de hora. En esta sección, dará formato al campo Sales para mostrar el número como moneda y al campo SalesDate para mostrar solo la fecha. Alterne **Estilos de marcador de posición** para mostrar los cuadros de texto con formato y el texto de marcador de posición como valores de ejemplo.  
@@ -157,9 +157,9 @@ De forma predeterminada, los datos de resumen para el campo Sales muestran un n�
   
 3.  En la pestaña **Inicio** > **Número** > **Moneda**. Las celdas cambian para mostrar la moneda con formato.  
   
-    Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [ **$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.  
+    Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [ **$12,345.00** ]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.  
     
-    ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
+    ![Captura de pantalla de la opción Valores de ejemplo de Report Builder.](../reporting-services/media/report-builder-placeholder-value.png)
   
 4.  Haga clic en la celda que contiene `[SalesDate]`.  
   
@@ -180,7 +180,7 @@ En esta sección, agregará un grupo de columnas adyacente al grupo de columnas 
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
-2.  Haga clic con el botón derecho en la celda que contiene `[Subcategory]`, señale **Agregar grupo**y luego haga clic en **Adyacente a la derecha**.  
+2.  Haga clic con el botón derecho en la celda que contiene `[Subcategory]`, señale **Agregar grupo** y luego haga clic en **Adyacente a la derecha**.  
   
     Se abre el cuadro de diálogo **Grupo de Tablix** .  
   
@@ -212,10 +212,10 @@ En esta sección, agregará un grupo de columnas adyacente al grupo de columnas 
   
 El informe incluye columnas denominadas Monday y Tuesday. El conjunto de datos solo contiene los datos de estos dos días.  
 
-![report-builder-matrix-weekdays](../reporting-services/media/report-builder-matrix-weekdays.png)
+![Captura de pantalla en la que se muestran los días laborables en el informe de matriz de Report Builder.](../reporting-services/media/report-builder-matrix-weekdays.png)
   
 > [!NOTE]  
-> Si los datos incluyeran otros días, el informe también incluiría las columnas correspondientes. Cada columna tiene el encabezado de columna **Sales**y los totales de ventas por territorio.  
+> Si los datos incluyeran otros días, el informe también incluiría las columnas correspondientes. Cada columna tiene el encabezado de columna **Sales** y los totales de ventas por territorio.  
   
 ## <a name="5-change-column-widths"></a><a name="Width"></a>5. Cambiar el ancho de columna  
 Un informe que incluye una matriz normalmente se expande horizontalmente así como verticalmente cuando se ejecuta. Controlar la expansión horizontal es particularmente importante si piensa exportar el informe a los formatos como Microsoft Word o Adobe PDF, que se utilizan para los informes impresos. Si el informe se expande horizontalmente por varias páginas, el informe impreso es difícil de entender. Para minimizar la expansión horizontal, puede cambiar el tamaño de las columnas para que tengan solo el ancho necesario para mostrar los datos sin ajustar. También puede cambiar el nombre de las columnas para que sus títulos con el ancho necesario para mostrar los datos.  
@@ -234,7 +234,7 @@ Un informe que incluye una matriz normalmente se expande horizontalmente así co
   
     Las barras grises situadas en la parte superior y en el lado de la tabla son los identificadores de fila y de columna.  
     
-    ![report-builder-column-handles](../reporting-services/media/report-builder-column-handles.png)
+    ![Captura de pantalla de los manipuladores de columna y fila en el informe de matriz de Report Builder.](../reporting-services/media/report-builder-column-handles.png)
   
 5.  Para cambiar el tamaño de la columna QTY más alejada de la izquierda, seleccione la línea entre los identificadores de columna para que el cursor cambie a una flecha doble. Arrastre la columna hacia la izquierda hasta que el ancho sea de 1/2 pulgada.  
   
@@ -276,17 +276,17 @@ Los títulos de informe aparecen en la parte superior. Puede situar el título d
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
-2.  Seleccione el cuadro de texto de la parte superior del cuerpo del informe que contiene **Haga clic para agregar un título**y, después, pulse la tecla Suprimir.  
+2.  Seleccione el cuadro de texto de la parte superior del cuerpo del informe que contiene **Haga clic para agregar un título** y, después, pulse la tecla Suprimir.  
   
 3.  En la pestaña **Insertar** > **Encabezado** > **Agregar encabezado**.  
   
     Se agrega un encabezado a la parte superior del cuerpo del informe.  
   
-4.  En la pestaña **Insertar** , haga clic en **Cuadro de texto**y luego arrastre un cuadro de texto al encabezado del informe. Haga un cuadro de texto de aproximadamente 6 pulgadas de largo y 3/4 de pulgada de alto, y colóquelo en el lado izquierdo del encabezado del informe.  
+4.  En la pestaña **Insertar** , haga clic en **Cuadro de texto** y luego arrastre un cuadro de texto al encabezado del informe. Haga un cuadro de texto de aproximadamente 6 pulgadas de largo y 3/4 de pulgada de alto, y colóquelo en el lado izquierdo del encabezado del informe.  
   
 5.  En el cuadro de texto, escriba **Ventas por territorio, Subcategoría y Día**.  
   
-6.  Seleccione el texto que ha escrito, en la pestaña **Inicio** > **Fuente**:
+6.  Seleccione el texto que ha escrito, en la pestaña **Inicio** > **Fuente** :
     * **Tamaño 24 pt**
     * **Color Rojo oscuro**
  
@@ -309,9 +309,9 @@ En este tutorial, guarde el informe en un servidor de informes. Si no tiene acce
   
     Aparecerá el mensaje "Conectando con el servidor de informes". Una vez completada la conexión, verá el contenido de la carpeta de informes que el administrador del servidor de informes especificó como ubicación predeterminada para los informes.  
   
-4.  En **Nombre**, reemplace el nombre predeterminado por **SalesByTerritorySubcategory**.  
+4.  En **Nombre** , reemplace el nombre predeterminado por **SalesByTerritorySubcategory**.  
   
-5.  Haga clic en **Save**(Guardar).  
+5.  Haga clic en **Save** (Guardar).  
   
 El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
@@ -319,11 +319,11 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
   
 1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
-2.  Haga clic en **Escritorio**, **Mis documentos**o **Mi PC**y vaya a la carpeta donde desea guardar el informe.  
+2.  Haga clic en **Escritorio** , **Mis documentos** o **Mi PC** y vaya a la carpeta donde desea guardar el informe.  
   
-3.  En **Nombre**, reemplace el nombre predeterminado por **SalesByTerritorySubcategory**.  
+3.  En **Nombre** , reemplace el nombre predeterminado por **SalesByTerritorySubcategory**.  
   
-4.  Haga clic en **Save**(Guardar).  
+4.  Haga clic en **Save** (Guardar).  
   
 ## <a name="9-optional-rotate-text-box-270-degrees"></a><a name="RotateTextBox"></a>9. (Opcional) Girar 270 grados el cuadro de texto  
 Un informe con matrices se puede expandir horizontal y verticalmente cuando se ejecuta. Girando los cuadros de texto verticalmente o 270 grados, puede ahorrar espacio horizontal. El informe representado se hace más estrecho y, si se exporta a un formato como Microsoft Word, tendrá más posibilidades de ajustar en una página impresa.  
@@ -336,9 +336,9 @@ Un cuadro de texto también puede mostrar el texto como horizontal o como, verti
   
 2.  Seleccione la celda que contiene `[Territory].` 
 
-    >**Nota**: Seleccione la celda, no el texto. La propiedad WritingMode solo está disponible para la celda.
+    >**Nota** : Seleccione la celda, no el texto. La propiedad WritingMode solo está disponible para la celda.
     
-     ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
+     ![Captura de pantalla en la que se muestra la celda Territory en el informe de matriz de Report Builder.](../reporting-services/media/report-builder-select-territory-cell.png)
   
 3.  En el panel Propiedades, busque la propiedad WritingMode y cámbiela de **Default** a **Rotate270**.  
   
@@ -346,7 +346,7 @@ Un cuadro de texto también puede mostrar el texto como horizontal o como, verti
   
 4.  Compruebe que la propiedad CanGrow está establecida en **True**.  
   
-5.  En la pestaña **Inicio**, sección **Párrafo**, seleccione **Centro** y **Centrar** para colocar el texto en el centro de la celda tanto vertical como horizontalmente.  
+5.  En la pestaña **Inicio** , sección **Párrafo** , seleccione **Centro** y **Centrar** para colocar el texto en el centro de la celda tanto vertical como horizontalmente.  
  
 6. Cambie el tamaño de la columna Territory para que tenga un ancho de 1/2 pulgada y elimine el título de columna.  
 6.  Haga clic en **Ejecutar** para obtener una vista previa del informe.  

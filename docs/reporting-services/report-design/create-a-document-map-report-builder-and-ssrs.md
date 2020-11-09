@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bfb17d88af0c5901e0cb4ee0097d02c0225693d2
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: cd6c70f92cb409ee6742590709743897bb3e77f7
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85061046"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364447"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Crear un mapa del documento (Generador de informes y SSRS)
 
@@ -40,8 +40,7 @@ Un mapa del documento proporciona un conjunto de vínculos de navegación a los 
   
  Para más información, vea [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md).  
   
-##  <a name="AddRptItemToMap"></a>   
-#### <a name="to-add-a-report-item-to-a-document-map"></a>Para agregar un elemento de informe a un mapa del documento  
+##  <a name="to-add-a-report-item-to-a-document-map"></a><a name="AddRptItemToMap"></a> Para agregar un elemento de informe a un mapa del documento  
   
 1.  En la vista de diseño, seleccione el elemento de informe (tabla, matriz o medidor, por ejemplo) que desea agregar al mapa del documento. Las propiedades del elemento de informe aparecen en el panel de propiedades.  
   
@@ -58,8 +57,7 @@ Un mapa del documento proporciona un conjunto de vínculos de navegación a los 
 4.  Haga clic en **Ejecutar**. El informe se ejecuta y el mapa del documento muestra las etiquetas que ha creado. Haga clic en cualquier vínculo para saltar a la página del informe que contiene ese elemento.  
 
   
-##  <a name="AddUniqueValuesToMap"></a>   
-#### <a name="to-add-unique-group-values-to-a-document-map"></a>Para agregar valores de grupo únicos a un mapa del documento  
+##  <a name="to-add-unique-group-values-to-a-document-map"></a><a name="AddUniqueValuesToMap"></a> Para agregar valores de grupo únicos a un mapa del documento  
   
 1.  En la vista Diseño, seleccione la tabla, la matriz o la lista que contiene el grupo que desea mostrar en el mapa del documento. El Panel de agrupación muestra los grupos de filas y de columnas.  
   
@@ -75,8 +73,7 @@ Un mapa del documento proporciona un conjunto de vínculos de navegación a los 
   
 7.  Haga clic en **Ejecutar**. El informe se ejecuta y el mapa del documento muestra los valores de grupo. Haga clic en cualquier vínculo para saltar a la página del informe que contiene ese elemento.  
   
-##  <a name="HideMapWhenViewRpt"></a>   
-#### <a name="to-hide-the-document-map-when-you-view-a-report"></a>Para ocultar el mapa del documento al ver un informe  
+##  <a name="to-hide-the-document-map-when-you-view-a-report"></a><a name="HideMapWhenViewRpt"></a> Para ocultar el mapa del documento al ver un informe  
   
 1.  En el portal web, busque el informe que contiene el mapa del documento.  
   

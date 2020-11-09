@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fca4a966d661005f1c672011ac5712903644780b
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: b8db1d2a7fe18264c81d7585e02babef65b3346d
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462389"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364577"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Funciones del Generador de informes: función Multilookup
   Devuelve el conjunto de valores de primera coincidencia para el conjunto especificado de nombres a partir de un conjunto de datos que contiene pares nombre/valor.  
@@ -31,19 +31,19 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 #### <a name="parameters"></a>Parámetros  
  *source_expression*  
- (**VariantArray**) Una expresión que se evalúa en el ámbito actual y que especifica el conjunto de nombres o claves que se buscará. Por ejemplo, para un parámetro de varios valores, `=Parameters!IDs.value`.  
+ ( **VariantArray** ) Una expresión que se evalúa en el ámbito actual y que especifica el conjunto de nombres o claves que se buscará. Por ejemplo, para un parámetro de varios valores, `=Parameters!IDs.value`.  
   
  *destination_expression*  
- (**Variant**) Una expresión que se evalúa para cada fila de un conjunto de datos y que especifica el nombre o la clave que se hará coincidir. Por ejemplo, `=Fields!ID.Value`.  
+ ( **Variant** ) Una expresión que se evalúa para cada fila de un conjunto de datos y que especifica el nombre o la clave que se hará coincidir. Por ejemplo, `=Fields!ID.Value`.  
   
  *result_expression*  
- (**Variant**) Una expresión que se evalúa para la fila de un conjunto de datos donde *source_expression* = *destination_expression*, y que especifica el valor que se va a recuperar. Por ejemplo, `=Fields!Name.Value`.  
+ ( **Variant** ) Una expresión que se evalúa para la fila de un conjunto de datos donde *source_expression* = *destination_expression* , y que especifica el valor que se va a recuperar. Por ejemplo, `=Fields!Name.Value`.  
   
  *conjunto de datos*  
  Una constante que especifica el nombre de un conjunto de datos del informe. Por ejemplo, "Colores".  
   
 ## <a name="return"></a>Valor devuelto  
- Devuelve **VariantArray**o **Nothing** si no hay ninguna coincidencia.  
+ Devuelve **VariantArray** o **Nothing** si no hay ninguna coincidencia.  
   
 ## <a name="remarks"></a>Observaciones  
  Use **Multilookup** para recuperar un conjunto de valores de un conjunto de datos para los pares nombre-valor donde cada par tiene una relación de uno a uno. **MultiLookup** es equivalente de llamar **Lookup** para un conjunto de nombres o de claves. Por ejemplo, para un parámetro de varios valores que se base en identificadores de clave principal, puede usar **Multilookup** en una expresión de un cuadro de texto en una tabla para recuperar los valores asociados de un conjunto de datos que no esté enlazado al parámetro ni a la tabla.  
@@ -60,7 +60,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Se aplican las restricciones que se indican a continuación:  
   
--   Se evalúa**Multilookup** después de aplicar todas las expresiones de filtro.  
+-   Se evalúa **Multilookup** después de aplicar todas las expresiones de filtro.  
   
 -   Solo se admite un nivel de búsqueda. Un origen, un destino o una expresión de resultado no pueden incluir una referencia a una función de búsqueda.  
   
@@ -84,7 +84,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Para más información, vea [Funciones del generador de informes - referencia de funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) y [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="example"></a>Ejemplo  
+## <a name="examples"></a>Ejemplos
+
+### <a name="a-use-multilookup-function"></a>A. Uso de la función MultiLookup
  Suponga que un conjunto de datos denominado "Category" contiene el campo CategoryList, que es un campo que incluye una lista separada por comas de identificadores de categoría, "2, 4, 2, 1", por ejemplo.  
   
  El conjunto de datos CategoryNames contiene el identificador y el nombre de la categoría, tal como se muestra en la siguiente tabla.  
@@ -106,7 +108,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
    ", ")  
 ```  
   
-## <a name="example"></a>Ejemplo  
+### <a name="b-use-multilookup-with-multivalue-parameter"></a>B. Uso de MultiLookup con un parámetro con varios valores  
  Suponga que un conjunto de datos ProductColors contiene un campo de identificador de color, ColorID, y un campo de valor de color, Color, tal como se muestra en la siguiente tabla.  
   
 |ColorID|Color|  

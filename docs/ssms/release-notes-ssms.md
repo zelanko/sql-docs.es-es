@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: ce232d98e441d6ce217a2f97f6b8b1b5e130b7f3
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.openlocfilehash: fbfe0f98d5a61033bdc17e7c974e3859814ce4cc
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734639"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364787"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notas de la versión de SQL Server Management Studio (SSMS)
 
@@ -123,7 +123,7 @@ SSMS 18.7 es la versión de disponibilidad general (GA) más reciente de SSMS. 
 | Analysis Services | Se corrigió un problema que podría haber provocado un error al intentar conectarse a SSAS a través de msmdpump.dll. Vea [Comentarios del usuario de SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696). |
 | Copia de seguridad y restauración | Se solucionó un problema por el cual la selección de "Ver propiedades de conexión" producía un error SMO que causaba la falta de la propiedad HostDistribution para SQL 2016 y versiones anteriores. |
 | Diseñador de bases de datos | Se corrigió un problema que hacía que SSMS se bloqueara al administrar números decimales. |
-| Diagramas de base de datos | Se corrigió un problema que podía provocar que SSMS se bloqueara al usar diagramas de base de datos donde el cuadro de diálogo "Agregar tabla" no se mostraba correctamente. |
+| Diagramas de base de datos | Se ha corregido un problema que podía provocar que SSMS se bloqueara o dejara de responder al usar diagramas de base de datos donde el cuadro de diálogo "Agregar tabla" no se mostraba correctamente. |
 | Creación de reflejo de la base de datos | Se corrigió un problema que hacía que se produjera un error en la configuración del reflejo. Vea [Comentarios del usuario de SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897281). |
 | SSMS general | Se corrigió un problema al intentar conectarse a una base de datos SQL de Azure, que podía tardar varios segundos (inicio de sesión de SQL en una base de datos de usuario). |
 | SSMS general | Se corrigió un problema por el que SSMS no administraba ni mostraba el interbloqueo capturado (archivos .xdl). |
@@ -164,7 +164,7 @@ SSMS 18.7 es la versión de disponibilidad general (GA) más reciente de SSMS. 
 
 ### <a name="186"></a>18.6
 
-![Descargar](media/download-icon.png) [Descargar SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2146265)
+![Descargar](media/download-icon.png) [Descargar SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
 
 - Número de versión: 18.6
 - Número de compilación: 15.0.18338.0

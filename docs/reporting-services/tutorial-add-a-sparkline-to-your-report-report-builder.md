@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a60dfa5cf08b11789fde744f41a2c139f922d286
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245662"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043803"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adición de un minigráfico a un informe (Generador de informes)
 
@@ -22,7 +22,7 @@ En este tutorial del [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)],
   
 Los minigráficos y las barras de datos son gráficos simples y pequeños que contienen mucha información en poco espacio, a menudo en tablas y matrices de los informes de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . En la siguiente ilustración se muestra un informe similar al que creará.  
   
-![generador-de-informes-minigráfico-final](../reporting-services/media/report-builder-sparkline-final.png)  
+![Captura de pantalla en la que se muestra el minigráfico de Report Builder.](../reporting-services/media/report-builder-sparkline-final.png)  
      
 Tiempo estimado para completar este tutorial: 30 minutos.  
   
@@ -35,7 +35,7 @@ Para obtener más información sobre los requisitos, consulte [Requisitos previo
   
     Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
-    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
+    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos** , vaya al menú **Archivo** > **Nuevo**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -44,15 +44,15 @@ Para obtener más información sobre los requisitos, consulte [Requisitos previo
 4.  En la página **Elegir un conjunto de datos** , seleccione **Crear un conjunto de datos** > **Siguiente**. Se abre la página **Elegir una conexión a un origen de datos** .  
   
     > [!NOTE]  
-    > Para este tutorial no se necesitan datos concretos, solo una conexión a una base de datos de SQL Server. Si ya tiene una conexión de origen de datos enumerada en **Conexiones de origen de datos**, puede seleccionarla e ir al paso 10. Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Para este tutorial no se necesitan datos concretos, solo una conexión a una base de datos de SQL Server. Si ya tiene una conexión de origen de datos enumerada en **Conexiones de origen de datos** , puede seleccionarla e ir al paso 10. Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Haga clic en **Nueva**. Se abre el cuadro de diálogo **Propiedades del origen de datos** .  
   
-6.  En **Nombre**, escriba **Ventas de producto**como nombre del origen de datos.  
+6.  En **Nombre** , escriba **Ventas de producto** como nombre del origen de datos.  
   
-7.  En **Seleccionar un tipo de conexión**, compruebe que está seleccionado **Microsoft SQL Server** .  
+7.  En **Seleccionar un tipo de conexión** , compruebe que está seleccionado **Microsoft SQL Server** .  
   
-8.  En **Cadena de conexión**, escriba el texto siguiente:  
+8.  En **Cadena de conexión** , escriba el texto siguiente:  
   
     `Data Source\=<servername>`  
   
@@ -121,23 +121,23 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 4.  En la barra de herramientas del diseñador de consultas, haga clic en Ejecutar ( **!** ).  
   
-    La consulta se ejecuta y muestra el conjunto de resultados para los campos **SalesDate**, **Subcategory**, **Product**, **Sales**y **Quantity**.  
+    La consulta se ejecuta y muestra el conjunto de resultados para los campos **SalesDate** , **Subcategory** , **Product** , **Sales** y **Quantity**.  
   
 5.  Haga clic en **Next**.  
   
 6.  En la página **Organizar campos** , arrastre **Sales** hasta **Valores**.  
   
-    La función Sum agrega**Sales** . El valor es [Sum(Sales)].  
+    La función Sum agrega **Sales** . El valor es [Sum(Sales)].  
   
 7.  Arrastre **Product** hasta **Grupos de filas**.  
   
 8.  Arrastre **SalesDate** hasta **Grupos de columnas**.  
 
-    ![generador-de-informes-minigráfico-organizar-campos](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
+    ![Captura de pantalla en que se muestra cómo organizar campos.](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
 9. Haga clic en **Next**.  
   
-10. En la página **Elegir el diseño** , en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
+10. En la página **Elegir el diseño** , en **Opciones** , compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
     El panel Vista previa del asistente muestra una tabla con tres filas. Al ejecutar el informe, cada fila se mostrará de la siguiente forma:  
   
@@ -147,7 +147,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
     *  La tercera fila aparecerá una vez en la tabla para mostrar los totales generales.  
     
-    ![generador-de-informes-minigráfico-elegir-diseño](../reporting-services/media/report-builder-sparkline-choose-layout.png)
+    ![Captura de pantalla en que se muestra cómo elegir un diseño.](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
 11. Haga clic en **Next**.  
   
@@ -157,7 +157,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
     Busque en el panel Agrupación. Si no ve el panel Agrupación, en el menú **Vista** , haga clic en **Agrupación**. El panel Grupos de filas muestra un grupo de filas: **Product**. El panel Grupos de columnas muestra un grupo de columnas: **SalesDate**. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
     
-    ![generador-de-informes-minigráfico-panel-agrupación](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
+    ![Captura de pantalla en la que se muestra el panel de agrupación de Report Builder.](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
 
@@ -168,15 +168,15 @@ De manera predeterminada, los datos de resumen del campo **Sales** se muestran e
   
 2.  Haga clic en la celda en la segunda fila (bajo la fila de encabezados de columna) en la columna **SalesDate** . Mantenga presionada la tecla CTRL y seleccione todas las celdas que contienen `[Sum(Sales)]`. 
 
-    ![generador-de-informes-seleccionar-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
+    ![Captura de pantalla en la que muestra cómo seleccionar las ventas acumuladas.](../reporting-services/media/report-builder-select-sum-sales.png) 
   
-3.  En la pestaña **Inicio** > grupo **Número**, haga clic en **Moneda**. Las celdas cambian para mostrar la moneda con formato.  
+3.  En la pestaña **Inicio** > grupo **Número** , haga clic en **Moneda**. Las celdas cambian para mostrar la moneda con formato.  
 
-    ![generador-de-informes-marcador de posición-moneda](../reporting-services/media/report-builder-placeholder-currency.png)
+    ![Captura de pantalla en la que se muestran las ventas acumuladas reemplazadas por valores de moneda de marcador de posición.](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [ **$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.  
+    Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [ **$12,345.00** ]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.  
     
-    ![generador-de-informes-botón-valor-marcador-de-posición](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![Captura de pantalla en la que se muestra la opción Valores de ejemplo seleccionada.](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. (Opcional) Dar formato a datos como fechas  
 De manera predeterminada, en el campo **SalesDate** se muestra información de fecha y hora. Puede darle formato para mostrar solo la fecha.  
@@ -197,13 +197,13 @@ Los valores **SalesDate** se muestran en el formato de fecha predeterminado, y l
   
 2.  Seleccione la columna Total en su tabla.  
   
-3.  Haga clic con el botón derecho, señale **Insertar columna**y, después, haga clic en **Izquierda**.  
+3.  Haga clic con el botón derecho, señale **Insertar columna** y, después, haga clic en **Izquierda**.  
 
-    ![generador-de-informes-agregar-columna-izquierda](../reporting-services/media/report-builder-add-column-left.png)
+    ![Captura de pantalla en la que se muestra cómo insertar una columna a la izquierda.](../reporting-services/media/report-builder-add-column-left.png)
   
 4.  En la nueva columna, haga clic con el botón derecho en la celda de la fila `[Product]` > **Insertar** > **Minigráfico**.  
 
-    ![generador-de-informes-insertar-minigráfico](../reporting-services/media/report-builder-insert-sparkline.png)
+    ![Captura de pantalla en la que se muestra cómo insertar un minigráfico.](../reporting-services/media/report-builder-insert-sparkline.png)
   
 5.  En el cuadro de diálogo **Seleccionar tipo de minigráfico** , asegúrese de que está seleccionado el primer minigráfico de la fila **Columna** y, después, haga clic en **Aceptar**.  
   
@@ -211,7 +211,7 @@ Los valores **SalesDate** se muestran en el formato de fecha predeterminado, y l
   
 7.  Haga clic en el signo más (+) en el cuadro Valores y, después, haga clic en **Sales**. 
 
-    ![generador-de-informes-valores-minigráfico](../reporting-services/media/report-builder-sparkline-values.png) 
+    ![Captura de pantalla en la que se muestra cómo agregar valores al minigráfico de Report Builder. ](../reporting-services/media/report-builder-sparkline-values.png) 
   
     Los valores del campo **Sales** son ahora los valores para el minigráfico.  
   
@@ -223,7 +223,7 @@ Los valores **SalesDate** se muestran en el formato de fecha predeterminado, y l
   
     Además, para cada fila, la barra más alta es el alto de la fila. Esto también induce a error porque los valores mayores de cada fila no son iguales: el valor mayor para Budget Movie-Maker es 10 400 $, pero para Slim Digital es 26 576 $, más del doble. Además, las barras más grandes de esas dos filas tienen aproximadamente el mismo alto. Todos los minigráficos necesitan usar la misma escala.  
   
-     ![generador-de-informes-minigráfico-desalineados](../reporting-services/media/report-builder-sparkline-misaligned.png)
+     ![Captura de pantalla en la que se muestra un minigráfico de Report Builder mal alineado.](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
 ## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. Alinear los minigráficos vertical y horizontalmente  
 Los minigráficos son difíciles de leer cuando todos no usan las mismas medidas. Los ejes horizontal y vertical de cada uno tienen que coincidir con el resto.  
@@ -250,7 +250,7 @@ Los minigráficos son difíciles de leer cuando todos no usan las mismas medidas
   
 Ahora todas las barras de cada minigráfico se alinean con las barras de los otros minigráficos, y el alto es relativo.  
   
-![generador-de-informes-minigráfico-alineados](../reporting-services/media/report-builder-sparkline-aligned.png)
+![Captura de pantalla en la que se muestra un minigráfico de Report Builder que está alineado.](../reporting-services/media/report-builder-sparkline-aligned.png)
   
 ## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. (Opcional) Cambiar el ancho de columna  
 De forma predeterminada, cada celda de una tabla contiene un cuadro de texto. Un cuadro de texto se expande verticalmente para alojar el texto cuando se representa la página. En el informe representado, cada fila se expande hasta el alto del cuadro de texto más alto representado de la fila. El alto de la fila en la superficie de diseño no tiene efecto alguno en el alto de la fila en el informe representado.  
@@ -276,7 +276,7 @@ El texto se puede mejorar aún más aplicando estilos de fuente, tamaños y colo
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Escriba **Ventas por fecha**y, después, haga clic fuera del cuadro de texto.  
+2.  Escriba **Ventas por fecha** y, después, haga clic fuera del cuadro de texto.  
   
 3.  Seleccione el cuadro de texto que contiene **Ventas de producto**.  
   
@@ -299,9 +299,9 @@ Guarde el informe un servidor de informes o en su equipo. Si no guarda el inform
   
     Aparecerá el mensaje "Conectando con el servidor de informes". Una vez completada la conexión, se mostrará el contenido de la carpeta de informes que el administrador del servidor de informes especificó como ubicación predeterminada para los informes.  
   
-4.  En **Nombre**, reemplace el nombre predeterminado por **Ventas de producto**.  
+4.  En **Nombre** , reemplace el nombre predeterminado por **Ventas de producto**.  
   
-5.  Haga clic en **Save**(Guardar).  
+5.  Haga clic en **Save** (Guardar).  
   
 El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
@@ -309,11 +309,11 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
   
 1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
-2.  Haga clic en **Escritorio**, **Mis documentos**o **Mi PC**y vaya a la carpeta donde quiere guardar el informe.  
+2.  Haga clic en **Escritorio** , **Mis documentos** o **Mi PC** y vaya a la carpeta donde quiere guardar el informe.  
   
-3.  En **Nombre**, reemplace el nombre predeterminado por **Ventas de producto**.  
+3.  En **Nombre** , reemplace el nombre predeterminado por **Ventas de producto**.  
   
-4.  Haga clic en **Save**(Guardar).  
+4.  Haga clic en **Save** (Guardar).  
   
 ## <a name="next-steps"></a>Pasos siguientes  
 

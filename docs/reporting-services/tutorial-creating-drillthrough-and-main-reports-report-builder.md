@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce825906ef6282cd722f91b1c0dbf76463a7c821
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0e5d34588bef3022f340d6a52dded1b03aad30d0
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238440"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364647"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Creación de informes principales y de obtención de detalles (Generador de informes)
 En este tutorial se explica cómo crear dos tipos de informes paginados de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un informe detallado y un informe principal. Los datos de ventas de ejemplo utilizados en estos informes se recuperan de un cubo de Analysis Services. 
@@ -45,7 +45,7 @@ En el cuadro de diálogo Introducción, cree un informe de matriz usando el **As
   
     Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
-    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
+    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos** , vaya al menú **Archivo** > **Nuevo**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -56,19 +56,19 @@ Una conexión de datos contiene la información necesaria para conectarse a un o
   
 #### <a name="to-create-an-embedded-data-source"></a>Para crear un origen de datos incrustado  
   
-1.  En la página **Elegir un conjunto de datos** , seleccione **Crear un conjunto de datos**y, después, haga clic en **Siguiente**. Se abre la página **Elegir una conexión a un origen de datos** .  
+1.  En la página **Elegir un conjunto de datos** , seleccione **Crear un conjunto de datos** y, después, haga clic en **Siguiente**. Se abre la página **Elegir una conexión a un origen de datos** .  
   
 2.  Haga clic en **Nueva**. Se abre el cuadro de diálogo **Propiedades del origen de datos** .  
   
-3.  En **Nombre**, escriba **Detalle de ventas en línea y por distribuidor** como nombre del origen de datos.  
+3.  En **Nombre** , escriba **Detalle de ventas en línea y por distribuidor** como nombre del origen de datos.  
   
-4.  En **Seleccionar un tipo de conexión**, seleccione **Microsoft SQL Server Analysis Services**y, después, haga clic en **Compilar**.  
+4.  En **Seleccionar un tipo de conexión** , seleccione **Microsoft SQL Server Analysis Services** y, después, haga clic en **Compilar**.  
   
-5.  En **Origen de datos**, compruebe que el origen de datos es **Microsoft SQL Server Analysis Services (AdomdClient)** .  
+5.  En **Origen de datos** , compruebe que el origen de datos es **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
-6.  En **Nombre del servidor**, escriba el nombre de un servidor donde esté instalada una instancia de Analysis Services.  
+6.  En **Nombre del servidor** , escriba el nombre de un servidor donde esté instalada una instancia de Analysis Services.  
   
-7.  En la lista **Seleccione o escriba un nombre de base de datos**, seleccione el cubo de Contoso.  
+7.  En la lista **Seleccione o escriba un nombre de base de datos** , seleccione el cubo de Contoso.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -102,7 +102,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 #### <a name="to-create-query-filters"></a>Crear filtros de consulta  
   
-1.  En la página **Diseñar una consulta**, en el panel Metadatos, haga clic en el botón **(...)** .  
+1.  En la página **Diseñar una consulta** , en el panel Metadatos, haga clic en el botón **(...)** .  
   
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
@@ -119,13 +119,13 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 4.  Para abrir la lista **Filtrar expresión** , haga clic en la flecha abajo en la columna **Filtrar expresión** .  
   
-5.  En la lista de expresiones de filtro, expanda **Todos los canales**, haga clic en **En línea**, en **Distribuidor**y, después, en **Aceptar**.  
+5.  En la lista de expresiones de filtro, expanda **Todos los canales** , haga clic en **En línea** , en **Distribuidor** y, después, en **Aceptar**.  
   
     Ahora la consulta contiene un filtro para incluir solo estos canales: En línea y Distribuidor.  
   
-6.  Expanda la dimensión Territorio de ventas y arrastre el Grupo del territorio de ventas a la columna **Jerarquía** (bajo **Nombre de canal**).  
+6.  Expanda la dimensión Territorio de ventas y arrastre el Grupo del territorio de ventas a la columna **Jerarquía** (bajo **Nombre de canal** ).  
   
-7.  Abra la lista **Filtrar expresión** , expanda **All Sales Territory**(Todos los territorios de ventas), haga clic en **Norteamérica**y haga clic en **Aceptar**.  
+7.  Abra la lista **Filtrar expresión** , expanda **All Sales Territory** (Todos los territorios de ventas), haga clic en **Norteamérica** y haga clic en **Aceptar**.  
   
     La consulta tiene ahora un filtro para incluir solamente las ventas de Norteamérica  
   
@@ -135,7 +135,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 9. Para abrir la lista **Filtrar expresión** , haga clic en la flecha abajo en la columna **Filtrar expresión** .  
   
-10. En la lista de expresiones de filtro, expanda **Todas las fechas**, haga clic en **Año 2009**y, después, haga clic en **Aceptar**.  
+10. En la lista de expresiones de filtro, expanda **Todas las fechas** , haga clic en **Año 2009** y, después, haga clic en **Aceptar**.  
   
     La consulta incluye ahora un filtro para incluir solo el año natural 2009.  
   
@@ -143,7 +143,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 1.  Expanda la dimensión Producto y, después, arrastre el miembro Nombre de categoría de producto hasta la columna **Jerarquía** , bajo **Año natural**.  
   
-2.  Abra la lista **Expresión de filtro** , haga clic en **Todos los productos**y, después, haga clic en **Aceptar**.  
+2.  Abra la lista **Expresión de filtro** , haga clic en **Todos los productos** y, después, haga clic en **Aceptar**.  
   
 3.  Active la casilla **Parámetro** . La consulta incluye ahora el parámetro ProductProductCategoryName.  
   
@@ -158,7 +158,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 3.  Desde la dimensión Producto, arrastre Product Subcategory Name (Nombre de subcategoría de producto) hasta el panel de datos y, después, colóquelo a la derecha de Nombre de categoría de producto.  
   
-4.  En el panel Metadatos, expanda **Medida**y, después, expanda Ventas.  
+4.  En el panel Metadatos, expanda **Medida** y, después, expanda Ventas.  
   
 5.  Arrastre la medida Importe de venta hasta el panel de datos y, después, colóquela a la derecha de Product Subcategory Name (Nombre de subcategoría de producto).  
   
@@ -166,7 +166,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 7.  Haga clic en **Next**.  
   
-## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. Organizar los datos en grupos  
+## <a name="1c-organize-drillthrough-report-data-into-groups"></a><a name="DLayout"></a>1c. Organizar los datos de informes de obtención de detalles en grupos  
 Al seleccionar los campos por los que desea agrupar los datos, diseñe una matriz con filas y columnas que muestre datos detallados y datos agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar los datos en grupos  
@@ -186,18 +186,18 @@ Al seleccionar los campos por los que desea agrupar los datos, diseñe una matri
   
     Puede abrir la lista desplegable Para ver las demás funciones de agregado disponibles, abra la lista desplegable (no cambie la función de agregado).  
   
-5.  Arrastre Sales_Return_Amount hacia **Valores**y, después, colóquelo bajo `[Sum(Sales_Amount)]`.  
+5.  Arrastre Sales_Return_Amount hacia **Valores** y, después, colóquelo bajo `[Sum(Sales_Amount)]`.  
   
     Los pasos 4 y 5 especifican los datos que deben aparecer en la matriz.  
   
 6.  Haga clic en **Next**.  
   
-## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. Agregar subtotales y totales  
+## <a name="1d-add-drillthrough-report-subtotals-and-totals"></a><a name="DTotals"></a>1d. Agregar los subtotales y totales de informes de obtención de detalles  
 Después de crear grupos, puede agregar filas y darles formato, donde se mostrarán los valores agregados para los campos. Puede decidir también si mostrar todos los datos o permitir que los usuarios expandan y contraigan de forma interactiva los datos agrupados.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Para agregar subtotales y totales  
   
-1.  En la página **Elegir el diseño** , en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
+1.  En la página **Elegir el diseño** , en **Opciones** , compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
     El panel Vista previa del asistente muestra una matriz con cuatro filas.  
   
@@ -227,11 +227,11 @@ En lugar de mostrar de ventas y retornos de ventas como valores de moneda, el in
   
 1.  Para cambiar a la vista de diseño, haga clic en **Diseño**.  
   
-2.  En el grupo Total de la matriz, Haga clic con el botón derecho en la columna **Importe de venta** , haga clic en **Insertar Columna**y, después, en **Derecha**.  
+2.  En el grupo Total de la matriz, Haga clic con el botón derecho en la columna **Importe de venta** , haga clic en **Insertar Columna** y, después, en **Derecha**.  
   
     Se agrega una columna vacía a la derecha de **Importe de venta**.  
   
-3.  En la cinta de opciones, haga clic en **Rectángulo**y, después, haga clic en la celda vacía situada a la derecha de la celda `[Sum(Sales_Amount)]` en el grupo de filas [Product_Subcategory].  
+3.  En la cinta de opciones, haga clic en **Rectángulo** y, después, haga clic en la celda vacía situada a la derecha de la celda `[Sum(Sales_Amount)]` en el grupo de filas [Product_Subcategory].  
   
 4.  En la cinta de opciones, haga clic en el icono **Minigráficos** y, después, haga clic en la celda donde se agregó el rectángulo.  
   
@@ -251,7 +251,7 @@ En lugar de mostrar de ventas y retornos de ventas como valores de moneda, el in
   
 12. En el panel Datos del gráfico, haga clic en el icono **Agregar campo** y, después, haga clic en Sales_Return_Amount.  
   
-13. Haga clic en **Ejecutar**para obtener la vista previa del informe.  
+13. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
 ## <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4. Agregar el título de informe con el nombre de categoría del producto  
 Los títulos de informe aparecen en la parte superior. Puede situar el título del informe en un encabezado de informe o, si el informe no lo utiliza, en un cuadro de texto en la parte superior del cuerpo del informe. En este tutorial, deberá utilizar el cuadro de texto que se coloca automáticamente en la parte superior del cuerpo del informe.  
@@ -268,7 +268,7 @@ Los títulos de informe aparecen en la parte superior. Puede situar el título d
   
 5.  Haga clic en el botón **(fx)** , a la derecha de la lista **Valor** .  
   
-6.  En el cuadro de diálogo **Expresión** , en el panel Categoría, haga clic en **Conjunto de datos**y, después, haga doble clic en **en la lista** Valores `First(Product_Category_Name)`.  
+6.  En el cuadro de diálogo **Expresión** , en el panel Categoría, haga clic en **Conjunto de datos** y, después, haga doble clic en **en la lista** Valores `First(Product_Category_Name)`.  
   
     El cuadro **Expresión** contiene la siguiente expresión:  
   
@@ -276,11 +276,11 @@ Los títulos de informe aparecen en la parte superior. Puede situar el título d
     =First(Fields!Product_Category_Name.Value, "DataSet1")  
     ```  
   
-7.  Haga clic en **Ejecutar**para obtener la vista previa del informe.  
+7.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
 El título del informe incluye el nombre de la primera categoría de producto. Después, tras ejecutar este informe como un informe detallado, el nombre de la categoría de producto cambiará dinámicamente, para reflejar el nombre de la categoría de producto en la que se hizo clic en el informe principal.  
   
-## <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5. Actualizar las propiedades de parámetro  
+## <a name="5-set-hidden-parameter-property"></a><a name="DParameter"></a>5. Establecer la propiedad de parámetro oculto  
 De forma predeterminada los parámetros están visibles, lo que no es adecuado para este informe. Actualizará las propiedades de parámetro para el informe detallado.  
   
 #### <a name="to-hide-a-parameter"></a>Ocultar un parámetro  
@@ -323,9 +323,9 @@ Puede guardar el informe en una biblioteca de SharePoint, en un servidor de info
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  Haga clic en **Save**(Guardar).  
+4.  Haga clic en **Save** (Guardar).  
   
-    En**Sitios y servidores recientes** se enumeran las bibliotecas del sitio de SharePoint.  
+    En **Sitios y servidores recientes** se enumeran las bibliotecas del sitio de SharePoint.  
   
 5.  Navegue hasta la biblioteca donde guardará el informe.  
   
@@ -334,7 +334,7 @@ Puede guardar el informe en una biblioteca de SharePoint, en un servidor de info
     > [!NOTE]  
     > Guardará el informe principal en la misma ubicación. Si quiere guardar los informes detallados y principal en sitios o bibliotecas diferentes, debe actualizar la ruta de acceso de la acción **Ir a informe** en el informe principal.  
   
-7.  Haga clic en **Save**(Guardar).  
+7.  Haga clic en **Save** (Guardar).  
   
 ## <a name="1-create-the-main-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. Crear el informe principal desde el Asistente para tabla o matriz  
 En el cuadro de diálogo **Introducción** , cree un informe de matriz usando el **Asistente para tabla o matriz**.  
@@ -345,28 +345,28 @@ En el cuadro de diálogo **Introducción** , cree un informe de matriz usando el
   
     Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
-    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
+    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos** , vaya al menú **Archivo** > **Nuevo**.  
  
 2.  En el cuadro de diálogo **Introducción** , compruebe que está seleccionado **Nuevo informe** y, después, haga clic en **Asistente para tabla o matriz**.  
   
-## <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. Especificar una conexión de datos  
+## <a name="1a-add-embedded-data-source"></a><a name="MConnection"></a>1a. Agregar orígenes de datos incrustados  
 Agregará un origen de datos incrustados al informe principal.  
   
 #### <a name="to-create-an-embedded-data-source"></a>Para crear un origen de datos incrustado  
   
-1.  En la página **Elegir un conjunto de datos** , seleccione **Crear un conjunto de datos**y, después, haga clic en **Siguiente**.  
+1.  En la página **Elegir un conjunto de datos** , seleccione **Crear un conjunto de datos** y, después, haga clic en **Siguiente**.  
   
 2.  Haga clic en **Nueva**.  
   
-3.  En **Nombre**, escriba **Ventas principales en línea y de distribuidor** como el nombre del origen de datos.  
+3.  En **Nombre** , escriba **Ventas principales en línea y de distribuidor** como el nombre del origen de datos.  
   
-4.  En **Seleccionar un tipo de conexión**, seleccione **Microsoft SQL Server Analysis Services**y, después, haga clic en **Compilar**.  
+4.  En **Seleccionar un tipo de conexión** , seleccione **Microsoft SQL Server Analysis Services** y, después, haga clic en **Compilar**.  
   
-5.  En **Origen de datos**, compruebe que el origen de datos es **Microsoft SQL Server Analysis Services (AdomdClient)** .  
+5.  En **Origen de datos** , compruebe que el origen de datos es **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
-6.  En **Nombre del servidor**, escriba el nombre de un servidor donde esté instalada una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+6.  En **Nombre del servidor** , escriba el nombre de un servidor donde esté instalada una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-7.  En la lista **Seleccione o escriba un nombre de base de datos**, seleccione el cubo de Contoso.  
+7.  En la lista **Seleccione o escriba un nombre de base de datos** , seleccione el cubo de Contoso.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -388,12 +388,12 @@ Agregará un origen de datos incrustados al informe principal.
   
 14. Haga clic en **Next**.  
   
-## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. Crear una consulta MDX  
+## <a name="1b-create-embedded-dataset"></a><a name="MMDXQuery"></a>1b. Crear un conjunto de datos incrustados  
 Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseñador de consultas para crear filtros, parámetros y miembros calculados, así como el propio conjunto de datos.  
   
 #### <a name="to-create-query-filters"></a>Crear filtros de consulta  
   
-1.  En la página **Diseñar una consulta**, en la sección de cubo del panel Metadatos, haga clic en el botón de puntos suspensivos **(...)** .  
+1.  En la página **Diseñar una consulta** , en la sección de cubo del panel Metadatos, haga clic en el botón de puntos suspensivos **(...)** .  
   
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
@@ -410,13 +410,13 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
   
 4.  Para abrir la lista **Filtrar expresión** , haga clic en la flecha abajo en la columna **Filtrar expresión** .  
   
-5.  En la lista de expresiones de filtro, expanda **Todos los canales**, haga clic en **En línea** y en **Distribuidor**y, después, en **Aceptar**.  
+5.  En la lista de expresiones de filtro, expanda **Todos los canales** , haga clic en **En línea** y en **Distribuidor** y, después, en **Aceptar**.  
   
     Ahora la consulta contiene un filtro para incluir solo estos canales: En línea y Distribuidor.  
   
-6.  Expanda la dimensión Territorio de ventas y arrastre el Grupo del territorio de ventas a la columna **Jerarquía** (bajo **Nombre de canal**).  
+6.  Expanda la dimensión Territorio de ventas y arrastre el Grupo del territorio de ventas a la columna **Jerarquía** (bajo **Nombre de canal** ).  
   
-7.  Abra la lista **Filtrar expresión** , expanda **All Sales Territory**(Todos los territorios de ventas), haga clic en **Norteamérica**y haga clic en **Aceptar**.  
+7.  Abra la lista **Filtrar expresión** , expanda **All Sales Territory** (Todos los territorios de ventas), haga clic en **Norteamérica** y haga clic en **Aceptar**.  
   
     La consulta tiene ahora un filtro para incluir solamente las ventas de Norteamérica  
   
@@ -426,7 +426,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
   
 9. Para abrir la lista **Filtrar expresión** , haga clic en la flecha abajo en la columna **Filtrar expresión** .  
   
-10. En la lista de expresiones de filtro, expanda **Todas las fechas**, haga clic en **Año 2009**y, después, haga clic en **Aceptar**.  
+10. En la lista de expresiones de filtro, expanda **Todas las fechas** , haga clic en **Año 2009** y, después, haga clic en **Aceptar**.  
   
     La consulta incluye ahora un filtro para incluir solo el año natural 2009.  
   
@@ -434,7 +434,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
   
 1.  Expanda la dimensión Producto y, después, arrastre el miembro Nombre de categoría de producto hasta la columna **Jerarquía** , bajo **Grupo del territorio de ventas**.  
   
-2.  Abra la lista **Expresión de filtro** , haga clic en **Todos los productos**y, después, haga clic en **Aceptar**.  
+2.  Abra la lista **Expresión de filtro** , haga clic en **Todos los productos** y, después, haga clic en **Aceptar**.  
   
 3.  Active la casilla **Parámetro** . La consulta incluye ahora el parámetro ProductProductCategoryName.  
   
@@ -452,13 +452,13 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
     [Measures].[Sales Quantity] - [Measures].[Sales Return Quantity]  
     ```  
   
-4.  En el cuadro Nombre, escriba **Net QTY**y haga clic en **Aceptar**.  
+4.  En el cuadro Nombre, escriba **Net QTY** y haga clic en **Aceptar**.  
   
     En el panel Miembros calculados se muestra el miembro calculado **Net QTY** .  
   
-5.  Haga clic con el botón derecho en **Miembros calculados**y, después, haga clic en **Nuevo miembro calculado**.  
+5.  Haga clic con el botón derecho en **Miembros calculados** y, después, haga clic en **Nuevo miembro calculado**.  
   
-6.  En el panel Metadatos, expanda **Medidas**y, después, expanda Ventas.  
+6.  En el panel Metadatos, expanda **Medidas** y, después, expanda Ventas.  
   
 7.  Arrastre la medida Sales Amount al cuadro **Expresión** , escriba el carácter de resta (-) y, después, arrastre la medida Sales Return Amount al cuadro **Expresión** ; colóquela después del carácter de resta.  
   
@@ -468,7 +468,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
     [Measures].[Sales Amount] - [Measures].[Sales Return Amount]  
     ```  
   
-8.  En el cuadro **Nombre** , escriba  **Ventas netas**y, después, haga clic en **Aceptar**. En el panel Miembros calculados se muestra el miembro calculado **Ventas netas** .  
+8.  En el cuadro **Nombre** , escriba  **Ventas netas** y, después, haga clic en **Aceptar**. En el panel Miembros calculados se muestra el miembro calculado **Ventas netas** .  
   
 ### <a name="to-create-the-dataset"></a><a name="MSkip"></a>Crear el conjunto de datos  
   
@@ -476,7 +476,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
   
 2.  Desde la dimensión Producto, arrastre Nombre de categoría de producto hasta el panel de datos y, después, colóquelo a la derecha de Nombre del canal.  
   
-3.  Desde **Miembros calculados**, arrastre `Net QTY` al panel de datos y colóquelo a la derecha de Nombre de categoría de producto.  
+3.  Desde **Miembros calculados** , arrastre `Net QTY` al panel de datos y colóquelo a la derecha de Nombre de categoría de producto.  
   
 4.  Desde Miembros calculados, arrastre Ventas netas al panel de datos y colóquelo a la derecha de `Net QTY`.  
   
@@ -486,7 +486,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
   
 6.  Haga clic en **Next**.  
   
-## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. Organizar los datos en grupos  
+## <a name="1c-organize-main-report-data-into-groups"></a><a name="MLayout"></a>1c. Organizar los datos del informe principal en grupos  
 Al seleccionar los campos por los que desea agrupar los datos, diseñe una matriz con filas y columnas que muestre datos detallados y datos agregados.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar los datos en grupos  
@@ -505,12 +505,12 @@ Al seleccionar los campos por los que desea agrupar los datos, diseñe una matri
   
     Los pasos 3 y 4 especifican los datos que deben mostrarse en la matriz.  
   
-## <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. Agregar subtotales y totales  
+## <a name="1d-add-main-report-subtotals-and-totals"></a><a name="MTotals"></a>1d. Agregar los subtotales y totales del informe principal  
 Puede mostrar subtotales y totales generales en informes. Los datos del informe principal muestran como un indicador; quitará el total general cuando complete el asistente.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Agregar subtotales y totales generales  
   
-1.  En la página **Elegir el diseño** , en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
+1.  En la página **Elegir el diseño** , en **Opciones** , compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
     El panel Vista previa del asistente muestra una matriz con cuatro filas.  Al ejecutar el informe, cada fila se mostrará de la siguiente manera: la primera fila es el grupo de columnas, la segunda fila contiene los encabezados de columna, la tercera fila contiene los datos de la categoría de producto (`[Sum(Net_ QTY)]` y `[Sum(Net_Sales)]`y la fila cuarta contiene los totales.  
   
@@ -518,7 +518,7 @@ Puede mostrar subtotales y totales generales en informes. Los datos del informe 
   
 3.  Haga clic en **Finalizar**  
   
-3.  Haga clic en **Ejecutar**para obtener la vista previa del informe.  
+3.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
 ## <a name="2-remove-the-grand-total-row"></a><a name="MGrandTotal"></a>2. Quitar la fila Total general  
 Los valores de datos se muestran como estados del indictor, incluyendo los totales del grupo de columna. Quite la fila que muestra el total general.  
@@ -529,7 +529,7 @@ Los valores de datos se muestran como estados del indictor, incluyendo los total
   
 2.  Haga clic en la fila Total (la última fila de la matriz), haga clic con el botón derecho y, después, haga clic en **Eliminar filas**.  
   
-3.  Haga clic en **Ejecutar**para obtener la vista previa del informe.  
+3.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
 ## <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3. Configurar la acción del cuadro de texto para la obtención de detalles  
 Para habilitar la obtención de detalles, especifique una acción en un cuadro de texto en el informe principal.  
@@ -544,13 +544,13 @@ Para habilitar la obtención de detalles, especifique una acción en un cuadro d
   
 4.  Seleccione **Ir a informe**.  
   
-5.  En **Especificar un informe**, haga clic en **Examinar**y, después, ubique el informe detallado denominado ResellerVSOnlineDrillthrough.  
+5.  En **Especificar un informe** , haga clic en **Examinar** y, después, ubique el informe detallado denominado ResellerVSOnlineDrillthrough.  
   
 6.  Agregue un nuevo parámetro para pasárselo al informe detallado y haga clic en **Agregar**.  
   
 7.  En la lista **Nombre** , seleccione ProductProductCategoryName.  
   
-8.  En **Valor**, escriba `[Product_Category_Name.UniqueName]`.  
+8.  En **Valor** , escriba `[Product_Category_Name.UniqueName]`.  
   
     Product_Category_Name es un campo del conjunto de datos.  
   
@@ -606,7 +606,7 @@ Utilice los indicadores para mostrar el estado de cantidades y ventas para los c
   
 6.  Para obtener una vista previa de un informe, haga clic en **Ejecutar**.  
   
-## <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5. Actualizar las propiedades de parámetro  
+## <a name="5-set-internal-parameter-property"></a><a name="MParameter"></a>5. Establecer la propiedad de parámetro interno  
 De forma predeterminada, los parámetros están visibles, lo que no es adecuado para este informe. Actualizará las propiedades de parámetro para hacer el parámetro interno.  
   
 #### <a name="to-make-the-parameter-internal"></a>Realizar el parámetro interno  
@@ -655,12 +655,12 @@ Guarde el informe principal en una biblioteca de SharePoint
   
 5.  Navegue hasta la biblioteca donde quieren guardar el informe.  
   
-6.  En **Nombre**, reemplace el nombre predeterminado por **ResellerVSOnlineMain**.  
+6.  En **Nombre** , reemplace el nombre predeterminado por **ResellerVSOnlineMain**.  
   
     > [!IMPORTANT]  
     > Guarde el informe principal en la misma ubicación donde guardó el informe detallado. Para guardar los informes detallados y principal en sitios o bibliotecas diferentes, confirme que la acción **Ir a informe** del informe principal señala a la ubicación correcta del informe detallado.  
   
-7.  Haga clic en **Save**(Guardar).  
+7.  Haga clic en **Save** (Guardar).  
   
 ## <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. Ejecutar los informes principal y detallado  
 Ejecute el informe principal y, a continuación, haga clic en los valores de la columna de categoría de producto para ejecutar el informe detallado.  

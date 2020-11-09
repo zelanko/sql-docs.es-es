@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b07d50a9f885d6440f9cfd0a5bb47b3017d5f114
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 1ebe16bd9b9474b892346ec2a8dd6f25254c6d0b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935409"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243770"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Trabajar con informes paginados (portal web)
 
@@ -30,7 +30,7 @@ Para crear un nuevo conjunto de datos compartido, puede hacer lo siguiente:
   
 2.  Seleccione **Informe paginado**.  
   
-    ![ssRSWebPortal-new-report](../reporting-services/media/ssrswebportal-new-report.png)  
+    ![Captura de pantalla en la que se muestra la lista desplegable Nuevo con la opción Informe paginado destacada.](../reporting-services/media/ssrswebportal-new-report.png)  
   
 3.  Se iniciará el Generador de informes o se le pedirá que lo descargue.  
   
@@ -45,28 +45,28 @@ Para administrar un informe paginado existente, puede hacer lo siguiente.
   
 1.  Haga clic en los **puntos suspensivos (...)** del conjunto de datos que quiera administrar.  
       
-    ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
+    ![Captura de pantalla en la que se muestra que el usuario selecciona el botón de puntos suspensivos del conjunto de datos.](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
 2.  Seleccione **Administrar** , que le llevará a la pantalla de edición.  
     
-    ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
+    ![Captura de pantalla en la que se muestra el botón de puntos suspensivos seleccionado con la opción ADMINISTRAR destacada.](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
 ## <a name="properties"></a>Propiedades  
   
-En la pantalla de propiedades, puede cambiar el **nombre** y la **descripción** del informe paginado. También puede usar las opciones **Eliminar**, **Mover**, **Crear informe vinculado**, **Editar en el Generador de informes**, **Descargar** o **Reemplazar**.  
+En la pantalla de propiedades, puede cambiar el **nombre** y la **descripción** del informe paginado. También puede usar las opciones **Eliminar** , **Mover** , **Crear informe vinculado** , **Editar en el Generador de informes** , **Descargar** o **Reemplazar**.  
     
-![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
+![Captura de pantalla en la que se muestra la pantalla Propiedades del cuadro de diálogo Editar Company Sales.](../reporting-services/media/ssrswebportal-report-properties.png)  
    
 ## <a name="parameters"></a>Parámetros  
   
 Puede modificar los parámetros existentes de un informe paginado. Para agregar un nuevo parámetro, hay que editar el informe en el Generador de informes o en SQL Server Data Tools.  
   
-![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
+![Captura de pantalla en la que se muestra la pantalla Parámetros del cuadro de diálogo Editar Company Sales.](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
 ## <a name="data-source"></a>Origen de datos  
 Puede apuntar a un origen de datos compartido o escribir la información de conexión correspondiente a un origen de datos personalizado.  
   
-![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
+![Captura de pantalla en la que se muestra la pantalla Orígenes de datos del cuadro de diálogo Editar Company Sales.](../reporting-services/media/ssrswebportal-report-datasource.png)  
   
 Para especificar un origen de datos personalizado, se usan las siguientes opciones.  
   
@@ -122,7 +122,7 @@ Para usar esta opción, debe haber configurado previamente la cuenta de ejecuci�
 ## <a name="subscriptions"></a>Suscripciones  
 Una suscripción de Reporting Services es una configuración que entrega un informe a una hora concreta o a raíz de un evento. Lo hace en el formato de archivo que especifique. Por ejemplo, todos los miércoles, se guarda el informe VentasMensuales en formato de documento Microsoft Word en un recurso compartido de archivos. Las suscripciones se pueden utilizar para programar y automatizar la entrega de un informe con un conjunto concreto de valores de parámetros de informes. Para más información, vea [Trabajar con suscripciones](working-with-subscriptions-web-portal.md).
   
-![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
+![Captura de pantalla en la que se muestra la pantalla Suscripciones del cuadro de diálogo Editar Company Sales.](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>Elementos dependientes  
 Use la página Elementos dependientes para ver una lista de los elementos que hacen referencia a este informe. El icono de cada tipo de elemento indica en qué consiste. Después, puede hacer clic en el botón de **puntos suspensivos (...)** de cada elemento para seguir administrándolo.  
@@ -136,11 +136,11 @@ Dispone de varias opciones para almacenar en memoria caché los datos de un info
   
 3.  **Ejecutar siempre este informe según las instantáneas generadas previamente** almacenará en la memoria caché el diseño y los datos del informe durante un período de tiempo determinado. Los informes pueden ejecutarse como una instantánea de informe si se desea evitar que el informe se ejecute de forma arbitraria (durante una copia de seguridad programada, por ejemplo). La instantánea se puede actualizar según una programación. [Más información]  
   
-![ssRSWebPortal-report-caching1](../reporting-services/media/ssrswebportal-report-caching1.png)  
+![Captura de pantalla en la que se muestra la pantalla Almacenamiento en caché del cuadro de diálogo Editar Company Sales con la opción Ejecutar este informe siempre con los datos más recientes seleccionada.](../reporting-services/media/ssrswebportal-report-caching1.png)  
    
 Si selecciona **Cache Copies of this report and use them when available** (Almacenar en caché copias del informe y usarlas cuando estén disponibles), dispondrá de más opciones.  
   
-![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
+![Captura de pantalla en la que se muestra la pantalla Almacenamiento en caché del cuadro de diálogo Editar Company Sales con la opción Realiza copias en caché de este informe y las usa cuando están disponibles. seleccionada.](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
 Para más información, vea [Trabajar con instantáneas](working-with-snapshots-web-portal.md).
   
@@ -161,9 +161,9 @@ Después de aplicar la opción de caché anterior, puede definir el plan de actu
   
 Para crear un nuevo plan de actualización de caché, seleccione **Nuevo plan de actualización de caché**. Después, puede escribir un nombre para el plan y especificar una programación. Si el conjunto de datos tiene parámetros definidos, verá que se enumeran y podrá especificar valores, a menos que estén marcados como de solo lectura.  
   
-Cuando haya terminado, puede seleccionar **Create Cache Refresh Plan**(Crear plan de actualización de caché).  
+Cuando haya terminado, puede seleccionar **Create Cache Refresh Plan** (Crear plan de actualización de caché).  
   
-![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
+![Captura de pantalla del cuadro de diálogo Editar Company Sales en la que se muestra la opción Crear plan de actualización de caché.](../reporting-services/media/ssrswebportal-report-caching3.png)  
   
 > [!NOTE]
 > El Agente SQL Server debe estar ejecutándose para poder crear un plan de actualización de caché.  

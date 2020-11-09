@@ -10,18 +10,18 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 073776c042c0a0da136347c8e1658603b755208f
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 51286acc7f963b8d680bd81121cc22bab1c1a0a6
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378471"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364387"
 ---
 # <a name="troubleshooting-big-data-clusters-bdc-with-notebooks"></a>Solución de problemas de Clústeres de macrodatos (BDC) con cuadernos
 
 Esta página es un índice de los cuadernos para Clústeres de macrodatos de SQL Server. Estos cuadernos ejecutables (.ipynb) están diseñados para SQL Server 2019 como ayuda para la solución de problemas de Clústeres de macrodatos.
 
-Cada cuaderno está diseñado para comprobar sus propias dependencias. Una operación de tipo **Ejecutar todas las celdas** se realizará correctamente o generará una excepción con una sugerencia con hipervínculo a otro cuaderno para resolver la dependencia que falta. Siga el hipervínculo de la sugerencia al cuaderno siguiente, presione **Ejecutar todas las celdas** y, cuando el proceso finalice correctamente, vuelva al cuaderno original y presione **Ejecutar todas las celdas** .
+Cada cuaderno está diseñado para comprobar sus propias dependencias. Una operación de tipo **Ejecutar todas las celdas** se realizará correctamente o generará una excepción con una sugerencia con hipervínculo a otro cuaderno para resolver la dependencia que falta. Siga el hipervínculo de la sugerencia al cuaderno siguiente, presione **Ejecutar todas las celdas** y, cuando el proceso finalice correctamente, vuelva al cuaderno original y presione **Ejecutar todas las celdas**.
 
 Una vez que se instalan todas las dependencias y que la operación **Ejecutar todas las celdas** produce un error, cada cuaderno analizará los resultados y, siempre que sea posible, generará una sugerencia con hipervínculo a otro cuaderno para ayudarlo a resolver el problema.
 
@@ -62,7 +62,7 @@ Un conjunto de cuadernos para diagnosticar situaciones y estados con un Clúster
 |TSG079: Generación del volcado principal del controlador|Use este cuaderno para generar el volcado principal del controlador.|
 |TSG086: Ejecución en la parte superior de todos los contenedores|Use este bloc de notas para la ejecución en la parte superior de todos los contenedores.|
 |TSG087: Uso de la CLI hadoop fs en el pod namenode|Use este cuaderno para usar la CLI de hadoop fs en el pod de namenode.|
-|TSG108: Visualización de la asignación de configuración de actualización del controlador|Use este cuaderno para solucionar el error al ejecutar una actualización de Clúster de macrodatos mediante **azdata bdc upgrade** .|
+|TSG108: Visualización de la asignación de configuración de actualización del controlador|Use este cuaderno para solucionar el error al ejecutar una actualización de Clúster de macrodatos mediante **azdata bdc upgrade**.|
 |TSG112: Comprobaciones previas a la implementación de Active Directory|Use este cuaderno para validar que una configuración de Clúster de macrodatos (BDC) es válida para una implementación de Active Directory (AD).|
 |TSG115: Traductor de registro de seguridad de SQL Server en Linux|Use este cuaderno para analizar los registros generados por los registradores secuirty.ldap y security.kerberos para SQL Server en Linux. Para habilitar estos registradores, coloque las líneas siguientes en /var/opt/mssql/logger.ini en el equipo que ejecuta SQL Server en Linux. Tenga en cuenta que este archivo distingue mayúsculas de minúsculas.|
 |TSG116: Traductor de registro de compatibilidad de seguridad de BDC de SQL|Use este cuaderno para analizar los registros generados por el servicio de soporte técnico de seguridad en BDC de SQL. Para obtener los registros, se copiarán los registros de depuración del clúster y se extraerán. Siga los pasos que se indican a continuación: ejecute "azdata bdc debug copy-logs -n <namespace> *". Esto creará varios archivos .tar.gz: extraiga el contenido de los registros de depuración-* <namespace>-<date>-<time>.tar.gz. Busque el registro de compatibilidad de seguridad almacenado en ./<namespace>/control-<…>/security-support/supervisol/log/secsupp-stderr---<…>.log.|
@@ -80,7 +80,7 @@ Un conjunto de cuadernos para reparar situaciones y estados conocidos de un Clú
 |Nombre |Descripción |
 |---|---|---|---|
 |TSG005: bucle de reenvío detectado|Use este cuaderno para abordar el bucle de reenvío detectado, puesto que la utilidad dnsmasq puede colocar un bucle invertido local en resolv.conf, lo que puede hacer que los pods del controlador pasen a un estado CrashLoopBackOff durante la implementación inicial del clúster: https://askubuntu.com/questions/627899/nameserver-127-0-1-1-in-resolv-conf-wont-go-away|
-|TSG011: reinicio del servidor de sparkhistory|Use este cuaderno para reiniciar el servidor de sparkhistory, ya que el proceso de java de sparkhistory puede bloquearse durante el inicio. Si se reinicia el servidor de sparkhistory (supervisorctl restart sparkhistory), podría resolverse este problema.|
+|TSG011: reinicio del servidor de sparkhistory|Use este cuaderno para reiniciar el servidor de sparkhistory, ya que el proceso de Java de sparkhistory puede dejar de responder durante el inicio. Si se reinicia el servidor de sparkhistory (supervisorctl restart sparkhistory), podría resolverse este problema.|
 |TSG018: terminación del proceso sqlservr en el grupo maestro| Use este cuaderno cuando T-SQL SHUTDOWN no vuelva a recorrer correctamente el proceso ./sqlservr. Use este cuaderno para terminar el proceso principal sqlservr que se reiniciará automáticamente mediante el proceso de front-end ./sqlservr.|
 |TSG024: Namenode está en modo seguro| Use este cuaderno cuando HDFS entre en modo seguro. Por ejemplo, si se vuelven a recorrer demasiados pods demasiado rápido en el bloque de almacenamiento, el modo seguro puede habilitarse automáticamente.|
 |TSG028: reinicio de nodemanager en todos los nodos del bloque de almacenamiento| Use este cuaderno cuando necesite reiniciar el administrador de nodos en todos los nodos del grupo de almacenamiento.|
@@ -104,4 +104,3 @@ Un conjunto de cuadernos para reparar situaciones y estados conocidos de un Clú
 ## <a name="next-steps"></a>Pasos siguientes
 
 Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md) para obtener más información sobre los clústeres de macrodatos.
-

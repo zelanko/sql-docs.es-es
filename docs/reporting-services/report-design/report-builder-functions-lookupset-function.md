@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c790f63ddec2a30d1381459b37b4cfdf9088389
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 22d4a311d38d32fad4910960007223edbe2f9b70
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255588"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364467"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Funciones del Generador de informes: función LookupSet
   Devuelve el conjunto de valores coincidentes para el nombre especificado de un conjunto de datos que contiene pares nombre/valor.  
@@ -31,19 +31,19 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parámetros  
  *source_expression*  
- (**Variant**) Una expresión que se evalúa en el ámbito actual y que especifica el nombre o la clave que se buscará. Por ejemplo, `=Fields!ID.Value`.  
+ ( **Variant** ) Una expresión que se evalúa en el ámbito actual y que especifica el nombre o la clave que se buscará. Por ejemplo, `=Fields!ID.Value`.  
   
  *destination_expression*  
- (**Variant**) Una expresión que se evalúa para cada fila de un conjunto de datos y que especifica el nombre o la clave que se hará coincidir. Por ejemplo, `=Fields!CustomerID.Value`.  
+ ( **Variant** ) Una expresión que se evalúa para cada fila de un conjunto de datos y que especifica el nombre o la clave que se hará coincidir. Por ejemplo, `=Fields!CustomerID.Value`.  
   
  *result_expression*  
- (**Variant**) Una expresión que se evalúa para la fila de un conjunto de datos donde *source_expression* = *destination_expression*, y que especifica el valor que se va a recuperar. Por ejemplo, `=Fields!PhoneNumber.Value`.  
+ ( **Variant** ) Una expresión que se evalúa para la fila de un conjunto de datos donde *source_expression* = *destination_expression* , y que especifica el valor que se va a recuperar. Por ejemplo, `=Fields!PhoneNumber.Value`.  
   
  *conjunto de datos*  
  Una constante que especifica el nombre de un conjunto de datos del informe. Por ejemplo, "ContactInformation".  
   
 ## <a name="return"></a>Valor devuelto  
- Devuelve **VariantArray**o **Nothing** si no hay ninguna coincidencia.  
+ Devuelve **VariantArray** o **Nothing** si no hay ninguna coincidencia.  
   
 ## <a name="remarks"></a>Observaciones  
  Use **LookupSet** para recuperar un conjunto de valores del conjunto de datos especificado correspondiente a un par nombre-valor donde hay una relación de uno a varios. Por ejemplo, para un identificador de cliente en una tabla, puede usar **LookupSet** para recuperar todos los números de teléfono asociados a ese cliente de un conjunto de datos que no está enlazado a la región de datos.  
@@ -62,7 +62,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Se aplican las restricciones que se indican a continuación:  
   
--   Se evalúa**LookupSet** después de aplicar todas las expresiones de filtro.  
+-   Se evalúa **LookupSet** después de aplicar todas las expresiones de filtro.  
   
 -   Solo se admite un nivel de búsqueda. Un origen, un destino o una expresión de resultado no pueden incluir una referencia a una función de búsqueda.  
   
@@ -86,16 +86,18 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Para más información, vea [Funciones del generador de informes - referencia de funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) y [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo se supone que la tabla está enlazada a un conjunto de datos que incluye un identificador de territorio de ventas, TerritoryGroupID. Un conjunto de datos independiente denominado "Stores" contiene la lista de todas las tiendas de un territorio e incluye el identificador de territorio, ID, y el nombre de la tienda, StoreName.  
+## <a name="examples"></a>Ejemplos
+
+ En los siguientes ejemplos se supone que la tabla está enlazada a un conjunto de datos que incluye un identificador de territorio de ventas, TerritoryGroupID. Un conjunto de datos independiente denominado "Stores" contiene la lista de todas las tiendas de un territorio e incluye el identificador de territorio, ID, y el nombre de la tienda, StoreName.  
   
+### <a name="a-use-lookupset"></a>A. Uso de LookupSet  
  En la siguiente expresión, **LookupSet** compara el valor TerritoryGroupID con ID por cada fila del conjunto de datos denominado "Stores". Por cada coincidencia, el valor del campo StoreName de dicha fila se agrega al conjunto de resultados.  
   
 ```  
 =LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores")  
 ```  
   
-## <a name="example"></a>Ejemplo  
+### <a name="b-use-join-to-create-a-result-list"></a>B. Uso de Join para crear una lista de resultados 
  Dado que **LookupSet** devuelve una colección de objetos, no se puede mostrar la expresión de resultado directamente en un cuadro de texto. Puede concatenar el valor de cada objeto de la colección como una cadena.  
   
  Use la función [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Join **de** para crear una cadena delimitada a partir de un conjunto de objetos. Use la coma como separador para combinar los objetos en una sola línea. En algunos representadores, puede usar un salto de línea de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) como separador para enumerar cada valor en una nueva línea.  
@@ -106,7 +108,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
 ```  
   
-## <a name="example"></a>Ejemplo  
+### <a name="c-add-code-to-generate-html"></a>C. Adición de código para generar HTML
  Para los cuadros de texto que solo se representan pocas veces, puede agregar código personalizado para generar el código HTML para mostrar valores en un cuadro de texto. El código HTML en un cuadro de texto requiere procesamiento adicional, por lo que no es una buena opción para un cuadro de texto que se representa miles de veces.  
   
  Copie las siguientes funciones de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] en un bloque Code en una definición de informe. **MakeList** toma la matriz de objetos que se devuelve en *result_expression* y genera una lista no ordenada mediante etiquetas HTML. **Length** devuelve el número de elementos en la matriz de objetos.  
@@ -138,7 +140,7 @@ Function Length(ByVal items as Object()) as Integer
 End Function  
 ```  
   
-## <a name="example"></a>Ejemplo  
+### <a name="d-call-the-function"></a>D. Llamada a la función
  Para generar el código HTML, debe llamar a la función. Pegue la siguiente expresión en la propiedad Value del cuadro de texto y establezca el tipo de marcado del texto en HTML. Para más información, vea [Agregar HTML a un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md).  
   
 ```  

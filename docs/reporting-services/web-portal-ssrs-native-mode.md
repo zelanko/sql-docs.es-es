@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4592e5b2bc35da9c2887e0c2552dc33cd3cecd5e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 301d77a972da39f4e3e046e5e983206e9a1ba5c9
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987401"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243776"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>El portal web de un servidor de informes (modo nativo de SSRS)
 
@@ -22,7 +22,7 @@ ms.locfileid: "91987401"
 
 El portal web de un servidor de informes de Reporting Services es una experiencia basada en web. En el portal, puede ver informes, informes móviles, KPI y navegar por los elementos de la instancia del servidor de informes. También puede usar el portal web para administrar una única instancia del servidor de informes.
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png)
+![Captura de pantalla en la que se muestra el portal de SQL Server Reporting Services.](../reporting-services/media/ssrsportal.png)
 
 ## <a name="what-is-the-web-portal"></a>¿Qué es el portal web?
 
@@ -86,15 +86,15 @@ El portal web agrupará los elementos en distintas categorías. Las categorías 
 
 Puede controlar lo que se muestra si selecciona **Vista** en la esquina superior derecha. Si selecciona Mostrar oculto, esos elementos se mostrarán en un color más claro.
 
-![ssRSWebPortal-view](../reporting-services/media/ssrswebportal-view.png)
+![Captura de pantalla del menú desplegable Vista con la opción Mostrar elementos ocultos seleccionada.](../reporting-services/media/ssrswebportal-view.png)
 
-![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
+![Captura de pantalla en la que se muestra la opción Informes paginados como no disponible.](../reporting-services/media/ssrswebportal-hidden.png)
 
 ### <a name="power-bi-desktop-reports-and-excel-workbooks"></a>Informes de Power BI Desktop y libros de Excel
 
 Puede cargar, organizar y administrar los permisos para los informes de Power BI Desktop y libros de Excel. Se agruparán juntos en el portal web.
 
-![ssRSWebPortal-view-pbi-and-excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
+![Captura de pantalla en la que se muestran las secciones Informes de Power BI Desktop y Libros de Excel.](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
 Los archivos se almacenan en Reporting Services, como sucede con otros archivos de recursos. Si selecciona uno de estos elementos, se descargará localmente en su escritorio. Puede guardar los cambios que ha realizado si los vuelve a cargar al servidor de informes.
 
@@ -102,7 +102,7 @@ Los archivos se almacenan en Reporting Services, como sucede con otros archivos 
 
 Escriba un término de búsqueda y vea todos los elementos a los que puede acceder. Los resultados se categorizan en KPI, informes, conjuntos de datos y otros elementos. Después, puede interactuar con los resultados y agregarlos a sus favoritos.
 
-![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
+![Captura de pantalla en la que se muestra el portal de SQL Server Reporting Servers con el cuadro de texto Buscar destacado.](../reporting-services/media/ssrswebportal-search.png)
 
 ## <a name="web-portal-tasks"></a>Tareas del portal web
 

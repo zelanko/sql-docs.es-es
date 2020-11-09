@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3446eb921f0a731a571f2ad5e7a6f275612f2776
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f4802ee3beb72e34ed2b85e8857ac69c61557018
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245652"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043714"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (Generador de informes)
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], agregará un indicador clave de rendimiento (KPI) a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
@@ -23,7 +23,7 @@ Los KPI son valores medibles con significado empresarial. En este escenario, el 
   
 La ilustración siguiente es similar al informe que va a crear.  
   
-![generador-de-informes-informe-kpi](../reporting-services/media/report-builder-kpi-report.png)
+![Captura de pantalla de un informe de KPI de Report Builder.](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
 > En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar el asistente, vea el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
@@ -42,7 +42,7 @@ En esta sección, elija un origen de datos compartido, cree un conjunto de datos
   
     Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
-    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
+    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos** , vaya al menú **Archivo** > **Nuevo**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -125,7 +125,7 @@ El Asistente para tabla o matriz proporciona un diseño inicial en el que se van
   
     Al ejecutar el informe, la tabla muestra cada fecha, todos los pedidos de cada fecha, y todos los productos, cantidades y totales de ventas de cada pedido.  
   
-7.  En la página Elegir el diseño, en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
+7.  En la página Elegir el diseño, en **Opciones** , compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
 8.  Compruebe que esté seleccionada la opción **Bloqueado, subtotal abajo** .  
   
@@ -139,13 +139,13 @@ El Asistente para tabla o matriz proporciona un diseño inicial en el que se van
   
       La tabla se agrega a la superficie de diseño. La tabla tiene cinco columnas y cinco filas. El panel Grupos de filas muestra tres grupos de filas: SalesDate, Subcategory y Details. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos. El panel Grupos de columnas está vacío.  
       
-      ![generador-de-informes-kpi-fila-grupos](../reporting-services/media/report-builder-kpi-row-groups.png)
+      ![Captura de pantalla en la que se muestran los grupos de filas.](../reporting-services/media/report-builder-kpi-row-groups.png)
   
 12. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
 Para cada producto vendido en una fecha concreta, la tabla muestra el nombre del producto, la cantidad vendida y el total de ventas. Los datos se organizan primero por fecha de ventas y, a continuación, por subcategoría. 
 
-![generador-de-informes-kpi-tabla-básica](../reporting-services/media/report-builder-kpi-basic-table.png)
+![Captura de pantalla en la que se muestra una tabla de KPI básica de Report Builder.](../reporting-services/media/report-builder-kpi-basic-table.png)
     
 ### <a name="format-dates-and-currency"></a>Aplicar formato de fecha y moneda
 Vamos a hacer las columnas más anchas y establecer el formato de moneda y fecha.
@@ -160,7 +160,7 @@ Vamos a hacer las columnas más anchas y establecer el formato de moneda y fecha
 
    Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [$12,345.00]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.
     
-    ![generador-de-informes-botón-valor-marcador-de-posición](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![Captura de pantalla en la que se muestra la opción Valores de ejemplo de Report Builder seleccionada.](../reporting-services/media/report-builder-placeholder-value-button.png)
 
 5. (Opcional) En la pestaña **Inicio** , en el grupo **Número** , haga clic dos veces en el botón **Disminuir decimales** para mostrar las cifras en dólares sin centavos.
 
@@ -172,7 +172,7 @@ Vamos a hacer las columnas más anchas y establecer el formato de moneda y fecha
 
 12. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
  
-![generador-de-informes-kpi-formato-números](../reporting-services/media/report-builder-kpi-format-numbers.png)
+![Captura de pantalla del informe de KPI de Report Builder con números con formato.](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
 ## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3. Utilizar los colores de fondo para mostrar un KPI  
 Los colores de fondo se pueden establecer en una expresión que se evalúe al ejecutar el informe.  
@@ -183,7 +183,7 @@ Los colores de fondo se pueden establecer en una expresión que se evalúe al ej
 
     Asegúrese de que ha seleccionado la celda, no el texto de la celda, para ver **Propiedades de cuadro de texto**. 
     
-    ![generador-de-informes-cuadro-de-texto-propiedades](../reporting-services/media/report-builder-text-box-properties.png)
+    ![Captura de pantalla de la opción Propiedades de cuadro de texto de Report Builder.](../reporting-services/media/report-builder-text-box-properties.png)
   
 2.  En la pestaña **Relleno** , haga clic en el botón **fx** situado junto a la opción **Color de relleno** y escriba la siguiente expresión en el campo **Establecer expresión para: BackgroundColor** :  
   
@@ -197,7 +197,7 @@ Los colores de fondo se pueden establecer en una expresión que se evalúe al ej
   
 En la fila de subtotal que muestra las ventas de una subcategoría, el color de fondo de la celda será rojo, amarillo o verde en función del valor de la suma de ventas.  
 
-![generador-de-informes-kpi-colores](../reporting-services/media/report-builder-kpi-colors.png)
+![Captura de pantalla del informe de KPI de Report Builder con colores aplicados a determinadas celdas.](../reporting-services/media/report-builder-kpi-colors.png)
   
 ## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4. Mostrar un KPI usando un medidor  
 Un medidor muestra un valor único de un conjunto de datos. En este tutorial se usa un medidor lineal horizontal porque su forma y simplicidad hacen que resulte fácil leerlo, incluso cuando tiene un tamaño pequeño y está dentro de la celda de una tabla. Para obtener más información, vea [Medidores &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
@@ -208,7 +208,7 @@ Un medidor muestra un valor único de un conjunto de datos. En este tutorial se 
   
 2.  En la tabla, haga clic con el botón derecho en el controlador de columna para la columna Ventas > **Insertar columna** > **Derecha**. Se agregará una nueva columna a la tabla.  
 
-    ![generador-de-informes-kpi-insertar-columna](../reporting-services/media/report-builder-kpi-insert-column.png)
+    ![Captura de pantalla en la que se muestra cómo insertar una columna en el informe de KPI de Report Builder.](../reporting-services/media/report-builder-kpi-insert-column.png)
   
 3.  Escriba **KPI lineal** en el encabezado de columna.  
   
@@ -224,17 +224,17 @@ Un medidor muestra un valor único de un conjunto de datos. En este tutorial se 
   
     Al arrastrar el campo `Sales` al medidor, este se dirige a la lista **Valores** y se agrega mediante la función Sum integrada.  
    
-    ![generador-de-informes-kpi-arrastrar-campo-ventas](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
+    ![Captura de pantalla en la que se muestra cómo arrastrar el campo Sales a un informe de KPI de Report Builder.](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
    
 9. En el panel **Datos del medidor** , haga clic en la flecha junto a **LinearPointer1** > **Propiedades de puntero**.  
   
-10. En el cuadro de diálogo **Propiedades del puntero lineal** > **Opciones de puntero** > **Tipo de puntero**, asegúrese de que **Barra** está seleccionado. 
+10. En el cuadro de diálogo **Propiedades del puntero lineal** > **Opciones de puntero** > **Tipo de puntero** , asegúrese de que **Barra** está seleccionado. 
  
 11. Haga clic en **OK**.  
   
 12. Haga clic con el botón derecho en la escala del medidor y haga clic en **Propiedades de escala**.  
   
-13. En el cuadro de diálogo **Propiedades de escala lineal** > pestaña **General**, establezca **Máximo** en 25 000.  
+13. En el cuadro de diálogo **Propiedades de escala lineal** > pestaña **General** , establezca **Máximo** en 25 000.  
 
     > [!NOTE]  
     > En lugar de una constante como 25 000, puede usar una expresión para calcular dinámicamente el valor de la opción **Máximo** . La expresión usaría el agregado de la característica de agregados y es similar a la expresión `=Max(Sum(Fields!Sales.value), "Tablix1")`.  
@@ -252,7 +252,7 @@ Un medidor muestra un valor único de un conjunto de datos. En este tutorial se 
   
     La longitud horizontal de la barra verde del medidor cambia en función del valor del KPI.  
   
-![generador-de-informes-kpi-lineal](../reporting-services/media/report-builder-linear-kpi.png) 
+![Captura de pantalla en la que se muestra una columna de KPI lineal agregada al informe de KPI de Report Builder.](../reporting-services/media/report-builder-linear-kpi.png) 
   
 ## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5. Mostrar un KPI usando un indicador  
 Los indicadores son medidores pequeños y simples que comunican los valores de datos de un vistazo. Debido a su tamaño y simplicidad, los indicadores se utilizan a menudo en tablas y matrices. Para más información, vea [Indicadores &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
@@ -269,7 +269,7 @@ Los indicadores son medidores pequeños y simples que comunican los valores de d
   
 5.  En la pestaña **Insertar** > **Visualizaciones de datos** > haga doble clic en **Indicador**.  
   
-6.  En el cuadro de diálogo **Seleccionar tipo de indicador** , en **Formas**, seleccione el primer tipo de forma, **3 semáforos (sin marco)** .  
+6.  En el cuadro de diálogo **Seleccionar tipo de indicador** , en **Formas** , seleccione el primer tipo de forma, **3 semáforos (sin marco)** .  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -279,7 +279,7 @@ Los indicadores son medidores pequeños y simples que comunican los valores de d
   
 9. En la pestaña **Valores y estados** , en el cuadro **Valor** , seleccione **[Sum(Sales)]** . No cambie ninguna de las otras opciones.  
   
-    De manera predeterminada, la sincronización de datos se produce en la región de datos y podrá ver el valor **Tablix1**, el nombre de la región de datos de la tabla del informe, en el cuadro **Ámbito de sincronización** .  
+    De manera predeterminada, la sincronización de datos se produce en la región de datos y podrá ver el valor **Tablix1** , el nombre de la región de datos de la tabla del informe, en el cuadro **Ámbito de sincronización** .  
   
     En este informe, podrá cambiar también el ámbito de un indicador colocado en la celda del subtotal de la subcategoría para realizar la sincronización en el campo SalesDate.  
   
@@ -287,7 +287,7 @@ Los indicadores son medidores pequeños y simples que comunican los valores de d
 
 11. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
 
-![generador-de-informes-kpi-luz](../reporting-services/media/report-builder-kpi-stoplight.png)
+![Captura de pantalla en la que se muestra una columna de KPI de semáforo agregada al informe de KPI de Report Builder.](../reporting-services/media/report-builder-kpi-stoplight.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Agregar un título de informe  
 Los títulos de informe aparecen en la parte superior. Puede situar el título del informe en un encabezado de informe o, si el informe no lo utiliza, en un cuadro de texto en la parte superior del cuerpo del informe. En esta sección, usa el cuadro de texto que se coloca automáticamente en la parte superior del cuerpo del informe.  
@@ -298,9 +298,9 @@ Puede mejorar aún más el texto aplicando estilos de fuente, tamaños y colores
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Escriba **KPI de ventas del producto**y, después, haga clic fuera del cuadro de texto.  
+2.  Escriba **KPI de ventas del producto** y, después, haga clic fuera del cuadro de texto.  
   
-3.  De manera opcional, haga clic con el botón derecho en el cuadro de texto que contiene **KPI de ventas del producto**, haga clic en **Propiedades de cuadro de texto**y, después, en la pestaña Fuente, seleccione los diferentes estilos de fuente, tamaños y colores.  
+3.  De manera opcional, haga clic con el botón derecho en el cuadro de texto que contiene **KPI de ventas del producto** , haga clic en **Propiedades de cuadro de texto** y, después, en la pestaña Fuente, seleccione los diferentes estilos de fuente, tamaños y colores.  
   
 4.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
@@ -317,9 +317,9 @@ Guarde el informe un servidor de informes o en su equipo. Si no guarda el inform
   
     Aparecerá el mensaje "Conectando con el servidor de informes". Una vez completada la conexión, se mostrará el contenido de la carpeta de informes que el administrador del servidor de informes especificó como ubicación predeterminada para los informes.  
   
-4.  En **Nombre**, reemplace el nombre predeterminado por **KPI de ventas del producto**.  
+4.  En **Nombre** , reemplace el nombre predeterminado por **KPI de ventas del producto**.  
   
-5.  Haga clic en **Save**(Guardar).  
+5.  Haga clic en **Save** (Guardar).  
   
 El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
@@ -327,14 +327,14 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
   
 1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
-2.  Haga clic en **Escritorio**, **Mis documentos**o **Mi PC**y vaya a la carpeta donde quiere guardar el informe.  
+2.  Haga clic en **Escritorio** , **Mis documentos** o **Mi PC** y vaya a la carpeta donde quiere guardar el informe.  
   
 > [!NOTE]  
-> Si no tiene acceso a un servidor de informes, haga clic en **Escritorio**, **Mis documentos**o **Mi PC** y guarde el informe en su equipo.  
+> Si no tiene acceso a un servidor de informes, haga clic en **Escritorio** , **Mis documentos** o **Mi PC** y guarde el informe en su equipo.  
   
-1.  En **Nombre**, reemplace el nombre predeterminado por **KPI de ventas del producto**.  
+1.  En **Nombre** , reemplace el nombre predeterminado por **KPI de ventas del producto**.  
   
-2.  Haga clic en **Save**(Guardar).  
+2.  Haga clic en **Save** (Guardar).  
   
 ## <a name="next-steps"></a>Pasos siguientes  
 Ha completado correctamente el tutorial Agregar un KPI a un informe. Para más información, consulte:

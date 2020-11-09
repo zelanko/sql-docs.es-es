@@ -9,12 +9,12 @@ ms.author: hanqin
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: bfb4ea0b745fa61ea6d7c688ab90eaf369b2a5bb
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 4054917071578fb0b3ddcf5c22d5950075a2b0fe
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036002"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328480"
 ---
 # <a name="preview-features-in-azure-data-studio"></a>Características en versión preliminar de Azure Data Studio
 
@@ -77,7 +77,7 @@ Puede habilitar o deshabilitar las características en versión preliminar en cu
 ### <a name="first-party-extensions-in-preview"></a>Extensiones de primera entidad en versión preliminar
 
 * Paquete de administración para SQL Server
-* Conclusiones sobre Azure SQL Data Warehouse
+* Información de Azure Synapse Analytics
 * Servidores de administración central
 * Extensiones de la herramienta de administración de bases de datos para Windows
 * Kusto

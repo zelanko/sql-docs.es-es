@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ebb428a12bc75f3c61793918dde0594da531ed2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: db1efab37a24e49dcf9eac774809ec788831b037
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248544"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043820"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , se usan expresiones con operadores y funciones comunes para crear informes paginados eficaces y flexibles de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -25,7 +25,7 @@ Se trata de un informe con bandas con filas que alternan entre el blanco y un co
   
 En esta ilustración se muestra un informe similar al que creará.  
   
-![report-builder-expression-tutorial-in-browser](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
+![Captura de pantalla de un informe de Report Builder en el que se usan expresiones.](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
 Tiempo estimado para completar este tutorial: 30 minutos.  
   
@@ -44,7 +44,7 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
   
     Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
-    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
+    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos** , vaya al menú **Archivo** > **Nuevo**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -92,7 +92,7 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
   
 10. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ). El conjunto de resultados muestra 23 líneas de datos con las columnas siguientes: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase y LastPurchase.  
 
-    ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
+    ![Captura de pantalla del paso Diseñar una consulta del asistente Nueva tabla o matriz.](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
 11. Haga clic en **Next**.  
   
@@ -113,13 +113,13 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
   
     La suma ya no se aplica a YTDPurchase.  
     
-    ![report-builder-expression-not-sum](../reporting-services/media/report-builder-expression-not-sum.png)
+    ![Captura de pantalla de la lista Valores en la que se muestra la opción Suma lista para borrarse.](../reporting-services/media/report-builder-expression-not-sum.png)
   
 15. Haga clic en **Next**.  
   
 16. En la página **Elegir el diseño** , mantenga la configuración predeterminada y haga clic en **Siguiente**.  
 
-    ![report-builder-expression-tutorial-choose-layout](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
+    ![Captura de pantalla del paso Elegir el diseño del asistente Nueva tabla o matriz.](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
   
 17. Haga clic en **Finalizar**  
   
@@ -141,34 +141,34 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
   
 2.  Haga clic con el botón derecho en **ConjuntoDeDatos1** y haga clic en **Propiedades del conjunto de datos.**  
 
-    ![report-builder-expression-tutorial-rename-dataset](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
+    ![Captura de pantalla en la que se muestra cómo acceder a las propiedades del conjunto de datos en Report Builder.](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
   
 3.  En el cuadro **Nombre** , escriba **Expresiones**  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. Mostrar First Initial y Last Name  
-En esta sección, usará la función **Left** y el operador **Concatenate** (**&**) en una expresión que da como resultado un nombre que incluye una inicial y un apellido. Puede compilar la expresión paso a paso o avanzar en el procedimiento y copiar y pegar la expresión desde el tutorial al cuadro de diálogo **Expresión** .   
+En esta sección, usará la función **Left** y el operador **Concatenate** ( **&** ) en una expresión que da como resultado un nombre que incluye una inicial y un apellido. Puede compilar la expresión paso a paso o avanzar en el procedimiento y copiar y pegar la expresión desde el tutorial al cuadro de diálogo **Expresión** .   
   
-1.  Haga clic con el botón derecho en la columna **StateProvince** , seleccione **Insertar columna**y haga clic en **Izquierda**.  
+1.  Haga clic con el botón derecho en la columna **StateProvince** , seleccione **Insertar columna** y haga clic en **Izquierda**.  
   
     Se agrega una columna nueva a la izquierda de la columna **StateProvince** . 
     
-    ![report-builder-expression-tutorial-insert-column](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
+    ![Captura de pantalla en la que se muestra cómo insertar una columna a la izquierda en un informe.](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
   
 2.  Haga clic en el encabezado de la nueva columna y escriba **Nombre**  
   
 3.  Haga clic con el botón derecho en la celda de datos de la columna **Nombre** y haga clic en **Expresión**.  
 
-    ![report-builder-expression-tutorial-insert-expression](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
+    ![Captura de pantalla en la que se muestra cómo insertar una expresión en un informe.](../reporting-services/media/report-builder-expression-tutorial-insert-expression.png)
   
-4.  En el cuadro de diálogo **Expresión** , expanda **Funciones comunes**y haga clic en **Texto**.  
+4.  En el cuadro de diálogo **Expresión** , expanda **Funciones comunes** y haga clic en **Texto**.  
   
 5.  En la lista **Elemento** , haga doble clic en **Izquierda**.  
   
     La función **Izquierda** se agrega a la expresión.  
     
-    ![report-builder-expression-tutorial-left-function](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
+    ![Captura de pantalla en la que se muestra cómo agregar una función IZQUIERDA a una expresión.](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
   
 6.  En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
   
@@ -186,7 +186,7 @@ En esta sección, usará la función **Left** y el operador **Concatenate** (**&
   
     La expresión completa es: `=Left(Fields!FirstName.Value, 1) &". "& Fields!LastName.Value`  
     
-    ![report-builder-expression-tutorial-complete-name-expression](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
+    ![Captura de pantalla en la que se muestra cómo agregar un valor LastName a una expresión.](../reporting-services/media/report-builder-expression-tutorial-complete-name-expression.png)
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -199,13 +199,13 @@ En esta sección, dará formato a la columna **Last Purchase** que contiene fech
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
-2.  Seleccione la celda de datos en la columna **Last Purchase** y, en la pestaña **Inicio** > sección **Número**, seleccione **Fecha**.  
+2.  Seleccione la celda de datos en la columna **Last Purchase** y, en la pestaña **Inicio** > sección **Número** , seleccione **Fecha**.  
 
-    ![report-builder-expression-tutorial-date-format](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
+    ![Captura de pantalla en la que se muestra cómo establecer la columna de Última compra en Fecha.](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
 3.  Además, en la sección **Número** , haga clic en la flecha junto a **Estilos de marcador de posición** y seleccione **Valores de ejemplo**. 
 
-    ![report-builder-expression-tutorial-sample-values](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
+    ![Captura de pantalla en la que se muestra la opción Valores de ejemplo en Report Builder.](../reporting-services/media/report-builder-expression-tutorial-sample-values.png)
 
     Ahora puede ver un ejemplo del formato que ha seleccionado. 
   
@@ -217,15 +217,15 @@ En esta sección, dará formato a la columna **Last Purchase** que contiene fech
 
 1. Seleccione la fila de los encabezados de columna.
 
-2. En la pestaña **Inicio** > sección **Párrafo**, seleccione **Izquierda**. 
+2. En la pestaña **Inicio** > sección **Párrafo** , seleccione **Izquierda**. 
 
-    ![report-builder-expression-tutorial-format-headings](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
+    ![Captura de pantalla en la que se muestra cómo dar formato a los encabezados en Report Builder.](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
 
 3. Haga clic en **Ejecutar** para obtener la vista previa del informe. 
 
 Aquí se muestra el informe hasta el momento con el formato en las fechas, moneda y encabezados de columna.
 
-![report-builder-expression-tutorial-preview-formatted](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
+![Captura de pantalla en la que se muestra la vista previa del informe con formato.](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
 ## <a name="4-use-color-to-display-gender"></a><a name="Gender"></a>4. Usar color para mostrar el sexo de una persona  
@@ -236,7 +236,7 @@ Para mantener el color que ha aplicado en la celda de la tabla cuando crea un in
  
 ### <a name="to-add-an-mf-column"></a>Para agregar una columna M/F  
   
-1.  Haga clic con el botón derecho en la columna **Nombre** , seleccione **Insertar columna**y haga clic en **Izquierda**.  
+1.  Haga clic con el botón derecho en la columna **Nombre** , seleccione **Insertar columna** y haga clic en **Izquierda**.  
   
     Se agrega una columna nueva a la izquierda de la columna **Nombre** .  
   
@@ -248,17 +248,17 @@ Para mantener el color que ha aplicado en la celda de la tabla cuando crea un in
   
      Se agregará un rectángulo a la celda.  
      
-     ![report-builder-expression-tutorial-insert-rectangle](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
+     ![Captura de pantalla en la que se muestra cómo insertar un rectángulo.](../reporting-services/media/report-builder-expression-tutorial-insert-rectangle.png)
   
 2. Arrastre el divisor de columna entre **M/F** y **Nombre** para hacer más estrecha la columna **M/F** .
 
-    ![report-builder-expression-tutorial-narrow-column](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
+    ![Captura de pantalla en la que se muestra cómo hacer que una columna sea más estrecha.](../reporting-services/media/report-builder-expression-tutorial-narrow-column.png)
   
 ### <a name="to-use-color-to-show-gender"></a>Para usar color para mostrar el sexo de una persona  
   
 1.  Haga clic con el botón derecho en el rectángulo de la celda de datos de la columna **M/F** y haga clic en **Propiedades del rectángulo**.  
   
-2.  En el cuadro de diálogo **Propiedades del rectángulo** > pestaña **Relleno**, haga clic en el botón de la expresión **fx** junto a **Color de relleno**.  
+2.  En el cuadro de diálogo **Propiedades del rectángulo** > pestaña **Relleno** , haga clic en el botón de la expresión **fx** junto a **Color de relleno**.  
   
 3.  En el cuadro de diálogo **Expresión** , expanda **Funciones comunes** y, después, haga clic en **Flujo de programa**.  
   
@@ -270,9 +270,9 @@ Para mantener el color que ha aplicado en la celda de la tabla cuando crea un in
   
 7.  Escriba **="Hombre",** (incluida la coma).
 
-8. En la lista **Categoría** , haga clic en **Constantes**y, en el cuadro **Valores** , haga clic en **Azul aciano**.
+8. En la lista **Categoría** , haga clic en **Constantes** y, en el cuadro **Valores** , haga clic en **Azul aciano**.
 
-    ![report-builder-expression-tutorial-color-expression-cornflower-blue](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
+    ![Captura de pantalla en la que se muestra cómo usar un color para indicar un sexo.](../reporting-services/media/report-builder-expression-tutorial-color-expression-cornflower-blue.png)
 
 9. Escriba una coma al final. 
   
@@ -280,19 +280,19 @@ Para mantener el color que ha aplicado en la celda de la tabla cuando crea un in
   
 7.  Escriba **="Mujer",** (incluida la coma). 
 
-8. En la lista **Categoría** , haga clic en **Constantes**y, en el cuadro **Valores** , haga clic en **Rojo tomate**.
+8. En la lista **Categoría** , haga clic en **Constantes** y, en el cuadro **Valores** , haga clic en **Rojo tomate**.
 
 13. Escriba un paréntesis de cierre **)** al final. 
   
     La expresión completa es: `=Switch(Fields!Gender.Value ="Male", "CornflowerBlue",Fields!Gender.Value ="Female","Tomato")`  
     
-    ![report-builder-expression-tutorial-color-expression-complete](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
+    ![Captura de pantalla en la que se muestra la expresión completa en el cuadro de diálogo Expresión.](../reporting-services/media/report-builder-expression-tutorial-color-expression-complete.png)
   
-12. Haga clic en **Aceptar**y, después, en **Aceptar** de nuevo para cerrar el cuadro de diálogo **Propiedades del rectángulo** .  
+12. Haga clic en **Aceptar** y, después, en **Aceptar** de nuevo para cerrar el cuadro de diálogo **Propiedades del rectángulo** .  
   
 14. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
 
-    ![report-builder-expression-tutorial-preview-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
+    ![Captura de pantalla en la que se muestra la vista previa con la columna M/F.](../reporting-services/media/report-builder-expression-tutorial-preview-m-f-column.png)
 
 ### <a name="to-format-the-color-rectangles"></a>Para dar formato a los rectángulos de color
 
@@ -304,11 +304,11 @@ Para mantener el color que ha aplicado en la celda de la tabla cuando crea un in
     - BorderStyle = Solid
     - BorderWidth = 5pt
     
-    ![report-builder-expression-tutorial-format-m-f-column](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
+    ![Captura de pantalla que muestra cómo dar formato a los rectángulos de color de la columna M/F.](../reporting-services/media/report-builder-expression-tutorial-format-m-f-column.png)
 
 18. Haga clic en **Ejecutar** para obtener la vista previa del informe de nuevo. Esta vez, los bloques de color tienen espacios en blanco a su alrededor.
 
-    ![report-builder-expression-tutorial-preview-formatted-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
+    ![Captura de pantalla en la que se muestra la vista previa con los rectángulos con formato en la columna M/F.](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
 ## <a name="5-look-up-the-countryregion-name"></a><a name="Lookup"></a>5. Buscar el nombre CountryRegion  
 En esta sección, creará el conjunto de datos CountryRegion y usará la función **Lookup** para mostrar el nombre de un país o región en lugar del identificador del mismo.  
@@ -387,7 +387,7 @@ En esta sección, agregará una columna y, después, usará la función **Now** 
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
-2.  Haga clic con el botón derecho en la columna **Last Purchase** , seleccione **Insertar columna**y haga clic en **Derecha**.  
+2.  Haga clic con el botón derecho en la columna **Last Purchase** , seleccione **Insertar columna** y haga clic en **Derecha**.  
   
     Se agrega una columna nueva a la derecha de la columna **Last Purchase** .  
   
@@ -395,7 +395,7 @@ En esta sección, agregará una columna y, después, usará la función **Now** 
   
 4.  Haga clic con el botón derecho en la celda de datos de la columna **Días transcurridos** y haga clic en **Expresión**.  
   
-5.  En el cuadro de diálogo **Expresión**, expanda **Funciones comunes** y haga clic en **Fecha y hora**.  
+5.  En el cuadro de diálogo **Expresión** , expanda **Funciones comunes** y haga clic en **Fecha y hora**.  
   
 6.  En la lista **Elemento** , haga doble clic en **DateDiff**.  
   
@@ -405,7 +405,7 @@ En esta sección, agregará una columna y, después, usará la función **Now** 
   
 11. Inmediatamente después de `Fields!LastPurchase.Value`, escriba **,** (una coma). 
   
-13. En la lista **Categoría**, haga clic en **Fecha y hora** de nuevo y, en la lista **Elemento**, haga doble clic en **Ahora**.  
+13. En la lista **Categoría** , haga clic en **Fecha y hora** de nuevo y, en la lista **Elemento** , haga doble clic en **Ahora**.  
   
     > [!WARNING]  
     > En los informes de producción no debe usar la función **Ahora** en las expresiones que se evalúan varias veces como representadores de informes (por ejemplo, en las filas de detalle de un informe). El valor de **Ahora** cambia de una fila a otra y los diferentes valores afectan a los resultados de evaluación de las expresiones, lo que conduce a resultados ligeramente incoherentes. En su lugar, use la variable global `ExecutionTime` que proporciona [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -414,7 +414,7 @@ En esta sección, agregará una columna y, después, usará la función **Now** 
   
     La expresión completa es: `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
     
-    ![report-builder-expression-tutorial-date-since-last-purchase](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
+    ![Captura de pantalla en la que se muestra la expresión completa de la fecha desde la última compra.](../reporting-services/media/report-builder-expression-tutorial-date-since-last-purchase.png)
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
@@ -427,7 +427,7 @@ Configurar el indicador y sus estados tiene muchos pasos. Si quiere, puede salta
   
 ### <a name="to-add-the--or---avg-sales-column"></a>Para agregar la columna Promedio + o -  
   
-1.  Haga clic con el botón derecho en la columna **YTD Purchase** , seleccione **Insertar columna**y haga clic en **Derecha**.  
+1.  Haga clic con el botón derecho en la columna **YTD Purchase** , seleccione **Insertar columna** y haga clic en **Derecha**.  
   
     Se agrega una columna nueva a la derecha de la columna **YTD Purchase** .  
   
@@ -435,23 +435,23 @@ Configurar el indicador y sus estados tiene muchos pasos. Si quiere, puede salta
   
 ### <a name="to-add-an-indicator"></a>Para agregar un indicador  
   
-1.  En la pestaña **Insertar** , haga clic en **Indicador**y, después, haga clic en la celda de datos de la columna **Ventas promedio + o -** .  
+1.  En la pestaña **Insertar** , haga clic en **Indicador** y, después, haga clic en la celda de datos de la columna **Ventas promedio + o -** .  
   
     Se abrirá el cuadro de diálogo **Seleccionar tipo de indicador** .  
   
 2.  En el grupo **Direccional** de los conjuntos de iconos, haga clic en el conjunto de tres flechas grises.  
 
-    ![report-builder-expression-tutorial-select-indicator](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
+    ![Captura de pantalla en la que se muestra cómo agregar un indicador.](../reporting-services/media/report-builder-expression-tutorial-select-indicator.png)
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="to-configure-the-indicator"></a>Para configurar el indicador  
   
-1.  Haga clic con el botón derecho en el indicador, haga clic en **Propiedades de indicador**y, después, en **Valor y estados**.  
+1.  Haga clic con el botón derecho en el indicador, haga clic en **Propiedades de indicador** y, después, en **Valor y estados**.  
   
 2.  Haga clic en el botón de expresión **fx** situado junto al cuadro de texto **Valor** .  
   
-3.  En el cuadro de diálogo **Expresión** , expanda **Funciones comunes**y haga clic en **Matemáticas**.  
+3.  En el cuadro de diálogo **Expresión** , expanda **Funciones comunes** y haga clic en **Matemáticas**.  
   
 4.  En la lista **Elemento** , haga doble clic en **Redondear**.  
   
@@ -459,7 +459,7 @@ Configurar el indicador y sus estados tiene muchos pasos. Si quiere, puede salta
   
 7.  Inmediatamente después de `Fields!YTDPurchase.Value`, escriba  **-** (un signo menos). 
   
-9. Expanda **Funciones comunes** de nuevo, haga clic en **Agregado**y, en la lista **Elemento** , haga doble clic en **Promedio**.  
+9. Expanda **Funciones comunes** de nuevo, haga clic en **Agregado** y, en la lista **Elemento** , haga doble clic en **Promedio**.  
   
 11. En la lista **Categoría** , haga clic en **Campos (expresiones)** y, en la lista **Valores** , haga doble clic en **YTDPurchase**.  
   
@@ -473,9 +473,9 @@ Configurar el indicador y sus estados tiene muchos pasos. Si quiere, puede salta
   
 17. En la fila con la flecha hacia abajo, haga clic en el botón **fx** a la derecha del cuadro de texto del valor **Inicio** .  
 
-    ![report-builder-expression-tutorial-indicator-start](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
+    ![Captura de pantalla en la que se muestra cómo seleccionar el botón FX situado junto al cuadro de texto Iniciar.](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
   
-18. En el cuadro de diálogo **Expresión** , expanda **Funciones comunes**y haga clic en **Matemáticas**.  
+18. En el cuadro de diálogo **Expresión** , expanda **Funciones comunes** y haga clic en **Matemáticas**.  
   
 19. En la lista **Elemento** , haga doble clic en **Redondear**.  
   
@@ -483,7 +483,7 @@ Configurar el indicador y sus estados tiene muchos pasos. Si quiere, puede salta
   
 22. Inmediatamente después de `Fields!YTDPurchase.Value`, escriba  **-** (un signo menos). 
   
-24. Expanda **Funciones comunes** de nuevo, haga clic en **Agregado**y, en la lista **Elemento** , haga doble clic en **Promedio**.  
+24. Expanda **Funciones comunes** de nuevo, haga clic en **Agregado** y, en la lista **Elemento** , haga doble clic en **Promedio**.  
   
 26. En la lista **Categoría** , haga clic en **Campos (expresiones)** y, en la lista **Valores** , haga doble clic en **YTDPurchase**.  
   
@@ -497,7 +497,7 @@ Configurar el indicador y sus estados tiene muchos pasos. Si quiere, puede salta
   
 32. Haga clic en la fila con la flecha horizontal y haga clic en **Eliminar**.  
 
-    ![report-builder-expression-tutorial-delete-indicator-state](../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png)
+    ![Captura de pantalla en la que se muestra cómo eliminar un indicador.](../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png)
     
     Ahora solo existen dos flechas, una hacia arriba y otra hacia abajo.
   
@@ -513,7 +513,7 @@ Configurar el indicador y sus estados tiene muchos pasos. Si quiere, puede salta
   
 38. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
 
-    ![report-builder-expression-tutorial-preview-indicator](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
+    ![Captura de pantalla en la que se muestra la vista previa con la columna + o - AVG Sales, incluidos todos los nuevos indicadores.](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
 ## <a name="8-make-a-banded-report"></a><a name="GreenBar"></a>8. Crear un informe con bandas  
 Cree un parámetro de forma que los lectores del informe puedan especificar el color que se aplicará a las filas alternativas del informe, convirtiéndolo en un informe con bandas.  
@@ -524,13 +524,13 @@ Cree un parámetro de forma que los lectores del informe puedan especificar el c
   
 2.  En el panel **Datos de informe** , haga clic con el botón derecho en **Parámetros** y haga clic en **Agregar parámetro**.  
 
-    ![report-builder-expression-tutorial-add-parameter](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
+    ![Captura de pantalla en la que se muestra cómo agregar un parámetro.](../reporting-services/media/report-builder-expression-tutorial-add-parameter.png)
   
     Se abrirá el cuadro de diálogo **Propiedades de parámetro de informe** .  
   
-3.  En **Pedir datos**, escriba **Elegir color**  
+3.  En **Pedir datos** , escriba **Elegir color**  
   
-4.  En **Nombre**, escriba **RowColor**  
+4.  En **Nombre** , escriba **RowColor**  
   
 5.  En la pestaña **Valores disponibles** , haga clic en **Especificar valores**.  
   
@@ -558,7 +558,7 @@ Cree un parámetro de forma que los lectores del informe puedan especificar el c
   
 18. En el cuadro **Valor** , escriba **Rosa**  
 
-    ![report-builder-expression-tutorial-parameter-available](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
+    ![Captura de pantalla del cuadro de diálogo Propiedades de parámetro de informe en la que se muestra el paso Elección de los valores disponibles para este parámetro.](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -566,7 +566,7 @@ Cree un parámetro de forma que los lectores del informe puedan especificar el c
   
 1.   Seleccione toda la celda en la fila de datos excepto la celda de la columna **M/F** que tiene su propio color de fondo.  
 
-     ![report-builder-expression-tutorial-select-banded](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
+     ![Captura de pantalla en la que se muestran las celdas seleccionadas en una fila de datos.](../reporting-services/media/report-builder-expression-tutorial-select-banded.png)
   
 4.  En el panel Propiedades, haga clic en **BackgroundColor**. 
 
@@ -576,13 +576,13 @@ Cree un parámetro de forma que los lectores del informe puedan especificar el c
   
 5.  Haga clic en la flecha hacia abajo y, después, en **Expresión**.  
 
-    ![report-builder-expression-tutorial-banded-color-property](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
+    ![Captura de pantalla del cuadro Propiedades en el que se muestra cómo asociar una expresión a BackgroundColor.](../reporting-services/media/report-builder-expression-tutorial-banded-color-property.png)
   
-6.  En el cuadro de diálogo **Expresión** , expanda **Funciones comunes**y, después, haga clic en **Flujo de programa**.  
+6.  En el cuadro de diálogo **Expresión** , expanda **Funciones comunes** y, después, haga clic en **Flujo de programa**.  
   
 7.  En la lista **Elemento** , haga doble clic en **SiInm**.  
   
-8.  En **Funciones comunes**, haga clic en **Varios**y, en la lista **Elemento** , haga doble clic en **RowNumber**.  
+8.  En **Funciones comunes** , haga clic en **Varios** y, en la lista **Elemento** , haga doble clic en **RowNumber**.  
 
 9. Inmediatamente después de **RowNumber(** escriba **Nada) MOD 2,**
   
@@ -592,7 +592,7 @@ Cree un parámetro de forma que los lectores del informe puedan especificar el c
   
     La expresión completa es: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
     
-    ![report-builder-expression-tutorial-banded-color-expressn](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
+    ![Captura de pantalla en la que se muestra la expresión con color completo con bandas.](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -604,13 +604,13 @@ Cree un parámetro de forma que los lectores del informe puedan especificar el c
   
 3.  En la lista **Elegir color** , seleccione un color para las bandas que no son blancas del informe.  
     
-    ![report-builder-expression-tutorial-select-color](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
+    ![Captura de pantalla en la que se muestra cómo elegir un color para las bandas que no son blancas.](../reporting-services/media/report-builder-expression-tutorial-select-color.png)
   
 4.  Haga clic en **Ver informe**.  
   
     Los representadores de informes y las filas alternativas tienen el fondo que elija. 
     
-    ![report-builder-expression-tutorial-preview-banded](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
+    ![Captura de pantalla en la que se muestra la vista previa con filas con colores alternos.](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
 ## <a name="optional-add-a-report-title"></a><a name="Title"></a>(Opcional) Agregar un título de informe  
 Agregue un título al informe.  
@@ -619,7 +619,7 @@ Agregue un título al informe.
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Escriba **Resumen de comparación de ventas**y seleccione el texto.  
+2.  Escriba **Resumen de comparación de ventas** y seleccione el texto.  
   
 3.  En la pestaña **Inicio** , en el cuadro **Fuente** , establezca:
 
@@ -652,7 +652,7 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
 
 Ahora los lectores del informe pueden ver su informe en el portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .
 
-![report-builder-expression-tutorial-final-in-browser](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
+![Captura de pantalla del nuevo informe completado con todas las expresiones visibles.](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
 
    
 ## <a name="see-also"></a>Consulte también  

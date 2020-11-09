@@ -7,12 +7,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 459a49a4f2ed41b8e9d95c805431ff2c29a770fa
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: c6f2a0989cb13253ef4a6a26e013a6b8c7a84ded
+ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257997"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93294384"
 ---
 # <a name="configure-sql-assessment-on-an-azure-arc-enabled-sql-server-instance"></a>Configuración de SQL Assessment en una instancia de SQL Server habilitado para Azure Arc
 
@@ -37,11 +37,22 @@ SQL Assessment proporciona un mecanismo para evaluar la configuración de SQL S
    > [!div class="mx-imgBorder"]
    > [ ![Captura de pantalla que muestra la pantalla Estado del entorno de un recurso de SQL Server-Azure Arc.](media/assess/sql-assessment-heading-sql-server-arc.png) ](media/assess/sql-assessment-heading-sql-server-arc.png#lightbox)
 
-1. Especifique un directorio de trabajo en la máquina de recopilación de datos. De forma predeterminada, se usa `C:\sql_assessment\work_dir`. Durante la recopilación y el análisis, los datos se almacenan temporalmente en esa carpeta. Si la carpeta no existe, se crea automáticamente.
+> [!IMPORTANT]
+> Si la extensión MMA no está instalada, no podrá iniciar SQL Assessment a petición.
 
-1. Seleccione **Descargar script de configuración** . Copie el script descargado en la máquina de destino.
+2. Seleccione el tipo de cuenta. Si tiene una cuenta de servicio administrada, le permitirá iniciar SQL Assessment directamente desde el portal. Especifique el nombre de la cuenta.
 
-1. Abra una instancia de administrador de **powershell.exe** y ejecute uno de los siguientes bloques de código:
+> [!NOTE]
+> Al especificar una *cuenta de servicio administrada* , se activará el botón **Configurar SQL Assessment** , de modo que podrá iniciar la evaluación desde el portal mediante la implementación de una extensión *CustomScriptExtension*. Dado que solo se puede implementar una extensión *CustomScriptExtension* al mismo tiempo, la extensión de script para SQL Assessment se quitará automáticamente después de la ejecución. Si ya tiene otra extensión *CustomScriptExtension* implementada en la máquina host, no se activará el botón **Configurar SQL Assessment**.
+
+3. Si quiere cambiar el valor predeterminado, especifique un directorio de trabajo en la máquina de recopilación de datos. De forma predeterminada, se usa `C:\sql_assessment\work_dir`. Durante la recopilación y el análisis, los datos se almacenan temporalmente en esa carpeta. Si la carpeta no existe, se crea automáticamente.
+
+4. Si inicia SQL Assessment desde el portal haciendo clic en **Configurar SQL Assessment** , se mostrará una burbuja de implementación estándar.
+
+> [!div class="mx-imgBorder"]
+   > [ ![Captura de pantalla en la que se muestra la implementación de una extensión CustomScriptExtension.](media/assess/sql-assessment-custom-script-deployment.png) ](media/assess/sql-assessment-custom-script-deployment.png#lightbox)
+
+5. Si prefiere iniciar SQL Assessment desde la máquina de destino, haga clic en **Descargar script de configuración** , copie el script descargado en la máquina de destino y ejecute uno de los siguientes bloques de código en una instancia de administrador de **powershell.exe** :
 
    * _Cuenta de dominio_ :  se le pedirá la cuenta de usuario y la contraseña.
 
@@ -61,7 +72,7 @@ SQL Assessment proporciona un mecanismo para evaluar la configuración de SQL S
 > El script programa una tarea denominada *SQLAssessment* , que desencadena la recopilación de datos. Esta tarea se ejecuta en un plazo de una hora después de ejecutar el script. A continuación, se repite cada siete días.
 
 > [!TIP]
-> Puede modificar la tarea para que se ejecute en una fecha y hora diferentes, o incluso forzarla para que se ejecute inmediatamente. En la biblioteca del programador de tareas, busque **Microsoft** > **Operations Management Suite** > **AOI\*\*\***  > **Assessments** > **SQLAssessment** .
+> Puede modificar la tarea para que se ejecute en una fecha y hora diferentes, o incluso forzarla para que se ejecute inmediatamente. En la biblioteca del programador de tareas, busque **Microsoft** > **Operations Management Suite** > **AOI\*\*\***  > **Assessments** > **SQLAssessment**.
 
 ## <a name="view-sql-assessment-results"></a>Visualización de resultados de SQL Assessment
 

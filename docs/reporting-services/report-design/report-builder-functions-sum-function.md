@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 22db409b3c5e485db27cb828f1769ecdb001b5c8
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: fe8a7c4948b811a97c2f6973a04227543a496991
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681434"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364427"
 ---
 # <a name="report-builder-functions---sum-function"></a>Funciones del Generador de informes: función Sum
   Devuelve la suma de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.  
@@ -31,19 +31,19 @@ Sum(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parámetros  
  *expression*  
- (**Integer** o **Float**) Expresión en la que se realiza la agregación.  
+ ( **Integer** o **Float** ) Expresión en la que se realiza la agregación.  
   
  *scope*  
- (**String**) Opcional. Nombre de un conjunto de datos, un grupo o una región de datos que contiene los elementos de informe a los que se va a aplicar la función de agregado. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
+ ( **String** ) Opcional. Nombre de un conjunto de datos, un grupo o una región de datos que contiene los elementos de informe a los que se va a aplicar la función de agregado. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
   
  *recursive*  
- (**Tipo enumerado**) Opcional. **Simple** (valor predeterminado) o **RdlRecursive**. Especifica si se debe realizar la agregación de forma recursiva.  
+ ( **Tipo enumerado** ) Opcional. **Simple** (valor predeterminado) o **RdlRecursive**. Especifica si se debe realizar la agregación de forma recursiva.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
  Devuelve un valor **Decimal** para expresiones decimales y un valor **Double** para las demás expresiones.  
   
 ## <a name="remarks"></a>Observaciones  
- El conjunto de datos especificado en la expresión debe tener el mismo tipo de datos. Si desea convertir datos de varios tipos de datos numéricos al mismo tipo de datos, use funciones de conversión como **CInt**, **CDbl** o **CDec**. Para obtener más información, vea [Funciones de conversión de tipos](https://go.microsoft.com/fwlink/?LinkId=96142).  
+ El conjunto de datos especificado en la expresión debe tener el mismo tipo de datos. Si desea convertir datos de varios tipos de datos numéricos al mismo tipo de datos, use funciones de conversión como **CInt** , **CDbl** o **CDec**. Para obtener más información, vea [Funciones de conversión de tipos](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
  El valor de *scope* tiene que ser una constante de cadena y no puede ser una expresión. Para los agregados exteriores o los que no especifican a otros agregados, *scope* debe hacer referencia al ámbito actual o a un ámbito de contenido. Para los agregados de agregados, los agregados anidados pueden especificar un ámbito secundario.  
   
@@ -53,7 +53,7 @@ Sum(expression, scope, recursive)
   
 -   *Scope* , para los agregados anidados, no puede ser el nombre de un conjunto de datos.  
   
--   *Expression* no debe contener las funciones **First**, **Last**, **Previous**o **RunningValue** .  
+-   *Expression* no debe contener las funciones **First** , **Last** , **Previous** o **RunningValue** .  
   
 -   *Expression* no debe contener a los agregados anidados que especifican *recursive*.  
   
@@ -61,8 +61,10 @@ Sum(expression, scope, recursive)
   
  Para más información sobre los agregados recursivos, vea [Crear un grupo de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-## <a name="example"></a>Ejemplo  
- Los dos ejemplos de código siguientes devuelven la suma de los totales para cada artículo del grupo o de la región de datos `Order` .  
+## <a name="examples"></a>Ejemplos  
+
+### <a name="a-sum-of-line-item-totals"></a>A. Suma de los totales de los elementos de línea 
+ Los dos ejemplos de código siguientes devuelven la suma de los totales para cada artículo del grupo o de la región de datos `Order`.  
   
 ```  
 =Sum(Fields!LineTotal.Value, "Order")  
@@ -70,7 +72,7 @@ Sum(expression, scope, recursive)
 =Sum(CDbl(Fields!LineTotal.Value), "Order")  
 ```  
   
-## <a name="example"></a>Ejemplo  
+### <a name="b-maximum-value-from-all-nested-regions"></a>B. Valor máximo de todas las regiones anidadas 
  En una región de datos de matriz con la categoría y la subcategoría de grupos de filas anidadas, y el año y el cuatrimestre de grupos de columnas anidadas, en una celda que pertenezca a los grupos de columnas y filas más internos, la expresión siguiente se evalúa como el valor máximo de todos los trimestres para todas las subcategorías.  
   
 ```  

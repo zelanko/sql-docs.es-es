@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d37e617ef7dcb4c63b7d2239881cc6cb96c7c2f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 695b6d02494430b134ce46ac14d802443b41046b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243606"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243794"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Trabajar con conjuntos de datos compartidos: portal web
 
@@ -32,7 +32,7 @@ Para crear un nuevo conjunto de datos compartido, puede hacer lo siguiente:
   
 2.  Seleccione **Conjunto de datos**.  
   
-    ![ssRSDataset-NewDataset](../reporting-services/media/ssrsdataset-newdataset.png)  
+    ![Captura de pantalla en la que se muestra la lista desplegable Nuevo con la opción Conjunto de datos destacada.](../reporting-services/media/ssrsdataset-newdataset.png)  
   
 3.  Se iniciará el Generador de informes o se le pedirá que lo descargue.  
   
@@ -51,17 +51,17 @@ Para administrar un conjunto de datos compartido existente, puede hacer lo sigui
   
 1.  Haga clic en los **puntos suspensivos (...)** del conjunto de datos que quiera administrar.  
   
-    ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
+    ![Captura de pantalla en la que se muestra que el usuario selecciona el botón de puntos suspensivos del conjunto de datos.](../reporting-services/media/ssrsdataset-ellipse.png)  
   
 2.  Seleccione **Administrar** , que le llevará a la pantalla de edición.  
   
-    ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
+    ![Captura de pantalla en la que se muestra el botón de puntos suspensivos seleccionado con la opción ADMINISTRAR destacada.](../reporting-services/media/ssrsdataset-manage.png)  
   
 ## <a name="properties"></a>Propiedades
   
-En la pantalla de propiedades, puede cambiar el **nombre** y la **descripción** del conjunto de datos. También puede **Eliminar**, **Mover**, **Editar en el Generador de informes**, **Descargar** o **Reemplazar**.  
+En la pantalla de propiedades, puede cambiar el **nombre** y la **descripción** del conjunto de datos. También puede **Eliminar** , **Mover** , **Editar en el Generador de informes** , **Descargar** o **Reemplazar**.  
   
-![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
+![Captura de pantalla en la que se muestra la pantalla Propiedades del cuadro de diálogo Editar Company Sales.](../reporting-services/media/ssrsdataset-properties.png)  
   
 ## <a name="caching"></a>Almacenamiento en memoria caché
   
@@ -71,17 +71,17 @@ Dispone de varias opciones para almacenar en memoria caché los datos de un conj
   
 2.  **Cache copies of this report and use them when available** (Almacenar en caché copias del informe y usarlas cuando estén disponibles) colocará una copia temporal de los datos en una memoria caché para su uso con elementos que utilicen este conjunto de datos. El almacenamiento en memoria caché suele mejorar el rendimiento porque los datos se devuelven desde la memoria caché en lugar de ejecutarse de nuevo la consulta del conjunto de datos.  
   
-![ssRSDataset-Caching1](../reporting-services/media/ssrsdataset-caching1.png)  
+![Captura de pantalla en la que se muestra la pantalla Almacenamiento en caché del cuadro de diálogo Editar Company Sales con la opción Ejecutar este informe siempre con los datos más recientes seleccionada.](../reporting-services/media/ssrsdataset-caching1.png)  
   
 Si selecciona **Cache Copies of this report and use them when available** (Almacenar en caché copias del informe y usarlas cuando estén disponibles), dispondrá de más opciones.  
   
-![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
+![Captura de pantalla en la que se muestra la pantalla Almacenamiento en caché del cuadro de diálogo Editar Company Sales con la opción Realiza copias en caché de este informe y las usa cuando están disponibles. seleccionada.](../reporting-services/media/ssrsdataset-caching2.png)  
   
 ### <a name="cache-expiration"></a>Expiración de la caché  
   
 Puede controlar si desea que la caché expire, para el conjunto de datos compartido, después de una cantidad de tiempo determinada, o bien si prefiere hacerlo según una programación. Puede usar una programación compartida.  
   
-![ssRSDataset-Caching3](../reporting-services/media/ssrsdataset-caching3.png)  
+![Captura de pantalla en la que se muestra que la opción La memoria caché expira en una programación. seleccionada.](../reporting-services/media/ssrsdataset-caching3.png)  
   
 > [!NOTE]
 > La memoria caché no se actualiza al establecer una expiración. Sin un plan de actualización de caché, los datos se actualizarán con la siguiente ejecución del conjunto de datos.  
@@ -96,9 +96,9 @@ Después de aplicar la opción de caché anterior, puede definir el plan de actu
   
 Para crear un nuevo plan de actualización de caché, seleccione **Nuevo plan de actualización de caché**. Después, puede escribir un nombre para el plan y especificar una programación. Si el conjunto de datos tiene parámetros definidos, verá que se enumeran y podrá especificar valores, a menos que estén marcados como de solo lectura.  
   
-Cuando haya terminado, puede seleccionar **Create Cache Refresh Plan**(Crear plan de actualización de caché).  
+Cuando haya terminado, puede seleccionar **Create Cache Refresh Plan** (Crear plan de actualización de caché).  
   
-![ssRSDataset-Caching4](../reporting-services/media/ssrsdataset-caching4.png)  
+![Captura de pantalla del cuadro de diálogo Editar Company Sales en la que se muestra la opción Crear plan de actualización de caché.](../reporting-services/media/ssrsdataset-caching4.png)  
   
 > [!NOTE]
 > El Agente SQL Server debe estar ejecutándose para poder crear un plan de actualización de caché.  

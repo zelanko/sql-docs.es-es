@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 450e625fba58eaa6ff1d9e9fe13065bf934a633b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 23796da12c2b987dfad6f023d40e9975cb301e28
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245692"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043767"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)
 En este tutorial, creará un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con un gráfico de columnas que muestra una serie como un conjunto de barras verticales agrupadas por categoría. 
@@ -27,7 +27,7 @@ Los gráficos de columna son útiles para:
   
 En la ilustración siguiente se muestra el gráfico de columnas que creará, con una media móvil.  
   
-![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
+![Captura de pantalla en la que se muestra un gráfico de columnas de Report Builder.](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
 > En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
@@ -48,13 +48,13 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
   
     Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
-    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
+    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos** , vaya al menú **Archivo** > **Nuevo**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
 3.  En el panel derecho, haga clic en **Asistente para gráficos**.  
   
-4.  En la **página Elegir un conjunto de datos**, haga clic en **Crear un conjunto de datos**y,después, haga clic en **Siguiente**.  
+4.  En la **página Elegir un conjunto de datos** , haga clic en **Crear un conjunto de datos** y,después, haga clic en **Siguiente**.  
   
 5.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos, y después haga clic en **Siguiente**. Puede que necesite escribir un nombre de usuario y contraseña.  
   
@@ -105,13 +105,13 @@ Puede elegir entre varios tipos de gráfico predefinidos y luego modificar el gr
   
     El gráfico se agrega a la superficie de diseño. Tenga en cuenta que el nuevo gráfico de columnas solo muestra los datos de representación. La leyenda dice Fecha de ventas A, Fecha de ventas B, etc., solo para dar una idea del aspecto que tendrá el informe. 
     
-    ![generador-informes-gráfico-columnas-vista-diseño-1](../reporting-services/media/report-builder-column-chart-1-design-view.png)
+    ![Captura de pantalla de una columna de Report Builder en la vista de diseño.](../reporting-services/media/report-builder-column-chart-1-design-view.png)
   
 7.  Haga clic en el gráfico para mostrar las asas del gráfico. Arrastre la esquina inferior derecha del gráfico para aumentar su tamaño. Observe que la superficie de diseño del informe aumenta de tamaño para adaptarse al tamaño del gráfico.  
   
 8.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
 
-    ![generador-informes-gráfico-columnas-vista-previa-1](../reporting-services/media/report-builder-column-chart-1-preview.png)
+    ![Captura de pantalla en la que se muestra una vista previa del gráfico de columnas de Report Builder.](../reporting-services/media/report-builder-column-chart-1-preview.png)
 
 Tenga en cuenta que el gráfico no etiqueta todas las categorías del eje horizontal. De forma predeterminada, solo se incluyen las etiquetas que caben a lo largo del eje. 
   
@@ -122,7 +122,7 @@ De forma predeterminada, el eje horizontal muestra los valores en un formato gen
   
 2.  Haga clic con el botón derecho en el eje horizontal > **Propiedades del eje horizontal**.  
   
-3.  En la pestaña **Número** , en **Categoría**, seleccione **fecha**.  
+3.  En la pestaña **Número** , en **Categoría** , seleccione **fecha**.  
   
 5.  En el cuadro **Tipo** , seleccione **31 Ene 2000**.  
   
@@ -132,7 +132,7 @@ De forma predeterminada, el eje horizontal muestra los valores en un formato gen
   
 La fecha se mostrará en el formato de fecha que haya seleccionado. El gráfico todavía no etiqueta todas las categorías del eje horizontal. 
 
-![generador-informes-gráfico-columnas-vista-previa-2](../reporting-services/media/report-builder-column-chart-2-preview.png)
+![Captura de pantalla del gráfico de columnas de Report Builder en la que se muestra el formato de fecha.](../reporting-services/media/report-builder-column-chart-2-preview.png)
   
 Puede personalizar la presentación de las etiquetas girándolas y especificando el intervalo.  
   
@@ -144,21 +144,21 @@ Puede personalizar la presentación de las etiquetas girándolas y especificando
   
 3.  Haga clic con el botón derecho en el eje horizontal > **Propiedades del eje horizontal**.  
   
-5.  En la pestaña **Etiquetas** , bajo **Cambiar opciones de ajuste automát. de etiquetas de eje**, seleccione **Deshabilitar el ajuste automático**.  
+5.  En la pestaña **Etiquetas** , bajo **Cambiar opciones de ajuste automát. de etiquetas de eje** , seleccione **Deshabilitar el ajuste automático**.  
   
-7.  En **Ángulo de giro de etiqueta**, seleccione **-90**.  
+7.  En **Ángulo de giro de etiqueta** , seleccione **-90**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
     El texto de ejemplo del eje horizontal girará 90 grados.  
     
-    ![generador-informes-gráfico-columnas-girar-eje-x](../reporting-services/media/report-builder-column-chart-rotate-x-axis.png)
+    ![Captura de pantalla del gráfico de columnas de Report Builder con texto del eje x girado en la vista de diseño.](../reporting-services/media/report-builder-column-chart-rotate-x-axis.png)
   
 9. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
 En el gráfico, las etiquetas se giran.  
 
-![generador-informes-gráfico-columnas-girar-eje-x-vista-previa](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
+![Captura de pantalla en la que se muestra una vista previa del gráfico de columnas de Report Builder con texto del eje x girado.](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
   
 ## <a name="5-move-the-legend"></a><a name="Legend"></a>5. Mover la leyenda  
 La leyenda se crea automáticamente a partir de los datos de las categorías y las series. Puede mover la leyenda debajo del área de gráfico de un gráfico de columnas.  
@@ -167,7 +167,7 @@ La leyenda se crea automáticamente a partir de los datos de las categorías y l
   
 2.  Haga clic con el botón derecho en la leyenda del gráfico > **Propiedades de la leyenda**.  
   
-3.  En **Diseño y posición**, seleccione una posición diferente. Por ejemplo, seleccione la opción centrada en la parte inferior.  
+3.  En **Diseño y posición** , seleccione una posición diferente. Por ejemplo, seleccione la opción centrada en la parte inferior.  
   
     Cuando la leyenda se coloca en la parte superior o inferior de un gráfico, su diseño cambia de vertical a horizontal. Puede seleccionar un diseño diferente en el cuadro **Diseño** .  
   
@@ -192,7 +192,7 @@ De forma predeterminada, el eje vertical muestra los valores en un formato gener
   
 2. Haga clic en las etiquetas del eje vertical a lo largo del lateral izquierdo del gráfico para seleccionarlas.  
   
-3.  En la pestaña **Inicio** > grupo **Número**, haga clic en el botón **Moneda**. Las etiquetas del eje cambiarán para mostrar el formato de moneda.  
+3.  En la pestaña **Inicio** > grupo **Número** , haga clic en el botón **Moneda**. Las etiquetas del eje cambiarán para mostrar el formato de moneda.  
   
 4.  Haga clic dos veces en el botón **Disminuir decimales** para mostrar el número redondeado al dólar más próximo.  
   
@@ -214,7 +214,7 @@ De forma predeterminada, el eje vertical muestra los valores en un formato gener
   
 12. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
 
-    ![generador-informes-gráfico-columnas-formato-eje-x](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
+    ![Captura de pantalla en la que se muestra una vista previa del formato del gráfico de columnas de Report Builder con el eje y etiquetado correctamente.](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
 ## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Mostrar todas las etiquetas del eje horizontal (x)
 
@@ -226,13 +226,13 @@ Observe que solo se muestran algunas de las etiquetas del eje x. En esta secció
 
 3. En el panel Propiedades, establezca LabelInterval en 1.
 
-    ![report-builder-column-chart-set-label-interval](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![Captura de pantalla en la que se muestra cómo definir el intervalo de etiquetas del gráfico de columnas de Report Builder.](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     El gráfico tiene el mismo aspecto en la vista Diseño. 
     
 5.  Haga clic en **Ejecutar** para obtener la vista previa del informe.
 
-    ![report-builder-column-chart-label-interval-one-preview](../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![Captura de pantalla en la que se muestra una vista previa del gráfico de columnas de Report Builder con el intervalo de etiquetas establecido en uno.](../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     Ahora el gráfico muestra todas sus etiquetas.
   
@@ -246,13 +246,13 @@ Una media móvil es una media de los datos de la serie, calculada en el tiempo. 
   
 3.  Haga clic con el botón derecho en el campo **[Sum(Sales)]** en el área **Valores** y, después, haga clic en **Agregar serie calculada**.  
 
-     ![generador-informes-gráfico-columnas-agregar-serie-calculada](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
+     ![Captura de pantalla en la que se muestra cómo agregar una serie calculada al gráfico de columnas de Report Builder.](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
   
-4.  En **Fórmula**, compruebe que esté seleccionada la opción **Media móvil** .  
+4.  En **Fórmula** , compruebe que esté seleccionada la opción **Media móvil** .  
   
-5.  En **Establecer parámetros de fórmula**, para **Período**, seleccione **4**.  
+5.  En **Establecer parámetros de fórmula** , para **Período** , seleccione **4**.  
   
-6.  En la pestaña **Borde** , en **Ancho de línea**, seleccione **3pt**.  
+6.  En la pestaña **Borde** , en **Ancho de línea** , seleccione **3pt**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -260,7 +260,7 @@ Una media móvil es una media de los datos de la serie, calculada en el tiempo. 
   
 El gráfico muestra una línea que muestra la media móvil del total de ventas por fecha, promediado cada cuatro fechas. Obtenga más información sobre [Agregar una media móvil a un gráfico](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md). 
 
-![generador-informes-gráfico-columnas-media-móvil](../reporting-services/media/report-builder-column-chart-moving-average.png)
+![Captura de pantalla de un gráfico de columnas de Report Builder en la que se muestra una media móvil.](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
 ## <a name="10-add-a-report-title"></a><a name="Title"></a>10. Agregar un título de informe  
   
@@ -268,7 +268,7 @@ El gráfico muestra una línea que muestra la media móvil del total de ventas p
   
 2.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-3.  Escriba **Gráfico de ventas**, pulse ENTRAR y, después, escriba **Enero a diciembre de 2015**, para que tenga este aspecto:  
+3.  Escriba **Gráfico de ventas** , pulse ENTRAR y, después, escriba **Enero a diciembre de 2015** , para que tenga este aspecto:  
   
     **Gráfico de ventas**  
   
@@ -294,9 +294,9 @@ El gráfico muestra una línea que muestra la media móvil del total de ventas p
 
     Puede guardarlo en el equipo o en el servidor de informes.
   
-3.  En **Nombre**, escriba **Gráfico de columnas de pedidos de ventas**.  
+3.  En **Nombre** , escriba **Gráfico de columnas de pedidos de ventas**.  
   
-4.  Haga clic en **Save**(Guardar).  
+4.  Haga clic en **Save** (Guardar).  
   
 ## <a name="next-steps"></a>Pasos siguientes  
 Ha completado correctamente el tutorial Agregar un gráfico de columnas al informe. Para obtener más información sobre los gráficos, vea [Gráficos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  

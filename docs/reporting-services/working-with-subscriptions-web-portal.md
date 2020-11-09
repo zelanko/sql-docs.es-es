@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5d936933b96c8d7f5c4c2830707b4a6bb4d9fe2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4efd72f1c2d6f9098e2af4840483d38d4749d264
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243560"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243752"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>Trabajar con suscripciones (portal web)
 
@@ -44,7 +44,7 @@ Las suscripciones se admiten para informes que se pueden ejecutar en modo desate
 ## <a name="type-of-subscription"></a>Tipo de suscripción  
 Puede optar entre una **suscripción estándar** y una **suscripción controlada por datos**.  
   
-![ssRSWebPortal-subscriptions3](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
+![Captura de pantalla en la que se muestra la sección Tipo de suscripción.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
    
 Una suscripción controlada por datos es aquella que consulta una base de datos de suscriptor para obtener información sobre la suscripción cada vez que esta se ejecuta. Las suscripciones controladas por datos usan los resultados de la consulta para determinar los destinatarios de la suscripción, la configuración de entrega y los valores de parámetro de informe. En tiempo de ejecución, el servidor de informes ejecuta una consulta para obtener los valores utilizados para la configuración de la suscripción.   
   
@@ -57,7 +57,7 @@ Seleccione la extensión de entrega que se va a utilizar para distribuir el info
   
 La disponibilidad de una extensión de entrega depende de si está instalada y configurada en el servidor de informes. El correo electrónico del servidor de informes es la extensión de entrega predeterminada, pero se debe configurar antes de poder usarlo. No es necesario configurar la entrega al recurso compartido de archivos, pero se debe definir una carpeta compartida para poder utilizarla.  
   
-![ssRSWebPortal-subscriptions2](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
+![Captura de pantalla en la que se muestran las secciones Destino y Opciones de entrega (recurso compartido de archivos de Windows).](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
   
 Según la extensión de entrega que usted seleccione, aparece la siguiente configuración:  
   
@@ -68,7 +68,7 @@ Según la extensión de entrega que usted seleccione, aparece la siguiente confi
 ## <a name="data-driven-subscription-dataset"></a>Conjunto de datos de suscripción controlada por datos  
 En una suscripción controlada por datos hay que definir el conjunto de datos que se usará para la suscripción. Seleccione **Editar conjunto de datos** para proporcionar esa información.  
   
-![ssRSWebPortal-subscriptions4](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
+![Captura de pantalla en la que se muestra la sección Conjunto de datos.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
   
 Primero hay que suministrar un **origen de datos** para usarlo en la consulta. Puede tratarse de un origen de datos compartido, o bien puede proporcionar un origen de datos personalizado.  
   
@@ -80,7 +80,7 @@ Para obtener los mejores resultados, ejecute primero la consulta en SQL Server M
   
 -   Las filas del conjunto de resultados determinan el número de entregas de informes que se generan. Si tiene 10.000 filas, el servidor de informes generará 10.000 notificaciones y entregas.  
   
-![ssRSWebPortal-subscriptions5](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
+![Captura de pantalla en la que se muestra la sección Consulta.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
   
 Ya podemos pasar a validar la consulta. También se puede definir un **tiempo de espera de consulta**.  
   

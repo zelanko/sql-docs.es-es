@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd5fab649fc481bdb91b42c34be33f5976b5af93
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8e4d7569f8624843f0cf05b4c873f0be7b26df3c
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245682"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043775"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adición de un parámetro al informe (Generador de informes)
 En este tutorial, agregará un parámetro a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] para que los lectores del informe puedan filtrar los datos del informe para uno o más valores. 
   
-![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
+![Captura de pantalla en la que se muestra que se puede agregar un parámetro a un informe paginado.](../reporting-services/media/report-builder-parameter-tutorial.png)
 
 Los parámetros del informe se crean automáticamente para cada parámetro de la consulta que incluya en una consulta del conjunto de datos. El tipo de datos de parámetro determina cómo aparece en la barra de herramientas de visualización de informe. 
    
@@ -43,7 +43,7 @@ Cree un informe de matriz, un origen de datos y un conjunto de datos.
   
     Se abre el cuadro de diálogo **Nuevo informe o conjunto de datos** .  
   
-    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos**, vaya al menú **Archivo** > **Nuevo**.  
+    Si no ve el cuadro de diálogo **Nuevo informe o conjunto de datos** , vaya al menú **Archivo** > **Nuevo**.  
   
 2.  En el panel de la izquierda, asegúrese de que está seleccionada la opción **Nuevo informe** .  
   
@@ -104,7 +104,7 @@ El asistente proporciona un diseño inicial para mostrar los datos. El panel de 
   
 4.  Haga clic en **Next**.  
   
-5.  En la página **Elegir el diseño** , en **Opciones**, asegúrese de que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
+5.  En la página **Elegir el diseño** , en **Opciones** , asegúrese de que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
     Al ejecutar el informe, la última columna mostrará la cantidad total de cada subcategoría para todos los almacenes y la última fila mostrará la cantidad total para todas las subcategorías de cada almacén.  
   
@@ -135,7 +135,7 @@ Al agregar un parámetro de consulta a una consulta, el Generador de informes cr
   
 1.  Haga clic en **Diseño** para volver a cambiar a la vista Diseño.  
   
-2.  En el panel Datos de informe, expanda la carpeta **Conjuntos de datos** , haga clic con el botón derecho en **DataSet1**y haga clic en **Consulta**.  
+2.  En el panel Datos de informe, expanda la carpeta **Conjuntos de datos** , haga clic con el botón derecho en **DataSet1** y haga clic en **Consulta**.  
   
 3.  Agregue la siguiente cláusula **WHERE** de [!INCLUDE[tsql](../includes/tsql-md.md)] como última línea de la consulta:  
   
@@ -147,7 +147,7 @@ Al agregar un parámetro de consulta a una consulta, el Generador de informes cr
   
 4.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ). Se abre el cuadro de diálogo **Definir parámetros de consulta** y se le pide un valor para el parámetro de consulta *\@StoreID*.  
   
-5.  En **Valor de parámetro**, escriba **200**.  
+5.  En **Valor de parámetro** , escriba **200**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -170,11 +170,11 @@ Después de crear un parámetro de informe, puede ajustar los valores predetermi
   
 De manera predeterminada, el parámetro que ha creado tiene el tipo de datos **Texto**. Como el identificador de almacén es un entero, puede cambiar el tipo de datos a Entero.  
   
-1.  En el panel Datos de informe debajo del nodo **Parámetros**, haga clic con el botón derecho en *\@StoreID* y, luego, haga clic en **Propiedades del parámetro**.  
+1.  En el panel Datos de informe debajo del nodo **Parámetros** , haga clic con el botón derecho en *\@StoreID* y, luego, haga clic en **Propiedades del parámetro**.  
   
-2.  En **Pedir datos**, escriba **¿Identificador del almacén?** Este texto aparece en la barra de herramientas del visor de informes al ejecutar el informe.  
+2.  En **Pedir datos** , escriba **¿Identificador del almacén?** Este texto aparece en la barra de herramientas del visor de informes al ejecutar el informe.  
   
-3.  En **Tipo de datos**, en la lista desplegable, seleccione **Entero**.  
+3.  En **Tipo de datos** , en la lista desplegable, seleccione **Entero**.  
   
 4.  Acepte los valores predeterminados restantes del cuadro de diálogo.  
   
@@ -182,7 +182,7 @@ De manera predeterminada, el parámetro que ha creado tiene el tipo de datos **T
   
 6.  Haga clic en **Ejecutar** para obtener la vista previa del informe. El visor de informes muestra el aviso **¿Identificador del almacén?** para *\@StoreID*.  
   
-7.  En la barra de herramientas del visor de informes, al lado de Store ID, escriba **200**y, después, haga clic en **Ver informe**.  
+7.  En la barra de herramientas del visor de informes, al lado de Store ID, escriba **200** y, después, haga clic en **Ver informe**.  
   
 ![SSRB_ParamTutStoreID](../reporting-services/media/ssrb-paramtutstoreid.png)  
   
@@ -195,15 +195,15 @@ Para asegurarse de que los lectores del informe solo pueden escribir valores vá
   
 2.  En el panel Datos de informe, haga clic con el botón derecho en la carpeta **Conjuntos de datos** y, después, haga clic en **Agregar conjunto de datos**.  
   
-3.  En **Nombre**, escriba **Almacenes**.  
+3.  En **Nombre** , escriba **Almacenes**.  
   
 4.  Seleccione **Usar un conjunto de datos insertado en el informe**.  
   
-5.  En **Origen de datos**, en la lista desplegable, elija el origen de datos que ha usado en el primer procedimiento.  
+5.  En **Origen de datos** , en la lista desplegable, elija el origen de datos que ha usado en el primer procedimiento.  
   
-6.  En **Tipo de consulta**, compruebe que la opción **Texto** está seleccionada.  
+6.  En **Tipo de consulta** , compruebe que la opción **Texto** está seleccionada.  
   
-7.  En **Consulta**, pegue el texto siguiente:  
+7.  En **Consulta** , pegue el texto siguiente:  
   
     ```  
     SELECT 200 AS StoreID, 'Contoso Catalog Store' as StoreName  
@@ -223,17 +223,17 @@ Después de crear un conjunto de datos para proporcionar los valores disponibles
   
 1.  En el panel Datos de informe, haga clic con el botón derecho en el parámetro *StoreID\@ y, después, haga clic en* **Propiedades del parámetro**.  
   
-2.  Haga clic en **Valores disponibles**y luego haga clic en **Obtener valores de una consulta**.  
+2.  Haga clic en **Valores disponibles** y luego haga clic en **Obtener valores de una consulta**.  
   
-3.  En **Conjunto de datos**, haga clic en **Almacenes**en la lista desplegable.  
+3.  En **Conjunto de datos** , haga clic en **Almacenes** en la lista desplegable.  
   
-4.  En **Campo de valor**, en la lista desplegable, haga clic en StoreID.  
+4.  En **Campo de valor** , en la lista desplegable, haga clic en StoreID.  
   
-5.  En **Campo de etiqueta**, en la lista desplegable, haga clic en StoreName. El campo de etiqueta especifica el nombre para mostrar del valor.  
+5.  En **Campo de etiqueta** , en la lista desplegable, haga clic en StoreName. El campo de etiqueta especifica el nombre para mostrar del valor.  
   
 6.  Haga clic en **General**.  
   
-7.  En **Pedir datos**, cambie **¿Identificador del almacén?** a **¿Nombre del almacén?**  
+7.  En **Pedir datos** , cambie **¿Identificador del almacén?** a **¿Nombre del almacén?**  
   
     Los lectores del informe seleccionarán ahora entre una lista de nombres de almacén en lugar de entre los identificadores de almacén. Observe que el tipo de datos de parámetro sigue siendo **Entero** , porque el parámetro está basado en el identificador del almacén, no el nombre del almacén.  
   
@@ -256,17 +256,17 @@ Puede especificar un valor predeterminado para cada parámetro de modo que el in
   
 2.  En el panel Datos de informe, haga clic con el botón derecho en *StoreID\@ y, luego, haga clic en* **Propiedades del parámetro**.  
   
-3.  Haga clic en **Valores predeterminados**y, después, haga clic en **Obtener valores de una consulta**.  
+3.  Haga clic en **Valores predeterminados** y, después, haga clic en **Obtener valores de una consulta**.  
   
-4.  En **Conjunto de datos**, haga clic en **Almacenes**en la lista desplegable.  
+4.  En **Conjunto de datos** , haga clic en **Almacenes** en la lista desplegable.  
   
-5.  En **Campo de valor**, en la lista desplegable, haga clic en StoreID.  
+5.  En **Campo de valor** , en la lista desplegable, haga clic en StoreID.  
   
 6.  [!INCLUDE[clickOK_md](../includes/clickok-md.md)]  
   
 7.  Obtenga una vista previa del informe.  
   
-Para *\@StoreID*, el visor de informes muestra el valor "Contoso Norteamérica Online Store", porque es el primer valor del conjunto de resultados del conjunto de datos **Almacenes**. El informe muestra la cantidad vendida de cámaras digitales para el identificador del almacén **199**.  
+Para *\@StoreID* , el visor de informes muestra el valor "Contoso Norteamérica Online Store", porque es el primer valor del conjunto de resultados del conjunto de datos **Almacenes**. El informe muestra la cantidad vendida de cámaras digitales para el identificador del almacén **199**.  
   
 ### <a name="to-specify-a-custom-default-value"></a>Para especificar un valor predeterminado personalizado  
   
@@ -276,13 +276,13 @@ Para *\@StoreID*, el visor de informes muestra el valor "Contoso Norteamérica O
   
 3.  Haga clic en **Valores predeterminados** > **Especificar valores** > **Agregar**. Se agrega una nueva fila de valor.  
   
-4.  En **Valor**, escriba **200**.  
+4.  En **Valor** , escriba **200**.  
   
 5.  [!INCLUDE[clickOK_md](../includes/clickok-md.md)] 
   
 6.  Obtenga una vista previa del informe.  
   
-Para *\@StoreID*, el visor de informes muestra "Contoso Catalog Store", porque es el nombre para mostrar del identificador de almacén **200**. El informe muestra la cantidad vendida de accesorios, cámaras de vídeo y cámaras digitales SLR para el identificador de almacén **200**.  
+Para *\@StoreID* , el visor de informes muestra "Contoso Catalog Store", porque es el nombre para mostrar del identificador de almacén **200**. El informe muestra la cantidad vendida de accesorios, cámaras de vídeo y cámaras digitales SLR para el identificador de almacén **200**.  
   
 ## <a name="4d-look-up-a-namevalue-pair"></a><a name="NameValue"></a>4d. Buscar un par Nombre/Valor  
 Un conjunto de datos podría contener el identificador y el campo de nombre correspondiente. Si solo tiene un identificador, puede buscar el nombre correspondiente en un conjunto de datos que haya creado y que tenga pares de nombre/valor.  
@@ -295,7 +295,7 @@ Un conjunto de datos podría contener el identificador y el campo de nombre corr
   
 3.  En el panel de expresión, elimine todo el texto excepto el **signo igual** (=) inicial.  
   
-4.  En **Categoría**, expanda **Funciones comunes**y haga clic en **Varios**. El panel de elementos muestra un conjunto de funciones.  
+4.  En **Categoría** , expanda **Funciones comunes** y haga clic en **Varios**. El panel de elementos muestra un conjunto de funciones.  
   
 5.  En Elemento, haga doble clic en **Búsqueda**. En el panel de expresión se muestra `=Lookup(`. En el panel de ejemplo se muestra un ejemplo de sintaxis de búsqueda.  
   
@@ -345,13 +345,13 @@ Los filtros ayudan a controlar qué datos se deben usar en un informe una vez qu
   
 2.  Haga clic con el botón derecho en una fila o identificador del encabezado de columna de la matriz y, después, haga clic en **Propiedades de Tablix**.  
   
-3.  Haga clic en **Filtros**y luego en **Agregar**. Aparece una nueva fila de filtro.  
+3.  Haga clic en **Filtros** y luego en **Agregar**. Aparece una nueva fila de filtro.  
   
-4.  En **Expresión**, en la lista desplegable, seleccione el StoreId del campo de conjunto de datos. El tipo de datos indica **Entero**. Cuando el valor de expresión es un campo de un conjunto de datos, el tipo de datos se establece automáticamente.  
+4.  En **Expresión** , en la lista desplegable, seleccione el StoreId del campo de conjunto de datos. El tipo de datos indica **Entero**. Cuando el valor de expresión es un campo de un conjunto de datos, el tipo de datos se establece automáticamente.  
   
-5.  En **Operador**, compruebe que está seleccionado **signo igual** (=).  
+5.  En **Operador** , compruebe que está seleccionado **signo igual** (=).  
   
-6.  En **Valor**, escriba `[@StoreID]`. 
+6.  En **Valor** , escriba `[@StoreID]`. 
 
     `[@StoreID]` es la sintaxis de expresión simple que representa `=Parameters!StoreID.Value`.  
   
@@ -361,7 +361,7 @@ Los filtros ayudan a controlar qué datos se deben usar en un informe una vez qu
   
     La matriz solo muestra los datos de "Contoso Catalog Store".  
   
-9. En la barra de herramientas del visor de informes, para **¿Nombre del almacén?** , seleccione **Contoso Asia Online Store**y, después, haga clic en **Ver informe**.  
+9. En la barra de herramientas del visor de informes, para **¿Nombre del almacén?** , seleccione **Contoso Asia Online Store** y, después, haga clic en **Ver informe**.  
   
 La matriz muestra los datos correspondientes al almacén que había seleccionado.  
   
@@ -378,7 +378,7 @@ Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la co
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  En el panel Datos de informe, expanda la carpeta **Conjuntos de datos** , haga clic con el botón derecho en **DataSet1**y haga clic en **Consulta**.  
+5.  En el panel Datos de informe, expanda la carpeta **Conjuntos de datos** , haga clic con el botón derecho en **DataSet1** y haga clic en **Consulta**.  
   
 6.  Cambie el **signo igual** (=) por **IN** en la cláusula [!INCLUDE[tsql](../includes/tsql-md.md)]**WHERE** de la última línea de la consulta:  
   
@@ -394,7 +394,7 @@ Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la co
   
 9. Haga clic en **Filtros**.  
   
-10. En **Operador**, seleccione **In**.  
+10. En **Operador** , seleccione **In**.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -416,32 +416,32 @@ Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la co
   
     Cada valor válido aparece al lado de una casilla.  
   
-18. Haga clic en **Seleccionar todo**y, después, en **Ver informe**.  
+18. Haga clic en **Seleccionar todo** y, después, en **Ver informe**.  
   
     El informe muestra la cantidad vendida para todas las subcategorías en todos los almacenes.  
   
 19. En la lista desplegable, haga clic en **Seleccionar todo** para borrar la lista, haga clic en "Contoso Catalog Store" y en "Contoso Asia Online Store" y luego haga clic en **Ver informe**.  
 
-    ![report-builder-parameter-multiselect](../reporting-services/media/report-builder-parameter-multiselect.png)
+    ![Captura de pantalla en la que se muestra que se pueden seleccionar varios parámetros para agregarlos a un informe.](../reporting-services/media/report-builder-parameter-multiselect.png)
   
  
 ## <a name="8-add-a-boolean-parameter-for-conditional-visibility"></a><a name="Boolean"></a>8. Agregar un parámetro booleano para obtener visibilidad condicional  
   
 ### <a name="to-add-a-boolean-parameter"></a>Para agregar un parámetro booleano  
   
-1.  En la superficie de diseño, en el panel Datos de informe, haga clic con el botón derecho en **Parámetros**y haga clic en **Agregar parámetro**.  
+1.  En la superficie de diseño, en el panel Datos de informe, haga clic con el botón derecho en **Parámetros** y haga clic en **Agregar parámetro**.  
   
-2.  En **Nombre**, escriba ShowSelections.  
+2.  En **Nombre** , escriba ShowSelections.  
   
-3.  En **Pedir datos**, escriba ¿Mostrar selecciones?  
+3.  En **Pedir datos** , escriba ¿Mostrar selecciones?  
   
-4.  En **Tipo de datos**, haga clic en **Booleano**.  
+4.  En **Tipo de datos** , haga clic en **Booleano**.  
   
 5.  Haga clic en **Valores predeterminados**.  
   
-6.  Haga clic en **Especificar valor**y, después, haga clic en **Agregar**.  
+6.  Haga clic en **Especificar valor** y, después, haga clic en **Agregar**.  
   
-7.  En **Valor**, escriba **False**.  
+7.  En **Valor** , escriba **False**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -451,7 +451,7 @@ Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la co
   
 2.  Haga clic en **Visibilidad**.  
   
-3.  Seleccione la opción **Mostrar u ocultar en función de una expresión**y, después, haga clic en el botón de expresión **Fx**.  
+3.  Seleccione la opción **Mostrar u ocultar en función de una expresión** y, después, haga clic en el botón de expresión **Fx**.  
   
 4.  Escriba la siguiente expresión: `=Not Parameters!ShowSelections.Value`  
   
@@ -465,7 +465,7 @@ Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la co
   
     El cuadro de texto que muestra las opciones de parámetro en el pie de página no aparece.  
   
-8.  En la barra de herramientas del visor de informes, al lado de **Show selections**(Mostrar selecciones), haga clic en **True** > **Ver informe**.  
+8.  En la barra de herramientas del visor de informes, al lado de **Show selections** (Mostrar selecciones), haga clic en **True** > **Ver informe**.  
   
     El cuadro de texto del pie de página aparece y muestra todos los nombres de almacén que haya seleccionado.  
   
@@ -491,9 +491,9 @@ Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la co
   
     Aparece el mensaje **Conectándose al servidor de informes**. Una vez completada la conexión, se mostrará el contenido de la carpeta de informes que el administrador del servidor de informes especificó como ubicación predeterminada para los informes.  
   
-4.  En **Nombre**, reemplace el nombre predeterminado por Ventas de productos con parámetros.  
+4.  En **Nombre** , reemplace el nombre predeterminado por Ventas de productos con parámetros.  
   
-5.  Haga clic en **Save**(Guardar).  
+5.  Haga clic en **Save** (Guardar).  
   
 El informe se guarda en el servidor de informes. El servidor de informes al que está conectado aparece en la barra de estado en la parte inferior de la ventana.  
   

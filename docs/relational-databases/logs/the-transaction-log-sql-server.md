@@ -64,9 +64,9 @@ Las soluciones de servidor en espera, [!INCLUDE[ssHADR](../../includes/sshadr-md
 
 En un **escenario de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]** , cada actualización de una base de datos, la réplica principal, se reproduce de inmediato en copias completas e independientes de la base de datos, las réplicas secundarias. La réplica principal envía las entradas del registro inmediatamente a las réplicas secundarias, que aplican las entradas del registro entrantes a las bases de datos de los grupos de disponibilidad, poniéndolas al día. Para obtener más información, consulte [Instancias de clúster de conmutación por error de AlwaysOn](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 
-En un **escenario de trasvase de registros**, el servidor principal envía el registro de transacciones activo de la base de datos principal a uno o varios destinos. Los servidores secundarios restauran el registro en su base de datos secundaria local. Para obtener más información, consulte [Acerca del trasvase de registros](../../database-engine/log-shipping/about-log-shipping-sql-server.md). 
+En un **escenario de trasvase de registros** , el servidor principal envía el registro de transacciones activo de la base de datos principal a uno o varios destinos. Los servidores secundarios restauran el registro en su base de datos secundaria local. Para obtener más información, consulte [Acerca del trasvase de registros](../../database-engine/log-shipping/about-log-shipping-sql-server.md). 
 
-En un **escenario de creación de reflejo de la base de datos**, las actualizaciones de una base de datos (la principal) se reproducen inmediatamente en una copia completa e independiente de la base de datos (la base de datos reflejada). La instancia de servidor principal envía de forma inmediata los registros a la instancia del servidor reflejado, que los aplica a la base de datos reflejada, poniéndola al día de forma continua. Para obtener más información, consulte [Creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
+En un **escenario de creación de reflejo de la base de datos** , las actualizaciones de una base de datos (la principal) se reproducen inmediatamente en una copia completa e independiente de la base de datos (la base de datos reflejada). La instancia de servidor principal envía de forma inmediata los registros a la instancia del servidor reflejado, que los aplica a la base de datos reflejada, poniéndola al día de forma continua. Para obtener más información, consulte [Creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
 
 ##  <a name="transaction-log-characteristics"></a><a name="Characteristics"></a>Características del registro de transacciones
 Características del registro de transacciones de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]: 
@@ -96,7 +96,7 @@ Para evitar quedarse sin espacio, a menos que el truncamiento del registro se re
 > El truncamiento del registro no reduce el tamaño del archivo de registro físico. Para reducir el tamaño físico de un archivo de registro físico, debe reducir el archivo de registro. Para obtener información sobre cómo reducir el tamaño de un archivo de registro físico, vea [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
 > Pero tenga en cuenta los [Factores que pueden ralentizar el truncamiento del registro](#FactorsThatDelayTruncation). Si se requiere el espacio de almacenamiento de nuevo después de reducir un registro, el registro de transacciones volverá a crecer y esto implicará una sobrecarga de rendimiento durante las operaciones de ampliación de registro.
   
-##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factores que pueden ralentizar el truncamiento del registro  
  Cuando las entradas de registro permanecen activas durante una transacción de larga duración, se retrasa el truncamiento del registro y es posible que se llene el registro de transacciones, como ya hemos mencionado anteriormente en este tema largo.  
   
 > [!IMPORTANT]
@@ -124,7 +124,7 @@ Para evitar quedarse sin espacio, a menos que el truncamiento del registro se re
 |16|XTP_CHECKPOINT|Es necesario realizar un punto de comprobación de OLTP en memoria. En el caso de las tablas optimizadas para memoria, se toma un punto de comprobación automático cuando el archivo de registro de transacciones es mayor que 1,5 GB desde el último punto de control (incluye tablas basadas en disco y optimizadas para memoria).<br /> Para obtener más información, vea [Funcionamiento de los puntos de comprobación para tablas con optimización para memoria](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md) y [Proceso de registro y punto de comprobación para las tablas optimizadas en memoria] (https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/)
   
 ##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> Operaciones que se pueden registrar mínimamente  
-El*registro mínimo* implica registrar únicamente la cantidad de información necesaria para recuperar la transacción sin permitir la recuperación a un momento dado. En este tema se identifican las operaciones que se registran mínimamente en el [modelo de recuperación](../backup-restore/recovery-models-sql-server.md) optimizado para cargas masivas de registros (y en el modelo de recuperación simple, excepto cuando se está ejecutando una copia de seguridad).  
+El *registro mínimo* implica registrar únicamente la cantidad de información necesaria para recuperar la transacción sin permitir la recuperación a un momento dado. En este tema se identifican las operaciones que se registran mínimamente en el [modelo de recuperación](../backup-restore/recovery-models-sql-server.md) optimizado para cargas masivas de registros (y en el modelo de recuperación simple, excepto cuando se está ejecutando una copia de seguridad).  
   
 > [!NOTE]
 > Las tablas optimizadas para memoria no admiten el registro mínimo.  
@@ -144,10 +144,10 @@ Cuando la replicación transaccional está habilitada, las operaciones `SELECT I
   
 -   Actualizaciones parciales de tipos de datos de valores grandes que usan la cláusula `.WRITE` de la instrucción [UPDATE](../../t-sql/queries/update-transact-sql.md) al insertar o anexar datos nuevos. Tenga en cuenta que el registro mínimo no se utiliza cuando se actualizan valores existentes. Para obtener más información sobre los tipos de datos de valores grandes, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
--   Las instrucciones[WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) y [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) al insertar o anexar datos nuevos en las columnas de tipos de datos **text**, **ntext**, y **image** . Tenga en cuenta que el registro mínimo no se utiliza cuando se actualizan valores existentes.  
+-   Las instrucciones [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) y [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) al insertar o anexar datos nuevos en las columnas de tipos de datos **text** , **ntext** , y **image** . Tenga en cuenta que el registro mínimo no se utiliza cuando se actualizan valores existentes.  
   
     > [!WARNING]
-    > Las instrucciones `WRITETEXT` y `UPDATETEXT` ha quedado **en desuso**; evite usarlas en las nuevas aplicaciones.  
+    > Las instrucciones `WRITETEXT` y `UPDATETEXT` ha quedado **en desuso** ; evite usarlas en las nuevas aplicaciones.  
   
 -   Si la base de datos está establecida en el modelo de recuperación optimizado para cargas masivas de registros o simple, algunas operaciones DDL de índices se registran mínimamente con independencia de si la operación se ejecuta sin conexión o con conexión. Las operaciones de índice con registro mínimo son:  
   
@@ -156,7 +156,7 @@ Cuando la replicación transaccional está habilitada, las operaciones `SELECT I
     -   Operaciones[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD o DBCC DBREINDEX.  
   
         > [!WARNING]
-        > La instrucción `DBCC DBREINDEX` ha quedado **en desuso**, de modo que no conviene usarla en las aplicaciones nuevas.  
+        > La instrucción `DBCC DBREINDEX` ha quedado **en desuso** , de modo que no conviene usarla en las aplicaciones nuevas.  
   
         > [!NOTE]
         > Las operaciones de generación de índices usan un registro insignificante, pero se pueden retrasar cuando una copia de seguridad se ejecuta simultáneamente. Este retraso se debe a los requisitos de sincronización de las páginas del grupo de búferes registradas mínimamente cuando se usa el modelo de recuperación simple u optimizado para cargas masivas de registros. 

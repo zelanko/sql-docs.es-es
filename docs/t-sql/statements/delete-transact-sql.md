@@ -26,12 +26,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0de7a61b92599b82aabc0f0197c02098c7758384
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: 7e074f54cb4d31616abced2e0b555c068728ec6c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300519"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384834"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -122,7 +122,7 @@ DELETE
  Especifica el número o el porcentaje de filas aleatorias que se van a eliminar. *expression* puede ser un número o un porcentaje de las filas. Las filas a las que se hace referencia en la expresión TOP utilizada con INSERT, UPDATE o DELETE no se ordenan. Para más información, vea [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
- Palabra clave opcional que se puede usar entre la palabra clave DELETE y el destino *table_or_view_name* o *rowset_function_limited* .  
+ Palabra clave opcional que se puede usar entre la palabra clave DELETE y el destino *table_or_view_name* o *rowset_function_limited*.  
   
  *table_alias*  
  Alias especificado en la cláusula FROM *table_source* que representa la tabla o vista de la que se van a eliminar las filas.  
@@ -130,7 +130,7 @@ DELETE
  *server_name*  
  **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
- Nombre del servidor (un nombre de servidor vinculado o la función [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) como nombre de servidor) en el que se encuentra la tabla o la vista. Si se especifica *server_name* , se requiere *database_name* y *schema_name* .  
+ Nombre del servidor (un nombre de servidor vinculado o la función [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) como nombre de servidor) en el que se encuentra la tabla o la vista. Si se especifica *server_name* , se requiere *database_name* y *schema_name*.  
   
  *database_name*  
  El nombre de la base de datos.  
@@ -168,7 +168,7 @@ DELETE
   
  Hay dos formas de operaciones de eliminación, que se basan en las condiciones que se especifiquen en la cláusula WHERE:  
   
--   Las eliminaciones por búsqueda especifican una condición de búsqueda que califica las filas que se van a eliminar. Por ejemplo, WHERE *column_name* = *value* .  
+-   Las eliminaciones por búsqueda especifican una condición de búsqueda que califica las filas que se van a eliminar. Por ejemplo, WHERE *column_name* = *value*.  
   
 -   Las eliminaciones por posición utilizan la cláusula CURRENT OF para especificar un cursor. La operación de eliminación se produce en la posición actual del cursor. Este método puede ser más preciso que una instrucción DELETE por búsqueda que utilice una cláusula WHERE *search_condition* para calificar las filas que se van a eliminar. Una instrucción DELETE por búsqueda elimina varias filas si la condición de búsqueda no identifica exclusivamente una única fila.  
   
@@ -338,7 +338,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. Utilizar TOP para limitar el número de filas eliminadas  
- Cuando se usa una cláusula TOP ( *n* ) con DELETE, la operación de eliminación se realiza en una selección aleatoria de un número de filas *n* . En el ejemplo siguiente se eliminan `20` filas aleatorias de la tabla `PurchaseOrderDetail` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] cuyas fechas de vencimiento sean anteriores al 1 de julio de 2006.  
+ Cuando se usa una cláusula TOP ( *n* ) con DELETE, la operación de eliminación se realiza en una selección aleatoria de un número de filas *n*. En el ejemplo siguiente se eliminan `20` filas aleatorias de la tabla `PurchaseOrderDetail` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] cuyas fechas de vencimiento sean anteriores al 1 de julio de 2006.  
   
 ```sql
 DELETE TOP (20)   
@@ -364,7 +364,7 @@ GO
 **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Eliminar datos de una tabla remota usando un servidor vinculado  
- En el ejemplo siguiente se eliminan filas de una tabla remota. En el ejemplo primero se crea un vínculo al origen de datos remoto mediante [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). El nombre del servidor vinculado, `MyLinkServer`, se especifica después como parte del nombre de objeto de cuatro partes con el formato *server.catalog.schema.object* .  
+ En el ejemplo siguiente se eliminan filas de una tabla remota. En el ejemplo primero se crea un vínculo al origen de datos remoto mediante [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). El nombre del servidor vinculado, `MyLinkServer`, se especifica después como parte del nombre de objeto de cuatro partes con el formato *server.catalog.schema.object*.  
   
 ```sql
 USE master;  
@@ -400,13 +400,13 @@ GO
 ```  
   
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>H. Eliminar datos de una tabla remota con una función OPENDATASOURCE  
- En el ejemplo siguiente se elimina una fila de una tabla remota especificando la función de conjunto de filas [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Especifique un nombre de servidor válido para el origen de datos con el formato *server_name* o *server_name\instance_name* .  
+ En el ejemplo siguiente se elimina una fila de una tabla remota especificando la función de conjunto de filas [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Especifique un nombre de servidor válido para el origen de datos con el formato *server_name* o *server_name\instance_name*.  
   
 ```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
     .AdventureWorks2012.HumanResources.Department   
-WHERE DepartmentID = 17;'  
+WHERE DepartmentID = 17;
 ```  
   
 ###  <a name="capturing-the-results-of-the-delete-statement"></a><a name="CaptureResults"></a> Capturar los resultados de la instrucción DELETE  

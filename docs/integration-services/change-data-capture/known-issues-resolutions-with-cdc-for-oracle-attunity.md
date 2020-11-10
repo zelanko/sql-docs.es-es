@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 899a00273fbccb1e68e6690556e81bb3f0bde05c
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523910"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384736"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Errores conocidos y resoluciones con captura de datos modificados para Oracle de Attunity
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ La **versión 1.1.0.102** contiene estas correcciones:
 - CDC para la instancia de Oracle no responde cuando se inicia y no captura los cambios. La memoria del servidor de Oracle puede aumentar hasta que se agote la memoria o se bloquee.
 - [2672759](https://support.microsoft.com/kb/2672759): Se produce un mensaje de error al usar Change Data Capture Service para Oracle de Attunity: "ORA-00600: código de error interno". Agregue el seguimiento de nivel de origen y confirme si recibe el mismo error ORA-00600. Solucionado mediante una descarga de revisión de Oracle.
 - Varias particiones
-    - Cuando se usan más de 10 particiones en una tabla de Oracle, la instancia CDC no puede capturar todos los cambios de la tabla. Cuando la tabla de Oracle se define con más de 10 particiones, los cambios solo se capturan desde las últimas 10 particiones. Se ha corregido en la versión _Service Pack 1 para SQL Server 2012_ . Consulte la [página de descarga de Feature Pack de SP1](https://www.microsoft.com/download/details.aspx?id=35580). 
+    - Cuando se usan más de 10 particiones en una tabla de Oracle, la instancia CDC no puede capturar todos los cambios de la tabla. Cuando la tabla de Oracle se define con más de 10 particiones, los cambios solo se capturan desde las últimas 10 particiones. Se ha corregido en la versión _Service Pack 1 para SQL Server 2012_. Consulte la [página de descarga de Feature Pack de SP1](https://www.microsoft.com/download/details.aspx?id=35575). 
 - Los cambios se han perdido
-    - La captura de eventos puede entrar en un bucle infinito y dejar de capturar nuevos cambios de datos (relacionados con el error 5623813 de Oracle). Cuando el entorno de Oracle RAC realiza una detención o reanudación de la instancia CDC, los cambios se pueden omitir o perder. Esto significa que a la captura de datos modificados de SQL Server le faltan filas importantes y, por lo tanto, hay pérdida de datos en el almacén de datos o en el sistema de suscripción. Se ha corregido en la versión _Service Pack 1 para SQL Server 2012_ . Consulte la [página de descarga de Feature Pack de SP1](https://www.microsoft.com/download/details.aspx?id=35580).
+    - La captura de eventos puede entrar en un bucle infinito y dejar de capturar nuevos cambios de datos (relacionados con el error 5623813 de Oracle). Cuando el entorno de Oracle RAC realiza una detención o reanudación de la instancia CDC, los cambios se pueden omitir o perder. Esto significa que a la captura de datos modificados de SQL Server le faltan filas importantes y, por lo tanto, hay pérdida de datos en el almacén de datos o en el sistema de suscripción. Se ha corregido en la versión _Service Pack 1 para SQL Server 2012_. Consulte la [página de descarga de Feature Pack de SP1](https://www.microsoft.com/download/details.aspx?id=35575).
 - Anchos dobles en columnas de SQL
     - Al crear una instancia CDC para Oracle, en los scripts que se van a ejecutar en SQL Server, la longitud de una columna de tipo de datos de ancho variable se duplica en las tablas de SQL Server que se crean en el script. Por ejemplo, si intenta realizar un seguimiento de los cambios en una columna VARCHAR2(10) en una tabla de Oracle, la columna correspondiente de la tabla SQL Server es NVARCHAR(20) en el script de implementación. Se ha corregido en la _Actualización acumulativa 2 para SQL Server 2012 SP1_ o en la _Actualización acumulativa 5 para SQL Server 2012_ , tal como se describe en KB [2769673](https://support.microsoft.com/kb/2769673). 
 - Los datos DDL se truncan.
@@ -115,7 +115,7 @@ Elija una hora de inicio y seleccione una ubicación para el archivo de registro
 
 ### <a name="detailed-errors"></a>Errores detallados
 
-Puede aumentar el nivel de seguimiento que ha recopilado la instancia y repetir el escenario para recopilar un registro más detallado. Para ello, en **Acciones** , seleccione **Propiedades** y, después, agregue una nueva propiedad en la cuadrícula de **Configuración avanzada** de la pestaña **Avanzado** . Establezca el nombre de la propiedad en `trace` y luego establezca el valor en `SOURCE`. 
+Puede aumentar el nivel de seguimiento que ha recopilado la instancia y repetir el escenario para recopilar un registro más detallado. Para ello, en **Acciones** , seleccione **Propiedades** y, después, agregue una nueva propiedad en la cuadrícula de **Configuración avanzada** de la pestaña **Avanzado**. Establezca el nombre de la propiedad en `trace` y luego establezca el valor en `SOURCE`. 
 
 ![Captura de pantalla en la que se muestra la opción Propiedades en Acciones.](media/known-issues-resolutions-with-cdc-for-oracle-attunity/properties.png)
 
@@ -151,7 +151,7 @@ Para resolver este error, conceda a los usuarios configurados actualmente los pe
 
 La lista de todos los permisos necesarios se detalla en el archivo de ayuda incluido en la carpeta de archivos del programa de instalación `C:\Program Files\Change Data Capture for Oracle by Attunity\Attunity.SqlServer.XdbCdcDesigner.chm`.  Consulte la página titulada "Conectarse a una base de datos de origen de Oracle" en el archivo .chm para ver la lista completa.
 
-Para establecer la cuenta de usuario, seleccione CDCInstance en el panel izquierdo y el botón Propiedades en el panel Acciones, situado más a la derecha dentro de la ventana **CDC Designer** . Puede cambiar la cuenta de autenticación de minería de registros de Oracle desde la página de diálogo de propiedades.
+Para establecer la cuenta de usuario, seleccione CDCInstance en el panel izquierdo y el botón Propiedades en el panel Acciones, situado más a la derecha dentro de la ventana **CDC Designer**. Puede cambiar la cuenta de autenticación de minería de registros de Oracle desde la página de diálogo de propiedades.
 
 ![Captura de pantalla en la que se muestra la pestaña Oracle del cuadro de diálogo testTA Properties (Propiedades de testTA).](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-connection.png)
 

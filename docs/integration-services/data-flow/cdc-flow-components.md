@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0306e266f48259d0a7cc68a455116ec5a5ce847f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 19b4d69708405a3c70ffaacd0f9d81e995f4aba8
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196489"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384634"
 ---
 # <a name="cdc-flow-components"></a>Componentes del flujo de CDC
 
@@ -31,11 +31,11 @@ ms.locfileid: "92196489"
   
  Estos son los componentes de la captura de datos modificados de Attunity:  
   
- **Componentes de flujo de control CDC**:  
+ **Componentes de flujo de control CDC** :  
   
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
   
- **Componentes de flujo de datos CDC**:  
+ **Componentes de flujo de datos CDC** :  
   
  [origen de CDC](../../integration-services/data-flow/cdc-source.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "92196489"
 ## <a name="installation"></a>Instalación  
  En esta sección se describen los procedimientos de instalación de los componentes CDC para Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
- Los componentes de CDC para SSIS se incluyen con el servicio y el diseñador de captura de datos modificados para Oracle de Attunity de Microsoft® para Microsoft SQL Server®. Esta descarga forma parte de SQL Server Feature Pack. Descargue los componentes del Feature Pack, en la [página web de SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ Los componentes de CDC para SSIS se incluyen con el servicio y el diseñador de captura de datos modificados para Oracle de Attunity de Microsoft® para Microsoft SQL Server®. Esta descarga forma parte de SQL Server Feature Pack. Descargue los componentes del Feature Pack, en la [página web de SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833).  
   
 ### <a name="version-support"></a>Compatibilidad de versiones
 
@@ -181,7 +181,7 @@ Aparecerá un mensaje después de instalar los componentes. Haga clic en **Sí**
 |2- ILEND (Carga inicial terminada)|Es el estado que se produce cuando el paquete de carga inicial finaliza correctamente. Se produce tras la llamada de la operación MarkInitialLoadEnd a la tarea Control CDC.<br /><br /> Para obtener más información acerca de las operaciones de la tarea Control CDC, vea [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |3-ILUPDATE (Actualización de carga inicial)|Es el estado que existe tras la primera ejecución del paquete de actualización después de la carga inicial, mientras continua procesándose el intervalo de procesamiento inicial. Se produce tras la llamada de la operación **GetProcessingRange** a la tarea Control CDC.<br /><br /> Si se usa la columna **_$reprocessing** , se establece en 1 para indicar que el paquete puede estar ya volviendo a procesar filas en el destino.<br /><br /> Para obtener más información acerca de las operaciones de la tarea Control CDC, vea [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |4-TFEND (Actualización de fuente de generación terminada)|Es el estado que se espera para las ejecuciones normales de CDC. Indica que la ejecución anterior se completó correctamente y que se puede iniciar una ejecución nueva con un intervalo de procesamiento nuevo.|  
-|5-TFSTART (Actualización de fuente de generación iniciada)|Es el estado que existe en ejecuciones posteriores del paquete de actualización tras la llamada de la operación **GetProcessingRange** a la tarea Control CDC.<br /><br /> Esto indica que se ha iniciado correctamente una ejecución de CDC normal, pero que aún no ha terminado (**MarkProcessedRange**).<br /><br /> Para obtener más información acerca de las operaciones de la tarea Control CDC, vea [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
+|5-TFSTART (Actualización de fuente de generación iniciada)|Es el estado que existe en ejecuciones posteriores del paquete de actualización tras la llamada de la operación **GetProcessingRange** a la tarea Control CDC.<br /><br /> Esto indica que se ha iniciado correctamente una ejecución de CDC normal, pero que aún no ha terminado ( **MarkProcessedRange** ).<br /><br /> Para obtener más información acerca de las operaciones de la tarea Control CDC, vea [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |6-TFREDO (Reprocesamiento de actualizaciones de fuente de generación)|Es el estado en una **GetProcessingRange** que tiene lugar tras TFSTART. Esto indica que la ejecución anterior no ha finalizado correctamente.<br /><br /> Si se usa la columna __$reprocessing, se establece en 1 para indicar que el paquete puede estar ya volviendo a procesar filas en el destino.|  
 |7-ERROR|El grupo CDC tiene un estado ERROR.|  
   

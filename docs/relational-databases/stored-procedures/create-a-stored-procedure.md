@@ -15,12 +15,12 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dde2beed868314f315bf51e9fa8174ba01b09e3e
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 5da64e544211e29491ce4270c91ae527bda923de
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332664"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364767"
 ---
 # <a name="create-a-stored-procedure"></a>Crear un procedimiento almacenado
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,6 @@ ms.locfileid: "87332664"
 
 En este tema se describe cómo se crea un procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y la instrucción CREATE PROCEDURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-##  <a name="Top"></a>   
 -   **Antes de empezar:**  [Permisos](#Permissions)  
   
 -   **Para crear un procedimiento con:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
@@ -46,11 +45,11 @@ En este tema se describe cómo se crea un procedimiento almacenado de [!INCLUDE[
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para crear un procedimiento en el Explorador de objetos**  
   
-1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  
+1.  En el **Explorador de objetos** , conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  
   
-2.  Expanda **Bases de datos**, la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] y, por último, **Programación**.  
+2.  Expanda **Bases de datos** , la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] y, por último, **Programación**.  
   
-3.  Haga clic con el botón derecho en **Procedimientos almacenados**y, después, haga clic en **Nuevo procedimiento almacenado**.  
+3.  Haga clic con el botón derecho en **Procedimientos almacenados** y, después, haga clic en **Nuevo procedimiento almacenado**.  
   
 4.  En el menú **Consulta** , haga clic en **Especificar valores para parámetros de plantilla**.  
   
@@ -63,15 +62,15 @@ En este tema se describe cómo se crea un procedimiento almacenado de [!INCLUDE[
     |Descripción|Devuelve datos de empleado.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
-    |@Datatype_For_Param1|**nvarchar**(50)|  
+    |@Datatype_For_Param1|**nvarchar** (50)|  
     |Default_Value_For_Param1|NULL|  
     |@Param2|@FirstName|  
-    |@Datatype_For_Param2|**nvarchar**(50)|  
+    |@Datatype_For_Param2|**nvarchar** (50)|  
     |Default_Value_For_Param2|NULL|  
   
 6.  Haga clic en **OK**.  
   
-7.  En el **Editor de consultas**, reemplace la instrucción SELECT por la siguiente instrucción:  
+7.  En el **Editor de consultas** , reemplace la instrucción SELECT por la siguiente instrucción:  
   
     ```sql  
     SELECT FirstName, LastName, Department  
@@ -88,7 +87,7 @@ En este tema se describe cómo se crea un procedimiento almacenado de [!INCLUDE[
   
 11. Para ejecutar el procedimiento, en el Explorador de objetos, haga clic con el botón derecho en el nombre del procedimiento almacenado **HumanResources.uspGetEmployeesTest** y seleccione **Ejecutar procedimiento almacenado**.  
   
-12. En la ventana **Ejecutar procedimiento**, escriba Margheim como valor del parámetro @LastName y Diane como valor del parámetro @FirstName.  
+12. En la ventana **Ejecutar procedimiento** , escriba Margheim como valor del parámetro @LastName y Diane como valor del parámetro @FirstName.  
   
 > [!WARNING]  
 >  Valide todos los datos proporcionados por el usuario. No concatene ninguna entrada de usuario antes de validarla. No ejecute nunca un comando creado a partir de una entrada de usuario no validada.  
@@ -96,7 +95,7 @@ En este tema se describe cómo se crea un procedimiento almacenado de [!INCLUDE[
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para crear un procedimiento en el Editor de consultas**  
   
-1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  En el **Explorador de objetos** , conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En el menú **Archivo** , haga clic en **Nueva consulta**.  
   
@@ -132,7 +131,6 @@ En este tema se describe cómo se crea un procedimiento almacenado de [!INCLUDE[
   
     ```  
   
-##  <a name="PowerShellProcedure"></a>   
 ## <a name="see-also"></a>Consulte también  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   

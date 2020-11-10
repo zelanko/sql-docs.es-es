@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b956269df3d887800587d80fbcd0e5a1699dcca3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8e1fd0c8e43000573d030a80ce52145bd0c8669
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457597"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384884"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Introducción a la Consola del diseñador CDC
 
@@ -28,7 +28,7 @@ ms.locfileid: "88457597"
 ## <a name="installation"></a>Instalación  
  En esta sección se describen los procedimientos de instalación del Diseñador de captura de datos modificados para Oracle de Attunity.  
   
- El servicio y el diseñador de captura de datos modificados para Oracle de Attunity de Microsoft para Microsoft SQL Server 2016 forman parte de SQL Server 2016 Feature Pack. Descargue los componentes del Feature Pack, en la [página web de SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ El servicio y el diseñador de captura de datos modificados para Oracle de Attunity de Microsoft para Microsoft SQL Server 2016 forman parte de SQL Server 2016 Feature Pack. Descargue los componentes del Feature Pack, en la [página web de SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833).  
   
 ## <a name="supported-windows-environments"></a>Entornos de Windows admitidos  
  La Consola del diseñador CDC se puede ejecutar en los entornos de Windows siguientes:  

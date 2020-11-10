@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3b101ac6ab904543ab3e5a558ce2d50030df5adf
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aac745594f2dcd23974cc91cb0f9c57ebff91f29
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720846"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384909"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexiones de Integration Services (SSIS)
 
@@ -74,7 +74,7 @@ ms.locfileid: "91720846"
 ### <a name="package-level-and-project-level-connection-managers"></a>Administradores de conexiones de nivel de paquete y de nivel de proyecto
 Se puede crear un administrador de conexiones en el nivel de paquete o en el nivel de proyecto. El administrador de conexiones creado en el nivel de proyecto está disponible para todos los paquetes del proyecto. En tanto que el administrador de conexiones creado en el nivel de paquete está disponible para ese paquete específico.  
   
- Utilice los administradores de conexiones que se crean en el nivel de proyecto en lugar de orígenes de datos, para compartir conexiones a orígenes. Para agregar un administrador de conexiones en el nivel de proyecto, el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] debe utilizar el modelo de implementación del proyecto. Cuando se configura un proyecto de usar este modelo, la carpeta **Administradores de conexiones** aparece en el **Explorador de soluciones**y la carpeta **Orígenes de datos** se quita del **Explorador de soluciones**.  
+ Utilice los administradores de conexiones que se crean en el nivel de proyecto en lugar de orígenes de datos, para compartir conexiones a orígenes. Para agregar un administrador de conexiones en el nivel de proyecto, el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] debe utilizar el modelo de implementación del proyecto. Cuando se configura un proyecto de usar este modelo, la carpeta **Administradores de conexiones** aparece en el **Explorador de soluciones** y la carpeta **Orígenes de datos** se quita del **Explorador de soluciones**.  
   
 > [!NOTE]  
 >  Si desea utilizar orígenes de datos en el paquete, debe convertir el proyecto en el modelo de implementación de paquetes.  
@@ -115,7 +115,7 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
 |Tipo|Descripción|Tema|  
 |----------|-----------------|-----------|  
 |ORACLE|Establece conexión con un servidor Oracle \<version info\>.|El administrador de conexiones de Oracle es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://www.microsoft.com/download/details.aspx?id=55179).|  
-|SAPBI|Se conecta a un sistema SAP NetWeaver BI versión 7.|El administrador de conexiones de SAP BI es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI incluye también un origen y un destino. Para obtener más información, vea la página de descarga, [Feature Pack de Microsoft SQL Server 2008](https://www.microsoft.com/download/details.aspx?id=30440).|  
+|SAPBI|Se conecta a un sistema SAP NetWeaver BI versión 7.|El administrador de conexiones de SAP BI es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI incluye también un origen y un destino. Para obtener más información, vea la página de descarga, [Feature Pack de Microsoft SQL Server 2008](https://www.microsoft.com/download/details.aspx?id=44277).|  
 |TERADATA|Establece conexión con un servidor Teradata \<version info\>.|El administrador de conexiones de Teradata es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://www.microsoft.com/download/details.aspx?id=55179).|  
   
 ### <a name="custom-connection-managers"></a>Administradores de conexión personalizados  
@@ -126,12 +126,12 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
   
  Para crear y configurar automáticamente los administradores de conexiones al crear un paquete nuevo, puede utilizar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este asistente también ayuda a crear y configurar los orígenes y destinos que utilizan los administradores de conexiones. Para obtener más información, vea [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
- Para crear manualmente un nuevo administrador de conexiones y agregarlo a un paquete existente, se usa el área **Administradores de conexiones** que aparece en las pestañas **Flujo de control**, **Flujo de datos**y **Controladores de eventos** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Desde el área **Administrador de conexiones** , se elige el tipo de administrador de conexiones que se desea crear y luego se establecen las propiedades del administrador de conexiones mediante un cuadro de diálogo proporcionado por el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Para obtener más información, vea la sección "Usar el área Administradores de conexiones" más adelante en este tema.  
+ Para crear manualmente un nuevo administrador de conexiones y agregarlo a un paquete existente, se usa el área **Administradores de conexiones** que aparece en las pestañas **Flujo de control** , **Flujo de datos** y **Controladores de eventos** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Desde el área **Administrador de conexiones** , se elige el tipo de administrador de conexiones que se desea crear y luego se establecen las propiedades del administrador de conexiones mediante un cuadro de diálogo proporcionado por el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Para obtener más información, vea la sección "Usar el área Administradores de conexiones" más adelante en este tema.  
   
  Una vez agregado el administrador de conexiones a un paquete, puede usarlo en tareas, contenedores de bucles Foreach, orígenes, transformaciones y destinos. Para obtener más información, vea [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md), [Contenedor Foreach Loop](../../integration-services/control-flow/foreach-loop-container.md) y [Flujo de datos](../../integration-services/data-flow/data-flow.md).  
   
 ### <a name="using-the-connection-managers-area"></a>Uso del área Administradores de conexión  
- Puede crear administradores de conexión mientras las pestañas **Flujo de control**, **Flujo de datos**o **Controladores de eventos** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] están activas.  
+ Puede crear administradores de conexión mientras las pestañas **Flujo de control** , **Flujo de datos** o **Controladores de eventos** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] están activas.  
   
  El siguiente diagrama muestra el área **Administradores de conexión** en la pestaña **Flujo de control** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
@@ -142,7 +142,7 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
   
  En tiempo de ejecución, se utiliza la versión correcta, independientemente de que haya especificado la versión de 32 bits del proveedor en tiempo de diseño. Se puede ejecutar la versión de 64 bits del proveedor aun cuando el paquete se ejecuta en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-  Las dos versiones del proveedor tienen el mismo identificador. Para especificar si el tiempo de ejecución de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa una versión de 64 bits disponible del proveedor, establezca la propiedad Run64BitRuntime del proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si la propiedad Run64BitRuntime se establece en **true**, el tiempo de ejecución busca y usa el proveedor de 64 bits; si Run64BitRuntime se establece en **false**, el tiempo de ejecución busca y usa el proveedor de 32 bits. Para más información sobre las propiedades que se pueden establecer en proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Entornos de Studio e Integration Services (SSIS)](../integration-services-ssis-development-and-management-tools.md).   
+  Las dos versiones del proveedor tienen el mismo identificador. Para especificar si el tiempo de ejecución de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa una versión de 64 bits disponible del proveedor, establezca la propiedad Run64BitRuntime del proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si la propiedad Run64BitRuntime se establece en **true** , el tiempo de ejecución busca y usa el proveedor de 64 bits; si Run64BitRuntime se establece en **false** , el tiempo de ejecución busca y usa el proveedor de 32 bits. Para más información sobre las propiedades que se pueden establecer en proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Entornos de Studio e Integration Services (SSIS)](../integration-services-ssis-development-and-management-tools.md).   
 
 ## <a name="add-a-connection-manager"></a>Agregar un administrador de conexiones
 ###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> Agregar un administrador de conexiones al crear un paquete  
@@ -191,7 +191,7 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
   
      En el área **Administradores de conexiones** se muestra el administrador de conexiones agregado.  
   
-5.  Opcionalmente, puede hacer clic con el botón derecho en el administrador de conexiones, hacer clic en **Cambiar nombre**y, después, modificar el nombre predeterminado del administrador de conexiones.  
+5.  Opcionalmente, puede hacer clic con el botón derecho en el administrador de conexiones, hacer clic en **Cambiar nombre** y, después, modificar el nombre predeterminado del administrador de conexiones.  
   
 6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** en el menú **Archivo** .  
   
@@ -199,7 +199,7 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
   
 1.  Abra el proyecto de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  En el **Explorador de soluciones**, haga clic con el botón derecho en **Administradores de conexiones**y, después, en **Nuevo administrador de conexiones**.  
+2.  En el **Explorador de soluciones** , haga clic con el botón derecho en **Administradores de conexiones** y, después, en **Nuevo administrador de conexiones**.  
   
 3.  En el cuadro de diálogo **Agregar administrador de conexiones SSIS** , seleccione el tipo de administrador de conexiones y, a continuación, haga clic en **Agregar**.  
   
@@ -227,10 +227,10 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
   
      El administrador de conexiones que agregó aparecerá en el nodo de **Administradores de conexiones** en el **Explorador de soluciones**. También aparecerá en la pestaña **Administradores de conexiones** de la ventana **Diseñador SSIS** para todos los paquetes del proyecto. El nombre del administrador de conexiones de esta pestaña tendrá el prefijo **(proyecto)** para distinguir este administrador de conexiones de nivel de proyecto de los administradores de conexiones de nivel de paquete.  
   
-4.  Si quiere, haga clic con el botón derecho en el administrador de conexiones de la ventana **Explorador de soluciones** en el nodo **Administradores de conexiones** o en la pestaña **Administradores de conexiones** de la ventana **Diseñador SSIS** , haga clic en **Cambiar nombre**y, después, modifique el nombre predeterminado del administrador de conexiones.  
+4.  Si quiere, haga clic con el botón derecho en el administrador de conexiones de la ventana **Explorador de soluciones** en el nodo **Administradores de conexiones** o en la pestaña **Administradores de conexiones** de la ventana **Diseñador SSIS** , haga clic en **Cambiar nombre** y, después, modifique el nombre predeterminado del administrador de conexiones.  
   
     > [!NOTE]  
-    >  En la pestaña **Administradores de conexiones** de la ventana **Diseñador SSIS**, no podrá sobrescribir el prefijo **(proyecto)** del nombre del administrador de conexiones. es así por diseño.  
+    >  En la pestaña **Administradores de conexiones** de la ventana **Diseñador SSIS** , no podrá sobrescribir el prefijo **(proyecto)** del nombre del administrador de conexiones. es así por diseño.  
 
 ### <a name="add-ssis-connection-manager-dialog-box"></a>Cuadro de diálogo Agregar administrador de conexiones SSIS
 Utilice el cuadro de diálogo **Agregar administrador de conexiones SSIS** para seleccionar el tipo de conexión que se va a agregar a un paquete.  
@@ -239,7 +239,7 @@ Utilice el cuadro de diálogo **Agregar administrador de conexiones SSIS** para 
   
 #### <a name="options"></a>Opciones  
  **Tipo de administrador de conexiones**  
- Seleccione un tipo de conexión y haga clic en **Agregar**, o bien haga doble clic en un tipo de conexión para especificar las propiedades de conexión con el editor para cada tipo de conexión.  
+ Seleccione un tipo de conexión y haga clic en **Agregar** , o bien haga doble clic en un tipo de conexión para especificar las propiedades de conexión con el editor para cada tipo de conexión.  
   
  **Add (Agregar)**  
  Especifique las propiedades de conexión mediante el editor para cada tipo de conexión.  
@@ -269,7 +269,7 @@ Utilice el cuadro de diálogo **Agregar administrador de conexiones SSIS** para 
   
     -   El paquete no se puede ejecutar.  
   
-5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
+5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo**.  
   
 ###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> Eliminar un administrador de conexiones compartido (administrador de conexiones de nivel de proyecto)  
   
@@ -302,7 +302,7 @@ Todos los administradores de conexión se pueden configurar en la ventana **Prop
   
 6.  Haga clic en **OK**.  
   
-7.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
+7.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo**.  
   
 ### <a name="modify-a-connection-manager-using-a-connection-manager-dialog-box"></a>Modificar un administrador de conexiones mediante el cuadro de diálogo Administrador de conexiones  
   
@@ -334,7 +334,7 @@ Todos los administradores de conexión se pueden configurar en la ventana **Prop
     |[Administrador de conexiones con SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Editor del administrador de conexiones con SQL Server Compact Edition &#40;página Conexión&#41;](./sql-server-compact-edition-connection-manager.md)<br /><br /> [Editor del administrador de conexiones con SQL Server Compact Edition &#40;página Todo&#41;](./sql-server-compact-edition-connection-manager.md)|  
     |[Administrador de conexiones WMI](../../integration-services/connection-manager/wmi-connection-manager.md)|[Editor del administrador de conexiones WMI](./wmi-connection-manager.md)|  
   
-5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
+5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo**.  
 
 ## <a name="related-content"></a>Contenido relacionado  
   

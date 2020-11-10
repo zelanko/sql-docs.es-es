@@ -36,7 +36,7 @@ ms.locfileid: "88498609"
 > [!IMPORTANT]  
 >  Las columnas de destino deben tener habilitada la indización de texto completo y semántica.  
   
-###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
+###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a> Ejemplo: búsqueda de lo principales documentos que son similares a otro documento.  
  En el ejemplo siguiente se recuperan los 10 candidatos principales que son similares al candidato especificado por *\@CandidateID* de la tabla HumanResources.JobCandidate de la base de datos de ejemplo AdventureWorks2012.  
   
 ```scr  

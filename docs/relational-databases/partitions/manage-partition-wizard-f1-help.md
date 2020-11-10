@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 45cfba1078dbe72e09f760f24fc0c9f47c0c0b1f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 756dd29442fe224f5e0518066cbbfdcbf2ba5ea6
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891025"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364683"
 ---
 # <a name="manage-partition-wizard"></a>Asistente para administrar particiones 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91891025"
   
 ### <a name="to-start-the-manage-partition-wizard"></a>Para iniciar el Asistente para la administración de particiones  
   
--   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], seleccione la base de datos, haga clic con el botón derecho en la tabla en la que quiera crear las particiones, seleccione **Almacenamiento**y haga clic en **Administrar partición**.  
+-   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], seleccione la base de datos, haga clic con el botón derecho en la tabla en la que quiera crear las particiones, seleccione **Almacenamiento** y haga clic en **Administrar partición**.  
   
      **Note** Si la opción **Administrar partición** no está disponible, puede que haya seleccionado una tabla que no contenga particiones. Haga clic en **Crear partición** en el submenú **Almacenamiento** y utilice el **Asistente para la creación de particiones** con el fin de crear las particiones en la tabla.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "91891025"
 ### <a name="sliding-window-scenario"></a>Escenario de ventana deslizante  
  Para administrar las particiones en un escenario de ventana deslizante, seleccione **Administrar datos particionados en un escenario de ventana deslizante**.  
   
-## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
+### <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Crear una tabla de ensayo para la modificación de particiones**  
  Crea una tabla de ensayo para los datos cuya partición está activando o desactivando en la tabla con particiones existente.  
   
@@ -95,12 +95,12 @@ ms.locfileid: "91891025"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Página Seleccionar las opciones de activación de la partición  
  Use la página **Seleccionar las opciones de activación de la partición** para seleccionar la tabla de ensayo que quiera activar en la tabla con particiones.  
   
-## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
+### <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Mostrar todas las particiones**  
  Seleccione esta opción para mostrar todas las particiones, incluidas las particiones existentes actualmente en la tabla con particiones.  
   
  **Cuadrícula Partición**  
- Muestra el nombre de la partición, el **Límite izquierdo**, el **Límite derecho**, el **Grupo de archivos**y el **Recuento de filas** de las particiones seleccionadas.  
+ Muestra el nombre de la partición, el **Límite izquierdo** , el **Límite derecho** , el **Grupo de archivos** y el **Recuento de filas** de las particiones seleccionadas.  
   
  **Tabla de activación**  
  Seleccione la tabla de ensayo que contiene la partición que desea agregar a la tabla con particiones. Debe crear esta tabla de almacenamiento provisional antes de activar las particiones con el **Asistente para la administración de particiones**.  
@@ -110,9 +110,9 @@ ms.locfileid: "91891025"
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Página Seleccionar las opciones de desactivación de la partición  
  Use la página **Seleccionar las opciones de desactivación de la partición** para seleccionar la partición y la tabla de ensayo donde se almacenarán los datos particionados que está desactivando en la tabla con particiones.  
   
-## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
+### <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Cuadrícula Partición**  
- Muestra el nombre de la partición, el **Límite izquierdo**, el **Límite derecho**, el **Grupo de archivos**y el **Recuento de filas** de las particiones seleccionadas.  
+ Muestra el nombre de la partición, el **Límite izquierdo** , el **Límite derecho** , el **Grupo de archivos** y el **Recuento de filas** de las particiones seleccionadas.  
   
  **Tabla de desactivación**  
  Seleccione una tabla nueva o una tabla existente en la que desea desactivar los datos.  
@@ -132,7 +132,7 @@ ms.locfileid: "91891025"
   
  También puede crear en la tabla de ensayo los mismos índices que existan en la partición de origen. La tabla de ensayo contiene automáticamente una restricción basada en los elementos de la partición de origen. Esta restricción se suele generar a partir del valor de límite de la partición de origen.  
   
-## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
+### <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre de tabla de ensayo**  
  Cree un nombre para la tabla de ensayo o acepte el predeterminado que se muestra en el cuadro de edición.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "91891025"
 ##  <a name="summary-page"></a><a name="Summary"></a> Página Resumen  
  Utilice la página **Resumen** para revisar las opciones que ha seleccionado en las páginas anteriores.  
   
-## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
+### <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Revisar opciones seleccionadas**  
  Muestra las selecciones que ha realizado en cada página del asistente. Haga clic en un nodo para expandir y ver sus opciones seleccionadas previamente.  
   

@@ -51,11 +51,11 @@ ms.locfileid: "91869053"
   
 -   Muy compactos  
   
-     El número medio de bits necesarios para representar un nodo en un árbol con *n* nodos depende del promedio de distribución ramificada secundarios (el promedio de elementos secundarios de un nodo). Para distribuciones ramificadas pequeñas (0-7), el tamaño es aproximadamente 6\*logA*n* bits, donde A es el promedio de distribución ramificada. Un nodo en una jerarquía organizativa de 100.000 personas con un promedio de nodos secundarios de 6 niveles supone aproximadamente 38 bits. Esto se redondea a 40 bits (o 5 bytes) para el almacenamiento.  
+     El número medio de bits necesarios para representar un nodo en un árbol con *n* nodos depende del promedio de distribución ramificada secundarios (el promedio de elementos secundarios de un nodo). Para distribuciones ramificadas pequeñas (0-7), el tamaño es aproximadamente 6\*logA *n* bits, donde A es el promedio de distribución ramificada. Un nodo en una jerarquía organizativa de 100.000 personas con un promedio de nodos secundarios de 6 niveles supone aproximadamente 38 bits. Esto se redondea a 40 bits (o 5 bytes) para el almacenamiento.  
   
 -   La comparación se realiza con prioridad a la profundidad  
   
-     Dados dos valores **hierarchyid****a** y **b**, **a<b** significa que a viene antes que b en un corte transversal de prioridad a la profundidad del árbol. Los índices de los tipos de datos **hierarchyid** están en orden con prioridad a la profundidad y los nodos cercanos entre sí en un corte transversal de prioridad a la profundidad se almacenan casi uno junto a otro. Por ejemplo, los elementos secundarios de un registro se almacenan adyacentes a ese registro.  
+     Dados dos valores **hierarchyid****a** y **b** , **a<b** significa que a viene antes que b en un corte transversal de prioridad a la profundidad del árbol. Los índices de los tipos de datos **hierarchyid** están en orden con prioridad a la profundidad y los nodos cercanos entre sí en un corte transversal de prioridad a la profundidad se almacenan casi uno junto a otro. Por ejemplo, los elementos secundarios de un registro se almacenan adyacentes a ese registro.  
   
 -   Compatibilidad con inserciones y eliminaciones arbitrarias  
   
@@ -79,7 +79,7 @@ ms.locfileid: "91869053"
   
 -   XML  
   
- Normalmente,**hierarchyid** es mejor opción en comparación con estas alternativas. Sin embargo, hay situaciones concretas, que se detallan a continuación, donde es probable que las alternativas sean una mejor opción.  
+ Normalmente, **hierarchyid** es mejor opción en comparación con estas alternativas. Sin embargo, hay situaciones concretas, que se detallan a continuación, donde es probable que las alternativas sean una mejor opción.  
   
 ### <a name="parentchild"></a>Elemento primario/secundario  
  Cuando se usa el planteamiento de elemento primario/secundario, cada fila contiene una referencia al elemento primario. La tabla siguiente define una tabla típica que se usa para contener las filas del elemento primario y el secundario en una relación entre elemento primario y secundario:  
@@ -109,7 +109,7 @@ GO
   
  La estructura de elemento primario/secundario puede ser mejor opción cuando se dan las condiciones siguientes:  
   
--   El tamaño de la clave es crítico. Para el mismo número de nodos, un valor **hierarchyid** es igual o mayor que un valor de la familia de enteros (**smallint**, **int**, **bigint**). Esta es solo una de las razones para usar la estructura de elemento primario/secundario en casos poco comunes, ya que **hierarchyid** tiene una proximidad significativamente mejor de E/S y de complejidad de la CPU que las expresiones de tabla comunes necesarias cuando se usa una estructura de elemento primario/secundario.  
+-   El tamaño de la clave es crítico. Para el mismo número de nodos, un valor **hierarchyid** es igual o mayor que un valor de la familia de enteros ( **smallint** , **int** , **bigint** ). Esta es solo una de las razones para usar la estructura de elemento primario/secundario en casos poco comunes, ya que **hierarchyid** tiene una proximidad significativamente mejor de E/S y de complejidad de la CPU que las expresiones de tabla comunes necesarias cuando se usa una estructura de elemento primario/secundario.  
   
 -   Las consultas raramente recorren todas las secciones de la jerarquía. Dicho de otro modo, las consultas normalmente se dirigen a un solo punto de la jerarquía. En estos casos la ubicación conjunta no es importante. Por ejemplo, la estructura de elemento primario y secundario es la mejor opción cuando la tabla de organización solo se usa para procesar la nómina de empleados individuales.  
   
@@ -513,7 +513,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> Mover los subárboles  
- Otra operación común es mover subárboles. El procedimiento siguiente toma el subárbol de **\@oldMgr** y lo convierte (incluido **\@oldMgr**) en un subárbol de **\@newMgr**.  
+ Otra operación común es mover subárboles. El procedimiento siguiente toma el subárbol de **\@oldMgr** y lo convierte (incluido **\@oldMgr** ) en un subárbol de **\@newMgr**.  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

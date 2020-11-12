@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1cbf760c16d6de88906d03f511315ae6caec335
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 9b438bd466023844f7396a5ef71e9c8e0f916005
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91811947"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384314"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>Diagnóstico y resolución de la contención de bloqueos temporales en SQL Server
 
@@ -31,7 +31,7 @@ Los bloqueos temporales son primitivos de sincronización ligeros que usa el mot
 
 La contención en bloqueos temporales de página es el escenario más común en los sistemas de varias CPU y, por tanto, casi la totalidad de este artículo se va a centrar en ellos.
 
-La contención de bloqueos temporales se produce cuando varios subprocesos intentan adquirir bloqueos temporales no compatibles de forma simultánea en la misma estructura en memoria. Dado que un bloqueo temporal es un mecanismo de control interno, el motor de SQL determina cuándo se usan. Puesto que el comportamiento de los bloqueos temporales es determinista, las decisiones de aplicación, incluido el diseño de esquema, pueden afectar a este comportamiento. En este artículo se proporciona la siguiente información:
+La contención de bloqueos temporales se produce cuando varios subprocesos intentan adquirir bloqueos temporales no compatibles de forma simultánea en la misma estructura en memoria. Dado que un bloqueo temporal es un mecanismo de control interno, el motor de SQL determina automáticamente cuándo se usan. Puesto que el comportamiento de los bloqueos temporales es determinista, las decisiones de aplicación, incluido el diseño de esquema, pueden afectar a este comportamiento. En este artículo se proporciona la siguiente información:
 
 * Información básica sobre cómo usa SQL Server los bloqueos temporales. 
 * Herramientas usadas para investigar la contención de bloqueos temporales. 
@@ -56,16 +56,16 @@ Cierta contención de bloqueos temporales es de esperar como parte del funcionam
 
 Los bloqueos temporales se adquieren de uno de cinco modos diferentes relacionados con el nivel de acceso. Los modos de bloqueo temporal de SQL Server se pueden resumir de la manera siguiente:
 
-* **KP**: bloqueo temporal de mantenimiento, que garantiza que la estructura a la que se hace referencia no se pueda destruir. Se usa cuando un subproceso quiere examinar una estructura de búfer. Dado que el bloqueo temporal de KP es compatible con todos los bloqueos temporales salvo el de destrucción (DT), se considera "ligero", lo que significa que el impacto sobre el rendimiento cuando se usa es mínimo. Puesto que el bloqueo temporal de KP no es compatible con el de DT, evita que cualquier otro subproceso destruya la estructura a la que se hace referencia. Por ejemplo, un bloqueo temporal de KP evita que el proceso de escritura diferida destruya la estructura a la que se hace referencia. Para obtener más información sobre cómo se usa el proceso de escritura diferida con la administración de páginas de búfer de SQL Server, vea [Escribir páginas](./writing-pages.md).
+* **KP** : bloqueo temporal de mantenimiento, que garantiza que la estructura a la que se hace referencia no se pueda destruir. Se usa cuando un subproceso quiere examinar una estructura de búfer. Dado que el bloqueo temporal de KP es compatible con todos los bloqueos temporales salvo el de destrucción (DT), se considera "ligero", lo que significa que el impacto sobre el rendimiento cuando se usa es mínimo. Puesto que el bloqueo temporal de KP no es compatible con el de DT, evita que cualquier otro subproceso destruya la estructura a la que se hace referencia. Por ejemplo, un bloqueo temporal de KP evita que el proceso de escritura diferida destruya la estructura a la que se hace referencia. Para obtener más información sobre cómo se usa el proceso de escritura diferida con la administración de páginas de búfer de SQL Server, vea [Escribir páginas](./writing-pages.md).
 
-* **SH**: bloqueo temporal compartido, que es necesario para leer una estructura de página. 
-* **UP**: bloqueo temporal de actualización, que es compatible con SH (bloqueo temporal compartido) y KP, pero no con otros y, por lo tanto, no permite que un bloqueo temporal de EX escriba en la estructura a la que se hace referencia. 
-* **EX**: bloqueo temporal exclusivo, que evita que otros subprocesos escriban o lean en la estructura a la que se hace referencia. Un ejemplo de uso sería la modificación del contenido de una página para la protección contra página rasgada. 
-* **DT**: bloqueo temporal de destrucción, que debe adquirirse antes de destruir contenido de la estructura a la que se hace referencia. Por ejemplo, el proceso de escritura diferida debe adquirir un bloqueo temporal de DT para liberar una página limpia antes de agregarla a la lista de búferes disponibles para su uso por parte de otros subprocesos.
+* **SH** : bloqueo temporal compartido, que es necesario para leer una estructura de página. 
+* **UP** : bloqueo temporal de actualización, que es compatible con SH (bloqueo temporal compartido) y KP, pero no con otros y, por lo tanto, no permite que un bloqueo temporal de EX escriba en la estructura a la que se hace referencia. 
+* **EX** : bloqueo temporal exclusivo, que evita que otros subprocesos escriban o lean en la estructura a la que se hace referencia. Un ejemplo de uso sería la modificación del contenido de una página para la protección contra página rasgada. 
+* **DT** : bloqueo temporal de destrucción, que debe adquirirse antes de destruir contenido de la estructura a la que se hace referencia. Por ejemplo, el proceso de escritura diferida debe adquirir un bloqueo temporal de DT para liberar una página limpia antes de agregarla a la lista de búferes disponibles para su uso por parte de otros subprocesos.
 
 Los modos de bloqueo temporal tienen distintos niveles de compatibilidad; por ejemplo, un bloqueo temporal compartido (SH) es compatible con uno de actualización (UP) o mantenimiento (KP), pero no con uno de destrucción (DT). Se pueden adquirir varios bloqueos temporales de forma simultánea en la misma estructura siempre que sean compatibles. Cuando un subproceso intenta adquirir un bloqueo temporal mantenido en un modo que no es compatible, se coloca en una cola para esperar una señal que indica que el recurso está disponible. Se usa un bloqueo por subproceso de tipo SOS_Task para proteger la cola de espera mediante la aplicación de acceso en serie a esta. Este bloqueo por subproceso debe adquirirse para agregar elementos a la cola. El bloqueo por subproceso SOS_Task también indica a los subprocesos de la cola cuándo se liberan bloqueos temporales no compatibles, lo que permite a los subprocesos en espera adquirir un bloqueo temporal compatible y seguir trabajando. La cola de espera se procesa mediante el sistema primero en entrar, primero en salir (FIFO) a medida que se liberan solicitudes de bloqueos temporales. Los bloqueos temporales siguen este sistema FIFO para garantizar la equidad y evitar el colapso de subprocesos.
 
-En la tabla siguiente se muestra la compatibilidad de los modos de bloqueo temporal (**Y** indica compatibilidad y **N** indica no compatibilidad):
+En la tabla siguiente se muestra la compatibilidad de los modos de bloqueo temporal ( **Y** indica compatibilidad y **N** indica no compatibilidad):
 
 |Modo de bloqueo temporal |**KP**  |**SH** |**UP**  |**EX**  |**DT**|
 |--------|--------|-------|--------|--------|--------|
@@ -87,18 +87,18 @@ Use el objeto **SQL Server:Latches** y los contadores asociados del Monitor de 
 
 ## <a name="latch-wait-types"></a>Tipos de tiempos de espera de bloqueo temporal
 
-SQL Server realiza un seguimiento de la información de espera acumulada, a la que se puede acceder mediante la vista de administración dinámica (DMV) *sys.dm_os_wait_stats*. SQL Server emplea tres tipos de tiempos de espera de bloqueo temporal, tal como se define en el elemento "wait_type" correspondiente de la DMV *sys.dm_os_wait_stats*:
+SQL Server realiza un seguimiento de la información de espera acumulada, a la que se puede acceder mediante la vista de administración dinámica (DMV) *sys.dm_os_wait_stats*. SQL Server emplea tres tipos de tiempos de espera de bloqueo temporal, tal como se define en el elemento "wait_type" correspondiente de la DMV *sys.dm_os_wait_stats* :
 
-* **Bloqueo temporal de búfer (BUF)** : se usa para garantizar la coherencia de las páginas de datos y de índice de los objetos de usuario. También se usa para proteger el acceso a las páginas de datos que SQL Server usa para los objetos del sistema. Por ejemplo, las páginas que administran asignaciones están protegidas mediante bloqueos temporales de búfer. Estas incluyen páginas de Espacio disponible en páginas (PFS), Mapa de asignación global (GAM), Mapa de asignación global compartido (SGAM) y Mapa de asignación de índices (IAM). Los bloqueos temporales de búfer se notifican en *sys.dm_os_wait_stats* con un elemento *wait_type* **PAGELATCH\_\*** .
+* **Bloqueo temporal de búfer (BUF)** : se usa para garantizar la coherencia de las páginas de datos y de índice de los objetos de usuario. También se usa para proteger el acceso a las páginas de datos que SQL Server usa para los objetos del sistema. Por ejemplo, las páginas que administran asignaciones están protegidas mediante bloqueos temporales de búfer. Estas incluyen páginas de Espacio disponible en páginas (PFS), Mapa de asignación global (GAM), Mapa de asignación global compartido (SGAM) y Mapa de asignación de índices (IAM). Los bloqueos temporales de búfer se notifican en *sys.dm_os_wait_stats* con un elemento *wait_type* de * *PAGELATCH\_\** _.
 
-* **Bloqueo temporal no de búfer (no BUF)** : se usa para garantizar la coherencia de las estructuras en memoria que no son páginas del grupo de búferes. Cualquier espera de los bloqueos temporales no de búfer se notifica como *wait_type* **LATCH\_\*** .
+_ **Bloqueo temporal no de búfer (no BUF)** : se usa para garantizar la coherencia de las estructuras en memoria que no son páginas del grupo de búferes. Cualquier espera de los bloqueos temporales no de búfer se notifica como *wait_type* de * *LATCH\_\** _.
 
-* **Bloqueo temporal de E/S**: subconjunto de bloqueos temporales de búfer que garantizan la coherencia de las mismas estructuras protegidas por los bloqueos temporales de búfer cuando estas estructuras necesitan cargarse en el grupo de búferes con una operación de E/S. Los bloqueos temporales de E/S evitan que otro subproceso cargue la misma página en el grupo de búferes con un bloqueo temporal no compatible. Se asocian con un elemento *wait_type* **PAGEIOLATCH\_\*** .
+_ **Bloqueo temporal de E/S** : subconjunto de bloqueos temporales de búfer que garantizan la coherencia de las mismas estructuras protegidas por los bloqueos temporales de búfer cuando estas estructuras necesitan cargarse en el grupo de búferes con una operación de E/S. Los bloqueos temporales de E/S evitan que otro subproceso cargue la misma página en el grupo de búferes con un bloqueo temporal no compatible. Se asocian con un elemento *wait_type* de * *PAGEIOLATCH\_\** _.
 
    > [!NOTE]
    > Si ve muchas esperas PAGEIOLATCH, eso significa que SQL Server está esperando al subsistema de E/S. Aunque es de esperar una cierta cantidad de esperas PAGEIOLATCH y es el comportamiento normal, si los tiempos de espera de PAGEIOLATCH medios suelen ser superiores a 10 milisegundos (ms), debe investigar por qué el subsistema de E/S está sometido a presión.
 
-Al examinar la DMV *sys.dm_os_wait_stats*, si encuentra bloqueos temporales no de búfer, se debe examinar *sys.dm_os_latch_waits* para obtener un desglose detallado de la información de espera acumulada de los bloqueos temporales no de búfer. Todos los tiempos de espera de bloqueo temporal de búfer se clasifican en la clase de bloqueo temporal BUFFER; el resto se usa para clasificar los bloqueos temporales no de búfer.
+Al examinar la DMV sys.dm_os_wait_stats*, si encuentra bloqueos temporales no de búfer, se debe examinar *sys.dm_os_latch_waits* para obtener un desglose detallado de la información de espera acumulada de los bloqueos temporales no de búfer. Todos los tiempos de espera de bloqueo temporal de búfer se clasifican en la clase de bloqueo temporal BUFFER; el resto se usa para clasificar los bloqueos temporales no de búfer.
 
 ## <a name="symptoms-and-causes-of-sql-server-latch-contention"></a>Síntomas y causas de la contención de bloqueos temporales de SQL Server
 
@@ -112,7 +112,7 @@ En el diagrama siguiente la línea azul representa el rendimiento de SQL Server
 
 ### <a name="performance-when-latch-contention-is-resolved"></a>Rendimiento al resolver la contención de bloqueos temporales
 
-Como se muestra en el siguiente diagrama, SQL Server ya no tiene un cuello de botella en los tiempos de espera de bloqueo temporal de página y el rendimiento ha aumentado un 300 % medido en transacciones por segundo. Esto se ha conseguido con la técnica **Uso de creación de particiones por hash con una columna calculada**, que se explica más adelante en este artículo. Esta mejora del rendimiento está orientada a sistemas con un gran número de núcleos y un alto nivel de simultaneidad.
+Como se muestra en el siguiente diagrama, SQL Server ya no tiene un cuello de botella en los tiempos de espera de bloqueo temporal de página y el rendimiento ha aumentado un 300 % medido en transacciones por segundo. Esto se ha conseguido con la técnica **Uso de creación de particiones por hash con una columna calculada** , que se explica más adelante en este artículo. Esta mejora del rendimiento está orientada a sistemas con un gran número de núcleos y un alto nivel de simultaneidad.
 
 ![Mejoras de rendimiento conseguidas con la creación de particiones por hash](./media/diagnose-resolve-latch-contention/image6.png)
 
@@ -163,54 +163,54 @@ Como se ha indicado anteriormente, la contención de bloqueos temporales solo es
 
 3. Determine la proporción de los que están relacionados con bloqueos temporales.
 
-La información de espera acumulada está disponible en la DMV *sys.dm_os_wait_stats*. El tipo más común de contención de bloqueos temporales es el de búfer, que se observa como un aumento de los tiempos de espera de los bloqueos temporales con un elemento *wait_type* **PAGELATCH\_\*** . Los bloqueos temporales no de búfer se agrupan bajo el tipo de espera **LATCH\*** . Como se muestra en el diagrama siguiente, primero se debe echar un vistazo global a las esperas del sistema mediante la DMV *sys.dm_os_wait_stats* para determinar el porcentaje del tiempo de espera total causado por los bloqueos temporales de búfer o no de búfer. Si se detectan bloqueos temporales no de búfer, también se debe examinar la DMV *sys.dm_os_latch_stats*.
+La información de espera acumulada está disponible en la DMV *sys.dm_os_wait_stats*. El tipo más común de contención de bloqueos temporales es el de búfer, que se observa como un aumento de los tiempos de espera de los bloqueos temporales con un elemento *wait_type* de * *PAGELATCH\_\** _. Los bloqueos temporales no de búfer se agrupan bajo el tipo de espera _*LATCH\**_. Como se muestra en el diagrama siguiente, primero se debe echar un vistazo global a las esperas del sistema mediante la DMV sys.dm_os_wait_stats* para determinar el porcentaje del tiempo de espera total causado por los bloqueos temporales de búfer o no de búfer. Si se detectan bloqueos temporales no de búfer, también se debe examinar la DMV *sys.dm_os_latch_stats*.
 
 En el diagrama siguiente se describe la relación entre la información devuelta por las DMV *sys.dm_os_wait_stats* y *sys.dm_os_latch_stats*.
 
 ![Tiempos de espera de bloqueo temporal](./media/diagnose-resolve-latch-contention/image7.png)
 
-Para obtener más información sobre la DMV *sys.dm_os_wait_stats*, vea [sys.dm_os_wait_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) en la ayuda de SQL Server.
+Para obtener más información sobre la DMV *sys.dm_os_wait_stats* , vea [sys.dm_os_wait_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) en la ayuda de SQL Server.
 
-Para obtener más información sobre la DMV *sys.dm_os_latch_stats*, vea [sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md) en la ayuda de SQL Server.
+Para obtener más información sobre la DMV *sys.dm_os_latch_stats* , vea [sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md) en la ayuda de SQL Server.
 
 Las siguientes medidas de tiempo de espera de bloqueo temporal son indicadores de que una contención excesiva de bloqueos temporales está afectando al rendimiento de la aplicación:
 
-* **El tiempo de espera de bloqueo temporal de página medio aumenta sistemáticamente con el rendimiento**: si los tiempos de espera de bloqueo temporal de página medios aumentan sistemáticamente con el rendimiento y los tiempos de espera de bloqueo temporal de búfer también aumentan por encima de los tiempos de respuesta de disco esperados, se deben examinar las tareas actuales en espera mediante la DMV *sys.dm_os_waiting_tasks*. Las medias pueden ser engañosas si se analizan por separado, así que es importante examinar el sistema en activo cuando sea posible para entender las características de la carga de trabajo. En concreto, compruebe si hay altas esperas de solicitudes PAGELATCH_EX o PAGELATCH_SH en cualquier página. Siga estos pasos para diagnosticar un aumento del tiempo de espera de bloqueo temporal de página medio con el rendimiento:
+* **El tiempo de espera de bloqueo temporal de página medio aumenta sistemáticamente con el rendimiento** : si los tiempos de espera de bloqueo temporal de página medios aumentan sistemáticamente con el rendimiento y los tiempos de espera de bloqueo temporal de búfer también aumentan por encima de los tiempos de respuesta de disco esperados, se deben examinar las tareas actuales en espera mediante la DMV *sys.dm_os_waiting_tasks*. Las medias pueden ser engañosas si se analizan por separado, así que es importante examinar el sistema en activo cuando sea posible para entender las características de la carga de trabajo. En concreto, compruebe si hay altas esperas de solicitudes PAGELATCH_EX o PAGELATCH_SH en cualquier página. Siga estos pasos para diagnosticar un aumento del tiempo de espera de bloqueo temporal de página medio con el rendimiento:
 
    * Use los scripts de ejemplo de [Consulta de sys.dm_os_waiting_tasks ordenada por identificador de sesión](#waiting-tasks-script1) o [Cálculo de esperas a lo largo de un período de tiempo](#calculate-waits-over-a-time-period) para examinar las tareas en espera actuales y medir el tiempo de espera de bloqueo temporal medio. 
    * Use el script de ejemplo de [Consulta de los descriptores del búfer para determinar los objetos que causan la contención de bloqueos temporales](#query-buffer-descriptors) para determinar el índice y la tabla subyacente donde se produce la contención. 
    * Mida el tiempo de espera de bloqueo temporal de página medio con el contador del Monitor de rendimiento **MSSQL%InstanceName%\\Estadísticas de espera\\Esperas de bloqueos temporales de páginas\\Tiempo promedio de espera** o mediante la ejecución de la DMV *sys.dm_os_wait_stats*.
 
    > [!NOTE]
-   > Para calcular el tiempo de espera medio de un tipo de espera determinado (devuelto por *sys.dm_os_wait_stats* como *wt_:type*), divida el tiempo de espera total (devuelto como *wait_time_ms*) por el número de tareas en espera (devueltas como *waiting_tasks_count*).
+   > Para calcular el tiempo de espera medio de un tipo de espera determinado (devuelto por *sys.dm_os_wait_stats* como *wt_:type* ), divida el tiempo de espera total (devuelto como *wait_time_ms* ) por el número de tareas en espera (devueltas como *waiting_tasks_count* ).
 
-* **Porcentaje del tiempo de espera total empleado en los tipos de espera de bloqueo temporal durante la carga máxima**: si el tiempo de espera de bloqueo temporal medio como porcentaje del tiempo de espera total aumenta en línea con la carga de la aplicación, la contención de bloqueos temporales puede afectar al rendimiento y debe investigarse.
+* **Porcentaje del tiempo de espera total empleado en los tipos de espera de bloqueo temporal durante la carga máxima** : si el tiempo de espera de bloqueo temporal medio como porcentaje del tiempo de espera total aumenta en línea con la carga de la aplicación, la contención de bloqueos temporales puede afectar al rendimiento y debe investigarse.
 
    Mida los tiempos de espera de bloqueo temporal de página y los que no son de página con los contadores de rendimiento de [Wait Statistics (objeto de SQL Server)](./performance-monitor/sql-server-wait-statistics-object.md). Luego compare los valores de estos contadores de rendimiento con los contadores de rendimiento asociados al rendimiento de CPU, E/S, memoria y red. Por ejemplo, transacciones/s y solicitudes por lotes/s son dos buenas medidas de uso de recursos.
 
    > [!NOTE]
-   > El tiempo de espera relativo de cada tipo de espera no se incluye en la DMV *sys.dm_os_wait_stats*, ya que esta DMV mide los tiempos de espera desde la última vez que se inició la instancia de SQL Server o se restablecieron las estadísticas de espera acumuladas mediante DBCC SQLPERF. Para calcular el tiempo de espera relativo de cada tipo de espera, tome una instantánea de *sys.dm_os_wait_stats* antes de la carga máxima, después de esta y calcule la diferencia. El script de ejemplo de [Cálculo de esperas a lo largo de un período de tiempo](#calculate-waits-over-a-time-period) puede usarse para este fin.
+   > El tiempo de espera relativo de cada tipo de espera no se incluye en la DMV *sys.dm_os_wait_stats* , ya que esta DMV mide los tiempos de espera desde la última vez que se inició la instancia de SQL Server o se restablecieron las estadísticas de espera acumuladas mediante DBCC SQLPERF. Para calcular el tiempo de espera relativo de cada tipo de espera, tome una instantánea de *sys.dm_os_wait_stats* antes de la carga máxima, después de esta y calcule la diferencia. El script de ejemplo de [Cálculo de esperas a lo largo de un período de tiempo](#calculate-waits-over-a-time-period) puede usarse para este fin.
 
-   Exclusivamente en el caso de un **entorno que no sea de producción**, borre la DMV *sys.dm_os_wait_stats* con el siguiente comando:
+   Exclusivamente en el caso de un **entorno que no sea de producción** , borre la DMV *sys.dm_os_wait_stats* con el siguiente comando:
    
    ```sql
    dbcc SQLPERF ('sys.dm_os_wait_stats', 'CLEAR')
    ```
-   Se puede ejecutar un comando similar para borrar la DMV *sys.dm_os_latch_stats*:
+   Se puede ejecutar un comando similar para borrar la DMV *sys.dm_os_latch_stats* :
    
    ```sql
    dbcc SQLPERF ('sys.dm_os_latch_stats', 'CLEAR')
    ```
 
-* **El rendimiento no aumenta, y en algunos casos disminuye, a medida que aumentan la carga de la aplicación y el número de CPU disponibles en SQL Server**: esto se ha mostrado en [Ejemplo de contención de bloqueos temporales](#example-of-latch-contention).
+* **El rendimiento no aumenta, y en algunos casos disminuye, a medida que aumentan la carga de la aplicación y el número de CPU disponibles en SQL Server** : esto se ha mostrado en [Ejemplo de contención de bloqueos temporales](#example-of-latch-contention).
 
-* **El uso de CPU no aumenta a medida que lo hace la carga de trabajo de la aplicación**: si el uso de CPU en el sistema no aumenta a medida que lo hace la simultaneidad basada en el rendimiento de la aplicación, eso es un indicador de que SQL Server está esperando algo y es síntoma de contención de bloqueos temporales.
+* **El uso de CPU no aumenta a medida que lo hace la carga de trabajo de la aplicación** : si el uso de CPU en el sistema no aumenta a medida que lo hace la simultaneidad basada en el rendimiento de la aplicación, eso es un indicador de que SQL Server está esperando algo y es síntoma de contención de bloqueos temporales.
 
 Analice la causa principal. Aunque se cumplan todas las condiciones anteriores, es posible que la causa principal de los problemas de rendimiento sea otra. De hecho, en la mayoría de los casos, el uso poco óptimo de CPU se debe a otros tipos de esperas, como el bloqueo en bloqueos, las esperas relacionadas con E/S o problemas relacionados con la red. Como regla general, siempre es mejor resolver la espera de recurso que representa la mayor parte del tiempo de espera total antes de continuar con un análisis más exhaustivo.
 
 ## <a name="analyzing-current-wait-buffer-latches"></a>Análisis de bloqueos temporales de búfer de espera actuales
 
-La contención de bloqueos temporales de búfer se manifiesta como aumento de los tiempos de espera de los bloqueos temporales con un elemento *wait_type* **PAGELATCH\_\*** o **PAGEIOLATCH\_\*** , como se muestra en la DMV *sys.dm_os_wait_stats*. Para ver el sistema en tiempo real, ejecute la siguiente consulta en un sistema para combinar las DMV *sys.dm_os_wait_stats*, *sys.dm_exec_sessions* y *sys.dm_exec_requests*. Los resultados se pueden usar para determinar el tipo de espera actual de las sesiones que se ejecutan en el servidor.
+La contención de bloqueos temporales de búfer se manifiesta como aumento de los tiempos de espera de los bloqueos temporales con un elemento *wait_type* de * *PAGELATCH\_\** _ o _*PAGEIOLATCH\_\**_ , como se muestra en la DMV sys.dm_os_wait_stats*. Para ver el sistema en tiempo real, ejecute la siguiente consulta en un sistema para combinar las DMV *sys.dm_os_wait_stats* , *sys.dm_exec_sessions* y *sys.dm_exec_requests*. Los resultados se pueden usar para determinar el tipo de espera actual de las sesiones que se ejecutan en el servidor.
 
 ```sql
 SELECT wt.session_id, wt.wait_type
@@ -477,12 +477,12 @@ La creación de particiones de tabla de SQL Server se puede usar para mitigar l
 
 2. Si usa un grupo de archivos nuevo, equilibre equitativamente los archivos individuales en LUN, con cuidado de usar un diseño óptimo. Si el patrón de acceso conlleva una alta tasa de inserciones, asegúrese de crear el mismo número de archivos que de núcleos de CPU físicos en el equipo de SQL Server.
 
-3. Use el comando **CREATE PARTITION FUNCTION** para particionar las tablas en *X* particiones, donde *X* es el número de núcleos de CPU físicos del equipo de SQL Server. (Hasta 32 particiones como mínimo)
+3. Use el comando **CREATE PARTITION FUNCTION** para particionar las tablas en *X*  particiones, donde *X* es el número de núcleos de CPU físicos del equipo de SQL Server. (Hasta 32 particiones como mínimo)
 
    > [!NOTE]
    > No siempre se necesita una alineación 1:1 del número de particiones con el número de núcleos de CPU. En muchos casos, puede ser algún valor menor que el número de núcleos de CPU. El hecho de tener más particiones puede suponer una mayor sobrecarga para las consultas que tienen que buscar en todas las particiones y, en estos casos, ayuda el tener menos particiones. En las pruebas de SQLCAT con sistemas de 64 y 128 CPU lógicas con particiones de 32 cargas de trabajo de clientes reales, las particiones han sido suficientes para resolver la contención excesiva de bloqueos temporales y alcanzar los objetivos de escala. En última instancia, el número ideal de particiones se debe determinar mediante pruebas. 
 
-4. Use el comando **CREATE PARTITION SCHEME**:
+4. Use el comando **CREATE PARTITION SCHEME** :
 
    * Enlace la función de partición a los grupos de archivos. 
    * Agregue una columna hash de tipo tinyint o smallint a la tabla. 
@@ -541,11 +541,11 @@ En las dos secciones siguientes se proporciona un resumen de las técnicas que s
 
 ### <a name="non-sequential-keyindex"></a>Índice o clave no secuencial
 
-**Ventajas**:
+**Ventajas** :
 
 * Permite el uso de otras características de creación de particiones, como el archivado de datos mediante un esquema de ventana deslizante y la funcionalidad de conmutación de particiones.
 
-**Desventajas**:
+**Desventajas** :
 
 * Posibles desafíos a la hora de elegir una clave o un índice para garantizar una distribución prácticamente uniforme de las inserciones en todo momento.
 * Se puede usar el GUID como columna inicial para garantizar una distribución uniforme, con el riesgo de que puede dar lugar a operaciones de división de página excesivas.
@@ -553,11 +553,11 @@ En las dos secciones siguientes se proporciona un resumen de las técnicas que s
 
 ### <a name="hash-partitioning-with-computed-column"></a>Creación de particiones por hash con una columna calculada
 
-**Ventajas**:
+**Ventajas** :
 
 * Es transparente para las inserciones.
 
-**Desventajas**:
+**Desventajas** :
 
 * Las particiones no se pueden usar para características de administración previstas como el archivado de datos mediante opciones de conmutación de particiones.
 * Puede causar problemas de eliminación de particiones en las consultas, incluidas las consultas de selección o actualización individuales y basadas en intervalos y aquellas que realizan una combinación.

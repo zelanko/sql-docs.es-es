@@ -21,12 +21,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b08199f3cbc0d0ae87b5902600188908dac6615d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 31850fe7f9ecf78af666faced53f552646de672a
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923451"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364702"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Actualizar scripts de replicación (programación de la replicación con Transact-SQL)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,31 +37,31 @@ ms.locfileid: "86923451"
   
  Estas mejoras de seguridad, que hacen posible un mayor control sobre los permisos permitiéndole especificar de manera explícita las cuentas [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows bajo las cuales se ejecutan los trabajos del agente de replicación, afectan a los siguientes procedimientos almacenados de scripts existentes:  
   
--   **sp_addpublication_snapshot**:  
+-   **sp_addpublication_snapshot** :  
   
      Debería proporcionar ahora las credenciales de Windows como `@job_login` y `@job_password` al ejecutar [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) para crear el trabajo bajo el que el Agente de instantáneas se ejecuta en el distribuidor.  
   
--   **sp_addpushsubscription_agent**:  
+-   **sp_addpushsubscription_agent** :  
   
      Debería ejecutar ahora [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) para agregar de forma explícita un trabajo y proporcionar las credenciales de Windows (`@job_login` y `@job_password`) bajo las que se ejecuta el Agente de distribución en el distribuidor. En las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], esto se hacía automáticamente cuando se creaba una suscripción de inserción.  
   
--   **sp_addmergepushsubscription_agent**:  
+-   **sp_addmergepushsubscription_agent** :  
   
      Debería ejecutar ahora [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) para agregar de forma explícita un trabajo y proporcionar las credenciales de Windows (`@job_login` y `@job_password`) bajo las que se ejecuta el Agente de mezcla en el distribuidor. En las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], esto se hacía automáticamente cuando se creaba una suscripción de inserción.  
   
--   **sp_addpullsubscription_agent**:  
+-   **sp_addpullsubscription_agent** :  
   
      Debería proporcionar ahora las credenciales de Windows como `@job_login` y `@job_password` al ejecutar [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) para crear el trabajo bajo el que el Agente de distribución se ejecuta en el suscriptor.  
   
--   **sp_addmergepullsubscription_agent**:  
+-   **sp_addmergepullsubscription_agent** :  
   
      Debería proporcionar ahora las credenciales de Windows como `@job_login` y `@job_password` al ejecutar [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) para crear el trabajo bajo el que el Agente de mezcla se ejecuta en el suscriptor.  
   
--   **sp_addlogreader_agent**:  
+-   **sp_addlogreader_agent** :  
   
      Debería ejecutar ahora [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) para agregar manualmente el trabajo y proporcionar las credenciales de Windows bajo las que se ejecuta el Agente de registro del LOG en el distribuidor. En las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], esto se hacía automáticamente cuando se creaba una publicación transaccional.  
   
--   **sp_addqreader_agent**:  
+-   **sp_addqreader_agent** :  
   
      Debería ejecutar ahora [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) para agregar manualmente el trabajo y proporcionar las credenciales de Windows bajo las que se ejecuta el Agente de lectura de cola en el distribuidor. En las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], esto se hacía automáticamente cuando se creaba una publicación transaccional que admitía actualización en cola.  
   
@@ -112,38 +112,41 @@ ms.locfileid: "86923451"
   
     -   Para una suscripción de inserción, ejecute [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) en el publicador. Especifique `@subscriber`, `@subscriber_db`, `@publication`, las credenciales de Windows bajo las que se ejecuta el Agente de mezcla en el distribuidor para `@job_name` y `@job_password`, y una programación para este trabajo del agente. Para obtener más información, consulte [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Esto se hace después de la ejecución de [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Para obtener más información, consulte [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md).  
   
-## <a name="example"></a>Ejemplo  
+## <a name="examples"></a>Ejemplos  
+
+### <a name="a-sql-server-2000-script-to-create-a-transactional-publication"></a>A. Script de SQL Server 2000 para crear una publicación transaccional
+
  A continuación, se muestra un ejemplo de un script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] que crea una publicación transaccional para la tabla Product. Esta publicación admite la actualización inmediata con actualización en cola como conmutación por error. Los parámetros predeterminados se han quitado para mayor legibilidad.  
   
  [!code-sql[HowTo#sp_createtranpub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_1.sql)]  
   
-## <a name="example"></a>Ejemplo  
+### <a name="b-sql-server-2005-and-later-script-to-create-a-transactional-publication"></a>B. Script de SQL Server 2005 y versiones posteriores para crear una publicación transaccional
  A continuación, se muestra un ejemplo de actualización del script anterior, que crea una publicación transaccional, para ejecutarse correctamente para [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y las versiones posteriores. Esta publicación admite la actualización inmediata con actualización en cola como conmutación por error. Los valores predeterminados de los nuevos parámetros se ha declarado explícitamente.  
   
 > [!NOTE]  
->  Las credenciales de Windows se proporcionan en el tiempo de ejecución mediante las variables de scripting **sqlcmd** .  
+>   Las credenciales de Windows se proporcionan en el tiempo de ejecución mediante las variables de scripting **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createtranpub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_2.sql)]  
   
-## <a name="example"></a>Ejemplo  
+### <a name="c-sql-server-2000-script-to-create-a-merge-publication"></a>C. Script de SQL Server 2000 para crear una publicación de combinación
  A continuación, se muestra un ejemplo de un script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] que crea una publicación de combinación para la tabla Customers. Los parámetros predeterminados se han quitado para mayor legibilidad.  
   
  [!code-sql[HowTo#sp_createmergepub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_3.sql)]  
   
-## <a name="example"></a>Ejemplo  
+### <a name="d-sql-server-2005-and-later-script-to-create-a-merge-publication"></a>D. Script de SQL Server 2005 y versiones posteriores para crear una publicación de combinación
  A continuación, se muestra un ejemplo del script anterior, que crea una publicación de combinación, actualizada para ejecutarse correctamente para [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y las versiones posteriores. Los valores predeterminados de los nuevos parámetros se ha declarado explícitamente.  
   
 > [!NOTE]  
->  Las credenciales de Windows se proporcionan en el tiempo de ejecución mediante las variables de scripting **sqlcmd** .  
+>   Las credenciales de Windows se proporcionan en el tiempo de ejecución mediante las variables de scripting **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createmergepub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_4.sql)]  
   
-## <a name="example"></a>Ejemplo  
+### <a name="e-sql-server-2000-script-to-create-a-push-subscription-to-a-transactional-publication"></a>E. Script de SQL Server 2000 para crear una suscripción de inserción para una publicación transaccional
  A continuación, se muestra un ejemplo de un script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] que crea una suscripción de inserción a una publicación transaccional. Los parámetros predeterminados se han quitado para mayor legibilidad.  
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_5.sql)]  
   
-## <a name="example"></a>Ejemplo  
+### <a name="f-sql-server-2005-and-later-script-to-create-a-push-subscription-to-a-transactional-publication"></a>F. Script de SQL Server 2005 y versiones posteriores para crear una suscripción de inserción para una publicación transaccional
  A continuación, se muestra un ejemplo de actualización del script anterior, que crea una suscripción de inserción, para ejecutarse correctamente para [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y las versiones posteriores. Los valores predeterminados de los nuevos parámetros se ha declarado explícitamente.  
   
 > [!NOTE]  
@@ -151,42 +154,42 @@ ms.locfileid: "86923451"
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_6.sql)]  
   
-## <a name="example"></a>Ejemplo  
+### <a name="g-sql-server-2000-script-to-create-a-push-subscription-to-a-merge-publication"></a>G. Script de SQL Server 2000 para crear una suscripción de inserción para una publicación de combinación
  A continuación, se muestra un ejemplo de un script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] que crea una suscripción de inserción a una publicación de combinación. Los parámetros predeterminados se han quitado para mayor legibilidad.  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
   
-## <a name="example"></a>Ejemplo  
+### <a name="h-sql-server-2005-and-later-script-to-create-a-push-subscription-to-a-merge-publication"></a>H. Script de SQL Server 2005 y versiones posteriores para crear una suscripción de inserción para una publicación de combinación
  A continuación, se muestra un ejemplo del script anterior, que crea una suscripción de inserción en una publicación de combinación, actualizado para ejecutarse correctamente para [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y las versiones posteriores. Los valores predeterminados de los nuevos parámetros se ha declarado explícitamente.  
   
 > [!NOTE]  
->  Las credenciales de Windows se proporcionan en el tiempo de ejecución mediante las variables de scripting **sqlcmd** .  
+>   Las credenciales de Windows se proporcionan en el tiempo de ejecución mediante las variables de scripting **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_8.sql)]  
   
-## <a name="example"></a>Ejemplo  
+### <a name="i-sql-server-2000-script-to-create-a-pull-subscription-to-a-transactional-publication"></a>I. Script de SQL Server 2000 para crear una suscripción de extracción para una publicación transaccional
  A continuación, se muestra un ejemplo de un script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] que crea una suscripción de extracción a una publicación transaccional. Los parámetros predeterminados se han quitado para mayor legibilidad.  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
   
-## <a name="example"></a>Ejemplo  
+### <a name="j-sql-server-2005-and-later-script-to-create-a-pull-subscription-to-a-transactional-publication"></a>J. Script de SQL Server 2005 y versiones posteriores para crear una suscripción de extracción para una publicación transaccional
  A continuación, se muestra un ejemplo de actualización del script anterior, que crea una suscripción de extracción, actualizado para ejecutarse correctamente para [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y las versiones posteriores. Los valores predeterminados de los nuevos parámetros se ha declarado explícitamente.  
   
 > [!NOTE]  
->  Las credenciales de Windows se proporcionan en el tiempo de ejecución mediante las variables de scripting **sqlcmd** .  
+>   Las credenciales de Windows se proporcionan en el tiempo de ejecución mediante las variables de scripting **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createtranpullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_9.sql)]  
   
-## <a name="example"></a>Ejemplo  
+### <a name="k-sql-server-2000-script-to-create-a-pull-subscription-to-a-merge-publication"></a>K. Script de SQL Server 2000 para crear una suscripción de extracción para una publicación de combinación
  A continuación, se muestra un ejemplo de un script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] que crea una suscripción de extracción a una publicación de combinación. Los parámetros predeterminados se han quitado para mayor legibilidad.  
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_10.sql)]  
   
-## <a name="example"></a>Ejemplo  
+### <a name="l-sql-server-2005-and-later-script-to-create-a-pull-subscription-to-a-merge-publication"></a>L. Script de SQL Server 2005 y versiones posteriores para crear una suscripción de extracción para una publicación de combinación
  A continuación, se muestra un ejemplo del script anterior, que crea una suscripción de extracción en una publicación de combinación, actualizado para ejecutarse correctamente para [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y las versiones posteriores. Los valores predeterminados de los nuevos parámetros se ha declarado explícitamente.  
   
 > [!NOTE]  
->  Las credenciales de Windows se proporcionan en el tiempo de ejecución mediante las variables de scripting **sqlcmd** .  
+>   Las credenciales de Windows se proporcionan en el tiempo de ejecución mediante las variables de scripting **sqlcmd** .  
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_11.sql)]  
   

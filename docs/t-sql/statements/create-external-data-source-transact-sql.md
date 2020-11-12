@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f54f2fdce030f477a9e203daa837287dff86f107
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: 05995a1205677bbeefbb2b025268af20e445a1b4
+ms.sourcegitcommit: ab68925e9869e6cf5b39efdb415ecc8e8f5b08fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043850"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93417426"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -107,7 +107,7 @@ Ruta de acceso de ubicación:
 - `<`NameNode`>`: nombre de equipo, nombre de URI de servicio o dirección IP del `Namenode` en el clúster de Hadoop. PolyBase debe resolver los nombres DNS utilizados por el clúster de Hadoop. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
 - `port` = el puerto en el cual escucha el origen de datos externo. En Hadoop, el puerto se puede encontrar mediante el parámetro de configuración `fs.defaultFS`. El valor predeterminado es 8020.
 - `<container>` = el contenedor de la cuenta de almacenamiento que contiene los datos. Los contenedores raíz son de solo lectura, no se pueden volver a escribir datos en el contenedor.
-- `<storage_account>` = el nombre de la cuenta de almacenamiento del recurso de Azure.
+- `<storage_account>` = nombre de la cuenta de almacenamiento del recurso de Azure.
 - `<server_name>` = el nombre de host.
 - `<instance_name>` = el nombre de la instancia con nombre de SQL Server. Se usa si tiene el servicio de SQL Server Browser en ejecución en la instancia de destino.
 
@@ -338,7 +338,7 @@ WITH (
 
 ### <a name="g-create-external-data-source-to-reference-kafka"></a>G. Creación de un origen de datos externo para hacer referencia a Kafka
 
-En este ejemplo, el origen de datos externo es un servidor Kafka con la dirección IP xxx.xxx.xxx.xxx y que escucha en el puerto 1900. El origen de datos externo Kafka es solo para el streaming de datos y no admite la inserción de predicados.
+En este ejemplo, el origen de datos externo es un servidor Kafka que tiene la dirección IP xxx.xxx.xxx.xxx y que escucha en el puerto 1900. El origen de datos externo Kafka es solo para el streaming de datos y no admite la inserción de predicados.
 
 ```sql
 -- Create an External Data Source for Kafka
@@ -678,6 +678,7 @@ Crea un origen de datos externo para PolyBase. Los orígenes de datos externos s
 
 ## <a name="syntax"></a>Sintaxis
 
+### [[!INCLUDE[sss-dedicated-pool-md.md](../../includes/sss-dedicated-pool-md.md)]](#tab/dedicated)
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
@@ -686,6 +687,15 @@ WITH
     [ [ , ] TYPE = HADOOP ]
 [ ; ]
 ```
+### [[!INCLUDE[sssod-md.md](../../includes/sssod-md.md)]](#tab/serverless)
+```syntaxsql
+CREATE EXTERNAL DATA SOURCE <data_source_name>  
+WITH
+(    LOCATION = '<prefix>://<path>[:<port>]'
+) 
+[;]
+```
+---
 
 ## <a name="arguments"></a>Argumentos
 
@@ -706,7 +716,7 @@ Proporciona el protocolo de conectividad y la ruta de acceso al origen de datos 
 Ruta de acceso de ubicación:
 
 - `<container>` = el contenedor de la cuenta de almacenamiento que contiene los datos. Los contenedores raíz son de solo lectura, no se pueden volver a escribir datos en el contenedor.
-- `<storage_account>` = el nombre de la cuenta de almacenamiento del recurso de Azure.
+- `<storage_account>` = nombre de la cuenta de almacenamiento del recurso de Azure.
 
 Instrucciones y notas adicionales cuando se establece la ubicación:
 

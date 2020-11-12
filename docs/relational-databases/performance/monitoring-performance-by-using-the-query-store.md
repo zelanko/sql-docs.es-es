@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 5b3a9151d07599661445eb3dfa20c9ef432e0719
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4cccda1a792b8c006b758c3788d910e745e94989
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243436"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418032"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisión del rendimiento mediante el almacén de consultas
 
@@ -122,7 +122,7 @@ Seleccione un plan para ver el plan de consulta gráfica. Los botones están dis
 
 ![Consultas devueltas de SQL Server 2016 en Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Consultas devueltas de SQL Server 2016 en Explorador de objetos de SSMS")
 
-Para aplicar un plan, seleccione una consulta y el plan y luego haga clic en **Force Plan**(Forzar plan). Solo puede forzar planes que se guardaron mediante la característica del plan de consulta y que todavía se conservan en la caché del plan de consulta.
+Para aplicar un plan, seleccione una consulta y el plan y luego haga clic en **Force Plan** (Forzar plan). Solo puede forzar planes que se guardaron mediante la característica del plan de consulta y que todavía se conservan en la caché del plan de consulta.
 
 ## <a name="finding-waiting-queries"></a><a name="Waiting"></a> Buscar consultas en espera
 
@@ -233,7 +233,7 @@ Los procedimientos almacenados configuran el Almacén de consultas.
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
+        [sp_query_store_remove_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
     :::column-end:::
     :::column:::
         [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)
@@ -241,11 +241,13 @@ Los procedimientos almacenados configuran el Almacén de consultas.
 :::row-end:::
 :::row:::
     :::column:::
-        sp_query_store_consistency_check &#40;Transct-SQL&#41;
+        sp_query_store_consistency_check &#40;Transact-SQL&#41;<sup>1</sup>
     :::column-end:::
     :::column:::
     :::column-end:::
 :::row-end:::
+
+<sup>1</sup> En escenarios extremos, Almacén de consultas puede entrar en el estado ERROR debido a errores internos. A partir de SQL Server 2017 (14.x), si esto ocurre, el Almacén de consultas se puede recuperar si se ejecuta el procedimiento sp_query_store_consistency_check almacenado en la base de datos afectada. Consulte [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) para conocer los detalles de la descripción de la columna actual_state_desc.
 
 ## <a name="key-usage-scenarios"></a><a name="Scenarios"></a> Escenarios de uso clave
 

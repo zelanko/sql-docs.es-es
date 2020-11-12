@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fb19a7e3dc1ef6c1fc2bcc1c1416c79b2a6c5e4c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff2970bf4d450c425f169be7b2bb72c24db7d2d0
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402581"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364801"
 ---
 # <a name="create-a-trace-transact-sql"></a>Crear un seguimiento (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88402581"
   
 ### <a name="to-create-a-trace"></a>Para crear un seguimiento  
   
-1.  Ejecute **sp_trace_create** con los parámetros necesarios para crear un seguimiento nuevo. El nuevo seguimiento estará en estado de detención (el*estado* es **0**).  
+1.  Ejecute **sp_trace_create** con los parámetros necesarios para crear un seguimiento nuevo. El nuevo seguimiento estará en estado de detención (el *estado* es **0** ).  
   
 2.  Ejecute **sp_trace_setevent** con los parámetros necesarios para seleccionar los eventos y las columnas de las que va a realizar un seguimiento.  
   
@@ -36,11 +36,13 @@ ms.locfileid: "88402581"
      **sp_trace_setevent** y **sp_trace_setfilter** solo se pueden ejecutar en seguimientos existentes que estén detenidos.  
   
     > [!IMPORTANT]  
-    >  A diferencia de los procedimientos almacenados normales, los parámetros de todos los procedimientos almacenados de SQL Server Profiler (<strong>sp_trace_*xx*</strong>) tienen establecimiento inflexible de tipos y no admiten la conversión de tipos de datos automática. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devuelve un error.  
+    >  A diferencia de los procedimientos almacenados normales, los parámetros de todos los procedimientos almacenados de SQL Server Profiler ( <strong>sp_trace_ *xx*</strong>) tienen establecimiento inflexible de tipos y no admiten la conversión de tipos de datos automática. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devuelve un error.  
   
-## <a name="example"></a>Ejemplo  
+## <a name="examples"></a>Ejemplos
+
  En el ejemplo de código siguiente se muestra la forma de crear un seguimiento con [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se divide en tres secciones: crear el seguimiento, rellenar el archivo de seguimiento y detener el seguimiento. Personalice el seguimiento agregando los eventos que desee seguir. Para obtener la lista de eventos y columnas, vea [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
+### <a name="a-create-a-trace"></a>A. Creación de un seguimiento
  En el código siguiente se crea un seguimiento, se agregan los eventos al seguimiento y, a continuación, se inicia el seguimiento:  
   
 ```  
@@ -73,7 +75,7 @@ GO
   
 ```  
   
-## <a name="example"></a>Ejemplo  
+### <a name="b-populate-the-trace-file"></a>B. Relleno del archivo de seguimiento
  Ahora que se ha creado el seguimiento y se ha iniciado, ejecute el código siguiente para rellenarlo con actividad.  
   
 ```  
@@ -84,7 +86,7 @@ GO
   
 ```  
   
-## <a name="example"></a>Ejemplo  
+### <a name="c-stop-the-trace"></a>C. Detención del seguimiento
  Se puede detener el seguimiento y reiniciar en cualquier momento. En este ejemplo, ejecute el código siguiente para detener el seguimiento, cerrarlo y eliminar su definición.  
   
 ```  
@@ -100,7 +102,7 @@ EXEC sp_trace_setstatus @TraceID, 2
   
 ```  
   
-## <a name="example"></a>Ejemplo  
+### <a name="d-examine-the-trace-file"></a>D. Examen del archivo de seguimiento
  Para examinar el archivo de seguimiento, abra el archivo SampleTrace.trc mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  

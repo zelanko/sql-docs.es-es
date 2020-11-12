@@ -1,1 +1,1 @@
-SQL a petición (versión preliminar) en Azure Synapse Analytics
+Grupo de SQL sin servidor (versión preliminar) en Azure Synapse Analytics

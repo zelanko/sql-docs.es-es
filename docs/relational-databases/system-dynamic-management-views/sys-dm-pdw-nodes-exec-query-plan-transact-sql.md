@@ -13,24 +13,28 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ec94a367ca0cc9bb354fd35cbc214d8e83ede584
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: 06c5acb9480f52d0cadf84c54aa39bbc9bae12d9
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059539"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584942"
 ---
 # <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>sys.pdw_nodes_dm_exec_query_plan (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Devuelve el plan de presentación en formato XML para el lote especificado por el identificador del plan. Este plan especificado por el identificador del plan puede estar almacenado en caché o ejecutándose.  
 
+> [!note] 
+> En Synapse SQL, la adición de espacios en blanco en una consulta constituye un cambio de consulta que hace que el hash de consulta se vuelva a calcular y no se reutilice el plan de ejecución almacenado en caché anterior.
+
+
 ## <a name="table-returned"></a>Tabla devuelta  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**pdw_node_id**|**int**|IDENTIFICADOR numérico único asociado al nodo.| 
-|**dbid**|**smallint**|Identificador de la base de datos de contexto que estaba activa al compilarse la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente a este plan. En el caso de instrucciones SQL no planeadas y preparadas, el identificador de la base de datos donde se compilaron las instrucciones.<br /><br /> Esta columna acepta valores NULL.|  
+|**DBID**|**smallint**|Identificador de la base de datos de contexto que estaba activa al compilarse la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente a este plan. En el caso de instrucciones SQL no planeadas y preparadas, el identificador de la base de datos donde se compilaron las instrucciones.<br /><br /> Esta columna acepta valores NULL.|  
 |**objectid**|**int**|Identificador del objeto (por ejemplo, procedimiento almacenado o función definida por el usuario) de este plan de consulta. Para lotes "ad hoc" y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
 |**número**|**smallint**|Entero de procedimiento almacenado numerado. Para lotes "ad hoc" y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.| 
 |**cifra**|**bit**|Indica si el procedimiento almacenado correspondiente está cifrado.<br /><br /> 0 = no cifrado<br /><br /> 1 = cifrado<br /><br /> La columna no acepta valores NULL.|  
@@ -42,7 +46,7 @@ Se aplican los mismos comentarios en [Sys.dm_exec_query_plan](./sys-dm-exec-quer
 ## <a name="permissions"></a>Permisos  
  Requiere el rol de servidor **sysadmin** o `VIEW SERVER STATE` el permiso en el servidor.  
   
-## <a name="see-also"></a>Consulta también  
+## <a name="see-also"></a>Consulte también  
  [Azure Synapse Analytics y vistas de administración dinámica de almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
  ## <a name="next-steps"></a>Pasos siguientes

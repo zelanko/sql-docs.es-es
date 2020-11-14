@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 248865b70115a64f73ce93dbd966dac94db61a0a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 495bb8455c3e13b88d2d3ae6b400c5c0f2167604
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482978"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631681"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>Efecto de las transacciones en los cursores y las instrucciones preparadas
-La confirmación o reversión de una transacción tiene el siguiente efecto en los cursores y los planes de acceso:  
+La confirmación o reversión de una transacción tiene uno de los siguientes efectos en los cursores y los planes de acceso:  
   
 -   Se cierran todos los cursores y se eliminan los planes de acceso para las instrucciones preparadas en esa conexión.  
   
--   Todos los cursores están cerrados y los planes de acceso para las instrucciones preparadas en esa conexión permanecen intactos.  
+-   Todos los cursores están cerrados y los planes de acceso para las instrucciones preparadas en esa conexión permanecen intactos, o 
   
 -   Todos los cursores permanecen abiertos y los planes de acceso para las instrucciones preparadas en esa conexión permanecen intactos.  
   

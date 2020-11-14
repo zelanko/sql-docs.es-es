@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 189d0a2997b256f9c9b615fc81b5b9ed3ef46a5c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4760e4928421e0acdeca22f31a00cb148b82019c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918730"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384374"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Compatibilidad de SqlClient con LocalDB
 
@@ -42,7 +42,7 @@ server=(localdb)\\myInstance
   
 `User Instance=True` no se permite al conectarse a una base de datos de LocalDB.  
   
-Puede descargar LocalDB desde [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). Si va a usar sqlcmd.exe para modificar datos en la instancia de LocalDB, necesita sqlcmd de SQL Server 2012, que también puede obtener de SQL Server 2012 Feature Pack.  
+Puede descargar LocalDB desde [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041). Si va a usar sqlcmd.exe para modificar datos en la instancia de LocalDB, necesita sqlcmd de SQL Server 2012, que también puede obtener de SQL Server 2012 Feature Pack.  
   
 ## <a name="programmatically-create-a-named-instance"></a>Creación de una instancia con nombre mediante programación  
 Una aplicación puede crear una instancia con nombre y especificar una base de datos de la siguiente manera:  

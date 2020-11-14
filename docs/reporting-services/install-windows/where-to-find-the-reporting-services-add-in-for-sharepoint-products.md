@@ -12,12 +12,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ba6987367e72ed544df13216b31aebe85af500e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fae846be15fd8606315aa0e66efeb25c745ff98a
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866298"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384544"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Dónde encontrar el complemento Reporting Services para Productos de SharePoint
 
@@ -53,13 +53,13 @@ El complemento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[
   
  Para descargar e instalar el complemento, vea el Centro de descarga de [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
   
--   **Complemento SP1**:  [Complemento Microsoft® SQL Server® 2012 SP1 Reporting Services para Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583).  
+-   **Complemento SP1** :  [Complemento Microsoft® SQL Server® 2012 SP1 Reporting Services para Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583).  
   
 -   **SP1:**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35575) (https://www.microsoft.com/download/details.aspx?id=35575).  
 
 ##  <a name="sssql11-reporting-services-add-in-for-sharepoint-2010-products"></a><a name="bkmk_sql11"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Complemento Reporting Services para Productos de SharePoint 2010
 
-En la versión SQL Server 2016, el complemento se puede instalar como parte del Asistente para la instalación de SQL Server, en la página Selección de características. Si quiere descargar e instalar el complemento por separado, la versión más actualizada de este archivo está disponible en el Centro de descarga de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en la página [Complemento Microsoft® SQL Server® 2012 Reporting Services para las tecnologías de Microsoft® SharePoint® 2010](https://go.microsoft.com/fwlink/?LinkID=207242) .
+En la versión SQL Server 2016, el complemento se puede instalar como parte del Asistente para la instalación de SQL Server, en la página Selección de características. Si quiere descargar e instalar el complemento por separado, la versión más actualizada de este archivo está disponible en el Centro de descarga de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en la página [Complemento Microsoft® SQL Server® 2012 Reporting Services para las tecnologías de Microsoft® SharePoint® 2010](https://www.microsoft.com/download/details.aspx?id=56052) .
 
 ## <a name="next-steps"></a>Pasos siguientes
 

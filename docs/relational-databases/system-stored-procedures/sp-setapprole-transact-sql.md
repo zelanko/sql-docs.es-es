@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4e8680d0f122d2b89c199172866a40dd55981a00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0513878f65513e57a6e26bb52d8101ba6c5d672c
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493087"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570963"
 ---
 # <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -46,9 +46,9 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>Argumentos
 
-`[ @rolename = ] 'role'` Es el nombre del rol de aplicación definido en la base de datos actual. *role* es de **tipo sysname**y no tiene ningún valor predeterminado. el *rol* debe existir en la base de datos actual.  
+`[ @rolename = ] 'role'` Es el nombre del rol de aplicación definido en la base de datos actual. *role* es de **tipo sysname** y no tiene ningún valor predeterminado. el *rol* debe existir en la base de datos actual.  
   
-`[ @password = ] { encrypt N'password' }` Es la contraseña requerida para activar el rol de aplicación. *password* es de **tipo sysname**y no tiene ningún valor predeterminado. la *contraseña* se puede ofuscar mediante la función **Encrypt** de ODBC. Cuando se usa la función **Encrypt** , la contraseña se debe convertir en una cadena Unicode colocando **N** delante de la primera comilla.  
+`[ @password = ] { encrypt N'password' }` Es la contraseña requerida para activar el rol de aplicación. *password* es de **tipo sysname** y no tiene ningún valor predeterminado. la *contraseña* se puede ofuscar mediante la función **Encrypt** de ODBC. Cuando se usa la función **Encrypt** , la contraseña se debe convertir en una cadena Unicode colocando **N** delante de la primera comilla.  
   
  No se admite la opción Encrypt en las conexiones que usan **SqlClient**.  
   
@@ -63,7 +63,7 @@ sp_setapprole [ @rolename = ] 'role',
   
 `[ @fCreateCookie = ] true | false` Especifica si se va a crear una cookie. **true** se convierte implícitamente a 1. **false** se convierte implícitamente a 0.  
   
-`[ @cookie = ] @cookie OUTPUT` Especifica un parámetro de salida que contendrá la cookie. La cookie solo se genera si el valor de ** \@ fCreateCookie** es **true**. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` Especifica un parámetro de salida que contendrá la cookie. La cookie solo se genera si el valor de **\@ fCreateCookie** es **true**. **varbinary(8000)**  
   
 > [!NOTE]  
 > El parámetro **OUTPUT** de la cookie para **sp_setapprole** está documentado actualmente como **varbinary(8000)** , que es la longitud máxima correcta. Pero la implementación actual devuelve **varbinary(50)** . Las aplicaciones deben seguir reservando **varbinary (8000)** para que la aplicación siga funcionando correctamente si el tamaño de retorno de la cookie aumenta en una versión futura.
@@ -74,13 +74,13 @@ sp_setapprole [ @rolename = ] 'role',
   
 ## <a name="remarks"></a>Observaciones
 
- Después de activar un rol de aplicación mediante **sp_setapprole**, el rol permanece activo hasta que el usuario se desconecta del servidor o ejecuta **sp_unsetapprole**. **sp_setapprole** solo se pueden ejecutar mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones directas. **sp_setapprole** no se pueden ejecutar dentro de otro procedimiento almacenado o dentro de una transacción definida por el usuario.  
+ Después de activar un rol de aplicación mediante **sp_setapprole** , el rol permanece activo hasta que el usuario se desconecta del servidor o ejecuta **sp_unsetapprole**. **sp_setapprole** solo pueden ejecutarse mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones directas, en el nivel ad hoc y no dentro de otro procedimiento almacenado, desencadenador o dentro de una transacción definida por el usuario.  
   
  Para obtener información general sobre los roles de aplicación, consulte [roles de aplicación](../../relational-databases/security/authentication-access/application-roles.md).  
   
 > [!IMPORTANT]  
 > Para proteger la contraseña del rol de aplicación cuando se transmite a través de una red, siempre debe usar una conexión cifrada al habilitar un rol de aplicación.
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] **SqlClient**no admite la opción de **cifrado** de ODBC. Si debe almacenar las credenciales, cífrelas con las funciones de la API de cifrado. La *contraseña* del parámetro se almacena como un hash unidireccional. Para conservar la compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **sp_addapprole**no aplica la Directiva de complejidad de contraseñas. Para aplicar la Directiva de complejidad de contraseñas, use [crear rol de aplicación](../../t-sql/statements/create-application-role-transact-sql.md).  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] **SqlClient** no admite la opción de **cifrado** de ODBC. Si debe almacenar las credenciales, cífrelas con las funciones de la API de cifrado. La *contraseña* del parámetro se almacena como un hash unidireccional. Para conservar la compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **sp_addapprole** no aplica la Directiva de complejidad de contraseñas. Para aplicar la Directiva de complejidad de contraseñas, use [crear rol de aplicación](../../t-sql/statements/create-application-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos
 
@@ -119,4 +119,8 @@ GO
 
 ## <a name="see-also"></a>Consulte también
 
- [Procedimientos almacenados del sistema &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) [procedimientos almacenados de seguridad &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md) [crear rol de aplicación &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md) [quitar rol de aplicación &#40;Transact-sql&#41;](../../t-sql/statements/drop-application-role-transact-sql.md) sp_unsetapprole &#40;[Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)
+ [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [sp_unsetapprole &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)

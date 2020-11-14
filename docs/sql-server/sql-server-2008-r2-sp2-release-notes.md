@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d9fee236a710d7bc742f9a8fed27e12801daa550
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: ebebc4ed225e131db50df4c4c0b1ee3eb6da51b7
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988274"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384640"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ Use la tabla siguiente para determinar qué archivo va a descargar e instalar. C
 |Una versión de 32 bits únicamente del cliente y de las herramientas de administración para SQL Server 2008 R2 o SQL Server 2008 R2 SP1 (lo cual incluye SQL Server 2008 R2 Management Studio)|Actualizar el cliente y herramientas de administración a la versión de 32 bits de SQL Server 2008 R2 SP2|SQLServer2008R2SP2-KB2630458-x86-ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
 |Una versión de 32 bits de SQL Server 2008 R2 Management Studio Express o SQL Server 2008 R2 SP1 Management Studio Express|Actualizar a la versión de 32 bits de SQL Server 2008 R2 SP2 Management Studio Express|SQLManagementStudio_x86_ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkId=251791)|  
 |Una versión de 32 bits de cualquier edición de SQL Server 2008 R2 o SQL Server 2008 R2 SP1 **y** una versión de 32 bits del cliente y herramientas de administración (lo cual incluye SQL Server 2008 R2 RTM Management Studio)|Actualizar todos los productos a la versión de 32 bits de SQL Server 2008 R2 SP2|SQLServer2008R2SP2-KB2630458-x86-ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
-|Una versión de 32 bits de una o más herramientas del [Microsoft SQL Server 2008 R2 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)|Actualizar las herramientas a la versión del Microsoft SQL Server 2008 R2 SP2 Feature Pack|Uno o más archivos del [Microsoft SQL Server 2008 R2 SP2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=251792)|  
+|Una versión de 32 bits de una o más herramientas del [Microsoft SQL Server 2008 R2 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)|Actualizar las herramientas a la versión del Microsoft SQL Server 2008 R2 SP2 Feature Pack|Uno o más archivos del [Microsoft SQL Server 2008 R2 SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30438)|  
 |No instalar la versión de 32 bits de SQL Server 2008 R2|Instalar Server 2008 R2 junto con el SP2|Vaya a [SQL Server 2008 R2 SP2 - Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791) y siga las instrucciones.|  
 |No instalar la versión de 32 bits de SQL Server 2008 R2 Management Studio|Instalar SQL Server 2008 R2 Management Studio junto con el SP2|SQLManagementStudio_x86_ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkId=251791) para instalar SQL Server 2008 R2 SP2 Management Studio Express Edition de forma gratuita.|  
 |Una versión de 64 bits de cualquier edición de SQL Server 2008 R2 o SQL Server 2008 R2 SP1|Actualizar a la versión de 64 bits de SQL Server 2008 R2 SP2|SQLServer2008R2SP2-KB2630458-x64-ENU o SQLServer2008R2SP2-KB2630455-IA64-ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
@@ -51,14 +51,14 @@ Use la tabla siguiente para determinar qué archivo va a descargar e instalar. C
 |Una versión de 64 bits únicamente del cliente y de las herramientas de administración para SQL Server 2008 R2 o SQL Server 2008 R2 SP1 (lo cual incluye SQL Server 2008 R2 Management Studio)|Actualizar el cliente y herramientas de administración a la versión de 64 bits de SQL Server 2008 R2 SP2|SQLServer2008R2SP2-KB2630458-x64-ENU.exe o SQLServer2008R2SP2-KB2630455-IA64-ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
 |Una versión de 64 bits de SQL Server 2008 R2 Management Studio Express o SQL Server 2008 R2 SP1 Management Studio Express|Actualizar a la versión de 64 bits de SQL Server 2008 R2 SP2 Management Studio Express|SQLManagementStudio_x64_ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkId=251791)|  
 |Una versión de 64 bits de cualquier edición de SQL Server 2008 R2 o SQL Server 2008 R2 SP1 **y** una versión de 64 bits del cliente y herramientas de administración (lo cual incluye SQL Server 2008 R2 RTM Management Studio)|Actualizar todos los productos a la versión de 64 bits de SQL Server 2008 R2 SP2|SQLServer2008R2SP2-KB2630458-x64-ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkId=251790)|  
-|Una versión de 64 bits de una o más herramientas del [Microsoft SQL Server 2008 R2 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)|Actualizar las herramientas a la versión de 64 bits del Microsoft SQL Server 2008 R2 SP2 Feature Pack|Uno o más archivos del [Microsoft SQL Server 2008 R2 SP2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=251792)|  
+|Una versión de 64 bits de una o más herramientas del [Microsoft SQL Server 2008 R2 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)|Actualizar las herramientas a la versión de 64 bits del Microsoft SQL Server 2008 R2 SP2 Feature Pack|Uno o más archivos del [Microsoft SQL Server 2008 R2 SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30438)|  
 |No instalar la versión de 64 bits de SQL Server 2008 R2|Instalar Server 2008 R2 junto con el SP2|Vaya a [SQL Server 2008 R2 SP2 - Express Edition](https://go.microsoft.com/fwlink/?LinkId=251791) y siga las instrucciones.|  
 |No instalar la versión de 64 bits de SQL Server 2008 R2 Management Studio|Instalar SQL Server 2008 R2 Management Studio junto con el SP2|SQLManagementStudio_x64_ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkId=251791) para instalar SQL Server 2008 R2 SP2 Management Studio Express Edition de forma gratuita.|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 Posibles errores en el programa de instalación si otro proceso ha bloqueado SQAGTRES.dll  
 **Problema:** Es posible que se produzca el siguiente error en una operación del programa de instalación de SQL Server: `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` La causa raíz es que otro proceso ha bloqueado C:\Windows\system32\SQAGTRES.DLL y el programa de instalación no ha podido actualizarlo.  
   
-**Solución alternativa**: cambie el nombre de C:\Windows\system32\SQAGTRES.DLL a uno temporal como C:\Windows\system32\SQAGTRES_antiguo.DLL y, después, seleccione la opción Reintentar en el mensaje de error de la instalación. De esta forma el programa de instalación podrá continuar. Después de reiniciar, podrá eliminar el archivo temporal C:\Windows\system32\SQAGTRES_antiguo.DLL.  
+**Solución alternativa** : cambie el nombre de C:\Windows\system32\SQAGTRES.DLL a uno temporal como C:\Windows\system32\SQAGTRES_antiguo.DLL y, después, seleccione la opción Reintentar en el mensaje de error de la instalación. De esta forma el programa de instalación podrá continuar. Después de reiniciar, podrá eliminar el archivo temporal C:\Windows\system32\SQAGTRES_antiguo.DLL.  
   
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0 Problemas conocidos corregidos en este Service Pack  
 Para obtener una lista completa de errores y de problemas conocidos corregidos en este Service Pack, vea este [artículo maestro de KB](https://support.microsoft.com/kb/2630455).  

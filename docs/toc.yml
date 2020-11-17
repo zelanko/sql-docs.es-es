@@ -135,7 +135,13 @@
             - name: Prerrequisitos
               href: big-data-cluster/active-directory-prerequisites.md
             - name: Implementación
-              href: big-data-cluster/active-directory-deploy.md
+              items:
+                - name: Implementación sencilla de AD
+                  href: big-data-cluster/active-directory-deploy.md
+                - name: Planeamiento de AD en AKS
+                  href: big-data-cluster/active-directory-deployment-aks.md
+                - name: 'Tutorial: AD en AKS'
+                  href: big-data-cluster/active-directory-deployment-aks-tutorial.md
             - name: Conectar
               href: big-data-cluster/active-directory-connect.md
             - name: Varias instancias de BDC en el mismo dominio de AD
@@ -9992,11 +9998,11 @@
               href: linux/sql-server-linux-setup-full-text-search.md
             - name: Instalar SQL Server Integration Services
               href: linux/sql-server-linux-setup-ssis.md
-            - name: Instalación de SQL Server Machine Learning Services
+            - name: "Instalación de SQL\_Server Machine Learning Services (Python y R)"
               href: linux/sql-server-linux-setup-machine-learning.md
-            - name: "Instalación de Machine Learning Services de SQL\_Server en Docker"
+            - name: "Instalación de SQL\_Server Machine Learning Services (Python y R) en Docker"
               href: linux/sql-server-linux-setup-machine-learning-docker.md
-            - name: Instalar extensiones de lenguaje de SQL Server
+            - name: "Instalación de extensión de lenguaje Java de SQL\_Server"
               href: linux/sql-server-linux-setup-language-extensions-java.md
             - name: Configuración de repositorios
               href: linux/sql-server-linux-change-repo.md

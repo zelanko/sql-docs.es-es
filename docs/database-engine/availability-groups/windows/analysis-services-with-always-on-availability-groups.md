@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c56b8595955caef35d5ff1e591eed417a831a48
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: febd24b17458a37a6ff12c8b17f55527311a0aee
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726568"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584795"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con grupos de disponibilidad AlwaysOn
 
@@ -128,7 +128,7 @@ ms.locfileid: "91726568"
   
 2.  En el Administrador de conexiones, en Proveedor, elija un proveedor que admita el protocolo Flujo TDS. SQL Server 11.0 Native Client admite este protocolo.  
   
-3.  En el Administrador de conexiones, en Nombre de Servidor, escriba el nombre del *agente de escucha de grupo de disponibilidad*y elija una base de datos que esté disponible en el grupo.  
+3.  En el Administrador de conexiones, en Nombre de Servidor, escriba el nombre del *agente de escucha de grupo de disponibilidad* y elija una base de datos que esté disponible en el grupo.  
   
      El agente de escucha de grupo de disponibilidad redirige una conexión de cliente a una replicación principal para las solicitudes de lectura/escritura o a una replicación secundaria si especifica intento de lectura en la cadena de conexión. Dado que los roles de réplica cambiarán durante una conmutación por error (donde el servidor principal se convierte en el servidor secundario y un elemento secundario se convierte en uno principal), siempre debe especificarse la escucha para redirigir la conexión de cliente en consecuencia.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "91726568"
   
      Establezca **Intención de aplicaciones** en **READONLY** si va a configurar una conexión de cliente de solo lectura en una réplica secundaria. En otro caso mantenga el valor predeterminado **READWRITE** para redirigir la conexión a la réplica primaria.  
   
-5.  En Información de suplantación, seleccione **Utilizar un nombre de usuario y una contraseña de Windows específicos**y escriba una cuenta de usuario de dominio de Windows que tenga un mínimo de permisos de **db_datareader** en la base de datos.  
+5.  En Información de suplantación, seleccione **Utilizar un nombre de usuario y una contraseña de Windows específicos** y escriba una cuenta de usuario de dominio de Windows que tenga un mínimo de permisos de **db_datareader** en la base de datos.  
   
      No elija **Usar las credenciales del usuario actual** o **Heredar**. Puede elegir **Use la cuenta de servicio**, pero solo si esa cuenta tiene permisos de lectura en la base de datos.  
   

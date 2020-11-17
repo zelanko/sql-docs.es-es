@@ -15,14 +15,14 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3208f04a990bc7cc07cfc8b1672e7534074bec70
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 82a8d9f4e787fd419e31e637775e33a4cf71f36d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724606"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584867"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Descarga de cargas de trabajo de solo lectura a la réplica secundaria de un grupo de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "91724606"
   
 -   **Enrutamiento de solo lectura**  
   
-     El*enrutamiento de solo lectura* hace referencia a la capacidad de SQL Server para enrutar las solicitudes de conexión con intención de lectura entrantes, que se dirigen a un agente de escucha de grupo de disponibilidad, a una réplica secundaria legible disponible. Los requisitos previos para el enrutamiento de solo lectura son los siguientes:  
+     El *enrutamiento de solo lectura* hace referencia a la capacidad de SQL Server para enrutar las solicitudes de conexión con intención de lectura entrantes, que se dirigen a un agente de escucha de grupo de disponibilidad, a una réplica secundaria legible disponible. Los requisitos previos para el enrutamiento de solo lectura son los siguientes:  
   
     -   Para admitir el enrutamiento de solo lectura, una réplica secundaria legible requiere una dirección URL de enrutamiento de solo lectura. Esta dirección URL tiene efecto cuando la réplica local se ejecuta en el rol secundario. La dirección URL de enrutamiento de solo lectura debe especificarse réplica a réplica, según sea necesario. Cada dirección URL de solo lectura se usa para enrutar las solicitudes de conexión de intento de lectura a una réplica secundaria legible específica. Normalmente, cada réplica secundaria legible se asigna a una dirección URL de enrutamiento de solo lectura.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "91724606"
 ###  <a name="indexing"></a><a name="bkmk_Indexing"></a> Indización  
  Para optimizar las cargas de trabajo de solo lectura en réplicas secundarias legibles, tal vez desee crear índices en las tablas de las bases de datos secundarias. Debido a que no se pueden realizar cambios de esquema o de datos en las bases de datos secundarias, cree los índices en las bases de datos principales y permita que los cambios se transfieran a la base de datos secundaria mediante el proceso de puesta al día.  
   
- Para supervisar la actividad de uso de índices en una réplica secundaria, consulte las columnas **user_seeks**, **user_scans**y **user_lookups** de la vista de administración dinámica [sys.dm_db_index_usage_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) .  
+ Para supervisar la actividad de uso de índices en una réplica secundaria, consulte las columnas **user_seeks**, **user_scans** y **user_lookups** de la vista de administración dinámica [sys.dm_db_index_usage_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) .  
   
 ###  <a name="statistics-for-read-only-access-databases"></a><a name="Read-OnlyStats"></a> Estadísticas de las bases de datos de acceso de solo lectura  
  Las estadísticas de las columnas de tablas y vistas indizadas se usan para optimizar los planes de consulta. Para los grupos de disponibilidad, las estadísticas que se crean y se mantienen en las bases de datos principales se conservan automáticamente en las bases de datos secundarias como parte de la aplicación de los registros de transacciones. No obstante, la carga de trabajo de solo lectura en las bases de datos secundarias puede necesitar estadísticas distintas de las que se crean en las bases de datos principales. Sin embargo, debido a que las bases de datos secundarias están restringidas al acceso de solo lectura, las estadísticas no se pueden crear en las bases de datos secundarias.  

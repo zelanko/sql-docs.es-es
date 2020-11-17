@@ -14,12 +14,12 @@ ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f70e0d563760cf0e511b673ea7f838f6aabdde4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75a8df34472bd8e29b7d4422612ccc6977a70dda
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488687"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674243"
 ---
 # <a name="column-properties-general-page"></a>Propiedades de columna (página General)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88488687"
  Tipo de datos que puede contener la columna. Si el tipo de datos es un tipo de datos del sistema, se muestra este tipo. Si el tipo de datos es un tipo definido por el usuario, se muestra el tipo de datos del sistema que conforma el tipo de datos definido por el usuario.  
   
  **Clave principal**  
- Indica si la columna es una clave principal. Los valores posibles son **True**o **False**.  
+ Indica si la columna es una clave principal. Los valores posibles son **True** o **False**.  
   
  **Permitir valores NULL**  
  Indica si la columna acepta valores NULL. Los valores posibles son **True** o **False**.  

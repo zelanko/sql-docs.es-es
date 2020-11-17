@@ -43,7 +43,7 @@ Si restaura una base de datos de una versión anterior en [!INCLUDE[ssCurrent](.
   
 Normalmente, la base de datos está disponible inmediatamente. Pero si una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, según la configuración de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Según la cantidad de datos que se indexen, la importación puede tardar varias horas y la opción de recompilación puede necesitar hasta diez veces más.     
     
-Si la opción de actualización se establece en **Importar**y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados. Para obtener más información sobre cómo ver o cambiar la configuración de la propiedad **Opción de actualización de texto completo** , vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
+Si la opción de actualización se establece en **Importar** y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados. Para obtener más información sobre cómo ver o cambiar la configuración de la propiedad **Opción de actualización de texto completo** , vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
 
 Para obtener más información sobre la restauración de SQL Server en el servicio de almacenamiento de blobs de Microsoft Azure, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
@@ -68,7 +68,7 @@ Para obtener más información sobre la restauración de SQL Server en el servic
     
          Haga clic en el botón de exploración ( **...** ) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . 
          
-        -   Cuadro de diálogo**Seleccionar dispositivos de copia de seguridad**  
+        -   Cuadro de diálogo **Seleccionar dispositivos de copia de seguridad**  
         
             **Tipo de medio de copia de seguridad**  
          Seleccione un tipo de medio en la lista desplegable **Tipo de medio de copia de seguridad** .  Nota: La opción **Cinta** solo aparece si se ha montado una unidad de cinta en el sistema; la opción **Dispositivo de copia de seguridad** aparece únicamente si existe al menos un dispositivo de copia de seguridad.
@@ -109,7 +109,7 @@ Para obtener más información sobre la restauración de SQL Server en el servic
     
 8. Para ver o seleccionar las opciones avanzadas, en la página **Opciones** , en el panel **Opciones de restauración** , puede seleccionar cualquiera de las opciones siguientes si son apropiadas para su situación:    
 
-   1. Opciones**WITH** (no necesarias):    
+   1. Opciones **WITH** (no necesarias):    
     
      - **Sobrescribir la base de datos existente (WITH REPLACE)**    
     

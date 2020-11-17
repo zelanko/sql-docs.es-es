@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 545b3ef714c36712b7b7973294a14e56eb78dad4
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 96ef99a120c050f098d6d690055479e5711c11bb
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670808"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583637"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para grupo de disponibilidad (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ En la mayoría de los casos, puede usar el Asistente para nuevo grupo de disponi
 
 6. Después, especifique el tipo de clúster. Los tipos de clúster posibles dependen de la versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y del sistema operativo. Elija **WSFC**, **EXTERNAL** o **NONE**. Para más información, vea [Specify Availability Group Name Page](specify-availability-group-name-page.md) (Página Especificar nombre de grupo de disponibilidad).
  
-6.  En la página **Seleccionar bases de datos** , la cuadrícula enumera las bases de datos de la instancia del servidor conectado que se pueden convertir en *bases de datos de disponibilidad*. Seleccione una o varias de las bases de datos enumeradas para participar como bases de datos de disponibilidad en el nuevo grupo de disponibilidad. Estas bases de datos serán inicialmente las *bases de datos principales*iniciales.  
+6.  En la página **Seleccionar bases de datos** , la cuadrícula enumera las bases de datos de la instancia del servidor conectado que se pueden convertir en *bases de datos de disponibilidad*. Seleccione una o varias de las bases de datos enumeradas para participar como bases de datos de disponibilidad en el nuevo grupo de disponibilidad. Estas bases de datos serán inicialmente las *bases de datos principales* iniciales.  
   
      Para cada base de datos de la lista, la columna **Tamaño** muestra el tamaño de la base de datos, si se conoce. La columna **Estado** indica si una base de datos determinada cumple los [requisitos previos](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)de las bases de datos de disponibilidad. Si los requisitos previos no se cumplen, una breve descripción de estado indica el motivo por el que la base de datos no es apta; por ejemplo, si no utiliza el modelo de recuperación completa. Para obtener más información, haga clic en la descripción del estado.  
   

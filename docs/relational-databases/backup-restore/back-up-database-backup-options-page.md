@@ -55,7 +55,7 @@ ms.locfileid: "85719990"
   
 |||  
 |-|-|  
-|**Después**|Especifique el número de días que debe transcurrir antes de que el conjunto de copia de seguridad expire y se pueda sobrescribir. Este valor puede estar entre 0 y 99999 días; el valor 0 significa que el conjunto de copia de seguridad no expirará nunca.<br /><br /> El valor predeterminado para la expiración de la copia de seguridad es el valor configurado en la opción **Tiempo predeterminado de retención de medios de copia de seguridad (días)** . Para tener acceso a esta opción, haga clic con el botón derecho en el nombre del servidor en el Explorador de objetos y seleccione **Propiedades** ; luego, haga clic en la página **Configuración de base de datos** del cuadro de diálogo **Propiedades del servidor** .|  
+|**Después**|Especifique el número de días que debe transcurrir antes de que el conjunto de copia de seguridad expire y se pueda sobrescribir. Este valor puede estar entre 0 y 99999 días; el valor 0 significa que el conjunto de copia de seguridad no expirará nunca.<br /><br /> El valor predeterminado para la expiración de la copia de seguridad es el valor configurado en la opción **Tiempo predeterminado de retención de medios de copia de seguridad (días)** . Para tener acceso a esta opción, haga clic con el botón derecho en el nombre del servidor en el Explorador de objetos y seleccione **Propiedades**; luego, haga clic en la página **Configuración de base de datos** del cuadro de diálogo **Propiedades del servidor** .|  
 |**Activado**|Especifique una fecha determinada en la que el conjunto de copias de seguridad expire y se pueda sobrescribir.|  
   
 ### <a name="compression"></a>Compresión  

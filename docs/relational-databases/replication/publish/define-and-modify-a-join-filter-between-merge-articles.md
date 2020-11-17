@@ -64,9 +64,9 @@ ms.locfileid: "85898038"
   
 3.  Cree la instrucción de combinación: seleccione **Usar generador de instrucciones para crear la instrucción** o **Escribir instrucción de combinación manualmente**.  
   
-    -   Si selecciona utilizar el generador, utilice las columnas de la cuadrícula ( **Conjunción** , **Columna de tabla filtrada** , **Operador** y **Columna de tabla combinada** ) para generar una instrucción de combinación.  
+    -   Si selecciona utilizar el generador, utilice las columnas de la cuadrícula (**Conjunción**, **Columna de tabla filtrada**, **Operador** y **Columna de tabla combinada**) para generar una instrucción de combinación.  
   
-         Cada una de las columnas de la cuadrícula contiene un cuadro combinado desplegable que le permite seleccionar dos columnas y un operador ( **=** , **<>** , **<=** , **\<**, **>=** , **>** y **like** ). Los resultados se muestran en el área de texto **Vista previa** . Si la combinación implica más de un par de columnas, seleccione una conjunción (AND u OR) de la columna **Conjunción** y, a continuación, especifique dos columnas más y un operador.  
+         Cada una de las columnas de la cuadrícula contiene un cuadro combinado desplegable que le permite seleccionar dos columnas y un operador ( **=** , **<>** , **<=** , **\<**, **>=** , **>** y **like**). Los resultados se muestran en el área de texto **Vista previa** . Si la combinación implica más de un par de columnas, seleccione una conjunción (AND u OR) de la columna **Conjunción** y, a continuación, especifique dos columnas más y un operador.  
   
     -   Si selecciona escribir la instrucción manualmente, escriba la instrucción de combinación en el área de texto **Instrucción de combinación** . Utilice los cuadros de lista **Columnas de la tabla filtrada** y **Columnas de la tabla combinada** para arrastrar y colocar columnas en el área de texto **Instrucción de combinación** .  
   

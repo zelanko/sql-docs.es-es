@@ -6,15 +6,15 @@ ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.reviewer: alayu, jrasnick
+ms.reviewer: maghan, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 526349f9e6ca186b8555d52f76f3663c0862503c
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: 1b0fe9ee55f9e0e1243ea72e8160b39a95876a55
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793702"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570931"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>Inicio rápido: Uso de Azure Data Studio para conectarse a datos y consultarlos mediante un grupo de SQL dedicado en Azure Synapse Analytics
 
@@ -34,15 +34,15 @@ Recuerde el nombre del servidor y las credenciales de inicio de sesión.
 
 Use Azure Data Studio para establecer una conexión con el servidor de Azure Synapse Analytics.
 
-1. La primera vez que ejecute Azure Data Studio, se abrirá la página **Conexión** . Si no ve la página **Conexión** , seleccione **Agregar conexión** , o bien en el icono de **Nueva conexión** en la barra lateral **SERVIDORES** :
+1. La primera vez que ejecute Azure Data Studio, se abrirá la página **Conexión**. Si no ve la página **Conexión**, seleccione **Agregar conexión**, o bien en el icono de **Nueva conexión** en la barra lateral **SERVIDORES**:
    
    ![Captura de pantalla de la página de conexiones con el icono de Nueva conexión resaltado.](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. En este artículo, se usa el *inicio de sesión de SQL* , pero se admite la *autenticación de Windows* . Rellene los campos como se indica a continuación con el nombre del servidor, el nombre de usuario y la contraseña de *su instancia* de Azure SQL Server:
+2. En este artículo, se usa el *inicio de sesión de SQL*, pero se admite la *autenticación de Windows*. Rellene los campos como se indica a continuación con el nombre del servidor, el nombre de usuario y la contraseña de *su instancia* de Azure SQL Server:
 
    |   Configuración    | Valor sugerido | Descripción |
    |--------------|-----------------|-------------| 
-   | **Nombre del servidor** | Nombre completo del servidor | Por ejemplo, el nombre debe tener este formato: **sqlpoolservername.database.windows.net** . |
+   | **Nombre del servidor** | Nombre completo del servidor | Por ejemplo, el nombre debe tener este formato: **sqlpoolservername.database.windows.net**. |
    | **Autenticación** | Inicio de sesión SQL| En este tutorial, se usa la autenticación de SQL. |
    | **Nombre de usuario** | La cuenta de administrador del servidor | Es la cuenta que especificó cuando creó el servidor. |
    | **Contraseña (Inicio de sesión de SQL)** | La contraseña de la cuenta de administrador del servidor | Es la contraseña que especificó cuando creó el servidor. |
@@ -50,15 +50,15 @@ Use Azure Data Studio para establecer una conexión con el servidor de Azure Syn
    | **Nombre de la base de datos** | *dejar en blanco* | Nombre de la base de datos a la que se va a conectar. |
    | **Grupo de servidores** | Seleccione <Default>. | Si ha creado un grupo de servidores, puede establecerlo en un grupo de servidores específico. | 
 
-3. Si el servidor no tiene una regla de firewall que permita a Azure Data Studio conectarse, se abrirá el formulario **Crear nueva regla de firewall** . Rellene el formulario para crear una nueva regla de firewall. Para obtener detalles, vea [Reglas de firewall](/azure/sql-database/sql-database-firewall-configure).
+3. Si el servidor no tiene una regla de firewall que permita a Azure Data Studio conectarse, se abrirá el formulario **Crear nueva regla de firewall**. Rellene el formulario para crear una nueva regla de firewall. Para obtener detalles, vea [Reglas de firewall](/azure/sql-database/sql-database-firewall-configure).
 
-4. Después de conectarse correctamente, el servidor se abre en la barra lateral *SERVIDORES* .
+4. Después de conectarse correctamente, el servidor se abre en la barra lateral *SERVIDORES*.
 
 ## <a name="create-a-database-in-your-dedicated-sql-pool"></a>Creación de una base de datos en un grupo de SQL dedicado
 
-1. En el explorador de objetos, Haga clic con el botón derecho en el servidor y seleccione **Nueva consulta** .
+1. En el explorador de objetos, Haga clic con el botón derecho en el servidor y seleccione **Nueva consulta**.
 
-2. Pegue el siguiente fragmento de código en el editor de consultas y seleccione **Ejecutar** :
+2. Pegue el siguiente fragmento de código en el editor de consultas y seleccione **Ejecutar**:
 
    ```sql
     IF NOT EXISTS (
@@ -75,14 +75,14 @@ Use Azure Data Studio para establecer una conexión con el servidor de Azure Syn
 
 ## <a name="create-a-table"></a>Creación de una tabla
 
-El editor de consultas aún está conectado a la base de datos *maestra* , pero lo que queremos es crear una tabla en la base de datos *TutorialDB* . 
+El editor de consultas aún está conectado a la base de datos *maestra*, pero lo que queremos es crear una tabla en la base de datos *TutorialDB*. 
 
-1. Cambie el contexto de conexión a **TutorialDB** :
+1. Cambie el contexto de conexión a **TutorialDB**:
 
-2. Pegue el siguiente fragmento de código en el editor de consultas y seleccione **Ejecutar** :
+2. Pegue el siguiente fragmento de código en el editor de consultas y seleccione **Ejecutar**:
 
    > [!NOTE]
-   > Puede anexar esto, o bien puede sobrescribir la consulta anterior en el editor. Al seleccionar **Ejecutar** , solo se ejecuta la consulta seleccionada. Si no hay ninguna opción seleccionada, cuando seleccione **Ejecutar** se ejecutarán todas las consultas en el editor.
+   > Puede anexar esto, o bien puede sobrescribir la consulta anterior en el editor. Al seleccionar **Ejecutar**, solo se ejecuta la consulta seleccionada. Si no hay ninguna opción seleccionada, cuando seleccione **Ejecutar** se ejecutarán todas las consultas en el editor.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -106,7 +106,7 @@ El editor de consultas aún está conectado a la base de datos *maestra* , pero 
 
 ## <a name="insert-rows"></a>Insertar filas
 
-1. Pegue el siguiente fragmento de código en el editor de consultas y seleccione **Ejecutar** :
+1. Pegue el siguiente fragmento de código en el editor de consultas y seleccione **Ejecutar**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -118,11 +118,11 @@ El editor de consultas aún está conectado a la base de datos *maestra* , pero 
       SELECT 4, N'Janet', N'United States', N'janet1@adventure-works.com'
    ```
 
-    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="Creación de una tabla en la base de datos TutorialDB":::
+    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="Creación de filas en la tabla":::
 
 ## <a name="view-the-result"></a>Ver el resultado
 
-1. Pegue el siguiente fragmento de código en el editor de consultas y seleccione **Ejecutar** :
+1. Pegue el siguiente fragmento de código en el editor de consultas y seleccione **Ejecutar**:
 
    ```sql
    -- Select rows from table 'Customers'
@@ -131,7 +131,7 @@ El editor de consultas aún está conectado a la base de datos *maestra* , pero 
 
 2. Se muestran los resultados de la consulta:
 
-    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="Creación de una tabla en la base de datos TutorialDB":::
+    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="Visualización de los resultados":::
 
 
 ## <a name="clean-up-resources"></a>Limpieza de recursos

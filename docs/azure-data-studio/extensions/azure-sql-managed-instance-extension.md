@@ -9,12 +9,12 @@ ms.author: jovanpop
 ms.reviewer: alanyu, maghan, sstein
 ms.custom: ''
 ms.date: 10/07/2019
-ms.openlocfilehash: bc4a01ce30d05853c08b59b720452a3e09cb6417
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: eee9b2874fe879a544725bf2243075703149e34d
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725206"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570932"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Panel de Azure SQL Managed Instance para Azure Data Studio (versión preliminar)
 
@@ -50,7 +50,7 @@ En el panel superior se muestran los detalles siguientes:
 
 Si selecciona el segundo panel en la pestaña **Instancia administrada**, obtendrá recomendaciones y alertas que le ayudarán a optimizar su instancia administrada.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Propiedades de la instancia administrada":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Recomendaciones para la instancia administrada":::
 
 Es posible que vea algunas de las siguientes recomendaciones:
 
@@ -67,7 +67,7 @@ Revise periódicamente estas recomendaciones, investigue las causas principales 
 
 El tercer panel de la pestaña **Instancia administrada** muestra el estado de las réplicas de base de datos en su instancia administrada.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Propiedades de la instancia administrada":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Réplicas de la instancia administrada":::
 
 En el nivel de servicio de uso general, cada base de datos tiene una única réplica (principal). En una instancia de nivel de servicio crítico para la empresa, cada base de datos tiene una réplica principal y tres secundarias, una de las cuales se usa para las cargas de trabajo de solo lectura. En el panel **Réplicas**, puede supervisar el proceso de sincronización y comprobar que todas las réplicas secundarias están sincronizadas con la réplica principal.
 
@@ -75,7 +75,7 @@ En el nivel de servicio de uso general, cada base de datos tiene una única rép
 
 En el cuarto panel de **Instancia administrada** se muestran las entradas más recientes y relevantes del registro de errores de SQL.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Propiedades de la instancia administrada":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Entradas de registro de la instancia administrada":::
 
 Aunque su instancia administrada genera un gran número de entradas de registro, la mayoría de ellas son internas o de información del sistema. Además, algunas entradas del registro muestran los nombres de las bases de datos físicas (valores `GUID`) en lugar de los nombres de las bases de datos lógicas reales.
 
@@ -87,9 +87,9 @@ Si tiene problemas con la extensión SQL Managed Instance, vaya al [proyecto de 
 
 ## <a name="code-of-conduct"></a>Código de conducta
 
-Este proyecto ha adoptado el [Código de conducta de código abierto de Microsoft][https://opensource.microsoft.com/codeofconduct/ ].
+El proyecto ha adoptado el [Código de conducta de código abierto de Microsoft](https://opensource.microsoft.com/codeofconduct/).
 
-Para obtener más información, vea las [Preguntas más frecuentes sobre el código de conducta][https://opensource.microsoft.com/codeofconduct/faq/ ], o póngase en contacto con [opencode@microsoft.com ][mailto:opencode@microsoft.com- ] si tiene preguntas o comentarios.
+Para obtener más información, vea las [Preguntas más frecuentes sobre el código de conducta](https://opensource.microsoft.com/codeofconduct/faq/), o póngase en contacto con [opencode@microsoft.com](mailto:opencode@microsoft.com) si tiene preguntas o comentarios.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

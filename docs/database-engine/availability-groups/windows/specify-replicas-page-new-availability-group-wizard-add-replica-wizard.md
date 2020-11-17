@@ -12,14 +12,14 @@ f1_keywords:
 - sql13.swb.addreplicawizard.specifyreplicas.f1
 - sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ea049ce576949df930aabafafb67adf56fe96c5c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 404d2afc78765adebb191c49fb58f6d390516a6c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671105"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583899"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar réplicas (Asistente para nuevo grupo de disponibilidad: Asistente para agregar réplica)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "91671105"
   
 -   Si cada instancia del servidor se ejecuta con una cuenta de servicio de dominio, es decir, si la columna **Cuenta de servicio de SQL Server** muestra una cuenta de servicio de dominio para cada instancia del servidor, haga clic en **Siguiente**.  
   
--   Si una instancia del servidor se ejecuta con una cuenta de servicio que no es de dominio, se debe realizar un cambio manual en la instancia del servidor antes de continuar con el asistente. En este caso, si hace clic en **Siguiente** , se muestra un cuadro de diálogo de advertencia; debe hacer clic en **No**y volverá a la pestaña**Extremos** . Permaneciendo en la página **Especificar réplicas** del asistente, realice uno de los siguientes cambios en cada instancia del servidor para que la columna **Cuenta de servicio de SQL Server** muestre una cuenta de servicio que no es de dominio; puede:  
+-   Si una instancia del servidor se ejecuta con una cuenta de servicio que no es de dominio, se debe realizar un cambio manual en la instancia del servidor antes de continuar con el asistente. En este caso, si hace clic en **Siguiente** , se muestra un cuadro de diálogo de advertencia; debe hacer clic en **No** y volverá a la pestaña **Extremos** . Permaneciendo en la página **Especificar réplicas** del asistente, realice uno de los siguientes cambios en cada instancia del servidor para que la columna **Cuenta de servicio de SQL Server** muestre una cuenta de servicio que no es de dominio; puede:  
   
     -   Usar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para cambiar la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a una cuenta de dominio. Para obtener más información, vea [Cambiar la cuenta de inicio del servicio para SQL Server &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md).  
   
@@ -166,10 +166,10 @@ ms.locfileid: "91671105"
   
  Si se selecciona **Dirección IP estática** como modo de red (esta es la selección predeterminada), una cuadrícula muestra las columnas **Subret** y **Dirección IP** , y se muestran los botones **Agregar** y **Quitar** asociados. La cuadrícula estará vacía hasta que se agregue la primera subred.  
   
- Columna**Subret**  
+ Columna **Subret**  
  Muestra la dirección de subred seleccionada para cada subred agregada para el agente de escucha.  
   
- Columna**Dirección IP**  
+ Columna **Dirección IP**  
  Muestra la dirección IPv4 o IPv6 especificada para una subred determinada.  
   
  **Add (Agregar)**  

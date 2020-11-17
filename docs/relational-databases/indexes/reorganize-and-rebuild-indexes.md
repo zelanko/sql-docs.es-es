@@ -187,7 +187,7 @@ object_id   TableName                   index_id    IndexName                   
 3. Expanda la tabla en la que quiera comprobar la fragmentación de un índice.
 4. Expanda la carpeta **Índices** .
 5. Haga clic con el botón derecho en el índice en el que quiere comprobar la fragmentación y seleccione **Propiedades**.
-6. Bajo **Seleccionar una página** , seleccione **Fragmentación**.
+6. Bajo **Seleccionar una página**, seleccione **Fragmentación**.
 
 La siguiente información está disponible en la página **Fragmentación** :
 
@@ -199,7 +199,7 @@ La siguiente información está disponible en la página **Fragmentación** :
 |**Profundidad**|Número de niveles del índice, incluido el nivel hoja.|
 |**Registros reenviados**|Número de registros de un montón que han reenviado punteros a otra ubicación de datos. Este estado se produce durante una actualización, cuando no existe suficiente espacio para almacenar la nueva fila en la ubicación original.|
 |**Filas fantasma**|Número de filas marcadas como eliminadas que todavía no se han quitado. Estas filas se quitarán en un subproceso de limpieza, cuando el servidor no esté ocupado. Este valor no incluye las filas que se retienen debido a una transacción pendiente de aislamiento de instantáneas.|
-|**Tipo de índice**|Tipo de índice. Los valores posibles son **Índice clúster** , **Índice no clúster** y **XML principal**. Las tablas también se pueden almacenar como un montón (sin índices), pero en tal caso la página Propiedades del índice no puede abrirse.|
+|**Tipo de índice**|Tipo de índice. Los valores posibles son **Índice clúster**, **Índice no clúster** y **XML principal**. Las tablas también se pueden almacenar como un montón (sin índices), pero en tal caso la página Propiedades del índice no puede abrirse.|
 |**Filas de nivel de hoja**|Número de filas de nivel hoja.|
 |**Tamaño máximo de la fila**|Tamaño máximo de la fila de nivel de hoja.|
 |**Tamaño mínimo de la fila**|Tamaño mínimo de la fila de nivel de hoja.|

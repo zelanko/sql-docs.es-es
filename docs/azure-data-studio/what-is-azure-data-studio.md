@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 10/20/2020
-ms.openlocfilehash: 6ea5bc72ee2f4b5bf421f73a27a85d80a421e00f
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 669379b4db1bd2c975875c443fe6a80e38926a5c
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036689"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570882"
 ---
 # <a name="what-is-azure-data-studio"></a>¿Qué es Azure Data Studio?
 
-Azure Data Studio es una herramienta de base de datos multiplataforma para profesionales de datos que usan la familia de plataformas de datos locales y en la nube de Microsoft en Windows, macOS y Linux.
+Azure Data Studio es una herramienta de base de datos multiplataforma para profesionales de datos que usan plataformas de datos locales y en la nube en Windows, macOS y Linux.
 
 Azure Data Studio ofrece una experiencia de editor moderna con IntelliSense, fragmentos de código, integración del control de código fuente y un terminal integrado. Se ha diseñado para usuarios de plataformas de datos, con gráficos integrados de conjuntos de resultados de consultas y paneles personalizables.
 

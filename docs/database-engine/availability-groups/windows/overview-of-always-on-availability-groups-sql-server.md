@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], data movement
 - Availability Groups [SQL Server]
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 41bb72eefbfac24da8c390cea2bb9fa741e7255f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 634dcdb3f3682b133e19d25b041819e22300a932
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727842"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584170"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>¿Qué es un grupo de disponibilidad AlwaysOn?
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -58,17 +58,17 @@ ms.locfileid: "91727842"
 ## <a name="availability-databases"></a><a name="AvDbs"></a> Bases de datos de disponibilidad  
  Para agregar una base de datos a un grupo de disponibilidad, la base de datos debe ser una base de datos de lectura/escritura en línea que exista en la instancia del servidor que hospeda la réplica principal. Al agregar una base de datos, se une al grupo de disponibilidad como base de datos principal, mientras permanece disponible para los clientes. No existe una base de datos secundaria correspondiente hasta que las copias de seguridad de la nueva base de datos principal se restauran a la instancia del servidor que hospeda la réplica secundaria (utilizando RESTORE WITH NORECOVERY). La nueva base de datos secundaria está en estado RESTORING hasta que se une al grupo de disponibilidad. Para obtener más información, vea [Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
- La unión coloca la base de datos secundaria en estado ONLINE e inicia la sincronización de datos con la base de datos principal correspondiente. La*sincronización de datos* es el proceso mediante el cual los cambios en una base de datos principal se reproducidos en una base de datos secundaria. La sincronización de datos implica que la base de datos principal envía entradas del registro de transacciones a la base de datos secundaria.  
+ La unión coloca la base de datos secundaria en estado ONLINE e inicia la sincronización de datos con la base de datos principal correspondiente. La *sincronización de datos* es el proceso mediante el cual los cambios en una base de datos principal se reproducidos en una base de datos secundaria. La sincronización de datos implica que la base de datos principal envía entradas del registro de transacciones a la base de datos secundaria.  
   
 > [!IMPORTANT]  
 >  Una base de datos de disponibilidad a veces se denomina *réplica de base de datos* en los nombres de Objetos de administración de SQL Server (SMO), [!INCLUDE[tsql](../../../includes/tsql-md.md)]y PowerShell. Por ejemplo, el término "réplica de base de datos" se usa en los nombres de las vistas de administración dinámicas de AlwaysOn que devuelven información sobre las bases de datos de disponibilidad:  **sys.dm_hadr_database_replica_states** y **sys.dm_hadr_database_replica_cluster_states**. Sin embargo, en Libros en pantalla de SQL Server, el término "réplica" suele hacer referencia a las réplicas de disponibilidad. Por ejemplo, “replicación primaria” y “replicación secundaria” siempre hacen referencia a la disponibilidad de las réplicas.  
   
 ## <a name="availability-replicas"></a><a name="AGsARsADBs"></a> Réplicas de disponibilidad  
- Cada grupo de disponibilidad define un conjunto de dos o más asociados de conmutación por error conocidos como réplicas de disponibilidad. Las*réplicas de disponibilidad* son componentes del grupo de disponibilidad. Cada réplica de disponibilidad hospeda una copia de las bases de datos de disponibilidad en el grupo de disponibilidad. Para un grupo de disponibilidad determinado, las réplicas de disponibilidad deben hospedarse en instancias independientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que residan en nodos diferentes de un clúster de WSFC. Cada una de estas instancias del servidor debe estar habilitada para AlwaysOn.  
+ Cada grupo de disponibilidad define un conjunto de dos o más asociados de conmutación por error conocidos como réplicas de disponibilidad. Las *réplicas de disponibilidad* son componentes del grupo de disponibilidad. Cada réplica de disponibilidad hospeda una copia de las bases de datos de disponibilidad en el grupo de disponibilidad. Para un grupo de disponibilidad determinado, las réplicas de disponibilidad deben hospedarse en instancias independientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que residan en nodos diferentes de un clúster de WSFC. Cada una de estas instancias del servidor debe estar habilitada para AlwaysOn.  
   
  Una instancia determinada solo puede hospedar una única réplica de disponibilidad por grupo de disponibilidad. Sin embargo, cada instancia puede utilizarse para varios grupos de disponibilidad. Una instancia determinada puede ser una instancia independiente o una instancia de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si necesita redundancia de nivel de servidor, utilice instancias de clúster de conmutación por error.  
   
- A cada réplica de disponibilidad se le asigna un rol, ya sea el *rol principal* o el *rol secundario*, que es heredado por las bases de datos de disponibilidad de esa réplica. El rol de una réplica dada determina si hospeda bases de datos de lectura/escritura o bases de datos de solo lectura. A una réplica, conocida como *réplica principal*, se le asigna el rol principal y hospeda bases de datos de lectura/escritura, que se denominan *bases de datos principales*. Como mínimo, a otra réplica denominada *réplica secundaria*se le asigna el rol secundario. Una réplica secundaria hospeda bases de datos de solo lectura, conocidas como bases de datos secundarias.  
+ A cada réplica de disponibilidad se le asigna un rol, ya sea el *rol principal* o el *rol secundario*, que es heredado por las bases de datos de disponibilidad de esa réplica. El rol de una réplica dada determina si hospeda bases de datos de lectura/escritura o bases de datos de solo lectura. A una réplica, conocida como *réplica principal*, se le asigna el rol principal y hospeda bases de datos de lectura/escritura, que se denominan *bases de datos principales*. Como mínimo, a otra réplica denominada *réplica secundaria* se le asigna el rol secundario. Una réplica secundaria hospeda bases de datos de solo lectura, conocidas como bases de datos secundarias.  
   
 > [!NOTE]  
 >  Cuando el rol de una réplica de disponibilidad es indeterminado, como durante una conmutación por error, sus bases de datos están temporalmente en estado NOT SYNCHRONIZING. Su rol se establece en RESOLVING hasta que el rol de la réplica de disponibilidad se resuelve. Si una réplica de disponibilidad se resuelve en el rol principal, sus bases de datos se convierten en las bases de datos principales. Si una réplica de disponibilidad se resuelve en el rol secundario, sus bases de datos se convierten en bases de datos secundarias.  

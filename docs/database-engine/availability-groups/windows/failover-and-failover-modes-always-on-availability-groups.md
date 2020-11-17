@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 99155a11cfa3b8837dfec41a9163db6b9c56a925
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7cd148979886048bad16bc706d19b020d114377f
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727909"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584257"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  Dentro del contexto de un grupo de disponibilidad, el rol principal y el rol secundario de las réplicas de disponibilidad suelen ser intercambiables en un proceso denominado *conmutación por error*. Hay tres formas de conmutación por error: conmutación por error automática (sin pérdida de datos), conmutación por error manual planeada (sin pérdida de datos) y conmutación por error manual forzada (con posible pérdida de datos), normalmente denominada *conmutación por error forzada*. Las conmutaciones por error automáticas o manuales planeadas mantienen todos los datos. Un grupo de disponibilidad realiza la conmutación por error en el nivel de la réplica de disponibilidad. Es decir, un grupo de disponibilidad conmuta por error a una de sus réplicas secundarias (el *destino de conmutación por error*actual).  
+  Dentro del contexto de un grupo de disponibilidad, el rol principal y el rol secundario de las réplicas de disponibilidad suelen ser intercambiables en un proceso denominado *conmutación por error*. Hay tres formas de conmutación por error: conmutación por error automática (sin pérdida de datos), conmutación por error manual planeada (sin pérdida de datos) y conmutación por error manual forzada (con posible pérdida de datos), normalmente denominada *conmutación por error forzada*. Las conmutaciones por error automáticas o manuales planeadas mantienen todos los datos. Un grupo de disponibilidad realiza la conmutación por error en el nivel de la réplica de disponibilidad. Es decir, un grupo de disponibilidad conmuta por error a una de sus réplicas secundarias (el *destino de conmutación por error* actual).  
   
 > [!NOTE]  
 >   A menos que la [Detección del estado del nivel de la base de datos](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) esté configurada, los problemas que se producen en el nivel de la base de datos, como, por ejemplo, que una base de datos pase a ser sospechosa debido a la pérdida de un archivo de datos, la eliminación de una base de datos o los daños de un registro de transacciones, no producen la conmutación por error del grupo de disponibilidad.  
@@ -36,7 +36,7 @@ ms.locfileid: "91727909"
   
 -   Las **réplicas de confirmación sincrónica** admiten dos valores: automático o manual. El valor “automático” admite tanto la conmutación por error automática como la manual. Para evitar la pérdida de datos, la conmutación automática por error y la conmutación por error planeada requieren que el destino de conmutación por error sea una réplica secundaria de confirmación sincrónica con un estado de sincronización apropiado (esto indica que todas las bases de datos secundarias del destino de conmutación por error están sincronizadas con la base de datos principal correspondiente). Siempre que una réplica secundaria no cumple las dos condiciones, solo admite la conmutación por error manual forzada. Tenga en cuenta que la conmutación por error también admite una réplica cuyo rol esté en el estado RESOLVING.  
   
--   Las**réplicas de confirmación asincrónica** solo admiten el modo de conmutación por error manual. Además, debido a que nunca se sincronizan, solo admiten la conmutación por error forzada.  
+-   Las **réplicas de confirmación asincrónica** solo admiten el modo de conmutación por error manual. Además, debido a que nunca se sincronizan, solo admiten la conmutación por error forzada.  
   
 > [!NOTE]  
 >  Después de una conmutación por error, las aplicaciones cliente que necesitan tener acceso a las bases de datos principales deben establecer conexión con la nueva réplica principal. Además, si la nueva réplica secundaria se configura para permitir el acceso de solo lectura, las aplicaciones cliente de solo lectura pueden conectarse a ella. Para obtener información sobre cómo se conectan los clientes a un grupo de disponibilidad, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  

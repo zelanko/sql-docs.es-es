@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 43b80003afbb83090aa7575aa038f6bebe7958a4
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f34a3a3ce7ddf6c80127fbdfb5cdd0298466633b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670906"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584168"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Realización de una conmutación por error manual planeada de un grupo de disponibilidad Always On (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ Una conmutación por error manual planeada solo se admite cuando la réplica pri
 -   Actualmente, la réplica secundaria de destino debe estar sincronizada con la réplica principal. Todas las bases de datos secundarias de esta réplica secundaria deben estar unidas al grupo de disponibilidad. También deben estar sincronizadas con sus bases de datos principales correspondientes (es decir, las bases de datos secundarias locales deben estar SINCRONIZADAS). 
   
     > [!TIP] 
-    >  Para determinar la preparación para la conmutación por error de una réplica secundaria, consulte la columna **is_failover_ready** en la vista e administración dinámica [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md). O bien, puede examinar la columna **Preparación de la conmutación por error**del [panel de grupos AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
+    >  Para determinar la preparación para la conmutación por error de una réplica secundaria, consulte la columna **is_failover_ready** en la vista e administración dinámica [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md). O bien, puede examinar la columna **Preparación de la conmutación por error** del [panel de grupos AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
 -   Esta tarea solo se admite en la réplica secundaria de destino. Debe estar conectado a la instancia del servidor que hospeda la réplica secundaria de destino. 
   
 ###  <a name="security"></a><a name="Security"></a> Seguridad 

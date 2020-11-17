@@ -6,21 +6,23 @@ ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
-author: pensivebrian
-ms.author: broneill
-ms.reviewer: drswkier; sstein
-ms.date: 09/29/2020
-ms.openlocfilehash: c4a7fb02521a20dffa95c45cc8a345c243c4ae0e
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan; sstein
+ms.date: 11/4/2020
+ms.openlocfilehash: ee78b145965c17ff0a496611c6506d23df1a31a3
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005536"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384504"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
 **SqlPackage.exe** es una utilidad de línea de comandos que automatiza las siguientes tareas de desarrollo de base de datos:  
   
+- [Versión](#version): devuelve el número de compilación de la aplicación SqlPackage.  Se agregó en la versión 18.6.
+
 - [Extract](#extract-parameters-and-properties): crea un archivo de instantáneas de base de datos (.dacpac) a partir de una base de datos activa de SQL Server o Azure SQL Database.  
   
 - [Publicar](#publish-parameters-properties-and-sqlcmd-variables): actualiza de forma incremental un esquema de la base de datos para coincidir con el esquema de un archivo .dacpac de origen. Si no existe la base de datos en el servidor, la operación de publicación la crea. De lo contrario, se actualiza una base de datos existente.  
@@ -69,7 +71,10 @@ Cree un script SQL que genere las diferencias de dos archivos .dacpac:
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
  ```
 
-Muestra la versión de sqlpackage:
+
+## <a name="version"></a>Versión
+
+Muestra la versión de sqlpackage como un número de compilación.  Se puede usar en solicitudes interactivas o en [canalizaciones automatizadas](sqlpackage-pipelines.md).
 
 ```
 sqlpackage.exe /Version

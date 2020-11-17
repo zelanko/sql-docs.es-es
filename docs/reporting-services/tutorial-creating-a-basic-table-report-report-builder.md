@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bffaef60422d47484968ad30b5bc8d625549a74e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bc7e78fb2b4101df84c2d54162d62ec8b95f6aab
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247484"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418012"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Crear un informe de tabla básico (Generador de informes)
 Este tutorial muestra cómo crear un informe de tabla básico basado en datos de ventas de ejemplo. En la siguiente ilustración se muestra el informe que va a crear.  
@@ -49,7 +49,7 @@ En este tutorial, utilizará un origen del datos incrustado. Para obtener más i
   
 ### <a name="to-create-an-embedded-data-source"></a>Para crear un origen de datos incrustado  
   
-1.  En la página **Elegir un conjunto de datos** , seleccione **Crear un conjunto de datos**y, después, haga clic en **Siguiente**. Se abre la página **Elegir una conexión a un origen de datos** .  
+1.  En la página **Elegir un conjunto de datos** , seleccione **Crear un conjunto de datos** y, después, haga clic en **Siguiente**. Se abre la página **Elegir una conexión a un origen de datos** .  
   
 2.  Haga clic en **Nueva**. Se abre el cuadro de diálogo **Propiedades del origen de datos** .  
   
@@ -175,7 +175,7 @@ Después de crear grupos, puede agregar filas y darles formato, para mostrar en 
   
     2.  La segunda fila se repetirá una vez en cada artículo de línea del pedido de venta y mostrará el nombre del producto, la cantidad del pedido y el total de línea.  
   
-    3.  La tercera fila se repetirá una vez en cada pedido de venta para mostrar los subtotales de cada pedido.  
+    3.  La tercera fila se repetirá una vez en cada categoría de pedido de venta para mostrar los subtotales de cada categoría.  
   
     4.  La cuarta fila se repetirá una vez en cada fecha de pedido para mostrar los subtotales por día.  
   
@@ -269,7 +269,7 @@ El texto se puede mejorar aún más aplicando estilos de fuente, tamaños y colo
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Escriba **Ventas del producto**y después haga clic fuera del cuadro de texto.  
+2.  Escriba **Ventas del producto** y después haga clic fuera del cuadro de texto.  
   
 3.  Haga clic con el botón secundario en el cuadro de texto que contiene **Ventas del producto** y haga clic en **Propiedades de cuadro de texto**.  
   
@@ -306,7 +306,7 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
   
 1.  Haga clic en **Archivo** > **Guardar como**.  
   
-2.  Haga clic en **Escritorio**, **Mis documentos**o **Mi PC**y vaya a la carpeta donde quiere guardar el informe.  
+2.  Haga clic en **Escritorio**, **Mis documentos** o **Mi PC** y vaya a la carpeta donde quiere guardar el informe.  
   
 3.  En **Nombre**, reemplace **Sin título** con **Product Sales**.  
   

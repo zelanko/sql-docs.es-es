@@ -1,7 +1,7 @@
 ---
 title: Montaje de ADLS Gen2 para los niveles de HDFS
 titleSuffix: How to mount ADLS Gen2
-description: En este artículo se explica cómo configurar la organización en niveles de HDFS para montar un sistema de archivos de Azure Data Lake Storage externo en HDFS en un clúster de macrodatos de SQL Server 2019.
+description: En este artículo se ofrece un ejemplo de cómo configurar la organización en niveles de HDFS con un origen de datos de Azure Data Lake Storage Gen2.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4bfb894112f071cc7a628146265ede17b3f0a14
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730650"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521042"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Procedimiento para montar ADLS Gen2 para los niveles de HDFS en un clúster de macrodatos
 

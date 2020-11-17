@@ -13,12 +13,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f07d5ea10fbb762b46dcf47fb15e9acdfe8404a9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: caca5016c6d461af5cd665ae0ada144cd5fd1c2e
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111142"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384688"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de la versión de SQL Server 2012
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ Antes de instalar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], tenga en c
   
 3.  En la ventana Servicios de componentes, navegue a **Raíz de consola** -> **Servicios de componentes** -> **Equipos** -> **Mi PC** -> **Dconfig** ->**DReplayController**.  
   
-4.  Haga clic con el botón derecho en **DReplayController**y luego haga clic en **Propiedades**.  
+4.  Haga clic con el botón derecho en **DReplayController** y luego haga clic en **Propiedades**.  
   
 5.  En la ventana **Propiedades de DReplayController** , en la pestaña **Seguridad** , haga clic en **Editar** en la sección **Permisos de inicio y activación** .  
   
@@ -133,7 +133,7 @@ A continuación se describe el comportamiento de la instalación de requisitos p
   
         2.  En la interfaz **Seleccionar características** , expanda la entrada **Características de .NET Framework 3.5.1** .  
   
-        3.  Después de expandir **Características de .NET Framework 3.5.1**, verá dos casillas. Una es para .NET Framework 3.5.1 y la otra para Activación WCF. Seleccione **.NET Framework 3.5.1**y, a continuación, haga clic en **Siguiente**. No puede instalar características de .NET Framework 3.5.1 a menos que también se instalen los servicios de rol y las características necesarios.  
+        3.  Después de expandir **Características de .NET Framework 3.5.1**, verá dos casillas. Una es para .NET Framework 3.5.1 y la otra para Activación WCF. Seleccione **.NET Framework 3.5.1** y, a continuación, haga clic en **Siguiente**. No puede instalar características de .NET Framework 3.5.1 a menos que también se instalen los servicios de rol y las características necesarios.  
   
         4.  En **Confirmar las selecciones de la instalación**, revise las selecciones y haga clic en Instalar.  
   
@@ -143,7 +143,7 @@ A continuación se describe el comportamiento de la instalación de requisitos p
   
         1.  Haga clic en **Inicio** | **Todos los programas** | **Accesorios**.  
   
-        2.  Expanda **Windows PowerShell**, haga clic con el botón secundario en **Windows PowerShell**y haga clic en **Ejecutar como administrador**. Haga clic en **Sí** en el cuadro **Control de cuentas de usuario** .  
+        2.  Expanda **Windows PowerShell**, haga clic con el botón secundario en **Windows PowerShell** y haga clic en **Ejecutar como administrador**. Haga clic en **Sí** en el cuadro **Control de cuentas de usuario** .  
   
         3.  En el símbolo del sistema de PowerShell, escriba los comandos siguientes y presione ENTRAR después de cada uno:  
   
@@ -154,7 +154,7 @@ A continuación se describe el comportamiento de la instalación de requisitos p
   
         **Use el método siguiente para habilitar .NET Framework 3.5 SP1 en Windows 7 SP1:**  
   
-        1.  Haga clic en **Inicio** | **Panel de control** | **Programas**y, a continuación, haga clic en **Activar o desactivar las características de Windows**. Si se le solicita una contraseña de administrador o se le pide confirmación, escriba la contraseña o proporcione la confirmación.  
+        1.  Haga clic en **Inicio** | **Panel de control** | **Programas** y, a continuación, haga clic en **Activar o desactivar las características de Windows**. Si se le solicita una contraseña de administrador o se le pide confirmación, escriba la contraseña o proporcione la confirmación.  
   
         2.  Para habilitar **Microsoft .NET Framework 3.5.1**, active la casilla situada junto a esa característica. Para desactivar una característica de Windows, desactive la casilla.  
   
@@ -630,7 +630,7 @@ La conectividad desde SQL Server 2012 Reporting Services con Microsoft SQL Serve
 ![barra_horizontal](media/horizontal-bar.png "barra_horizontal")  
   
 ## <a name="90-streaminsight"></a><a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012 incluye StreamInsight 2.0. StreamInsight 2.0 necesita una licencia de Microsoft SQL Server 2012 y .NET Framework 4.0. Incluye una serie de mejoras de rendimiento y algunas correcciones de errores. Para obtener más información, vea las [Notas de la versión de Microsoft StreamInsight 2.0](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). Para descargar StreamInsight 2.0 por separado, visite la [página de descarga de Microsoft StreamInsight 2.0](https://go.microsoft.com/fwlink/?LinkId=241593) en el Centro de descarga de Microsoft.  
+SQL Server 2012 incluye StreamInsight 2.1. StreamInsight 2.1 necesita una licencia de Microsoft SQL Server 2012 y .NET Framework 4.0. Incluye una serie de mejoras de rendimiento y algunas correcciones de errores. Para más información, consulte las [Notas de la versión de Microsoft StreamInsight 2.1](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). Para descargar StreamInsight 2.1 por separado, visite la [página de descarga de Microsoft StreamInsight 2.1](https://www.microsoft.com/download/details.aspx?id=30149) en el Centro de descarga de Microsoft.  
   
 ![barra_horizontal](media/horizontal-bar.png "barra_horizontal")  
   

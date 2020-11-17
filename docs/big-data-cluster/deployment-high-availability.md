@@ -9,12 +9,12 @@ ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17aaed99c8adb73b88a2d81482fcdefc7d8f68fd
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 08645672c1aa8b7b980b4ffe86b4029a691fa1cf
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990027"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447111"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implementación de clústeres de macrodatos de SQL Server con alta disponibilidad
 
@@ -211,6 +211,8 @@ Estos son los problemas y las limitaciones conocidos de los grupos de disponibil
 - Para restaurar de forma correcta una base de datos habilitada para TDE a partir de una copia de seguridad creada en otro servidor, debe asegurarse de que los [certificados necesarios](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md) se restauren tanto en la instancia maestra de SQL Server como en el grupo de disponibilidad maestro contenido. [Aquí](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/) puede ver un ejemplo de cómo realizar una copia de seguridad de los certificados y restaurarlos.
 - Determinadas operaciones, como la ejecución de la configuración de servidor con `sp_configure`, requieren una conexión a la base de datos `master` de la instancia de SQL Server, no a `master` del grupo de disponibilidad. No se puede usar el punto de conexión principal correspondiente. Siga las [instrucciones](#instance-connect) para exponer un punto de conexión y conectarse a la instancia de SQL Server y ejecutar `sp_configure`. Solo se puede usar autenticación SQL cuando se expone manualmente el punto de conexión para conectarse a la base de datos `master` de la instancia de SQL Server.
 - Aunque la base de datos msdb independiente se incluye en el grupo de disponibilidad y los trabajos del Agente SQL se replican ahí, los trabajos solo se ejecutan según una programación en la réplica principal.
+- La característica de replicación no es compatible con los grupos de disponibilidad contenidos. La parte de las instancias de SQL Server de un grupo de disponibilidad contenido no funciona como distribuidor ni publicador, ya sea en el nivel de instancia o en el nivel de grupo de disponibilidad contenido.
+- No se admite agregar grupos de archivos al crear la base de datos. Como solución alternativa, puede crear primero la base de datos y, luego, emitir una instrucción ALTER DATABASE para agregar grupos de archivos.
 - Antes de SQL Server 2019 CU2, las bases de datos creadas como resultado de flujos de trabajo distintos a `CREATE DATABASE` y `RESTORE DATABASE`, como `CREATE DATABASE FROM SNAPSHOT`, no se agregan automáticamente al grupo de disponibilidad. [Conéctese a la instancia](#instance-connect) y agregue la base de datos al grupo de disponibilidad manualmente.
 
 ## <a name="next-steps"></a>Pasos siguientes

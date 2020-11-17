@@ -1,28 +1,28 @@
 ---
 description: Complemento de privacidad de SQL Server
 title: Complemento de privacidad de SQL Server | Microsoft Docs
-ms.date: 09/30/2020
+ms.date: 11/11/2020
 ms.prod: sql
 ms.technology: release-landing
-ms.reviewer: mikeray
+ms.reviewer: wopeter
 ms.custom: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
-author: jaszymas
-ms.author: jaszymas
-ms.openlocfilehash: f8356b5c07e6d85d9359276740fdd30adc200493
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 87cd9ec5266002f91fea682591e82dfecd403ab5
+ms.sourcegitcommit: 4545b502e3cae7136411fd9a7c15450315665f38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793812"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94550010"
 ---
 # <a name="sql-server-privacy-supplement"></a>Complemento de privacidad de SQL Server
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-En este artículo se resumen las características habilitadas para Internet que pueden recopilar y enviar datos anónimos sobre el uso de características a Microsoft. SQL Server puede recopilar información estándar del equipo y datos sobre el uso y el rendimiento que se podría transmitir a Microsoft y analizarse a fin de mejorar la calidad, la seguridad y la confiabilidad del producto.
+En este artículo se resumen las características habilitadas para Internet que pueden recopilar y enviar datos anónimos sobre el uso de características a Microsoft. SQL Server puede recopilar información estándar del equipo y datos sobre el uso y el rendimiento que se podría transmitir a Microsoft y analizarse a fin de mejorar la calidad, la seguridad y la confiabilidad del producto. Si instala SQL Server en una máquina virtual en el servicio de Microsoft Azure, se puede enviar información del entorno a Microsoft para que pueda instalar la extensión Agente de IaaS de SQL Server en la máquina virtual y registrar el recurso de máquina virtual con SQL con el proveedor de recursos de la VM con SQL, tal como se describe [aquí](/azure/azure-sql/virtual-machines/windows/sql-vm-resource-provider-register).
 
 Este artículo es un anexo a la [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839) general. La clasificación de datos de este artículo solo se aplica a versiones del producto local de SQL Server. No se aplica a los elementos:
 
@@ -168,7 +168,7 @@ Datos necesarios para ofrecer servicios basados en Internet, según los término
      |Escenario  |Restricciones de acceso               |Requisitos de retención|
      |---------|---------|---------|
      |Microsoft podría usarlos para mejorar las características y corregir errores de las características actuales.|Limitado al uso interno de Microsoft sin acceso de terceros. |Mínimo 90 días, máximo 3 años. |
-     |Pueden usarse para realizar sugerencias para el cliente.  Por ejemplo, "En función de su uso del producto, considere la posibilidad de usar la característica *X* , ya que obtendría mejores resultados". |Microsoft puede exponer los datos al cliente original, por ejemplo, a través de paneles. |Registros de seguridad de datos de cliente: mínimo 3 años, máximo 6 años. |
+     |Pueden usarse para realizar sugerencias para el cliente.  Por ejemplo, "En función de su uso del producto, considere la posibilidad de usar la característica *X*, ya que obtendría mejores resultados". |Microsoft puede exponer los datos al cliente original, por ejemplo, a través de paneles. |Registros de seguridad de datos de cliente: mínimo 3 años, máximo 6 años. |
      |Microsoft podría usarlos para la planeación de productos en el futuro. |Microsoft puede compartir esta información con otros proveedores de hardware y software para mejorar el funcionamiento de sus productos con software de Microsoft. |Mínimo 90 días, máximo 3 años.|
      |Microsoft podría usarlos para proporcionar servicios en la nube basados en los datos de uso y diagnóstico emitidos. Por ejemplo, a través de un panel de cliente en el que se muestra el uso de características en todas las instalaciones de SQL Server de una organización. |Microsoft puede exponer los datos al cliente original, por ejemplo, a través de paneles. |Mínimo 90 días, máximo 3 años. |
      |Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan datos del cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: máximo 1 año. |

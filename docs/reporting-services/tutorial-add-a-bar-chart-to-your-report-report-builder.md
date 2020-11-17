@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial: Agregar un gráfico de barras a un informe (Generador de informes) | Microsoft Docs'
-description: Aprenda a crear un informe paginado de Reporting Services con un gráfico de columnas en el que se muestre una serie como un conjunto de barras verticales agrupadas por categoría.
+description: Aprenda a usar un asistente en el Generador de informes para crear un gráfico de barras en un informe paginado de Reporting Services.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 57dd6f4472c64ee37190d5149ef354d5829e1266
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: 9b18950488cb0fed336feb3df61e5a4e66b56603
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043734"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521126"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Incorporación de un gráfico de barras a un informe (Generador de informes)
 En este tutorial, usará un asistente en [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] para crear un gráfico de barras en un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Después, agregará un filtro y mejorará el gráfico. 
@@ -94,7 +94,7 @@ En el que puede crear un conjunto de datos incrustado, elegir un origen de datos
   
 2.  Haga clic en **Barras** y después en **Siguiente**.  
   
-    En la página **Organizar campos del gráfico** hay cuatro campos en el panel **Campos disponibles** : FirstName, LastName, SalesYear2015 y SalesYear2014.  
+    En la página **Organizar campos del gráfico** hay cuatro campos en el panel **Campos disponibles**: FirstName, LastName, SalesYear2015 y SalesYear2014.  
   
 3.  Arrastre LastName hasta el panel Categorías.  
   
@@ -121,7 +121,7 @@ De forma predeterminada, solo aparecen algunos de los valores del eje vertical. 
   
 2.  Haga clic con el botón secundario en el eje vertical y, después, haga clic en **Propiedades del eje vertical**.  
   
-3.  En **Rango e intervalo del eje** , en el cuadro **Intervalo** , escriba **1**.  
+3.  En **Rango e intervalo del eje**, en el cuadro **Intervalo** , escriba **1**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -167,7 +167,7 @@ Al ordenar los datos en un gráfico, está cambiando el orden de valores en el e
   
 4.  Haga clic en **Ordenar**. La página **Cambiar opciones de ordenación** muestra una lista de expresiones de ordenación. De forma predeterminada, esta lista tiene una expresión de ordenación que es igual que la expresión de grupo de categorías original.  
   
-5.  En **Ordenar por** , haga clic en **[SalesYear2015]** .  
+5.  En **Ordenar por**, haga clic en **[SalesYear2015]** .  
   
 6.  en la lista **Ordenar** , seleccione **A a Z** para que los nombres aparezcan en orden de mayor a menor venta de 2015.
   
@@ -188,7 +188,7 @@ Para mejorar la legibilidad de los valores del gráfico, es posible que le inter
   
 3.  Seleccione **Propiedades de la leyenda**.  
   
-4.  Para **Posición de la leyenda** , seleccione una posición diferente. Por ejemplo, sitúe la leyenda centrada en la parte inferior.  
+4.  Para **Posición de la leyenda**, seleccione una posición diferente. Por ejemplo, sitúe la leyenda centrada en la parte inferior.  
   
     Cuando la leyenda se coloca en la parte superior o inferior de un gráfico, su diseño cambia de vertical a horizontal. Puede seleccionar un diseño diferente en la lista desplegable **Diseño** .  
   
@@ -246,13 +246,13 @@ Puede agregar un filtro al gráfico para especificar qué datos del conjunto de 
   
 5.  Haga clic en **Agregar**. Aparece un nuevo filtro en blanco.  
   
-6.  En **Expresión** , escriba **[Sum(SalesYear2015)]** . Esto crea la expresión subyacente `=Sum(Fields!SalesYear2015.Value)`, que puede ver si hace clic en el botón **fx** .  
+6.  En **Expresión**, escriba **[Sum(SalesYear2015)]** . Esto crea la expresión subyacente `=Sum(Fields!SalesYear2015.Value)`, que puede ver si hace clic en el botón **fx** .  
   
 7.  Compruebe que el tipo de datos es **Texto**.  
   
-8.  En **Operador** , seleccione **Superior N** en la lista desplegable.  
+8.  En **Operador**, seleccione **Superior N** en la lista desplegable.  
   
-9. En **Valor** , escriba la siguiente expresión: **=5**  
+9. En **Valor**, escriba la siguiente expresión: **=5**  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -266,7 +266,7 @@ El gráfico muestra los nombres de los cinco primeros vendedores de los datos de
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Escriba **Gráfico de barras de ventas** , presione ENTRAR y después escriba **Cinco primeros vendedores de 2015** , de modo que tenga este aspecto:  
+2.  Escriba **Gráfico de barras de ventas**, presione ENTRAR y después escriba **Cinco primeros vendedores de 2015**, de modo que tenga este aspecto:  
   
     **Gráfico de barras de ventas**  
   
@@ -288,11 +288,11 @@ El gráfico muestra los nombres de los cinco primeros vendedores de los datos de
   
 2.  Haga clic en **Archivo** > **Guardar como**.  
   
-3.  En **Nombre** , escriba **Gráfico de barras de ventas**.  
+3.  En **Nombre**, escriba **Gráfico de barras de ventas**.  
 
     Puede guardarlo en el equipo o en el servidor de informes.
   
-4.  Haga clic en **Save** (Guardar).   
+4.  Haga clic en **Save**(Guardar).   
   
 ## <a name="next-steps"></a>Pasos siguientes  
 Ha completado correctamente el tutorial Agregar un gráfico de barras al informe. Para obtener más información sobre gráficos, consulte [Gráficos](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [Gráficos de barras](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md).  

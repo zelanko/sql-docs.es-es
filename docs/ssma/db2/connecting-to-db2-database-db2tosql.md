@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9372a12b6ebaa47096c4ad8b6429db61b00a6188
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d0ac703c8ea155f33ecb713b98a26f0c39b5a695
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987461"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870081"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Conectar con la base de datos DB2 (DB2ToSQL)
 
@@ -49,7 +49,7 @@ Cuando se conecta a una base de datos, SSMA Lee los metadatos de la base de dato
 
 3. En el cuadro **Administrador** , puede seleccionar **DB2 para zOs**, **DB2 para LUW** o **DB2 para i**
 
-4. En el cuadro **modo** , seleccione **modo estándar**o modo de **cadena de conexión**.
+4. En el cuadro **modo** , seleccione **modo estándar** o modo de **cadena de conexión**.
 
    Utilice el modo estándar para especificar el nombre del servidor y el puerto. Use el modo de nombre de servicio para especificar manualmente el nombre del servicio DB2. Use el modo de cadena de conexión para proporcionar una cadena de conexión completa.
 
@@ -86,7 +86,7 @@ Los metadatos de la base de datos DB2 no se actualizan automáticamente. Los met
 
 1. Asegúrese de que está conectado a la base de datos.
 2. En el explorador de metadatos DB2, active la casilla que hay al lado de cada esquema u objeto de base de datos que desee actualizar.
-3. Haga clic con el botón secundario en **esquemas**o en el objeto de esquema o base de datos individual y, a continuación, seleccione **actualizar desde base de datos**.
+3. Haga clic con el botón secundario en **esquemas** o en el objeto de esquema o base de datos individual y, a continuación, seleccione **actualizar desde base de datos**.
 
    Si no tiene una conexión activa, SSMA mostrará el cuadro de diálogo **conectar con DB2** para que pueda conectarse.
   
@@ -101,7 +101,7 @@ Los metadatos de la base de datos DB2 no se actualizan automáticamente. Los met
 
 ## <a name="next-step"></a>siguiente paso
 
-- El siguiente paso del proceso de migración consiste en [conectarse a SQL Server](./connecting-to-sql-server-db2etosql.md).
+- El siguiente paso del proceso de migración consiste en [conectarse a SQL Server](./connecting-to-sql-server-db2tosql.md).
 
 ## <a name="see-also"></a>Consulte también
 

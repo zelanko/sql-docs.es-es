@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7b609bfa0b29e289a8b2225d969d131112a8f532
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9942d2ee78932c3bb8bed2baac0885b68e40049d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987451"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869573"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Asignación de esquemas de DB2 a esquemas de SQL Server (DB2ToSQL)
 En DB2, cada base de datos tiene uno o más esquemas. De forma predeterminada, SSMA migra todos los objetos de un esquema DB2 a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos denominada para el esquema. Sin embargo, puede personalizar la asignación entre las bases de datos y los esquemas DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -23,7 +23,7 @@ En DB2, cada base de datos tiene uno o más esquemas. De forma predeterminada, S
 ## <a name="db2-and-sql-server-schemas"></a>Esquemas de DB2 y SQL Server  
 Una base de datos DB2 contiene esquemas. Una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene varias bases de datos, cada una de las cuales puede tener varios esquemas.  
   
-El concepto de DB2 de un esquema se asigna al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concepto de una base de datos y a uno de sus esquemas. Por ejemplo, DB2 podría tener un esquema denominado **HR**. Una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría tener una base de datos denominada **HR**y, dentro de esa base de datos, los esquemas. Un esquema es el esquema **DBO** (o el propietario de la base de datos). De forma predeterminada, el **HR** del esquema DB2 se asignará a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos y el esquema **HR. DBO**. SSMA hace referencia a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinación de base de datos y esquema como esquema.  
+El concepto de DB2 de un esquema se asigna al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concepto de una base de datos y a uno de sus esquemas. Por ejemplo, DB2 podría tener un esquema denominado **HR**. Una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría tener una base de datos denominada **HR** y, dentro de esa base de datos, los esquemas. Un esquema es el esquema **DBO** (o el propietario de la base de datos). De forma predeterminada, el **HR** del esquema DB2 se asignará a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos y el esquema **HR. DBO**. SSMA hace referencia a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinación de base de datos y esquema como esquema.  
   
 Puede modificar la asignación entre DB2 y los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas.  
   
@@ -63,5 +63,5 @@ Si personaliza la asignación entre un esquema DB2 y un [!INCLUDE[ssNoVersion](.
 Si desea analizar la conversión de objetos DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, puede usar el [Informe de migración de datos (SSMA Common)](../sybase/data-migration-report-sybasetosql.md).  
   
 ## <a name="see-also"></a>Consulte también  
-[Conexión a SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[Conexión a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md)  
 [Migrar bases de datos DB2 a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

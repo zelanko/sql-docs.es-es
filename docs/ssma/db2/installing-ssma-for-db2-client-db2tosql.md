@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5b9679451c1052423cb412b85bf8dde25c4a8351
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: a223f5dbf6e100ac776e2f3aebad51c9bb885abf
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823720"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869613"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>Instalación de SSMA para el cliente DB2 (DB2ToSQL)
 
@@ -36,10 +36,10 @@ SSMA está diseñado para funcionar con DB2 en la versión 9,0 y 10,0 de z/OS, D
 Antes de instalar SSMA, asegúrese de que el equipo cumple los requisitos siguientes:
 
 - Windows 7 o versiones posteriores, o Windows Server 2008 o versiones posteriores.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 o versiones posteriores.
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3,1 o versiones posteriores.
 - La [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versión 4.7.2 o una versión posterior. Puede obtenerlo en el [Centro para desarrolladores de .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).
 - Proveedor OLE DB de Microsoft para DB2 versión 5 o una versión posterior y la conectividad con las bases de datos DB2 que desea migrar.
-- Acceso a y permisos suficientes en el equipo que hospeda la instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database donde va a migrar los datos y los objetos de base de datos. Para obtener más información, vea [conectarse a SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).
+- Acceso a y permisos suficientes en el equipo que hospeda la instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database donde va a migrar los datos y los objetos de base de datos. Para obtener más información, vea [conectarse a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md).
 - se recomiendan 4 GB de RAM.
 
 ## <a name="microsoft-ole-db-provider-for-db2"></a>Proveedor Microsoft OLE DB para DB2
@@ -50,12 +50,12 @@ SSMA es una descarga Web. Para descargar la versión más reciente, consulte la 
 
 Para instalar el cliente de SSMA:
 
-1. Haga doble clic en **SSMAforDB2_*n*. msi**, donde *n* es el número de compilación.
+1. Haga doble clic en **SSMAforDB2_ *n*. msi**, donde *n* es el número de compilación.
 2. En la página **principal**, seleccione **Siguiente**.
 
    Si no tiene instalados los requisitos previos, aparecerá un mensaje que indica que primero debe instalar los componentes necesarios. Asegúrese de que ha instalado todos los requisitos previos y, a continuación, vuelva a ejecutar el programa de instalación.
 
-3. Lea el contrato de licencia para el usuario final. Si está de acuerdo, seleccione Acepto **el contrato**y, a continuación, seleccione **siguiente**.
+3. Lea el contrato de licencia de End-User. Si está de acuerdo, seleccione Acepto **el contrato** y, a continuación, seleccione **siguiente**.
 4. En la página **elegir tipo de instalación** , seleccione **típica**.
 5. En la página **listo para instalar** puede habilitar o deshabilitar la telemetría y las comprobaciones de actualizaciones automáticas cada vez que se inicia la herramienta. Haga clic en **Instalar** para iniciar la instalación.
 
@@ -64,7 +64,7 @@ Para instalar el cliente de SSMA:
 
 La ubicación de instalación predeterminada es `C:\Program Files\Microsoft SQL Server Migration Assistant for DB2`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instalación de componentes de SSMA en SQL Server](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)
 - [Migración de bases de datos de DB2 a SQL Server](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)

@@ -2,7 +2,7 @@
 description: SQL dinámico
 title: SQL dinámico | Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 11/16/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de711543748a91015a9aa0d4cb8aadb011744306
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 86164b1bc5d98475d4e2f0980ce433d33e5d858f
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494586"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704180"
 ---
 # <a name="dynamic-sql"></a>SQL dinámico
 Aunque SQL estático funciona bien en muchos casos, hay una clase de aplicaciones en las que el acceso a los datos no se puede determinar de antemano. Por ejemplo, supongamos que una hoja de cálculo permite al usuario escribir una consulta, que la hoja de cálculo envía a la DBMS para recuperar los datos. Obviamente, el programador no puede conocer el contenido de esta consulta cuando se escribe el programa de hojas de cálculo.  
@@ -32,7 +32,7 @@ Aunque SQL estático funciona bien en muchos casos, hay una clase de aplicacione
   
  La manera más sencilla de ejecutar una instrucción SQL dinámica es con una instrucción EXECUTe Immediate. Esta instrucción pasa la instrucción SQL al DBMS para compilar y ejecutar.  
   
- Una desventaja de la instrucción EXECUTe Immediate es que el DBMS debe pasar por cada uno de los cinco pasos de procesamiento de una instrucción SQL cada vez que se ejecuta la instrucción. La sobrecarga implicada en este proceso puede ser significativa si muchas de las instrucciones se ejecutan de forma dinámica y es una pérdida de las instrucciones si son similares. Para solucionar esta situación, SQL dinámico ofrece una forma optimizada de ejecución denominada ejecución preparada, que usa los pasos siguientes:  
+ Una desventaja de la instrucción EXECUTe Immediate es que el DBMS debe pasar por cada uno de los [cinco pasos de procesamiento de una instrucción SQL](processing-a-sql-statement.md) cada vez que se ejecuta la instrucción. La sobrecarga implicada en este proceso puede ser significativa si muchas de las instrucciones se ejecutan de forma dinámica y es una pérdida de las instrucciones si son similares. Para solucionar esta situación, SQL dinámico ofrece una forma optimizada de ejecución denominada ejecución preparada, que usa los pasos siguientes:  
   
 1.  El programa crea una instrucción SQL en un búfer, tal y como lo hace para la instrucción EXECUTe Immediate. En lugar de las variables de host, se puede sustituir un signo de interrogación (?) por una constante en cualquier parte del texto de la instrucción para indicar que se proporcionará un valor para la constante más adelante. Se llama al signo de interrogación como marcador de parámetro.  
   

@@ -8,17 +8,40 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/14/2020
-ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.date: 11/12/2020
+ms.openlocfilehash: a45b17b98ae8c8d398eee18c7678a119cb32a4f7
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059193"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584808"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión de Azure Data Studio
 
 **[Descargue e instale la versión más reciente](./download-azure-data-studio.md)** .
+
+## <a name="november-2020"></a>Noviembre de 2020
+
+12 de noviembre de 2020 &nbsp; / &nbsp; Versión: 1.24.0
+
+&nbsp;
+
+| Change | Detalles |
+| ------ | ------- |
+| Correcciones de errores | Para obtener una la lista completa de las correcciones, vea [Correcciones y problemas en GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2020+Release%22+is%3Aclosed). |
+| Cuadro de diálogo de conexión | Se ha agregado una nueva pestaña para examinar en el cuadro de diálogo de conexión. |
+| Actualización de extensiones | Se ha publicado la actualización de la extensión Postgres. |
+| Nuevas características de los cuadernos | Se han agregado nuevas características a la compatibilidad con SQL y Notebook. <br/> Se han agregado nuevas características a la compatibilidad con la parametrización de Notebook. <br/>  Se han agregado nuevas características al streaming de resultados para cuadernos SQL. |
+| Instalación de Python | El paquete PROSE se ha quitado de la instalación predeterminada de Python. |
+
+### <a name="known-issues-1240"></a>Incidencias conocidas (1.24.0)
+
+| Nuevo elemento | Detalles | Solución alternativa |
+|----------|---------|------------|
+| Extensión Azure Arc | [Problema conocido:](https://github.com/microsoft/azuredatastudio/issues/13319) El botón "Script a Notebook" para implementaciones de Arc MIAA & PG no realiza la validación de campos antes de generar scripts para el cuaderno. Esto significa que si los usuarios escriben una contraseña incorrecta en las entradas de confirmación de contraseña, es posible que terminen con un cuaderno que tenga el valor incorrecto para la contraseña.| El botón "Implementar" funciona según lo previsto, por lo que los usuarios deben utilizarlo en su lugar. |
+| Explorador de objetos | Las versiones de ADS anteriores a 1.24.0 tienen un cambio importante en el explorador de objetos debido a los cambios del motor relacionados con [SQL a petición de Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Para seguir usando el explorador de objetos en Azure Data Studio con SQL a petición de Azure Synapse Analytics, debe usar Azure Data Studio 1.24.0 o posterior. |
+
+Puede consultar los [comentarios de Azure Data Studio](https://github.com/microsoft/azuredatastudio) para obtener otras incidencias conocidas y proporcionar comentarios al equipo del producto.
 
 ## <a name="october-2020"></a>Octubre de 2020
 

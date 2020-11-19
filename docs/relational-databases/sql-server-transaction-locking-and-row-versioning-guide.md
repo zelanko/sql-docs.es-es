@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70358a9ba4fc5cb9d9b326119b488efe6af3a9f5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 07c59ceb0ec51d4d9fd357fcc154892091c3caaf
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868190"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631771"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -550,7 +550,7 @@ GO
   
 -   El intervalo representa el modo de bloqueo que protege el intervalo entre dos entradas de índice consecutivas.  
 -   La fila representa el modo de bloqueo que protege la entrada de índice.  
--   El modo representa el modo de bloqueo combinado que se utiliza. Los modos de bloqueo del intervalo de claves constan de dos partes. La primera representa el tipo de bloqueo que se utiliza para bloquear el intervalo del índice (Range*T*) y la segunda representa el tipo de bloqueo que se utiliza para bloquear una clave específica (*K*). Ambas partes se conectan con un guion (-), como Range*T*-*K*.  
+-   El modo representa el modo de bloqueo combinado que se utiliza. Los modos de bloqueo del intervalo de claves constan de dos partes. La primera representa el tipo de bloqueo que se utiliza para bloquear el intervalo del índice (Range *T*) y la segunda representa el tipo de bloqueo que se utiliza para bloquear una clave específica (*K*). Ambas partes se conectan con un guion (-), como Range *T*-*K*.  
   
     |Intervalo|Row|Mode|Descripción|  
     |-----------|---------|----------|-----------------|  
@@ -912,7 +912,7 @@ GO
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> Evento extendido de interbloqueo
 A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], se debe usar el evento extendido de `xml_deadlock_report` (xEvent) en lugar de la clase de eventos Deadlock Graph en Seguimiento de SQL o SQL Profiler.
 
-También a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], cuando se producen interbloqueos, la sesión ***system\_health*** captura todos los eventos extendidos `xml_deadlock_report` que contienen el grafo de interbloqueo. Como la sesión *system\_health* está habilitada de forma predeterminada, no es necesario configurar una sesión de eventos extendidos independiente para capturar la información de interbloqueo. 
+También a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], cuando se producen interbloqueos, la sesión **_system\_health_* _ captura todos los xEvents `xml_deadlock_report` que contienen el grafo de interbloqueo. Como la sesión _system\_health* está habilitada de forma predeterminada, no es necesario configurar una sesión de xEvent independiente para capturar la información de interbloqueo. 
 
 El grafo de interbloqueo que se capturaba normalmente consta de tres nodos distintos:
 -   **victim-list**. Identificador de proceso del elemento afectado por el interbloqueo.

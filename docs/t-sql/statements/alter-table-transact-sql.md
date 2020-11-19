@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 131f1c7578aad18f6eae95c34ad2beec8ebad73f
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: 3cef7fd2ddbcc95789ddb8a306538b6dfdaf29c5
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300626"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521192"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -429,7 +429,7 @@ Especifica que la columna con nombre va a cambiarse o modificarse.
 
 La columna modificada no puede ser:
 
-- Una columna con un tipo de datos **timestamp** .
+- Una columna con un tipo de datos **timestamp**.
 - La columna ROWGUIDCOL de la tabla.
 - Una columna calculada o usada en una columna calculada.
 - Se usa en las estadísticas generadas por la instrucción CREATE STATISTICS. Los usuarios deben ejecutar DROP STATISTICS para quitar las estadísticas a fin de que ALTER COLUMN pueda realizarse correctamente.  Ejecute esta consulta para obtener todas las estadísticas y las columnas de estadísticas creadas por el usuario para una tabla.
@@ -454,7 +454,7 @@ WHERE s.object_id = OBJECT_ID('<table_name>');
 - Una columna utilizada en una restricción CHECK o UNIQUE. Sin embargo, se permite el cambio de longitud de una columna de longitud variable en una restricción CHECK o UNIQUE.
 - Una columna asociada a la definición predeterminada. No obstante, la longitud, precisión o escala de una columna puede cambiarse si el tipo de datos no se cambia.
 
-El tipo de datos de las columnas **text** , **ntext** e **image** solo se puede cambiar de las formas siguientes:
+El tipo de datos de las columnas **text**, **ntext** e **image** solo se puede cambiar de las formas siguientes:
 
 - **text** por **varchar(max)** , **nvarchar(max)** o **xml**
 - **ntext** por **varchar(max)** , **nvarchar(max)** o **xml**
@@ -465,16 +465,16 @@ Algunos cambios del tipo de datos podrían suponer un cambio en los datos. Por e
 > [!NOTE]
 > El tipo de datos de una columna de una tabla con particiones no puede cambiarse.
 >
-> El tipo de datos de las columnas incluidas en un índice no puede cambiarse, a menos que la columna sea del tipo de datos **varchar** , **nvarchar** o **varbinary** y que el nuevo tamaño sea igual o mayor que el tamaño anterior.
+> El tipo de datos de las columnas incluidas en un índice no puede cambiarse, a menos que la columna sea del tipo de datos **varchar**, **nvarchar** o **varbinary** y que el nuevo tamaño sea igual o mayor que el tamaño anterior.
 >
-> Las columnas incluidas en una restricción de clave principal no se pueden cambiar de **NOT NULL** a **NULL** .
+> Las columnas incluidas en una restricción de clave principal no se pueden cambiar de **NOT NULL** a **NULL**.
 
 Al utilizar Always Encrypted (sin enclaves seguros), si la columna que se está modificando se cifra mediante "ENCRYPTED WITH", puede cambiar el tipo de datos por un tipo de datos compatible (como INT por BIGINT), pero no se puede cambiar cualquier valor de cifrado.
 
 Al usar Always Encrypted con enclaves seguros, puede cambiar cualquier configuración de cifrado, si la clave de cifrado de columna que protege la columna (y la nueva clave de cifrado de columna, si va a cambiar la clave) admita los cálculos de enclave (cifrados con claves maestras de columna habilitadas para el enclave). Para más información, vea [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 *column_name*  
-El nombre de la columna que se va a modificar, agregar o quitar. La longitud máxima de *column_name* es 128 caracteres. Si se trata de columnas nuevas, puede omitir *column_name* para las columnas creadas con un tipo de datos **timestamp** . Si no se especifica el argumento *column_name* en una columna con un tipo de datos **timestamp** , se usa el nombre **timestamp** .
+El nombre de la columna que se va a modificar, agregar o quitar. La longitud máxima de *column_name* es 128 caracteres. Si se trata de columnas nuevas, puede omitir *column_name* para las columnas creadas con un tipo de datos **timestamp**. Si no se especifica el argumento *column_name* en una columna con un tipo de datos **timestamp**, se usa el nombre **timestamp**.
 
 > [!NOTE]
 > Se agregan nuevas columnas después de que se modifiquen todas las columnas existentes en la tabla.
@@ -489,7 +489,7 @@ El nuevo tipo de datos de la columna modificada o el tipo de datos de la columna
 A continuación se indican los criterios de *type_name* en una columna modificada:
 
 - El tipo de datos anterior debe poderse convertir implícitamente al nuevo tipo de datos.
-- *type_name* no puede ser **timestamp** .
+- *type_name* no puede ser **timestamp**.
 - Los valores predeterminados de ANSI_NULL están siempre activados para ALTER COLUMN; si no se especifican, la columna admite valores NULL.
 - El relleno ANSI_PADDING está siempre activado para ALTER COLUMN.
 - Si la columna alterada es una columna de identidad, *new_data_type* debe ser de un tipo de datos compatible con la propiedad de la identidad.
@@ -505,17 +505,17 @@ La precisión del tipo de datos especificado. Para más información sobre los v
 La escala del tipo de datos especificado. Para más información sobre los valores de escala válidos, vea [Precisión, escala y longitud](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).
 
 **max**  
-Solo se aplica a los tipos de datos **varchar** , **nvarchar** y **varbinary** para el almacenamiento de 2^31-1 bytes de caracteres, datos binarios y datos Unicode.
+Solo se aplica a los tipos de datos **varchar**, **nvarchar** y **varbinary** para el almacenamiento de 2^31-1 bytes de caracteres, datos binarios y datos Unicode.
 
 *xml_schema_collection*  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Solo se aplica al tipo de datos **xml** para asociar un esquema XML con el tipo. Antes de escribir una columna **xml** en una colección de esquemas, cree primero la colección de esquema en la base de datos mediante el uso de [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).
 
 COLLATE \< *collation_name* >  
 Especifica la nueva intercalación para la columna alterada. Si no se especifica, se asigna a la columna la intercalación predeterminada de la base de datos. El nombre de intercalación puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Para obtener una lista y más información, vea [Windows Collation Name](../../t-sql/statements/windows-collation-name-transact-sql.md) [Nombre de intercalación de Windows (Transact-SQL)] y [SQL Server Collation Name](../../t-sql/statements/sql-server-collation-name-transact-sql.md) [Nombre de intercalación de SQL Server (Transact-SQL)].
 
-La cláusula COLLATE cambia únicamente las intercalaciones de las columnas con tipos de datos **char** , **varchar** , **nchar** y **nvarchar** . Para cambiar la intercalación de una columna de tipo de datos de alias definido por el usuario, use distintas instrucciones ALTER TABLE para cambiar la columna a un tipo de datos del sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, cambie su intercalación y cambie la columna de nuevo a un tipo de datos de alias.
+La cláusula COLLATE cambia únicamente las intercalaciones de las columnas con tipos de datos **char**, **varchar**, **nchar** y **nvarchar**. Para cambiar la intercalación de una columna de tipo de datos de alias definido por el usuario, use distintas instrucciones ALTER TABLE para cambiar la columna a un tipo de datos del sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, cambie su intercalación y cambie la columna de nuevo a un tipo de datos de alias.
 
 ALTER COLUMN no puede tener un cambio de intercalación si existe alguna de las siguientes condiciones:
 
@@ -542,12 +542,12 @@ Cuando cree o altere una tabla con las instrucciones CREATE TABLE o ALTER TABLE,
 Si agrega una columna con un tipo de datos definidos por el usuario, asegúrese de definir la columna con la misma nulabilidad del tipo de datos definidos por el usuario. Y especifique un valor predeterminado para la columna. Para obtener más información, vea [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).
 
 > [!NOTE]
-> Si se especifica NULL o NOT NULL con ALTER COLUMN, también se debe especificar *new_data_type* [( *precision* [, *scale* ])]. Si el tipo de datos, la precisión y la escala no se cambian, especifique los valores actuales de la columna.
+> Si se especifica NULL o NOT NULL con ALTER COLUMN, también se debe especificar *new_data_type* [(*precision* [, *scale* ])]. Si el tipo de datos, la precisión y la escala no se cambian, especifique los valores actuales de la columna.
 
 [ {ADD | DROP} ROWGUIDCOL ]  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Especifica que la propiedad ROWGUIDCOL se agrega a la columna indicada o se quita de ella. ROWGUIDCOL indica que la columna es una columna GUID de fila. Puede designar solo una columna **uniqueidentifier** por tabla como columna ROWGUIDCOL. Y solo puede asignar la propiedad ROWGUIDCOL a una columna **uniqueidentifier** . ROWGUIDCOL no puede asignarse a una columna de un tipo de datos definido por el usuario.
+Especifica que la propiedad ROWGUIDCOL se agrega a la columna indicada o se quita de ella. ROWGUIDCOL indica que la columna es una columna GUID de fila. Puede designar solo una columna **uniqueidentifier** por tabla como columna ROWGUIDCOL. Y solo puede asignar la propiedad ROWGUIDCOL a una columna **uniqueidentifier**. ROWGUIDCOL no puede asignarse a una columna de un tipo de datos definido por el usuario.
 
 ROWGUIDCOL no exige la exclusividad de los valores almacenados en la columna y no genera automáticamente valores para las nuevas filas que se insertan en la tabla. Si desea generar valores únicos para cada columna, use la función NEWID o NEWSEQUENTIALID en instrucciones INSERT. O bien, especifique la función NEWID o NEWSEQUENTIALID como valor predeterminado para la columna.
 
@@ -557,7 +557,7 @@ Especifica que la propiedad PERSISTED se agrega a la columna indicada o se quita
 Las columnas calculadas que se utilizan como columna de partición de una tabla con particiones deben marcarse explícitamente como PERSISTED.
 
 DROP NOT FOR REPLICATION  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica que los valores de columnas de identidad se incrementan cuando los agentes de replicación realizan operaciones de inserción. Solo puede especificar esta cláusula si *column_name* es una columna de identidad.
 
@@ -565,7 +565,7 @@ SPARSE
 Indica que la columna es una columna dispersa. El almacenamiento de columnas dispersas está optimizado para los valores NULL. No se puede establecer las columnas dispersas como NOT NULL. Al convertir una columna de dispersa a no dispersa o viceversa, se bloquea la tabla durante la ejecución del comando. Es posible que tenga que usar la cláusula REBUILD para recuperar espacio. Para conocer otras restricciones y leer más información sobre columnas dispersas, vea [Usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md).
 
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica una máscara dinámica de datos. *mask_function* es el nombre de la función de máscara con los parámetros adecuados. Hay tres funciones disponibles:
 
@@ -577,7 +577,7 @@ Especifica una máscara dinámica de datos. *mask_function* es el nombre de la f
 Para quitar una máscara, utilice `DROP MASKED`. Para conocer más parámetros de función, vea [Enmascaramiento de datos dinámicos](../../relational-databases/security/dynamic-data-masking.md).
 
 WITH ( ONLINE = ON | OFF) \<as applies to altering a column>  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Permite realizar numerosas acciones de alteración de columna mientras la tabla sigue estando disponible. El valor predeterminado es OFF. La alteración de columna se puede realizar en línea para los cambios de columna relacionados con el tipo de datos, la precisión o la longitud de la columna, la nulabilidad, la escasez y la intercalación.
 
@@ -611,7 +611,7 @@ Si no desea volver a comprobar las restricciones CHECK o FOREIGN KEY nuevas con 
 > El optimizador de consultas no considera las restricciones definidas como WITH NOCHECK. Estas restricciones se pasan por alto hasta que se vuelven a habilitar mediante `ALTER TABLE table WITH CHECK CHECK CONSTRAINT ALL`.
 
 ALTER INDEX *nombre_de_índice*  
-Especifica que es necesario cambiar o modificar el número de cubos de *nombre_de_índice* .
+Especifica que es necesario cambiar o modificar el número de cubos de *nombre_de_índice*.
 
 La sintaxis ALTER TABLE ... ADD/DROP/ALTER INDEX solo se admite para tablas optimizadas para memoria.
 
@@ -628,7 +628,7 @@ Especifica que se agregan una o más definiciones de columna, definiciones de co
 > Si no se usa una instrucción ALTER TABLE, las instrucciones [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) y [PAD_INDEX](alter-table-index-option-transact-sql.md) no son compatibles con los índices de las tablas optimizadas para memoria.
 
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica los nombres de las columnas que el sistema usa para registrar el período durante el que un registro es válido. Puede especificar las columnas existentes o crear nuevas columnas como parte del argumento ADD PERIOD FOR SYSTEM_TIME. Configure las columnas con el tipo de datos de datetime2 y defínalas como NOT NULL. Si una columna de período se define como NULL, se producirá un error. Puede definir [column_constraint](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) o [especificar valores predeterminados para las columnas](../../relational-databases/tables/specify-default-values-for-columns.md) en las columnas system_start_time y system_end_time. Vea el ejemplo A en la sección [Control de versiones del sistema](#system_versioning), en que se muestra el uso de un valor predeterminado para la columna system_end_time.
 
@@ -642,7 +642,7 @@ Especifica que se quitan una o más definiciones de columna, definiciones de col
 CONSTRAINT *constraint_name*  
 Especifica que *constraint_name* se ha quitado de la tabla. Se pueden enumerar múltiples restricciones.
 
-Puede determinar el nombre de la restricción, ya sea proporcionado por el sistema o definido por el usuario, mediante la consulta de las vistas de catálogo **sys.check_constraint** , **sys.default_constraints** , **sys.key_constraints** y **sys.foreign_keys** .
+Puede determinar el nombre de la restricción, ya sea proporcionado por el sistema o definido por el usuario, mediante la consulta de las vistas de catálogo **sys.check_constraint**, **sys.default_constraints**, **sys.key_constraints** y **sys.foreign_keys**.
 
 Una restricción PRIMARY KEY no puede quitarse si existe un índice XML en la tabla.
 
@@ -668,7 +668,7 @@ Especifica que *constraint_name* o *column_name* se quita de la tabla. Pueden es
 > Quitar una columna no recupera el espacio en disco de la columna. Tendrá que recuperar el espacio en disco de una columna quitada cuando el tamaño de fila de una tabla esté a punto de superar su límite o lo haya hecho ya. Recupere el espacio mediante la creación de un índice agrupado en la tabla o regenerando un índice agrupado existente mediante la utilización de [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). Para obtener más información acerca del impacto de quitar los tipos de datos LOB, vea esta [entrada del blog de CSS](/archive/blogs/psssql/how-it-works-gotcha-varcharmax-caused-my-queries-to-be-slower).
 
 PERIOD FOR SYSTEM_TIME  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Quita la especificación de las columnas que va a utilizar el sistema para el control de versiones del sistema.
 
@@ -676,7 +676,7 @@ WITH \<drop_clustered_constraint_option>
 Especifica que se han establecido una o más opciones para quitar restricciones en clúster.
 
 MAXDOP = *max_degree_of_parallelism*  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Invalida la opción de configuración **grado máximo de paralelismo** solo durante la operación. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
@@ -714,8 +714,8 @@ Para más información, vea [Cómo funcionan las operaciones de índice en líne
 > [!NOTE]
 > Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) y [Ediciones y características admitidas de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** ... *n* ] **)**  | *filegroup* |  **"** default **"** }  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** ... *n*] **)**  | *filegroup* |  **"** default **"** }  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica una ubicación a la que mover las filas de datos que se encuentran en el nivel hoja del índice clúster. La tabla se mueve a la nueva ubicación. Esta opción solo se aplica a las restricciones que crean un índice clúster.
 
@@ -738,7 +738,7 @@ Especifica si todos los desencadenadores de la tabla están habilitados o deshab
 Especifica el nombre del desencadenador que se va a habilitar o deshabilitar.
 
 { ENABLE | DISABLE } CHANGE_TRACKING  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica si el seguimiento de cambios está habilitado o deshabilitado para la tabla. El seguimiento de cambios está deshabilitado de manera predeterminada.
 
@@ -747,12 +747,12 @@ Esta opción solo está disponible cuando el seguimiento de cambios está habili
 Para habilitar el seguimiento de cambios, la tabla debe tener una clave principal.
 
 WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)**  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica si [!INCLUDE[ssDE](../../includes/ssde-md.md)] realiza el seguimiento de las columnas sometidas a seguimiento de cambios que se actualizaron. El valor predeterminado es OFF.
 
 SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_ **.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Modifica un bloqueo de datos de una de las formas siguientes:
 
@@ -760,7 +760,7 @@ Modifica un bloqueo de datos de una de las formas siguientes:
 - Modifica una partición de una tabla con particiones a otra.
 - Vuelve a asignar todos los datos de una partición de una tabla con particiones a una tabla sin particiones ya existente.
 
-Si *table* es una tabla con particiones, debe especificar *source_partition_number_expression* . Si *target_table* es una tabla con particiones, debe especificar *target_partition_number_expression* . Si se vuelven a asignar los datos de una tabla como partición a una tabla con particiones ya existente, o se modifica una partición de una tabla con particiones a otra, la partición de destino debe existir y debe estar vacía.
+Si *table* es una tabla con particiones, debe especificar *source_partition_number_expression*. Si *target_table* es una tabla con particiones, debe especificar *target_partition_number_expression*. Si se vuelven a asignar los datos de una tabla como partición a una tabla con particiones ya existente, o se modifica una partición de una tabla con particiones a otra, la partición de destino debe existir y debe estar vacía.
 
 Si se vuelven a asignar los datos de una partición para formar una sola tabla, la tabla de destino debe ya estar creada y vacía. Tanto la tabla o partición de origen como la tabla o partición de destino deben residir en el mismo grupo de archivos. Los índices correspondientes, o particiones de índice, también deben residir en el mismo grupo de archivos. Son muchas las restricciones adicionales que se aplican a las particiones que se modifican. *table* y *target_table* no pueden ser iguales. *target_table* puede ser un identificador de varias partes.
 
@@ -777,27 +777,27 @@ Para **CAMBIAR** de restricción al utilizar la replicación, vea [Replicar tabl
 Los índices de almacén de columnas no agrupados compilados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 y para las versiones de SQL Database anteriores a V12 estaban en un formato de solo lectura. Debe volver a compilar los índices de almacén de columnas no agrupados en el formato actual (que se puede actualizar) para poder ejecutar cualquier operación de partición.
 
 SET **(** FILESTREAM_ON = { *partition_scheme_name* \| *filestream_filegroup_name* \| **"** default **"** \| **"** NULL **"** } **)**  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] no es compatible con `FILESTREAM`.
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] no es compatible con `FILESTREAM`.
 
 Especifica dónde se almacenan los datos FILESTREAM.
 
 La ejecución de ALTER TABLE con la cláusula SET FILESTREAM_ON es correcta únicamente si la tabla no tiene columnas FILESTREAM. Puede agregar columnas FILESTREAM utilizando una segunda instrucción ALTER TABLE.
 
-Si especifica *partition_scheme_name* , se aplican las reglas para [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md). Asegúrese de que la tabla tenga ya particiones para los datos de la fila y de que su esquema de partición utilice la misma función de partición y columnas que el esquema de partición de FILESTREAM.
+Si especifica *partition_scheme_name*, se aplican las reglas para [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md). Asegúrese de que la tabla tenga ya particiones para los datos de la fila y de que su esquema de partición utilice la misma función de partición y columnas que el esquema de partición de FILESTREAM.
 
 *filestream_filegroup_name* especifica el nombre de un grupo de archivos FILESTREAM. El grupo de archivos debe tener un archivo que esté definido para el grupo de archivos, utilizando para ello las instrucciones [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) o [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md); de lo contrario, se producirá un error.
 
 **"** default **"** especifica el grupo de archivos FILESTREAM con la propiedad DEFAULT establecida. Si no hay ningún grupo de archivos FILESTREAM, se produce un error.
 
-**"** NULL **"** especifica que se quitarán todas las referencias a los grupos de archivos FILESTREAM para la tabla. Se deben quitar primero todas las columnas FILESTREAM. Use SET FILESTREAM_ON = " **NULL** " para eliminar todos los datos FILESTREAM que estén asociados a una tabla.
+**"** NULL **"** especifica que se quitarán todas las referencias a los grupos de archivos FILESTREAM para la tabla. Se deben quitar primero todas las columnas FILESTREAM. Use SET FILESTREAM_ON = "**NULL**" para eliminar todos los datos FILESTREAM que estén asociados a una tabla.
 
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ] ) ] } **)**  
- **Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Habilita o deshabilita el control de versiones del sistema de una tabla. Para habilitar el control de versiones del sistema de una tabla, el sistema comprueba que se cumplan los requisitos de restricción del tipo de datos, de la restricción de nulabilidad y de la clave principal para el control de versiones del sistema. Si no utiliza el argumento HISTORY_TABLE, el sistema genera una nueva tabla de historial que coincide con el esquema de la tabla actual, crea un vínculo entre las dos tablas y permite que el sistema registre el historial de cada registro de la tabla actual en la tabla de historial. El nombre de esta tabla de historial será `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Si usa el argumento HISTORY_TABLE para crear un vínculo a un historial existente y usarlo, el sistema crea un vínculo entre la tabla actual y la tabla especificada. Al crear un vínculo a una tabla de historial existente, puede realizar una comprobación de coherencia de datos. Esta comprobación de coherencia de datos garantiza que los registros existentes no se superponen. La comprobación de coherencia de datos se ejecuta de manera predeterminada. Para obtener más información, consulte [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 HISTORY_RETENTION_PERIOD = { **INFINITE** \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS} }  
-**Se aplica a** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Se aplica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica la retención finita o infinita de los datos del historial en la tabla temporal. Si se omite, se presupone la retención infinita.
 
@@ -818,11 +818,11 @@ Especifica la columna que se debe usar para determinar si las filas de la tabla 
   - SmallDateTime
   - DateTimeOffset
 
-- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
+- RETENTION_PERIOD = { INFINITE \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS }}       
 Especifica la directiva del período de retención para la tabla. El período de retención se especifica como una combinación de un valor entero positivo y la unidad de la parte de la fecha. 
 
 SET **(** LOCK_ESCALATION = { AUTO \| TABLE \| DISABLE } **)**  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica los métodos permitidos de extensión de bloqueo para una tabla.
 
@@ -844,19 +844,19 @@ Utilice la sintaxis de REBUILD WITH para volver a generar una tabla completa que
 Utilice la sintaxis de REBUILD PARTITION para volver a generar una partición única en una tabla con particiones.
 
 PARTITION = ALL  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Vuelve a generar todas las particiones al cambiar los valores de compresión de la partición.
 
 REBUILD WITH ( \<rebuild_option> )  
 Todas las opciones se aplican a una tabla con un índice clúster. Si la tabla no tiene un índice agrupado, solo algunas de las opciones afectan a la estructura del montón.
 
-Cuando no se especifica un valor de compresión específico con la operación REBUILD, se usa el valor de compresión actual de la partición. Para devolver el valor actual, realice una consulta en la columna **data_compression** de la vista del catálogo **sys.partitions** .
+Cuando no se especifica un valor de compresión específico con la operación REBUILD, se usa el valor de compresión actual de la partición. Para devolver el valor actual, realice una consulta en la columna **data_compression** de la vista del catálogo **sys.partitions**.
 
 Para obtener una descripción completa de las opciones de recompilación, vea [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md).
 
 DATA_COMPRESSION  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica la opción de compresión de datos para la tabla, el número de partición o el intervalo de particiones especificados. Las opciones son las siguientes:
 
@@ -867,12 +867,12 @@ ROW La tabla o las particiones especificadas se comprimen utilizando la compresi
 PAGE La tabla o las particiones especificadas se comprimen utilizando la compresión de página. Esta opción no se aplica a las tablas del almacén de columnas.
 
 COLUMNSTORE  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Solo se aplica a tablas de almacén de columnas. COLUMNSTORE especifica que se descomprima una partición que se comprimió con la opción COLUMNSTORE_ARCHIVE. Cuando se restauran los datos, siguen estando comprimidos con la compresión de almacén de columnas que se usa para todas las tablas de almacén de columnas.
 
 COLUMNSTORE_ARCHIVE  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Solo se aplica a las tablas de almacén de columnas almacenadas con un índice clúster de almacén de columnas. COLUMNSTORE_ARCHIVE comprimirá aún más la partición especificada a un tamaño mínimo. Use esta opción para el archivado o para otras situaciones que requieran menos almacenamiento y en las que pueda permitirse más tiempo para el almacenamiento y recuperación.
 
@@ -891,17 +891,17 @@ Apagado
 Los bloqueos de tabla se aplican durante la operación de índice. Esto evita que todos los usuarios tengan acceso a la tabla subyacente durante la operación.
 
 *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 El nombre del conjunto de columnas. Un conjunto de columnas es una representación XML sin tipo que combina todas las columnas dispersas de una tabla en una salida estructurada. No se puede agregar un conjunto de columnas a una tabla que contenga columnas dispersas. Para obtener más información sobre los conjuntos de columnas, vea [Usar conjuntos de columnas](../../relational-databases/tables/use-column-sets.md).
 
 { ENABLE | DISABLE } FILETABLE_NAMESPACE  
- **Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores)
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores)
 
 Habilita o deshabilita las restricciones definidas por el sistema en un objeto FileTable. Solo se puede utilizar con un objeto FileTable.
 
 SET ( FILETABLE_DIRECTORY = *directory_name* )  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] no es compatible con `FILETABLE`.
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] no es compatible con `FILETABLE`.
 
 Especifica el nombre de directorio de FileTable compatible con Windows. Este nombre debe ser único entre todos los nombres de directorio de FileTable en la base de datos. La comparación de unicidad no distingue mayúsculas de minúsculas, a pesar de la configuración de intercalación de SQL. Solo se puede utilizar con un objeto FileTable.
 
@@ -915,7 +915,7 @@ Especifica el nombre de directorio de FileTable compatible con Windows. Este nom
         } )
 ```
 
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y versiones posteriores)
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y versiones posteriores)
 
 Habilita o deshabilita Stretch Database para una tabla. Para obtener más información, vea [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
@@ -923,9 +923,9 @@ Habilita o deshabilita Stretch Database para una tabla. Para obtener más inform
 
 Al habilitar Stretch para una tabla especificando `ON`, también tiene que especificar `MIGRATION_STATE = OUTBOUND` para empezar a migrar los datos inmediatamente o `MIGRATION_STATE = PAUSED` para posponer la migración de datos. El valor predeterminado es `MIGRATION_STATE = OUTBOUND`. Para más información sobre la habilitación de Stretch para una tabla, vea [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) (Habilitar Stretch Database para una tabla).
 
-**Requisitos previos** . Para poder habilitar Stretch para una tabla, primero tiene que habilitar Stretch en el servidor y en la base de datos. Para obtener más información, vea [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md) (Habilitar Stretch Database para una tabla).
+**Requisitos previos**. Para poder habilitar Stretch para una tabla, primero tiene que habilitar Stretch en el servidor y en la base de datos. Para obtener más información, vea [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md) (Habilitar Stretch Database para una tabla).
 
-**Permisos** . Para habilitar Stretch para una base de datos o una tabla se necesitan permisos db_owner. Además, para habilitar Stretch para una tabla se necesitan permisos ALTER en la tabla.
+**Permisos**. Para habilitar Stretch para una base de datos o una tabla se necesitan permisos db_owner. Además, para habilitar Stretch para una tabla se necesitan permisos ALTER en la tabla.
 
 **Deshabilitar Stretch Database para una tabla**
 
@@ -954,7 +954,7 @@ Después de deshabilitar Stretch Database para una tabla, se detiene la migraci�
 Al deshabilitar Stretch no se quita la tabla remota. Si quiere eliminar la tabla remota, tiene que quitarla mediante Azure Portal.
 
 [ FILTER_PREDICATE = { null | *predicate* } ]  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y versiones posteriores)
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y versiones posteriores)
 
 Especifica opcionalmente un predicado de filtro para seleccionar las filas que se migrarán desde una tabla que contiene datos históricos y datos actuales. El predicado debe llamar a una función determinista con valores de tabla insertada. Para obtener más información, consulte [Enable Stretch Database para una tabla](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) (Habilitar Stretch Database para una tabla) y [Seleccionar las filas que se van a migrar mediante una función de filtro (Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
 
@@ -963,10 +963,10 @@ Especifica opcionalmente un predicado de filtro para seleccionar las filas que s
 
 Si no se especifica un predicado de filtro, se migrará toda la tabla.
 
-Cuando se especifica un predicado de filtro, también hay que especificar *MIGRATION_STATE* .
+Cuando se especifica un predicado de filtro, también hay que especificar *MIGRATION_STATE*.
 
 MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y versiones posteriores)
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y versiones posteriores)
 
 - Especifique `OUTBOUND` para migrar datos de SQL Server a Azure.
 - Especifique `INBOUND` para copiar los datos remotos de la tabla de Azure a SQL Server y deshabilite Stretch para la tabla. Para obtener más información, vea [Deshabilitar Stretch Database y recuperar datos remotos](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
@@ -976,17 +976,17 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 - Especifique `PAUSED` para pausar o posponer la migración de datos. Para obtener más información, vea [Pausa y reanudación de la migración de datos (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
 WAIT_AT_LOW_PRIORITY  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Una recompilación de índices en línea tiene que esperar a las operaciones de bloqueo en esta tabla. **WAIT_AT_LOW_PRIORITY** indica que la operación de regeneración de índice en línea espera a los bloqueos de prioridad baja, de forma que otras operaciones pueden continuar mientras la operación de generación de índice en línea está en espera. Omitir la opción **WAIT AT LOW PRIORITY** equivale a `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.
 
-MAX_DURATION = *time* [ **MINUTES** ]  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+MAX_DURATION = *time* [**MINUTES** ]  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-El tiempo de espera (valor entero especificado en minutos) que **SWITCH** o los bloqueos de la operación de recompilación de índices en línea esperan con prioridad baja al ejecutar el comando DDL. Si la operación se bloquea durante el tiempo de **MAX_DURATION** , se ejecutará una de las acciones **ABORT_AFTER_WAIT** . El tiempo de **MAX_DURATION** siempre es en minutos y la palabra **MINUTES** puede omitirse.
+El tiempo de espera (valor entero especificado en minutos) que **SWITCH** o los bloqueos de la operación de recompilación de índices en línea esperan con prioridad baja al ejecutar el comando DDL. Si la operación se bloquea durante el tiempo de **MAX_DURATION**, se ejecutará una de las acciones **ABORT_AFTER_WAIT**. El tiempo de **MAX_DURATION** siempre es en minutos y la palabra **MINUTES** puede omitirse.
 
-ABORT_AFTER_WAIT = [ **NONE** | **SELF** | **BLOCKERS** } ]  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Ninguno  
 Se continúa esperando al bloqueo con prioridad normal.
@@ -997,10 +997,10 @@ Sale de la operación DDL **SWITCH** o regeneración de índices en línea que s
 BLOCKERS  
 Elimina todas las transacciones de usuario que están bloqueando la operación DDL **SWITCH** o la regeneración de índices en línea de forma que la operación pueda continuar.
 
-Requiere el permiso **ALTER ANY CONNECTION** .
+Requiere el permiso **ALTER ANY CONNECTION**.
 
 IF EXISTS  
-**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Quita condicionalmente la columna o restricción solo si ya existe.
 
@@ -1012,7 +1012,7 @@ Si hubiera algún plan de ejecución en la memoria caché del procedimiento que 
 
 ## <a name="changing-the-size-of-a-column"></a>Cambiar el tamaño de una columna
 
-Puede cambiar la longitud, precisión o escala de una columna especificando un nuevo tamaño para el tipo de datos de columna. Utilice la cláusula ALTER COLUMN. Si hay datos en la columna, el nuevo tamaño no puede ser menor que el tamaño máximo de los datos. Asimismo, no puede definir la columna en un índice, a menos que sea de un tipo de datos **varchar** , **nvarchar** o **varbinary** , y el índice no sea el resultado de una restricción KEY PRIMARY. Vea el ejemplo en la breve sección titulada [Modificación de una definición de columna](#alter_column).
+Puede cambiar la longitud, precisión o escala de una columna especificando un nuevo tamaño para el tipo de datos de columna. Utilice la cláusula ALTER COLUMN. Si hay datos en la columna, el nuevo tamaño no puede ser menor que el tamaño máximo de los datos. Asimismo, no puede definir la columna en un índice, a menos que sea de un tipo de datos **varchar**, **nvarchar** o **varbinary**, y el índice no sea el resultado de una restricción KEY PRIMARY. Vea el ejemplo en la breve sección titulada [Modificación de una definición de columna](#alter_column).
 
 ## <a name="locks-and-alter-table"></a>Bloqueos y ALTER TABLE
 
@@ -1020,11 +1020,11 @@ Los cambios que especifique en ALTER TABLE se implementan inmediatamente. Si los
 
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>Agregar columnas NOT NULL como una operación en línea
 
-A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition, agregar una columna NOT NULL con un valor predeterminado es una operación en línea cuando el valor predeterminado es una *constante de tiempo de ejecución* . Esto significa que la operación se ha completado de forma casi instantánea, a pesar del número de filas de la tabla. Esto se debe a que las filas existentes en la tabla no se actualizan durante la operación. En su lugar, el valor predeterminado se almacena únicamente en los metadatos de la tabla y el valor se busca según sea necesario en las consultas que tienen acceso a estas filas. Este comportamiento es automático. No se requiere sintaxis adicional alguna para implementar la operación en línea aparte de la sintaxis de COLUMN ADD. Una constante de tiempo de ejecución es una expresión que genera el mismo valor en tiempo de ejecución para cada fila de la tabla, a pesar de su determinismo. Por ejemplo, la expresión constante “mis datos temporales” o la función del sistema GETUTCDATETIME() son constantes de tiempo de ejecución. En cambio, las funciones `NEWID()` o `NEWSEQUENTIALID()` no son constantes de tiempo de ejecución porque se genera un valor único para cada fila de la tabla. Cuando se agrega una columna NOT NULL con un valor predeterminado que no es una constante de tiempo de ejecución, se ejecuta siempre sin conexión y se adquiere un bloqueo exclusivo (SCH-M) mientras dura la operación.
+A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition, agregar una columna NOT NULL con un valor predeterminado es una operación en línea cuando el valor predeterminado es una *constante de tiempo de ejecución*. Esto significa que la operación se ha completado de forma casi instantánea, a pesar del número de filas de la tabla. Esto se debe a que las filas existentes en la tabla no se actualizan durante la operación. En su lugar, el valor predeterminado se almacena únicamente en los metadatos de la tabla y el valor se busca según sea necesario en las consultas que tienen acceso a estas filas. Este comportamiento es automático. No se requiere sintaxis adicional alguna para implementar la operación en línea aparte de la sintaxis de COLUMN ADD. Una constante de tiempo de ejecución es una expresión que genera el mismo valor en tiempo de ejecución para cada fila de la tabla, a pesar de su determinismo. Por ejemplo, la expresión constante “mis datos temporales” o la función del sistema GETUTCDATETIME() son constantes de tiempo de ejecución. En cambio, las funciones `NEWID()` o `NEWSEQUENTIALID()` no son constantes de tiempo de ejecución porque se genera un valor único para cada fila de la tabla. Cuando se agrega una columna NOT NULL con un valor predeterminado que no es una constante de tiempo de ejecución, se ejecuta siempre sin conexión y se adquiere un bloqueo exclusivo (SCH-M) mientras dura la operación.
 
 Mientras que las filas existentes hacen referencia al valor almacenado en los metadatos, el valor predeterminado se almacena en la fila para aquellas filas nuevas que se inserten y que no especifiquen otro valor para la columna. El valor predeterminado que se almacena en los metadatos se traslada a una fila existente cuando se actualiza la fila (aunque la columna real no se especifique en la instrucción UPDATE) o bien, si la tabla o el índice agrupado se vuelve a generar.
 
-Las columnas de tipo **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** , **text** , **ntext** , **image** , **hierarchyid** , **geometry** , **geography** o CLR UDTS no se pueden agregar en una operación en línea. Una columna no se puede agregar en línea si al hacerlo provoca que el tamaño máximo posible de fila supere el límite de 8.060 bytes. En este caso, la columna se agrega como una operación sin conexión.
+Las columnas de tipo **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** o CLR UDTS no se pueden agregar en una operación en línea. Una columna no se puede agregar en línea si al hacerlo provoca que el tamaño máximo posible de fila supere el límite de 8.060 bytes. En este caso, la columna se agrega como una operación sin conexión.
 
 ## <a name="parallel-plan-execution"></a>Ejecutar planes paralelos
 
@@ -1088,7 +1088,7 @@ Al quitar las columnas NTEXT, la limpieza de los datos eliminados se produce com
 
 ## <a name="online-index-rebuild"></a>Volver a generar índice en línea
 
-Para ejecutar la instrucción DDL a fin de regenerar el índice en línea, todas las transacciones activas de bloqueo que se ejecutan en una tabla determinada deben completarse. Cuando la regeneración de índice en línea se inicia, bloquea todas las nuevas transacciones que están listas para iniciar la ejecución en esta tabla. Aunque la vigencia del bloqueo para volver a generar el índice en línea es muy corta, si se espera a que las transacciones abiertas en una tabla dada se completen y se bloquean las nuevas transacciones que se inician, se podría afectar significativamente al rendimiento. Esto puede provocar un retraso o un tiempo de espera en la carga de trabajo y limitar mucho el acceso a la tabla base. Con la opción **WAIT_AT_LOW_PRIORITY** , el DBA puede administrar los bloqueos S-lock y Sch-M necesarios para las regeneraciones de índice en línea y seleccionar una de las tres opciones. En los tres casos, si durante el tiempo de espera (`(MAX_DURATION =n [minutes])`) no hay actividades de bloqueo, la regeneración de índice en línea se ejecuta inmediatamente sin esperar y la instrucción DDL se completa.
+Para ejecutar la instrucción DDL a fin de regenerar el índice en línea, todas las transacciones activas de bloqueo que se ejecutan en una tabla determinada deben completarse. Cuando la regeneración de índice en línea se inicia, bloquea todas las nuevas transacciones que están listas para iniciar la ejecución en esta tabla. Aunque la vigencia del bloqueo para volver a generar el índice en línea es muy corta, si se espera a que las transacciones abiertas en una tabla dada se completen y se bloquean las nuevas transacciones que se inician, se podría afectar significativamente al rendimiento. Esto puede provocar un retraso o un tiempo de espera en la carga de trabajo y limitar mucho el acceso a la tabla base. Con la opción **WAIT_AT_LOW_PRIORITY**, el DBA puede administrar los bloqueos S-lock y Sch-M necesarios para las regeneraciones de índice en línea y seleccionar una de las tres opciones. En los tres casos, si durante el tiempo de espera (`(MAX_DURATION =n [minutes])`) no hay actividades de bloqueo, la regeneración de índice en línea se ejecuta inmediatamente sin esperar y la instrucción DDL se completa.
 
 ## <a name="compatibility-support"></a>Soporte de compatibilidad
 
@@ -1253,7 +1253,7 @@ GO
 
 En el ejemplo siguiente se crea la restricción PRIMARY KEY `PK_TransactionHistoryArchive_TransactionID` y se establecen las opciones `FILLFACTOR`, `ONLINE` y `PAD_INDEX`. El índice clúster resultante tendrá el mismo nombre que la restricción.
 
-**Se aplica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 USE AdventureWorks;
@@ -1456,7 +1456,7 @@ GO
 
 #### <a name="b-changing-the-size-of-a-column"></a>B. Cambiar el tamaño de una columna
 
-En el ejemplo siguiente se aumenta el tamaño de una columna **varchar** y la precisión y la escala de una columna **decimal** . Dado que las columnas contienen datos, solo se puede aumentar el tamaño de columna. Observe también que `col_a` se define en un índice único. Aún se puede aumentar el tamaño de `col_a` porque el tipo de datos es **varchar** y el índice no es el resultado de una restricción KEY PRIMARY.
+En el ejemplo siguiente se aumenta el tamaño de una columna **varchar** y la precisión y la escala de una columna **decimal**. Dado que las columnas contienen datos, solo se puede aumentar el tamaño de columna. Observe también que `col_a` se define en un índice único. Aún se puede aumentar el tamaño de `col_a` porque el tipo de datos es **varchar** y el índice no es el resultado de una restricción KEY PRIMARY.
 
 ```sql
 -- Create a two-column table with a unique index on the varchar column.
@@ -1546,7 +1546,7 @@ REBUILD WITH (DATA_COMPRESSION = PAGE) ;
 
 En el ejemplo siguiente se cambia la compresión de una tabla con particiones. La sintaxis `REBUILD PARTITION = 1` hace que solo se vuelva a generar la partición número `1`.
 
-**Se aplica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 ALTER TABLE PartitionTable1
@@ -1556,7 +1556,7 @@ GO
 
 La misma operación que utiliza la sintaxis alternativa siguiente hace que se vuelvan a generar todas las particiones de la tabla.
 
-**Se aplica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 ALTER TABLE PartitionTable1
@@ -1570,7 +1570,7 @@ Para obtener más ejemplos de compresión de datos, vea [Compresión de datos](.
 
 En el ejemplo siguiente se comprime aún más una partición de tabla de almacén de columnas aplicando un algoritmo de compresión adicional. Esta compresión reduce la tabla a un tamaño mínimo, pero también aumenta el tiempo necesario para el almacenamiento y la recuperación. Esto resulta útil para el archivado o para otras situaciones que requieran menos espacio y en las que pueda permitirse más tiempo para el almacenamiento y recuperación.
 
-**Se aplica a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 ALTER TABLE PartitionTable1
@@ -1580,7 +1580,7 @@ GO
 
 En el siguiente ejemplo se descomprime una partición de tabla de almacén de columnas que se comprimió con la opción COLUMNSTORE_ARCHIVE. Cuando se restauran los datos, seguirán estando comprimidos con la compresión de almacén de columnas que se usa para todas las tablas de almacén de columnas.
 
-**Se aplica a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 ALTER TABLE PartitionTable1
@@ -1607,7 +1607,7 @@ GO
 
 En el ejemplo siguiente se habilita la extensión de bloqueo al nivel de partición en una tabla con particiones. Si la tabla no tiene particiones, la extensión de bloqueo se establece en el nivel TABLE.
 
-**Se aplica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 ALTER TABLE dbo.T1 SET (LOCK_ESCALATION = AUTO) ;
@@ -1618,7 +1618,7 @@ GO
 
 En el ejemplo siguiente se habilita el seguimiento de cambios en la tabla `Person.Person`.
 
-**Se aplica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 USE AdventureWorks;
@@ -1640,7 +1640,7 @@ WITH (TRACK_COLUMNS_UPDATED = ON)
 
 En el ejemplo siguiente se deshabilita el seguimiento de cambios en la tabla `Person.Person`.
 
-**Se aplica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 USE AdventureWorks;
@@ -1721,7 +1721,7 @@ GO
 
 En el ejemplo siguiente se muestra cómo realizar una regeneración de índice en línea que especifica las opciones de espera de prioridad baja.
 
-**Se aplica a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 ALTER TABLE T1
@@ -1737,7 +1737,7 @@ REBUILD WITH
 
 En el ejemplo siguiente se muestra cómo ejecutar una operación de alteración de columna con la opción ONLINE.
 
-**Se aplica a** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 CREATE TABLE dbo.doc_exy (column_a INT) ;
@@ -1756,7 +1756,7 @@ GO
 
 Los cuatro ejemplos siguientes le ayudarán a familiarizarse con la sintaxis para usar el control de versiones del sistema. Para obtener más ayuda, consulte [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md).
 
-**Se aplica a** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 #### <a name="a-add-system-versioning-to-existing-tables"></a>A. Agregar el control de versiones del sistema a las tablas existentes
 

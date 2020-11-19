@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 80f1dedefc2808da0c32eaee2d559496defca051
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: fdabd19b81a880c0969cc6359c703cd156a03fab
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115808"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521127"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Introducción al trasvase de registros en Linux
 
@@ -20,8 +20,7 @@ ms.locfileid: "92115808"
 
 El trasvase de registros de SQL Server es una configuración de alta disponibilidad donde una base de datos de un servidor principal se replica en uno o varios servidores secundarios. En pocas palabras, se restaura una copia de seguridad de la base de datos de origen en el servidor secundario. Después, el servidor principal crea copias de seguridad del registro de transacciones periódicamente y los servidores secundarios las restauran, lo que actualiza la copia secundaria de la base de datos. 
 
-  ![Trasvase de registros](https://preview.ibb.co/hr5Ri5/logshipping.png)
-
+  ![Diagrama en el que se muestra el flujo de trabajo de trasvase de registros.](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 Tal y como se describe en esta imagen, una sesión de trasvase de registros consta de los siguientes pasos:
 

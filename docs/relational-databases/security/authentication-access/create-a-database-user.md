@@ -25,12 +25,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f74a4cb83db387bf0251a3dc6be7c07c06d8dce2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c18c98192c2806f0b946e5025127151c68009682
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005689"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521182"
 ---
 # <a name="create-a-database-user"></a>Crear un usuario de base de datos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "86005689"
 ##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> Descripción de los tipos de usuarios  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ofrece 6 opciones a la hora de crear un usuario de base de datos. En el gráfico siguiente se muestran las 6 opciones en el recuadro verde y se indica lo que representan.  
   
- ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
+ ![Diagrama en el que se explican los diferentes tipos de usuarios.](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
 ### <a name="selecting-the-type-of-user"></a>Seleccionar el tipo de usuario  
  **Credenciales de inicio de sesión o usuario no asignado a un inicio de sesión**  
@@ -51,7 +51,7 @@ ms.locfileid: "86005689"
   
  Si la persona o el grupo que necesita tener acceso a la base de datos no tiene credenciales de inicio de sesión y solo necesita tener acceso a una o a pocas bases de datos, cree un **usuario de Windows** o un **usuario SQL con contraseña**. También se denomina "usuario de base de datos independiente" y no está asociado con un inicio de sesión en la base de datos maestra. Se trata de una excelente opción si quiere mover fácilmente su base de datos entre instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para usar esta opción en [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], es necesario que un administrador habilite las bases de datos independientes para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]y que la base de datos esté habilitada para la contención. Para obtener más información, vea [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-> **IMPORTANTE:** Al conectarse como un usuario de base de datos independiente, debe proporcionar el nombre de la base de datos como parte de la cadena de conexión. Para especificar la base de datos en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], en el cuadro de diálogo **Conectar a** , haga clic en **Opciones**y en la pestaña **Propiedades de la conexión** .  
+> **IMPORTANTE:** Al conectarse como un usuario de base de datos independiente, debe proporcionar el nombre de la base de datos como parte de la cadena de conexión. Para especificar la base de datos en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], en el cuadro de diálogo **Conectar a** , haga clic en **Opciones** y en la pestaña **Propiedades de la conexión** .  
   
  Seleccione **Usuario SQL con contraseña** o **Usuario SQL con inicio de sesión** basado en un **SQL Server authentication login**(Inicio de sesión de autenticación de SQL Server) cuando la persona que se conecta no pueda autenticarse con Windows. Esto suele ocurrir cuando se conectan a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]personas de fuera de su organización (por ejemplo, clientes).  
   
@@ -96,7 +96,7 @@ ms.locfileid: "86005689"
      Escriba un nombre para el nuevo usuario. Si ha elegido **Usuario de Windows** en la lista **Tipo de usuario**, también puede hacer clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccione Usuario o Grupo**.  
   
      **Nombre de inicio de sesión**  
-     Especifique el inicio de sesión del usuario. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión**. Si selecciona**Usuario SQL con inicio de sesión** o **Usuario de Windows** en la lista **Tipo de usuario** , estará disponible **Nombre de inicio de sesión** .  
+     Especifique el inicio de sesión del usuario. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión**. Si selecciona **Usuario SQL con inicio de sesión** o **Usuario de Windows** en la lista **Tipo de usuario** , estará disponible **Nombre de inicio de sesión** .  
   
      **Contraseña** y **Confirmar contraseña**  
      Escriba una contraseña para los usuarios que se autentican en la base de datos.  
@@ -105,13 +105,13 @@ ms.locfileid: "86005689"
      Escriba el idioma predeterminado del usuario.  
   
      **Esquema predeterminado**  
-     Escriba el esquema al que pertenecerán los objetos creados por este usuario. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar esquema**. Si selecciona**Usuario SQL con inicio de sesión** , **Usuario SQL sin inicio de sesión**, **Usuario de Windows**en la lista **Tipo de usuario** , estará disponible **Esquema predeterminado** .  
+     Escriba el esquema al que pertenecerán los objetos creados por este usuario. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar esquema**. Si selecciona **Usuario SQL con inicio de sesión** , **Usuario SQL sin inicio de sesión**, **Usuario de Windows** en la lista **Tipo de usuario** , estará disponible **Esquema predeterminado** .  
   
      **Nombre de certificado**  
-     Escriba el certificado que se usará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar certificado**. Si selecciona**Usuario asignado a un certificado** en la lista **Tipo de usuario** , estará disponible **Nombre de certificado** .  
+     Escriba el certificado que se usará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar certificado**. Si selecciona **Usuario asignado a un certificado** en la lista **Tipo de usuario** , estará disponible **Nombre de certificado** .  
   
      **Nombre de clave asimétrica**  
-     Escriba la clave que se usará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar clave asimétrica**. Si selecciona**Usuario asignado a una clave asimétrica** en la lista **Tipo de usuario** , estará disponible **Nombre de clave asimétrica** .  
+     Escriba la clave que se usará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar clave asimétrica**. Si selecciona **Usuario asignado a una clave asimétrica** en la lista **Tipo de usuario** , estará disponible **Nombre de clave asimétrica** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

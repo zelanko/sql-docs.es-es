@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 6d3a6d83b14c401ca6fc7ff6c773ef9565662a0f
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 11ac66182122cba239634cdf07f4b6683d2479cb
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115476"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674182"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Ediciones y características admitidas de SQL Server 2017 en Linux
 
@@ -210,6 +210,7 @@ Para obtener información sobre las características de Integration Services (SS
 |Tipos de datos planares y geodésicos|Sí|Sí|Sí|Sí| 
 |Bibliotecas espaciales avanzadas|Sí|Sí|Sí|Sí|   
 |Importación y exportación de formatos de datos espaciales estándar del sector|Sí|Sí|Sí|Sí|   
+
 ## <a name="unsupported-features--services"></a><a name="Unsupported"></a> Características y servicios no admitidos
 
 Las siguientes características y servicios no están disponibles para SQL Server 2017 en Linux. La compatibilidad de estas características se incrementará con el tiempo.
@@ -225,6 +226,7 @@ Las siguientes características y servicios no están disponibles para SQL Serv
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | Ensamblados de CLR con el conjunto de permisos EXTERNAL_ACCESS o UNSAFE |
 | &nbsp; | Buffer Pool Extension |
+| &nbsp; | Copia de seguridad en URL: blob en páginas <sup>1</sup>|
 | **Agente SQL Server** |  Subsistemas: CmdExec, PowerShell, Agente de lectura de cola, SSIS, SSAS, SSRS |
 | &nbsp; | Alertas |
 | &nbsp; | Agente de registro del LOG |
@@ -241,6 +243,8 @@ Las siguientes características y servicios no están disponibles para SQL Serv
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
   
+<sup>1</sup> La copia de seguridad en URL es compatible con los blobs en bloques, mediante la [firma de acceso compartido](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
+
 ## <a name="next-steps"></a>Pasos siguientes
  [Ediciones y características admitidas de SQL Server 2019 en Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Ediciones y características admitidas de SQL Server 2017 en Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  

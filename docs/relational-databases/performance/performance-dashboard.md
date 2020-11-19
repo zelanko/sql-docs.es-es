@@ -2,7 +2,7 @@
 title: Panel de rendimiento | Microsoft Docs
 description: Obtenga más información sobre el panel de rendimiento de SQL Server Management Studio, que proporciona información rápida sobre SQL Server y Azure SQL Managed Instance.
 ms.custom: ''
-ms.date: 12/14/2019
+ms.date: 11/13/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 61abc33a31948bca020f4a6cf7c9539ae0546af5
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 45b657be3cef9267431892eeced327e966b97b7d
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863400"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674201"
 ---
 # <a name="performance-dashboard"></a>Panel de rendimiento
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,8 +78,9 @@ En el informe **Esperas** se filtran todas las esperas inactivas y en suspensió
 
 Los informes **Consultas que consumen muchos recursos** se restablecen cuando se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque se borran los datos de las DMV subyacentes. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede encontrar información detallada sobre las consultas que consumen muchos recursos en el Almacén de consultas. 
 
+
 > [!NOTE]
-> El panel de rendimiento se publicó inicialmente como una descarga independiente para [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) y después se actualizó para [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063).
+> El panel de rendimiento se publicó inicialmente como una descarga independiente para [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) y después se actualizó para [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063). Aunque el representador de informes SQL Server Management Studio no admite que el Portapapeles acceda al texto contenido en los informes, se puede acceder al texto mediante los informes independientes.  Descargue los informes de independiente si necesita copiar el texto de la consulta de los informes.
 
 ## <a name="permissions"></a>Permisos  
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requiere los permisos `VIEW SERVER STATE` y `ALTER TRACE`. En [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.

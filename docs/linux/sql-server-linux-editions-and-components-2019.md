@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 1c196ea3219f4bdbad2e4001240f754b106e3917
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f208b424272644f3d66146014401a1343f00e576
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115429"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674211"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Ediciones y características admitidas de SQL Server 2019 en Linux
 
@@ -225,6 +225,7 @@ Las siguientes características y servicios no están disponibles para SQL Serv
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | Ensamblados de CLR con el conjunto de permisos EXTERNAL_ACCESS o UNSAFE |
 | &nbsp; | Buffer Pool Extension |
+| &nbsp; | Copia de seguridad en URL: blob en páginas <sup>2</sup> |
 | **Agente SQL Server** |  Subsistemas: CmdExec, PowerShell, Agente de lectura de cola, SSIS, SSAS, SSRS |
 | &nbsp; | Alertas |
 | &nbsp; | Copia de seguridad administrada |
@@ -241,7 +242,9 @@ Las siguientes características y servicios no están disponibles para SQL Serv
 | &nbsp; | Master Data Services |
 
 <sup>1</sup> SQL Server R es compatible con SQL Server, pero SQL Server R Services como paquete independiente no lo es.
-  
+
+<sup>2</sup> La copia de seguridad en URL es compatible con los blobs en bloques, mediante la [firma de acceso compartido](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
+
 ## <a name="next-steps"></a>Pasos siguientes
  [Características compatibles con las ediciones de SQL Server 2017 en Linux](sql-server-linux-editions-and-components-2017.md)  
  [Ediciones y características admitidas de SQL Server 2019 en Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  

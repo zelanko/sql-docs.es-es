@@ -1,6 +1,6 @@
 ---
 title: MSSQLSERVER_233 | Microsoft Docs
-description: El cliente de SQL Server no se puede conectar al servidor. Vea una explicación del error y las posibles resoluciones.
+description: El cliente de SQL Server no se puede conectar al servidor. Vea una explicación del error 233 y las posibles resoluciones.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 201665dc-7ac8-4c19-90d3-33354c5caa72
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87c312289b9a2a8ed7e0ae9d97a4993121772721
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf1a3e2f94c221caa4b70105aaccc331c6082b97
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780469"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521079"
 ---
 # <a name="mssqlserver_233"></a>MSSQLSERVER_233
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

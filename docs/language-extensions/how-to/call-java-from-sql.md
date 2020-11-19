@@ -5,16 +5,16 @@ description: Obtenga información sobre cómo llamar clases de Java desde proced
 author: dphansen
 ms.author: davidph
 ms.date: 06/25/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 901410fb36080d39436a3a908a0ffd9260c5b513
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: c4d12382cf1e498b33f202bb1b775ba63458a5a5
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765801"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870196"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>Procedimiento para llamar al tiempo de ejecución de Java en las extensiones de lenguaje de SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]

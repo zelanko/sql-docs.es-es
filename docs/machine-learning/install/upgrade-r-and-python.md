@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/30/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 2036fda1d483bdfb04a205f5a2e3bf6d86119b1b
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 3263723e04834e5b0a6bad86455f281fe643e083
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956734"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870464"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>Actualización del entorno de ejecución de Python y R con enlace en SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
@@ -140,7 +140,7 @@ Siga los pasos para enlazar SQL Server a Microsoft Machine Learning Server med
 
 1. En **Configurar la instalación**, confirme los componentes que se van a actualizar y revise la lista de instancias compatibles.
 
-1. En la página**Contrato de licencia**, seleccione **Acepto estos términos** para aceptar los términos de licencia de Machine Learning Server. 
+1. En la página **Contrato de licencia**, seleccione **Acepto estos términos** para aceptar los términos de licencia de Machine Learning Server. 
 
 1. En las páginas sucesivas, dé su consentimiento a otras condiciones de licencia para cualquier componente de código abierto que seleccione, como Microsoft R Open o la distribución Anaconda de Python.
 

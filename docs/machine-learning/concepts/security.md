@@ -7,15 +7,14 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f51998b722748bdfe51b773e251de88c8cac07a2
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: eb5ab3d1f6408bb63d194b964626bf303ba9e249
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956537"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870023"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Arquitectura de seguridad del marco de extensibilidad en SQL Server Machine Learning Services
 
@@ -77,7 +76,7 @@ Por lo tanto, todos los scripts externos que se inician desde un cliente remoto 
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Servicios usados en el procesamiento externo (launchpad)
 
-El marco de extensibilidad agrega un nuevo servicio NT a la [lista de servicios](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) en una instalación de SQL Server: [**SQL Server Launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+El marco de extensibilidad agrega un nuevo servicio NT a la [lista de servicios](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) en una instalación de SQL Server: [**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 El motor de base de datos usa el servicio **launchpad** de SQL Server para crear instancias de una sesión de scripts externos como un proceso independiente. 
 El proceso se ejecuta con una cuenta con pocos privilegios diferente a SQL Server, Launchpad y la identidad del usuario en la que se ha ejecutado el procedimiento almacenado o la consulta de host. La ejecución de un script en un proceso independiente, en una cuenta con pocos privilegios, es la base del modelo de aislamiento y seguridad para los scripts externos en SQL Server.
@@ -93,7 +92,7 @@ SQL Server también mantiene una asignación de la identidad del usuario que re
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Servicios usados en el procesamiento externo (launchpad)
 
-El marco de extensibilidad agrega un nuevo servicio NT a la [lista de servicios](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) en una instalación de SQL Server: [**SQL Server Launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+El marco de extensibilidad agrega un nuevo servicio NT a la [lista de servicios](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) en una instalación de SQL Server: [**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 El motor de base de datos usa el servicio **launchpad** de SQL Server para crear instancias de una sesión de scripts externos como un proceso independiente. 
 El proceso se ejecuta con la identidad de usuario de launchpad, pero con la restricción agregada de estar contenida dentro de un objeto AppContainer. La ejecución de un script en un proceso independiente, bajo AppContainer, es la base del modelo de aislamiento y seguridad para los script externos en SQL Server.
@@ -129,7 +128,7 @@ Para obtener más información, vea [Arquitectura de extensibilidad en SQL Serv
 
 + El tamaño del grupo de cuentas de usuario es estático y el valor predeterminado es 20, que admite 20 sesiones simultáneas. El número de sesiones del runtime externas que se puede iniciar de forma simultánea está limitado por el tamaño de este grupo de cuentas de usuario. 
 
-+ Los nombres de las cuentas profesionales del bloque presentan el formato SQLInstanceName*nn*. Por ejemplo, en una instancia predeterminada, **SQLRUserGroup** contiene las cuentas denominadas MSSQLSERVER01, MSSQLSERVER02 y así sucesivamente hasta MSSQLSERVER20.
++ Los nombres de las cuentas profesionales del bloque presentan el formato SQLInstanceName *nn*. Por ejemplo, en una instancia predeterminada, **SQLRUserGroup** contiene las cuentas denominadas MSSQLSERVER01, MSSQLSERVER02 y así sucesivamente hasta MSSQLSERVER20.
 
 Las tareas en paralelo no consumen cuentas adicionales. Por ejemplo, si un usuario ejecuta una tarea de puntuación que utiliza el procesamiento en paralelo, se reutiliza la misma cuenta de trabajo para todos los subprocesos. Si piensa hacer un uso intensivo del aprendizaje automático, puede aumentar el número de cuentas que se usan para ejecutar scripts externos. Para obtener más información, vea [Escalar la ejecución simultánea de scripts externos en SQL Server Machine Learning Services](../../machine-learning/administration/scale-concurrent-execution-external-scripts.md).
 

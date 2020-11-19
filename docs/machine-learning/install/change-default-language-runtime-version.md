@@ -8,14 +8,13 @@ ms.date: 08/14/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: d730ead0a11c240284ecb9a902a90eaedc5b1bb6
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: 457d728bd0e4abb5c2cf70063c0330924104c482
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009371"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869989"
 ---
 # <a name="change-the-default-r-or-python-language-runtime-version"></a>Cambio de la versión predeterminada del entorno de ejecución del lenguaje R o Python
 

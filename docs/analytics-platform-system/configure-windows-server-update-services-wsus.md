@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e6242699ac8a4079ddd2811c016ba8a1969e448e
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 06ac0126bb12668654c04e6a82b20ca551dd925e
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947957"
+ms.locfileid: "94983066"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configuración de Windows Server Update Services (WSUS) en Analytics Platform System
 Estas instrucciones le guiarán por los pasos necesarios para usar el Asistente para configuración de Windows Server Update Services (WSUS) para configurar WSUS para el sistema de plataforma de análisis. Debe configurar WSUS para poder aplicar actualizaciones de software al dispositivo. WSUS ya está instalado en la máquina virtual de VMM del dispositivo.  
@@ -156,7 +156,7 @@ Para configurar WSUS, debe:
   
     Seleccione **actualizaciones críticas**, **actualizaciones de seguridad** y **paquetes acumulativos** de actualizaciones para las actualizaciones que se van a sincronizar para el dispositivo de sistema de plataforma de análisis y, a continuación, haga clic en **siguiente**.  
   
-    ![Elegir clasificaciones](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![Elegir clasificaciones](./media/configure-windows-server-update-services-wsus/sql-server-pdw-wsus-choose-classifications.png "SQL Server-PDW-WSUS-Choose-clasificaciones")  
   
 10. Configure la programación de sincronización.  
   

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5f336c3c2c475523d2081bcf01189e67b77fe19
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401190"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947920"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Descargar y aplicar actualizaciones de Microsoft para el sistema de plataforma de análisis
 En este tema se describe cómo descargar actualizaciones del catálogo de Microsoft Update a Windows Server Update Services (WSUS) y cómo aplicarlas a los servidores del dispositivo de análisis de plataforma. Microsoft Update instalará todas las actualizaciones aplicables para Windows y SQL Server. WSUS está instalado en la máquina virtual de VMM del dispositivo.  
@@ -26,7 +26,7 @@ En este tema se describe cómo descargar actualizaciones del catálogo de Micros
 >   
 > No aplique actualizaciones de Microsoft mientras el dispositivo esté en uso. La aplicación de actualizaciones puede hacer que los nodos del dispositivo se reinicien. Las actualizaciones deben aplicarse durante una ventana de mantenimiento cuando no se usa el dispositivo.  
   
-### <a name="prerequisites"></a>Prerrequisitos  
+### <a name="prerequisites"></a>Requisitos previos  
 Antes de realizar estos pasos, debe hacer lo siguiente:  
   
 -   Configure WSUS en el dispositivo siguiendo las instrucciones de [configuración de Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
@@ -63,9 +63,11 @@ Antes de realizar estos pasos, debe hacer lo siguiente:
   
 #### <a name="approve-microsoft-updates-in-wsus"></a>Aprobar actualizaciones de Microsoft en WSUS  
   
-1.  En el panel izquierdo de la consola de WSUS, haga clic en **todas las actualizaciones**.  
+1. Rechazar los paquetes acumulativos de actualizaciones que no sean de **System Center**.
+
+2. En el panel izquierdo de la consola de WSUS, haga clic en **todas las actualizaciones**.  
   
-2.  En el panel **todas las actualizaciones** , haga clic en el menú desplegable **aprobación** , establezca **aprobación** en **cualquiera excepto rechazado**. Haga clic en el menú desplegable **Estado** y establezca **Estado** en **cualquiera**. Haga clic en **Actualizar**.  
+3.  En el panel **todas las actualizaciones** , haga clic en el menú desplegable **aprobación** , establezca **aprobación** en **cualquiera excepto rechazado**. Haga clic en el menú desplegable **Estado** y establezca **Estado** en **cualquiera**. Haga clic en **Actualizar**.  
   
     Haga clic con el botón derecho en la columna **título** y seleccione **Estado del archivo** para comprobar el estado del archivo una vez completada la descarga.  
   
@@ -73,19 +75,19 @@ Antes de realizar estos pasos, debe hacer lo siguiente:
   
     ![Seleccione todas las actualizaciones y cambie el estado a Cualquiera.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectAllUpdates.png "SQL_Server_PDW_WSUSSelectAllUpdates")  
   
-3.  Seleccione todas las actualizaciones y, a continuación, haga clic en el vínculo **aprobar** en el panel derecho.  
+4.  Seleccione todas las actualizaciones y, a continuación, haga clic en el vínculo **aprobar** en el panel derecho.  
   
     También puede hacer clic con el botón secundario en las actualizaciones seleccionadas y, a continuación, hacer clic en **aprobar**. Es posible que se le pida que acepte los términos de licencia del software de Microsoft. Si es así, **haga clic en Acepto en** la ventana para continuar.  
   
     ![Seleccione todas las actualizaciones aplicables y haga clic en Aprobar.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
-4.  Seleccione el grupo de servidores de dispositivo que creó en [configurar Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
+5.  Seleccione el grupo de servidores de dispositivo que creó en [configurar Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
   
-5.  Haga clic en **Aprobada para su instalación**y, a continuación, en **Aceptar**.  
+6.  Haga clic en **Aprobada para su instalación** y, a continuación, en **Aceptar**.  
   
     ![Aprobar actualizaciones para el grupo de equipos.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
   
-6.  En el cuadro de diálogo progreso de la **aprobación** , cuando se complete el proceso de aprobación, haga clic en **cerrar**.  
+7.  En el cuadro de diálogo progreso de la **aprobación** , cuando se complete el proceso de aprobación, haga clic en **cerrar**.  
   
     ![Cerrar ventana una vez aprobadas las actualizaciones](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSCloseApprovalProgressWindow.png "SQL_Server_PDW_WSUSCloseApprovalProgressWindow")  
   
@@ -123,7 +125,7 @@ Antes de realizar estos pasos, debe hacer lo siguiente:
   
 5.  En el menú desplegable **Estado** , seleccione **cualquiera** y haga clic en **Actualizar**.  
   
-6.  Expanda **servicios**de *<appliance name>* actualización,-VMM, **actualizaciones**, **todas las actualizaciones**, donde *<appliance name>* es el nombre del dispositivo.  
+6.  Expanda **servicios de actualización**, *<appliance name>* -VMM, **actualizaciones**, **todas las actualizaciones**, donde *<appliance name>* es el nombre del dispositivo.  
   
 7.  En la ventana **todas las actualizaciones** , establezca **aprobación** en **cualquiera, excepto rechazado**.  
   

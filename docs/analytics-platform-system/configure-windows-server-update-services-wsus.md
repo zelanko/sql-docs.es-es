@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6882700208e165464261f236cadd00b30503b81f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: e6242699ac8a4079ddd2811c016ba8a1969e448e
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379583"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947957"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configuración de Windows Server Update Services (WSUS) en Analytics Platform System
 Estas instrucciones le guiarán por los pasos necesarios para usar el Asistente para configuración de Windows Server Update Services (WSUS) para configurar WSUS para el sistema de plataforma de análisis. Debe configurar WSUS para poder aplicar actualizaciones de software al dispositivo. WSUS ya está instalado en la máquina virtual de VMM del dispositivo.  
@@ -39,7 +39,7 @@ Para configurar WSUS, debe:
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>Para configurar Windows Server Update Services (WSUS)  
   
-1.  Inicie sesión en la **consola de administración**de. En la pestaña **Estado del dispositivo** , compruebe que las columnas **clúster** y **red** muestran el color verde (o **na**) de todos los nodos. Compruebe los indicadores de estado de todos los nodos en el **Estado del dispositivo**.  
+1.  Inicie sesión en la **consola de administración** de. En la pestaña **Estado del dispositivo** , compruebe que las columnas **clúster** y **red** muestran el color verde (o **na**) de todos los nodos. Compruebe los indicadores de estado de todos los nodos en el **Estado del dispositivo**.  
   
     -   Es seguro continuar con los indicadores verde o NA.  
   
@@ -69,7 +69,7 @@ Para configurar WSUS, debe:
   
         ![WSUS - Antes de empezar](./media/configure-windows-server-update-services-wsus/WSUS_Wiz2.png "WSUS_Wiz2")  
   
-    6.  En la página **unirse al programa de mejora de Microsoft Update** , seleccione **sí, deseo unirme al programa de mejora**de la Microsoft Update y, a continuación, haga clic en **siguiente**.  
+    6.  En la página **unirse al programa de mejora de Microsoft Update** , seleccione **sí, deseo unirme al programa de mejora** de la Microsoft Update y, a continuación, haga clic en **siguiente**.  
   
         ![WSUS - Programa de mejora](./media/configure-windows-server-update-services-wsus/WSUS_Wiz3.png "WSUS_Wiz3")  
   
@@ -101,7 +101,7 @@ Para configurar WSUS, debe:
   
         ![WSUS - Réplica del servidor que precede en la cadena](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
   
-    4.  En este momento, ya ha terminado con la configuración del servidor que precede en la cadena. Haga clic en **siguiente**o seleccione **especificar servidor proxy** en el panel de navegación izquierdo.  
+    4.  En este momento, ya ha terminado con la configuración del servidor que precede en la cadena. Haga clic en **siguiente** o seleccione **especificar servidor proxy** en el panel de navegación izquierdo.  
   
 5.  Especifique el servidor proxy.  
   
@@ -131,7 +131,7 @@ Para configurar WSUS, debe:
   
     Seleccione **Descargar actualizaciones solo en estos idiomas**.  
   
-    Seleccione **Inglés**y, a continuación, haga clic en **siguiente**.  
+    Seleccione **Inglés** y, a continuación, haga clic en **siguiente**.  
   
     ![Elegir idiomas](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
   
@@ -145,7 +145,7 @@ Para configurar WSUS, debe:
   
     Anula la selección de todas las actualizaciones seleccionadas.  
   
-    Seleccione **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**y **System Center 2012 R2-Virtual Machine Manager**y, a continuación, haga clic en **siguiente**.  
+    Seleccione **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**, **System Center 2012 R2-Virtual Machine Manager**, **Windows Server 2016** y **System Center 2016-Virtual Machine Manager** y, a continuación, haga clic en **siguiente**.  
   
 9. Elija clasificaciones.  
   
@@ -154,19 +154,19 @@ Para configurar WSUS, debe:
   
     Anular la selección de todas las actualizaciones seleccionadas previamente.  
   
-    Seleccione **actualizaciones críticas** y actualizaciones de **seguridad** para las actualizaciones que se van a sincronizar para el dispositivo de sistema de plataforma de análisis y, a continuación, haga clic en **siguiente**.  
+    Seleccione **actualizaciones críticas**, **actualizaciones de seguridad** y **paquetes acumulativos** de actualizaciones para las actualizaciones que se van a sincronizar para el dispositivo de sistema de plataforma de análisis y, a continuación, haga clic en **siguiente**.  
   
     ![Elegir clasificaciones](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
 10. Configure la programación de sincronización.  
   
-    Seleccione **sincronizar manualmente**y, a continuación, haga clic en **siguiente**.  
+    Seleccione **sincronizar manualmente** y, a continuación, haga clic en **siguiente**.  
   
     ![Establecer programación de sincronización](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
   
 11. Comenzar la sincronización inicial.  
   
-    Seleccione **Iniciar sincronización inicial**y, a continuación, haga clic en **siguiente**.  
+    Seleccione **Iniciar sincronización inicial** y, a continuación, haga clic en **siguiente**.  
   
 12. Finish. (Finalizar)  
   
@@ -188,7 +188,7 @@ Después de configurar WSUS para el sistema de plataforma de análisis, el sigui
   
     ![Escriba un nombre para el nuevo grupo de equipos.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSpecifyGroupName.png "SQL_Server_PDW_WSUSSpecifyGroupName")  
   
-3.  Vuelva a hacer clic en **todos los equipos** , cambie el estado en el menú desplegable **Estado** a **cualquiera**y, a continuación, haga clic en **Actualizar**. Es posible que necesite expandir **todos los equipos** haciendo clic en el control de árbol de la izquierda para ver el nuevo grupo que acaba de agregar.  
+3.  Vuelva a hacer clic en **todos los equipos** , cambie el estado en el menú desplegable **Estado** a **cualquiera** y, a continuación, haga clic en **Actualizar**. Es posible que necesite expandir **todos los equipos** haciendo clic en el control de árbol de la izquierda para ver el nuevo grupo que acaba de agregar.  
   
     ![Cambie el estado a Cualquiera y haga clic en Actualizar.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeStatusToAny.png "SQL_Server_PDW_WSUSChangeStatusToAny")  
   
@@ -200,6 +200,6 @@ Después de configurar WSUS para el sistema de plataforma de análisis, el sigui
   
     ![Establecer la pertenencia del grupo de equipos](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
   
-6.  Seleccione el nuevo grupo de equipos, cambie su **Estado** a **cualquiera**y, a continuación, haga clic en **Actualizar**. Ahora todos los equipos deben estar asignados a este grupo y aparecer en el panel derecho. Por lo general, es seguro continuar cuando los nodos muestran advertencias, como que **este nodo todavía no ha notificado el estado**.  
+6.  Seleccione el nuevo grupo de equipos, cambie su **Estado** a **cualquiera** y, a continuación, haga clic en **Actualizar**. Ahora todos los equipos deben estar asignados a este grupo y aparecer en el panel derecho. Por lo general, es seguro continuar cuando los nodos muestran advertencias, como que **este nodo todavía no ha notificado el estado**.  
   
     ![Cambie el estado a cualquiera y haga clic en actualizar.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeStatusAnyRefresh.png "SQL_Server_PDW_WSUSChangeStatusAnyRefresh")  

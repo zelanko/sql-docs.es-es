@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: a5ebfaaf303a354124f3668b65716cd65bdb8043
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727776"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947935"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificación de la SKU de Azure SQL Database/Instancia administrada adecuada para la base de datos local
 
@@ -42,6 +42,8 @@ Las siguientes son instrucciones para ayudarle a determinar las recomendaciones 
 
 - Descargue e instale la versión más reciente de [DMA](https://aka.ms/get-dma). Si ya tiene una versión anterior de la herramienta, ábrala y se le pedirá que actualice el DMA.
 - Asegúrese de que el equipo tiene la [versión 5,1](https://www.microsoft.com/download/details.aspx?id=54616) o posterior de PowerShell, que es necesaria para ejecutar todos los scripts. Para obtener información sobre cómo averiguar qué versión de PowerShell está instalada en el equipo, consulte el artículo [Descargar e instalar Windows PowerShell 5,1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
+  > [!NOTE]
+  > Para recopilar información de la máquina, el script de recopilación de datos usa el cmdlet Get-WmiObject, que quedó en desuso en PowerShell 6. Para ejecutar este script en PowerShell 6 o 7, debe reemplazar los cmdlets de WMI por los cmdlets de CIM más recientes.
 - Asegúrese de que el equipo tiene instalado el módulo de Azure PowerShell. Para obtener más información, vea el artículo [instalar el módulo de Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Compruebe que el archivo de PowerShell **SkuRecommendationDataCollectionScript.ps1**, que es necesario para recopilar los contadores de rendimiento, está instalado en la carpeta DMA.
 - Asegúrese de que el equipo en el que va a realizar este proceso tenga permisos de administrador en el equipo que hospeda las bases de datos de.
@@ -69,7 +71,7 @@ No es necesario realizar esta tarea para cada base de datos individualmente. Los
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
      -CollectionTimeInSeconds 2400
-     -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
+     -DbConnectionString Server=localhost;Initial Catalog=master;Integrated Security=SSPI;
     ```
 
     Una vez ejecutado el comando, el proceso generará un archivo que incluye los contadores de rendimiento en la ubicación especificada. Este archivo se puede usar como entrada para la siguiente parte del proceso, lo que proporcionará recomendaciones de SKU para las opciones de base de datos única y de instancias administradas.

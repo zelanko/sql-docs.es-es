@@ -9,17 +9,27 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5e0193fb7e749b7127d59743557e58cb049e734c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 25bc830bcf2582d7630829ccb3c369fdd434c094
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778474"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95011808"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novedades de Analytics Platform System, un almacenamiento de datos MPP de escalabilidad horizontal
 Vea las novedades de las últimas actualizaciones del dispositivo para Microsoft Analytics Platform System (AP). APS es un dispositivo local de escalado horizontal que hospeda MPP SQL Server almacenamiento de datos paralelos. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.7"></a>
+## <a name="aps-cu77"></a>APS CU 7.7
+Fecha de lanzamiento: noviembre 2020
+
+### <a name="scvmm2016"></a>SCVMM2016
+APS CU 7.7 software actualiza la máquina virtual de VMM a Windows Server 2016 e instala SCVMM2016. SCVMM 2012 R2 que está actualmente en uso tiene una fecha de finalización de la actualización del 2022 de julio. Es necesario que se admita la versión más reciente de SCVMM para que CU 7.7 sea una actualización obligatoria. Se recomienda a los clientes que actualicen a CU 7.7 lo antes posible.
+
+### <a name="ssis-destination-adapter-for-sql-server-2019-as-target"></a>Adaptador de destino de SSIS para SQL Server 2019 como destino
+El nuevo adaptador de destino de SSIS de APS que admite SQL Server 2019 como destino de implementación se puede descargar desde el [sitio de descarga](https://www.microsoft.com/download/details.aspx?id=57472).
+
 <a name="h2-aps-cu7.6"></a>
 ## <a name="aps-cu76"></a>APS CU7.6
 Fecha de lanzamiento: abril 2020
@@ -87,7 +97,7 @@ Para obtener más información, consulte [configuración de TLS 1.2 en APS](conf
 ### <a name="hadoop-encryption-zone-support-for-polybase"></a>Compatibilidad de la zona de cifrado de Hadoop con polybase
 Polybase ahora puede comunicarse con zonas de cifrado de Hadoop. Consulte cambios de configuración de APS necesarios en [configuración](polybase-configure-hadoop-security.md#encryptionzone)de la seguridad de Hadoop.
 
-### <a name="insert-select-maxdop-options"></a>Insertar-seleccionar opciones de maxdop
+### <a name="insert-select-maxdop-options"></a>Insert-Select opciones maxdop
 Hemos agregado un [modificador de características](appliance-feature-switch.md) que le permite elegir una configuración de maxdop mayor que 1 para las operaciones de inserción y selección. Ahora puede establecer el valor de maxdop en 0, 1, 2 o 4. El valor predeterminado es 1.
 
 > [!IMPORTANT]  

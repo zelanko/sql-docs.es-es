@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1e5e4a4856b91cd717e9498fb96567ecd6c70ca6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 2dab1d48ca2aa98e4a70a08bac492366f2632b79
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192649"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584968"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Datos de demostración de los taxis de Nueva York para tutoriales de Python y R en SQL Server
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 En este artículo se explica cómo configurar una base de datos de ejemplo formada por datos públicos procedentes de la [Comisión de taxis y limusinas de la ciudad de Nueva York](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Estos datos se usan en varios tutoriales de R y Python para el análisis de bases de datos en SQL Server. Para que el código de ejemplo se ejecute más rápidamente, hemos creado una muestra representativa del 1 % de los datos. En el sistema, el archivo de copia de seguridad de base de datos es ligeramente superior a 90 MB, lo que proporciona 1,7 millones de filas en la tabla de datos principal.
 
-Para completar este ejercicio, debe tener [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) u otra herramienta que pueda restaurar un archivo de copia de seguridad de la base de datos y ejecutar consultas de T-SQL.
+Para completar este ejercicio, debe tener [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017&preserve-view=true) u otra herramienta que pueda restaurar un archivo de copia de seguridad de la base de datos y ejecutar consultas de T-SQL.
 
 Entre los tutoriales y las guías de inicio rápido que usan este conjunto de datos se incluyen los siguientes:
 
@@ -41,7 +41,7 @@ El tamaño del archivo es de aproximadamente 90 MB.
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
 >[!NOTE]
->Para restaurar la base de datos de ejemplo en [Machine Learning Services en Azure SQL Managed Instance (versión preliminar)](/azure/azure-sql/managed-instance/machine-learning-services-overview), siga las instrucciones de [Inicio rápido: Restauración de una base de datos a Azure SQL Managed Instance](/azure/azure-sql/managed-instance/restore-sample-database-quickstart) mediante el archivo. bak de la base de datos de taxis de Nueva York: [https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak).
+>Para restaurar la base de datos de ejemplo en [Machine Learning Services, en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview), siga las instrucciones de [Inicio rápido: Restauración de una base de datos a Azure SQL Managed Instance](/azure/azure-sql/managed-instance/restore-sample-database-quickstart) mediante el archivo. bak de la base de datos de taxis de Nueva York: [https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak).
 ::: moniker-end
 
 1. Haga clic en [NYCTaxi_Sample. bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) para descargar el archivo de copia de seguridad de la base de datos.

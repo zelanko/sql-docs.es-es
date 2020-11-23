@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b3f8d66d7197e2e55a07f7a5b6de5da1b4ee24a
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: db8a0c073821df46e6d9d5bda43e74aae19a2501
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412554"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585067"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Tutorial de R: Predicción de tarifas de taxi de Nueva York con clasificación binaria
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -33,7 +33,7 @@ En esta serie de tutoriales de cinco partes para programadores de SQL, obtendrá
 ::: moniker-end
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
-En esta serie de tutoriales de cinco partes para programadores de SQL, obtendrá información sobre la integración de R en [Machine Learning Services en Azure SQL Managed Instance (versión preliminar)](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+En esta serie de tutoriales de cinco partes para programadores de SQL, obtendrá información sobre la integración de R en [Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 Creará e implementará una solución de aprendizaje automático basada en R mediante una base de datos de ejemplo en SQL Server. Se usará T-SQL, Azure Data Studio, o SQL Server Management Studio, y una instancia del motor de base de datos con el aprendizaje automático de SQL y la compatibilidad con el lenguaje R.

@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a625684b3196fc246b2753fc7b7e38b3e603f6e
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 2a37b086804a8fabe3719db0744b49345d69e6b8
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155069"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674143"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Instalación de un entorno de ejecución personalizado de Python para SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -30,16 +30,11 @@ En este artículo se describe cómo instalar un entorno de ejecución personaliz
 > [!NOTE]
 > En este artículo se describe cómo instalar un entorno de ejecución personalizado para Python en Windows. Para instalar en Linux, consulte [Instalación de un entorno de ejecución personalizado de Python para SQL Server en Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
 
-
-
 ## <a name="pre-install-checklist"></a>Lista de comprobación previa a la instalación
 
 Antes de instalar un entorno de ejecución personalizado de Python, instale lo siguiente:
 
-+ [SQL Server 2019 para Windows CU3 o posterior](../../database-engine/install-windows/install-sql-server.md).
-
-  > [!NOTE]
-  > El entorno de ejecución personalizado de Python requiere la actualización acumulativa (CU) 3 o posterior para SQL Server 2019.
++ [Actualización acumulada (CU) 3 de SQL Server 2019 para Windows](../../database-engine/install-windows/install-sql-server.md).
 
 + [Extensiones de lenguaje de SQL Server en Windows con el marco de extensibilidad](../../language-extensions/install/windows-java.md).
 
@@ -302,7 +297,7 @@ GO
 
 ## <a name="enable-external-script-execution-in-sql-server"></a>Habilitación de la ejecución de scripts externos en SQL Server
 
-Se puede ejecutar un script externo en Python mediante la ejecución del procedimiento almacenado [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) en SQL Server. 
+Se puede ejecutar un script externo en Python mediante la ejecución del procedimiento almacenado [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) en SQL Server. 
 
 Para habilitar los scripts externos, ejecute los siguientes comandos SQL con [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md), conectado a SQL Server.
 

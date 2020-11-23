@@ -2,19 +2,19 @@
 title: Insertar un dataframe de Python en una tabla SQL
 titleSuffix: SQL machine learning
 description: Inserción de datos de un dataframe en una tabla SQL.
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.date: 07/23/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f479186a8b1455fab8e8ddac7313193337e42dc9
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 85980bf7bc69190a0e7ae75ee74336a62afd12c6
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956853"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870253"
 ---
 # <a name="insert-python-dataframe-into-sql-table"></a>Insertar un dataframe de Python en una tabla SQL
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -24,20 +24,20 @@ En este artículo se describe cómo insertar un dataframe de [Pandas](https://pa
 ## <a name="prerequisites"></a>Requisitos previos
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server. Para obtener información sobre la instalación, consulte [SQL Server para Windows](../../database-engine/install-windows/install-sql-server.md) o [para Linux](../../linux/sql-server-linux-overview.md).
+* [SQL Server para Windows](../../database-engine/install-windows/install-sql-server.md) o [para Linux](../../linux/sql-server-linux-overview.md).
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL Database. Para obtener información sobre cómo suscribirse, consulte [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
+* [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL Managed Instance. Para obtener información sobre cómo suscribirse, consulte [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/instance-create-quickstart).
+* [Instancia administrada de Azure SQL](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) para restaurar la base de datos de ejemplo en Azure SQL Managed Instance.
 ::: moniker-end
 
-* Azure Data Studio. Para obtener información sobre la instalación, consulte [Azure Data Studio](../../azure-data-studio/what-is.md).
+* Azure Data Studio. Para realizar la instalación, vea [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 * [Restaure la base de datos de ejemplo](../../samples/adventureworks-install-configure.md) para obtener los datos de ejemplo que se usan en este artículo.
 

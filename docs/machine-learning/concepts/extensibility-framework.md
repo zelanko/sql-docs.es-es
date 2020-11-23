@@ -7,15 +7,14 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 053639f8ff25d50e7cad9c05d82cfcac6a0ee071
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: b7be2d8a11a63c1330e721f893e0ec3e945d8b5d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956546"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870033"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Arquitectura de extensibilidad en SQL Server Machine Learning Services 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -46,15 +45,15 @@ Un script externo se puede ejecutar llamando a un procedimiento almacenado. En e
 
 La arquitectura está diseñada de modo que los scripts externos se ejecuten en un proceso independiente de SQL Server, pero con componentes que administran internamente la cadena de solicitudes de datos y operaciones en SQL Server. En función de la versión de SQL Server, las extensiones de lenguaje compatibles incluyen [R](extension-r.md), [Python](extension-python.md) y lenguajes de terceros, como Java y .NET.
 
-  ***Arquitectura de los componentes en Windows:***
+  ***Arquitectura de los componentes en Windows:** _
   
   ![Arquitectura de los componentes de Windows](../media/generic-architecture-windows.png "Arquitectura de los componentes")
   
-  ***Arquitectura de los componentes en Linux:***
+  _*_Arquitectura de los componentes en Linux:_*_
 
   ![Arquitectura de los componentes de Linux](../media/generic-architecture-linux.png "Arquitectura de los componentes")
   
-Los componentes incluyen un servicio **Launchpad** que se usa para invocar los entornos de ejecución externos y la lógica específica de la biblioteca a fin de cargar intérpretes y bibliotecas. El iniciador carga un entorno de ejecución de lenguajes, además de cualquier módulo de propietario. Por ejemplo, si el código incluye funciones de RevoScaleR, se cargará un intérprete de RevoScaleR. **BxlServer** y **SQL Satellite** administran la comunicación y la transferencia de datos con SQL Server. 
+Los componentes incluyen un servicio _ *launchpad** que se usa para invocar los entornos de ejecución externos y la lógica específica de la biblioteca a fin de cargar intérpretes y bibliotecas. El iniciador carga un entorno de ejecución de lenguajes, además de cualquier módulo de propietario. Por ejemplo, si el código incluye funciones de RevoScaleR, se cargará un intérprete de RevoScaleR. **BxlServer** y **SQL Satellite** administran la comunicación y la transferencia de datos con SQL Server. 
 
 En Linux, SQL usa un servicio **Launchpad** a fin de comunicarse con un proceso de Launchpad independiente para cada usuario.
 

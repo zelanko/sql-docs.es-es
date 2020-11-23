@@ -2,19 +2,19 @@
 title: Trazado de un histograma para la exploración de datos con Python
 titleSuffix: SQL machine learning
 description: Aprenda a crear un histograma para visualizar datos mediante Python.
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.date: 07/14/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c1f30230b00258b5f5f662a99c2d75c29ea7ba8d
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: ee708d473e29cd36fe02e18e95eb71c0505dfdd7
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956814"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870171"
 ---
 # <a name="plot-histograms-in-python"></a>Trazado de histogramas en Python 
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -24,20 +24,20 @@ En este artículo se describe cómo trazar datos mediante el paquete de Python [
 ## <a name="prerequisites"></a>Requisitos previos:
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server. Para obtener información sobre la instalación, consulte [SQL Server para Windows](../../database-engine/install-windows/install-sql-server.md) o [para Linux](../../linux/sql-server-linux-overview.md).
+* [SQL Server para Windows](../../database-engine/install-windows/install-sql-server.md) o [para Linux](../../linux/sql-server-linux-overview.md).
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL Database. Para obtener información sobre cómo suscribirse, consulte [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
+* [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL Managed Instance. Para obtener información sobre cómo suscribirse, consulte [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/instance-create-quickstart).
+* [Instancia administrada de Azure SQL](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) para restaurar la base de datos de ejemplo en Azure SQL Managed Instance.
 ::: moniker-end
 
-* Azure Data Studio. Para obtener información sobre la instalación, consulte [Azure Data Studio](../../azure-data-studio/what-is.md).
+* Azure Data Studio. Para realizar la instalación, vea [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 * [Restaure la base de datos DW de ejemplo](../../samples/adventureworks-install-configure.md) para obtener los datos de ejemplo que se usan en este artículo.
 

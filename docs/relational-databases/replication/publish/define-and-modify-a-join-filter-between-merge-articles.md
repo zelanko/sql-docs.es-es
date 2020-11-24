@@ -110,7 +110,7 @@ ms.locfileid: "85898038"
   
 1.  Defina el filtrado para el artículo con el que se combina, conocido también como artículo primario.  
   
-    -   Para obtener más información acerca de los artículos filtrados mediante un filtro de fila con parámetros, vea [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+    -   Para obtener más información acerca de los artículos filtrados mediante un filtro de fila con parámetros, vea [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
     -   Para obtener más información acerca de los artículos filtrados mediante un filtro de fila estático, vea [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   

@@ -16,12 +16,12 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cc5d297364c5f2967536f94fde15441e4e21524
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 74f5c5dcf2f2e1891daca22d70ebb9d9f1d9119f
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551537"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983119"
 ---
 # <a name="synonyms-database-engine"></a>Usar sinónimos (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89551537"
   
 Por ejemplo, suponga la tabla **Employee** de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], situada en un servidor denominado **Server1**. Para hacer referencia a esta tabla desde otro servidor, **Server2**, una aplicación cliente tendría que usar el nombre de cuatro partes **Server1.AdventureWorks.Person.Employee**. Además, si la ubicación de la tabla cambiara, por ejemplo a otro servidor, la aplicación cliente debería modificarse para reflejar ese cambio.  
   
-Para solucionar ambas cosas, puede crear un sinónimo, **EmpTable**, en **Server2** para la tabla **Employee** en **Server1**. Ahora la aplicación cliente solo tiene que usar el nombre de una parte, **EmpTable**, para hacer referencia a la tabla **Employee** . Además, si la ubicación de la tabla **Employee** cambia, tendrá que modificar el sinónimo, **EmpTable**, para que apunte a la nueva ubicación de la tabla **Employee** . Puesto que no hay ninguna instrucción ALTER SYNONYM, primero tiene que quitar el sinónimo, **EmpTable**y, luego, volver a crearlo con el mismo nombre, pero apuntando a la nueva ubicación de **Employee**.  
+Para solucionar ambas cosas, puede crear un sinónimo, **EmpTable**, en **Server2** para la tabla **Employee** en **Server1**. Ahora la aplicación cliente solo tiene que usar el nombre de una parte, **EmpTable**, para hacer referencia a la tabla **Employee** . Además, si la ubicación de la tabla **Employee** cambia, tendrá que modificar el sinónimo, **EmpTable**, para que apunte a la nueva ubicación de la tabla **Employee** . Puesto que no hay ninguna instrucción ALTER SYNONYM, primero tiene que quitar el sinónimo, **EmpTable** y, luego, volver a crearlo con el mismo nombre, pero apuntando a la nueva ubicación de **Employee**.  
   
 Un sinónimo pertenece a un esquema y, al igual que otros objetos de un esquema, el nombre de un sinónimo debe ser único. Puede crear sinónimos para los siguientes objetos de base de datos:  
 
@@ -53,8 +53,6 @@ Un sinónimo pertenece a un esquema y, al igual que otros objetos de un esquema,
     :::column-end:::
     :::column:::
         Función con valores de tabla del ensamblado (CLR)
-
-        Función de agregado del ensamblado (CLR)
 
         Función de agregado del ensamblado (CLR)
 
@@ -81,7 +79,7 @@ Las referencias a sinónimos no están enlazadas a esquema. Por tanto, un sinón
 Si tiene un esquema predeterminado que no posee y desea crear un sinónimo, debe calificar el nombre del sinónimo con el nombre de un esquema que posea. Por ejemplo, si posee un esquema **x**, pero **y** es su esquema predeterminado y usa la instrucción CREATE SYNONYM, debe poner un prefijo al nombre del sinónimo con el esquema **x**, en lugar de asignar un nombre al sinónimo mediante un nombre con una sola parte. Para obtener más información sobre cómo crear sinónimos, vea [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md).  
   
 ## <a name="granting-permissions-on-a-synonym"></a>Conceder permisos para un sinónimo  
-Solo los propietarios de los sinónimos, miembros de **db_owner**o miembros de **db_ddladmin** pueden conceder permiso para un sinónimo.  
+Solo los propietarios de los sinónimos, miembros de **db_owner** o miembros de **db_ddladmin** pueden conceder permiso para un sinónimo.  
   
 Puede usar `GRANT`, `DENY` y `REVOKE` en todos o cualquiera de los permisos siguientes para un sinónimo:  
 

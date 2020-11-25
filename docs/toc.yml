@@ -1872,15 +1872,6 @@
               href: relational-databases/tables/use-table-valued-parameters-database-engine.md
         - name: Restricciones perimetrales
           href: relational-databases/tables/graph-edge-constraints.md
-          items:
-            - name: Crear
-              href: relational-databases/tables/create-edge-constraints.md
-            - name: Eliminar
-              href: relational-databases/tables/delete-edge-constraint.md
-            - name: Modificar
-              href: relational-databases/tables/modify-edge-constraint.md
-            - name: Ver
-              href: relational-databases/tables/view-edge-constraint-properties.md
         - name: Claves principales
           href: relational-databases/tables/primary-and-foreign-key-constraints.md
           items:

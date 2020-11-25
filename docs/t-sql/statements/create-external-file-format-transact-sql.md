@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f979bc7b5dd8a3a3e67c499480003c45a8c4ebd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 0c7d02931ab25c1400fbb256fc86d14464826114
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255782"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947940"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ Se admiten los formatos de archivo siguientes:
   
 - Texto delimitado  
   
-- Hive RCFile  
+- Hive RCFile: no se aplica a Azure Synapse Analytics.
   
 - Hive ORC
   
@@ -146,7 +146,7 @@ Especifica el formato de los datos externos.
 - ORC  
   Especifica un formato ORC (Optimized Row Columnar). Esta opción requiere Hive versión 0.11 o superior en el clúster externo de Hadoop. En Hadoop, el formato de archivo ORC ofrece un rendimiento y una comprensión mejores que el formato de archivo RCFILE.
 
-- RCFILE (en combinación con SERDE_METHOD = *SERDE_method* ) Especifica un formato de archivo RcFile (Record Columnar). Esta opción exige especificar un método Serializer y Deserializer (SerDe) de Hive. Este requisito es el mismo si se usa Hive/HiveQL en Hadoop para consultar archivos RC. Tenga en cuenta que el método SerDe distingue mayúsculas de minúsculas.
+- RCFILE (en combinación con SERDE_METHOD = *SERDE_method*) Especifica un formato de archivo RcFile (Record Columnar). Esta opción exige especificar un método Serializer y Deserializer (SerDe) de Hive. Este requisito es el mismo si se usa Hive/HiveQL en Hadoop para consultar archivos RC. Tenga en cuenta que el método SerDe distingue mayúsculas de minúsculas.
 
   Ejemplos de especificación de RCFile con los dos métodos SerDe que admite PolyBase.
 
@@ -257,7 +257,7 @@ Los **formatos de fecha de ejemplo** se encuentran en la tabla siguiente:
   
 Notas sobre la tabla:  
   
--   El año, el mes y el día pueden adoptar distintos formatos y órdenes. La tabla muestra solo el formato **amd** . El mes puede tener uno o dos dígitos, o tres caracteres. El día puede tener uno o dos dígitos. El año puede tener dos o cuatro dígitos.
+-   El año, el mes y el día pueden adoptar distintos formatos y órdenes. La tabla muestra solo el formato **amd**. El mes puede tener uno o dos dígitos, o tres caracteres. El día puede tener uno o dos dígitos. El año puede tener dos o cuatro dígitos.
   
 -   Los milisegundos (fffffff) no son necesarios.
   

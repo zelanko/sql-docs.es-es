@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4df36b6012cd6cbe0f2570bb678ebff02fa21dd5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 92511a835a8a9a6f899f7597900fec6707f6dada
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195819"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129423"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalación y configuración de Master Data Services
 
@@ -80,7 +80,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
 6.  En la página **Tipo de instalación** del **Asistente para agregar roles y características**, acepte el valor predeterminado (**Instalación basada en características o en roles**) y haga clic en **Siguiente**.  
   
-7.  Haga clic en **Seleccionar un servidor del grupo de servidores**y, después, haga clic en el servidor en el que ha instalado [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+7.  Haga clic en **Seleccionar un servidor del grupo de servidores** y, después, haga clic en el servidor en el que ha instalado [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
      ![mds_AddRolesFeaturesWizard_ServerSelectionPage](../master-data-services/media/mds-addrolesfeatureswizard-serverselectionpage.png) 
   
@@ -126,13 +126,13 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
 1.  Inicie el [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]y haga clic en **Configuración de base de datos** en el panel izquierdo.  
   
-2.  Haga clic en **Crear base de datos**y, después, haga clic en **Siguiente** en el **Asistente para crear bases de datos**.  
+2.  Haga clic en **Crear base de datos** y, después, haga clic en **Siguiente** en el **Asistente para crear bases de datos**.  
   
 3.  En la página **servidor de base de datos** , especifique la instancia de SQL Server. 
 
     >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] agrega compatibilidad con Instancia administrada de SQL Server. Establezca el valor de **SQL Server instancia** en el host de la instancia administrada. Por ejemplo, `xxxxxx.xxxxxx.database.windows.net`.
 
-4. Seleccione el **tipo de autenticación** y, a continuación, haga clic en **conexión de prueba** para confirmar que puede conectarse a la base de datos con las credenciales del tipo de autenticación que ha seleccionado. Haga clic en **Siguiente**.
+4. Seleccione el **tipo de autenticación** y, a continuación, haga clic en **conexión de prueba** para confirmar que puede conectarse a la base de datos con las credenciales del tipo de autenticación que ha seleccionado. Haga clic en **Next**.
 
     >Para [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] , para conectarse a la instancia administrada, use uno de los siguientes tipos de autenticación:
     >
@@ -146,7 +146,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desmarque la casilla **Intercalación predeterminada de SQL Server** y haga clic en una o varias de las opciones disponibles, como **Distinguir mayúsculas de minúsculas**. Haga clic en **Siguiente**.
+4.  Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desmarque la casilla **Intercalación predeterminada de SQL Server** y haga clic en una o varias de las opciones disponibles, como **Distinguir mayúsculas de minúsculas**. Haga clic en **Next**.
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -174,7 +174,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
 9. En [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], haga clic en **Configuración web** en el panel izquierdo.  
   
-10. En el cuadro de lista **Sitio web** , haga clic en **Sitio web predeterminado**y, luego, haga clic en **Crear** para crear una aplicación web.  
+10. En el cuadro de lista **Sitio web** , haga clic en **Sitio web predeterminado** y, luego, haga clic en **Crear** para crear una aplicación web.  
   
     > [!NOTE]  
     >  Al seleccionar **Sitio web predeterminado**, debe crear una aplicación web. Si selecciona **Crear nuevo sitio web** en el cuadro de lista, la aplicación se crea de forma automática.  
@@ -183,7 +183,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
 11. En la sección **Grupo de aplicaciones** , realice una de las siguientes acciones.  
   
-    -   Escriba el mismo nombre de usuario que ha escrito en el paso 5 para la **Cuenta de administrador**de la base de datos, escriba la contraseña y, después, haga clic en **Aceptar**.  
+    -   Escriba el mismo nombre de usuario que ha escrito en el paso 5 para la **Cuenta de administrador** de la base de datos, escriba la contraseña y, después, haga clic en **Aceptar**.  
   
          **De**  
   
@@ -194,6 +194,9 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
         ![mds_2016ConfigManager_WebConfig_CreateWebApplication](../master-data-services/media/mds-2016configmanager-webconfig-createwebapplication.png)   
   
      Para obtener más información sobre el cuadro de diálogo **Crear aplicación web**, consulte [Cuadro de diálogo Crear aplicación web &#40;Administrador de configuración de Master Data Services&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).  
+
+    > [!NOTE] 
+    >  Si el dominio implementa [los requisitos de enlace de canal ldap 2020 y firma LDAP para Windows](https://support.microsoft.com/en-us/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows). Verá el problema "no se pudieron comprobar las credenciales en Active Directory". al usar una cuenta de dominio para crear el grupo de aplicaciones. Para obtener una solución alternativa, en lugar de usuario de dominio, use un **usuario del equipo local**. Esto puede omitir la comprobación de credenciales con Active Directory. Después de crear la aplicación Web, puede cambiar la identidad a usuario de dominio en el **Administrador de Internet Information Services (IIS)**.
   
 12. En la página **Configuración web** en el cuadro **Aplicación web** , haga clic en la aplicación que ha creado y, luego, haga clic en **Seleccionar** en la sección  **Asociar aplicación a base de datos** .  
   

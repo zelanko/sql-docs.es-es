@@ -2,7 +2,7 @@
 description: sp_rename (Transact-SQL)
 title: sp_rename (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 10/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,19 +21,22 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: edfe9a3a3d69c95b2a8778ca44583e005c6495c6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: d9bcc769abf138658c4994a42b9ee1898e964509
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538661"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130896"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
 
   Cambia el nombre de un objeto creado por el usuario en la base de datos actual. Este objeto puede ser una tabla, un índice, una columna, un tipo de datos de alias o un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tipo definido por el usuario Common Language Runtime (CLR).  
   
+> [!NOTE]
+> En [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] , sp_rename está en **versión preliminar** y solo se puede usar para cambiar el nombre de una columna en un objeto de usuario.
+
 > [!CAUTION]  
 >  Al cambiar cualquier parte del nombre de un objeto se pueden interrumpir scripts y procedimientos almacenados. Se recomienda no utilizar esta instrucción para cambiar el nombre a procedimientos almacenados, desencadenadores, funciones definidas por el usuario o vistas; en su lugar, quite el objeto y vuelva a crearlo con el nuevo nombre.  
   
@@ -41,11 +44,17 @@ ms.locfileid: "89538661"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
+```sql  
+-- Transact-SQL Syntax for sp_rename in SQL Server and Azure SQL Database
 sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'   
     [ , [ @objtype = ] 'object_type' ]   
 ```  
+
+```sql  
+-- Transact-SQL Syntax for sp_rename (preview) in Azure Synapse Analytics
+sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'   
+    , [ @objtype = ] 'COLUMN'   
+``` 
   
 ## <a name="arguments"></a>Argumentos  
  [ @objname =] '*object_name*'  
@@ -54,7 +63,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  Las comillas solo se necesitan si se especifica un objeto completo. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *object_name* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado.  
   
  [ @newname =] '*new_name*'  
- Es el nuevo nombre del objeto especificado. *new_name* debe ser un nombre de una parte y debe cumplir las reglas de los identificadores. *NewName* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ Es el nuevo nombre del objeto especificado. *new_name* debe ser un nombre de una parte y debe cumplir las reglas de los identificadores. *NewName* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
 >  Los nombres de los desencadenadores no pueden comenzar por # o ##.  
@@ -62,7 +71,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objtype =] '*object_type*'  
  Es el tipo de objeto cuyo nombre se va a cambiar. *object_type* es de tipo **VARCHAR (13)**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |COLUMN|Una columna cuyo nombre se va a cambiar.|  
 |DATABASE|Una base de datos definida por el usuario. Este tipo de objeto es necesario cuando se cambia el nombre de una base de datos|  
@@ -71,19 +80,27 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |STATISTICS|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br /> Estadísticas que crea un usuario explícitamente o que se crean implícitamente con un índice. Si se cambia el nombre de las estadísticas de un índice, también se cambia automáticamente el nombre del índice.|  
 |USERDATATYPE|[Tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) agregados al ejecutar [CREATE Type](../../t-sql/statements/create-type-transact-sql.md) o [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
   
+[ @objtype =] '*Columna*' **se aplica a**: Azure Synapse Analytics  
+En sp_rename (versión preliminar) de [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)] , la *columna* es un parámetro obligatorio que especifica que el tipo de objeto al que se va a cambiar el nombre es una columna. Es un **VARCHAR (13)** sin ningún valor predeterminado y siempre debe incluirse en la instrucción sp_rename (Preview). Solo se puede cambiar el nombre de una columna si se trata de una columna que no es de distribución.
+
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  
   
 ## <a name="remarks"></a>Observaciones  
- Solo se puede cambiar el nombre de un objeto o tipo de datos de la base de datos actual. No se pueden cambiar los nombres de la mayoría de los tipos de datos y objetos del sistema.  
-  
+**Se aplica a** SQL Server (todas las versiones compatibles) y Azure SQL Database  
  sp_rename cambia automáticamente el nombre del índice asociado cuando se cambia el nombre de una restricción PRIMARY KEY o UNIQUE. Si un índice cuyo nombre se ha cambiado está enlazado a una restricción PRIMARY KEY, sp_rename también cambia automáticamente el nombre de esta restricción.  
-  
+
+**Se aplica a** SQL Server (todas las versiones compatibles) y Azure SQL Database  
  sp_rename se puede utilizar para cambiar el nombre de los índices XML principales y secundarios.  
   
- Al cambiar el nombre de un procedimiento almacenado, una función, una vista o un desencadenador, no se cambiará el nombre del objeto correspondiente en la columna de definición de la vista de catálogo [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) u obtenida mediante la función integrada [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) . Por lo tanto, se recomienda no utilizar sp_rename para cambiar el nombre a estos tipos de objetos. En su lugar, quite el objeto y vuelva a crearlo con su nuevo nombre.  
-  
+**Se aplica a** SQL Server (todas las versiones compatibles) y Azure SQL Database  
+ Al cambiar el nombre de un procedimiento almacenado, una función, una vista o un desencadenador, no se cambiará el nombre del objeto correspondiente en la columna de definición de la vista de catálogo [Sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) u obtenida mediante la función integrada [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) . Por lo tanto, se recomienda no utilizar sp_rename para cambiar el nombre a estos tipos de objetos. En su lugar, quite el objeto y vuelva a crearlo con su nuevo nombre.  
+
+**Se aplica a** SQL Server (todas las versiones compatibles), Azure SQL Database y Azure Synapse Analytics  
  Al cambiar el nombre de un objeto como una tabla o columna, no se cambia automáticamente el nombre de las referencias a ese objeto. Es necesario modificar de forma manual los objetos que hacen referencia al objeto cuyo nombre se ha cambiado. Por ejemplo, si se cambia el nombre de una columna de una tabla y en un desencadenador existe una referencia a esa columna, es necesario modificar el desencadenador para reflejar el nuevo nombre de la columna. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) para ver las dependencias del objeto antes de cambiarle el nombre.  
+
+**Se aplica a** SQL Server (todas las versiones compatibles), Azure SQL Database y Azure Synapse Analytics  
+ Solo se puede cambiar el nombre de un objeto o tipo de datos de la base de datos actual. No se pueden cambiar los nombres de la mayoría de los tipos de datos y objetos del sistema.  
   
 ## <a name="permissions"></a>Permisos  
  Para cambiar el nombre de objetos, columnas e índices, se necesita permiso ALTER en el objeto. Para cambiar el nombre de tipos de usuario, se necesita el permiso CONTROL en el tipo. Para cambiar el nombre de una base de datos, debe pertenecer a los roles fijos de servidor sysadmin o dbcreator.   
@@ -93,7 +110,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ### <a name="a-renaming-a-table"></a>A. Cambiar el nombre de una tabla  
  En el siguiente ejemplo se cambia el nombre de la tabla `SalesTerritory` por `SalesTerr` en el esquema `Sales` .  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';  
@@ -103,7 +120,7 @@ GO
 ### <a name="b-renaming-a-column"></a>B. Cambiar el nombre de una columna  
  En el ejemplo siguiente se cambia el nombre de la `TerritoryID` columna de la `SalesTerritory` tabla a `TerrID` .  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename 'Sales.SalesTerritory.TerritoryID', 'TerrID', 'COLUMN';  
@@ -113,7 +130,7 @@ GO
 ### <a name="c-renaming-an-index"></a>C. Cambiar el nombre de un índice  
  En el siguiente ejemplo se cambia el nombre del índice `IX_ProductVendor_VendorID` por `IX_VendorID`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename N'Purchasing.ProductVendor.IX_ProductVendor_VendorID', N'IX_VendorID', N'INDEX';  
@@ -123,7 +140,7 @@ GO
 ### <a name="d-renaming-an-alias-data-type"></a>D. Cambiar el nombre de un tipo de datos de alias  
  En el siguiente ejemplo se cambia el nombre del tipo de datos de alias `Phone` por `Telephone`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_rename N'Phone', N'Telephone', N'USERDATATYPE';  
@@ -133,7 +150,7 @@ GO
 ### <a name="e-renaming-constraints"></a>E. Cambiar el nombre de las restricciones  
  En los siguientes ejemplos se cambia el nombre de las restricciones PRIMARY KEY, CHECK y FOREIGN KEY. Al cambiar el nombre de una restricción, debe especificarse el esquema al que pertenece.  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GO  
 -- Return the current Primary Key, Foreign Key and Check constraints for the Employee table.  
@@ -195,13 +212,23 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 ### <a name="f-renaming-statistics"></a>F. Cambiar el nombre de las estadísticas  
  En el ejemplo siguiente se crea un objeto de estadísticas denominado contactMail1 y, a continuación, se cambia el nombre de la estadística a NewContact mediante sp_rename. Al cambiar el nombre de las estadísticas, el objeto se debe especificar con el formato schema.table.statistics_name.  
   
-```  
+```sql  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
   
 sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';  
   
+```  
+
+## <a name="examples-sssdwfull"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
+### <a name="g-renaming-a-column"></a>G. Cambiar el nombre de una columna  
+ En el ejemplo siguiente se cambia el nombre de la `c1` columna de la `table1` tabla a `col1` .  
+  
+```sql  
+CREATE TABLE table1 (c1 INT, c2 INT);
+EXEC sp_rename 'table1.c1', 'col1', 'COLUMN';
+GO  
 ```  
   
 ## <a name="see-also"></a>Consulte también  

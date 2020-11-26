@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 8492b1fb7b7270fb273afdd74ad12ad44b352f95
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 678775f19cee303b4c1bb34320ca9f7fd7030e97
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988331"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127633"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>Configuración de los valores de la propiedad FailureConditionLevel
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 2.  Expanda **Servicios y aplicaciones** y seleccione la FCI.  
   
-3.  Haga clic con el botón derecho en el **recurso de SQL Server** en **Otros recursos**y seleccione **Propiedades** en el menú. Se abrirá el cuadro de diálogo **Propiedades** del recurso de SQL Server.  
+3.  Haga clic con el botón derecho en el **recurso de SQL Server** en **Otros recursos** y seleccione **Propiedades** en el menú. Se abrirá el cuadro de diálogo **Propiedades** del recurso de SQL Server.  
   
 4.  Seleccione la pestaña **Propiedades** , escriba el valor deseado para la propiedad **FaliureConditionLevel** y, a continuación, haga clic en **Aceptar** para aplicar el cambio.  
   

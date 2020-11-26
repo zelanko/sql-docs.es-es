@@ -15,14 +15,14 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f505d4559529661738efc8504931c7f96ad8933f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 0f99d649dfda393c5371039976321c4bf54be684
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114668"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121230"
 ---
 # <a name="create-a-new-always-on-failover-cluster-instance-setup"></a>Creación de una nueva instancia de clúster de conmutación por error Always On (programa de instalación)
 
@@ -91,13 +91,13 @@ ms.locfileid: "91114668"
   
 2.  El Asistente para la instalación inicia el Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para crear una nueva instalación de clústeres de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], haga clic en **Nueva instalación de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** en la página de instalación.  
   
-3.  El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**.  
+3.  El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**.  
   
 4.  Para continuar, haga clic en **Siguiente**.  
   
 5.  En la página Archivos auxiliares del programa de instalación, haga clic en **Instalar** para instalar los archivos auxiliares del programa de instalación.  
   
-6.  El Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de seguir con la instalación. Cuando se haya completado la comprobación, haga clic en **Siguiente** para continuar. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**.  
+6.  El Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de seguir con la instalación. Cuando se haya completado la comprobación, haga clic en **Siguiente** para continuar. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**.  
   
 7.  En la página Clave del producto, indique si va a instalar una edición gratuita de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]o si tiene una clave de PID para una versión de producción del producto. Para obtener más información, vea [Ediciones y componentes de SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
@@ -187,7 +187,7 @@ ms.locfileid: "91114668"
   
          Una vez que un dispositivo establece una conexión correcta con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el mecanismo de seguridad es el mismo para la autenticación de Windows y para el modo mixto.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administradores: debe especificar al menos un administrador del sistema para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o en **Quitar**y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administradores: debe especificar al menos un administrador del sistema para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o en **Quitar** y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
      Cuando haya terminado de modificar la lista, haga clic en [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Compruebe la lista de administradores en el cuadro de diálogo de configuración. Cuando la lista esté completa, haga clic en **Siguiente**.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "91114668"
    
 21. Use la página Configuración de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] - FILESTREAM para habilitar FILESTREAM para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Haga clic en **Siguiente** para continuar.  
   
-22. Use la página Configuración de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Aprovisionamiento de cuentas para especificar los usuarios o las cuentas que tendrán permisos de administrador para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Debe especificar al menos un administrador del sistema para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o **Quitar**y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].
+22. Use la página Configuración de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Aprovisionamiento de cuentas para especificar los usuarios o las cuentas que tendrán permisos de administrador para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Debe especificar al menos un administrador del sistema para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o **Quitar** y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].
   
      Cuando haya terminado de modificar la lista, haga clic en [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Compruebe la lista de administradores en el cuadro de diálogo de configuración. Cuando la lista esté completa, haga clic en **Siguiente**.  
   
@@ -240,11 +240,11 @@ ms.locfileid: "91114668"
   
 3.  Una vez instalados los requisitos previos, el Asistente para instalación inicia el Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para preparar el nodo para la agrupación en clústeres, vaya a la página **Opciones avanzadas** y, a continuación, haga clic en **Preparación de clúster para avanzada**.  
   
-4.  El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**.  
+4.  El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**.  
   
 5.  En la página Archivos auxiliares del programa de instalación, haga clic en **Instalar** para instalar los archivos auxiliares del programa de instalación.  
   
-6.  El Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de seguir con la instalación. Cuando se haya completado la comprobación, haga clic en **Siguiente** para continuar. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**.  
+6.  El Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de seguir con la instalación. Cuando se haya completado la comprobación, haga clic en **Siguiente** para continuar. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**.  
   
 7.  En la página Selección de idioma, puede especificar el idioma para su instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si va a realizar la instalación en un sistema operativo localizado y el medio de instalación incluye paquetes de idioma en inglés y en el idioma correspondiente al sistema operativo. Para obtener más información sobre la compatibilidad entre idiomas y las consideraciones sobre la instalación, vea [Versiones de idioma local en SQL Server](../../../sql-server/install/local-language-versions-in-sql-server.md).  
   
@@ -328,11 +328,11 @@ ms.locfileid: "91114668"
   
 1.  Después de preparar todos los nodos como se describe en el [paso de preparación](#prepare), ejecute el programa de instalación en uno de los nodos preparados, preferiblemente el que posee el disco compartido. En la página **Opciones avanzadas** del Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Finalización avanzada de clúster**.  
   
-2.  El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**.  
+2.  El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**.  
   
 3.  En la página Archivos auxiliares del programa de instalación, haga clic en **Instalar** para instalar los archivos auxiliares del programa de instalación.  
   
-4.  El Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de seguir con la instalación. Cuando se haya completado la comprobación, haga clic en **Siguiente** para continuar. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**.  
+4.  El Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de seguir con la instalación. Cuando se haya completado la comprobación, haga clic en **Siguiente** para continuar. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**.  
   
 5.  En la página Selección de idioma, puede especificar el idioma para su instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si va a realizar la instalación en un sistema operativo localizado y el medio de instalación incluye paquetes de idioma en inglés y en el idioma correspondiente al sistema operativo. Para obtener más información sobre la compatibilidad entre idiomas y las consideraciones sobre la instalación, vea [Versiones de idioma local en SQL Server](../../../sql-server/install/local-language-versions-in-sql-server.md).  
   
@@ -370,7 +370,7 @@ ms.locfileid: "91114668"
   
          Una vez que un dispositivo establece una conexión correcta con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el mecanismo de seguridad es el mismo para la autenticación de Windows y para el modo mixto.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administradores: debe especificar al menos un administrador del sistema para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o en **Quitar**y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administradores: debe especificar al menos un administrador del sistema para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o en **Quitar** y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
      Cuando haya terminado de modificar la lista, haga clic en [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Compruebe la lista de administradores en el cuadro de diálogo de configuración. Cuando la lista esté completa, haga clic en **Siguiente**.  
   
@@ -380,7 +380,7 @@ ms.locfileid: "91114668"
     >  Si especifica directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los directorios de datos se deben encontrar en el disco de clúster compartido para la instancia de clúster de conmutación por error.  
   
   
-14. Use la página Configuración de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Aprovisionamiento de cuentas para especificar los usuarios o las cuentas que tendrán permisos de administrador para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Debe especificar al menos un administrador del sistema para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o **Quitar**y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+14. Use la página Configuración de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Aprovisionamiento de cuentas para especificar los usuarios o las cuentas que tendrán permisos de administrador para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Debe especificar al menos un administrador del sistema para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o **Quitar** y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
      Cuando haya terminado de modificar la lista, haga clic en [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Compruebe la lista de administradores en el cuadro de diálogo de configuración. Cuando la lista esté completa, haga clic en **Siguiente**.  
   

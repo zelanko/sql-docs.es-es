@@ -12,14 +12,14 @@ helpviewer_keywords:
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: c06446f14fd2f316f297b675cc1b96efc7801ba1
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cad44bde76e3915aeb5f99d8eeb415d89b02359e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988321"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127583"
 ---
 # <a name="upgrade-a-failover-cluster-instance"></a>Actualización de una instancia del clúster de conmutación por error 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -79,9 +79,9 @@ ms.locfileid: "91988321"
   
 5.  En la página Clave del producto, escriba la clave de PID de la nueva edición de la versión, que debe ser la misma edición que la de la versión anterior del producto. Por ejemplo, para actualizar un clústeres de conmutación por error de Enterprise, debe especificar la clave de PID de [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]. Haga clic en **Siguiente** para continuar. Tenga en cuenta que la clave de PID que use para actualizar los clústeres de conmutación por error debe ser coherente en todos los nodos de clúster de conmutación por error de la misma instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-6.  En la página Términos de licencia, lea el contrato de licencia y active la casilla para aceptar los términos y condiciones de la licencia. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Para continuar, haga clic en**Siguiente**. Para salir del programa de instalación, haga clic en **Cancelar**.  
+6.  En la página Términos de licencia, lea el contrato de licencia y active la casilla para aceptar los términos y condiciones de la licencia. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Para continuar, haga clic en **Siguiente**. Para salir del programa de instalación, haga clic en **Cancelar**.  
   
-7.  En la página Seleccionar instancia, especifique la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que desea a actualizar a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para continuar, haga clic en**Siguiente**.  
+7.  En la página Seleccionar instancia, especifique la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que desea a actualizar a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para continuar, haga clic en **Siguiente**.  
   
 8.  En la página Selección de características aparecen seleccionadas las características que van a actualizarse. Después de seleccionar el nombre de la característica se muestra una descripción de cada grupo de componentes en el panel derecho. Tenga en cuenta que no puede cambiar las características que se van a actualizar, y no puede agregar características durante la operación de actualización. Para agregar características a una instancia actualizada de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] una vez completada la operación de actualización, vea [Agregar características a una instancia de SQL Server 2016 &#40;programa de instalación&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md).  
   
@@ -91,7 +91,7 @@ ms.locfileid: "91988321"
   
      **Id. de instancia** : de manera predeterminada, el nombre de instancia se usa como identificador de la instancia. Se usa para identificar los directorios de instalación y las claves del Registro para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Es así en las instancias predeterminadas y en las instancias con nombre. Con una instancia predeterminada, el nombre y el identificador serían MSSQLSERVER. Para utilizar un identificador de instancia no predeterminado, active la casilla **Id. de instancia** y proporcione un valor. Si invalida el valor predeterminado, deberá especificar el mismo identificador de instancia para la instancia que se está actualizando en todos los nodos de clúster de conmutación por error. El identificador de la instancia actualizada debe coincidir en todos los nodos.  
   
-     **Características e instancias detectadas:** la cuadrícula muestra las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hay en el equipo en el que se ejecuta el programa de instalación. Para continuar, haga clic en**Siguiente**.  
+     **Características e instancias detectadas:** la cuadrícula muestra las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hay en el equipo en el que se ejecuta el programa de instalación. Para continuar, haga clic en **Siguiente**.  
   
 10. La página Requisitos de espacio en disco calcula el espacio en disco necesario para las características especificadas y compara los requisitos con el espacio en disco disponible en el equipo donde se ejecuta el programa de instalación.  
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 336822b6ad2ff420c987e42c033e2efae20c2536
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894901"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127545"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar un equipo de host múltiple para el acceso a SQL Server
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "85894901"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>Para determinar las direcciones IP disponibles en el equipo  
   
-1.  En el equipo en el que está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **Inicio**y en **Ejecutar**, escriba **cmd** y, después, [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+1.  En el equipo en el que está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **Inicio** y en **Ejecutar**, escriba **cmd** y, después, [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
 2.  En la ventana del símbolo del sistema, escriba **ipconfig,** y presione ENTRAR para mostrar las direcciones IP disponibles en este equipo.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "85894901"
   
 1.  En el equipo en el que está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , inicie sesión como administrador.  
   
-2.  Haga clic en **Inicio**, en **Ejecutar**, escriba **wf.msc**y luego haga clic en **Aceptar**.  
+2.  Haga clic en **Inicio**, en **Ejecutar**, escriba **wf.msc** y luego haga clic en **Aceptar**.  
   
 3.  En el cuadro de diálogo **Control de cuentas de usuario** , haga clic en **Continuar** para usar las credenciales de administrador para abrir Firewall de windows con el complemento Seguridad avanzada.  
   
@@ -95,22 +95,22 @@ ms.locfileid: "85894901"
   
 5.  En el panel izquierdo, haga clic en **Reglas de entrada**.  
   
-6.  Haga clic con el botón derecho en **Reglas de entrada**y, después, haga clic en **Nueva regla** para abrir el **Asistente para nueva regla de entrada**.  
+6.  Haga clic con el botón derecho en **Reglas de entrada** y, después, haga clic en **Nueva regla** para abrir el **Asistente para nueva regla de entrada**.  
   
-7.  Podría crear una regla para el programa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sin embargo, dado que este ejemplo usa un puerto fijo, seleccione **Puerto**y haga clic en **Siguiente**.  
+7.  Podría crear una regla para el programa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sin embargo, dado que este ejemplo usa un puerto fijo, seleccione **Puerto** y haga clic en **Siguiente**.  
   
 8.  En la página **Protocolos y puertos** , seleccione **TCP**.  
   
 9. Seleccione **Puertos locales especificados**. Escriba los números de puertos separados por comas y, a continuación, haga clic en **Siguiente**. En este ejemplo, configurará el puerto predeterminado; por lo tanto, escriba **1433**.  
   
-10. En la página **Acción** , revise las opciones. En este ejemplo no se usa el firewall para aplicar conexiones seguras. Por lo tanto, haga clic en **Permitir la conexión**y, a continuación, haga clic en **Siguiente**.  
+10. En la página **Acción** , revise las opciones. En este ejemplo no se usa el firewall para aplicar conexiones seguras. Por lo tanto, haga clic en **Permitir la conexión** y, a continuación, haga clic en **Siguiente**.  
   
     > [!NOTE]  
     >  El entorno podría requerir conexiones seguras. Si selecciona una de las opciones de conexiones seguras, podría tener que configurar un certificado y la opción **Forzar cifrado** . Para obtener más información sobre las conexiones seguras, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;.](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)[Habilitar conexiones cifradas en el motor de base de datos & #40; Administrador de configuración de SQL Server & #41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)  
   
 11. En la página **Perfil** , seleccione uno o varios perfiles para la regla. Si no conoce los perfiles de firewall, haga clic en el vínculo **Más información acerca de los perfiles** del programa de firewall.  
   
-    -   Si el equipo es un servidor y está disponible solo cuando se conecta a un dominio, seleccione **Dominio**y haga clic en **Siguiente**.  
+    -   Si el equipo es un servidor y está disponible solo cuando se conecta a un dominio, seleccione **Dominio** y haga clic en **Siguiente**.  
   
     -   Si el equipo es móvil, por ejemplo un portátil, es probable que use varios perfiles al conectarse a redes diferentes. En un equipo móvil puede configurar capacidades de acceso diferentes para perfiles distintos. Por ejemplo, podría permitir el acceso cuando el equipo use el perfil Dominio y no permitirlo si usa el perfil Público.  
   

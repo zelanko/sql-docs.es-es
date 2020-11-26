@@ -8,18 +8,18 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 06148ae5d10db159745a7eb55be06735efa49531
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4a4d15d2a1475acfc5c4924e68a60b48f698c4ae
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364734"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127577"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Ver y leer el registro de diagnósticos de la instancia de clúster de conmutación por error
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Todos los errores críticos y eventos de advertencia de la DLL de recursos de SQL Server se escriben en el registro de eventos de Windows. El procedimiento almacenado del sistema [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) captura un registro en ejecución de la información de diagnóstico específica de SQL Server y lo escribe en los archivos de registro de diagnósticos de clústeres de conmutación por error de SQL Server (también conocidos como registros *SQLDIAG* ).  
+  Todos los errores críticos y eventos de advertencia de la DLL de recursos de SQL Server se escriben en el registro de eventos de Windows. El procedimiento almacenado del sistema [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) captura un registro en ejecución de la información de diagnóstico específica de SQL Server y lo escribe en los archivos de registro de diagnósticos de clústeres de conmutación por error de SQL Server (también conocidos como registros *SQLDIAG*).  
   
 -   **Antes de empezar:**  [Recomendaciones](#Recommendations), [Seguridad](#Security)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "93364734"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para ver los archivos de registro de diagnóstico:**  
   
-1.  En el menú **Archivo** , seleccione **Abrir** , **Archivo** y elija el archivo de registro de diagnóstico que desea ver.  
+1.  En el menú **Archivo** , seleccione **Abrir**, **Archivo** y elija el archivo de registro de diagnóstico que desea ver.  
   
 2.  Los eventos aparecen como filas en el panel derecho y, de forma predeterminada, las dos únicas columnas mostradas son **name** y **timestamp** .  
   
@@ -94,7 +94,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  Para ver un ejemplo de este procedimiento, vea [Ejemplo (Transact-SQL)](#TsqlExample)más adelante en esta sección.  
   
- Con la instrucción de lenguaje de definición de datos (DDL) **ALTER SERVER CONFIGURATION** , puede iniciar o detener el registro de los datos de diagnóstico capturados por el procedimiento [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) y establecer parámetros de configuración del registro de SQLDIAG como el recuento de sustitución incremental del archivo de registro, el tamaño del archivo de registro y la ubicación del archivo. Para obtener información detallada sobre la sintaxis, vea [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
+ Con la instrucción de lenguaje de definición de datos (DDL) **ALTER SERVER CONFIGURATION**, puede iniciar o detener el registro de los datos de diagnóstico capturados por el procedimiento [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) y establecer parámetros de configuración del registro de SQLDIAG como el recuento de sustitución incremental del archivo de registro, el tamaño del archivo de registro y la ubicación del archivo. Para obtener información detallada sobre la sintaxis, vea [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
   
 ###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> Ejemplos (Transact-SQL)  
   

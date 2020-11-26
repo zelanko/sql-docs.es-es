@@ -12,14 +12,14 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3144f53bed98c5f5ec92d26a1e72254b6adda25e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d900bbc6b8183e4a903886878cf61ce68ac39573
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895147"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127523"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Configuración de los votos y modos de quórum WSFC (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "85895147"
 ##  <a name="cluster-health-detection-by-quorum"></a><a name="ClusterHealthDetectionbyQuorum"></a> Detección del estado de clúster por quórum  
  Cada nodo de un clúster WSFC participa en la comunicación periódica de latido para compartir el estado de mantenimiento del nodo con los demás nodos. Los nodos que no responden se consideran que se encuentran en estado de error.  
   
- Un conjunto de nodos de *quórum* es una mayoría de los nodos con derecho a voto y testigos en el clúster WSFC. Un *voto de quórum*periódico determina el estado general de un clúster WSFC.  La presencia de un quórum significa que el clúster es correcto y puede proporcionar tolerancia a errores de nivel de nodo.  
+ Un conjunto de nodos de *quórum* es una mayoría de los nodos con derecho a voto y testigos en el clúster WSFC. Un *voto de quórum* periódico determina el estado general de un clúster WSFC.  La presencia de un quórum significa que el clúster es correcto y puede proporcionar tolerancia a errores de nivel de nodo.  
   
  La ausencia de un quórum indica que el clúster no es correcto.  El estado general del clúster WSFC debe mantenerse para asegurarse de que los nodos secundarios sanos correctos disponibles para que los nodos primarios puedan conmutar por error.  Si el voto de quórum da error, el clúster WSFC se pondrá sin conexión como medida preventiva.  También hará que todas las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] registradas con el clúster se detengan.  
   

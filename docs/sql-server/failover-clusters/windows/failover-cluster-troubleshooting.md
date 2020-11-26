@@ -12,14 +12,14 @@ helpviewer_keywords:
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 75090ce180ff6e71796c9363e39768f09ec3f91b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988313"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121103"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Solucionar problemas de clústeres de conmutación por error
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
   
 4.  Para ver temas de ayuda que le ayudarán a interpretar los resultados, haga clic en **Más información acerca de las pruebas de validación de clústeres**.  
   
- Para ver los temas de ayuda sobre la validación de clústeres después de cerrar el asistente, en el complemento de clústeres de conmutación por error, haga clic en **Ayuda**, en **Temas de Ayuda**y en la pestaña **Contenido** . Expanda el contenido de la ayuda de clústeres de conmutación por error y haga clic en **Validating a Failover Cluster Configuration (Validar una configuración de clúster de conmutación por error)**.  Una vez que el Asistente para validación haya finalizado, los resultados se mostrarán en **Informe de resumen** . Se deben superar todas las pruebas con una marca de verificación verde o, en algunos casos, un triángulo amarillo (advertencia). Cuando busque áreas con problemas (X de color rojo o signos de interrogación amarillos), en la parte del informe donde se resumen los resultados de las pruebas, haga clic en una prueba individual para revisar los detalles. Todos los problemas indicados con una X de color rojo se tendrán que resolver antes de solucionar los problemas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Para ver los temas de ayuda sobre la validación de clústeres después de cerrar el asistente, en el complemento de clústeres de conmutación por error, haga clic en **Ayuda**, en **Temas de Ayuda** y en la pestaña **Contenido** . Expanda el contenido de la ayuda de clústeres de conmutación por error y haga clic en **Validating a Failover Cluster Configuration (Validar una configuración de clúster de conmutación por error)**.  Una vez que el Asistente para validación haya finalizado, los resultados se mostrarán en **Informe de resumen** . Se deben superar todas las pruebas con una marca de verificación verde o, en algunos casos, un triángulo amarillo (advertencia). Cuando busque áreas con problemas (X de color rojo o signos de interrogación amarillos), en la parte del informe donde se resumen los resultados de las pruebas, haga clic en una prueba individual para revisar los detalles. Todos los problemas indicados con una X de color rojo se tendrán que resolver antes de solucionar los problemas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  **Instalación de actualizaciones**  
   
@@ -93,7 +93,7 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
   
  **Solución 1**: compruebe los registros de eventos para ver si hay problemas de red, como errores de los adaptadores o problemas de DNS. Compruebe que puede hacer ping al controlador de dominio.  
   
- **Problema 2: las contraseñas de las cuentas de servicio de ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no son idénticas en todos los nodos de clúster o el nodo no reinicia un servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se ha migrado desde un nodo con error.  
+ **Problema 2: las contraseñas de las cuentas de servicio de** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no son idénticas en todos los nodos de clúster o el nodo no reinicia un servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se ha migrado desde un nodo con error.  
   
  **Solución 2:** cambie las contraseñas de las cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si no lo hace y cambia las contraseñas de la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un nodo, debe cambiar también las contraseñas de los demás nodos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lo hace automáticamente.  
   
@@ -168,11 +168,11 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
   
  Para habilitar completamente MS DTC, lleve a cabo los siguientes pasos:  
   
-1.  En el Panel de control, abra **Herramientas administrativas**y, a continuación, abra **Administración de equipos**.  
+1.  En el Panel de control, abra **Herramientas administrativas** y, a continuación, abra **Administración de equipos**.  
   
-2.  En el panel izquierdo de Administración de equipos, expanda **Servicios y Aplicaciones**y, a continuación, haga clic en **Servicios**.  
+2.  En el panel izquierdo de Administración de equipos, expanda **Servicios y Aplicaciones** y, a continuación, haga clic en **Servicios**.  
   
-3.  En el panel derecho de Administración de equipos, haga clic con el botón derecho en **Coordinador de transacciones distribuidas**y seleccione **Propiedades**.  
+3.  En el panel derecho de Administración de equipos, haga clic con el botón derecho en **Coordinador de transacciones distribuidas** y seleccione **Propiedades**.  
   
 4.  En la ventana **Coordinador de transacciones distribuidas** , haga clic en la pestaña **General** y, a continuación, haga clic en **Detener** para detener el servicio.  
   

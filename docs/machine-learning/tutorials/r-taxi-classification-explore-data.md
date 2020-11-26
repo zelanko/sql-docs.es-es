@@ -11,10 +11,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
 ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92412542"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>Tutorial de R: Explorar y visualizar datos
@@ -51,7 +51,7 @@ En la [parte cinco](r-taxi-classification-deploy-model.md), aprenderá a poner e
 
 Desarrollar una solución de ciencia de datos incluye normalmente la exploración de datos intensivos y la visualización de datos. Así pues, primero revise los datos de ejemplo si no lo ha hecho ya, solo le llevará un minuto.
 
-En el conjunto de datos públicos original, los identificadores de taxis y los registros de viajes se proporcionaron en archivos independientes. En cambio, para facilitar el uso de los datos de ejemplo, los dos conjuntos de datos originales se han unido en las columnas _medallion_ , _hack\_license_ y _pickup\_datetime_.  Los registros también se muestrearon para obtener solo un 1 % del número de registros original. El conjunto de datos muestreado resultante tiene 1 703 957 filas y 23 columnas.
+En el conjunto de datos públicos original, los identificadores de taxis y los registros de viajes se proporcionaron en archivos independientes. En cambio, para facilitar el uso de los datos de ejemplo, los dos conjuntos de datos originales se han unido en las columnas _medallion_, _hack\_license_ y _pickup\_datetime_.  Los registros también se muestrearon para obtener solo un 1 % del número de registros original. El conjunto de datos muestreado resultante tiene 1 703 957 filas y 23 columnas.
 
 **Identificadores de taxis**
   
@@ -69,7 +69,7 @@ En el conjunto de datos públicos original, los identificadores de taxis y los r
   
   Este tutorial muestra solo la tarea de clasificación binaria; puede intentar crear modelos de las otras dos tareas de aprendizaje automático, regresión y clasificación de varias clases.
   
-+ Los valores usados para las columnas de etiqueta se basan en la columna _tip\_amount_ , usando estas reglas de negocios:
++ Los valores usados para las columnas de etiqueta se basan en la columna _tip\_amount_, usando estas reglas de negocios:
   
   |Nombre de columna derivada|Regla|
   |-|-|
@@ -150,7 +150,7 @@ El procedimiento almacenado devuelve la imagen como una secuencia de datos varbi
 
    Pulse ENTRAR en cada aviso para aceptar los valores predeterminados, excepto estos cambios:
 
-   + En **prefix-length of field plot** , escriba 0.
+   + En **prefix-length of field plot**, escriba 0.
   
    + Escriba **Y** si quiere guardar los parámetros de salida para un uso posterior.
   

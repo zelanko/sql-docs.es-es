@@ -40,6 +40,39 @@
           href: ../connect/ado-net/appcontext-switches.md
         - name: Búsqueda de información adicional
           href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+    - name: Asignaciones de tipos de datos en ADO.NET
+      href: ../connect/ado-net/data-type-mappings-ado-net.md
+      items:
+        - name: Asignaciones de tipos de datos de SQL Server
+          href: ../connect/ado-net/sql-server-data-type-mappings.md
+        - name: Números de punto flotante
+          href: ../connect/ado-net/floating-point-numbers.md
+    - name: Recuperar y modificar datos en ADO.NET
+      href: ../connect/ado-net/retrieving-modifying-data.md
+      items:
+        - name: Conectar a origen de datos
+          href: ../connect/ado-net/connecting-to-data-source.md
+          items:
+            - name: Establecer conexión
+              href: ../connect/ado-net/establishing-connection.md
+            - name: Eventos de Connection
+              href: ../connect/ado-net/connection-events.md
+        - name: Cadenas de conexión
+          href: ../connect/ado-net/connection-strings.md
+          items:
+            - name: Generadores de cadenas de conexión
+              href: ../connect/ado-net/connection-string-builders.md
+            - name: Cadenas de conexión y archivos de configuración
+              href: ../connect/ado-net/connection-strings-and-configuration-files.md
+            - name: Sintaxis de cadenas de conexión
+              href: ../connect/ado-net/connection-string-syntax.md
+            - name: Proteger la información de conexión
+              href: ../connect/ado-net/protecting-connection-information.md
+        - name: Agrupar conexiones
+          href: ../connect/ado-net/connection-pooling.md
+          items:
+            - name: Agrupación de conexiones de SQL Server (ADO.NET)
+              href: ../connect/ado-net/sql-server-connection-pooling.md
     - name: SQL Server y ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:

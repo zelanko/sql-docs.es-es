@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 2e3490f1a381bbe3a27f9860df2884c759387c39
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: 7001f188b00e70c2616e8c3592d7fa9e34147321
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636095"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419790"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configuración de Distributed Replay para Asistente para experimentación con bases de datos
 
@@ -61,12 +61,12 @@ Esta configuración solo es necesaria en el equipo del controlador.
 
 1. Abra dcomcnfg.exe.
 2. Expanda **servicios de componente**  >  **equipos**  >  **mi PC**  >  **Configuración DCOM**.
-3. En **Configuración DCOM**, haga clic con el botón secundario en **DReplayController**y seleccione **propiedades**.
+3. En **Configuración DCOM**, haga clic con el botón secundario en **DReplayController** y seleccione **propiedades**.
 4. Seleccione la pestaña **Seguridad** .
-5. En **permisos de inicio y activación**, seleccione **personalizar**y, a continuación, seleccione **Editar**.
+5. En **permisos de inicio y activación**, seleccione **personalizar** y, a continuación, seleccione **Editar**.
 6. Agregue el usuario que va a iniciar la reproducción. Conceda al usuario el inicio local y los permisos de activación local. Si el usuario tiene previsto iniciar o activar de forma remota, conceda al usuario permisos de inicio remoto y activación remota.
 7. Seleccione **Aceptar** para confirmar los cambios y volver a la pestaña **seguridad** .
-8. En **permisos de acceso**, seleccione **personalizar**y, a continuación, seleccione **Editar**.
+8. En **permisos de acceso**, seleccione **personalizar** y, a continuación, seleccione **Editar**.
 9. Agregue el usuario que va a iniciar la reproducción. Conceda a los permisos de acceso local del usuario. Si el usuario tiene previsto tener acceso al servicio de controlador de forma remota, conceda a los usuarios permisos de acceso remoto.
 10. Seleccione **Aceptar** para confirmar los cambios y volver a la pestaña **seguridad** .
 11. Seleccione **Aceptar** para confirmar los cambios.
@@ -99,7 +99,7 @@ Para más opciones de configuración, consulte [configuración de Distributed Re
 
 Puede usar Distributed Replay herramientas de administración para probar rápidamente si Distributed Replay funciona correctamente en el entorno. La prueba de la configuración puede ser especialmente útil en un entorno en el que se registran varios equipos cliente con un controlador. Es posible que tenga que instalar SQL Server Management Studio (SSMS) para obtener las herramientas de administración.
 
-1. Vaya a la ubicación de instalación de SSMS y busque la herramienta de administración de Distributed Replay dreplay.exe y sus componentes dependientes.
+1. Vaya a la ubicación de instalación de SSMS y busque la herramienta de administración de Distributed Replay dreplay.exe y sus componentes dependientes. Actualmente, [SSMS 17](../ssms/release-notes-ssms.md#1791) es la versión más reciente de SSMS para incluir dreplay.exe.
 2. En un símbolo del sistema, ejecute `dreplay.exe status -f 1` .
 
 Si los pasos anteriores se realizaron correctamente, la salida de la consola indica que el controlador puede ver sus clientes en un `READY` Estado.

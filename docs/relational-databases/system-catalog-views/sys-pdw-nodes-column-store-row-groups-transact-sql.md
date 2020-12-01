@@ -13,12 +13,12 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c08303bd13b96089ac2b9e0f82c83a992ec83e63
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 1038b37cf97fed506d8503ceafb94a7bdabb0b2d
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038306"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419836"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "92038306"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|IDENTIFICADOR de la tabla subyacente. Esta es la tabla física del nodo de proceso, no la object_id de la tabla lógica del nodo de control. Por ejemplo, object_id no coincide con el object_id de sys. tables.<br /><br /> Para combinar con sys. Tables, use sys.pdw_index_mappings.|  
 |**id_de_índice**|**int**|IDENTIFICADOR del índice de almacén de columnas agrupado en *object_id* tabla.|  
-|**partition_number**|**int**|IDENTIFICADOR de la partición de tabla que contiene el *row_group_id*de grupo de filas. Puede usar *partition_number* para unir esta DMV a sys. partitions.|  
+|**partition_number**|**int**|IDENTIFICADOR de la partición de tabla que contiene el *row_group_id* de grupo de filas. Puede usar *partition_number* para unir esta DMV a sys. partitions.|  
 |**row_group_id**|**int**|IDENTIFICADOR de este grupo de filas. Es único en la partición.|  
 |**dellta_store_hobt_id**|**bigint**|El hobt_id para los grupos de filas delta, o NULL si el tipo del grupo de filas no es delta. Un grupo de filas delta es un grupo de filas de lectura/escritura que acepta nuevos registros. Un grupo de filas Delta tiene el estado **Open** . Un grupo de filas delta está todavía en formato de almacén de filas y no se ha comprimido al formato de almacén de columnas.|  
 |**state**|**tinyint**|Número de identificación asociado con el state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
@@ -40,7 +40,7 @@ ms.locfileid: "92038306"
 |**pdw_node_id**|**int**|IDENTIFICADOR único de un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|  
 |**distribution_id**|**int**|IDENTIFICADOR único de la distribución.|
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Devuelve una fila para cada grupo de filas del almacén de columnas de cada tabla que tenga un índice clúster o no clúster de almacén de columnas.  
   
  Utilice **Sys.pdw_nodes_column_store_row_groups** para determinar el número de filas incluidas en el grupo de filas y el tamaño del grupo de filas.  
@@ -76,6 +76,7 @@ JOIN sys.pdw_nodes_indexes AS NI
 JOIN sys.pdw_nodes_column_store_row_groups AS CSRowGroups  
     ON CSRowGroups.object_id = NI.object_id   
     AND CSRowGroups.pdw_node_id = NI.pdw_node_id  
+    AND CSRowGroups.distribution_id = NI.distribution_id
     AND CSRowGroups.index_id = NI.index_id      
 WHERE total_rows > 0
 --WHERE t.name = '<table_name>'   

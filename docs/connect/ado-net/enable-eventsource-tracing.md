@@ -1,7 +1,7 @@
 ---
-title: Habilitar el seguimiento de eventos en SqlClient
+title: Habilitación del seguimiento de eventos en SqlClient
 description: Describe cómo habilitar el seguimiento de eventos en SqlClient implementando un agente de escucha de eventos y cómo obtener acceso a los datos del evento.
-ms.date: 06/15/2020
+ms.date: 11/23/2020
 dev_langs:
 - csharp
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: 4eac1ab519549ccace092cfc175c735dd4537269
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b45f6146f8b5e2f367281720b0fa1c3395d94256
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725746"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123965"
 ---
-# <a name="enabling-event-tracing-in-sqlclient"></a>Habilitar el seguimiento de eventos en SqlClient
+# <a name="enable-event-tracing-in-sqlclient"></a>Habilitación del seguimiento de eventos en SqlClient
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -54,10 +54,99 @@ En el ejemplo siguiente se habilita el seguimiento de eventos para una operació
 
 [!code-csharp [SqlClientEventSource#1](~/../sqlclient/doc/samples/SqlClientEventSource.cs#1)]
 
+## <a name="event-tracing-support-in-native-sni"></a>Compatibilidad con el seguimiento de eventos en SNI nativo
+
+**Microsoft.Data.SqlClient** v2.1.0 amplía la compatibilidad con el seguimiento de eventos en **Microsoft.Data.SqlClient.SNI** y **Microsoft.Data.SqlClient.SNI.runtime**. Mediante el envío de EventCommand a `SqlClientEventSource`, se pueden recopilar eventos en el archivo SNI.dll nativo con las herramientas [Xperf](https://docs.microsoft.com/windows-hardware/test/wpt/) y [PerfView](https://github.com/microsoft/perfview). Los valores válidos de EventCommand se muestran a continuación:
+
+```cs
+// Enables trace events:
+EventSource.SendCommand(eventSource, (EventCommand)8192, null);
+
+// Enables flow events:
+EventSource.SendCommand(eventSource, (EventCommand)16384, null);
+
+// Enables both trace and flow events:
+EventSource.SendCommand(eventSource, (EventCommand)(8192 | 16384), null);
+```
+
+En el ejemplo siguiente se habilita el seguimiento de eventos en el archivo SNI.dll nativo cuando la aplicación tiene como destino .NET Framework. 
+
+```cs
+// Native SNI tracing example
+// .NET Framework application
+using System;
+using System.Diagnostics.Tracing;
+using Microsoft.Data.SqlClient;
+
+public class SqlClientListener : EventListener
+{
+    protected override void OnEventSourceCreated(EventSource eventSource)
+    {
+        if (eventSource.Name.Equals("Microsoft.Data.SqlClient.EventSource"))
+        {
+            // Enables both trace and flow events
+            EventSource.SendCommand(eventSource, (EventCommand)(8192 | 16384), null);
+        }
+    }
+}
+
+class Program
+{
+    static string connectionString = @"Data Source = localhost; Initial Catalog = AdventureWorks;Integrated Security=true;";
+
+    static void Main(string[] args)
+    {
+        using (SqlClientListener listener = new SqlClientListener())
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+        }        
+    }
+}
+```
+
+### <a name="use-xperf-to-collect-trace-log"></a>Uso de Xperf para recopilar el registro de seguimiento
+
+1. Inicie el seguimiento con la siguiente línea de comandos.
+
+   ```
+   xperf -start trace -f myTrace.etl -on *Microsoft.Data.SqlClient.EventSource
+   ```
+   
+2. Ejecute el ejemplo de seguimiento de SNI nativo para conectarse a SQL Server.
+
+3. Detenga el seguimiento con la siguiente línea de comandos.
+
+   ```
+   xperf -stop trace
+   ```
+   
+4. Use PerfView para abrir el archivo myTrace.etl especificado en el paso 1. El registro de seguimiento de SNI se puede encontrar con los nombres de evento `Microsoft.Data.SqlClient.EventSource/SNIScope` y `Microsoft.Data.SqlClient.EventSource/SNITrace`. 
+
+   ![Uso de PerfView para ver el archivo de seguimiento de SNI](media/view-event-trace-native-sni.png)
+
+
+### <a name="use-perfview-to-collect-trace-log"></a>Uso de PerfView para recopilar el registro de seguimiento
+
+1. Inicie PerfView y ejecute `Collect > Collect` desde la barra de menús.
+
+2. Configure el nombre del archivo de seguimiento, la ruta de acceso de salida y el nombre del proveedor.
+
+   ![Configuración de PerfView antes de la recopilación](media/collect-event-trace-native-sni.png)
+   
+3. Inicie la recopilación.
+
+4. Ejecute el ejemplo de seguimiento de SNI nativo para conectarse a SQL Server.
+
+5. Detenga la recopilación de PerfView. Se tardará un tiempo en generar el archivo PerfViewData.etl según la configuración del paso 2.
+
+6. Abra el archivo etl en PerfView. El registro de seguimiento de SNI se puede encontrar con los nombres de evento `Microsoft.Data.SqlClient.EventSource/SNIScope` y `Microsoft.Data.SqlClient.EventSource/SNITrace`. 
+
+
 ## <a name="external-resources"></a>Recursos externos  
 Para obtener más información, vea los recursos siguientes.  
   
-|Recurso|Descripción|  
+|Resource|Descripción|  
 |--------------|-----------------|  
 |[clase EventSource](/dotnet/api/system.diagnostics.tracing.eventsource)|Ofrece la capacidad de crear y modificar eventos ETW.| 
 |[Clase EventListener](/dotnet/api/system.diagnostics.tracing.eventlistener)|Proporciona métodos para habilitar y deshabilitar eventos de orígenes de eventos.|

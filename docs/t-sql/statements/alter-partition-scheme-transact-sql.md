@@ -23,11 +23,11 @@ ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 8ca48f836b6d14b85d3f8d0286fd31e60c403afe
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688270"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124258"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -57,7 +57,7 @@ NEXT USED [ filegroup_name ] [ ; ]
  *filegroup_name*  
  Especifica el grupo de archivos que el esquema de partición debe marcar como NEXT USED. Esto significa que el grupo de archivos aceptará una nueva partición creada mediante una instrucción [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md).  
   
- En un esquema de partición, solo un grupo de archivos puede designarse como NEXT USED. Puede especificarse un grupo de archivos que no esté vacío. Si se especifica*filegroup_name* y actualmente no hay ningún grupo de archivos marcado como NEXT USED, *filegroup_name* se marca como NEXT USED. Si se especifica *filegroup_name* y ya existe un grupo de archivos con la propiedad NEXT USED, la propiedad NEXT USED se transfiere del grupo de archivos existente a *filegroup_name*.  
+ En un esquema de partición, solo un grupo de archivos puede designarse como NEXT USED. Puede especificarse un grupo de archivos que no esté vacío. Si se especifica *filegroup_name* y actualmente no hay ningún grupo de archivos marcado como NEXT USED, *filegroup_name* se marca como NEXT USED. Si se especifica *filegroup_name* y ya existe un grupo de archivos con la propiedad NEXT USED, la propiedad NEXT USED se transfiere del grupo de archivos existente a *filegroup_name*.  
   
  Si no se especifica *filegroup_name* y ya existe un grupo de archivos con la propiedad NEXT USED, ese grupo de archivos pierde su estado NEXT USED para que no haya grupos de archivos NEXT USED en *partition_scheme_name*.  
   

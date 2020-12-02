@@ -29,11 +29,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d4799b962fd1c8b6084443f5d83fa171fe4b0a1
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067436"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124136"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -126,7 +126,7 @@ CREATE CERTIFICATE certificate_name
  ASSEMBLY *assembly_name*  
  Especifica un ensamblado firmado que se ha cargado en la base de datos.  
   
- [ EXECUTABLE ] FILE = " *ruta_al_archivo* "  
+ [ EXECUTABLE ] FILE = "*ruta_al_archivo*"  
  Especifica la ruta completa, incluido el nombre de archivo, de acceso a un archivo codificado con DER que contiene el certificado. Si se usa la opción EXECUTABLE, el archivo es una DLL firmada por el certificado. *path_to_file* puede ser una ruta de acceso local o una ruta UNC a una ubicación de red. Se accede al archivo en el contexto de seguridad de la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta cuenta debe disponer de los necesarios permisos de sistema de archivos.  
 
 > [!IMPORTANT]
@@ -139,30 +139,30 @@ CREATE CERTIFICATE certificate_name
  WITH PRIVATE KEY  
  Especifica que la clave privada del certificado se ha cargado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta cláusula no es válida si el certificado se crea desde un ensamblado. Para cargar la clave privada de un certificado creado desde un ensamblado, use [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
   
- FILE =' *path_to_private_key* '  
+ FILE ='*path_to_private_key*'  
  Especifica la ruta de acceso completa a la clave privada, incluido el nombre de archivo. *path_to_private_key* puede ser una ruta de acceso local o una ruta UNC a una ubicación de red. Se accede al archivo en el contexto de seguridad de la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta cuenta debe disponer de los necesarios permisos de sistema de archivos.  
   
 > [!IMPORTANT]  
 > Esta opción no está disponible en una base de dato independiente o en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  BINARY = *private_key_bits*  
- **Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Bits de clave privada especificados como una constante binaria. Estos bits pueden estar en forma cifrada. Si están cifrados, el usuario debe proporcionar una contraseña de descifrado. No se realizan comprobaciones de directiva de contraseña en esta contraseña. Los bits de clave privada deben tener el formato de archivo PVK.  
   
- DECRYPTION BY PASSWORD = " *código de acceso_de_clave* "  
+ DECRYPTION BY PASSWORD = "*código de acceso_de_clave*"  
  Especifica la contraseña necesaria para descifrar una clave privada recuperada de un archivo. La cláusula es opcional si la clave privada está protegida por una contraseña NULL. No se recomienda guardar una clave privada de un archivo sin protección de contraseña. Si no se especifica una contraseña y es obligatorio hacerlo, se produce un error en la instrucción.  
   
- ENCRYPTION BY PASSWORD = ' *password* '  
+ ENCRYPTION BY PASSWORD = '*password*'  
  Especifica la contraseña usada para cifrar la clave privada. Utilice esta opción solo si desea cifrar el certificado con una contraseña. Si se omite esta cláusula, la clave privada se cifra usando la clave maestra de la base de datos. *password* debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Password Policy](../../relational-databases/security/password-policy.md).  
   
- SUBJECT = " *nombre_del_asunto_del_certificado* "  
+ SUBJECT = "*nombre_del_asunto_del_certificado*"  
  El término *subject* se refiere a un campo de asunto en los metadatos del certificado, según lo establecido en el estándar X.509. El contenido del asunto no debe tener más de 64 caracteres; este límite se aplica para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Linux. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Windows, este campo puede tener un máximo de 128 caracteres. Los asuntos que superen los 128 caracteres se truncan al almacenarlos en el catálogo, pero el objeto binario grande (BLOB) que contiene el certificado conserva el nombre de asunto completo.  
   
- START_DATE =" *fecha_y_hora* "  
+ START_DATE ="*fecha_y_hora*"  
  Es la fecha en la que el certificado comienza a ser válido. Si no se especifica, START_DATE coincide con la fecha actual. START_DATE se especifica en hora UTC y en cualquier formato que se pueda convertir a una fecha y hora.  
   
- EXPIRY_DATE =" *fecha_y_hora* "  
+ EXPIRY_DATE ="*fecha_y_hora*"  
  Es la fecha en la que expira el certificado. Si no se especifica, EXPIRY_DATE es una fecha un año posterior a la indicada en START_DATE. EXPIRY_DATE se especifica en hora UTC y en cualquier formato que se pueda convertir a una fecha y hora. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker comprueba la fecha de expiración, Backup con cifrado que usa certificados también comprueba la fecha de expiración y no permitirá que una nueva copia de seguridad se cree con un certificado caducado, pero permitirá restauraciones con un certificado caducado. Sin embargo, no se exige la expiración cuando el certificado se usa para el cifrado de base de datos o para Always Encrypted.  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  

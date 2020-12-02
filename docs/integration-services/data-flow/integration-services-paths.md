@@ -22,10 +22,10 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a69d70b9e58458303dbba3444b6a8c38fb40ccc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495865"
 ---
 # <a name="integration-services-paths"></a>Rutas de Integration Services
@@ -42,7 +42,7 @@ ms.locfileid: "88495865"
   
  Entre las propiedades configurables de la ruta se incluyen el nombre, descripción y anotación de la ruta. También puede configurar rutas mediante programación. Para obtener más información, vea [Conectar componentes de flujo de datos mediante programación](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
- Una anotación de ruta muestra el nombre del origen de ruta o el nombre de ruta en la superficie de diseño de la pestaña **Flujo de datos** en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Las anotaciones de ruta son similares a las anotaciones que se pueden agregar a los flujos de datos, flujos de control y controladores de eventos. La única diferencia es que una anotación de ruta se adjunta a una ruta, mientras que otras anotaciones aparecen en las pestañas **Flujo de datos**, **Flujo de control**y **Controlador de eventos**del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ Una anotación de ruta muestra el nombre del origen de ruta o el nombre de ruta en la superficie de diseño de la pestaña **Flujo de datos** en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Las anotaciones de ruta son similares a las anotaciones que se pueden agregar a los flujos de datos, flujos de control y controladores de eventos. La única diferencia es que una anotación de ruta se adjunta a una ruta, mientras que otras anotaciones aparecen en las pestañas **Flujo de datos**, **Flujo de control** y **Controlador de eventos** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Los metadatos muestran el nombre, tipo de datos, precisión, escala, longitud, página de códigos y componente de origen de cada columna en la salida del componente anterior. El componente de origen es el componente de flujo de datos que creó la columna. Este componente puede ser el primero en el flujo de datos, o puede no serlo. Por ejemplo, las transformaciones Unión de todo y Ordenar crean sus propias columnas, y son los orígenes de sus columnas de salida. Por otro lado, una transformación Copiar columna puede pasar por columnas sin modificarlas o puede crear nuevas columnas copiando columnas de entrada. La transformación Copiar columna es el componente de origen solamente de las nuevas columnas.  
 
@@ -159,6 +159,6 @@ Los objetos de flujo de datos del modelo de objetos de [!INCLUDE[msCoName](../..
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|PathAnnotation|Integer (enumeración)|Un valor que indica si una anotación se debería mostrar con la ruta de acceso en el área del diseñador. Los valores posibles son **AsNeeded**, **SourceName**, **PathName**y **Never**. El valor predeterminado es **AsNeeded**.|  
+|PathAnnotation|Integer (enumeración)|Un valor que indica si una anotación se debería mostrar con la ruta de acceso en el área del diseñador. Los valores posibles son **AsNeeded**, **SourceName**, **PathName** y **Never**. El valor predeterminado es **AsNeeded**.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|La entrada asociada a la ruta de acceso.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|La salida asociada a la ruta de acceso.|  

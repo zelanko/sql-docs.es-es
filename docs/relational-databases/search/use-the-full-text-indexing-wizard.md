@@ -25,10 +25,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 24903e075fc7ce38e79c0b99a559afac194638bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88490595"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar el Asistente para indización de texto completo
@@ -37,7 +37,7 @@ ms.locfileid: "88490595"
   
 ## <a name="create-a--full-text-index"></a>Crear un índice de texto completo 
 
-1. En el Explorador de objetos, haga clic con el botón derecho en la tabla en la que quiere crear un índice de texto completo, seleccione **Índice de texto completo**y, luego, haga clic en **Definir índice de texto completo**. Esta acción inicia el Asistente en una ventana independiente.
+1. En el Explorador de objetos, haga clic con el botón derecho en la tabla en la que quiere crear un índice de texto completo, seleccione **Índice de texto completo** y, luego, haga clic en **Definir índice de texto completo**. Esta acción inicia el Asistente en una ventana independiente.
    Haga clic en Next (Siguiente). 
   
 2. **Índice único.**  Seleccione un índice de la lista desplegable. El índice deberá ser un índice de columna de una sola clave, único y que no admita valores NULL. Seleccione el índice de clave única más pequeño para la clave única de texto completo. Para obtener mejores resultados, se recomienda utilizar un índice clúster.  

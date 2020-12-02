@@ -20,10 +20,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f68204154f2bbbc3c78d3aeec7e9221a625f355d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470166"
 ---
 # <a name="limit-search-results-with-rank"></a>Limitar los resultados de la búsqueda con RANK
@@ -33,7 +33,7 @@ ms.locfileid: "88470166"
 > [!NOTE]  
 >  Los predicados CONTAINS y FREETEXT no devuelven ningún valor de clasificación.  
   
- El número de elementos que coincide con una condición de búsqueda suele ser muy grande. Para evitar que las consultas CONTAINSTABLE o FREETEXTTABLE devuelvan demasiadas coincidencias, use el parámetro opcional *top_n_by_rank* , que solo devuelve un subconjunto de filas. *top_n_by_rank* es un valor entero, donde *n*especifica que solo se devuelvan las *n* coincidencias con la clasificación más alta, en orden descendente. Si se combina *top_n_by_rank* con otros parámetros, es posible que la consulta devuelva menos filas de las que en realidad coinciden con todos los predicados.  
+ El número de elementos que coincide con una condición de búsqueda suele ser muy grande. Para evitar que las consultas CONTAINSTABLE o FREETEXTTABLE devuelvan demasiadas coincidencias, use el parámetro opcional *top_n_by_rank* , que solo devuelve un subconjunto de filas. *top_n_by_rank* es un valor entero, donde *n* especifica que solo se devuelvan las *n* coincidencias con la clasificación más alta, en orden descendente. Si se combina *top_n_by_rank* con otros parámetros, es posible que la consulta devuelva menos filas de las que en realidad coinciden con todos los predicados.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordena las coincidencias por orden de clasificación y devuelve solo hasta el número especificado de filas. Esta opción puede aumentar significativamente el rendimiento. Por ejemplo, una consulta que por lo general devolvería 100.000 filas de una tabla de 1 millón se procesará de forma más rápida si solo se solicitan las 100 primeras filas.  
   
@@ -145,7 +145,7 @@ GO
   
  Las estadísticas como **IndexRowCount** pueden variar enormemente. Por ejemplo, si un catálogo tiene 2.000 millones de filas en el índice maestro, un nuevo documento se indizará en un índice intermedio de la memoria y los rangos de dicho documento basados en el número de documentos en el índice almacenado en la memoria podrían desviarse de los rangos de los documentos del índice maestro. Por este motivo, tras realizar un llenado que dé como resultado la indización o reindización de un gran número de filas, se recomienda mezclar los índices en un índice maestro mediante la instrucción ALTER FULLTEXT CATALOG ... REORGANIZE de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El motor de búsqueda de texto completo también mezclará automáticamente los índices basándose en parámetros como el número y el tamaño de los índices intermedios.  
   
- Los valores de**MaxOccurrence** se normalizan en 1 de 32 intervalos. Esto significa que, por ejemplo, un documento de 50 palabras se trata igual que un documento de 100 palabras. A continuación se muestra la tabla utilizada para la normalización. Como las longitudes de los documentos se encuentran en el intervalo entre los valores de tabla adyacentes 32 y 128, en la práctica se considera que tienen la misma longitud, 128 (32 < **docLength** <= 128).  
+ Los valores de **MaxOccurrence** se normalizan en 1 de 32 intervalos. Esto significa que, por ejemplo, un documento de 50 palabras se trata igual que un documento de 100 palabras. A continuación se muestra la tabla utilizada para la normalización. Como las longitudes de los documentos se encuentran en el intervalo entre los valores de tabla adyacentes 32 y 128, en la práctica se considera que tienen la misma longitud, 128 (32 < **docLength** <= 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   

@@ -12,10 +12,10 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f6c7fed5c20d9025be9ad9bce060d6fa83de378a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472044"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Lección 3-3: Probar los paquetes implementados
@@ -40,7 +40,7 @@ Las carpetas de nivel superior dentro de la carpeta Paquetes almacenados son car
   
 ### <a name="to-connect-to-integration-services-in-sql-server-management-studio"></a>Para conectar a Integration Services en SQL Server Management Studio  
   
-1.  Haga clic en **Inicio**, elija **Todos los programas**, **Microsoft SQL Server**y, a continuación, haga clic en **SQL Server Management Studio**.  
+1.  Haga clic en **Inicio**, elija **Todos los programas**, **Microsoft SQL Server** y, a continuación, haga clic en **SQL Server Management Studio**.  
   
 2.  En el cuadro de diálogo **Conectar con el servidor** , seleccione **Integration Services** en la lista **Tipo de servidor** , proporcione un nombre de servidor en el cuadro **Nombre del servidor** y haga clic en **Conectar**.  
   

@@ -12,10 +12,10 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bbe7698c4b97a11fd9b2b4dba581fbad5a8be8df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88484115"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Lección 2-3: Modificación del Administrador de conexiones de archivos planos
@@ -28,9 +28,9 @@ Al modificar el administrador de conexiones para que use el valor de la variable
   
 ## <a name="configure-the-flat-file-connection-manager-to-use-a-variable"></a>Configuración del Administrador de conexiones de archivos planos para usar una variable  
   
-1.  En el panel **Administradores de conexión** , haga clic con el botón derecho en **Sample Flat File Source Data**y, después, seleccione **Propiedades**.  
+1.  En el panel **Administradores de conexión** , haga clic con el botón derecho en **Sample Flat File Source Data** y, después, seleccione **Propiedades**.  
 
-2.  En la ventana **Propiedades**, asegúrese de que **PackagePath** comienza con **\Package.Connections**. Si no, en el panel **Administradores de conexión**, haga clic con el botón derecho en **Sample Flat File Source Data** (Datos de origen de archivos planos de ejemplo) y seleccione **Convertir en conexión de paquete **.
+2.  En la ventana **Propiedades**, asegúrese de que **PackagePath** comienza con **\Package.Connections**. Si no, en el panel **Administradores de conexión**, haga clic con el botón derecho en **Sample Flat File Source Data** (Datos de origen de archivos planos de ejemplo) y seleccione **Convertir en conexión de paquete**.
   
 3.  En la ventana **Propiedades**, para **Expresiones**, seleccione la celda vacía y, después, haga clic en el botón de puntos suspensivos **(...)**.  
   

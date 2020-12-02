@@ -24,10 +24,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90990416"
 ---
 # <a name="integration-services-service-ssis-service"></a>Servicio Integration Services (servicio SSIS)
@@ -100,9 +100,9 @@ ms.locfileid: "90990416"
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-sql-server-configuration-manager"></a>Para establecer las propiedades del servicio Integration Services con el Administrador de configuración de SQL Server  
   
-1.  En el menú **Inicio** , seleccione **Todos los programas**, **Microsoft SQL Server**, **Herramientas de configuración**y haga clic en **Administrador de configuración de SQL Server**.  
+1.  En el menú **Inicio** , seleccione **Todos los programas**, **Microsoft SQL Server**, **Herramientas de configuración** y haga clic en **Administrador de configuración de SQL Server**.  
   
-2.  En el complemento **Administrador de configuración de SQL Server** , busque **SQL Server Integration Services** en la lista de servicios, haga clic con el botón derecho en **SQL Server Integration Services**y, después, haga clic en **Propiedades**.  
+2.  En el complemento **Administrador de configuración de SQL Server** , busque **SQL Server Integration Services** en la lista de servicios, haga clic con el botón derecho en **SQL Server Integration Services** y, después, haga clic en **Propiedades**.  
   
 3.  En el cuadro de diálogo **Propiedades de SQL Server Integration Services** , puede hacer lo siguiente:  
   
@@ -119,11 +119,11 @@ ms.locfileid: "90990416"
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-services"></a>Para establecer las propiedades del servicio Integration Services con el complemento Servicios  
   
-1.  En el **Panel de control**, si utiliza la Vista clásica, haga clic en **Herramientas administrativas**o bien, si utiliza la Vista por categorías, haga clic en **Rendimiento y mantenimiento** y, a continuación, en **Herramientas administrativas**.  
+1.  En el **Panel de control**, si utiliza la Vista clásica, haga clic en **Herramientas administrativas** o bien, si utiliza la Vista por categorías, haga clic en **Rendimiento y mantenimiento** y, a continuación, en **Herramientas administrativas**.  
   
 2.  Haga clic en **Servicios**.  
   
-3.  En el complemento **Servicios** , localice **SQL Server Integration Services** en la lista de servicios, haga clic con el botón derecho en **SQL Server Integration Services**y, después, haga clic en **Propiedades**.  
+3.  En el complemento **Servicios** , localice **SQL Server Integration Services** en la lista de servicios, haga clic con el botón derecho en **SQL Server Integration Services** y, después, haga clic en **Propiedades**.  
   
 4.  En el cuadro de diálogo **Propiedades de SQL Server Integration Services** , puede hacer lo siguiente:  
   
@@ -152,7 +152,7 @@ ms.locfileid: "90990416"
   
 2.  En el cuadro de diálogo **Servicios de componente**, expanda el nodo Servicios de componente > Equipos > Mi PC > Configuración DCOM.  
   
-3.  Haga clic con el botón derecho en **Microsoft SQL Server Integration Services 13.0**y, después, haga clic en **Propiedades**.  
+3.  Haga clic con el botón derecho en **Microsoft SQL Server Integration Services 13.0** y, después, haga clic en **Propiedades**.  
   
 4.  En la pestaña **Seguridad** , haga clic en **Editar** en la sección **Permisos de inicio y activación** .  
   
@@ -290,7 +290,7 @@ Cuando se instala [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)],
   
 2.  Haga clic en **Explorador de objetos** , en el menú **Ver** .  
   
-3.  En la barra de herramientas del Explorador de objetos, haga clic en **Conectar**y, a continuación, en **Integration Services**.  
+3.  En la barra de herramientas del Explorador de objetos, haga clic en **Conectar** y, a continuación, en **Integration Services**.  
   
 4.  En el cuadro de diálogo **Conectar al servidor** , indique el nombre del servidor. Puede usar un punto (.), (local) o **localhost** para indicar el servidor local.  
   
@@ -342,7 +342,7 @@ Cuando se instala [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)],
   
 6.  En el cuadro de diálogo **Propiedades de SQL Server Integration Services 11.0** , seleccione la pestaña **Seguridad** .  
   
-7.  En **Permisos de inicio y activación**, active **Personalizar**y haga clic en **Editar** para abrir el cuadro de diálogo **Permisos de inicio** .  
+7.  En **Permisos de inicio y activación**, active **Personalizar** y haga clic en **Editar** para abrir el cuadro de diálogo **Permisos de inicio** .  
   
 8.  En el cuadro de diálogo **Permisos de inicio** , agregue o elimine usuarios y asigne los permisos adecuados a los usuarios y grupos correspondientes. Los permisos disponibles son Ejecución local, Ejecución remota, Activación local y Activación remota. Los derechos de ejecución conceden o deniegan el permiso para iniciar y detener el servicio; los derechos de activación conceden o deniegan el permiso para conectarse al servicio.  
   

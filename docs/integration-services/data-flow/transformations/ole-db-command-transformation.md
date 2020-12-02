@@ -17,10 +17,10 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5cde3dc6eb7805f412ed7e820fb4946cf0c20c1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477652"
 ---
 # <a name="ole-db-command-transformation"></a>transformación Comando de OLE DB
@@ -38,7 +38,7 @@ ms.locfileid: "88477652"
   
 -   Especificar la página de códigos predeterminada.  
   
- Normalmente, la instrucción SQL incluye parámetros. Los valores de parámetro se almacenan en columnas externas en la entrada de transformación y al asignar una columna de entrada a una columna externa se asigna una columna de entrada a un parámetro. Por ejemplo, para buscar filas en la tabla **DimProduct** por el valor de su columna **ProductKey** y luego eliminarlas, puede asignar la columna externa denominada **Param_0** a la columna de entrada denominada **ProductKey** y luego ejecutar la instrucción SQL `DELETE FROM DimProduct WHERE ProductKey = ?`. La transformación Comando de OLE DB proporciona los nombres de parámetro y no puede modificarlos. Los nombres de parámetro son **Param_0**, **Param_1**y así sucesivamente.  
+ Normalmente, la instrucción SQL incluye parámetros. Los valores de parámetro se almacenan en columnas externas en la entrada de transformación y al asignar una columna de entrada a una columna externa se asigna una columna de entrada a un parámetro. Por ejemplo, para buscar filas en la tabla **DimProduct** por el valor de su columna **ProductKey** y luego eliminarlas, puede asignar la columna externa denominada **Param_0** a la columna de entrada denominada **ProductKey** y luego ejecutar la instrucción SQL `DELETE FROM DimProduct WHERE ProductKey = ?`. La transformación Comando de OLE DB proporciona los nombres de parámetro y no puede modificarlos. Los nombres de parámetro son **Param_0**, **Param_1** y así sucesivamente.  
   
  Si configura la transformación Comando de OLE DB mediante el cuadro de diálogo **Editor avanzado** , los parámetros de la instrucción SQL se pueden asignar automáticamente a las columnas externas en la entrada de transformación y las características de cada parámetro se definen haciendo clic en el botón **Actualizar** . Sin embargo, si el proveedor OLE DB que usa la transformación Comando de OLE DB no admite la derivación de la información de parámetros del parámetro, debe configurar las columnas externas manualmente. Esto significa que debe agregar una columna por cada parámetro a la entrada externa a la transformación, actualizar los nombres de columna para que usen nombres como **Param_0**, especificar el valor de la propiedad DBParamInfoFlags y asignar las columnas de entrada que contienen valores de parámetro a las columnas externas.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88477652"
   
 10. Haga clic en la pestaña **Propiedades de entrada y salida** .  
   
-11. Expanda **Entrada de comando de OLE DB**y luego expanda **Columnas externas**.  
+11. Expanda **Entrada de comando de OLE DB** y luego expanda **Columnas externas**.  
   
 12. Compruebe que **Columnas externas** enumera una columna para cada parámetro en la instrucción SQL. Los nombres de columna son **Param_0**, **Param_1**, etc.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "88477652"
   
     -   Especifique el tipo de datos de la columna y, según el tipo de datos, especifique la página de códigos, longitud, precisión y escala de la columna.  
   
-    -   Para eliminar un parámetro sin usar, seleccione el parámetro en **Columnas externas**y luego haga clic en **Quitar columna**.  
+    -   Para eliminar un parámetro sin usar, seleccione el parámetro en **Columnas externas** y luego haga clic en **Quitar columna**.  
   
     -   Haga clic en **Asignaciones de columnas** y asigne las columnas de la lista **Columnas de entrada disponibles** a parámetros de la lista **Columnas de destino disponibles** .  
   

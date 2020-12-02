@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c83a02c9c2b0c8c22a62f1765c839a1c15534405
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470197"
 ---
 # <a name="validate-replicated-data"></a>Validar datos replicados
@@ -39,7 +39,7 @@ La replicación transaccional y la replicación de mezcla le permiten validar qu
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
    
 ## <a name="how-data-validation-works"></a>Cómo funciona la validación de datos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valida los datos calculando un recuento de filas o una suma de comprobación en el Publicador y, a continuación, compara estos valores con el recuento de filas o suma de comprobación calculado en el suscriptor. Se calcula un valor para toda la tabla de publicación y otro valor para toda la tabla de suscripción, pero en los cálculos no se incluyen los datos de las columnas **text**, **ntext**ni **image** .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valida los datos calculando un recuento de filas o una suma de comprobación en el Publicador y, a continuación, compara estos valores con el recuento de filas o suma de comprobación calculado en el suscriptor. Se calcula un valor para toda la tabla de publicación y otro valor para toda la tabla de suscripción, pero en los cálculos no se incluyen los datos de las columnas **text**, **ntext** ni **image** .  
   
  Mientras se realizan los cálculos, se colocan bloqueos compartidos temporalmente en las tablas en las que se ejecutan los recuentos de filas y sumas de comprobación, pero los cálculos se completan rápidamente y los bloqueos compartidos se quitan normalmente en unos segundos.  
   
@@ -98,7 +98,7 @@ La replicación transaccional y la replicación de mezcla le permiten validar qu
 4.  En el cuadro de diálogo **Validar suscripciones** , seleccione las suscripciones que desea validar:   
     -   Seleccione **Validar todas las suscripciones de SQL Server**.    
     -   Seleccione **Validar las siguientes suscripciones:** y, a continuación, seleccione una o varias suscripciones.    
-5.  Para especificar el tipo de validación que se va a realizar (recuento de filas o recuento de filas y suma de comprobación), haga clic en **Opciones de validación**y, a continuación, especifique las opciones en el cuadro de diálogo **Opciones de validación de suscripciones** .  
+5.  Para especificar el tipo de validación que se va a realizar (recuento de filas o recuento de filas y suma de comprobación), haga clic en **Opciones de validación** y, a continuación, especifique las opciones en el cuadro de diálogo **Opciones de validación de suscripciones** .  
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 7.  Vea los resultados de la validación en el Monitor de replicación o en el cuadro de diálogo **Ver estado de sincronización** . Para cada suscripción:   
     1.  Expanda la publicación, haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Ver estado de sincronización**.    
@@ -159,7 +159,7 @@ La replicación transaccional y la replicación de mezcla le permiten validar qu
   
     -   Seleccione **Validar todas las suscripciones de SQL Server**.    
     -   Seleccione **Validar las siguientes suscripciones:** y, a continuación, seleccione una o varias suscripciones.    
-4.  Para especificar el tipo de validación que se va a realizar (recuento de filas o recuento de filas y suma de comprobación), haga clic en **Opciones de validación**y, a continuación, especifique las opciones en el cuadro de diálogo **Opciones de validación de suscripciones** .    
+4.  Para especificar el tipo de validación que se va a realizar (recuento de filas o recuento de filas y suma de comprobación), haga clic en **Opciones de validación** y, a continuación, especifique las opciones en el cuadro de diálogo **Opciones de validación de suscripciones** .    
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 6.  Haga clic en la pestaña **Todas las suscripciones** .  
 7.  Vea los resultados de la validación. Para cada suscripción de inserción:    
@@ -175,7 +175,7 @@ La replicación transaccional y la replicación de mezcla le permiten validar qu
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .   
 3.  Expanda la publicación en la que desea validar las suscripciones, haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Validar suscripción**.    
 4.  En el cuadro de diálogo **Validar suscripción** , seleccione **Validar esta suscripción**.    
-5.  Para especificar el tipo de validación que se va a realizar (recuento de filas o recuento de filas y suma de comprobación), haga clic en **Opciones**y, a continuación, especifique las opciones en el cuadro de diálogo **Opciones de validación de suscripciones** .    
+5.  Para especificar el tipo de validación que se va a realizar (recuento de filas o recuento de filas y suma de comprobación), haga clic en **Opciones** y, a continuación, especifique las opciones en el cuadro de diálogo **Opciones de validación de suscripciones** .    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  Vea los resultados de la validación en el Monitor de replicación o en el cuadro de diálogo **Ver estado de sincronización** :  
   
@@ -206,7 +206,7 @@ La replicación transaccional y la replicación de mezcla le permiten validar qu
 2.  Haga clic en la pestaña **Todas las suscripciones** .    
 3.  Haga clic con el botón secundario en la suscripción que desea validar y, a continuación, haga clic en **Validar suscripción**.    
 4.  En el cuadro de diálogo **Validar suscripción** , seleccione **Validar esta suscripción**.    
-5.  Para especificar el tipo de validación que se va a realizar (recuento de filas o recuento de filas y suma de comprobación), haga clic en **Opciones**y, a continuación, especifique las opciones en el cuadro de diálogo **Opciones de validación de suscripciones** .    
+5.  Para especificar el tipo de validación que se va a realizar (recuento de filas o recuento de filas y suma de comprobación), haga clic en **Opciones** y, a continuación, especifique las opciones en el cuadro de diálogo **Opciones de validación de suscripciones** .    
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  Haga clic en la pestaña **Todas las suscripciones** .    
 8.  Vea los resultados de la validación:    

@@ -12,10 +12,10 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8c30d9c27550913f5c83334ff33ff3a1cc08e1bc
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90990418"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Lección 1-7: Adición y configuración del destino de OLE DB
@@ -30,7 +30,7 @@ En esta tarea, se agrega y configura un destino de OLE DB para usar el administr
   
 ## <a name="add-and-configure-the-sample-ole-db-destination"></a>Adición y configuración del destino de OLE DB de ejemplo  
   
-1.  En el **Cuadro de herramientas de SSIS**, expanda **Otros destinos**y arrastre **Destino de OLE DB** a la superficie de diseño de la pestaña **Flujo de datos** . Coloque el **destino de OLE DB** directamente debajo de la transformación **Lookup Date Key**.  
+1.  En el **Cuadro de herramientas de SSIS**, expanda **Otros destinos** y arrastre **Destino de OLE DB** a la superficie de diseño de la pestaña **Flujo de datos** . Coloque el **destino de OLE DB** directamente debajo de la transformación **Lookup Date Key**.  
   
 2.  Haga clic en la transformación **Lookup Date Key** y arrastre la flecha de color azul hasta el nuevo **Destino de OLE DB** para conectar los dos componentes entre sí.  
   
@@ -52,7 +52,7 @@ En esta tarea, se agrega y configura un destino de OLE DB para usar el administr
   
 11. Haga clic en **Asignaciones**.  
   
-12. Compruebe que las columnas de entrada **AverageRate**, **CurrencyKey**, **EndOfDayRate**y **DateKey** están correctamente asignadas a las columnas de destino. Si hay columnas con el mismo nombre asignadas, la asignación es correcta.  
+12. Compruebe que las columnas de entrada **AverageRate**, **CurrencyKey**, **EndOfDayRate** y **DateKey** están correctamente asignadas a las columnas de destino. Si hay columnas con el mismo nombre asignadas, la asignación es correcta.  
   
 13. Seleccione **Aceptar**.  
   

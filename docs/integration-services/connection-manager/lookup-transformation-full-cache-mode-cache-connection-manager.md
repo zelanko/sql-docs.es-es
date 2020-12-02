@@ -14,10 +14,10 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2d897301336c7697b658fbf40837b23b0a2e3797
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719896"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Transformación Búsqueda en el modo Caché completa - Administrador de conexiones de caché
@@ -173,7 +173,7 @@ ms.locfileid: "91719896"
   
 9. En el paquete secundario, cree un administrador de conexiones de caché. Para hacerlo, haga clic con el botón derecho en el área **Administradores de conexiones** , haga clic en **Nueva conexión**, seleccione **CACHÉ** en el cuadro de diálogo **Agregar administrador de conexiones SSIS** y, después, haga clic en **Agregar**.  
   
-     El área **Administradores de conexión** aparece en la parte inferior de las pestañas **Flujo de control**, **Flujo de datos**y **Controladores de eventos** del Diseñador de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+     El área **Administradores de conexión** aparece en la parte inferior de las pestañas **Flujo de control**, **Flujo de datos** y **Controladores de eventos** del Diseñador de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 10. En el **Editor del administrador de conexiones de caché**, en la pestaña **General** , configure el administrador para leer los datos del archivo caché seleccionado a través de las opciones siguientes:  
   
@@ -227,9 +227,9 @@ ms.locfileid: "91719896"
   
 2.  Haga clic con el botón derecho en el área **Administradores de conexiones** y, después, en **Nueva conexión**.  
   
-     El área **Administradores de conexión** aparece en la parte inferior de las pestañas **Flujo de control**, **Flujo de datos**y **Controladores de eventos** del Diseñador de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+     El área **Administradores de conexión** aparece en la parte inferior de las pestañas **Flujo de control**, **Flujo de datos** y **Controladores de eventos** del Diseñador de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-3.  En el cuadro de diálogo **Agregar administrador de conexiones SSIS** , seleccione **CACHÉ**y, a continuación, haga clic en **Agregar** para agregar un administrador de conexiones de caché.  
+3.  En el cuadro de diálogo **Agregar administrador de conexiones SSIS** , seleccione **CACHÉ** y, a continuación, haga clic en **Agregar** para agregar un administrador de conexiones de caché.  
   
 4.  Haga doble clic en el Administrador de conexiones de caché para abrir el **Editor del administrador de conexiones de caché**.  
   

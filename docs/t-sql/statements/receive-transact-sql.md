@@ -23,10 +23,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: b299ace817088af33732d9e4a9984d7978709f6c
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91498180"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -159,7 +159,7 @@ ms.locfileid: "91498180"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**status**|**tinyint**|Estado del mensaje. Para los mensajes devueltos por el comando RECEIVE, el estado es siempre **0**. Los mensajes de la cola pueden contener uno de los siguiente valores:<br /><br /> **0**=Listo**1**=Mensaje recibido**2**=Sin completar**3**=Mensaje enviado retenido|  
+|**status**|**tinyint**|Estado del mensaje. Para los mensajes devueltos por el comando RECEIVE, el estado es siempre **0**. Los mensajes de la cola pueden contener uno de los siguiente valores:<br /><br /> **0**=Listo **1**=Mensaje recibido **2**=Sin completar **3**=Mensaje enviado retenido|  
 |**priority**|**tinyint**|Nivel de prioridad de la conversación que se aplica al mensaje.|  
 |**queuing_order**|**bigint**|Número de orden del mensaje en la cola.|  
 |**conversation_group_id**|**uniqueidentifier**|Identificador para el grupo de conversación al que pertenece este mensaje.|  
@@ -171,7 +171,7 @@ ms.locfileid: "91498180"
 |**service_contract_id**|**int**|Identificador de objeto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del contrato por el que se rige la conversación.|  
 |**message_type_name**|**nvarchar(256)**|Nombre del tipo de mensaje que describe el formato del mensaje. Los mensajes pueden ser tipos de mensaje de aplicación o mensajes del sistema del agente.|  
 |**message_type_id**|**int**|Identificador de objeto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del tipo de mensaje que describe el mensaje.|  
-|**validation**|**nchar(2)**|Validación utilizada para el mensaje.<br /><br /> **E**=Vacío**N**=Ninguno**X**=XML|  
+|**validation**|**nchar(2)**|Validación utilizada para el mensaje.<br /><br /> **E**=Vacío **N**=Ninguno **X**=XML|  
 |**message_body**|**varbinary(MAX)**|Contenido del mensaje.|  
   
 ## <a name="permissions"></a>Permisos  

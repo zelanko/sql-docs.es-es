@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a17fb30859866155b2e3976e3d1a1bb2890ac4e
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92006223"
 ---
 # <a name="polygon"></a>Polygon
@@ -48,7 +48,7 @@ Como se muestra en la ilustración:
  Las instancias aceptadas de **Polygon** son las instancias que pueden almacenarse en una variable de tipo **geometry** o **geography** sin generar una excepción. Se aceptan las siguientes instancias de **Polygon** :  
   
 -   Una instancia vacía de **Polygon** .  
--   Una instancia de **Polygon** que tiene un anillo exterior aceptable ring (**LineString**) y cero o más anillos interiores aceptables (**LineString**s).  
+-   Una instancia de **Polygon** que tiene un anillo exterior aceptable ring (**LineString**) y cero o más anillos interiores aceptables (**LineString** s).  
   
 Deben cumplirse necesariamente los criterios siguientes para que un anillo (**LineString**) sea aceptable.  
   

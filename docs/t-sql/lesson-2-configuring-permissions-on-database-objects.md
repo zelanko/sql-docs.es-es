@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15986ee3b8407a62fc4ed40a49c043921fe34588
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92035859"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>Lección 2: Configuración de permisos en objetos de base de datos
@@ -46,7 +46,7 @@ De forma predeterminada, los administradores del equipo tienen acceso total a [!
 ### <a name="create-a-new-windows-account"></a>Creación de una cuenta de Windows  
   
 1.  Haga clic en **Inicio** y en **Ejecutar**, en el cuadro **Abrir**, escriba **%SystemRoot%\system32\compmgmt.msc /s** y, a continuación, haga clic en **Aceptar** para abrir el programa Administración de equipos. 
-2.  En **Herramientas del sistema**, expanda **Usuarios y grupos locales**, haga clic con el botón derecho en **Usuarios**y luego haga clic en **Nuevo usuario**.    
+2.  En **Herramientas del sistema**, expanda **Usuarios y grupos locales**, haga clic con el botón derecho en **Usuarios** y luego haga clic en **Nuevo usuario**.    
 3.  En el cuadro **Nombre de usuario** , escriba **Mary**.    
 4.  En los cuadros **Contraseña** y **Confirmar contraseña** , escriba una contraseña segura y, a continuación, haga clic en **Crear** para crear un nuevo usuario de Windows local.  
   

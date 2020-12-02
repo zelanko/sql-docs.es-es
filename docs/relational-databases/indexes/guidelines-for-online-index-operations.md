@@ -20,10 +20,10 @@ ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 047ca1b9ebb3a9157dfe9cbea2ececb898f6b478
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91867670"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
@@ -32,7 +32,7 @@ ms.locfileid: "91867670"
 
 Al realizar operaciones de índice en línea se aplican las siguientes directrices:  
 
-- Los índices agrupados deben crearse, volver a compilarse o quitarse sin conexión cuando la tabla subyacente contienen los siguientes tipos de datos de objetos grandes (LOB): **image**, **ntext**y **text**.  
+- Los índices agrupados deben crearse, volver a compilarse o quitarse sin conexión cuando la tabla subyacente contienen los siguientes tipos de datos de objetos grandes (LOB): **image**, **ntext** y **text**.  
 - Los índices no clúster que no son únicos se pueden crear en línea cuando la tabla contiene tipos de datos LOB, pero ninguna de estas columnas se utiliza en la definición del índice como columna de clave o sin clave (incluida).  
 - Los índices de tablas temporales locales no se pueden crear, reconstruir o quitar en línea. Esta restricción no se aplica a los índices de tablas temporales globales.
 - Los índices se pueden reanudar desde la ubicación en la que se hayan detenido tras un error inesperado, una conmutación por error de la base de datos o un comando **PAUSE**. Consulte [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) y [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).
@@ -73,7 +73,7 @@ Las operaciones de índice en línea requieren más espacio en disco necesario q
 
 Para más información, consulte [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
-## <a name="performance-considerations"></a>Consideraciones de rendimiento
+## <a name="performance-considerations"></a>Consideraciones sobre el rendimiento
 
 Aunque las operaciones de índice en línea permiten actividades de actualización de usuario simultáneas, las operaciones de índice tardan más si la actividad de actualización es muy grande. Normalmente, las operaciones de índice en línea son más lentas que las operaciones de índice sin conexión equivalentes, independientemente del nivel de actividad de actualización simultánea.  
   

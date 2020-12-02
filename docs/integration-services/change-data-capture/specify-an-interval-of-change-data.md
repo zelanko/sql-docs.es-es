@@ -14,10 +14,10 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 960567c1278f1ed4e5da60a018c330591cd3627d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91724983"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar un intervalo de datos modificados
@@ -86,7 +86,7 @@ ms.locfileid: "91724983"
   
 1.  En la pestaña **Flujo de control** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , agregue una tarea Ejecutar SQL al paquete.  
   
-2.  Abra el **Editor de la tarea Ejecutar SQL**y en la página **General** del editor, seleccione las opciones siguientes:  
+2.  Abra el **Editor de la tarea Ejecutar SQL** y en la página **General** del editor, seleccione las opciones siguientes:  
   
     1.  En **Conjunto de resultados**, seleccione **Fila única**.  
   

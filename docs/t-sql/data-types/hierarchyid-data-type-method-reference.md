@@ -20,10 +20,10 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e9968e1537901de729406c5b0ddc21857e74b886
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92037503"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Referencia de los métodos del tipo de datos hierarchyid
@@ -34,7 +34,7 @@ El tipo de datos **hierarchyid** es un tipo de datos del sistema de longitud var
 Un valor del tipo de datos **hierarchyid** representa una posición en una jerarquía de árbol. Los valores de **hierarchyid** tienen las siguientes propiedades.
   
 -   Muy compactos  
-     El número medio de bits necesarios para representar un nodo en un árbol con *n* nodos depende del promedio de distribución ramificada secundarios (el promedio de elementos secundarios de un nodo). Para distribuciones ramificadas pequeñas (0-7), el tamaño es aproximadamente 6\*logA*n* bits, donde A es el promedio de distribución ramificada. Un nodo en una jerarquía organizativa de 100.000 personas con un promedio de nodos secundarios de 6 niveles supone aproximadamente 38 bits. Esto se redondea a 40 bits (o 5 bytes) para el almacenamiento.  
+     El número medio de bits necesarios para representar un nodo en un árbol con *n* nodos depende del promedio de distribución ramificada secundarios (el promedio de elementos secundarios de un nodo). Para distribuciones ramificadas pequeñas (0-7), el tamaño es aproximadamente 6\*logA *n* bits, donde A es el promedio de distribución ramificada. Un nodo en una jerarquía organizativa de 100.000 personas con un promedio de nodos secundarios de 6 niveles supone aproximadamente 38 bits. Esto se redondea a 40 bits (o 5 bytes) para el almacenamiento.  
 -   La comparación se realiza con prioridad a la profundidad  
      Dados dos valores **hierarchyid****a** y **b**, **a<b** significa que a viene antes que b en un corte transversal de prioridad a la profundidad del árbol. Los índices de los tipos de datos **hierarchyid** están en orden con prioridad a la profundidad y los nodos cercanos entre sí en un corte transversal de prioridad a la profundidad se almacenan casi uno junto a otro. Por ejemplo, los elementos secundarios de un registro se almacenan adyacentes a ese registro. Para más información, vea [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).  
 -   Compatibilidad con inserciones y eliminaciones arbitrarias  

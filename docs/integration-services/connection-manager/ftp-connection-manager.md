@@ -18,10 +18,10 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 854f975c64f5622c53d04c51651929d83745864a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91728051"
 ---
 # <a name="ftp-connection-manager"></a>FTP, administrador de conexiones
@@ -98,7 +98,7 @@ ms.locfileid: "91728051"
  Indique un tamaño de fragmento en kilobytes para transmitir datos.  
   
  **Probar conexión**  
- Después de configurar el Administrador de conexiones FTP, haga clic en **Probar conexión**para confirmar que la conexión es viable.  
+ Después de configurar el Administrador de conexiones FTP, haga clic en **Probar conexión** para confirmar que la conexión es viable.  
   
 ## <a name="see-also"></a>Vea también  
  [Tarea FTP](../../integration-services/control-flow/ftp-task.md)   

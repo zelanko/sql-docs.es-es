@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ddf8c0360de470d5640ed650c4b8339061c41b4
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91810491"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propiedades de columnas de tablas (SQL Server Management Studio)
@@ -32,7 +32,7 @@ ms.locfileid: "91810491"
 >  Si se publica la tabla para replicación, debe modificar el esquema mediante la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)][ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o SMO (Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Si se modifica el esquema mediante el Diseñador de tablas o el Diseñador de diagramas de base de datos, se intentará eliminar la tabla y volver a crearla. No se pueden eliminar objetos publicados, por lo que la modificación del esquema generará un error.  
   
  **General**  
- Se expande para mostrar **Nombre**, **Permitir valores NULL**, **Tipo de datos**, **Valor o enlace predeterminado**, **Longitud**, **Precisión**y **Escala**.  
+ Se expande para mostrar **Nombre**, **Permitir valores NULL**, **Tipo de datos**, **Valor o enlace predeterminado**, **Longitud**, **Precisión** y **Escala**.  
   
  **Nombre**  
  Muestra el nombre de la columna seleccionada.  
@@ -100,7 +100,7 @@ ms.locfileid: "91810491"
  **Semántica estadística**  
  Seleccione si desea habilitar la indización semántica estadística para la columna seleccionada. Para obtener más información, vea [Búsqueda semántica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- Si selecciona **Idioma** antes de seleccionar **Semántica estadística**y el idioma seleccionado no tiene un modelo de idioma semántico asociado, la opción **Semántica estadística** se establece en **No** y no puede modificarse. Si selecciona **Sí** para la opción de **Semántica estadística** antes de seleccionar **Idioma**, los idiomas disponibles en la columna **Idioma** estarán limitados a aquellos para los que exista un modelo de idioma semántico.  
+ Si selecciona **Idioma** antes de seleccionar **Semántica estadística** y el idioma seleccionado no tiene un modelo de idioma semántico asociado, la opción **Semántica estadística** se establece en **No** y no puede modificarse. Si selecciona **Sí** para la opción de **Semántica estadística** antes de seleccionar **Idioma**, los idiomas disponibles en la columna **Idioma** estarán limitados a aquellos para los que exista un modelo de idioma semántico.  
   
  **Suscriptor que no es de SQL Server**  
  Indica si la columna se está replicando en un suscriptor que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

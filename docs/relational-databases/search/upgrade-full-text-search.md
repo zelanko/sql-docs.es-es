@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4759838a20e721031db8e4ea5e644cc3822285a8
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91868943"
 ---
 # <a name="upgrade-full-text-search"></a>Actualizar la búsqueda de texto completo
@@ -137,9 +137,9 @@ Cuando una base de datos se actualiza a [!INCLUDE[ssCurrent](../../includes/sscu
   
  Para obtener más información sobre las copias de seguridad y la restauración de catálogos de texto completo de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , vea [Backing Up and Restoring Full-Text Catalogs (Copia de seguridad y restauración de catálogos de texto completo)](./back-up-and-restore-full-text-catalogs-and-indexes.md) y [File Backup and Restore and Full-Text Catalogs (Copia de seguridad y restauración de archivos y catálogos de texto completo)](/previous-versions/sql/sql-server-2008-r2/ms190643(v=sql.105))en los Libros en pantalla de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
- Cuando la base de datos se restaura en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se crea un nuevo archivo de base de datos para el catálogo de texto completo. El nombre predeterminado de este archivo es ftrow_*catalog-name*.ndf. Por ejemplo, si *catalog-name* es `cat1`, el nombre predeterminado del archivo de base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] será `ftrow_cat1.ndf`. Pero si el nombre predeterminado ya se usa en el directorio de destino, el nuevo archivo de base de datos se denominará `ftrow_`*catalog-name*`{`*GUID*`}.ndf`, donde *GUID* es el identificador único global del nuevo archivo.  
+ Cuando la base de datos se restaura en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se crea un nuevo archivo de base de datos para el catálogo de texto completo. El nombre predeterminado de este archivo es ftrow_ *catalog-name*.ndf. Por ejemplo, si *catalog-name* es `cat1`, el nombre predeterminado del archivo de base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] será `ftrow_cat1.ndf`. Pero si el nombre predeterminado ya se usa en el directorio de destino, el nuevo archivo de base de datos se denominará `ftrow_`*catalog-name*`{`*GUID*`}.ndf`, donde *GUID* es el identificador único global del nuevo archivo.  
   
- Después de que se hayan importado los catálogos, los elementos **sys.database_files** y **sys.master_file**se actualizan para eliminar las entradas de catálogo, y la columna **path** de **sys.fulltext_catalogs** se establece en NULL.  
+ Después de que se hayan importado los catálogos, los elementos **sys.database_files** y **sys.master_file** se actualizan para eliminar las entradas de catálogo, y la columna **path** de **sys.fulltext_catalogs** se establece en NULL.  
   
  **Para realizar una copia de seguridad de una base de datos**  
   

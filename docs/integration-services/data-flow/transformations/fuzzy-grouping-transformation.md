@@ -30,10 +30,10 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ce27ef50da9b1c72bc3b620dda61e6c1c925d14
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195967"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Agrupación aproximada, transformación
@@ -56,7 +56,7 @@ ms.locfileid: "92195967"
   
 -   **_key_in**, una columna que identifica de forma única cada fila.  
   
--   **_key_out**, una columna que identifica un grupo de filas duplicadas. La columna **_key_out** tiene el valor de la columna **_key_in** en la fila de datos canónica. Las filas con el mismo valor en **_key_out** forman parte del mismo grupo. El valor **_key_out**de un grupo corresponde al valor de **_key_in** en la fila de datos canónicos.  
+-   **_key_out**, una columna que identifica un grupo de filas duplicadas. La columna **_key_out** tiene el valor de la columna **_key_in** en la fila de datos canónica. Las filas con el mismo valor en **_key_out** forman parte del mismo grupo. El valor **_key_out** de un grupo corresponde al valor de **_key_in** en la fila de datos canónicos.  
   
 -   **_score**, un valor entre 0 y 1 que indica la similitud entre la fila de entrada y la fila canónica.  
   

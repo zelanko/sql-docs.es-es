@@ -18,11 +18,11 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 60e136951deb8701893ea3d611597e8388909816
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430997"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123541"
 ---
 # <a name="data-profiling-task"></a>Tarea de generación de perfiles de datos
 
@@ -87,17 +87,17 @@ ms.locfileid: "88430997"
 |FunctionalDependencyProfile|Columnas de tipo **integer** , **char** y **datetime**|  
 |InclusionProfile|Columnas de tipo **integer** , **char** y **datetime**|  
   
- \* En la tabla anterior de tipos de datos válidos, los tipos **integer**, **char**, **datetime**y **numeric** incluyen los tipos de datos específicos siguientes:  
+ \* En la tabla anterior de tipos de datos válidos, los tipos **integer**, **char**, **datetime** y **numeric** incluyen los tipos de datos específicos siguientes:  
   
- Los tipos enteros incluyen **bit**, **tinyint**, **smallint**, **int**y **bigint**.  
+ Los tipos enteros incluyen **bit**, **tinyint**, **smallint**, **int** y **bigint**.  
   
- Los tipos de caracteres incluyen **char**, **nchar**, **varchar**y **nvarchar** , pero no incluyen **varchar (max)** ni **nvarchar (max)**.  
+ Los tipos de caracteres incluyen **char**, **nchar**, **varchar** y **nvarchar** , pero no incluyen **varchar (max)** ni **nvarchar (max)**.  
   
- Los tipos de fecha y hora incluyen **datetime**, **smalldatetime**y **timestamp**.  
+ Los tipos de fecha y hora incluyen **datetime**, **smalldatetime** y **timestamp**.  
   
- Los tipos numéricos incluyen los tipos **integer** (excepto **bit**), **money**, **smallmoney**, **decimal**, **float**, **real**y **numeric**.  
+ Los tipos numéricos incluyen los tipos **integer** (excepto **bit**), **money**, **smallmoney**, **decimal**, **float**, **real** y **numeric**.  
   
- \*\* **image**, **text**, **XML**, **udt**y **variant** solo se admiten para el perfil de proporción de columnas nulas.  
+ \*\* **image**, **text**, **XML**, **udt** y **variant** solo se admiten para el perfil de proporción de columnas nulas.  
   
 ### <a name="valid-tables-and-columns"></a>Tablas y columnas válidas  
  Si la tabla o la columna está vacía, la tarea de generación de perfiles de datos realiza las acciones siguientes:  

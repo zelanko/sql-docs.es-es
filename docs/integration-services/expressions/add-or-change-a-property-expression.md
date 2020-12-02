@@ -15,11 +15,11 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3ef6580fb5a6983412343137e5cdf9e0d4ecbcf0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484457"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123317"
 ---
 # <a name="add-or-change-a-property-expression"></a>Agregar o cambiar una expresión de propiedad
 
@@ -28,7 +28,7 @@ ms.locfileid: "88484457"
 
   Puede crear expresiones de propiedad para paquetes, tareas, contenedores de bucles ForEach, contenedores de bucles For, contenedores de secuencias, controladores de eventos, administradores de conexión de paquetes y proyectos, y proveedores de registro.  
   
- Para crear o cambiar expresiones de propiedad, puede utilizar el **Editor de expresiones de propiedad** o el **Generador de expresiones**. Se puede tener acceso al **Editor de expresiones de propiedad** desde los editores personalizados que están disponibles para tareas y contenedores, o desde la ventana **Propiedades** . Se puede tener acceso al**Generador de expresiones** desde el **Editor de expresiones de propiedad**. Aunque puede escribir expresiones en el **Editor de expresiones de propiedad** o en el **Generador de expresiones**, el **Generador de expresiones** proporciona un conjunto gráfico de herramientas que simplifica el proceso de generar expresiones complejas.  
+ Para crear o cambiar expresiones de propiedad, puede utilizar el **Editor de expresiones de propiedad** o el **Generador de expresiones**. Se puede tener acceso al **Editor de expresiones de propiedad** desde los editores personalizados que están disponibles para tareas y contenedores, o desde la ventana **Propiedades** . Se puede tener acceso al **Generador de expresiones** desde el **Editor de expresiones de propiedad**. Aunque puede escribir expresiones en el **Editor de expresiones de propiedad** o en el **Generador de expresiones**, el **Generador de expresiones** proporciona un conjunto gráfico de herramientas que simplifica el proceso de generar expresiones complejas.  
   
  Para obtener más información sobre la sintaxis, los operadores y las funciones que proporciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md). El tema de cada operador o función incluye ejemplos de uso de ese operador o función en una expresión. Para obtener ejemplos de expresiones más complejas, vea [Usar expresiones de propiedad en paquetes](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "88484457"
   
     -   Para tener acceso a las variables del sistema y a las definidas por el usuario, expanda **Variables**.  
   
-    -   Para tener acceso a las funciones, las conversiones y los operadores que proporciona el lenguaje de expresiones de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , expanda **Funciones matemáticas**, **Funciones de cadena**, **Funciones de fecha y hora**, **Funciones NULL**, **Conversiones de tipo**y **Operadores**.  
+    -   Para tener acceso a las funciones, las conversiones y los operadores que proporciona el lenguaje de expresiones de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , expanda **Funciones matemáticas**, **Funciones de cadena**, **Funciones de fecha y hora**, **Funciones NULL**, **Conversiones de tipo** y **Operadores**.  
   
     -   Para generar o cambiar una expresión en el **Generador de expresiones**, arrastre variables, columnas, funciones, operadores y conversiones hasta el cuadro **Expresión** , o escriba la expresión en el cuadro.  
   

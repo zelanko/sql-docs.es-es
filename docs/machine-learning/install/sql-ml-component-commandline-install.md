@@ -3,18 +3,18 @@ title: Instalación desde un símbolo del sistema
 description: Ejecute la instalación de línea de comandos de SQL Server para agregar Machine Learning Services con Python y R a una instancia del motor de base de datos de SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/12/2020
+ms.date: 11/25/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd9e1e261790c301ceac8198a76fbe2906c8ccf6
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8e32b14682c7813dd911b52e80249cf6af7ebaac
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956773"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122766"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Instalación de SQL Server Machine Learning Services con R y Python mediante la línea de comandos
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -37,9 +37,9 @@ Puede especificar la interacción silenciosa, básica o completa con la interfaz
 
 ## <a name="command-line-arguments"></a>Argumentos de la línea de comandos
 
-El argumento FEATURES es obligatorio, igual que los contratos de términos de licencia. 
+El argumento **/FEATURES** es obligatorio, igual que los contratos de términos de licencia. 
 
-Al realizar la instalación a través del símbolo del sistema, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el modo totalmente silencioso mediante el uso del parámetro /Q o el modo silencioso sencillo mediante el parámetro /QS. El modificador /QS solamente muestra el progreso, pero no acepta ninguna entrada ni muestra mensajes de error si los encuentra. El parámetro /QS solamente se admite cuando se ha especificado /Action=install.
+Al realizar la instalación a través del símbolo del sistema, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el modo totalmente silencioso mediante el uso del parámetro **/Q** o el modo silencioso sencillo mediante el parámetro **/QS**. El modificador **/QS** solamente muestra el progreso, pero no acepta ninguna entrada ni muestra mensajes de error si los encuentra. El parámetro **/QS** solamente se admite cuando se ha especificado **/Action=install**.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 | Argumentos | Descripción |

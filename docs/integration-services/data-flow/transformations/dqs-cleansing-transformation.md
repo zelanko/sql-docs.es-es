@@ -18,11 +18,11 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ce6e3f36d8216f08493933798cdab558274e0cb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495713"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123389"
 ---
 # <a name="dqs-cleansing-transformation"></a>Transformación Limpieza de DQS
 
@@ -83,7 +83,7 @@ ms.locfileid: "88495713"
   
 ###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Establecer opciones en la pestaña Administrador de conexiones  
  **Administrador de conexiones de calidad de datos**  
- Seleccione un administrador de conexiones DQS existente de la lista, o bien haga clic en **Nuevo**para crear una conexión.  
+ Seleccione un administrador de conexiones DQS existente de la lista, o bien haga clic en **Nuevo** para crear una conexión.  
   
  **Nuevo**  
  Cree un administrador de conexiones con el cuadro de diálogo **Administrador de conexiones de limpieza de DQS** . Vea [Set the options in the DQS Cleansing Connection Manager dialog box](#manager).  
@@ -162,7 +162,7 @@ ms.locfileid: "88495713"
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], abra un proyecto de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] existente o cree uno nuevo.  
   
-2.  Haga clic con el botón derecho en el área de conexiones, haga clic en **Nueva conexión**y, después, en **DQS**.  
+2.  Haga clic con el botón derecho en el área de conexiones, haga clic en **Nueva conexión** y, después, en **DQS**.  
   
 3.  Haga clic en **Agregar**.  
   

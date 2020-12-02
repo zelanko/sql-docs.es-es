@@ -19,10 +19,10 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 54a577a2a94c64eafe3817ccd9a041125629f846
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193850"
 ---
 # <a name="integration-services-ssis-queries"></a>Consultas de Integration Services (SSIS)
@@ -114,8 +114,8 @@ Utilice el cuadro de diálogo **Generador de consultas** para crear una consulta
   
 |Panel|Descripción|  
 |----------|-----------------|  
-|Panel**Diagrama**|Muestra la consulta en un diagrama. El diagrama muestra las tablas incluidas en la consulta y cómo se combinan. Active o desactive la casilla situada junto a una columna de la tabla para agregarla a (o quitarla de) la salida de la consulta.<br /><br /> Cuando agrega tablas a la consulta, el Generador de consultas crea combinaciones entre las tablas basadas en tablas, según las claves de la tabla. Para agregar una combinación, arrastre un campo de una de las tablas a un campo de otra tabla. Para administrar una combinación, haga clic con el botón secundario en la combinación y, a continuación, seleccione una opción de menú.<br /><br /> Haga clic con el botón derecho en el panel **Diagrama** para agregar o quitar tablas, seleccionar todas las tablas y mostrar u ocultar paneles.|  
-|Panel**Cuadrícula**|Muestra la consulta en una cuadrícula. Puede utilizar este panel para agregar y quitar columnas de una consulta y cambiar la configuración de cada columna.|  
-|Panel**SQL**|Muestra la consulta como texto SQL. Los cambios que se realicen en el panel **Diagrama** y en el panel **Cuadrícula** aparecerán aquí, y los cambios que se realicen aquí aparecerán en el panel **Diagrama** y en el panel **Cuadrícula** .|  
-|Panel**Resultados**|Muestra los resultados de la consulta al hacer clic en **Ejecutar** en la barra de herramientas.| 
+|Panel **Diagrama**|Muestra la consulta en un diagrama. El diagrama muestra las tablas incluidas en la consulta y cómo se combinan. Active o desactive la casilla situada junto a una columna de la tabla para agregarla a (o quitarla de) la salida de la consulta.<br /><br /> Cuando agrega tablas a la consulta, el Generador de consultas crea combinaciones entre las tablas basadas en tablas, según las claves de la tabla. Para agregar una combinación, arrastre un campo de una de las tablas a un campo de otra tabla. Para administrar una combinación, haga clic con el botón secundario en la combinación y, a continuación, seleccione una opción de menú.<br /><br /> Haga clic con el botón derecho en el panel **Diagrama** para agregar o quitar tablas, seleccionar todas las tablas y mostrar u ocultar paneles.|  
+|Panel **Cuadrícula**|Muestra la consulta en una cuadrícula. Puede utilizar este panel para agregar y quitar columnas de una consulta y cambiar la configuración de cada columna.|  
+|Panel **SQL**|Muestra la consulta como texto SQL. Los cambios que se realicen en el panel **Diagrama** y en el panel **Cuadrícula** aparecerán aquí, y los cambios que se realicen aquí aparecerán en el panel **Diagrama** y en el panel **Cuadrícula** .|  
+|Panel **Resultados**|Muestra los resultados de la consulta al hacer clic en **Ejecutar** en la barra de herramientas.| 
 

@@ -2,20 +2,20 @@
 title: ¿Qué son las Actualizaciones de seguridad extendidas?
 description: Aprenda a usar el registro de SQL Server para obtener actualizaciones de seguridad extendidas para los productos de SQL Server de fin del soporte técnico y fin de la vida útil, como SQL Server 2008 y SQL Server 2008 R2.
 ms.custom: ''
-ms.date: 12/09/2019
+ms.date: 11/24/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: f3a337395be09743be335dd01ac80caf9dc98be0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793822"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121271"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>¿Qué son las Actualizaciones de seguridad extendidas para SQL Server?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -86,8 +86,8 @@ Para crear el registro de SQL Server, siga estos pasos:
 
    ![Captura de pantalla de Azure Portal que muestra cómo crear un registro de SQL Server.](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
-1. En **Detalles del proyecto** , elija su suscripción en el menú desplegable. Luego, elija un **grupo de recursos** existente o seleccione **Crear nuevo** para crear un grupo de recursos para el servicio del registro de SQL Server nuevo. 
-1. En **Detalles del servicio** , especifique un nombre y una región para el recurso del **registro de SQL Server** nuevo: 
+1. En **Detalles del proyecto**, elija su suscripción en el menú desplegable. Luego, elija un **grupo de recursos** existente o seleccione **Crear nuevo** para crear un grupo de recursos para el servicio del registro de SQL Server nuevo. 
+1. En **Detalles del servicio**, especifique un nombre y una región para el recurso del **registro de SQL Server** nuevo: 
 
    ![Captura de pantalla del registro de SQL Server que muestra la pestaña Conceptos básicos.](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
@@ -95,7 +95,7 @@ Para crear el registro de SQL Server, siga estos pasos:
 
 ## <a name="register-instances-for-esus"></a>Registro de instancias para las Actualizaciones de seguridad extendidas
 
-Una vez implementado el recurso del **registro de SQL Server** , puede elegir registrar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [única](#single-sql-server-instance), o bien puede registrar varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera [masiva](#multiple-sql-server-instances-in-bulk). Es necesario que haya al menos una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrada en el ámbito del registro de SQL Server para poder descargar cualquier paquete de ESU. 
+Una vez implementado el recurso del **registro de SQL Server**, puede elegir registrar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [única](#single-sql-server-instance), o bien puede registrar varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera [masiva](#multiple-sql-server-instances-in-bulk). Es necesario que haya al menos una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrada en el ámbito del registro de SQL Server para poder descargar cualquier paquete de ESU. 
 
 ### <a name="single-sql-server-instance"></a>Instancia de SQL Server única
 
@@ -103,11 +103,11 @@ Para registrar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 
 1. Inicie sesión en el [Portal de Azure](https://portal.azure.com). 
 1. Vaya al recurso del **registro de SQL Server**. 
-1. Seleccione **+ Registrar** en el panel de **información general** : 
+1. Seleccione **+ Registrar** en el panel de **información general**: 
 
    ![Elegir Registrar para registrar una instancia única de SQL Server](media/sql-server-extended-security-updates/register-single-sql-server-instance.png)
 
-1. Proporcione la información necesaria tal como se detalla en esta tabla y, luego, seleccione **Registrar** : 
+1. Proporcione la información necesaria tal como se detalla en esta tabla y, luego, seleccione **Registrar**: 
 
    |**Valor**| **Descripción**|
    | :-------| :------------- |
@@ -123,7 +123,7 @@ Para registrar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 
    <sup>1</sup> Solo es necesario para las máquinas virtuales de Azure. 
 
-La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recién registrada ahora está visible en la sección **Register SQL Server instances** (Registrar instancias de SQL Server) del panel de **información general** : 
+La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recién registrada ahora está visible en la sección **Register SQL Server instances** (Registrar instancias de SQL Server) del panel de **información general**: 
 
 ![Instancias de SQL Server registradas](media/sql-server-extended-security-updates/registered-sql-instance.png)
 
@@ -135,7 +135,7 @@ Las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] múl
 
 1. Inicie sesión en el [Portal de Azure](https://portal.azure.com). 
 1. Vaya al recurso del **registro de SQL Server**. 
-1. Seleccione **Bulk Register** (Registro masivo) en el panel de **información general** :  
+1. Seleccione **Bulk Register** (Registro masivo) en el panel de **información general**:  
 
    ![Elija el registro masivo para registrar varias instancias de SQL Server](media/sql-server-extended-security-updates/bulk-register-sql-server-instances.png)
 
@@ -207,6 +207,39 @@ Para descargar las Actualizaciones de seguridad extendidas, siga estos pasos:
 
 1. Descargue las actualizaciones de seguridad desde aquí, siempre que estén disponibles. 
 
+## <a name="supported-regions-and-data-residency"></a>Regiones admitidas y residencia de datos
+
+El servicio **Registro de SQL Server** (versión preliminar) está disponible en un subconjunto de las regiones de Azure. En la tabla siguiente se muestran las regiones admitidas y el tipo de residencia de datos en cada una de ellas.
+
+| **Región** | **Residencia de datos** |
+|:--|:--|
+|Este de Australia|Geoárea|
+|Sudeste de Australia|Geoárea|
+|Centro de Canadá|Geoárea|
+|Centro de Francia|Geoárea|
+|Japón Oriental|Geoárea|
+|Japón Occidental|Geoárea|
+|Centro de Corea del Sur|Geoárea|
+|Corea del Sur|Geoárea|
+|Centro-Norte de EE. UU|Geoárea|
+|Norte de Europa|Geoárea|
+|Centro-sur de EE. UU.|Geoárea|
+|Sudeste de Asia|Región única|
+|Sur de la India|Geoárea|
+|Norte de Sudáfrica|Geoárea|
+|Sur de Reino Unido|Geoárea|
+|Oeste de Reino Unido|Geoárea|
+|Oeste de EE. UU.|Geoárea|
+|Este de EE. UU.|Geoárea|
+|Centro de EE. UU.|Geoárea|
+|Este de Asia|Geoárea|
+|Oeste de Europa|Geoárea|
+|Centro-Oeste de EE. UU.|Geoárea|
+|Oeste de EE. UU. 2|Geoárea|
+|Este de EE. UU. 2|Geoárea|
+
+En las regiones con residencia geográfica, el servicio Registro de SQL mantiene las copias de seguridad de los datos en una cuenta de almacenamiento con redundancia geográfica (GRS).  En las regiones con residencia de una sola región, el servicio Registro de SQL mantiene las copias de seguridad de los datos en una cuenta de almacenamiento con redundancia de zona (ZRS). Para más información, consulte el [Centro de confianza](https://azuredatacentermap.azurewebsites.net/).
+
 ## <a name="configure-regional-redundancy"></a>Configuración de la redundancia regional 
 
 Los clientes que necesiten redundancia regional para su **registro de SQL Server** pueden crear datos de registro en dos regiones distintas. Después, los clientes pueden descargar actualizaciones de seguridad desde cualquier región en función de la disponibilidad del servicio de **registro de SQL Server**. 
@@ -223,7 +256,7 @@ Para configurar la redundancia regional, siga estos pasos:
 1. Cree el segundo servicio de **registro de SQL Server** en la segunda región y, a continuación, registre de forma masiva el otro archivo csv. Por ejemplo, cree el segundo servicio de **registro de SQL Server** en la región **Este de EE. UU.** y registre de forma masiva los servidores SQL Server con el archivo upload2.csv. 
 
 
-Una vez que los datos se han registrado con dos diferentes recursos de **registro de SQL Server** , podrá descargar actualizaciones de seguridad desde cualquiera de las regiones, en función de la disponibilidad del servicio. 
+Una vez que los datos se han registrado con dos diferentes recursos de **registro de SQL Server**, podrá descargar actualizaciones de seguridad desde cualquiera de las regiones, en función de la disponibilidad del servicio. 
 
 
 ## <a name="faq"></a>Preguntas más frecuentes

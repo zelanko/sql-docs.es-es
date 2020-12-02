@@ -12,11 +12,11 @@ ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e73d9b4a6f23473e0dcb7600507dc29fd795679a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484314"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123206"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Desarrollar componentes de flujo de datos con varias entradas
 
@@ -61,7 +61,7 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
   
  Al implementar este método, establece el estado de un elemento en la matriz *canProcess* Boolean para cada una de las entradas del componente. (Las entradas se identifican mediante los valores del id. en la matriz *inputIDs*). Al establecer el valor de un elemento en la matriz *canProcess* en **true** para una entrada, el motor de flujo de datos llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> del componente y proporciona más datos para la entrada especificada.  
   
- Aunque los datos del nivel superior estén disponibles, el valor del elemento de la matriz *canProcess* de una entrada al menos siempre debe ser **true**o procesar las detenciones.  
+ Aunque los datos del nivel superior estén disponibles, el valor del elemento de la matriz *canProcess* de una entrada al menos siempre debe ser **true** o procesar las detenciones.  
   
  El motor de flujo de datos llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> antes de enviar cada búfer de datos para determinar qué entradas esperan recibir más datos. Cuando el valor devuelto indica que se bloquea una entrada, el motor de flujo de datos almacena temporalmente en memoria caché los búferes adicionales de datos para esa entrada en lugar de enviarlos al componente.  
   

@@ -9,20 +9,20 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2b95ef0934c1eb01944df562c4c34cd73d8e0d0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 144b769ce42b192099678cda4cfe6fb2935c1c2f
+ms.sourcegitcommit: af663bdca0df8a1f34a14667390662f6f0e17766
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257345"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94924172"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>Implementación de varios [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en el mismo dominio de Active Directory
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-En este artículo se explican las actualizaciones de SQL Server 2019 CU 5 que permiten la implementación e integración de varios clústeres de macrodatos de SQL Server 2019 con el mismo dominio de Active Directory.
+En este artículo se explican las actualizaciones de SQL Server 2019 CU 5 que permiten la implementación e integración de varios Clústeres de macrodatos de SQL Server 2019 con el mismo dominio de Active Directory.
 
-Antes de CU5 había dos problemas que impedían la implementación de varios clústeres de macrodatos en un dominio de AD.
+Antes de SQL 2019 CU5 había dos problemas que impedían la implementación de varios clústeres de macrodatos en un dominio de AD.
 
 - Conflicto de nomenclatura para los nombres de entidades de seguridad de servicio y el dominio DNS
 - Nombre principal de la cuenta de dominio
@@ -35,11 +35,11 @@ El nombre de dominio proporcionado en el momento de la implementación se usa co
 
 ### <a name="domain-account-principal-names"></a>Nombre principal de la cuenta de dominio
 
-Durante una implementación de un clúster de macrodatos con un dominio de Active Directory se generan varias entidades de seguridad de cuenta para los servicios que se ejecutan dentro del clúster de macrodatos. Son esencialmente cuentas de usuario de AD. Antes de CU5, los nombres de dichas cuentas no serían únicos entre los clústeres. Este manifiesto intenta crear el mismo nombre de cuenta de usuario para un servicio determinado en un clúster de macrodatos en dos clústeres diferentes. El clúster que se está implementando en segundo lugar entrará en conflicto en AD y no podrá crear su cuenta.
+Durante una implementación de un clúster de macrodatos con un dominio de Active Directory se generan varias entidades de seguridad de cuenta para los servicios que se ejecutan dentro del clúster de macrodatos. Son esencialmente cuentas de usuario de AD. Antes de SQL 2019 CU5, los nombres de dichas cuentas no serían únicos entre los clústeres. Este manifiesto intenta crear el mismo nombre de cuenta de usuario para un servicio determinado en un clúster de macrodatos en dos clústeres diferentes. El clúster que se está implementando en segundo lugar entrará en conflicto en AD y no podrá crear su cuenta.
 
 ## <a name="resolution-for-collisions"></a>Resolución de colisiones
 
-### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---cu5"></a>Solución para resolver el problema con los SPN y el dominio DNS: CU5
+### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---sql-2019-cu5"></a>Solución para resolver el problema con los SPN y el dominio DNS: SQL 2019 CU5
 
 Dado que los SPN deben ser diferentes en dos clústeres, el nombre de dominio DNS que se pasa en el momento de la implementación debe ser diferente. Puede especificar diferentes nombres DNS mediante la configuración que acaba de introducir en el archivo de configuración de la implementación: `subdomain`. Si el subdominio es diferente en dos clústeres y se puede producir una comunicación interna a través de este subdominio, los SPN incluirán el subdominio que consigue la exclusividad necesaria.
 
@@ -63,7 +63,7 @@ El subdominio solo se aplica a DNS. Por lo tanto, el nombre de la nueva cuenta d
 
 ## <a name="semantics"></a>Semántica
 
-En resumen, la semántica de los parámetros agregados en CU5 para varios clústeres en un dominio es la siguiente:
+En resumen, la semántica de los parámetros agregados en SQL 2019 CU5 para varios clústeres en un dominio es la siguiente:
 
 ### `subdomain`
 
@@ -138,7 +138,7 @@ A continuación, se muestra un ejemplo de especificación del punto de conexión
 
 No es necesario, pero es recomendable. Proporcionar unidades organizativas independientes para clústeres independientes ayuda a administrar las cuentas de usuario generadas.
 
-### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>¿Cómo revertir al comportamiento anterior a CU5?
+### <a name="how-to-revert-back-to-the-pre-cu5-behavior-in-sql-2019"></a>¿Cómo revertir al comportamiento anterior a CU5 en SQL 2019?
 
 Puede haber escenarios en los que no pueda adaptar el parámetro `subdomain` recientemente introducido. Por ejemplo, debe implementar una versión anterior a CU5 y ya se ha actualizado [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Esto es muy improbable, pero si necesita revertir al comportamiento anterior a CU5, puede establecer el parámetro `useSubdomain` en `false` en la sección de Active Directory de `control.json`.
 

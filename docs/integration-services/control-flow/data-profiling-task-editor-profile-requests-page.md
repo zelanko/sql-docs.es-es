@@ -16,11 +16,11 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3365f6540a95639f2f6d4c607bfdee094c550c1c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431007"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123526"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil)
 
@@ -55,13 +55,13 @@ ms.locfileid: "88431007"
   
 -   Si selecciona ver **Todas las solicitudes**, el panel de solicitudes tiene dos columnas: **Tipo de perfil** e **Id. de solicitud**.  
   
--   Si selecciona ver uno de los cinco perfiles de columna, el panel de solicitud tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **Columna**e **Id. de solicitud**.  
+-   Si selecciona ver uno de los cinco perfiles de columna, el panel de solicitud tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **Columna** e **Id. de solicitud**.  
   
--   Si selecciona ver un perfil de claves candidatas, el panel de solicitudes tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **Columnas de clave**e **Id. de solicitud**.  
+-   Si selecciona ver un perfil de claves candidatas, el panel de solicitudes tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **Columnas de clave** e **Id. de solicitud**.  
   
--   Si selecciona ver un perfil de dependencia funcional, el panel de solicitudes tiene cinco columnas: **Tipo de perfil**, **Tabla o vista**, **Columnas determinantes**, **Columna dependiente**e **Id. de solicitud**.  
+-   Si selecciona ver un perfil de dependencia funcional, el panel de solicitudes tiene cinco columnas: **Tipo de perfil**, **Tabla o vista**, **Columnas determinantes**, **Columna dependiente** e **Id. de solicitud**.  
   
--   Si selecciona ver un perfil de inclusión de valores, el panel de solicitudes tiene seis columnas: **Tipo de perfil**, **Tabla o vista de subconjuntos**, **Tabla o vista de superconjuntos**, **Columnas de subconjunto**, **Columnas de superconjunto**e **Id. de solicitud**.  
+-   Si selecciona ver un perfil de inclusión de valores, el panel de solicitudes tiene seis columnas: **Tipo de perfil**, **Tabla o vista de subconjuntos**, **Tabla o vista de superconjuntos**, **Columnas de subconjunto**, **Columnas de superconjunto** e **Id. de solicitud**.  
   
  En las secciones siguientes se describe cada una de esas columnas.  
   

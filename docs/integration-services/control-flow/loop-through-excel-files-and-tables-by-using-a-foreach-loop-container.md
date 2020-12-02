@@ -16,10 +16,10 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7c6e986f032f755f73db249f7ddeff539fca4a8c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92197180"
 ---
 # <a name="loop-through-excel-files-and-tables-with-a-foreach-loop-container"></a>Creación de bucles entre archivos y tablas de Excel mediante un contenedor de bucles Foreach

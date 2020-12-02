@@ -22,10 +22,10 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 27b28672540d25fe84573c37004161992d3d3827
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194211"
 ---
 # <a name="raw-file-destination"></a>destino de archivo sin formato
@@ -118,7 +118,7 @@ ms.locfileid: "92194211"
   
  Para crear el archivo en la primera iteración del bucle y, posteriormente, agregar filas en las iteraciones subsiguientes, debe hacer lo siguiente en tiempo de diseño:  
   
-1.  Establezca la propiedad WriteOption en **CreateOnce** o **CreateAlways**y ejecute una iteración del bucle. Se crea el archivo. Así se garantiza que los metadatos de los datos agregados y del archivo sean iguales.  
+1.  Establezca la propiedad WriteOption en **CreateOnce** o **CreateAlways** y ejecute una iteración del bucle. Se crea el archivo. Así se garantiza que los metadatos de los datos agregados y del archivo sean iguales.  
   
 2.  Restablezca la propiedad WriteOption a **Append** y establezca la propiedad ValidateExternalMetadata en **False**.  
   

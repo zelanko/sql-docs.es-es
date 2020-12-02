@@ -17,10 +17,10 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f971d0788b33420495f1ae7ceeaca56599c8e239
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194192"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementar una búsqueda en modo No hay caché o Caché parcial
@@ -61,9 +61,9 @@ ms.locfileid: "92194192"
   
 8.  Realice uno de los siguientes pasos:  
   
-    -   Haga clic en **Usar una tabla o una vista**y, a continuación, seleccione una tabla o una vista, o haga clic en **Nueva** para crear una tabla o una vista.  
+    -   Haga clic en **Usar una tabla o una vista** y, a continuación, seleccione una tabla o una vista, o haga clic en **Nueva** para crear una tabla o una vista.  
   
-    -   Haga clic en **Usar los resultados de una consulta SQL**y, a continuación, genere una consulta en la ventana **Comando SQL** .  
+    -   Haga clic en **Usar los resultados de una consulta SQL** y, a continuación, genere una consulta en la ventana **Comando SQL** .  
   
          o bien  
   
@@ -101,7 +101,7 @@ ms.locfileid: "92194192"
   
     -   En la lista **Asignación desde caché** , seleccione el porcentaje que debe utilizarse de la memoria caché para almacenar las filas sin entradas coincidentes.  
   
-12. Para modificar la instrucción SQL que genera el conjunto de datos de referencia, seleccione **Modificar la instrucción SQL**y cambie la instrucción SQL mostrada en el cuadro de texto.  
+12. Para modificar la instrucción SQL que genera el conjunto de datos de referencia, seleccione **Modificar la instrucción SQL** y cambie la instrucción SQL mostrada en el cuadro de texto.  
   
      Si la instrucción incluye parámetros, haga clic en **Parámetros** para asignar los parámetros a las columnas de entrada.  
   

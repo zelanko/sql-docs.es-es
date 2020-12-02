@@ -20,10 +20,10 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1918d6cac049fd863426ce320ab774067c350ea5
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92678928"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS), proyectos y soluciones
@@ -40,7 +40,7 @@ Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] resid
  Los proyectos se almacenan en soluciones. Primero se crea una solución y luego se agrega un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] a la solución. Si no existe solución, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] crea automáticamente una cuando se crea el proyecto. Una solución puede contener varios proyectos de tipos diferentes.  
   
 > [!TIP]  
->  De forma predeterminada, al crear un proyecto nuevo de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], la solución no se muestra en el panel **Explorador de soluciones** . Para cambiar este comportamiento predeterminado, en el menú **Herramientas** , haga clic en **Opciones** . En el cuadro de diálogo **Opciones** , expanda **Proyectos y soluciones** y, a continuación, haga clic en **General** . En la página **General** , seleccione **Mostrar solución siempre** .  
+>  De forma predeterminada, al crear un proyecto nuevo de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], la solución no se muestra en el panel **Explorador de soluciones**. Para cambiar este comportamiento predeterminado, en el menú **Herramientas** , haga clic en **Opciones**. En el cuadro de diálogo **Opciones** , expanda **Proyectos y soluciones** y, a continuación, haga clic en **General**. En la página **General** , seleccione **Mostrar solución siempre**.  
 
 ## <a name="solutions-contain-projects"></a>Las soluciones contienen proyectos  
  Una solución es un contenedor que agrupa y administra los proyectos que se utilizan cuando se desarrollan soluciones empresariales de extremo a extremo. Una solución le permite manejar varios proyectos como una sola unidad y unir uno o más proyectos relacionados que contribuyen a una solución empresarial.  
@@ -90,7 +90,7 @@ Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] resid
 ## <a name="version-targeting-in-integration-services-projects"></a>Versión de destino en proyectos de Integration Services  
  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], puede crear, mantener y ejecutar paquetes que tienen como destino SQL Server 2017, SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
   
- En el Explorador de soluciones, haga clic con el botón derecho en un proyecto de Integration Services y seleccione **Propiedades** para abrir las páginas de propiedades del proyecto. En la pestaña **General** de **Propiedades de configuración** , seleccione la propiedad **TargetServerVersion** y luego elija SQL Server 2017, SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
+ En el Explorador de soluciones, haga clic con el botón derecho en un proyecto de Integration Services y seleccione **Propiedades** para abrir las páginas de propiedades del proyecto. En la pestaña **General** de **Propiedades de configuración**, seleccione la propiedad **TargetServerVersion** y luego elija SQL Server 2017, SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
   
  ![Propiedad TargetServerVersion en el cuadro de diálogo Propiedades del proyecto](../integration-services/media/targetserverversion2.png "Propiedad TargetServerVersion en el cuadro de diálogo Propiedades del proyecto")  
 
@@ -98,9 +98,9 @@ Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] resid
   
 1.  Abra [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-2.  En el menú **Archivo** , seleccione **Nuevo** y haga clic en **Proyecto** .  
+2.  En el menú **Archivo** , seleccione **Nuevo** y haga clic en **Proyecto**.  
   
-3.  En el cuadro de diálogo **Nuevo proyecto** , seleccione **Inteligencia empresarial** y después la plantilla **Proyecto de Integration Services** .  
+3.  En el cuadro de diálogo **Nuevo proyecto**, seleccione **Inteligencia empresarial** y después la plantilla **Proyecto de Integration Services**.  
   
      La plantilla **Proyecto de Integration Services** crea un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene un único paquete vacío.
 
@@ -110,13 +110,13 @@ Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] resid
   
      El nombre de la solución se actualiza automáticamente para que coincida con el nombre del proyecto.  
   
-5.  Para crear una carpeta diferente para el archivo de solución, seleccione **Crear directorio para la solución** . Ésta es la opción predeterminada.  
+5.  Para crear una carpeta diferente para el archivo de solución, seleccione **Crear directorio para la solución**. Ésta es la opción predeterminada.  
   
 6.  Si en el equipo hay instalado software de control de código fuente, seleccione **Agregar al control de código fuente**  para asociar el proyecto con el control de código fuente.  
   
-7.  Si el software de control de código fuente es [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, se abre el cuadro de diálogo **Inicio de sesión en Visual SourceSafe** . En **Inicio de sesión en Visual SourceSafe** , proporcione un nombre de usuario, una contraseña y el nombre de la base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe. Haga clic en **Examinar** para buscar la base de datos.  
+7.  Si el software de control de código fuente es [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, se abre el cuadro de diálogo **Inicio de sesión en Visual SourceSafe** . En **Inicio de sesión en Visual SourceSafe**, proporcione un nombre de usuario, una contraseña y el nombre de la base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe. Haga clic en **Examinar** para buscar la base de datos.  
   
-    > **NOTA:** Para ver y cambiar el complemento de control de código fuente seleccionado y para configurar el entorno de control de código fuente, haga clic en **Opciones** en el menú **Herramientas** y, después, expanda el nodo **Control de código fuente** .  
+    > **NOTA:** Para ver y cambiar el complemento de control de código fuente seleccionado y para configurar el entorno de control de código fuente, haga clic en **Opciones** en el menú **Herramientas** y, después, expanda el nodo **Control de código fuente**.  
   
 8.  Haga clic en **Aceptar** para agregar la solución al **Explorador de soluciones** y agregue el proyecto a la solución.  
 
@@ -124,7 +124,7 @@ Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] resid
   
 1.  En [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], haga clic en **Nuevo** > **Proyecto** en el menú **Archivo** .  
   
-2.  En el área **Plantillas instaladas** de la ventana **Nuevo proyecto** , expanda **Business Intelligence** y haga clic en **Integration Services** .  
+2.  En el área **Plantillas instaladas** de la ventana **Nuevo proyecto** , expanda **Business Intelligence** y haga clic en **Integration Services**.  
   
 3.  Seleccione **Asistente para importar proyectos de Integration Services** de la lista de tipos de proyecto.  
   
@@ -138,11 +138,11 @@ Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] resid
   
 8.  Haga clic en **Siguiente** para cambiar a la página **Seleccionar origen** .  
   
-9. Si va a importar desde un archivo **.ispac** , escriba la ruta de acceso con el nombre de archivo incluido en el cuadro de texto **Ruta de acceso** . Haga clic en **Examinar** para navegar hasta la carpeta donde desea almacenar la solución, escriba el nombre del archivo en el cuadro de texto **Nombre de archivo** y haga clic en **Abrir** .  
+9. Si va a importar desde un archivo **.ispac**, escriba la ruta de acceso con el nombre de archivo incluido en el cuadro de texto **Ruta de acceso**. Haga clic en **Examinar** para navegar hasta la carpeta donde desea almacenar la solución, escriba el nombre del archivo en el cuadro de texto **Nombre de archivo** y haga clic en **Abrir**.  
   
-     Si va a importar desde un **Catálogo de Integration Services** , escriba el nombre de la instancia de base de datos en el cuadro de texto **Nombre del servidor** , o bien haga clic en **Examinar** y seleccione la instancia de base de datos que contiene el catálogo.  
+     Si va a importar desde un **Catálogo de Integration Services**, escriba el nombre de la instancia de base de datos en el cuadro de texto **Nombre del servidor**, o bien haga clic en **Examinar** y seleccione la instancia de base de datos que contiene el catálogo.  
   
-     Haga clic en **Examinar** junto al cuadro de texto **Ruta de acceso** , expanda la carpeta del catálogo, seleccione el proyecto que desea importar y haga clic en **Aceptar** .  
+     Haga clic en **Examinar** junto al cuadro de texto **Ruta de acceso** , expanda la carpeta del catálogo, seleccione el proyecto que desea importar y haga clic en **Aceptar**.  
   
      Haga clic en **Siguiente** para pasar a la página **Revisión** .  
   
@@ -159,34 +159,34 @@ Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] resid
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra la solución para la cual desea agregar un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nuevo y realice una de las siguientes acciones:  
   
-    -   Haga clic con el botón derecho en la solución, seleccione **Agregar** y, después, haga clic en **Nuevo proyecto** .  
+    -   Haga clic con el botón derecho en la solución, seleccione **Agregar** y, después, haga clic en **Nuevo proyecto**.  
   
-    -   En el menú **Archivo** , seleccione **Agregar** y haga clic en **Nuevo proyecto** .  
+    -   En el menú **Archivo** , seleccione **Agregar** y haga clic en **Nuevo proyecto**.  
   
 2.  En el cuadro de diálogo **Nuevo proyecto** , seleccione **Proyecto de Integration Services** del panel **Plantillas** .  
   
 3.  Opcionalmente, modifique el nombre y ubicación del proyecto.  
   
-4.  Haga clic en **OK** .  
+4.  Haga clic en **OK**.  
   
 ### <a name="add-an-existing-project-to-a-solution"></a>Agregar un proyecto existente a una solución  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra la solución para la cual desee agregar un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] existente y realice una de las siguientes acciones:  
   
-    -   Haga clic con el botón derecho en la solución, seleccione **Agregar** y, después, haga clic en **Proyecto existente** .  
+    -   Haga clic con el botón derecho en la solución, seleccione **Agregar** y, después, haga clic en **Proyecto existente**.  
   
-    -   En el menú **Archivo** , seleccione **Agregar** y haga clic en **Proyecto existente** .  
+    -   En el menú **Archivo** , seleccione **Agregar** y haga clic en **Proyecto existente**.  
   
-2.  En el cuadro de diálogo **Agregar proyecto existente** , busque el proyecto que desee agregar y haga clic en **Abrir** .  
+2.  En el cuadro de diálogo **Agregar proyecto existente** , busque el proyecto que desee agregar y haga clic en **Abrir**.  
   
-3.  El proyecto se agrega a la carpeta de soluciones en el **Explorador de soluciones** .  
+3.  El proyecto se agrega a la carpeta de soluciones en el **Explorador de soluciones**.  
   
 ## <a name="remove-a-project-from-a-solution"></a>Eliminación de un proyecto de una solución
  Solo puede quitar un proyecto de una solución mientras la solución está visible en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Una vez que la solución está visible, puede quitar todos los proyectos excepto uno. Tan pronto como queda un solo proyecto, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ya no muestra la carpeta de la solución y no se puede quitar el último proyecto.  
    
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra la solución de la que desea quitar un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-2.  En el Explorador de soluciones, haga clic con el botón derecho en el proyecto y, después, haga clic en **Descargar el proyecto** .  
+2.  En el Explorador de soluciones, haga clic con el botón derecho en el proyecto y, después, haga clic en **Descargar el proyecto**.  
   
 3.  Haga clic en **Aceptar** para confirmar la eliminación.  
 
@@ -198,7 +198,7 @@ Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] resid
   
     -   Haga clic en **Nuevo elemento** y a continuación, seleccione una plantilla del panel **Plantillas** en el cuadro de diálogo **Agregar nuevo elemento** .  
   
-    -   Haga clic en **Elemento existente** , examine el cuadro de diálogo **Agregar elemento existente** para encontrar el elemento que desea agregar al proyecto y luego haga clic en **Agregar** .  
+    -   Haga clic en **Elemento existente**, examine el cuadro de diálogo **Agregar elemento existente** para encontrar el elemento que desea agregar al proyecto y luego haga clic en **Agregar**.  
   
 3.  El nuevo elemento aparece en la carpeta correspondiente en el Explorador de soluciones.  
 
@@ -209,11 +209,11 @@ Puede copiar objetos dentro de un proyecto de [!INCLUDE[ssISnoversion](../includ
   
 2.  Expanda el proyecto y la carpeta de elementos desde donde se copiará.  
   
-3.  Haga clic con el botón derecho en el elemento y, después, haga clic en **Copiar** .  
+3.  Haga clic con el botón derecho en el elemento y, después, haga clic en **Copiar**.  
   
-4.  Haga clic con el botón derecho en el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y luego haga clic en **Pegar** .  
+4.  Haga clic con el botón derecho en el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y luego haga clic en **Pegar**.  
   
-     Los elementos se copian automáticamente en la carpeta correcta. Si copia elementos al proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que no son paquetes, estos elementos se copian en la carpeta **Varios** .  
+     Los elementos se copian automáticamente en la carpeta correcta. Si copia elementos al proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que no son paquetes, estos elementos se copian en la carpeta **Varios**.  
 
 ## <a name="next-steps"></a>Pasos siguientes
 

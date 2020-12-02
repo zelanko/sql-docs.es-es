@@ -20,10 +20,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1dfeeecf62ad33ab5d2d66e0fdf454f89036d047
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193834"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables de Integration Services (SSIS)
@@ -261,7 +261,7 @@ Utilice el cuadro de diálogo **Agregar variable** para especificar las propieda
   
  Cuando se usa la ventana **Propiedades** para establecer expresiones en una variable definida por el usuario:  
   
--   El valor de una variable se puede establecer por las propiedades Value o Expression. De forma predeterminada, la propiedad EvaluateAsExpression se establece en **False** y la propiedad Value establece el valor de la variable. Para usar una expresión para establecer el valor, primero necesita establecer EvaluateAsExpression en **True**y, después, proporcionar una expresión en la propiedad Expression. La propiedad Value se establece automáticamente en el resultado de la evaluación de la expresión.  
+-   El valor de una variable se puede establecer por las propiedades Value o Expression. De forma predeterminada, la propiedad EvaluateAsExpression se establece en **False** y la propiedad Value establece el valor de la variable. Para usar una expresión para establecer el valor, primero necesita establecer EvaluateAsExpression en **True** y, después, proporcionar una expresión en la propiedad Expression. La propiedad Value se establece automáticamente en el resultado de la evaluación de la expresión.  
   
 -   La propiedad ValueType contiene el tipo de datos del valor de la propiedad Value. Si Value se establece con una expresión, ValueType se actualiza automáticamente a un tipo de datos compatible con el resultado de la evaluación de la expresión. Por ejemplo, si Value contiene 0 y la propiedad ValueType contiene **Int32** y, después, establece Expression en GETDATE(), Value contendrá la fecha y hora actuales y ValueType se establecerá en **DateTime**.  
   

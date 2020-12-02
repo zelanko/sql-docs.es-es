@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 307d27f85d5643b837298418279e22dc9225ac67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423589"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121393"
 ---
 # <a name="enhance-general-replication-performance"></a>Aumentar el rendimiento de la replicación general
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "88423589"
   
 -   Limite el uso de tipos de datos de objetos grandes (LOB).  
   
-     Los LOB requieren más espacio de almacenamiento y procesamiento que otros tipos de datos de columna. No incluya estas columnas en los artículos a menos que sea necesario para la aplicación. Los tipos de datos **text**, **ntext**y **image** han quedado desusados. Si incluye LOB, se recomienda que utilice los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)**, respectivamente.  
+     Los LOB requieren más espacio de almacenamiento y procesamiento que otros tipos de datos de columna. No incluya estas columnas en los artículos a menos que sea necesario para la aplicación. Los tipos de datos **text**, **ntext** y **image** han quedado desusados. Si incluye LOB, se recomienda que utilice los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)**, respectivamente.  
   
      Para la replicación transaccional, considere la posibilidad de utilizar el perfil de Agente de distribución denominado **Perfil de distribución para secuencias OLEDB**. Para obtener más información, consulte [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

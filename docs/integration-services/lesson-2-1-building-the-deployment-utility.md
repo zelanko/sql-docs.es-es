@@ -12,10 +12,10 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3e1b6c318bd971e5352ad0191ccad51e20f5560a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193810"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lección 2-1: Generar la utilidad de implementación
@@ -31,15 +31,15 @@ Antes de generar la utilidad de implementación, debe modificar las propiedades 
   
 ### <a name="to-set-the-deployment-utility-properties"></a>Para establecer las propiedades de la utilidad de implementación  
   
-1.  Si [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] no está abierto todavía, haga clic en **Inicio**, seleccione **Todos los programas**, **Microsoft SQL Server**y, después, haga clic en **Business Intelligence Development Studio**.  
+1.  Si [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] no está abierto todavía, haga clic en **Inicio**, seleccione **Todos los programas**, **Microsoft SQL Server** y, después, haga clic en **Business Intelligence Development Studio**.  
   
-2.  En el menú **Archivo** , haga clic en **Abrir**y, en **Proyecto o solución**, haga clic en la carpeta **Deployment Tutorial** a continuación, haga clic en **Abrir**y, después, haga doble clic en **Deployment Tutorial.sln**.  
+2.  En el menú **Archivo** , haga clic en **Abrir** y, en **Proyecto o solución**, haga clic en la carpeta **Deployment Tutorial** a continuación, haga clic en **Abrir** y, después, haga doble clic en **Deployment Tutorial.sln**.  
   
 3.  En el Explorador de soluciones, haga clic con el botón derecho en Deployment Tutorial y haga clic en **Propiedades**.  
   
 4.  En el cuadro de diálogo **Deployment Tutorial Property Pages** (Páginas de propiedades de Deployment Tutorial), expanda Propiedades de configuración y haga clic en Utilidad de implementación.  
   
-5.  En el panel derecho del cuadro de diálogo **Deployment Tutorial Property Pages** (Páginas de propiedades de Deployment Tutorial), compruebe que **AllowConfigurationChanges** se establece en **True**, establezca **CreateDeploymentUtility** en **True**y, de manera opcional, actualice el valor predeterminado de **DeploymentOutputPath**.  
+5.  En el panel derecho del cuadro de diálogo **Deployment Tutorial Property Pages** (Páginas de propiedades de Deployment Tutorial), compruebe que **AllowConfigurationChanges** se establece en **True**, establezca **CreateDeploymentUtility** en **True** y, de manera opcional, actualice el valor predeterminado de **DeploymentOutputPath**.  
   
 6.  Haga clic en **Aceptar**.  
   

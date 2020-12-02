@@ -17,11 +17,11 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b5a0e9c219a1649385b337ea378dec751f7851d4
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194568"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123306"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Ejemplos de expresiones avanzadas de Integration Services
 
@@ -74,7 +74,7 @@ ms.locfileid: "92194568"
 ## <a name="non-boolean-expressions"></a>Expresiones no booleanas  
  Las expresiones no booleanas se usan en la transformación Columna derivada, en expresiones de propiedades y en el contenedor de bucles For.  
   
--   En este ejemplo se utiliza la tabla **Contact** . La expresión quita los espacios iniciales y finales de las columnas **FirstName**, **MiddleName**y **LastName** . Extrae la primera letra de la columna **MiddleName** si no es NULL, concatena la inicial del segundo nombre y los valores de **FirstName** y **LastName**, e inserta los espacios apropiados entre los valores.  
+-   En este ejemplo se utiliza la tabla **Contact** . La expresión quita los espacios iniciales y finales de las columnas **FirstName**, **MiddleName** y **LastName** . Extrae la primera letra de la columna **MiddleName** si no es NULL, concatena la inicial del segundo nombre y los valores de **FirstName** y **LastName**, e inserta los espacios apropiados entre los valores.  
   
     ```  
     TRIM(FirstName) + " " + (!ISNULL(MiddleName) ? SUBSTRING(MiddleName,1,1) + " " : "") + TRIM(LastName)  

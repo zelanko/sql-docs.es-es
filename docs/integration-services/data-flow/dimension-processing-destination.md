@@ -22,11 +22,11 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a93e031afddb7533cea5251c4882da2760fbfe
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195403"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123499"
 ---
 # <a name="dimension-processing-destination"></a>procesamiento de dimensiones, destino
 
@@ -101,7 +101,7 @@ ms.locfileid: "92195403"
   
 ### <a name="options"></a>Opciones  
  **Utilizar la configuración de error predeterminada**  
- Especifica si debe utilizarse el control de errores predeterminado de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Este valor es **True**de forma predeterminada.  
+ Especifica si debe utilizarse el control de errores predeterminado de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Este valor es **True** de forma predeterminada.  
   
  **Acción del error de clave**  
  Permite especificar la forma de controlar registros que tienen valores de clave no aceptables.  
@@ -129,7 +129,7 @@ ms.locfileid: "92195403"
 |**StopLogging**|Detiene el registro de errores.|  
   
  **Clave no encontrada**  
- Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave no encontrada. Este valor es **ReportAndContinue**de forma predeterminada.  
+ Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave no encontrada. Este valor es **ReportAndContinue** de forma predeterminada.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -138,7 +138,7 @@ ms.locfileid: "92195403"
 |**ReportAndStop**|Informa del error y detiene el procesamiento.|  
   
  **Clave duplicada**  
- Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave duplicada. Este valor es **IgnoreError**de forma predeterminada.  
+ Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave duplicada. Este valor es **IgnoreError** de forma predeterminada.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -147,7 +147,7 @@ ms.locfileid: "92195403"
 |**ReportAndStop**|Informa del error y detiene el procesamiento.|  
   
  **Clave NULL convertida en desconocida**  
- Especifica la acción que se realizará cuando una clave NULL se convierta al valor **UnknownMember** . Este valor es **IgnoreError**de forma predeterminada.  
+ Especifica la acción que se realizará cuando una clave NULL se convierta al valor **UnknownMember** . Este valor es **IgnoreError** de forma predeterminada.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -156,7 +156,7 @@ ms.locfileid: "92195403"
 |**ReportAndStop**|Informa del error y detiene el procesamiento.|  
   
  **Clave NULL no permitida**  
- Especifica la acción que debe llevarse a cabo cuando no se permiten claves NULL y se encuentra una clave NULL. Este valor es **ReportAndContinue**de forma predeterminada.  
+ Especifica la acción que debe llevarse a cabo cuando no se permiten claves NULL y se encuentra una clave NULL. Este valor es **ReportAndContinue** de forma predeterminada.  
   
 |Value|Descripción|  
 |-----------|-----------------|  

@@ -20,11 +20,11 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1af5f497be96f5c8b9808878aea9e5275c77ddf7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727615"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123548"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
 
@@ -144,7 +144,7 @@ ms.locfileid: "91727615"
  **Nombre del resultado**  
  Opcionalmente, actualice el nombre del conjunto de resultados. Para asignar el resultado a una variable, seleccione una variable de la lista **Nombre de variable** .  
   
- Para agregar un resultado, haga clic en **Agregar**y escriba un nombre único para el resultado.  
+ Para agregar un resultado, haga clic en **Agregar** y escriba un nombre único para el resultado.  
   
  **Nombre de variable**  
  Seleccione una variable de la lista para asignarla al conjunto de resultados.  

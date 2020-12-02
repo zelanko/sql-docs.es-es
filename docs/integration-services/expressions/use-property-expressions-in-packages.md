@@ -21,10 +21,10 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d8775714da1c59e86a6ba62661610a0f5abbd11e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193189"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expresiones de propiedad en paquetes
@@ -57,7 +57,7 @@ ms.locfileid: "92193189"
   
  Una propiedad solo puede utilizar una expresión de propiedad, y una expresión de propiedad solo se puede aplicar a una propiedad. Sin embargo, puede generar varias expresiones de propiedad idénticas y asignarlas a diferentes propiedades.  
   
- Algunas propiedades se establecen mediante el uso de valores provenientes de enumeradores. Cuando hace referencia al miembro enumerador en una expresión de propiedad, debe utilizar el valor numérico equivalente al nombre descriptivo del miembro enumerador. Por ejemplo, si una expresión de propiedad establece la propiedad **LoggingMode** , que utiliza un valor de la enumeración **DTSLoggingMode** , la expresión de propiedad debe utilizar 0, 1 o 2 en lugar de los nombres descriptivos **Enabled**, **Disabled**o **UseParentSetting**. Para más información, vea [Constantes enumeradas en expresiones de propiedad](../../integration-services/expressions/enumerated-constants-in-property-expressions.md).  
+ Algunas propiedades se establecen mediante el uso de valores provenientes de enumeradores. Cuando hace referencia al miembro enumerador en una expresión de propiedad, debe utilizar el valor numérico equivalente al nombre descriptivo del miembro enumerador. Por ejemplo, si una expresión de propiedad establece la propiedad **LoggingMode** , que utiliza un valor de la enumeración **DTSLoggingMode** , la expresión de propiedad debe utilizar 0, 1 o 2 en lugar de los nombres descriptivos **Enabled**, **Disabled** o **UseParentSetting**. Para más información, vea [Constantes enumeradas en expresiones de propiedad](../../integration-services/expressions/enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Interfaz de usuario de las expresiones de propiedad  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona un conjunto de herramientas para generar y administrar expresiones de propiedad.  
@@ -119,7 +119,7 @@ ms.locfileid: "92193189"
  En las siguientes expresiones de ejemplo se muestra cómo utilizar variables del sistema, operadores, funciones y literales de cadena en las expresiones de propiedad.  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>Expresión de propiedad para la propiedad LoggingMode de un paquete  
- Se puede usar la siguiente expresión de propiedad para establecer la propiedad LoggingMode de un paquete. La expresión utiliza las funciones DAY y GETDATE para obtener un entero que representa la parte de la fecha correspondiente al día de la fecha. Si el día es el 1 o el 15, se habilita el registro; de lo contrario, el registro se deshabilita. El valor 1 es el entero equivalente del miembro **Enabled**del enumerador LoggingMode, mientras que el valor 2 es el entero equivalente del miembro **Disabled**. Debe utilizar el valor numérico en lugar del nombre del miembro enumerador en la expresión.  
+ Se puede usar la siguiente expresión de propiedad para establecer la propiedad LoggingMode de un paquete. La expresión utiliza las funciones DAY y GETDATE para obtener un entero que representa la parte de la fecha correspondiente al día de la fecha. Si el día es el 1 o el 15, se habilita el registro; de lo contrario, el registro se deshabilita. El valor 1 es el entero equivalente del miembro **Enabled** del enumerador LoggingMode, mientras que el valor 2 es el entero equivalente del miembro **Disabled**. Debe utilizar el valor numérico en lugar del nombre del miembro enumerador en la expresión.  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   

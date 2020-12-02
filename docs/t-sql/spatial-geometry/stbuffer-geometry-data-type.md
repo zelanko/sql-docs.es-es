@@ -19,10 +19,10 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7644e25159a7df28d2de51d5e1a08a0e1b36ef05
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92300379"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (tipo de datos geometry)
@@ -41,7 +41,7 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
 
 ## <a name="arguments"></a>Argumentos
  *distance*  
- Es un valor de tipo **float** ( **double** en .NET Framework) que especifica la distancia desde la instancia de geometry en torno a la cual se puede calcular el búfer.  
+ Es un valor de tipo **float** (**double** en .NET Framework) que especifica la distancia desde la instancia de geometry en torno a la cual se puede calcular el búfer.  
   
 ## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
@@ -49,12 +49,12 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Comentarios  
- `STBuffer()` calcula un búfer como [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) mediante la especificación de *tolerance* = distance \* .001 y *relative* = **false** .  
+ `STBuffer()` calcula un búfer como [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) mediante la especificación de *tolerance* = distance \* .001 y *relative* = **false**.  
   
- Cuando *distance* > 0, se devuelve una instancia de **Polygon** o **MultiPolygon** .  
+ Cuando *distance* > 0, se devuelve una instancia de **Polygon** o **MultiPolygon**.  
   
 > [!NOTE]  
->  Puesto que distance es de tipo **float** , un valor muy pequeño puede resultar igual a cero en los cálculos.  Cuando ocurre esto, se devuelve una copia de la instancia de **geometry** que llama.  Vea [float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
+>  Puesto que distance es de tipo **float**, un valor muy pequeño puede resultar igual a cero en los cálculos.  Cuando ocurre esto, se devuelve una copia de la instancia de **geometry** que llama.  Vea [float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
   
  Cuando *distance* = 0, se devuelve una copia de la instancia de **geometry** que llama.  
   

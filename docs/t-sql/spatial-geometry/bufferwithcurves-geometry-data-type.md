@@ -17,11 +17,11 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b1249cafc3fd10cdded36ed7d73f190c38d02f5d
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235533"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96115934"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (tipo de datos Geometry)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -69,11 +69,11 @@ Tipo de valor devuelto de SQL Server: **geometry**
 |distancia > 0|Todas las dimensiones|Instancia de **CurvePolygon** o **GeometryCollection**|  
   
 > [!NOTE]  
->  Puesto que *distance* es de tipo **float** , un valor muy pequeño puede resultar igual a cero en los cálculos. Cuando ocurre esto, se devuelve una copia de la instancia de **geometry** que llama. Vea [float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
+>  Puesto que *distance* es de tipo **float**, un valor muy pequeño puede resultar igual a cero en los cálculos. Cuando ocurre esto, se devuelve una copia de la instancia de **geometry** que llama. Vea [float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
   
  Un búfer negativo quita todos los puntos incluidos en la distancia dada del límite de la geometría. En la siguiente ilustración se muestra un búfer negativo como el área del círculo sombreada en claro. La línea de puntos es el límite del polígono original y la línea continua es el límite del polígono resultante.  
   
- Si se pasa al método un parámetro **string** , se convertirá en un valor de tipo **float** o producirá una excepción `ArgumentException`.  
+ Si se pasa al método un parámetro **string**, se convertirá en un valor de tipo **float** o producirá una excepción `ArgumentException`.  
   
 ## <a name="examples"></a>Ejemplos  
   

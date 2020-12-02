@@ -16,10 +16,10 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c67835df192436ce3b8264849589a1db3f66fee
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92192385"
 ---
 # <a name="ssis-toolbox"></a>Cuadro de herramientas de SSIS
@@ -42,7 +42,7 @@ Puede obtener más información acerca de un componente del cuadro de herramient
 ## <a name="toolbox-categories"></a>Categorías del cuadro de herramientas
  En el **Cuadro de herramientas de SSIS**, los componentes de flujo de control y flujo de datos están organizados en categorías.  Puede expandir y contraer las categorías y reorganizar los componentes.  Para restaurar la organización predeterminada, haga clic con el botón derecho dentro del cuadro de herramientas y, a continuación, haga clic en **Restaurar valores predeterminados del cuadro de herramientas**.  
   
- Las categorías **Favoritos** y **Común** aparecen en el cuadro de herramientas al seleccionar las pestañas **Flujo de control**, **Flujo de datos**y **Controladores de eventos** . La categoría **Otras tareas** aparece en el cuadro de herramientas al seleccionar las pestañas **Flujo de control** o **Controladores de eventos** . Las categorías **Otras transformaciones**, **Otros orígenes**y **Otros destinos** aparecen en el cuadro de herramientas al seleccionar la pestaña **Flujo de datos** .  
+ Las categorías **Favoritos** y **Común** aparecen en el cuadro de herramientas al seleccionar las pestañas **Flujo de control**, **Flujo de datos** y **Controladores de eventos** . La categoría **Otras tareas** aparece en el cuadro de herramientas al seleccionar las pestañas **Flujo de control** o **Controladores de eventos** . Las categorías **Otras transformaciones**, **Otros orígenes** y **Otros destinos** aparecen en el cuadro de herramientas al seleccionar la pestaña **Flujo de datos** .  
 
  ## <a name="add-azure-components-to-the-toolbox"></a>Agregar componentes de Azure al cuadro de herramientas  
  Azure Feature Pack para Integration Services contiene administradores de conexiones para conectarse a orígenes de datos de Azure y tareas para realizar operaciones comunes de Azure. Instale el Feature Pack para agregar estos elementos al cuadro de herramientas. Para obtener más información, vea [Azure Feature Pack para Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  

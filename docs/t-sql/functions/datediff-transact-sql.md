@@ -32,11 +32,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df865c15c13c78f01a8c3da30be2f39656dc7156
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116140"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96117767"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "91116140"
 
 Esta función devuelve el recuento (como un valor entero con firma) de los límites datepart que se han cruzado entre los valores *startdate* y *enddate* especificados.
   
-Vea [DATEDIFF_BIG &#40;Transact-SQL&#41; ](../../t-sql/functions/datediff-big-transact-sql.md) para obtener una función que controla las diferencias más importantes entre los valores *startdate* y *enddate*. Vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) para obtener información general sobre todos los tipos de datos y las funciones de fecha y hora de [!INCLUDE[tsql](../../includes/tsql-md.md)].
+Vea [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md) para obtener una función que controla las diferencias más importantes entre los valores *startdate* y *enddate*. Vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) para obtener información general sobre todos los tipos de datos y las funciones de fecha y hora de [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -59,7 +59,7 @@ DATEDIFF ( datepart , startdate , enddate )
 ## <a name="arguments"></a>Argumentos
 
 *datepart*  
-Las unidades en las que **DATEDIFF** informa la diferencia entre _startdate_y _enddate_. Entre las unidades de _datepart_ usadas comúnmente se incluyen `month` o `second`.
+Las unidades en las que **DATEDIFF** informa la diferencia entre _startdate_ y _enddate_. Entre las unidades de _datepart_ usadas comúnmente se incluyen `month` o `second`.
 
 No se puede especificar el valor _datepart_ en una variable, ni como una cadena entrecomillada, como `'month'`.
 

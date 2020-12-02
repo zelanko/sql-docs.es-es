@@ -14,11 +14,11 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85beabd085481a48d6681bbaf2d2d381a1d0df93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425977"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123557"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de patrón de columnas (tarea de generación de perfiles de datos)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88425977"
  Todos los delimitadores se normalizan en un espacio como parte del proceso de división en tokens, mientras que los símbolos se conservan.  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>Uso de la tabla de etiquetas  
- Si lo desea, puede agrupar los tokens relacionados con una etiqueta única almacenando las etiquetas y los términos relacionados en una tabla especial que cree en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La tabla de etiquetas debe tener dos columnas de cadena, una denominada "Etiqueta" y la otra "Término". Estas columnas pueden ser de tipo **char**, **nchar**, **varchar**o **nvarchar**, pero no **text** ni **ntext**. Puede combinar varias etiquetas y los términos correspondientes en una única tabla. Una solicitud de perfil de patrón de columnas puede utilizar solo una tabla de etiquetas. Puede utilizar un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] independiente para conectarse a la tabla de etiquetas. Por consiguiente, la tabla de etiquetas se puede encontrar en una base de datos o en un servidor diferente al de los datos de origen.  
+ Si lo desea, puede agrupar los tokens relacionados con una etiqueta única almacenando las etiquetas y los términos relacionados en una tabla especial que cree en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La tabla de etiquetas debe tener dos columnas de cadena, una denominada "Etiqueta" y la otra "Término". Estas columnas pueden ser de tipo **char**, **nchar**, **varchar** o **nvarchar**, pero no **text** ni **ntext**. Puede combinar varias etiquetas y los términos correspondientes en una única tabla. Una solicitud de perfil de patrón de columnas puede utilizar solo una tabla de etiquetas. Puede utilizar un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] independiente para conectarse a la tabla de etiquetas. Por consiguiente, la tabla de etiquetas se puede encontrar en una base de datos o en un servidor diferente al de los datos de origen.  
   
  Por ejemplo, podría agrupar los valores "Este", "Oeste", "Norte" y "Sur" que podrían aparecer en direcciones mediante la etiqueta única "Dirección". La tabla siguiente es un ejemplo de este tipo de tabla de etiquetas.  
   

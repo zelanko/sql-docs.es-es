@@ -18,11 +18,11 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2f70d8f963a6f26131099e6cd7d09d5019f9c6bc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194682"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123406"
 ---
 # <a name="conditional-split-transformation"></a>División condicional, transformación
 
@@ -91,7 +91,7 @@ ms.locfileid: "92194682"
   
  Puede especificar el valor de esta propiedad con una expresión de propiedad.  
   
- **Temas relacionados: **  [Expresiones de Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **Temas relacionados:**  [Expresiones de Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **Nombre de salida predeterminado**  
  Escriba un nombre para la salida predeterminada o utilice el nombre predeterminado.  

@@ -21,11 +21,11 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: df48a338c2fe6cbc938284ed85b3b08fdc06f1cc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193225"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123375"
 ---
 # <a name="derived-column-transformation"></a>Transformación Columna derivada
 
@@ -42,7 +42,7 @@ ms.locfileid: "92193225"
   
 -   Aplicar funciones matemáticas a datos numéricos y almacenar el resultado en una columna derivada. Por ejemplo, puede cambiar la longitud y la precisión de una columna numérica, **SalesTax**, a un número con dos cifras decimales mediante la expresión `ROUND(SalesTax, 2)`.  
   
--   Crear expresiones que comparen columnas de entrada y variables. Por ejemplo, puede comparar la variable **Version** con los datos de la columna **ProductVersion**y, en función del resultado de la comparación, usar el valor de **Version** o **ProductVersion**mediante la expresión `ProductVersion == @Version? ProductVersion : @Version`.  
+-   Crear expresiones que comparen columnas de entrada y variables. Por ejemplo, puede comparar la variable **Version** con los datos de la columna **ProductVersion** y, en función del resultado de la comparación, usar el valor de **Version** o **ProductVersion** mediante la expresión `ProductVersion == @Version? ProductVersion : @Version`.  
   
 -   Extraer partes de un valor datetime. Por ejemplo, puede utilizar las funciones GETDATE y DATEPART para extraer el año actual mediante la expresión `DATEPART("year",GETDATE())`.  
   

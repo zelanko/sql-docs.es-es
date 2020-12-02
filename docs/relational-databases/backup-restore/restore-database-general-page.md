@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5c322f8c798a7b4a319df67e56565af54ceac20f
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cda87fffca686f8e86c7b617e502952341bd459f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662184"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125547"
 ---
 # <a name="restore-database-general-page"></a>Restaurar la base de datos (página General)
 
@@ -78,7 +78,7 @@ Estas opciones identifican la ubicación de los conjuntos de copia de seguridad 
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utiliza una ruta de acceso predeterminada distinta de la de versiones anteriores. Para restaurar una base de datos creada en la ubicación predeterminada de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es preciso usar la opción MOVE.  
   
- Después de restaurar una base de datos de una versión anterior en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos se actualiza automáticamente. Normalmente, la base de datos está disponible inmediatamente. Pero, si una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, según la configuración de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede tardar varias horas en completarse y la duración de la regeneración puede multiplicarse por diez. Tenga en cuenta también que si la opción de actualización se establece en **Importar**y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados.  
+ Después de restaurar una base de datos de una versión anterior en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos se actualiza automáticamente. Normalmente, la base de datos está disponible inmediatamente. Pero, si una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, según la configuración de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede tardar varias horas en completarse y la duración de la regeneración puede multiplicarse por diez. Tenga en cuenta también que si la opción de actualización se establece en **Importar** y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados.  
   
 ## <a name="restoring-from-an-encrypted-backup"></a>Restaurar a partir de una copia de seguridad cifrada  
  La restauración requiere que el certificado o la clave asimétrica que se utilizó originalmente para crear la copia de seguridad esté disponible en la instancia en la que se está realizando la restauración. La cuenta de usuario que realiza la restauración debe tener permisos de **VIEW DEFINITIONS** en el certificado o la clave asimétrica. No renueve ni actualice los certificados que se hayan usado para cifrar la copia de seguridad.  

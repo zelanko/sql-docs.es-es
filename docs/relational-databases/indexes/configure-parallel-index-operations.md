@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f4226d3fac66ec20f5012a15bb092b666cf86f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475809"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125187"
 ---
 # <a name="configure-parallel-index-operations"></a>Configurar operaciones de índice en paralelo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -98,7 +98,7 @@ En los sistemas multiprocesador que ejecutan [!INCLUDE[ssNoVersion](../../includ
   
 6.  Debajo de **Seleccionar una página**, seleccione **Opciones**.  
   
-7.  Seleccione **Grado máximo de paralelismo**y, a continuación, escriba un valor entre 1 y 64.  
+7.  Seleccione **Grado máximo de paralelismo** y, a continuación, escriba un valor entre 1 y 64.  
   
 8.  Haga clic en **OK**.  
 

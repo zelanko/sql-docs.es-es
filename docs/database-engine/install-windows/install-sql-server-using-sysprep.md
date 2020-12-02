@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b562b03068ebee035f9b298c62ca49d5c1c0f396
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6c06cb6fe516625cb517fc315bac8f3bc91e4fd7
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671108"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125917"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Instalar SQL Server con SysPrep
 
@@ -86,13 +86,13 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
   
 2. El Asistente para instalación ejecuta el Centro de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para preparar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], haga clic en **Preparar imagen de una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** en la página **Avanzadas**. 
   
-3. El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, haga clic en **Aceptar**. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
+3. El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, haga clic en **Aceptar**. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
   
 4. En la página Actualizaciones del producto se muestran las actualizaciones del producto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] más recientes disponibles. Si no quiere incluir las actualizaciones, desactive la casilla **Incluir actualizaciones de productos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Si no se detectan actualizaciones de producto, el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no muestra esta página y pasa automáticamente a la página **Instalar archivos de instalación** . 
   
 5. En la página Instalar archivos de instalación, el programa de instalación proporciona el progreso de descarga, extracción e instalación de los archivos de instalación. Si se encuentra una actualización para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y se especifica que debe incluirse, esa actualización también se instalará. 
   
-6. El Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de seguir con la instalación. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
+6. El Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de seguir con la instalación. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
   
 7. En la página **Tipo de imagen para preparar**, seleccione **Preparar una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . 
   
@@ -110,7 +110,7 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
   
      Los requisitos previos para las características seleccionadas se muestran en el recuadro del lado derecho. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación instalará los requisitos previos que no se hayan instalado todavía durante el paso de instalación que se describe más adelante en este procedimiento. 
   
-10. En la página **Preparar reglas de imagen** , el Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de que continúe el programa de instalación. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
+10. En la página **Preparar reglas de imagen** , el Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de que continúe el programa de instalación. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
   
 11. En la página Configuración de instancia, especifique el identificador de la instancia. Haga clic en **Siguiente** para continuar. 
   
@@ -124,7 +124,7 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
   
 12. La página **Requisitos de espacio en disco** calcula el espacio en disco necesario para las características que haya especificado. A continuación, compara el espacio necesario con el espacio en disco disponible. 
   
-13. El Comprobador de configuración del sistema ejecutará las reglas de preparación de imagen para validar la configuración del equipo con las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ha especificado. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
+13. El Comprobador de configuración del sistema ejecutará las reglas de preparación de imagen para validar la configuración del equipo con las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ha especificado. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
   
 14. La página **Listo para preparar la imagen** muestra una vista de árbol de las opciones de instalación que se especificaron durante la instalación. En esta página, el programa de instalación indica si la característica de actualización de producto está habilitada o deshabilitada y la versión final de actualización. Para continuar, haga clic en **Preparar**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación instalará primero los requisitos previos necesarios para las características seleccionadas y a continuación realizará la instalación de características. 
   
@@ -142,11 +142,11 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
   
 1. Si tiene una instancia preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluida en la imagen del equipo, verá un acceso directo en el menú Inicio. También puede iniciar el Centro de instalación y hacer clic en **Completar imagen de una instancia independiente preparada** en la página **Avanzadas** . 
   
-2. El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, haga clic en **Aceptar**. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
+2. El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, haga clic en **Aceptar**. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
   
 3. En la página **Archivos auxiliares del programa de instalación** , haga clic en **Instalar** para instalar los archivos auxiliares de la instalación. 
   
-4. El Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de seguir con la instalación. Cuando se haya completado la comprobación, haga clic en **Siguiente** para continuar. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
+4. El Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de seguir con la instalación. Cuando se haya completado la comprobación, haga clic en **Siguiente** para continuar. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
   
 5. En la página **Clave del producto** , seleccione un botón de opción para indicar si está instalando una edición gratuita de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o una versión de producción del producto con una clave de PID. Para más información, vea [Ediciones y características admitidas de SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md). Si está instalando una edición de evaluación, el período de prueba de 180 días comienza al completar este paso. 
   
@@ -191,7 +191,7 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
   
          Una vez que un dispositivo establece una conexión correcta con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el mecanismo de seguridad es el mismo para la autenticación de Windows y para el modo mixto. Para obtener más información, vea [Configuración del motor de base de datos: configuración del servidor](./install-sql-server.md). 
   
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administradores: debe especificar al menos un administrador del sistema para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o en **Quitar**y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Configuración del motor de base de datos: configuración del servidor](./install-sql-server.md). 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administradores: debe especificar al menos un administrador del sistema para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o en **Quitar** y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Configuración del motor de base de datos: configuración del servidor](./install-sql-server.md). 
   
      Cuando haya terminado de modificar la lista, haga clic en **Aceptar**. Compruebe la lista de administradores en el cuadro de diálogo de configuración. Cuando la lista esté completa, haga clic en **Siguiente**. 
   
@@ -208,7 +208,7 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
   
 17. En la página **Informes de errores** , especifique la información que desee enviar a [!INCLUDE[msCoName](../../includes/msconame-md.md)] y que ayudará a mejorar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De forma predeterminada, se habilitan las opciones de informes de errores. 
   
-18. En la página **Completar reglas de imagen** , el Comprobador de configuración del sistema ejecutará las reglas para completar imagen a fin de validar la configuración del equipo con los valores de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ha especificado. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
+18. En la página **Completar reglas de imagen** , el Comprobador de configuración del sistema ejecutará las reglas para completar imagen a fin de validar la configuración del equipo con los valores de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ha especificado. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
   
 19. La página **Listo para completar la imagen** muestra una vista de árbol de las opciones de instalación que se especificaron durante la instalación. Para continuar, haga clic en **Instalar**. 
   
@@ -228,7 +228,7 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
   
 2. El Asistente para instalación ejecuta el Centro de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para agregar características a una instancia preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], haga clic en **Preparar imagen de una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** en la página **Avanzadas**. 
   
-3. El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, haga clic en **Aceptar**. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
+3. El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, haga clic en **Aceptar**. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
   
 4. En la página Archivos auxiliares del programa de instalación, haga clic en **Instalar** para instalar los archivos auxiliares del programa de instalación. 
   
@@ -238,11 +238,11 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
   
      Los requisitos previos para las características seleccionadas se muestran en el recuadro del lado derecho. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación instalará los requisitos previos que no se hayan instalado todavía durante el paso de instalación que se describe más adelante en este procedimiento. 
   
-7. En la página **Preparar reglas de imagen** , el Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de que continúe el programa de instalación. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
+7. En la página **Preparar reglas de imagen** , el Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de que continúe el programa de instalación. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
   
 8. La página Requisitos de espacio en disco calcula el espacio en disco necesario para las características que haya especificado. A continuación, compara el espacio necesario con el espacio en disco disponible. 
   
-9. En la página **Preparar reglas de imagen** , el Comprobador de configuración del sistema ejecutará las reglas de preparación de imagen para validar la configuración del equipo con las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ha especificado. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
+9. En la página **Preparar reglas de imagen** , el Comprobador de configuración del sistema ejecutará las reglas de preparación de imagen para validar la configuración del equipo con las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ha especificado. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles** o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
   
 10. La página **Listo para preparar la imagen** muestra una vista de árbol de las opciones de instalación que se especificaron durante la instalación. Para continuar, haga clic en **Instalar**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación instalará primero los requisitos previos necesarios para las características seleccionadas y a continuación realizará la instalación de características. 
   

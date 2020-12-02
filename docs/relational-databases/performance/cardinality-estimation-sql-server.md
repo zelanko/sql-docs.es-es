@@ -17,11 +17,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6ae3d6eaeab58e1352c14ba5ee90b47d500b974
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891005"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125117"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimación de cardinalidad (SQL Server)
 
@@ -100,11 +100,11 @@ GO
  
 O bien, a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
- ```sql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
 WHERE OrderAddedDate >= '2016-05-01'
-OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
 **Almacén de consultas:** a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el almacén de consultas es una herramienta muy útil para examinar el rendimiento de las consultas. En [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], en el **Explorador de objetos**, debajo del nodo de la base de datos, se muestra un nodo del **Almacén de consultas**, si este está habilitado.  
@@ -195,7 +195,7 @@ Estos son los pasos que se pueden realizar para saber si alguna de las consultas
   
     -   **Número de filas estimado**.  
   
-    -   **Costo de E/S estimado**y otras propiedades de *estimación* similares que tengan que ver con el rendimiento real más que con las predicciones de números de filas.  
+    -   **Costo de E/S estimado** y otras propiedades de *estimación* similares que tengan que ver con el rendimiento real más que con las predicciones de números de filas.  
   
     -   **Operación lógica** y **Operación física**. *Paralelismo* es un buen valor.  
   

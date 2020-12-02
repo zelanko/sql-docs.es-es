@@ -18,14 +18,14 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 89abaf77c605574ef05a88a7cc18a09c0840a9c0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 19ff3852dad4b98b739bfc058ba7a532af932ee1
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717991"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125573"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar una base de datos a una nueva ubicación (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "85717991"
   
 1.  Conéctese a la instancia adecuada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y después, en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol.  
   
-2.  Haga clic con el botón derecho en **Bases de datos**y, luego, haga clic en **Restaurar base de datos**. Se abre el cuadro de diálogo **Restaurar base de datos** .  
+2.  Haga clic con el botón derecho en **Bases de datos** y, luego, haga clic en **Restaurar base de datos**. Se abre el cuadro de diálogo **Restaurar base de datos** .  
   
 3.  En la página **General** , use la sección **Origen** para especificar el origen y la ubicación de los conjuntos de copias de seguridad que se deben restaurar. Seleccione una de las siguientes opciones:  
   

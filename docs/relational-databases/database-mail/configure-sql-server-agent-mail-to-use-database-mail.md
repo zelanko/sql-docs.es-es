@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 44252fa011dcdeaca457d6aa7f9819f581dbeb11
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192585"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125258"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurar el Agente SQL Server para que use el Correo electrónico de base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "92192585"
   
 -   En el Explorador de objetos, expanda una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Haga clic con el botón derecho en **Agente SQL Server**y, luego, haga clic en **Propiedades**.  
+-   Haga clic con el botón derecho en **Agente SQL Server** y, luego, haga clic en **Propiedades**.  
   
 -   Haga clic en **Sistema de alerta**.  
   

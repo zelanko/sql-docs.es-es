@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1bec1ae2badef02e407b4562732af9cda85fc989
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 321c56d6e528586a44e4f94619e7c28709ab6998
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670219"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125724"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Actualizar a una edición diferente de SQL Server (programa de instalación)
 
@@ -44,7 +44,7 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
   
 1.  Inserte el medio de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En la carpeta raíz, haga doble clic en setup.exe o inicie el Centro de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde Herramientas de configuración. Para realizar la instalación desde un recurso compartido de red, localice la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe.  
   
-2.  Para actualizar una instancia existente de [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] a una edición diferente, en el Centro de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] haga clic en **Mantenimiento**y, a continuación, seleccione **Actualización de edición**.  
+2.  Para actualizar una instancia existente de [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] a una edición diferente, en el Centro de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] haga clic en **Mantenimiento** y, a continuación, seleccione **Actualización de edición**.  
   
 3.  Si son necesarios los archivos auxiliares del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el citado programa se encarga de instalarlos. Si se le solicita que reinicie el equipo, hágalo antes de continuar.  
   

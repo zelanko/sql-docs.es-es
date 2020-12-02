@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79625148ed44c2003c74d393502129fe15a112f5
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564645"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125087"
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de columnas
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -111,11 +111,11 @@ GO
  En este ejemplo, no se ha especificado ningún valor para la columna `i`, pero se ha insertado el valor `0` .  
   
 ## <a name="using-the-sql_variant-data-type"></a>Usar el tipo de datos sql_variant  
- El tipo de datos **sql_variant** puede almacenar varios tipos de datos distintos, como **int**, **char**y **date**. Los conjuntos de columnas generan la información sobre el tipo de datos, como la escala, la precisión y la información de configuración regional que se asocia a un valor **sql_variant** , como atributos en la columna XML generada. Si intenta proporcionar estos atributos en una instrucción XML generada de forma personalizada como una entrada para una operación de inserción o de actualización en un conjunto de columnas, algunos de dichos atributos son obligatorios y a otros se les asigna un valor predeterminado. En la tabla siguiente se enumeran los tipos de datos y los valores predeterminados que genera el servidor cuando no se proporciona el valor.  
+ El tipo de datos **sql_variant** puede almacenar varios tipos de datos distintos, como **int**, **char** y **date**. Los conjuntos de columnas generan la información sobre el tipo de datos, como la escala, la precisión y la información de configuración regional que se asocia a un valor **sql_variant** , como atributos en la columna XML generada. Si intenta proporcionar estos atributos en una instrucción XML generada de forma personalizada como una entrada para una operación de inserción o de actualización en un conjunto de columnas, algunos de dichos atributos son obligatorios y a otros se les asigna un valor predeterminado. En la tabla siguiente se enumeran los tipos de datos y los valores predeterminados que genera el servidor cuando no se proporciona el valor.  
   
 |Tipo de datos|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longitud máxima|Precisión|Escala|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
-|**char**, **varchar**, **binary**|-1|'Default'|0|0|8000|No aplicable**|No disponible|  
+|**char**, **varchar**, **binary**|-1|'Default'|0|0|8000|No aplicable**|No aplicable|  
 |**nvarchar**|-1|'Default'|0|0|4000|No aplicable|No aplicable|  
 |**decimal**, **float**, **real**|No aplicable|No aplicable|No aplicable|No aplicable|No aplicable|18|0|  
 |**integer**, **bigint**, **tinyint**, **smallint**|No aplicable|No aplicable|No aplicable|No aplicable|No aplicable|No aplicable|No aplicable|  

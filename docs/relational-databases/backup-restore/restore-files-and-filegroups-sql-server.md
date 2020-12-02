@@ -16,14 +16,14 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], restoring files and filegroups
 - restoring [SQL Server], files
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fade272bf603b0931d19c66b0ca1009b8cfbb3b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 40397b72c72142e65716f48a9e948d079d5a7015
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737691"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125515"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Restaurar archivos y grupos de archivos (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,11 +71,11 @@ ms.locfileid: "85737691"
   
 1.  Después de conectarse a la instancia adecuada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol.  
   
-2.  Expanda **Bases de datos**. En función de la base de datos, seleccione una base de datos de usuario o expanda **Bases de datos del sistema**y, a continuación, seleccione una base de datos del sistema.  
+2.  Expanda **Bases de datos**. En función de la base de datos, seleccione una base de datos de usuario o expanda **Bases de datos del sistema** y, a continuación, seleccione una base de datos del sistema.  
   
-3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, después, haga clic en **Restaurar**.  
+3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas** y, después, haga clic en **Restaurar**.  
   
-4.  Haga clic en **Archivos y grupos de archivos**para abrir el cuadro de diálogo **Restaurar archivos y grupos de archivos** .  
+4.  Haga clic en **Archivos y grupos de archivos** para abrir el cuadro de diálogo **Restaurar archivos y grupos de archivos** .  
   
 5.  En la página **General** , en el cuadro de lista **A una base de datos** , especifique la base de datos que desea restaurar. Puede especificar una nueva base de datos o elegir una base de datos existente de la lista desplegable. La lista incluye todas las bases de datos del servidor, y excluye las bases de datos del sistema **master** y **tempdb**.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "85737691"
      Esta opción es especialmente útil cuando hay que intercambiar cintas para distintos conjuntos de medios, como cuando el servidor dispone de un dispositivo de cinta.  
   
      **Restringir el acceso a la base de datos restaurada**  
-     Hace que la base de datos restaurada esté disponible solo para los miembros de **db_owner**, **dbcreator**o **sysadmin**.  
+     Hace que la base de datos restaurada esté disponible solo para los miembros de **db_owner**, **dbcreator** o **sysadmin**.  
   
      La selección de esta opción equivale al uso de la opción RESTRICTED_USER en una instrucción RESTORE de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   

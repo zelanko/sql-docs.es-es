@@ -15,11 +15,11 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4f0f124b9073335a5dc681c34fb7fa977123f04c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869283"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125133"
 ---
 # <a name="view-offline-log-files"></a>Ver sin conexión archivos de registro
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "91869283"
   
     -   Haga clic en **Inicio**, escriba **wmimgmt.msc** en el cuadro **Iniciar búsqueda** y presione ENTRAR.  
   
-    -   Haga clic en **Inicio**, haga clic en **Ejecutar**, escriba **wmimgmt.msc**y, a continuación, presione ENTRAR.  
+    -   Haga clic en **Inicio**, haga clic en **Ejecutar**, escriba **wmimgmt.msc** y, a continuación, presione ENTRAR.  
   
 2.  De forma predeterminada, el complemento Control WMI administra el equipo local.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "91869283"
   
 ##### <a name="to-view-log-files-for-instances-that-are-offline"></a>Ver los archivos de registro de las instancias que están sin conexión  
   
-1.  Si desea ver los archivos de registro sin conexión en una instancia local, asegúrese de que inicia [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] con permisos elevados. Para ello, al iniciar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en **SQL Server Management Studio**y, después, haga clic en **Ejecutar como administrador**.  
+1.  Si desea ver los archivos de registro sin conexión en una instancia local, asegúrese de que inicia [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] con permisos elevados. Para ello, al iniciar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en **SQL Server Management Studio** y, después, haga clic en **Ejecutar como administrador**.  
   
 2.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el menú **Ver** , haga clic en **Servidores registrados**.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "91869283"
   
     -   Si la instancia está en **Grupos de servidor locales**, expanda **Grupos de servidor locales**, expanda el grupo de servidores (si la instancia pertenece a un grupo), haga clic con el botón derecho en la instancia y, después, haga clic en **Ver registro de SQL Server**.  
   
-    -   Si la instancia es el propio servidor de administración Central, expanda **Servidores de administración central**, haga clic con el botón derecho en la instancia, seleccione **Acciones del servidor de administración central**y, después, haga clic en **Ver registro de SQL Server**.  
+    -   Si la instancia es el propio servidor de administración Central, expanda **Servidores de administración central**, haga clic con el botón derecho en la instancia, seleccione **Acciones del servidor de administración central** y, después, haga clic en **Ver registro de SQL Server**.  
   
     -   Si la instancia está en **Servidores de administración central**, expanda **Servidores de administración central**, expanda el servidor de administración central, haga clic con el botón derecho en la instancia (o expanda un grupo de servidores y haga clic con el botón derecho en la instancia) y, después, haga clic en **Ver registro de SQL Server**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "91869283"
   
     -   Para conectarse como usuario actual, asegúrese de que la casilla **Conectar como otro usuario** está desactivada y, a continuación, haga clic en **Aceptar**.  
   
-    -   Para conectarse como otro usuario, active la casilla **Conectar como otro usuario** y, a continuación, haga clic en **Establecer usuario**. Cuando se le pida, especifique las credenciales de usuario (con el nombre de usuario en el formato *nombre_dominio*\\*nombre_usuario*), haga clic en **Aceptar**y, después, de nuevo en **Aceptar** para conectarse.  
+    -   Para conectarse como otro usuario, active la casilla **Conectar como otro usuario** y, a continuación, haga clic en **Establecer usuario**. Cuando se le pida, especifique las credenciales de usuario (con el nombre de usuario en el formato *nombre_dominio*\\*nombre_usuario*), haga clic en **Aceptar** y, después, de nuevo en **Aceptar** para conectarse.  
   
     > [!NOTE]  
     >  Si los archivos de registro tardan demasiado en cargarse, puede hacer clic en **Detener** en la barra de herramientas del Visor del archivo de registros.  

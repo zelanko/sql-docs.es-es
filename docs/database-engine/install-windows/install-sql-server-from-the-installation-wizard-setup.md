@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9e9e71fc425ca978d3050e8fdfd72a1c39d7f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6280e0abe6c95b2ac0a13339b0dfe2c6092e2fa3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670451"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125963"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar SQL Server desde el Asistente para la instalación (programa de instalación)
 
@@ -232,7 +232,7 @@ Esto no se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
   
    Para continuar, seleccione **Siguiente**.
   
-1. En la página **Términos de licencia**, revise el contrato de licencia. Si está de acuerdo, marque la casilla **Acepto los términos de licencia[declaración de privacidad](https://privacy.microsoft.com/privacystatement)** y, luego, seleccione **Siguiente**.  
+1. En la página **Términos de licencia**, revise el contrato de licencia. Si está de acuerdo, marque la casilla **Acepto los términos de licencia [declaración de privacidad](https://privacy.microsoft.com/privacystatement)** y, luego, seleccione **Siguiente**.  
 
    > [!NOTE]
    > Si se especifica una clave de producto de licencia Enterprise Server o CAL y el equipo tiene más de 20 núcleos físicos, o 40 núcleos lógicos si la tecnología Hyper-Threading está habilitada, se muestra una advertencia durante la instalación. Puede continuar con la instalación si activa la casilla **Para continuar, active esta casilla para confirmar esta limitación o haga clic en Atrás o Cancelar para escribir una licencia de producto Enterprise Core que admita hasta el máximo del sistema operativo** o hace clic en **Atrás** y escribe una clave de licencia que admita el número máximo de procesadores del sistema operativo.
@@ -326,14 +326,14 @@ Esto no se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
     > [!NOTE]  
     > Esta página solo está disponible en el programa de instalación a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    Para obtener más información, consulte [Página Configuración del Motor de base de datos: MaxDOP](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#maxdop). 
+    Para obtener más información, consulte [Página Configuración del Motor de base de datos: MaxDOP](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#maxdop). 
 
      Use la página **Configuración del Motor de base de datos: Memoria** para especificar los valores de **Memoria de servidor mínima** y **Memoria de servidor máxima** que usará esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] después del inicio. Puede usar los valores predeterminados o los valores calculados recomendados o especificar manualmente sus propios valores después de haber elegido la opción **Recomendado**.
      
     > [!NOTE]  
     > Esta página solo está disponible en el programa de instalación a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    Para obtener más información, consulte [Página Configuración del Motor de base de datos: memoria](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#memory). 
+    Para obtener más información, consulte [Página Configuración del Motor de base de datos: memoria](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#memory). 
 
      Use la página **Configuración de Motor de base de datos - FILESTREAM** para habilitar FILESTREAM para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte la página [Configuración del Motor de base de datos - FILESTREAM](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
@@ -401,7 +401,7 @@ Esto no se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Configure la nueva instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-instances-sql-server?view=sql-server-2017).  
+[Configure la nueva instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](../../database-engine/configure-windows/database-engine-instances-sql-server.md).  
   
 Para reducir el área expuesta de un sistema susceptible de recibir ataques, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala y habilita de manera selectiva los servicios y características clave. Para obtener más información, consulte [Configuración del área expuesta](../../relational-databases/security/surface-area-configuration.md).  
   

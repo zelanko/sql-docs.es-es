@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c2fb5fcd6c7f9902f52481a1e66350f4543a85a
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: c67682305f0ed48c1d96cf5ca41ad0e88e421e06
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670312"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125897"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Instalar SQL Server mediante un archivo de configuración
 
@@ -23,7 +23,7 @@ ms.locfileid: "91670312"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación permite generar un archivo de configuración basado en las entradas de tiempo de ejecución y en la configuración predeterminada del sistema. Puede usar el archivo de configuración para implementar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en toda la empresa con la misma configuración. También puede normalizar las instalaciones manuales en toda la empresa mediante la creación de un archivo por lotes que inicie Setup.exe. 
  
-Este artículo se mantiene para SQL Server 2016 y versiones posteriores. En cuanto a las versiones anteriores de SQL Server, vea [Instalar SQL Server 2014 mediante un archivo de configuración](/previous-versions/sql/2014/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014).
+Este artículo se mantiene para SQL Server 2016 y versiones posteriores. En cuanto a las versiones anteriores de SQL Server, vea [Instalar SQL Server 2014 mediante un archivo de configuración](/previous-versions/sql/2014/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014&preserve-view=true).
  
 El programa de instalación admite el uso del archivo de configuración solamente a través del símbolo del sistema. A continuación se indica el orden de procesamiento de los parámetros cuando se usa el archivo de configuración:  
   

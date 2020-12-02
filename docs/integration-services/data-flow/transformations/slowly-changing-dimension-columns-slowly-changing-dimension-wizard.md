@@ -14,10 +14,10 @@ ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8b27c9c0e575775449d2f3a25c5a20bd6667b5cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425727"
 ---
 # <a name="slowly-changing-dimension-columns-slowly-changing-dimension-wizard"></a>Columnas de dimensión variable lenta (Asistente para dimensiones variables)
@@ -34,7 +34,7 @@ ms.locfileid: "88425727"
  Seleccione una columna de dimensión de la lista.  
   
  **Tipo de cambio**  
- Seleccione un **Atributo fijo**o seleccione uno de los dos tipos de atributos variables. Utilice **Atributo fijo** cuando el valor de una columna no tenga que cambiar; [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tratará entonces los cambios como errores. Utilice **Atributo variable** para sobrescribir los valores existentes con los valores modificados. Utilice **Atributo histórico** para guardar los valores modificados en nuevos registros, al tiempo que los registros anteriores quedan marcados como desusados.  
+ Seleccione un **Atributo fijo** o seleccione uno de los dos tipos de atributos variables. Utilice **Atributo fijo** cuando el valor de una columna no tenga que cambiar; [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tratará entonces los cambios como errores. Utilice **Atributo variable** para sobrescribir los valores existentes con los valores modificados. Utilice **Atributo histórico** para guardar los valores modificados en nuevos registros, al tiempo que los registros anteriores quedan marcados como desusados.  
   
  **Remove**  
  Seleccione una columna de dimensión y quítela de la lista de columnas asignadas haciendo clic en **Quitar**.  

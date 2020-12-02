@@ -12,10 +12,10 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: daade3348f7384ed83365923bf94af7b211d6422
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457141"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Lección 4-3: Adición de redireccionamiento de flujo de errores
@@ -34,7 +34,7 @@ De forma predeterminada, las dos columnas adicionales en una salida de errores d
   
 ## <a name="configure-an-error-output"></a>Configuración de una salida de errores  
   
-1.  En el **Cuadro de herramientas de SSIS**, expanda **Comunes**y, a continuación, arrastre **Componente de script** a la superficie de diseño de la pestaña **Flujo de datos** . Coloque **Script** a la derecha de la transformación **Lookup Currency Key** .  
+1.  En el **Cuadro de herramientas de SSIS**, expanda **Comunes** y, a continuación, arrastre **Componente de script** a la superficie de diseño de la pestaña **Flujo de datos** . Coloque **Script** a la derecha de la transformación **Lookup Currency Key** .  
   
 2.  En el cuadro de diálogo **Seleccionar el tipo de componente de script**, haga clic en **Transformación** y luego en **Aceptar**.  
   

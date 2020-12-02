@@ -18,10 +18,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e044fa0e368893f0aaa1fe8175b306c2fc04c24b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88327071"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
@@ -42,9 +42,9 @@ ms.locfileid: "88327071"
   
 2.  Cree una cadena de conexión para el suscriptor. La cadena de conexión se puede crear en cualquier editor de texto, pero se recomienda utilizar la Herramienta de acceso a datos. Para crear la cadena en la Herramienta de acceso a datos:  
   
-    1.  Haga clic en **Inicio**, **Programas**, **Proveedor Microsoft OLE DB para DB2**y, a continuación, en **Herramienta de acceso a datos**.  
+    1.  Haga clic en **Inicio**, **Programas**, **Proveedor Microsoft OLE DB para DB2** y, a continuación, en **Herramienta de acceso a datos**.  
   
-    2.  Siga los pasos que se indican en la **Herramienta de acceso a datos**para obtener información acerca del servidor DB2. Al completar la herramienta, se crea un vínculo de datos universal (UDL) con una cadena de conexión asociada (el UDL no se usa realmente en la replicación, pero la cadena de conexión sí).  
+    2.  Siga los pasos que se indican en la **Herramienta de acceso a datos** para obtener información acerca del servidor DB2. Al completar la herramienta, se crea un vínculo de datos universal (UDL) con una cadena de conexión asociada (el UDL no se usa realmente en la replicación, pero la cadena de conexión sí).  
   
     3.  Obtenga acceso a la cadena de conexión: haga clic con el botón secundario en el UDL en la Herramienta de acceso a datos y seleccione **Display Connection String**(Mostrar cadena de conexión).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88327071"
   
      **Para crear un script de un artículo y suministrarlo como un script de creación personalizado**  
   
-    1.  Cree un script de artículo con el dialecto DB2 SQL. Asegúrese de que la primera línea del archivo sea **bypass_translation**y de que no haya nada más en la línea.  
+    1.  Cree un script de artículo con el dialecto DB2 SQL. Asegúrese de que la primera línea del archivo sea **bypass_translation** y de que no haya nada más en la línea.  
   
     2.  Ejecute sp_changearticle, especificando la ruta de acceso del archivo y el nombre de la propiedad *creation_script*.  
   

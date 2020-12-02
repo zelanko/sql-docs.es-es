@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c85265a8461fae5060ac7c8cdbffaf38ce8e9ee3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88325845"
 ---
 # <a name="sequence-properties-general-page"></a>Propiedades de secuencia (página General)
@@ -87,7 +87,7 @@ ms.locfileid: "88325845"
  Para obtener información adicional sobre las opciones de creación de secuencias, vea [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el permiso **CREATE SEQUENCE**, **ALTER**o **CONTROL** en el SCHEMA.  
+ Requiere el permiso **CREATE SEQUENCE**, **ALTER** o **CONTROL** en el SCHEMA.  
   
 ## <a name="see-also"></a>Vea también  
  [sys.sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  

@@ -14,10 +14,10 @@ ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2c30a5e35a3c3e5b8e127a317e6d44880dee2e7f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88430937"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de inclusión de valores (tarea de generación de perfiles de datos)
@@ -58,7 +58,7 @@ ms.locfileid: "88430937"
 ## <a name="request-properties-options"></a>Opciones de Propiedades de la solicitud  
  Para cada **Solicitud de perfil de inclusión de valores**, el panel **Propiedades de la solicitud** muestra los grupos siguientes de opciones:  
   
--   **Data**, que incluye las opciones **SubsetTableOrView**, **SupersetTableOrView**e **InclusionColumns**  
+-   **Data**, que incluye las opciones **SubsetTableOrView**, **SupersetTableOrView** e **InclusionColumns**  
   
 -   **General**  
   

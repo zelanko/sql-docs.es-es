@@ -12,10 +12,10 @@ ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 025e601dfb6f062246d1edcb1799c1daf2b69886
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449707"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>Lección 1-2: Crear el proyecto de implementación
@@ -27,9 +27,9 @@ En [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], la unidad que se 
   
 ### <a name="to-create-the-integration-services-project"></a>Para crear el proyecto de Integration Services  
   
-1.  Haga clic en **Inicio**, seleccione **Todos los programas**, **Microsoft SQL Server**y, después, haga clic en **SQL Server Data Tools**.  
+1.  Haga clic en **Inicio**, seleccione **Todos los programas**, **Microsoft SQL Server** y, después, haga clic en **SQL Server Data Tools**.  
   
-2.  En el menú **Archivo** , seleccione **Nuevo**y haga clic en **Proyecto** para crear un proyecto nuevo de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+2.  En el menú **Archivo** , seleccione **Nuevo** y haga clic en **Proyecto** para crear un proyecto nuevo de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 3.  En el cuadro de diálogo **Nuevo proyecto** , seleccione **Proyecto de Integration Services** en el panel **Plantillas** .  
   

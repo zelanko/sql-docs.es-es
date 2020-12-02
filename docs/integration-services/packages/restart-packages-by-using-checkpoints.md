@@ -16,10 +16,10 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 090e89467a7916295abdc31305cbe993872ade60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425247"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar paquetes de usando puntos de comprobación
@@ -78,7 +78,7 @@ ms.locfileid: "88425247"
 |**IfExists**|Especifica que se utilizará el archivo de punto de comprobación, si existe. Si existe un archivo de punto de comprobación, el paquete se reiniciará desde el punto del error de ejecución anterior; de lo contrario, se ejecutará desde el inicio del flujo de trabajo del paquete.|  
   
 > [!NOTE]  
->  La opción **/CheckPointing on** de dtexec equivale a establecer en **True** el valor de la propiedad **SaveCheckpoints**del paquete y el de la propiedad **CheckpointUsage** en Always. Para obtener más información, consulte [utilidad dtexec](../../integration-services/packages/dtexec-utility.md).  
+>  La opción **/CheckPointing on** de dtexec equivale a establecer en **True** el valor de la propiedad **SaveCheckpoints** del paquete y el de la propiedad **CheckpointUsage** en Always. Para obtener más información, consulte [utilidad dtexec](../../integration-services/packages/dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Proteger archivos de puntos de comprobación  
  El nivel de protección de paquetes no incluye la protección de archivos de puntos de comprobación; estos archivos se deben proteger por separado. Solo puede almacenar datos de puntos de comprobación en el sistema de archivos y debe utilizar una lista de control de acceso (ACL) al sistema operativo para proteger la ubicación o carpeta en la que ha almacenado el archivo. Es importante proteger los archivos de puntos de comprobación, dado que contienen información sobre el estado del paquete, incluidos los valores actuales de las variables. Por ejemplo, una variable puede contener un conjunto de registros con varias filas de datos privados, tales como números de teléfono. Para más información, vea [Acceso a los archivos usados por los paquetes](../../integration-services/security/security-overview-integration-services.md#files).  

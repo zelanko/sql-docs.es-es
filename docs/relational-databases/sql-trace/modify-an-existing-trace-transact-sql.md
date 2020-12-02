@@ -15,10 +15,10 @@ ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6f706093032867835830d0cf98afb86c07e93f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88455377"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>Modificar un seguimiento existente (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "88455377"
     ||NOT NULL|La columna se desactiva, se establece en OFF, para el evento especificado.|  
   
 > [!IMPORTANT]
->  A diferencia de los procedimientos almacenados normales, los parámetros de todos los procedimientos almacenados de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (<strong>sp_trace_*xx*</strong>) tienen establecimiento inflexible de tipos y no admiten la conversión automática de tipos de datos. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devuelve un error.  
+>  A diferencia de los procedimientos almacenados normales, los parámetros de todos los procedimientos almacenados de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (<strong>sp_trace_ *xx*</strong>) tienen establecimiento inflexible de tipos y no admiten la conversión automática de tipos de datos. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devuelve un error.  
   
 ## <a name="see-also"></a>Consulte también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

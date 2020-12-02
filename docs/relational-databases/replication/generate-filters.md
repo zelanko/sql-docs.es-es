@@ -14,10 +14,10 @@ ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5c124642da9b895522e35c80e5edf68f50335dc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88428037"
 ---
 # <a name="generate-filters"></a>Generar filtros
@@ -25,7 +25,7 @@ ms.locfileid: "88428037"
   El cuadro de diálogo **Generar filtros** le permite definir un filtro de filas en una tabla de una publicación de combinación; la replicación extenderá automáticamente el filtro a otras tablas relacionadas con relaciones de clave externa. Por ejemplo, si define un filtro en una tabla de clientes para que solo contenga datos de clientes franceses, la replicación extiende el filtro de forma que los pedidos y las tablas de detalles de pedidos relacionados solo contengan información relativa a los clientes franceses.  
   
 ## <a name="options"></a>Opciones  
- El cuadro de diálogo presenta un proceso de tres pasos para crear un filtro de fila en una tabla. A continuación, el filtro se extiende a las tablas relacionadas con la tabla filtrada mediante relaciones de clave principal y de clave externa. Por ejemplo, dadas las tablas **Customer**, **SalesOrderHeader**y **SalesOrderDetail**, con una relación entre **Customer** y **SalesOrderHeader**y una relación entre **SalesOrderHeader** y **SalesOrderDetail**, al aplicar un filtro de filas a **Customer**, la replicación extenderá dicho filtro a **SalesOrderHeader** y **SalesOrderDetail**.  
+ El cuadro de diálogo presenta un proceso de tres pasos para crear un filtro de fila en una tabla. A continuación, el filtro se extiende a las tablas relacionadas con la tabla filtrada mediante relaciones de clave principal y de clave externa. Por ejemplo, dadas las tablas **Customer**, **SalesOrderHeader** y **SalesOrderDetail**, con una relación entre **Customer** y **SalesOrderHeader** y una relación entre **SalesOrderHeader** y **SalesOrderDetail**, al aplicar un filtro de filas a **Customer**, la replicación extenderá dicho filtro a **SalesOrderHeader** y **SalesOrderDetail**.  
   
 1.  **Seleccione la tabla que desea filtrar.**  
   

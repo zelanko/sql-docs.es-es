@@ -14,17 +14,17 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f7533366a28517fcc2fdb8ca5c2e4ad0c0dd01c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88424057"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitor de actividad de trabajo (Configuración del filtro)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice esta página para reducir el número de filas visibles en el Monitor de actividad de trabajo. Inserte criterios en uno o varios de los cuadros disponibles, para mostrar solo las filas que coinciden con los valores especificados. Algunos cuadros, como **Estado** o **Tipo de bloqueo** ofrecen un número determinado de valores posibles, en una lista desplegable. Otros, como **Aplicación** , permiten indicar un número indeterminado de valores, como una lista separada por comas. Los iconos de barra de herramientas permiten ordenar los cuadros disponibles alfabéticamente o por categoría. Haga clic en los criterios para consultar una descripción breve.  
   
- Para filtrar el Monitor de actividad de trabajo, proporcione los criterios de filtro que desee, haga clic en **Aplicar filtro**y, a continuación, haga clic en **Aceptar**.  
+ Para filtrar el Monitor de actividad de trabajo, proporcione los criterios de filtro que desee, haga clic en **Aplicar filtro** y, a continuación, haga clic en **Aceptar**.  
   
 ## <a name="all-jobs"></a>Todos los trabajos  
  Este grupo de criterios de filtro está disponible cuando se filtra el Monitor de actividad de trabajo.  

@@ -18,10 +18,10 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3e7b6abc6b235950fef107a870e53d827dee6f5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88455608"
 ---
 # <a name="oracle-subscribers"></a>Suscriptores de Oracle
@@ -60,7 +60,7 @@ ms.locfileid: "88455608"
   
  Después de realizar una conexión correcta al publicador de Oracle, intente iniciar la sesión en la base de datos con la cuenta y la contraseña configurados para el Agente de distribución de la suscripción.  
   
-1.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**.  
+1.  Haga clic en **Inicio** y, a continuación, haga clic en **Ejecutar**.  
   
 2.  Escriba `cmd` y haga clic en **Aceptar**.  
   

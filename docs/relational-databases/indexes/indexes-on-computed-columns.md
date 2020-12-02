@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea5366a8080ccbfb4d48c8bcfda8928ed54932d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88408121"
 ---
 # <a name="indexes-on-computed-columns"></a>Índices en columnas calculadas
@@ -95,9 +95,9 @@ La propiedad **IsPrecise** de la función COLUMNPROPERTY informa de si una expre
 
 ## <a name="data-type-requirements"></a>Requisitos de tipo de datos
   
--   La expresión *computed_column_expression* definida para la columna calculada no se puede evaluar para los tipos de datos **text**, **ntext**o **image** .  
+-   La expresión *computed_column_expression* definida para la columna calculada no se puede evaluar para los tipos de datos **text**, **ntext** o **image** .  
 -   Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml** se pueden indexar, siempre que el tipo de datos de la columna calculada esté disponible como una columna de clave de índice.  
--   Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**y **text** pueden ser columnas sin clave (incluidas) en un índice no agrupado, siempre que el tipo de datos de la columna calculada esté disponible como una columna índice sin clave.  
+-   Las columnas calculadas derivadas de los tipos de datos **image**, **ntext** y **text** pueden ser columnas sin clave (incluidas) en un índice no agrupado, siempre que el tipo de datos de la columna calculada esté disponible como una columna índice sin clave.  
 
 
 ## <a name="set-option-requirements"></a>Requisitos de la opción SET

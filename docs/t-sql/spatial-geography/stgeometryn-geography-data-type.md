@@ -18,16 +18,16 @@ ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 812a5e63f21de77028c1f00a08f1819c5a07be13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445254"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (tipo de datos geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Devuelve un elemento **geography** especificado en una colección **GeometryCollection** o en uno de sus subtipos. Cuando STGeometryN() se usa en un subtipo de **GeometryCollection**, como **MultiPoint** o **MultiLineString**, este método devuelve la instancia de **geography ** si se llama con N = 1.  
+  Devuelve un elemento **geography** especificado en una colección **GeometryCollection** o en uno de sus subtipos. Cuando STGeometryN() se usa en un subtipo de **GeometryCollection**, como **MultiPoint** o **MultiLineString**, este método devuelve la instancia de **geography** si se llama con N = 1.  
   
 ## <a name="syntax"></a>Sintaxis  
   

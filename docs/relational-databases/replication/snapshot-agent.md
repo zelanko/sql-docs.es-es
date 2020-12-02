@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 532917bc211dcc281dd65ebb6229febc953d5805
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88420389"
 ---
 # <a name="snapshot-agent"></a>Agente de instantáneas
@@ -28,7 +28,7 @@ ms.locfileid: "88420389"
    El cuadro de diálogo **Agente de instantáneas** muestra información detallada acerca del Agente de instantáneas, como el estado, el historial, mensajes informativos y mensajes de error.  
   
 ## <a name="options"></a>Opciones  
- Seleccione en el menú **Ver** las sesiones del Agente de instantáneas que desea ver y seleccione a continuación una sesión específica en la cuadrícula con la etiqueta **Sesiones del Agente de instantáneas**. En la cuadrícula con la etiqueta **Acciones en la sesión seleccionada**se muestra información detallada de la sesión. Si la sesión seleccionada finalizó con un error, también se muestra el área de texto con la etiqueta **Detalles del error o mensaje de la sesión seleccionada** .  
+ Seleccione en el menú **Ver** las sesiones del Agente de instantáneas que desea ver y seleccione a continuación una sesión específica en la cuadrícula con la etiqueta **Sesiones del Agente de instantáneas**. En la cuadrícula con la etiqueta **Acciones en la sesión seleccionada** se muestra información detallada de la sesión. Si la sesión seleccionada finalizó con un error, también se muestra el área de texto con la etiqueta **Detalles del error o mensaje de la sesión seleccionada** .  
   
  **Vista**  
  Seleccione las sesiones del Agente de instantáneas que desea ver.  

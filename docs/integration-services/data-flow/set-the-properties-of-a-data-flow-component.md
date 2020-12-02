@@ -14,10 +14,10 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c7799b5d2f5f541b6713821dccbec820697371ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88348951"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Establecer las propiedades de un componente de flujo de datos
@@ -152,14 +152,14 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |--------------|---------------|-----------------|  
 |Descripción|String|Descripción de la entrada.|  
 |ErrorOrTruncationOperation|String|Cadena opcional que especifica los tipos de errores o truncamientos que pueden producirse al procesar una fila.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure** y **Redirect row**.|  
 |HasSideEffects|Boolean|Indica si un componente se puede quitar del plan de ejecución del flujo de datos cuando no está adjunto a un componente de nivel inferior y cuando **RunInOptimizedMode** es **true**.|  
 |ID|Entero|Valor que identifica la entrada de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la entrada.|  
 |IsSorted|Boolean|Indica si los datos de la entrada están ordenados.|  
 |Nombre|String|Nombre de la entrada.|  
 |SourceLocale|Entero|El Id. de configuración regional (LCID) de los datos de entrada.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. . Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. . Los valores son **Fail component**, **Ignore failure** y **Redirect row**.|  
   
  Los destinos y algunas transformaciones no admiten la salida de errores y, además, las propiedades ErrorRowDisposition y TruncationRowDisposition de estos componentes son de solo lectura.  
   
@@ -173,7 +173,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |ComparisonFlags|Entero|Conjunto de marcas que especifican la comparación de columnas cuyo tipo de datos es carácter. Para más información, consulte [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
 |Descripción|String|Describe la columna de entrada.|  
 |ErrorOrTruncationOperation|String|Cadena opcional que especifica los tipos de errores o truncamientos que pueden producirse al procesar una fila.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure** y **Redirect row**.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|El Id. de la columna de metadatos externa asignado a una columna de entrada.|  
 |ID|Entero|Valor que identifica la columna de entrada de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la columna de entrada.|  
@@ -181,7 +181,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |LineageIdentificationString|String|La cadena de identificación que incluye el nombre de la columna de nivel superior.|  
 |Nombre|String|Nombre de la columna de entrada.|  
 |SortKeyPosition|Entero|Valor que indica si una columna está ordenada, su criterio de ordenación y la secuencia en la que se ordenan varias columnas. El valor **0** indica que la columna no está ordenada.  Para obtener más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son **Fail component**, **Ignore failure** y **Redirect row**.|  
 |UpstreamComponentName|String|Nombre del componente de nivel superior.|  
 |UsageType|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>|Valor que determina la forma en que el componente utiliza una columna de entrada.|  
   
@@ -197,7 +197,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |DeleteOutputOnPathDetached|Boolean|Valor que determina si el motor de flujo de datos elimina la salida cuando ésta se separa de una ruta.|  
 |Descripción|String|Describe la salida.|  
 |ErrorOrTruncationOperation|String|Cadena opcional que especifica los tipos de errores o truncamientos que pueden producirse al procesar una fila.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure** y **Redirect row**.|  
 |ExclusionGroup|Entero|Valor que identifica un grupo de salidas mutuamente excluyentes.|  
 |HasSideEffects|Boolean|Valor que indica si un componente puede quitarse del plan de ejecución del flujo de datos cuando no está adjunto con un componente de nivel superior y cuando **RunInOptimizedMode** es **true**.|  
 |ID|Entero|Valor que identifica la salida de forma inequívoca.|  
@@ -206,7 +206,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |IsSorted|Boolean|Indica si la salida está ordenada. El valor predeterminado es **False**.<br /><br /> **\*\* Importante \*\*** Aunque se establezca el valor de la propiedad **IsSorted** en **True**, los datos no se ordenan. Esta propiedad únicamente proporciona una sugerencia a los componentes de nivel inferior acerca de que los datos se han ordenado previamente. Para obtener más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Nombre|String|Nombre de la salida.|  
 |SynchronousInputID|Entero|El Id. de una entrada que es sincrónica con la salida.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son **Fail component**, **Ignore failure** y **Redirect row**.|  
   
 ###  <a name="output-column-properties"></a><a name="outputcolumns"></a> Propiedades de las columnas de salida  
  En el modelo de objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , una salida contiene una colección de columnas de resultados. Una columna de resultados de un componente en el flujo de datos implementa la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
@@ -218,7 +218,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |ComparisonFlags|Entero|Conjunto de marcas que especifican la comparación de columnas cuyo tipo de datos es carácter. Para más información, consulte [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
 |Descripción|String|Describe la columna de resultados.|  
 |ErrorOrTruncationOperation|String|Cadena opcional que especifica los tipos de errores o truncamientos que pueden producirse al procesar una fila.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure**y **Redirect row**. El valor predeterminado es **Error de componente**.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure** y **Redirect row**. El valor predeterminado es **Error de componente**.|  
 |ExternalMetadataColumnID|Entero|El Id. de la columna de metadatos externa asignado a una columna de entrada.|  
 |ID|Entero|Valor que identifica la columna de resultados de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la columna de resultados.|  
@@ -227,7 +227,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |Nombre|String|Nombre de la columna de resultados.|  
 |SortKeyPosition|Entero|Valor que indica si una columna está ordenada, su criterio de ordenación y la secuencia en la que se ordenan varias columnas. El valor **0** indica que la columna no está ordenada. Para obtener más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |SpecialFlags|Entero|Un valor que contiene las marcas especiales de la columna de resultados.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son **Fail component**, **Ignore failure**y **Redirect row**. El valor predeterminado es **Error de componente**.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son **Fail component**, **Ignore failure** y **Redirect row**. El valor predeterminado es **Error de componente**.|  
   
  Las columnas de resultados también incluyen un conjunto de propiedades de tipo de datos.  
   
@@ -316,7 +316,7 @@ Este procedimiento describe cómo agregar una expresión a la transformación Di
   
 7.  En el panel de la izquierda, expanda **Variables** para ver las variables del sistema y las definidas por el usuario, y expanda **Columnas** para ver las columnas de entrada de la transformación.  
   
-8.  En el panel de la derecha, expanda **Funciones matemáticas**, **Funciones de cadena**, **Funciones de fecha y hora**, **Funciones NULL**, **Conversiones de tipo**y **Operadores** para tener acceso a las funciones, las conversiones y los operadores que proporciona la gramática de expresiones.  
+8.  En el panel de la derecha, expanda **Funciones matemáticas**, **Funciones de cadena**, **Funciones de fecha y hora**, **Funciones NULL**, **Conversiones de tipo** y **Operadores** para tener acceso a las funciones, las conversiones y los operadores que proporciona la gramática de expresiones.  
   
 9. Dependiendo de la transformación, siga uno de estos procedimientos para crear una expresión:  
   

@@ -12,10 +12,10 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cfc6ffa21bf3f6c1205b1c9c667cc6e75868cece
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88390871"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Lección 1-5: Adición y configuración del origen de archivo plano
@@ -31,7 +31,7 @@ Para esta tarea, configurará el origen de archivo plano para que use el adminis
   
 1.  Para abrir el diseñador **Flujo de datos**, haga doble clic en la tarea de flujo de datos **Extract Sample Currency Data**, o bien haga clic en la pestaña **Flujo de datos**.  
   
-2.  En el **cuadro de herramientas de SSIS**, expanda **Otros orígenes**y, después, arrastre un **Origen de archivo plano** a la superficie de diseño de la pestaña **Flujo de datos** .  
+2.  En el **cuadro de herramientas de SSIS**, expanda **Otros orígenes** y, después, arrastre un **Origen de archivo plano** a la superficie de diseño de la pestaña **Flujo de datos** .  
   
 3.  En la superficie de diseño **Flujo de datos**, haga clic con el botón derecho en el **Origen de archivo plano** recién agredo, haga clic en **Cambiar nombre** y cambie el nombre por **Extract Sample Currency Data**.  
   

@@ -12,10 +12,10 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38d062e21ec2bd7eb0e9314f5e108ea785e5428a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88449727"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Lección 1-3: Agregar paquetes y otros archivos
@@ -48,11 +48,11 @@ En la siguiente tarea, agregará configuraciones a los paquetes DataTransfer y L
   
 ### <a name="to-add-packages-to-the-deployment-tutorial-project"></a>Para agregar paquetes al proyecto Deployment Tutorial  
   
-1.  Si [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] no está abierto, haga clic en **Inicio**, seleccione **Todos los programas**, **Microsoft SQL Server**y luego haga clic en **SQL Server Data Tools**.  
+1.  Si [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] no está abierto, haga clic en **Inicio**, seleccione **Todos los programas**, **Microsoft SQL Server** y luego haga clic en **SQL Server Data Tools**.  
   
-2.  En el menú **Archivo** , haga clic en **Abrir**y, en **Proyecto o solución**, haga clic en la carpeta **Deployment Tutorial** a continuación, haga clic en **Abrir**y, después, haga doble clic en **Deployment Tutorial.sln**.  
+2.  En el menú **Archivo** , haga clic en **Abrir** y, en **Proyecto o solución**, haga clic en la carpeta **Deployment Tutorial** a continuación, haga clic en **Abrir** y, después, haga doble clic en **Deployment Tutorial.sln**.  
   
-3.  En el Explorador de soluciones, haga clic con el botón derecho en Deployment Tutorial, haga clic en **Agregar**y, después, en **Paquete existente**.  
+3.  En el Explorador de soluciones, haga clic con el botón derecho en Deployment Tutorial, haga clic en **Agregar** y, después, en **Paquete existente**.  
   
 4.  En el cuadro de diálogo **Agregar copia de paquete existente** , en **Ubicación del paquete**, seleccione **Sistema de archivos**.  
   
@@ -64,7 +64,7 @@ En la siguiente tarea, agregará configuraciones a los paquetes DataTransfer y L
   
 ### <a name="to-add-ancillary-files-to-the-deployment-tutorial-project"></a>Para agregar archivos auxiliares al proyecto Deployment Tutorial  
   
-1.  En el Explorador de soluciones, haga clic con el botón derecho en Deployment Tutorial, haga clic en **Agregar**y, después, en **Elemento existente**.  
+1.  En el Explorador de soluciones, haga clic con el botón derecho en Deployment Tutorial, haga clic en **Agregar** y, después, en **Elemento existente**.  
   
 2.  En el cuadro de diálogo **Agregar elemento existente - Deployment Tutorial** , vaya a C:\Archivos de programa\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data, seleccione orders.xml, orders.xsd y NewCustomers.txt y luego haga clic en **Agregar**.  
   

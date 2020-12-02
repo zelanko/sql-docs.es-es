@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 8637bafe6433893b73e3dc2a7980c43f73fe19d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88420499"
 ---
 # <a name="publication-properties-subscription-options"></a>Propiedades de la publicación, Opciones de suscripción
@@ -66,7 +66,7 @@ ms.locfileid: "88420499"
  Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Determina si se permite utilizar archivos de copia de seguridad para inicializar suscripciones. Para obtener más información, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Permitir suscriptores que no sean de SQL**  
- Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Determina si la publicación admite suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si esta opción se establece en **True**, se configuran otras propiedades de la publicación para admitir suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta opción es de solo lectura si existen suscripciones; no se puede establecer en **True** si las opciones **Permitir suscripciones de actualización inmediata**, **Permitir suscripciones de actualización en cola**o **Permitir suscripciones punto a punto** están establecidas en **True**. Para más información, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Determina si la publicación admite suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si esta opción se establece en **True**, se configuran otras propiedades de la publicación para admitir suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta opción es de solo lectura si existen suscripciones; no se puede establecer en **True** si las opciones **Permitir suscripciones de actualización inmediata**, **Permitir suscripciones de actualización en cola** o **Permitir suscripciones punto a punto** están establecidas en **True**. Para más información, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Transformación de datos  
  **Permitir transformaciones de datos**  
@@ -77,7 +77,7 @@ ms.locfileid: "88420499"
   
 ### <a name="peer-to-peer-replication"></a>Replicación punto a punto  
  **Permitir suscripciones punto a punto**  
- Se aplica solamente a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Determina si la publicación admite la replicación punto a punto. Si se establece esta opción en **True** , se configuran otras propiedades de la publicación para admitir la replicación punto a punto. Esta opción es de solo lectura si existen suscripciones. Esta opción no se puede establecer en **True** si las opciones **Permitir suscripciones de actualización inmediata** , **Permitir suscripciones de actualización en cola**o **Permitir suscriptores que no sean de SQL** están establecidas en **True**. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
+ Se aplica solamente a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Determina si la publicación admite la replicación punto a punto. Si se establece esta opción en **True** , se configuran otras propiedades de la publicación para admitir la replicación punto a punto. Esta opción es de solo lectura si existen suscripciones. Esta opción no se puede establecer en **True** si las opciones **Permitir suscripciones de actualización inmediata** , **Permitir suscripciones de actualización en cola** o **Permitir suscriptores que no sean de SQL** están establecidas en **True**. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  **Permitir detección de conflictos de replicación punto a punto**  
  Se aplica solamente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. Especifica si la detección de conflictos está habilitada para esta publicación. Para utilizar la detección de conflictos, todos los nodos deben estar ejecutando [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o una versión posterior, y debe haberse habilitado la detección para todos los nodos. Para utilizar la detección de conflictos también debe especificar un valor para **Identificador del autor del mismo nivel**. Para más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  

@@ -11,10 +11,10 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: ''
 ms.openlocfilehash: 4ab6f98a868dc504cf13fa770cd0d5ad5ceb1788
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88462055"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lección 1-6: Adición y configuración de las transformaciones de búsqueda
@@ -38,7 +38,7 @@ En ambos casos, en la transformación de búsqueda se usa el administrador de co
   
 ## <a name="add-and-configure-the-lookup-currency-key-transformation"></a>Adición y configuración de la transformación Lookup Currency Key  
   
-1.  En el **cuadro de herramientas de SSIS**, expanda **Comunes**y arrastre **Búsqueda** a la superficie de diseño de la pestaña **Flujo de datos** . Coloque **Búsqueda** directamente bajo el origen **Extract Sample Currency Data**.  
+1.  En el **cuadro de herramientas de SSIS**, expanda **Comunes** y arrastre **Búsqueda** a la superficie de diseño de la pestaña **Flujo de datos** . Coloque **Búsqueda** directamente bajo el origen **Extract Sample Currency Data**.  
   
 2.  Haga clic en el origen de archivo plano **Extract Sample Currency Data** y arrastre la flecha de color azul a la transformación **Búsqueda** recién agregada para conectar los dos componentes.  
   

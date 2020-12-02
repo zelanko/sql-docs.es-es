@@ -12,10 +12,10 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e12fe80482b6b6ffd96fe6e56e6dfad1a92362fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425677"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Tutorial: Usar el origen OData
@@ -31,7 +31,7 @@ ms.locfileid: "88425677"
   
 2.  Haga clic en **Archivo**, seleccione **Nuevo** y, luego, haga clic en **Proyecto**.  
   
-3.  En el cuadro de diálogo **Nuevo proyecto** , expanda **Instalado**, expanda **Plantillas**, expanda **Business Intelligence**y haga clic en **Integration Services**.  
+3.  En el cuadro de diálogo **Nuevo proyecto** , expanda **Instalado**, expanda **Plantillas**, expanda **Business Intelligence** y haga clic en **Integration Services**.  
   
 4.  Seleccione **Proyecto de Integration Services** como tipo de proyecto.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "88425677"
   
 13. Haga clic en **Columnas** en el panel de navegación de la izquierda para cambiar a la página **Columnas** .  
   
-14. Seleccione **EmployeeID**, **FirstName**y **LastName** en **Columnas externas disponibles** activando las casillas correspondientes.  
+14. Seleccione **EmployeeID**, **FirstName** y **LastName** en **Columnas externas disponibles** activando las casillas correspondientes.  
   
 15. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Editor de origen OData** .  
   

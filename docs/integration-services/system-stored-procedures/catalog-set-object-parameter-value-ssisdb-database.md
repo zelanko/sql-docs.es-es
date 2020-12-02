@@ -12,11 +12,11 @@ ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a6991d846ffd6dd4673f3faca443c1bd1578ecaf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422129"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129615"
 ---
 # <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value (base de datos de SSISDB)
 
@@ -91,7 +91,7 @@ catalog.set_object_parameter_value [ @object_type = ] object_type
   
 ## <a name="remarks"></a>Observaciones  
   
--   Si no se especifica ningún parámetro *value_type*, se usa un valor literal de *parameter_value* de forma predeterminada. Cuando se usa un valor literal, el parámetro*value_set* de la vista [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) se establece en `1`. No se permiten valores de parámetro NULL.  
+-   Si no se especifica ningún parámetro *value_type*, se usa un valor literal de *parameter_value* de forma predeterminada. Cuando se usa un valor literal, el parámetro *value_set* de la vista [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) se establece en `1`. No se permiten valores de parámetro NULL.  
   
 -   Si *value_type* contiene el carácter `R` (el cual denota un valor de referencia), el parámetro *parameter_value* hace referencia al nombre de una variable de entorno.  
   

@@ -73,6 +73,24 @@
           items:
             - name: Agrupación de conexiones de SQL Server (ADO.NET)
               href: ../connect/ado-net/sql-server-connection-pooling.md
+        - name: Comandos y parámetros
+          href: ../connect/ado-net/commands-parameters.md
+          items:
+            - name: Ejecutar un comando
+              href: ../connect/ado-net/execute-command.md
+            - name: Configurar parámetros
+              href: ../connect/ado-net/configure-parameters.md
+            - name: Generar comandos con objetos CommandBuilder
+              href: ../connect/ado-net/generate-commands-with-commandbuilders.md
+            - name: Obtener un valor único de una base de datos
+              href: ../connect/ado-net/obtain-single-value-from-database.md
+            - name: Usar comandos para modificar datos
+              href: ../connect/ado-net/use-commands-to-modify-data.md
+              items:
+                - name: Actualizar datos de un origen de datos
+                  href: ../connect/ado-net/update-data-inside-data-source.md
+                - name: Realizar operaciones de catálogo
+                  href: ../connect/ado-net/perform-catalog-operations.md
     - name: SQL Server y ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:

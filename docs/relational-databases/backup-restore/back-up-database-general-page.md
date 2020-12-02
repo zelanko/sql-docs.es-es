@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d47d3f31533dc7cabd4195ad585068474fe446eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: dd1dd775aff0865b2ce0f2f833ef78b7c5eb4b5e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719972"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130577"
 ---
 # <a name="back-up-database-general-page"></a>Copia de seguridad de base de datos (página General)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "85719972"
  **Contents**  
 Muestra el contenido del medio del dispositivo seleccionado, si existe.  El botón no realiza una función cuando se especifica una dirección **URL** . 
    
-Cuadro de diálogo**Seleccionar destino de la copia de seguridad** . El cuadro de diálogo **Seleccionar destino de la copia de seguridad** aparece después de seleccionar **Agregar**.   El conjunto de las opciones que aparecen depende del tipo de destino seleccionado. 
+Cuadro de diálogo **Seleccionar destino de la copia de seguridad** . El cuadro de diálogo **Seleccionar destino de la copia de seguridad** aparece después de seleccionar **Agregar**.   El conjunto de las opciones que aparecen depende del tipo de destino seleccionado. 
 
 Si ha seleccionado **Disco** o **Cinta** como el destino de la copia de seguridad, se muestra la siguiente opción.  
 

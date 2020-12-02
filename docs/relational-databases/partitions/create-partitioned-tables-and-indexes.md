@@ -31,11 +31,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a22807e98d887504cb1700e7bc3497984b699059
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482540"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130226"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Crear tablas e índices con particiones
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -145,7 +145,7 @@ ms.locfileid: "88482540"
      En esta página están disponibles las opciones siguientes:  
   
      **Establecer límites...**  
-     Abre el cuadro de diálogo **Establecer valores límite** para seleccionar los valores límite y los rangos de fechas que desea para las particiones. Esta opción solo está disponible cuando ha seleccionado una columna de partición que contiene uno de los tipos de datos siguientes: **date**, **datetime**, **smalldatetime**, **datetime2**o **datetimeoffset**.  
+     Abre el cuadro de diálogo **Establecer valores límite** para seleccionar los valores límite y los rangos de fechas que desea para las particiones. Esta opción solo está disponible cuando ha seleccionado una columna de partición que contiene uno de los tipos de datos siguientes: **date**, **datetime**, **smalldatetime**, **datetime2** o **datetimeoffset**.  
   
      **Estimar almacenamiento**  
      Calcula el número de filas, el espacio necesario y el espacio disponible para el almacenamiento de cada grupo de archivos especificado para las particiones. Estos valores se muestran en la cuadrícula como valores de solo lectura.  
@@ -204,7 +204,7 @@ ms.locfileid: "88482540"
   
                 -   Si selecciona **Día**, especifique la fecha del mes que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si quiere que la programación de trabajo se ejecute el decimoquinto día de cada mes, seleccione **Día** y escriba "15" en el primer cuadro y "2" en el segundo. Tenga en cuenta que el mayor número permitido en el segundo cuadro es "99".  
   
-                -   Si selecciona **El**, seleccione el día concreto de la semana del mes en que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si quiere que la programación de trabajo se ejecute el último día de la semana de cada mes, seleccione **Día**, seleccione **último** en la primera lista y **día de la semana** en la segunda y, después, escriba "2" en el último cuadro. En las primeras dos listas, también puede seleccionar **primero**, **segundo**, **tercero**o **cuarto**, así como días de la semana concretos (por ejemplo: domingo o miércoles). Tenga en cuenta que el mayor número permitido en el último cuadro es "99".  
+                -   Si selecciona **El**, seleccione el día concreto de la semana del mes en que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si quiere que la programación de trabajo se ejecute el último día de la semana de cada mes, seleccione **Día**, seleccione **último** en la primera lista y **día de la semana** en la segunda y, después, escriba "2" en el último cuadro. En las primeras dos listas, también puede seleccionar **primero**, **segundo**, **tercero** o **cuarto**, así como días de la semana concretos (por ejemplo: domingo o miércoles). Tenga en cuenta que el mayor número permitido en el último cuadro es "99".  
   
         2.  Debajo de **Frecuencia diaria**, especifique la frecuencia con que se repite la programación de trabajo en el día en que se ejecuta:  
   
@@ -243,7 +243,7 @@ ms.locfileid: "88482540"
      Proporciona los mensajes de error o de advertencia devueltos por el proceso.  
   
      **Report**  
-     Crea un informe que contiene los resultados del Asistente para la creación de particiones. Las opciones son **Ver informe**, **Guardar informe en archivo**, **Copiar informe al Portapapeles**y **Enviar informe como correo electrónico**.  
+     Crea un informe que contiene los resultados del Asistente para la creación de particiones. Las opciones son **Ver informe**, **Guardar informe en archivo**, **Copiar informe al Portapapeles** y **Enviar informe como correo electrónico**.  
   
      **Ver informe**  
      Abre el cuadro de diálogo **Ver informe** , que contiene un informe de texto del progreso del Asistente para la creación de particiones.  

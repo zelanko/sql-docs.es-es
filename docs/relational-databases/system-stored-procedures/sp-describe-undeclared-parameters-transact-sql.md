@@ -19,17 +19,17 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 5ca659670cb68bafa10f758bc2a7997243f5c1a8
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 232ad1cfe65fca719260a9ed8ab87a7f2d7ed3dd
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990133"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443160"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
-  Devuelve un conjunto de resultados que contiene metadatos sobre parámetros no declarados en un [!INCLUDE[tsql](../../includes/tsql-md.md)] lote. Considera cada parámetro que se utiliza en el lote de ** \@ tsql** , pero no se declara en los ** \@ parámetros**. Se devuelve un conjunto de resultados que contiene una fila para cada parámetro, con la información de tipo deducida para dicho parámetro. El procedimiento devuelve un conjunto de resultados vacío si el lote de entrada de ** \@ tsql** no tiene ningún parámetro excepto los declarados en ** \@ params**.  
+  Devuelve un conjunto de resultados que contiene metadatos sobre parámetros no declarados en un [!INCLUDE[tsql](../../includes/tsql-md.md)] lote. Considera cada parámetro que se utiliza en el lote de **\@ tsql** , pero no se declara en los **\@ parámetros**. Se devuelve un conjunto de resultados que contiene una fila para cada parámetro, con la información de tipo deducida para dicho parámetro. El procedimiento devuelve un conjunto de resultados vacío si el lote de entrada de **\@ tsql** no tiene ningún parámetro excepto los declarados en **\@ params**.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_describe_undeclared_parameters
 ```  
 
 > [!Note] 
-> Para usar este procedimiento almacenado en Azure Synapse Analytics (anteriormente SQL DW), establezca el nivel de compatibilidad de la base de datos en 20 o superior.   Para no participar, cambie el nivel de compatibilidad de la base de datos a 10.
+> Para usar este procedimiento almacenado en Azure Synapse Analytics en un grupo de SQL dedicado, establezca el nivel de compatibilidad de la base de datos en 20 o superior.   Para no participar, cambie el nivel de compatibilidad de la base de datos a 10.
 
 ## <a name="arguments"></a>Argumentos  
 `[ \@tsql = ] 'Transact-SQL\_batch'` Una o más [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones. *Transact-SQL_batch* puede ser **nvarchar (**_n_**)** o **nvarchar (Max)**.  
@@ -56,7 +56,7 @@ sp_describe_undeclared_parameters
  El tipo de datos del parámetro.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- **sp_describe_undeclared_parameters** siempre devuelve el estado de retorno de cero si se realiza correctamente. Si el procedimiento produce un error y se llama al procedimiento como un RPC, el estado de retorno es rellenado por el tipo de error tal y como se describe en la error_type columna de sys. dm_exec_describe_first_result_set. Si se llama al procedimiento desde [!INCLUDE[tsql](../../includes/tsql-md.md)], el valor devuelto siempre es cero, incluso si se produce un error.  
+ **sp_describe_undeclared_parameters** siempre devuelve el estado de retorno de cero si se realiza correctamente. Si el procedimiento produce un error y se llama al procedimiento como un RPC, el estado de retorno es rellenado por el tipo de error tal y como se describe en la error_type columna de sys.dm_exec_describe_first_result_set. Si se llama al procedimiento desde [!INCLUDE[tsql](../../includes/tsql-md.md)], el valor devuelto siempre es cero, incluso si se produce un error.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_describe_undeclared_parameters** devuelve el siguiente conjunto de resultados.  
@@ -226,7 +226,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      En este caso, E ( \@ p) es Col_Int + \@ p y TT ( \@ p) es de **tipo int**. se elige **int** para \@ p porque no genera ninguna conversión implícita. Cualquier otra opción de tipo de datos genera al menos una conversión implícita.  
   
-2.  Si hay varios tipos de datos que coinciden en el número menor de conversiones, se utiliza el tipo de datos con mayor prioridad. Por ejemplo,  
+2.  Si hay varios tipos de datos que coinciden en el número menor de conversiones, se utiliza el tipo de datos con mayor prioridad. Por ejemplo  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
@@ -279,5 +279,5 @@ WHERE object_id = @id OR NAME = @name',
   
 ## <a name="see-also"></a>Consulte también  
  [sp_describe_first_result_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [Sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [Sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+ [sys.dm_exec_describe_first_result_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

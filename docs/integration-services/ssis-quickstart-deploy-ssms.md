@@ -12,11 +12,11 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/21/2018
 ms.openlocfilehash: fc86054be556dbb34d212b24172e50fbf52f8980
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344556"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129977"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Implementar un proyecto de SSIS con SQL Server Management Studio (SSMS)
 
@@ -50,8 +50,8 @@ No puede usar la información que aparece en este inicio rápido para implementa
 Para implementar el proyecto en Azure SQL Database, debe obtener la información de conexión necesaria para conectarse a la base de datos del catálogo de SSIS (SSISDB). Necesita el nombre completo y la información de inicio de sesión del servidor en los procedimientos siguientes.
 
 1. Inicie sesión en [Azure Portal](https://portal.azure.com/).
-2. Seleccione **Bases de datos SQL** en el menú izquierdo y, después, seleccione la base de datos SSISDB en la página **Bases de datos SQL** . 
-3. En la página **Introducción** de la base de datos, compruebe el nombre completo del servidor. Mantenga el puntero del ratón sobre el nombre del servidor para ver la opción **Haga clic para copiar** . 
+2. Seleccione **Bases de datos SQL** en el menú izquierdo y, después, seleccione la base de datos SSISDB en la página **Bases de datos SQL**. 
+3. En la página **Introducción** de la base de datos, compruebe el nombre completo del servidor. Mantenga el puntero del ratón sobre el nombre del servidor para ver la opción **Haga clic para copiar**. 
 4. Si olvida la información de inicio de sesión del servidor de Azure SQL Database, navegue a la página del servidor de SQL Database para ver el nombre del administrador del servidor. Si es necesario, puede restablecer la contraseña.
 
 ## <a name="authentication-methods-for-deployment"></a>Métodos de autenticación para la implementación
@@ -66,7 +66,7 @@ Use SQL Server Management Studio para establecer una conexión con el catálogo 
 
 1. Abra SQL Server Management Studio.
 
-2. En el cuadro de diálogo **Conectar con el servidor** , especifique la siguiente información:
+2. En el cuadro de diálogo **Conectar con el servidor**, especifique la siguiente información:
 
    | Configuración       | Valor sugerido | Más información | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -76,38 +76,38 @@ Use SQL Server Management Studio para establecer una conexión con el catálogo 
    | **Inicio de sesión** | La cuenta de administrador del servidor | Esta es la cuenta que especificó cuando creó el servidor. |
    | **Contraseña** | La contraseña de la cuenta de administrador del servidor | Esta es la contraseña que especificó cuando creó el servidor. |
 
-3. Haga clic en **Conectar** . La ventana Explorador de objetos se abre en SSMS. 
+3. Haga clic en **Conectar**. La ventana Explorador de objetos se abre en SSMS. 
 
 4. En el Explorador de objetos, expanda la opción **Catálogos de Integration Services** y, a continuación, expanda **SSISDB** para ver los objetos de la base de datos del catálogo de SSIS.
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Iniciar el Asistente para implementación de Integration Services
 1. En el Explorador de objetos, con el nodo **Catálogos de Integration Services** y el nodo **SSISDB** expandidos, expanda una carpeta.
 
-2.  Seleccione el nodo **Proyectos** .
+2.  Seleccione el nodo **Proyectos**.
 
-3.  Haga doble clic en el nodo **Proyectos** y seleccione **Implementar proyecto** . Se abre el Asistente para implementación de Integration Services. Puede implementar un proyecto desde el catálogo actual o desde el sistema de archivos.
+3.  Haga doble clic en el nodo **Proyectos** y seleccione **Implementar proyecto**. Se abre el Asistente para implementación de Integration Services. Puede implementar un proyecto desde el catálogo actual o desde el sistema de archivos.
 
 ## <a name="deploy-a-project-with-the-wizard"></a>Implementar un proyecto con el asistente
-1. En la página **Introducción** del asistente, revise la introducción. Haga clic en **Siguiente** para abrir la página **Seleccionar origen** .
+1. En la página **Introducción** del asistente, revise la introducción. Haga clic en **Siguiente** para abrir la página **Seleccionar origen**.
 
-2. En la página **Seleccionar origen** , seleccione el proyecto SSIS existente que hay que implementar.
+2. En la página **Seleccionar origen**, seleccione el proyecto SSIS existente que hay que implementar.
     -   Para implementar un archivo de implementación de proyecto que haya creado compilando un proyecto en el entorno de desarrollo, seleccione **Archivo de implementación de proyecto** y especifique la ruta de acceso al archivo .ispac.
     -   Para implementar un proyecto que ya se ha implementado en una base de datos del catálogo de SSIS, seleccione **Catálogo de Integration Services** y especifique el nombre del servidor y la ruta de acceso al proyecto del catálogo.
     Haga clic en **Siguiente** para ver la página **Seleccionar destino** .
   
-3.  En la página **Seleccionar destino** , seleccione el destino del proyecto.
+3.  En la página **Seleccionar destino**, seleccione el destino del proyecto.
     -   Escriba el nombre completo del servidor. Si el servidor de destino es un servidor de Azure SQL Database, el nombre tendrá el formato `<server_name>.database.windows.net`.
-    -   Proporcione la información de autenticación y, después, seleccione **Conectar** . Vea [Métodos de autenticación en la implementación](#authentication-methods-for-deployment) en este artículo.
+    -   Proporcione la información de autenticación y, después, seleccione **Conectar**. Vea [Métodos de autenticación en la implementación](#authentication-methods-for-deployment) en este artículo.
     -   A continuación, haga clic en **Examinar** para seleccionar la carpeta de destino de SSISDB.
-    -   Después, seleccione **Siguiente** para abrir la página **Revisión** (el botón **Siguiente** solo se habilitará después de que haya seleccionado **Conectar** ).
+    -   Después, seleccione **Siguiente** para abrir la página **Revisión** (el botón **Siguiente** solo se habilitará después de que haya seleccionado **Conectar**).
   
-4.  En la página **Revisión** , revise la configuración seleccionada.
+4.  En la página **Revisión**, revise la configuración seleccionada.
     -   Puede cambiar las selecciones si hace clic en **Anterior** o si hace clic en cualquiera de los pasos del panel izquierdo.
     -   Haga clic en **Implementar** para iniciar el proceso de implementación.
 
 5.  Si va a efectuar una implementación en un servidor de Azure SQL Database, se abrirá la página **Validar** y se comprobará si hay errores conocidos en los paquetes del proyecto que puedan evitar que se ejecuten según lo esperado en Azure SSIS Integration Runtime. Para obtener más información, vea [Validación de paquetes de SSIS implementados en Azure](lift-shift/ssis-azure-validate-packages.md).
 
-6.  Una vez completado el proceso de implementación, se abrirá la página **Resultados** . Esta página muestra si cada acción si se completó correctamente o no.
+6.  Una vez completado el proceso de implementación, se abrirá la página **Resultados**. Esta página muestra si cada acción si se completó correctamente o no.
     -   Si se produce un error en la acción, haga clic en **Error** en la columna **Resultado** para que aparezca una explicación del error.
     -   De forma opcional, puede hacer clic en **Guardar informe** para guardar los resultados en un archivo XML.
     -   Haga clic en **Cerrar** para salir del asistente.

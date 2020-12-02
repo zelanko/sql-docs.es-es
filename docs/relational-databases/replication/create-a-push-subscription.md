@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 4710900a9a33de2be669ddf1204080068aad0220
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869256"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131019"
 ---
 # <a name="create-a-push-subscription"></a>Creación de una suscripción de inserción
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -129,7 +129,7 @@ Las suscripciones de inserción se pueden crear mediante programación usando pr
   
    - **\@subscriber_type**. Para una suscripción de cliente, especifique **local**. Para una suscripción de servidor, especifique **global**.  
   
-   - **\@subscription_priority**. Para una suscripción de servidor, especifique una prioridad para la suscripción (de**0,00** a **99,99**).  
+   - **\@subscription_priority**. Para una suscripción de servidor, especifique una prioridad para la suscripción (de **0,00** a **99,99**).  
   
    Para más información, consulte [Detección y resolución de conflictos de replicación de mezcla avanzada](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   

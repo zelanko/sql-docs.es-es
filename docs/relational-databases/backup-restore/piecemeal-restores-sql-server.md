@@ -14,14 +14,14 @@ helpviewer_keywords:
 - piecemeal restores [SQL Server]
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 61054ac32e13c16a77c1ad27400be6b978cebe7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3681cad0b17f2241ae388c19ba34c18578bc258f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670240"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130344"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restauraciones por etapas (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "85670240"
   
  Para obtener información sobre la restauración por etapas y las tablas optimizadas para memoria, vea [Restauración por etapas de bases de datos con tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
- La*restauración por etapas* , permite la restauración y recuperación en fases de las bases de datos que contienen varios grupos de archivos. Este tipo de restauración implica una serie de secuencias de restauración, empezando por el grupo de archivos principal y, en algunos casos, uno o varios grupos de archivos secundarios. La restauración por etapas mantiene comprobaciones para garantizar que, al final, la base de datos será coherente. Una vez completada la secuencia de restauración, los archivos recuperados (si son válidos y coherentes con la base de datos) pueden ponerse en línea directamente.  
+ La *restauración por etapas* , permite la restauración y recuperación en fases de las bases de datos que contienen varios grupos de archivos. Este tipo de restauración implica una serie de secuencias de restauración, empezando por el grupo de archivos principal y, en algunos casos, uno o varios grupos de archivos secundarios. La restauración por etapas mantiene comprobaciones para garantizar que, al final, la base de datos será coherente. Una vez completada la secuencia de restauración, los archivos recuperados (si son válidos y coherentes con la base de datos) pueden ponerse en línea directamente.  
   
  La restauración por etapas funciona con todos los modelos de recuperación, pero su flexibilidad es mayor para los modelos de recuperación optimizado para cargas masivas de registros y completo que para el modelo de recuperación simple.  
   

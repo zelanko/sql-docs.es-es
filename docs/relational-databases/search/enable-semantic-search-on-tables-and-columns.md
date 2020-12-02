@@ -14,11 +14,11 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: d02424e5e33823956977c8b32d1ab4e996df5526
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867470"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130938"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar la búsqueda semántica en tablas y columnas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +83,7 @@ GO
   
  **Ejemplo 2: Crear un índice de texto completo y semántico en varias columnas con rellenado de índice retrasado**  
   
- En el ejemplo siguiente se crea un catálogo de texto completo, **documents_catalog**, en la base de datos de ejemplo AdventureWorks2012. A continuación, se crea un índice de texto completo que usa este nuevo catálogo. El índice de texto completo se crea en las columnas **Title**, **DocumentSummary**y **Document** de la tabla **Production.Document** , mientras que el índice semántico se crea únicamente en la columna **Document** . Este índice de texto completo usa el catálogo de texto completo recién creado y un índice de clave única existente, **PK_Document_DocumentID**. Tal como se recomienda, esta clave de índice se crea en una columna de enteros, **DocumentID**. En el ejemplo se especifica el LCID de inglés, 1033, que es el idioma de los datos de las columnas.  
+ En el ejemplo siguiente se crea un catálogo de texto completo, **documents_catalog**, en la base de datos de ejemplo AdventureWorks2012. A continuación, se crea un índice de texto completo que usa este nuevo catálogo. El índice de texto completo se crea en las columnas **Title**, **DocumentSummary** y **Document** de la tabla **Production.Document** , mientras que el índice semántico se crea únicamente en la columna **Document** . Este índice de texto completo usa el catálogo de texto completo recién creado y un índice de clave única existente, **PK_Document_DocumentID**. Tal como se recomienda, esta clave de índice se crea en una columna de enteros, **DocumentID**. En el ejemplo se especifica el LCID de inglés, 1033, que es el idioma de los datos de las columnas.  
   
  En este ejemplo también se especifica que el seguimiento de cambios está desactivado sin rellenado. Posteriormente, durante las horas de menor actividad, en el ejemplo se usa una instrucción **ALTER FULLTEXT INDEX** para iniciar un rellenado completo en el nuevo índice y habilitar el seguimiento automático de cambios.  
   

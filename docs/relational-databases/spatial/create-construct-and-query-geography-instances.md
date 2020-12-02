@@ -16,11 +16,11 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8dd26e26f4b567918f56187b5be4442b286ffabb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006340"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130189"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Crear, construir y consultar instancias de Geography
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "92006340"
  [STEndpoint &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> Dimensión  
- Una instancia de **geography** no vacía puede ser no dimensional, unidimensional o bidimensional. Las instancias de **geography** no dimensionales, como **Point** y **MultiPoint**, no tienen longitud ni área. Los objetos unidimensionales, como **LineString, CircularString**, **CompoundCurve**y **MultiLineString**, tienen longitud. Las instancias bidimensionales, como **Polygon, CurvePolygon**y **MultiPolygon**, tienen área y longitud. Las instancias vacías informan de una dimensión de -1 y **GeometryCollection** informa de la dimensión máxima de su contenido.  
+ Una instancia de **geography** no vacía puede ser no dimensional, unidimensional o bidimensional. Las instancias de **geography** no dimensionales, como **Point** y **MultiPoint**, no tienen longitud ni área. Los objetos unidimensionales, como **LineString, CircularString**, **CompoundCurve** y **MultiLineString**, tienen longitud. Las instancias bidimensionales, como **Polygon, CurvePolygon** y **MultiPolygon**, tienen área y longitud. Las instancias vacías informan de una dimensión de -1 y **GeometryCollection** informa de la dimensión máxima de su contenido.  
   
  **Devolver la dimensión de una instancia**  
  [STDimension &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -175,13 +175,13 @@ ms.locfileid: "92006340"
  [STArea &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a><a name="empty"></a> Vacía  
- Una instancia _empty_**geography** no tiene puntos. La longitud de las instancias de **LineString, CircularString**, **CompoundCurve**y **MultiLineString** vacías es 0. El área de las instancias de **Polygon, CurvePolygon** y **MultiPolygon** vacías es 0.  
+ Una instancia _empty_**geography** no tiene puntos. La longitud de las instancias de **LineString, CircularString**, **CompoundCurve** y **MultiLineString** vacías es 0. El área de las instancias de **Polygon, CurvePolygon** y **MultiPolygon** vacías es 0.  
   
  **Para determinar si una instancia está vacía**  
  [STIsEmpty &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> Clausura  
- Una instancia de **geography**_cerrada_ es una figura cuyos puntos de inicio y de finalización son los mismos. Las instancias**Polygon** se consideran cerradas. Las instancias**Point** no son cerradas.  
+ Una instancia de **geography**_cerrada_ es una figura cuyos puntos de inicio y de finalización son los mismos. Las instancias **Polygon** se consideran cerradas. Las instancias **Point** no son cerradas.  
   
  Un anillo es una instancia de **LineString** simple y cerrada.  
   

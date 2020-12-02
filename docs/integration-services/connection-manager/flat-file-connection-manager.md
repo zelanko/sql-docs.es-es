@@ -24,11 +24,11 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 93890a2bf8fc0b9209eb9582c8129ee6856865ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351291"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130104"
 ---
 # <a name="flat-file-connection-manager"></a>Administrador de conexiones de archivos planos
 
@@ -192,7 +192,7 @@ ms.locfileid: "88351291"
  Presenta datos de ejemplo del archivo plano, divididos en columnas y filas mediante las opciones seleccionadas.  
   
  **Restablecer columnas**  
- Al hacer clic en **Restablecer columnas**se eliminará todo, excepto las columnas originales.  
+ Al hacer clic en **Restablecer columnas** se eliminará todo, excepto las columnas originales.  
   
 #### <a name="format--fixed-width"></a>Formato = Ancho fijo  
  **Fuente**  
@@ -205,7 +205,7 @@ ms.locfileid: "88351291"
  Especifique la longitud de la fila antes de agregar los delimitadores para las columnas individuales. O bien arrastre la línea roja vertical en la ventana de vista previa para marcar el final de la fila. El valor del ancho de la fila se actualizará automáticamente.  
   
  **Restablecer columnas**  
- Al hacer clic en **Restablecer columnas**se eliminará todo, excepto las columnas originales.  
+ Al hacer clic en **Restablecer columnas** se eliminará todo, excepto las columnas originales.  
   
 #### <a name="format--ragged-right"></a>Formato = Derecho irregular  
   
@@ -233,7 +233,7 @@ ms.locfileid: "88351291"
 |**Barra vertical {&#124;}**|Las filas se delimitan mediante una barra vertical.|  
   
  **Restablecer columnas**  
- Al hacer clic en **Restablecer columnas**se eliminará todo, excepto las columnas originales.  
+ Al hacer clic en **Restablecer columnas** se eliminará todo, excepto las columnas originales.  
 ## <a name="flat-file-connection-manager-editor-advanced-page"></a>Editor del administrador de conexiones de archivos planos (página Avanzadas)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** para establecer prioridades que especifiquen la forma en que Integration Services debe leer y escribir datos en archivos planos. Puede cambiar los nombres de columna del archivo plano y establecer propiedades que incluyan tipos de datos y delimitadores para cada columna del archivo.  
   
@@ -273,7 +273,7 @@ ms.locfileid: "88351291"
 |**Insertar detrás**|Inserta una nueva columna detrás de la columna seleccionada.|  
   
  **Eliminar**  
- Seleccione una columna y, después, haga clic en **Eliminar**para quitarla.  
+ Seleccione una columna y, después, haga clic en **Eliminar** para quitarla.  
   
  **Sugerir tipos**  
  Use el cuadro de diálogo **Sugerir tipos de columna** para evaluar los datos de ejemplo del archivo y obtener sugerencias para el tipo de datos y la longitud de cada columna. Para más información, vea [Referencia de la interfaz de usuario del cuadro de diálogo Sugerir tipos de columna](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md).  

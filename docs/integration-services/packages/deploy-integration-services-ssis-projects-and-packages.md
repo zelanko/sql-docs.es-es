@@ -20,11 +20,11 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 90fdfd4a64d77d3fa51ef7dc4c39ccf11b1fb9f3
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196379"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130087"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implementación de proyectos y paquetes de Integration Services (SSIS)
 
@@ -309,7 +309,7 @@ Inicie el asistente de una de estas dos formas:
   
 #### <a name="select-source"></a>Selección del origen
 
- Para implementar un archivo de implementación de proyectos que haya creado, seleccione **Archivo de implementación de proyecto** y especifique la ruta de acceso del archivo .ispac. Para implementar un proyecto que resida en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , seleccione **Catálogo de Integration Services**y especifique el nombre del servidor y la ruta de acceso al proyecto en el catálogo. Haga clic en **Siguiente** para ver la página **Seleccionar destino** .  
+ Para implementar un archivo de implementación de proyectos que haya creado, seleccione **Archivo de implementación de proyecto** y especifique la ruta de acceso del archivo .ispac. Para implementar un proyecto que resida en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , seleccione **Catálogo de Integration Services** y especifique el nombre del servidor y la ruta de acceso al proyecto en el catálogo. Haga clic en **Siguiente** para ver la página **Seleccionar destino** .  
   
 #### <a name="select-destination"></a>Seleccionar destino
 
@@ -317,7 +317,7 @@ Inicie el asistente de una de estas dos formas:
   
 #### <a name="review-and-deploy"></a>Revisión e implementación
 
- La página permite revisar la configuración seleccionada. Puede cambiar las selecciones si hace clic en **Anterior**o si hace clic en cualquiera de los pasos del panel izquierdo. Haga clic en **Implementar** para iniciar el proceso de implementación.  
+ La página permite revisar la configuración seleccionada. Puede cambiar las selecciones si hace clic en **Anterior** o si hace clic en cualquiera de los pasos del panel izquierdo. Haga clic en **Implementar** para iniciar el proceso de implementación.  
   
 #### <a name="results"></a>Results
 
@@ -386,7 +386,7 @@ Inicie el asistente de una de estas dos formas:
   
 6.  En la página **Permisos** , haga lo siguiente para conceder o denegar permisos para los usuarios y roles seleccionados.  
   
-    1.  Haga clic en **Examinar**y, a continuación, seleccione uno o más usuarios y roles en el cuadro de diálogo **Examinar todas las entidades** .  
+    1.  Haga clic en **Examinar** y, a continuación, seleccione uno o más usuarios y roles en el cuadro de diálogo **Examinar todas las entidades** .  
   
     2.  En el área **Inicios de sesión o roles** , seleccione el usuario o el rol al que desea conceder o denegar permisos.  
   
@@ -409,13 +409,13 @@ Inicie el asistente de una de estas dos formas:
   
     1.  En la pestaña **Parámetros** de la página **Parámetros** , haga clic en el botón Examinar situado junto al campo **Valor** .  
   
-    2.  Haga clic en **Usar variable de entorno**y seleccione la variable de entorno que creó.  
+    2.  Haga clic en **Usar variable de entorno** y seleccione la variable de entorno que creó.  
   
 13. Para asignar la variable de entorno a una propiedad del administrador de conexiones, haga lo siguiente. Se generan automáticamente parámetros en el servidor SSIS para las propiedades del administrador de conexiones.  
   
     1.  En la pestaña **Administradores de conexiones** de la página **Parámetros**, haga clic en el botón **Examinar** situado junto al campo **Valor**.  
   
-    2.  Haga clic en **Usar variable de entorno**y seleccione la variable de entorno que creó.  
+    2.  Haga clic en **Usar variable de entorno** y seleccione la variable de entorno que creó.  
   
 14. Haga clic en **Aceptar** dos veces para guardar los cambios.  
 
@@ -573,7 +573,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  La siguiente opción aparece en la página al seleccionar **Sistema de archivos** en la lista desplegable **Origen** . Seleccione esta opción si el paquete reside en el sistema de archivos.  
   
  **Carpeta**  
- Escriba la ruta de acceso al paquete, o bien haga clic en **Examinar**para abrir la ubicación del paquete.  
+ Escriba la ruta de acceso al paquete, o bien haga clic en **Examinar** para abrir la ubicación del paquete.  
   
  En la página se muestran las opciones siguientes al seleccionar **Almacén de paquetes SSIS** en la lista desplegable **Origen**. Para más información sobre el almacén de paquetes, vea [Administración de paquetes &#40;servicio SSIS&#41;](../../integration-services/service/package-management-ssis-service.md).  
   
@@ -581,7 +581,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Especifique el nombre del servidor o seleccione el servidor.  
   
  **Carpeta**  
- Escriba la ruta de acceso al paquete, o bien haga clic en **Examinar**para abrir la ubicación del paquete.  
+ Escriba la ruta de acceso al paquete, o bien haga clic en **Examinar** para abrir la ubicación del paquete.  
   
  En la página se muestran las opciones siguientes al seleccionar **Microsoft SQL Server** en la lista desplegable **Origen** . Seleccione esta opción si el paquete reside en Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -601,7 +601,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Especifique la contraseña cuando use la autenticación de SQL Server.  
   
  **Carpeta**  
- Escriba la ruta de acceso al paquete, o bien haga clic en **Examinar**para abrir la ubicación del paquete.  
+ Escriba la ruta de acceso al paquete, o bien haga clic en **Examinar** para abrir la ubicación del paquete.  
   
 ###  <a name="set-options-on-the-select-packages-page"></a><a name="selectPackages"></a> Establecer las opciones de la página Seleccionar paquete  
  **Nombre del paquete**  
@@ -629,7 +629,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 >   La página **Seleccionar destino** está disponible solamente cuando ejecuta el asistente desde [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  **Ruta de acceso de salida**  
- Escriba la ruta de acceso al archivo de implementación, o bien haga clic en **Examinar**para abrir la ubicación del archivo.  
+ Escriba la ruta de acceso al archivo de implementación, o bien haga clic en **Examinar** para abrir la ubicación del archivo.  
   
  **Nombre del proyecto**  
  Escriba el nombre del proyecto.  

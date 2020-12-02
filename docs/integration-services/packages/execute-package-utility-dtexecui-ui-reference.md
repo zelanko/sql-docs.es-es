@@ -25,11 +25,11 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 630fea974e83507984cae8a4ec2b7938fc551d25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425287"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130043"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilidad de ejecución de paquetes (dtexecui)
 
@@ -48,11 +48,11 @@ ms.locfileid: "88425287"
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el menú **Ver** , haga clic en **Explorador de objetos**.  
   
-2.  En el Explorador de objetos, haga clic en **Conectar**y, después, haga clic en **Integration Services**.  
+2.  En el Explorador de objetos, haga clic en **Conectar** y, después, haga clic en **Integration Services**.  
   
 3.  En el cuadro de diálogo **Conectar al servidor** , escriba el nombre de servidor en la lista **Nombre del servidor** y, después, haga clic en **Conectar**.  
   
-4.  Expanda la carpeta **Paquetes almacenados**y sus subcarpetas, haga clic con el botón derecho en el paquete que quiera ejecutar y, después, haga clic en **Ejecutar paquete**.  
+4.  Expanda la carpeta **Paquetes almacenados** y sus subcarpetas, haga clic con el botón derecho en el paquete que quiera ejecutar y, después, haga clic en **Ejecutar paquete**.  
   
 ### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>Para abrir la Utilidad de ejecución de paquetes en el símbolo del sistema  
   

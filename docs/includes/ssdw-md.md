@@ -1,1 +1,1 @@
-Microsoft Azure Synapse Analytics (anteriormente, SQL Data Warehouse)  
+Microsoft Azure Synapse Analytics  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 25e6685166177b6adc436a1fc024d899be5f0233
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386431"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128837"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Usar SQL Server Profiler para crear un conjunto de recopilación de Seguimiento de SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "88386431"
   
 10. En la barra de herramientas, haga clic en **Detener seguimiento seleccionado** o **Pausar seguimiento seleccionado**.  
   
-11. En el menú **Archivo** , seleccione **Exportar**, **Definición de seguimiento de scripts**y, a continuación, haga clic en **Para el conjunto de recopilación de Seguimiento de SQL**.  
+11. En el menú **Archivo** , seleccione **Exportar**, **Definición de seguimiento de scripts** y, a continuación, haga clic en **Para el conjunto de recopilación de Seguimiento de SQL**.  
   
 12. En el cuadro **Nombre de archivo** del cuadro de diálogo **Guardar como** , escriba el nombre que desea usar para la definición de seguimiento y, a continuación, guárdela en la ubicación que desee. En este ejemplo, el nombre de archivo es igual que el nombre de seguimiento (SPgt80).  
   
@@ -95,17 +95,17 @@ ms.locfileid: "88386431"
   
 3.  Desplácese a través del script y realice las sustituciones siguientes, que están anotadas en el texto de los comentarios del script:  
   
-    -   Reemplace **SQLTrace Collection Set Name Here** por el nombre que desea usar para el conjunto de recopilación. En este ejemplo, asigne el nombre **SPROC_CollectionSet**al conjunto de recopilación.  
+    -   Reemplace **SQLTrace Collection Set Name Here** por el nombre que desea usar para el conjunto de recopilación. En este ejemplo, asigne el nombre **SPROC_CollectionSet** al conjunto de recopilación.  
   
-    -   Reemplace **SQLTrace Collection Item Name Here** por el nombre que desea usar para el elemento de recopilación. En este ejemplo, asigne el nombre **SPROC_Collection_Item**al elemento de recopilación.  
+    -   Reemplace **SQLTrace Collection Item Name Here** por el nombre que desea usar para el elemento de recopilación. En este ejemplo, asigne el nombre **SPROC_Collection_Item** al elemento de recopilación.  
   
 4.  Haga clic en **Ejecutar** para ejecutar la consulta y crear el conjunto de recopilación.  
   
 5.  En el Explorador de objetos, compruebe que se ha creado el conjunto de recopilación. Para ello, siga estos pasos.  
   
-    1.  Haga clic con el botón derecho en **Administración**y, después, haga clic en **Actualizar**.  
+    1.  Haga clic con el botón derecho en **Administración** y, después, haga clic en **Actualizar**.  
   
-    2.  Expanda **Administración**y, a continuación, expanda **Recopilación de datos**.  
+    2.  Expanda **Administración** y, a continuación, expanda **Recopilación de datos**.  
   
      El conjunto de recopilación **SPROC_CollectionSet** aparece en el mismo nivel que el nodo **Conjuntos de recopilación de datos del sistema** . De manera predeterminada, el conjunto de recopilación está deshabilitado.  
   
@@ -127,11 +127,11 @@ BEGIN TRANSACTION
 BEGIN TRY  
   
 -- Define collection set  
--- ***  
--- *** Replace 'SqlTrace Collection Set Name Here' in the   
--- *** following script with the name you want  
--- *** to use for the collection set.  
--- ***  
+-- **_  
+-- _*_ Replace 'SqlTrace Collection Set Name Here' in the   
+-- _*_ following script with the name you want  
+-- _*_ to use for the collection set.  
+-- _*_  
 DECLARE @collection_set_id int;  
 EXEC [dbo].[sp_syscollector_create_collection_set]  
     @name = N'SPROC_CollectionSet',  
@@ -171,11 +171,11 @@ SELECT @collector_type_GUID = collector_type_uid
   WHERE name = N'Generic SQL Trace Collector Type';  
   
 -- Create the trace collection item.  
--- ***  
--- *** Replace 'SqlTrace Collection Item Name Here' in   
--- *** the following script with the name you want to  
--- *** use for the collection item.  
--- ***  
+-- _*_  
+-- _*_ Replace 'SqlTrace Collection Item Name Here' in   
+-- _*_ the following script with the name you want to  
+-- _*_ use for the collection item.  
+-- _**  
 EXEC [dbo].[sp_syscollector_create_collection_item]  
    @collection_set_id = @collection_set_id,  
    @collector_type_uid = @collector_type_GUID,  

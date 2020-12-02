@@ -25,11 +25,11 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d915b70f3f17c1be5c87361ab2810a82d18d6525
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192454"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130025"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Control del acceso a la información confidencial en paquetes
 
@@ -81,9 +81,9 @@ ms.locfileid: "92192454"
   
  Normalmente, el nivel de protección se cambia como se muestra en los pasos siguientes:  
   
-1.  Durante el desarrollo, deje el nivel de protección de los paquetes establecido en el valor predeterminado: **EncryptSensitiveWithUserKey**. Este valor ayuda a asegurarse de que solamente el programador vea los valores confidenciales del paquete. O bien, puede considerar usar **EncryptAllWithUserKey**o **DontSaveSensitive**.  
+1.  Durante el desarrollo, deje el nivel de protección de los paquetes establecido en el valor predeterminado: **EncryptSensitiveWithUserKey**. Este valor ayuda a asegurarse de que solamente el programador vea los valores confidenciales del paquete. O bien, puede considerar usar **EncryptAllWithUserKey** o **DontSaveSensitive**.  
   
-2.  Cuando llegue el momento de implementar los paquetes, tiene que cambiar el nivel de protección por uno que no dependa de la clave de usuario del programador. Por tanto, normalmente tiene que seleccionar **EncryptSensitiveWithPassword**o **EncryptAllWithPassword**. Cifre los paquetes asignando una contraseña segura temporal que también conozca el equipo de operaciones del entorno de producción.  
+2.  Cuando llegue el momento de implementar los paquetes, tiene que cambiar el nivel de protección por uno que no dependa de la clave de usuario del programador. Por tanto, normalmente tiene que seleccionar **EncryptSensitiveWithPassword** o **EncryptAllWithPassword**. Cifre los paquetes asignando una contraseña segura temporal que también conozca el equipo de operaciones del entorno de producción.  
   
 3.  Una vez implementados los paquetes en el entorno de producción, el equipo de operaciones puede volver a cifrar los paquetes implementados asignando una contraseña segura que solo ellos conozcan. O bien, pueden cifrar los paquetes implementados seleccionando **EncryptSensitiveWithUserKey** o **EncryptAllWithUserKey**, y utilizando las credenciales locales de la cuenta que ejecutará los paquetes.  
 
@@ -153,7 +153,7 @@ ms.locfileid: "92192454"
  Escriba la contraseña nuevamente.  
 
 ## <a name="package-password-dialog-box"></a><a name="password_dialog"></a>Cuadro de diálogo Contraseña del paquete
-  Utilice el cuadro de diálogo **Contraseña del paquete** con el fin de proporcionar la contraseña para un paquete cifrado con una contraseña. Debe proporcionar una contraseña si el paquete utiliza el nivel de protección **Cifrar la información confidencial con una contraseña**o **Cifrar todos los datos con una contraseña** .  
+  Utilice el cuadro de diálogo **Contraseña del paquete** con el fin de proporcionar la contraseña para un paquete cifrado con una contraseña. Debe proporcionar una contraseña si el paquete utiliza el nivel de protección **Cifrar la información confidencial con una contraseña** o **Cifrar todos los datos con una contraseña** .  
   
 ### <a name="options"></a>Opciones  
  **Contraseña**  

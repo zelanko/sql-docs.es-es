@@ -1,11 +1,11 @@
 ---
-title: Sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+title: sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 description: Devuelve el estado actual de los semáforos de recursos usados para limitar la optimización de consultas simultáneas.
 ms.custom: seo-dt-2019
 ms.date: 04/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: language-reference
 f1_keywords:
@@ -20,14 +20,14 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3da92fb6d489bd8ca09c65e267f67dca75d8c01a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 1db599449d45263445ae9628e2cfbacfe768f0f1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646405"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96503586"
 ---
-# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>Sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
@@ -51,10 +51,10 @@ SQL Server requiere el permiso VIEW SERVER STATE en el servidor.
 Azure SQL Database requiere el permiso VIEW DATABASE STATE en la base de datos.
 
 
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 SQL Server usa un enfoque de puerta de enlace en capas para limitar el número de compilaciones simultáneas permitidas.  Se usan tres puertas de enlace, como pequeño, mediano y grande. Las puertas de enlace ayudan a evitar el agotamiento de los recursos de memoria generales por la memoria de compilación más grande, que requiere consumidores.
 
-Espera en una puerta de enlace como resultado de la compilación diferida. Además de los retrasos en la compilación, las solicitudes limitadas tendrán un asociado RESOURCE_SEMAPHORE_QUERY_COMPILE la acumulación del tipo de espera. El tipo de espera de RESOURCE_SEMAPHORE_QUERY_COMPILE puede indicar que las consultas usan una gran cantidad de memoria para la compilación y que se ha agotado la memoria, o que, como alternativa, hay suficiente memoria disponible en general, pero se han agotado las unidades disponibles en una puerta de enlace específica. La salida de **Sys. dm_exec_query_optimizer_memory_gateways** se puede usar para solucionar problemas de escenarios en los que no había memoria suficiente para compilar un plan de ejecución de consulta.  
+Espera en una puerta de enlace como resultado de la compilación diferida. Además de los retrasos en la compilación, las solicitudes limitadas tendrán un asociado RESOURCE_SEMAPHORE_QUERY_COMPILE la acumulación del tipo de espera. El tipo de espera de RESOURCE_SEMAPHORE_QUERY_COMPILE puede indicar que las consultas usan una gran cantidad de memoria para la compilación y que se ha agotado la memoria, o que, como alternativa, hay suficiente memoria disponible en general, pero se han agotado las unidades disponibles en una puerta de enlace específica. La salida de **Sys.dm_exec_query_optimizer_memory_gateways** se puede usar para solucionar problemas de escenarios en los que no había memoria suficiente para compilar un plan de ejecución de consulta.  
 
 ## <a name="examples"></a>Ejemplos  
 
@@ -69,7 +69,7 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 
 ```  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [Cómo usar el comando DBCC MEMORYSTATUS para supervisar el uso de memoria en SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005) 

@@ -21,14 +21,14 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 71241e4a76e90a7c42e4dbd6e176d43bb5281fdb
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e43b37dd96a931d98555f05fe6e70b9f8a4f99e3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088173"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129172"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recuperación de bases de datos relacionadas que contienen transacciones marcadas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
  Las opciones STOPATMARK y STOPBEFOREMARK admiten una cláusula AFTER *datetime* opcional. Cuando se utiliza *datetime* , no es necesario que los nombres de marca sean únicos.  
   
- Si se omite AFTER *datetime* , la puesta al día se detiene en la primera marca que tenga el nombre especificado. Si se especifica AFTER *datetime* , la puesta al día se detiene en la primera marca que tenga el nombre especificado, ya sea en *datetime*o después.  
+ Si se omite AFTER *datetime* , la puesta al día se detiene en la primera marca que tenga el nombre especificado. Si se especifica AFTER *datetime* , la puesta al día se detiene en la primera marca que tenga el nombre especificado, ya sea en *datetime* o después.  
   
 > [!NOTE]  
 >  Al igual que en las operaciones de restauración a un momento dado, la recuperación hasta una marca no está permitida cuando la base de datos está realizando operaciones de registro masivo.  

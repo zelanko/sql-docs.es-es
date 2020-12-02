@@ -15,14 +15,14 @@ helpviewer_keywords:
 - restoring databases [SQL Server], marked transactions
 - marked transactions [SQL Server], restoring
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3f267e998b0bd9693c821000cd51a044326e9161
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d35f1478d3d9f290557a6eeebd6ce4365e461e21
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718009"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129123"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restauración de bases de datos en una transacción marcada (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "85718009"
   
 1.  Después de conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
   
-2.  Expanda **Bases de datos**y, en función de la base de datos, seleccione la base de datos de un usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.  
+2.  Expanda **Bases de datos** y, en función de la base de datos, seleccione la base de datos de un usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.  
   
-3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, después, haga clic en **Restaurar**.  
+3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas** y, después, haga clic en **Restaurar**.  
   
-4.  Haga clic en **Registro de transacciones**para abrir el cuadro de diálogo **Restaurar registro de transacciones** .  
+4.  Haga clic en **Registro de transacciones** para abrir el cuadro de diálogo **Restaurar registro de transacciones** .  
   
-5.  En la página **General** , en la sección **Restaurar en** , seleccione **Transacción marcada**para abrir el cuadro de diálogo **Seleccionar transacción marcada** . Este cuadro de diálogo muestra una cuadrícula en la que aparecen las transacciones marcadas disponibles en las copias de seguridad de los registros de transacciones seleccionados.  
+5.  En la página **General** , en la sección **Restaurar en** , seleccione **Transacción marcada** para abrir el cuadro de diálogo **Seleccionar transacción marcada** . Este cuadro de diálogo muestra una cuadrícula en la que aparecen las transacciones marcadas disponibles en las copias de seguridad de los registros de transacciones seleccionados.  
   
      De forma predeterminada, la restauración se realiza hasta la transacción marcada, sin incluirla. Para restaurar también la transacción marcada, seleccione **Incluir transacción marcada**.  
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d534efe7cf6de24acad83604b7ed6e42efa9ce6f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e0c103fba0dae4f6e31d976c151b7c01c487f658
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809281"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129285"
 ---
 # <a name="create-a-full-database-backup"></a>Crear una copia de seguridad completa de base de datos
 
@@ -62,7 +62,7 @@ De forma predeterminada, los permisos `BACKUP DATABASE` y `BACKUP LOG` se corres
 
 1. Tras conectarse a la instancia adecuada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expanda el árbol de servidores en el **Explorador de objetos**.
 
-1. Expanda **Bases de datos**y seleccione la base de datos de un usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.
+1. Expanda **Bases de datos** y seleccione la base de datos de un usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.
 
 1. Haga clic con el botón derecho en la base de datos de la que quiera hacer una copia de seguridad, seleccione **Tareas** y, después, haga clic en **Copia de seguridad...**
 
@@ -138,7 +138,7 @@ En este ejemplo, se creará una copia de seguridad de la base de datos `SQLTestD
 
 1. Tras conectarse a la instancia adecuada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expanda el árbol de servidores en el **Explorador de objetos**.
 
-1. Expanda **Bases de datos**, haga clic con el botón derecho en `SQLTestDB`, seleccione **Tareas**y, luego, haga clic en **Copia de seguridad...**
+1. Expanda **Bases de datos**, haga clic con el botón derecho en `SQLTestDB`, seleccione **Tareas** y, luego, haga clic en **Copia de seguridad...**
 
 1. Haga clic en **OK**.
 
@@ -152,7 +152,7 @@ En este ejemplo, se creará una copia de seguridad de la base de datos `SQLTestD
 
 1. Tras conectarse a la instancia adecuada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expanda el árbol de servidores en el **Explorador de objetos**.
 
-1. Expanda **Bases de datos**, haga clic con el botón derecho en `SQLTestDB`, seleccione **Tareas**y, luego, haga clic en **Copia de seguridad...**
+1. Expanda **Bases de datos**, haga clic con el botón derecho en `SQLTestDB`, seleccione **Tareas** y, luego, haga clic en **Copia de seguridad...**
 
 1. En la página **General** , en la sección **Destino** , seleccione **Disco** en la lista desplegable **Copia de seguridad en:** .
 
@@ -212,7 +212,7 @@ Si no tiene un contenedor de blobs de Azure en una cuenta de almacenamiento, cre
 
 1. Tras conectarse a la instancia adecuada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expanda el árbol de servidores en el **Explorador de objetos**.
 
-1. Expanda **Bases de datos**, haga clic con el botón derecho en `SQLTestDB`, seleccione **Tareas**y, luego, haga clic en **Copia de seguridad...**
+1. Expanda **Bases de datos**, haga clic con el botón derecho en `SQLTestDB`, seleccione **Tareas** y, luego, haga clic en **Copia de seguridad...**
 
 1. En la página **General** de la sección **Destino** , seleccione **URL** en la lista desplegable **Copia de seguridad en:** .
 

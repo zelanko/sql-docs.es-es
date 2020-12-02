@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a73fde3a0d1c254709d63a85f7a7028c8da30891
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b06c0cc9b3b50510282c620ff86aa1a478fae419
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989841"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129329"
 ---
 # <a name="backup-encryption"></a>Cifrado de copia de seguridad
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -104,7 +104,7 @@ La cuenta que realiza las operaciones de copia de seguridad en una base de datos
   
 1. [Copia de seguridad de la base de datos &#40;página Opciones de copia de seguridad&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md) En la página **Opciones de copia de seguridad**, puede seleccionar **Cifrado** y especificar el algoritmo de cifrado y el certificado o la clave asimétrica que va a usar para el cifrado.  
   
-1. [Usar el Asistente para planes de mantenimiento](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) Al seleccionar una tarea de copia de seguridad, en la pestaña **Opciones** de la página **Definir la tarea de copia de seguridad** , puede seleccionar **Cifrado de copia de seguridad**y especificar el algoritmo de cifrado y el certificado o la clave que se usarán para el cifrado.  
+1. [Usar el Asistente para planes de mantenimiento](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) Al seleccionar una tarea de copia de seguridad, en la pestaña **Opciones** de la página **Definir la tarea de copia de seguridad** , puede seleccionar **Cifrado de copia de seguridad** y especificar el algoritmo de cifrado y el certificado o la clave que se usarán para el cifrado.  
   
 ### <a name="using-transact-sql"></a>Usar Transact-SQL  
  La siguiente es una instrucción TSQL de ejemplo para cifrar el archivo de copia de seguridad:  

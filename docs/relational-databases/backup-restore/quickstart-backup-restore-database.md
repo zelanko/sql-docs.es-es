@@ -2,8 +2,8 @@
 title: 'Inicio rápido: Copia de seguridad y restauración de una base de datos'
 titleSuffix: SQL Server
 description: En este artículo, obtendrá información sobre cómo crear una nueva base de datos, realizar una copia de seguridad de la base de datos y restaurar la copia de seguridad en SQL Server.
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 6e261914baec4774d0e7ae1f343874e4a3154d42
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d658358fa8e09b967b921d162b8f443032a16ddc
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669956"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129206"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>Inicio rápido: Copias de seguridad y restauración de bases de datos de SQL Server en el entorno local
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

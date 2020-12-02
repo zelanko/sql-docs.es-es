@@ -18,14 +18,14 @@ helpviewer_keywords:
 - restoring transaction logs [SQL Server], restoring backups
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ffd2fd146d585b49579910d5876ba5268e4237f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6c983279a1fe317b2e7975b972e5471b9724b65d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717955"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129108"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar una copia de seguridad de registros de transacciones (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "85717955"
   
 1.  Después de conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
   
-2.  Expanda **Bases de datos**y, en función de la base de datos, seleccione la base de datos de un usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.  
+2.  Expanda **Bases de datos** y, en función de la base de datos, seleccione la base de datos de un usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.  
   
-3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**, **Restaurar**y, después, haga clic en **Registro de transacciones**, con lo que se abre el cuadro de diálogo **Restaurar registro de transacciones** .  
+3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**, **Restaurar** y, después, haga clic en **Registro de transacciones**, con lo que se abre el cuadro de diálogo **Restaurar registro de transacciones** .  
   
     > [!NOTE]  
     >  Si la opción **Registro de transacciones** está atenuada, es posible que primero deba restaurar una copia de seguridad completa o diferencial. Use el cuadro de diálogo de copia de seguridad **Base de datos** .  
@@ -163,7 +163,7 @@ ms.locfileid: "85717955"
   
     -   **Restringir el acceso a la base de datos restaurada (WITH RESTRICTED_USER)**  
   
-         Hace que la base de datos restaurada esté disponible solo para los miembros de **db_owner**, **dbcreator**o **sysadmin**.  
+         Hace que la base de datos restaurada esté disponible solo para los miembros de **db_owner**, **dbcreator** o **sysadmin**.  
   
          Activar esta opción equivale al uso de la opción **RESTRICTED_USER** en una instrucción **RESTORE** de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

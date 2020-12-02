@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9d1826e8c9291dbfb92b7cccbd48ac0bf34fe690
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235514"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128731"
 ---
 # <a name="create-tables-database-engine"></a>Crear tablas (motor de base de datos)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -38,9 +38,9 @@ Esta tarea necesita el permiso CREATE TABLE en la base de datos y el permiso ALT
  
 ## <a name="using-table-designer"></a>Usar el Diseñador de tablas  
   
-1.  En SSMS, en el **Explorador de objetos** , conéctese a la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contiene la base de datos que se va a modificar.  
+1.  En SSMS, en el **Explorador de objetos**, conéctese a la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contiene la base de datos que se va a modificar.  
   
-2.  En el **Explorador de objetos** , expanda el nodo **Bases de datos** y, a continuación, expanda la base de datos que contendrá la nueva tabla.  
+2.  En el **Explorador de objetos**, expanda el nodo **Bases de datos** y, a continuación, expanda la base de datos que contendrá la nueva tabla.  
   
 3.  En el Explorador de objetos, haga clic con el botón derecho en el nodo **Tablas** de la base de datos y, después, haga clic en **Nueva tabla**.  
   
@@ -64,17 +64,17 @@ Esta tarea necesita el permiso CREATE TABLE en la base de datos y el permiso ALT
   
      Para obtener más información acerca de los esquemas, vea [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md).  
   
-9. En el menú **Archivo** , seleccione **Guardar** *nombre de tabla*.  
+9. En el menú **Archivo**, seleccione **Guardar** *nombre de tabla*.  
   
 10. En el cuadro de diálogo **Elegir nombre** , escriba un nombre para la tabla y haga clic en **Aceptar**.  
   
-11. Para ver la nueva tabla, en el **Explorador de objetos** , expanda el nodo **Tablas** y presione **F5** para actualizar la lista de objetos. La nueva tabla se mostrará en la lista de tablas.  
+11. Para ver la nueva tabla, en el **Explorador de objetos**, expanda el nodo **Tablas** y presione **F5** para actualizar la lista de objetos. La nueva tabla se mostrará en la lista de tablas.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 ## <a name="using-query-editor"></a>Usar el Editor de consultas  
   
-1.  En el **Explorador de objetos** , conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
   

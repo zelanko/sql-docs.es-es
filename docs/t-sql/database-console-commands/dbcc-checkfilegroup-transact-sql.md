@@ -27,11 +27,11 @@ ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 4b7a386f058a442a984ba45b3be58bba5e9bb2e1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116149"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128626"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -143,7 +143,7 @@ Cuando finaliza el comando DBCC CHECKFILEGROUP, se escribe un mensaje en el regi
 |5|Error desconocido que cancela el comando DBCC.|  
   
 ## <a name="error-reporting"></a>Informes de errores  
-Se crea un archivo de minivolcado (SQLDUMP*nnnn*.txt) en el directorio LOG de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre que DBCC CHECKFILEGROUP detecta un error relacionado con datos dañados. Si la recopilación de datos de uso de características y la creación informes de errores están habilitadas para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el archivo se reenvía automáticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Los datos recopilados se utilizan para mejorar la funcionalidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Se crea un archivo de minivolcado (SQLDUMP *nnnn*.txt) en el directorio LOG de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre que DBCC CHECKFILEGROUP detecta un error relacionado con datos dañados. Si la recopilación de datos de uso de características y la creación informes de errores están habilitadas para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el archivo se reenvía automáticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Los datos recopilados se utilizan para mejorar la funcionalidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 El archivo de volcado contiene los resultados del comando DBCC CHECKFILEGROUP y la salida de diagnóstico adicional. El archivo tiene listas de control de acceso discrecional (DACL) restringidas. El acceso está limitado a la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a los miembros del rol **sysadmin**. De forma predeterminada, el rol **sysadmin** contiene todos los miembros del grupo BUILTIN\Administradores de Windows y el grupo de administradores local. El comando DBCC no producirá error en caso de que se produzca un error en el proceso de recopilación de datos.
   
 ## <a name="resolving-errors"></a>Resolver errores  

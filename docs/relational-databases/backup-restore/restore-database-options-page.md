@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f68337ee44e052c838b29d0051631c7be495a478
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 244b815a0e670cd0e697c037c62d66cc78159d81
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737718"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129099"
 ---
 # <a name="restore-database-options-page"></a>Restaurar base de datos (página Opciones)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85737718"
  Para modificar aspectos del comportamiento de la operación de restauración, utilice las opciones del panel **Opciones de restauración** .  
   
  **Sobrescribir la base de datos existente [WITH REPLACE]**  
- La operación de restauración sobrescribirá los archivos de cualquier base de datos que use en ese momento el nombre de base de datos especificado en el campo **Restaurar en**en la página [General](../../relational-databases/backup-restore/restore-database-general-page.md) del cuadro de diálogo **Restaurar base de datos** . Los archivos de la base de datos existente se sobrescribirán aunque restaure copias de seguridad de una base de datos diferente al nombre de base de datos existente. La selección de esta opción equivale a usar la opción REPLACE en una instrucción [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ La operación de restauración sobrescribirá los archivos de cualquier base de datos que use en ese momento el nombre de base de datos especificado en el campo **Restaurar en** en la página [General](../../relational-databases/backup-restore/restore-database-general-page.md) del cuadro de diálogo **Restaurar base de datos** . Los archivos de la base de datos existente se sobrescribirán aunque restaure copias de seguridad de una base de datos diferente al nombre de base de datos existente. La selección de esta opción equivale a usar la opción REPLACE en una instrucción [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
 >  Utilice esta opción después de haberlo pensado detenidamente. Para obtener más información, vea [RESTORE &#40;argumentos, Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "85737718"
  Para obtener más información, vea [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
  **Restringir el acceso a la base de datos restaurada [WITH RESTRICTED_USER]**  
- Hace que la base de datos restaurada esté disponible solo para los miembros de **db_owner**, **dbcreator**o **sysadmin**.  
+ Hace que la base de datos restaurada esté disponible solo para los miembros de **db_owner**, **dbcreator** o **sysadmin**.  
   
  La selección de esta opción equivale al uso de la opción RESTRICTED_USER en una instrucción RESTORE.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "85737718"
  Para determinar el estado de la base de datos después de la operación de restauración, debe seleccionar una de las opciones del panel **Estado de recuperación** .  
   
  **RESTORE WITH RECOVERY**  
- Recupera la base de datos después de restaurar la copia de seguridad final seleccionada en la cuadrícula **Conjuntos de copia de seguridad para restaurar**de la [página General](../../relational-databases/backup-restore/restore-database-general-page.md). Esta es la opción predeterminada y es equivalente a especificar WITH RECOVERY en una instrucción [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Recupera la base de datos después de restaurar la copia de seguridad final seleccionada en la cuadrícula **Conjuntos de copia de seguridad para restaurar** de la [página General](../../relational-databases/backup-restore/restore-database-general-page.md). Esta es la opción predeterminada y es equivalente a especificar WITH RECOVERY en una instrucción [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!NOTE]  
 >  En el modelo de recuperación completa o en el modelo de recuperación optimizado para cargas masivas de registros, elija esta opción solo si va a restaurar todos los archivos de registro ahora.  

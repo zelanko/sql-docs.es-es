@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2709846194c14dc08653efa761edd6660620872a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485386"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128651"
 ---
 # <a name="create-nested-triggers"></a>Crear desencadenadores anidados
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,13 +60,13 @@ AS
   
 -   Recursión directa  
   
-     Esta recursividad se produce cuando un desencadenador se activa y realiza una acción que provoca que el mismo desencadenador se vuelva a activar. Por ejemplo, una aplicación actualiza la tabla **T3**y esto provoca la activación del desencadenador **Trig3** . **Trig3** vuelve a actualizar la tabla **T3** , lo que provoca una nueva activación del mismo desencadenador **Trig3** .  
+     Esta recursividad se produce cuando un desencadenador se activa y realiza una acción que provoca que el mismo desencadenador se vuelva a activar. Por ejemplo, una aplicación actualiza la tabla **T3** y esto provoca la activación del desencadenador **Trig3** . **Trig3** vuelve a actualizar la tabla **T3** , lo que provoca una nueva activación del mismo desencadenador **Trig3** .  
   
-     También se puede producir la repetición directa cuando se llama de nuevo al mismo desencadenador, pero después de que se llame a un desencadenador de un tipo diferente (AFTER o INSTEAD OF). Es decir, la repetición directa de un desencadenador INSTEAD OF puede producirse cuando se llama al mismo desencadenador INSTEAD OF por segunda vez, incluso cuando se llaman a uno o varios desencadenadores AFTER en medio. Del mismo modo, la repetición directa de un desencadenador AFTER puede producirse cuando se llama al mismo desencadenador AFTER por segunda vez, incluso cuando se llaman a uno o varios desencadenadores INSTEAD OF en medio. Por ejemplo, una aplicación actualiza la tabla **T4**. Esta actualización hace que se active el desencadenador INSTEAD OF **Trig4** . **Trig4** actualiza la tabla **T5**. Esta actualización hace que se active el desencadenador AFTER **Trig5** . **Trig5** actualiza la tabla **T4**y esta actualización hace que se active de nuevo el desencadenador INSTEAD OF **Trig4** . Esta cadena de eventos se considera una repetición directa de **Trig4**.  
+     También se puede producir la repetición directa cuando se llama de nuevo al mismo desencadenador, pero después de que se llame a un desencadenador de un tipo diferente (AFTER o INSTEAD OF). Es decir, la repetición directa de un desencadenador INSTEAD OF puede producirse cuando se llama al mismo desencadenador INSTEAD OF por segunda vez, incluso cuando se llaman a uno o varios desencadenadores AFTER en medio. Del mismo modo, la repetición directa de un desencadenador AFTER puede producirse cuando se llama al mismo desencadenador AFTER por segunda vez, incluso cuando se llaman a uno o varios desencadenadores INSTEAD OF en medio. Por ejemplo, una aplicación actualiza la tabla **T4**. Esta actualización hace que se active el desencadenador INSTEAD OF **Trig4** . **Trig4** actualiza la tabla **T5**. Esta actualización hace que se active el desencadenador AFTER **Trig5** . **Trig5** actualiza la tabla **T4** y esta actualización hace que se active de nuevo el desencadenador INSTEAD OF **Trig4** . Esta cadena de eventos se considera una repetición directa de **Trig4**.  
   
 -   Recursión indirecta  
   
-     Esta repetición se produce cuando se activa un desencadenador y realiza una acción que provoca la activación de otro desencadenador del mismo tipo (AFTER o INSTEAD OF). Este segundo desencadenador realiza una acción que provoca una nueva activación del desencadenador original. Es decir, la repetición indirecta se puede producir cuando se llama a un desencadenador INSTEAD OF por segunda vez, pero no hasta que se llama a otro desencadenador INSTEAD OF en medio. Del mismo modo, la repetición indirecta se puede producir cuando se llama a un desencadenador AFTER por segunda vez, pero no hasta que se llama a otro desencadenador AFTER en medio. Por ejemplo, una aplicación actualiza la tabla **T1**. Esta actualización hace que se active el desencadenador AFTER **Trig1** . **Trig1** actualiza la tabla **T2**y esta actualización hace que se active el desencadenador AFTER **Trig2** . A su vez,**Trig2** actualiza la tabla **T1** , lo que provoca que se vuelva a activar el desencadenador AFTER **Trig1** .  
+     Esta repetición se produce cuando se activa un desencadenador y realiza una acción que provoca la activación de otro desencadenador del mismo tipo (AFTER o INSTEAD OF). Este segundo desencadenador realiza una acción que provoca una nueva activación del desencadenador original. Es decir, la repetición indirecta se puede producir cuando se llama a un desencadenador INSTEAD OF por segunda vez, pero no hasta que se llama a otro desencadenador INSTEAD OF en medio. Del mismo modo, la repetición indirecta se puede producir cuando se llama a un desencadenador AFTER por segunda vez, pero no hasta que se llama a otro desencadenador AFTER en medio. Por ejemplo, una aplicación actualiza la tabla **T1**. Esta actualización hace que se active el desencadenador AFTER **Trig1** . **Trig1** actualiza la tabla **T2** y esta actualización hace que se active el desencadenador AFTER **Trig2** . A su vez,**Trig2** actualiza la tabla **T1** , lo que provoca que se vuelva a activar el desencadenador AFTER **Trig1** .  
   
  La repetición directa de los desencadenadores AFTER solo se impide si la opción RECURSIVE_TRIGGERS de la base de datos se establece en OFF. Para deshabilitar la repetición indirecta de los desencadenadores AFTER, también debe establecer la opción **nested triggers** del servidor en **0**.  
   

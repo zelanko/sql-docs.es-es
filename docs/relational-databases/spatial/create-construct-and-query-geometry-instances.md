@@ -15,11 +15,11 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ddc0df0e6949ed429d415940fe9fda4263d3190a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006344"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127712"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Crear, construir y consultar instancias de Geometry
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -178,7 +178,7 @@ ms.locfileid: "92006344"
   
   
 ###  <a name="number-of-points"></a><a name="number"></a> Número de puntos  
- Todas las instancias de **geometry** no vacías están compuestas de *puntos*. Estos puntos representan las coordenadas X e Y del plano en el cual se dibujan los objetos geometry. El tipo de datos**geometry** proporciona numerosos métodos integrados para consultar los puntos de una instancia.  
+ Todas las instancias de **geometry** no vacías están compuestas de *puntos*. Estos puntos representan las coordenadas X e Y del plano en el cual se dibujan los objetos geometry. El tipo de datos **geometry** proporciona numerosos métodos integrados para consultar los puntos de una instancia.  
   
  **Devolver el número de puntos que comprende una instancia**  
  [STNumPoints &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)  
@@ -206,7 +206,7 @@ ms.locfileid: "92006344"
   
   
 ###  <a name="dimension"></a><a name="dimension"></a> Dimensión  
- Una instancia de **geometry** no vacía puede ser no dimensional, unidimensional o bidimensional. Los tipos de datos **geometry**no dimensionales, como **Point** y **MultiPoint**, no tienen ni longitud ni área. Los objetos unidimensionales, como **LineString, CircularString, CompoundCurve**y **MultiLineString**, tienen longitud. Las instancias bidimensionales, como **Polygon**, **CurvePolygon**y **MultiPolygon**, tienen área y longitud. Las instancias vacías informarán de una dimensión de -1 y **GeometryCollection** informará de un área dependiente de los tipos de su contenido.  
+ Una instancia de **geometry** no vacía puede ser no dimensional, unidimensional o bidimensional. Los tipos de datos **geometry** no dimensionales, como **Point** y **MultiPoint**, no tienen ni longitud ni área. Los objetos unidimensionales, como **LineString, CircularString, CompoundCurve** y **MultiLineString**, tienen longitud. Las instancias bidimensionales, como **Polygon**, **CurvePolygon** y **MultiPolygon**, tienen área y longitud. Las instancias vacías informarán de una dimensión de -1 y **GeometryCollection** informará de un área dependiente de los tipos de su contenido.  
   
  **Devolver la dimensión de una instancia**  
  [STDimension](../../t-sql/spatial-geometry/stdimension-geometry-data-type.md)  
@@ -219,7 +219,7 @@ ms.locfileid: "92006344"
   
   
 ###  <a name="empty"></a><a name="empty"></a> Vacía  
- Una instancia _empty_**geometry** no tiene puntos. La longitud de instancias de **LineString, CircularString**, **CompoundCurve**y **MultiLineString** es cero. El área de las instancias de **Polygon**, **CurvePolygon**y **MultiPolygon** vacías es 0.  
+ Una instancia _empty_**geometry** no tiene puntos. La longitud de instancias de **LineString, CircularString**, **CompoundCurve** y **MultiLineString** es cero. El área de las instancias de **Polygon**, **CurvePolygon** y **MultiPolygon** vacías es 0.  
   
  **Para determinar si una instancia está vacía**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
@@ -242,11 +242,11 @@ ms.locfileid: "92006344"
 ###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> Límite, interior y exterior  
  El *interior* de una instancia de **geometry** es el espacio ocupado por la instancia y el *exterior* es el espacio no ocupado.  
   
- El*límite* lo define OGC de la siguiente manera:  
+ El *límite* lo define OGC de la siguiente manera:  
   
--   La instancias de**Point** y **MultiPoint** no tienen un límite.  
+-   La instancias de **Point** y **MultiPoint** no tienen un límite.  
   
--   Los límites de**LineString** y **MultiLineString** boundaries are formed by the start points y end points, removing those that occur an even number of times.  
+-   Los límites de **LineString** y **MultiLineString** boundaries are formed by the start points y end points, removing those that occur an even number of times.  
   
 ```sql  
 DECLARE @g geometry;  
@@ -272,7 +272,7 @@ SELECT @g.STBoundary().ToString();
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> Clausura  
- Una instancia de **geometry**_cerrada_ es una figura cuyos puntos de inicio y de finalización son los mismos. Las instancias**Polygon** se consideran cerradas. Las instancias**Point** no son cerradas.  
+ Una instancia de **geometry**_cerrada_ es una figura cuyos puntos de inicio y de finalización son los mismos. Las instancias **Polygon** se consideran cerradas. Las instancias **Point** no son cerradas.  
   
  Un anillo es una instancia de **LineString** simple y cerrada.  
   

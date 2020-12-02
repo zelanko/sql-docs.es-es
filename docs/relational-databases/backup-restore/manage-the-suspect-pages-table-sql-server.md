@@ -17,14 +17,14 @@ helpviewer_keywords:
 - suspect pages [SQL Server]
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2effd97ab34bd59d0dbebf283bff398508f21cbb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 16255027d2fa0617066fcff0d2a208e70c96a9f9
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718026"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126906"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Administrar la tabla suspect_pages (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "85718026"
   
      La tabla **suspect_pages** contiene una fila por cada página que causó un error 824, hasta un límite de 1000 filas. En la siguiente tabla se muestran los errores registrados en la columna **event_type** de la tabla **suspect_pages** .  
   
-    |Descripción del error|Valor**event_type**|  
+    |Descripción del error|Valor **event_type**|  
     |-----------------------|---------------------------|  
     |Error 823 producido por un error de CRC del sistema operativo, o error 824 que no sea una suma de comprobación no válida o una página rasgada (por ejemplo, un Id. de página no válido)|1|  
     |Suma de comprobación errónea|2|  
@@ -128,7 +128,7 @@ ms.locfileid: "85718026"
   
 1.  En el **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expándala y, a continuación, expanda **Bases de datos**.  
   
-2.  Expanda **Bases de datos del sistema**, expanda **msdb**, expanda **Tablas**y, por último, expanda **Tablas del sistema**.  
+2.  Expanda **Bases de datos del sistema**, expanda **msdb**, expanda **Tablas** y, por último, expanda **Tablas del sistema**.  
   
 3.  Expanda **dbo.suspect_pages** y haga clic con el botón derecho en **Editar las 200 primeras filas**.  
   

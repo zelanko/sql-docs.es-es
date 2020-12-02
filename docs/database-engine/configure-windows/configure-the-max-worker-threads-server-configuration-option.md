@@ -15,11 +15,11 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: e1f2398e59fb7a0fee48f2d4c4e4a171c6044ca7
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807095"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127426"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ El valor predeterminado de **máximo de subprocesos de trabajo** es 0. Esto perm
   
 -   La agrupación de subprocesos permite optimizar el rendimiento cuando un gran número de clientes se conecta al servidor. Normalmente, se crea un subproceso del sistema operativo independiente para cada solicitud de la consulta. Sin embargo, cuando hay cientos de conexiones al servidor, el uso de un subproceso por solicitud de consulta puede consumir grandes cantidades de recursos del sistema. La opción de **máximo de subprocesos de trabajo** permite que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cree un grupo de subprocesos de trabajo para atender un gran número de solicitudes de consulta, lo que mejora el rendimiento.  
   
--   En la tabla siguiente se muestra el número configurado automáticamente de máximo de subprocesos de trabajo (cuando el valor se establece en 0) basado en diferentes combinaciones de CPU, arquitectura de equipo y versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mediante la fórmula: ***Trabajos máximos predeterminados* + ((* CPU lógicas* - 4) * *Trabajos por CPU*)**.  
+-   En la tabla siguiente se muestra el número configurado automáticamente de máximo de subprocesos de trabajo (cuando el valor se establece en 0) basado en diferentes combinaciones de CPU, arquitectura de equipo y versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mediante la fórmula: **_Trabajos máximos predeterminados_ + ((* CPU lógicas* - 4) * *Trabajos por CPU*)**.  
   
     |Número de CPU|Equipo de 32 bits (hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|Equipo de 64 bits (hasta [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|Equipo de 64 bits (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
     |------------|------------|------------|------------|  

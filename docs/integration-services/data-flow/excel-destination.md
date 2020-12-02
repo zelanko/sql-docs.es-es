@@ -20,11 +20,11 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85b62ff41c9b413c49ff6312e918f648fba430cd
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194834"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127295"
 ---
 # <a name="excel-destination"></a>Destino de Excel
 

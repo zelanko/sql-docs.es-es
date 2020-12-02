@@ -12,11 +12,11 @@ ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cb9336b7999373b1f6af5bb5327a35f77fdbe7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495891"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127235"
 ---
 # <a name="create-new-infoobject"></a>Crear nuevo InfoObject
 
@@ -40,19 +40,19 @@ ms.locfileid: "88495891"
   
 4.  En la página **Administrador de conexiones** , en el cuadro del grupo **Crear objetos de SAP BW** , lleve a cabo uno de los siguientes pasos para crear un InfoObject:  
   
-    1.  Para crear un InfoObject directamente, seleccione **InfoObject**y haga clic en **Crear** para abrir el cuadro de diálogo **Crear nuevo InfoObject** .  
+    1.  Para crear un InfoObject directamente, seleccione **InfoObject** y haga clic en **Crear** para abrir el cuadro de diálogo **Crear nuevo InfoObject** .  
   
-    2.  Para crear un InfoObject mientras crea un InfoCube, seleccione **InfoCube**y, a continuación, haga clic en **Crear**. En el cuadro de diálogo **Crear InfoCube para los datos de transacción** , en la columna **IObject** para una de las filas en la lista, seleccione **Crear** para abrir el cuadro de diálogo **Crear nuevo InfoObject** .  
-  
-        > [!NOTE]  
-        >  Cada fila de la tabla representa una columna en el flujo de datos del paquete.  
-  
-    3.  Para crear un InfoObject mientras crea un InfoSource para los datos de transacción, seleccione **InfoSource**y, a continuación, haga clic en **Crear**. En el cuadro de diálogo **Crear InfoSource** , seleccione **Datos transaccionales**y, a continuación, haga clic en **Aceptar**. En el cuadro de diálogo **Crear InfoSource para los datos de transacción** , en la columna **IObject** para una de las filas en la lista, seleccione **Crear** para abrir el cuadro de diálogo **Crear nuevo InfoObject** .  
+    2.  Para crear un InfoObject mientras crea un InfoCube, seleccione **InfoCube** y, a continuación, haga clic en **Crear**. En el cuadro de diálogo **Crear InfoCube para los datos de transacción** , en la columna **IObject** para una de las filas en la lista, seleccione **Crear** para abrir el cuadro de diálogo **Crear nuevo InfoObject** .  
   
         > [!NOTE]  
         >  Cada fila de la tabla representa una columna en el flujo de datos del paquete.  
   
-    4.  Para crear un InfoObject mientras crea un InfoSource para los datos maestros, seleccione **InfoSource**y, a continuación, haga clic en **Crear**. En el cuadro de diálogo **Crear InfoSource** , seleccione **Datos maestros**y, a continuación, haga clic en **Aceptar**. En el cuadro de diálogo **Crear InfoSource para datos maestros** , haga clic en **Nuevo** para abrir el cuadro de diálogo **Crear nuevo InfoObject** .  
+    3.  Para crear un InfoObject mientras crea un InfoSource para los datos de transacción, seleccione **InfoSource** y, a continuación, haga clic en **Crear**. En el cuadro de diálogo **Crear InfoSource** , seleccione **Datos transaccionales** y, a continuación, haga clic en **Aceptar**. En el cuadro de diálogo **Crear InfoSource para los datos de transacción** , en la columna **IObject** para una de las filas en la lista, seleccione **Crear** para abrir el cuadro de diálogo **Crear nuevo InfoObject** .  
+  
+        > [!NOTE]  
+        >  Cada fila de la tabla representa una columna en el flujo de datos del paquete.  
+  
+    4.  Para crear un InfoObject mientras crea un InfoSource para los datos maestros, seleccione **InfoSource** y, a continuación, haga clic en **Crear**. En el cuadro de diálogo **Crear InfoSource** , seleccione **Datos maestros** y, a continuación, haga clic en **Aceptar**. En el cuadro de diálogo **Crear InfoSource para datos maestros** , haga clic en **Nuevo** para abrir el cuadro de diálogo **Crear nuevo InfoObject** .  
   
  También puede abrir el cuadro de diálogo **Crear nuevo InfoObject** si hace clic en **Nuevo** en la sección **Atributos** del cuadro de diálogo **Crear nuevo InfoObject** .  
   

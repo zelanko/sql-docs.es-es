@@ -16,11 +16,11 @@ ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f95994ac6c663020074c5ef3971c1e0a895b3a10
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720577"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127781"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Ver conflictos de datos para publicaciones transaccionales (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85720577"
   
     -   Seleccionar una fila en la cuadrícula superior para ver la información de esa fila en la cuadrícula inferior.  
   
-    -   Seleccionar una o más filas en la cuadrícula superior y hacer clic en **Quitar**para quitar las filas de la tabla de metadatos de conflictos.  
+    -   Seleccionar una o más filas en la cuadrícula superior y hacer clic en **Quitar** para quitar las filas de la tabla de metadatos de conflictos.  
   
     -   Hacer clic en el botón de propiedades ( **…** ) para ver más información acerca de la columna involucrada en el conflicto.  
   

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - database backups [SQL Server], tapes
 - tape backup devices, creating
 ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 17fa4f717c7da238503c87dc99ab2120b65e9cdb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ddb39f0d488becdcb7711ef05030bad4aff08aa5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748122"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127019"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>Definir un dispositivo lógico de copia de seguridad en una unidad de cinta (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "85748122"
   
 1.  Después de conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
   
-2.  Expanda **Objetos de servidor**y, luego, haga clic con el botón derecho en **Dispositivos de copia de seguridad**.  
+2.  Expanda **Objetos de servidor** y, luego, haga clic con el botón derecho en **Dispositivos de copia de seguridad**.  
   
 3.  Haga clic en **Nuevo dispositivo de copia de seguridad**, que abre el cuadro de diálogo **Dispositivo de copia de seguridad** .  
   

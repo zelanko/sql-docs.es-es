@@ -21,11 +21,11 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b70fe92da0c7efb0e59dbc89505ad623cad64432
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196459"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127245"
 ---
 # <a name="data-mining-model-training-destination"></a>entrenamiento del modelo de minería de datos, destino
 
@@ -65,7 +65,7 @@ ms.locfileid: "92196459"
  Permite crear una conexión con el cuadro de diálogo **Agregar administrador de conexiones de Analysis Services** .  
   
  **Estructura de minería de datos**  
- Seleccione una estructura de la lista de estructuras de minería de datos disponibles, o bien haga clic en **Nuevo**para crear una estructura.  
+ Seleccione una estructura de la lista de estructuras de minería de datos disponibles, o bien haga clic en **Nuevo** para crear una estructura.  
   
  **Nuevo**  
  Permite crear una estructura de minería de datos y un modelo de minería de datos con el **Asistente para minería de datos**.  

@@ -23,11 +23,11 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: eac401156014952142c39851b1e703605997c245
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549429"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127998"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ Es el nombre de la columna incluida en el índice de texto completo. Solo se pue
 CREATE FULLTEXT INDEX ON *table_name* (*column_name1* [...], *column_name2* [...]) ...  
   
 TYPE COLUMN *type_column_name*       
-Especifica el nombre de una columna de tabla, *type_column_name*, que se usa para almacenar el tipo de documento para un documento **varbinary(max)** o **image**. Esta columna, denominada columna de tipo, contiene una extensión de archivo proporcionada por el usuario (.doc, .pdf, .xls, etc.). La columna de tipo debe ser de tipo **char**, **nchar**, **varchar**o **nvarchar**.  
+Especifica el nombre de una columna de tabla, *type_column_name*, que se usa para almacenar el tipo de documento para un documento **varbinary(max)** o **image**. Esta columna, denominada columna de tipo, contiene una extensión de archivo proporcionada por el usuario (.doc, .pdf, .xls, etc.). La columna de tipo debe ser de tipo **char**, **nchar**, **varchar** o **nvarchar**.  
   
 Especifique TYPE COLUMN *type_column_name* únicamente si *column_name* especifica una columna de tipo **varbinary(max)** o **image**, en la que los datos se almacenan como datos binarios; de lo contrario, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un error.  
   

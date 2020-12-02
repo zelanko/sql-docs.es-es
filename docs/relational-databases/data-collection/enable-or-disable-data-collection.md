@@ -14,11 +14,11 @@ ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0ff43debf025f9c6494f9e1beeeae1cb5721037
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428847"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125280"
 ---
 # <a name="enable-or-disable-data-collection"></a>Habilitar o deshabilitar la recopilación de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,13 +49,13 @@ ms.locfileid: "88428847"
   
 1.  En el Explorador de objetos, expanda el nodo **Administración** .  
   
-2.  Haga clic con el botón derecho en **Recopilación de datos**y, luego, haga clic en **Habilitar recopilación de datos**.  
+2.  Haga clic con el botón derecho en **Recopilación de datos** y, luego, haga clic en **Habilitar recopilación de datos**.  
 
 #### <a name="to-disable-the-data-collector"></a>Para deshabilitar el recopilador de datos  
   
 1.  En el Explorador de objetos, expanda el nodo **Administración** .  
   
-2.  Haga clic con el botón derecho en **Recopilación de datos**y luego haga clic en **Deshabilitar recopilación de datos**.  
+2.  Haga clic con el botón derecho en **Recopilación de datos** y luego haga clic en **Deshabilitar recopilación de datos**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   

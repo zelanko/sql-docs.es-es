@@ -28,18 +28,18 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 560e3b6ff5b9beeed4dcf93f831a51b941b9d74e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729968"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126319"
 ---
 # <a name="examples-using-openxml"></a>Ejemplos: Uso de OPENXML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Los ejemplos de este tema muestran cómo se utiliza OPENXML para crear una vista de conjunto de filas de un documento XML. Para obtener más información sobre la sintaxis de OPENXML, vea [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Los ejemplos muestran todos los aspectos de OPENXML, pero no especifican metapropiedades en OPENXML. Para obtener más información sobre cómo especificar metapropiedades en OPENXML, vea [Especificar metapropiedades en OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Ejemplos  
- Al recuperar los datos, se utiliza *rowpattern* para identificar los nodos del documento XML que determinan las filas. Además, *rowpattern* se expresa en el lenguaje del patrón XPath que se utiliza en la implementación XPath de MSXML. Por ejemplo, si el patrón termina en un elemento o atributo, se crea una fila para cada nodo de elemento o atributo que *rowpattern*seleccione.  
+ Al recuperar los datos, se utiliza *rowpattern* para identificar los nodos del documento XML que determinan las filas. Además, *rowpattern* se expresa en el lenguaje del patrón XPath que se utiliza en la implementación XPath de MSXML. Por ejemplo, si el patrón termina en un elemento o atributo, se crea una fila para cada nodo de elemento o atributo que *rowpattern* seleccione.  
   
  El valor *flags* proporciona una asignación predeterminada. Si no se especifica *ColPattern* en *SchemaDeclaration*, se asume la asignación especificada en *flags* . El valor *flags* se omite si se especifica *ColPattern* en *SchemaDeclaration*. La especificación *ColPattern* determina la asignación (centrada en atributos o elementos) y también el comportamiento para manejar los datos de desbordamiento y los no usados.  
   
@@ -145,7 +145,7 @@ LILAS      Carlos Gonzlez
 ### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. Especificar ColPattern para la asignación entre columnas del conjunto de filas y los atributos y elementos XML  
  Este ejemplo muestra cómo se especifica el patrón XPath en el parámetro opcional *ColPattern* para proporcionar una asignación entre columnas del conjunto de filas y los atributos y elementos XML.  
   
- El documento XML de este ejemplo se compone de los elementos <`Customer`>, <`Order`> y <`OrderDetail`>. La instrucción OPENXML recupera información del cliente y del pedido del documento XML en forma de conjunto de filas (**CustomerID**, **OrderDate**, **ProdID**y **Qty**).  
+ El documento XML de este ejemplo se compone de los elementos <`Customer`>, <`Order`> y <`OrderDetail`>. La instrucción OPENXML recupera información del cliente y del pedido del documento XML en forma de conjunto de filas (**CustomerID**, **OrderDate**, **ProdID** y **Qty**).  
   
  Primero, para obtener un identificador de documento se llama al procedimiento almacenado **sp_xml_preparedocument** . Este identificador de documento se pasa a OPENXML.  
   
@@ -296,7 +296,7 @@ LILAS      Carlos Gonzlez
   
 -   El valor del parámetro *flags* se establece en **1** e indica una asignación centrada en atributos. Como resultado, los atributos XML se asignan a columnas del conjunto de filas definido en *SchemaDeclaration*.  
   
--   En *SchemaDeclaration* , en la cláusula WITH, los nombres de columna del conjunto de filas **oid** y **amount** coinciden con los nombres de atributo XML correspondientes. Por lo tanto, no se especifica el parámetro *ColPattern* . En la columna **comment** del conjunto de filas, la función **text()** de XPath se especifica como *ColPattern*. Esto sobrescribe la asignación centrada en atributos especificada en *flags*y la columna contiene la cadena del valor de hoja del contenido del elemento.  
+-   En *SchemaDeclaration* , en la cláusula WITH, los nombres de columna del conjunto de filas **oid** y **amount** coinciden con los nombres de atributo XML correspondientes. Por lo tanto, no se especifica el parámetro *ColPattern* . En la columna **comment** del conjunto de filas, la función **text()** de XPath se especifica como *ColPattern*. Esto sobrescribe la asignación centrada en atributos especificada en *flags* y la columna contiene la cadena del valor de hoja del contenido del elemento.  
   
  A continuación, la instrucción SELECT recupera todas las columnas del conjunto de filas que proporciona OPENXML.  
   
@@ -345,7 +345,7 @@ O4    10000.0       NULL
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>E. Especificar TableName en la cláusula WITH  
  Este ejemplo especifica *TableName* en la cláusula WITH, en lugar de *SchemaDeclaration*. Resulta útil si dispone de una tabla con la estructura deseada y no se requieren patrones de columnas (parámetro *ColPattern* ).  
   
- El documento XML de este ejemplo se compone de los elementos <`Customer`> y <`Order`>. La instrucción OPENXML recupera información del pedido en un conjunto de filas de tres columnas (**oid**, **date**y **amount**) del documento XML.  
+ El documento XML de este ejemplo se compone de los elementos <`Customer`> y <`Order`>. La instrucción OPENXML recupera información del pedido en un conjunto de filas de tres columnas (**oid**, **date** y **amount**) del documento XML.  
   
  Primero, para obtener un identificador de documento se llama al procedimiento almacenado **sp_xml_preparedocument** . Este identificador de documento se pasa a OPENXML.  
   
@@ -464,7 +464,7 @@ EXEC sp_xml_removedocument @docHandle
     ```  
   
 ### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. Especificar rowpattern con final en atributo  
- El documento XML de este ejemplo se compone de los elementos <`Customer`>, <`Order`> y <`OrderDetail`>. La instrucción OPENXML recupera información detallada del pedido en un conjunto de filas de tres columnas (**ProductID**, **Quantity**y **OrderID**) del documento XML.  
+ El documento XML de este ejemplo se compone de los elementos <`Customer`>, <`Order`> y <`OrderDetail`>. La instrucción OPENXML recupera información detallada del pedido en un conjunto de filas de tres columnas (**ProductID**, **Quantity** y **OrderID**) del documento XML.  
   
  Primero, para obtener un identificador de documento se llama a **sp_xml_preparedocument** . Este identificador de documento se pasa a OPENXML.  
   
@@ -612,11 +612,11 @@ id  lname   xmlname                   OverFlow
   
 -   \<Student>  
   
-     Los atributos **id** (identificador del estudiante), **name**y **attends** . El atributo **attends** es un atributo con varios valores.  
+     Los atributos **id** (identificador del estudiante), **name** y **attends** . El atributo **attends** es un atributo con varios valores.  
   
 -   \<Class>  
   
-     Los atributos **id** (identificador de la clase), **name**y **attendedBy** . El atributo **attendedBy** es un atributo con varios valores.  
+     Los atributos **id** (identificador de la clase), **name** y **attendedBy** . El atributo **attendedBy** es un atributo con varios valores.  
   
  El atributo **attends** de \<Student> y el atributo **attendedBy** de \<Class> representan una relación **m:n** entre las tablas Student y Class. Un estudiante puede tener muchas clases y una clase puede tener varios estudiantes.  
   

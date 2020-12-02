@@ -21,11 +21,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9f8c0860bb5ef874a6095b993478fa9cbc117fc4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475551"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127771"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Elegir un idioma al crear un índice de texto completo
 
@@ -72,7 +72,7 @@ ms.locfileid: "88475551"
  Al crear un índice de texto completo, tiene que especificar un nombre de idioma válido para cada columna. Si un nombre de idioma es válido pero no lo devuelve la vista de catálogo [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) , la búsqueda de texto completo vuelve al nombre de idioma disponible más próximo de la misma familia de idiomas, si lo hubiera. De lo contrario, la búsqueda de texto completo retrocede al separador de palabras neutro. Este comportamiento de retroceso podría afectar a la exactitud de recuperación. Por consiguiente recomendamos encarecidamente que especifique un nombre de idioma válido y disponible para cada columna al crear un índice de texto completo.  
   
 > [!NOTE]  
->  El LCID se usa con todos los tipos de datos aptos para la indexación de texto completo (como **char** o **nchar**). Aunque el criterio de ordenación de una columna de tipo **char**, **varchar**o **text** esté establecido en una configuración de idioma distinta del identificado por el LCID, el LCID se usa de todos modos durante la indexación de texto completo y en las consultas de esas columnas.  
+>  El LCID se usa con todos los tipos de datos aptos para la indexación de texto completo (como **char** o **nchar**). Aunque el criterio de ordenación de una columna de tipo **char**, **varchar** o **text** esté establecido en una configuración de idioma distinta del identificado por el LCID, el LCID se usa de todos modos durante la indexación de texto completo y en las consultas de esas columnas.  
   
   
 ##  <a name="word-breaking"></a><a name="breaking"></a> Separación de palabras  
@@ -101,7 +101,7 @@ ms.locfileid: "88475551"
   
   
 ##  <a name="stemming"></a><a name="stemming"></a> Lematización  
- Una consideración adicional al elegir el idioma de columna es la lematización. En las consultas de texto completo, la*lematización* es un proceso de búsqueda de todas las formas con inflexión de una palabra en un idioma determinado. Al utilizar un separador de palabras genérico para procesar varios idiomas, el proceso de lematización solo funciona para el idioma especificado de la columna, no para otros idiomas de la misma. Por ejemplo, los lematizadores de alemán no funcionan para inglés o español (etc.). Esto podría afectar a su recuperación, según el idioma que elija en el momento de la consulta.  
+ Una consideración adicional al elegir el idioma de columna es la lematización. En las consultas de texto completo, la *lematización* es un proceso de búsqueda de todas las formas con inflexión de una palabra en un idioma determinado. Al utilizar un separador de palabras genérico para procesar varios idiomas, el proceso de lematización solo funciona para el idioma especificado de la columna, no para otros idiomas de la misma. Por ejemplo, los lematizadores de alemán no funcionan para inglés o español (etc.). Esto podría afectar a su recuperación, según el idioma que elija en el momento de la consulta.  
   
   
 ##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> Efecto del tipo de columna en la búsqueda de texto completo  

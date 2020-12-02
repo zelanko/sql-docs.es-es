@@ -18,11 +18,11 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3bce4cae8fc71c93487f65a726bb42f58618d5a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457454"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127324"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Realizar una carga masiva de datos mediante el destino de SQL Server
 
@@ -49,7 +49,7 @@ ms.locfileid: "88457454"
   
     -   Seleccione una tabla o vista existente.  
   
-    -   Haga clic en **Nuevo**y, en el cuadro de diálogo **Crear tabla** , escriba una instrucción SQL que cree una tabla o vista.  
+    -   Haga clic en **Nuevo** y, en el cuadro de diálogo **Crear tabla** , escriba una instrucción SQL que cree una tabla o vista.  
   
         > [!NOTE]  
         >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] genera una instrucción CREATE TABLE predeterminada basada en el origen de datos conectado. La instrucción predeterminada CREATE TABLE no incluirá el atributo FILESTREAM, aunque la tabla de origen tenga una columna con el atributo FILESTREAM declarado. Para ejecutar un componente [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con el atributo FILESTREAM, implemente en primer lugar el almacenamiento de FILESTREAM en la base de datos de destino. A continuación, agregue el atributo FILESTREAM a la instrucción CREATE TABLE en el cuadro de diálogo **Crear tabla** . Para más información, vea [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "88457454"
     > [!NOTE]  
     >  El destino asigna automáticamente las columnas con el mismo nombre.  
   
-9. Haga clic en **Avanzadas** y establezca las opciones de carga masiva: **Mantener valores de identidad**, **Mantener valores NULL**, **Bloqueo de tabla**, **Comprobar restricciones**y **Activar desencadenadores**.  
+9. Haga clic en **Avanzadas** y establezca las opciones de carga masiva: **Mantener valores de identidad**, **Mantener valores NULL**, **Bloqueo de tabla**, **Comprobar restricciones** y **Activar desencadenadores**.  
   
      Opcionalmente, especifique la primera y última fila de entrada que desea insertar, la cantidad máxima de errores que pueden producirse antes de que se detenga la operación de inserción y las columnas en las que se ordena la inserción.  
   

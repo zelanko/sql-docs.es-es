@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d4d4c319afb3cfb40c05cc187ae4d6ea6e0eacb
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f47083ceb58a7125ad1477c1471c1d9f329472c8
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059623"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535299"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -76,7 +76,7 @@ Id. del archivo. *file_id* es de tipo int y no tiene ningún valor predeterminad
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|nombre de base de datos.</br></br>En el caso de Azure Synapse Analytics, es el nombre de la base de datos almacenada en el nodo que se identifica mediante pdw_node_id. Cada nodo tiene una base de datos Tempdb con 13 archivos. Cada nodo también tiene una base de datos por distribución, y cada base de datos de distribución tiene 5 archivos. Por ejemplo, si cada nodo contiene 4 distribuciones, los resultados muestran 20 archivos de base de datos de distribución por pdw_node_id. 
+|**database_name**|**sysname**|No **se aplica a:**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> nombre de base de datos.</br></br>En el caso de Azure Synapse Analytics, es el nombre de la base de datos almacenada en el nodo que se identifica mediante pdw_node_id. Cada nodo tiene una base de datos Tempdb con 13 archivos. Cada nodo también tiene una base de datos por distribución, y cada base de datos de distribución tiene 5 archivos. Por ejemplo, si cada nodo contiene 4 distribuciones, los resultados muestran 20 archivos de base de datos de distribución por pdw_node_id. 
 |**database_id**|**smallint**|Identificador de la base de datos.|  
 |**file_id**|**smallint**|IDENTIFICADOR del archivo.|  
 |**sample_ms**|**bigint**|Número de milisegundos transcurridos desde que se inició el equipo. Esta columna se puede utilizar para comparar diferentes resultados de esta función.</br></br>El tipo de datos es **int** para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
@@ -93,7 +93,7 @@ Id. del archivo. *file_id* es de tipo int y no tiene ningún valor predeterminad
 |**io_stall_queued_write_ms**|**bigint**|No **se aplica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br />  Latencia total de E/S introducida por la gobernanza de recursos de E/S para las escrituras. No admite valores NULL.|
 |**pdw_node_id**|**int**|**Se aplica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].</br></br>Identificador del nodo de la distribución.
  
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 Los contadores se inicializan en vacío cada vez que se inicia el servicio SQL Server (MSSQLSERVER).
   
 ## <a name="permissions"></a>Permisos  

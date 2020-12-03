@@ -18,11 +18,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457265"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126618"
 ---
 # <a name="execution-plans"></a>Planes de ejecución
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,9 +46,9 @@ Un plan de ejecución de consulta es una definición de los siguientes elementos
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tiene tres opciones para mostrar los planes de ejecución:        
-> -  El ***[plan de ejecución estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** es el plan compilado, generado por el optimizador de consultas en función de las estimaciones. Este es el plan de consulta que se almacena en la caché de planes.        
-> -  El ***[plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md)*** es el plan compilado más su [contexto de ejecución](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Estará disponible **una vez finalizada la ejecución de la consulta**. Esto incluye la información del entorno de ejecución real, como advertencias de ejecución o, en versiones más recientes del [!INCLUDE[ssde_md](../../includes/ssde_md.md)], el tiempo transcurrido y el tiempo de CPU usado durante la ejecución.         
-> -  Las ***[Estadísticas de consulta activa](../../relational-databases/performance/live-query-statistics.md)*** son lo mismo que el plan compilado más su contexto de ejecución. Está disponible para **ejecuciones de consultas en curso** y se actualiza cada segundo. Esto incluye información del entorno de ejecución, como el número real de filas que fluyen a través de los [operadores](../../relational-databases/showplan-logical-and-physical-operators-reference.md), el tiempo transcurrido y el progreso estimado de la consulta.
+> -  El **_[Plan de ejecución estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md)_* _ es el plan compilado, que genera el Optimizador de consultas en función de las estimaciones. Este es el plan de consulta que se almacena en la caché de planes.        
+> -  El _*_ [Plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md) _*_ es el plan compilado más su [contexto de ejecución](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Estará disponible _*una vez finalizada la ejecución de la consulta**. Esto incluye la información del entorno de ejecución real, como advertencias de ejecución o, en versiones más recientes del [!INCLUDE[ssde_md](../../includes/ssde_md.md)], el tiempo transcurrido y el tiempo de CPU usado durante la ejecución.         
+> -  Las **_[Estadísticas de consulta activa](../../relational-databases/performance/live-query-statistics.md)_ *_ son lo mismo que el plan compilado más su contexto de ejecución. Está disponible para _* ejecuciones de consultas en curso** y se actualiza cada segundo. Esto incluye información del entorno de ejecución, como el número real de filas que fluyen a través de los [operadores](../../relational-databases/showplan-logical-and-physical-operators-reference.md), el tiempo transcurrido y el progreso estimado de la consulta.
 
 > [!TIP]
 > Para más información sobre el procesamiento de consultas y los planes de ejecución de consultas, consulte las secciones [Optimización de las instrucciones SELECT](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) y [Almacenar en caché y volver a utilizar un plan de ejecución](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) de la Guía de arquitectura de procesamiento de consultas.

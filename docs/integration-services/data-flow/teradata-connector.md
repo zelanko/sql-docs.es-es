@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a866d7d1083435acffeb157edf9fe4a0bb725d3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425767"
 ---
 # <a name="microsoft-connector-for-teradata"></a>Conector de Microsoft para Teradata
@@ -86,15 +86,15 @@ Para ejecutar un paquete SSIS *que tenga como destino SQL Server 2017 y versio
 
 Para diseñar un paquete SSIS en SSDT *que tenga como destino SQL Server 2017 y versiones anteriores*, deberá tener **Microsoft Connector para Teradata** e instalar **Microsoft Connector para Teradata de Attunity** con la versión correspondiente.
 
-## <a name="limitationsandknownissues"></a>Limitaciones y problemas conocidos
+## <a name="limitations-and-known-issues"></a>Limitaciones y problemas conocidos
 
-- En el editor de origen/destino de Teradata, la propiedad  **Base de datos predeterminada**  no surte efecto. Como solución alternativa, escriba el nombre de la base de datos en el cuadro desplegable para filtrar la tabla o vista.
+- En el editor de origen/destino de Teradata, la propiedad **Base de datos predeterminada** no surte efecto.  Como solución alternativa, escriba el nombre de la base de datos en el cuadro desplegable para filtrar la tabla o vista.
 
-- En el editor de origen/destino de Teradata, el paso de asignación no funciona al escribir  \<database>.<table/view>. Como solución alternativa, escriba  \<database>.<table/view> y, a continuación, haga clic en el botón desplegable.
+- En el editor de origen/destino de Teradata, el paso de asignación no funciona al escribir \<database>.<table/view>. Como solución alternativa, escriba \<database>.<table/view> y, después, haga clic en el botón desplegable.
 
 - En el editor de origen de Teradata, no se puede mostrar la vista cuando el modo de acceso a datos es "Table Name – TPT Export". Como solución alternativa, use el editor avanzado de origen de Teradata.
 
-- En el destino de Teradata, el atributo 'PackMaximum' no se puede establecer en 'True'. De lo contrario, se producirá un error.
+- En el destino de Teradata, el atributo 'PackMaximum' no se puede establecer en 'True'.  De lo contrario, se producirá un error.
 
 ## <a name="uninstallation"></a>Desinstalación
 

@@ -14,10 +14,10 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445873"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversión no determinista de las cadenas de fecha literales en valores DATE
@@ -60,7 +60,7 @@ SL_Polish
 
 SL_Croatian
 2018-10-28
-***/
+**_/
 ```
 
 
@@ -69,7 +69,7 @@ SL_Croatian
 
 - `SET DATEFORMAT dmy;`
 
-El formato **dmy** anterior dice que el significado de la cadena de fecha de ejemplo “01-03-2018” se interpretaría como _el primer día de marzo del año 2018_.
+El formato _ *dmy** anterior dice que el significado de la cadena de fecha de ejemplo "01-03-2018" se interpretaría como _el primer día de marzo del año 2018_.
 
 Si en su lugar se ha especificado **mdy**, la misma cadena “01-03-2018” significaría _el tercer día de enero de 2018_.
 
@@ -115,10 +115,10 @@ MDY-Interpretation-of-input-format
 
 YMD-Interpretation--?--NotGuaranteed
 2018-12-09
-***/
+**_/
 ```
 
-En el ejemplo de código anterior, el último ejemplo tiene una discrepancia entre el formato **ymd** y la cadena de entrada. El tercer nodo de la cadena de entrada representa un valor numérico que es demasiado grande para ser un día. Microsoft no garantiza el valor de salida de este tipo de errores.
+En el ejemplo de código anterior, el último ejemplo tiene una discrepancia entre el formato _ *ymd** y la cadena de entrada. El tercer nodo de la cadena de entrada representa un valor numérico que es demasiado grande para ser un día. Microsoft no garantiza el valor de salida de este tipo de errores.
 
 #### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT ofrece códigos explícitos para control _determinista_ de formatos de fecha
 

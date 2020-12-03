@@ -21,11 +21,11 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 814df70ce91d6cc65b6c2a86d0617dc42bbb4489
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688697"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128151"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,10 +63,10 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  Cambia la protección de la clave privada.  
   
- ENCRYPTION BY PASSWORD **="***contraseñaSegura***"**  
+ ENCRYPTION BY PASSWORD **="** _stongPassword_*_"_*  
  Especifica una nueva contraseña para proteger la clave privada. *password* debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se omite esta opción, la clave privada se cifrará con la clave maestra de la base de datos.  
   
- DECRYPTION BY PASSWORD **='***oldPassword***'**  
+ DECRYPTION BY PASSWORD **="** _oldPassword_*_"_*  
  Especifica la antigua contraseña con la que está protegida la clave privada. No es necesario si la clave privada está cifrada con la clave maestra de la base de datos.  
   
 ## <a name="remarks"></a>Observaciones  

@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d1487a5c7a6c9343438c1a3f6d42fd49e425000b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4212c397c712351e951060032f6e7a2ece6a5c3f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809181"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129029"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Procedimientos recomendados y solución de problemas de Copia de seguridad en URL de SQL Server
 
@@ -70,11 +70,11 @@ ms.locfileid: "91809181"
     , SECRET = '<storage access key>' ;  
     ```  
   
--   La credencial existe pero la cuenta de inicio de sesión usada para ejecutar el comando de copia de seguridad no tiene permisos de acceso a las credenciales. Use una cuenta de inicio de sesión en el rol **db_backupoperator** con permisos para ***Modificar cualquier credencial*** .  
+-   La credencial existe pero la cuenta de inicio de sesión usada para ejecutar el comando de copia de seguridad no tiene permisos de acceso a las credenciales. Use una cuenta de inicio de sesión en el rol **db_backupoperator** con los permisos **_Alter any credential_* _.  
   
 -   Compruebe los valores de clave y nombre de la cuenta de almacenamiento. La información almacenada en la credencial debe coincidir con los valores de propiedad de la cuenta de Azure Storage que se usa en las operaciones de copia de seguridad y restauración.  
   
- **Errores de copia de seguridad:**  
+ _ *Errores de copia de seguridad:* *  
   
 -   Las copias de seguridad en paralelo en el mismo blob produce errores en una de las copias de seguridad y hacen que aparezca un **Error de inicialización** .  
   

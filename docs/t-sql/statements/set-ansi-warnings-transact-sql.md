@@ -24,12 +24,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b41f37f996015de4b853c9443ef700b16242b44
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: d1dfea07a02effb5362b0f01ad496b536c646139
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300836"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328121"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,16 +39,14 @@ ms.locfileid: "92300836"
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis
-  
+
+### <a name="syntax-for-ssnoversion-mdmd-and-sssodfull-mdmd"></a>Sintaxis para [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] y [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
-  
 SET ANSI_WARNINGS { ON | OFF }
 ```
 
+### <a name="syntax-for-sssdw-mdmd-and-sspdw-mdmd"></a>Sintaxis para [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] y [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
-
 SET ANSI_WARNINGS ON
 ```
 
@@ -59,10 +57,10 @@ SET ANSI_WARNINGS ON
   
 -   Si es ON y aparecen valores NULL en funciones de agregado, como SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP o COUNT, se genera un mensaje de advertencia. Si es OFF, no se genera ninguna advertencia.  
   
--   Si es ON, los errores de división por cero y desbordamiento aritmético hacen que la instrucción se revierta y que se genere un mensaje de error. Si es OFF, los errores de división por cero y de desbordamiento aritmético hacen que se devuelvan valores NULL. El comportamiento por el que un error de división por cero o desbordamiento aritmético hace que se devuelvan valores NULL tiene lugar cuando se intenta ejecutar una operación INSERT o UPDATE en una columna de tipo **character** , Unicode o **binary** , en la que la longitud del nuevo valor excede el tamaño máximo de la columna. Si SET ANSI_WARNINGS es ON, se cancelan INSERT o UPDATE, tal y como especifica el estándar ISO. No se tienen en cuenta los espacios en blanco a la derecha en las columnas de carácter ni los valores NULL a la derecha en las columnas binarias. Cuando es OFF, los datos se truncan para ajustarlos al tamaño de la columna y la instrucción se ejecuta correctamente.  
+-   Si es ON, los errores de división por cero y desbordamiento aritmético hacen que la instrucción se revierta y que se genere un mensaje de error. Si es OFF, los errores de división por cero y de desbordamiento aritmético hacen que se devuelvan valores NULL. El comportamiento por el que un error de división por cero o desbordamiento aritmético hace que se devuelvan valores NULL tiene lugar cuando se intenta ejecutar una operación INSERT o UPDATE en una columna de tipo **character**, Unicode o **binary**, en la que la longitud del nuevo valor excede el tamaño máximo de la columna. Si SET ANSI_WARNINGS es ON, se cancelan INSERT o UPDATE, tal y como especifica el estándar ISO. No se tienen en cuenta los espacios en blanco a la derecha en las columnas de carácter ni los valores NULL a la derecha en las columnas binarias. Cuando es OFF, los datos se truncan para ajustarlos al tamaño de la columna y la instrucción se ejecuta correctamente.  
   
 > [!NOTE]  
-> Cuando se produce un truncamiento en alguna conversión desde o hacia datos **binary** o **varbinary** , no se emite ningún error ni advertencia, independientemente de las opciones SET.  
+> Cuando se produce un truncamiento en alguna conversión desde o hacia datos **binary** o **varbinary**, no se emite ningún error ni advertencia, independientemente de las opciones SET.  
   
 > [!NOTE]  
 > No se respeta ANSI_WARNINGS al pasar parámetros de un procedimiento almacenado, una función definida por el usuario o al declarar y establecer variables en una instrucción de lote. Por ejemplo, si una variable se define como **char(3)** y después se establece en un valor de más de tres caracteres, los datos se truncan hasta el tamaño definido y la instrucción INSERT o UPDATE se ejecuta correctamente.  

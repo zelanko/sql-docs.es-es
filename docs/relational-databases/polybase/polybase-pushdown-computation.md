@@ -2,7 +2,7 @@
 description: Cálculos de la aplicación en PolyBase
 title: Cálculos de la aplicación en PolyBase | Microsoft Docs
 dexcription: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
-ms.date: 04/23/2019
+ms.date: 11/17/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -10,26 +10,29 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0b028d0476b55d17a7eca9a8cace18d9ca206bc3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59ff1e7807a8bdd8427e3b902bf53c111d52c7b7
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482529"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "96127846"
 ---
 # <a name="pushdown-computations-in-polybase"></a>Cálculos de la aplicación en PolyBase
 
-## <a name="dmv"></a>DMV
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+El cálculo de aplicación mejora el rendimiento de las consultas en los orígenes de datos externos. A partir de SQL Server 2016, los cálculos de aplicación han estado disponibles para los orígenes de datos externos de Hadoop. SQL Server 2019 presenta cálculos de aplicación para otros tipos de orígenes de datos externos.
 
-El cálculo de la aplicación mejora el rendimiento de las consultas en el clúster de Hadoop.
+## <a name="enable-pushdown-computation"></a> Habilitar el cálculo de la aplicación
 
-## <a name="enable-pushdown"></a>Habilitar aplicación
+En los artículos siguientes se incluye información sobre la configuración del cálculo de aplicación para tipos específicos de orígenes de datos externos:
 
-En el siguiente artículo se tratan los pasos para habilitar la aplicación:
-
-[Habilitar el cálculo de la aplicación en Hadoop](polybase-configure-hadoop.md#pushdown)
+- [Habilitar el cálculo de la aplicación en Hadoop](polybase-configure-hadoop.md#pushdown)
+- [Configurar PolyBase para acceder a datos externos en Oracle](polybase-configure-oracle.md)
+- [Configurar PolyBase para obtener acceso a datos externos en Teradata](polybase-configure-teradata.md)
+- [Configurar PolyBase para acceder a datos externos en MongoDB](polybase-configure-mongodb.md)
+- [Configuración de PolyBase para acceder a datos externos con tipos genéricos de ODBC](polybase-configure-odbc-generic.md)
+- [Configurar PolyBase para acceder a datos externos en SQL Server](polybase-configure-sql-server.md)
 
 ## <a name="select-a-subset-of-rows"></a>Seleccionar un subconjunto de filas
 
@@ -46,35 +49,38 @@ SELECT * FROM SensorData WHERE Speed > 65;
 
 Use la aplicación del predicado para mejorar el rendimiento de una consulta que selecciona un subconjunto de columnas de una tabla externa.
 
-En esta consulta, SQL Server inicia un trabajo asignar/reducir para preprocesar el archivo de texto delimitado por Hadoop para que únicamente los datos de las dos columnas, customer.name y customer.zip_code, se copien en PDW de SQL Server.
+En esta consulta, SQL Server inicia un trabajo de asignación y reducción para preprocesar el archivo de texto delimitado por Hadoop, de tal modo que únicamente los datos de las dos columnas, customer.name y customer.zip_code, se copien en SQL Server.
 
 ```sql
-SELECT customer.name, customer.zip_code FROM customer WHERE customer.account_balance < 200000
+SELECT customer.name, customer.zip_code
+FROM customer
+WHERE customer.account_balance < 200000
 ```
 
 ### <a name="pushdown-for-basic-expressions-and-operators"></a>Aplicación para operadores y expresiones básicas
 
 SQL Server permite las siguientes expresiones básicas y operadores para la aplicación del predicado.
 
-+ Operadores de comparación binarios (\<, >, =, !=, <>, >=, <=) para valores de hora, fecha y numéricos.
+- Operadores de comparación binarios (`<`, `>`, `=`, `!=`, `<>`, `>=` y `<=`) para valores de hora, fecha y numéricos.
+- Operadores aritméticos (`+`, `-`, `*`, `/` y `%`).
+- Operadores lógicos (`AND` y `OR`).
+- Operadores unarios (`NOT`, `IS NULL` y `IS NOT NULL`).
 
-+ Operadores aritméticos (+, -, *, /, %).
+Los operadores `BETWEEN`, `NOT`, `IN` y `LIKE` se pueden insertar. El comportamiento real depende de cómo el optimizador de consultas vuelva a escribir las expresiones de operador como una serie de instrucciones que usan operadores relacionales básicos.
 
-+ Operadores lógicos (AND, OR).
+La consulta de este ejemplo tiene varios predicados que se pueden insertar en Hadoop. SQL Server puede insertar trabajos de Map Reduce en Hadoop para ejecutar el predicado `customer.account_balance <= 200000`. La expresión `BETWEEN 92656 AND 92677` se compone también de operaciones binarias y lógicas que se pueden insertar en Hadoop. La operación lógica **AND** en `customer.account_balance AND customer.zipcode` es una expresión final.
 
-+ Operadores unarios (NOT, IS NULL, IS NOT NULL).
-
-Los operadores BETWEEN, NOT, IN y LIKE podrían aplicarse. El comportamiento real depende de cómo el optimizador de consultas vuelva a escribir las expresiones de operador como una serie de instrucciones que usan operadores relacionales básicos.
-
-La consulta de este ejemplo tiene varios predicados que se pueden insertar en Hadoop. SQL Server puede insertar trabajos de Map Reduce en Hadoop para ejecutar el predicado `customer.account_balance <= 200000`. La expresión `BETWEEN 92656 and 92677` se compone también de operaciones binarias y lógicas que se pueden insertar en Hadoop. La operación lógica **AND** en `customer.account_balance and customer.zipcode` es una expresión final.
-
-Dada esta combinación de predicados, los trabajos de Map Reduce pueden ejecutar todos la cláusula WHERE. Solo los datos que cumplen los criterios SELECT se vuelven a copiar en PDW de SQL Server.
+Dada esta combinación de predicados, los trabajos de Map Reduce pueden ejecutar todos la cláusula WHERE. Solo los datos que cumplen los criterios `SELECT` se vuelven a copiar en SQL Server.
 
 ```sql
-SELECT * FROM customer WHERE customer.account_balance <= 200000 AND customer.zipcode BETWEEN 92656 AND 92677
+SELECT * FROM customer 
+WHERE customer.account_balance <= 200000 
+    AND customer.zipcode BETWEEN 92656 AND 92677
 ```
 
-## <a name="force-pushdown"></a>Forzar aplicación
+## <a name="examples"></a>Ejemplos
+
+### <a name="force-pushdown"></a>Forzar aplicación
 
 ```sql
 SELECT * FROM [dbo].[SensorData]
@@ -82,7 +88,7 @@ WHERE Speed > 65
 OPTION (FORCE EXTERNALPUSHDOWN);
 ```
 
-## <a name="disable-pushdown"></a>Deshabilitar aplicación
+### <a name="disable-pushdown"></a>Deshabilitar aplicación
 
 ```sql
 SELECT * FROM [dbo].[SensorData]

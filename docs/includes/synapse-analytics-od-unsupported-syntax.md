@@ -1,2 +1,2 @@
 > [!NOTE]
-> El grupo de SQL sin servidor (versión preliminar) no admite esta sintaxis en Azure Synapse Analytics.
+> El grupo de SQL sin servidor no admite esta sintaxis en Azure Synapse Analytics.

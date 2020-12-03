@@ -14,11 +14,11 @@ ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 23bc66a0c782005a2426ee9fc4e35a237f49cb96
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789651"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126156"
 ---
 # <a name="register-mirrored-database"></a>Registrar base de datos reflejada
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85789651"
  Seleccione una instancia del servidor en la lista, que contiene instancias del servidor con las que el Monitor de creación de reflejo de la base de datos ya tiene una conexión almacenada, o bien haga clic en **Conectar**. Para especificar nuevas credenciales para una instancia del servidor de la lista, haga clic en **Conectar** y conéctese mediante las nuevas credenciales.  
   
 > [!NOTE]  
->  Para registrar bases de datos en varias instancias del servidor, una vez terminada la búsqueda de una instancia del servidor en las bases de datos deseadas, haga clic en **Aplicar**y, luego, seleccione otra instancia del servidor.  
+>  Para registrar bases de datos en varias instancias del servidor, una vez terminada la búsqueda de una instancia del servidor en las bases de datos deseadas, haga clic en **Aplicar** y, luego, seleccione otra instancia del servidor.  
   
  **Conexión**  
  Para especificar nuevas credenciales para la instancia del servidor, haga clic en **Conectar** y conéctese mediante las nuevas credenciales. Al conectarse a una instancia del servidor, el Monitor de creación de reflejo de la base de datos muestra **Esperando datos**.  
@@ -51,7 +51,7 @@ ms.locfileid: "85789651"
 |**Registro**|Comprueba cada una de las bases de datos que desee registrar. Si se supervisa actualmente una base de datos, su casilla estará activada y permanecerá deshabilitada.<br /><br /> Nota: Para eliminar del Registro una base de datos, cierre el cuadro de diálogo **Registrar base de datos reflejada**, seleccione la base de datos en el árbol de navegación y seleccione **Eliminar del Registro** en el menú **Acción**.|  
 |**Base de datos**|Nombre de una base de datos reflejada en la instancia del servidor seleccionada.|  
 |**Rol actual**|Rol de creación de reflejo actual de la base de datos, ya sea principal o reflejada, en la instancia del servidor seleccionada.|  
-|**Asociado (Conectar como)**|Nombre del asociado de conmutación por error de la base de datos. Se muestra entre paréntesis **Autenticación de Windows del usuario de consola** o **Autenticación de SQL Server de inicio de sesión "***\<login name>***"** . Esta información de autenticación es la que se utiliza actualmente (si la instancia se ha agregado antes) o la que se utilizará en un futuro (si la instancia no se ha agregado al monitor).|  
+|**Asociado (Conectar como)**|Nombre del asociado de conmutación por error de la base de datos. Se muestra entre paréntesis **Autenticación de Windows del usuario de consola** o **Autenticación de SQL Server de inicio de sesión "** _\<login name>_ *_"_*. Esta información de autenticación es la que se utiliza actualmente (si la instancia se ha agregado antes) o la que se utilizará en un futuro (si la instancia no se ha agregado al monitor).|  
   
  **Mostrar el cuadro de diálogo para administrar conexiones de instancia del servidor cuando haga clic en Aceptar**  
  De forma predeterminada, el Monitor de creación de reflejo de la base de datos utiliza las credenciales de autenticación de Windows para instancias del servidor asociado, cuyas credenciales no se han proporcionado con anterioridad. Habilite esta opción para cambiar las credenciales de una o varias instancias del servidor al terminar de registrar las bases de datos.  

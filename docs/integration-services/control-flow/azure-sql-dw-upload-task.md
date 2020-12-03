@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: c0864f868cc046fcd1f0763fff7e5a97e2fe8607
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 5510fb2a0a4760b5465dad7f44eed8c85ef36251
+ms.sourcegitcommit: ece151df14dc2610d96cd0d40b370a4653796d74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006203"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96297967"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tarea de carga de Azure SQL DW
 
@@ -31,6 +31,11 @@ La **tarea de carga de Azure SQL DW** permite que un paquete SSIS copie datos ta
 La tarea usa PolyBase para mejorar el rendimiento, tal como se describe en el artículo [Azure Synapse Analytics Loading Patterns and Strategies](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies) (Patrones y estrategias de carga de Azure Synapse Analytics).
 El formato de archivo de origen de datos que se admite actualmente es texto delimitado en codificación UTF8.
 Al copiar desde el sistema de archivos, los datos primeros se cargarán a Azure Blob Storage para almacenamiento provisional y luego a Azure SQL DW. Por lo tanto, se necesita una cuenta de Azure Blob Storage.
+
+> [!NOTE]
+> No se admite el administrador de conexiones de Azure Storage con el tipo de servicio de Data Lake Gen2.
+>
+> Para usar Azure Data Lake Gen2 para el origen o el almacenamiento provisional, puede conectarse a través del administrador de conexiones de Azure Storage con el tipo de servicio de Blob Storage.
 
 La **tarea de carga de Azure SQL DW** es un componente de [Feature Pack de SQL Server Integration Services (SSIS) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 

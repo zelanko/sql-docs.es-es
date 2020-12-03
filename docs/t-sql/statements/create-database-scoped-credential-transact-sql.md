@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfca6f2f7e40593e4480c90ecf543eb39fc810be
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: ee984b5e04426cd269b7ed21f43d6b9b9dc91469
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300934"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328125"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* Especifica el nombre de la credencial con ámbito de base de datos que se va a crear. *credential_name* no puede comenzar por el signo de almohadilla (#). Las credenciales del sistema comienzan por ##.
 
-IDENTITY **="** _nombre\_identidad_ **"** Especifica el nombre de la cuenta que se va a usar para conectarse fuera del servidor. Para importar un archivo desde Azure Blob Storage usando una clave compartida, el nombre de identidad debe ser `SHARED ACCESS SIGNATURE`. Para cargar datos en SQL DW, se puede usar cualquier valor válido para la identidad. Para saber más sobre las firmas de acceso compartido, vea [Uso de firmas de acceso compartido (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). Cuando use Kerberos (Windows Active Directory o MIT KDC), no use el nombre de dominio en el argumento IDENTITY. Solamente debe usar el nombre de la cuenta.
+IDENTITY **="** _nombre\_identidad_ **"** Especifica el nombre de la cuenta que se va a usar para conectarse fuera del servidor. Para importar un archivo desde Azure Blob Storage usando una clave compartida, el nombre de identidad debe ser `SHARED ACCESS SIGNATURE`. Para cargar datos en SQL DW, se puede usar cualquier valor válido para la identidad. Para saber más sobre las firmas de acceso compartido, vea [Uso de firmas de acceso compartido (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). Cuando utilice Kerberos (Windows Active Directory o MIT KDC), no use el nombre de dominio en el argumento IDENTITY. Solamente debe usar el nombre de la cuenta.
 
 > [!IMPORTANT]
 > Los conectores ODBC de SQL, Oracle, Teradata y MongoDB para PolyBase solo admiten la autenticación básica, no la autenticación Kerberos.

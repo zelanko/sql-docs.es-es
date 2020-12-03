@@ -14,11 +14,11 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d94a2c804f67657581f5ead059e6951f410e05f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789638"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126146"
 ---
 # <a name="set-warning-thresholds"></a>Establecer umbrales de advertencia
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85789638"
   
 ## <a name="options"></a>Opciones  
  *Instancia del servidor y su estado de conexión*  
- Nombre de una instancia del servidor asociado con el formato *SISTEMA***\\***NOMBRE_DE_INSTANCIA*. En el caso de una instancia de servidor predeterminada, solo se muestra el nombre del sistema.  
+ Nombre de una instancia del servidor asociado con el formato *SYSTEM* **\\** _INSTANCE_NAME_. En el caso de una instancia de servidor predeterminada, solo se muestra el nombre del sistema.  
   
  Este campo también indica si el monitor está conectado actualmente a esta instancia del servidor. Los estados de conexión posibles son:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "85789638"
   
 -   Cuando hay un intento de conexión en curso, el texto del botón es **Cancelar**. Haga clic en el botón para cancelar el intento de conexión.  
   
--   Si el servidor está conectado, el texto del botón es **Conectado**y éste aparece atenuado.  
+-   Si el servidor está conectado, el texto del botón es **Conectado** y éste aparece atenuado.  
   
  **Umbrales**  
  En la cuadrícula **Umbrales** se muestra la configuración de advertencias para las dos instancias del servidor.  

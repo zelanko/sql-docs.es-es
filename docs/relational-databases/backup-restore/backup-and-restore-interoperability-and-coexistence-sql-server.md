@@ -15,14 +15,14 @@ helpviewer_keywords:
 - backups [SQL Server], files or filegroups
 - file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3dcf1473fc92ba69d68f9aae9d871540e2604b52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 106773df7a5e9f88c123b614688ca19722613d7f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737832"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130535"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Copia de seguridad y restauración: interoperabilidad y coexistencia (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "85737832"
   
  Si se detecta algún problema durante el inicio de la base de datos, no se puede llevar a cabo la restauración y la base de datos se marca como SUSPECT. Si es posible aislar el problema en un archivo o una serie de archivos, el administrador de la base de datos puede dejar sin conexión los archivos en cuestión e intentar reiniciar la base de datos. Para dejar sin conexión un archivo se puede utilizar la siguiente instrucción [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) :  
   
- ALTER DATABASE *nombre_base_de_datos* MODIFY FILE (NAME **='***nombredearchivo***'** , OFFLINE)  
+ ALTER DATABASE *database_name* MODIFY FILE (NAME **="** _filename_*_"_*, OFFLINE)  
   
  En caso de iniciarse correctamente, los grupos de archivos que contengan algún archivo sin conexión seguirán sin conexión.  
   

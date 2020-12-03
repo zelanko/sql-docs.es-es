@@ -25,11 +25,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 973583b5c5dd32273312f6282e91d501659887fb
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114888"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124855"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,7 +79,7 @@ COUNT(DISTINCT *expresión*) evalúa *expresión* en todas las filas del grupo y
   
 Para valores devueltos superiores a 2^31-1, `COUNT` devuelve un error. En estos casos, utilice `COUNT_BIG` en su lugar.
   
-`COUNT` es una función determinista cuando se utiliza ***sin*** las cláusulas OVER y ORDER BY. Es no determinista si se especifica ***con*** las cláusulas OVER y ORDER BY. Para más información, consulte [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+`COUNT` es una función determinista cuando se utiliza ***sin** _ las cláusulas OVER y ORDER BY. Es no determinista si se especifica _*_con_*_ las cláusulas OVER y ORDER BY. Para más información, consulte [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -101,7 +101,7 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="b-using-count"></a>B. Usar COUNT(\*)  
+### <a name="b-using-count_"></a>B. Usar COUNT(\_)  
 Este ejemplo devuelve el número total de empleados de [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
   
 ```sql

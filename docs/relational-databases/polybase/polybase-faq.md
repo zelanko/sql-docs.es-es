@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 5083228cc44b859faec866eca7d36aae9626e8fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 627afe62630dbca81c77bef45d8263824d8c41df
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760440"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "96127854"
 ---
 # <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 
@@ -28,7 +28,7 @@ En la tabla siguiente se resaltan las diferencias entre las características de 
 |Usa controladores ODBC.|Usa proveedores OLEDB.|
 |Admite operaciones de solo lectura en todos los orígenes de datos y operaciones de inserción solo para HADOOP y el origen de datos del grupo de datos.|Admite tanto operaciones de lectura como de escritura.|
 |Las consultas al origen de datos remotos desde una sola conexión se pueden escalar horizontalmente |Las consultas al origen de datos remotos desde una única conexión no se pueden escalar horizontalmente|
-|Se admite la inserción de predicados|Se admite la inserción de predicados|
+|Se admite la aplicación de predicados.|Se admite la aplicación de predicados.|
 |No se necesita ninguna configuración independiente para el grupo de disponibilidad|Se necesita una configuración independiente para cada instancia del grupo de disponibilidad|
 |Solo autenticación básica|Autenticación básica e integrada|
 |Adecuado para procesar un gran número de filas de consultas de análisis|Adecuado para consultas OLTP que devuelven algunas filas|
@@ -36,7 +36,7 @@ En la tabla siguiente se resaltan las diferencias entre las características de 
 
 ## <a name="whats-new-in-polybase-2019"></a>Novedades en PolyBase 2019 
 
-PolyBase en [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] puede leer ahora datos de una mayor variedad de orígenes de datos. Los datos de estos orígenes de datos externos se pueden almacenar como tablas externas en SQL Server. PolyBase además admite el cálculo de inserción en estos orígenes de datos externos, excepto los tipos de ODBC genéricos.
+PolyBase en [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] puede leer ahora datos de una mayor variedad de orígenes de datos. Los datos de estos orígenes de datos externos se pueden almacenar como tablas externas en SQL Server. PolyBase además admite el cálculo de aplicación en estos orígenes de datos externos, excepto los tipos de ODBC genéricos.
 
 ### <a name="compatible-data-sources"></a>Orígenes de datos compatibles
 

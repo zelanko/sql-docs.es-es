@@ -25,10 +25,10 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b3c2abcfbb15fa1d2adcd6683e2c2ead5e4572f1
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193227"
 ---
 # <a name="lookup-transformation"></a>Transformación de búsqueda
@@ -91,9 +91,9 @@ ms.locfileid: "92193227"
   
  A continuación se describen otras ventajas relacionadas con guardar la memoria caché en un archivo:  
   
--   ***El archivo caché se puede compartir entre varios paquetes. Para más información, vea***  [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***El archivo caché se puede compartir entre varios paquetes. Para obtener más información, vea** _  [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  _*_ . _*_  
   
--   El archivo caché se puede implementar con un paquete. ***De esta forma, podrá utilizar los datos en varios equipos.*** Para obtener información, vea [Cómo crear e implementar una memoria caché para la transformación Búsqueda](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
+-   El archivo caché se puede implementar con un paquete. _*_De esta forma, podrá utilizar los datos en varios equipos._*_ Para obtener información, vea [Cómo crear e implementar una memoria caché para la transformación Búsqueda](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
 -   Usar el origen de archivo sin formato para leer datos del archivo caché. A continuación, puede utilizar otros componentes de flujo de datos para transformar o mover los datos. Para más información, consulte [Raw File Source](../../../integration-services/data-flow/raw-file-source.md).  
   
@@ -146,7 +146,7 @@ ms.locfileid: "92193227"
      Para obtener información acerca de cómo instalar muestras de producto y bases de datos de ejemplo de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vea [Ejemplos del producto SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
 ## <a name="lookup-transformation-editor-general-page"></a>Editor de transformación Búsqueda (página General)
-  Utilice la página **General** del cuadro de diálogo Editor de transformación Búsqueda para seleccionar el modo de caché y el tipo de conexión, y especificar cómo administrar las filas sin entradas coincidentes.  
+  Utilice la página _ *General** del cuadro de diálogo Editor de transformación Búsqueda para seleccionar el modo de caché y el tipo de conexión, y especificar cómo administrar las filas sin entradas coincidentes.  
   
 ### <a name="options"></a>Opciones  
  **Caché completa**  
@@ -186,7 +186,7 @@ ms.locfileid: "92193227"
  **Nuevo**  
  Cree una conexión mediante el cuadro de diálogo **Editor del administrador de conexiones de caché** .  
   
- Las opciones siguientes están disponibles al seleccionar **Caché completa**, **Caché parcial**o **Sin caché**, y **Administrador de conexiones OLE DB**en la página General del cuadro de diálogo **Editor de transformación Búsqueda** .  
+ Las opciones siguientes están disponibles al seleccionar **Caché completa**, **Caché parcial** o **Sin caché**, y **Administrador de conexiones OLE DB** en la página General del cuadro de diálogo **Editor de transformación Búsqueda** .  
   
  **Administrador de conexiones OLE DB**  
  Seleccione un administrador de conexiones OLE DB de la lista o cree una conexión haciendo clic en **Nueva**.  
@@ -230,7 +230,7 @@ ms.locfileid: "92193227"
   
  Utilice una operación de arrastrar y colocar para asignar columnas de entrada disponibles a columnas de búsqueda.  
   
- También puede asignar columnas de entrada a columnas de búsqueda utilizando el teclado, resaltando una columna en la tabla **Columnas de entrada disponibles** , presionando la tecla de aplicación y haciendo clic en **Editar asignaciones**a continuación.  
+ También puede asignar columnas de entrada a columnas de búsqueda utilizando el teclado, resaltando una columna en la tabla **Columnas de entrada disponibles** , presionando la tecla de aplicación y haciendo clic en **Editar asignaciones** a continuación.  
   
  **Columnas de búsqueda disponibles**  
  Muestra la lista de columnas de búsqueda. Las columnas de búsqueda son columnas de la tabla de referencia en las que desea buscar valores que coinciden con las columnas de entrada.  
@@ -239,7 +239,7 @@ ms.locfileid: "92193227"
   
  Use las casillas para seleccionar las columnas de búsqueda de la tabla de referencia en las que se realizarán operaciones de búsqueda.  
   
- También puede asignar columnas de búsqueda a columnas de entrada utilizando el teclado, resaltando una columna en la tabla **Columnas de búsqueda disponibles** , presionando la tecla de aplicación y haciendo clic en **Editar asignaciones**a continuación.  
+ También puede asignar columnas de búsqueda a columnas de entrada utilizando el teclado, resaltando una columna en la tabla **Columnas de búsqueda disponibles** , presionando la tecla de aplicación y haciendo clic en **Editar asignaciones** a continuación.  
   
  **columna de búsqueda**  
  Muestra las columnas de búsqueda seleccionadas. Las selecciones se reflejan en las casillas activadas en la tabla **Columnas de búsqueda disponibles** .  

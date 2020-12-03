@@ -26,11 +26,11 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0c75769df4c504f71dfdd3a724648aea19b66460
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688144"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124210"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,25 +64,25 @@ ALTER SERVICE MASTER KEY
  REGENERATE  
  Indica que la clave maestra de servicio debe volver a generarse.  
   
- OLD_ACCOUNT **='***account_name***'**  
+ OLD_ACCOUNT **="** _account_name_*_"_*  
  Especifica el nombre de la antigua cuenta de servicio de Windows.  
   
 > [!WARNING]  
 >  Esta opción es obsoleta. No utilizar. Utilice el administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en su lugar.  
   
- OLD_PASSWORD **='***password***'**  
+ OLD_PASSWORD **="** _password_*_"_*  
  Especifica la contraseña de la antigua cuenta de servicio de Windows.  
   
 > [!WARNING]  
 >  Esta opción es obsoleta. No utilizar. Utilice el administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en su lugar.  
   
- NEW_ACCOUNT **='***account_name***'**  
+ NEW_ACCOUNT **="** _account_name_*_"_*  
  Especifica el nombre de la nueva cuenta de servicio de Windows.  
   
 > [!WARNING]  
 >  Esta opción es obsoleta. No utilizar. Utilice el administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en su lugar.  
   
- NEW_PASSWORD **='***password***'**  
+ NEW_PASSWORD **="** _password_*_"_*  
  Especifica la contraseña de la nueva cuenta de servicio de Windows.  
   
 > [!WARNING]  

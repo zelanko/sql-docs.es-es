@@ -38,6 +38,8 @@
           href: ../connect/ado-net/enable-eventsource-tracing.md
         - name: Cambios de AppContext
           href: ../connect/ado-net/appcontext-switches.md
+        - name: Guía de solución de problemas
+          href: ../connect/ado-net/sqlclient-troubleshooting-guide.md
         - name: Búsqueda de información adicional
           href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
     - name: Asignaciones de tipos de datos en ADO.NET
@@ -5177,6 +5179,8 @@
           href: ../connect/oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md
         - name: Uso de Azure Active Directory
           href: ../connect/oledb/features/using-azure-active-directory.md
+        - name: Uso de la clasificación de datos
+          href: ../connect/oledb/features/using-data-classification.md
         - name: Usar la creación de reflejo de bases de datos
           href: ../connect/oledb/features/using-database-mirroring.md
         - name: Utilizar el cifrado sin validación
@@ -5447,6 +5451,12 @@
                   href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md
                 - name: 'ISSCommandWithParameters::SetParameterProperties'
                   href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
+                - name: ISSDataClassification
+                  items:
+                    - name: ISSDataClassification
+                      href: oledb/ole-db-interfaces/issdataclassification-ole-db.md
+                    - name: 'ISSDataClassification::GetSensitivityClassification'
+                      href: oledb/ole-db-interfaces/issdataclassification-getsensitivityclassification-ole-db.md
             - name: Procedimientos
               href: ../connect/oledb/ole-db-how-to/ole-db-how-to-topics.md
               items:

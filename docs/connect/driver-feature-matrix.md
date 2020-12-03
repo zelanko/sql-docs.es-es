@@ -2,19 +2,19 @@
 title: Matriz de compatibilidad de características del controlador
 description: Obtenga información sobre las características populares que se admiten en los controladores para SQL Server y dónde encontrar información sobre ellas.
 ms.custom: ''
-ms.date: 08/05/2020
+ms.date: 11/30/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: 6a781688b4fc24f8b79f3820fbcc3dc339b6c068
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: ac2f39826768cf7fe2948a4168bd93187a93ea3c
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081434"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419677"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Matriz de compatibilidad de características del controlador para Microsoft SQL Server
 
@@ -43,7 +43,7 @@ Queremos que todos los controladores admitan todas las características y dedica
 | [Autenticación de contraseña de Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | Sí | Sí | | Sí |
 | [Autenticación integrada de Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | Sí | Sí | | Sí |
 | [Autenticación interactiva (MFA) de Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | Sí | Sí | | Sí |
-| [Autenticación de identidad administrada de Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | | | | |
+| [Autenticación de identidad administrada de Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | Sí | Sí | | |
 | [Autenticación de entidad de servicio de Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | Sí | Sí | | |
 | [Autenticación integrada de Windows](/windows-server/security/windows-authentication/windows-authentication-overview) | [Sí](ado-net/sql/authentication-sql-server.md) | [Sí](ado-net/sql/authentication-sql-server.md) | [Sí](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [Sí](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [Copia masiva](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Sí](ado-net/sql/bulk-copy-operations-sql-server.md) | [Sí](ado-net/sql/bulk-copy-operations-sql-server.md) | [Sí](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [Sí](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 4b29191e5f7e42b5057d4258145f7b56001285b5
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 2eb3c7d996463b9c581ea60bc11f853a5d131582
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126451"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419754"
 ---
 # <a name="establishing-connection"></a>Establecimiento de conexión
 
@@ -55,5 +55,5 @@ La identidad de seguridad para aplicaciones ASP.NET se puede establecer en una d
 
 ## <a name="see-also"></a>Vea también
 
-- [Conectarse a un origen de datos](connecting-to-data-source.md)
+- [Conexión a un origen de datos](connecting-to-data-source.md)
 - [Cadenas de conexión](connection-strings.md)

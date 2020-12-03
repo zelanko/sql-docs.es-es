@@ -1,7 +1,7 @@
 ---
 title: Directivas de compatibilidad del controlador OLE DB para SQL Server
 description: Obtenga información sobre las directivas de compatibilidad de OLE DB Driver for SQL Server y las versiones de sistemas operativos y de bases de datos SQL compatibles con cada versión del controlador.
-ms.date: 08/06/2020
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca90e20ef6dab5a61bfa6b2969a1220d4a22db2e
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: aa01dec4758bb91a4b05d65af372ee66c1c53672
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860641"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506426"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Directivas de compatibilidad del controlador OLE DB para SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,6 +30,7 @@ OLE DB Driver for SQL Server se ha probado y admite conexiones a las versiones
 
 | Versión de la base de datos&nbsp;&#8594;<br />&#8595; versión del controlador | Azure SQL Database | Azure Synapse Analytics | Instancia administrada de Azure SQL | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
 |----|---|---|---|---|---|---|---|---|
+|18.5|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|
 |18.4|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|
 |18.3|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|
 |18.2|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|
@@ -43,6 +44,7 @@ En la tabla siguiente se enumeran los sistemas operativos que admite OLE DB Dri
 
 | Sistema operativo&nbsp;&#8594;<br />&#8595; versión del controlador | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|---|---|---|---|---|---|
+|18.5|Sí|Sí|Sí|Sí|Sí|Sí|
 |18.4|Sí|Sí|Sí|Sí|Sí|Sí|
 |18.3|Sí|Sí|Sí|Sí|Sí|Sí|
 |18.2|Sí|Sí|Sí|Sí|Sí|Sí|

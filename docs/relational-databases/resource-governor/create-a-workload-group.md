@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, workload group create
 - workload groups [SQL Server], create
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: eb23f8926cff87651ba0feda1b398112dec930af
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: b9ad4bf1f8c344a6ea4babe8d4ce737b2d6fe3d4
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456941"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504846"
 ---
 # <a name="create-a-workload-group"></a>Crear un grupo de cargas de trabajo
 
@@ -59,7 +59,7 @@ ms.locfileid: "86456941"
   
 6.  Haga clic o doble clic en cualquier otra celda de la fila cuya configuración predeterminada desee cambiar, y especifique los nuevos valores.  
   
-7.  Haga clic en **Aceptar**para guardar los cambios.  
+7.  Haga clic en **Aceptar** para guardar los cambios.  
 
 ##  <a name="create-a-workload-group-using-transact-sql"></a><a name="CreRPTSQL"></a> Crear un grupo de cargas de trabajo mediante Transact-SQL  
  **Para crear un grupo de cargas de trabajo utilizando [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

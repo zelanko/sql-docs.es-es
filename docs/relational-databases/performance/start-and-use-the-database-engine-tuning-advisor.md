@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 68e48fb6316b5794d51208b42ab10938b17126dc
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c8cd352c5347cbc48979af4e03775c9d7da8f3d1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890748"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504974"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar y utilizar el Asistente para la optimización de motor de base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "91890748"
   
 #### <a name="to-start-database-engine-tuning-advisor-from-the-windows-start-menu"></a>Para iniciar el Asistente para la optimización de motor de base de datos desde el menú Inicio de Windows  
   
-1.  En el menú **Inicio** , elija **Todos los programas**, **Microsoft SQL Server**, **Herramientas de rendimiento**y, a continuación, haga clic en **Asistente para la optimización de motor de base de datos**.  
+1.  En el menú **Inicio** , elija **Todos los programas**, **Microsoft SQL Server**, **Herramientas de rendimiento** y, a continuación, haga clic en **Asistente para la optimización de motor de base de datos**.  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>Para iniciar el Asistente para la optimización de motor de base de datos en SQL Server Management Studio  
   
@@ -98,7 +98,7 @@ ms.locfileid: "91890748"
   
 1.  Inicie el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] mediante uno de los métodos siguientes:  
   
-    -   En el menú **Inicio** , elija **Todos los programas**, **Microsoft SQL Server**, **Herramientas de rendimiento**y, a continuación, haga clic en **SQL Server Profiler**.  
+    -   En el menú **Inicio** , elija **Todos los programas**, **Microsoft SQL Server**, **Herramientas de rendimiento** y, a continuación, haga clic en **SQL Server Profiler**.  
   
     -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic en el menú **Herramientas** y, a continuación, haga clic en **SQL Server Profiler**.  
   
@@ -398,7 +398,7 @@ database_name.owner_name.table_name
  **Seleccionar bases de datos y tablas para optimizar**  
  Especifica las bases de datos y tablas que se deben optimizar. Para especificar todas las bases de datos, seleccione la casilla del encabezado de columna **Nombre** . Para especificar bases de datos específicas, seleccione la casilla situada junto al nombre de la base de datos. De forma predeterminada, todas las tablas de las bases de datos seleccionadas se incluyen automáticamente en la sesión de optimización. Para excluir tablas, haga clic en la flecha de la columna **Tablas seleccionadas** y, a continuación, desactive las casillas situadas junto a las tablas que no desee optimizar.  
   
- Flecha abajo de**Tablas seleccionadas**  
+ Flecha abajo de **Tablas seleccionadas**  
  Expande la lista de tablas para poder seleccionar tablas individuales para su optimización.  
   
  **Guardar registro de optimización**  

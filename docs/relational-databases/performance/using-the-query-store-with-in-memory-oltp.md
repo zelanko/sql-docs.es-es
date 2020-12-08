@@ -11,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b18741804460a5a95f74345f2158cb647ab3689c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 8c0da148cb3d1d733e506aee2ce06b5494e44c90
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457122"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504919"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Uso del almacén de consultas con OLTP en memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ Sin embargo, existen algunos aspectos específicos que los usuarios deben tener 
     
 -   Si ejecuta un almacén de consultas en una base de datos con una carga de trabajo mixta, podrá usar el campo **is_natively_compiled** de [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) para encontrar rápidamente los planes de consulta que haya generado la compilación de código nativa.  
   
--   El modo de captura del almacén de consultas no (el parámetro*QUERY_CAPTURE_MODE* de la instrucción **ALTER TABLE** ) no afecta a las consultas de módulos compilados de forma nativa, ya que estas se capturan siempre, con independencia del valor configurado. Esto incluye la opción `QUERY_CAPTURE_MODE = NONE`.  
+-   El modo de captura del almacén de consultas no (el parámetro *QUERY_CAPTURE_MODE* de la instrucción **ALTER TABLE** ) no afecta a las consultas de módulos compilados de forma nativa, ya que estas se capturan siempre, con independencia del valor configurado. Esto incluye la opción `QUERY_CAPTURE_MODE = NONE`.  
   
 -   En la duración de la compilación de la consulta que captura el almacén de consultas se incluye únicamente el tiempo dedicado a la optimización de la consulta, antes de la generación del código nativo. Más concretamente, no incluye el tiempo de compilación de código de C y la generación de las estructuras internas necesarias para la generación de código de C.  
   

@@ -24,14 +24,14 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: e81bbff1dd2eedace6ac7a5e535db9e9689157e8
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 87ecdbd39bb5773b114358ed4d22e8c560b77f87
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734672"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504899"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Consulta y trabajo con la salida del Asistente para la optimización de motor de base de datos (DTA)
 
@@ -96,7 +96,7 @@ ms.locfileid: "92734672"
   
 3.  Una vez finalizada la nueva sesión de optimización, o bien después de que la herramienta haya cargado la sesión existente, haga clic en la opción **Aplicar recomendaciones** del menú **Acciones** .  
   
-4.  En el cuadro de diálogo **Aplicar recomendaciones** , elija **Aplicar ahora** o **Programar para más tarde**. Si elige **Programar para más tarde** , seleccione la fecha y la hora.  
+4.  En el cuadro de diálogo **Aplicar recomendaciones** , elija **Aplicar ahora** o **Programar para más tarde**. Si elige **Programar para más tarde**, seleccione la fecha y la hora.  
   
 5.  Haga clic en **Aceptar** para aplicar las recomendaciones.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "92734672"
   
 3.  Abra el archivo XML creado en el paso 2 en un editor XML, un editor de texto o en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Desplácese hasta el elemento **Configuration** . Copie y pegue la sección del elemento **Configuration** en una plantilla de archivo de entrada XML después del elemento **TuningOptions** . Guarde este archivo de entrada XML.  
   
-4.  En el archivo de entrada XML nuevo creado en el paso 3, especifique todas las opciones de optimización que quiera en el elemento **TuningOptions** , modifique la sección del elemento **Configuration** (agregue o elimine las estructuras de diseño físico según sea necesario para su análisis), guarde el archivo y valídelo según el esquema XML del Asistente para la optimización de motor de base de datos. Para obtener información sobre cómo modificar este archivo XML, vea [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+4.  En el archivo de entrada XML nuevo creado en el paso 3, especifique todas las opciones de optimización que quiera en el elemento **TuningOptions**, modifique la sección del elemento **Configuration** (agregue o elimine las estructuras de diseño físico según sea necesario para su análisis), guarde el archivo y valídelo según el esquema XML del Asistente para la optimización de motor de base de datos. Para obtener información sobre cómo modificar este archivo XML, vea [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 5.  Use el archivo XML creado en el paso 4 como entrada para la utilidad de línea de comandos **dta** . Para obtener información sobre cómo utilizar los archivos de entrada XML con esta herramienta, vea la sección "Optimizar una base de datos mediante la utilidad dta" en [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -166,7 +166,7 @@ ms.locfileid: "92734672"
   
 2.  Copie y pegue el [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) en el editor XML o en un editor de texto. Use este ejemplo para crear un archivo de entrada XML para su sesión de optimización. Para obtener información sobre la realización de esta tarea, vea la sección "Crear archivos de entrada XML" en [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-3.  Edite los elementos **TuningOptions** y **Configuration** en el archivo de entrada XML de ejemplo. En el elemento **TuningOptions** , especifique las estructuras de diseño físico que desea que el Asistente para la optimización de motor de base de datos tenga en cuenta durante la sesión de optimización. En el elemento **Configuration** , especifique las estructuras de diseño físico que coincidan con la configuración hipotética de las estructuras de diseño físico de la base de datos que desea que analice el Asistente para la optimización de motor de base de datos. Para obtener información sobre los atributos y elementos secundarios que puede usar con los elementos primarios **TuningOptions** y **Configuration** , vea [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Edite los elementos **TuningOptions** y **Configuration** en el archivo de entrada XML de ejemplo. En el elemento **TuningOptions** , especifique las estructuras de diseño físico que desea que el Asistente para la optimización de motor de base de datos tenga en cuenta durante la sesión de optimización. En el elemento **Configuration** , especifique las estructuras de diseño físico que coincidan con la configuración hipotética de las estructuras de diseño físico de la base de datos que desea que analice el Asistente para la optimización de motor de base de datos. Para obtener información sobre los atributos y elementos secundarios que puede usar con los elementos primarios **TuningOptions** y **Configuration**, vea [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Guarde el archivo de entrada con la extensión **.xml** .  
   
@@ -203,11 +203,11 @@ ms.locfileid: "92734672"
 4.  Si hace doble clic en el nombre de una sesión de optimización, se cargará su información en el Asistente para la optimización de motor de base de datos. Una vez cargada la información de la sesión, podrá elegir cualquiera de las pestañas para ver información sobre la sesión en cuestión.  
   
 ### <a name="evaluate-existing-tuning-sessions-as-hypothetical-configurations"></a>Evaluar las sesiones de optimización existentes como configuraciones hipotéticas  
- Siga los pasos que se indican a continuación para evaluar una sesión de optimización existente. La evaluación de una sesión de optimización implica la visualización y modificación de sus recomendaciones, seguidas de una nueva optimización. Por ejemplo, si decide que solo desea crear índices en **table1** , eliminará la creación de vistas indizadas y la creación de particiones de una recomendación de optimización existente. A continuación, el Asistente para la optimización de motor de base de datos creará una nueva sesión de optimización y optimizará la carga de trabajo de las bases de datos mediante las recomendaciones modificadas como configuración hipotética. Esto significa que el Asistente para la optimización de motor de base de datos optimiza la carga de trabajo de las bases de datos como si se hubieran implementado las recomendaciones, lo que permite realizar análisis de escenarios condicionales limitados. Estos análisis son limitados porque solo se puede elegir un subconjunto de una recomendación existente cuando se utiliza la GUI del Asistente para la optimización de motor de base de datos. Para realizar análisis de escenarios condicionales completos, especificando una configuración hipotética totalmente nueva que no sea un subconjunto de una sesión de optimización anterior, deberá usar el archivo de entrada XML del Asistente para la optimización de motor de base de datos con la utilidad de la línea de comandos **dta** .  
+ Siga los pasos que se indican a continuación para evaluar una sesión de optimización existente. La evaluación de una sesión de optimización implica la visualización y modificación de sus recomendaciones, seguidas de una nueva optimización. Por ejemplo, si decide que solo desea crear índices en **table1**, eliminará la creación de vistas indizadas y la creación de particiones de una recomendación de optimización existente. A continuación, el Asistente para la optimización de motor de base de datos creará una nueva sesión de optimización y optimizará la carga de trabajo de las bases de datos mediante las recomendaciones modificadas como configuración hipotética. Esto significa que el Asistente para la optimización de motor de base de datos optimiza la carga de trabajo de las bases de datos como si se hubieran implementado las recomendaciones, lo que permite realizar análisis de escenarios condicionales limitados. Estos análisis son limitados porque solo se puede elegir un subconjunto de una recomendación existente cuando se utiliza la GUI del Asistente para la optimización de motor de base de datos. Para realizar análisis de escenarios condicionales completos, especificando una configuración hipotética totalmente nueva que no sea un subconjunto de una sesión de optimización anterior, deberá usar el archivo de entrada XML del Asistente para la optimización de motor de base de datos con la utilidad de la línea de comandos **dta** .  
   
 ##### <a name="to-evaluate-an-existing-tuning-session"></a>Para evaluar una sesión de optimización existente  
   
-1.  Tras iniciar el Asistente para la optimización de motor de base de datos, haga doble clic en una sesión de optimización en la mitad superior del **Monitor de sesión** , que cargará la información de sesión en el Asistente para la optimización de motor de base de datos.  
+1.  Tras iniciar el Asistente para la optimización de motor de base de datos, haga doble clic en una sesión de optimización en la mitad superior del **Monitor de sesión**, que cargará la información de sesión en el Asistente para la optimización de motor de base de datos.  
   
 2.  Haga clic en la pestaña **Progreso** para comprobar el registro de optimización, que incluye información de errores sobre todos los eventos de la carga de trabajo que el Asistente para la optimización de motor de base de datos no pudo optimizar. Esta información le ayudará a evaluar la eficacia de la carga de trabajo.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "92734672"
   
 ##### <a name="to-create-new-tuning-sessions-by-cloning-existing-sessions"></a>Para crear nuevas sesiones de optimización mediante la clonación de sesiones existentes  
   
-1.  Tras iniciar el Asistente para la optimización de motor de base de datos, haga doble clic en una sesión de optimización en la mitad superior del **Monitor de sesión** , que cargará la información de sesión en el Asistente para la optimización de motor de base de datos.  
+1.  Tras iniciar el Asistente para la optimización de motor de base de datos, haga doble clic en una sesión de optimización en la mitad superior del **Monitor de sesión**, que cargará la información de sesión en el Asistente para la optimización de motor de base de datos.  
   
 2.  En el menú **Acciones** , haga clic en **Clonar sesión**.  
   

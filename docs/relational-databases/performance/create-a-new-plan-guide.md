@@ -13,14 +13,14 @@ helpviewer_keywords:
 - creating plan guides
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 46a3cc2e95093a9d4d3a69f1b5ca0e1eddb38d21
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: b8f96167fff7c5d36209d43eedbbd53bc1daffee
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457357"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505329"
 ---
 # <a name="create-a-new-plan-guide"></a>Crear una nueva guía de plan
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,7 @@ Una guía de plan aplica un plan de consulta fijo, y/o sugerencias de consulta, 
   
 4.  En el cuadro **Instrucción** , escriba la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] con la que se aplicará la guía de plan.  
   
-5.  En la lista **Tipo de ámbito** , seleccione el tipo de entidad en el que aparecerá la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] . Así se especifica el contexto para hacer coincidir la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] con la guía de plan. Los valores posibles son **OBJECT**, **SQL**y **TEMPLATE**.  
+5.  En la lista **Tipo de ámbito** , seleccione el tipo de entidad en el que aparecerá la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] . Así se especifica el contexto para hacer coincidir la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] con la guía de plan. Los valores posibles son **OBJECT**, **SQL** y **TEMPLATE**.  
   
 6.  En el cuadro **Lote de ámbito** , escriba el texto del lote en el que aparecerá la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] . El texto del lote no puede incluir una instrucción `USE`*database*. El cuadro **Lote de ámbito** solo está disponible cuando **SQL** se ha seleccionado como tipo de ámbito. Si no escribe nada en el cuadro Lote de ámbito cuando SQL es el tipo de ámbito, el valor del texto del lote se establece en el mismo valor que está en el cuadro **Instrucción** .  
   

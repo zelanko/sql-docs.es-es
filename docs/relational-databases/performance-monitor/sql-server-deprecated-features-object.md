@@ -14,14 +14,14 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a833e7029697693a6620ce5196a10b6ef95acc8f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4e6e6ae53bfc9cf3c6c702e9caf8a1a9bdaf29a1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890925"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505728"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |CREATE TRIGGER WITH APPEND|Se encontró una instrucción CREATE TRIGGER con la cláusula WITH APPEND. Vuelva a crear el desencadenador entero en su lugar. Se produce una vez por cada uso en una instrucción DDL.|  
 |CREATE_DROP_DEFAULT|Se encontró la sintaxis CREATE DEFAULT o DROP DEFAULT. Vuelva a escribir el comando utilizando la opción DEFAULT de CREATE TABLE o ALTER TABLE. Se produce una vez por cada compilación.|  
 |CREATE_DROP_RULE|Se encontró la sintaxis CREATE RULE. Reescriba el comando utilizando las restricciones. Se produce una vez por cada compilación.|  
-|Data types: text ntext or image|Se encontraron los tipos de datos **text**, **ntext**o **image** . Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext**y **image** . Se produce una vez por cada consulta.|  
+|Data types: text ntext or image|Se encontraron los tipos de datos **text**, **ntext** o **image** . Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext** y **image** . Se produce una vez por cada consulta.|  
 ||Número total de veces que una base de datos se cambió al nivel de compatibilidad 80. Planee actualizar la base de datos y la aplicación antes de la versión siguiente. También se produce cuando se inicia una base de datos en el nivel de compatibilidad 80.|  
 |Niveles de compatibilidad de la base de datos 100, 110. 120|Número total de veces que el nivel de compatibilidad de una base de datos ha cambiado. Planee actualizar la base de datos y la aplicación en una versión futura. También se produce cuando se inicia una base de datos situada en un nivel de compatibilidad en desuso.|  
 |DATABASE_MIRRORING|Se encontraron referencias a la característica de creación de reflejo de la base de datos. Planee la actualización a Grupos de disponibilidad AlwaysOn, o si ejecuta una edición de SQL Server que no admite Grupos de disponibilidad AlwaysOn, planee la migración al trasvase de registros.|  
@@ -266,10 +266,10 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |sysusers|Se encontraron referencias a sysusers. Utilice en su lugar sys.database_principals. Se produce una vez por cada compilación.|  
 |Sugerencia de table sin WITH|Se encontró una instrucción que utilizaba sugerencias de tabla pero no usaba la palabra clave WITH. Modifique las instrucciones para incluir la palabra WITH. Se produce una vez por cada compilación.|  
 |Opción de tabla Text in row|Se encontraron referencias a la opción de tabla 'text in row'. Utilice sp_tableoption 'large value types out of row' en su lugar. Se produce una vez por cada consulta.|  
-|TEXTPTR|Se encontraron referencias a la función TEXTPTR. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext**y **image** . Se produce una vez por cada consulta.|  
-|TEXTVALID|Se encontraron referencias a la función TEXTVALID. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext**y **image** . Se produce una vez por cada consulta.|  
+|TEXTPTR|Se encontraron referencias a la función TEXTPTR. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext** y **image** . Se produce una vez por cada consulta.|  
+|TEXTVALID|Se encontraron referencias a la función TEXTVALID. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext** y **image** . Se produce una vez por cada consulta.|  
 |timestamp|Número total de veces que el tipo de datos **timestamp** obsoleto se encontró en una instrucción DDL. En su lugar, use el tipo de datos **rowversion** .|  
-|UPDATETEXT o WRITETEXT|Se encontró la instrucción WRITETEXT o UPDATETEXT. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext**y **image** . Se produce una vez por cada consulta.|  
+|UPDATETEXT o WRITETEXT|Se encontró la instrucción WRITETEXT o UPDATETEXT. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext** y **image** . Se produce una vez por cada consulta.|  
 |USER_ID|Se encontraron referencias a la función USER_ID. Utilice en su lugar la función DATABASE_PRINCIPAL_ID. Se produce una vez por cada compilación.|  
 |Uso de OLEDB para servidores vinculados||  
 |Formato de almacenamiento vardecimal|Se encontró que se usa el de formato de almacenamiento **vardecimal** . En su lugar, use la compresión de datos.|  

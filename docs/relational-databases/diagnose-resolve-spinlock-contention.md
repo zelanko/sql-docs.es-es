@@ -3,18 +3,18 @@ title: 'Notas del producto: Diagnóstico y resolución de la contención de bloq
 description: En este artículo se profundiza en el diagnóstico y la resolución de la contención de bloqueos por subproceso en SQL Server. Fue publicado originalmente por el equipo de SQLCAT de Microsoft.
 ms.date: 09/30/2020
 ms.prod: sql
-ms.reviewer: jroth
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf22570ae96e0ee2a839088e6848443d0c9dddd9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 6ecce46a04943d36dc6d821d6a3457b056f00356
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91811861"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506319"
 ---
 # <a name="diagnose-and-resolve-spinlock-contention-on-sql-server"></a>Diagnóstico y resolución de contención de bloqueos por subproceso en SQL Server
 
@@ -598,4 +598,4 @@ where snap_time = @previous_snap_time
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre las herramientas de supervisión, consulte [Herramientas de supervisión y optimización del rendimiento](./performance/performance-monitoring-and-tuning-tools.md).
+Para obtener más información sobre las herramientas de supervisión del rendimiento, vea [Herramientas de supervisión y optimización del rendimiento](./performance/performance-monitoring-and-tuning-tools.md).

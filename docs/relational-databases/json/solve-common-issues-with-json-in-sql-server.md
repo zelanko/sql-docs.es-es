@@ -13,15 +13,15 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d898f2e0c61b0775d9094580e319640f2aeadf2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 30e1204a188c4b71c001bd4c0d00c0df3ce9200f
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490916"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595136"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Resolver problemas comunes con JSON en SQL Server
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
  Encuentre respuestas en este artículo a algunas preguntas habituales sobre la compatibilidad integrada de JSON en SQL Server.  
  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - compression [SQL Server], row
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbe2358e2be461666378cc18c5a735a71574f17a
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 829229371dfecd55a56fdbb9a6530635a6170904
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456357"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506360"
 ---
 # <a name="row-compression-implementation"></a>Row Compression Implementation
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "86456357"
   
 -   Reduce la sobrecarga de metadatos asociada al registro. Estos metadatos son información sobre las columnas, sus longitudes y desplazamientos. En algunos casos, la sobrecarga de los metadatos podría ser mayor que en el formato de almacenamiento anterior.  
   
--   Emplea el formato de almacenamiento de longitud variable para los tipos numéricos (por ejemplo, **integer**, **decimal**y **float**) y para los tipos que están basados en tipos numéricos (por ejemplo, **datetime** y **money**).  
+-   Emplea el formato de almacenamiento de longitud variable para los tipos numéricos (por ejemplo, **integer**, **decimal** y **float**) y para los tipos que están basados en tipos numéricos (por ejemplo, **datetime** y **money**).  
   
 -   Almacena las cadenas de caracteres fijas utilizando el formato de longitud variable sin almacenar los caracteres en blanco.  
   
@@ -52,8 +52,8 @@ ms.locfileid: "86456357"
 |**bit**|Sí|La sobrecarga de metadatos hace que ocupe 4 bits.|  
 |**smallmoney**|Sí|Usa la representación de datos enteros utilizando un entero de 4 bytes. El valor de moneda se multiplica por 10.000 y el valor entero resultante se almacena quitando los dígitos situados después del separador decimal. Este tipo tiene una optimización de almacenamiento similar a la de los tipos enteros.|  
 |**money**|Sí|Usa la representación de datos enteros utilizando un entero de 8 bytes. El valor de moneda se multiplica por 10.000 y el valor entero resultante se almacena quitando los dígitos situados después del separador decimal. Este tipo tiene un intervalo mayor que **smallmoney**. Este tipo tiene una optimización de almacenamiento similar a la de los tipos enteros.|  
-|**float**|Sí|Los bytes menos significativos con ceros no se almacenan. La compresión**float** se aplica principalmente a valores no decimales de mantisa.|  
-|**real**|Sí|Los bytes menos significativos con ceros no se almacenan. La compresión**real** se aplica principalmente a valores no decimales de mantisa.|  
+|**float**|Sí|Los bytes menos significativos con ceros no se almacenan. La compresión **float** se aplica principalmente a valores no decimales de mantisa.|  
+|**real**|Sí|Los bytes menos significativos con ceros no se almacenan. La compresión **real** se aplica principalmente a valores no decimales de mantisa.|  
 |**smalldatetime**|No|Usa la representación de datos enteros con dos enteros de 2 bytes. La fecha toma 2 bytes. Es el número de días desde el 1/1/1901. Necesita 2 bytes que se inician en 1902. Por lo tanto, no se produce ningún ahorro después de ese punto.<br /><br /> El tiempo es el número de minutos desde medianoche. Los valores de tiempo situados ligeramente después de 4 a.m. empiezan a utilizar el segundo byte.<br /><br /> Si se usa solo **smalldatetime** para representar una fecha (un caso común), el tiempo será 0.0. La compresión ahorra 2 bytes almacenando el tiempo en el formato de byte más significativo para la compresión de fila.|  
 |**datetime**|Sí|Usa la representación de datos enteros utilizando dos enteros de 4 bytes. El valor entero representa el número de días con la fecha base 1/1/1900. Los 2 primeros bytes pueden representar hasta el año 2079. La compresión siempre puede guardar aquí 2 bytes hasta ese punto. Cada valor entero representa 3,33 milisegundos. La compresión agota los primeros 2 bytes en los primeros cinco minutos y necesita el cuarto byte después de las 4 p.m. Por consiguiente, la compresión puede guardar solo 1 byte después de las 4 p.m. Cuando **datetime** se comprime como cualquier otro entero, la compresión ahorra 2 bytes en la fecha.|  
 |**date**|No|Usa la representación de datos enteros con 3 bytes. Representa la fecha desde 1/1/0001. Para las fechas contemporáneas, la compresión de fila utiliza los 3 bytes. No se obtiene ningún tipo de ahorro.|  

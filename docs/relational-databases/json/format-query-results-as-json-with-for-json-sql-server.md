@@ -15,16 +15,16 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3621fcc105d7b03d2347bc723f2ddb552bc9e81
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 852cb235738316312794a963879e49f1a5eb7ee6
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765714"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595226"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Dar formato JSON a los resultados de consulta con FOR JSON (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
 Dé formato JSON a los resultados de las consultas o exporte datos de SQL Server como JSON mediante la adición de la cláusula **FOR JSON** a una instrucción **SELECT**. Use la cláusula **FOR JSON** para simplificar las aplicaciones cliente mediante la delegación del formato de la salida JSON desde la aplicación a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) es el editor de consultas recomendado para las consultas JSON porque da formato automáticamente a los resultados JSON (como se muestra en este artículo), en lugar de mostrar una cadena plana.
   

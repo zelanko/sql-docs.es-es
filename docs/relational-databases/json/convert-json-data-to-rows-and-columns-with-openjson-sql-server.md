@@ -15,15 +15,15 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c92c89d86f14f108e1d21643da7b578d6a2f800
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 519d66511b71cb0045623b239cc82d0e80791968
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88499373"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595093"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>Análisis y transformación de datos JSON con OPENJSON (SQL Server)
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 La función de conjunto de filas **OPENJSON** convierte texto JSON en un conjunto de filas y columnas. Una vez que transforma una colección de JSON en un conjunto de filas con **OPENJSON**, puede ejecutar cualquier consulta SQL en los datos devueltos o insertarlos en una tabla de SQL Server. 
   

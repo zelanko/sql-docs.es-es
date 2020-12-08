@@ -11,14 +11,14 @@ helpviewer_keywords:
 - resource pools [SQL Server], create
 - Resource Governor, resource pool create
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: cc46e2e759dbfec54064975281101cb694039786
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a37ffa8d49f850d25aeb815683d9f3541e24bb64
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457547"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506623"
 ---
 # <a name="create-a-resource-pool"></a>Crear un grupo de recursos de servidor
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "86457547"
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta e incluyendo el nodo **Regulador de recursos**.  
   
-2.  Haga clic con el botón derecho en **Regulador de recursos**y, luego, haga clic en **Propiedades**.  
+2.  Haga clic con el botón derecho en **Regulador de recursos** y, luego, haga clic en **Propiedades**.  
   
 3.  En la cuadrícula **Grupos de recursos de servidor** , haga clic en la primera columna de la fila vacía. Esta columna tiene como etiqueta un asterisco (*).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "86457547"
   
 5.  Haga clic o doble clic en cualquier otra celda de la fila que desea cambiar, y especifique los nuevos valores.  
   
-6.  Haga clic en **Aceptar**para guardar los cambios.  
+6.  Haga clic en **Aceptar** para guardar los cambios.  
   
 ##  <a name="create-a-resource-pool-using-transact-sql"></a><a name="CreRPTSQL"></a> Crear un grupo de recursos de servidor mediante Transact-SQL  
  **Para crear un grupo de recursos de servidor con [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

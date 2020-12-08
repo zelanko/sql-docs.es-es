@@ -11,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data compression [SQL Server], disabling
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0fd426cecf7fa74e3f45ee13e9d508c6f36a4bb7
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c2b557b1fe9c73c9672eb2a02afc2fb27c5ae0ea
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86459047"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506371"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Deshabilitar compresión de una tabla o un índice
 
@@ -72,14 +72,14 @@ ms.locfileid: "86459047"
   
      Las siguientes opciones están disponibles en la página de **Seleccionar el tipo de compresión** :  
   
-     Casilla**Usar el mismo tipo de compresión para todas las particiones**  
-     Active esta casilla para configurar el mismo valor de compresión para todas las particiones. Esto habilita el cuadro de selección y deshabilita la columna **Tipo de compresión** en la cuadrícula. Cuando se activa, las opciones de la lista adyacente son **Ninguna**, **Fila**y **Página**.  
+     Casilla **Usar el mismo tipo de compresión para todas las particiones**  
+     Active esta casilla para configurar el mismo valor de compresión para todas las particiones. Esto habilita el cuadro de selección y deshabilita la columna **Tipo de compresión** en la cuadrícula. Cuando se activa, las opciones de la lista adyacente son **Ninguna**, **Fila** y **Página**.  
   
      **Número de partición**  
      Muestra una lista con cada partición en la tabla o el índice. Esta columna es de solo lectura.  
   
      **Tipo de compresión**  
-     Seleccione la opción de compresión para cada partición. No estará disponible cuando la casilla **Usar el mismo tipo de compresión para todas las particiones** esté activada. Las opciones son **Ninguna**, **Fila**y **Página**.  
+     Seleccione la opción de compresión para cada partición. No estará disponible cuando la casilla **Usar el mismo tipo de compresión para todas las particiones** esté activada. Las opciones son **Ninguna**, **Fila** y **Página**.  
   
      **Límite**  
      Muestra el límite de la partición. Esta columna es de solo lectura.  
@@ -137,7 +137,7 @@ ms.locfileid: "86459047"
   
                 -   Si selecciona **Día**, especifique la fecha del mes que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si quiere que la programación de trabajo se ejecute el decimoquinto día de cada mes, seleccione **Día** y escriba "15" en el primer cuadro y "2" en el segundo. Tenga en cuenta que el mayor número permitido en el segundo cuadro es "99".  
   
-                -   Si selecciona **El**, seleccione el día concreto de la semana del mes en que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si quiere que la programación de trabajo se ejecute el último día de la semana de cada mes, seleccione **Día**, seleccione **último** en la primera lista y **día de la semana** en la segunda y, después, escriba "2" en el último cuadro. En las primeras dos listas, también puede seleccionar **primero**, **segundo**, **tercero**o **cuarto**, así como días de la semana concretos (por ejemplo: domingo o miércoles). Tenga en cuenta que el mayor número permitido en el último cuadro es "99".  
+                -   Si selecciona **El**, seleccione el día concreto de la semana del mes en que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si quiere que la programación de trabajo se ejecute el último día de la semana de cada mes, seleccione **Día**, seleccione **último** en la primera lista y **día de la semana** en la segunda y, después, escriba "2" en el último cuadro. En las primeras dos listas, también puede seleccionar **primero**, **segundo**, **tercero** o **cuarto**, así como días de la semana concretos (por ejemplo: domingo o miércoles). Tenga en cuenta que el mayor número permitido en el último cuadro es "99".  
   
         2.  Debajo de **Frecuencia diaria**, especifique la frecuencia con que se repite la programación de trabajo en el día en que se ejecuta:  
   
@@ -176,7 +176,7 @@ ms.locfileid: "86459047"
      Proporciona los mensajes de error o de advertencia devueltos por el proceso.  
   
      **Report**  
-     Crea un informe que contiene los resultados del Asistente para la creación de particiones. Las opciones son **Ver informe**, **Guardar informe en archivo**, **Copiar informe al Portapapeles**y **Enviar informe como correo electrónico**.  
+     Crea un informe que contiene los resultados del Asistente para la creación de particiones. Las opciones son **Ver informe**, **Guardar informe en archivo**, **Copiar informe al Portapapeles** y **Enviar informe como correo electrónico**.  
   
      **Ver informe**  
      Abre el cuadro de diálogo **Ver informe** , que contiene un informe de texto del progreso del Asistente para la creación de particiones.  

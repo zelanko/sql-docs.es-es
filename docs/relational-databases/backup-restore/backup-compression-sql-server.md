@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c39b9520bebf08cf523bece5b2c9bab78675138d
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 278ee9ecf44a90574d212e761089127342b2c9be
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129346"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563131"
 ---
 # <a name="backup-compression-sql-server"></a>Compresión de copia de seguridad (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe la compresión de copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluidas las restricciones, las ventajas y desventajas de la compresión de las copias de seguridad respecto al rendimiento, la configuración de la compresión de copias de seguridad y la razón de compresión.  Solo se admite la compresión de copia de seguridad en las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]: Enterprise, Standard y Developer.  Cada edición de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y posteriores pueden restaurar una copia de seguridad cifrada. 
+  En este tema se describe la compresión de copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluidas las restricciones, las ventajas y desventajas de la compresión de las copias de seguridad respecto al rendimiento, la configuración de la compresión de copias de seguridad y la razón de compresión.  Solo se admite la compresión de copia de seguridad en las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Enterprise, Standard y Developer.  Cada edición de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y posteriores pueden restaurar una copia de seguridad cifrada. 
  
   
 ##  <a name="benefits"></a><a name="Benefits"></a> Ventajas  

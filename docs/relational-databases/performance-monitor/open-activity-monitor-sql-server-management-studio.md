@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Activity Monitor [SQL Server], opening
 - opening Activity Monitor
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d570faf51200708bcbd56371d68f53a12776d12e
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 5569286a31b9897b8fcca0eafea6830593d05183
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457477"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506019"
 ---
 # <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>Apertura del Monitor de actividad en SQL Server Management Studio (SSMS)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ Complete el cuadro de diálogo **Conectar con el servidor** si todavía no está
   
 1.  En el menú **Herramientas** , haga clic en **Opciones**.  
   
-2.  En el cuadro de diálogo **Opciones** , expanda **Entorno**y, luego, seleccione **Inicio**.  
+2.  En el cuadro de diálogo **Opciones** , expanda **Entorno** y, luego, seleccione **Inicio**.  
   
 3.  En la lista desplegable **Al inicio** , seleccione **Abrir el Explorador de objetos y el Monitor de actividad**.  
 
@@ -66,6 +66,6 @@ Complete el cuadro de diálogo **Conectar con el servidor** si todavía no está
   
 1.   Abra el Monitor de actividad.  
   
-2.   Haga clic con el botón derecho en **Información general**, seleccione **Intervalo de actualización**y después seleccione el intervalo en el que el Monitor de actividad debería obtener nueva información de la instancia.  
+2.   Haga clic con el botón derecho en **Información general**, seleccione **Intervalo de actualización** y después seleccione el intervalo en el que el Monitor de actividad debería obtener nueva información de la instancia.  
   
   

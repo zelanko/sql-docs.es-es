@@ -11,14 +11,14 @@ helpviewer_keywords:
 - workload groups [SQL Server], alter
 - Resource Governor, workload group alter
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 882d0f15b946e49bf33338707ddeb2ea5354f922
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 28b55fd7546db7378f79f98db213e7abd6aae40c
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457557"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506629"
 ---
 # <a name="change-workload-group-settings"></a>Cambiar la configuración del grupo de cargas de trabajo
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "86457557"
   
 4.  Haga clic o doble clic en las celdas de la fila que va a cambiar y especifique los nuevos valores.  
   
-5.  Haga clic en **Aceptar**para guardar los cambios.  
+5.  Haga clic en **Aceptar** para guardar los cambios.  
   
 ##  <a name="change-workload-group-settings-using-transact-sql"></a><a name="ChgWGTSQL"></a> Cambiar la configuración del grupo de cargas de trabajo mediante Transact-SQL  
  **Para cambiar la configuración del grupo de cargas de trabajo utilizando Transact-SQL**  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - workload groups [SQL Server], delete
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 160f7f998aa42ed86a9f46d9fab70e38ac1b2d02
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 27708e9a4b5a6d0a2863595e7ee25dccf77e5d2f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457907"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506609"
 ---
 # <a name="delete-a-workload-group"></a>Eliminar un grupo de cargas de trabajo
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "86457907"
 ##  <a name="delete-a-workload-group-using-object-explorer"></a><a name="DelWGObjEx"></a> Eliminar un grupo de carga de trabajo mediante el Explorador de objetos  
  **Para eliminar un grupo de cargas de trabajo mediante el Explorador de objetos**  
   
-1.  En[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta **Grupos de recursos de servidor**incluido.  
+1.  En[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta **Grupos de recursos de servidor** incluido.  
   
 2.  Expanda de forma recursiva **Grupos de recursos** hasta e incluido el nodo **Grupos de carga de trabajo** en el grupo de recursos de servidor que contiene el grupo de cargas de trabajo que va a eliminar.  
   

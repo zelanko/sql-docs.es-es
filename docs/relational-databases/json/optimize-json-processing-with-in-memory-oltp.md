@@ -11,15 +11,15 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73106658572120b2c679c2ac37e2770fbc1151a1
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 54a6f6b52229b76ce2ffefd0a89d11130d8e2656
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88490940"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595087"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Optimización del procesamiento de OLTP en memoria JSON
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 SQL Server y Azure SQL Database permiten trabajar con texto en formato JSON. Para aumentar el rendimiento de las consultas que procesan datos JSON, puede almacenar documentos JSON en tablas optimizadas para memoria mediante las columnas de cadena estándar (tipo NVARCHAR). Al almacenar datos JSON en tablas optimizadas para memoria, se aumenta el rendimiento de consulta gracias a que se aprovecha el acceso a los datos en memoria sin bloqueo.
 

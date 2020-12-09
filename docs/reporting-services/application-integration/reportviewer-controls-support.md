@@ -9,13 +9,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.date: 06/03/2020
-ms.openlocfilehash: 087be959ea39ba9b223b7bd5ae0e3e343d90a594
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.date: 12/01/2020
+ms.openlocfilehash: f6c713d579042425dc863b7d4f942229a091d0c4
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891485"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96502699"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>Compatibilidad con versiones de rama actual del Visor de informes
 
@@ -26,6 +26,20 @@ El **control Microsoft Report Viewer** es compatible con SQL Server Reporting Se
 Para obtener un historial de versiones del control de Visor de informes, vea los vínculos siguientes:
 
 - [Windows Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/)
-- [Formularios Web Forms ASP.NET](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
+- [ASP.NET Web Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
 
-Para más información sobre la versión actual del control Visor de informes, puede revisar el [blog](/archive/blogs/sqlrsteamblog/report-viewer-2016-control-update-now-available) siguiente.
+## <a name="application-server-and-report-server-combinations"></a>Combinaciones de servidores de aplicaciones y servidores de informes
+
+Algunas características del control del Visor de informes se basan en los comportamientos predeterminados del sistema operativo. Por lo tanto, puede que requieran la ejecución de la misma versión para el cliente (el servidor de aplicaciones que ejecuta el control del Visor de informes) y el servidor (que ejecuta Reporting Services). Se admiten las siguientes combinaciones de servidor de aplicaciones y servidor de informes:
+
+| Servidor de aplicaciones | Servidor de informes |
+| :----------------- | :------ |
+| Windows Server 2012 | Windows Server 2012 |
+| Windows Server 2012 | Windows Server 2012 R2 |
+| Windows Server 2012 R2 | Windows Server 2012 R2 |
+| Windows Server 2012 R2 | Windows Server 2012 |
+| Windows Server 2016 y versiones posteriores | Windows Server 2016 y versiones posteriores |
+
+## <a name="next-steps"></a>Pasos siguientes
+
+Para obtener más información sobre el control del Visor de informes, vea [Integración de Reporting Services con los controles del Visor de informes: Introducción](integrating-reporting-services-using-reportviewer-controls-get-started.md).

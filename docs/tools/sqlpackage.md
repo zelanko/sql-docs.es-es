@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: ee78b145965c17ff0a496611c6506d23df1a31a3
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: 7894ea12ef77a7fb07a61ff454f27150812c7dfb
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384504"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443069"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -110,7 +110,7 @@ Una acción de extracción de SqlPackage.exe crea un esquema de una base de dato
 
 ### <a name="properties-specific-to-the-extract-action"></a>Propiedades específicas de la acción Extract
 
-|Propiedad|Valor|Descripción|
+|Propiedad|Value|Descripción|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Especifica el tiempo de espera de comando en segundos cuando se ejecutan consultas en SQL Server.|
 |**/p:**|DacApplicationDescription=(STRING)|Define la descripción de la aplicación que se va a guardar en los metadatos del DACPAC.|
@@ -176,7 +176,7 @@ Una operación de publicación de SqlPackage.exe actualiza incrementalmente el e
 
 ### <a name="properties-specific-to-the-publish-action"></a>Propiedades específicas de la acción Publish
 
-|Propiedad|Valor|Descripción|
+|Propiedad|Value|Descripción|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Especifica los argumentos de colaborador de implementación adicionales para los colaboradores de implementación. Debe ser una lista de valores delimitada por punto y coma.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Especifica colaboradores de implementación adicionales que se deben ejecutar cuando se implementa el dacpac. Debe ser una lista delimitada por punto y coma de nombres completos o identificadores de los colaboradores de compilación.|
@@ -245,7 +245,7 @@ Una operación de publicación de SqlPackage.exe actualiza incrementalmente el e
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Especifica si las diferencias en cuanto al periodo durante el cual SQL Server conserva la ruta en la tabla de enrutamiento se deben omitir o si hay que actualizar al publicar en una base de datos.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Especifica si las diferencias en los caracteres de punto y coma entre las instrucciones T-SQL se ignorarán o se actualizarán al publicar en una base de datos.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Especifica si las diferencias en las opciones de tabla se ignorarán o se actualizarán al publicar en una base de datos.|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Especifica si las diferencias en las opciones de partición de tabla se ignorarán o se actualizarán al publicar en una base de datos.  Esta opción solo se aplica a bases de datos del grupo de SQL de Azure Synapse Analytics (almacenamiento de datos).|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Especifica si las diferencias en las opciones de partición de tabla se ignorarán o se actualizarán al publicar en una base de datos.  Esta opción solo se aplica a bases de datos del grupo de SQL dedicado de Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Especifica si las diferencias en los objetos de configuración de usuario se ignorarán o se actualizarán al publicar en una base de datos.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Especifica si las diferencias en los espacios en blanco se ignorarán o se actualizarán al publicar en una base de datos.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Especifica si las diferencias en el valor de la cláusula WITH NOCHECK de las restricciones CHECK se omiten o hay que actualizar al publicar.|
@@ -309,7 +309,7 @@ Una acción de exportación de SqlPackage.exe exporta una base de datos activa d
 
 ### <a name="properties-specific-to-the-export-action"></a>Propiedades específicas de la acción Export
 
-|Propiedad|Valor|Descripción|
+|Propiedad|Value|Descripción|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Especifica el tiempo de espera de comando en segundos cuando se ejecutan consultas en SQL Server.|
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Especifica el tiempo de expiración de bloqueo de la base de datos en segundos al ejecutar consultas en SQLServer. Use -1 para esperar indefinidamente.|
@@ -349,7 +349,7 @@ Una acción de importación de SqlPackage.exe importa los datos de esquema y tab
 
 Propiedades específicas de la acción Import:
 
-|Propiedad|Valor|Descripción|
+|Propiedad|Value|Descripción|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Especifica el tiempo de espera de comando en segundos cuando se ejecutan consultas en SQL Server.|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Define la edición de la instancia de Azure SQL Database.|
@@ -404,7 +404,7 @@ Las acciones de informe **SqlPackage.exe** crean un informe XML de los cambios q
 
 ## <a name="properties-specific-to-the-deployreport-action"></a>Propiedades específicas de la acción DeployReport
 
-|Propiedad|Valor|Descripción|
+|Propiedad|Value|Descripción|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Especifica los argumentos de colaborador de implementación adicionales para los colaboradores de implementación. Debe ser una lista de valores delimitada por punto y coma.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Especifica colaboradores de implementación adicionales que se deben ejecutar cuando se implementa el dacpac. Debe ser una lista delimitada por punto y coma de nombres completos o identificadores de los colaboradores de compilación.|
@@ -569,7 +569,7 @@ Las acciones del script **SqlPackage.exe** crean un script de actualización inc
 
 ### <a name="properties-specific-to-the-script-action"></a>Propiedades específicas de la acción Script
 
-|Propiedad|Valor|Descripción|
+|Propiedad|Value|Descripción|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Especifica los argumentos de colaborador de implementación adicionales para los colaboradores de implementación. Debe ser una lista de valores delimitada por punto y coma.
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Especifica colaboradores de implementación adicionales que se deben ejecutar cuando se implementa el dacpac. Debe ser una lista delimitada por punto y coma de nombres completos o identificadores de los colaboradores de compilación.

@@ -2,7 +2,7 @@
 title: Uso de Azure Active Directory
 description: Obtenga información sobre los métodos de autenticación de Azure Active Directory disponibles en Microsoft OLE DB Driver for SQL Server que permiten conectarse a bases de datos Azure SQL.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: bace88bd8ccf42cbef96a34ddb2af2593cedd7be
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 71f95203e006141649db7b884b56d085f562974b
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727306"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504723"
 ---
 # <a name="using-azure-active-directory"></a>Uso de Azure Active Directory
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,15 +24,20 @@ ms.locfileid: "91727306"
 
 ## <a name="purpose"></a>Propósito
 
-A partir de la versión 18.2.1, Microsoft OLE DB Driver for SQL Server permite que las aplicaciones OLE DB se conecten a una instancia de Azure SQL Database mediante una identidad federada. Entre los nuevos métodos de autenticación se incluyen:
+
+A partir de la versión [18.2.1](../release-notes-for-oledb-driver-for-sql-server.md#1821), Microsoft OLE DB Driver for SQL Server permite que las aplicaciones OLE DB se conecten a una instancia de Azure SQL Database mediante una identidad federada. Entre los nuevos métodos de autenticación se incluyen:
 - Identificador y contraseña de inicio de sesión de Azure Active Directory
 - Token de acceso de Azure Active Directory
 - Autenticación integrada de Azure Active Directory
 - Identificador y contraseña de inicio de sesión de SQL
 
-La versión 18.3 agrega compatibilidad con los siguientes métodos de autenticación:
+
+La versión [18.3.0 ](../release-notes-for-oledb-driver-for-sql-server.md#1830)agrega compatibilidad con los siguientes métodos de autenticación:
 - Autenticación interactiva de Azure Active Directory
 - Autenticación de identidad administrada de Azure Active Directory
+
+La versión [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) agrega compatibilidad con los siguientes métodos de autenticación:
+- Autenticación de entidad de servicio de Azure Active Directory
 
 > [!NOTE]
 > No se admite el uso de `DataTypeCompatibility` los siguientes modos de autenticación con (o `80` su propiedad correspondiente) establecer en **no** es compatible
@@ -40,7 +45,8 @@ La versión 18.3 agrega compatibilidad con los siguientes métodos de autenticac
 > - Autenticación de Azure Active Directory con el token de acceso
 > - Autenticación integrada de Azure Active Directory
 > - Autenticación interactiva de Azure Active Directory
-> - Autenticación de identidad administrada de Azure Active Directory
+> - Autenticación de identidades administradas de Azure Active Directory
+> - Autenticación de entidad de servicio de Azure Active Directory
 
 ## <a name="connection-string-keywords-and-properties"></a>Palabras clave de cadena de conexión y propiedades
 Se han agregado las siguientes palabras clave de cadena de conexión para admitir la autenticación de Azure Active Directory:
@@ -142,6 +148,13 @@ En esta sección se muestran ejemplos de palabras clave de cadena de conexión n
         > Server=[server];Database=[database];**Authentication=ActiveDirectoryMSI**;UID=[Object ID];Encrypt=yes
     - Identidad administrada asignada por el sistema:
         > Server=[server];Database=[database];**Authentication=ActiveDirectoryMSI**;Encrypt=yes
+
+### <a name="azure-active-directory-service-principal-authentication"></a>Autenticación de entidad de servicio de Azure Active Directory
+
+- Usar `IDataInitialize::GetDataSource`:
+    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryServicePrincipal**;User ID=[Application (client) ID];Password=[Application (client) secret];Use Encryption for Data=true
+- Usar `DBPROP_INIT_PROVIDERSTRING`:
+    > Server=[server];Database=[database];**Authentication=ActiveDirectoryServicePrincipal**;UID=[Application (client) ID];PWD=[Application (client) secret];Encrypt=yes
 
 ## <a name="code-samples"></a>Ejemplos de código
 

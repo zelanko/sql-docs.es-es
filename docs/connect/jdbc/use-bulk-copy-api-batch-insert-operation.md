@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 14074b0136baf800b038e4b113325e81d65dc3e7
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943034"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442596"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Uso de la API de copia masiva para la operación de inserción por lotes
 
@@ -71,7 +71,7 @@ Si se produce un error en la consulta por errores no relacionados con "SQL Serve
 
 ## <a name="example"></a>Ejemplo
 
-A continuación aparece un código de ejemplo que muestra el caso de uso para una operación de inserción por lotes en Azure Synapse Analytics (SQL DW) de mil filas, para ambos escenarios (normal frente a API de copia masiva).
+A continuación aparece un código de ejemplo que muestra el caso de uso para una operación de inserción por lotes en Azure Synapse Analytics de mil filas, para ambos escenarios (normal frente a API de copia masiva).
 
 ```java
     public static void main(String[] args) throws Exception

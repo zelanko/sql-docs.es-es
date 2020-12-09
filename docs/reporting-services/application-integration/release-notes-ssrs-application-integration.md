@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión de los controles del Visor de informes
 description: Las notas de la versión de los controles del Visor de informes de WebForms y WinForms, relacionadas con Reporting Services.
-ms.date: 01/16/2020
+ms.date: 11/30/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -11,18 +11,25 @@ ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 ms.reviewer: maggies
 author: RhysSchmidtke
 ms.author: rhys
-ms.openlocfilehash: 1ed8d92f77a360d195c893c38ee08e642ee0b24a
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 7edb40b44108ebf66c9462e8c909fbbd9f39510f
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80752877"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443011"
 ---
 # <a name="release-notes-for-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>Notas de la versión de los controles del Visor de informes para WebForms y WinForms de SSRS
 
 Estas son las notas de la versión de los controles del Visor de informes de WebForms y WinForms, relacionadas con [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS).
 
 Para las notas de la versión de SSRS, consulte [Notas de la versión de SQL Server Reporting Services (SSRS) 2017 y versiones posteriores](../release-notes-reporting-services.md).
+
+## <a name="15014270"></a>150.1427.0
+| Descripción del cambio | Detalles |
+| :----------------- | :------ |
+| Correcciones de errores | Se ha corregido un problema con los vínculos que no parecían visitados después de hacer clic en ellos. |
+|           | Se ha corregido un problema de análisis de fecha y hora que afectaba a ciertas configuraciones regionales. |
+| &nbsp; | &nbsp; |
 
 ## <a name="15014040"></a>150.1404.0
 | Descripción del cambio | Detalles |

@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c452310bbc2813cb3d11ced51f680c7a1f66e5e0
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: af8f519e7fec6a440fcdce44ccebbcfab2f0e0a9
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235392"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443198"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -309,7 +309,7 @@ GO
         [Instancia administrada de SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
@@ -476,7 +476,7 @@ Especifica el tamaño máximo de la base de datos. El tamaño máximo debe cumpl
 |200 GB|N/D|√|√|√|√|
 |250 GB|N/D|√ (D)|√ (D)|√|√|
 |300 GB|N/D|√|√|√|√|
-|400 GB|N/D|√|√|√|√|
+|400 GB|N/A|√|√|√|√|
 |500 GB|N/D|√|√|√ (D)|√|
 |750 GB|N/D|√|√|√|√|
 |1024 GB|N/D|√|√|√|√ (D)|
@@ -788,7 +788,7 @@ ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
         **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
@@ -950,7 +950,7 @@ Proporciona la sintaxis e información relacionada para cambiar los atributos de
 
 ## <a name="syntax"></a>Sintaxis
 
-### <a name="sql-pool"></a>[Grupo de SQL](#tab/sqlpool)
+### <a name="dedicated-sql-pool"></a>[Grupo de SQL dedicado](#tab/sqlpool)
 ```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -974,7 +974,7 @@ ALTER DATABASE { database_name | CURRENT }
           | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
-### <a name="sql-on-demand-preview"></a>[SQL a petición (versión preliminar)](#tab/sqlod)
+### <a name="serverless-sql-pool"></a>[Grupo de SQL sin servidor](#tab/sqlod)
 ```syntaxsql
 ALTER DATABASE { database_name | Current } 
 { 
@@ -1109,7 +1109,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
         [Instancia administrada de SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;

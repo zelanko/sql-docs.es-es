@@ -2,7 +2,7 @@
 title: Nombres de entidad de seguridad de servicio (SPN) en conexiones de cliente (OLE DB) | Microsoft Docs
 description: Obtenga información sobre las propiedades y funciones miembro de OLE DB Driver for SQL Server compatibles con los nombres principales de servicio en aplicaciones cliente.
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5a97e889a8e36e0c9fc918f3f4724d283b8cfa5d
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 43e0972f3dde7be226ccac2bd4039dd7403ade03
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862235"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504749"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db-in-sql-server-native-client"></a>Nombres de entidad de seguridad de servicio (SPN) en conexiones de cliente (OLE DB) en SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88862235"
 |Nombre|Tipo|Uso|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR, solo lectura|Devuelve el método de autenticación que utiliza la conexión. El valor devuelto a la aplicación es el valor que Windows devuelve a OLE DB Driver for SQL Server. Estos son los valores posibles: <br />"NTLM", que se devuelve cuando una conexión se abre mediante la autenticación NTLM.<br />"Kerberos", que se devuelve cuando una conexión se abre mediante la autenticación Kerberos.<br /><br /> Si se ha abierto una conexión y no se puede determinar el método de autenticación, se devuelve VT_EMPTY.<br /><br /> Esta propiedad solo se puede leer cuando se ha inicializado un origen de datos. Si intenta leer la propiedad antes de que se haya inicializado un origen de datos, IDBProperties::GetProperies devolverá DB_S_ERRORSOCCURRED o DB_E_ERRORSOCCURRED, según corresponda, y DBPROPSTATUS_NOTSUPPORTED se establecerá en DBPROPSET_PROPERTIESINERROR para esta propiedad. Este comportamiento está de acuerdo con la especificación básica de OLE DB.|  
-|SSPROP_MUTUALLYAUTHENICATED|VT_BOOL, solo lectura|Devuelve VARIANT_TRUE si los servidores de la conexión se autenticaron mutuamente; de lo contrario, devuelve VARIANT_FALSE.<br /><br /> Esta propiedad solo se puede leer cuando se ha inicializado un origen de datos. Si hay un intento de leer la propiedad antes de que se haya inicializado un origen de datos, IDBProperties::GetProperies devolverá DB_S_ERRORSOCCURRED o DB_E_ERRORSOCCURRED, según corresponda, y DBPROPSTATUS_NOTSUPPORTED se establecerá en DBPROPSET_PROPERTIESINERROR para esta propiedad. Este comportamiento está de acuerdo con la especificación básica de OLE DB<br /><br /> Si este atributo se consulta para una conexión que no usó la autenticación de Windows, se devuelve VARIANT_FALSE.|  
+|SSPROP_MUTUALLYAUTHENTICATED|VT_BOOL, solo lectura|Devuelve VARIANT_TRUE si los servidores de la conexión se autenticaron mutuamente; de lo contrario, devuelve VARIANT_FALSE.<br /><br /> Esta propiedad solo se puede leer cuando se ha inicializado un origen de datos. Si hay un intento de leer la propiedad antes de que se haya inicializado un origen de datos, IDBProperties::GetProperies devolverá DB_S_ERRORSOCCURRED o DB_E_ERRORSOCCURRED, según corresponda, y DBPROPSTATUS_NOTSUPPORTED se establecerá en DBPROPSET_PROPERTIESINERROR para esta propiedad. Este comportamiento está de acuerdo con la especificación básica de OLE DB<br /><br /> Si este atributo se consulta para una conexión que no usó la autenticación de Windows, se devuelve VARIANT_FALSE.|  
   
 ## <a name="ole-db-api-support-for-spns"></a>Compatibilidad de API OLE DB con SPN  
  La tabla siguiente describe las funciones del miembro OLE DB que admiten SPN en conexiones de cliente:  

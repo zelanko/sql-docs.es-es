@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 2a04c986f9d9b5189a5ed0c2751c0df3cdd876e0
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 1cf7cf010724453aadcc3c93ef216e44d6a869fc
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126577"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419751"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Agrupación de conexiones de SQL Server (ADO.NET)
 
@@ -129,5 +129,5 @@ Se recomienda aprovechar las ventajas de los mecanismos de seguridad que se pued
 
 ## <a name="see-also"></a>Vea también
 
-- [Agrupar conexiones](connection-pooling.md)
+- [Agrupación de conexiones](connection-pooling.md)
 - [SQL Server y ADO.NET](./sql/index.md)

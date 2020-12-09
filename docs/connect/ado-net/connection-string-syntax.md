@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 40fc82cdc264951d1e776875a48b5a516b4b26a8
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f61b867b70825595a012b2167d2c63b13409a8e2
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126589"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442818"
 ---
 # <a name="connection-string-syntax"></a>Sintaxis de cadenas de conexión
 
@@ -69,7 +69,7 @@ Es preferible utilizar la autenticación de Windows para conectarse a SQL Server
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-Cuando se conecte a Azure SQL Database o a Azure SQL Data Warehouse y proporcione un inicio de sesión con el formato `user@servername`, asegúrese de que el valor `servername` del inicio de sesión coincida con el valor proporcionado para `Server=`.
+Cuando se conecte a Azure SQL Database o a Azure Synapse Analytics y proporcione un inicio de sesión con el formato `user@servername`, asegúrese de que el valor `servername` del inicio de sesión coincida con el valor proporcionado para `Server=`.
 
 > [!NOTE]
 > La autenticación de Windows tiene prioridad sobre los inicios de sesión de SQL Server. Si especifica Integrated Security=true junto con un nombre de usuario y una contraseña, se ignorarán el nombre de usuario y la contraseña, y se usará la autenticación de Windows.
@@ -128,4 +128,4 @@ Para obtener más información, vea [Usar el cifrado sin validación](/sql/relat
 ## <a name="see-also"></a>Vea también
 
 - [Cadenas de conexión](connection-strings.md)
-- [Conectarse a un origen de datos](connecting-to-data-source.md)
+- [Conexión a un origen de datos](connecting-to-data-source.md)

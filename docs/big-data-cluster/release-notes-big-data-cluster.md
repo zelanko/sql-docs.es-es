@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 02fbb46968d51bc4dbe730fcc7d575793063bcff
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
+ms.openlocfilehash: b3265c99e185f4a8fcbe68e400ab1277b1e72671
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631691"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442887"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Notas de la versión para los Clústeres de macrodatos de SQL Server 2019
 
@@ -113,8 +113,10 @@ Esta versión incluye mejoras y correcciones menores. En los siguientes artícul
 - [Administración del acceso al clúster de macrodatos en el modo de Active Directory](manage-user-access.md)
 - [Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en el modo de Active Directory](active-directory-deploy.md)
 - [Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en AKS en el modo de Active Directory](active-directory-deployment-aks.md)
-- [Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] con alta disponibilidad](deployment-high-availability.md)
-- [Configurar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](configure-cluster.md)
+- [Implementación de clústeres de macrodatos con el clúster privado de Azure Kubernetes Service (AKS)](private-deploy.md)
+- [Restricción del tráfico de salida de clústeres de macrodatos en el clúster privado de Azure Kubernetes Service (AKS)](private-restrict-egress-traffic.md)
+- [Implementación de clústeres de macrodatos de SQL Server con alta disponibilidad](deployment-high-availability.md)
+- [Configuración de un clúster de macrodatos de SQL Server](configure-cluster.md)
 - [Configuración de Apache Spark y Apache Hadoop en clústeres de macrodatos](configure-spark-hdfs.md)
 - [Propiedades de configuración de la instancia maestra de SQL Server](reference-config-master-instance.md)
 - [Propiedades de configuración de Apache Spark y Apache Hadoop (HDFS)](reference-config-spark-hadoop.md)

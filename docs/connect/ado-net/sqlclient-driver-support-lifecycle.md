@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: 30155a584de4e22692601a1dcf9551a67d4f580f
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: eef9e81c94c930b9f00689b41339d54a0f0302be
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011792"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442720"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>Ciclo de vida de soporte del controlador SqlClient
 
@@ -30,16 +30,21 @@ La biblioteca Microsoft.Data.SqlClient sigue la directiva de soporte técnico de
 
 ## <a name="microsoftdatasqlclient-release-cadence"></a>Cadencia de versión de Microsoft.Data.SqlClient
 
-Las nuevas versiones estables (GA) se publicarán cada 6 meses a partir de una cadencia regular a partir de la versión 1.2, junto con 2 a 3 versiones preliminares entre medio. Las partes interesadas y los mantenedores elegirán las versiones de soporte técnico a largo plazo (LTS) en función de unas cuantas calificaciones y de la respuesta de los clientes.
+Las nuevas versiones estables (GA) se publican cada 6 meses a partir de una cadencia regular a partir de la versión 1.2, junto con 2 a 3 versiones preliminares entre medio. Las partes interesadas y los mantenedores elegirán las versiones de soporte técnico a largo plazo (LTS) en función de unas cuantas calificaciones y de la respuesta de los clientes.
 
-### <a name="release-life-cycles"></a>Ciclos de vida de la versión
+### <a name="actively-supported-releases"></a>Versiones admitidas activamente
 
 | Versión | Fecha oficial de lanzamiento | Última versión de revisión | Fecha de publicación de la actualización acumulativa | Nivel de soporte técnico  | Finalización del soporte |
 | -- | -- | -- | -- | -- | -- |
 | 2.1 | 19 de noviembre de 2020 | 2.1.0 | 19 de noviembre de 2020 | Current | |
-| 2.0 | 16 de junio de 2020 | 2.0.1 | 25 de agosto de 2020 | Current | |
+| 2.0 | 16 de junio de 2020 | 2.0.1 | 25 de agosto de 2020 | Current | 19 de febrero de 2021 |
 | 1.1 | 20 de noviembre de 2019 | 1.1.3 | 15 de mayo de 2020 | LTS | 21 de noviembre de 2022 |
-| 1.0 | 28 de agosto de 2019 | 1.0.19269.1 | 26 de septiembre de 2019 | Current | 20 de febrero de 2020 |
+
+### <a name="out-of-support-releases"></a>Versiones fuera de soporte técnico
+
+| Versión | Fecha de publicación de la revisión más reciente | Última versión de revisión | Fin de soporte técnico |
+| -- | -- | -- | -- |
+| 1.0 | 26 de septiembre de 2019 | 1.0.19269.1 | 20 de febrero de 2020 |
 
 ### <a name="long-term-support-lts-releases"></a>Versiones de soporte técnico a largo plazo (LTS)
 
@@ -57,3 +62,20 @@ Las versiones actuales se admiten durante tres meses después de la versión act
 |2.0|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|
 |1,1|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|
 |1.0|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|
+
+## <a name="supported-os-versions"></a>Versiones de SO admitidas
+
+### <a name="support-for-net-framework-applications"></a>Compatibilidad con aplicaciones de .NET Framework
+
+Microsoft.Data.SqlClient es compatible con todos los sistemas operativos compatibles con .NET Framework 4.6 y versiones posteriores.
+
+[Requisitos de sistema de .NET Framework](/dotnet/framework/get-started/system-requirements).
+
+### <a name="support-for-net-core-applications"></a>Compatibilidad con aplicaciones .NET Core
+
+Microsoft.Data.SqlClient es compatible con todos los sistemas operativos compatibles con .NET Core v2.1 y versiones posteriores.
+
+[Directiva de ciclo de vida del sistema operativo compatible con .NET Core](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md).
+
+> [!NOTE]
+> El modo invariable de globalización no se admite actualmente.

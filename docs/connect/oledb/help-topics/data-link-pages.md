@@ -2,7 +2,7 @@
 title: Configuración de vínculo de datos universal (UDL) | Microsoft Docs
 description: Use la pestaña Conexión para especificar cómo conectarse a los datos mediante Microsoft OLE DB Driver for SQL Server.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: b691d24bb1d700a63e1ecfc9daca3bbfb5399800
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f8d9444864dfe144918374c6d10e1a9f403faff3
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727286"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504738"
 ---
 # <a name="universal-data-link-udl-configuration"></a>Configuración de vínculo de datos universal (UDL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ La pestaña Conexión es específica del proveedor y solo muestra las propiedade
 |Opción|Descripción|
 |---   |---        |
 |Seleccionar o especificar un nombre de servidor|Seleccione un nombre de servidor en la lista desplegable o escriba la ubicación del servidor donde se encuentra la base de datos a la que desea obtener acceso. La selección de la base de datos en el servidor es una acción independiente. Actualice la lista haciendo clic en "Actualizar".
-|Especificación de información para iniciar sesión en el servidor|Puede seleccionar las siguientes opciones de autenticación en esta lista desplegable: <ul><li>`Windows Authentication:` autenticación en SQL Server con las credenciales de la cuenta de Windows del usuario que ha iniciado sesión actualmente.</li><li>`SQL Server Authentication:` autenticación con el identificador y la contraseña de inicio de sesión.</li><li>`Active Directory - Integrated:` autenticación integrada con una identidad de Azure Active Directory. Este modo también se puede usar para la autenticación de Windows en SQL Server.</li><li>`Active Directory - Password:` autenticación de identificador de usuario y contraseña con una identidad de Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` autenticación interactiva con una identidad de Azure Active Directory. Este modo admite Microsoft Azure Multi-Factor Authentication (MFA).</li></ul>|
+|Especificación de información para iniciar sesión en el servidor|Puede seleccionar las siguientes opciones de autenticación en esta lista desplegable: <ul><li>`Windows Authentication:` autenticación en SQL Server con las credenciales de la cuenta de Windows del usuario que ha iniciado sesión actualmente.</li><li>`SQL Server Authentication:` autenticación con el identificador y la contraseña de inicio de sesión.</li><li>`Active Directory - Integrated:` autenticación integrada con una identidad de Azure Active Directory. Este modo también se puede usar para la autenticación de Windows en SQL Server.</li><li>`Active Directory - Password:` autenticación de identificador de usuario y contraseña con una identidad de Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` autenticación interactiva con una identidad de Azure Active Directory. Este modo admite Microsoft Azure Multi-Factor Authentication (MFA).</li><li>`Active Directory - Service Principal:` Autenticación con una entidad de servicio de Azure Active Directory. El **nombre de usuario** debe establecerse en el identificador de la aplicación (cliente). La **contraseña** debe establecerse en el secreto de la aplicación (cliente).</li></ul>|
 |Dirección SPN del servidor|Si utiliza una conexión de confianza, puede especificar un nombre principal de servicio (SPN) para el servidor.|
 |Nombre de usuario|Escriba el identificador de usuario que se usará en la autenticación al iniciar sesión en el origen de datos.|
 |Contraseña|Escriba la contraseña que se utilizará en la autenticación al iniciar sesión en el origen de datos.|

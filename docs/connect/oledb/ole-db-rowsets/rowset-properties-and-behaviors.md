@@ -2,7 +2,7 @@
 title: Propiedades y comportamientos de conjunto de filas (controlador OLE DB)
 description: Estas son las propiedades del conjunto de filas de OLE DB Driver for SQL Server, incluido el nombre y la descripción de la propiedad.
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b5d42db2a329290f13917b754a89232e30ae52ed
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: ff19eb334fceba0b49a88fd1f812ad5b320c762f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859992"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504746"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propiedades y comportamientos de conjuntos de filas
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Estas son las propiedades de los conjuntos de filas de OLE DB Driver for SQL Server.  
+  Estas son las propiedades de los conjuntos de filas de OLE DB Driver for SQL Server:
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
@@ -97,6 +97,7 @@ ms.locfileid: "88859992"
 |SSPROP_DEFERPREPARE|Columna: No<br /><br /> R (lectura) y W (escritura): Lectura/escritura<br /><br /> Escriba:  VT_BOOL<br /><br /> Valor predeterminado: VARIANT_TRUE<br /><br /> Descripción: VARIANT_TRUE: en una ejecución preparada, la preparación de comandos se aplaza hasta que se llama a **ICommand::Execute** o hasta que se realiza una operación de metapropiedad. Si la propiedad está establecida en<br /><br /> VARIANT_FALSE: la instrucción se prepara cuando se ejecuta **ICommandPrepare::Prepare**.|  
 |SSPROP_IRowsetFastLoad|Columna: No<br /><br /> R (lectura) y W (escritura): Lectura/escritura<br /><br /> Escriba:  VT_BOOL<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: establezca esta propiedad en VARIANT_TRUE para abrir un conjunto de filas de carga rápida mediante **IOpenRowset::OpenRowset**. No puede establecer esta propiedad en **ICommandProperties::SetProperties**.|  
 |SSPROP_ISSAsynchStatus|Columna: No.<br /><br /> R (lectura) y W (escritura): Lectura/escritura<br /><br /> Escriba:  VT_BOOL<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: establezca esta propiedad en VARIANT_TRUE para habilitar las operaciones asincrónicas con la interfaz [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md).|  
+|SSPROP_ISSDataClassification|R (lectura) y W (escritura): Lectura/escritura<br /><br />  Escriba:  VT_BOOL<br /><br /> Valor predeterminado: VARIANT_TRUE<br /><br /> Descripción: El controlador OLE DB Driver for SQL Server admite la recuperación de información de clasificación de confidencialidad mediante la interfaz [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md).|  
 |SSPROP_MAXBLOBLENGTH|Columna: No<br /><br /> R (lectura) y W (escritura): Lectura/escritura<br /><br /> Escriba:  VT_I4<br /><br /> Valor predeterminado: el proveedor no restringe el tamaño del texto devuelto por el servidor y el valor de propiedad se establece en su valor máximo. Por ejemplo, 2147483647.<br /><br /> Descripción: OLE DB Driver for SQL Server ejecuta una instrucción SET TEXTSIZE para restringir la longitud de los datos de objetos binarios grandes (BLOB) devueltos por una instrucción SELECT.|  
 |SSPROP_NOCOUNT_STATUS|Columna: NoCount<br /><br /> R (lectura) y W (escritura): Solo lectura<br /><br /> Escriba:  VT_BOOL<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: valor booleano que representa el estado de SET NOCOUNT ON/OFF en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> VARIANT_TRUE: cuando SET NOCOUNT ON<br /><br /> VARIANT_FALSE: cuando SET NOCOUNT OFF|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|Columna: No<br /><br /> R (lectura) y W (escritura): Lectura/escritura<br /><br /> Escriba:  VT_BSTR (1-2000 caracteres permitidos)<br /><br /> Valor predeterminado: cadena vacía.<br /><br /> Descripción: texto del mensaje de la notificación de consulta. Lo define el usuario y no tiene ningún formato definido.|  

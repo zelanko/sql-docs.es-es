@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6273f057b7733b787ed2ed8e8b61d23fd107fbd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d470cda4e0c5cf54bcce0827fff4e5f9b9d1acb7
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546850"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901068"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "89546850"
 |**is_dynamic**|**bit**|1 = La variable que surte surte efecto cuando se ejecuta la instrucción RECONFIGURE.|  
 |**is_advanced**|**bit**|1 = la variable solo se muestra cuando se establece **Show advancedoption** .|  
   
- ## <a name="remarks"></a>Observaciones
+ ## <a name="remarks"></a>Comentarios
   Para obtener una lista de todas las opciones de configuración del servidor, consulte [Opciones de configuración del servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  
@@ -53,7 +53,7 @@ ms.locfileid: "89546850"
 La vista de catálogo sys.configurations se puede usar para determinar el config_value (la columna de valor), el run_value (la columna de value_in_use) y si la opción de configuración es dinámica (no requiere un reinicio del motor de servidor ni la columna is_dynamic).
 
 > [!NOTE]
-> El config_value del conjunto de resultados de sp_configure es equivalente a la columna **sys.configurations. Value** . La **run_value** es equivalente a la columna **sys.configurations. value_in_use** .
+> El config_value del conjunto de resultados de sp_configure es equivalente a la columna **sys.configurations. Value** . La **run_value** es equivalente a la columna de **urations.value_in_usesys.config** .
 
 La siguiente consulta se puede utilizar para determinar si no se han instalado valores configurados:
 
@@ -65,9 +65,10 @@ Si el valor es igual al cambio de la opción de configuración realizada pero el
 
 Hay opciones de configuración en las que el valor y el value_in_use no pueden ser iguales y este comportamiento es el esperado. Por ejemplo:
 
-"Max Server Memory (MB)": el valor predeterminado configurado de 0 se mostrará como value_in_use = 2147483647 "min Server Memory (MB)": el valor predeterminado configurado de 0 puede aparecer como value_in_use = 8 (32 bits) o 16 (64 bits). 
+"Max Server Memory (MB)": el valor predeterminado configurado 0 se muestra como **value_in_use** = 2147483647<br>
 
-En algunos casos, el **value_in_use** será 0. En esta situación, el **value_in_use** "true" es 8 (32 bits) o 16 (64 bits)
+"memoria de servidor mínima (MB)": el valor predeterminado configurado de 0 puede aparecer como **value_in_use** = 8 (32 bits) o 16 (64 bits). En algunos casos, el **value_in_use** es 0. En esta situación, el **value_in_use** "true" es 8 (32 bits) o 16 (64 bits).
+
 
 La columna **is_dynamic** se puede utilizar para determinar si la opción de configuración requiere un reinicio. is_dynamic = 1 significa que cuando se ejecuta la comandos reconfigure (T-SQL), el nuevo valor surtirá efecto "inmediatamente" (en algunos casos, es posible que el motor del servidor no evalúe el nuevo valor inmediatamente, pero lo hará en el curso normal de su ejecución). is_dynamic = 0 significa que el valor de configuración cambiado no surtirá efecto hasta que se reinicie el servidor, aunque se haya ejecutado el comando reconfigure (T-SQL).
 
@@ -77,7 +78,7 @@ En el caso de una opción de configuración que no sea dinámica, no hay ninguna
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** . Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Vistas de catálogo de configuración de todo el servidor &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

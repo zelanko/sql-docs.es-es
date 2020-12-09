@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b474931aad2958a4ddba3bccb20773e7f36fd0e7
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 910ee3433bfa4298412a10a58405fb27dad0b157
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753827"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900993"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +56,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` Número de identificación del trabajo al que se agrega la programación. *job_id* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado.  
+`[ @job_id = ] job_id` Número de identificación del trabajo al que se agrega la programación. *job_id* es de tipo **uniqueidentifier** y no tiene ningún valor predeterminado.  
   
 `[ @job_name = ] 'job_name'` Nombre del trabajo al que se agrega la programación. *job_name* es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado.  
   
@@ -65,9 +65,9 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @name = ] 'name'` Nombre de la programación. *Name* es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado.  
   
-`[ @enabled = ] enabled_flag` Indica el estado actual de la programación. *enabled_flag* es de **tinyint**y su valor predeterminado es **1** (habilitado). Si es **0**, la programación no está habilitada. Si la programación está deshabilitada, el trabajo no se ejecutará.  
+`[ @enabled = ] enabled_flag` Indica el estado actual de la programación. *enabled_flag* es de **tinyint** y su valor predeterminado es **1** (habilitado). Si es **0**, la programación no está habilitada. Si la programación está deshabilitada, el trabajo no se ejecutará.  
   
-`[ @freq_type = ] frequency_type` Valor que indica cuándo se va a ejecutar el trabajo. *frequency_type* es de **tipo int**, su valor predeterminado es **0**y puede tener uno de los valores siguientes:  
+`[ @freq_type = ] frequency_type` Valor que indica cuándo se va a ejecutar el trabajo. *frequency_type* es de **tipo int**, su valor predeterminado es **0** y puede tener uno de los valores siguientes:  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -96,10 +96,11 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |Value|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**0x1**|A la hora especificada|  
+|**0X2**|Segundos|  
 |**0x4**|Minutos|  
 |**0x8**|Horas|  
   
-`[ @freq_subday_interval = ] frequency_subday_interval` Número de períodos de *frequency_subday_type* entre cada ejecución del trabajo. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es 0.  
+`[ @freq_subday_interval = ] frequency_subday_interval` Número de períodos de *frequency_subday_type* entre cada ejecución del trabajo. *frequency_subday_interval* es de **tipo int** y su valor predeterminado es 0.  
   
 `[ @freq_relative_interval = ] frequency_relative_interval` Además, define el *frequency_interval* cuando *frequency_type* se establece en **32** (relativo mensual).  
   
@@ -113,21 +114,21 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**8**|Cuarto|  
 |**16**|Último|  
   
- *frequency_relative_interval* indica la aparición del intervalo. Por ejemplo, si *frequency_relative_interval* está establecido en **2**, *frequency_type* se establece en **32**y *frequency_interval* se establece en **3**, el trabajo programado se produciría el segundo martes de cada mes.  
+ *frequency_relative_interval* indica la aparición del intervalo. Por ejemplo, si *frequency_relative_interval* está establecido en **2**, *frequency_type* se establece en **32** y *frequency_interval* se establece en **3**, el trabajo programado se produciría el segundo martes de cada mes.  
   
-`[ @freq_recurrence_factor = ] frequency_recurrence_factor` Número de semanas o meses entre la ejecución programada del trabajo. *frequency_recurrence_factor* solo se utiliza si *frequency_type* está establecido en **8**, **16**o **32**. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es 0.  
+`[ @freq_recurrence_factor = ] frequency_recurrence_factor` Número de semanas o meses entre la ejecución programada del trabajo. *frequency_recurrence_factor* solo se utiliza si *frequency_type* está establecido en **8**, **16** o **32**. *frequency_recurrence_factor* es de **tipo int** y su valor predeterminado es 0.  
   
-`[ @active_start_date = ] active_start_date` Fecha en la que puede comenzar la ejecución del trabajo. *active_start_date* es de **tipo int**y no tiene ningún valor predeterminado. La fecha tiene el formato AAAAMMDD. Si se establece *active_start_date* , la fecha debe ser mayor o igual que 19900101.  
+`[ @active_start_date = ] active_start_date` Fecha en la que puede comenzar la ejecución del trabajo. *active_start_date* es de **tipo int** y no tiene ningún valor predeterminado. La fecha tiene el formato AAAAMMDD. Si se establece *active_start_date* , la fecha debe ser mayor o igual que 19900101.  
   
  Una vez creada la programación, revise la fecha de inicio y confirme que es correcta. Para obtener más información, vea la sección sobre la programación de la fecha de inicio en [crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
-`[ @active_end_date = ] active_end_date` Fecha en la que se puede detener la ejecución del trabajo. *active_end_date* es de **tipo int**y no tiene ningún valor predeterminado. La fecha tiene el formato AAAAMMDD.  
+`[ @active_end_date = ] active_end_date` Fecha en la que se puede detener la ejecución del trabajo. *active_end_date* es de **tipo int** y no tiene ningún valor predeterminado. La fecha tiene el formato AAAAMMDD.  
   
-`[ @active_start_time = ] active_start_time` Hora de un día entre *active_start_date* y *active_end_date* para iniciar la ejecución del trabajo. *active_start_time* es de **tipo int**y no tiene ningún valor predeterminado. La hora tiene el formato HHMMSS en un reloj de 24 horas.  
+`[ @active_start_time = ] active_start_time` Hora de un día entre *active_start_date* y *active_end_date* para iniciar la ejecución del trabajo. *active_start_time* es de **tipo int** y no tiene ningún valor predeterminado. La hora tiene el formato HHMMSS en un reloj de 24 horas.  
   
-`[ @active_end_time = active_end_time_` Hora de un día entre *active_start_date* y *active_end_date* para finalizar la ejecución del trabajo. *active_end_time* es de **tipo int**y no tiene ningún valor predeterminado. La hora tiene el formato HHMMSS en un reloj de 24 horas.  
+`[ @active_end_time = active_end_time_` Hora de un día entre *active_start_date* y *active_end_date* para finalizar la ejecución del trabajo. *active_end_time* es de **tipo int** y no tiene ningún valor predeterminado. La hora tiene el formato HHMMSS en un reloj de 24 horas.  
   
-`[ @schedule_id = schedule_idOUTPUT` Número de identificación de la programación asignado a la programación si se ha creado correctamente. *schedule_id* es una variable de salida de tipo **int**y no tiene ningún valor predeterminado.  
+`[ @schedule_id = schedule_idOUTPUT` Número de identificación de la programación asignado a la programación si se ha creado correctamente. *schedule_id* es una variable de salida de tipo **int** y no tiene ningún valor predeterminado.  
   
 `[ @schedule_uid = ] _schedule_uidOUTPUT` Identificador único de la programación. *schedule_uid* es una variable de tipo **uniqueidentifier**.  
   
@@ -163,7 +164,7 @@ EXEC msdb.dbo.sp_add_jobschedule
         @active_start_time = 20000 -- 2:00 AM
 ```
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [Programar un trabajo](../../ssms/agent/schedule-a-job.md)   
  [Crear una programación](../../ssms/agent/create-a-schedule.md)   

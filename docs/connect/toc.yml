@@ -93,6 +93,27 @@
                   href: ../connect/ado-net/update-data-inside-data-source.md
                 - name: Realizar operaciones de catálogo
                   href: ../connect/ado-net/perform-catalog-operations.md
+        - name: Objetos DataAdapter y DataReader
+          href: ../connect/ado-net/dataadapters-datareaders.md
+          items:
+            - name: Recuperación de datos mediante un objeto DataReader
+              href: ../connect/ado-net/retrieve-data-by-datareader.md
+            - name: Rellenar un conjunto de datos a partir de un objeto DataAdapter
+              href: ../connect/ado-net/populate-dataset-from-dataadapter.md
+            - name: Parámetros de objetos DataAdapter
+              href: ../connect/ado-net/dataadapter-parameters.md
+            - name: Adición de las restricciones existentes a un conjunto de datos
+              href: ../connect/ado-net/add-existing-constraints-to-dataset.md
+            - name: 'Asignaciones de objetos DataAdapter, DataTable y DataColumn'
+              href: ../connect/ado-net/dataadapter-datatable-datacolumn-mappings.md
+            - name: Paginación de resultados de consulta
+              href: ../connect/ado-net/paging-through-query-result.md
+            - name: Actualización de orígenes de datos con objetos DataAdapter
+              href: ../connect/ado-net/update-data-sources-with-dataadapters.md
+            - name: Control de eventos de objetos DataAdapter
+              href: ../connect/ado-net/handle-dataadapter-events.md
+            - name: Operaciones por lotes con objetos DataAdapter
+              href: ../connect/ado-net/batch-operations-using-dataadapters.md
     - name: SQL Server y ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:

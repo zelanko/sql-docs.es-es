@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 03ebdbdd15adfae8e765964e8338f043999319f3
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 98127e41b5b07c38030ef27214c9c92bf7c4b4be
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428295"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761483"
 ---
 # <a name="using-commands-to-modify-data"></a>Uso de comandos para modificar datos
 
@@ -31,11 +31,14 @@ Aunque el método **ExecuteNonQuery** no devuelve ninguna fila, mediante la cole
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Actualización de datos en un origen de datos](update-data-inside-data-source.md) Describe cómo ejecutar comandos o procedimientos almacenados que modifican datos en una base de datos.
+[Actualización de datos en un origen de datos](update-data-inside-data-source.md)  
+Describe la forma de ejecutar comandos o procedimientos almacenados que modifican datos en una base de datos.
 
-[Realización de operaciones de catálogo](perform-catalog-operations.md) Describe cómo ejecutar comandos que modifican el esquema de la base de datos.
+[Realización de operaciones de catálogo](perform-catalog-operations.md)  
+Describe la forma de ejecutar comandos que modifican esquemas de la base de datos.
 
 ## <a name="see-also"></a>Vea también
 
 - [Recuperación y modificación de datos en ADO.NET](retrieving-modifying-data.md)
 - [Comandos y parámetros](commands-parameters.md)
+- [Microsoft ADO.NET para SQL Server](microsoft-ado-net-sql-server.md)

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 127b163ff7f75b4c7ebeff37781f8a5670a47cf9
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364082"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900828"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Creación de una extensión de distribución de teclado de Azure Data Studio
 
@@ -44,7 +44,7 @@ Azure Data Studio se basa en el mismo marco que Visual Studio Code, por lo que l
 Para simplificar el proceso de creación de extensiones, hemos compilado [un generador de extensiones](https://code.visualstudio.com/docs/extensions/yocode) con Yeoman. Para instalarlo, ejecute el código en el siguiente símbolo del sistema:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-keymap-extension"></a>Creación de la extensión de distribución de teclado
@@ -79,9 +79,40 @@ Lo más importante que noté que faltaba fue:
 
 Resulta fácil encontrar y reemplazar estos enlaces de teclado. Ejecute *Abrir métodos abreviados de teclado* para mostrar la pestaña **Métodos abreviados de teclado** en Azure Data Studio, busque *consulta* y elija **Cambiar enlace de teclado**. Una vez que haya terminado de cambiar el enlace de teclado, puede ver la asignación actualizada en el archivo keybindings.json (ejecute *Abrir métodos abreviados de teclado* para verla).
 
-:::image type="content" source="media/keymap-extension/keyboard-shortcuts.png" alt-text="Generador de extensiones":::
+:::image type="content" source="media/keymap-extension/keyboard-shortcuts.png" alt-text="Métodos abreviados de teclado":::
 
-:::image type="content" source="media/keymap-extension/key-bindings-json.png" alt-text="Generador de extensiones"
+:::image type="content" source="media/keymap-extension/key-bindings-json.png" alt-text="Extensión Keybindings.json":::
+
+**Paso 2: Adición de accesos directos a la extensión**
+
+Para agregar accesos directos a la extensión, abra el archivo *package.json* (en la extensión) y reemplace la sección `contributes` por el siguiente código:
+
+```json
+"contributes": {
+  "keybindings": [
+    {
+      "key": "shift+cmd+e",
+      "command": "runQueryKeyboardAction"
+    },
+    {
+      "key": "ctrl+cmd+e",
+      "command": "workbench.view.explorer"
+    },
+    {
+      "key": "alt+f1",
+      "command": "workbench.action.query.shortcut1"
+    },
+    {
+      "key": "shift+alt+enter",
+      "command": "workbench.action.toggleFullScreen"
+    },
+    {
+      "key": "f8",
+      "command": "workbench.view.connections"
+    },
+    {
+      "key": "ctrl+m",
+      "command": "runCurrentQueryWithActualPlanKeyboardAction"
     }
   ]
 }
@@ -95,9 +126,9 @@ Asegúrese de que la extensión Debug de Azure Data Studio está instalada en Vi
 
 Seleccione **F5** para iniciar Azure Data Studio en modo de depuración con la extensión en ejecución:
 
-:::image type="content" source="media/keymap-extension/install-extension.png" alt-text="Generador de extensiones":::
+:::image type="content" source="media/keymap-extension/install-extension.png" alt-text="Instalación de la extensión":::
 
-:::image type="content" source="media/keymap-extension/test-extension.png" alt-text="Generador de extensiones":::
+:::image type="content" source="media/keymap-extension/test-extension.png" alt-text="prueba de la extensión":::
 
 Las asignaciones de teclas son una de las extensiones más rápidas de crear, por lo que la nueva extensión ahora debería funcionar correctamente y estar lista para compartir.
 
@@ -106,7 +137,7 @@ Las asignaciones de teclas son una de las extensiones más rápidas de crear, po
 Para compartirla con otros usuarios, tendrá que empaquetar la extensión en un único archivo. Este se puede publicar en el marketplace de extensiones de Azure Data Studio, o bien compartir entre el equipo o la comunidad. Para ello, debe instalar otro paquete npm desde la línea de comandos:
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Navegue hasta el directorio base de la extensión y ejecute `vsce package`. Tuve que agregar un par de líneas adicionales para evitar reclamaciones de la herramienta *vsce*:
@@ -123,7 +154,7 @@ Navegue hasta el directorio base de la extensión y ejecute `vsce package`. Tuve
 
 Una vez hecho esto, el archivo ssmskeymap-0.1.0.vsix se ha creado y está listo para instalarlo y compartirlo con el mundo.
 
-:::image type="content" source="media/keymap-extension/extensions.png" alt-text="Generador de extensiones":::
+:::image type="content" source="media/keymap-extension/extensions.png" alt-text="Instalación":::
 
 ## <a name="publish-your-extension-to-the-marketplace"></a>Publicación de la extensión en marketplace
 

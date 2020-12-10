@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 87d8e2013693d2e8123adb97273309d6f22de03e
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 146063d665b89a8541c34d9cc3b0b6da3939d801
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126574"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563101"
 ---
 # <a name="protecting-connection-information"></a>Protección de la información de conexión
 
@@ -23,7 +23,7 @@ ms.locfileid: "96126574"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-La protección del acceso al origen de datos es uno de los objetivos más importantes a la hora de proteger una aplicación. Las cadenas de conexión presentan una posible vulnerabilidad si no se protegen. El almacenamiento de la información de conexión en texto sin formato o en la memoria ponen en riesgo el sistema completo. Las cadenas de conexión insertadas en el código fuente se pueden leer con [Ildasm.exe (IL Disassembler)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md) para ver el lenguaje intermedio de Microsoft (MSIL) en un ensamblado compilado.
+La protección del acceso al origen de datos es uno de los objetivos más importantes a la hora de proteger una aplicación. Las cadenas de conexión presentan una posible vulnerabilidad si no se protegen. El almacenamiento de la información de conexión en texto sin formato o en la memoria ponen en riesgo el sistema completo. Las cadenas de conexión insertadas en el código fuente se pueden leer con [Ildasm.exe (IL Disassembler)](/dotnet/framework/tools/ildasm-exe-il-disassembler) para ver el lenguaje intermedio de Microsoft (MSIL) en un ensamblado compilado.
 
 Pueden surgir vulnerabilidades de seguridad que afecten a las cadenas de conexión en función del tipo de autenticación usado, de la forma en que las cadenas de conexión se almacenan en memoria y en disco, y de las técnicas usadas para construirlas en tiempo de ejecución.
 

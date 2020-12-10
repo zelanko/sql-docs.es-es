@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c5610f182adaab2197b67578e51331fd6d7ce19b
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: fb290f9a795c9f64bcb2ee95c66210790a80a71d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126586"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563121"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Cadenas de conexión y archivos de configuración
 
@@ -25,7 +25,7 @@ ms.locfileid: "96126586"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-La incrustación de cadenas de conexión en el código de la aplicación puede producir vulnerabilidades en la seguridad y problemas de mantenimiento. Las cadenas de conexión sin cifrar compiladas en el código fuente de una aplicación se pueden ver con la herramienta [Ildasm.exe (Desensamblador de IL)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md). Además, si la cadena de conexión cambia en algún momento, será necesario compilar de nuevo la aplicación. Por estas razones, se recomienda almacenar las cadenas de conexión en un archivo de configuración de la aplicación.
+La incrustación de cadenas de conexión en el código de la aplicación puede producir vulnerabilidades en la seguridad y problemas de mantenimiento. Las cadenas de conexión sin cifrar compiladas en el código fuente de una aplicación se pueden ver con la herramienta [Ildasm.exe (Desensamblador de IL)](/dotnet/framework/tools/ildasm-exe-il-disassembler). Además, si la cadena de conexión cambia en algún momento, será necesario compilar de nuevo la aplicación. Por estas razones, se recomienda almacenar las cadenas de conexión en un archivo de configuración de la aplicación.
 
 ## <a name="working-with-application-configuration-files"></a>Trabajar con archivos de configuración de la aplicación
 
@@ -194,5 +194,5 @@ Para obtener más información sobre cómo proteger las aplicaciones de ASP.NET,
 - [Generadores de cadenas de conexión](connection-string-builders.md)
 - [Proteger la información de conexión](protecting-connection-information.md)
 - [Utilizar las clases Configuration](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Configurar aplicaciones](/dotnet/docs/framework/configure-apps/index.md)
+- [Configurar aplicaciones](/dotnet/framework/configure-apps/index)
 - [Administrar sitios web ASP.NET](/previous-versions/aspnet/6hy1xzbw(v=vs.100))

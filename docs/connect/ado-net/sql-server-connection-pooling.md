@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 1cf7cf010724453aadcc3c93ef216e44d6a869fc
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: ef687114ff2ceceabc1ed87d67a4585a5846029d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419751"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563090"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Agrupación de conexiones de SQL Server (ADO.NET)
 
@@ -68,10 +68,10 @@ Cuando se solicita un objeto <xref:Microsoft.Data.SqlClient.SqlConnection>, se o
 El agrupador de conexiones satisface las solicitudes de conexión al reasignar las conexiones conforme se liberan de nuevo en el grupo. Si se ha alcanzado el tamaño máximo del grupo y no hay disponible ninguna conexión que se pueda utilizar, la solicitud se pone en la cola. A continuación, el concentrador intenta reclamar las conexiones hasta que se alcanza el tiempo de espera (**el valor predeterminado es 15 segundos**). Si no puede satisfacer la solicitud antes de que se agote el tiempo de espera de la conexión, se inicia una excepción.
 
 > [!CAUTION]
-> Se recomienda encarecidamente cerrar siempre la conexión cuando se termine de utilizar para que regrese al grupo. Para ello, puede utilizar los métodos `Close` o `Dispose` del objeto `Connection`, o abrir todas las conexiones dentro de una instrucción `using` en C# o de una instrucción `Using` en Visual Basic. Es posible que las conexiones que no se cierran explícitamente no se puedan agregar ni puedan regresar al grupo. Para obtener más información, vea [using (Instrucción, Referencia de C#)](/dotnet/docs/csharp/language-reference/keywords/using-statement.md) o [Cómo: Deshacerse de un recurso del sistema](/dotnet/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) para Visual Basic.
+> Se recomienda encarecidamente cerrar siempre la conexión cuando se termine de utilizar para que regrese al grupo. Para ello, puede utilizar los métodos `Close` o `Dispose` del objeto `Connection`, o abrir todas las conexiones dentro de una instrucción `using` en C# o de una instrucción `Using` en Visual Basic. Es posible que las conexiones que no se cierran explícitamente no se puedan agregar ni puedan regresar al grupo. Para obtener más información, vea [using (Instrucción, Referencia de C#)](/dotnet/csharp/language-reference/keywords/using-statement) o [Cómo: Deshacerse de un recurso del sistema](/dotnet/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource) para Visual Basic.
 
 > [!NOTE]
-> No llame a `Close` o a `Dispose` en un objeto `Connection`, un objeto `DataReader` o cualquier otro objeto administrado en el método `Finalize` de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no dispone de recursos no administrados, no incluya un método `Finalize` en la definición de clase. Para obtener más información, consulte [Recolección de elementos no utilizados](/dotnet/docs/standard/garbage-collection/index.md).
+> No llame a `Close` o a `Dispose` en un objeto `Connection`, un objeto `DataReader` o cualquier otro objeto administrado en el método `Finalize` de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no dispone de recursos no administrados, no incluya un método `Finalize` en la definición de clase. Para obtener más información, consulte [Recolección de elementos no utilizados](/dotnet/standard/garbage-collection/index).
 
 Para obtener más información sobre los eventos asociados a la apertura y el cierre de conexiones, consulte [Audit Login, clase de eventos](/sql/relational-databases/event-classes/audit-login-event-class) y [Audit Logout, clase de eventos](/sql/relational-databases/event-classes/audit-logout-event-class) en la documentación de SQL Server.
 

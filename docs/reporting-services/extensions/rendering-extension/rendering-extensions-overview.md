@@ -1,7 +1,7 @@
 ---
 title: Información general de las extensiones de representación | Microsoft Docs
 description: Vea qué extensiones de representación de datos se incluyen con Reporting Services. Aprenda a agregar extensiones de representación personalizadas para generar informes en otros formatos.
-ms.date: 03/14/2017
+ms.date: 12/7/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dd3bca97b438d683e325194616af123ea9fb8290
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: c14237adcb3cd45e62db0915004f51ed547c9f30
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529431"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788326"
 ---
 # <a name="rendering-extensions-overview"></a>Información general de las extensiones de representación
   Una extensión de representación es un componente o módulo de un servidor de informes que transforma los datos de informes y la información de diseño en un formato específico del dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye siete extensiones de representación: HTML, Excel, Word, CSV o Text, XML, Image y PDF. Puede crear extensiones de representación adicionales para generar informes en otros formatos.  
@@ -54,8 +54,6 @@ ms.locfileid: "84529431"
 -   Agregar formato personalizado y características de presentación combinando Transformaciones XSL (XSLT) con la salida del formato de representación XML.  
   
  Escribir una extensión de representación personalizada es difícil. Normalmente, debe admitir todas las combinaciones posibles de elementos de informe y requiere que implemente centenares de clases, interfaces, métodos y propiedades. Si debe representar un informe en un formato que no está incluido con [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y decide escribir su propia implementación de código administrado de una extensión de representación, el código de la extensión de representación debe implementar la interfaz **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension**, que requiere el servidor de informes.  
-  
- Para obtener documentación complementaria y notas del producto de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vea los recursos técnicos más recientes en el [sitio web de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=19951).  
   
 ## <a name="see-also"></a>Consulte también  
  [Implementar una extensión de representación](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

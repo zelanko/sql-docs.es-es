@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 091bf94f01c66b3f991c0457adcfa4d119d49167
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: c7402c8dd0d2d85d38536a0bcfea3ce8cd780657
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364102"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900878"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>Creación de una extensión de panel de Azure Data Studio
 
@@ -44,7 +44,7 @@ Azure Data Studio se basa en el mismo marco que Visual Studio Code, por lo que 
 Para simplificar el proceso de creación de extensiones, hemos compilado [un generador de extensiones](https://code.visualstudio.com/docs/extensions/yocode) con Yeoman. Para instalarlo, ejecute el comando siguiente desde el símbolo del sistema:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-dashboard-extension"></a>Creación de la extensión de panel
@@ -63,7 +63,7 @@ Hay tres puntos de contribución principales para que las extensiones agreguen f
 2. **Acciones de la página principal**: botones de acción en la parte superior de la barra de herramientas de conexión.
 3. **Widgets**: grafos que se ejecutan en la instancia de SQL Server.
 
-   :::image type="content" source="media/dashboard-extension/dashboard-contrib-points.png" alt-text="Captura de pantalla que muestra una presentación de los paneles.":::
+   :::image type="content" source="media/dashboard-extension/dashboard-contrib-points.png" alt-text="Captura de pantalla que muestra los puntos de contribución.":::
 
 ### <a name="run-the-extension-generator"></a>Ejecución del generador de extensiones
 
@@ -77,11 +77,11 @@ Para crear una extensión:
 
 1. Rellene los mensajes, como se muestra, para crear una extensión que contribuye con una pestaña al panel del servidor.
 
-   :::image type="content" source="media/dashboard-extension/dashboard-generator.png" alt-text="Captura de pantalla que muestra una presentación de los paneles.":::
+   :::image type="content" source="media/dashboard-extension/dashboard-generator.png" alt-text="Captura de pantalla que muestra el generador de extensiones.":::
 
    Hay varios mensajes, por lo que se muestra a continuación un poco más de información sobre lo que significa cada pregunta:
 
-   :::image type="content" source="media/dashboard-extension/dashboard-flowchart.png" alt-text="Captura de pantalla que muestra una presentación de los paneles.":::
+   :::image type="content" source="media/dashboard-extension/dashboard-flowchart.png" alt-text="Captura de pantalla que muestra un diagrama de flujo del panel.":::
 
 Al completar los pasos anteriores, se crea una carpeta. Abra la carpeta en Visual Studio Code y estará listo para crear una extensión de panel propia.
 
@@ -108,7 +108,7 @@ Puede probar con estos cambios:
 Para compartirla con otros usuarios, tendrá que empaquetar la extensión en un único archivo. La extensión se puede publicar en el marketplace de extensiones de Azure Data Studio, o bien compartir con el equipo o la comunidad. Para realizar este paso, debe instalar otro paquete npm desde la línea de comandos.
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Edite el archivo `README.md` a su gusto. Vaya al directorio base de la extensión y ejecute `vsce package`. Opcionalmente, puede vincular un repositorio con la extensión o continuar sin ninguno. Para agregar uno, agregue una línea similar al archivo `package.json`.
@@ -122,7 +122,7 @@ Edite el archivo `README.md` a su gusto. Vaya al directorio base de la extensió
 
 Una vez agregadas estas líneas, se crea el archivo `my-test-extension-0.0.1.vsix` y está listo para su instalación en Azure Data Studio.
 
-:::image type="content" source="media/dashboard-extension/install-vsix.png" alt-text="Captura de pantalla que muestra una presentación de los paneles.":::
+:::image type="content" source="media/dashboard-extension/install-vsix.png" alt-text="Captura de pantalla que muestra la instalación con VSIX.":::
 
 ## <a name="publish-your-extension-to-the-marketplace"></a>Publicación de la extensión en Marketplace
 

@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: e2996b583cd1005e26e4334c9934fff79c321ee4
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 44080250d95d21cecca16ff605ca22683e5b4440
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364052"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900818"
 ---
 # <a name="create-a-jupyter-notebook-extension"></a>Creación de una extensión de cuaderno de Jupyter Notebook
 
@@ -55,7 +55,7 @@ Azure Data Studio se basa en el mismo marco que Visual Studio Code, por lo que 
 Para simplificar el proceso de creación de extensiones, hemos compilado [un generador de extensiones](https://www.npmjs.com/package/generator-azuredatastudio) con Yeoman. Para instalarlo, ejecute el comando siguiente desde el símbolo del sistema:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-extension"></a>Creación de la extensión
@@ -70,13 +70,13 @@ Para crear una extensión:
 
    :::image type="content" source="media/notebook-extension/notebook-extension-generator.png" alt-text="Generador de extensiones de cuaderno":::
 
-3. Siga los pasos para rellenar el nombre de la extensión. Use **Cuaderno de prueba**en este tutorial. A continuación, especifique el nombre del publicador. Use **Microsoft** en este tutorial. Finalmente, agregue una descripción.
+3. Siga los pasos para rellenar el nombre de la extensión. Use **Cuaderno de prueba** en este tutorial. A continuación, especifique el nombre del publicador. Use **Microsoft** en este tutorial. Finalmente, agregue una descripción.
 
 En este punto, existe más de una opción. Puede agregar cuadernos de Jupyter Notebook que ya ha creado, o bien puede usar cuadernos de ejemplo que le haya proporcionado el generador.
 
 En este tutorial, se usará un cuaderno de Python de ejemplo:
 
-   :::image type="content" source="media/notebook-extension/notebook-sample-generator.png" alt-text="Generador de extensiones de cuaderno":::
+   :::image type="content" source="media/notebook-extension/notebook-sample-generator.png" alt-text="Selección del ejemplo de Python":::
 
 Si tiene cuadernos que le interesa enviar, responda que ya tiene cuadernos que desea enviar. Proporcione la ruta de acceso absoluta del archivo donde se encuentran todos los cuadernos o archivos Markdown.
 
@@ -86,7 +86,7 @@ Al completar los pasos anteriores, se crea una carpeta con el cuaderno de ejempl
 
 Este es el aspecto que debe tener el proyecto:
 
-   :::image type="content" source="media/notebook-extension/notebook-file-structure-generator.png" alt-text="Generador de extensiones de cuaderno":::
+   :::image type="content" source="media/notebook-extension/notebook-file-structure-generator.png" alt-text="Estructura de los archivos de la extensión":::
 
 El archivo `vsc-extension-quickstart.md` le proporciona una referencia de los archivos importantes. En el archivo `README.md` puede proporcionar documentación para la nueva extensión. Observe los archivos `package.json`, `notebook.ts` y `pySample.ipynb`.
 
@@ -136,7 +136,7 @@ Hay un evento de activación para el comando y también se han agregado puntos d
 Para compartirla con otros usuarios, tendrá que empaquetar la extensión en un único archivo. La extensión se puede publicar en el marketplace de extensiones de Azure Data Studio, o bien compartir con el equipo o la comunidad. Para realizar este paso, debe instalar otro paquete npm desde la línea de comandos.
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Edite el archivo `README.md` a su gusto. Vaya al directorio base de la extensión y ejecute `vsce package`. Opcionalmente, puede vincular un repositorio con la extensión o continuar sin ninguno. Para agregar uno, agregue una línea similar al archivo `package.json`.
@@ -154,11 +154,11 @@ Una vez agregadas estas líneas, se crea un archivo `my test-notebook-0.0.1.vsix
 
 Para ejecutar y probar la extensión, abra Azure Data Studio y abra la paleta de comandos mediante **Ctrl+Shift+P**. Busque el comando **Extensiones: Instalar desde VSIX** y vaya a la carpeta que contiene la nueva extensión.
 
-   :::image type="content" source="media/notebook-extension/install-vsix.png" alt-text="Generador de extensiones de cuaderno":::
+   :::image type="content" source="media/notebook-extension/install-vsix.png" alt-text="Instalación de VSIX":::
 
 La extensión debería aparecer en el panel de extensiones de Azure Data Studio. Vuelva a abrir la paleta de comandos y encontrará el nuevo comando que se ha creado con la extensión, **Iniciar libro: libro de prueba**. Al ejecutarlo, debe abrir el libro de Jupyter que ha empaquetado con la extensión.
 
-   :::image type="content" source="media/notebook-extension/notebook-launch-ads.png" alt-text="Generador de extensiones de cuaderno":::
+   :::image type="content" source="media/notebook-extension/notebook-launch-ads.png" alt-text="Comando Notebook":::
 
 ¡Enhorabuena! Ha creado la primera extensión de Jupyter Notebook y ya puede enviarla.
 

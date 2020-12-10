@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 2eb3c7d996463b9c581ea60bc11f853a5d131582
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: cb77d01ede16a6fa68aac6dcb49612ad8fd9a191
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419754"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563091"
 ---
 # <a name="establishing-connection"></a>Establecimiento de conexión
 
@@ -29,12 +29,12 @@ Para conectarse a Microsoft SQL Server, use el objeto <xref:Microsoft.Data.Sql
 
 ## <a name="closing-connections"></a>Cierre de conexiones
 
-Recomendamos cerrar siempre la conexión cuando termine de utilizarla, para que la conexión pueda regresar al grupo. El bloque `Using` de Visual Basic o C# elimina automáticamente la conexión cuando el código sale del bloque, incluso en el caso de una excepción no controlada. Vea [Instrucción using](/dotnet/docs/csharp/language-reference/keywords/using-statement.md) e [Instrucción using](/dotnet/docs/visual-basic/language-reference/statements/using-statement.md) para obtener más información.
+Recomendamos cerrar siempre la conexión cuando termine de utilizarla, para que la conexión pueda regresar al grupo. El bloque `Using` de Visual Basic o C# elimina automáticamente la conexión cuando el código sale del bloque, incluso en el caso de una excepción no controlada. Vea [Instrucción using](/dotnet/csharp/language-reference/keywords/using-statement) e [Instrucción using](/dotnet/visual-basic/language-reference/statements/using-statement) para obtener más información.
 
 También puede utilizar los métodos `Close` o `Dispose` del objeto de conexión. Es posible que las conexiones que no se cierran explícitamente no se puedan agregar ni puedan regresar al grupo. Por ejemplo, una conexión que se ha salido del ámbito pero que no se ha cerrado explícitamente solo se devolverá al grupo de conexión si se ha alcanzado el tamaño máximo del grupo y la conexión aún es válida.
 
 > [!NOTE]
-> No llame a `Close` o a `Dispose` en un objeto **Connection**, un objeto **DataReader** o cualquier otro objeto administrado en el método `Finalize` de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no dispone de recursos no administrados, no incluya un método `Finalize` en la definición de clase. Para obtener más información, consulte [Recolección de elementos no utilizados](/dotnet/docs/standard/garbage-collection/index.md).
+> No llame a `Close` o a `Dispose` en un objeto **Connection**, un objeto **DataReader** o cualquier otro objeto administrado en el método `Finalize` de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no dispone de recursos no administrados, no incluya un método `Finalize` en la definición de clase. Para obtener más información, consulte [Recolección de elementos no utilizados](/dotnet/standard/garbage-collection/index).
 
 > [!NOTE]
 > Los eventos de inicio y cierre de sesión no se provocarán en el servidor cuando se busque una conexión desde el grupo de conexiones o se devuelva a éste, puesto que la conexión no está cerrada realmente cuando se devuelve al grupo de conexiones. Para obtener más información, vea [Agrupación de conexiones de SQL Server (ADO.NET)](sql-server-connection-pooling.md).

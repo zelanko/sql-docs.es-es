@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_top_version_generators (Transact-SQL)
-title: Sys. dm_tran_top_version_generators (Transact-SQL) | Microsoft Docs
+title: sys.dm_tran_top_version_generators (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54e3caeb50a0c6fd9f3a6b1523675eb482005384
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 77cabe4416c3168930822d85710cb663b5752a86
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546527"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334422"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Devuelve una tabla virtual para los objetos que producen la mayor parte de las versiones en el almacén de versiones. **Sys. dm_tran_top_version_generators** devuelve las longitudes de registro agregadas principales 256 agrupadas por los **database_id** y **rowset_id**. **Sys. dm_tran_top_version_generators** recupera datos consultando la tabla virtual **dm_tran_version_store** . **Sys. dm_tran_top_version_generators** es una vista ineficaz para ejecutarse porque esta vista consulta el almacén de versiones y el almacén de versiones puede ser muy grande. Es recomendable utilizar esta función para encontrar los principales consumidores del almacén de versiones.  
+  Devuelve una tabla virtual para los objetos que producen la mayor parte de las versiones en el almacén de versiones. **Sys.dm_tran_top_version_generators** devuelve las longitudes de registro agregadas principales 256 agrupadas por los **database_id** y **rowset_id**. **Sys.dm_tran_top_version_generators** recupera datos consultando la tabla virtual **dm_tran_version_store** . **Sys.dm_tran_top_version_generators** es una vista ineficaz para ejecutarse porque esta vista consulta el almacén de versiones y el almacén de versiones puede ser muy grande. Es recomendable utilizar esta función para encontrar los principales consumidores del almacén de versiones.  
   
 > [!NOTE]  
->  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_tran_top_version_generators**.  
+>  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys.dm_pdw_nodes_tran_top_version_generators**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,10 +55,10 @@ sys.dm_tran_top_version_generators
 ## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, `Server admin` `Azure Active Directory admin` se requiere la cuenta o. En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
 
 ## <a name="remarks"></a>Observaciones  
- Dado que **Sys. dm_tran_top_version_generators** podría tener que leer muchas páginas mientras examina todo el almacén de versiones, la ejecución de **Sys. dm_tran_top_version_generators** puede interferir con el rendimiento del sistema.  
+ Dado que es posible que **Sys.dm_tran_top_version_generators** tenga que leer muchas páginas mientras examina todo el almacén de versiones, ejecutar **Sys.dm_tran_top_version_generators** puede interferir con el rendimiento del sistema.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se utiliza un escenario de prueba con cuatro transacciones simultáneas, identificadas con un número de secuencia de transacción (XSN), que se ejecutan en una base de datos con las opciones ALLOW_SNAPSHOT_ISOLATION y READ_COMMITTED_SNAPSHOT establecidas en ON. Se están ejecutando las siguientes transacciones:  

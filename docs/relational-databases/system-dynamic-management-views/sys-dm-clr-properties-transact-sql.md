@@ -1,6 +1,6 @@
 ---
 description: sys.dm_clr_properties (Transact-SQL)
-title: Sys. dm_clr_properties (Transact-SQL) | Microsoft Docs
+title: sys.dm_clr_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,23 +21,23 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7f966cbb5570eb1efb2068d7796ccecb4463750
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e313b3e873fbd59a53306475d0641ddbe5566703
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551312"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330026"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
-  Devuelve una fila para cada propiedad relacionada con la integración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Common Language Runtime (CLR), incluidos la versión y el estado del entorno CLR hospedado. El CLR hospedado se inicializa mediante la ejecución de las instrucciones [Create Assembly](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)o [Drop Assembly](../../t-sql/statements/drop-assembly-transact-sql.md) , o mediante la ejecución de cualquier rutina, tipo o desencadenador de CLR. La vista **Sys. dm_clr_properties** no especifica si se ha habilitado la ejecución de código CLR de usuario en el servidor. La ejecución del código CLR de usuario se habilita mediante el [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) procedimiento almacenado con la opción [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) establecida en 1.  
+  Devuelve una fila para cada propiedad relacionada con la integración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Common Language Runtime (CLR), incluidos la versión y el estado del entorno CLR hospedado. El CLR hospedado se inicializa mediante la ejecución de las instrucciones [Create Assembly](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)o [Drop Assembly](../../t-sql/statements/drop-assembly-transact-sql.md) , o mediante la ejecución de cualquier rutina, tipo o desencadenador de CLR. En la vista **Sys.dm_clr_properties** no se especifica si se ha habilitado la ejecución del código CLR del usuario en el servidor. La ejecución del código CLR de usuario se habilita mediante el [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) procedimiento almacenado con la opción [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) establecida en 1.  
   
- La vista **Sys. dm_clr_properties** contiene las columnas **nombre** y **valor** . Cada una de las filas de esta vista proporciona información detallada acerca de una propiedad del entorno CLR hospedado. Utilice esta vista para recopilar información acerca del entorno CLR hospedado, como el directorio de instalación de CLR, la versión de CLR y el estado actual del entorno CLR hospedado. Esta vista puede ayudarle a determinar si el código de integración CLR no funciona debido a problemas con la instalación de CLR en el equipo servidor.  
+ La vista **Sys.dm_clr_properties** contiene las columnas **nombre** y **valor** . Cada una de las filas de esta vista proporciona información detallada acerca de una propiedad del entorno CLR hospedado. Utilice esta vista para recopilar información acerca del entorno CLR hospedado, como el directorio de instalación de CLR, la versión de CLR y el estado actual del entorno CLR hospedado. Esta vista puede ayudarle a determinar si el código de integración CLR no funciona debido a problemas con la instalación de CLR en el equipo servidor.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|Nombre de la propiedad.|  
+|**name**|**nvarchar(128)**|El nombre de la propiedad.|  
 |**value**|**nvarchar(128)**|Valor de la propiedad.|  
   
 ## <a name="properties"></a>Propiedades  
@@ -45,7 +45,7 @@ ms.locfileid: "89551312"
   
  La propiedad **version** indica la versión del .NET Framework y el CLR hospedado en el servidor.  
   
- La vista administrada dinámica **Sys. dm_clr_properties** puede devolver seis valores diferentes para la propiedad **State** , que refleja el estado del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hospedado. Son las siguientes:  
+ La **Sys.dm_clr_properties** vista dinámica administrada puede devolver seis valores diferentes para la propiedad **State** , que refleja el estado del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hospedado. Son las siguientes:  
   
 -   Mscoree is not loaded.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "89551312"
 ## <a name="permissions"></a>Permisos  
   
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, `Server admin` `Azure Active Directory admin` se requiere la cuenta o. En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
 
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se recupera información acerca del entorno CLR hospedado:  

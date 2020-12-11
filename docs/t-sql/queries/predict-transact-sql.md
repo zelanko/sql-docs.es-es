@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a21506caf12537eb8acab96c97fa53c62b7fadf
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ff521b8cf230bcb2113937ee6c223b55c61be02a
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116284"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523054"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -120,9 +120,9 @@ El parámetro DATA se usa para especificar los datos que se usan para la puntuac
 **RUNTIME = ONNX**
 
 > [!IMPORTANT]
-> El argumento `RUNTIME = ONNX` solo está disponible en [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) y [Azure SQL Edge](/azure/sql-database-edge/onnx-overview).
+> El argumento `RUNTIME = ONNX` solo está disponible en [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview), [Azure SQL Edge](/azure/sql-database-edge/onnx-overview) y [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is).
 
-Indica el motor de aprendizaje automático que se usa para la ejecución del modelo. El valor del parámetro `RUNTIME` siempre es `ONNX`. El parámetro es obligatorio para Azure SQL Edge. En Azure SQL Managed Instance, el parámetro es opcional y solo se usa cuando se utilizan modelos ONNX.
+Indica el motor de aprendizaje automático que se usa para la ejecución del modelo. El valor del parámetro `RUNTIME` siempre es `ONNX`. El parámetro es necesario para Azure SQL Edge y Azure Synapse Analytics. En Azure SQL Managed Instance, el parámetro es opcional y solo se usa cuando se utilizan modelos ONNX.
 
 **WITH ( <definición_de_conjunto_de_resultados> )**
 
@@ -186,7 +186,7 @@ DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE mode
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+    DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
@@ -207,7 +207,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+             DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -216,6 +216,8 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 
 Un caso de uso común para la predicción consiste en generar una puntuación para los datos de entrada y después insertar los valores de predicción en una tabla. En el ejemplo siguiente se da por supuesto que la aplicación que realiza la llamada usa un procedimiento almacenado para insertar una fila que contiene el valor de predicción en una tabla:
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
@@ -223,6 +225,20 @@ INSERT INTO loan_applications (c1, c2, c3, c4, score)
 SELECT d.c1, d.c2, d.c3, d.c4, p.score
 FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
+
+:::moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```sql
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+
+INSERT INTO loan_applications (c1, c2, c3, c4, score)
+SELECT d.c1, d.c2, d.c3, d.c4, p.score
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score FLOAT) AS p;
+```
+
+:::moniker-end
 
 - Los resultados de `PREDICT` se almacenan en una tabla denominada PredictionResults. 
 - El modelo se almacena como la columna `varbinary(max)` en la tabla **Models**. En la tabla se puede guardar información adicional como el id. y la descripción para identificar el modelo.

@@ -5,23 +5,23 @@ ms.custom: seo-dt-2019
 ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce39e398db9d3676bc9c6e2257c9847774927e26
-ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
+ms.openlocfilehash: d1171d4f3570c6bcfcf222043c5036de15c98241
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92134873"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595146"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Procesamiento de consultas inteligente en bases de datos SQL
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 La familia de características de procesamiento de consultas inteligentes incluye características con un gran impacto que mejoran el rendimiento de las cargas de trabajo existentes con un esfuerzo de implementación mínimo. 
 
@@ -40,8 +40,8 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 En la siguiente tabla se detallan todas las características de procesamiento de consultas inteligentes, así como cualquier requisito que tengan en cuanto a nivel de compatibilidad de base de datos.
 
-| **Característica de procesamiento de consultas inteligentes** | **Compatible con Azure SQL Database** | **Compatible con SQL Server** |**Descripción** |
-| --- | --- | --- |--- |
+| **Característica de procesamiento de consultas inteligentes** | **Se admite en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]** | **Se admite en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** |**Descripción** |
+| ---------------- | ------- | ------- | ---------------- |
 | [Combinaciones adaptables (modo por lotes)](#batch-mode-adaptive-joins) | Sí, en el nivel de compatibilidad 140| Sí, a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] en el nivel de compatibilidad 140|Las combinaciones adaptables seleccionan dinámicamente un tipo de combinación en tiempo de ejecución según las filas de entrada reales.|
 | [Count Distinct aproximada](#approximate-query-processing) | Sí| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|Proporcione un valor de COUNT DISTINCT aproximado en escenarios de macrodatos, con la ventaja de un alto rendimiento y una baja superficie de memoria. |
 | [Modo por lotes en el almacén de filas](#batch-mode-on-rowstore) | Sí, en el nivel de compatibilidad 150| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] en el nivel de compatibilidad 150|Proporcione el modo por lotes en las cargas de trabajo de almacenamiento de datos relacionales enlazadas a la CPU, sin necesidad de índices de almacén de columnas.  | 
@@ -136,7 +136,7 @@ Para habilitar los comentarios de concesión de memoria del modo de fila en [!IN
 
 La actividad de comentarios de concesión de memoria del modo de fila será visible a través del evento extendido **memory_grant_updated_by_feedback**. 
 
-A partir de los comentarios de concesión de memoria del modo de fila, se mostrarán dos atributos nuevos de plan de consulta para los planes reales posteriores a la ejecución: ***IsMemoryGrantFeedbackAdjusted*** y ***LastRequestedMemory***, que se agregan al elemento XML de plan de consulta *MemoryGrantInfo*. 
+A partir de los comentarios de concesión de memoria del modo de fila, se mostrarán dos nuevos atributos de plan de consulta para planes reales posteriores a la ejecución: **_IsMemoryGrantFeedbackAdjusted_* y _*_LastRequestedMemory_*_, que se agregan al elemento XML del plan de consulta MemoryGrantInfo*. 
 
 *LastRequestedMemory* muestra la memoria concedida en Kilobytes (KB) desde la ejecución de consulta anterior. El atributo *IsMemoryGrantFeedbackAdjusted* permite comprobar el estado de los comentarios de concesión de memoria para la instrucción dentro de un plan de ejecución de consulta real. Los valores que se exponen en este atributo son los siguientes:
 
@@ -319,14 +319,14 @@ SELECT L_OrderKey, L_Quantity
 FROM dbo.lineitem
 WHERE L_Quantity = 5;
 
-SELECT  O_OrderKey,
+SELECT O_OrderKey,
     O_CustKey,
     O_OrderStatus,
     L_QUANTITY
 FROM    
     ORDERS,
     @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
+WHERE    O_ORDERKEY    =    L_ORDERKEY
     AND O_OrderStatus = 'O'
 OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 ```
@@ -391,7 +391,6 @@ Establezca la base de datos en el nivel de compatibilidad 150. No se requiere ni
 Incluso si una consulta no accede a ninguna tabla con índice de almacén de columnas, el procesador de consultas, mediante la heurística, decidirá si se va a considerar el modo por lotes. La heurística consiste en estas comprobaciones:
 1. Una comprobación inicial de tamaños de tablas, operadores utilizados y cardinalidades estimadas en la consulta de entrada.
 2. Puntos de control adicionales, a medida que el optimizador detecta planes nuevos y más baratos para la consulta. Si estos planes alternativos no hacen un uso considerable del modo por lotes, el optimizador dejará explorar alternativas al modo por lotes.
-
 
 Si se usa el modo por lotes en el almacén de filas, verá el modo de ejecución real como **modo por lotes** en el plan de consulta. El operador de examen usa el modo por lotes para montones en disco e índices de árbol B. Esta exploración del modo por lotes puede evaluar los filtros de mapa de bits del modo por lotes. También podría ver otros operadores del modo por lotes en el plan. Entre los ejemplos se incluyen combinaciones hash, agregados basados en hash, ordenaciones, agregados de ventana, filtros, concatenación y operadores Compute Scalar.
 

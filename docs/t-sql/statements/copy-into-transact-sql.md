@@ -1,5 +1,5 @@
 ---
-title: COPY INTO (Transact-SQL) (versión preliminar)
+title: COPY INTO (Transact-SQL)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Use la instrucción COPY en Azure Synapse Analytics para la carga desde cuentas de almacenamiento externo.
 ms.date: 09/25/2020
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300288"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788028"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -45,7 +45,7 @@ Consulte la documentación siguiente para obtener ejemplos completos y guías de
 
 - [Inicio rápido: Carga masiva de datos mediante la instrucción COPY](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
 - [Inicio rápido: Ejemplos de uso de la instrucción COPY y sus métodos de autenticación admitidos](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [Inicio rápido: Creación de la instrucción COPY mediante la interfaz de usuario de Synapse Studio enriquecida (versión preliminar para área de trabajo)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [Inicio rápido: Creación de la instrucción COPY mediante la interfaz de usuario de Synapse Studio enriquecida](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>Sintaxis  
 
@@ -85,9 +85,9 @@ Es una lista opcional de una o varias columnas que se usa para asignar campos de
 
 [(Column_name [Default_value] [Field_number] [,...n])]
 
-- *Column_name* : el nombre de la columna en la tabla de destino.
-- *Default_value* : el valor predeterminado que sustituirá a cualquier valor NULL en el archivo de entrada. El valor predeterminado se aplica a todos los formatos de archivo. COPY intentará cargar NULL desde el archivo de entrada cuando se omita una columna de la lista de columnas o cuando haya un campo de archivo de entrada vacío.
-- *Field_number* : el número de campo del archivo de entrada que se asignará al nombre de la columna de destino.
+- *Column_name*: el nombre de la columna en la tabla de destino.
+- *Default_value*: el valor predeterminado que sustituirá a cualquier valor NULL en el archivo de entrada. El valor predeterminado se aplica a todos los formatos de archivo. COPY intentará cargar NULL desde el archivo de entrada cuando se omita una columna de la lista de columnas o cuando haya un campo de archivo de entrada vacío.
+- *Field_number*: el número de campo del archivo de entrada que se asignará al nombre de la columna de destino.
 - La indización de campos comienza en 1.
 
 Cuando no se especifica una lista de columnas, COPY asigna columnas en función de la posición ordinal de origen y de destino: El campo de entrada 1 irá a la columna de destino 1, el campo 2 irá a la columna 2, etc.
@@ -101,11 +101,11 @@ Es donde se almacenan provisionalmente los archivos que contienen los datos. Act
 > [!NOTE]  
 > El punto de conexión .blob también está disponible para ADLS Gen2 y actualmente ofrece el mejor rendimiento. Use el punto de conexión .blob cuando no se requiera .dfs para su método de autenticación.
 
-- *Cuenta* : el nombre de la cuenta de almacenamiento
+- *Cuenta*: el nombre de la cuenta de almacenamiento
 
-- *Contenedor* : el nombre del contenedor de blobs
+- *Contenedor*: el nombre del contenedor de blobs
 
-- *Ruta* : la carpeta o la ruta de acceso de archivo para los datos. La ubicación comienza en el contenedor. Si se especifica una carpeta, COPY recuperará todos los archivos de la carpeta y todas sus subcarpetas. COPY omite las carpetas ocultas y no devuelve los archivos que comienzan por un subrayado (_) o un punto (.), a menos que se especifique explícitamente en la ruta de acceso. Este comportamiento es el mismo incluso cuando se especifica una ruta de acceso con un carácter comodín.
+- *Ruta*: la carpeta o la ruta de acceso de archivo para los datos. La ubicación comienza en el contenedor. Si se especifica una carpeta, COPY recuperará todos los archivos de la carpeta y todas sus subcarpetas. COPY omite las carpetas ocultas y no devuelve los archivos que comienzan por un subrayado (_) o un punto (.), a menos que se especifique explícitamente en la ruta de acceso. Este comportamiento es el mismo incluso cuando se especifica una ruta de acceso con un carácter comodín.
 
 Se pueden incluir caracteres comodín en la ruta de acceso, donde
 
@@ -141,9 +141,9 @@ Solo se pueden especificar varias ubicaciones de archivos desde el mismo contene
 |  **Azure Blob Storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1: Para este método de autenticación, se requiere el punto de conexión .blob ( **.blob** .core.windows.net) en la ruta de acceso a la ubicación externa.
+1: Para este método de autenticación, se requiere el punto de conexión .blob ( **.blob**.core.windows.net) en la ruta de acceso a la ubicación externa.
 
-2: Para este método de autenticación, se requiere el punto de conexión .dfs ( **.dfs** .core.windows.net) en la ruta de acceso a la ubicación externa.
+2: Para este método de autenticación, se requiere el punto de conexión .dfs ( **.dfs**.core.windows.net) en la ruta de acceso a la ubicación externa.
 
 
 > [!NOTE]  
@@ -179,7 +179,7 @@ Solo se pueden especificar varias ubicaciones de archivos desde el mismo contene
   - Roles de RBAC mínimos necesarios: Colaborador de datos de Storage Blob o propietario de datos de Storage Blob para el usuario de AAD
 
 *ERRORFILE = Ubicación del directorio*</br>
-*ERRORFILE* solo se aplica a CSV. Especifica el directorio de la instrucción COPY donde se deben escribir las filas rechazadas y el archivo de error correspondiente. Se puede especificar la ruta de acceso completa de la cuenta de almacenamiento o se puede especificar la ruta de acceso relativa al contenedor. Si la ruta de acceso especificada no existe, se creará una en su nombre. Se crea un directorio secundario con el nombre “ _rejectedrows”. El carácter “_ ” garantiza que se escape el directorio para otro procesamiento de datos, a menos que se mencione explícitamente en el parámetro de ubicación. 
+*ERRORFILE* solo se aplica a CSV. Especifica el directorio de la instrucción COPY donde se deben escribir las filas rechazadas y el archivo de error correspondiente. Se puede especificar la ruta de acceso completa de la cuenta de almacenamiento o se puede especificar la ruta de acceso relativa al contenedor. Si la ruta de acceso especificada no existe, se creará una en su nombre. Se crea un directorio secundario con el nombre “_rejectedrows”. El carácter “_ ” garantiza que se escape el directorio para otro procesamiento de datos, a menos que se mencione explícitamente en el parámetro de ubicación. 
 
 En este directorio hay una carpeta que se crea según la hora de envío de la carga con el formato AñoMesDía-HoraMinutoSegundo (por ejemplo, 20180330-173205). En esta carpeta, se escriben dos tipos de archivos, el archivo de motivos (error) y el archivo de datos (fila) cada uno anexado previamente con queryID, distributionID y GUID de archivo. Como los datos y los motivos están en archivos independientes, los archivos correspondientes tienen un prefijo coincidente.
 
@@ -262,7 +262,7 @@ DATEFORMAT solo se aplica a CSV y especifica el formato de fecha de la asignaci�
 *ENCODING* solo se aplica a CSV. El valor predeterminado es UTF8. Especifica el estándar de codificación de datos para los archivos cargados por el comando COPY. 
 
 *IDENTITY_INSERT = 'ON' | 'OFF'*</br>
-IDENTITY_INSERT especifica si el valor o los valores de identidad del archivo de datos importado se van a utilizar para la columna de identidad. Si IDENTITY_INSERT está desactivado (OFF, valor predeterminado), se comprueban los valores de identidad de esta columna, pero no se importan. SQL DW asignará automáticamente valores únicos basados en los valores de inicialización y de incremento especificados durante la creación de la tabla. Tenga en cuenta el siguiente comportamiento con el comando COPY:
+IDENTITY_INSERT especifica si el valor o los valores de identidad del archivo de datos importado se van a utilizar para la columna de identidad. Si IDENTITY_INSERT está desactivado (OFF, valor predeterminado), se comprueban los valores de identidad de esta columna, pero no se importan. Azure Synapse Analytics asignará automáticamente valores únicos en función de los valores de inicialización e incremento especificados durante la creación de la tabla. Tenga en cuenta el siguiente comportamiento con el comando COPY:
 
 - Si IDENTITY_INSERT está desactivado (OFF) y la tabla tiene una columna de identidad
   - Se debe especificar una lista de columnas que no asigne un campo de entrada a la columna de identidad.
@@ -433,17 +433,6 @@ No es necesario dividir los archivos ORC o Parquet porque el comando COPY lo har
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>¿Hay alguna limitación en el número o el tamaño de los archivos?
 No hay limitaciones en cuanto al número o tamaño de los archivos; sin embargo, para obtener el mejor rendimiento, recomendamos usar archivos de al menos 4 MB.
 
-### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>¿Existe alguna limitación para COPY al usar áreas de trabajo de Synapse (versión preliminar)?
-
-La autenticación mediante identidad administrada (MSI) no se admite con la instrucción COPY o PolyBase (incluido cuando se usa en canalizaciones). Puede aparecer un mensaje de error similar al siguiente:
-
-*com.microsoft.sqlserver.jdbc.SQLServerException: La identidad de servicio administrada no se ha habilitado en este servidor. Habilite la identidad de servicio administrada e inténtelo de nuevo.*
-
-La autenticación mediante identidad de servicio administrada es necesaria cuando la cuenta de almacenamiento está asociada a una red virtual. Debe usar BCP/Bulk Insert para cargar datos en lugar de COPY o PolyBase si la cuenta de almacenamiento está conectada a una red virtual.
-
-Esta limitación solo se aplica a los grupos de SQL que pertenezcan a una área de trabajo de Synapse (versión preliminar). Se habilitará la compatibilidad con la identidad de servicio administrada en las áreas de trabajo de SYNAPSE en una próxima versión. 
-
-Envíe cualquier comentario o problema a la lista de distribución sqldwcopypreview@service.microsoft.com.
 
 ## <a name="see-also"></a>Consulte también  
 

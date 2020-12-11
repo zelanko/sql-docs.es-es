@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b0fea6ec995f383cd290ebbee786e31623b25f1
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: f290da98335aaf46c3c0d12c94d265f14dc1e2bd
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669724"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535289"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -64,6 +64,10 @@ La utilidad `SqlLocalDb` puede crear instancias de LocalDB e iniciar y detener u
 La intercalación de instancias de LocalDB está establecida en `SQL_Latin1_General_CP1_CI_AS` y no se puede cambiar. Normalmente se admiten las intercalaciones de nivel de base de datos, nivel de columna y nivel de expresión. Las bases de datos independientes siguen las reglas de metadatos e intercalaciones de `tempdb` definidas por [Intercalaciones de bases de datos independientes](../../relational-databases/databases/contained-database-collations.md).
 
 ### <a name="restrictions"></a>Restricciones
+
+- No se pueden aplicar otras revisiones a LocalDB que no sean los Service Packs. No se pueden aplicar y no se aplicarán actualizaciones de seguridad y acumulativas a través de Windows Update, Windows Update para empresas u otros métodos.
+
+- LocalDB no se puede administrar de forma remota a través de SQL Management Studio.
 
 - LocalDB no puede ser un suscriptor de replicación de mezcla.
 

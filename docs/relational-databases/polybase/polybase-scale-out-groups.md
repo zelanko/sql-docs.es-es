@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 11462e9c55f22e16fb3e20920c104bf1047d8991
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 3ab1841c009094831ae114d701d526a1d3036dba
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523860"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535279"
 ---
 # <a name="polybase-scale-out-groups"></a>Grupos de escalado horizontal de PolyBase
 
@@ -35,11 +35,11 @@ Vea [Introducción a PolyBase](./polybase-guide.md) y [Guía de PolyBase](../../
   
 ## <a name="head-node"></a>Nodo principal  
 
-El nodo principal contiene la instancia de SQL Server a la que se envían las consultas PolyBase. Cada grupo de PolyBase solo puede tener un nodo principal. Un nodo principal es un grupo lógico del motor de base de datos de SQL, el motor de PolyBase y el servicio de movimiento de datos de PolyBase de la instancia de SQL Server.
+El nodo principal contiene la instancia de SQL Server a la que se envían las consultas PolyBase. Cada grupo de PolyBase solo puede tener un nodo principal. Un nodo principal es un grupo lógico formado por el motor de base de datos de SQL Server, el motor de PolyBase y el servicio de movimiento de datos de PolyBase de la instancia de SQL Server. Con SQL Server 2017 y SQL Server 2016, el nodo principal debe ser una edición Enterprise. A partir de SQL Server 2019, el nodo principal de PolyBase puede ser una edición Enterprise o Standard.
   
-## <a name="compute-node"></a>Nodo de ejecución  
+## <a name="compute-node"></a>Nodo de ejecución
 
-Un nodo de ejecución contiene la instancia de SQL Server que ayuda a escalar horizontalmente el procesamiento de las consultas de los datos externos. Un nodo de ejecución es un grupo lógico de SQL Server y el servicio de movimiento de datos de PolyBase de la instancia de SQL Server. Un grupo de PolyBase puede tener varios nodos de ejecución. El nodo principal y los nodos de ejecución deben ejecutar la misma versión de SQL Server.
+Un nodo de ejecución contiene la instancia de SQL Server que ayuda a escalar horizontalmente el procesamiento de las consultas de los datos externos. Un nodo de ejecución es un grupo lógico de SQL Server y el servicio de movimiento de datos de PolyBase de la instancia de SQL Server. Un grupo de PolyBase puede tener varios nodos de ejecución. El nodo principal y los nodos de ejecución deben ejecutar la misma versión de SQL Server. La versión inicial de SQL Server 2016 permitía que los nodos de proceso fueran una edición Enterprise o Standard. A partir de SQL Server 2016 SP1, todas las ediciones de SQL Server pueden ser un nodo de proceso.
 
 ## <a name="scale-out-reads"></a>Lecturas de escalabilidad horizontal
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05995a1205677bbeefbb2b025268af20e445a1b4
-ms.sourcegitcommit: ab68925e9869e6cf5b39efdb415ecc8e8f5b08fc
+ms.openlocfilehash: 7888360aa4d4bdfa9b9eb782226f718d8f503ff8
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93417426"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443106"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -63,7 +63,7 @@ Crea un origen de datos externo para consultas de PolyBase. Los orígenes de dat
 - Virtualización y carga de datos mediante [PolyBase][intro_pb]
 - Operaciones de carga masiva con `BULK INSERT` o `OPENROWSET`
 
-**Se aplica a** : A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
+**Se aplica a**: A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -716,7 +716,7 @@ Proporciona el protocolo de conectividad y la ruta de acceso al origen de datos 
 Ruta de acceso de ubicación:
 
 - `<container>` = el contenedor de la cuenta de almacenamiento que contiene los datos. Los contenedores raíz son de solo lectura, no se pueden volver a escribir datos en el contenedor.
-- `<storage_account>` = nombre de la cuenta de almacenamiento del recurso de Azure.
+- `<storage_account>` = el nombre de la cuenta de almacenamiento del recurso de Azure.
 
 Instrucciones y notas adicionales cuando se establece la ubicación:
 
@@ -732,7 +732,7 @@ Especifica una credencial de ámbito de base de datos para la autenticación en 
 
 Instrucciones y notas adicionales cuando se crea una credencial:
 
-- Para cargar datos desde Azure Storage o Azure Data Lake Store (ADLS) Gen2 en SQL DW, use una clave Azure Storage.
+- Para cargar datos de Azure Storage o Azure Data Lake Store (ADLS) Gen2 en Azure Synapse Analytics, use una clave de Azure Storage.
 - `CREDENTIAL` solo se necesita si se han protegido los datos. `CREDENTIAL` no es necesario para los conjuntos de datos que permiten el acceso anónimo.
 
 Para crear una credencial con ámbito de base de datos, vea [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].

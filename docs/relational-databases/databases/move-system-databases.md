@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c9edfd5b460a6a6b80900e1beced674b80bfce93
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: a72ccacd9401a8b7955eae10751c5ac67ca211ac
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195023"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523069"
 ---
 # <a name="move-system-databases"></a>Mover bases de datos del sistema
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "92195023"
 >  Si se mueve una base de datos del sistema y posteriormente se vuelve a generar la base de datos maestra, se debe mover de nuevo la base de datos del sistema porque la operación de regeneración instala todas las bases de datos del sistema en su ubicación predeterminada.  
 
 > [!IMPORTANT]  
->  Después de mover los archivos, la cuenta del servicio de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] debe tener permiso de acceso a los archivos en la nueva ubicación de la carpeta de archivos.
+>  Después de mover los archivos, la cuenta del servicio de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] debe tener permiso de acceso a los archivos en la nueva ubicación de la carpeta de archivos. Para más información, consulte [Configurar permisos del sistema de archivos para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).
     
   
 ##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> Procedimiento de reubicación planeada y mantenimiento de disco programado  
@@ -145,7 +145,7 @@ ms.locfileid: "92195023"
 ##  <a name="moving-the-master-database"></a><a name="master"></a> Mover la base de datos maestra  
  Para mover la base de datos maestra, siga estos pasos.  
   
-1.  Desde el menú **Inicio** , seleccione **Todos los programas**, **Microsoft SQL Server 2005**, **Herramientas de configuración**y, finalmente, haga clic en **Administrador de configuración de SQL Server**.  
+1.  Desde el menú **Inicio** , seleccione **Todos los programas**, **Microsoft SQL Server 2005**, **Herramientas de configuración** y, finalmente, haga clic en **Administrador de configuración de SQL Server**.  
   
 2.  En el nodo **Servicios de SQL Server** , haga clic con el botón derecho en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, **SQL Server (MSSQLSERVER)** ) y elija **Propiedades**.  
   

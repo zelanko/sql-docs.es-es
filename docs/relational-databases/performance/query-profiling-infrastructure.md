@@ -4,7 +4,7 @@ description: Obtenga más información sobre cómo el Motor de base de datos de 
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 125a95f14f7082a3ed806d6dfa7fcb05b6d11c81
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890769"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505086"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestructura de generación de perfiles de consultas
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,8 @@ La *infraestructura de generación de perfiles de estadísticas de ejecución de
 
 Los siguientes métodos de recopilación de información de planes de ejecución para **todas las sesiones** aprovechan la infraestructura de generación de perfiles estándar:
 
--  El evento extendido ***query_post_execution_showplan***. Para habilitar eventos extendidos, consulte [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
-- El evento de seguimiento **Showplan XML** de [Seguimiento de SQL](../../relational-databases/sql-trace/sql-trace.md) y [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). Para obtener más información sobre este evento de seguimiento, vea [Showplan XML [clase de eventos]](../../relational-databases/event-classes/showplan-xml-event-class.md).
+-  El evento extendido **_query_post_execution_showplan_*. Para habilitar eventos extendidos, consulte [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
+- El evento de seguimiento *Showplan XML** de [Seguimiento de SQL](../../relational-databases/sql-trace/sql-trace.md) y [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). Para obtener más información sobre este evento de seguimiento, vea [Showplan XML [clase de eventos]](../../relational-databases/event-classes/showplan-xml-event-class.md).
 
 Cuando se ejecuta una sesión de eventos extendidos que usa el evento *query_post_execution_showplan*, la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) también se rellena, lo que habilita las estadísticas de consulta dinámicas para todas las sesiones mediante [Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md) o una consulta directa a la DMV. Para obtener más información, consulte [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md).
 
@@ -64,7 +64,7 @@ A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y [!INCLUDE[ss
   
 A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], se ha reducido la sobrecarga de rendimiento para recopilar información sobre los planes de ejecución gracias a la incorporación de la generación de perfiles ligera. A diferencia de la generación de perfiles estándar, la ligera no recopila información en tiempo de ejecución de CPU, aunque sigue recopilando la información de uso de E/S y de recuento de filas.
 
-Además se ha incorporado un nuevo evento extendido***query_thread_profile*** que aprovecha la generación de perfiles ligera. Este evento extendido expone estadísticas de ejecución por operador, lo que ofrece más información sobre el rendimiento de cada nodo y subproceso. Se puede configurar una sesión de ejemplo con este evento extendido como en el ejemplo siguiente:
+Además, se ha incorporado un nuevo evento extendido **_query_thread_profile_* que aprovecha la generación de perfiles ligera. Este evento extendido expone estadísticas de ejecución por operador, lo que ofrece más información sobre el rendimiento de cada nodo y subproceso. Se puede configurar una sesión de ejemplo con este evento extendido como en el ejemplo siguiente:
 
 ```sql
 CREATE EVENT SESSION [NodePerfStats] ON SERVER
@@ -86,7 +86,7 @@ WITH (MAX_MEMORY=4096 KB,
 > [!NOTE]
 > Para más información sobre la sobrecarga de rendimiento del generación de perfiles de consulta, vea la entrada de blog [Developers Choice: Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar). 
 
-Cuando se ejecuta una sesión de eventos extendidos que usa el evento *query_thread_profile*, la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) también se rellena con la generación de perfiles ligera, lo que habilita las estadísticas de consulta dinámicas para todas las sesiones mediante [Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md) o la consulta directa a la DMV.
+Cuando se ejecuta una sesión de eventos extendidos que usa el evento query_thread_profile, la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) también se rellena con la generación de perfiles ligera, lo que permite estadísticas de consulta dinámicas en todas las sesiones mediante el [Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md) o la consulta directa a la DMV.
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>Infraestructura de generación de perfiles de estadísticas de ejecución de consultas ligera v2
 
@@ -94,7 +94,7 @@ Cuando se ejecuta una sesión de eventos extendidos que usa el evento *query_thr
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 incluye una versión revisada de la generación de perfiles ligera con sobrecarga mínima. La generación de perfiles ligera también puede habilitarse de forma global mediante la [marca de seguimiento 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) para las versiones indicadas anteriormente en *Se aplica a*. Se ha incorporado una nueva DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) para devolver el plan de ejecución de consultas de las solicitudes en curso.
 
-A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, si la generación de perfiles ligera no está habilitada de forma global, se puede usar el nuevo argumento de [sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)**QUERY_PLAN_PROFILE** para habilitarla en el nivel de consulta y para cualquier sesión. Cuando una consulta que contiene esta nueva sugerencia finaliza, también se devuelve un nuevo evento extendido ***query_plan_profile*** que proporciona un archivo XML de plan de ejecución real similar al evento extendido *query_post_execution_showplan*. 
+A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, si la generación de perfiles ligera no está habilitada de forma global, se puede usar el nuevo argumento de [sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)**QUERY_PLAN_PROFILE** para habilitarla en el nivel de consulta y para cualquier sesión. Cuando una consulta que contiene esta nueva sugerencia finaliza, también se devuelve un nuevo evento extendido **_query_plan_profile_* que proporciona un archivo XML de plan de ejecución real similar al evento extendido query_post_execution_showplan*. 
 
 > [!NOTE]
 > El evento ampliado *query_plan_profile* también usa la generación de perfiles ligera, incluso si no se usa la sugerencia de consulta. 

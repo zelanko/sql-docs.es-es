@@ -18,18 +18,18 @@ ms.author: vanto
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/10/2020
-ms.openlocfilehash: 0f0ed0ee3619abae19df06879fbfd1d60b22a0b0
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 1202cb470530941b23c3e0a742ea9a1715170784
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688424"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523083"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Agrega una firma digital a un procedimiento almacenado, una función, un ensamblado o un desencadenador. También agrega una contrafirma a un procedimiento almacenado, una función, un ensamblado o un desencadenador.
+Agrega una firma digital a un procedimiento almacenado, una función, un ensamblado o un desencadenador de DML. También agrega una contrafirma a un procedimiento almacenado, una función, un ensamblado o un desencadenador de DML.
 
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -83,7 +83,7 @@ El módulo que se va a firmar o contrafirmar, y el certificado o la clave simét
 > [!CAUTION]
 > La firma de módulos solo se debe utilizar para conceder permisos, nunca para denegarlos ni revocarlos.  
   
- No se puede firmar las funciones con valores de tabla insertadas.  
+ Los desencadenadores del lenguaje de definición de Data (DDL) y las funciones con valores de tabla insertadas no se pueden firmar.  
   
  Para obtener más información acerca de las firmas, vea la vista de catálogo sys.crypt_properties.  
   

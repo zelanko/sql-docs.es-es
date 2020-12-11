@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5ddd76c050e50576a446e8e404b889fcc8fa92d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 728650497849454ab7c30dae04317a750665a26c
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867960"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442970"
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
 
@@ -110,11 +110,11 @@ RLS admite dos tipos de predicados de seguridad.
   
  Además, son necesarios los siguientes permisos para cada predicado que se agrega:  
   
-- Los permisos**SELECT** y **REFERENCES** de la función que se usa como predicado.  
+- Los permisos **SELECT** y **REFERENCES** de la función que se usa como predicado.  
   
-- El permiso**REFERENCES** de la tabla de destino que se enlaza a la directiva.  
+- El permiso **REFERENCES** de la tabla de destino que se enlaza a la directiva.  
   
-- El permiso**REFERENCES** de cada columna desde la tabla de destino que se usa como argumento.  
+- El permiso **REFERENCES** de cada columna desde la tabla de destino que se usa como argumento.  
   
  Las directivas de seguridad se aplican a todos los usuarios, incluidos los usuarios dbo de la base de datos. Los usuarios dbo pueden modificar o quitar directivas de seguridad, sin embargo, se pueden auditar los cambios en las directivas de seguridad. Si los usuarios con privilegios elevados, como sysadmin o db_owner, necesitan ver todas las filas para solucionar problemas o validar los datos, la directiva de seguridad debe estar escrita de modo que lo permita.  
   
@@ -208,12 +208,12 @@ CREATE TABLE Sales
  Rellene la tabla con seis filas de datos que muestren tres pedidos para cada representante de ventas.  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
@@ -302,8 +302,8 @@ Este breve ejemplo crea tres usuarios y una tabla externa con seis filas. Despu�
 
 ### <a name="prerequisites"></a>Prerrequisitos
 
-1. Debe tener un grupo de SQL. Vea [Creación de un grupo de Synapse SQL](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
-1. El servidor que hospeda el grupo de SQL debe estar registrado con AAD y debe tener una cuenta de almacenamiento de Azure con permisos de colaborador de blog de Storage. Siga [estos](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps) pasos.
+1. Debe tener un grupo de SQL dedicado. Consulte [Creación de un grupo de SQL dedicado](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal).
+1. El servidor que hospeda el grupo de SQL dedicado debe estar registrado con AAD y se debe tener una cuenta de almacenamiento de Azure con permisos de colaborador de blog de Storage. Siga [estos](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps) pasos.
 1. Cree un sistema de archivos para la cuenta de Azure Storage. Use el Explorador de Storage para ver la cuenta de almacenamiento. Haga clic con el botón derecho en los contenedores y seleccione *Crear sistema de archivos*.  
 
 Después de implementar los requisitos previos, cree tres cuentas de usuario que mostrarán las distintas funciones de acceso.
@@ -317,10 +317,10 @@ GO
 CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
---run in master and your SQL pool database
-CREATE USER Manager FOR LOGIN Manager;  
-CREATE USER Sales1  FOR LOGIN Sales1;  
-CREATE USER Sales2  FOR LOGIN Sales2 ;
+--run in master and your dedicated SQL pool database
+CREATE USER Manager FOR LOGIN Manager;  
+CREATE USER Sales1  FOR LOGIN Sales1;  
+CREATE USER Sales2  FOR LOGIN Sales2 ;
 ```
 
 Cree una tabla que contenga datos.  

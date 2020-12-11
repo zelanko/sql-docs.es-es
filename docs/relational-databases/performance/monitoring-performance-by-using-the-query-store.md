@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 4cccda1a792b8c006b758c3788d910e745e94989
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: 96e137f3e49ac21a38577704c2663d3de85151ff
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418032"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505149"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisión del rendimiento mediante el almacén de consultas
 
@@ -35,7 +35,7 @@ Para más información sobre el funcionamiento del Almacén de consultas de Azur
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Habilitar el Almacén de consultas
 
- El Almacén de consultas no está habilitado de forma predeterminada para las nuevas bases de datos de SQL Server y Azure Synapse Analytics (SQL DW) y está habilitado de forma predeterminada para las nuevas bases de datos de Azure SQL Database.
+ El Almacén de consultas no está habilitado de forma predeterminada para las nuevas bases de datos de SQL Server y Azure Synapse Analytics y sí lo está para las nuevas bases de datos de Azure SQL Database.
 
 ### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Use la página del Almacén de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
@@ -122,7 +122,7 @@ Seleccione un plan para ver el plan de consulta gráfica. Los botones están dis
 
 ![Consultas devueltas de SQL Server 2016 en Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Consultas devueltas de SQL Server 2016 en Explorador de objetos de SSMS")
 
-Para aplicar un plan, seleccione una consulta y el plan y luego haga clic en **Force Plan** (Forzar plan). Solo puede forzar planes que se guardaron mediante la característica del plan de consulta y que todavía se conservan en la caché del plan de consulta.
+Para aplicar un plan, seleccione una consulta y el plan y luego haga clic en **Force Plan**(Forzar plan). Solo puede forzar planes que se guardaron mediante la característica del plan de consulta y que todavía se conservan en la caché del plan de consulta.
 
 ## <a name="finding-waiting-queries"></a><a name="Waiting"></a> Buscar consultas en espera
 

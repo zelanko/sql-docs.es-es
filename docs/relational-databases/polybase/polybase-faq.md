@@ -1,19 +1,19 @@
 ---
 title: Preguntas más frecuentes en PolyBase | Microsoft Docs
 description: Compare PolyBase y los servidores vinculados, y compare PolyBase en clústeres de macrodatos y en instancias independientes. Descubra las novedades de PolyBase 2019.
-ms.date: 04/23/2019
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 627afe62630dbca81c77bef45d8263824d8c41df
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 57d59e774c1042bf7989bcd2df4a652ed4498f0d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "96127854"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563141"
 ---
 # <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 
@@ -55,13 +55,13 @@ En la tabla siguiente se resaltan las características de PolyBase disponibles e
 
 |Característica |Clúster de macrodatos|Instancia independiente|
 |--------------------------|--------------------------|---------|   
-|Crear un origen de datos externos desde SQL Server, Oracle, Teradata y Mongo DB |X|X |
+|Crear un origen de datos externos desde SQL Server, Oracle, Teradata y Mongo DB |X|X|
 |Crear un origen de datos externos con un controlador ODBC de terceros compatible | | X|
 |Crear un origen de datos externos para el origen de datos HADOOP | X| X|
 |Crear un origen de datos externo para Azure Blob Storage | X| X|
 |Crear una tabla externa en un grupo de datos de SQL Server | X| |
 |Crear una tabla externa en un grupo de almacenamiento de SQL Server | X| |
-|Escalar horizontalmente la ejecución de consultas | X| X|
+|Escalar horizontalmente la ejecución de consultas | X| X (solo Windows) |
 
 > [!NOTE]
 >En la tabla no se describe la funcionalidad disponible en la versión más reciente de CTP de [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)]. Para ver las características disponibles, consulte las notas de la versión. Para más información sobre las conexiones mediante el conector ODBC genérico, consulte la [guía para configurar tipos genéricos de ODBC](polybase-configure-odbc-generic.md).

@@ -26,12 +26,12 @@ ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f90d94a11b4e026082bd3be9f25cc7ad7246df9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e5802f6e2a078a50797579f2c03079802be5c097
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006660"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443044"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Importar y exportar datos de forma masiva (SQL Server)
 
@@ -39,7 +39,7 @@ ms.locfileid: "86006660"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la exportación masiva de datos (*conjuntos masivos de datos*) desde una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la importación en bloque de datos en una tabla o vista sin particiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
-- La*exportación masiva* se refiere a la copia de datos de una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un archivo de datos.
+- La *exportación masiva* se refiere a la copia de datos de una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un archivo de datos.
 - *Importación masiva* significa cargar datos de un archivo de datos a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, puede exportar datos de una aplicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel a un archivo de datos y, después, importarlos masivamente en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
 ## <a name="methods-for-bulk-importing-and-exporting-data"></a><a name="MethodsForBuliIE"></a> Métodos para la importación y exportación masivas de datos
@@ -57,7 +57,7 @@ ms.locfileid: "86006660"
 > Para obtener las reglas sobre el uso de un archivo de valores separados por comas (CSV) como archivo de datos para una importación en bloque de datos a SQL Server, vea [Preparación de los datos para exportar o importar en bloque (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
 > [!NOTE]
-> Azure SQL DW solo admite la utilidad bcp para importar y exportar archivos delimitados.
+> Azure Synapse Analytics solo admite la utilidad bcp para importar y exportar archivos delimitados.
 
 ## <a name="format-files"></a><a name="FFs"></a> Archivos de formato
 

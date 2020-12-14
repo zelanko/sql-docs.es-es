@@ -21,13 +21,13 @@ ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06299f367f987cfc716154f4d26ffb8e5e07a868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c8643c40f7b62c0a0fdc3d85d32111d05ee955f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760417"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405171"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Cómo especificar un esquema de asignación anotado en un diagrama de actualización (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "85760417"
 >  En esta documentación se asume que está familiarizado con la compatibilidad de las plantillas y el esquema de asignación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Introducción a los esquemas XSD anotados &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). En el caso de las aplicaciones heredadas que usan XDR, consulte [esquemas XDR anotados &#40;en desuso en SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Trabajar con tipos de datos  
- Si el esquema especifica el tipo de datos **Image**, **Binary**o **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (mediante **SQL: DataType**) y no especifica un tipo de datos XML, el diagrama supone que el tipo de datos XML es **Binary base 64**. Si los datos son de tipo **bin. base** , debe especificar explícitamente el tipo (**DT: Type = bin. base** o **type = "xsd: hexBinary"**).  
+ Si el esquema especifica el tipo de datos **Image**, **Binary** o **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (mediante **SQL: DataType**) y no especifica un tipo de datos XML, el diagrama supone que el tipo de datos XML es **Binary base 64**. Si los datos son de tipo **bin. base** , debe especificar explícitamente el tipo (**DT: Type = bin. base** o **type = "xsd: hexBinary"**).  
   
- Si el esquema especifica el tipo de datos de fecha y hora de **DateTime**, **Date**u **Time** , también debe especificar el tipo de datos correspondiente mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **SQL: DataType = "DateTime"**.  
+ Si el esquema especifica el tipo de datos de fecha y hora de **DateTime**, **Date** u **Time** , también debe especificar el tipo de datos correspondiente mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **SQL: DataType = "DateTime"**.  
   
  Al controlar los parámetros de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo **Money** , debe especificar explícitamente **SQL: DataType = "Money"** en el nodo correspondiente en el esquema de asignación.  
   

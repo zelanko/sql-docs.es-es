@@ -18,13 +18,13 @@ ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 39db2d1bd2d3525e1dc2902c11e362d70b212ebd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: dbe893e86824ad727b7eaca96b4e01e4ded971d5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809871"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405071"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "91809871"
 |**elastic_pool_storage_limit_mb**|**bigint**|Configuración de límite máximo de almacenamiento de grupos elásticos actual para este grupo elástico en megabytes durante este intervalo.|
 |**avg_allocated_storage_percent**|**decimal (5, 2)**|El porcentaje de espacio de datos asignado por todas las bases de datos del grupo elástico.  Esta es la proporción de espacio de datos asignado al tamaño máximo de los datos para el grupo elástico.  Para obtener más información, vea [Administración del espacio de archivo en SQL Database](/azure/sql-database/sql-database-file-space-management)|  
   
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
  Esta vista existe en la base de datos maestra del servidor de SQL Database. Debe estar conectado a la base de datos maestra para consultar **Sys.elastic_pool_resource_stats**.  
   

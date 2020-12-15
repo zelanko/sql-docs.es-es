@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b84de259222b9e2bde8c9b99f67328ea317e645
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 35f08a014fd1abbc8af6db994ba4c2d9b85a0bd4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765140"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405720"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ El cuadro de diálogo **Nueva clave maestra de columna** permite generar una cla
     - **Almacén de certificados: usuario actual**: indica la ubicación del almacén de certificados del usuario actual en el Almacén de certificados de Windows, que es el almacén personal. 
     - **Almacén de certificados: equipo local**: indica la ubicación del almacén de certificados del equipo local en el Almacén de certificados de Windows. 
     - **Azure Key Vault**: deberá iniciar sesión en Azure (haga clic en **Iniciar sesión**). Una vez que haya iniciado sesión, podrá elegir una de las suscripciones de Azure y un almacén de claves.
-    - **Proveedor de almacén de claves (KSP)** : indica un almacén de claves accesible a través de un proveedor de almacén de claves (KSP) que implementa la API Cryptography Next Generation (CNG). Normalmente, este tipo de almacén es un módulo de seguridad de hardware (HSM). Después de seleccionar esta opción, debe elegir un KSP. De forma predeterminada está seleccionado el**proveedor de almacén de claves de software de Microsoft** . Si quiere usar una clave maestra de columna almacenada en un HSM, seleccione un KSP para el dispositivo (debe estar instalado y configurado en el equipo antes de que abra el cuadro de diálogo).
+    - **Proveedor de almacén de claves (KSP)** : indica un almacén de claves accesible a través de un proveedor de almacén de claves (KSP) que implementa la API Cryptography Next Generation (CNG). Normalmente, este tipo de almacén es un módulo de seguridad de hardware (HSM). Después de seleccionar esta opción, debe elegir un KSP. De forma predeterminada está seleccionado el **proveedor de almacén de claves de software de Microsoft** . Si quiere usar una clave maestra de columna almacenada en un HSM, seleccione un KSP para el dispositivo (debe estar instalado y configurado en el equipo antes de que abra el cuadro de diálogo).
     -   **Proveedor de servicios de cifrado (CAPI)** : almacén de claves accesible mediante un proveedor de servicios de cifrado (CSP) que implementa Cryptography API (CAPI). Normalmente, este almacén es un módulo de seguridad de hardware (HSM). Después de seleccionar esta opción, debe elegir un CSP.  Si quiere usar una clave maestra de columna almacenada en un HSM, seleccione un CSP para el dispositivo (debe estar instalado y configurado en el equipo antes de que abra el cuadro de diálogo).
     
     > [!NOTE]
@@ -60,7 +60,7 @@ El cuadro de diálogo **Nueva clave maestra de columna** permite generar una cla
 
 Una vez que haya completado el cuadro de diálogo, SQL Server Management Studio creará los metadatos para la clave maestra de columna en la base de datos. El cuadro de diálogo consigue esto generando y emitiendo una instrucción [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) .
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 Si está configurando una clave maestra de columna habilitada para el enclave, SSMS también firma los metadatos mediante la clave maestra de columna. 
 

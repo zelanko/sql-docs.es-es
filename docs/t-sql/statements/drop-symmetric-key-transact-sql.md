@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e18319e45c3d397e4283013ec31bb3c98424c892
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f07f4d02c005ee89b24a323111c05789dbbd9fac
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96131090"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901048"
 ---
 # <a name="drop-symmetric-key-transact-sql"></a>DROP SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,9 +54,8 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  Quita una clave de Administración extensible de claves (EKM) de un dispositivo EKM. Para más información sobre la Administración extensible de claves, vea [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 ## <a name="remarks"></a>Observaciones  
- Si la clave está abierta en la sesión actual, la instrucción registrará errores.  
   
- Si la clave asimétrica está asignada a una clave de Administración extensible de claves (EKM) en un dispositivo EKM y no se especifica la opción de **REMOVE PROVIDER KEY**, la clave se quitará de la base de datos pero no del dispositivo y se emitirá una advertencia.  
+Si la clave asimétrica está asignada a una clave de Administración extensible de claves (EKM) en un dispositivo EKM y no se especifica la opción de **REMOVE PROVIDER KEY**, la clave se quitará de la base de datos pero no del dispositivo y se emitirá una advertencia.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL para la clave simétrica.  

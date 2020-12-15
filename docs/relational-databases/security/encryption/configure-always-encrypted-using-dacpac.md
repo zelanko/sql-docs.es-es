@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bb90c0f00087f0d2b0b76b3fa66b8cca2f4707c
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c18b6842139e5a4f5f0261761fa93cc42d3a506c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96130907"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405742"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Configuración del cifrado de columna mediante Always Encrypted con un paquete DAC 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ La implementación de un paquete DAC también puede dar lugar a la creación o l
 ## <a name="performance-considerations"></a>Consideraciones de rendimiento
 Para realizar operaciones criptográficas, la herramienta que se use para implementar un DACPAC debe trasladar los datos fuera de la base de datos. La herramienta crea una tabla (o varias) con la configuración de cifrado deseada en la base de datos, carga todos los datos de las tablas originales, realiza las operaciones criptográficas solicitadas, carga los datos en las nuevas tablas y, después, intercambia las tablas originales por las nuevas. La ejecución de operaciones criptográficas puede llevar mucho tiempo. Durante ese tiempo, la base de datos no está disponible para escribir transacciones. 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] y su instancia de SQL Server está configurada con un enclave seguro, puede ejecutar las operaciones criptográficas en contexto, sin sacar los datos de la base de datos. Vea [Configuración del cifrado de columnas en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md). Tenga en cuenta que el cifrado en contexto no está disponible para las implementaciones de DACPAC.

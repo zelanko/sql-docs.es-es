@@ -18,13 +18,13 @@ ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17f6ca29f9a91315eef11c39a884bf773cad6daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c02a33e76fd478e77e2b5a743b5cc6e1d32f1ff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649782"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414569"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Especificar predicados de selección en la ruta de acceso de ubicación (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85649782"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- En esta consulta XPath, `child` y `attribute` son nombres de eje. `Customer`es la prueba de nodo (TRUE si `Customer` es **\<element node>** , porque **\<element>** es el tipo de nodo principal del `child` eje). `attribute::CustomerID="ALFKI"` es el predicado. En el predicado, `attribute` es el eje y `CustomerID` es la prueba de nodo (true si **CustomerID** es un atributo del nodo de contexto, porque **\<attribute>** es el tipo de nodo principal del eje de **atributo** ).  
+ En esta consulta XPath, `child` y `attribute` son nombres de eje. `Customer` es la prueba de nodo (TRUE si `Customer` es **\<element node>** , porque **\<element>** es el tipo de nodo principal del `child` eje). `attribute::CustomerID="ALFKI"` es el predicado. En el predicado, `attribute` es el eje y `CustomerID` es la prueba de nodo (true si **CustomerID** es un atributo del nodo de contexto, porque **\<attribute>** es el tipo de nodo principal del eje de **atributo** ).  
   
  Con la sintaxis abreviada, la consulta XPath también se puede especificar como:  
   
@@ -74,7 +74,7 @@ child::Customer[child::ContactName]
   
  En este ejemplo se da por supuesto que **\<ContactName>** es un elemento secundario del **\<Customer>** elemento en el documento XML, al que se hace referencia como *asignación centrada en elementos* en un esquema XSD anotado.  
   
- En esta expresión XPath, `child` es el nombre de eje. `Customer`es la prueba de nodo (TRUE si `Customer` es un **\<element>** nodo, porque **\<element>** es el tipo de nodo principal del `child` eje). `child::ContactName` es el predicado. En el predicado, `child` es el eje y `ContactName` es la prueba de nodo (true si `ContactName` es un **\<element>** nodo).  
+ En esta expresión XPath, `child` es el nombre de eje. `Customer` es la prueba de nodo (TRUE si `Customer` es un **\<element>** nodo, porque **\<element>** es el tipo de nodo principal del `child` eje). `child::ContactName` es el predicado. En el predicado, `child` es el eje y `ContactName` es la prueba de nodo (true si `ContactName` es un **\<element>** nodo).  
   
  Esta expresión solo devuelve los elementos **\<Customer>** secundarios del nodo de contexto que tienen elementos **\<ContactName>** secundarios.  
   
@@ -93,7 +93,7 @@ child::Customer[not(child::ContactName)]
   
  En este ejemplo se da por supuesto que **\<ContactName>** es un elemento secundario del **\<Customer>** elemento en el documento XML y el campo ContactName no es necesario en la base de datos.  
   
- En este ejemplo, `child` es el eje. `Customer`es la prueba de nodo (TRUE si `Customer` es un \<element> nodo). `not(child::ContactName)` es el predicado. En el predicado, `child` es el eje y `ContactName` es la prueba de nodo (true si `ContactName` es un \<element> nodo).  
+ En este ejemplo, `child` es el eje. `Customer` es la prueba de nodo (TRUE si `Customer` es un \<element> nodo). `not(child::ContactName)` es el predicado. En el predicado, `child` es el eje y `ContactName` es la prueba de nodo (true si `ContactName` es un \<element> nodo).  
   
  Con la sintaxis abreviada, la consulta XPath también se puede especificar como:  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.table_types (Transact-SQL)
-title: Sys. table_types (Transact-SQL) | Microsoft Docs
+title: sys.table_types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: c05fd873-aff2-4a89-9936-a54c2ea09996
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd8ea2fe8960115b5ef638490a38291ed9cdd559
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0e55d33dbc18c8a06100a2ffab4b9ea3691aabc1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548684"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482886"
 ---
 # <a name="systable_types-transact-sql"></a>sys.table_types (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "89548684"
   
 ## <a name="see-also"></a>Consulte también  
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
- [Usar parámetros con valores de tabla &#40;Motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
+ [Usar parámetros de Table-Valued &#40;Motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)   
  [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

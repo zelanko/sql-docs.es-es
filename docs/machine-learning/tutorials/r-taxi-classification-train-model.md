@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d42d51371b0641fe460150e68fe96c5eb68e09cb
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 0b5f930568e655df645cbaed140f163ada3e3afa
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412553"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934037"
 ---
 # <a name="r-tutorial-train-and-save-model"></a>Tutorial de R: Entrenamiento y guardado del modelo
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -79,7 +79,7 @@ Al llamar a R desde T-SQL, utilice el procedimiento almacenado del sistema [sp_e
   
    + El script de R llama a la función **glm** de R para crear el modelo de regresión logística.
   
-     La variable binaria _tipped_ se usa como la *etiqueta* o columna del resultado y el modelo se ajusta mediante estas columnas específicas:  _passenger_count_ , _trip_distance_ , _trip_time_in_secs_ y _direct_distance_.
+     La variable binaria _tipped_ se usa como la *etiqueta* o columna del resultado y el modelo se ajusta mediante estas columnas específicas:  _passenger_count_, _trip_distance_, _trip_time_in_secs_ y _direct_distance_.
   
    + El modelo entrenado, guardado en la variable de R `logitObj`, se serializa y se devuelve como un parámetro de salida.
 
@@ -101,7 +101,7 @@ Como el procedimiento almacenado ya incluye una definición de los datos de entr
 
 3. Una vez completada la instrucción, abra la tabla *nyc_taxi_models*. Es posible que el procesamiento de los datos y el ajuste del modelo tarden un rato.
 
-   Puede ver que se ha agregado una fila nueva, que contiene el modelo serializado en la columna _modelo_ y el nombre del modelo **TrainLog_model** en la columna _nombre_.
+   Puede ver que se ha agregado una fila nueva, que contiene el modelo serializado en la columna _model_ y el nombre del modelo **RxTrainLogit_model** en la columna _name_.
 
    ```text
    model                        name

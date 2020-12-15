@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8816e2ca5872da55193fab016a459a461359c742
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: a84facf470cbafa9480c1beb48b19be7b9783f51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328580"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482571"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -54,19 +54,19 @@ ms.locfileid: "93328580"
 
 El valor entero negativo de la columna result_cache_hit es un valor de mapa de bits de todos los motivos aplicados por los que el conjunto de resultados de una consulta no se puede almacenar en caché.  Esta columna puede ser la [| (OR bit a bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) producto de uno o varios de los siguientes valores:  
   
-|Valor            |Descripción  |  
+|Value            |Descripción  |  
 |-----------------|-----------------|  
 |**1**|Acierto de caché de conjunto de resultados|  
-|**0x00** ( **0** )|Error de caché de conjunto de resultados|  
-|-**0x01** ( **-1** )|El almacenamiento en caché del conjunto de resultados está deshabilitado en la base de datos.|  
-|-**0x02** ( **-2** )|El almacenamiento en caché del conjunto de resultados está deshabilitado en la sesión. | 
-|-**0x04** ( **-4** )|El almacenamiento en caché del conjunto de resultados está deshabilitado debido a que no hay orígenes de datos para la consulta.|  
-|-**0x08** ( **-8** )|El almacenamiento en caché del conjunto de resultados está deshabilitado debido a predicados de seguridad de nivel de fila.|  
-|-**0x10** ( **-16** )|El almacenamiento en caché del conjunto de resultados está deshabilitado debido al uso de la tabla del sistema, la tabla temporal o la tabla externa en la consulta.|  
-|-**0x20** ( **-32** )|El almacenamiento en caché del conjunto de resultados está deshabilitado porque la consulta contiene constantes de tiempo de ejecución, funciones definidas por el usuario o funciones no deterministas.|  
-|-**0x40** ( **-64** )|El almacenamiento en caché del conjunto de resultados está deshabilitado porque el tamaño estimado del conjunto de resultados es >10 GB.|  
-|-**0x80** ( **-128** ) |El almacenamiento en caché del conjunto de resultados está deshabilitado porque el conjunto de resultados contiene filas con un tamaño grande (>64 KB).|  
-|-**0x100** ( **-256** ) |El almacenamiento en caché del conjunto de resultados está deshabilitado debido al uso del enmascaramiento dinámico de datos granular.|  
+|**0x00** (**0**)|Error de caché de conjunto de resultados|  
+|-**0x01** (**-1**)|El almacenamiento en caché del conjunto de resultados está deshabilitado en la base de datos.|  
+|-**0x02** (**-2**)|El almacenamiento en caché del conjunto de resultados está deshabilitado en la sesión. | 
+|-**0x04** (**-4**)|El almacenamiento en caché del conjunto de resultados está deshabilitado debido a que no hay orígenes de datos para la consulta.|  
+|-**0x08** (**-8**)|El almacenamiento en caché del conjunto de resultados está deshabilitado debido a predicados de seguridad de nivel de fila.|  
+|-**0x10** (**-16**)|El almacenamiento en caché del conjunto de resultados está deshabilitado debido al uso de la tabla del sistema, la tabla temporal o la tabla externa en la consulta.|  
+|-**0x20** (**-32**)|El almacenamiento en caché del conjunto de resultados está deshabilitado porque la consulta contiene constantes de tiempo de ejecución, funciones definidas por el usuario o funciones no deterministas.|  
+|-**0x40**(**-64**)|El almacenamiento en caché del conjunto de resultados está deshabilitado porque el tamaño estimado del conjunto de resultados es >10 GB.|  
+|-**0x80**(**-128**) |El almacenamiento en caché del conjunto de resultados está deshabilitado porque el conjunto de resultados contiene filas con un tamaño grande (>64 KB).|  
+|-**0x100**(**-256**) |El almacenamiento en caché del conjunto de resultados está deshabilitado debido al uso del enmascaramiento dinámico de datos granular.|  
 
 ## <a name="permissions"></a>Permisos
 

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_external_script_execution_stats
-title: Sys. dm_external_script_execution_stats | Microsoft Docs
+title: sys.dm_external_script_execution_stats | Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2020
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c8244de0efc2bdd3dc506e5e1ebcddcd4843dea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 32a35224dd40cfc33bdc3c8bb0c93fd5a783966a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489928"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482696"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -49,7 +49,7 @@ Devuelve una fila por cada tipo de solicitud de script externo. Las solicitudes 
 > [!NOTE]  
 > Los usuarios que ejecuten scripts externos deben tener el permiso adicional EXECUTE ANY EXTERNAL SCRIPT, sin embargo, los administradores pueden usar esta DMV sin este permiso.
   
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
   Esta DMV se proporciona para la telemetría interna, a fin de supervisar el uso general de la nueva característica de ejecución de scripts externos que se proporciona en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. El servicio de telemetría comienza cuando LaunchPad comienza e incrementa un contador basado en disco cada vez que se llama una función registrada de script externo.
 
@@ -97,7 +97,7 @@ FROM sys.dm_external_script_execution_stats
 WHERE language = 'Python';
 ```  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 + [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 + [Funciones y vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)

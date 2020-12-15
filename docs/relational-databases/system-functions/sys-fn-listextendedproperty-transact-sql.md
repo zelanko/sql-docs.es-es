@@ -1,6 +1,6 @@
 ---
 description: sys.fn_listextendedproperty (Transact-SQL)
-title: Sys. fn_listextendedproperty (Transact-SQL) | Microsoft Docs
+title: sys.fn_listextendedproperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd891bcfdaddfb42e2b55e1b69e3f320563c1ba7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3efd2428f9eeae241c0ec9be497c854ba0d91417
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427827"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478956"
 ---
 # <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -97,7 +97,7 @@ fn_listextendedproperty (
   
  Si la tabla devuelta está vacía, el objeto no tiene propiedades extendidas o el usuario no tiene permisos para mostrar las propiedades extendidas del objeto. Cuando se devuelven propiedades extendidas de la propia base de datos, el valor de las columnas objtype y objname será NULL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si el valor de *property_name* es null o default, fn_listextendedproperty devuelve todas las propiedades del objeto especificado.  
   
  Cuando se especifica el tipo de objeto y el valor del nombre de objeto correspondiente es NULL o el valor predeterminado, fn_listextendedproperty devuelve todas las propiedades extendidas de todos los objetos del tipo especificado.  
@@ -182,6 +182,6 @@ GO
  [sp_addextendedproperty &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [Sys. extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sys.extended_properties &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

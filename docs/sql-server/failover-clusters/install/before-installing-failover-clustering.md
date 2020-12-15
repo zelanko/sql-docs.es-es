@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b26571c01db073aa2567ebbee19ff2183c47a552
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: fd95dd20cf72900a85c675c0e6b89689553d55f5
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127676"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999252"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar los clústeres de conmutación por error
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "96127676"
   
 -   La administración remota debe estar habilitada.  
   
--   Para el puerto de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , use el Administrador de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con objeto de comprobar la configuración de la red de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el protocolo TCP/IP en la instancia que desea desbloquear. Debe habilitar el puerto TCP para IPALL si desea conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante TCP después de la instalación. De forma predeterminada, SQL Browser escucha en el puerto UDP 1434.  
+- Para las instancias de SQL Server con un puerto no predeterminado, use la configuración de red del Administrador de configuración de SQL Server para determinar el puerto que usa la instancia de SQL Server que quiere desbloquear. Habilite el puerto TCP para IPALL en el firewall si se quiere conectarse a la instancia de SQL Server mediante el [servicio SQL Server Browser](../../../tools/configuration-manager/sql-server-browser-service.md), que usa una dirección IP diferente de la instancia en clúster y el puerto UDP 1434. 
   
 -   Las operaciones de instalación de los clústeres de conmutación por error incluyen una regla que comprueba el orden de los enlaces de red. Aunque el orden de los enlaces pueda parecer correcto, existe la posibilidad de haber deshabilitado configuraciones de NIC o haber dejado configuraciones de NIC "fantasma" en el sistema. Las configuraciones de NIC "fantasma" pueden afectar al orden de los enlaces y hacer que la regla de orden de enlaces emita una advertencia. Para evitar esta situación, realice los pasos siguientes con el fin de identificar y quitar los adaptadores de red deshabilitados:  
   

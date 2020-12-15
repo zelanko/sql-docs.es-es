@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_memory_grants (Transact-SQL)
-title: Sys. dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da496a91a9ed3fa6a391d0862de7eb7fde391480
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b38c73b671329a13923604965f9529113d0549d7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546623"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477286"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "89546623"
  En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, se filtran todas las filas que contienen datos que no pertenecen al inquilino conectado. Además, se filtran los valores de las columnas **scheduler_id**, **wait_order**, **pool_id** **group_id** . el valor de la columna se establece en NULL.  
   
 > [!NOTE]  
-> Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_exec_query_memory_grants**.  
+> Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys.dm_pdw_nodes_exec_query_memory_grants**.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|Id. (SPID) de la sesión en la que se está ejecutando esta consulta.|  
 |**id_de_solicitud**|**int**|Id. de la solicitud. Es único en el contexto de la sesión.|  
 |**scheduler_id**|**int**|Id. del programador que programa esta consulta.|  
-|**dop**|**smallint**|Grado de paralelismo de esta consulta.|  
+|**DOP**|**smallint**|Grado de paralelismo de esta consulta.|  
 |**request_time**|**datetime**|Fecha y hora a la que esta consulta solicitó la concesión de memoria.|  
 |**grant_time**|**datetime**|Fecha y hora a la que se concedió la memoria para esta consulta. Es NULL si aún no se ha concedido la memoria.|  
 |**requested_memory_kb**|**bigint**|Memoria solicitada total en kilobytes.|  
@@ -75,14 +75,14 @@ ms.locfileid: "89546623"
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
    
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Un escenario de depuración típico para un tiempo de espera de consulta puede tener el siguiente aspecto:  
   
 -   Compruebe el estado de la memoria del sistema global con [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) y diversos contadores de rendimiento.  
   
 -   Compruebe las reservas de memoria para la ejecución de consultas en **sys.dm_os_memory_clerks**, donde `type = 'MEMORYCLERK_SQLQERESERVATIONS'`.  
   
--   Busque las consultas en espera<sup>1</sup> para las concesiones con **Sys. dm_exec_query_memory_grants**.  
+-   Busque las consultas en espera <sup>1</sup> para las concesiones mediante **Sys.dm_exec_query_memory_grants**.  
   
     ```sql  
     --Find all queries waiting in the memory queue  
@@ -91,7 +91,7 @@ En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiere el permiso `V
     
     <sup>1</sup> En este caso, el tipo de espera normalmente es RESOURCE_SEMAPHORE. Para obtener más información, vea [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
   
--   Almacenar en caché las consultas con concesiones de memoria mediante [Sys. dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) y [sys. dm_exec_query_plan &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+-   Almacenar en caché las consultas con concesiones de memoria mediante [sys.dm_exec_cached_plans &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) y [Sys.dm_exec_query_plan &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
     ```sql  
     -- retrieve every query plan from the plan cache  
@@ -117,10 +117,10 @@ En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiere el permiso `V
   
  Las consultas que utilizan vistas de administración dinámica que incluyen `ORDER BY` o agregados pueden aumentar el consumo de memoria y, por tanto, contribuir al problema que están solucionando.  
   
- La característica del regulador de recursos permite que un administrador de bases de datos distribuya los recursos del servidor entre los grupos de recursos de servidor, hasta un máximo de 64 fondos. A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , cada grupo se comporta como una pequeña instancia de servidor independiente y requiere 2 semáforos. El número de filas que se devuelven desde **Sys. dm_exec_query_resource_semaphores** puede ser hasta 20 veces mayor que las filas devueltas en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+ La característica del regulador de recursos permite que un administrador de bases de datos distribuya los recursos del servidor entre los grupos de recursos de servidor, hasta un máximo de 64 fondos. A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , cada grupo se comporta como una pequeña instancia de servidor independiente y requiere 2 semáforos. El número de filas que se devuelven desde **Sys.dm_exec_query_resource_semaphores** puede ser hasta 20 veces mayor que las filas devueltas en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
+ [sys.dm_exec_query_resource_semaphores &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
  [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md)   

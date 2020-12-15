@@ -1,6 +1,6 @@
 ---
 description: Campos de descriptor de parámetros con valores de tabla
-title: Campos de descriptor de parámetros con valores de tabla | Microsoft Docs
+title: Table-Valued campos de descriptor de parámetros | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5e8f06fc25aceda016398b414c895c349804008
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 391c6bafc42a7504643f09ba5cef2d17e1e734ec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486758"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478046"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Campos de descriptor de parámetros con valores de tabla
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   La compatibilidad con los parámetros con valores de tabla incluye nuevos campos específicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en descriptores de parámetros de aplicación ODBC (APD) y descriptores de parámetros de implementación (IPD).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
-|Nombre|Location|Tipo|Descripción|  
+|Nombre|Ubicación|Tipo|Descripción|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Nombre del tipo de servidor del parámetro con valores de tabla.<br /><br /> Cuando se especifica un nombre de tipo de parámetro con valores de tabla en una llamada a SQLBindParameter, siempre debe especificarse como un valor Unicode, incluso en aplicaciones compiladas como aplicaciones ANSI. El valor usado para el parámetro *StrLen_or_IndPtr* debe ser SQL_NTS o la longitud de la cadena del nombre multiplicado por SIZEOF (WCHAR).<br /><br /> Cuando se especifica un nombre de tipo de parámetro con valores de tabla a través de SQLSetDescField, se puede especificar mediante un literal que se ajuste a la manera en que se compila la aplicación. El administrador de controladores ODBC realizará cualquier conversión Unicode que sea necesaria.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (solo lectura)|IPD|SQLTCHAR*|Catálogo donde se define el tipo.|  
@@ -38,7 +38,7 @@ ms.locfileid: "88486758"
   
  Cuando el enfoque del parámetro se establece en un parámetro con valores de tabla, se aplican los siguientes campos de encabezado de descriptor y atributos de instrucción a los parámetros con valores de tabla:  
   
-|Nombre|Location|Tipo|Descripción|  
+|Nombre|Ubicación|Tipo|Descripción|  
 |----------|--------------|----------|-----------------|  
 |SQL_ATTR_PARAMSET_SIZE<br /><br /> (Equivalente a SQL_DESC_ARRAY_SIZE en el APD.)|APD|SQLUINTEGER|Tamaño de matriz de las matrices de búfer de un parámetro con valores de tabla. Éste es el número máximo de filas que los búferes pueden incluir o el tamaño de los búferes en filas; el propio valor de parámetro con valores de tabla puede tener más o menos filas de las que pueden incluir los búferes. El valor predeterminado es 1.<br /><br /> Nota: si SQL_SOPT_SS_PARAM_FOCUS se establece en su valor predeterminado de 0, SQL_ATTR_PARAMSET_SIZE hace referencia a la instrucción y especifica el número de conjuntos de parámetros. Si SQL_SOPT_SS_PARAM_FOCUS se establece en el ordinal de un parámetro con valores de tabla, hace referencia al parámetro con valores de tabla y especifica el número de filas por conjunto de parámetros del parámetro con valores de tabla.|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|El valor predeterminado es SQL_PARAM_BIND_BY_COLUMN.<br /><br /> Para seleccionar el enlace de modo de fila, este campo se establece en la longitud de la estructura o en una instancia de un búfer que se enlazará a un conjunto de filas de parámetro con valores de tabla. Esta longitud debe incluir el espacio para todas las columnas enlazadas y cualquier relleno de la estructura o búfer. De esta forma se garantiza que, cuando la dirección de una columna enlazada se incrementa con la longitud especificada, el resultado señalará al principio de la misma columna en la fila siguiente. Al usar el operador **sizeof** en ANSI C, se garantiza este comportamiento.|  

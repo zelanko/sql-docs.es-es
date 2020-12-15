@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_text_query_plan (Transact-SQL)
-title: Sys. dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51e2ee0d9867f952b219434ff59432732a96ddd6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f24871b199c66ea1efdd238b7141d8f0f7d99e19
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539450"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482826"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Devuelve el plan de presentación en formato de texto para un lote [!INCLUDE[tsql](../../includes/tsql-md.md)] o para una instrucción concreta dentro del mismo. Este plan de consulta especificado por el identificador del plan puede estar almacenado en caché o ejecutándose. Esta función con valores de tabla es similar a [Sys. dm_exec_query_plan &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), pero tiene las siguientes diferencias:  
+Devuelve el plan de presentación en formato de texto para un lote [!INCLUDE[tsql](../../includes/tsql-md.md)] o para una instrucción concreta dentro del mismo. Este plan de consulta especificado por el identificador del plan puede estar almacenado en caché o ejecutándose. Esta función con valores de tabla es similar a [sys.dm_exec_query_plan &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), pero tiene las siguientes diferencias:  
   
 -   El resultado del plan de consulta se devuelve en formato de texto.  
 -   El resultado del plan de consulta no está limitado en tamaño.  
@@ -64,9 +64,9 @@ El *plan_handle* se puede obtener de los siguientes objetos de administración d
   
 -   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [Sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys.dm_exec_procedure_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [Sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys.dm_exec_trigger_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 *statement_start_offset* | 0 | PREDETERMINADA  
 Indica, en bytes, la posición inicial de la consulta que la fila describe en el texto del lote o del objeto permanente. *statement_start_offset* es de **tipo int**. Un valor de 0 indica el principio del lote. El valor predeterminado es 0.  
@@ -94,14 +94,14 @@ El valor -1 indica el final del lote. El valor predeterminado es -1.
 |**cifra**|**bit**|Indica si el procedimiento almacenado correspondiente está cifrado.<br /><br /> 0 = no cifrado<br /><br /> 1 = cifrado<br /><br /> La columna no acepta valores NULL.|  
 |**query_plan**|**nvarchar(max)**|Contiene la representación del plan de presentación de tiempo de compilación del plan de ejecución de consultas especificado con *plan_handle*. El plan de presentación está en formato de texto. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario.<br /><br /> Esta columna acepta valores NULL.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  En las siguientes condiciones, no se devuelve ningún plan de presentación en la columna **plan** de la tabla devuelta para **sys.dm_exec_text_query_plan**:  
   
 -   Si el plan de consulta especificado mediante *plan_handle* se ha expulsado de la caché del plan, la columna **query_plan** de la tabla devuelta es NULL. Por ejemplo, esta condición puede producirse si hay un retraso entre el momento en que se captura el identificador del plan y el momento en que se utiliza con **sys.dm_exec_text_query_plan**.  
   
 -   Algunas instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] no se almacenan en la caché, como, por ejemplo, instrucciones de operaciones masivas o instrucciones que contienen literales de cadenas de más de 8 KB. Los planes de presentación de dichas instrucciones no se pueden recuperar mediante **sys.dm_exec_text_query_plan** porque no existen en la caché.  
   
--   Si un [!INCLUDE[tsql](../../includes/tsql-md.md)] proceso por lotes o un procedimiento almacenado contiene una llamada a una función definida por el usuario o una llamada a SQL dinámico, por ejemplo, con exec (*String*), el plan de presentación XML compilado para la función definida por el usuario no se incluye en la tabla devuelta por **Sys. dm_exec_text_query_plan** para el lote o procedimiento almacenado. En su lugar, debe hacer una llamada independiente a **Sys. dm_exec_text_query_plan** para la *plan_handle* que corresponde a la función definida por el usuario.  
+-   Si un [!INCLUDE[tsql](../../includes/tsql-md.md)] proceso por lotes o un procedimiento almacenado contiene una llamada a una función definida por el usuario o una llamada a SQL dinámico, por ejemplo, con exec (*String*), el plan de presentación XML compilado de la función definida por el usuario no se incluye en la tabla devuelta por **Sys.dm_exec_text_query_plan** para el lote o procedimiento almacenado. En su lugar, debe hacer una llamada independiente a **Sys.dm_exec_text_query_plan** para la *plan_handle* que corresponde a la función definida por el usuario.  
   
 Cuando una consulta ad hoc usa [parametrización](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) [simple](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) o forzada, la **query_plan** columna solo contendrá el texto de la instrucción y no el plan de consulta real. Para devolver el plan de consulta, llame a **sys.dm_exec_text_query_plan** con el identificador del plan de la consulta con parámetros preparada. Puede determinar si la consulta era con parámetros haciendo referencia a la columna **sql** de la vista [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) o a la columna de texto de la vista de administración dinámica [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
@@ -181,4 +181,4 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+ [sys.dm_exec_query_plan &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

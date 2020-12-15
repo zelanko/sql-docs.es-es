@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 41842a2eb754aedc31bad206ad427a86bb65f00f
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 41b139d2f22a9cb3137879d96224b02eafc24bab
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126587"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761503"
 ---
 # <a name="connection-pooling"></a>Agrupación de conexiones
 
@@ -27,8 +27,10 @@ La conexión a un origen de datos puede ser un proceso largo. Para reducir el co
 
 ## <a name="in-this-section"></a>En esta sección  
 
-[Agrupación de conexiones de SQL Server (ADO.NET)](sql-server-connection-pooling.md) Proporciona información general sobre la agrupación de conexiones y describe cómo funciona la agrupación de conexiones en SQL Server.
+[Agrupación de conexiones de SQL Server (ADO.NET)](sql-server-connection-pooling.md)  
+Se proporciona información general sobre la agrupación de conexiones y se describe cómo funciona en SQL Server.
 
 ## <a name="see-also"></a>Vea también
 
 - [Recuperar y modificar datos en ADO.NET](retrieving-modifying-data.md)
+- [Microsoft ADO.NET para SQL Server](microsoft-ado-net-sql-server.md)

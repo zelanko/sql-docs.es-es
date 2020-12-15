@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 931c36619f5eaed0159ee04db3a08eb745634698
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: f899ad41e609874cbcc22c2a3ac959c41574e0eb
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428318"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761533"
 ---
 # <a name="commands-and-parameters"></a>Comandos y parámetros
 
@@ -29,17 +29,22 @@ También puede configurar dichos objetos como propiedades del comando. También 
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Ejecución de un comando](execute-command.md) Describe el objeto `Command` de ADO.NET y cómo usarlo para ejecutar consultas y comandos en un origen de datos.
+[Ejecutar un comando](execute-command.md)  
+Describe el objeto `Command` de ADO.NET, así como la forma de utilizarlo para ejecutar consultas y comandos con respecto a un origen de datos.
 
-[Configuración de parámetros](configure-parameters.md) Describe el trabajo con parámetros `Command`, como la dirección, los tipos de datos y la sintaxis de los parámetros.
+[Configuración de parámetros](configure-parameters.md)  
+Describe el trabajo con parámetros `Command`, incluidos dirección, tipo de datos y sintaxis de parámetros.
 
 [Generación de comandos con objetos CommandBuilder](generate-commands-with-commandbuilders.md)  
 Describe cómo utilizar generadores de comandos para generar automáticamente comandos INSERT, UPDATE y DELETE para un `DataAdapter` que tiene un comando SELECT de tabla única.
 
-[Obtención de un valor único de una base de datos](obtain-single-value-from-database.md) Describe cómo utilizar el método `ExecuteScalar` de un objeto `Command` para devolver un valor único de una consulta de base de datos.
+[Obtención de un valor único de una base de datos](obtain-single-value-from-database.md)  
+Describe cómo utilizar el método `ExecuteScalar` de un objeto `Command` para devolver un único valor desde una consulta de base de datos.
 
-[Uso de comandos para modificar datos](use-commands-to-modify-data.md) Describe cómo usar el proveedor de datos SqlClient de Microsoft para SQL Server para ejecutar procedimientos almacenados o instrucciones de lenguaje de definición de datos (DDL).
+[Uso de comandos para modificar datos](use-commands-to-modify-data.md)  
+Se describe cómo usar el proveedor de datos SqlClient de Microsoft para SQL Server a fin de ejecutar procedimientos almacenados o instrucciones de lenguaje de definición de datos (DDL).
 
 ## <a name="see-also"></a>Vea también
 
 - [Conexión a un origen de datos](connecting-to-data-source.md)
+- [Microsoft ADO.NET para SQL Server](microsoft-ado-net-sql-server.md)

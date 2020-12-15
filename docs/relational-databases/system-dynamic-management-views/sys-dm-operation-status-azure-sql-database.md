@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 777dd89339ef2eefccdb5ee180178100a16b5216
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 7146d3455d4d9a36304cc0a1cc69ba3c4c841479
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834157"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477226"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
@@ -39,7 +39,7 @@ ms.locfileid: "91834157"
 |resource_type|**int**|Indica el tipo de recurso en el que se realiza la operación. NOT NULL. En la versión actual, esta vista solo realiza el seguimiento de las operaciones realizadas en [!INCLUDE[ssSDS](../../includes/sssds-md.md)], y el valor entero correspondiente es 0.|  
 |resource_type_desc|**nvarchar(2048)**|Descripción del tipo de recurso en el que se realiza la operación. En la versión actual, esta vista solo realiza el seguimiento de las operaciones realizadas en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |major_resource_id|**sql_variant**|Nombre del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el que se realiza la operación. No NULL.|  
-|minor_resource_id|**sql_variant**|Sólo para uso interno. NOT NULL.|  
+|minor_resource_id|**sql_variant**|Solo para uso interno. NOT NULL.|  
 |operation|**nvarchar(60)**|Operación realizada en un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , como Create o ALTER.|  
 |state|**tinyint**|El estado de la operación.<br /><br /> 0 = Pendiente<br />1 = en curso<br />2= Completado<br />3 = error<br />4 = Cancelado|  
 |state_desc|**nvarchar(120)**|PENDING = la operación está esperando disponibilidad de los recursos o la cuota.<br /><br /> IN_PROGRESS = la operación se ha iniciado y está en curso.<br /><br /> COMPLETED = la operación finalizó correctamente.<br /><br /> FAILED= se produjo un error en la operación Vea la columna **error_desc** para obtener más información.<br /><br /> CANCELLED = la operación se detuvo a petición del usuario.|  
@@ -54,7 +54,7 @@ ms.locfileid: "91834157"
 ## <a name="permissions"></a>Permisos  
  Esta vista solo está disponible en la base de datos **maestra** para el inicio de sesión principal de nivel de servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para usar esta vista, debe estar conectado a la base de datos **maestra** . Use la `sys.dm_operation_status` vista en la base de datos **maestra** del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor para realizar un seguimiento del estado de las siguientes operaciones realizadas en un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Crear base de datos  
@@ -67,9 +67,9 @@ ms.locfileid: "91834157"
   
 -   Cambiar el nivel de servicio de una base de datos, como cambiar de básico a estándar.  
   
--   Configuración de una relación de replicación geográfica  
+-   Configuración de una relación de Geo-Replication  
   
--   Finalización de una relación de replicación geográfica  
+-   Terminar una relación Geo-Replication  
   
 -   Restaurar base de datos  
   

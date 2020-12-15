@@ -2,7 +2,7 @@
 title: Descripción del control de la simultaneidad
 description: Obtenga información sobre el control de simultaneidad y cómo mantener la integridad de la base de datos al desarrollar una aplicación multiusuario con el controlador JDBC para SQL Server.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 12/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9350c62c29acce5e56d60cfcd1fa854a7e2414cd
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: c44f52697fa8048a8c7db2286c3e69114f658152
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435308"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900948"
 ---
 # <a name="understanding-concurrency-control"></a>Descripción del control de la simultaneidad
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "87435308"
   El control de la simultaneidad se refiere a las diversas técnicas que se utilizan para conservar la integridad de la base de datos cuando varios usuarios actualizan filas al mismo tiempo. Una simultaneidad incorrecta puede causar problemas, como la lectura de datos sucios, las lecturas fantasmas y las lecturas no repetibles. El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona interfaces para todas las técnicas de simultaneidad que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emplea para resolver estos problemas.  
   
 > [!NOTE]  
->  Para obtener más información sobre la simultaneidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea "Administrar el acceso simultáneo a datos" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Para obtener más información sobre la simultaneidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Administrar el acceso simultáneo a datos](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#managing-concurrent-data-access).  
   
 ## <a name="remarks"></a>Observaciones  
  El controlador JDBC es compatible con los tipos de simultaneidad siguientes:  

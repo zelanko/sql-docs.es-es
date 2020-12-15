@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccce0c55e7c59cd72e004d6c7bd52fe03a1c4e1f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 473dd22d2f19d29e5b778a585ad59d0d99acbaee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91807400"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479106"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>Vistas de catálogo de esquemas: sys. Schemas
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91807400"
 |**schema_id**|**int**|Id. del esquema. Es único en la base de datos.|  
 |**principal_id**|**int**|Id. de la entidad de seguridad propietaria del esquema.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 Los esquemas de base de datos actúan como espacios de nombres o contenedores para objetos, como tablas, vistas, procedimientos y funciones, que se pueden encontrar en la vista de catálogo **Sys. Objects** .  
 
 Cada esquema tiene un propietario. El propietario es una [entidad](../../relational-databases/security/authentication-access/principals-database-engine.md)de seguridad.

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21f743aa4c28095a3167ebb16cf873f46afece38
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9cad51a7a83f694ac89b41584929a46e1fbc725c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541965"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482407"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,9 +48,9 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="arguments"></a>Argumentos  
 `[ @defname = ] 'default'` Es el nombre del valor predeterminado creado por CREATE DEFAULT. el *valor predeterminado* es **nvarchar (776)** y no tiene ningún valor predeterminado.  
   
-`[ @objname = ] 'object_name'` Es el nombre de la tabla y columna, o el tipo de datos del alias al que se va a enlazar el valor predeterminado. *object_name* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado. *object_name* no se pueden definir con los tipos definidos por el usuario **VARCHAR (Max**), **nvarchar (Max)**, **varbinary (Max)**, **XML**o CLR.  
+`[ @objname = ] 'object_name'` Es el nombre de la tabla y columna, o el tipo de datos del alias al que se va a enlazar el valor predeterminado. *object_name* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado. *object_name* no se pueden definir con los tipos definidos por el usuario **VARCHAR (Max**), **nvarchar (Max)**, **varbinary (Max)**, **XML** o CLR.  
   
- Si *object_name* es un nombre de una parte, se resuelve como un tipo de datos de alias. Si es un nombre de dos o tres partes, se resuelve primero como una tabla y una columna. y si se produce un error en esta resolución, se resuelve como un tipo de datos de alias. De forma predeterminada, las columnas existentes del tipo de datos de alias heredan de forma *predeterminada*, a menos que se haya enlazado un valor predeterminado directamente a la columna. Un valor predeterminado no se puede enlazar a una columna de tipo **Text**, **ntext**, **Image**, **VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)**, **XML**, **timestamp**o CLR definido por el usuario, una columna con la propiedad Identity, una columna calculada o una columna que ya tenga una restricción default.  
+ Si *object_name* es un nombre de una parte, se resuelve como un tipo de datos de alias. Si es un nombre de dos o tres partes, se resuelve primero como una tabla y una columna. y si se produce un error en esta resolución, se resuelve como un tipo de datos de alias. De forma predeterminada, las columnas existentes del tipo de datos de alias heredan de forma *predeterminada*, a menos que se haya enlazado un valor predeterminado directamente a la columna. Un valor predeterminado no se puede enlazar a una columna de tipo **Text**, **ntext**, **Image**, **VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)**, **XML**, **timestamp** o CLR definido por el usuario, una columna con la propiedad Identity, una columna calculada o una columna que ya tenga una restricción default.  
   
 > [!NOTE]  
 >  *object_name* puede contener corchetes **[]** como identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
@@ -82,7 +82,7 @@ EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. Enlazar un valor predeterminado con un tipo de datos de alias  
- El valor predeterminado denominado `def_ssn` y el tipo de datos de alias denominado `ssn` ya existen. En el siguiente ejemplo se enlaza el valor predeterminado `def_ssn` con `ssn`. Al crear una tabla, el valor predeterminado es heredado por todas las columnas a las que se asigna el tipo de datos de alias `ssn`. Las columnas existentes de tipo **SSN** también heredan la **def_ssn**predeterminada, a menos que se especifique **futureonly** para *futureonly_flag* valor, o a menos que la columna tenga un valor predeterminado enlazado directamente a ella. Los valores predeterminados enlazados con columnas siempre tienen preferencia sobre los enlazados con tipos de datos.  
+ El valor predeterminado denominado `def_ssn` y el tipo de datos de alias denominado `ssn` ya existen. En el siguiente ejemplo se enlaza el valor predeterminado `def_ssn` con `ssn`. Al crear una tabla, el valor predeterminado es heredado por todas las columnas a las que se asigna el tipo de datos de alias `ssn`. Las columnas existentes de tipo **SSN** también heredan la **def_ssn** predeterminada, a menos que se especifique **futureonly** para *futureonly_flag* valor, o a menos que la columna tenga un valor predeterminado enlazado directamente a ella. Los valores predeterminados enlazados con columnas siempre tienen preferencia sobre los enlazados con tipos de datos.  
   
 ```  
 USE master;  

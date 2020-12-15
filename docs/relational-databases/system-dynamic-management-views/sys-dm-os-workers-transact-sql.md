@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_workers (Transact-SQL)
-title: Sys. dm_os_workers (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2039e39c68735358d6bcf88c739d9008897567d3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a7439c541a15f980cb85b91bc336e0e63d2f3dec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532454"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482676"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,50 +34,50 @@ ms.locfileid: "89532454"
   Devuelve una fila por cada trabajador del sistema. Para obtener más información sobre los trabajos, consulte la [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md). 
   
 > [!NOTE]  
->  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_os_workers**.  
+>  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys.dm_pdw_nodes_os_workers**.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary(8**|Dirección de memoria del trabajador.|  
-|status|**int**|Exclusivamente para uso interno.|  
+|status|**int**|Solo para uso interno.|  
 |is_preemptive|**bit**|1 = El trabajador está trabajando con un programa preferente. Un trabajador que ejecuta código externo trabaja con un programa preferente.|  
 |is_fiber|**bit**|1 = El trabajador está trabajando con la opción de agrupación ligera. Para obtener más información, vea [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).|  
 |is_sick|**bit**|1 = El trabajador está atascado intentando obtener un bloqueo por subproceso. Si este bit está establecido, podría indicar un problema con la contención de un objeto al que se tiene acceso con frecuencia.|  
 |is_in_cc_exception|**bit**|1 = El trabajador está controlando actualmente una excepción que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |is_fatal_exception|**bit**|Especifica si este trabajador recibió una excepción grave.|  
 |is_inside_catch|**bit**|1 = El trabajador está controlando actualmente una excepción.|  
-|is_in_polling_io_completion_routine|**bit**|1 = El trabajador está ejecutando actualmente una rutina de finalización de E/S de una E/S pendiente. Para obtener más información, vea [Sys. dm_io_pending_io_requests &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md).|  
+|is_in_polling_io_completion_routine|**bit**|1 = El trabajador está ejecutando actualmente una rutina de finalización de E/S de una E/S pendiente. Para obtener más información, vea [sys.dm_io_pending_io_requests &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md).|  
 |context_switch_count|**int**|Número de cambios de contexto del programador realizados por este trabajador.|  
 |pending_io_count|**int**|Número de E/S físicas realizadas por este trabajador.|  
 |pending_io_byte_count|**bigint**|Número total de bytes de todas las E/S físicas pendientes de este trabajador.|  
 |pending_io_byte_average|**int**|Número promedio de bytes de las E/S físicas de este trabajador.|  
-|wait_started_ms_ticks|**bigint**|Punto en el tiempo, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), cuando este trabajador entró en estado suspendido. Si se resta este valor de ms_ticks en [Sys. dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) se devuelve el número de milisegundos que el trabajador ha estado esperando.|  
-|wait_resumed_ms_ticks|**bigint**|Punto en el tiempo, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), cuando este trabajador entró en el estado RUNNABLE. Si se resta este valor de ms_ticks en [Sys. dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) se devuelve el número de milisegundos que el trabajador ha estado en la cola de ejecutables.|  
+|wait_started_ms_ticks|**bigint**|Punto en el tiempo, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), cuando este trabajador entró en estado suspendido. Si se resta este valor de ms_ticks en [Sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) , se devuelve el número de milisegundos que el trabajador ha estado esperando.|  
+|wait_resumed_ms_ticks|**bigint**|Punto en el tiempo, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), cuando este trabajador entró en el estado RUNNABLE. Restar este valor de ms_ticks en [Sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) devuelve el número de milisegundos que el trabajador ha estado en la cola de ejecutables.|  
 |task_bound_ms_ticks|**bigint**|Punto en el tiempo, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), cuando una tarea se enlaza a este trabajador.|  
 |worker_created_ms_ticks|**bigint**|Punto en el tiempo, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), cuando se crea un trabajador.|  
 |exception_num|**int**|Número de error de la última excepción que encontró este trabajador.|  
 |exception_severity|**int**|Gravedad de la última excepción que encontró este trabajador.|  
 |exception_address|**varbinary(8**|Dirección del código que produjo la excepción|  
-|affinity|**bigint**|La afinidad de subprocesos del trabajador. Coincide con la afinidad del subproceso en [Sys. dm_os_threads &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
+|affinity|**bigint**|La afinidad de subprocesos del trabajador. Coincide con la afinidad del subproceso en [sys.dm_os_threads &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
 |state|**nvarchar(60)**|Estado del trabajador. Puede ser uno de los siguientes valores:<br /><br /> INIT = El trabajador se está inicializando actualmente.<br /><br /> RUNNING = El trabajador está trabajando de forma preferente o no preferente.<br /><br /> RUNNABLE = El trabajador está preparado para ejecutarse en el programador.<br /><br /> SUSPENDED = El trabajador está suspendido actualmente, esperando por un evento para enviarle una señal.|  
 |start_quantum|**bigint**|Tiempo en milisegundos al inicio de la ejecución actual de este trabajador.|  
 |end_quantum|**bigint**|Tiempo en milisegundos al final de la ejecución actual de este trabajador.|  
-|last_wait_type|**nvarchar(60)**|Tipo de la última espera. Para obtener una lista de tipos de espera, vea [Sys. dm_os_wait_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|last_wait_type|**nvarchar(60)**|Tipo de la última espera. Para obtener una lista de tipos de espera, vea [sys.dm_os_wait_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |return_code|**int**|Valor devuelto de la última espera. Puede ser uno de los siguientes valores:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
-|quantum_used|**bigint**|Exclusivamente para uso interno.|  
-|max_quantum|**bigint**|Exclusivamente para uso interno.|  
-|boost_count|**int**|Exclusivamente para uso interno.|  
+|quantum_used|**bigint**|Solo para uso interno.|  
+|max_quantum|**bigint**|Solo para uso interno.|  
+|boost_count|**int**|Solo para uso interno.|  
 |tasks_processed_count|**int**|Número de tareas procesadas por este trabajador.|  
 |fiber_address|**varbinary(8**|Dirección de memoria de la fibra con la que está asociado este trabajador.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está configurado para agrupación ligera.|  
-|task_address|**varbinary(8**|Dirección de memoria de la tarea actual. Para obtener más información, vea [Sys. dm_os_tasks &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
-|memory_object_address|**varbinary(8**|Dirección de memoria del objeto de memoria del trabajador. Para obtener más información, vea [Sys. dm_os_memory_objects &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
-|thread_address|**varbinary(8**|Dirección de memoria del subproceso asociado con este trabajador. Para obtener más información, vea [Sys. dm_os_threads &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
-|signal_worker_address|**varbinary(8**|Dirección de memoria del último trabajador que indicó este objeto. Para obtener más información, vea [Sys. dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|scheduler_address|**varbinary(8**|Dirección de memoria del programador. Para obtener más información, vea [Sys. dm_os_schedulers &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|task_address|**varbinary(8**|Dirección de memoria de la tarea actual. Para obtener más información, vea [sys.dm_os_tasks &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
+|memory_object_address|**varbinary(8**|Dirección de memoria del objeto de memoria del trabajador. Para obtener más información, vea [sys.dm_os_memory_objects &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|thread_address|**varbinary(8**|Dirección de memoria del subproceso asociado con este trabajador. Para obtener más información, vea [sys.dm_os_threads &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
+|signal_worker_address|**varbinary(8**|Dirección de memoria del último trabajador que indicó este objeto. Para obtener más información, vea [Sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|scheduler_address|**varbinary(8**|Dirección de memoria del programador. Para obtener más información, vea [sys.dm_os_schedulers &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |processor_group|**smallint**|Almacena el identificador de grupo de procesadores que está asignado a este subproceso.|  
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si el estado de trabajador es RUNNING y se está ejecutando de forma no preferente, la dirección del trabajador coincide con active_worker_address en sys.dm_os_schedulers.  
   
  Cuando se señala a un trabajador que espera en un evento, el trabajador se coloca al principio de la cola de ejecutables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que suceda esto 1.000 veces en una fila; después, el trabajador se coloca al final de la cola. Mover un trabajador al final de la cola tiene algunas implicaciones sobre el rendimiento.  

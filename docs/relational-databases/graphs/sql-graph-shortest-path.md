@@ -18,13 +18,13 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current
+ms.openlocfilehash: c916466f6a105a2b10508e23f1739bba0d192970
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475851"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480186"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
@@ -50,7 +50,7 @@ PARA PATH debe usarse con cualquier nombre de tabla perimetral o de nodo en la c
 Este patrón incluye los nodos y bordes que se deben atravesar repetidamente hasta que se alcance el nodo deseado o hasta que se cumpla el número máximo de iteraciones especificado en el patrón. Cada vez que se ejecuta la consulta, el resultado de la ejecución de este patrón será una colección ordenada de los nodos y los bordes recorridos a lo largo de la ruta de acceso desde el nodo de inicio hasta el nodo final. Se trata de un patrón de sintaxis de estilo de expresión regular y se admiten los siguientes dos cuantificadores de patrón:
 
 * **' + '**: Repetir el patrón 1 o más veces. Finaliza en cuanto encuentra una ruta de acceso más corta.
-* **{1, n}**: repetir el patrón 1 en ' n ' veces. Finaliza en cuanto se encuentra un más corto.
+* **{1, n}** : repite el patrón de 1 a "n" veces. Finaliza en cuanto se encuentra un más corto.
 
 ## <a name="last_node"></a>LAST_NODE
 La función LAST_NODE () permite encadenar dos patrones de recorrido de longitud arbitraria. Se puede usar en escenarios donde:    
@@ -103,13 +103,13 @@ Esta función devuelve el número de valores no NULL del atributo node/Edge dese
 ### <a name="avg"></a>MEDIA
 Devuelve el promedio de los valores de atributo de nodo o perimetral proporcionados o la expresión que aparecía en la ruta de acceso recorrida.
 
-### <a name="min"></a>MIN
+### <a name="min"></a>MÍN
 Devuelve el valor mínimo de los valores de atributo de nodo o perimetral proporcionados o la expresión que aparecía en la ruta de acceso recorrida.
 
-### <a name="max"></a>MAX
+### <a name="max"></a>MÁX
 Devuelve el valor máximo de los valores de atributo de nodo o perimetral proporcionados o la expresión que aparecía en la ruta de acceso recorrida.
 
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 shortest_path función solo se puede usar dentro de la coincidencia.     
 LAST_NODE solo se admite dentro de shortest_path.     
 No se admite la búsqueda de una ruta más corta ponderada, ni todas las rutas de acceso o todas las rutas más cortas.         
@@ -212,7 +212,7 @@ WHERE Q.levels = 2
 
 ## <a name="see-also"></a>Consulte también  
  [COINCIDENCIA (gráfico SQL)](../../t-sql/queries/match-sql-graph.md)    
- [CREATE TABLE &#40;gráfico de SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [Insert (gráfico de SQL)](../../t-sql/statements/insert-sql-graph.md)]  
+ [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Procesamiento de gráficos con SQL Server 2017)     
  

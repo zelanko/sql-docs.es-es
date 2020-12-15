@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44097fb7340dd61f467b4bb08e0b4a718d6ab323
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 279789c40dbc79dd3d7b2d421d757a936b0e6126
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528580"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482406"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,15 +45,15 @@ sp_column_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>Argumentos  
  [ @table_name =] '*TABLE_NAME*'  
- Es la tabla que se usa para devolver información de catálogo. *TABLE_NAME* es de **tipo sysname**y no tiene ningún valor predeterminado. No se admite la coincidencia de patrón de caracteres comodín.  
+ Es la tabla que se usa para devolver información de catálogo. *TABLE_NAME* es de **tipo sysname** y no tiene ningún valor predeterminado. No se admite la coincidencia de patrón de caracteres comodín.  
   
  [ @table_owner =] '*table_owner*'  
- Es el propietario de la tabla que se utiliza para devolver información de catálogo. *table_owner* es de **tipo sysname y su**valor predeterminado es NULL. No se admite la coincidencia de patrón de caracteres comodín. Si no se especifica *table_owner* , se aplican las reglas predeterminadas de visibilidad de la tabla del sistema de administración de bases de datos (DBMS) subyacente.  
+ Es el propietario de la tabla que se utiliza para devolver información de catálogo. *table_owner* es de **tipo sysname y su** valor predeterminado es NULL. No se admite la coincidencia de patrón de caracteres comodín. Si no se especifica *table_owner* , se aplican las reglas predeterminadas de visibilidad de la tabla del sistema de administración de bases de datos (DBMS) subyacente.  
   
- Si el usuario actual es propietario de una tabla con el nombre especificado, se devuelven las columnas de esa tabla. Si no se especifica *table_owner* y el usuario actual no es el propietario de una tabla con el *table_name*especificado, sp_column privilegios busca una tabla con el *TABLE_NAME* especificado propiedad del propietario de la base de datos. Si hay una, se devuelven las columnas de esa tabla.  
+ Si el usuario actual es propietario de una tabla con el nombre especificado, se devuelven las columnas de esa tabla. Si no se especifica *table_owner* y el usuario actual no es el propietario de una tabla con el *table_name* especificado, sp_column privilegios busca una tabla con el *TABLE_NAME* especificado propiedad del propietario de la base de datos. Si hay una, se devuelven las columnas de esa tabla.  
   
  [ @table_qualifier =] '*TABLE_QUALIFIER*'  
- Es el nombre del calificador de tabla. *TABLE_QUALIFIER* es de *tipo sysname y su*valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+ Es el nombre del calificador de tabla. *TABLE_QUALIFIER* es de *tipo sysname y su* valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
  [ @column_name =] '*columna*'  
  Es una sola columna que se usa cuando solo se obtiene una columna de información del catálogo. la *columna* es de tipo **nvarchar (** 384 **)** y su valor predeterminado es NULL. Si no se especifica *Column* , se devuelven todas las columnas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la *columna* representa el nombre de la columna tal y como aparece en la tabla sys. Columns. la *columna* puede incluir caracteres comodín mediante patrones de coincidencia de caracteres comodín del DBMS subyacente. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de ISO (caracteres comodín % y _).  
@@ -72,7 +72,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**VARCHAR (** 32 **)**|Uno de los permisos de columna disponibles. Los permisos de columna pueden ser uno de los valores siguientes (u otros valores compatibles con el origen de datos cuando se define la implementación):<br /><br /> SELECT = GRANTEE puede recuperar datos de las columnas.<br /><br /> INSERT = GRANTEE puede proporcionar datos para esta columna cuando se inserten nuevas filas (por parte de GRANTEE) en la tabla.<br /><br /> UPDATE = GRANTEE puede modificar datos existentes en la columna.<br /><br /> REFERENCES = GRANTEE puede hacer referencia a una columna de una tabla externa en una relación entre clave principal y clave externa. Las relaciones entre clave principal y clave externa se definen mediante restricciones de tabla.|  
 |IS_GRANTABLE|**VARCHAR (** 3 **)**|Indica si se permite que GRANTEE conceda permisos a otros usuarios (a menudo se hace referencia a esta operación como permiso “conceder por concesión”). Puede ser YES, NO o NULL. Un valor desconocido, o NULL, hace referencia a un origen de datos para el que “conceder por concesión” no se aplica.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los permisos se conceden mediante la instrucción GRANT y se retiran mediante la instrucción REVOKE.  
   
 ## <a name="permissions"></a>Permisos  

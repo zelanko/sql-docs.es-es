@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_sql_text (Transact-SQL)
-title: Sys. dm_exec_sql_text (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_sql_text (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95db0c9386b8c3f1befda89c68635e37f32a1eb5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0f15f149cadf6f1fd98526bd4eb27606fc929561
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539438"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482756"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Devuelve el texto del lote SQL que se identifica mediante el *sql_handle*especificado. Esta función con valores de tabla reemplaza a la función del sistema **fn_get_sql**.  
+  Devuelve el texto del lote SQL que se identifica mediante el *sql_handle* especificado. Esta función con valores de tabla reemplaza a la función del sistema **fn_get_sql**.  
   
  
 ## <a name="syntax"></a>Sintaxis  
@@ -69,9 +69,9 @@ El *plan_handle* se puede obtener de los siguientes objetos de administración d
   
 -   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [Sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys.dm_exec_procedure_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [Sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
+-   [sys.dm_exec_trigger_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
@@ -79,14 +79,14 @@ El *plan_handle* se puede obtener de los siguientes objetos de administración d
 |-----------------|---------------|-----------------|  
 |**DBID**|**smallint**|Identificador de la base de datos.<br /><br /> En el caso de instrucciones SQL ad hoc y preparadas, identificador de la base de datos en que se compilaron las instrucciones.|  
 |**objectid**|**int**|Identificador del objeto.<br /><br /> Este valor es NULL para las instrucciones SQL ad hoc y preparadas.|  
-|**número**|**smallint**|En un procedimiento almacenado numerado, esta columna devuelve el número del procedimiento almacenado. Para obtener más información, vea [Sys. numbered_procedures &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Este valor es NULL para las instrucciones SQL ad hoc y preparadas.|  
+|**número**|**smallint**|En un procedimiento almacenado numerado, esta columna devuelve el número del procedimiento almacenado. Para obtener más información, vea [sys.numbered_procedures &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Este valor es NULL para las instrucciones SQL ad hoc y preparadas.|  
 |**cifra**|**bit**|1 = El texto SQL está cifrado.<br /><br /> 0 = El texto SQL no está cifrado.|  
 |**text**|**nvarchar (Max** **)**|Texto de la consulta de SQL.<br /><br /> Este valor es NULL para objetos cifrados.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso `VIEW SERVER STATE` en el servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 En el caso de las consultas ad hoc, los identificadores SQL son valores hash basados en el texto SQL que se envía al servidor y pueden proceder de cualquier base de datos. 
 
 Para los objetos de base de datos, como procedimientos almacenados, desencadenadores o funciones, los identificadores SQL se derivan del identificador de base de datos, del identificador de objeto y del número de objeto. 
@@ -112,7 +112,7 @@ Ejecute el siguiente T-SQL en una nueva ventana de consulta de [!INCLUDE[ssManSt
       ```
       
   2.  Usar **Cross Apply**.  
-    La sql_handle de **Sys. dm_exec_requests** se pasará a **Sys. DM_EXEC_SQL_TEXT** mediante **Cross Apply**. Abra una nueva ventana de consulta y pase el SPID identificado en el paso 1. En este ejemplo, el SPID es `59` .
+    La sql_handle de **Sys.dm_exec_requests** se pasará a **Sys.DM_EXEC_SQL_TEXT** mediante **Cross Apply**. Abra una nueva ventana de consulta y pase el SPID identificado en el paso 1. En este ejemplo, el SPID es `59` .
 
         ```sql
         SELECT t.*
@@ -122,7 +122,7 @@ Ejecute el siguiente T-SQL en una nueva ventana de consulta de [!INCLUDE[ssManSt
          ```      
  
   2.  Pasar **sql_handle** directamente.  
-Adquiera el **sql_handle** de **Sys. dm_exec_requests**. A continuación, pase el **sql_handle** directamente a **Sys. dm_exec_sql_text**. Abra una nueva ventana de consulta y pase el SPID identificado en el paso 1 a **Sys. dm_exec_requests**. En este ejemplo, el SPID es `59` . A continuación, pase el **sql_handle** devuelto como argumento a **Sys. dm_exec_sql_text**.
+Adquiera el **sql_handle** de **Sys.dm_exec_requests**. A continuación, pase el **sql_handle** directamente a **Sys.dm_exec_sql_text**. Abra una nueva ventana de consulta y pase el SPID identificado en el paso 1 a **Sys.dm_exec_requests**. En este ejemplo, el SPID es `59` . A continuación, pase el **sql_handle** devuelto como argumento a **Sys.dm_exec_sql_text**.
 
         ```sql
         -- acquire sql_handle
@@ -179,13 +179,14 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys.dm_exec_query_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [Sys. dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
- [Sys. dm_exec_xml_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
- [Sys. dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [Usar Apply](../../t-sql/queries/from-transact-sql.md#using-apply)   [Sys. dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
+ [sys.dm_exec_cursors &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
+ [sys.dm_exec_xml_handles &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
+ [sys.dm_exec_query_memory_grants &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [Usar APPLY](../../t-sql/queries/from-transact-sql.md#using-apply)   
+ [sys.dm_exec_text_query_plan &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 

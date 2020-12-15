@@ -1,6 +1,6 @@
 ---
-description: Sys. fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
-title: Sys. fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Microsoft Docs
+description: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
+title: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ dev_langs:
 ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5008d433757351e6d4be65d6db9c3ba8e0deb10f
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a46c5b4d9fa9f5bdf5db52e9ee2c0610ef7ba2a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646505"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482458"
 ---
-# <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>Sys. fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
+# <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
@@ -57,7 +57,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 -   3-forzado  
   
 ## <a name="columns-returned"></a>Columnas devueltas  
- En la tabla siguiente se enumeran las columnas que sys. fn_stmt_sql_handle_from_sql_stmt devuelve.  
+ En la tabla siguiente se enumeran las columnas que sys.fn_stmt_sql_handle_from_sql_stmt devuelve.  
   
 |Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
@@ -94,7 +94,7 @@ JOIN sys.dm_exec_query_stats AS qs
     ON fn_handle_from_stmt.statement_sql_handle = qs.statement_sql_handle;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_query_store_force_plan &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
  [sp_query_store_remove_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_unforce_plan &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   

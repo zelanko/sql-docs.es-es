@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 6b631c6a8139304bd716e4eb1f3969de706f31d6
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: 1ab5c24dadbe3e8d0ad333cd67452c752cb2937b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753772"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478996"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -52,11 +52,11 @@ fn_get_audit_file ( file_pattern,
     
     Este argumento debe incluir una ruta de acceso (letra de unidad o recurso compartido de red) y un nombre de archivo que pueda contener un carácter comodín. Se puede usar un solo asterisco (*) para recopilar varios archivos de un conjunto de archivos de auditoría. Por ejemplo:  
   
-    -   **\<path>\\\*** : Recopila todos los archivos de auditoría en la ubicación especificada.  
+    -   **\<path>\\\** _: Recopila todos los archivos de auditoría en la ubicación especificada.  
   
-    -   ** \<path> \ LOGINSAUDIT_ {GUID}***: recopila todos los archivos de auditoría que tienen el nombre y el par GUID especificados.  
+    -   _* \<path> \LoginsAudit_{GUID} * * _: recopila todos los archivos de auditoría que tienen el nombre y el par GUID especificados.  
   
-    -   ** \<path> \ LOGINSAUDIT_ {GUID} _00_29384. sqlaudit** : recopilar un archivo de auditoría específico.  
+    -   _* \<path> \LoginsAudit_{GUID} _00_29384. sqlaudit * *: recopilar un archivo de auditoría específico.  
   
  - **Azure SQL Database**:
  
@@ -64,7 +64,7 @@ fn_get_audit_file ( file_pattern,
  
       - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** : recopila todos los archivos de auditoría (BLOB) para la base de datos específica.    
       
-      - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . Xel** : recopila un archivo de auditoría específico (BLOB).
+      - **\<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . Xel** : recopila un archivo de auditoría específico (BLOB).
   
 > [!NOTE]  
 >  Si se pasa una ruta de acceso sin un patrón de nombre de archivo, se producirá un error.  
@@ -128,7 +128,7 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar(4000)** | **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, Azure SQL Database y SQL instancia administrada<br /><br /> Se usa para registrar información adicional que el usuario desea grabar en el registro de auditoría mediante el **sp_audit_write** procedimiento almacenado. |  
 
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si el argumento *file_pattern* pasado a **fn_get_audit_file** hace referencia a una ruta o un archivo que no existe, o si el archivo no es un archivo de auditoría, se devuelve el mensaje de error **MSG_INVALID_AUDIT_FILE** .  
   
 ## <a name="permissions"></a>Permisos
@@ -159,7 +159,7 @@ fn_get_audit_file ( file_pattern,
   GO  
   ```  
 
-  Este ejemplo lee del mismo archivo que el anterior, pero con cláusulas de T-SQL adicionales (cláusula**Top**, **order by**y **Where** para filtrar los registros de auditoría devueltos por la función):
+  Este ejemplo lee del mismo archivo que el anterior, pero con cláusulas de T-SQL adicionales (cláusula **Top**, **order by** y **Where** para filtrar los registros de auditoría devueltos por la función):
   
   ```  
   SELECT TOP 10 * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default)

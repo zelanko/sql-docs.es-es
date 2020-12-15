@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8683920e22e8888cc3dc93ffa350a43189116646
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 2baa21665d7fae6f87acbbebb88e55ca6c4624fc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834225"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482636"
 ---
 # <a name="sysdm_pdw_dms_external_work-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91834225"
 |step_index|**int**|Paso de consulta que invoca a este trabajo de DMS.<br /><br /> request_id, step_index y dms_step_index forman la clave de esta vista.|Igual que step_index en [sys.dm_pdw_request_steps &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Paso actual del plan DMS.<br /><br /> request_id, step_index y dms_step_index forman la clave de esta vista.|Igual que dms___step_index en [sys.dm_pdw_dms_workers &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md).|  
 |pdw_node_id|**int**|Nodo que ejecuta el trabajo de DMS.|Igual que node_id en [sys.dm_pdw_nodes &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|type|**nvarchar(60)**|Tipo de operación externa que se está ejecutando en este nodo.<br /><br /> La división de archivos es una operación en un archivo de Hadoop externo que se ha dividido en varios supuestos más pequeños.|' DIVISIÓN DE ARCHIVOS '|  
+|tipo|**nvarchar(60)**|Tipo de operación externa que se está ejecutando en este nodo.<br /><br /> La división de archivos es una operación en un archivo de Hadoop externo que se ha dividido en varios supuestos más pequeños.|' DIVISIÓN DE ARCHIVOS '|  
 |work_id|**int**|IDENTIFICADOR de división del archivo.|Mayor o igual que 0.<br /><br /> Único por nodo de proceso.|  
 |input_name|**nvarchar(60)**|Nombre de cadena de la entrada que se lee.|Para un archivo de Hadoop, este es el nombre de archivo de Hadoop.|  
 |read_location|**bigint**|Desplazamiento de la ubicación de lectura.||  

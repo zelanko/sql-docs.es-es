@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb810e5130f04a7f55ac0e262ecfe6f11b784a98
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2cd4ad72b81a0a602707ad55c85174657feb183c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543425"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482388"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 > [!NOTE]  
 >  Los catálogos de texto completo se pueden crear, quitar o modificar como precise. No obstante, evite realizar cambios de esquema en varios catálogos al mismo tiempo. Estas acciones se pueden realizar mediante el **sp_fulltext_table** procedimiento almacenado, que es el método recomendado.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Creación**|Crea un nuevo catálogo de texto completo vacío en el sistema de archivos y agrega una fila asociada en **sysfulltextcatalogs** con los valores *fulltext_catalog_name* y *root_directory*, si existen,. *fulltext_catalog_name* debe ser único en la base de datos.|  
 |**Omisiones**|Quita *fulltext_catalog_name* quitando del sistema de archivos y eliminando la fila asociada en **sysfulltextcatalogs**. Esta acción genera un error si el catálogo contiene índices de una o más tablas. **sp_fulltext_table** se debe ejecutar '*TABLE_NAME*', ' Drop ' para quitar las tablas del catálogo.<br /><br /> Se muestra un error si el catálogo no existe.|  
@@ -64,7 +64,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
   
 `[ @path = ] 'root_directory'` Es el directorio raíz (no la ruta de acceso física completa) de una acción de **creación** . *root_directory* es de tipo **nvarchar (100)** y su valor predeterminado es null, lo que indica el uso de la ubicación predeterminada especificada en el programa de instalación. Este es el subdirectorio FTDATA del directorio MSSQL; por ejemplo, C:\Archivos de Programa\microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. El directorio raíz especificado debe existir, residir en una unidad en el mismo equipo y constar de más datos que solo la letra de unidad, y no puede ser una ruta de acceso relativa. No se admiten las unidades de red, discos extraíbles, disquetes y rutas de acceso UNC. Los catálogos de texto completo deben crearse en una unidad de disco duro local asociada con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ** \@ path** solo es válido cuando *Action* es **Create**. En el caso de acciones distintas a **Create** (**Stop**, **rebuild**, etc.), ** \@ path** debe ser null u omitirse.  
+ **\@ path** solo es válido cuando *Action* es **Create**. En el caso de acciones distintas a **Create** (**Stop**, **rebuild**, etc.), **\@ path** debe ser null u omitirse.  
   
  Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un servidor virtual en un clúster, el directorio del catálogo especificado debe estar en una unidad de disco compartida de la que depende el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si @path no se especifica, la ubicación del directorio de catálogos predeterminado se encuentra en la unidad de disco compartida, en el directorio que se especificó cuando se instaló el servidor virtual.  
   
@@ -77,7 +77,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="remarks"></a>Observaciones  
  La acción **start_full** se usa para crear una instantánea completa de los datos de texto completo en *fulltext_catalog_name*. La acción **start_incremental** se utiliza para volver a indizar solo las filas modificadas en la base de datos. El rellenado incremental solo se puede aplicar si la tabla tiene una columna de tipo **timestamp**. Si una tabla del catálogo de texto completo no contiene una columna de tipo **timestamp**, se lleva a cabo un rellenado completo en la tabla.  
   
- Los datos del catálogo de texto completo y del índice se almacenan en archivos creados en un directorio de catálogos de texto completo. El directorio del catálogo de texto completo se crea como un subdirectorio del directorio especificado en ** \@ ruta de acceso** o en el directorio del catálogo de texto completo predeterminado si no se especifica la ** \@ ruta de acceso** . El nombre del directorio de catálogos de texto completo se genera de forma que se garantiza que será exclusivo en el servidor. Por lo tanto, todos los directorios de catálogos de texto completo de un servidor pueden compartir la misma ruta de acceso.  
+ Los datos del catálogo de texto completo y del índice se almacenan en archivos creados en un directorio de catálogos de texto completo. El directorio del catálogo de texto completo se crea como un subdirectorio del directorio especificado en **\@ ruta de acceso** o en el directorio del catálogo de texto completo predeterminado si no se especifica la **\@ ruta de acceso** . El nombre del directorio de catálogos de texto completo se genera de forma que se garantiza que será exclusivo en el servidor. Por lo tanto, todos los directorios de catálogos de texto completo de un servidor pueden compartir la misma ruta de acceso.  
   
 ## <a name="permissions"></a>Permisos  
  El llamador debe ser miembro del rol **db_owner** . Dependiendo de la acción solicitada, el autor de la llamada no debe denegar los permisos ALTER o CONTROL (que **db_owner** tiene) en el catálogo de texto completo de destino.  

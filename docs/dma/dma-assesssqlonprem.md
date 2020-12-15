@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 5c0ddd9aa7c89f7f77212155a0b85089c34087d9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c88a289e21e7cd70980763474e82b7dd6cbd49c2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726305"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489522"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Evaluación de la migración de SQL Server con Data Migration Assistant
 
@@ -29,7 +29,7 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
    > [!NOTE]
    > Data Migration Assistant v 5.0 incluye compatibilidad para analizar la conectividad de base de datos y las consultas SQL incrustadas en el código de la aplicación. Para obtener más información, consulte la entrada de blog sobre el [uso de Data Migration Assistant para evaluar el nivel de acceso a datos de una aplicación](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
 
-## <a name="create-an-assessment"></a>Crear una evaluación
+## <a name="create-an-assessment"></a>Creación de una evaluación
 
 1. Seleccione el icono de **nuevo** (+) y, a continuación, seleccione el tipo de proyecto **evaluación** .
 
@@ -39,7 +39,7 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
 
 3. Haga clic en **Crear**.
 
-   ![Crear una evaluación](../dma/media/dma-assesssqlonprem/new-assessment.png)
+   ![Creación de una evaluación](../dma/media/dma-assesssqlonprem/new-assessment.png)
 
 ## <a name="choose-assessment-options"></a>Elegir opciones de evaluación
 
@@ -125,23 +125,23 @@ La duración de la evaluación depende del número de bases de datos agregadas y
 
 2. Revise los problemas de compatibilidad en todos los niveles de compatibilidad admitidos por la versión de SQL Server de destino que seleccionó en la página **Opciones** .
 
-Puede revisar los problemas de compatibilidad analizando el objeto afectado, sus detalles y, potencialmente, una corrección para cada problema identificado en **cambios importantes**, **cambios de comportamiento**y **características en desuso**.
+Puede revisar los problemas de compatibilidad analizando el objeto afectado, sus detalles y, potencialmente, una corrección para cada problema identificado en **cambios importantes**, **cambios de comportamiento** y **características en desuso**.
 
 ![Ver los resultados de la evaluación](../dma/media/dma-assesssqlonprem/review-results.png)
 
-Del mismo modo, puede revisar las recomendaciones sobre características en las áreas de **rendimiento**, **almacenamiento**y **seguridad** .
+Del mismo modo, puede revisar las recomendaciones sobre características en las áreas de **rendimiento**, **almacenamiento** y **seguridad** .
 
-Las recomendaciones de características cubren distintos tipos de características como OLTP en memoria, almacén de columnas, Stretch Database, Always Encrypted, Enmascaramiento dinámico de datos y Cifrado de datos transparente.
+Las recomendaciones de características cubren diferentes tipos de características, como In-Memory OLTP, almacén de columnas, Stretch Database, Always Encrypted, Enmascaramiento dinámico de datos y Cifrado de datos transparente.
 
 ![Ver recomendaciones de características](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 
-Por Azure SQL Database, las evaluaciones proporcionan problemas de bloqueo de la migración y problemas de paridad de características.Revise los resultados de ambas categorías seleccionando las opciones específicas.
+Por Azure SQL Database, las evaluaciones proporcionan problemas de bloqueo de la migración y problemas de paridad de características. Revise los resultados de ambas categorías seleccionando las opciones específicas.
 
 - La categoría de **paridad de características SQL Server** proporciona un conjunto completo de recomendaciones, enfoques alternativos disponibles en Azure y procedimientos de mitigación. Le ayuda a planear este esfuerzo en los proyectos de migración.
 
   ![Ver información de SQL Server paridad de características](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
-- La categoría de **problemas de compatibilidad** proporciona características parcialmente compatibles o no compatibles que bloquean la migración de bases de datos locales de SQL Server a bases de datos SQL de Azure.A continuación, se proporcionan recomendaciones para ayudarle a solucionar esos problemas.
+- La categoría de **problemas de compatibilidad** proporciona características parcialmente compatibles o no compatibles que bloquean la migración de bases de datos locales de SQL Server a bases de datos SQL de Azure. A continuación, se proporcionan recomendaciones para ayudarle a solucionar esos problemas.
 
   ![Ver problemas de compatibilidad](../dma/media/dma-assesssqlonprem/compatibility-issues.png)
 
@@ -151,7 +151,7 @@ Si desea ampliar aún más estas evaluaciones a toda la información y encontrar
 
 Esto le permite ver los resultados consolidados en el proyecto de Azure Migrate Hub.
 
-[Aquí](./dma-assess-sql-data-estate-to-sqldb.md?view=sql-server-2017)encontrará una guía paso a paso detallada para las evaluaciones de preparación de destino.
+[Aquí](./dma-assess-sql-data-estate-to-sqldb.md)encontrará una guía paso a paso detallada para las evaluaciones de preparación de destino.
 
    ![Cargar resultados en Azure Migrate](../dma/media/dma-assesssqlonprem/upload-to-azure-migrate.png)
 

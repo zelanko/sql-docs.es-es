@@ -1,5 +1,5 @@
 ---
-title: Cargador de línea de comandos de dwloader
+title: Cargador de Command-Line de dwloader
 description: dwloader es una herramienta de línea de comandos de almacenamiento de datos paralelos (PDW) que carga masivamente filas de tabla en una tabla existente.
 author: mzaman1
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 7dd0ccf960b53b3cd1b474f61c60a58ff9b0a2c6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3635aff3c3dad371c969acd3d72b2fb738748ecc
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767054"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489695"
 ---
-# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Cargador de línea de comandos de dwloader para almacenamiento de datos paralelos
-**dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelos (PDW) que carga masivamente filas de tabla en una tabla existente. Al cargar filas, puede agregar todas las filas al final de la tabla (modo*Append* o *modo fastappend*), anexar nuevas filas y actualizar las filas existentes (*modo Upsert*) o eliminar todas las filas existentes antes de cargarlas y, a continuación, insertar todas las filas en una tabla vacía (*modo de recarga*).  
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader Command-Line cargador para almacenamiento de datos paralelos
+**dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelos (PDW) que carga masivamente filas de tabla en una tabla existente. Al cargar filas, puede agregar todas las filas al final de la tabla (modo *Append* o *modo fastappend*), anexar nuevas filas y actualizar las filas existentes (*modo Upsert*) o eliminar todas las filas existentes antes de cargarlas y, a continuación, insertar todas las filas en una tabla vacía (*modo de recarga*).  
   
 **Proceso de carga de datos**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "88767054"
   
     Inicie sesión en el servidor de carga y ejecute el **dwloader.exe** ejecutable con las opciones de línea de comandos adecuadas.  
   
-6.  Compruebe los resultados.  
+6.  Verifique los resultados.  
   
     Puede comprobar el archivo de filas con errores (especificado con-R) para ver si no se cargó ninguna fila. Si este archivo está vacío, se cargan todas las filas correctamente. **dwloader** es transaccional, por lo que si se produce un error en algún paso (excepto las filas rechazadas), todos los pasos se revertirán a su estado inicial.  
   
@@ -124,7 +124,7 @@ Muestra información de ayuda sencilla sobre el uso del cargador. La ayuda solo 
 Un inicio de sesión de autenticación de SQL Server válido con los permisos adecuados para realizar la carga.  
   
 **-P** *password*  
-La contraseña de un *login_name*de autenticación de SQL Server.  
+La contraseña de un *login_name* de autenticación de SQL Server.  
   
 **-W**  
 Usa la autenticación de Windows. (No se requiere *login_name* ni la *contraseña* ). 
@@ -138,7 +138,7 @@ Use un archivo de parámetros, *parameter_file_name*, en lugar de los parámetro
   
 El archivo de parámetros contiene un parámetro, sin el **-** prefijo, por línea.  
   
-Ejemplo:  
+Ejemplos:  
   
 `rt=percentage`  
   
@@ -193,7 +193,7 @@ Para cargar varios archivos con un comando:
   
 -   Todos los archivos se concatenarán y se cargarán como si fueran un archivo, y las filas rechazadas Irán a un solo archivo de rechazo.  
   
-Ejemplo:  
+Ejemplos:  
   
 -   -i \\ \loadserver\loads\daily \\ *. gz  
   
@@ -222,7 +222,7 @@ Especifica un tipo de codificación de caracteres para los datos que se van a ca
 **-t** *field_delimiter*  
 Delimitador para cada campo (columna) de la fila. El delimitador de campo es uno o varios de estos caracteres de escape ASCII o valores hexadecimales ASCII.  
   
-|Nombre|Carácter de escape|Carácter Hex|  
+|NOMBRE|Carácter de escape|Carácter Hex|  
 |--------|--------------------|-----------------|  
 |Pestaña|\t|0x09|  
 |Retorno de carro (CR)|\r|0x0D|  
@@ -234,7 +234,7 @@ Delimitador para cada campo (columna) de la fila. El delimitador de campo es uno
   
 Para especificar el carácter de barra vertical en la línea de comandos, escríbalo entre comillas dobles, "|". Esto evitará que el analizador de la línea de comandos interprete erróneamente. Otros caracteres se incluyen entre comillas simples.  
   
-Ejemplo:  
+Ejemplos:  
   
 -t "|"  
   
@@ -274,7 +274,7 @@ Se requiere un LF para UNIX. Se requiere un CR para Windows.
 **-s** *string_delimiter*  
 El delimitador para el campo de tipo de datos de cadena de un archivo de entrada delimitado por texto. El delimitador de cadena es uno o más valores ASCII.  Se puede especificar como un carácter (por ejemplo,-s *) o como un valor hexadecimal (por ejemplo,-s 0x22 para una comilla doble).  
   
-Ejemplo:  
+Ejemplos:  
   
 seg  
   
@@ -380,7 +380,7 @@ Cada formato de fecha y hora se especifica en un archivo denominado *datetime_fo
   
 Cada línea contiene el nombre de una columna en la tabla de destino y su formato de fecha y hora.  
   
-Ejemplo:  
+Ejemplos:  
   
 `LastReceiptDate=ymd`  
   
@@ -427,7 +427,7 @@ Si el tipo de carga es FASTAPPEND, *BatchSize* se aplica a la carga de datos en 
 Especifica las opciones para determinar el número de errores de carga que permitirá el cargador. Si los errores de carga superan el umbral, el cargador se detendrá y no confirmará ninguna fila.  
   
 **-RT** { **Value** | Percentage}  
-Especifica si el*reject_value* de la opción **-RV** *reject_value* es un número literal de filas (valor) o una tasa de error (porcentaje). El valor predeterminado es Value.  
+Especifica si el *reject_value* de la opción **-RV** *reject_value* es un número literal de filas (valor) o una tasa de error (porcentaje). El valor predeterminado es Value.  
   
 La opción de porcentaje es un cálculo en tiempo real que se produce a intervalos según la opción-RS.  
   
@@ -448,7 +448,7 @@ Se utiliza con la `-rt percentage` opción para especificar las comprobaciones d
 **-c**  
 Quita los caracteres de espacio en blanco situados a la izquierda y a la derecha de los campos Char, nchar, VARCHAR y nvarchar. Convierte cada campo que solo contiene caracteres de espacio en blanco en la cadena vacía.  
   
-Ejemplo:  
+Ejemplos:  
   
 ' ' se trunca en ' '  
   
@@ -466,7 +466,7 @@ Con **-m**, PDW de SQL Server realiza y confirma cargas en paralelo. Esto funcio
   
 Sin **-m**, PDW de SQL Server realiza y confirma cargas en serie entre las distribuciones dentro de cada nodo de proceso y simultáneamente a través de los nodos de proceso. Este método es más lento que el modo de transacciones múltiples, pero es seguro para las transacciones.  
   
-**-m** es opcional para *Append*, *Reload*y *Upsert*.  
+**-m** es opcional para *Append*, *Reload* y *Upsert*.  
   
 **-m** es necesario para fastappend.  
   
@@ -528,7 +528,7 @@ Los datos cargados pueden requerir más o menos espacio en el dispositivo que en
 Aunque **dwloader** es un proceso de transacción y se revierte correctamente en caso de error, no se puede revertir una vez que la carga masiva se ha completado correctamente. Para cancelar un proceso de **dwloader** activo, escriba Ctrl + C.  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
-El tamaño total de todas las cargas que se producen simultáneamente debe ser menor que LOG_SIZE para la base de datos y se recomienda que el tamaño total de todas las cargas simultáneas sea inferior al 50% del LOG_SIZE. Para lograr este límite de tamaño, puede dividir las cargas grandes en varios lotes. Para obtener más información sobre LOG_SIZE, consulte [Create Database](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016) .  
+El tamaño total de todas las cargas que se producen simultáneamente debe ser menor que LOG_SIZE para la base de datos y se recomienda que el tamaño total de todas las cargas simultáneas sea inferior al 50% del LOG_SIZE. Para lograr este límite de tamaño, puede dividir las cargas grandes en varios lotes. Para obtener más información sobre LOG_SIZE, consulte [Create Database](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true) .  
   
 Al cargar varios archivos con un comando LOAD, todas las filas rechazadas se escriben en el mismo archivo de rechazo. El archivo de rechazo no muestra el archivo de entrada que contiene cada fila rechazada.  
   
@@ -675,7 +675,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 Descripción de los parámetros de la línea de comandos:  
   
--   *C:\Archivos de programa\microsoft SQL Server Warehouse\100\dwloader.exede datos paralelos * es la ubicación instalada de dwloader.exe.  
+-   *C:\Archivos de programa\microsoft SQL Server Warehouse\100\dwloader.exede datos paralelos* es la ubicación instalada de dwloader.exe.  
   
 -   *-S* va seguido de la dirección IP del nodo de control.  
   
@@ -695,7 +695,7 @@ Descripción de los parámetros de la línea de comandos:
   
 -   *-r \r\n* especifica que cada fila de DimAccount.txt finaliza con un retorno de carro y un carácter de avance de línea.  
   
--   *-U <login_name>-P <password> * especifica el inicio de sesión y la contraseña para el inicio de sesión que tiene permisos para realizar la carga.  
+-   *-U <login_name>-P <password>* especifica el inicio de sesión y la contraseña para el inicio de sesión que tiene permisos para realizar la carga.  
   
 
 <!-- MISSING LINK

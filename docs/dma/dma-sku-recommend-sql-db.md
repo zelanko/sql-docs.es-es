@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 8d4de2aea0a9020a7f971f36dd011c435a3cec3d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947935"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489501"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificación de la SKU de Azure SQL Database/Instancia administrada adecuada para la base de datos local
 
@@ -38,13 +38,13 @@ La característica de recomendaciones de SKU le permite identificar el mínimo r
 
 Las siguientes son instrucciones para ayudarle a determinar las recomendaciones de la SKU y aprovisionar las bases de datos únicas correspondientes o las instancias administradas de Azure mediante DMA.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Descargue e instale la versión más reciente de [DMA](https://aka.ms/get-dma). Si ya tiene una versión anterior de la herramienta, ábrala y se le pedirá que actualice el DMA.
 - Asegúrese de que el equipo tiene la [versión 5,1](https://www.microsoft.com/download/details.aspx?id=54616) o posterior de PowerShell, que es necesaria para ejecutar todos los scripts. Para obtener información sobre cómo averiguar qué versión de PowerShell está instalada en el equipo, consulte el artículo [Descargar e instalar Windows PowerShell 5,1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
   > [!NOTE]
   > Para recopilar información de la máquina, el script de recopilación de datos usa el cmdlet Get-WmiObject, que quedó en desuso en PowerShell 6. Para ejecutar este script en PowerShell 6 o 7, debe reemplazar los cmdlets de WMI por los cmdlets de CIM más recientes.
-- Asegúrese de que el equipo tiene instalado el módulo de Azure PowerShell. Para obtener más información, vea el artículo [instalar el módulo de Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.8.0).
+- Asegúrese de que el equipo tiene instalado el módulo de Azure PowerShell. Para obtener más información, vea el artículo [instalar el módulo de Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true).
 - Compruebe que el archivo de PowerShell **SkuRecommendationDataCollectionScript.ps1**, que es necesario para recopilar los contadores de rendimiento, está instalado en la carpeta DMA.
 - Asegúrese de que el equipo en el que va a realizar este proceso tenga permisos de administrador en el equipo que hospeda las bases de datos de.
 
@@ -239,4 +239,4 @@ Para introducir información de aprovisionamiento y realizar cambios en las reco
 
 ## <a name="next-step"></a>Paso siguiente
 
-- Para obtener una lista completa de los comandos para ejecutar DMA desde la CLI, consulte el artículo [ejecución de Data Migration Assistant desde la línea de comandos](./dma-commandline.md?view=sql-server-2017).
+- Para obtener una lista completa de los comandos para ejecutar DMA desde la CLI, consulte el artículo [ejecución de Data Migration Assistant desde la línea de comandos](./dma-commandline.md).

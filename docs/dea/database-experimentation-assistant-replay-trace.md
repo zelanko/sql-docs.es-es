@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: fa37fb348aa94e59ac3816d523cc5a30bc314713
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: b91385f587668b17bd9cde9f173cebacce48dc91
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636175"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489549"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Reproducir un seguimiento en Asistente para experimentación con bases de datos
 
@@ -57,7 +57,7 @@ En primer lugar, debe realizar una reproducción de seguimiento en el destino 1,
     - **Tipo de servidor**: especifique el tipo de servidor SQL Server **(SQLServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
     - **Nombre del servidor**: especifique el nombre del servidor o la dirección IP de su SQL Server.
     - **Tipo de autenticación**: para el tipo de autenticación, seleccione **Windows**.
-    - **Nombre**de la base de datos: escriba un nombre para la base de datos en la que se va a iniciar un seguimiento del lado servidor. Si no se especifica una base de datos, el seguimiento se captura en todas las bases de datos del servidor.
+    - **Nombre** de la base de datos: escriba un nombre para la base de datos en la que se va a iniciar un seguimiento del lado servidor. Si no se especifica una base de datos, el seguimiento se captura en todas las bases de datos del servidor.
 
 5. Active o desactive las casillas **cifrar conexión** y **confiar en certificado de servidor** según corresponda para su escenario.
 
@@ -139,7 +139,7 @@ Puede obtener más detalles en los registros en% Temp% \\ DEA. Si el problema pe
 
 - Compruebe que el servicio del controlador de Distributed Replay se está ejecutando en el equipo del controlador. Para comprobarlo, use las herramientas de administración de Distributed Replay (ejecute el comando `dreplay.exe status -f 1` ).
 - Si la reproducción se inicia de forma remota:
-  - Confirme que el equipo que ejecuta DEA puede hacer ping correctamente en el controlador. Confirme que la configuración del Firewall permite conexiones según las instrucciones de la página **configurar el entorno de reproducción** . Para obtener más información, vea el artículo [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017).
+  - Confirme que el equipo que ejecuta DEA puede hacer ping correctamente en el controlador. Confirme que la configuración del Firewall permite conexiones según las instrucciones de la página **configurar el entorno de reproducción** . Para obtener más información, vea el artículo [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md).
   - Asegúrese de que se permite el inicio remoto DCOM y la activación remota para el usuario del controlador de Distributed Replay.
   - Asegúrese de que los derechos de usuario de acceso remoto DCOM están permitidos para el usuario del controlador de Distributed Replay.
 

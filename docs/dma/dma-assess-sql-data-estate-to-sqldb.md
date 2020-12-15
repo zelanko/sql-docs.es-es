@@ -15,18 +15,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9aae42b92c6d7d9bb5c26c84e49c49a8cde6bc57
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: c6e5a3878011de396568c4649ea5575635e96aec
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523882"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489559"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Evaluar la preparación de una SQL Server la migración de datos a Azure SQL Database mediante el Data Migration Assistant
 
 La migración de cientos de instancias de SQL Server y miles de bases de datos a Azure SQL Database, nuestra oferta de plataforma como servicio (PaaS), es una tarea considerable. Para simplificar el proceso tanto como sea posible, debe sentirse seguro de la preparación relativa de la migración. La identificación de frutas de bajo nivel, incluidos los servidores y las bases de datos que están totalmente preparados o que requieren un esfuerzo mínimo para prepararse para la migración, facilitan y aceleran sus esfuerzos.
 
-En este artículo se proporcionan instrucciones paso a paso para aprovechar el [Data Migration Assistant](./dma-overview.md?view=sql-server-2017) para resumir los resultados de la preparación y exponerlos en el concentrador de [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
+En este artículo se proporcionan instrucciones paso a paso para aprovechar el [Data Migration Assistant](./dma-overview.md) para resumir los resultados de la preparación y exponerlos en el concentrador de [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
 
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
@@ -37,7 +37,7 @@ Configure un nuevo proyecto de Azure Migrate en una suscripción de Azure y, des
 
 El proyecto de Azure Migrate se usa para almacenar los metadatos de detección, valoración y migración recopilados del entorno que se va a evaluar o migrar. También se usa un proyecto para realizar el seguimiento de los activos detectados y para organizar la evaluación y la migración.
 
-1. Inicie sesión en el Azure Portal, seleccione **todos los servicios**y, a continuación, busque Azure Migrate.
+1. Inicie sesión en el Azure Portal, seleccione **todos los servicios** y, a continuación, busque Azure Migrate.
 2. En **Servicios**, seleccione **Azure Migrate**.
 
    ![Azure Migrate: seleccionar servicio](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-services.png)
@@ -66,16 +66,16 @@ El proyecto de Azure Migrate se usa para almacenar los metadatos de detección, 
 
     La ubicación geográfica especificada para el proyecto solo se utiliza para almacenar los metadatos que se recopilan a partir de máquinas virtuales locales. Puede seleccionar cualquier región de destino para la migración real.
 
-7. Seleccione **siguiente**y, a continuación, agregue una herramienta de evaluación.
+7. Seleccione **siguiente** y, a continuación, agregue una herramienta de evaluación.
 
    > [!NOTE]
    > Al crear un proyecto, debe agregar al menos una herramienta de evaluación o de migración.
 
-8. En la pestaña **Seleccionar herramienta de evaluación** , **Azure Migrate: evaluación de base de datos** aparece como la herramienta de evaluación que se va a agregar. Si actualmente no necesita una herramienta de evaluación, active la casilla **omitir la adición de una herramienta de evaluación ahora** . Seleccione **Next** (Siguiente).
+8. En la pestaña **Seleccionar herramienta de evaluación** , **Azure Migrate: evaluación de base de datos** aparece como la herramienta de evaluación que se va a agregar. Si actualmente no necesita una herramienta de evaluación, active la casilla **omitir la adición de una herramienta de evaluación ahora** . Seleccione **Siguiente**.
 
     ![Azure Migrate: ficha seleccionar herramienta de evaluación](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-assessment-tool.png)
 
-9. En la pestaña **Seleccionar herramienta de migración** , **Azure Migrate: la migración de bases de datos** aparece como la herramienta de migración que se va a agregar. Si actualmente no necesita una herramienta de migración, seleccione la **herramienta para omitir la adición de una migración por ahora**. Seleccione **Next** (Siguiente).
+9. En la pestaña **Seleccionar herramienta de migración** , **Azure Migrate: la migración de bases de datos** aparece como la herramienta de migración que se va a agregar. Si actualmente no necesita una herramienta de migración, seleccione la **herramienta para omitir la adición de una migración por ahora**. Seleccione **Siguiente**.
 
     ![Azure Migrate: ficha seleccionar herramienta de migración](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-migration-tool.png)
 
@@ -94,7 +94,7 @@ Después de crear correctamente un proyecto de migración, en **herramientas de 
 1. Descargue Data Migration Assistant mediante el vínculo proporcionado y, a continuación, instálelo en un equipo con acceso a las instancias de SQL Server de origen.
 2. Inicie Data Migration Assistant.
 
-### <a name="create-an-assessment"></a>Crear una evaluación
+### <a name="create-an-assessment"></a>Creación de una evaluación
 
 1. A la izquierda, seleccione el **+** icono y, a continuación, seleccione el **tipo de proyecto** evaluación.
 2. Especifique el nombre del proyecto y, a continuación, seleccione los tipos de servidor de origen y de servidor de destino.
@@ -115,7 +115,7 @@ Después de crear correctamente un proyecto de migración, en **herramientas de 
 
    ![Azure Migrate Data Migration Assistant pantalla de opciones de evaluación](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-options-screen.png)
 
-2. Seleccione **Next** (Siguiente).
+2. Seleccione **Siguiente**.
 
 ### <a name="add-databases-to-assess"></a>Adición de bases de datos para evaluar
 

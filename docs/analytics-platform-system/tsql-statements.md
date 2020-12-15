@@ -9,24 +9,24 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 078c0364e64ddca8974544734e8e5a45950e14e0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: df390f724f6903a1cd87deee1f9d48b363ce4f57
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778404"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489633"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>Instrucciones T-SQL para almacenamiento de datos paralelos
 Instrucciones Transact-SQL (T-SQL) para el sistema de plataforma analítica (APS) SQL Server almacenamiento de datos paralelos (PDW).
 
 ## <a name="data-definition-language-ddl-statements"></a>Instrucciones del Lenguaje de definición de datos (DDL)
-* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016)
+* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [ALTER SCHEMA](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
 * [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
-* [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016)
+* [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
 * [CREATE DATABASE SCOPED CREDENTIAL](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b6e0bbfd3acbc7616fca0f180d6de3238a724231
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767164"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489725"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Adquisición y configuración de un servidor de copia de seguridad para almacenamiento de datos paralelos
 En este artículo se describe cómo configurar un sistema de Windows que no es de aplicación como un servidor de copia de seguridad para su uso con las características de copia de seguridad y restauración de Analytics Platform System (APS) y almacenamiento de datos paralelos (PDW).  
@@ -120,9 +120,9 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 Para más información, consulte: 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)   
   
--   [RESTAURAR BASE DE DATOS](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
+-   [RESTAURAR BASE DE DATOS](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)  
   
 ## <a name="security-notices"></a><a name="Security"></a>Avisos de seguridad  
 El servidor de copia de seguridad no está unido al dominio privado del dispositivo. Está en su propia red y no hay ninguna relación de confianza entre su dominio y el dominio de la aplicación privada.  
@@ -140,7 +140,7 @@ Para almacenar el nombre de usuario y la contraseña en PDW, use el [sp_pdw_add_
   
 Para quitar las credenciales de red de PDW, use el [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) procedimiento almacenado.  
   
-Para enumerar todas las credenciales de red almacenadas en PDW de SQL Server, use la vista de administración dinámica [Sys. dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) .  
+Para enumerar todas las credenciales de red almacenadas en PDW de SQL Server, use la vista de administración dinámica [Sys.dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) .  
   
 ### <a name="secure-communications"></a>Comunicaciones seguras  
   

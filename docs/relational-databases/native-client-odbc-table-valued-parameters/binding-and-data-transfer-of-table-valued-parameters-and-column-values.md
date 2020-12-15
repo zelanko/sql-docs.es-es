@@ -1,6 +1,6 @@
 ---
-title: Transferencia de datos de parámetros con valores de tabla
-description: Describir Transferencia de datos de parámetros con valores de tabla
+title: Transferencia de datos de parámetros de Table-Valued
+description: Describir Transferencia de datos de parámetros de Table-Valued
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.technology: native-client
@@ -11,12 +11,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/01/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0be2ffbfb7160d5be8f5ebb2a2ed688103a54b4d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 19a7f22cd26ea4988364d51ff70300cdbf42d365
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004617"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97436163"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Enlace y transferencia de datos de valores de columnas y parámetros con valores de tabla
 
@@ -78,7 +79,7 @@ En el caso del enlace de filas fijo, una aplicación asigna búferes (o matrices
 
 En el caso del enlace de filas variable, las filas se transfieren por lotes en tiempo de ejecución y la aplicación pasa las filas al controlador a petición. Es similar a los datos en ejecución para los valores de parámetro individuales. En el caso del enlace de filas variable, la aplicación hace lo siguiente:  
 
-1. Enlaza los parámetros y las columnas de parámetro con valores de tabla, como se describe en los pasos 1 a 3 de la sección anterior, "enlace de filas fijo de parámetros con valores de tabla".  
+1. Enlaza los parámetros y las columnas de parámetro con valores de tabla, como se describe en los pasos 1 a 3 de la sección anterior, "Fixed Table-Valued parámetro de fila de parámetros".  
 
 2. Establece *StrLen_or_IndPtr* o SQL_DESC_OCTET_LENGTH_PTR para los parámetros con valores de tabla que se van a pasar en el tiempo de ejecución a SQL_DATA_AT_EXEC. Si no se establece ninguno, el parámetro se procesa como se describe en la sección anterior.  
 

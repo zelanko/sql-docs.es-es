@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2cd0786cac3976bcb280422f177d19d8f86a3c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b659380d95adf9149ef22a47544446e1c1349e6b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465317"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438083"
 ---
 # <a name="mapping-data-types-odbc"></a>Asignar tipos de datos (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88465317"
 >  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos **timestamp** se asigna al tipo de datos SQL_BINARY o SQL_VARBINARY ODBC porque los valores de las columnas **timestamp** no son valores **DateTime** , sino valores **binarios (8)** o **varbinary (8)** que indican la secuencia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actividad de la fila. Si el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client encuentra un valor SQL_C_WCHAR (Unicode) con un número impar de bytes, se trunca el byte impar final.  
   
 ## <a name="dealing-with-sql_variant-data-type-in-odbc"></a>Administrar tipos de datos sql_variant en ODBC  
- La columna tipo de datos **sql_variant** puede contener cualquiera de los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , excepto los objetos grandes (LOB), como **Text**, **ntext**e **Image**. Por ejemplo, la columna puede contener valores **smallint** para algunas filas, valores **float** para otras filas y valores **CHAR/NCHAR** en el resto.  
+ La columna tipo de datos **sql_variant** puede contener cualquiera de los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , excepto los objetos grandes (LOB), como **Text**, **ntext** e **Image**. Por ejemplo, la columna puede contener valores **smallint** para algunas filas, valores **float** para otras filas y valores **CHAR/NCHAR** en el resto.  
   
  El tipo de datos **sql_variant** es similar al tipo de datos **variant** de Microsoft Visual Basic®.  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_sql_referencing_entities (Transact-SQL)
-title: Sys. dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
+title: sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9855ef4c747c411476df5700f4a61f43f31de299
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 517e6f8faaccf40091535b8a78d47d0fa8a43032
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550207"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484577"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -95,7 +95,7 @@ sys.dm_sql_referencing_entities (
   
  Devuelve un error si la entidad especificada a la que se hace referencia es un procedimiento almacenado numerado.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La tabla siguiente enumera los tipos de entidades para las que se crea y mantiene la información de dependencia. La información de dependencia no se crea ni mantiene para reglas, valores predeterminados, tablas temporales, procedimientos almacenados temporales u objetos del sistema.  
   
 |Tipo de entidad|Entidad que hace la referencia|Entidad a la que se hace referencia|  
@@ -127,7 +127,7 @@ sys.dm_sql_referencing_entities (
   
 -   Requiere el permiso CONTROL en el objeto al que se hace referencia. Cuando la entidad a la que se hace referencia es una función de partición, se requiere el permiso CONTROL en la base de datos.  
   
--   Requiere el permiso SELECT en sys. dm_sql_referencing_entities. De forma predeterminada, se concede el permiso SELECT a public.  
+-   Requiere el permiso SELECT en sys.dm_sql_referencing_entities. De forma predeterminada, se concede el permiso SELECT a public.  
   
 ### <a name="sssql14---sscurrent"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   

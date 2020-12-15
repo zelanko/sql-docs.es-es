@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 1cbc5d23a7c7843a2186cd951fd5bb16079489d3
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current
+ms.openlocfilehash: 8aafaca36fb5ef1d96ddbd9f369a3ba4f06a596d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834321"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484587"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
@@ -36,7 +36,7 @@ Devuelve una instantánea en un intervalo de 20 segundos para los últimos 32 mi
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**{1}pool_id{2}**|int|Identificador del grupo de recursos. No admite valores NULL.
+|**pool_id**|int|Identificador del grupo de recursos. No admite valores NULL.
 |**name**|sysname|Nombre del grupo de recursos. No admite valores NULL.|
 |**snapshot_time**|datetime2|Fecha y hora de la instantánea de estadísticas del grupo de recursos tomada|
 |**duration_ms**|int|Duración entre la instantánea actual y la anterior|
@@ -104,7 +104,7 @@ Devuelve una instantánea en un intervalo de 20 segundos para los últimos 32 mi
 
 Esta vista requiere el permiso VIEW SERVER STATE.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Los usuarios pueden tener acceso a esta vista de administración dinámica para supervisar el consumo de recursos casi en tiempo real para el grupo de cargas de trabajo de usuario, así como los grupos internos del sistema de la instancia de Azure SQL Database.
 

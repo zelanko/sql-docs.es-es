@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65fc7918a3e8064310757a2875e62d6e001f750c
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 57a595a2bcb78d86c3a770db6b584974c229a0df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91808593"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483657"
 ---
 # <a name="automatic-tuning"></a>Ajuste automático
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -101,7 +101,7 @@ Sin el ajuste automático, los usuarios deben supervisar periódicamente el sist
 
 En [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] , puede buscar regresiones de elección del plan mediante almacén de consultas vistas del sistema. A partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] , [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta y muestra las posibles regresiones de elección del plan y las acciones recomendadas que se deben aplicar en el [sys.dm_db_tuning_recommendations &#40;DMV&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) . La DMV muestra información sobre el problema, la importancia del problema y detalles como la consulta identificada, el identificador del plan con regresión, el ID. del plan que se usó como línea base para la comparación y la [!INCLUDE[tsql_md](../../includes/tsql-md.md)] instrucción que se puede ejecutar para corregir el problema.
 
-| type | description | datetime | score | detalles | ... |
+| tipo | description | datetime | score | detalles | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Tiempo de CPU cambiado de 4 MS a 14 MS | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Tiempo de CPU cambiado de 37 MS a 84 MS | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |

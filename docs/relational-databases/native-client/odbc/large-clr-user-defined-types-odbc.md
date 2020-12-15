@@ -1,6 +1,6 @@
 ---
 description: Tipos CLR grandes definidos por el usuario (ODBC)
-title: Tipos definidos por el usuario CLR grandes (ODBC) | Microsoft Docs
+title: Tipos de User-Defined CLR grandes (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f1beb11da79f41349ef0f01bb203d969654db07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 52944d98e4e3141ffbe036b1166b083195ea7fb4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428167"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483166"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipos CLR grandes definidos por el usuario (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88428167"
   
  Para ver un ejemplo que muestra la compatibilidad de ODBC con los UDT de CLR grandes, consulte [compatibilidad con UDT grandes](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md).  
   
- Para obtener más información acerca de la compatibilidad con UDT CLR grandes en SQL Server Native Client, consulte [tipos CLR grandes definidos por el usuario](../../../relational-databases/native-client/features/large-clr-user-defined-types.md).  
+ Para obtener más información sobre la compatibilidad con UDT CLR grandes en SQL Server Native Client, consulte [tipos de User-Defined CLR grandes](../../../relational-databases/native-client/features/large-clr-user-defined-types.md).  
   
 ## <a name="data-format"></a>Formato de datos  
  SQL Server Native Client usa SQL_SS_LENGTH_UNLIMITED para indicar que el tamaño de una columna es superior a 8.000 bytes para los tipos de objeto grandes (LOB). A partir de SQL Server 2008, se usa el mismo valor para los tipos UDT CLR cuando su tamaño es superior a 8.000 bytes.  
@@ -89,7 +89,7 @@ ms.locfileid: "88428167"
 |SQL_DESC_CONCISE_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|0|0|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
-|SQL_DESC_DISPLAY_SIZE|2*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
+|SQL_DESC_DISPLAY_SIZE|2 *n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_LENGTH|*n*|SQL_SS_LENGTH_UNLIMITED (0)|  
 |SQL_DESC_LITERAL_PREFIX|"0x"|"0x"|  
@@ -161,7 +161,7 @@ ms.locfileid: "88428167"
 |Versión del servidor|SQL_SS_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|SQL_SS_UDT<br /><br /> (longitud mayor que 8.000 bytes)|  
 |--------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
 |SQL Server 2005|**UDT**|**varbinary(max)**|  
-|SQL Server 2008 y posterior|**UDT**|**UDT**|  
+|SQL Server 2008 y versiones posteriores|**UDT**|**UDT**|  
   
 ## <a name="odbc-functions-supporting-large-clr-udts"></a>Funciones ODBC compatibles con UDT de CLR grandes  
  En esta sección se describen los cambios realizados en las funciones ODBC de SQL Server Native Client para admitir UDT de CLR grandes.  
@@ -214,7 +214,7 @@ ms.locfileid: "88428167"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Los valores devueltos para los UDT son los siguientes:  
   
-|Tipo de datos de SQL|Tipo|SubType|Length|Precisión|Escala|  
+|Tipo de datos de SQL|Tipo|Subtipo|Length|Precisión|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (longitud mayor que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -234,7 +234,7 @@ ms.locfileid: "88428167"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Los valores que se permiten para los UDT son los siguientes:  
   
-|Tipo de datos de SQL|Tipo|SubType|Length|Precisión|Escala|  
+|Tipo de datos de SQL|Tipo|Subtipo|Length|Precisión|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (longitud mayor que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

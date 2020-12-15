@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b22227de702e787f183a7ec15e3b26d685fd6cb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ab64c4fa1ea96390631508130ba9a7b57d8a8493
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005955"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410559"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,15 +49,15 @@ sp_statistics [ @table_name = ] 'table_name'
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>Argumentos  
-`[ @table_name = ] 'table_name'` Especifica la tabla que se utiliza para devolver información del catálogo. *TABLE_NAME* es de **tipo sysname**y no tiene ningún valor predeterminado. No se admite la coincidencia de patrón de caracteres comodín.  
+`[ @table_name = ] 'table_name'` Especifica la tabla que se utiliza para devolver información del catálogo. *TABLE_NAME* es de **tipo sysname** y no tiene ningún valor predeterminado. No se admite la coincidencia de patrón de caracteres comodín.  
   
-`[ @table_owner = ] 'owner'` Es el nombre del propietario de la tabla que se utiliza para devolver información del catálogo. *table_owner* es de **tipo sysname y su**valor predeterminado es NULL. No se admite la coincidencia de patrón de caracteres comodín. Si no se especifica *Owner* , se aplican las reglas predeterminadas de visibilidad de tabla del DBMS subyacente.  
+`[ @table_owner = ] 'owner'` Es el nombre del propietario de la tabla que se utiliza para devolver información del catálogo. *table_owner* es de **tipo sysname y su** valor predeterminado es NULL. No se admite la coincidencia de patrón de caracteres comodín. Si no se especifica *Owner* , se aplican las reglas predeterminadas de visibilidad de tabla del DBMS subyacente.  
   
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual es propietario de una tabla en la que se especifica el nombre, se devuelven los índices de esa tabla. Si no se especifica *Owner* y el usuario actual no posee una tabla con el *nombre*especificado, este procedimiento busca una tabla con el *nombre* especificado que pertenezca al propietario de la base de datos. Si existe una, se devuelven los índices de esa tabla.  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual es propietario de una tabla en la que se especifica el nombre, se devuelven los índices de esa tabla. Si no se especifica *Owner* y el usuario actual no posee una tabla con el *nombre* especificado, este procedimiento busca una tabla con el *nombre* especificado que pertenezca al propietario de la base de datos. Si existe una, se devuelven los índices de esa tabla.  
   
-`[ @table_qualifier = ] 'qualifier'` Es el nombre del calificador de tabla. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este parámetro representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+`[ @table_qualifier = ] 'qualifier'` Es el nombre del calificador de tabla. el *calificador* es de **tipo sysname y su** valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este parámetro representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
-`[ @index_name = ] 'index_name'` Es el nombre del índice. *index_name* es de **tipo sysname y su**valor predeterminado es%. Se admite la coincidencia de patrón de caracteres comodín.  
+`[ @index_name = ] 'index_name'` Es el nombre del índice. *index_name* es de **tipo sysname y su** valor predeterminado es%. Se admite la coincidencia de patrón de caracteres comodín.  
   
 `[ @is_unique = ] 'is_unique'` Indica si solo se devolverán índices únicos (si **Y**). *is_unique* es **Char (1)** y su valor predeterminado es **N**.  
   
@@ -81,21 +81,21 @@ sp_statistics [ @table_name = ] 'table_name'
 |**SEQ_IN_INDEX**|**smallint**|Posición de la columna dentro del índice.|  
 |**COLUMN_NAME**|**sysname**|Nombre de columna de cada columna del **TABLE_NAME** devuelto. Esta columna siempre devuelve un valor.|  
 |**COLLATION**|**char(1)**|Orden utilizado en la intercalación. Puede ser:<br /><br /> A = Ascendente<br /><br /> D = Descendente<br /><br /> NULL = No aplicable|  
-|**CARDINALITY**|**int**|Número de filas de la tabla o valores únicos del índice.|  
+|**CARDINALIDAD**|**int**|Número de filas de la tabla o valores únicos del índice.|  
 |**PÁGINAS**|**int**|Número de páginas para el almacenamiento del índice o tabla.|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- None  
+ Ninguno  
   
 ## <a name="remarks"></a>Observaciones  
- Los índices del conjunto de resultados aparecen en orden ascendente por las columnas **NON_UNIQUE**, **tipo**, **INDEX_NAME**y **SEQ_IN_INDEX**.  
+ Los índices del conjunto de resultados aparecen en orden ascendente por las columnas **NON_UNIQUE**, **tipo**, **INDEX_NAME** y **SEQ_IN_INDEX**.  
   
  El tipo de índice clúster hace referencia a un índice en el que los datos de la tabla se almacenan en el orden del índice. Esto corresponde a los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] índices clúster.  
   
  El tipo de índice en hash acepta búsquedas de coincidencia exacta o de intervalos, pero las búsquedas de coincidencia de patrón no utilizan el índice.  
   
- **sp_statistics** es equivalente a **SQLStatistics** en ODBC. Los resultados devueltos se ordenan por **NON_UNIQUE**, **tipo**, **INDEX_QUALIFIER**, **INDEX_NAME**y **SEQ_IN_INDEX**. Para obtener más información, vea la referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-reference.md).  
+ **sp_statistics** es equivalente a **SQLStatistics** en ODBC. Los resultados devueltos se ordenan por **NON_UNIQUE**, **tipo**, **INDEX_QUALIFIER**, **INDEX_NAME** y **SEQ_IN_INDEX**. Para obtener más información, vea la referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-reference.md).  
   
 ## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  

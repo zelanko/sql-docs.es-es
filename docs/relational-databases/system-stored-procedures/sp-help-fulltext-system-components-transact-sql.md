@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2455a2d6ccf3c17c1cd60e159ce429af681dca4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9b8d7b3188afcc30aecc17c1e731ca9c5fae4127
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541718"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410557"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol **Public** ; sin embargo, los usuarios solo pueden ver información sobre los catálogos de texto completo para los que tienen permiso VIEW DEFINITION. Solo los miembros del rol fijo de servidor **serveradmin** pueden ver los valores de la columna **fullpath** .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Este método es de particular importancia cuando se prepara una actualización. Ejecute el procedimiento almacenado en una base de datos determinada y utilice la salida para determinar si un catálogo concreto se verá afectado por la actualización.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -107,7 +107,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Determinar si un separador de palabras concreto está registrado  
- El ejemplo siguiente mostrará el separador de palabras del idioma turco (LCID = 1055) si se ha instalado en el sistema y si está registrado en la instancia del servicio. Este ejemplo especifica los nombres de parámetro, ** \@ component_type** y ** \@ param**.  
+ El ejemplo siguiente mostrará el separador de palabras del idioma turco (LCID = 1055) si se ha instalado en el sistema y si está registrado en la instancia del servicio. Este ejemplo especifica los nombres de parámetro, **\@ component_type** y **\@ param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  

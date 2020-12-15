@@ -11,14 +11,14 @@ dev_langs:
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 212e8e5ab05204a6497282e79c4134dcff844299
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: 0aeb775ea03d022337f45463b16e7134cfb12dc8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067331"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410763"
 ---
 # <a name="sp_pdw_add_network_credentials-azure-synapse-analytics"></a>sp_pdw_add_network_credentials (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,20 +37,20 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', 'password'
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>Argumentos  
- ' *target_server_name* '  
+ '*target_server_name*'  
  Especifica el nombre de host o la dirección IP del servidor de destino. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] tendrá acceso a este servidor mediante las credenciales de nombre de usuario y contraseña que se pasaron a este procedimiento almacenado.  
   
  Para conectarse a través de la red InfiniBand, use la dirección IP InfiniBand del servidor de destino.  
   
  *target_server_name* se define como nvarchar (337).  
   
- ' *user_name* '  
+ '*user_name*'  
  Especifica el user_name que tiene permisos de acceso al servidor de destino. Si ya existen credenciales para el servidor de destino, se actualizarán a las nuevas credenciales.  
   
  *user_name* se define como nvarchar (513).  
   
- ' *password* "  
- Especifica la contraseña de *user_name* .  
+ '*password*"  
+ Especifica la contraseña de *user_name*.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

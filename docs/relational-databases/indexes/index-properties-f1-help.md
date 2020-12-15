@@ -19,13 +19,13 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43ef52303110cb26b145348edc6aa9ec09bf38de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 780ee667e84b0def82e27afff1b27886150c8bb0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408141"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407394"
 ---
 # <a name="index-properties-f1-help"></a>Propiedades del índice (Ayuda F1)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -279,7 +279,7 @@ Las páginas de nivel intermedio se llenan casi al máximo de su capacidad y dej
  En el nivel superior, si un objeto abarca más celdas de las especificadas mediante *n*, la indexación usa tantas celdas como sean necesarias para proporcionar una teselación de nivel superior completa. En tales casos, un objeto podría recibir más celdas de las especificadas. En este caso, el número máximo es la cantidad de celdas generadas por la cuadrícula de nivel superior, que depende de la densidad de **Nivel 1** .  
   
 ### <a name="grids"></a>Cuadrículas  
- Este panel muestra la densidad de la cuadrícula en cada nivel del esquema de la teselación. La densidad se especifica como **Baja**, **Media**o **Alta**. El valor predeterminado es **Media**. **Baja** representa una cuadrícula de 4 x 4 (16 celdas), **Media** representa una cuadrícula de 8 x 8 (64 celdas) y **Alta** representa una cuadrícula de 16 x 16 (256 celdas). Estas opciones no están disponibles cuando se eligen las opciones de teselación **Cuadrícula automática de geometría** o **Cuadrícula automática de geografía** .  
+ Este panel muestra la densidad de la cuadrícula en cada nivel del esquema de la teselación. La densidad se especifica como **Baja**, **Media** o **Alta**. El valor predeterminado es **Media**. **Baja** representa una cuadrícula de 4 x 4 (16 celdas), **Media** representa una cuadrícula de 8 x 8 (64 celdas) y **Alta** representa una cuadrícula de 16 x 16 (256 celdas). Estas opciones no están disponibles cuando se eligen las opciones de teselación **Cuadrícula automática de geometría** o **Cuadrícula automática de geografía** .  
   
  **Nivel 1**  
  La densidad de la cuadrícula del primer nivel (superior).  

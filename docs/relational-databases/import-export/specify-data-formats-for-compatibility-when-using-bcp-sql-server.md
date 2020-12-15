@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9bae99e460ea8a9e5e2877917bd8a82b25f8cc8a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c243b1f715ecf3b6196c23250c5f52836fba8ffa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001130"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407911"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>Especificación de formatos de datos de compatibilidad con bcp (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "86001130"
   
   
 ##  <a name="overview-of-the-field-specific-prompts"></a><a name="FieldSpecificPrompts"></a> Información general acerca de peticiones específicas de campos  
- Si un comando **bcp** interactivo contiene la opción **in** o **out** pero no contiene el modificador de formato de archivo ( **-f**) o un modificador de formato de datos ( **-n**, **-c**, **-w**o **-N**), cada columna de la tabla de origen o de destino, el comando solicita a su vez cada uno de los atributos precedentes. En cada mensaje, el comando **bcp** proporciona un valor predeterminado basado en el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la columna de la tabla. Si acepta el valor predeterminado de todos los mensajes, se obtiene el mismo resultado que si especifica un formato nativo ( **-n**) en la línea de comandos. Cada mensaje muestra un valor predeterminado entre corchetes: [*default*]. Para aceptar el valor predeterminado que se muestra, presione la tecla ENTRAR. Para especificar un valor distinto del predeterminado, escriba el nuevo valor cuando en el mensaje.  
+ Si un comando **bcp** interactivo contiene la opción **in** o **out** pero no contiene el modificador de formato de archivo ( **-f**) o un modificador de formato de datos ( **-n**, **-c**, **-w** o **-N**), cada columna de la tabla de origen o de destino, el comando solicita a su vez cada uno de los atributos precedentes. En cada mensaje, el comando **bcp** proporciona un valor predeterminado basado en el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la columna de la tabla. Si acepta el valor predeterminado de todos los mensajes, se obtiene el mismo resultado que si especifica un formato nativo ( **-n**) en la línea de comandos. Cada mensaje muestra un valor predeterminado entre corchetes: [*default*]. Para aceptar el valor predeterminado que se muestra, presione la tecla ENTRAR. Para especificar un valor distinto del predeterminado, escriba el nuevo valor cuando en el mensaje.  
   
 ### <a name="example"></a>Ejemplo  
  El siguiente ejemplo usa el comando **bcp** para exportar masivamente datos masivos desde la tabla `HumanResources.myTeam` interactivamente al archivo `myTeam.txt` . Antes de que pueda ejecutar el ejemplo, debe crear esta tabla. Para obtener más información sobre la tabla y cómo crearla, vea [Tabla de ejemplo HumanResources.myTeam &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md).  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52c91c09c440402df383253996e660d7abdb317c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 13d9b45efd0fc75e1e17ea0ec5b21537fae71971
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551183"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427300"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,10 +54,10 @@ sp_updateextendedproperty
   
 ## <a name="arguments"></a>Argumentos  
  [ @name =] {'*property_name*'}  
- Es el nombre de la propiedad que se va a actualizar. *property_name* es de **tipo sysname**y no puede ser null.  
+ Es el nombre de la propiedad que se va a actualizar. *property_name* es de **tipo sysname** y no puede ser null.  
   
  [ @value =] {'*valor*'}  
- Es el valor asociado a la propiedad. el *valor* es **sql_variant**y su valor predeterminado es NULL. El tamaño del *valor* no puede ser superior a 7.500 bytes.  
+ Es el valor asociado a la propiedad. el *valor* es **sql_variant** y su valor predeterminado es NULL. El tamaño del *valor* no puede ser superior a 7.500 bytes.  
   
  [ @level0type =] {'*level0_object_type*'}  
  Es el usuario o el tipo definido por el usuario. *level0_object_type* es de tipo **VARCHAR (128)** y su valor predeterminado es NULL. Las entradas válidas son ASSEMBLy, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, PLAN GUIDE, Remote SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE y NULL.  
@@ -78,7 +78,7 @@ sp_updateextendedproperty
  Es el tipo de objeto de nivel 2. *level2_object_type* es de tipo **VARCHAR (128)** y su valor predeterminado es NULL. Las entradas válidas son COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER y NULL.  
   
  [ @level2name =] {'*level2_object_name*'}  
- Es el nombre del tipo de objeto de nivel 2 especificado. *level2_object_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+ Es el nombre del tipo de objeto de nivel 2 especificado. *level2_object_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -86,7 +86,7 @@ sp_updateextendedproperty
 ## <a name="remarks"></a>Observaciones  
  Los objetos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se clasifican en tres niveles (0, 1, 2) con el fin de especificar las propiedades extendidas. El nivel 0 es el nivel más elevado y se define como los objetos incluidos en el ámbito de la base de datos. Los objetos de nivel 1 se incluyen en un ámbito de esquema o de usuario, y los objetos de nivel 2 están incluidos en los objetos de nivel 1. Se pueden definir propiedades extendidas para los objetos de cualquiera de estos niveles. Las referencias a un objeto de un nivel deben estar calificadas con los nombres de los objetos del nivel superior que son sus propietarios o que los contienen.  
   
- Dado una *property_name* y un *valor*válidos, si todos los tipos y nombres de objetos son NULL, la propiedad actualizada pertenece a la base de datos actual.  
+ Dado una *property_name* y un *valor* válidos, si todos los tipos y nombres de objetos son NULL, la propiedad actualizada pertenece a la base de datos actual.  
   
 ## <a name="permissions"></a>Permisos  
  Los miembros de los roles fijos de base de datos db_owner y db_ddladmin pueden actualizar las propiedades extendidas de cualquier objeto con la siguiente excepción: db_ddladmin no puede agregar propiedades a la base de datos, a los usuarios ni a los roles.  
@@ -138,9 +138,9 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Sys. fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;&#41;de Transact-SQL ](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [Sys. extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sys.extended_properties &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

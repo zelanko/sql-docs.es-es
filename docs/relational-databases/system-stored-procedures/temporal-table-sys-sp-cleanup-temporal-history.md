@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1eb0487c46b0ef3d16c7a8286292fce5cef11538
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: e4afeb9f30040cf576a35b1b822bf5292752c148
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809151"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427197"
 ---
 # <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact-SQL)
 
@@ -45,7 +45,7 @@ Nombre del esquema al que pertenece la tabla temporal actual.
 
 Parámetro de salida que devuelve el número de filas eliminadas. Si la tabla de historial tiene un índice de almacén de columnas agrupado, este parámetro devolverá siempre 0.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Este procedimiento almacenado solo se puede usar con tablas temporales que tengan especificado un período de retención finito.
 Utilice este procedimiento almacenado solo si necesita limpiar inmediatamente todas las filas antiguas de la tabla de historial. Debe saber que puede tener un impacto significativo en el registro de la base de datos y en el subsistema de e/s, ya que elimina todas las filas válidas dentro de la misma transacción.

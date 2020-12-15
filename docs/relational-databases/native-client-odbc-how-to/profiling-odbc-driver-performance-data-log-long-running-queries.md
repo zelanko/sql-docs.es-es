@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4942428a1f73275aeb85d9c41220467b89e3ab9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0b5eb57bb4e88ebcad9a3ffdfdf9517a2f2576cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868897"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97419535"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Generar perfiles de datos de rendimiento del controlador ODBC: registrar las consultas de larga ejecución
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "91868897"
   
 1.  En el **Panel de control**, haga doble clic en **herramientas administrativas** y, a continuación, haga doble clic en **orígenes de datos (ODBC)**. (Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema).  
   
-2.  Haga clic en la pestaña **DSN de usuario**, **DSN de sistema**o DSN de **archivo** .  
+2.  Haga clic en la pestaña **DSN de usuario**, **DSN de sistema** o DSN de **archivo** .  
   
 3.  Haga clic en el origen de datos para el que desea registrar las consultas de ejecución prolongada.  
   

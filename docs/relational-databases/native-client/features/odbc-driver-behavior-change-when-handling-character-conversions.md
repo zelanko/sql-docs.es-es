@@ -10,13 +10,13 @@ ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48c2230327a92a560291aacbf802ae775b99fe8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5d74887afafcc4ab0c00881081bf8abf941ac551
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498911"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97418938"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Cambio de comportamiento del controlador ODBC al administrar las conversiones de caracteres
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

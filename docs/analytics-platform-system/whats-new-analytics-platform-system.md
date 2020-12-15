@@ -9,19 +9,19 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 25bc830bcf2582d7630829ccb3c369fdd434c094
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 693e724256d8792581770e7fde4f4e6c991701bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011808"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420172"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novedades de Analytics Platform System, un almacenamiento de datos MPP de escalabilidad horizontal
 Vea las novedades de las últimas actualizaciones del dispositivo para Microsoft Analytics Platform System (AP). APS es un dispositivo local de escalado horizontal que hospeda MPP SQL Server almacenamiento de datos paralelos. 
 
-::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016-au7 "
 <a name="h2-aps-cu7.7"></a>
-## <a name="aps-cu77"></a>APS CU 7.7
+## <a name="aps-cu77"></a>APS CU7.7
 Fecha de lanzamiento: noviembre 2020
 
 ### <a name="scvmm2016"></a>SCVMM2016
@@ -179,7 +179,7 @@ Con el software APS AU7, se proporciona una actualización del BIOS de Intel que
 Microsoft recomienda que todos los clientes instalen el BIOS actualizado. Microsoft ha medido el efecto del sombreado de la dirección virtual del kernel (KVAS), el direccionamiento indirecto de la tabla de páginas del kernel (KPTI) y la mitigación de predicción de rama indirecta (IBP) en varias cargas de trabajo de SQL en varios entornos. Las medidas han detectado una degradación significativa en algunas cargas de trabajo. En función de los resultados, se recomienda probar el efecto de rendimiento de habilitar la actualización del BIOS antes de implementarla en un entorno de producción. Consulte la guía de SQL Server [aquí](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
 
 ::: moniker-end
-::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016 "
 <a name="h2-aps-au6"></a>
 ## <a name="aps-2016"></a>APS 2016
 En esta sección se describen las nuevas características de APS 2016-AU6.

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8c3f1c186774b803794315644c5c8aa9f8cef7ce
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 0b9717a6c71d5aef31dae428a67de37e9d9188ca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918281"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97417081"
 ---
 # <a name="compare-differences-between-replicated-tables-replication-programming"></a>Comparación de las diferencias entre las tablas replicadas (programación de la replicación)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

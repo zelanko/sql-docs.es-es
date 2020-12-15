@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
-title: Sys. dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c48807db007bd5d622283fd07c3aed8aec0198a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3688330769cbac60841f29d98efb5219cfc965a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542221"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474946"
 ---
 # <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "89542221"
   
  Un gran número de reintentos indica la existencia de problemas de simultaneidad; llame al servicio de soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Para obtener más información acerca de los índices no clúster optimizados para memoria, vea [SQL Server información general sobre los elementos internos de OLTP en memoria](https://t.co/T6zToWc6y6), página 17.  
+ Para obtener más información sobre los índices no clúster optimizados para memoria, vea [SQL Server In-Memory información general sobre](https://t.co/T6zToWc6y6)los elementos internos de OLTP, página 17.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

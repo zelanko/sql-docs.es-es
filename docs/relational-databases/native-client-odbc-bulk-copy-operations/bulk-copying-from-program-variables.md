@@ -19,20 +19,20 @@ helpviewer_keywords:
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50b1177e65ad2ef082335fa29a180ddd8f489adf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 66fc82b8253c5bb9eeac669bf88846737b315d91
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455982"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465066"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copia masiva de variables de programa
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Es posible realizar la copia masiva directamente desde variables de programa. Después de asignar variables para almacenar los datos de una fila y llamar a [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para iniciar la copia masiva, llame a [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) de cada columna para especificar la ubicación y el formato de la variable de programa que se va a asociar a la columna. Rellene cada variable con datos y, a continuación, llame a [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) para enviar una fila de datos al servidor. Repita el proceso de rellenar las variables y llamar a **bcp_sendrow** hasta que todas las filas se hayan enviado al servidor y, a continuación, llame a [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) para especificar que la operación se ha completado.  
   
- El **bcp_bind**parámetro_pdata_ contiene la dirección de la variable que se va a enlazar a la columna. Los datos de cada columna pueden almacenarse de una de estas dos formas:  
+ El **bcp_bind** parámetro _pdata_ contiene la dirección de la variable que se va a enlazar a la columna. Los datos de cada columna pueden almacenarse de una de estas dos formas:  
   
 -   Asignando una variable para almacenar los datos.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88455982"
   
  Los tres métodos se pueden usar en la misma llamada **bcp_bind** , en cuyo caso se usa la especificación que da como resultado la menor cantidad de datos que se van a copiar.  
   
- El parámetro de_tipo_ **bcp_bind**utiliza identificadores de tipo de datos de DB-Library, no identificadores de tipo de datos ODBC. Los identificadores de tipo de datos de DB-Library se definen en SQLNCLI. h para su uso con la función de **BCP_BIND** ODBC.  
+ El parámetro de _tipo_ **bcp_bind** usa DB-Library identificadores de tipo de datos, no los identificadores de tipo de datos ODBC. DB-Library los identificadores de tipo de datos se definen en SQLNCLI. h para su uso con la función de **bcp_bind** de ODBC.  
   
  Las funciones de copia masiva no admiten todos los tipos de datos C de ODBC. Por ejemplo, las funciones de copia masiva no admiten la estructura de SQL_C_TYPE_TIMESTAMP ODBC, por lo que debe usar [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) o [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) para convertir los datos de SQL_TYPE_TIMESTAMP ODBC en una variable de SQL_C_CHAR. Si después usa **bcp_bind** con un parámetro de *tipo* de SQLCHARACTER para enlazar la variable a una columna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **fecha y hora** , las funciones de copia masiva convierten la cláusula de escape de marca de tiempo de la variable de carácter en el formato de fecha y hora correcto.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "88455982"
   
 |Tipo de datos SQL de ODBC|Tipo de datos C de ODBC|bcp_bind parámetro de *tipo*|Tipos de datos de SQL Server|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
-|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**óptico**<br /><br /> **char**|  
+|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**carácter**<br /><br /> **char**|  
 |SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **variar caracteres**<br /><br /> **char varying**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
@@ -86,7 +86,7 @@ ms.locfileid: "88455982"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no tiene los tipos de datos **tinyint**, **smallint**sin signo o **int** sin signo. Para impedir la pérdida de valores de datos al migrar estos tipos de datos, cree la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el tipo de datos entero inmediatamente superior. Para impedir que los usuarios agreguen después valores que se encuentren fuera del intervalo permitido por el tipo de datos original, aplique una regla a la columna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para restringir los valores permitidos al intervalo admitido por el tipo de datos de origen inicial:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no tiene los tipos de datos **tinyint**, **smallint** sin signo o **int** sin signo. Para impedir la pérdida de valores de datos al migrar estos tipos de datos, cree la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el tipo de datos entero inmediatamente superior. Para impedir que los usuarios agreguen después valores que se encuentren fuera del intervalo permitido por el tipo de datos original, aplique una regla a la columna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para restringir los valores permitidos al intervalo admitido por el tipo de datos de origen inicial:  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  

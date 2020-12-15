@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3920007400a4ae407303f3fddff50c0a5ace2328
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 05de24f511f5d72bc4eba1947d1731491e3c1a37
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534813"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472686"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Establece los valores de las opciones de las tablas definidas por el usuario. sp_tableoption puede usarse para controlar el comportamiento consecutivo de las tablas con columnas **VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)**, **XML**, **Text**, **ntext**, **Image**o Large-defined.  
+  Establece los valores de las opciones de las tablas definidas por el usuario. sp_tableoption puede usarse para controlar el comportamiento consecutivo de las tablas con columnas **VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)**, **XML**, **Text**, **ntext**, **Image** o Large-defined.  
   
 > [!IMPORTANT]  
 >  La característica text in row se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para almacenar datos de valores grandes, se recomienda usar los tipos de datos **VARCHAR (Max)**, **nvarchar (Max)** y **varbinary (Max** ).  
@@ -53,11 +53,11 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName =] '*option_name*'  
  Es un nombre de opción de tabla. *option_name* es de tipo **VARCHAR (35)** y no tiene ningún valor predeterminado de NULL. *option_name* puede ser uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |table lock on bulk load|Cuando está deshabilitado (valor predeterminado), hace que los procesos de carga masiva en tablas definidas por el usuario obtengan bloqueos de fila. Cuando está habilitado, hace que los procesos de carga masiva en tablas definidas por el usuario obtengan un bloqueo de actualización masiva.|  
 |insert row lock|Ya no se admite.<br /><br /> Esta opción no afecta al comportamiento de bloqueo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y solo está incluida para mantener la compatibilidad con los scripts y procedimientos existentes.|  
-|text in row|Cuando es OFF o 0 (deshabilitado, valor predeterminado), no cambia el comportamiento actual, y no existe ningún BLOB almacenado en fila de manera consecutiva.<br /><br /> Cuando se especifica y @OptionValue está activado (habilitado) o un valor entero comprendido entre 24 y 7000, las nuevas cadenas **Text**, **ntext**o **Image** se almacenan directamente en la fila de datos. Todos los BLOBs existentes (objetos binarios grandes: datos **Text**, **ntext**o **Image** ) se cambiarán al formato text in row cuando se actualice el valor del BLOB. Para obtener más información, vea la sección Comentarios.|  
+|text in row|Cuando es OFF o 0 (deshabilitado, valor predeterminado), no cambia el comportamiento actual, y no existe ningún BLOB almacenado en fila de manera consecutiva.<br /><br /> Cuando se especifica y @OptionValue está activado (habilitado) o un valor entero comprendido entre 24 y 7000, las nuevas cadenas **Text**, **ntext** o **Image** se almacenan directamente en la fila de datos. Todos los BLOBs existentes (objetos binarios grandes: datos **Text**, **ntext** o **Image** ) se cambiarán al formato text in row cuando se actualice el valor del BLOB. Para obtener más información, vea la sección Comentarios.|  
 |large value types out of row|1 = **VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)**, **XML** y las columnas de tipo definido por el usuario (UDT) grandes de la tabla se almacenan de una fila, con un puntero de 16 bytes a la raíz.<br /><br /> 0 = **VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)**, **XML** y valores UDT grandes se almacenan directamente en la fila de datos, hasta un límite de 8000 bytes y siempre que el valor quepa en el registro. Si el valor no cabe en el registro, se almacena un puntero en la fila de manera consecutiva y el resto se almacena de forma no consecutiva en el espacio de almacenamiento de LOB. El valor predeterminado es 0.<br /><br /> El tipo definido por el usuario (UDT) de gran tamaño se aplica a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. <br /><br /> Utilice la opción TEXTIMAGE_ON de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) para especificar una ubicación para el almacenamiento de tipos de datos de gran tamaño. |  
 |vardecimal storage format|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> Cuando es TRUE, ON o 1, la tabla designada se habilita para el formato de almacenamiento vardecimal. Cuando es FALSE, OFF o 0, la tabla no se habilita para el formato de almacenamiento vardecimal. El formato de almacenamiento vardecimal solo se puede habilitar cuando la base de datos se ha habilitado para el formato de almacenamiento vardecimal mediante [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, el formato de almacenamiento **vardecimal** está en desuso. En su lugar, use la compresión de fila. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md). El valor predeterminado es 0.|  
   
@@ -69,14 +69,14 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o número de error (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_tableoption se puede utilizar únicamente para definir valores de opción de tablas definidas por el usuario. Para mostrar las propiedades de la tabla, use OBJECTPROPERTY o consulte sys. tables.  
   
  La opción text in row en sp_tableoption puede habilitarse o deshabilitarse solo en tablas que contengan columnas de texto. Si la tabla no contiene una columna de texto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un error.  
   
  Cuando la opción text in row está habilitada, el @OptionValue parámetro permite a los usuarios especificar el tamaño máximo que se va a almacenar en una fila de un BLOB. El valor predeterminado es 256 bytes, pero los valores pueden oscilar entre 24 y 7.000 bytes.  
   
- las cadenas **Text**, **ntext**o **Image** se almacenan en la fila de datos si se cumplen las condiciones siguientes:  
+ las cadenas **Text**, **ntext** o **Image** se almacenan en la fila de datos si se cumplen las condiciones siguientes:  
   
 -   La opción text in row está habilitada.  
   
@@ -84,13 +84,13 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   Hay suficiente espacio disponible en la fila de datos.  
   
- Cuando se almacenan cadenas BLOB en la fila de datos, leer y escribir las cadenas **Text**, **ntext**o **Image** puede ser tan rápido como leer o escribir cadenas binarias y de caracteres. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no necesita obtener acceso a páginas independientes para leer o escribir la cadena BLOB.  
+ Cuando se almacenan cadenas BLOB en la fila de datos, leer y escribir las cadenas **Text**, **ntext** o **Image** puede ser tan rápido como leer o escribir cadenas binarias y de caracteres. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no necesita obtener acceso a páginas independientes para leer o escribir la cadena BLOB.  
   
- Si una cadena de tipo **Text**, **ntext**o **Image** es mayor que el límite especificado o el espacio disponible en la fila, los punteros se almacenan en la fila en su lugar. Las condiciones para almacenar las cadenas BLOB en la fila siguen siendo válidas aunque debe haber espacio suficiente para almacenar los punteros en la fila de datos.  
+ Si una cadena de tipo **Text**, **ntext** o **Image** es mayor que el límite especificado o el espacio disponible en la fila, los punteros se almacenan en la fila en su lugar. Las condiciones para almacenar las cadenas BLOB en la fila siguen siendo válidas aunque debe haber espacio suficiente para almacenar los punteros en la fila de datos.  
   
  Los punteros y cadenas BLOB almacenados en la fila de una tabla se tratan de forma parecida a las cadenas de longitud variable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo utiliza el número de bytes necesario para almacenar la cadena o el puntero.  
   
- Las cadenas BLOB existentes no se convierten inmediatamente cuando text in row se habilita por primera vez. Las cadenas solo se convierten cuando se actualizan. Del mismo modo, cuando se aumenta el límite de la opción text in row, las cadenas **Text**, **ntext**o **Image** que ya están en la fila de datos no se convertirán para adherirse al nuevo límite hasta el momento en que se actualicen.  
+ Las cadenas BLOB existentes no se convierten inmediatamente cuando text in row se habilita por primera vez. Las cadenas solo se convierten cuando se actualizan. Del mismo modo, cuando se aumenta el límite de la opción text in row, las cadenas **Text**, **ntext** o **Image** que ya están en la fila de datos no se convertirán para adherirse al nuevo límite hasta el momento en que se actualicen.  
   
 > [!NOTE]  
 >  Para deshabilitar la opción text in row o reducir el límite de la opción será necesario realizar la conversión de todos los BLOB; el proceso puede ser largo en función del número de cadenas BLOB que deban convertirse. La tabla se bloquea durante el proceso de conversión.  

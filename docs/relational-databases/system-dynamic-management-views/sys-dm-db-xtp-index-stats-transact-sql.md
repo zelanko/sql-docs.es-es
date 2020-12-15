@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e6cf5401a48623df1a5b0c2338cf9d1c7287231
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 520452d4886d009777de62af55047ef3cd47caaf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833791"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474966"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Contiene las estadísticas recopiladas desde el último reinicio de la base de datos.  
   
- Para obtener más información, vea [OLTP en memoria &#40;la optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) y [directrices para usar índices en las tablas optimizadas para memoria](/previous-versions/sql/sql-server-2016/dn133166(v=sql.130)).  
+ Para obtener más información, vea [&#40;de OLTP en memoria In-Memory&#41;de optimización ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) y [directrices para usar índices en tablas de Memory-Optimized](/previous-versions/sql/sql-server-2016/dn133166(v=sql.130)).  
 
   
 |Nombre de la columna|Tipo de datos|Descripción|  
@@ -45,17 +45,17 @@ ms.locfileid: "91833791"
 |scans_retried|**bigint**|Número de recorridos de índice que tuvieron que reintentarse.|  
 |rows_returned|**bigint**|Número de filas devueltas acumulado desde que se creó la tabla o desde el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |rows_touched|**bigint**|Número acumulado de filas a las que se tuvo acceso desde que se creó la tabla o desde el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|rows_expiring|**bigint**|Exclusivamente para uso interno.|  
-|rows_expired|**bigint**|Exclusivamente para uso interno.|  
-|rows_expired_removed|**bigint**|Exclusivamente para uso interno.|  
-|phantom_scans_started|**bigint**|Exclusivamente para uso interno.|  
-|phatom_scans_retries|**bigint**|Exclusivamente para uso interno.|  
-|phantom_rows_touched|**bigint**|Exclusivamente para uso interno.|  
-|phantom_expiring_rows_encountered|**bigint**|Exclusivamente para uso interno.|  
-|phantom_expired_rows_encountered|**bigint**|Exclusivamente para uso interno.|  
-|phantom_expired_removed_rows_encountered|**bigint**|Exclusivamente para uso interno.|  
-|phantom_expired_rows_removed|**bigint**|Exclusivamente para uso interno.|  
-|object_address|**varbinary(8**|Exclusivamente para uso interno.|  
+|rows_expiring|**bigint**|Solo para uso interno.|  
+|rows_expired|**bigint**|Solo para uso interno.|  
+|rows_expired_removed|**bigint**|Solo para uso interno.|  
+|phantom_scans_started|**bigint**|Solo para uso interno.|  
+|phatom_scans_retries|**bigint**|Solo para uso interno.|  
+|phantom_rows_touched|**bigint**|Solo para uso interno.|  
+|phantom_expiring_rows_encountered|**bigint**|Solo para uso interno.|  
+|phantom_expired_rows_encountered|**bigint**|Solo para uso interno.|  
+|phantom_expired_removed_rows_encountered|**bigint**|Solo para uso interno.|  
+|phantom_expired_rows_removed|**bigint**|Solo para uso interno.|  
+|object_address|**varbinary(8**|Solo para uso interno.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos actual.  

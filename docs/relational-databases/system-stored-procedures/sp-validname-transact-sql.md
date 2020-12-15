@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b448493ada2d6ec5d1073f194053463b463807b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e73d8f6345be199c44278cb15aa43c6ada7f91c0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480971"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466796"
 ---
 # <a name="sp_validname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Comprueba la validez de los nombres de identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Todos los datos no binarios y distintos de cero, incluidos los datos Unicode que se pueden almacenar con los tipos de datos **nchar**, **nvarchar**o **ntext** , se aceptan como caracteres válidos para los nombres de identificador.  
+  Comprueba la validez de los nombres de identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Todos los datos no binarios y distintos de cero, incluidos los datos Unicode que se pueden almacenar con los tipos de datos **nchar**, **nvarchar** o **ntext** , se aceptan como caracteres válidos para los nombres de identificador.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +42,9 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` Es el nombre de los [identificadores](../../relational-databases/databases/database-identifiers.md) cuya validez se va a comprobar. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado. *el nombre* no puede ser null, no puede ser una cadena vacía y no puede contener un carácter cero binario.  
+`[ @name = ] 'name'` Es el nombre de los [identificadores](../../relational-databases/databases/database-identifiers.md) cuya validez se va a comprobar. *Name* es de **tipo sysname** y no tiene ningún valor predeterminado. *el nombre* no puede ser null, no puede ser una cadena vacía y no puede contener un carácter cero binario.  
   
-`[ @raise_error = ] raise_error` Especifica si se va a producir un error. *raise_error* es de **bit**y su valor predeterminado es 1. Esto significa que aparecerán errores. 0 hace que no aparezca ningún mensaje de error.  
+`[ @raise_error = ] raise_error` Especifica si se va a producir un error. *raise_error* es de **bit** y su valor predeterminado es 1. Esto significa que aparecerán errores. 0 hace que no aparezca ningún mensaje de error.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -52,7 +52,7 @@ sp_validname [@name =] 'name'
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   

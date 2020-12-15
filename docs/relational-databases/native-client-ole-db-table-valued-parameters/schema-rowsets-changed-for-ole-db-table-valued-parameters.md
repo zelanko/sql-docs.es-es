@@ -1,6 +1,6 @@
 ---
-description: Conjuntos de filas de esquema cambiados para OLE DB parámetros con valores de tabla en SQL Server Native Client
-title: Conjuntos de filas de esquema, OLE DB parámetros con valores de tabla
+description: Se cambiaron los conjuntos de filas de esquema para los parámetros de Table-Valued de OLE DB en SQL Server Native Client
+title: Conjuntos de filas de esquema, parámetros de OLE DB Table-Valued
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 581e3ead-53db-44da-8718-f3fc4b5108f1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d68366d87fdee64096ebca492b318c711fd2b038
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a5daac97d996eee396607fb62b19fe4352f3995f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482617"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469266"
 ---
-# <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters-in-sql-server-native-client"></a>Conjuntos de filas de esquema cambiados para OLE DB parámetros con valores de tabla en SQL Server Native Client
+# <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters-in-sql-server-native-client"></a>Se cambiaron los conjuntos de filas de esquema para los parámetros de Table-Valued de OLE DB en SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   A continuación figuran los conjuntos de filas de esquema que se han cambiado o agregado para admitir los parámetros con valores de tabla.  

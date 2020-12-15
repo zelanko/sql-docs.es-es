@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 2038883693288a75f9e2dbe17d80b6b9c7474343
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current
+ms.openlocfilehash: 933b7749218e71a66cdc6d0a25666be32c8badfe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753731"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474756"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
 
@@ -47,27 +47,27 @@ Devuelve la configuración y los valores de capacidad reales que usan los mecani
 |**min_cpu**|TINYINT|El valor MIN_CPU_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**max_cpu**|TINYINT|El valor MAX_CPU_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**cap_cpu**|TINYINT|El valor CAP_CPU_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
-|**min_cores**|SMALLINT|Exclusivamente para uso interno.|
+|**min_cores**|SMALLINT|Solo para uso interno.|
 |**max_dop**|SMALLINT|El valor de MAX_DOP del grupo de cargas de trabajo del usuario. Consulte [creación](../../t-sql/statements/create-workload-group-transact-sql.md)de un grupo de cargas de trabajo.|
 |**min_memory**|int|El valor MIN_MEMORY_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**max_memory**|int|El valor MAX_MEMORY_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**max_sessions**|int|El número máximo de sesiones permitidas en el grupo de cargas de trabajo de usuario.|
 |**max_memory_grant**|int|El valor de REQUEST_MAX_MEMORY_GRANT_PERCENT del grupo de cargas de trabajo del usuario. Consulte [creación](../../t-sql/statements/create-workload-group-transact-sql.md)de un grupo de cargas de trabajo.|
-|**max_db_memory**|int|Exclusivamente para uso interno.|
-|**govern_background_io**|bit|Exclusivamente para uso interno.|
+|**max_db_memory**|int|Solo para uso interno.|
+|**govern_background_io**|bit|Solo para uso interno.|
 |**min_db_max_size_in_mb**|bigint|El valor mínimo max_size para un archivo de datos, en MB. Vea [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**max_db_max_size_in_mb**|bigint|El valor máximo max_size para un archivo de datos, en MB. Vea [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**default_db_max_size_in_mb**|bigint|El valor predeterminado max_size para un archivo de datos, en MB. Vea [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**db_file_growth_in_mb**|bigint|Incremento de crecimiento predeterminado para un archivo de datos, en MB. Vea [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**initial_db_file_size_in_mb**|bigint|Tamaño predeterminado del nuevo archivo de datos, en MB. Vea [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**log_size_in_mb**|bigint|Tamaño predeterminado del nuevo archivo de registro, en MB. Vea [Sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
-|**instance_cap_cpu**|int|Exclusivamente para uso interno.|
+|**instance_cap_cpu**|int|Solo para uso interno.|
 |**instance_max_log_rate**|bigint|Límite de velocidad de generación de registros para la instancia de SQL Server, en bytes por segundo. Se aplica a todos los registros generados por la instancia de, incluidas `tempdb` y otras bases de datos del sistema. En un grupo elástico, se aplica al registro generado por todas las bases de datos del grupo.|
 |**instance_max_worker_threads**|int|Límite de subprocesos de trabajo para la instancia de SQL Server.|
 |**replica_type**|int|Tipo de réplica, donde 0 es principal y 1 es secundario.|
 |**max_transaction_size**|bigint|Espacio de registro máximo usado por cualquier transacción, en KB.|
-|**checkpoint_rate_mbps**|int|Exclusivamente para uso interno.|
-|**checkpoint_rate_io**|int|Exclusivamente para uso interno.|
+|**checkpoint_rate_mbps**|int|Solo para uso interno.|
+|**checkpoint_rate_io**|int|Solo para uso interno.|
 |**last_updated_date_utc**|datetime|Fecha y hora del último cambio o reconfiguración de la configuración, en UTC.|
 |**primary_group_id**|int|IDENTIFICADOR de grupo de cargas de trabajo para la carga de trabajo de usuario en la réplica principal y en las réplicas secundarias.|
 |**primary_group_max_workers**|int|Límite de subprocesos de trabajo para el grupo de cargas de trabajo de usuario.|
@@ -80,22 +80,22 @@ Devuelve la configuración y los valores de capacidad reales que usan los mecani
 |**primary_log_commit_fee**|int|Cuota de confirmación del gobierno de velocidad de registro para el grupo de cargas de trabajo de usuario, en bytes. Una cuota de confirmación aumenta el tamaño de cada registro e/s por un valor fijo solo con fines de contabilidad de tasas de registro. No se aumenta la e/s de registro real al almacenamiento.|
 |**primary_pool_max_workers**|int|Límite de subprocesos de trabajo para el grupo de recursos de carga de usuario.|
 |**pool_max_io**|int|Límite máximo de IOPS para el grupo de recursos de la carga de trabajo del usuario.|
-|**govern_db_memory_in_resource_pool**|bit|Exclusivamente para uso interno.|
-|**volume_local_iops**|int|Exclusivamente para uso interno.|
-|**volume_managed_xstore_iops**|int|Exclusivamente para uso interno.|
-|**volume_external_xstore_iops**|int|Exclusivamente para uso interno.|
-|**volume_type_local_iops**|int|Exclusivamente para uso interno.|
-|**volume_type_managed_xstore_iops**|int|Exclusivamente para uso interno.|
-|**volume_type_external_xstore_iops**|int|Exclusivamente para uso interno.|
-|**volume_pfs_iops**|int|Exclusivamente para uso interno.|
-|**volume_type_pfs_iops**|int|Exclusivamente para uso interno.|
+|**govern_db_memory_in_resource_pool**|bit|Solo para uso interno.|
+|**volume_local_iops**|int|Solo para uso interno.|
+|**volume_managed_xstore_iops**|int|Solo para uso interno.|
+|**volume_external_xstore_iops**|int|Solo para uso interno.|
+|**volume_type_local_iops**|int|Solo para uso interno.|
+|**volume_type_managed_xstore_iops**|int|Solo para uso interno.|
+|**volume_type_external_xstore_iops**|int|Solo para uso interno.|
+|**volume_pfs_iops**|int|Solo para uso interno.|
+|**volume_type_pfs_iops**|int|Solo para uso interno.|
 |||
 
 ## <a name="permissions"></a>Permisos
 
 Esta vista necesita el permiso VIEW DATABASE STATE.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Para obtener una descripción de la regulación de recursos en Azure SQL Database, consulte [SQL Database límites de recursos](/azure/sql-database/sql-database-resource-limits-database-server).
 

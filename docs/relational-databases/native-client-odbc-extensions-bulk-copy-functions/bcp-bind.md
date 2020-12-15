@@ -18,13 +18,13 @@ ms.author: maghan
 ms.custom: ''
 ms.reviewer: ''
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cbf8a5d7fa207b7be9eb2e6359766064dbef343
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: edff3154a4385ee87bf7686cf5e2954e026e495f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455930"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473666"
 ---
 # <a name="bcp_bind"></a>bcp_bind
 
@@ -120,7 +120,7 @@ bcp_bind(hdbc, szName, 0,
 
 *eDataType* Es el tipo de datos C de la variable de programa. Los datos de la variable de programa se convierten al tipo de la columna de base de datos. Si este parámetro es 0, no se realiza ninguna conversión.  
 
-Los *eDataType* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tokens de tipo de datos enumeran el parámetro eDataType en SQLNCLI. h, no los enumeradores de tipos de datos C de ODBC. Por ejemplo, puede especificar un entero de dos bytes, el tipo ODBC SQL_C_SHORT, utilizando el tipo SQLINT2 específico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Los  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tokens de tipo de datos enumeran el parámetro eDataType en SQLNCLI. h, no los enumeradores de tipos de datos C de ODBC. Por ejemplo, puede especificar un entero de dos bytes, el tipo ODBC SQL_C_SHORT, utilizando el tipo SQLINT2 específico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] incorporó la compatibilidad con los tokens de tipo de datos SQLXML y SQLUDT en el parámetro **_eDataType_** .  
 
@@ -174,7 +174,7 @@ En esta tabla se muestran los tipos de datos enumerados válidos y los tipos de 
 
  SUCCEED o FAIL.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Utilice **bcp_bind** para una manera rápida y eficaz de copiar datos de una variable de programa en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 

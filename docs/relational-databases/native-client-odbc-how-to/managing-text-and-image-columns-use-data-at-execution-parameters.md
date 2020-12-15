@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ce4d81317218c8823b528c3e37df40694471e9c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0c5c24773ebf373c9158d819a4efb95a9b63b779
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868913"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473546"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>Administrar columnas de texto e imagen: utilizar parámetros de datos en ejecución
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "91868913"
   
 1.  Cuando llame a [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) para enlazar un búfer de programa al parámetro de instrucción:  
   
-    -   Para el último parámetro, use SQL_LEN_DATA_AT_EXEC(*length*) donde *length* es la longitud total en bytes de los parámetros de datos de tipo **text**, **ntext**o **image** .  
+    -   Para el último parámetro, use SQL_LEN_DATA_AT_EXEC(*length*) donde *length* es la longitud total en bytes de los parámetros de datos de tipo **text**, **ntext** o **image** .  
   
     -   Use un **rgbValue** (octavo parámetro) de un identificador de parámetros definido por el programa.  
   

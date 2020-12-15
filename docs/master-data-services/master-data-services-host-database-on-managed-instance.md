@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5fa8a1df313af5473de9c49137166a6c2ac50589
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: ef24acb23a346b59b747d876d60d9a58374188bd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521114"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469976"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Hospedar una base de datos de MDS en una instancia administrada
 
@@ -135,11 +135,11 @@ Esta acción instala:
 
 1. Una vez creada y configurada la base de datos, seleccione **Finalizar**.
 
-   Para obtener más información acerca de la configuración del **Asistente para crear bases de datos** , vea [Asistente para crear bases de datos &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
+   Para obtener más información acerca de la configuración del **Asistente para crear bases de datos**, vea [Asistente para crear bases de datos &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
 
 1. En la página **configuración de base de datos** de la [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] , elija **Seleccionar base de datos**.
 
-1. Seleccione **conectar** , elija la [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] base de datos y, a continuación, haga clic en **Aceptar**.
+1. Seleccione **conectar**, elija la [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] base de datos y, a continuación, haga clic en **Aceptar**.
 
    ![Captura de pantalla del cuadro de diálogo conectar con base de datos.](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_connectDBName")
 
@@ -150,7 +150,7 @@ Esta acción instala:
    ![Captura de pantalla del cuadro de diálogo Administrador de configuración de Master Data Services.](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "MDS-SQLServer2019-config-MI_WebConfiguration")
 
    > [!NOTE]
-   > Si selecciona **sitio web predeterminado** , tendrá que crear una aplicación web por separado. Si elige **crear nuevo sitio web** en el cuadro de lista, la aplicación se crea automáticamente.
+   > Si selecciona **sitio web predeterminado**, tendrá que crear una aplicación web por separado. Si elige **crear nuevo sitio web** en el cuadro de lista, la aplicación se crea automáticamente.
 
 1. En la sección **grupo de aplicaciones** , escriba un nombre de usuario diferente, escriba la contraseña y, después, haga clic en **Aceptar**.
 
@@ -228,7 +228,7 @@ Para corregir este problema, debe actualizar la versión de la base de datos:
 
 1. Seleccione **Finalizar** una vez completadas todas las tareas.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Base de datos de Master Data Services](../master-data-services/master-data-services-database.md)
 - [Aplicación web Master Data Services](../master-data-services/master-data-manager-web-application.md)

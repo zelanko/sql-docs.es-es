@@ -34,13 +34,13 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88e1f334629482182fb182dde60f715c0d122d25
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ac801a52e89e60bb05d1431de77078fa750f6d34
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790600"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473116"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Insertar datos con diagramas de actualización XML (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -67,10 +67,10 @@ ms.locfileid: "85790600"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>\<before>Sin  
+## <a name="before-block"></a>\<before> Sin  
  El **\<before>** bloque se puede omitir para una operación de inserción. Si no se especifica el atributo **mapping-schema** opcional, el **\<ElementName>** especificado en diagrama se asigna a una tabla de base de datos y los elementos secundarios o atributos se asignan a las columnas de la tabla.  
   
-## <a name="after-block"></a>\<after>Sin  
+## <a name="after-block"></a>\<after> Sin  
  Puede especificar uno o varios registros en el **\<after>** bloque.  
   
  Si el **\<after>** bloque no proporciona un valor para una columna determinada, diagrama usa el valor predeterminado que se especifica en el esquema anotado (si se ha especificado un esquema). Si el esquema no especifica un valor predeterminado para la columna, diagrama no especifica ningún valor explícito para esta columna y, en su lugar, asigna el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valor predeterminado (si se especifica) a esta columna. Si no hay ningún valor predeterminado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y la columna acepta un valor NULL, el diagrama de actualización establece el valor de columna en NULL. Si la columna no tiene un valor predeterminado ni acepta un valor NULL, se produce un error en el comando y el diagrama de actualización devuelve un error. El atributo opcional **atributo updg: returnid** se usa para devolver el valor de identidad generado por el sistema cuando se agrega un registro en una tabla con una columna de tipo Identity.  

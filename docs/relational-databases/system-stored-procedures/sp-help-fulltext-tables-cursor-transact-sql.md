@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f51c5f4c8e96eecd770190be5efcc42799ed3958
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ca07485062d39e2fa547e524e2b0368b19e9b577
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548058"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468406"
 ---
 # <a name="sp_help_fulltext_tables_cursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89548058"
   Utiliza un cursor para devolver una lista de las tablas registradas para la indización de texto completo.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use la nueva vista de catálogo **Sys. fulltext_indexes** en su lugar. Para obtener más información, vea [Sys. fulltext_indexes &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, use la nueva vista de catálogo de **Sys.fulltext_indexes** . Para obtener más información, vea [sys.fulltext_indexes &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ## <a name="arguments"></a>Argumentos  
 `[ @cursor_return = ] @cursor_variable OUTPUT` Es la variable de salida de tipo **cursor**. El cursor es desplazable, dinámico y de solo lectura.  
   
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` Es el nombre del catálogo de texto completo. *fulltext_catalog_name* es de **tipo sysname y su**valor predeterminado es NULL. Si *fulltext_catalog_name* se omite o es null, se devuelven todas las tablas indizadas de texto completo asociadas a la base de datos. Si se especifica *fulltext_catalog_name* , pero *TABLE_NAME* se omite o es null, se recupera la información del índice de texto completo para cada tabla indizada de texto completo asociada a este catálogo. Si se especifican *fulltext_catalog_name* y *TABLE_NAME* , se devuelve una fila si *TABLE_NAME* está asociado a *fulltext_catalog_name*; de lo contrario, se produce un error.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` Es el nombre del catálogo de texto completo. *fulltext_catalog_name* es de **tipo sysname y su** valor predeterminado es NULL. Si *fulltext_catalog_name* se omite o es null, se devuelven todas las tablas indizadas de texto completo asociadas a la base de datos. Si se especifica *fulltext_catalog_name* , pero *TABLE_NAME* se omite o es null, se recupera la información del índice de texto completo para cada tabla indizada de texto completo asociada a este catálogo. Si se especifican *fulltext_catalog_name* y *TABLE_NAME* , se devuelve una fila si *TABLE_NAME* está asociado a *fulltext_catalog_name*; de lo contrario, se produce un error.  
   
 `[ @table_name = ] 'table_name'` Es el nombre de tabla de una o dos partes para la que se solicitan los metadatos de texto completo. *TABLE_NAME* es de tipo **nvarchar (r)** y su valor predeterminado es NULL. Si solo se especifica *TABLE_NAME* , solo se devuelve la fila pertinente a *TABLE_NAME* .  
   

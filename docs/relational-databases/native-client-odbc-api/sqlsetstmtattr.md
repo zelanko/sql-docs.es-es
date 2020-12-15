@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 043e8e62174f286ad229485ecce4e4db0990557a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e338ba67bdd2535f54e4678b4ff013c768571da8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868449"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465106"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "91868449"
   
  Cuando se establecen estas opciones, el servidor cierra el cursor automáticamente en cuanto detecta que se ha capturado la última fila. La aplicación debe seguir llamando a [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) (SQL_CLOSE) o [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md), pero el controlador no tiene que enviar la notificación de cierre al servidor.  
   
- Si la lista de selección contiene una columna **Text**, **ntext**o **Image** , el cursor de solo avance rápido se convierte en un cursor dinámico y se permite **SQLGetData** .  
+ Si la lista de selección contiene una columna **Text**, **ntext** o **Image** , el cursor de solo avance rápido se convierte en un cursor dinámico y se permite **SQLGetData** .  
   
 ### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  El atributo SQL_SOPT_SS_DEFER_PREPARE determina si la instrucción se prepara inmediatamente o se aplaza hasta que se ejecuta **SQLExecute**, [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) o [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) . En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 y versiones anteriores, esta propiedad se omite (no hay preparación diferida). El valor de *ValuePtr* es de tipo SQLLEN.  
@@ -134,10 +134,10 @@ ms.locfileid: "91868449"
   
 |Valor *ValuePtr*|Descripción|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|Predeterminada.<br /><br /> Cuando se utilizan parámetros con valores de tabla, indica que se deben devolver metadatos para las tablas reales.<br /><br /> Cuando se usa la característica de columnas dispersas, SQLColumns solo devolverá las columnas que no sean miembros del **COLUMN_SET**disperso.|  
+|SQL_SS_NAME_SCOPE_TABLE|Predeterminada.<br /><br /> Cuando se utilizan parámetros con valores de tabla, indica que se deben devolver metadatos para las tablas reales.<br /><br /> Cuando se usa la característica de columnas dispersas, SQLColumns solo devolverá las columnas que no sean miembros del **COLUMN_SET** disperso.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indica que la aplicación requiere metadatos para un tipo de tabla, en lugar de una tabla real (las funciones de catálogo deben devolver metadatos para los tipos de tabla). A continuación, la aplicación pasa el TYPE_NAME del parámetro con valores de tabla como parámetro *TableName* .|  
 |SQL_SS_NAME_SCOPE_EXTENDED|Cuando se usa la característica de columnas dispersas, SQLColumns devuelve todas las columnas, con independencia de la pertenencia a **COLUMN_SET** .|  
-|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Cuando se usa la característica de columnas dispersas, SQLColumns solo devuelve las columnas que son miembros del **COLUMN_SET**disperso.|  
+|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Cuando se usa la característica de columnas dispersas, SQLColumns solo devuelve las columnas que son miembros del **COLUMN_SET** disperso.|  
 |SQL_SS_NAME_SCOPE_DEFAULT|Igual que SQL_SS_NAME_SCOPE_TABLE.|  
   
  SS_TYPE_CATALOG_NAME y SS_TYPE_SCHEMA_NAME se utilizan con los parámetros *nombrecatálogo* y *SchemaName* , respectivamente, para identificar el catálogo y el esquema para el parámetro con valores de tabla. Cuando una aplicación ha terminado de recuperar los metadatos para los parámetros con valores de tabla, debe volver a establecer SQL_SOPT_SS_NAME_SCOPE en su valor predeterminado de SQL_SS_NAME_SCOPE_TABLE.  

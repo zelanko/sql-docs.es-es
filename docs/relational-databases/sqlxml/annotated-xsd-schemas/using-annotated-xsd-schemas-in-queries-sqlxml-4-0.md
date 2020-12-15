@@ -22,13 +22,13 @@ ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 857710f894ddc8ef2c874bdc3fed127f0625c8f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 030c1d04575c412c2cae9c69d0798e7d40e89450
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725848"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467106"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Usar esquemas XSD anotados en consultas (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -142,6 +142,6 @@ ms.locfileid: "85725848"
 </sql:xpath-query>  
 ```  
   
- La plantilla especifica una consulta XPath, pero no especifica ningún esquema de asignación. Por lo tanto, esta consulta se trata como una consulta de tipo **dbobject** en la que production. ProductPhoto es el nombre de tabla y @ProductPhotoID = ' 100 ' es un predicado que busca una fotografía de producto con el valor de identificador de 100. @LargePhotoes la columna de la que se va a recuperar el valor.  
+ La plantilla especifica una consulta XPath, pero no especifica ningún esquema de asignación. Por lo tanto, esta consulta se trata como una consulta de tipo **dbobject** en la que production. ProductPhoto es el nombre de tabla y @ProductPhotoID = ' 100 ' es un predicado que busca una fotografía de producto con el valor de identificador de 100. @LargePhoto es la columna de la que se va a recuperar el valor.  
   
   

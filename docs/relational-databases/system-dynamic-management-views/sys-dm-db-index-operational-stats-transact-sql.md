@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4d69890ba5c76c3d37ecd6accd9ba13caa7b089
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b1f177d09dd741eadc967a2b32a87a905e04dfb6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036101"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475076"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,29 +55,29 @@ sys.dm_db_index_operational_stats (
 
 *database_id* | NULL | 0 | PREDETERMINADA
 
-  Identificador de la base de datos. *database_id* es **smallint** . Las entradas válidas son el número de identificador de una base de datos, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
+  Identificador de la base de datos. *database_id* es **smallint**. Las entradas válidas son el número de identificador de una base de datos, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
     
- Especifique NULL para devolver información de todas las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si especifica NULL para *database_id* , también debe especificar null para *object_id* , *index_id* y *partition_number* .    
+ Especifique NULL para devolver información de todas las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si especifica NULL para *database_id*, también debe especificar null para *object_id*, *index_id* y *partition_number*.    
     
  Se puede especificar la función integrada [DB_ID](../../t-sql/functions/db-id-transact-sql.md).    
 
 *object_id* | NULL | 0 | PREDETERMINADA
 
- Identificador de objeto de la tabla o vista donde está activado el índice. *object_id* es de **tipo int** .    
+ Identificador de objeto de la tabla o vista donde está activado el índice. *object_id* es de **tipo int**.    
     
  Las entradas válidas son el número de identificador de una tabla o vista, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
     
- Especifique NULL para devolver información en memoria caché de todas las tablas y vistas de la base de datos especificada. Si especifica NULL para *object_id* , también debe especificar null para *index_id* y *partition_number* .    
+ Especifique NULL para devolver información en memoria caché de todas las tablas y vistas de la base de datos especificada. Si especifica NULL para *object_id*, también debe especificar null para *index_id* y *partition_number*.    
 
 *index_id* | 0 | NULL | -1 | PREDETERMINADA
 
- Id. del índice. *index_id* es de **tipo int** . Las entradas válidas son el número de identificación de un índice, 0 si *object_id* es un montón, null,-1 o default. El valor predeterminado es -1. NULL, -1 y DEFAULT son valores equivalentes en este contexto.    
+ Id. del índice. *index_id* es de **tipo int**. Las entradas válidas son el número de identificación de un índice, 0 si *object_id* es un montón, null,-1 o default. El valor predeterminado es -1. NULL, -1 y DEFAULT son valores equivalentes en este contexto.    
     
- Especifique NULL para devolver información en memoria caché de todos los índices de una tabla o vista base. Si especifica NULL para *index_id* , también debe especificar null para *partition_number* .    
+ Especifique NULL para devolver información en memoria caché de todos los índices de una tabla o vista base. Si especifica NULL para *index_id*, también debe especificar null para *partition_number*.    
 
 *partition_number* | NULL | 0 | PREDETERMINADA
 
- Número de partición en el objeto. *partition_number* es de **tipo int** . Las entradas válidas son las *partion_number* de un índice o montón, null, 0 o default. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
+ Número de partición en el objeto. *partition_number* es de **tipo int**. Las entradas válidas son las *partion_number* de un índice o montón, null, 0 o default. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
     
  Especifique NULL para devolver información en memoria caché de todas las particiones del índice o montón.    
     
@@ -85,13 +85,13 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="table-returned"></a>Tabla devuelta    
     
-|Nombre de columna|Tipo de datos|Descripción|    
+|Nombre de la columna|Tipo de datos|Descripción|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|Id. de la base de datos.|    
 |**object_id**|**int**|Identificador de la tabla o vista.|    
 |**id_de_índice**|**int**|Identificador del índice o montón.<br /><br /> 0 = Montón| 
 |**partition_number**|**int**|Número de partición en base 1 en el índice o montón.| 
-|**hobt_id**|**bigint**|**Se aplica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] desde hasta la [versión actual](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> IDENTIFICADOR del conjunto de filas de montículo o árbol B de datos que realiza el seguimiento de los datos internos de un índice de almacén de columnas.<br /><br /> NULL: este no es un conjunto de filas de almacén de columnas interno.<br /><br /> Para obtener más información, vea [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**hobt_id**|**bigint**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] desde hasta la [versión actual](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> IDENTIFICADOR del conjunto de filas de montículo o árbol B de datos que realiza el seguimiento de los datos internos de un índice de almacén de columnas.<br /><br /> NULL: este no es un conjunto de filas de almacén de columnas interno.<br /><br /> Para obtener más información, vea [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Recuento acumulado de inserciones en el nivel hoja.|    
 |**leaf_delete_count**|**bigint**|Recuento acumulado de eliminaciones en el nivel hoja. leaf_delete_count solo se incrementa para los registros eliminados que no están marcados como fantasma en primer lugar. En el caso de los registros eliminados que se borran primero, **leaf_ghost_count** se incrementa en su lugar.|    
 |**leaf_update_count**|**bigint**|Recuento acumulado de actualizaciones en el nivel hoja.|    
@@ -106,11 +106,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|Recuento acumulado de recorridos de tabla e intervalo iniciados en el índice o el montón.|    
 |**singleton_lookup_count**|**bigint**|Recuento acumulado de recuperaciones de filas únicas del índice o montón.|    
 |**forwarded_fetch_count**|**bigint**|Recuento de filas que se capturan mediante un registro de reenvío.<br /><br /> 0 = Índices|    
-|**lob_fetch_in_pages**|**bigint**|Recuento acumulado de páginas de objetos grandes (LOB) recuperadas desde la unidad de asignación LOB_DATA. Estas páginas contienen datos que se almacenan en columnas de tipo **Text** , **ntext** , **Image** , **VARCHAR (Max)** , **nvarchar (Max)** , **varbinary (Max)** y **XML** . Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
+|**lob_fetch_in_pages**|**bigint**|Recuento acumulado de páginas de objetos grandes (LOB) recuperadas desde la unidad de asignación LOB_DATA. Estas páginas contienen datos que se almacenan en columnas de tipo **Text**, **ntext**, **Image**, **VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)** y **XML**. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
 |**lob_fetch_in_bytes**|**bigint**|Recuento acumulado de bytes de datos de LOB recuperados.|    
 |**lob_orphan_create_count**|**bigint**|Recuento acumulado de valores de LOB huérfanos creados para operaciones masivas.<br /><br /> 0 = Índice no clúster|    
 |**lob_orphan_insert_count**|**bigint**|Recuento acumulado de valores de LOB huérfanos insertados durante operaciones masivas.<br /><br /> 0 = Índice no clúster|    
-|**row_overflow_fetch_in_pages**|**bigint**|Recuento acumulado de páginas de datos de desbordamiento de fila recuperadas desde la unidad de asignación ROW_OVERFLOW_DATA.<br /><br /> Estas páginas contienen datos almacenados en columnas de tipo **VARCHAR (n)** , **nvarchar (n)** , **varbinary (n)** y **sql_variant** que se han insertado de no fila.|    
+|**row_overflow_fetch_in_pages**|**bigint**|Recuento acumulado de páginas de datos de desbordamiento de fila recuperadas desde la unidad de asignación ROW_OVERFLOW_DATA.<br /><br /> Estas páginas contienen datos almacenados en columnas de tipo **VARCHAR (n)**, **nvarchar (n)**, **varbinary (n)** y **sql_variant** que se han insertado de no fila.|    
 |**row_overflow_fetch_in_bytes**|**bigint**|Recuento acumulado de bytes de datos de desbordamiento de fila recuperados.|    
 |**column_value_push_off_row_count**|**bigint**|Recuento acumulado de valores de columna de datos de LOB y datos de desbordamiento de fila que se han insertado de manera no consecutiva para que una fila insertada o actualizada entre en una página.|    
 |**column_value_pull_in_row_count**|**bigint**|Recuento acumulado de valores de columna de datos de LOB y datos de desbordamiento de fila que se han extraído de manera consecutiva. Esto ocurre cuando una operación de actualización libera espacio en un registro y proporciona una oportunidad para trasladar uno o más valores de manera no consecutiva de las unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA a la unidad de asignación IN_ROW_DATA.|    
@@ -140,7 +140,7 @@ sys.dm_db_index_operational_stats (
     
  Use las columnas siguientes para identificar áreas de contención.    
     
- **Para analizar un patrón de acceso común a la partición del índice o la tabla** , utilice estas columnas:    
+ **Para analizar un patrón de acceso común a la partición del índice o la tabla**, utilice estas columnas:    
     
 -   **leaf_insert_count**    
     
@@ -192,9 +192,9 @@ sys.dm_db_index_operational_stats (
     
 -   `CONTROL` permiso en el objeto especificado en la base de datos    
     
--   `VIEW DATABASE STATE` permiso para devolver información sobre todos los objetos de la base de datos especificada, mediante el uso del carácter comodín de objeto @ *object_id* = null.    
+-   `VIEW DATABASE STATE` permiso para devolver información sobre todos los objetos de la base de datos especificada, mediante el uso del carácter comodín de objeto @*object_id* = null.    
     
--   `VIEW SERVER STATE` permiso para devolver información sobre todas las bases de datos mediante el carácter comodín de base de datos @ *database_id* = null    
+-   `VIEW SERVER STATE` permiso para devolver información sobre todas las bases de datos mediante el carácter comodín de base de datos @*database_id* = null    
     
  La concesión `VIEW DATABASE STATE` permite devolver todos los objetos de la base de datos, independientemente de los permisos de control denegados en objetos específicos.    
     

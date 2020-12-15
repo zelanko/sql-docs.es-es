@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1be511c1-79ff-4947-9379-78d83b7b8945
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 304741f1c987f2f6c57b3e4e03a59b83987116b4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 850130a686a114d2e7a8bafaea8b0133d40215cd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539026"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472736"
 ---
 # <a name="sp_dropmergepartition-transact-sql"></a>sp_dropmergepartition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,16 +41,16 @@ sp_dropmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication] = 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication] = 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @suser_sname = ] 'suser_sname'` Es el valor de la función [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) en el suscriptor utilizado para definir la partición. *SUSER_SNAME* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @suser_sname = ] 'suser_sname'` Es el valor de la función [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) en el suscriptor utilizado para definir la partición. *SUSER_SNAME* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @host_name = ] 'host_name'` Es el valor de la función [host_name](../../t-sql/functions/host-name-transact-sql.md) en el suscriptor utilizado para definir la partición. *host_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @host_name = ] 'host_name'` Es el valor de la función [host_name](../../t-sql/functions/host-name-transact-sql.md) en el suscriptor utilizado para definir la partición. *host_name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_dropmergepartition** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  

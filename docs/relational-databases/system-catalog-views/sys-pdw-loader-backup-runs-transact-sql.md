@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 31d8ae2e196d116b6e3ff58c23deedc20425fdf5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: e74c866747b7e8f9c784f43e60ab7fb6ce4cc673
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036989"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472916"
 ---
 # <a name="syspdw_loader_backup_runs-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92036989"
 |end_time|**datetime**|Hora de finalización de la operación, error o cancelada.||  
 |total_elapsed_time|**int**|Tiempo total transcurrido entre el start_time y la hora actual, o entre start_time y end_time para las ejecuciones completadas, canceladas o con errores.|Si total_elapsed_time supera el valor máximo de un entero (24,8 días en milisegundos), se producirá un error de materialización debido al desbordamiento.<br /><br /> El valor máximo en milisegundos es equivalente a 24,8 días.|  
 |operation_type|**nvarchar (16)**|Tipo de carga.|' BACKUP ', ' LOAD ', ' RESTORE '|  
-|mode|**nvarchar (16)**|Modo en el tipo de ejecución.|Por operation_type = **copia de seguridad**<br />**DIFFERENTIAL**<br />**FULL**<br /><br /> Por operation_type = **Load**<br />**ANEXAR**<br />**VOLVER A cargar**<br />**UPSERT**<br /><br /> Por operation_type = **restore**<br />**BASE**<br />**HEADER_ONLY**|  
+|mode|**nvarchar (16)**|Modo en el tipo de ejecución.|Por operation_type = **copia de seguridad**<br />**DIFFERENTIAL**<br />**FULL**<br /><br /> Por operation_type = **Load**<br />**ANEXAR**<br />**VOLVER A cargar**<br />**UPSERT**<br /><br /> Por operation_type = **restore**<br />**DATABASE**<br />**HEADER_ONLY**|  
 |database_name|**nvarchar(255)**|Nombre de la base de datos que es el contexto de esta operación.||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|IDENTIFICADOR del usuario que solicita la operación.||  

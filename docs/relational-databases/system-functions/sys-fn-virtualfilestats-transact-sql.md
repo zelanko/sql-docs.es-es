@@ -1,6 +1,6 @@
 ---
 description: sys.fn_virtualfilestats (Transact-SQL)
-title: Sys. fn_virtualfilestats (Transact-SQL) | Microsoft Docs
+title: sys.fn_virtualfilestats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/16/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fedf4b7412578bb73a717d1646f29ac1471b14ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5cb40699cf7c4ba8c2391ea12d0c060f2c388986
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481821"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474746"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Devuelve las estadísticas de E/S de los archivos de las bases de datos, incluidos los archivos de registro. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta información también está disponible en la vista de administración dinámica [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) .  
+  Devuelve las estadísticas de E/S de los archivos de las bases de datos, incluidos los archivos de registro. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta información también está disponible en la vista de administración dinámica [Sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) .  
 
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
  Es el ID. de la base de datos. *database_id* es de tipo **int** y no tiene ningún valor predeterminado. Especifique NULL para devolver información de todas las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *file_id* | ACEPTA  
- Identificador del archivo. *file_id* es de **tipo int**y no tiene ningún valor predeterminado. Especifique NULL para devolver información de todos los archivos de la base de datos.  
+ Identificador del archivo. *file_id* es de **tipo int** y no tiene ningún valor predeterminado. Especifique NULL para devolver información de todos los archivos de la base de datos.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
@@ -65,9 +65,9 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**IoStallWriteMS**|**bigint**|Tiempo total, en milisegundos, que los usuarios han esperado para que finalicen las E/S de escritura en el archivo.|  
 |**IoStallMS**|**bigint**|Suma de **IoStallReadMS** y **IoStallWriteMS**.|  
 |**FileHandle**|**bigint**|Valor del identificador de archivos.|  
-|**BytesOnDisk**|**bigint**|Tamaño físico del archivo (recuento de bytes) en disco.<br /><br /> En el caso de los archivos de base de datos, este valor es el mismo que el **tamaño** en **Sys. database_files**, pero se expresa en bytes en lugar de en páginas.<br /><br /> En los archivos dispersos de instantáneas de base de datos, se trata del espacio que utiliza el sistema operativo para el archivo.|  
+|**BytesOnDisk**|**bigint**|Tamaño físico del archivo (recuento de bytes) en disco.<br /><br /> En el caso de los archivos de base de datos, es el mismo valor que el **tamaño** en **Sys.database_files**, pero se expresa en bytes en lugar de en páginas.<br /><br /> En los archivos dispersos de instantáneas de base de datos, se trata del espacio que utiliza el sistema operativo para el archivo.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **fn_virtualfilestats** es una función con valores de tabla del sistema que proporciona información estadística, como el número total de operaciones de e/s realizadas en un archivo. Puede utilizarse esta función como ayuda para realizar un seguimiento del tiempo que los usuarios tienen que esperar para leer un archivo o escribir en él. La función también ayuda a identificar los archivos que tienen mucha actividad de E/S.  
   
 ## <a name="permissions"></a>Permisos  
@@ -104,7 +104,7 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [DB_ID &#40;&#41;de Transact-SQL ](../../t-sql/functions/db-id-transact-sql.md)   
- [FILE_IDEX &#40;&#41;de Transact-SQL ](../../t-sql/functions/file-idex-transact-sql.md)   
+ [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

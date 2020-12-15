@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f23d179e0a3864d9408ab24571270007eff6254e
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: cf190b2c0a973db9e2955cd928e1b716d847d26b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810789"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467026"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91810789"
 |**create_date**|**datetime**|Hora en que se creó la entidad de seguridad.|  
 |**modify_date**|**datetime**|Hora en que se modificó por última vez la entidad de seguridad.|  
 |**owning_principal_id**|**int**|Id. de la entidad de seguridad propietaria de esta entidad de seguridad. De forma predeterminada, todos los roles fijos de base de datos pertenecen a **DBO** .|  
-|**sid**|**varbinary(85)**|SID (identificador de seguridad) de la entidad de seguridad.  NULL para SYS e INFORMATION SCHEMAS.|  
+|**Junction**|**varbinary(85)**|SID (identificador de seguridad) de la entidad de seguridad.  NULL para SYS e INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Si es 1, esta fila representa una entrada para uno de los roles fijos de base de datos: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
 |**authentication_type**|**int**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Tipo de autenticación. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> 0: sin autenticación<br />1: autenticación de la instancia<br />2: autenticación de base de datos<br />3: autenticación de Windows<br />4: autenticación Azure Active Directory|  
 |**authentication_type_desc**|**nvarchar(60)**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Descripción del tipo de autenticación. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> NINGUNO: sin autenticación<br />INSTANCIA: autenticación de la instancia<br />BASE de datos: autenticación de base de datos<br />WINDOWS: autenticación de Windows<br />EXTERNAL: autenticación Azure Active Directory|  
@@ -51,7 +51,7 @@ ms.locfileid: "91810789"
 |**default_language_lcid**|**int**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> LCID predeterminado para esta entidad de seguridad.|  
 |**allow_encrypted_value_modifications**|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] y versiones posteriores, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]<br /><br /> Suprime las comprobaciones de metadatos criptográficos en el servidor en operaciones de copia masiva. Esto permite al usuario realizar una copia masiva de datos cifrados mediante Always Encrypted, entre tablas o bases de datos, sin descifrar los datos. El valor predeterminado es OFF. |      
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las propiedades de *PasswordLastSetTime* están disponibles en todas las configuraciones admitidas de SQL Server, pero las demás propiedades solo están disponibles cuando se ejecuta SQL Server en Windows Server 2003 o posterior y se habilitan tanto CHECK_POLICY como CHECK_EXPIRATION. Consulte [Directiva de contraseñas](../../relational-databases/security/password-policy.md) para obtener más información.
 Los valores de la principal_id se pueden volver a usar en caso de que se hayan quitado las entidades de seguridad y, por lo tanto, no se garantice que se incremente cada vez.
   

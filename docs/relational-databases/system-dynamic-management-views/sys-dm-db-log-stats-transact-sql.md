@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_log_stats (Transact-SQL)
-title: Sys. dm_db_log_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_log_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98c8b45ccde39b7155443b1ef7fabd994f6b26ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5a5ea85a212e33a3e26ef295cc4d38c84967560a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550311"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472836"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Devuelve atributos de nivel de resumen e información sobre los archivos de regi
 
 *database_id* | NULL | **Valor predeterminado**
 
-Es el ID. de la base de datos. `database_id` es `int`. Las entradas válidas son el número de identificación de una base de datos, `NULL` o `DEFAULT` . El valor predeterminado es `NULL`. `NULL` y `DEFAULT` son valores equivalentes en el contexto de la base de datos actual.  
+Es el ID. de la base de datos. `database_id` es `int`. Las entradas válidas son el número de identificación de una base de datos, `NULL` o `DEFAULT` . De manera predeterminada, es `NULL`. `NULL` y `DEFAULT` son valores equivalentes en el contexto de la base de datos actual.  
 Se puede especificar la función integrada [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Al usar `DB_ID` sin especificar un nombre de base de datos, el nivel de compatibilidad de la base de datos actual debe ser 90 o superior.
 
   
@@ -73,7 +73,7 @@ Se puede especificar la función integrada [DB_ID](../../t-sql/functions/db-id-t
 |recovery_vlf_count |**bigint** |   Número total de [archivos de registro virtuales (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) que se van a recuperar, si se ha producido una conmutación por error o un reinicio del servidor. |  
 
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 Cuando `sys.dm_db_log_stats` se ejecuta en una base de datos que participa en un grupo de disponibilidad como una réplica secundaria, solo se devolverá un subconjunto de los campos descritos anteriormente.  Actualmente, solo `database_id` `recovery_model` `log_backup_time` se devolverá, y cuando se ejecute en una base de datos secundaria.   
 
 ## <a name="permissions"></a>Permisos  

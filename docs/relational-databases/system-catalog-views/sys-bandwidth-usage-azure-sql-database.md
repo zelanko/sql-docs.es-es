@@ -1,6 +1,6 @@
 ---
 description: sys.bandwidth_usage (Azure SQL Database)
-title: Sys. bandwidth_usage (Azure SQL Database) | Microsoft Docs
+title: sys.bandwidth_usage (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d39486a513e012fc53e66c408145bbf148696ff2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: c71fdc21c634e8f473d628373ae5adfa9c1c072f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402531"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473036"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -34,11 +34,11 @@ ms.locfileid: "88402531"
 > [!NOTE]
 > Esto solo se aplica a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11. * *  
   
- Devuelve información sobre el ancho de banda de red usado por cada base de datos en un ** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] servidor de base de datos de V11**,. Cada fila devuelta para una base de datos determinada resume una única dirección y clase de uso durante un período de una hora.  
+ Devuelve información sobre el ancho de banda de red usado por cada base de datos en un **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] servidor de base de datos de V11**,. Cada fila devuelta para una base de datos determinada resume una única dirección y clase de uso durante un período de una hora.  
   
  **Esto está en desuso en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .**  
   
- La vista **Sys. bandwidth_usage** contiene las columnas siguientes.  
+ La vista **Sys.bandwidth_usage** contiene las columnas siguientes.  
   
 |Nombre de columna|Descripción|  
 |-----------------|-----------------|  
@@ -53,13 +53,13 @@ ms.locfileid: "88402531"
 
  Esta vista solo está disponible en la base de datos **maestra** para el inicio de sesión principal de nivel de servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ### <a name="external-and-internal-classes"></a>Clases externas e internas
 
- Para cada base de datos que se utiliza en un momento dado, la vista **Sys. bandwidth_usage** devuelve filas que muestran la clase y la dirección del uso del ancho de banda. En el ejemplo siguiente se muestran los datos que se pueden exponer para una base de datos determinada. En este ejemplo, el tiempo son las 17:00 2012-04-21: 00, que se produce durante el período de tiempo máximo. El nombre de base de datos es Db1. En este ejemplo, **Sys. bandwidth_usage** ha devuelto una fila para las cuatro combinaciones de las direcciones de entrada y salida, y las clases externas e internas, como se indica a continuación:  
+ Para cada base de datos que se utiliza en un momento dado, la vista **Sys.bandwidth_usage** devuelve filas que muestran la clase y la dirección del uso del ancho de banda. En el ejemplo siguiente se muestran los datos que se pueden exponer para una base de datos determinada. En este ejemplo, el tiempo son las 17:00 2012-04-21: 00, que se produce durante el período de tiempo máximo. El nombre de base de datos es Db1. En este ejemplo, **Sys.bandwidth_usage** ha devuelto una fila para las cuatro combinaciones de las direcciones de entrada y salida, y las clases externas e internas, como se indica a continuación:  
   
-|time|database_name|direction|clase|time_period|quantity|  
+|time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  
 |2012-04-21 17:00:00|Db1|Entrada|Externo|Peak|66|  
 |2012-04-21 17:00:00|Db1|Salida|Externo|Peak|741|  

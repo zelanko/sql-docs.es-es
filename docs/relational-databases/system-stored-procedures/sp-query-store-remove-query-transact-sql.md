@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e14dd0778ceaa21e52987f49227c13f9e781dab7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ff371335d81f4080531c91d51a4672540fae314c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541651"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468326"
 ---
 # <a name="sp_query_store_remove_query-transact-sql"></a>sp_query_store_remove_query (Transact-SQL)
 
@@ -45,7 +45,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @query_id = ] query_id` Es el identificador de la consulta que se va a quitar del almacén de consultas. *query_id* es de tipo **BIGINT**y no tiene ningún valor predeterminado.  
+`[ @query_id = ] query_id` Es el identificador de la consulta que se va a quitar del almacén de consultas. *query_id* es de tipo **BIGINT** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

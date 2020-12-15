@@ -13,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: b4ac6f0e-8e6a-4b1a-9a7e-60e0a69b2180
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 499ca3cbd3c751e3f5a29260f46a5a4cfe8a6dce
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: da691dab0513ccd472459e2ad6ecaa4c446b9828
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009531"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467776"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>Configurar el controlador ODBC de SQL Server: agregar un origen de datos
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,9 +32,9 @@ ms.locfileid: "86009531"
   
 1.  En el **Panel de control**, acceda a **herramientas administrativas** y, a continuación, a **orígenes de datos ODBC (64 bits)** o a **orígenes de datos ODBC (32 bits)**. De modo alternativo, puede invocar odbcad32.exe.  
   
-2.  Haga clic en la pestaña **DSN de usuario**, **DSN de sistema**o **DSN de archivo** y, a continuación, haga clic en **Agregar**.  
+2.  Haga clic en la pestaña **DSN de usuario**, **DSN de sistema** o **DSN de archivo** y, a continuación, haga clic en **Agregar**.  
   
-3.  Haga clic en **SQL Server**y, a continuación, en **Finalizar**.  
+3.  Haga clic en **SQL Server** y, a continuación, en **Finalizar**.  
   
 4.  Complete los pasos del asistente **para crear un nuevo origen de datos para SQL Server** .  
   

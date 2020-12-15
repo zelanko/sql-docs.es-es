@@ -23,13 +23,13 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 - rank
-monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4021751337e7c49b22d6ec8bc2d24cc4e144e763
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest'
+ms.openlocfilehash: 908151d19df364171063bffcd280786a354c2654
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006004"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472956"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -50,7 +50,7 @@ Devuelve una fila por cada elemento clasificado en la base de datos.
 |**rank_desc**|**sysname**|Representación textual del rango:  <br><br>NINGUNO, BAJO, MEDIO, ALTO, CRÍTICO|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 
 - Esta vista proporciona visibilidad en el estado de clasificación de la base de datos. Se puede usar para administrar las clasificaciones de la base de datos, así como para generar informes.
 - Actualmente solo se admite la clasificación de columnas de base de datos.

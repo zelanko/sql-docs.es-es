@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_memory_consumers (Transact-SQL)
-title: Sys. dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 321297a2590a18ed7e51364b3f532076f90ce740
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a962925e0a359055286b6598914cd3e79cf8036c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542248"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474976"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -47,14 +47,14 @@ ms.locfileid: "89542248"
 |allocated_bytes|**bigint**|Número de bytes reservados para el consumidor.|  
 |used_bytes|**bigint**|Bytes utilizados por el consumidor. Solo se aplica a varheap.|  
 |allocation_count|**int**|Número de asignaciones.|  
-|partition_count|**int**|Exclusivamente para uso interno.|  
-|sizeclass_count|**int**|Exclusivamente para uso interno.|  
-|min_sizeclass|**int**|Exclusivamente para uso interno.|  
-|max_sizeclass|**int**|Exclusivamente para uso interno.|  
-|memory_consumer_address|**varbinary**|Dirección interna del consumidor. Sólo para uso interno.|  
+|partition_count|**int**|Solo para uso interno.|  
+|sizeclass_count|**int**|Solo para uso interno.|  
+|min_sizeclass|**int**|Solo para uso interno.|  
+|max_sizeclass|**int**|Solo para uso interno.|  
+|memory_consumer_address|**varbinary**|Dirección interna del consumidor. Solo para uso interno.|  
 |xtp_object_id|**bigint**|IDENTIFICADOR de objeto de OLTP en memoria que corresponde a la tabla optimizada para memoria.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  En la salida, los asignadores en los niveles de base de datos hacen referencia a las tablas de usuario, los índices y las tablas del sistema. VARHEAP con object_id = NULL hace referencia en la memoria asignada a tablas con columnas de longitud variable.  
   
 ## <a name="permissions"></a>Permisos  
@@ -65,7 +65,7 @@ ms.locfileid: "89542248"
  Las tablas del sistema solo se devuelven para los usuarios con el permiso VIEW DATABASE STATE.  
   
 ## <a name="general-remarks"></a>Notas generales  
- Cuando una tabla optimizada para memoria tiene un índice de almacén de columnas, el sistema usa algunas tablas internas, que consumen memoria, para realizar el seguimiento de los datos del índice de almacén de columnas. Para obtener más información sobre estas tablas internas y consultas de ejemplo que muestran su consumo de memoria [, vea sys. memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
+ Cuando una tabla optimizada para memoria tiene un índice de almacén de columnas, el sistema usa algunas tablas internas, que consumen memoria, para realizar el seguimiento de los datos del índice de almacén de columnas. Para obtener más información sobre estas tablas internas y consultas de ejemplo que muestran su consumo de memoria [, vea sys.memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
  
   
 ## <a name="examples"></a>Ejemplos  
@@ -112,7 +112,7 @@ NULL       VARHEAP                   NULL        NULL        1405943808         
 (17 row(s) affected)  
 ```  
   
- La memoria total asignada y utilizada desde esta DMV es la misma que el nivel de objeto en [Sys. dm_db_xtp_table_memory_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
+ La memoria total asignada y utilizada desde esta DMV es la misma que el nivel de objeto de [sys.dm_db_xtp_table_memory_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
   
 ```  
 select  sum(allocated_bytes)/(1024*1024) as total_allocated_MB,   

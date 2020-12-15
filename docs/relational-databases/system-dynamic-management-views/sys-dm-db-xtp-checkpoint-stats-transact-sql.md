@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs
 description: Devuelve estadísticas sobre las operaciones de punto de comprobación de OLTP en memoria de la base de datos actual. Obtenga información acerca de cómo esta vista difiere en las versiones de SQL Server.
 ms.custom: ''
 ms.date: 03/20/2017
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66532a6ed19dc3a7929fe7d5638fa850c893d119
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 39e4d0d0e4198fee1be446675bd0314e0fefcb7a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542342"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475006"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -45,7 +45,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores   
  En la tabla siguiente se describen las columnas de `sys.dm_db_xtp_checkpoint_stats` , a partir de **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|Último LSN detectado por el controlador.|  
 |end_of_log_lsn|**Numeric (38)**|LSN del final del registro.|  
@@ -68,7 +68,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |last_closed_checkpoint_ts|**bigint**|Marca de tiempo del último punto de control cerrado.|  
 |hardened_recovery_lsn|**Numeric (38)**|La recuperación se iniciará desde este LSN.|  
 |hardened_root_file_guid|**uniqueidentifier**|GUID del archivo raíz que protegió como resultado el último punto de control completado.|  
-|hardened_root_file_watermark|**bigint**|**Solo**para uso interno. Hasta ahora es válido leer el archivo raíz hasta (es un tipo solo relevante internamente, denominado BSN).|  
+|hardened_root_file_watermark|**bigint**|**Solo** para uso interno. Hasta ahora es válido leer el archivo raíz hasta (es un tipo solo relevante internamente, denominado BSN).|  
 |hardened_truncation_lsn|**Numeric (38)**|LSN del punto de truncamiento.|  
 |log_bytes_since_last_close|**bigint**|Bytes desde el último cierre hasta el final actual del registro.|  
 |time_since_last_close_in_ms|**bigint**|Tiempo desde el último cierre del punto de control.|  
@@ -87,7 +87,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  En la tabla siguiente se describen las columnas de `sys.dm_db_xtp_checkpoint_stats` , para **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|El número de bytes de registro entre el número de secuencia de registro (LSN) actual del subproceso y el fin del registro.|  
 |total_log_blocks_processed|**bigint**|Número total de bloques de registro procesados desde el inicio del servidor.|  

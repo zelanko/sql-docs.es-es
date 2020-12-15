@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c49367f78a257b1ba4e19d9916b590a67991d1a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7af34bd1bbe065012b18826f7edaec31940d1e50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536720"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466876"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89536720"
   
  sp_createstats es útil para aplicaciones como las pruebas comparativas cuando los tiempos de ejecución de la consulta resultan críticos y no se puede esperar a que el optimizador de consultas genere estadísticas de columna única. En la mayoría de los casos, no es necesario utilizar sp_createstats; el optimizador de consultas genera estadísticas de columna única según sea necesario para mejorar los planes de consulta cuando la opción de **AUTO_CREATE_STATISTICS** está activada.  
   
- Para obtener más información sobre las estadísticas, vea [Estadísticas](../../relational-databases/statistics/statistics.md). Para obtener más información sobre cómo generar estadísticas de columna única, vea la opción **AUTO_CREATE_STATISTICS** en [Opciones de ALTER database Set &#40;&#41;de Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Para obtener más información sobre las estadísticas, vea [Estadísticas](../../relational-databases/statistics/statistics.md). Para obtener más información sobre cómo generar estadísticas de columna única, vea la opción **AUTO_CREATE_STATISTICS** en [Opciones de ALTER database Set &#40;&#41;de Transact-SQL](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,7 +63,7 @@ sp_createstats
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Cada nuevo objeto de estadísticas tiene el mismo nombre que la columna en la que se creó.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_createstats no crea ni actualiza las estadísticas de las columnas que son la primera columna de un objeto de estadísticas existente.  Esto incluye la primera columna de estadísticas creadas para índices, columnas con estadísticas de columna única generadas con AUTO_CREATE_STATISTICS opción y la primera columna de estadísticas creadas con la instrucción CREATE STATISTICs. sp_createstats no crea estadísticas en las primeras columnas de los índices deshabilitados a menos que se use esa columna en otro índice habilitado. sp_createstats no crea estadísticas en las tablas con un índice clúster deshabilitado.  
   
  Cuando la tabla contiene un conjunto de columnas, sp_createstats no crea automáticamente estadísticas en columnas dispersas. Para obtener más información sobre los conjuntos de columnas y las columnas dispersas, vea [usar conjuntos](../../relational-databases/tables/use-column-sets.md) de columnas y [usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md).  

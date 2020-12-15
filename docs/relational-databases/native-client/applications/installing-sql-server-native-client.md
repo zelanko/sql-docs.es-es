@@ -1,5 +1,5 @@
 ---
-title: Instalación de
+title: Instalación
 description: SQL Server Native Client 11,0 se instala con SQL Server 2016. Obtenga información sobre dónde se instalan los componentes. También hay un programa de instalación redistribuible.
 ms.custom: ''
 ms.date: 07/15/2016
@@ -21,13 +21,13 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], installing SQL Server Native Client
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0537a9fc955cdd27a243ec020199122260db2890
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e713a0e7867f79fc4e0317151acf9f564f112a33
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384844"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469246"
 ---
 # <a name="installing-sql-server-native-client"></a>Instalar SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

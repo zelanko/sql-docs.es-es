@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95e4d3b3b1b06810fc1e60564a4ad7c84e85189a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 169f0069565c3d1f6561d6edc8e8b459fc77ac9a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486551"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475266"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "88486551"
 |**is_active_for_begin_dialog**|**bit**|Si el valor es 1, este certificado se utiliza para iniciar diálogos de servicio cifrados.|  
 |**issuer_name**|**nvarchar (442)**|Nombre del emisor del certificado.|  
 |**cert_serial_number**|**nvarchar (64)**|Número de serie del certificado.|  
-|**sid**|**varbinary(85)**|SID (identificador de seguridad) de inicio de sesión para este certificado.|  
+|**Junction**|**varbinary(85)**|SID (identificador de seguridad) de inicio de sesión para este certificado.|  
 |**string_sid**|**nvarchar(128)**|Representación en forma de cadena del SID de inicio de sesión para este certificado.|  
 |**subject**|**nvarchar(4000)**|Asunto del certificado.|  
 |**expiry_date**|**datetime**|Fecha en que expira el certificado.|  
 |**start_date**|**datetime**|Fecha en que se valida el certificado.|  
-|**huella**|**varbinary(32)**|Hash SHA-1 del certificado. El hash SHA-1 es único globalmente.|  
+|**thumbprint**|**varbinary(32)**|Hash SHA-1 del certificado. El hash SHA-1 es único globalmente.|  
 |**attested_by**|**nvarchar(260)**|Solo para uso del sistema.|  
 |**pvt_key_last_backup_date**|**datetime**|Fecha y hora en que se exportó por última vez la clave privada del certificado.|  
   

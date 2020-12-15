@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fb15ad9040276302586efc1b9661ff1e08e62e2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 184328e9b6d5c197b06f89f151942535a90f7f91
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548432"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474656"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ sp_addextendedproperty
  Es el nombre de la propiedad que se va a agregar. *property_name* es de **tipo sysname** y no puede ser null. Los nombres también pueden incluir espacios en blanco o cadenas de caracteres no alfanuméricos, y valores binarios.  
   
  [ @value =] {'*valor*'}  
- Es el valor que se va a asociar a la propiedad. el *valor* es **sql_variant**y su valor predeterminado es NULL. El tamaño de *value* no puede ser superior a 7.500 bytes.  
+ Es el valor que se va a asociar a la propiedad. el *valor* es **sql_variant** y su valor predeterminado es NULL. El tamaño de *value* no puede ser superior a 7.500 bytes.  
   
  [ @level0type =] {'*level0_object_type*'}  
  Tipo de objeto de nivel 0. *level0_object_type* es de tipo **VARCHAR (128)** y su valor predeterminado es NULL.  
@@ -74,13 +74,13 @@ sp_addextendedproperty
  [ @level1type =] {'*level1_object_type*'}  
  Tipo de objeto de nivel 1. *level1_object_type* es de tipo **VARCHAR (128)** y su valor predeterminado es NULL. Las entradas válidas son Aggregate, DEFAULT, FUNCTION, LOGICal FILE NAME, PROCEDURE, QUEUe, RULE, SEQUENCE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION y NULL.    
  [ @level1name =] {'*level1_object_name*'}  
- Nombre del tipo de objeto de nivel 1 especificado. *level1_object_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+ Nombre del tipo de objeto de nivel 1 especificado. *level1_object_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
  [ @level2type =] {'*level2_object_type*'}  
  Es el tipo de objeto de nivel 2. *level2_object_type* es de tipo **VARCHAR (128)** y su valor predeterminado es NULL. Las entradas válidas son COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER y NULL.  
   
  [ @level2name =] {'*level2_object_name*'}  
- Es el nombre del tipo de objeto de nivel 2 especificado. *level2_object_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+ Es el nombre del tipo de objeto de nivel 2 especificado. *level2_object_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -100,7 +100,7 @@ sp_addextendedproperty
  Las propiedades extendidas solo se replican en la sincronización inicial entre el publicador y el suscriptor. Si agrega o modifica una propiedad extendida después de la sincronización inicial, el cambio no se replica. Para obtener más información sobre cómo replicar objetos de base de datos, vea [publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
 ## <a name="schema-vs-user"></a>Esquema frente Usuario  
- No se recomienda especificar USER como tipo de nivel 0 cuando se aplica una propiedad extendida a un objeto de base de datos, ya que esto puede producir ambigüedad en la resolución de nombres. Supongamos, por ejemplo, que el usuario Mary posee dos esquemas, Mary y MySchema, y que cada uno contiene una tabla denominada MyTable. Si Mary agrega una propiedad extendida a la tabla MyTable y especifica ** @level0type = N'USER '**, ** @level0name = Mary**, no queda claro a qué tabla se aplica la propiedad extendida. Por compatibilidad con versiones anteriores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicará la propiedad a la tabla contenida en el esquema Mary.  
+ No se recomienda especificar USER como tipo de nivel 0 cuando se aplica una propiedad extendida a un objeto de base de datos, ya que esto puede producir ambigüedad en la resolución de nombres. Supongamos, por ejemplo, que el usuario Mary posee dos esquemas, Mary y MySchema, y que cada uno contiene una tabla denominada MyTable. Si Mary agrega una propiedad extendida a la tabla MyTable y especifica **@level0type = N'USER '**, **@level0name = Mary**, no queda claro a qué tabla se aplica la propiedad extendida. Por compatibilidad con versiones anteriores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicará la propiedad a la tabla contenida en el esquema Mary.  
   
 ## <a name="permissions"></a>Permisos  
  Los miembros de los roles fijos de base de datos db_owner y db_ddladmin pueden agregar las propiedades extendidas a cualquier objeto con la siguiente excepción: db_ddladmin no puede agregar propiedades a la base de datos, a los usuarios o a los roles.  
@@ -238,7 +238,7 @@ EXEC sys.sp_addextendedproperty
   
 ## <a name="see-also"></a>Consulte también  
  [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Sys. fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;&#41;de Transact-SQL ](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
   

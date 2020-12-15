@@ -10,12 +10,13 @@ ms.topic: reference
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08efcc441e0c06c05dcb49f2a5d18a3fc9e5d72d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1bdc9812b46869a46879adfe10efda8b35128bf9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005725"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469256"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>Directivas de soporte con SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -23,12 +24,12 @@ ms.locfileid: "86005725"
   En este tema se describe la forma de usar diversos componentes de acceso a datos con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="server-support"></a>Compatibilidad de servidor  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 11,0 admite conexiones a, [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] , [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] , [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] y [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11,0 admite conexiones a, [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] , [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] , [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] y [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] .  
   
 ## <a name="supported-operating-system-versions"></a>Versiones de sistema operativo compatibles  
  En la tabla siguiente se enumeran los sistemas operativos admitidos por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-|Versión de SQL Server Native Client|Sistemas operativos admitidos|  
+|Versión de SQL Server Native Client|Sistemas operativos compatibles|  
 |--------------------------------------|---------------------------------|  
 |SQL Server Native Client (SQL Server 2005)|Microsoft Windows 2000 Service Pack 4 o posterior<br /><br /> Microsoft Windows Server 2003 o posterior<br /><br /> Microsoft Windows XP Service Pack 1 o posterior<br /><br /> Microsoft Windows Vista (requiere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 o posterior)<br /><br /> Microsoft Windows Server 2008 R2 (requiere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 o posterior)|  
 |SQL Server Native Client 10,0 ( [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] )|Microsoft Windows Server 2003 Service Pack 2 o posterior<br /><br /> Microsoft Windows XP Service Pack 2 o posterior<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2|  

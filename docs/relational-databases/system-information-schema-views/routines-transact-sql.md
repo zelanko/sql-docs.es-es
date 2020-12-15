@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aad968588ff8e7ed454b35d74ce992cae0f9d836
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2d83c5ef33d9d1a050b531ef1b4a5ee2dc60d4e9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753997"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472846"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "91753997"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar (** 128 **)**|Nombre específico del catálogo. Este nombre es el mismo que ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Nombre específico del esquema.<br /><br /> Importante no use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. ** \* \* \* \* ** INFORMATION_SCHEMA vistas solo representan un subconjunto de los metadatos de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
+|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Nombre específico del esquema.<br /><br /> Importante no use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. **\* \* \* \*** INFORMATION_SCHEMA vistas solo representan un subconjunto de los metadatos de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
 |SPECIFIC_NAME|**nvarchar (** 128 **)**|Nombre específico del catálogo. Este nombre es el mismo que ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**nvarchar (** 128 **)**|Nombre del catálogo de la función.|  
-|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Nombre del esquema que contiene esta función.<br /><br /> Importante no use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. ** \* \* \* \* ** INFORMATION_SCHEMA vistas solo representan un subconjunto de los metadatos de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
+|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Nombre del esquema que contiene esta función.<br /><br /> Importante no use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. **\* \* \* \*** INFORMATION_SCHEMA vistas solo representan un subconjunto de los metadatos de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
 |ROUTINE_NAME|**nvarchar (** 128 **)**|El nombre de la función.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Devuelve PROCEDURE para los procedimientos almacenados y FUNCTION para las funciones.|  
 |MODULE_CATALOG|**nvarchar (** 128 **)**|NULL. Reservado para un uso futuro.|  

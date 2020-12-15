@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_hash_index_stats (Transact-SQL)
-title: Sys. dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e8b28d292de4d860a8e46f7a679e42d99ac8c88
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 310fb757ca9956ac3206ac3d9bff0cc99c857a87
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542274"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468486"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "89542274"
 Las longitudes de cadena largas pueden afectar significativamente al rendimiento de las operaciones DML en filas individuales, incluidas SELECT e INSERT. Las longitudes de cadena cortas, junto con un gran número de depósitos vacíos, indican que hay un bucket_count con un valor demasiado alto. Esto reduce el rendimiento de los exámenes de índice.  
   
 > [!WARNING]
-> **Sys. dm_db_xtp_hash_index_stats** examina toda la tabla. Por lo tanto, si hay tablas grandes en la base de datos, **Sys. dm_db_xtp_hash_index_stats** puede tardar mucho tiempo en ejecutarse.  
+> **Sys.dm_db_xtp_hash_index_stats** examina toda la tabla. Por lo tanto, si hay tablas grandes en la base de datos, **Sys.dm_db_xtp_hash_index_stats** puede tardar mucho tiempo en ejecutarse.  
   
-Para obtener más información, vea [índices de hash para tablas optimizadas para memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
+Para obtener más información, vea [índices de hash para tablas de Memory-Optimized](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|Identificador del objeto de la tabla primaria.|  
 |xtp_object_id|**bigint**|IDENTIFICADOR de la tabla optimizada para memoria.|  
@@ -88,7 +88,7 @@ La siguiente consulta se puede usar para solucionar problemas del número de cub
   ORDER BY [table], [index];  
 ``` 
 
-Para obtener más información sobre cómo interpretar los resultados de esta consulta, vea [solución de problemas de índices de hash para tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+Para obtener más información sobre cómo interpretar los resultados de esta consulta, consulte [solución de problemas de índices de hash para tablas de Memory-Optimized](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. Estadísticas de índice de hash para tablas internas
 

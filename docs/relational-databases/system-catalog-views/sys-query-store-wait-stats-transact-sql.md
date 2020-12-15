@@ -1,6 +1,6 @@
 ---
-description: Sys. query_store_wait_stats (Transact-SQL)
-title: Sys. query_store_wait_stats (Transact-SQL) | Microsoft Docs
+description: sys.query_store_wait_stats (Transact-SQL)
+title: sys.query_store_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc28729ef4f3743e945f782fed0409057e90224a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2ab48b6155e26873c22a3b951ef65705d3addd79
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537323"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466926"
 ---
-# <a name="sysquery_store_wait_stats-transact-sql"></a>Sys. query_store_wait_stats (Transact-SQL)
+# <a name="sysquery_store_wait_stats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
@@ -36,8 +36,8 @@ ms.locfileid: "89537323"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Identificador de la fila que representa las estadísticas de espera para el plan_id, runtime_stats_interval_id, execution_type y wait_category. Solo es único para los intervalos de estadísticas de tiempo de ejecución anteriores. Para el intervalo actualmente activo, puede haber varias filas que representen las estadísticas de espera del plan al que hace referencia plan_id, con el tipo de ejecución representado por execution_type y la categoría de espera representada por wait_category. Normalmente, una fila representa las estadísticas de espera que se vacían en el disco, mientras que otras representan el estado en memoria. Por lo tanto, para obtener el estado real de cada intervalo, debe agregar métricas, agrupación por plan_id, runtime_stats_interval_id, execution_type y wait_category. |  
-|**plan_id**|**bigint**|Clave externa. Combina con [Sys. query_store_plan &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|Clave externa. Combina con [Sys. query_store_runtime_stats_interval &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**plan_id**|**bigint**|Clave externa. Combina con [sys.query_store_plan &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
+|**runtime_stats_interval_id**|**bigint**|Clave externa. Combina con [sys.query_store_runtime_stats_interval &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Los tipos de espera se clasifican en la tabla siguiente y, a continuación, se agrega tiempo de espera en estas categorías de espera. Las distintas categorías de espera requieren un análisis de seguimiento diferente para resolver el problema, pero los tipos de espera de la misma categoría conducen a experiencias de solución de problemas similares, y proporcionar la consulta afectada además de las esperas es la pieza que falta para completar la mayoría de estas investigaciones correctamente.|
 |**wait_category_desc**|**nvarchar(128)**|Para obtener una descripción textual del campo de la categoría de espera, revise la tabla siguiente.|
 |**execution_type**|**tinyint**|Determina el tipo de ejecución de la consulta:<br /><br /> 0: ejecución normal (finalizada correctamente)<br /><br /> 3-ejecución de la anulada iniciada por el cliente<br /><br /> 4-ejecución de excepción anulada|  
@@ -55,15 +55,15 @@ ms.locfileid: "89537323"
   
 |Valor entero|Categoría de espera|Los tipos de espera se incluyen en la categoría|  
 |-----------------|---------------|-----------------|  
-|**0**|**Unknown**|Unknown |  
+|**0**|**Unknown**|Desconocido |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**Subproceso de trabajo**|THREADPOOL|
 |**3**|**Bloquear**|LCK_M_%|
-|**4**|**Abrazadera**|LATCH_%|
+|**4**|**Bloqueo temporal**|LATCH_%|
 |**5**|**Bloqueo temporal de búfer**|PAGELATCH_%|
 |**6**|**E/s de búfer**|PAGEIOLATCH_%|
-|**7**|**Previa***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|**8**|**SQL CLR**|CLR%, SQLCLR%|
+|**7**|**Compilación** _|RESOURCE_SEMAPHORE_QUERY_COMPILE|
+|_ *8**|**SQL CLR**|CLR%, SQLCLR%|
 |**9**|**Creación de reflejo**|DBMIRROR%|
 |**10**|**Transacción**|% DE TRANSACCIONES%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_% TRANSACTION_MUTEX|
 |**11**|**Inactivo**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE XE_TIMER_EVENT|
@@ -77,7 +77,7 @@ ms.locfileid: "89537323"
 |**19**|**Seguimiento**|TRACEWRITE, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT TRACE_EVTNOTIFF|
 |**20**|**Búsqueda de texto completo**|FT_RESTART_CRAWL, RECOPILADOR DE TEXTO COMPLETO, MSSEARCH, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR, PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC|
 |**21**|**Otra e/s de disco**|ASYNC_IO_COMPLETION, IO_COMPLETION, BACKUPIO, WRITE_COMPLETION, IO_QUEUE_LIMIT, IO_RETRY|
-|**22**|**Replicación**|SE_REPL_%, REPL_%, HADR_% **(pero no HADR_THROTTLE_LOG_RATE_GOVERNOR)**, PWAIT_HADR_%, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ PWAIT_HADRSIM|
+|**22**|**replicación**|SE_REPL_%, REPL_%, HADR_% **(pero no HADR_THROTTLE_LOG_RATE_GOVERNOR)**, PWAIT_HADR_%, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ PWAIT_HADRSIM|
 |**23**|**Regulador de velocidad de registro**|LOG_RATE_GOVERNOR, POOL_LOG_RATE_GOVERNOR, HADR_THROTTLE_LOG_RATE_GOVERNOR, INSTANCE_LOG_RATE_GOVERNOR|
 
 La categoría de espera de **compilación** no se admite actualmente.

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_page_info (Transact-SQL)
-title: Sys. dm_db_page_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_page_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 60df2ed8bf279bf7da8193282768124815aa6ab3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: 429f8049ef0b92168be5e3e0fc90c91e3d37224e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493699"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472816"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
@@ -60,61 +60,61 @@ Determina el nivel de detalle de la salida de la función. ' LIMITED ' devolver�
 
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|database_id |int |Identificador de base de datos |
-|file_id |int |Id. de archivo |
-|page_id |int |Identificador de página |
-|page_header_version |int |Versión del encabezado de página |
-|page_type |int |Tipo de página |
-|page_type_desc |nvarchar (64) |Descripción del tipo de página |
-|page_type_flag_bits |nvarchar (64) |Escribir bits de marca en encabezado de página |
-|page_type_flag_bits_desc |nvarchar (64) |Tipo de marca bits Descripción en encabezado de página |
-|page_flag_bits |nvarchar (64) |Marcar bits en encabezado de página |
-|page_flag_bits_desc |nvarchar(256) |Descripción de bits de marca en encabezado de página |
-|page_lsn |nvarchar (64) |Número de secuencia de registro/marca de tiempo |
-|page_level |int |Nivel de la página en el índice (hoja = 0) |
-|object_id |int |IDENTIFICADOR del objeto propietario de la página |
-|index_id |int |IDENTIFICADOR del índice (0 para las páginas de datos del montón) |
-|partition_id |bigint |IDENTIFICADOR de la partición |
-|alloc_unit_id |bigint |IDENTIFICADOR de la unidad de asignación |
+|database_id |int |Identificador de base de datos |
+|file_id |int |Id. de archivo |
+|page_id |int |Identificador de página |
+|page_header_version |int |Versión del encabezado de página |
+|page_type |int |Tipo de página |
+|page_type_desc |nvarchar (64) |Descripción del tipo de página |
+|page_type_flag_bits |nvarchar (64) |Escribir bits de marca en encabezado de página |
+|page_type_flag_bits_desc |nvarchar (64) |Tipo de marca bits Descripción en encabezado de página |
+|page_flag_bits |nvarchar (64) |Marcar bits en encabezado de página |
+|page_flag_bits_desc |nvarchar(256) |Descripción de bits de marca en encabezado de página |
+|page_lsn |nvarchar (64) |Número de secuencia de registro/marca de tiempo |
+|page_level |int |Nivel de la página en el índice (hoja = 0) |
+|object_id |int |IDENTIFICADOR del objeto propietario de la página |
+|index_id |int |IDENTIFICADOR del índice (0 para las páginas de datos del montón) |
+|partition_id |bigint |IDENTIFICADOR de la partición |
+|alloc_unit_id |bigint |IDENTIFICADOR de la unidad de asignación |
 |is_encrypted |bit |Bit que indica si la página está cifrada o no |
 |has_checksum |bit |Bit que indica si la página tiene o no un valor de suma de comprobación |
-|suma de comprobación |int |Almacena el valor de suma de comprobación que se usa para detectar daños en los datos |
-|is_iam_pg |bit |Bit que indica si la página es o no una página IAM  |
-|is_mixed_ext |bit |Bit que indica si se asigna en una extensión mixta |
+|suma de comprobación |int |Almacena el valor de suma de comprobación que se usa para detectar daños en los datos |
+|is_iam_pg |bit |Bit que indica si la página es o no una página IAM  |
+|is_mixed_ext |bit |Bit que indica si se asigna en una extensión mixta |
 |has_ghost_records |bit |Bit que indica si la página contiene registros fantasma <br> Un registro fantasma es aquel que se ha marcado para su eliminación, pero que aún no se ha quitado.|
 |has_version_records |bit |Bit que indica si la página contiene registros de versión que se usan para [acelerar la recuperación de bases de datos](../backup-restore/restore-and-recovery-overview-sql-server.md#adr) |
-|pfs_page_id |int |ID. de página de la página PFS correspondiente |
+|pfs_page_id |int |ID. de página de la página PFS correspondiente |
 |pfs_is_allocated |bit |Bit que indica si la página está marcada como asignada en la página PFS correspondiente |
-|pfs_alloc_percent |int |Porcentaje de asignación indicado por el byte PFS correspondiente |
-|pfs_status |nvarchar (64) |Byte PFS |
-|pfs_status_desc |nvarchar (64) |Descripción del byte PFS |
-|gam_page_id |int |ID. de página de la página GAM correspondiente |
-|gam_status |bit |Bit que indica si se ha asignado en GAM |
-|gam_status_desc |nvarchar (64) |Descripción del bit de estado de GAM |
-|sgam_page_id |int |ID. de página de la página SGAM correspondiente |
-|sgam_status |bit |Bit que indica si se ha asignado en SGAM |
-|sgam_status_desc |nvarchar (64) |Descripción del bit de estado de SGAM |
-|diff_map_page_id |int |ID. de página de la página de mapa de bits diferencial correspondiente |
-|diff_status |bit |Bit que indica si se ha cambiado el estado de diferencia |
-|diff_status_desc |nvarchar (64) |Descripción del bit de estado de diferencia |
-|ml_map_page_id |int |ID. de página de la página de mapa de bits de registro mínima correspondiente |
-|ml_status |bit |Bit que indica si la página tiene un registro mínimo |
-|ml_status_desc |nvarchar (64) |Descripción del bit de estado de registro mínimo |
-|prev_page_file_id |SMALLINT |ID. de archivo de página anterior |
-|prev_page_page_id |int |ID. de página de página anterior |
-|next_page_file_id |SMALLINT |IDENTIFICADOR de archivo de página siguiente |
-|next_page_page_id |int |IDENTIFICADOR de página de la página siguiente |
-|fixed_length |SMALLINT |Longitud de filas de tamaño fijo |
-|slot_count |SMALLINT |Número total de ranuras (usadas y sin usar) <br> En el caso de una página de datos, este número es equivalente al número de filas. |
-|ghost_rec_count |SMALLINT |Número de registros marcados como fantasma en la página <br> Un registro fantasma es aquel que se ha marcado para su eliminación, pero que aún no se ha quitado. |
-|free_bytes |SMALLINT |Número de bytes libres en la página |
-|free_data_offset |int |Desplazamiento de espacio disponible al final del área de datos |
-|reserved_bytes |SMALLINT |Número de bytes libres reservados por todas las transacciones (si es montón) <br> Número de filas fantasma (si es hoja del índice) |
-|reserved_bytes_by_xdes_id |SMALLINT |Espacio aportado por m_xdesID a m_reservedCnt <br> Solo con fines de depuración |
-|xdes_id |nvarchar (64) |Última transacción aportada por m_reserved <br> Solo con fines de depuración |
+|pfs_alloc_percent |int |Porcentaje de asignación indicado por el byte PFS correspondiente |
+|pfs_status |nvarchar (64) |Byte PFS |
+|pfs_status_desc |nvarchar (64) |Descripción del byte PFS |
+|gam_page_id |int |ID. de página de la página GAM correspondiente |
+|gam_status |bit |Bit que indica si se ha asignado en GAM |
+|gam_status_desc |nvarchar (64) |Descripción del bit de estado de GAM |
+|sgam_page_id |int |ID. de página de la página SGAM correspondiente |
+|sgam_status |bit |Bit que indica si se ha asignado en SGAM |
+|sgam_status_desc |nvarchar (64) |Descripción del bit de estado de SGAM |
+|diff_map_page_id |int |ID. de página de la página de mapa de bits diferencial correspondiente |
+|diff_status |bit |Bit que indica si se ha cambiado el estado de diferencia |
+|diff_status_desc |nvarchar (64) |Descripción del bit de estado de diferencia |
+|ml_map_page_id |int |ID. de página de la página de mapa de bits de registro mínima correspondiente |
+|ml_status |bit |Bit que indica si la página tiene un registro mínimo |
+|ml_status_desc |nvarchar (64) |Descripción del bit de estado de registro mínimo |
+|prev_page_file_id |SMALLINT |ID. de archivo de página anterior |
+|prev_page_page_id |int |ID. de página de página anterior |
+|next_page_file_id |SMALLINT |IDENTIFICADOR de archivo de página siguiente |
+|next_page_page_id |int |IDENTIFICADOR de página de la página siguiente |
+|fixed_length |SMALLINT |Longitud de filas de tamaño fijo |
+|slot_count |SMALLINT |Número total de ranuras (usadas y sin usar) <br> En el caso de una página de datos, este número es equivalente al número de filas. |
+|ghost_rec_count |SMALLINT |Número de registros marcados como fantasma en la página <br> Un registro fantasma es aquel que se ha marcado para su eliminación, pero que aún no se ha quitado. |
+|free_bytes |SMALLINT |Número de bytes libres en la página |
+|free_data_offset |int |Desplazamiento de espacio disponible al final del área de datos |
+|reserved_bytes |SMALLINT |Número de bytes libres reservados por todas las transacciones (si es montón) <br> Número de filas fantasma (si es hoja del índice) |
+|reserved_bytes_by_xdes_id |SMALLINT |Espacio aportado por m_xdesID a m_reservedCnt <br> Solo con fines de depuración |
+|xdes_id |nvarchar (64) |Última transacción aportada por m_reserved <br> Solo con fines de depuración |
 ||||
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 La `sys.dm_db_page_info` función de administración dinámica devuelve información de página como `page_id` , `file_id` , `index_id` , `object_id` etc. que se encuentra en un encabezado de página. Esta información es útil para la solución de problemas y la depuración de diversos problemas de rendimiento (contención de bloqueos y bloqueos temporales) y daños.
 
 `sys.dm_db_page_info` se puede usar en lugar de la `DBCC PAGE` instrucción en muchos casos, pero solo devuelve la información del encabezado de página, no el cuerpo de la página. `DBCC PAGE` seguirá siendo necesario para los casos de uso en los que se requiera todo el contenido de la página.
@@ -137,7 +137,7 @@ SELECT *
 FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 ```
 
-### <a name="b-using-sysdm_db_page_info-with-other-dmvs"></a>B. Usar sys. dm_db_page_info con otras DMV 
+### <a name="b-using-sysdm_db_page_info-with-other-dmvs"></a>B. Usar sys.dm_db_page_info con otras DMV 
 
 La siguiente consulta devuelve una fila por `wait_resource` exposición `sys.dm_exec_requests` cuando la fila contiene un valor distinto de NULL. `page_resource`
 
@@ -148,7 +148,7 @@ CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r
 CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS page_info
 ```
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Vistas de administración dinámica relacionadas con bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     

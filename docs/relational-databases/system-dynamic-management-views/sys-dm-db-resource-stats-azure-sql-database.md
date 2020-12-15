@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 21cef237634891d4795e46f96f63eba701f55852
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 0f1a31c5822ca8d3d7a18eed49145d37a07b49ec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833698"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475016"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (base de datos SQL de Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "91833698"
 |avg_cpu_percent|**decimal (5, 2)**|Uso de proceso promedio como porcentaje del límite del nivel de servicio.|  
 |avg_data_io_percent|**decimal (5, 2)**|Uso promedio de e/s de datos en porcentaje del límite del nivel de servicio. Para las bases de datos de hiperescala, consulte [e/s de datos en estadísticas de uso de recursos](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**decimal (5, 2)**|Promedio de escrituras del registro de transacciones (en MBps) como porcentaje del límite del nivel de servicio.|  
-|avg_memory_usage_percent|**decimal (5, 2)**|Uso de memoria promedio como porcentaje del límite del nivel de servicio.<br /><br /> Esto incluye la memoria usada para las páginas del grupo de búferes y el almacenamiento de objetos OLTP en memoria.|  
-|xtp_storage_percent|**decimal (5, 2)**|Uso del almacenamiento para OLTP en memoria en porcentaje del límite del nivel de servicio (al final del intervalo de informes). Esto incluye la memoria usada para el almacenamiento de los siguientes objetos OLTP en memoria: tablas, índices y variables de tabla con optimización para memoria. También incluye la memoria usada para procesar las operaciones de ALTER TABLE.<br /><br /> Devuelve 0 si no se utiliza OLTP en memoria en la base de datos.|  
+|avg_memory_usage_percent|**decimal (5, 2)**|Uso de memoria promedio como porcentaje del límite del nivel de servicio.<br /><br /> Esto incluye la memoria usada para las páginas del grupo de búferes y el almacenamiento de In-Memory objetos OLTP.|  
+|xtp_storage_percent|**decimal (5, 2)**|Uso del almacenamiento para In-Memory OLTP en porcentaje del límite del nivel de servicio (al final del intervalo de generación de informes). Esto incluye la memoria usada para el almacenamiento de los siguientes In-Memory objetos OLTP: tablas optimizadas para memoria, índices y variables de tabla. También incluye la memoria usada para procesar las operaciones de ALTER TABLE.<br /><br /> Devuelve 0 si no se utiliza In-Memory OLTP en la base de datos.|  
 |max_worker_percent|**decimal (5, 2)**|Número máximo de trabajos simultáneos (solicitudes) en porcentaje del límite del nivel de servicio de la base de datos.|  
 |max_session_percent|**decimal (5, 2)**|Número máximo de sesiones simultáneas en porcentaje del límite del nivel de servicio de la base de datos.|  
 |dtu_limit|**int**|Valor actual máximo de DTU de base de datos para esta base de datos durante este intervalo. En el caso de las bases de datos que usan el modelo basado en núcleo virtual, esta columna es NULL.|
@@ -56,7 +56,7 @@ ms.locfileid: "91833698"
 ## <a name="permissions"></a>Permisos
  Esta vista necesita el permiso VIEW DATABASE STATE.  
   
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
  Los datos devueltos por **Sys.dm_db_resource_stats** se expresan como un porcentaje de los límites máximos permitidos para el nivel de servicio/nivel de rendimiento que se está ejecutando.
  
  Si la base de datos ha conmutado por error a otro servidor en los últimos 60 minutos, la vista solo devolverá datos durante el tiempo transcurrido desde esa conmutación por error.  

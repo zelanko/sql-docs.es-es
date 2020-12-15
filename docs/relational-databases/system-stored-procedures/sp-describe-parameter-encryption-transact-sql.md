@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35bf38e3c6ac85fe27af595571785f8d34a6f0d4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b06ee1588fe46b04348d2e9595eb72206f7b57d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646495"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466826"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 
@@ -46,9 +46,9 @@ sp_describe_parameter_encryption
  Una o varias instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transact-SQL_batch puede ser nvarchar (n) o nvarchar (Max).  
   
  [ \@ params =] N'parameters '  
- * \@ params* proporciona una cadena de declaración para los parámetros del lote de Transact-SQL, que es similar a sp_executesql. Los parámetros pueden ser nvarchar (n) o nvarchar (Max).  
+ *\@ params* proporciona una cadena de declaración para los parámetros del lote de Transact-SQL, que es similar a sp_executesql. Los parámetros pueden ser nvarchar (n) o nvarchar (Max).  
   
- Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en el [!INCLUDE[tsql](../../includes/tsql-md.md)] _batch. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. *n* es un marcador de posición que indica definiciones de parámetros adicionales. Todos los parámetros especificados en la instrucción deben definirse en * \@ params*. Si la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o el lote de la instrucción no contiene parámetros, * \@ * no es necesario realizar ningún parámetro. NULL es el valor predeterminado para este parámetro.  
+ Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en el [!INCLUDE[tsql](../../includes/tsql-md.md)] _batch. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. *n* es un marcador de posición que indica definiciones de parámetros adicionales. Todos los parámetros especificados en la instrucción deben definirse en *\@ params*. Si la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o el lote de la instrucción no contiene parámetros, *\@* no es necesario realizar ningún parámetro. NULL es el valor predeterminado para este parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
  0 indica que la operación se ha realizado correctamente. Cualquier otro elemento indica un error.  
@@ -66,8 +66,8 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|Identificador de la fila del conjunto de resultados.|  
 |**database_id**|**int**|Identificador de base de datos.|  
-|**column_encryption_key_id**|**int**|Identificador de la clave de cifrado de la columna. Nota: este identificador denota una fila en la vista de catálogo [Sys. column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
-|**column_encryption_key_version**|**int**|Reservado para uso futuro. Actualmente, siempre contiene 1.|  
+|**column_encryption_key_id**|**int**|Identificador de la clave de cifrado de la columna. Nota: este identificador denota una fila en la sys.column_encryption_keys &#40;vista de catálogo de [Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
+|**column_encryption_key_version**|**int**|Reservado para un uso futuro. Actualmente, siempre contiene 1.|  
 |**column_encryption_key_metadata_version**|**Binary(8**|Marca de tiempo que representa la hora de creación de la clave de cifrado de columna.|  
 |**column_encryption_key_encrypted_value**|**varbinary (4000)**|Valor cifrado de la clave de cifrado de columna.|  
 |**column_master_key_store_provider_name**|**sysname**|Nombre del proveedor del almacén de claves que contiene la clave maestra de columna, que se usó para generar el valor cifrado de la clave de cifrado de columna.|  
@@ -79,13 +79,13 @@ sp_describe_parameter_encryption
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|Identificador de la fila del conjunto de resultados.|  
-|**parameter_name**|**sysname**|Nombre de uno de los parámetros especificados en el argumento * \@ params* .|  
+|**parameter_name**|**sysname**|Nombre de uno de los parámetros especificados en el argumento *\@ params* .|  
 |**column_encryption_algorithm**|**tinyint**|Código que indica el algoritmo de cifrado configurado para la columna, el parámetro corresponde a. Los valores admitidos actualmente son: 2 para **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
 |**column_encryption_type**|**tinyint**|Código que indica el tipo de cifrado configurado para la columna, el parámetro corresponde a. Los valores admitidos son:<br /><br /> 0: texto sin formato (la columna no está cifrada)<br /><br /> 1: cifrado aleatorio<br /><br /> 2-cifrado determinista.|  
 |**column_encryption_key_ordinal**|**int**|Código de la fila del primer conjunto de resultados. La fila a la que se hace referencia describe la clave de cifrado de columnas configurada para la columna, el parámetro corresponde a.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Número de versión del algoritmo de normalización de tipos.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador de cliente, compatible Always Encrypted, llama automáticamente a **sp_describe_parameter_encryption** para recuperar los metadatos de cifrado de las consultas con parámetros, emitidos por la aplicación. Posteriormente, el controlador utiliza los metadatos de cifrado para cifrar los valores de los parámetros que corresponden a las columnas de base de datos protegidas con Always Encrypted y sustituye los valores de parámetro de texto simple, enviados por la aplicación, con los valores de parámetro cifrados, antes de enviar la consulta al motor de base de datos.  
   
 ## <a name="permissions"></a>Permisos  
@@ -165,7 +165,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |--------------------------------------|------------------------------------------------------|  
 |1|1|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Desarrollo de aplicaciones con Always Encrypted](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   

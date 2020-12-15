@@ -17,13 +17,13 @@ ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce7be0a6f01ac92f13f35e4410dc59601fdbdc01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 129fceaeac7de8ca1ab44ff181dd0971b3744fa5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790565"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473106"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Pasar parámetros a diagramas de actualización (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "85790565"
   
 1.  Copie el diagrama de actualización anterior en el Bloc de notas y guárdelo en un archivo como UpdategramWithParameters.xml.  
   
-2.  Prepare el script SQLXML 4,0 test (Sqlxml4test. vbs) en [usar ado para ejecutar consultas sqlxml 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para ejecutar el diagrama agregando las siguientes líneas después de `cmd.Properties("Output Stream").Value = outStream` :  
+2.  Prepare el script de prueba SQLXML 4,0 (Sqlxml4test.vbs) en [usar ado para ejecutar consultas sqlxml 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para ejecutar el diagrama agregando las siguientes líneas después de `cmd.Properties("Output Stream").Value = outStream` :  
 
     ```  
     cmd.NamedParameters = True  
@@ -100,7 +100,7 @@ ms.locfileid: "85790565"
   
 1.  Copie el diagrama de actualización anterior en el Bloc de notas y guárdelo en un archivo como UpdategramPassingNullvalues.xml.  
   
-2.  Prepare el script SQLXML 4,0 test (Sqlxml4test. vbs) en [usar ado para ejecutar consultas sqlxml 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para ejecutar el diagrama agregando las siguientes líneas después de `cmd.Properties("Output Stream").Value = outStream` :  
+2.  Prepare el script de prueba SQLXML 4,0 (Sqlxml4test.vbs) en [usar ado para ejecutar consultas sqlxml 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) para ejecutar el diagrama agregando las siguientes líneas después de `cmd.Properties("Output Stream").Value = outStream` :  
   
     ```  
     cmd.NamedParameters = True  

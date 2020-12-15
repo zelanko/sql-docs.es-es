@@ -18,13 +18,13 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 06/10/2016
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94773e515b4bb184b1ff669c2bddb05c5723e208
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 21b823aeaa319263a3e90a3ddd917e9605506c0c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067370"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472866"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 
@@ -46,12 +46,12 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
 ## <a name="arguments"></a>Argumentos  
  *\@tsql*  
- Una o varias instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact-SQL_batch* puede ser **nvarchar (**_n_*_)_* o **nvarchar (Max)** .  
+ Una o varias instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact-SQL_batch* puede ser **nvarchar (**_n_*_)_* o **nvarchar (Max)**.  
   
  *\@params*  
- \@params proporciona una cadena de declaración para los parámetros del [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, similar a sp_executesql. Los parámetros pueden ser **nvarchar (n)** o **nvarchar (Max)** .  
+ \@params proporciona una cadena de declaración para los parámetros del [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, similar a sp_executesql. Los parámetros pueden ser **nvarchar (n)** o **nvarchar (Max)**.  
   
- Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en el [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch* . La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. *n* es un marcador de posición que indica definiciones de parámetros adicionales. Todos los parámetros especificados en stmt deben definirse en \@ params. Si la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o el lote de la instrucción no contiene parámetros, \@ no es necesario realizar ningún parámetro. NULL es el valor predeterminado para este parámetro.  
+ Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en el [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. *n* es un marcador de posición que indica definiciones de parámetros adicionales. Todos los parámetros especificados en stmt deben definirse en \@ params. Si la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o el lote de la instrucción no contiene parámetros, \@ no es necesario realizar ningún parámetro. NULL es el valor predeterminado para este parámetro.  
   
  *\@include_browse_information*  
  Si está establecido en 1, cada consulta se analiza como si tuviera una opción FOR BROWSE en la consulta. Se devuelven las columnas de clave adicionales e información de la tabla de origen.  
@@ -59,7 +59,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ## <a name="table-returned"></a>Tabla devuelta  
  Estos metadatos comunes se devuelven como un conjunto de resultados. Una fila para cada columna de los metadatos de resultados describe el tipo y la nulabilidad de la columna en el formato que se muestra en la siguiente tabla. Si la primera instrucción no existe en cada una de las rutas de acceso de control, se devuelve un conjunto de resultados con cero filas.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Especifica que la columna es una columna adicional agregada con la finalidad de buscar información que realmente no aparece en el conjunto de resultados.|  
 |**column_ordinal**|**int**|Contiene la posición ordinal de la columna en el conjunto de resultados. La posición de la primera columna se especificará como 1.|  
@@ -67,7 +67,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**is_nullable**|**bit**|Contiene los valores siguientes:<br /><br /> El valor 1 si la columna permite valores NULL.<br /><br /> El valor 0 si la columna no permite valores NULL.<br /><br /> El valor 1 si no se puede determinar que la columna admite valores NULL.|  
 |**system_type_id**|**int**|Contiene el system_type_id del tipo de datos de la columna tal y como se especifica en sys. types. En el caso de los tipos de CLR, aunque la columna system_type_name devuelva NULL, esta columna devolverá el valor 240.|  
 |**system_type_name**|**nvarchar(256)**|Contiene el nombre y los argumentos (como length, precision y scale) especificados para el tipo de datos de la columna.<br /><br /> Si el tipo de datos es un tipo de alias definido por el usuario, el tipo de sistema subyacente se especifica aquí.<br /><br /> Si es un tipo de datos definido por el usuario de CLR, en esta columna se devuelve NULL.|  
-|**max_length**|**smallint**|Longitud máxima de la columna, en bytes.<br /><br /> -1 = el tipo de datos de la columna es **VARCHAR (Max)** , **nvarchar (Max)** , **varbinary (Max)** o **XML** .<br /><br /> En el caso de las columnas de **texto** , el valor **max_length** será 16 o el valor establecido por **sp_tableoption ' Text in row '** .|  
+|**max_length**|**smallint**|Longitud máxima de la columna, en bytes.<br /><br /> -1 = el tipo de datos de la columna es **VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)** o **XML**.<br /><br /> En el caso de las columnas de **texto** , el valor **max_length** será 16 o el valor establecido por **sp_tableoption ' Text in row '**.|  
 |**precisión**|**tinyint**|Precisión de la columna, si está basada en números. De lo contrario, devuelve 0.|  
 |**scale**|**tinyint**|La escala de la columna se basa en valores numéricos. De lo contrario, devuelve 0.|  
 |**collation_name**|**sysname**|Nombre de la intercalación de la columna, si está basada en caracteres. De lo contrario, devuelve NULL.|  
@@ -104,7 +104,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type_desc**|**nvarchar(60)**|Contiene una cadena corta en mayúsculas que representa el error que se va a devolver. Se asigna a error_type. Vea la lista bajo las notas.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función utiliza el mismo algoritmo que **sp_describe_first_result_set** . Para obtener más información, vea [sp_describe_first_result_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ Esta función utiliza el mismo algoritmo que **sp_describe_first_result_set**. Para obtener más información, vea [sp_describe_first_result_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  En la tabla siguiente se muestran los tipos de error y su descripción.  
   
@@ -119,7 +119,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |7|EXTENDED_PROCEDURE|El resultado no se pudo determinar porque un procedimiento almacenado extendido podría devolver el primer resultado.|  
 |8|UNDECLARED_PARAMETER|No se pudo determinar el resultado porque el tipo de datos de una o varias de las columnas del conjunto de resultados depende potencialmente de un parámetro no declarado.|  
 |9|RECURSION|El resultado no se pudo determinar porque el lote contiene una instrucción recursiva.|  
-|10|TEMPORARY_TABLE|El resultado no se pudo determinar porque el lote contiene una tabla temporal que no es admitida por **sp_describe_first_result_set** .|  
+|10|TEMPORARY_TABLE|El resultado no se pudo determinar porque el lote contiene una tabla temporal que no es admitida por **sp_describe_first_result_set**.|  
 |11|UNSUPPORTED_STATEMENT|El resultado no se pudo determinar porque el lote contiene una instrucción que no es admitida por **sp_describe_first_result_set** (por ejemplo, FETCH, REVERT, etc.).|  
 |12|OBJECT_TYPE_NOT_SUPPORTED|\@No se admite la object_id pasada a la función (es decir, no un procedimiento almacenado)|  
 |13|OBJECT_DOES_NOT_EXIST|\@No se encontró la object_id pasada a la función en el catálogo del sistema.|  
@@ -128,7 +128,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  Requiere permiso para ejecutar el \@ argumento TSQL.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos adicionales del tema [sp_describe_first_result_set &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) se pueden adaptar para usar **Sys.dm_exec_describe_first_result_set** .  
+ Los ejemplos adicionales del tema [sp_describe_first_result_set &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) se pueden adaptar para usar **Sys.dm_exec_describe_first_result_set**.  
   
 ### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. Devolver información acerca de una sola instrucción de Transact-SQL  
  El código siguiente devuelve información acerca de los resultados de una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)].  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
-title: Sys. dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9600439c2f3d58d38cea393886ed90a55e5e7d8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fb51b9913b8a45b582520174cf98a226918d6aa3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550323"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474916"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Esta función de administración dinámica toma @object_id como parámetro y describe los metadatos del primer resultado para el módulo con ese identificador. El @object_id especificado puede ser el identificador de un [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado o un [!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador. Si es el identificador de cualquier otro objeto (como una vista, tabla, función o procedimiento CLR), se especificará un error en las columnas de error del resultado.  
   
- **Sys. dm_exec_describe_first_result_set_for_object** tiene la misma definición del conjunto de resultados que [sys. dm_exec_describe_first_result_set &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) y es similar a [sp_describe_first_result_set &#40;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)&#41;.  
+ **Sys.dm_exec_describe_first_result_set_for_object** tiene la misma definición del conjunto de resultados que [Sys.dm_exec_describe_first_result_set &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) y es similar a [SP_DESCRIBE_FIRST_RESULT_SET &#40;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -97,7 +97,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type**|**int**|Contiene un entero que representa el error que se va a devolver. Se asigna a error_type_desc. Vea la lista bajo las notas.|  
 |**error_type_desc**|**nvarchar(60)**|Contiene una cadena corta en mayúsculas que representa el error que se va a devolver. Se asigna a error_type. Vea la lista bajo las notas.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta función utiliza el mismo algoritmo que **sp_describe_first_result_set**. Para obtener más información, vea [sp_describe_first_result_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  En la tabla siguiente se muestran los tipos de error y su descripción.  
@@ -139,7 +139,7 @@ GO
 ```  
   
 ### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B. Combinar la función sys.dm_exec_describe_first_result_set_for_object y una tabla o vista  
- En el ejemplo siguiente se usa la vista de catálogo del sistema sys. Procedures y la función **Sys. dm_exec_describe_first_result_set_for_object** para mostrar los metadatos de los conjuntos de resultados de todos los procedimientos almacenados en la [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos.  
+ En el ejemplo siguiente se usa la vista de catálogo del sistema sys. Procedures y la función **Sys.dm_exec_describe_first_result_set_for_object** para mostrar los metadatos de los conjuntos de resultados de todos los procedimientos almacenados en la [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos.  
   
 ```  
 USE AdventureWorks2012;  
@@ -155,6 +155,6 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [sp_describe_first_result_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sp_describe_undeclared_parameters &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [Sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
+ [sys.dm_exec_describe_first_result_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
   
   

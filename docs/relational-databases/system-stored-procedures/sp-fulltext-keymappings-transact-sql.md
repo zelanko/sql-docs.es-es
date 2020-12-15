@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfac86a5cb8000203873f2434212bf2b50749a6d
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d51d0f1f2e15bcf6db3be6d7afee6010e9454a4e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810101"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427439"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -44,13 +44,13 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 #### <a name="parameters"></a>Parámetros  
  *table_id*  
- Identificador de objeto de la tabla con índice de texto completo. Si especifica un *table_id*no válido, se devuelve un error. Para obtener información sobre cómo obtener el identificador de objeto de una tabla, vea [OBJECT_ID &#40;&#41;de Transact-SQL ](../../t-sql/functions/object-id-transact-sql.md).  
+ Identificador de objeto de la tabla con índice de texto completo. Si especifica un *table_id* no válido, se devuelve un error. Para obtener información sobre cómo obtener el identificador de objeto de una tabla, vea [OBJECT_ID &#40;&#41;de Transact-SQL ](../../t-sql/functions/object-id-transact-sql.md).  
   
  *DocID*  
  Identificador de documento interno (DocId) que corresponde al valor de clave. Un valor de *docid* no válido no devuelve ningún resultado.  
   
  *key*  
- Valor de clave de texto completo de la tabla especificada. Un valor de *key* no válido no devuelve ningún resultado. Para obtener información sobre los valores de clave de texto completo, vea [Administrar índices de texto completo](../search/create-and-manage-full-text-indexes.md).  
+ Valor de clave de texto completo de la tabla especificada. Un valor de *key* no válido no devuelve ningún resultado. Para obtener información sobre los valores de clave de texto completo, vea [Administrar índices de Full-Text](../search/create-and-manage-full-text-indexes.md).  
   
 > [!IMPORTANT]  
 >  Para obtener información sobre cómo usar uno, dos o tres parámetros, vea "Notas" más adelante en este tema.  
@@ -70,7 +70,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="permissions"></a>Permisos  
  Esta función es pública y no requiere permisos especiales.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  En la tabla siguiente, se describe el efecto de usar uno, dos o tres parámetros.  
   
 |Esta lista de parámetros...|Tiene este resultado...|  
@@ -81,7 +81,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
  Se devolverá un error en cualquiera de las condiciones siguientes:  
   
--   Especifique una *table_id*no válida.  
+-   Especifique una *table_id* no válida.  
   
 -   La tabla no dispone de un índice de texto completo.  
   

@@ -17,13 +17,13 @@ ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f5793bef7a6b025198972b1be40fc9f482fd53c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9dedf4df4aa43f79ca4146da6f1183b0ee06286b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649742"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431382"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Especificar una ruta de acceso de ubicación (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "85649742"
   
 -   **Eje**  
   
-     El eje especifica la relación jerárquica entre los nodos seleccionados por el paso de ubicación y el nodo de contexto. Se admiten los ejes **primario**, **secundario**, **atributo**y **propio** . Si se especifica un eje **secundario** en la ruta de acceso de ubicación, todos los nodos seleccionados por la consulta serán los elementos secundarios del nodo de contexto. Si se especifica un eje **primario** , el nodo seleccionado es el nodo primario del nodo de contexto. Si se especifica un eje de **atributo** , los nodos seleccionados son los atributos del nodo de contexto.  
+     El eje especifica la relación jerárquica entre los nodos seleccionados por el paso de ubicación y el nodo de contexto. Se admiten los ejes **primario**, **secundario**, **atributo** y **propio** . Si se especifica un eje **secundario** en la ruta de acceso de ubicación, todos los nodos seleccionados por la consulta serán los elementos secundarios del nodo de contexto. Si se especifica un eje **primario** , el nodo seleccionado es el nodo primario del nodo de contexto. Si se especifica un eje de **atributo** , los nodos seleccionados son los atributos del nodo de contexto.  
   
 -   **Prueba de nodo**  
   
-     Una prueba de nodo especifica el tipo de nodo seleccionado por el paso de ubicación. Cada eje (**secundario**, **primario**, **atributo**y **propio**) tiene un tipo de nodo principal. Para el eje de **atributo** , el tipo de nodo principal es **\<attribute>** . En el caso de los ejes **primario**, **secundario**y **propio** , el tipo de nodo principal es **\<element>** .  
+     Una prueba de nodo especifica el tipo de nodo seleccionado por el paso de ubicación. Cada eje (**secundario**, **primario**, **atributo** y **propio**) tiene un tipo de nodo principal. Para el eje de **atributo** , el tipo de nodo principal es **\<attribute>** . En el caso de los ejes **primario**, **secundario** y **propio** , el tipo de nodo principal es **\<element>** .  
   
      Por ejemplo, si la ruta de acceso de ubicación especifica **Child:: Customer**, **\<Customer>** se seleccionan los elementos secundarios del nodo de contexto. Dado que el eje **secundario** tiene **\<element>** como su tipo de nodo principal, la prueba de nodo, Customer, es true si Customer es un **\<element>** nodo.  
   

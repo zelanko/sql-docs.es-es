@@ -1,6 +1,6 @@
 ---
 description: sys.sql_modules (Transact-SQL)
-title: Sys. sql_modules (Transact-SQL) | Microsoft Docs
+title: sys.sql_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/06/2018
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fef38d2e060e8b9442a29fb83e821de0e93822b5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: acf5f7195a3ee997590d9625615038577779fd14
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551388"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429353"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,10 +51,10 @@ ms.locfileid: "89551388"
 |**inline_type**|**bit**|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] y versiones posteriores.<br /><br />Indica si la inserción está activada para el módulo actualmente. <br /><br />0 = la inclusión está desactivada<br /><br /> 1 = la inserción está activada.<br /><br /> En el caso de las UDF escalares, el valor será 1 si la inserción está activada (explícita o implícitamente). El valor siempre será 1 para TVF en línea y 0 para otros tipos de módulo.<br />|  
 
   
-## <a name="remarks"></a>Observaciones  
- La expresión SQL de una restricción predeterminada, objeto de tipo D, se encuentra en la vista de catálogo [Sys. default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) . La expresión SQL de una restricción CHECK, objeto de tipo C, se encuentra en la vista de catálogo [Sys. check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) .  
+## <a name="remarks"></a>Comentarios  
+ La expresión SQL de una restricción predeterminada, objeto de tipo D, se encuentra en la vista de catálogo [Sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) . La expresión SQL de una restricción CHECK, objeto de tipo C, se encuentra en la vista de catálogo [Sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) .  
   
- Esta información también se describe en [Sys. dm_db_uncontained_entities &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
+ Esta información también se describe en [sys.dm_db_uncontained_entities &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

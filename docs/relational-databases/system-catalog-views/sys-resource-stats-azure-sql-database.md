@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: eea603b089c93b86b92ac39a22d0c6e9c64b49d9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 835fcabe9a247efb7cf280eb89a0baefd4076640
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91807025"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429131"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91807025"
 |max_worker_percent|**decimal (5, 2)**|Número máximo de trabajos simultáneos (solicitudes) en porcentaje según el límite del nivel de servicio de la base de datos.<br /><br /> El máximo se calcula actualmente para el intervalo de cinco minutos basado en las muestras de 15 segundos de los recuentos de trabajo simultáneos.|  
 |max_session_percent|**decimal (5, 2)**|Número máximo de sesiones simultáneas en porcentaje según el límite del nivel de servicio de la base de datos.<br /><br /> El valor máximo se calcula actualmente para el intervalo de cinco minutos basado en las muestras de 15 segundos de los recuentos de sesiones simultáneas.|  
 |dtu_limit|**int**|Valor actual máximo de DTU de base de datos para esta base de datos durante este intervalo. |
-|xtp_storage_percent|**decimal (5, 2)**|Uso del almacenamiento para OLTP en memoria en porcentaje del límite del nivel de servicio (al final del intervalo de informes). Esto incluye la memoria usada para el almacenamiento de los siguientes objetos OLTP en memoria: tablas, índices y variables de tabla con optimización para memoria. También incluye la memoria usada para procesar las operaciones de ALTER TABLE.<br /><br /> Devuelve 0 si no se utiliza OLTP en memoria en la base de datos.|
+|xtp_storage_percent|**decimal (5, 2)**|Uso del almacenamiento para In-Memory OLTP en porcentaje del límite del nivel de servicio (al final del intervalo de generación de informes). Esto incluye la memoria usada para el almacenamiento de los siguientes In-Memory objetos OLTP: tablas optimizadas para memoria, índices y variables de tabla. También incluye la memoria usada para procesar las operaciones de ALTER TABLE.<br /><br /> Devuelve 0 si no se utiliza In-Memory OLTP en la base de datos.|
 |avg_login_rate_percent|**decimal (5, 2)**|Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|
 |avg_instance_cpu_percent|**decimal (5, 2)**|Uso promedio de la CPU de la base de datos como porcentaje del proceso de SQL Database.|
 |avg_instance_memory_percent|**decimal (5, 2)**|Promedio de uso de memoria de base de datos como porcentaje del proceso de SQL Database.|
@@ -62,7 +62,7 @@ ms.locfileid: "91807025"
 ## <a name="permissions"></a>Permisos  
  Esta vista está disponible para todos los roles de usuario con permisos para conectarse a la base de datos **maestra** virtual.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los datos devueltos por **Sys.resource_stats** se expresan como un porcentaje de los límites máximos permitidos para el nivel de servicio/nivel de rendimiento que se está ejecutando.  
   
  Cuando una base de datos es miembro de un grupo elástico, las estadísticas de recursos que se presentan como valores porcentuales se expresan como el porcentaje del límite máximo de las bases de datos establecidas en la configuración del grupo elástico.  

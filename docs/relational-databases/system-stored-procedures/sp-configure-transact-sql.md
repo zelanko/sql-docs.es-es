@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e02f07a78dc5f3022bfd1f374738f22b326ca94e
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: bd045c01439e2913179fdf2188448772f20d9f48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955866"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427424"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -65,7 +65,7 @@ RECONFIGURE
   
  Para obtener información sobre las opciones de configuración disponibles y su configuración, consulte [Opciones de configuración del servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-`[ @configvalue = ] 'value'` Es el nuevo valor de configuración. *value* es de tipo **int**y su valor predeterminado es NULL. El valor máximo depende de la opción individual.  
+`[ @configvalue = ] 'value'` Es el nuevo valor de configuración. *value* es de tipo **int** y su valor predeterminado es NULL. El valor máximo depende de la opción individual.  
   
  Para ver el valor máximo de cada opción, vea la columna **Maximum** de la vista de catálogo **sys.configurations** .  
   
@@ -102,7 +102,7 @@ RECONFIGURE
   
  La instrucción RECONFIGURE actualiza algunas opciones dinámicamente; para otras opciones es necesario detener y reiniciar el servidor. Por ejemplo, las opciones de memoria de servidor **min Server** Memory y **Max Server Memory** se actualizan dinámicamente en el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ; por lo tanto, puede cambiarlas sin necesidad de reiniciar el servidor. Por el contrario, para volver a configurar el valor de ejecución de la opción de **factor de relleno** , es necesario reiniciar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- Después de ejecutar reconfigure en una opción de configuración, puede ver si la opción se ha actualizado dinámicamente ejecutando **sp_configure "***option_name***"**. Los valores de las columnas **run_value** y **config_value** deben coincidir para una opción actualizada dinámicamente. También puede comprobar qué opciones son dinámicas examinando la **is_dynamic** columna de la vista de catálogo **sys.configurations** .  
+ Después de ejecutar reconfigure en una opción de configuración, puede ver si la opción se ha actualizado dinámicamente ejecutando **sp_configure "**_option_name_*_"_*. Los valores de las columnas **run_value** y **config_value** deben coincidir para una opción actualizada dinámicamente. También puede comprobar qué opciones son dinámicas examinando la **is_dynamic** columna de la vista de catálogo **sys.configurations** .  
  
  El cambio también se escribe en el registro de errores de SQL Server.
   

@@ -17,13 +17,13 @@ ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a6e50a1e7a770ad8be9777d37b84bc328248159
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a28fe03f8e52d58f0e31c2e7d3cabebfd8a6113c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650043"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431575"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Ejecutar un DiffGram utilizando ADO (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -97,7 +97,7 @@ End Sub
     Microsoft ActiveX Data Objects 2.8 Library  
     ```  
   
-4.  En el cuadro de herramientas, haga clic en **CommandButton**y, a continuación, dibuje un botón en el formulario.  
+4.  En el cuadro de herramientas, haga clic en **CommandButton** y, a continuación, dibuje un botón en el formulario.  
   
 5.  Haga doble clic en el botón para modificar el código y agregue el código de aplicación que se proporciona en el tema.  
   

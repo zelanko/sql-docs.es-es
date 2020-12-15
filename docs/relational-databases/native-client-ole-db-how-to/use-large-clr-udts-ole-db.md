@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cec1e6076820e8d41feb077db417b168e80b05c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b1376f6ab56ae100d70882ee5c2b86301c8d4f42
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448483"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462216"
 ---
 # <a name="use-large-clr-udts--in-sql-server-native-client-ole-db"></a>Usar UDT CLR grandes en SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "88448483"
   En este ejemplo se muestra cómo capturar filas con tipos definidos por el usuario grandes de un conjunto de resultados. Para más información, consulte [Tipos grandes definidos por el usuario de CLR &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo contiene dos proyectos. Un proyecto crea un ensamblado (DLL) a partir de código fuente de C#. Este ensamblado contiene el tipo CLR. Se agregará una tabla a la base de datos. Una columna de la tabla será de un tipo definido en el ensamblado. De forma predeterminada, este ejemplo usará la base de datos maestra. El segundo proyecto es una aplicación de C nativa que lee datos de la tabla.  
+ Este ejemplo contiene dos proyectos. Un proyecto crea un ensamblado (DLL) a partir de código fuente de C#. Este ensamblado contiene el tipo CLR. Se agregará una tabla a la base de datos. Una columna de la tabla será de un tipo definido en el ensamblado. De forma predeterminada, en este ejemplo se usará la base de datos maestra. El segundo proyecto es una aplicación de C nativa que lee datos de la tabla.  
   
  Compile la primera lista de código (C#) a una DLL.  A continuación, copie la DLL en el directorio raíz de la unidad C.  
   

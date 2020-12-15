@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c67769e4afd62c4b69628a263f3485ee63081a2a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a356ea0603d096fc339495f028b1e4f86af81f92
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892015"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463386"
 ---
 # <a name="changing-sql-server-native-client-passwords-programmatically"></a>Cambiar las contraseñas de SQL Server Native Client mediante programación
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "91892015"
 ### <a name="odbc-user-interface-password-expiration"></a>Expiración de contraseñas de la interfaz de usuario de ODBC  
  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite la expiración de la contraseña a través de los cambios realizados en los cuadros de diálogo de **Inicio de sesión SQL Server** .  
   
- Si se llama a [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) y el valor de **DriverCompletion** se establece en SQL_DRIVER_NOPROMPT, se produce un error en el intento de conexión inicial si la contraseña ha expirado. Las llamadas posteriores a **SQLError** o **SQLGetDiagRec**devuelven el valor de SQLSTATE 28000 y el valor de código de error nativo 18487.  
+ Si se llama a [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) y el valor de **DriverCompletion** se establece en SQL_DRIVER_NOPROMPT, se produce un error en el intento de conexión inicial si la contraseña ha expirado. Las llamadas posteriores a **SQLError** o **SQLGetDiagRec** devuelven el valor de SQLSTATE 28000 y el valor de código de error nativo 18487.  
   
  Si **DriverCompletion** se ha establecido en cualquier otro valor, el usuario verá el **SQL Server** cuadro de diálogo de inicio de sesión, independientemente de si la contraseña ha expirado o no. El usuario puede hacer clic en el botón **Opciones** y seleccionar **Cambiar contraseña** para cambiar la contraseña.  
   

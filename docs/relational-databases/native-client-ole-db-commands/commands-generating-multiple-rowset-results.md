@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 791ae266a82168239f7c3a9cf99ef90066e8032f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f88f345a7c30ca240acdacd35cb0e015a4699f16
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455826"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439907"
 ---
-# <a name="sql-server-native-client-commands-generating-multiple-rowset-results"></a>SQL Server Native Client comandos que generan resultados de varios conjuntos de filas
+# <a name="sql-server-native-client-commands-generating-multiple-rowset-results"></a>SQL Server Native Client comandos que generan Multiple-Rowset resultados
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client puede devolver varios conjuntos de filas a partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrucciones. Las instrucciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelven resultados de varios conjuntos de filas si se dan las condiciones siguientes:  

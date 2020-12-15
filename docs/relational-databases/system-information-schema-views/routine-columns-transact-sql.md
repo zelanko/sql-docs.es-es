@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec57f41be3971b41d5bebf6c139b9913666e8c20
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eb990b9cb78d36bfe680562574eda0688422c7c3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753977"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462736"
 ---
 # <a name="routine_columns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91753977"
 |**NUMERIC_PRECISION**|**tinyint**|Precisión de los datos numéricos aproximados, datos numéricos exactos, datos enteros o datos monetarios. De lo contrario, devuelve NULL.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Base de la precisión de datos numéricos aproximados, datos numéricos exactos, datos enteros o datos monetarios. De lo contrario, devuelve NULL.|  
 |**NUMERIC_SCALE**|**tinyint**|Escala de datos numéricos aproximados, datos numéricos exactos, datos enteros o datos monetarios. De lo contrario, devuelve NULL.|  
-|**DATETIME_PRECISION**|**smallint**|Código de subtipo para los tipos de datos**enteros** de **DateTime** e ISO. Para otros tipos de datos, devuelve NULL.|  
+|**DATETIME_PRECISION**|**smallint**|Código de subtipo para los tipos de datos **enteros** de **DateTime** e ISO. Para otros tipos de datos, devuelve NULL.|  
 |**CHARACTER_SET_CATALOG**|**VARCHAR (** 6 **)**|Devuelve **Master**. Esto indica la base de datos en la que se encuentra el juego de caracteres si la columna es de tipo de datos de caracteres o de **texto** . De lo contrario, devuelve NULL.|  
 |**CHARACTER_SET_SCHEMA**|**VARCHAR (** 3 **)**|Siempre devuelve NULL.|  
 |**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|Devuelve el nombre único del juego de caracteres si esta columna es de tipo de datos de caracteres o de **texto** . De lo contrario, devuelve NULL.|  

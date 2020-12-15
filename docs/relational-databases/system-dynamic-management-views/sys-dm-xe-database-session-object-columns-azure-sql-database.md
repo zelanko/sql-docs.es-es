@@ -10,14 +10,14 @@ ms.topic: language-reference
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 78543caf023e0cdb9d677dcd43e7b62143b461a1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 92d1bb472d9d8369e116501b31f78dd2c5d3c8ff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546436"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440710"
 ---
 # <a name="sysdm_xe_database_session_object_columns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "89546436"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary(8**|La dirección de memoria de la sesión de eventos. Tiene una relación de varios a uno con sys. dm_xe_database_sessions. Address. No admite valores NULL.|  
+|event_session_address|**varbinary(8**|La dirección de memoria de la sesión de eventos. Tiene una relación de varios a uno con sys.dm_xe_database_sessions. Address. No admite valores NULL.|  
 |column_name|**nvarchar(60)**|El nombre del valor de configuración. No admite valores NULL.|  
 |column_id|**int**|IDENTIFICADOR de la columna. Es único en el objeto. No admite valores NULL.|  
 |column_value|**nvarchar(2048)**|El valor configurado de la columna. Acepta valores NULL.|  
-|object_type|**nvarchar(60)**|Tipo del objeto.  No acepta valores NULL. object_type es uno de los siguientes:<br /><br /> event<br /><br /> Destino|  
+|object_type|**nvarchar(60)**|Tipo del objeto.  No es nullable.object_type es uno de los siguientes:<br /><br /> event<br /><br /> Destino|  
 |object_name|**nvarchar(60)**|Nombre del objeto al que pertenece esta columna. No admite valores NULL.|  
 |object_package_guid|**uniqueidentifier**|GUID del paquete que contiene el objeto. No admite valores NULL.|  
   
@@ -45,8 +45,8 @@ ms.locfileid: "89546436"
   
 |From|En|Relación|  
 |----------|--------|------------------|  
-|dm_xe_database_session_object_columns. object_name<br /><br /> dm_xe_database_session_object_columns. object_package_guid|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|Varios a uno|  
-|dm_xe_database_session_object_columns. column_name<br /><br /> dm_xe_database_session_object_columns. column_id|sys.dm_xe_object_columns.name<br /><br /> sys.dm_xe_object_columns.column_id|Varios a uno|  
+|dm_xe_database_session_object_columns dm_xe_database_session_object_columns.object_name<br /><br /> dm_xe_database_session_object_columns dm_xe_database_session_object_columns.object_package_guid|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|Varios a uno|  
+|dm_xe_database_session_object_columns dm_xe_database_session_object_columns.column_name<br /><br /> dm_xe_database_session_object_columns dm_xe_database_session_object_columns.column_id|sys.dm_xe_object_columns.name<br /><br /> sys.dm_xe_object_columns.column_id|Varios a uno|  
   
 ## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)  

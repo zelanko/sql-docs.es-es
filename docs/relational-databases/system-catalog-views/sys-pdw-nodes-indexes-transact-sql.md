@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 70d4fbc8c6f6558001211646f79a16a79659e6e9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 173e1435cc8b8ffdee169f5d5955c54955f978c4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036931"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462816"
 ---
 # <a name="syspdw_nodes_indexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "92036931"
 |object_id|**int**|identificador del objeto al que pertenece este índice.||  
 |name|**sysname**|Nombre del índice. Name es único solo dentro del objeto. NULL = Montón||  
 |index_id|**int**|identificador del índice. index_id es exclusivo solo dentro del objeto.<br /><br /> 0 = Montón<br /><br /> 1 = Índice clúster<br /><br /> > 1 = Índice no clúster||  
-|type|**tinyint**|Tipo de índice:<br /><br /> 0 = Montón<br /><br /> 1 = Clúster<br /><br /> 2 = No clúster<br /><br /> 5 = índice de almacén de columnas optimizado para memoria xVelocity en clúster|  
+|tipo|**tinyint**|Tipo de índice:<br /><br /> 0 = Montón<br /><br /> 1 = Clúster<br /><br /> 2 = No clúster<br /><br /> 5 = índice de almacén de columnas optimizado para memoria xVelocity en clúster|  
 |type_desc|**nvarchar(60)**|Descripción del tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> ALMACÉN DE COLUMNAS AGRUPADO||  
 |is_unique|**bit**|0 = El índice no es exclusivo.|Siempre es 0.|  
 |data_space_id|**int**|identificador del espacio de datos para este índice. El espacio de datos es un grupo de archivos o un esquema de partición.<br /><br /> 0 = object_id es una función con valores de tabla.||  

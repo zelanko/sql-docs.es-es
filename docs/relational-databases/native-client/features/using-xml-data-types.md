@@ -30,13 +30,13 @@ helpviewer_keywords:
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b095eace82538b8d10efd0c628b467560ef36edf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 76b24491df72773fb45b0513720151ed9a9c6585
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428217"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461966"
 ---
 # <a name="using-xml-data-types-in-sql-server-native-clients"></a>Usar tipos de datos XML en SQL Server clientes nativos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "88428217"
 -   Un elemento **ISequentialStream**  
   
 > [!NOTE]  
->  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client no incluye un lector Sax, pero **ISequentialStream** se puede pasar fácilmente a objetos Sax y Dom en MSXML.  
+>  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client no incluye un lector Sax, pero  se puede pasar fácilmente a objetos Sax y Dom en MSXML.  
   
  **ISequentialStream** debe usarse para la recuperación de documentos XML de gran tamaño. Las mismas técnicas que se usan para otros tipos de valores grandes también se aplican a XML. Para más información, consulte [Usar tipos de valor grande](../../../relational-databases/native-client/features/using-large-value-types.md).  
   
@@ -80,7 +80,7 @@ ms.locfileid: "88428217"
  Si el XML de entrada se enlaza como DBTYPE_WSTR, la aplicación debe asegurarse de que se trata de Unicode codificado para evitar cualquier posibilidad de que se produzcan daños a causa de conversiones de datos no deseadas.  
   
 ### <a name="data-bindings-and-coercions"></a>Enlaces y conversiones de datos  
- En la tabla siguiente, se describen el enlace y la coerción que tienen lugar al usar los tipos de datos enumerados con el tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]xml**de**.  
+ En la tabla siguiente, se describen el enlace y la coerción que tienen lugar al usar los tipos de datos enumerados con el tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]xml **de**.  
   
 |Tipo de datos|A datos XML<br /><br /> **XML**|A datos XML<br /><br /> **Distinto de XML**|Desde datos XML<br /><br /> **XML**|Desde datos XML<br /><br /> **Distinto de XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
@@ -191,7 +191,7 @@ ms.locfileid: "88428217"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client agrega nuevos valores o cambios a muchas de las interfaces de OLE DB principales.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>La interfaz ISSCommandWithParameters  
- Con el fin de admitir el tipo de datos **XML** a través de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa diversos cambios, incluida la adición de la interfaz [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) . Esta nueva interfaz hereda de la interfaz OLE DB básica **ICommandWithParameters**. Además de los tres métodos heredados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**y **SetParameterInfo**; **ISSCommandWithParameters** proporciona los métodos [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) y [SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) que se usan para administrar tipos de datos específicos del servidor.  
+ Con el fin de admitir el tipo de datos **XML** a través de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa diversos cambios, incluida la adición de la interfaz [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) . Esta nueva interfaz hereda de la interfaz OLE DB básica **ICommandWithParameters**. Además de los tres métodos heredados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames** y **SetParameterInfo**; **ISSCommandWithParameters** proporciona los métodos [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) y [SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) que se usan para administrar tipos de datos específicos del servidor.  
   
 > [!NOTE]  
 >  La interfaz **ISSCommandWithParameters** también usa la nueva estructura SSPARAMPROPS.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 625157885fa4494f4d8c70da5bea8ac70472d3b5
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 55514f89487a06e16413f199f744013d2c4f8c90
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809491"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461506"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -53,7 +53,7 @@ Una consulta SQL válida
 Se devuelve una columna de puntuación, así como todas las columnas de paso a través del origen de datos de entrada.
 Se pueden devolver columnas de puntuación adicionales, como el intervalo de confianza, si el algoritmo admite la generación de estos valores.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Para habilitar el uso del procedimiento almacenado, SQLCLR debe estar habilitado en la instancia.
 
@@ -135,7 +135,7 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-Además de ser una consulta SQL válida, los datos de entrada de * \@ inputData* deben incluir columnas compatibles con las columnas del modelo almacenado.
+Además de ser una consulta SQL válida, los datos de entrada de *\@ inputData* deben incluir columnas compatibles con las columnas del modelo almacenado.
 
 `sp_rxPredict` solo admite los siguientes tipos de columna de .NET: Double, Float, Short, ushort, Long, ulong y String. Es posible que tenga que filtrar los tipos no admitidos en los datos de entrada antes de usarlo para la puntuación en tiempo real. 
 

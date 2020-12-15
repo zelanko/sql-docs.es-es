@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 198707a1ffda49a3ffc28d0d35eadced99e4b149
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9726ac52d0579c56de3c3ad971028cd606748726
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535072"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462686"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -44,15 +44,15 @@ sp_prepare handle OUTPUT, params, stmt, options
  Es un identificador de *controlador preparado* generado por SQL Server. *Handle* es un parámetro necesario con un valor devuelto **int** .  
   
  *params*  
- Identifica instrucciones con parámetros. La definición de *params* de variables se sustituye por los marcadores de parámetros de la instrucción. *params* es un parámetro necesario que requiere un valor de entrada **ntext**, **nchar**o **nvarchar** . Escriba un valor NULL si la instrucción no tiene parámetros.  
+ Identifica instrucciones con parámetros. La definición de *params* de variables se sustituye por los marcadores de parámetros de la instrucción. *params* es un parámetro necesario que requiere un valor de entrada **ntext**, **nchar** o **nvarchar** . Escriba un valor NULL si la instrucción no tiene parámetros.  
   
  *instrucción*  
- Define el conjunto de resultados del cursor. El parámetro *stmt* es obligatorio y llama a para un valor de entrada **ntext**, **nchar**o **nvarchar** .  
+ Define el conjunto de resultados del cursor. El parámetro *stmt* es obligatorio y llama a para un valor de entrada **ntext**, **nchar** o **nvarchar** .  
   
  *options*  
  Parámetro opcional que devuelve una descripción de las columnas del conjunto de resultados del cursor. *Options* requiere el siguiente valor de entrada int:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   

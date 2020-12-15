@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7355f421701c5eb24da58dec5037b5fb1b8317c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0616ed8334665f1c6226ad8bd28ed3e968a04be7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548334"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462726"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -87,7 +87,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. Enlazar una regla a un tipo de datos de alias  
- Suponiendo que existe una regla denominada `rule_ssn` y un tipo de datos de alias denominado `ssn`, este ejemplo enlaza `rule_ssn` a `ssn`. En una instrucción CREATE TABLE, las columnas del tipo `ssn` heredan la regla `rule_ssn`. Las columnas existentes de tipo `ssn` también heredan la `rule_ssn` regla, a menos que se especifique **futureonly** para *futureonly_flag*o `ssn` que tenga una regla enlazada directamente a ella. Las reglas enlazadas a columnas siempre tienen prioridad sobre las enlazadas a tipos de datos.  
+ Suponiendo que existe una regla denominada `rule_ssn` y un tipo de datos de alias denominado `ssn`, este ejemplo enlaza `rule_ssn` a `ssn`. En una instrucción CREATE TABLE, las columnas del tipo `ssn` heredan la regla `rule_ssn`. Las columnas existentes de tipo `ssn` también heredan la `rule_ssn` regla, a menos que se especifique **futureonly** para *futureonly_flag* o `ssn` que tenga una regla enlazada directamente a ella. Las reglas enlazadas a columnas siempre tienen prioridad sobre las enlazadas a tipos de datos.  
   
 ```  
 USE master;  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_io_cluster_shared_drives (Transact-SQL)
-title: Sys. dm_io_cluster_shared_drives (Transact-SQL) | Microsoft Docs
+title: sys.dm_io_cluster_shared_drives (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: c8fcced8-c780-49dc-99bd-6beb3ca532c4
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52582d7377ab7a8df39e7b752a4e7842d8c6c1fc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ed6f7581fb605009fbbdc25c116e3317a5236ec7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532772"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97444275"
 ---
 # <a name="sysdm_io_cluster_shared_drives-transact-sql"></a>sys.dm_io_cluster_shared_drives (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -34,18 +34,18 @@ ms.locfileid: "89532772"
   Esta vista devuelve el nombre de cada unidad compartida si la instancia de servidor actual es un servidor en clúster. Si la instancia del servidor actual no es una instancia en clúster, devuelve un conjunto de filas vacío.  
   
 > [!NOTE]  
->  Para llamarlo desde [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilice el nombre **sys. dm_pdw_nodes_io_cluster_shared_drives**.  
+>  Para llamarlo desde [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilice el nombre **Sys.dm_pdw_nodes_io_cluster_shared_drives**.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**DriveName**|**nchar(2)**|Nombre de la unidad (la letra de unidad) que representa un disco individual que forma parte de la matriz de discos compartida del clúster. La columna no acepta valores NULL.|  
 |**pdw_node_id**|**int**|**Se aplica a**: ssPDW<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cuando se habilita la agrupación en clústeres, la instancia en clúster de conmutación por error requiere que los archivos de datos y de registro estén en discos compartidos para que puedan estar accesibles después de que la instancia realice una conmutación por error a otro nodo. Cada una de las filas de esta vista representa un único disco compartido que utiliza esta instancia en clúster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para almacenar archivos de registros o datos de esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo se pueden utilizar los discos enumerados en esta vista. Los discos enumerados en esta vista son los que están en el grupo de recursos del clúster asociado a la instancia.  
   
 > [!NOTE]  
->  Esta vista quedará desusada en una versión futura. En su lugar, se recomienda usar [Sys. dm_io_cluster_valid_path_names &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) .  
+>  Esta vista quedará desusada en una versión futura. En su lugar, se recomienda usar [sys.dm_io_cluster_valid_path_names &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) .  
   
 ## <a name="permissions"></a>Permisos  
  El usuario debe tener permiso VIEW SERVER STATE para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -68,9 +68,9 @@ SELECT * FROM sys.dm_io_cluster_shared_drives;
  n  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. dm_io_cluster_valid_path_names &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
- [Sys. dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
- [Sys. fn_servershareddrives &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)   
+ [sys.dm_io_cluster_valid_path_names &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
+ [sys.dm_os_cluster_nodes &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [sys.fn_servershareddrives &#40;&#41;de Transact-SQL ](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

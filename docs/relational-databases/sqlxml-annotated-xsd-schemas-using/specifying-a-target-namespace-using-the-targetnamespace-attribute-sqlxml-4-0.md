@@ -20,17 +20,17 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfa6234aae5e2744a88c4fcfb158575cb07000f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 50eda94d40b819a5cd1fd51855232a53ecfc93db
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764898"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461746"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Especificar un espacio de nombres de destino mediante el atributo targetNamespace (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Al escribir esquemas XSD, puede usar el atributo **targetNamespace** de XSD para especificar un espacio de nombres de destino. En este tema se describe cómo funcionan los atributos XSD **targetNamespace**, **elementFormDefault**y **attributeFormDefault** , cómo afectan a la instancia XML que se genera y cómo se especifican las consultas XPath con espacios de nombres.  
+  Al escribir esquemas XSD, puede usar el atributo **targetNamespace** de XSD para especificar un espacio de nombres de destino. En este tema se describe cómo funcionan los atributos XSD **targetNamespace**, **elementFormDefault** y **attributeFormDefault** , cómo afectan a la instancia XML que se genera y cómo se especifican las consultas XPath con espacios de nombres.  
   
  Puede usar el atributo **xsd: targetNamespace** para colocar elementos y atributos del espacio de nombres predeterminado en un espacio de nombres diferente. También puede especificar si los elementos y los atributos del esquema declarados localmente deben estar certificados por un espacio de nombres, ya sea explícitamente mediante un prefijo o implícitamente de forma predeterminada. Puede usar los atributos **elementFormDefault** y **attributeFormDefault** en el **\<xsd:schema>** elemento para especificar globalmente la calificación de elementos y atributos locales, o puede usar el atributo **Form** para especificar elementos y atributos individuales por separado.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85764898"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. Especificar un espacio de nombres de destino  
- El siguiente esquema XSD especifica un espacio de nombres de destino mediante el atributo **xsd: targetNamespace** . El esquema también establece los valores de atributo **elementFormDefault** y **attributeFormDefault** en **"Unqualified"** (el valor predeterminado de estos atributos). Se trata de una declaración global que afecta a todos los elementos locales ( **\<Order>** en el esquema) y atributos (**CustomerID**, **ContactName**y **OrderID** en el esquema).  
+ El siguiente esquema XSD especifica un espacio de nombres de destino mediante el atributo **xsd: targetNamespace** . El esquema también establece los valores de atributo **elementFormDefault** y **attributeFormDefault** en **"Unqualified"** (el valor predeterminado de estos atributos). Se trata de una declaración global que afecta a todos los elementos locales ( **\<Order>** en el esquema) y atributos (**CustomerID**, **ContactName** y **OrderID** en el esquema).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -103,7 +103,7 @@ ms.locfileid: "85764898"
   
  Este documento de instancia define el espacio de nombres urn: myNameSpace y le asocia un prefijo (Y0). El prefijo solo se aplica al **\<Customer>** elemento global. (El elemento es global porque se declara como elemento secundario del **\<xsd:schema>** elemento en el esquema).  
   
- El prefijo no se aplica a los elementos y atributos locales porque el valor de los atributos **elementFormDefault** y **attributeFormDefault** se establece en **"Unqualified"** en el esquema. Tenga en cuenta que el **\<Order>** elemento es local porque su declaración aparece como un elemento secundario del **\<complexType>** elemento que define el **\<CustomerType>** elemento. Del mismo modo, los atributos (**CustomerID**, **OrderID**y **ContactName**) son locales, no globales.  
+ El prefijo no se aplica a los elementos y atributos locales porque el valor de los atributos **elementFormDefault** y **attributeFormDefault** se establece en **"Unqualified"** en el esquema. Tenga en cuenta que el **\<Order>** elemento es local porque su declaración aparece como un elemento secundario del **\<complexType>** elemento que define el **\<CustomerType>** elemento. Del mismo modo, los atributos (**CustomerID**, **OrderID** y **ContactName**) son locales, no globales.  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>Para crear un ejemplo funcional de este esquema  
   

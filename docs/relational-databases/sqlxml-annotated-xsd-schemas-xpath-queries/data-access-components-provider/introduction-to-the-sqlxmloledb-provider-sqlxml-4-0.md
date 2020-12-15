@@ -15,13 +15,13 @@ ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aafc93dd9cf83a648cc4eecfe9301ad6e3ab24c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6b3d36e6aae398c8b480a800cdd2dc6064eb220e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650081"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462896"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Introducción al proveedor SQLXMLOLEDB (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -40,16 +40,16 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Propiedades específicas del proveedor SQLXMLOLEDB  
  El proveedor SQLXMLOLEDB expone la siguiente propiedad de conexión específica del proveedor.  
   
-|Conexión<br /><br /> propiedad|Predeterminado<br /><br /> (si existe)|Descripción|  
+|Conexión<br /><br /> propiedad|Default<br /><br /> (si existe)|Descripción|  
 |-----------------------------|----------------------------|-----------------|  
 |Proveedor de datos||Proporciona el PROGID del proveedor OLE DB a través del que SQLXMLOLEDB ejecuta los comandos. A partir de SQLXML 4.0 y [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], este proveedor se incluye con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client; por lo tanto, este valor de propiedad se restringe a "SQLNCLI11". Para obtener más información, consulte [Programación de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md).|  
   
  El proveedor SQLXMLOLEDB expone las siguientes propiedades de comando específicas del proveedor.  
   
-|Comando<br /><br /> propiedad|Predeterminado<br /><br /> (si existe)|Descripción|  
+|Comando<br /><br /> propiedad|Default<br /><br /> (si existe)|Descripción|  
 |--------------------------|----------------------------|-----------------|  
 |Ruta de base|""|Especifica la ruta de acceso del archivo base. La ruta de acceso del archivo base se usa para especificar la ubicación del lenguaje de hojas de estilo XML (XSL) o de los archivos de esquema de asignación. La ruta de acceso del archivo base también se utiliza para resolver las rutas de acceso relativas de XSL o archivos de esquema de asignación que se han especificado en las propiedades de esquema XSL o de asignación.<br /><br /> Para obtener un ejemplo en el que se usa esta propiedad, vea [ejecutar consultas XPath &#40;proveedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
-|Clientsidexml,|False|Establezca esta propiedad en True si desea que el proceso de conversión del conjunto de filas a XML se produzca en el cliente en lugar de en el servidor. Esto resulta de gran utilidad si desea mover la carga de rendimiento al nivel intermedio.<br /><br /> Para ver un ejemplo en el que se usa esta propiedad, vea [ejecutar consultas sql &#40;proveedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) o [Ejecutar plantillas que contienen consultas SQL &#40;&#41;proveedor de SQLXMLOLEDB ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
+|Clientsidexml,|Falso|Establezca esta propiedad en True si desea que el proceso de conversión del conjunto de filas a XML se produzca en el cliente en lugar de en el servidor. Esto resulta de gran utilidad si desea mover la carga de rendimiento al nivel intermedio.<br /><br /> Para ver un ejemplo en el que se usa esta propiedad, vea [ejecutar consultas sql &#40;proveedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) o [Ejecutar plantillas que contienen consultas SQL &#40;&#41;proveedor de SQLXMLOLEDB ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
 |Tipo de contenido||Devuelve el tipo de contenido de salida. Esta propiedad es de solo lectura (READ ONLY).<br /><br /> Esta propiedad proporciona información al explorador acerca del tipo de contenido (como TEXT/XML, TEXT/HTML, imagen/jpeg, etc.). El valor de esta propiedad se convierte en el campo **Content-Type** que se envía al explorador como parte del encabezado HTTP, que contiene el tipo MIME (Extensiones multipropósito de correo Internet) del documento que se envía como cuerpo.|  
 |Esquema de asignación|NULL|Si una aplicación cliente ejecuta una consulta XPath en un esquema de asignación (XDR o XSD), esta propiedad se usa para especificar el nombre del esquema de asignación.<br /><br /> La ruta de acceso especificada puede ser relativa (xyz/abc/MySchema.xml) o absoluta (C:\miCarpeta\abc\MySchema.xml).<br /><br /> Si se especifica una ruta de acceso relativa, la ruta de acceso base especificada por la propiedad ruta de acceso base se usa para resolver la ruta de acceso relativa. Si no se ha especificado ninguna ruta de acceso en la propiedad ruta de acceso base, la ruta de acceso relativa es relativa al directorio actual.<br /><br /> Al especificar un valor para la propiedad esquema de asignación, puede especificar una ruta de acceso al directorio local o una dirección URL (https://...). Si especifica una dirección URL, debe configurar WinHTTP para tener acceso a los servidores HTTP y HTTPS a través de un servidor proxy. Puede hacerlo ejecutando la utilidad Proxycfg.exe. Para obtener más información, vea el tema sobre la forma de usar la utilidad de configuración del proxy WinHTTP en MSDN Library.<br /><br /> Para obtener un ejemplo en el que se usa esta propiedad, vea [ejecutar consultas XPath &#40;proveedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
 |espacios de nombres||Esta propiedad habilita la ejecución de consultas XPath que usan espacios de nombres. Para obtener un ejemplo en el que se usa esta propiedad, vea [ejecutar consultas XPath con espacios de nombres &#40;proveedor SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md).|  

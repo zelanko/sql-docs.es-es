@@ -29,13 +29,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15274c3b46ac7b0dfb3e9f43fad0dd1174f5fbbf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6c050a6b34781fc6312e7d410aeccace29e3dc84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775760"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461766"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificar relaciones mediante sql:relationship (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,16 +53,16 @@ ms.locfileid: "85775760"
   
  Para proporcionar los nombres de tabla y la información de combinación necesaria, se especifican los siguientes atributos en la anotación **SQL: Relationship** . Estos atributos solo son válidos con el **\<sql:relationship>** elemento:  
   
- **Name**  
+ **Nombre**  
  Especifica el nombre único de la relación.  
   
  **Parent**  
  Especifica la relación primaria (tabla). Es un atributo opcional; si no se especifica, el nombre de la tabla primaria se obtiene a partir de la información de la jerarquía secundaria del documento. Si el esquema especifica dos jerarquías de elementos primarios y secundarios que utilizan los mismos **\<sql:relationship>** elementos primarios pero distintos, no se especifica el atributo primario en **\<sql:relationship>** . Esta información se obtiene de la jerarquía del esquema.  
   
- **parent-key**  
+ **clave principal**  
  Especifica la clave principal del elemento primario. Si la clave principal se compone de varias columnas, los valores se especifican con un espacio entre ellos. Hay una asignación de posición entre los valores que se especifican para la clave de varias columnas y la clave secundaria correspondiente.  
   
- **Elemento secundario**  
+ **Secundario**  
  Especifica la relación secundaria (tabla).  
   
  **child-key**  

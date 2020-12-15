@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e22fcf286b0f1d336eebdbc5726af7b2c9f15ff0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 09cccfb889bb2eae2b80c2c466eaed1a96520be8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246754"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462006"
 ---
 # <a name="using-encryption-without-validation-in-sql-server-native-client"></a>Usar el cifrado sin validación en SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "87246754"
 
 Los certificados autofirmados no garantizan la seguridad. El protocolo de enlace cifrado se basa en NT LAN Manager (NTLM). Se recomienda encarecidamente que aprovisione un certificado comprobable en SQL Server para la conectividad segura. La seguridad de la capa de transporte (TLS) solo se puede proteger con la validación de certificados.
 
-Las aplicaciones pueden solicitar también el cifrado de todo el tráfico de red mediante palabras clave de cadenas de conexión o propiedades de conexión. Las palabras clave son "Encrypt" para ODBC y OLE DB al usar una cadena de proveedor con **IDbInitialize:: Initialize**o "usar cifrado para datos" para ADO y OLE DB cuando se usa una cadena de inicialización con **IDataInitialize**. También puede configurarse mediante Configuration Manager de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la opción **Forzar cifrado de protocolo** y al configurar el cliente para que solicite conexiones cifradas. De forma predeterminada, el cifrado de todo el tráfico de red de una conexión requiere que se proporcione un certificado en el servidor. Al configurar el cliente para que confíe en el certificado del servidor, podría ser vulnerable a ataques de tipo "Man in the middle". Si implementa un certificado comprobable en el servidor, asegúrese de cambiar la configuración de cliente acerca de confiar en el certificado en FALSE.
+Las aplicaciones pueden solicitar también el cifrado de todo el tráfico de red mediante palabras clave de cadenas de conexión o propiedades de conexión. Las palabras clave son "Encrypt" para ODBC y OLE DB al usar una cadena de proveedor con **IDbInitialize:: Initialize** o "usar cifrado para datos" para ADO y OLE DB cuando se usa una cadena de inicialización con **IDataInitialize**. También puede configurarse mediante Configuration Manager de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la opción **Forzar cifrado de protocolo** y al configurar el cliente para que solicite conexiones cifradas. De forma predeterminada, el cifrado de todo el tráfico de red de una conexión requiere que se proporcione un certificado en el servidor. Al configurar el cliente para que confíe en el certificado del servidor, podría ser vulnerable a ataques de tipo "Man in the middle". Si implementa un certificado comprobable en el servidor, asegúrese de cambiar la configuración de cliente acerca de confiar en el certificado en FALSE.
 
 Para obtener información sobre las palabras clave de cadena de conexión, vea [usar palabras clave de cadena de conexión con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   

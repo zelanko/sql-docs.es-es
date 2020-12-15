@@ -17,13 +17,13 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.SEQUENCES view
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fa13582e155387bbe7b7122e0051d830be2261b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 365b91660769cbb189b23366671486271177e6e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546342"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440596"
 ---
 # <a name="sequences-transact-sql"></a>SECUENCIAS (Transact-SQL)
 
@@ -31,7 +31,7 @@ ms.locfileid: "89546342"
 
 Devuelve una fila por cada secuencia a la que puede tener acceso el usuario actual en la base de datos actual.
 
-Para recuperar información de estas vistas, especifique el nombre completo de **INFORMATION_SCHEMA**_. view_name_.
+Para recuperar información de estas vistas, especifique el nombre completo de **INFORMATION_SCHEMA**_.view_name_.
 
 |Nombre de la columna|Tipo de datos|Descripción|
 |-----------------|---------------|-----------------|

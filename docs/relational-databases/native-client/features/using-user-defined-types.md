@@ -1,5 +1,5 @@
 ---
-description: Usar tipos definidos por el usuario en SQL Server Native Client
+description: Usar tipos de User-Defined en SQL Server Native Client
 title: Uso de tipos definidos por el usuario | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b56a4e3446c827ecd8372876aa54cb023827a861
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2808e712491271fe5738ba4d20ad3e7e2133a451
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448232"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461956"
 ---
-# <a name="using-user-defined-types-in-sql-server-native-client"></a>Usar tipos definidos por el usuario en SQL Server Native Client
+# <a name="using-user-defined-types-in-sql-server-native-client"></a>Usar tipos de User-Defined en SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
   Los tipos definidos por el usuario (UDT) se introdujeron en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Los UDT amplían el sistema de tipos SQL, ya que permiten almacenar objetos y estructuras de datos personalizadas en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los UDT pueden contener varios tipos de datos y pueden presentar distintos comportamientos, lo que los diferencia de los tipos de datos de alias tradicionales que constan de un único tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los UDT pueden definirse mediante cualquiera de los lenguajes compatibles con .NET Common Language Runtime (CLR) que genere código comprobable, como Microsoft Visual C#<sup>®</sup> y Visual Basic<sup>®</sup> .NET. Los datos se exponen como campos y propiedades de una clase o estructura de .NET, y los métodos de esa clase o estructura definen los comportamientos.  
@@ -174,7 +174,7 @@ ms.locfileid: "88448232"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client agrega nuevos valores o cambios a muchas de las interfaces de OLE DB principales.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>La interfaz ISSCommandWithParameters  
- Para admitir los UDT a través de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa diversos cambios, incluida la adición de la interfaz **ISSCommandWithParameters** . Esta nueva interfaz hereda de la interfaz OLE DB básica **ICommandWithParameters**. Además de los tres métodos heredados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**y **SetParameterInfo**; **ISSCommandWithParameters** proporciona los métodos **GetParameterProperties** y **SetParameterProperties** que se usan para administrar tipos de datos específicos del servidor.  
+ Para admitir los UDT a través de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa diversos cambios, incluida la adición de la interfaz **ISSCommandWithParameters** . Esta nueva interfaz hereda de la interfaz OLE DB básica **ICommandWithParameters**. Además de los tres métodos heredados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames** y **SetParameterInfo**; **ISSCommandWithParameters** proporciona los métodos **GetParameterProperties** y **SetParameterProperties** que se usan para administrar tipos de datos específicos del servidor.  
   
 > [!NOTE]  
 >  La interfaz **ISSCommandWithParameters** también usa la nueva estructura SSPARAMPROPS.  

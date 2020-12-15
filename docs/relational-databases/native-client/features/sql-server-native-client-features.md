@@ -15,12 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec878229524d048969acbf3ca1af7cca4e318084
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d192f469759ae57d01f4789aef887f4cbb60adca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008994"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462106"
 ---
 # <a name="sql-server-native-client-features"></a>Características de SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,11 +41,11 @@ ms.locfileid: "86008994"
  [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)  
  Explica cómo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite varios conjuntos de resultados activos (MARS). MARS permite ejecutar y recibir varios conjuntos de resultados mediante una conexión a una base de datos única.  
   
- [Usar tipos de datos XML](../../../relational-databases/native-client/features/using-xml-data-types.md)  
+ [Utilizar tipos de datos XML](../../../relational-databases/native-client/features/using-xml-data-types.md)  
  Explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con el tipo de datos XML, que es un tipo de datos basado en XML que se puede utilizar como un tipo de columna, un tipo de variable, un tipo de parámetro o un tipo de valor devuelto por una función.  
   
  [Usar tipos definidos por el usuario](../../../relational-databases/native-client/features/using-user-defined-types.md)  
- Describe cómo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite tipos definidos por el usuario (UDT), que amplía el sistema de tipos SQL permitiéndole almacenar objetos y estructuras de datos personalizadas en una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos.  
+ Describe cómo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite tipos de User-Defined (UDT), que amplía el sistema de tipos de SQL permitiéndole almacenar objetos y estructuras de datos personalizadas en una base de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  [Usar tipos de valor grande](../../../relational-databases/native-client/features/using-large-value-types.md)  
  Explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con tipos de datos de valor grande, que son tipos de datos de objetos grandes (LOB).  
@@ -79,7 +80,7 @@ ms.locfileid: "86008994"
  [Compatibilidad con columnas dispersas en SQL Server Native Client](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)  
  Explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con columnas dispersas.  
   
- [Mejoras de fecha y hora](../../../relational-databases/native-client/features/date-and-time-improvements.md)  
+ [Mejoras en la fecha y la hora](../../../relational-databases/native-client/features/date-and-time-improvements.md)  
  Explica la mayor compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con los tipos de datos de fecha y hora.  
   
  [Detección de metadatos](../../../relational-databases/native-client/features/metadata-discovery.md)  
@@ -91,7 +92,7 @@ ms.locfileid: "86008994"
  [Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  Describe cómo se puede configurar una aplicación para aprovechar las características de alta disponibilidad con recuperación ante desastres que se han agregado en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
- [Obtener acceso a la información de diagnóstico en el registro de eventos extendidos](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
+ [Obtener acceso a información de diagnóstico en el registro de eventos extendidos](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  Describe las mejoras realizadas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y en el seguimiento de datos que le ofrecen acceso a la información de diagnóstico del búfer de anillo y del registro de XEvents.  
   
  [Compatibilidad de SQL Server Native Client con LocalDB](../../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  

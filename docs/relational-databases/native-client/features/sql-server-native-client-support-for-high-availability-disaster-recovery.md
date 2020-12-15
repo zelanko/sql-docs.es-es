@@ -10,12 +10,13 @@ ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63b641e86c03dfdbc5bd7b5b506586fca3343b18
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 22a707d2a373045666b8eae0ad6f9d48d23c88ba
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008983"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462046"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,13 +41,13 @@ ms.locfileid: "86008983"
   
  Utilice las siguientes instrucciones para conectarse a un servidor en un grupo de disponibilidad o una instancia de clúster de conmutación por error:  
   
--   Use la propiedad de conexión **MultiSubnetFailover** cuando se conecte a una única subred o a varias subredes. mejorará el rendimiento de ambos.  
+-   Use la propiedad de conexión **MultiSubnetFailover** cuando se conecte a una única subred o a varias subredes, ya que mejorará el rendimiento en ambos casos.  
   
 -   Para conectarse a un grupo de disponibilidad, especifique el agente de escucha del grupo de disponibilidad como el servidor en la cadena de conexión.  
   
 -   La conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurada con más de 64 direcciones IP producirá un error en la conexión.  
   
--   El comportamiento de una aplicación que usa la propiedad de conexión **MultiSubnetFailover** no se ve afectado en función del tipo de autenticación: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autenticación de, autenticación Kerberos o autenticación de Windows.  
+-   El comportamiento de una aplicación que usa la propiedad de conexión **MultiSubnetFailover** no se ve afectado por el tipo de autenticación: autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], autenticación Kerberos o autenticación de Windows.  
   
 -   Puede aumentar el valor de **loginTimeout** para tener en cuenta el tiempo de conmutación por error y reducir los reintentos de conexión de la aplicación.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "86008983"
   
 1.  Si la ubicación de réplica secundaria no está configurada para aceptar conexiones.  
   
-2.  Si una aplicación utiliza **ApplicationIntent = ReadWrite** (se describe a continuación) y la ubicación de la réplica secundaria está configurada para acceso de solo lectura.  
+2.  Si una aplicación usa **ApplicationIntent=ReadWrite** (se describe a continuación) y la ubicación de réplica secundaria está configurada para acceso de solo lectura.  
   
  Una conexión producirá un error si una réplica principal está configurada para rechazar cargas de trabajo de solo lectura y la cadena de conexión contiene **ApplicationIntent=ReadOnly**.  
   

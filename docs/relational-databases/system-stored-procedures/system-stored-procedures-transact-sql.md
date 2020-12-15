@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581ac92066750ac578cf8103383087fddeb01e65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 60d30105f0c56224748a3c676ba4d76b73aa989b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810308"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462676"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Procedimientos almacenados del sistema (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "91810308"
   
 |Category|Descripción|  
 |--------------|-----------------|  
-|[Procedimientos almacenados de replicación geográfica activa]()|Se usa para administrar las configuraciones de replicación geográfica activa en Azure SQL Database|  
+|[Procedimientos almacenados de Geo-Replication activos]()|Se usa para administrar para administrar configuraciones de Geo-Replication activas en Azure SQL Database|  
 |[Procedimientos almacenados del catálogo](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Se utilizan para implementar las funciones del diccionario de datos ODBC y aislar las aplicaciones ODBC de los cambios en las tablas subyacentes del sistema.|  
 |[Procedimientos almacenados de captura de datos modificados](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Permiten habilitar, deshabilitar o informar sobre los objetos de la captura de datos modificados.|  
 |[Procedimientos almacenados de cursor](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Se utilizan para implementar la funcionalidad de variable de cursor.|  
@@ -75,7 +75,7 @@ ms.locfileid: "91810308"
 ## <a name="api-system-stored-procedures"></a>Procedimientos almacenados del sistema de la API  
  Los usuarios que ejecutan [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] con aplicaciones ADO, OLE DB y ODBC pueden observar que dichas aplicaciones usan procedimientos almacenados del sistema que no se tratan en la Referencia de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Estos procedimientos almacenados los utiliza el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client y el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client para implementar la funcionalidad de una API de base de datos. Estos procedimientos almacenados simplemente son el mecanismo que el proveedor o el controlador utiliza para comunicar las solicitudes del usuario a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Están destinados al uso interno del proveedor o el controlador. No se admite su llamada explícita desde una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicación basada en.  
   
- Los procedimientos almacenados sp_createorphan y sp_droporphans se utilizan para el procesamiento de imágenes **ntext**, **Text**e **Image** de ODBC.  
+ Los procedimientos almacenados sp_createorphan y sp_droporphans se utilizan para el procesamiento de imágenes **ntext**, **Text** e **Image** de ODBC.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza el procedimiento almacenado sp_reset_connection para permitir las llamadas a procedimientos almacenados remotos en una transacción. Este procedimiento almacenado también hace que se activen los eventos Audit Login y Audit Logout cuando se reutiliza una conexión de un grupo de conexiones.  
   

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fcd6eb55e54880365952491224e1b9511c8c561
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6182c18b9f85b2b11a5813a11131b7a5efb3bbbd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891985"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463366"
 ---
 # <a name="working-with-query-notifications"></a>Trabajar con notificaciones de consulta
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -116,7 +116,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- Si los valores de SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT y SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS son distintos de NULL, el encabezado TDS de notificación de consulta que contiene los tres atributos definidos anteriormente se enviará al servidor cada vez que se ejecute el comando. Si alguno de estos valores es NULL, el encabezado no se envía y se devuelve SQL_SUCCESS_WITH_INFO. La validación se produce en la [función SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md), **SqlExecDirect**y **SqlExecute**, y todas ellas generan un error si los atributos no son válidos. Del mismo modo, cuando estos atributos de notificación de consulta se establecen para versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se produce un error de ejecución con SQL_SUCCESS_WITH_INFO.  
+ Si los valores de SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT y SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS son distintos de NULL, el encabezado TDS de notificación de consulta que contiene los tres atributos definidos anteriormente se enviará al servidor cada vez que se ejecute el comando. Si alguno de estos valores es NULL, el encabezado no se envía y se devuelve SQL_SUCCESS_WITH_INFO. La validación se produce en la [función SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md), **SqlExecDirect** y **SqlExecute**, y todas ellas generan un error si los atributos no son válidos. Del mismo modo, cuando estos atributos de notificación de consulta se establecen para versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se produce un error de ejecución con SQL_SUCCESS_WITH_INFO.  
   
 > [!NOTE]  
 >  La preparación de instrucciones no hará que se inicie nunca la suscripción; la ejecución de la instrucción sí que puede iniciar la suscripción.  

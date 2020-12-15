@@ -28,19 +28,19 @@ ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 724290f48b0f33d586a797629766b36bae49ddb6
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 15b308481b6622284d6f8bdd36d474b3886570d6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332644"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460030"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipos de datos de XPath (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath y esquema XML (XSD) tienen tipos de datos muy diferentes. Por ejemplo, XPath no tiene tipos de datos enteros ni fecha, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y XSD tienen muchos. XSD utiliza la precisión del nanosegundo para los valores de hora y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza a lo sumo una precisión de 1/300 de segundo. Por consiguiente, no siempre es posible asignar un tipo de datos a otro. Para obtener más información sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la asignación de tipos de datos a tipos de datos XSD, vea conversiones de tipos de [datos y la anotación sql: DataType &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
- XPath tiene tres tipos de datos: **cadena**, **número**y **booleano**. El tipo de datos **Number** siempre es un punto flotante de doble precisión IEEE 754. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos **float (53)** es el más cercano al **número**de XPath. Sin embargo, **float (53)** no es exactamente IEEE 754. Por ejemplo, no se utiliza NaN (no es un número) ni infinito. Si se intenta convertir una cadena no numérica en **número** y se intenta dividir por cero, se producirá un error.  
+ XPath tiene tres tipos de datos: **cadena**, **número** y **booleano**. El tipo de datos **Number** siempre es un punto flotante de doble precisión IEEE 754. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos **float (53)** es el más cercano al **número** de XPath. Sin embargo, **float (53)** no es exactamente IEEE 754. Por ejemplo, no se utiliza NaN (no es un número) ni infinito. Si se intenta convertir una cadena no numérica en **número** y se intenta dividir por cero, se producirá un error.  
   
 ## <a name="xpath-conversions"></a>Conversiones de XPath  
  Al utilizar una consulta de XPath como `OrderDetail[@UnitPrice > "10.0"]`, las conversiones de tipos de datos implícitas y explícitas pueden cambiar el significado de la consulta de manera sutil. Por consiguiente, es importante entender cómo se implementan los tipos de datos de XPath. La especificación del lenguaje XPath, XML Path Language (XPath) versión 1,0 W3C propuesto Recomendación 8 de octubre de 1999, se puede encontrar en el sitio web de W3C en http://www.w3.org/TR/1999/PR-xpath-19991008.html .  
@@ -55,7 +55,7 @@ ms.locfileid: "87332644"
   
 -   Operadores aritméticos (+, -, *, div, mod)  
   
- Cada categoría de operador convierte de manera diferente los operandos. Los operadores de XPath convierten implícitamente los operandos si es necesario. Los operadores aritméticos convierten los operandos en **números**y dan lugar a un valor numérico. Los operadores booleanos convierten sus operandos en **booleanos**y dan como resultado un valor booleano. Los operadores relacionales y operadores de igualdad generan un valor booleano. Sin embargo, tienen reglas de conversión distintas en función de los tipos de datos originales de sus operandos, como se muestra en esta tabla.  
+ Cada categoría de operador convierte de manera diferente los operandos. Los operadores de XPath convierten implícitamente los operandos si es necesario. Los operadores aritméticos convierten los operandos en **números** y dan lugar a un valor numérico. Los operadores booleanos convierten sus operandos en **booleanos** y dan como resultado un valor booleano. Los operadores relacionales y operadores de igualdad generan un valor booleano. Sin embargo, tienen reglas de conversión distintas en función de los tipos de datos originales de sus operandos, como se muestra en esta tabla.  
   
 |Operando|Operador relacional|Operador de igualdad|  
 |-------------|-------------------------|-----------------------|  
@@ -66,15 +66,15 @@ ms.locfileid: "87332644"
 |Ninguno es un conjunto de nodos.|Convierta los dos operandos en **Number** y, a continuación, compare.|Convierta los dos operandos en un tipo común y, a continuación, compare. Se convierte en un **valor booleano** si es **booleano**, **número** si es **número**; de lo contrario, convertir en **cadena**.|  
   
 > [!NOTE]  
->  Dado que los operadores relacionales XPath convierten siempre sus operandos en un **número**, no es posible realizar comparaciones de **cadenas** . Para incluir las comparaciones de fecha, SQL Server 2000 ofrece esta variación a la especificación XPath: cuando un operador relacional compara una **cadena** con una **cadena, un**conjunto de nodos en una **cadena**o un conjunto de nodos con valores de cadena en un conjunto de nodos con valores de cadena, se realiza una comparación de **cadenas** (no una comparación de **números** ).  
+>  Dado que los operadores relacionales XPath convierten siempre sus operandos en un **número**, no es posible realizar comparaciones de **cadenas** . Para incluir las comparaciones de fecha, SQL Server 2000 ofrece esta variación a la especificación XPath: cuando un operador relacional compara una **cadena** con una **cadena, un** conjunto de nodos en una **cadena** o un conjunto de nodos con valores de cadena en un conjunto de nodos con valores de cadena, se realiza una comparación de **cadenas** (no una comparación de **números** ).  
   
 ## <a name="node-set-conversions"></a>Conversiones de conjunto de nodos  
- Las conversiones de conjunto de nodos no son siempre intuitivas. Un conjunto de nodos se convierte en una **cadena** tomando el valor de cadena solo del primer nodo del conjunto. Un conjunto de nodos se convierte en **número** convirtiéndolo en una **cadena**y, a continuación, convirtiendo la **cadena** en un **número**. Un conjunto de nodos se convierte en un **valor booleano** comprobando su existencia.  
+ Las conversiones de conjunto de nodos no son siempre intuitivas. Un conjunto de nodos se convierte en una **cadena** tomando el valor de cadena solo del primer nodo del conjunto. Un conjunto de nodos se convierte en **número** convirtiéndolo en una **cadena** y, a continuación, convirtiendo la **cadena** en un **número**. Un conjunto de nodos se convierte en un **valor booleano** comprobando su existencia.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no realiza la selección por posición en los conjuntos de nodos: por ejemplo, la consulta de XPath `Customer[3]` significa el tercer cliente; este tipo de selección por posición no se admite en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por tanto, no se implementan las conversiones de conjunto de nodos a**cadena** o de conjunto de nodos en**número** tal y como se describe en la especificación de XPath. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la semántica "cualquiera" donde la especificación de XPath especifica la semántica "primero". Por ejemplo, según la especificación XPath de W3C, la consulta XPath `Order[OrderDetail/@UnitPrice > 10.0]` selecciona los pedidos con el primer **OrderDetail** que tiene un **UnitPrice** mayor que 10,0. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta consulta XPath selecciona los pedidos con cualquier **OrderDetail** que tenga un **UnitPrice** mayor que 10,0.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no realiza la selección por posición en los conjuntos de nodos: por ejemplo, la consulta de XPath `Customer[3]` significa el tercer cliente; este tipo de selección por posición no se admite en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por tanto, no se implementan las conversiones de conjunto de nodos a **cadena** o de conjunto de nodos en **número** tal y como se describe en la especificación de XPath. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la semántica "cualquiera" donde la especificación de XPath especifica la semántica "primero". Por ejemplo, según la especificación XPath de W3C, la consulta XPath `Order[OrderDetail/@UnitPrice > 10.0]` selecciona los pedidos con el primer **OrderDetail** que tiene un **UnitPrice** mayor que 10,0. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta consulta XPath selecciona los pedidos con cualquier **OrderDetail** que tenga un **UnitPrice** mayor que 10,0.  
   
- La conversión a un **valor booleano** genera una prueba de existencia; por lo tanto, la consulta XPath `Products[@Discontinued=true()]` es equivalente a la expresión SQL "Products. Discontinued is not null", no a la expresión SQL "Products. Discontinued = 1". Para que la consulta sea equivalente a la última expresión SQL, convierta primero el conjunto de nodos a un tipo no**booleano** , como **Number**. Por ejemplo, `Products[number(@Discontinued) = true()]`.  
+ La conversión a un **valor booleano** genera una prueba de existencia; por lo tanto, la consulta XPath `Products[@Discontinued=true()]` es equivalente a la expresión SQL "Products. Discontinued is not null", no a la expresión SQL "Products. Discontinued = 1". Para que la consulta sea equivalente a la última expresión SQL, convierta primero el conjunto de nodos a un tipo no **booleano** , como **Number**. Por ejemplo, `Products[number(@Discontinued) = true()]`.  
   
  Dado que la mayoría de los operadores están definidos para ser TRUE si son TRUE para cualquiera o uno de los nodos del conjunto de nodos, estas operaciones siempre se evalúan como FALSE si el conjunto de nodos está vacío. Así, si A está vacío, `A = B` y `A != B` son FALSE y `not(A=B)` y `not(A!=B)` son TRUE.  
   

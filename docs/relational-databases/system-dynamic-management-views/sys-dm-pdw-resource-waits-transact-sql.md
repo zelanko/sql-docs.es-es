@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fad0e8410294ecfe477ccf24215772531260bd50
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 95e974c7a62722ea63510504d057b2e67370925b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035228"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440734"
 ---
 # <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,8 +29,8 @@ ms.locfileid: "92035228"
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Posición de la solicitud en la lista de espera.|ordinal basado en 0. Esto no es único en todas las entradas de espera.|  
 |session_id|**nvarchar(32)**|IDENTIFICADOR de la sesión en la que se ha producido el estado de espera.|Vea session_id en [sys.dm_pdw_exec_sessions &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|type|**nvarchar(255)**|Tipo de espera que esta entrada representa.|Valores posibles:<br /><br /> Conexión<br /><br /> Simultaneidad de consultas locales<br /><br /> Simultaneidad de consultas distribuidas<br /><br /> Simultaneidad de DMS<br /><br /> Simultaneidad de copias de seguridad|  
-|object_type|**nvarchar(255)**|Tipo de objeto que se ve afectado por la espera.|Valores posibles:<br /><br /> **OBJETO**<br /><br /> **BASE**<br /><br /> **INTEGRADO**<br /><br /> **SCHEMA**<br /><br /> **APLICACIÓN**|  
+|tipo|**nvarchar(255)**|Tipo de espera que esta entrada representa.|Valores posibles:<br /><br /> Conexión<br /><br /> Simultaneidad de consultas locales<br /><br /> Simultaneidad de consultas distribuidas<br /><br /> Simultaneidad de DMS<br /><br /> Simultaneidad de copias de seguridad|  
+|object_type|**nvarchar(255)**|Tipo de objeto que se ve afectado por la espera.|Valores posibles:<br /><br /> **OBJETO**<br /><br /> **DATABASE**<br /><br /> **INTEGRADO**<br /><br /> **SCHEMA**<br /><br /> **APLICACIÓN**|  
 |object_name|**nvarchar (386)**|Nombre o GUID del objeto especificado que se ha visto afectado por la espera.|Las tablas y vistas se muestran con nombres de tres partes.<br /><br /> Los índices y las estadísticas se muestran con nombres de cuatro partes.<br /><br /> Los nombres, entidades de seguridad y bases de datos son nombres de cadena.|  
 |request_id|**nvarchar(32)**|IDENTIFICADOR de la solicitud en la que se produjo el estado de espera.|Identificador de QID de la solicitud.<br /><br /> Identificador GUID para las solicitudes de carga.|  
 |request_time|**datetime**|Hora a la que se solicitó el bloqueo o el recurso.||  

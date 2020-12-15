@@ -23,13 +23,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84e6c1b0b5530ed33ade4a3ac4813b1a3fe6d251
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 19c9148b0e352a1b8a07bae23525df606f34f1c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750790"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461796"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Excluir elementos de esquema del documento XML mediante sql:mapped
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "85750790"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Especificar la anotación sql:mapped  
- Suponga que tiene un esquema XSD de algún otro origen. Este esquema XSD está compuesto de un **\<Person.Contact>** elemento con los atributos **ContactID**, **FirstName**, **LastName**y **HomeAddress** .  
+ Suponga que tiene un esquema XSD de algún otro origen. Este esquema XSD está compuesto de un **\<Person.Contact>** elemento con los atributos **ContactID**, **FirstName**, **LastName** y **HomeAddress** .  
   
  Al asignar este esquema XSD a la tabla person. contact de la base de datos AdventureWorks, se especifica **SQL: alpped** en el atributo **HomeAddress** porque la tabla Employees no almacena las direcciones particulares de los empleados. Por consiguiente, este atributo no se asigna a la base de datos y no se devuelve en el documento XML resultante cuando se especifica una consulta XPath en el esquema de asignación.  
   

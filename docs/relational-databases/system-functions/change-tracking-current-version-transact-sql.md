@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3027c4f7-6b4d-4089-a369-5926e8a8da1c
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f82ae7cb02694b74be028982f483c926ecda0587
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 874cf3c72400cc4885ec2515e005bb01ea42d473
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498200"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440636"
 ---
 # <a name="change_tracking_current_version-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ SET @next_baseline = CHANGE_TRACKING_CURRENT_VERSION();
 ## <a name="see-also"></a>Consulte también  
  [Funciones de seguimiento de cambios &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;&#41;de Transact-SQL ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

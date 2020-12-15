@@ -1,6 +1,6 @@
 ---
 description: sys.database_event_session_events (Azure SQL Database)
-title: Sys. database_event_session_events (Azure SQL Database) | Microsoft Docs
+title: sys.database_event_session_events (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.topic: language-reference
 ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d116c44d686398f4cb76d3443f10c8a85309727f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 99c8cf898c8e7ee719af0a88b7c2ea80a7e1ec83
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542593"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458939"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events (Azure SQL Database)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "89542593"
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW DATABASE STATE en el servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta vista tiene las siguientes cardinalidades de relación.  
   
 | From | En | Relación |
 | ---- | -- | ------------ |
-|Sys. database_event_session_events. event_session_id|Sys. database_event_sessions. event_session_id|Varios a uno|  
+|Sys.database_event_session_events sys.database_event_session_events.event_session_id|Sys.database_event_sessions sys.database_event_sessions.event_session_id|Varios a uno|  
   
 ## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)  

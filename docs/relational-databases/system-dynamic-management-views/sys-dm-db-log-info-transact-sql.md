@@ -1,6 +1,6 @@
 ---
-description: Sys. dm_db_log_info (Transact-SQL)
-title: Sys. dm_db_log_info (Transact-SQL) | Microsoft Docs
+description: sys.dm_db_log_info (Transact-SQL)
+title: sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -20,15 +20,15 @@ ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
 author: savjani
 ms.author: pariks
 manager: ajayj
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aba965d4a0289db9ef7def58b90f15a1479cb485
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 12fe1e95cbb1c7ad26025ee52ce111cb3f835704
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447667"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440830"
 ---
-# <a name="sysdm_db_log_info-transact-sql"></a>Sys. dm_db_log_info (Transact-SQL)
+# <a name="sysdm_db_log_info-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 Devuelve información del [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) del registro de transacciones. Nota: todos los archivos de registro de transacciones se combinan en la salida de la tabla. Cada fila de la salida representa un VLF en el registro de transacciones y proporciona información relevante para ese VLF en el registro.
@@ -63,7 +63,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_create_lsn|**nvarchar (48)** |[Número de secuencia de registro (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) de la entrada de registro que creó el [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_encryptor_thumbprint|**varbinary(20)**| **Se aplica a:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. <br><br> Muestra la huella digital del sistema de cifrado de VLF si el VLF se cifra mediante [cifrado de datos transparente](../../relational-databases/security/encryption/transparent-data-encryption.md), de lo contrario, es NULL. |
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 La `sys.dm_db_log_info` función de administración dinámica sustituye a la `DBCC LOGINFO` instrucción.    
  
 ## <a name="permissions"></a>Permisos  

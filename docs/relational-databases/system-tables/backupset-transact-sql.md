@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84c61b1e6517bc98e8acb32a8215f2dad853d7e5
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3271963cf5a07e88b6209bd2b7316ab40f43bc05
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328591"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461536"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "93328591"
 |**is_copy_only**|**bit**|1 = Copia de seguridad de solo copia. Para obtener más información, vea [Copias de seguridad de solo copia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|Id. de la bifurcación de recuperación inicial. Esto corresponde a **FirstRecoveryForkID** de RESTORE HEADERONLY.<br /><br /> En las copias de seguridad de datos, **first_recovery_fork_guid** es igual a **last_recovery_fork_guid**.|  
 |**last_recovery_fork_guid**|**uniqueidentifier**|Id. de la bifurcación de recuperación final. Esto corresponde a **RecoveryForkID** de RESTORE HEADERONLY.<br /><br /> En las copias de seguridad de datos, **first_recovery_fork_guid** es igual a **last_recovery_fork_guid**.|  
-|**fork_point_lsn**|**numeric(25,0)**|Si **first_recovery_fork_guid** no es igual a **last_recovery_fork_guid** , es el número de secuencia de registro del punto de bifurcación. En caso contrario, el valor es NULL.|  
+|**fork_point_lsn**|**numeric(25,0)**|Si **first_recovery_fork_guid** no es igual a **last_recovery_fork_guid**, es el número de secuencia de registro del punto de bifurcación. En caso contrario, el valor es NULL.|  
 |**database_guid**|**uniqueidentifier**|Id. único de la base de datos. Esto corresponde a **BindingID** de RESTORE HEADERONLY. Cuando se restaura la base de datos, se asigna un valor nuevo.|  
 |**family_guid**|**uniqueidentifier**|Id. único de la base de datos original cuando se creó. Este valor permanece invariable cuando se restaura la base de datos, incluso con un nombre diferente.|  
 |**differential_base_lsn**|**numeric(25,0)**|LSN de base para copias de seguridad diferenciales. Para una copia de seguridad diferencial basada en único; los cambios con LSN mayor o igual que **differential_base_lsn** se incluyen en la copia de seguridad diferencial.<br /><br /> En el caso de una diferencia de base múltiple, el valor es NULL y el LSN base debe determinarse en el nivel de archivo (vea [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Para los tipos de copia de seguridad no diferenciales, el valor siempre es NULL.|  

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd4c4946b5e62b9e7f06ca2beea8e75732f17e43
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1e4d175fe42497d2a75c23d3ae49d60821952ccf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833860"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458503"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,7 @@ sys.dm_db_index_physical_stats (
  *database_id* \| \| \| Valor predeterminado de NULL 0  
  Es el ID. de la base de datos. *database_id* es **smallint**. Las entradas válidas son el número de identificador de una base de datos, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.  
   
- Especifique NULL para devolver información de todas las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si especifica NULL para *database_id*, también debe especificar null para *object_id*, *index_id*y *partition_number*.  
+ Especifique NULL para devolver información de todas las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si especifica NULL para *database_id*, también debe especificar null para *object_id*, *index_id* y *partition_number*.  
   
  Se puede especificar la función integrada [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Al usar DB_ID sin especificar ningún nombre de base de datos, el nivel de compatibilidad de la base de datos actual debe ser 90 o superior.  
   
@@ -121,11 +121,11 @@ sys.dm_db_index_physical_stats (
 |offrow_regular_version_record_count|**bigint**|Recuento de registros de versión que se mantienen fuera de la fila de datos original. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |offrow_long_term_version_record_count|**bigint**|Recuento de registros de versión considerados a largo plazo. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La función de administración dinámica sys.dm_db_index_physical_stats sustituye a la instrucción DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Modos de recorrido  
- El modo en que se ejecuta la función determina el nivel de recorrido realizado para obtener los datos estadísticos que utiliza la función. el *modo* se especifica como Limited, sampled o Detailed. La función recorre las cadenas de páginas buscando las unidades de asignación que producen las particiones especificadas de la tabla o el índice. sys.dm_db_index_physical_stats solo requiere un bloqueo de tabla con intención compartida (IS), independientemente del modo en que se ejecute.  
+ El modo en que se ejecuta la función determina el nivel de recorrido realizado para obtener los datos estadísticos que utiliza la función. el *modo* se especifica como Limited, sampled o Detailed. La función recorre las cadenas de páginas buscando las unidades de asignación que producen las particiones especificadas de la tabla o el índice. sys.dm_db_index_physical_stats solo requiere un bloqueo de tabla Intent-Shared (IS), independientemente del modo en que se ejecute.  
   
  El modo LIMITED es el modo más rápido y examina el menor número de páginas. Para un índice, solamente se examinan las páginas del nivel primario del árbol b (es decir, las páginas sobre el nivel hoja). Para un montón, se examinan las páginas PFS e IAM asociadas y las páginas de datos de un montón se exploran en modo LIMITED.  
   

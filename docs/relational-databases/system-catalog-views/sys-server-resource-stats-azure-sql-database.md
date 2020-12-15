@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 57d0a8e10eb79213de7eb29a2d18ea8837d7f908
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current
+ms.openlocfilehash: 142269f7c3cd8a5a1e764e2e48cf41f83490bd76
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809326"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464606"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -59,7 +59,7 @@ La vista **Sys.server_resource_stats** tiene definiciones diferentes en función
 ## <a name="permissions"></a>Permisos  
  Esta vista está disponible para todos los roles de usuario con permisos para conectarse a la base de datos **maestra** .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los datos devueltos por **Sys.server_resource_stats** se expresan como el total que se usa en bytes o megabytes (indicados en nombres de columna) distintos de avg_cpu, que se expresa como un porcentaje de los límites máximos permitidos para el nivel de servicio/nivel de rendimiento que se está ejecutando.  
  
 ## <a name="examples"></a>Ejemplos  

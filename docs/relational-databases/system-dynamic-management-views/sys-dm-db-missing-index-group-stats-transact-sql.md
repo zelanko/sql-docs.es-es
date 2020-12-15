@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_missing_index_group_stats (Transact-SQL)
-title: Sys. dm_db_missing_index_group_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_missing_index_group_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e90b4b972786db7e5edf2459a9f5a081f42f3ef
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f91bc4e1698fe6a0b96f7b92931d84769d4d7351
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89518130"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462776"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "89518130"
 |**avg_total_system_cost**|**float**|Costo medio de las consultas del sistema que podría reducirse mediante el índice del grupo.|  
 |**avg_system_impact**|**float**|Beneficio porcentual medio que podrían obtener las consultas del sistema si se implementara este grupo de índices que faltan. El valor significa que el costo de las consultas se reduciría este porcentaje como promedio si se implementara este grupo de índices que faltan.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La información devuelta por **sys.dm_db_missing_index_group_stats** se actualiza en cada ejecución de la consulta, no en cada compilación o recompilación de la consulta. Las estadísticas de uso no se guardan; solo se conservan hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los administradores de bases de datos deben realizar periódicamente una copia de seguridad de la información de los índices que faltan si desean conservar las estadísticas de uso después del reciclaje del servidor.  
 
   >[!NOTE]
@@ -90,9 +90,9 @@ WHERE migs.group_handle = 24;
  Esta consulta proporciona el nombre de la base de datos, el esquema y la tabla en que falta un índice. También proporciona los nombres de las columnas que deben usarse para la clave de índice. Al escribir la instrucción CREATE INDEX DDL para implementar índices que faltan, enumere primero las columnas de igualdad y después las columnas de desigualdad en la \<*table_name*> cláusula on de la instrucción CREATE index. Las columnas incluidas deben mostrarse en la cláusula INCLUDE de la instrucción CREATE INDEX. Para determinar un orden efectivo para las columnas de igualdad, ordénelas en función de su selectividad, mostrando primero las columnas más selectivas (en la parte izquierda de la lista de columnas).  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
- [Sys. dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [Sys. dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_columns &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
+ [sys.dm_db_missing_index_details &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.dm_db_missing_index_groups &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   

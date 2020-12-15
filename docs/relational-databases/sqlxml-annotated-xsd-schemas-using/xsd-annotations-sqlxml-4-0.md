@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ab06c27a9d3fa7cf60c3eb59ad0030e6099fa5c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3bbf7245ec16a9946789eb28b444981822426e7b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724741"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462956"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>Anotaciones de XSD (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85724741"
 |**sql:max-depth**|Le permite especificar la profundidad de las relaciones recursivas que se especifican en el esquema.|[Especificar la profundidad en relaciones recursivas utilizando sql:max-depth](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md)|No compatible|  
 |**sql:overflow-field**|Identifica la columna de base de datos que contiene los datos de desbordamiento.|[Recuperar datos no utilizados mediante SQL: Overflow-Field &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/retrieving-unconsumed-data-using-the-sql-overflow-field-sqlxml-4-0.md)|Iguales|  
 |**sql:prefix**|Crea ID, IDREF e IDREFS de XML válidos. Antepone a los valores de ID, IDREF e IDREFS una cadena.|[Crear atributos válidos de tipo ID, IDREF e IDREFS mediante SQL: prefix &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)|Iguales|  
-|**sql:relationship**|Especifica las relaciones entre los elementos XML. Los atributos **primario**, **secundario**, **clave principal**y **clave secundaria** se usan para establecer la relación.|[Especificar relaciones mediante SQL: Relationship &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)|Los nombres de atributo son diferentes:<br /><br /> **clave: relación**<br /><br /> **relación externa**<br /><br /> **key**<br /><br /> **clave externa**|  
+|**sql:relationship**|Especifica las relaciones entre los elementos XML. Los atributos **primario**, **secundario**, **clave principal** y **clave secundaria** se usan para establecer la relación.|[Especificar relaciones mediante SQL: Relationship &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)|Los nombres de atributo son diferentes:<br /><br /> **clave: relación**<br /><br /> **relación externa**<br /><br /> **key**<br /><br /> **clave externa**|  
 |**sql:use-cdata**|Permite especificar secciones CDATA que se van a utilizar para ciertos elementos en el documento XML.|[Crear secciones CDATA mediante SQL: Use-CDATA &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)|Iguales|  
   
 > [!NOTE]  

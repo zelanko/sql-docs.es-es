@@ -22,13 +22,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 926f9588ad5bf9a29490a84017f3317f8ec5c424
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0e457aa6c1d1e16e96682f19898e22813254e9ef
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750787"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461806"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Conversiones de tipos de datos y la anotación sql: DataType (SQLXML 4,0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,11 +44,11 @@ ms.locfileid: "85750787"
 |Tipo de datos XSD|Conversión de SQL Server|  
 |-------------------|---------------------------|  
 |Boolean|CONVERT(bit, COLUMN)|  
-|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|Fecha|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |Decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Tiempo|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |Todos los demás|Ninguna conversión adicional|  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ ms.locfileid: "85750787"
 |**datetime**|**dateTime**|  
 |**decimal**|**decimal**|  
 |**float**|**double**|  
-|**imagen**|**base64Binary**|  
+|**image**|**base64Binary**|  
 |**int**|**int**|  
 |**money**|**decimal**|  
 |**nchar**|**string**|  
@@ -89,11 +89,11 @@ ms.locfileid: "85750787"
 ## <a name="sqldatatype-annotation"></a>Anotación sql:datatype  
  La anotación **SQL: DataType** se utiliza para especificar el tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos; esta anotación debe especificarse cuando:  
   
--   La carga masiva se realiza en una columna **DateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir **dateTime**de un tipo de **fecha**y **hora** de XSD. En este caso, debe identificar el tipo de datos de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] columna mediante **SQL: DataType = "DateTime"**. Esta regla también se aplica a los diagramas de actualización.  
+-   La carga masiva se realiza en una columna **DateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir de un tipo de **fecha** y **hora** de XSD. En este caso, debe identificar el tipo de datos de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] columna mediante **SQL: DataType = "DateTime"**. Esta regla también se aplica a los diagramas de actualización.  
   
 -   Está cargando de forma masiva en una columna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo **uniqueidentifier** y el valor XSD es un GUID que incluye llaves ({y}). Cuando se especifica **SQL: DataType = "uniqueidentifier"**, las llaves se quitan del valor antes de insertarse en la columna. Si no se especifica **SQL: DataType** , el valor se envía con las llaves y se produce un error en la inserción o la actualización.  
   
--   El tipo de datos XML **base64Binary** se asigna a varios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos (**Binary**, **Image**o **varbinary**). Para asignar el tipo de datos XML **base64Binary** a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos específico, use la anotación **SQL: DataType** . Esta anotación especifica el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explícito de la columna a la que asigna el atributo. Esto resulta de gran utilidad cuando los datos se almacenan en las bases de datos. Al especificar la anotación **SQL: DataType** , puede identificar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos explícito.  
+-   El tipo de datos XML **base64Binary** se asigna a varios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos (**Binary**, **Image** o **varbinary**). Para asignar el tipo de datos XML **base64Binary** a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos específico, use la anotación **SQL: DataType** . Esta anotación especifica el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explícito de la columna a la que asigna el atributo. Esto resulta de gran utilidad cuando los datos se almacenan en las bases de datos. Al especificar la anotación **SQL: DataType** , puede identificar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos explícito.  
   
  Por lo general, se recomienda especificar **SQL: DataType** en el esquema.  
   

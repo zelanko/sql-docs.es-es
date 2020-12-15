@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c7a46f76385a724f1aa8622ac85301cdc7e12b6
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7257b24d2908ea17977c0b08f0517d65d2481979
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006503"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439490"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,19 +50,19 @@ sp_columns [ @table_name = ] object
   
 `[ \@table_owner = ] owner` Es el propietario del objeto que se utiliza para devolver información del catálogo. *Owner* es **nvarchar (384)** y su valor predeterminado es NULL. Se admite la coincidencia de patrón de caracteres comodín. Si no se especifica *Owner* , se aplican las reglas de visibilidad de objeto predeterminadas del DBMS subyacente.  
   
- Si el usuario actual posee un objeto con el nombre especificado, se devuelven las columnas de ese objeto. Si no se especifica *Owner* y el usuario actual no posee un objeto con el *objeto*especificado, **sp_columns** busca un objeto con el *objeto* especificado que pertenezca al propietario de la base de datos. Si existe uno, se devuelven las columnas de ese objeto.  
+ Si el usuario actual posee un objeto con el nombre especificado, se devuelven las columnas de ese objeto. Si no se especifica *Owner* y el usuario actual no posee un objeto con el *objeto* especificado, **sp_columns** busca un objeto con el *objeto* especificado que pertenezca al propietario de la base de datos. Si existe uno, se devuelven las columnas de ese objeto.  
   
-`[ \@table_qualifier = ] qualifier` Es el nombre del calificador de objeto. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para objetos (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre de servidor del entorno de base de datos del objeto.  
+`[ \@table_qualifier = ] qualifier` Es el nombre del calificador de objeto. el *calificador* es de **tipo sysname y su** valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para objetos (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre de servidor del entorno de base de datos del objeto.  
   
 `[ \@column_name = ] column` Es una sola columna y se utiliza cuando solo se desea una columna de información del catálogo. la *columna* es de tipo **nvarchar (384)** y su valor predeterminado es NULL. Si no se especifica *Column* , se devuelven todas las columnas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la *columna* representa el nombre de la columna tal y como aparece en la tabla **syscolumns** . Se admite la coincidencia de patrón de caracteres comodín. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de SQL-92 (caracteres comodín % y _).  
   
-`[ \@ODBCVer = ] ODBCVer` Es la versión de ODBC que se está utilizando. *ODBCVer* es de **tipo int**y su valor predeterminado es 2. Esto indica ODBC Versión 2. Los valores válidos son 2 ó 3. Para conocer las diferencias de comportamiento entre las versiones 2 y 3, vea la especificación de **SQLColumns** de ODBC.  
+`[ \@ODBCVer = ] ODBCVer` Es la versión de ODBC que se está utilizando. *ODBCVer* es de **tipo int** y su valor predeterminado es 2. Esto indica ODBC Versión 2. Los valores válidos son 2 ó 3. Para conocer las diferencias de comportamiento entre las versiones 2 y 3, vea la especificación de **SQLColumns** de ODBC.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- El procedimiento almacenado del catálogo **sp_columns** es equivalente a **SQLColumns** en ODBC. Los resultados devueltos se ordenan por **TABLE_QUALIFIER**, **table_owner**y **TABLE_NAME**.  
+ El procedimiento almacenado del catálogo **sp_columns** es equivalente a **SQLColumns** en ODBC. Los resultados devueltos se ordenan por **TABLE_QUALIFIER**, **table_owner** y **TABLE_NAME**.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -91,7 +91,7 @@ sp_columns [ @table_name = ] object
 ## <a name="permissions"></a>Permisos  
  Requiere permisos SELECT y VIEW DEFINITION en el esquema.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_columns** sigue los requisitos de los identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Ejemplos  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1eb4580f3654b12f09b39e2fadf2167a9f9e561
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a2fbc7fe209653a142ea887999fc95310f29e30b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869336"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438358"
 ---
 # <a name="prepared-execution"></a>Ejecución preparada
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91869336"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona también compatibilidad nativa con la ejecución preparada. Un plan de ejecución se compila en **SQLPrepare** y, posteriormente, se ejecuta cuando se llama a **SQLExecute** . Dado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que no es necesario para crear procedimientos almacenados temporales en **SQLPrepare**, no hay ninguna sobrecarga adicional en las tablas del sistema de **tempdb**.  
   
- Por motivos de rendimiento, la preparación de instrucciones se difiere hasta que se llama a **SQLExecute** o se realiza una operación de metapropiedad (como [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) o [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) en ODBC). Este es el comportamiento predeterminado. Cualquier error que se produzca en la instrucción que se está preparando no se dará a conocer hasta que la instrucción se ejecute o hasta que se realice una operación de metapropiedad. Si desea desactivar este comportamiento predeterminado, establezca el atributo de instrucción específico del controlador ODBC de Native Client de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL_SOPT_SS_DEFER_PREPARE en SQL_DP_OFF.  
+ Por motivos de rendimiento, la preparación de instrucciones se difiere hasta que se llama a **SQLExecute** o se realiza una operación de metapropiedad (como [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) o [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) en ODBC). Éste es el comportamiento predeterminado. Cualquier error que se produzca en la instrucción que se está preparando no se dará a conocer hasta que la instrucción se ejecute o hasta que se realice una operación de metapropiedad. Si desea desactivar este comportamiento predeterminado, establezca el atributo de instrucción específico del controlador ODBC de Native Client de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL_SOPT_SS_DEFER_PREPARE en SQL_DP_OFF.  
   
  En el caso de la preparación diferida, al llamar a **SQLDescribeCol** o **SQLDescribeParam** antes de llamar a **SQLExecute** , se genera un viaje de ida y vuelta adicional al servidor. En **SQLDescribeCol**, el controlador quita la cláusula WHERE de la consulta y la envía al servidor con set FMTONLY on para obtener la descripción de las columnas del primer conjunto de resultados devuelto por la consulta. En **SQLDescribeParam**, el controlador llama al servidor para obtener una descripción de las expresiones o columnas a las que hacen referencia los marcadores de parámetros de la consulta. Este método tiene también algunas restricciones, como la imposibilidad de resolver parámetros en subconsultas.  
   

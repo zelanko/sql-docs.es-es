@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e0f32166351f80b87b28a169ea0204af97f832f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bf933bec30b2434583970992f79dfc4e898cd479
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547612"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439440"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ sp_recompile [ @objname = ] 'object'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_recompile busca un objeto solo en la base de datos actual.  
   
  Las consultas que utilizan los procedimientos almacenados o desencadenadores y funciones definidas por el usuario solo se optimizan cuando se compilan. A medida que se crean índices o se realizan otros cambios que afectan a las estadísticas de la base de datos, los procedimientos almacenados, desencadenadores y funciones definidas por el usuario compilados pueden perder eficacia. Al volver a compilar los procedimientos almacenados y desencadenadores que actúan sobre una tabla, puede volver a optimizar las consultas.  

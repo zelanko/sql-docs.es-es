@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f472c3354e2cfefe10aeeedd8935360e3a4751a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8b3a9c15979d162ca345a0d440f7093c4bd15ad9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868263"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439842"
 ---
 # <a name="overview-smo"></a>Información general (SMO)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "91868263"
   
  La ejecución directa es el método habitual de ejecución. Las instrucciones se envían directamente a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a medida que se generan. La ejecución de captura constituye una alternativa al método habitual de ejecución.  
   
- La ejecución de captura permite capturar lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] que, en condiciones normales, se ejecutarían. Esto permite al programador de SMO aplazar el script, almacenarlo para ejecutarlo posteriormente o proporcionar una vista previa al usuario final. Por ejemplo, es posible enviar una instrucción **create database**, **create table**y **create index** en un lote y, a continuación, realizar la ejecución en tres pasos secuenciales. El usuario es quien controla esta funcionalidad utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>.  
+ La ejecución de captura permite capturar lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] que, en condiciones normales, se ejecutarían. Esto permite al programador de SMO aplazar el script, almacenarlo para ejecutarlo posteriormente o proporcionar una vista previa al usuario final. Por ejemplo, es posible enviar una instrucción **create database**, **create table** y **create index** en un lote y, a continuación, realizar la ejecución en tres pasos secuenciales. El usuario es quien controla esta funcionalidad utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>.  
   
  **Proveedor WMI**  
   

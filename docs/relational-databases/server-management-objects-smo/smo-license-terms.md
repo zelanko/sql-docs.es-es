@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8939bfbec2f309c899a527288de35a3d3ea10d09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 91301000df95b19338313d4541d7a7de4956095d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420199"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439826"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>Términos de licencia de los objetos de administración compartida (SMO) de SQL Server
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
 
 **2.    REQUISITOS DE LICENCIA Y/O DERECHOS DE USUARIO ADICIONALES**
 
-&nbsp;&nbsp;**Código. distribuible.**
+&nbsp;&nbsp;**un.    Código distribuible.**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i. derecha para usar y distribuir. Si cumple con los términos siguientes:**
 *   Puede copiar y distribuir el formulario de código objeto del software ("código distribuible") en los programas que desarrolle; etc
@@ -86,9 +86,9 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
 
 **10.   LEGISLACIÓN APLICABLE.**
 
-&nbsp;&nbsp;**a. Estados Unidos.** Si adquirió el software en los Estados Unidos, es la ley estatal de Washington la que rige la interpretación de este contrato y se aplica a las reclamaciones por incumplimiento del mismo, independientemente del conflicto de principios legales. Para el resto de reclamaciones, será aplicable la legislación de su estado de residencia, incluidas las reclamaciones en virtud de las leyes estatales en materia de protección al consumidor, competencia desleal y responsabilidad extracontractual.
+&nbsp;&nbsp;**un.    Estados Unidos.** Si adquirió el software en los Estados Unidos, es la ley estatal de Washington la que rige la interpretación de este contrato y se aplica a las reclamaciones por incumplimiento del mismo, independientemente del conflicto de principios legales. Para el resto de reclamaciones, será aplicable la legislación de su estado de residencia, incluidas las reclamaciones en virtud de las leyes estatales en materia de protección al consumidor, competencia desleal y responsabilidad extracontractual.
 
-&nbsp;&nbsp;**b. fuera del Estados Unidos.** Si adquirió el software en otro país, se aplicarán las leyes del país en el que usted vive.
+&nbsp;&nbsp;**b.    Fuera del Estados Unidos.** Si adquirió el software en otro país, se aplicarán las leyes del país en el que usted vive.
 
 **11.   EFECTO LEGAL.** En este contrato se describen determinados derechos legales. Usted puede tener otros derechos conforme a las leyes de su estado o país. También puede tener derechos respecto a la parte de la que adquirió el software. Este contrato no cambia sus derechos bajo las leyes de su país o estado si dichas leyes no permiten que así lo haga.
 

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: dd5b35e6c999f69b7adda16fd4590942cd2da63b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 2ab1c51c53282b5f245cf7da0d33cf4f797bf53a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810251"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439470"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -73,10 +73,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso `ALTER ANY EXTERNAL DATA SOURCE`.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  `sp_execute_remote` los parámetros deben especificarse en el orden específico, tal y como se describe en la sección de sintaxis anterior. Si los parámetros se escriben desordenados, se producirá un mensaje de error.  
   
- `sp_execute_remote` tiene el mismo comportamiento que [execute &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) con respecto a los lotes y el ámbito de los nombres. La instrucción o el lote de Transact-SQL del parámetro sp_execute_remote * \@ stmt* no se compila hasta que se ejecuta la instrucción sp_execute_remote.  
+ `sp_execute_remote` tiene el mismo comportamiento que [execute &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) con respecto a los lotes y el ámbito de los nombres. La instrucción o el lote de Transact-SQL del parámetro sp_execute_remote *\@ stmt* no se compila hasta que se ejecuta la instrucción sp_execute_remote.  
   
  `sp_execute_remote` agrega una columna adicional al conjunto de resultados denominado ' $ShardName ' que contiene el nombre de la base de datos remota que creó la fila.  
   

@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ac3719d3946e07ec3314b586f5abb5a14910133
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e3291ebc25cfa29b866ccca576ef8900bf151fb2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955886"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440346"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
 
@@ -43,7 +43,7 @@ Quita del grupo de búferes todos los búferes borrados y quita del grupo de obj
   
 ## <a name="syntax"></a>Sintaxis
 
-Sintaxis de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]:
+Sintaxis para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]:
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  

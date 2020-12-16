@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c5d2d1f0af5abdf24fce8be780c15a73f2a778a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81bb8dd3acae7fda65af0ada009b065c909506b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864472"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460061"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introducción a los permisos de los motores de bases de datos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,15 +81,13 @@ ms.locfileid: "91864472"
   
 #### <a name="if-the-person-connecting-will-be-connecting-to-only-one-database"></a>Si la persona que se conecta lo va a hacer a una única base de datos  
   
-1.  Cree un inicio de sesión para los grupos de Windows. (Si usa la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , omita los pasos de Active Directory y cree los inicios de sesión de la autenticación [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aquí).  
+1.  En la base de datos de usuario, cree un usuario de base de datos independiente para el grupo de Windows. (Si usa la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , omita los pasos de Active Directory y cree la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del usuario de base de datos independiente aquí).  
   
-2.  En la base de datos de usuario, cree un usuario de base de datos independiente para el grupo de Windows. (Si usa la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , omita los pasos de Active Directory y cree la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del usuario de base de datos independiente aquí).  
+1.  En la base de datos de usuario, cree uno o varios roles de base de datos definidos por el usuario, cada uno para representar una función similar. Por ejemplo, analista financiero y analista de ventas.  
   
-3.  En la base de datos de usuario, cree uno o varios roles de base de datos definidos por el usuario, cada uno para representar una función similar. Por ejemplo, analista financiero y analista de ventas.  
+1.  Agregue los usuarios de base de datos a uno o varios roles de base de datos definidos por el usuario.  
   
-4.  Agregue los usuarios de base de datos a uno o varios roles de base de datos definidos por el usuario.  
-  
-5.  Conceda permisos a los roles de base de datos definidos por el usuario.  
+1.  Conceda permisos a los roles de base de datos definidos por el usuario.  
   
  Normalmente, el resultado en este punto es que un usuario de Windows es miembro de un grupo de Windows. El grupo de Windows tiene un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. El inicio de sesión se asigna a una identidad de usuario en la base de datos de usuario. El usuario es miembro de un rol de base de datos. Ahora debe agregar permisos al rol.  
   

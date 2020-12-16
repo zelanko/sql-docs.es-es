@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1bbcdf4244c81eac74e2206d06f5704b92ebb93
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 27e6f62e7b867fcae8d97a080ead87daf5536b7f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92191149"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464206"
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -51,7 +51,7 @@ USE { database_name }
   
  En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], el parámetro de base de datos solo puede hacer referencia a la base de datos actual. Si se proporciona una base de datos distinta de la base de datos actual, la instrucción `USE` no cambia entre bases de datos y se devuelve el código de error 40508. Para cambiar de base de datos, debe conectarse directamente a la base de datos. La instrucción USE está marcada como no aplicable a SQL Database al inicio de esta página porque, aunque se puede tener la instrucción `USE` en un lote, esta no hace nada.
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el inicio de sesión se conecta automáticamente a su base de datos predeterminada y adquiere el contexto de seguridad de un usuario de la base de datos. Si no se ha creado ningún usuario de la base de datos para el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el inicio de sesión se conecta como guest. Si el usuario de la base de datos no tiene permiso CONNECT en la base de datos, la instrucción USE no funcionará correctamente. Si no se ha asignado ninguna base de datos predeterminada al inicio de sesión, su base de datos predeterminada se establecerá en master.  
   
  USE se ejecuta en tiempo de compilación y de ejecución, y surte efecto inmediatamente. Por lo tanto, las instrucciones que aparecen en un lote después de la instrucción USE se ejecutan en la base de datos especificada.  

@@ -38,13 +38,13 @@ helpviewer_keywords:
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56eaaeb3dfc90ee9de1f5ee769417eb75c232e4b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 00ff65b2c1007f8c205bc30e27c48b5282b882b9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035822"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464216"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -215,7 +215,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  *expression* es el valor que se copia en *column_name*. *expression* se debe evaluar, o bien se debe poder convertir implícitamente al tipo *column_name*. Si *expression* se establece en NULL, @*Length* se omitirá y el valor en *column_name* se truncará en el valor @*Offset* especificado.  
   
- @*Offset* es el punto inicial del valor almacenado en *column_name* en el que se escribe *expression*. @*Offset* es una posición de byte ordinal de base cero, es de tipo **bigint** y no puede ser un número negativo. Si @*Offset* es NULL, la operación de actualización anexa *expression*al final del valor de *column_name* existente y @*Length* no se tiene en cuenta. Si @*Offset* es mayor que la longitud de bytes del valor de *column_name*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] devuelve un error. Si la suma de @*Offset* y @*Length* excede el final del valor subyacente de la columna, se elimina todo hasta el último carácter del valor.  
+ @*Offset* es el punto inicial del valor almacenado en *column_name* en el que se escribe *expression*. @*Offset* es una posición de byte ordinal de base cero, es de tipo **bigint** y no puede ser un número negativo. Si @*Offset* es NULL, la operación de actualización anexa *expression* al final del valor de *column_name* existente y @*Length* no se tiene en cuenta. Si @*Offset* es mayor que la longitud de bytes del valor de *column_name*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] devuelve un error. Si la suma de @*Offset* y @*Length* excede el final del valor subyacente de la columna, se elimina todo hasta el último carácter del valor.  
   
  @*Length* es la longitud de la sección de la columna, a partir de @*Offset*, que se reemplaza por *expression*. @*Length* es de tipo **bigint** y no puede ser un número negativo. Si @*Length* es NULL, la operación de actualización quita todos los datos de @*Offset* hasta el final del valor de *column_name*.  
   

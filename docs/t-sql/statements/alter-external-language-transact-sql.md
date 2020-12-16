@@ -10,13 +10,13 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 006a0577292ba825a3d28cd63cc573ac35cc5771
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: bca91a8745a36c845fd3ef7e08e1d0139b37bd1a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300423"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464156"
 ---
 # <a name="alter-external-language-transact-sql"></a>ALTER EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -111,7 +111,7 @@ Este parámetro es necesario para escenarios de sistemas operativos híbridos. E
 
 ## <a name="remarks"></a>Observaciones
 
-Actualmente, no se admite **PARAMETERS** ni **ENVIRONMENT_VARIABLES** .
+Actualmente, no se admite **PARAMETERS** ni **ENVIRONMENT_VARIABLES**.
 
 ## <a name="permissions"></a>Permisos
 

@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e074f54cb4d31616abced2e0b555c068728ec6c
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 59637197b72232df9f5054b88ea9a111f34b58a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384834"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464096"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -130,7 +130,7 @@ DELETE
  *server_name*  
  **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
- Nombre del servidor (un nombre de servidor vinculado o la función [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) como nombre de servidor) en el que se encuentra la tabla o la vista. Si se especifica *server_name* , se requiere *database_name* y *schema_name*.  
+ Nombre del servidor (un nombre de servidor vinculado o la función [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) como nombre de servidor) en el que se encuentra la tabla o la vista. Si se especifica *server_name*, se requiere *database_name* y *schema_name*.  
   
  *database_name*  
  El nombre de la base de datos.  
@@ -150,7 +150,7 @@ DELETE
   
  Función [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) u [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), dependiendo del proveedor.  
   
- WITH **(** \<table_hint_limited> [... *n* ] **)**  
+ WITH **(** \<table_hint_limited> [... *n*] **)**  
  Especifica una o varias sugerencias de tabla que están permitidas en una tabla de destino. La palabra clave WITH y los paréntesis son obligatorios. No se permiten NOLOCK ni READUNCOMMITTED. Para más información sobre las sugerencias de tabla, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<OUTPUT_Clause>  
@@ -182,12 +182,12 @@ DELETE
  Especifica que *cursor_name* hace referencia a un cursor global.  
   
  *cursor_name*  
- Es el nombre del cursor abierto desde el que se realiza la captura. Si hay un cursor global y otro local con el nombre *cursor_name* , este argumento hace referencia al cursor global si se especifica GLOBAL; de lo contrario, hace referencia al cursor local. El cursor debe permitir actualizaciones.  
+ Es el nombre del cursor abierto desde el que se realiza la captura. Si hay un cursor global y otro local con el nombre *cursor_name*, este argumento hace referencia al cursor global si se especifica GLOBAL; de lo contrario, hace referencia al cursor local. El cursor debe permitir actualizaciones.  
   
  *cursor_variable_name*  
  Nombre de una variable de cursor. La variable de cursor debe hacer referencia a un cursor que permita realizar actualizaciones.  
   
- OPTION **(** \<query_hint> [ **,** ... *n* ] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  Palabras clave que indican que se utilizan sugerencias del optimizador para personalizar el procesamiento de la instrucción por parte del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para obtener más información, vea [Sugerencias de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Prácticas recomendadas  
@@ -338,7 +338,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. Utilizar TOP para limitar el número de filas eliminadas  
- Cuando se usa una cláusula TOP ( *n* ) con DELETE, la operación de eliminación se realiza en una selección aleatoria de un número de filas *n*. En el ejemplo siguiente se eliminan `20` filas aleatorias de la tabla `PurchaseOrderDetail` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] cuyas fechas de vencimiento sean anteriores al 1 de julio de 2006.  
+ Cuando se usa una cláusula TOP (*n*) con DELETE, la operación de eliminación se realiza en una selección aleatoria de un número de filas *n*. En el ejemplo siguiente se eliminan `20` filas aleatorias de la tabla `PurchaseOrderDetail` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] cuyas fechas de vencimiento sean anteriores al 1 de julio de 2006.  
   
 ```sql
 DELETE TOP (20)   

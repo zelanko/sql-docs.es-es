@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8e5da6272ce3bb60852e10f3bac9cd3fa9a1435f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9597b6c0811ff2fe917a2282b43e677b74eebd4f
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426867"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490075"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ ms.locfileid: "88426867"
  Especifica la columna asociada a una definición DEFAULT de nivel de tabla.  
   
  WITH VALUES  
- Al agregar una columna Y una restricción DEFAULT, si la columna permite valores NULL con WITH VALUES, para las filas existentes, establecerá el valor de la columna nueva en el valor determinado en la expresión *constant_expression* DEFAULT. Si la columna que se agrega no permite valores NULL, para las filas existentes, el valor de la columna siempre se establecerá en el valor determinado en la *expresión constante* DEFAULT. Desde SQL Server 2012, está puede ser una operación de metadatos [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ Al agregar una columna Y una restricción DEFAULT, si la columna permite valores NULL con WITH VALUES, para las filas existentes, establecerá el valor de la columna nueva en el valor determinado en la expresión *constant_expression* DEFAULT. Si la columna que se agrega no permite valores NULL, para las filas existentes, el valor de la columna siempre se establecerá en el valor determinado en la *expresión constante* DEFAULT. Desde SQL Server 2012, está puede ser una operación de metadatos [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation).
 Si se usa cuando no se está agregando también la columna relacionada, no tiene ningún impacto. 
   
  CHECK  

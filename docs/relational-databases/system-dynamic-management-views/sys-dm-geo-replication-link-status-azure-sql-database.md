@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cb9936ce01a68055b7f050ddc7dbdb21a9802438
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d6177d289eb46f839d8b1e742d2daf2cff73f5e3
+ms.sourcegitcommit: 86534989f7827f1c36ed1333ad9c4557dfd77f3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474856"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97515360"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 
@@ -39,12 +39,12 @@ ms.locfileid: "97474856"
 |partner_database|**sysname**|Nombre de la base de datos vinculada en la que reside el servidor de SQL Database vinculado.|  
 |last_replication|**datetimeoffset**|Marca de tiempo de la confirmación de la última transacción por la base de datos secundaria en función del reloj de la base de datos principal. Este valor solo está disponible en la base de datos principal.|  
 |replication_lag_sec|**int**|Diferencia de tiempo en segundos entre el valor de last_replication y la marca de tiempo de la confirmación de la transacción en el principal basándose en el reloj de la base de datos principal.  Este valor solo está disponible en la base de datos principal.|  
-|replication_state|**tinyint**|El estado de la replicación geográfica para esta base de datos, uno de los siguientes:.<br /><br /> 1 = propagación. El destino de replicación geográfica se está inicializando, pero las dos bases de datos aún no se han sincronizado. Hasta que se completa la propagación, no se puede conectar a la base de datos secundaria. Al quitar la base de datos secundaria del servidor principal, se cancelará la operación de propagación.<br /><br /> 2 = puesta al día. La base de datos secundaria se encuentra en un estado transaccionalmente coherente y se está sincronizando constantemente con la base de datos principal.<br /><br /> 4 = suspendido. No es una relación activa de copia continua. Este estado suele indicar que el ancho de banda disponible para el interlink es insuficiente para el nivel de actividad de transacción en la base de datos principal. Sin embargo, la relación de copia continua sigue intacta.|  
+|replication_state|**tinyint**|El estado de la replicación geográfica para esta base de datos, uno de los siguientes:<br /><br /> 1 = propagación. El destino de replicación geográfica se está inicializando, pero las dos bases de datos aún no se han sincronizado. Hasta que se completa la propagación, no se puede conectar a la base de datos secundaria. Al quitar la base de datos secundaria del servidor principal, se cancelará la operación de propagación.<br /><br /> 2 = puesta al día. La base de datos secundaria se encuentra en un estado transaccionalmente coherente y se está sincronizando constantemente con la base de datos principal.<br /><br /> 4 = suspendido. No es una relación activa de copia continua. Este estado suele indicar que el ancho de banda disponible para el interlink es insuficiente para el nivel de actividad de transacción en la base de datos principal. Sin embargo, la relación de copia continua sigue intacta.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |rol|**tinyint**|Rol de replicación geográfica, uno de los siguientes:<br /><br /> 0 = principal. El database_id hace referencia a la base de datos principal de la Asociación de replicación geográfica.<br /><br /> 1 = secundaria.  El database_id hace referencia a la base de datos principal de la Asociación de replicación geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|El tipo secundario, uno de los siguientes:<br /><br /> 0 = no se permiten conexiones directas a la base de datos secundaria y la base de datos no está disponible para acceso de lectura.<br /><br /> 2 = se permiten todas las conexiones a la base de datos en el REPL secundario; ication para el acceso de solo lectura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> Todo|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> All|  
 |last_commit|**datetimeoffset**|Hora de la última transacción confirmada en la base de datos. Si se recupera en la base de datos principal, indica la hora de la última confirmación en la base de datos principal. Si se recupera en la base de datos secundaria, indica la hora de la última confirmación en la base de datos secundaria. Si se recupera en la base de datos secundaria cuando la réplica principal del vínculo de replicación está inactiva, indica hasta qué punto se ha detectado el elemento secundario.|
   
 > [!NOTE]  

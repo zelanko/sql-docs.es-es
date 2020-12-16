@@ -18,12 +18,12 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 12adf94f84fbe9c1b47093cf8ab6b106fb9d5249
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c69b375ae55f8d7a4d76c4c619f9c9afe1d50def
+ms.sourcegitcommit: 86534989f7827f1c36ed1333ad9c4557dfd77f3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440670"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97515369"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
 
@@ -34,17 +34,17 @@ ms.locfileid: "97440670"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|IDENTIFICADOR de la base de datos actual en la vista sys. databases.|  
-|start_date|**datetimeoffset**|Hora UTC en un centro de datos de SQL Database regional al iniciarse la replicación de base de datos|  
-|modify_date|**datetimeoffset**|Hora UTC en el centro de datos de SQL Database regional cuando se ha completado la replicación geográfica de la base de datos. La nueva base de datos se sincroniza con la base de datos principal en este momento. .|  
+|start_date|**datetimeoffset**|Hora UTC en un centro de datos de SQL Database regional al iniciarse la replicación de base de datos.|  
+|modify_date|**datetimeoffset**|Hora UTC en el centro de datos de SQL Database regional cuando se ha completado la replicación geográfica de la base de datos. La nueva base de datos se sincroniza con la base de datos principal en este momento.|  
 |link_guid|**uniqueidentifier**|IDENTIFICADOR único del vínculo de replicación geográfica.|  
 |partner_server|**sysname**|Nombre del servidor de SQL Database que contiene la base de datos con replicación geográfica.|  
 |partner_database|**sysname**|Nombre de la base de datos con replicación geográfica en el servidor de SQL Database vinculado.|  
-|replication_state|**tinyint**|El estado de la replicación geográfica para esta base de datos, uno de los siguientes:.<br /><br /> 0 = pendiente. La creación de la base de datos secundaria activa está programada, pero aún no se han completado los pasos de preparación necesarios.<br /><br /> 1 = propagación. El destino de replicación geográfica se está inicializando, pero las dos bases de datos aún no se han sincronizado. Hasta que se completa la propagación, no se puede conectar a la base de datos secundaria. Al quitar la base de datos secundaria del servidor principal, se cancelará la operación de propagación.<br /><br /> 2 = puesta al día. La base de datos secundaria se encuentra en un estado transaccionalmente coherente y se está sincronizando constantemente con la base de datos principal.|  
+|replication_state|**tinyint**|El estado de la replicación geográfica para esta base de datos, uno de los siguientes:<br /><br /> 0 = pendiente. La creación de la base de datos secundaria activa está programada, pero aún no se han completado los pasos de preparación necesarios.<br /><br /> 1 = propagación. El destino de replicación geográfica se está inicializando, pero las dos bases de datos aún no se han sincronizado. Hasta que se completa la propagación, no se puede conectar a la base de datos secundaria. Al quitar la base de datos secundaria del servidor principal, se cancelará la operación de propagación.<br /><br /> 2 = puesta al día. La base de datos secundaria se encuentra en un estado transaccionalmente coherente y se está sincronizando constantemente con la base de datos principal.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |rol|**tinyint**|Rol de replicación geográfica, uno de los siguientes:<br /><br /> 0 = principal. El database_id hace referencia a la base de datos principal de la Asociación de replicación geográfica.<br /><br /> 1 = secundaria.  El database_id hace referencia a la base de datos principal de la Asociación de replicación geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|El tipo secundario, uno de los siguientes:<br /><br /> 0 = No. No se puede obtener acceso a la base de datos secundaria hasta la conmutación por error.<br /><br /> 1 = solo lectura. Solo se puede acceder a la base de datos secundaria a las conexiones de cliente con ApplicationIntent = ReadOnly.<br /><br /> 2 = Todas. La base de datos secundaria es accesible para cualquier conexión de cliente.|  
-|secondary_allow_connections _desc|**nvarchar(256)**|No<br /><br /> Todo<br /><br /> Solo lectura|  
+|secondary_allow_connections _desc|**nvarchar(256)**|No<br /><br /> All<br /><br /> Solo lectura|  
   
 ## <a name="permissions"></a>Permisos
 

@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a6b0e958439025019e51bac7edb103febfe6409a
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+ms.openlocfilehash: 9fb4195047df5e996cbef4a3fbceb1367172df6b
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521175"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490085"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -420,7 +420,7 @@ Al igual que con ON y `TEXTIMAGE_ON`, el valor establecido utilizando `CREATE TA
 - Una instrucción [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) convierte un montón en un índice agrupado. En este caso, se puede especificar un grupo de archivos FILESTREAM diferente, un esquema de partición o NULL.
 - Una instrucción [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) convierte un índice agrupado en un montón. En este caso, se puede especificar otro grupo de archivos FILESTREAM, otro esquema de partición o **"default"** .
 
-El grupo de archivos en la cláusula `FILESTREAM_ON <filegroup>`, o cada grupo de archivos FILESTREAM que se mencione en el esquema de partición, debe tener un archivo definido para el grupo de archivos. Este archivo se debe definir mediante una instrucción [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) o [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md); en caso contrario, se produce un error.
+El grupo de archivos en la cláusula `FILESTREAM_ON <filegroup>`, o cada grupo de archivos FILESTREAM que se mencione en el esquema de partición, debe tener un archivo definido para el grupo de archivos. Este archivo se debe definir mediante una instrucción [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) o [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md); en caso contrario, se produce un error.
 
 Si quiere consultar temas sobre FILESTREAM relacionados, vea [Datos de objeto binario grande (Blob) (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).
 

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b3cffe95dcdd41cc904aed95de0d91c97314670
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f878144b8b7ff86636ff778ec586a0382ca801cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009928"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474066"
 ---
 # <a name="create-a-format-file-sql-server"></a>Crear un archivo de formato (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "86009928"
 > [!NOTE]  
 >  La versión de la utilidad **bcp** (Bcp.exe) que se emplee para leer un archivo de formato debe ser la misma versión, o una versión posterior, a la que se use para crear el archivo de formato. Por ejemplo, **bcp** de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] puede leer un archivo de formato de la versión 10.0 generado por **bcp** de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], pero **bcp** de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] no puede leer un archivo de formato de la versión 11.0 generado por **bcp** de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- En este tema se describe cómo utilizar la [utilidad bcp](../../tools/bcp-utility.md) para crear un archivo de formato para una tabla determinada. El archivo de formato se basa en la opción de tipo de datos especificada ( **-n**, **-c**, **-w**o **-N**) y en los delimitadores de la vista o de la tabla.  
+ En este tema se describe cómo utilizar la [utilidad bcp](../../tools/bcp-utility.md) para crear un archivo de formato para una tabla determinada. El archivo de formato se basa en la opción de tipo de datos especificada ( **-n**, **-c**, **-w** o **-N**) y en los delimitadores de la vista o de la tabla.  
   
 ## <a name="creating-a-non-xml-format-file"></a>Crear un archivo de formato no XML  
  Si quiere usar un comando **BCP** para crear un archivo de formato, especifique el argumento **format** y use **null** en lugar de una ruta de acceso de archivo de datos. La opción **format** también requiere la opción **-f** , como:  

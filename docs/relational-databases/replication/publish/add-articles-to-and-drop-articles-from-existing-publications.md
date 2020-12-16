@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7353735a34874248e3796763c608bff24a83f649
-ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 1f566297d7efaffeb272ba79fb3b35ff37730429
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907383"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475676"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Agregar y quitar artículos de publicaciones existentes
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92907383"
  Para agregar un artículo, es necesario agregar el artículo a la publicación, crear una instantánea nueva para la publicación y sincronizar la suscripción para aplicar el esquema y los datos para el nuevo artículo.  
   
 > [!NOTE]
->  Si se agrega un artículo a una publicación de combinación y ya hay un artículo que dependa de este nuevo artículo, debe especificar un orden de procesamiento para ambos artículos con el parámetro **\@processing_order** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) y [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Considere el caso siguiente: publica una tabla pero no publica una función a la que hace referencia la tabla. Si no publica la función, la tabla no se puede crear en el suscriptor. Al agregar la función a la publicación: especifique el valor **1** para el parámetro **\@processing_order** de **sp_addmergearticle** y el valor **2** para el parámetro **\@processing_order** de **sp_changemergearticle** ; asimismo, debe especificar el nombre de la tabla para el parámetro **\@article**. Este orden de procesamiento garantiza que la función se cree en el suscriptor antes que la tabla que depende de él. Puede usar números distintos para cada artículo, siempre que el número de la función sea inferior al de la tabla.  
+>  Si se agrega un artículo a una publicación de combinación y ya hay un artículo que dependa de este nuevo artículo, debe especificar un orden de procesamiento para ambos artículos con el parámetro **\@processing_order** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) y [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Considere el caso siguiente: publica una tabla pero no publica una función a la que hace referencia la tabla. Si no publica la función, la tabla no se puede crear en el suscriptor. Al agregar la función a la publicación: especifique el valor **1** para el parámetro **\@processing_order** de **sp_addmergearticle** y el valor **2** para el parámetro **\@processing_order** de **sp_changemergearticle**; asimismo, debe especificar el nombre de la tabla para el parámetro **\@article**. Este orden de procesamiento garantiza que la función se cree en el suscriptor antes que la tabla que depende de él. Puede usar números distintos para cada artículo, siempre que el número de la función sea inferior al de la tabla.  
   
 1.  Agregue uno o más artículos con uno de estos métodos:  
   

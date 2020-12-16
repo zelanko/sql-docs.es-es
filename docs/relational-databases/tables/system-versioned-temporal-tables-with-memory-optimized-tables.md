@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b93b419e4678b84684c524011ed4df4feb6fcb14
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810468"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474576"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tablas temporales con control de versiones del sistema con tablas con optimización para memoria
 
@@ -49,7 +49,7 @@ Los siguientes datos sobre las tablas temporales con control de versiones del si
 - Puede forzar un vaciado de datos invocando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).
 - Cuando **SYSTEM_VERSIONING = OFF** o cuando se modifica el esquema de una tabla con control de versiones del sistema agregando, quitando o alterando columnas, todo el contenido del búfer de almacenamiento provisional interno se mueve a la tabla de historial basada en disco.
 - La consulta de los datos de historial se produce en el nivel de aislamiento SNAPSHOT y siempre devuelve una unión entre el búfer de almacenamiento provisional en memoria y la tabla basada en disco sin duplicados.
-- Las operaciones**ALTER TABLE** que cambian el esquema de tabla internamente deben realizar un vaciado de datos, lo que podría prolongar la duración de la operación.
+- Las operaciones **ALTER TABLE** que cambian el esquema de tabla internamente deben realizar un vaciado de datos, lo que podría prolongar la duración de la operación.
 
 ## <a name="the-internal-memory-optimized-staging-table"></a>Tabla de almacenamiento provisional interna con optimización para memoria
 

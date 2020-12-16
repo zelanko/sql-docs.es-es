@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 38ffa83b86097e8789c61b26f161d6021f5ee79b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f879b6e749f3797a51970708be59b3b68920cb26
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036888"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474246"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversión de tipos de datos (motor de base de datos)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -136,7 +136,7 @@ En la tabla siguiente se describen las conversiones de tipos de datos de [!INCLU
 |**datetime**, **smalldatetime**|**Fecha**|  
 |Cualquiera establecido en NULL|**Variant** establecido en NULL|  
   
-Los valores únicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se convierten a un valor único de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], con la excepción de los valores **binary**, **varbinary** e **image**. Estos valores se convierten a una matriz **Byte()** unidimensional en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Esta matriz tiene un intervalo de **Byte(** 0 to _length_1 **)** donde *length* es el número de bytes en los valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** o **image**.
+Los valores únicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se convierten a un valor único de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], con la excepción de los valores **binary**, **varbinary** e **image**. Estos valores se convierten a una matriz **Byte()** unidimensional en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Esta matriz tiene un intervalo de **Byte(** 0 to _length_ 1 **)** donde *length* es el número de bytes en los valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** o **image**.
   
 A continuación se indican las conversiones de tipos de datos de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] a tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c9e762060e3afdc5df7802249e99075de66ef751
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 71782c95201c224bdd40624e23f529b01d892f22
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395030"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475946"
 ---
 # <a name="replication-distribution-agent"></a>Agente de distribución de replicación
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -222,7 +222,7 @@ distrib [-?]
  **-PacketSize** _packet_size_  
  Es el tamaño del paquete, en bytes. El valor predeterminado es 4096 (bytes).  
   
- **-PollingInterval** _polling_interval__  
+ **-PollingInterval** _polling_interval_ _  
  Es la frecuencia, en segundos, con la que la base de datos de distribución recibe consultas de transacciones replicadas. El valor predeterminado es 5 segundos.  
   
  **-ProfileName** _profile_name_  
@@ -280,7 +280,7 @@ distrib [-?]
  Especifica el tipo de suscripción para la distribución. Un valor de **0** indica una suscripción de inserción, un valor de **1** indica una suscripción de extracción y un valor de **2** indica una suscripción anónima.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Especifica el intervalo de la transacción para el registro del historial. Si el número de transacciones confirmadas después de la última instancia de registro del historial es mayor que esta opción, se registra un mensaje de historial. El valor predeterminado es 100. Un valor de **0** indica infinito **TransactionsPerHistory**. See the preceding **–MessageInterval**parameter.  
+ Especifica el intervalo de la transacción para el registro del historial. Si el número de transacciones confirmadas después de la última instancia de registro del historial es mayor que esta opción, se registra un mensaje de historial. El valor predeterminado es 100. Un valor de **0** indica infinito **TransactionsPerHistory**. See the preceding **–MessageInterval** parameter.  
   
  **-UseDTS**  
  Se debe especificar como un parámetro para una publicación que permite la transformación de datos.  

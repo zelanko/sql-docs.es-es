@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4ff1261ef4b1cfed1b36c8d14dde6810e6c27ef8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 558363289f212544d71eee6ad2a4d40a9d5716c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918731"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477876"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir la latencia y validar las conexiones de la replicación transaccional
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "86918731"
   
 3.  Haga clic en **Insertar seguimiento**.  
   
-4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor**y **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
+4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor** y **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Para ver información en el testigo de seguimiento insertado previamente  
   
@@ -101,7 +101,7 @@ ms.locfileid: "86918731"
   
 3.  Seleccione una hora en la lista desplegable **Hora de inserción** .  
   
-4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor**y **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
+4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor** y **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
   
     > [!NOTE]  
     >  La información del testigo de seguimiento se guarda durante el mismo período que otros datos del historial, que depende del período de retención de historial de la base de datos de distribución. Para obtener información sobre cómo cambiar las propiedades de la base de datos de distribución, vea [Ver y modificar las propiedades del distribuidor y del publicador](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  

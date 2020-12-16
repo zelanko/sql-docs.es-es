@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 281f95c0e80b11e6295e94ef1e19b93969910790
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 92101ce00eb74e7a48a7e72b320eb536e4d60022
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465242"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477826"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Información general de la interfaz del Monitor de replicación
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "88465242"
 ## <a name="viewing-information-and-performing-tasks-related-to-distributors"></a>Ver información y realizar tareas relacionadas con distribuidores  
  El Monitor de replicación muestra información sobre distribuidores en tres pestañas:  
   
--   Pestaña**Publicaciones**  
+-   Pestaña **Publicaciones**  
   
      Esta pestaña proporciona información resumida de todas las publicaciones de un distribuidor.  
   
--   Pestaña**Lista de supervisión de suscripciones**  
+-   Pestaña **Lista de supervisión de suscripciones**  
   
      Esta pestaña proporciona información sobre las suscripciones del distribuidor seleccionado. Puede filtrar la lista de suscripciones para ver errores, advertencias y las suscripciones que tienen un rendimiento bajo. La pestaña le permite igualmente realizar las siguientes tareas: acceder a las propiedades de la suscripción, acceder a información detallada sobre el agente o agentes asociados con una suscripción, así como reinicializar y validar suscripciones.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "88465242"
   
      Esta pestaña no está disponible para distribuidores que ejecuten versiones de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o anterior.  
   
--   Pestaña**Agentes**  
+-   Pestaña **Agentes**  
   
      Esta pestaña muestra información detallada sobre los agentes y trabajos utilizados por todos los tipos de replicación. La pestaña también le permite iniciar y detener cada agente y trabajo.  
   
@@ -83,11 +83,11 @@ ms.locfileid: "88465242"
 ## <a name="viewing-information-and-performing-tasks-related-to-publishers"></a>Ver información y realizar tareas relacionadas con publicadores  
  El Monitor de replicación muestra información sobre publicadores en tres pestañas:  
   
--   Pestaña**Publicaciones**  
+-   Pestaña **Publicaciones**  
   
      Esta pestaña proporciona información resumida de todas las publicaciones en un publicador.  
   
--   Pestaña**Lista de supervisión de suscripciones**  
+-   Pestaña **Lista de supervisión de suscripciones**  
   
      Esta pestaña está diseñada para mostrar información sobre suscripciones de todas las publicaciones disponibles en el publicador seleccionado. Puede filtrar la lista de suscripciones para ver errores, advertencias y las suscripciones que tienen un rendimiento bajo. La pestaña le permite igualmente: tener acceso a las propiedades de la suscripción, tener acceso a información detallada sobre el agente o agentes asociados con una suscripción, y reinicializar y validar suscripciones.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88465242"
   
      Esta pestaña no se muestra en los distribuidores que ejecuten versiones anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
--   Pestaña**Agentes**  
+-   Pestaña **Agentes**  
   
      Esta pestaña muestra información detallada sobre los agentes y trabajos utilizados por todos los tipos de replicación. La pestaña también le permite iniciar y detener cada agente y trabajo.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "88465242"
 ## <a name="viewing-information-and-performing-tasks-related-to-publications"></a>Ver información y realizar tareas relacionadas con publicaciones  
  El Monitor de replicación muestra información sobre publicaciones en tres pestañas y varias ventanas de detalles:  
   
--   Pestaña**Todas las suscripciones**  
+-   Pestaña **Todas las suscripciones**  
   
      En esta pestaña se muestra información acerca de todas las suscripciones de la publicación seleccionada. De forma predeterminada, esta pestaña está ordenada por orden de prioridad: primero los errores, a continuación las advertencias y, por último, en orden creciente de rendimiento, las suscripciones con rendimiento bajo en la parte superior.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "88465242"
   
          La cuadrícula de esta pestaña muestra iconos de advertencia y error en las suscripciones que requieran su atención.  
   
--   Pestaña**Agentes**  
+-   Pestaña **Agentes**  
   
      En esta pestaña se muestra información sobre los agentes utilizados por la replicación. Esta pestaña muestra información de los siguientes agentes:  
   
@@ -148,11 +148,11 @@ ms.locfileid: "88465242"
   
      La pestaña también permite realizar las tareas siguientes: tener acceso a información detallada sobre cada agente e iniciar y detener cada agente. Para obtener información sobre los agentes asociados con suscripciones (el Agente de distribución y el Agente de mezcla), vea la sección "Ver información y realizar tareas relacionadas con suscripciones" en este tema.  
   
--   Pestaña**Advertencias**  
+-   Pestaña **Advertencias**  
   
      Esta pestaña le permite especificar advertencias y alertas para los agentes. Para más información, consulte [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
--   Pestaña**Testigos de seguimiento** (solo replicación transaccional)  
+-   Pestaña **Testigos de seguimiento** (solo replicación transaccional)  
   
      Esta pestaña permite medir la latencia, es decir, el tiempo que transcurre entre la confirmación de una transacción en el publicador y la confirmación de la transacción correspondiente en el suscriptor.  
   
@@ -199,19 +199,19 @@ ms.locfileid: "88465242"
   
      Estas pestañas se han descrito anteriormente en este tema.  
   
--   Pestaña**Historial de Publicador a distribuidor** (solo replicación transaccional)  
+-   Pestaña **Historial de Publicador a distribuidor** (solo replicación transaccional)  
   
      En esta pestaña se muestra información sobre el Agente de registro del LOG para una publicación (la pestaña es idéntica a la ventana de detalles del Agente de registro del LOG).  
   
--   Pestaña**Historial de Distribuidor a suscriptor** (replicación de instantánea y replicación transaccional)  
+-   Pestaña **Historial de Distribuidor a suscriptor** (replicación de instantánea y replicación transaccional)  
   
      En esta pestaña se muestra información sobre el Agente de distribución para una suscripción.  
   
--   Pestaña**Comandos sin distribuir** (solo replicación transaccional)  
+-   Pestaña **Comandos sin distribuir** (solo replicación transaccional)  
   
      En esta pestaña se muestra información sobre le número de comandos de la base de datos de distribución que no se han entregado al suscriptor seleccionado y el tiempo estimado para entregar esos comandos. La pestaña ayuda a responder a la pregunta, "¿Qué retraso tiene mi suscripción?" Esta pestaña no se muestra en los distribuidores que ejecuten versiones anteriores a SQL Server 2005.  
   
--   Pestaña**Historial de sincronizaciones** (solo replicación de mezcla)  
+-   Pestaña **Historial de sincronizaciones** (solo replicación de mezcla)  
   
      En esta pestaña se muestra información sobre el Agente de mezcla para una suscripción. Esta pestaña ayuda a responder a la siguiente pregunta:  
   

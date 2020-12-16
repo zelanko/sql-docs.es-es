@@ -10,13 +10,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: cd954e33c7f3c9605d6887bbaa9db503d7b655ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 472b37589167899314e293ff15c920bba3208962
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420289"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477556"
 ---
 # <a name="rotate-enclave-enabled-keys"></a>Rotación de claves habilitadas para el enclave
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -45,6 +45,6 @@ Los siguientes pasos generales incluyen vínculos a artículos detallados, en fu
 - [Uso de Always Encrypted con enclaves seguros para las columnas cifradas existentes](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Desarrollo de aplicaciones mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-client-development.md)  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 - [Administración de claves para Always Encrypted con enclaves seguros](always-encrypted-enclaves-manage-keys.md)
 

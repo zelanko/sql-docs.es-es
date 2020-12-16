@@ -13,13 +13,13 @@ dev_langs:
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 47073d130f6a3881c7765d74f40fa06658b02f78
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 5d969da45ab53a82d71cea4d852a69f4bbc10999
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067390"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476626"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -106,8 +106,8 @@ RETURNS TABLE
  *parameter_data_type*  
  Es el tipo de datos del parámetro. En las funciones de [!INCLUDE[tsql](../../includes/tsql-md.md)], se permiten todos los tipos de datos escalares admitidos en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. El tipo de datos timestamp (rowversion) no es un tipo admitido.  
   
- [ = *default* ]  
- Es un valor predeterminado para el parámetro. Si se define un valor *default* , la función se puede ejecutar sin especificar un valor para ese parámetro.  
+ [ =*default* ]  
+ Es un valor predeterminado para el parámetro. Si se define un valor *default*, la función se puede ejecutar sin especificar un valor para ese parámetro.  
   
  Cuando un parámetro de la función tiene un valor predeterminado, se debe especificar la palabra clave DEFAULT al llamar a la función para recuperar el valor predeterminado. Este comportamiento es distinto del uso de parámetros con valores predeterminados en los procedimientos almacenados, donde la omisión del parámetro implica especificar el valor predeterminado.  
   
@@ -122,11 +122,11 @@ RETURNS TABLE
  *scalar_expression*  
  Especifica el valor escalar que devuelve la función escalar.  
 
- *select_stmt* **SE APLICA A** : Azure Synapse Analytics  
+ *select_stmt* **SE APLICA A**: Azure Synapse Analytics  
  Es la instrucción SELECT individual que define el valor devuelto de una función con valores de tabla insertados (versión preliminar).
 
- TABLE **SE APLICA A** : Azure Synapse Analytics  
- Especifica que el valor devuelto de la función con valores de tabla (TVF) es una tabla. Solamente se pueden pasar constantes y @ *local_variables* a las TVF.
+ TABLE **SE APLICA A**: Azure Synapse Analytics  
+ Especifica que el valor devuelto de la función con valores de tabla (TVF) es una tabla. Solamente se pueden pasar constantes y @*local_variables* a las TVF.
 
  En las funciones con valores de tabla insertados (versión preliminar), el valor devuelto de TABLE se define mediante una única instrucción SELECT. Las funciones insertadas no tienen variables devueltas asociadas.
   
@@ -244,7 +244,7 @@ RETURN
 );
 GO
 ```
-A continuación, se puede llamar a la función para devolver todos los objetos de vista ( **V** ) con:
+A continuación, se puede llamar a la función para devolver todos los objetos de vista (**V**) con:
 ```sql
 select * from dbo.ModulesByType('V');
 ```

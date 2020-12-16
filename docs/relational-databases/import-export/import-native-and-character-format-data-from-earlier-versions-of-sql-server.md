@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a433735d5989a9708c9ca59ba92051634e1c2eed
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: e89b0fb2445901ec981a5bdfa238cbd31704a039
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868748"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473956"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "91868748"
 ## <a name="interpretation-of-data-types"></a>Interpretación de los tipos de datos  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores tienen compatibilidad para algunos nuevos tipos. Si desea importar un tipo de datos nuevo en una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe almacenarlo en un formato que pueda ser leído por la versión anterior de los clientes **bcp** . En la tabla siguiente se resume cómo se convierten los tipos de datos nuevos a efectos de compatibilidad con las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nuevos tipos de datos de SQL Server 2005|Tipos de datos compatibles de la versión 6*x*|Tipos de datos compatibles de la versión 70|Tipos de datos compatibles de la versión 80|  
+|Nuevos tipos de datos de SQL Server 2005|Tipos de datos compatibles de la versión 6 *x*|Tipos de datos compatibles de la versión 70|Tipos de datos compatibles de la versión 80|  
 |---------------------------------------|-------------------------------------------|-----------------------------------------|-----------------------------------------|  
 |**bigint**|**decimal**|**decimal**|*|  
 |**sql_variant**|**text**|**nvarchar(4000)**|*|  

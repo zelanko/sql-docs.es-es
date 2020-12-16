@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 52c271ac-1a0e-43d5-85d4-35886d1efd32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 10b0edeac4c84d11eb1bafe43ef884b76734f784
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 123936b94066af78dce6cd9c2f8a4cdeec7f2fbd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470218"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475706"
 ---
 # <a name="mssql_repl027183"></a>MSSQL_REPL027183
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88470218"
   
 -   Fragmentar índices en las columnas empleadas para filtrar.  
   
--   Tablas de metadatos de mezcla de gran tamaño, como **MSmerge_tombstone**, **MSmerge_contents**y **MSmerge_genhistory**.  
+-   Tablas de metadatos de mezcla de gran tamaño, como **MSmerge_tombstone**, **MSmerge_contents** y **MSmerge_genhistory**.  
   
 -   Tablas filtradas que no están combinadas en una clave única y filtros de combinación que incluyen un gran número de tablas.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "88470218"
   
 -   Especifique el valor más bajo posible para el período de retención de la publicación, ya que la replicación no puede limpiar los metadatos de las bases de datos de suscripciones y publicaciones hasta que se alcance el período de retención. Para más información, consulte [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
--   Como parte del mantenimiento de la replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la replicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**y **MSmerge_past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+-   Como parte del mantenimiento de la replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la replicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings** y **MSmerge_past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Asegúrese de que las columnas utilizadas para filtrar están correctamente indizadas y vuelva a generar dichos índices en caso necesario. Para obtener más información, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   

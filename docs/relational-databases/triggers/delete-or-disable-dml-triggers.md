@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec282485aec37e07684de2430c2379bf584b4b05
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1c3e022c0c284fa1c2b4ef6824c94cec609e8222
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485451"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477206"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>Eliminar o deshabilitar desencadenadores DML
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "88485451"
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  
   
-2.  Expanda la base de datos que desee, expanda **Tablas**y, a continuación, expanda la tabla que contiene el desencadenador que desea eliminar.  
+2.  Expanda la base de datos que desee, expanda **Tablas** y, a continuación, expanda la tabla que contiene el desencadenador que desea eliminar.  
   
 3.  Expanda **Desencadenadores**, haga clic con el botón derecho en el desencadenador que quiera eliminar y luego haga clic en **Eliminar**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88485451"
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  
   
-2.  Expanda la base de datos que desee, expanda **Tablas**y, a continuación, expanda la tabla que contiene el desencadenador que desea deshabilitar.  
+2.  Expanda la base de datos que desee, expanda **Tablas** y, a continuación, expanda la tabla que contiene el desencadenador que desea deshabilitar.  
   
 3.  Expanda **Desencadenadores**, haga clic con el botón derecho en el desencadenador que quiera deshabilitar y luego haga clic en **Deshabilitar**.  
   

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc360ab3faf724830f61b4572cff93425203ec4
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f7cff43378cdffd2015040d9de4d8ffb7b014291
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332620"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475306"
 ---
 # <a name="execute-a-stored-procedure"></a>Ejecutar un procedimiento almacenado
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -114,7 +114,7 @@ En este tema se describe cómo ejecutar un procedimiento almacenado en [!INCLUDE
   
 -   Establecer, borrar y controlar la ejecución automática  
   
-     Solo el administrador del sistema (**sa**) puede marcar un procedimiento para que se ejecute automáticamente. Además, el procedimiento debe encontrarse en la base de datos **maestra** , pertenecer a **sa**y no incluir parámetros de entrada ni de salida.  
+     Solo el administrador del sistema (**sa**) puede marcar un procedimiento para que se ejecute automáticamente. Además, el procedimiento debe encontrarse en la base de datos **maestra** , pertenecer a **sa** y no incluir parámetros de entrada ni de salida.  
   
      Use [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) para:  
   
@@ -134,7 +134,7 @@ En este tema se describe cómo ejecutar un procedimiento almacenado en [!INCLUDE
   
 1.  En el **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], expándala y, a continuación, expanda **Bases de datos**.  
   
-2.  Expanda la base de datos que desee, expanda **Programación**y, a continuación, expanda **Procedimientos almacenados**.  
+2.  Expanda la base de datos que desee, expanda **Programación** y, a continuación, expanda **Procedimientos almacenados**.  
   
 3.  Haga clic con el botón derecho en el procedimiento almacenado definido por el usuario que quiera y, luego, haga clic en **Ejecutar procedimiento almacenado**.  
   

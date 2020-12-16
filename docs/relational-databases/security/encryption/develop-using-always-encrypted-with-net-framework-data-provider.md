@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2bf769680bfc19180b03cf30235e6abbc8dd77b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4e3bd7a6481f677de9355a892eb78b3b5aeaaa15
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867958"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477586"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Uso de Always Encrypted con el proveedor de datos .NET Framework para SQL Server
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ Always Encrypted permite a las aplicaciones cliente cifrar la información confi
 > El nivel de compatibilidad con Always Encrypted en determinadas versiones de .NET Framework varía. Vea la siguiente sección de referencia de la API de Always Encrypted para obtener más información.
 
 ## <a name="enabling-always-encrypted-for-application-queries"></a>Habilitar Always Encrypted para consultas de la aplicación
-Establecer el valor de la palabra clave de cadena de conexión Valor de cifrado de columnas en **enabled**es la manera más sencilla de habilitar el cifrado de parámetros y el descifrado de los resultados de la consulta que tienen como destino las columnas cifradas.
+Establecer el valor de la palabra clave de cadena de conexión Valor de cifrado de columnas en **enabled** es la manera más sencilla de habilitar el cifrado de parámetros y el descifrado de los resultados de la consulta que tienen como destino las columnas cifradas.
 
 A continuación se muestra un ejemplo de una cadena de conexión que habilita Always Encrypted:
 

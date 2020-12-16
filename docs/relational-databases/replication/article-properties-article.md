@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6a0703042862d995d8890c01fee519915b513e3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 03b08fa667f8b0753c315a7cf66123618cb493f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482468"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475866"
 ---
 # <a name="article-properties---ltarticlegt"></a>Article Properties - &lt;Article&gt; (Propiedades del artículo: &lt;Artículo&gt;)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "88482468"
   
 -   Para cada esquema, agregue un usuario a la base de datos de suscripciones con el mismo nombre que el esquema.  
   
- **Convertir XML a NTEXT**, **Convertir tipos de datos MAX a NTEXT e IMAGE**, **Convertir el tipo datetime nuevo a NVARCHAR**, **Convertir el tipo de secuencia de archivo a tipos de datos MAX**, **Convertir tipo CLR grande a tipos de datos MAX**, **Convertir tipo hierarchyId a tipos de datos MAX**y **Convertir tipo espacial a tipos de datos MAX**.  
+ **Convertir XML a NTEXT**, **Convertir tipos de datos MAX a NTEXT e IMAGE**, **Convertir el tipo datetime nuevo a NVARCHAR**, **Convertir el tipo de secuencia de archivo a tipos de datos MAX**, **Convertir tipo CLR grande a tipos de datos MAX**, **Convertir tipo hierarchyId a tipos de datos MAX** y **Convertir tipo espacial a tipos de datos MAX**.  
  Determina si se deben convertir los tipos de datos y los atributos tal como se describe. Especifique un valor de **True** si va a replicar estos tipos de datos a versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De este modo, se garantiza que se administrarán correctamente en el suscriptor.  
   
  **Nombre del objeto de destino**  
@@ -111,7 +111,7 @@ ms.locfileid: "88482468"
  **Nivel de seguimiento**  
  Determina si se deben tratar los cambios de la misma fila o columna como un conflicto.  
   
- **Comprobar permiso INSERT**, **Comprobar permiso UPDATE**y **Comprobar permiso DELETE**  
+ **Comprobar permiso INSERT**, **Comprobar permiso UPDATE** y **Comprobar permiso DELETE**  
  Determina si se debe comprobar durante la sincronización que el inicio de sesión del suscriptor tenga permisos INSERT, UPDATE o DELETE en las tablas publicadas en la base de datos de publicaciones. El valor predeterminado es **False** porque la replicación de mezcla no requiere que se otorguen estos permisos; el acceso a las tablas publicadas se controla a través de la lista de acceso a la publicación (PAL). Para obtener más información sobre la PAL, vea [Secure the Publisher](../../relational-databases/replication/security/secure-the-publisher.md) (Proteger el publicador).  
   
  Puede solicitar la comprobación de los permisos si desea permitir que uno o varios suscriptores carguen algunos cambios en los datos publicados, pero no otros. Por ejemplo, podría agregar un suscriptor a la PAL, pero sin otorgarle al suscriptor ningún permiso en las tablas de la base de datos de publicaciones. Entonces podría establecer la opción Comprobar permiso DELETE en **True**: el suscriptor podría cargar inserciones y actualizaciones, pero no eliminaciones.  

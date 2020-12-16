@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f2302499c6ea6a17e165f647823b3dfb6a48895f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: a050ee7d8f018277f4bb55726cd1e674c0ee7e68
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455561"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475636"
 ---
 # <a name="validate-all-subscriptions"></a>Validar todas las suscripciones
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88455561"
  **Comprobar los recuentos de filas y comparar las sumas de comprobación para comprobar los datos de las filas**  
  Además de llevar a cabo un recuento de filas en el publicador y en el suscriptor, se calcula una suma de comprobación de todos los datos utilizando el algoritmo binario de suma de comprobación. Si el número de filas da un error, no se lleva a cabo la suma de comprobación. Esta opción no es válida para [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Validar datos replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a754dd4904cb106fc847beab843abca3837545a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 31a157c04afc4890c8818a118c83f5a3c5458e84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002962"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474116"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar el tamaño de un montón
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "86002962"
      Los bytes agregados a **_Max_Var_Size_** son para el seguimiento de cada columna de longitud variable. En esta fórmula se supone que todas las columnas de longitud variable están llenas al 100%. Si prevé que se va a usar un porcentaje inferior del espacio de almacenamiento de columnas de longitud variable, puede ajustar el valor de **_Max_Var_Size_** en función de ese porcentaje para obtener una estimación más precisa del tamaño global de la tabla.  
   
     > [!NOTE]  
-    >  Puede combinar las columnas **varchar**, **nvarchar**, **varbinary**o **sql_variant** que hacen que el ancho total definido para la tabla sea superior a 8060 bytes. La longitud de cada una de estas columnas debe ajustarse al límite de 8.000 bytes en una columna **varchar**, **nvarchar, varbinary** o **sql_variant**. Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla.  
+    >  Puede combinar las columnas **varchar**, **nvarchar**, **varbinary** o **sql_variant** que hacen que el ancho total definido para la tabla sea superior a 8060 bytes. La longitud de cada una de estas columnas debe ajustarse al límite de 8.000 bytes en una columna **varchar**, **nvarchar, varbinary** o **sql_variant**. Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla.  
   
      Si no hay columnas de longitud variable, establezca **_Variable_Data_Size_** en 0.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "86002962"
   
 -   Valores de objetos grandes (LOB)  
   
-     El algoritmo para determinar exactamente la cantidad de espacio que se usará para almacenar los tipos de datos LOB y los valores **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntextxml**e **image** es complejo. Basta con agregar solamente el tamaño medio de los valores de LOB que se esperan y agregarlo al tamaño total del montón.  
+     El algoritmo para determinar exactamente la cantidad de espacio que se usará para almacenar los tipos de datos LOB y los valores **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntextxml** e **image** es complejo. Basta con agregar solamente el tamaño medio de los valores de LOB que se esperan y agregarlo al tamaño total del montón.  
   
 -   Compresión  
   

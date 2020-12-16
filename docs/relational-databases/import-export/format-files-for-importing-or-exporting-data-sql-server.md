@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f441380805e443cc13617a5477d3083ee1dc62d5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8584c274304757724d0eceb88a91257112ef694a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006250"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474006"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>Archivos de formato para importar y exportar datos (SQL Server)
 
@@ -106,7 +106,7 @@ Los archivos de formato se necesitan cuando:
 - Los caracteres de terminación o las longitudes de prefijo no coinciden entre las columnas del archivo de datos.
 
 > [!NOTE]
-> En caso de no disponer de ningún archivo de formato, si un comando **bcp** especifica un modificador de formato de datos ( **-n**, **-c**, **-w**o **-N**) o una operación BULK INSERT especifica la opción DATAFILETYPE, se usará el formato de datos especificado como método predeterminado para interpretar los campos del archivo de datos.
+> En caso de no disponer de ningún archivo de formato, si un comando **bcp** especifica un modificador de formato de datos ( **-n**, **-c**, **-w** o **-N**) o una operación BULK INSERT especifica la opción DATAFILETYPE, se usará el formato de datos especificado como método predeterminado para interpretar los campos del archivo de datos.
 
 ## <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas
 

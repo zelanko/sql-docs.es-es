@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d5d881ff7628c094b8d6880406650387c0cff48
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0626ff511e504a4718a426ae9b1ca85c674ab5f0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868575"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473876"
 ---
 # <a name="memory-optimization-advisor"></a>Asesor de optimización de memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "91868575"
   
  Si no existe una clave principal y la tabla se está migrando a una tabla no perdurable, esta pantalla no aparecerá.  
   
- Para las columnas de texto (columnas de tipo **char**, **nchar**, **varchar**y **nvarchar**), debe seleccionar la intercalación adecuada. OLTP en memoria solo admite las intercalaciones BIN2 para las columnas de una tabla optimizada para memoria y no admite intercalaciones con caracteres adicionales. Vea [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) para obtener información sobre las intercalaciones admitidas y el posible impacto de un cambio de la intercalación.  
+ Para las columnas de texto (columnas de tipo **char**, **nchar**, **varchar** y **nvarchar**), debe seleccionar la intercalación adecuada. OLTP en memoria solo admite las intercalaciones BIN2 para las columnas de una tabla optimizada para memoria y no admite intercalaciones con caracteres adicionales. Vea [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) para obtener información sobre las intercalaciones admitidas y el posible impacto de un cambio de la intercalación.  
   
  Puede configurar los parámetros siguientes para la clave principal:  
   

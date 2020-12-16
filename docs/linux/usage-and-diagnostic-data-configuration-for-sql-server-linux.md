@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 96c58159a020ba11708b12a4e5732438044b3291
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: bfc63894d7e2ada81ca230c1a66d32bd49d6d91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115744"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471406"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>Configuración de la recopilación de datos de uso y diagnóstico para SQL Server en Linux
 
@@ -83,7 +83,7 @@ Para deshabilitar la recopilación de datos de uso y diagnóstico en Docker, deb
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Agregue un archivo `mssql.conf` con las líneas `[telemetry]` y `customerfeedback = false` en el directorio host:
 
@@ -176,7 +176,7 @@ Para habilitar Auditoría local en Docker, debe hacer que Docker [conserve los d
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. El directorio de destino de los nuevos registros de Auditoría local está en el contenedor. Cree un directorio de destino para los nuevos registros de Auditoría local en el directorio host del equipo. En el ejemplo siguiente se crea un nuevo directorio **/audit**:
 

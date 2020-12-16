@@ -7,13 +7,13 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0e35acbb3bd331117170a41eb3665ddc2fb9f9ab
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
+ms.openlocfilehash: b5fcfbf30028c904be96ca17be1ebb7feeb6f91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115868"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471426"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restauración de una base de datos de SQL Server en un contenedor de Docker para Linux
 
@@ -26,7 +26,7 @@ En este tutorial se muestra cómo mover y restaurar un archivo de copia de segur
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 En este tutorial se muestra cómo mover y restaurar un archivo de copia de seguridad de SQL Server en una imagen de contenedor de Linux de SQL Server 2019 que se ejecuta en Docker.
 
@@ -108,7 +108,7 @@ En este tutorial se muestra cómo mover y restaurar un archivo de copia de segur
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Abra un terminal de Bash en Linux/Mac o una sesión de PowerShell con privilegios elevados en Windows.
 
@@ -465,7 +465,7 @@ Además de realizar copias de seguridad de las bases de datos para proteger los 
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Detenga el contenedor **sql1**.
 
@@ -529,7 +529,7 @@ En este tutorial ha aprendido a realizar una copia de seguridad de una base de d
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 En este tutorial ha aprendido a realizar una copia de seguridad de una base de datos en Windows y a moverla a un servidor de Linux con SQL Server 2019. Ha aprendido a:
 

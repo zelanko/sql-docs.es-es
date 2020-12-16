@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec11628388263463bbb7ca3f00f8611768380fd3
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f421e3a0e07b73037e9b789bd29778791f699561
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332566"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473076"
 ---
 # <a name="recompile-a-stored-procedure"></a>Volver a compilar un procedimiento almacenado
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,15 +56,15 @@ ms.locfileid: "87332566"
 ###  <a name="security"></a><a name="Security"></a> Seguridad  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
- Opción**WITH RECOMPILE**  
+ Opción **WITH RECOMPILE**  
  Si se usa esta opción cuando se crea la definición del procedimiento, se necesita el permiso CREATE PROCEDURE en la base de datos y el permiso ALTER en el esquema en el que se crea el procedimiento.  
   
  Si se usa esta opción en una instrucción EXECUTE, se necesitan permisos EXECUTE para el procedimiento. No se necesitan permisos en la propia instrucción EXECUTE, pero sí se necesitan permisos de ejecución en el procedimiento al que se hace referencia en la instrucción EXECUTE. Para obtener más información, vea [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
- Sugerencia de consulta**RECOMPILE**  
+ Sugerencia de consulta **RECOMPILE**  
  Esta característica se emplea cuando se crea el procedimiento y la sugerencia se incluye en las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] del procedimiento. Por tanto, necesita el permiso CREATE PROCEDURE en la base de datos y el permiso ALTER en el esquema en el que se va a crear el procedimiento.  
   
- Ejecutar el procedimiento almacenado del sistema**sp_recompile**  
+ Ejecutar el procedimiento almacenado del sistema **sp_recompile**  
  Necesita el permiso ALTER en el procedimiento especificado.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  

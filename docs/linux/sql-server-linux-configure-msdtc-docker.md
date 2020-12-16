@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5529412dd1c575f25fb372aba3428edcce55431a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f8487b4246a349169891f68e4068ad233f78d21
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900079"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471636"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Procedimiento para usar transacciones distribuidas con SQL Server en Docker
 
@@ -55,7 +55,7 @@ docker run `
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 En el ejemplo siguiente, se muestra cómo usar estas variables de entorno para extraer y ejecutar un único contenedor de SQL Server 2019 configurado para MSDTC. Esto le permite comunicarse con cualquier aplicación en cualquier host.
 

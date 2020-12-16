@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5375afc7e8a115c9398f7ab567c06cb731eb62
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b9d004ce88bba442dc17ff17c3d8a26e75bffd1a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006277"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473146"
 ---
 # <a name="spatial-indexes-overview"></a>Información general sobre los índices espaciales
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "92006277"
 ##  <a name="about-spatial-indexes"></a><a name="about"></a> Acerca de los índices espaciales  
   
 ###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> Descomponer espacio indizado en una jerarquía de cuadrículas  
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los índices espaciales se generan usando árboles B, es decir, los índices deben representar los datos espaciales bidimensionales en el orden lineal de los árboles B. Por consiguiente, antes de leer los datos en un índice espacial, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa una descomposición uniforme jerárquica de espacio. El proceso de creación de índices *descompone* el espacio en una *jerarquía de cuadrículas*de cuatro niveles. Estos niveles se conocen como *nivel 1* (el nivel superior), *nivel 2*, *nivel 3*y *nivel 4*.  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los índices espaciales se generan usando árboles B, es decir, los índices deben representar los datos espaciales bidimensionales en el orden lineal de los árboles B. Por consiguiente, antes de leer los datos en un índice espacial, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa una descomposición uniforme jerárquica de espacio. El proceso de creación de índices *descompone* el espacio en una *jerarquía de cuadrículas* de cuatro niveles. Estos niveles se conocen como *nivel 1* (el nivel superior), *nivel 2*, *nivel 3* y *nivel 4*.  
   
  Cada nivel sucesivo descompone el nivel superior, de manera que cada celda de nivel superior contiene una cuadrícula completa en el nivel siguiente. En un nivel determinado, todas las cuadrículas tienen el mismo número de celdas a lo largo de ambos ejes (por ejemplo, 4x4 o 8x8) y las celdas son todas del mismo tamaño.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "92006277"
 >  Puede especificar explícitamente este esquema de teselación con la cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
 ##### <a name="the-bounding-box"></a>El cuadro de límite  
- Los datos geométricos ocupan un plano que puede ser infinito. Sin embargo, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un índice espacial requiere un espacio finito. Para establecer un espacio finito para descomposición, el esquema de teselación de cuadrícula de geometría exige un *cuadro de límite*rectangular. El cuadro de límite está definido por cuatro coordenadas, **(**_x-min_**,**_y-min_**)** y **(**_x-max_**,**_y-max_**)**, que se almacenan como propiedades del índice espacial. Estas coordenadas representan lo siguiente:  
+ Los datos geométricos ocupan un plano que puede ser infinito. Sin embargo, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un índice espacial requiere un espacio finito. Para establecer un espacio finito para descomposición, el esquema de teselación de cuadrícula de geometría exige un *cuadro de límite* rectangular. El cuadro de límite está definido por cuatro coordenadas, **(**_x-min_**,**_y-min_**)** y **(**_x-max_**,**_y-max_**)**, que se almacenan como propiedades del índice espacial. Estas coordenadas representan lo siguiente:  
   
 -   *x-min* es la coordenada x de la esquina inferior izquierda del cuadro de límite.  
   

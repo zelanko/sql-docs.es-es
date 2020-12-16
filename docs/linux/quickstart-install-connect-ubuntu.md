@@ -9,12 +9,12 @@ ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 95581e7cfd8fbddd80aff1f4086d7f44e5812159
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: fd314ea1723786e514b6eb8320b373216de70aa8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115968"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471666"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Inicio rápido: Instalación de SQL Server y creación de una base de datos en Ubuntu
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -31,7 +31,7 @@ En este inicio rápido, instalará SQL Server 2017 en Ubuntu 18.04. Después,
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 En este inicio rápido, instalará SQL Server 2019 en Ubuntu 18.04. Después, se conectará con **sqlcmd** para crear la primera base de datos y ejecutar consultas.
 
@@ -62,7 +62,7 @@ Para conocer otros requisitos del sistema, vea [Requisitos del sistema para SQL 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 Debe tener un equipo Ubuntu 16.04 o 18.04 con **al menos 2 GB** de memoria.
 
@@ -136,7 +136,7 @@ En este momento, SQL Server se está ejecutando en el equipo Ubuntu y está list
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="install-sql-server"></a><a id="install"></a>Instalar SQL Server
 

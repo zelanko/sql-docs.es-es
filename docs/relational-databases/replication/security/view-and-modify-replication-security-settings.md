@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c7e4f4589fa5d6c4e2758a2b259ff8e6129904f7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 843ce787a060481f933376470ef431c6c8e8df08
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869074"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479746"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Ver y modificar la configuración de seguridad de la replicación
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -458,7 +458,7 @@ ms.locfileid: "91869074"
   
     -   Para especificar la autenticación de Windows integrada como el tipo de autenticación que utiliza el agente cuando se conecta al suscriptor, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> en **true**.  
   
-    -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al suscriptor, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> en **false**y especifique las credenciales de inicio de sesión del suscriptor para los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
+    -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al suscriptor, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> en **false** y especifique las credenciales de inicio de sesión del suscriptor para los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
   
         > [!NOTE]  
         >  La conexión de agente al distribuidor siempre se realiza utilizando las credenciales de Windows especificadas por <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Esta cuenta también se utiliza para realizar conexiones remotas mediante la autenticación de Windows.  
@@ -481,7 +481,7 @@ ms.locfileid: "91869074"
   
     -   Para especificar la autenticación de Windows integrada como el tipo de autenticación que utiliza el agente cuando se conecta al distribuidor, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> en **true**.  
   
-    -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al distribuidor, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> en **false**y especifique las credenciales de inicio de sesión del distribuidor para los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
+    -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al distribuidor, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> en **false** y especifique las credenciales de inicio de sesión del distribuidor para los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
   
         > [!NOTE]  
         >  La conexión de agente al suscriptor siempre se realiza utilizando las credenciales de Windows especificadas por <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Esta cuenta también se utiliza para realizar conexiones remotas mediante la autenticación de Windows.  
@@ -504,11 +504,11 @@ ms.locfileid: "91869074"
   
     -   Para especificar la autenticación de Windows integrada como el tipo de autenticación que utiliza el agente cuando se conecta al distribuidor, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> en **true**.  
   
-    -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al distribuidor, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> en **false**y especifique las credenciales de inicio de sesión del distribuidor para los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
+    -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al distribuidor, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> en **false** y especifique las credenciales de inicio de sesión del distribuidor para los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
   
     -   Para especificar la autenticación de Windows integrada como el tipo de autenticación que utiliza el agente cuando se conecta al publicador, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> en **true**.  
   
-    -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al publicador, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> en **false**y especifique las credenciales de inicio de sesión del publicador para los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
+    -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al publicador, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> en **false** y especifique las credenciales de inicio de sesión del publicador para los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
   
         > [!NOTE]  
         >  La conexión de agente al suscriptor siempre se realiza utilizando las credenciales de Windows especificadas por <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Esta cuenta también se utiliza para realizar conexiones remotas mediante la autenticación de Windows.  
@@ -531,11 +531,11 @@ ms.locfileid: "91869074"
   
     -   Para especificar la autenticación de Windows integrada como el tipo de autenticación que utiliza el agente cuando se conecta al suscriptor, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> en **true**.  
   
-    -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al suscriptor, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> en **false**y especifique las credenciales de inicio de sesión del suscriptor para los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
+    -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al suscriptor, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> en **false** y especifique las credenciales de inicio de sesión del suscriptor para los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
   
     -   Para especificar la autenticación de Windows integrada como el tipo de autenticación que utiliza el agente cuando se conecta al publicador, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> en **true**.  
   
-    -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al publicador, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> en **false**y especifique las credenciales de inicio de sesión del publicador para los campos <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> .  
+    -   Para especificar la autenticación de SQL Server como el tipo de autenticación que utiliza el agente cuando se conecta al publicador, establezca el campo <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> de la propiedad <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> en **false** y especifique las credenciales de inicio de sesión del publicador para los campos <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> .  
   
         > [!NOTE]  
         >  La conexión de agente al distribuidor siempre se realiza utilizando las credenciales de Windows especificadas por <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Esta cuenta también se utiliza para realizar conexiones remotas mediante la autenticación de Windows.  

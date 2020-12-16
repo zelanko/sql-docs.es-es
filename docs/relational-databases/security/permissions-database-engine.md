@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: AndreasWolter
 ms.author: anwolter
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5da1bad65cf04093be339e1f2e55bddd30efffbf
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0b7839615ed830f91ced84f1c565d9c2d32bf3a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243654"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479426"
 ---
 # <a name="permissions-database-engine"></a>Permisos (motor de base de datos)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -364,7 +364,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Resumen del algoritmo de comprobación de permiso  
- Comprobar los permisos puede ser complejo. El algoritmo de comprobación de permiso incluye la superposición de la pertenencia a grupos y el encadenamiento de propiedad, tanto el permiso explícito como el implícito, y puede ser afectado por los permisos en las clases protegibles y que contienen la entidad protegible. El proceso general del algoritmo es reunir todos los permisos pertinentes. Si no se encuentra ningún bloqueo DENY, el algoritmo busca un permiso GRANT que proporcione el acceso suficiente. El algoritmo contiene tres elementos esenciales, el **contexto de seguridad** , el **espacio del permiso** y el **permiso necesario**.  
+ Comprobar los permisos puede ser complejo. El algoritmo de comprobación de permiso incluye la superposición de la pertenencia a grupos y el encadenamiento de propiedad, tanto el permiso explícito como el implícito, y puede ser afectado por los permisos en las clases protegibles y que contienen la entidad protegible. El proceso general del algoritmo es reunir todos los permisos pertinentes. Si no se encuentra ningún bloqueo DENY, el algoritmo busca un permiso GRANT que proporcione el acceso suficiente. El algoritmo contiene tres elementos esenciales, el **contexto de seguridad**, el **espacio del permiso** y el **permiso necesario**.  
   
 > [!NOTE]  
 >  No puede conceder, denegar ni revocar permisos a sa, dbo, al propietario de la entidad, information_schema, sys ni a usted mismo.  
@@ -406,7 +406,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
   
 3.  Agrega las identidades de nivel del servidor, de base de datos y de módulo firmado que se asocian al autor de las llamadas para crear el **contexto de seguridad**.  
   
-4.  Para ese **contexto de seguridad** , reúne todos los permisos que se conceden o deniegan para el **espacio del permiso**. El permiso se puede nombrar explícitamente como GRANT, GRANT WITH GRANT o DENY; o los permisos pueden ser un permiso GRANT o DENY implícito o inclusivo. Por ejemplo, el permiso CONTROL sobre un esquema implica CONTROL sobre una tabla. Asimismo, CONTROL sobre una tabla implica SELECT. Por consiguiente, si se otorgó CONTROL sobre el esquema, se otorgó SELECT sobre la tabla. Si se denegó CONTROL sobre la tabla, también se denegó SELECT sobre ella.  
+4.  Para ese **contexto de seguridad**, reúne todos los permisos que se conceden o deniegan para el **espacio del permiso**. El permiso se puede nombrar explícitamente como GRANT, GRANT WITH GRANT o DENY; o los permisos pueden ser un permiso GRANT o DENY implícito o inclusivo. Por ejemplo, el permiso CONTROL sobre un esquema implica CONTROL sobre una tabla. Asimismo, CONTROL sobre una tabla implica SELECT. Por consiguiente, si se otorgó CONTROL sobre el esquema, se otorgó SELECT sobre la tabla. Si se denegó CONTROL sobre la tabla, también se denegó SELECT sobre ella.  
   
     > [!NOTE]  
     >  Un permiso GRANT de nivel de columna invalida un permiso DENY en el nivel de objeto.  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 08857f964f652c5663cda32ce442cf34e201c80c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 7c6121b21be6a0a0d49581ebfcc4d637e7fd2f27
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86907371"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481026"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Agregar y quitar publicadores del Monitor de replicación
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "86907371"
   
 1.  Haga clic con el botón secundario en el nodo **Monitor de replicación** o en un nodo de grupo de publicador en el panel izquierdo y, a continuación, haga clic en **Agregar publicador**.  
   
-2.  En el cuadro de diálogo **Agregar publicador** , haga clic en **Agregar**y, a continuación, en **Agregar publicador de SQL Server**.  
+2.  En el cuadro de diálogo **Agregar publicador** , haga clic en **Agregar** y, a continuación, en **Agregar publicador de SQL Server**.  
   
 3.  En el cuadro de diálogo **Conectar al servidor** , escriba el nombre del publicador y seleccione el tipo de autenticación. Si selecciona **Autenticación de SQL Server**, escriba un inicio de sesión y una contraseña. El Monitor de replicación guarda las credenciales que especifique para usarlas cuando se conecte con este servidor en el futuro. La cuenta de Windows o el inicio de sesión de SQL Server especificados han de ser miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **replmonitor** en la base de datos de distribución.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "86907371"
   
 6.  Para especificar opciones de actualización y de conexión para el publicador, seleccione el publicador en la cuadrícula y modifique las opciones como sea necesario. Para obtener más información acerca de las opciones de actualización, vea [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md).  
   
-7.  Seleccione el grupo bajo el que se debe mostrar el publicador en el Monitor de replicación. Para crear un grupo, haga clic en **Nuevo grupo**y, a continuación, escriba un nombre para el grupo. Seleccione el grupo en la lista **Mostrar estos publicadores en el siguiente grupo** .  
+7.  Seleccione el grupo bajo el que se debe mostrar el publicador en el Monitor de replicación. Para crear un grupo, haga clic en **Nuevo grupo** y, a continuación, escriba un nombre para el grupo. Seleccione el grupo en la lista **Mostrar estos publicadores en el siguiente grupo** .  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -47,7 +47,7 @@ ms.locfileid: "86907371"
   
 1.  Haga clic con el botón secundario en el nodo **Monitor de replicación** o en un nodo de grupo de publicador en el panel izquierdo y, a continuación, haga clic en **Agregar publicador**.  
   
-2.  En el cuadro de diálogo **Agregar publicador** , haga clic en **Agregar**y, a continuación, en **Agregar publicador de Oracle**.  
+2.  En el cuadro de diálogo **Agregar publicador** , haga clic en **Agregar** y, a continuación, en **Agregar publicador de Oracle**.  
   
 3.  En el cuadro de diálogo **Conectar al servidor**, escriba el nombre del distribuidor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] asociado con el publicador de Oracle y seleccione el tipo de autenticación. Si selecciona **Autenticación de SQL Server**, escriba un inicio de sesión y una contraseña. El Monitor de replicación guarda las credenciales que especifique para usarlas cuando se conecte con este servidor en el futuro. La cuenta de Windows o el inicio de sesión de SQL Server especificados han de ser miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **replmonitor** en la base de datos de distribución.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "86907371"
   
 6.  Para especificar opciones de actualización y de conexión para el publicador, seleccione el publicador en la cuadrícula y modifique las opciones como sea necesario. Para obtener más información acerca de las opciones de actualización, vea [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md).  
   
-7.  Seleccione el grupo bajo el que se debe mostrar el publicador en el Monitor de replicación. Para crear un grupo, haga clic en **Nuevo grupo**y, a continuación, escriba un nombre para el grupo. Seleccione el grupo en la lista **Mostrar estos publicadores en el siguiente grupo** .  
+7.  Seleccione el grupo bajo el que se debe mostrar el publicador en el Monitor de replicación. Para crear un grupo, haga clic en **Nuevo grupo** y, a continuación, escriba un nombre para el grupo. Seleccione el grupo en la lista **Mostrar estos publicadores en el siguiente grupo** .  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -65,7 +65,7 @@ ms.locfileid: "86907371"
   
 1.  Haga clic con el botón secundario en el nodo **Monitor de replicación** o en un nodo de grupo de publicador en el panel izquierdo y, a continuación, haga clic en **Agregar publicador**.  
   
-2.  En el cuadro de diálogo **Agregar publicador** , haga clic en **Agregar**y, a continuación, en **Especificar un distribuidor y agregar sus publicadores**.  
+2.  En el cuadro de diálogo **Agregar publicador** , haga clic en **Agregar** y, a continuación, en **Especificar un distribuidor y agregar sus publicadores**.  
   
 3.  En el cuadro de diálogo **Conectar al servidor** , escriba el nombre del distribuidor y seleccione el tipo de autenticación. Si selecciona **Autenticación de SQL Server**, escriba un inicio de sesión y una contraseña. El Monitor de replicación guarda las credenciales que especifique para usarlas cuando se conecte con este servidor en el futuro. La cuenta de Windows o el inicio de sesión de SQL Server especificados han de ser miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **replmonitor** en la base de datos de distribución.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "86907371"
   
 6.  Para especificar opciones de actualización y de conexión para el publicador, seleccione el publicador en la cuadrícula y modifique las opciones como sea necesario. Para obtener más información acerca de las opciones de actualización, vea [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md).  
   
-7.  Seleccione el grupo bajo el que se deben mostrar los publicadores en el Monitor de replicación. Para crear un grupo, haga clic en **Nuevo grupo**y, a continuación, escriba un nombre para el grupo. Seleccione el grupo en la lista **Mostrar estos publicadores en el siguiente grupo** .  
+7.  Seleccione el grupo bajo el que se deben mostrar los publicadores en el Monitor de replicación. Para crear un grupo, haga clic en **Nuevo grupo** y, a continuación, escriba un nombre para el grupo. Seleccione el grupo en la lista **Mostrar estos publicadores en el siguiente grupo** .  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

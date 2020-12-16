@@ -31,13 +31,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 898fd741dfdcb2a4ababb855a33eaee856a2dd4e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ffb074adf1c9af9ac48fad0f0762349190a5c254
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115466"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480466"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
 
@@ -80,7 +80,7 @@ ISDATE ( expression )
 |-----------------------|-------------------------|  
 |NULL|0|  
 |Valores de tipos de datos incluidos en la lista [Tipos de datos](../../t-sql/data-types/data-types-transact-sql.md) en cualquier categoría de tipo de datos distinta de las cadenas de caracteres, cadenas de caracteres Unicode o fecha y hora.|0|  
-|Valores de los tipos de datos **text**, **ntext**o **image**.|0|  
+|Valores de los tipos de datos **text**, **ntext** o **image**.|0|  
 |Cualquier valor que tiene una escala de precisión por segundos mayor que 3 (.0000 a.0000000... n) ISDATE devuelve 0 si *expression* es un valor **datetime2**, pero devolverá 1 si *expression* es un valor **datetime** válido.|0|  
 |Cualquier valor que mezcla una fecha válida con un valor no válido, por ejemplo 1995-10-1a.|0|  
   

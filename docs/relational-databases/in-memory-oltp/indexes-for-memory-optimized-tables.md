@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 817e126cfcd6bd4f825cb8e3158cc96d0a78e30c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7f43554f4b14b1afa5eee8a2cf3600c7b9ae2fab
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866621"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480116"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Índices de las tablas con optimización para memoria
 
@@ -38,7 +38,7 @@ El índice debe ser uno de los siguientes:
   
 Los índices de *hash* se analizan con más detalle en [Índices de hash de tablas optimizadas para memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
 Los índices *no agrupados* se analizan con más detalle en [Índice no agrupado de tablas optimizadas para memoria](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index).  
-Los índices de*almacén de columnas* se tratan en [otro artículo](../../relational-databases/indexes/columnstore-indexes-overview.md).  
+Los índices de *almacén de columnas* se tratan en [otro artículo](../../relational-databases/indexes/columnstore-indexes-overview.md).  
 
 ## <a name="syntax-for-memory-optimized-indexes"></a>Sintaxis de índices optimizados para memoria  
   

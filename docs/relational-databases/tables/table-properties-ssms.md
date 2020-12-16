@@ -18,13 +18,13 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a76a0aac8ff4630eb8b51835bba618303fe497cb
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f41013db7cbd871ef132c3c0a3bad8a772511022
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344061"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480786"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 
@@ -86,11 +86,11 @@ ms.locfileid: "92344061"
  Evita la extensión de bloqueo en la mayoría de los casos. No siempre se evitan los bloqueos de nivel de la tabla. Por ejemplo, si está examinando una tabla que no tiene ningún índice clúster en el nivel de aislamiento serializable, [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe realizar un bloqueo de la tabla para proteger la integridad de los datos.  
   
  **Tabla replicada**  
- Indica si se ha replicado la tabla en otra base de datos mediante la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los valores posibles son **True** o **False** .  
+ Indica si se ha replicado la tabla en otra base de datos mediante la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los valores posibles son **True** o **False**.  
   
 ##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> Página Seguimiento de cambios  
  **Seguimiento de cambios**  
- Indica si el seguimiento de cambios está habilitado para la tabla. El valor predeterminado es **False** .  
+ Indica si el seguimiento de cambios está habilitado para la tabla. El valor predeterminado es **False**.  
   
  Esta opción solo está disponible cuando el seguimiento de cambios está habilitado para la base de datos.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "92344061"
  La carpeta raíz para la tabla FileTable.  
   
  **Espacio de nombres de FileTable habilitado**  
- Si es **True** , este valor indica que la tabla es una de tipo FileTable. Si cambia este valor a **False** , cambiará la tabla FileTable a una tabla de usuario ordinaria. Si posteriormente desea cambiar la tabla a una tabla FileTable, la tabla tiene que pasar una comprobación de coherencia de FileTable antes de que la conversión se realice correctamente.  
+ Si es **True**, este valor indica que la tabla es una de tipo FileTable. Si cambia este valor a **False**, cambiará la tabla FileTable a una tabla de usuario ordinaria. Si posteriormente desea cambiar la tabla a una tabla FileTable, la tabla tiene que pasar una comprobación de coherencia de FileTable antes de que la conversión se realice correctamente.  
   
 ##  <a name="storage-page"></a><a name="Storage"></a> Página Almacenamiento  
  Muestra las propiedades relacionadas con el almacenamiento de la tabla seleccionada.  
@@ -137,7 +137,7 @@ ms.locfileid: "92344061"
  El nombre del grupo de archivos que contiene la tabla.  
   
  **La tabla tiene particiones**  
- Los valores posibles son **True** o **False** .  
+ Los valores posibles son **True** o **False**.  
   
  **Grupo de archivos de flujo de archivos**  
  Especifique el nombre del grupo de archivos de datos FILESTREAM si la tabla tiene una columna **varbinary(max)** con el atributo FILESTREAM. El valor predeterminado es el grupo de archivos de datos de FILESTREAM predeterminado.  
@@ -146,7 +146,7 @@ ms.locfileid: "92344061"
   
 ### <a name="general"></a>General  
  **El formato de almacenamiento Vardecimal está habilitado**  
- Si es **True** , este valor de solo lectura indica que los tipos de datos **decimal** y **numeric** se almacenan con el formato de almacenamiento vardecimal. Para cambiar esta opción, use la opción de **vardecimal storage format** de [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). El formato de almacenamiento Vardecimal está en desuso. En su lugar, use la compresión de fila.  
+ Si es **True**, este valor de solo lectura indica que los tipos de datos **decimal** y **numeric** se almacenan con el formato de almacenamiento vardecimal. Para cambiar esta opción, use la opción de **vardecimal storage format** de [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). El formato de almacenamiento Vardecimal está en desuso. En su lugar, use la compresión de fila.  
   
  **Espacio de índice**  
  La cantidad de espacio en megabytes que ocupan los índices en la tabla. Este valor no incluye el uso del espacio del índice XML en la tabla. Si los índices XML pertenecen a la tabla, use [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) en su lugar.  

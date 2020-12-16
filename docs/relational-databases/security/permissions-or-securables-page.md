@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8109779b1afe4badd7c44bd30b264a07503c5fa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0bc202f99dfc1bcc067b3baf7f7606506f318d3d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000557"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479406"
 ---
 # <a name="permissions-or-securables-page"></a>Página Permisos o Elementos protegibles
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "86000557"
  Describe el tipo de cada elemento.  
   
 ## <a name="explicit-tab"></a>Pestaña Explícito  
- La pestaña **Explícito** presenta los posibles permisos del elemento protegible seleccionados en la cuadrícula superior. Para configurar los permisos, active o desactive las casillas **Conceder** (o **Permitir**), **WITH GRANT**y **Denegar** . No todas las opciones de están disponibles para la totalidad de los permisos explícitos.  
+ La pestaña **Explícito** presenta los posibles permisos del elemento protegible seleccionados en la cuadrícula superior. Para configurar los permisos, active o desactive las casillas **Conceder** (o **Permitir**), **WITH GRANT** y **Denegar** . No todas las opciones de están disponibles para la totalidad de los permisos explícitos.  
   
  **Permisos**  
  Nombre del permiso.  
@@ -62,7 +62,7 @@ ms.locfileid: "86000557"
  Active esta casilla para denegar el permiso al inicio de sesión. Desactívela para revocar el permiso.  
   
  **Permisos de columna**  
- Para los objetos que contienen columnas (como tablas, vistas o funciones con valores de tabla), el botón **Permisos de columna** abre el cuadro de diálogo **Permisos de columna** . En este cuadro de diálogo, puede establecer las opciones **Conceder**, **Permitir**o **Denegar** para columnas individuales de la tabla o la vista. Esta opción no está disponible para todos los tipos de objetos o permisos.  
+ Para los objetos que contienen columnas (como tablas, vistas o funciones con valores de tabla), el botón **Permisos de columna** abre el cuadro de diálogo **Permisos de columna** . En este cuadro de diálogo, puede establecer las opciones **Conceder**, **Permitir** o **Denegar** para columnas individuales de la tabla o la vista. Esta opción no está disponible para todos los tipos de objetos o permisos.  
   
 ## <a name="effective-tab"></a>Pestaña Vigente  
  Los permisos que una entidad de seguridad ha relacionado con un elemento protegible pueden proceder de permisos establecidos para varias entidades de seguridad distintas. Por ejemplo, un inicio de sesión podría recibir permisos de forma individual y también como miembro de un grupo. La pestaña **Vigente** muestra el resultado de combinar los permisos explícitos y los permisos recibidos de pertenencia a grupos o roles. Los permisos Grant están agregados. Un permiso Deny invalida todos los permisos Grant.  

@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7b1338f4e935a2c7e8662a09aacff1cc4b7df9d3
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 773162660a1d64f37ee225a14b7a260640104594
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988818"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479606"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Cuadro de diálogo Propiedades de la suscripción de Replicación de SQL Server 
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ El cuadro de diálogo **Propiedades de suscripción** del suscriptor le permite 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>Opciones de publicador para todas las suscripciones  
  **Seguridad**  
- Haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades ( **...** ) para cambiar la cuenta con la que el Agente de distribución o el Agente de mezcla se ejecutan en el distribuidor. Para cambiar la cuenta en la que el Agente de distribución o el Agente de mezcla realizan conexiones al suscriptor, haga clic en **Conexión de suscriptor**y, a continuación, haga clic en el botón de propiedades ( **…** ).  
+ Haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades ( **...** ) para cambiar la cuenta con la que el Agente de distribución o el Agente de mezcla se ejecutan en el distribuidor. Para cambiar la cuenta en la que el Agente de distribución o el Agente de mezcla realizan conexiones al suscriptor, haga clic en **Conexión de suscriptor** y, a continuación, haga clic en el botón de propiedades ( **…** ).  
   
  Para obtener más información acerca de los permisos necesarios para cada agente, vea [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -100,11 +100,11 @@ El cuadro de diálogo **Propiedades de suscripción** del suscriptor le permite 
  **Seguridad**  
  Haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades ( **...** ) para cambiar la cuenta en la que se ejecuta el Agente de distribución o el Agente de mezcla en el suscriptor. Las opciones de seguridad relativas a las conexiones dependen del tipo de suscripción:  
   
--   Para las sucripciones a una publicación transaccional: para cambiar la cuenta en la que el Agente de distribución realiza la conexión al distribuidor, haga clic en **Conexión del distribuidor**y, a continuación, en el botón de propiedades ( **...** ).  
+-   Para las sucripciones a una publicación transaccional: para cambiar la cuenta en la que el Agente de distribución realiza la conexión al distribuidor, haga clic en **Conexión del distribuidor** y, a continuación, en el botón de propiedades ( **...** ).  
   
--   Para las suscripción de actualización inmediatas a una publicación transaccional: además de la conexión Distributor describió sobre, puede cambiar el método utilizado para propagar los cambios en el Suscriptor al Publicador: haga clic en **Conexión del publicador**y, a continuación, haga clic en el botón ( **...** ) de propiedades.  
+-   Para las suscripción de actualización inmediatas a una publicación transaccional: además de la conexión Distributor describió sobre, puede cambiar el método utilizado para propagar los cambios en el Suscriptor al Publicador: haga clic en **Conexión del publicador** y, a continuación, haga clic en el botón ( **...** ) de propiedades.  
   
--   En las suscripciones a publicaciones de combinación, haga clic en **Conexión de publicador**y, a continuación, haga clic en el botón de propiedades ( **...** ).  
+-   En las suscripciones a publicaciones de combinación, haga clic en **Conexión de publicador** y, a continuación, haga clic en el botón de propiedades ( **...** ).  
   
  Para obtener más información acerca de los permisos necesarios para cada agente, vea [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   

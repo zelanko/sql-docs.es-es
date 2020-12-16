@@ -10,13 +10,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 64680ae71e34d1da94bf0ec8b2ab1ef75cd3c4d3
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: a3da2dbe104b0a02ef9b973521ef14e5959a832c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679027"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480886"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclaves seguros
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -49,9 +49,9 @@ En [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], Always Encrypt
 
 Con los enclaves seguros, Always Encrypted protege la privacidad de la información confidencial mientras se brindan estas ventajas:
 
-- **Cifrado en contexto** : las operaciones criptográficas sobre información confidencial, como el cifrado inicial de datos o la rotación de una clave de cifrado de columna, se realizan dentro del enclave seguro y no requieren sacar los datos de la base de datos. Puede genera cifrado en contexto con la instrucción Transact-SQL ALTER TABLE y no es necesario usar herramientas, como el Asistente para Always Encrypted en SSMS o el cmdlet Set-SqlColumnEncryption de PowerShell.
+- **Cifrado en contexto**: las operaciones criptográficas sobre información confidencial, como el cifrado inicial de datos o la rotación de una clave de cifrado de columna, se realizan dentro del enclave seguro y no requieren sacar los datos de la base de datos. Puede genera cifrado en contexto con la instrucción Transact-SQL ALTER TABLE y no es necesario usar herramientas, como el Asistente para Always Encrypted en SSMS o el cmdlet Set-SqlColumnEncryption de PowerShell.
 
-- **Cálculos completos** : las operaciones sobre columnas cifradas, incluidas la coincidencia de patrones (el predicado LIKE) y las comparaciones de rangos, se admiten dentro del enclave seguro, que permite que Always Encrypted se use en una amplia variedad de aplicaciones y escenarios en los que es necesario que esos cálculos se realicen dentro del sistema de base de datos.
+- **Cálculos completos**: las operaciones sobre columnas cifradas, incluidas la coincidencia de patrones (el predicado LIKE) y las comparaciones de rangos, se admiten dentro del enclave seguro, que permite que Always Encrypted se use en una amplia variedad de aplicaciones y escenarios en los que es necesario que esos cálculos se realicen dentro del sistema de base de datos.
 
 ## <a name="secure-enclave-attestation"></a>Atestación de un enclave seguro
 
@@ -69,8 +69,8 @@ Para usar Always Encrypted con enclaves seguros, una aplicación debe usar un co
 
 Always Encrypted con enclaves seguros presenta el concepto de las claves habilitadas para el enclave:
 
-- **Clave maestra de columna habilitada para el enclave** : una clave maestra de columna que tiene la propiedad ENCLAVE_COMPUTATIONS especificada en el objeto de metadatos de clave maestra de columna dentro de la base de datos. El objeto de metadatos de clave maestra de columna también debe contener una signatura válida de las propiedades de los metadatos.
-- **Clave de cifrado de columna habilitada para el enclave** : una clave de cifrado de columna cifrada con una clave maestra de columna habilitada para el enclave.
+- **Clave maestra de columna habilitada para el enclave**: una clave maestra de columna que tiene la propiedad ENCLAVE_COMPUTATIONS especificada en el objeto de metadatos de clave maestra de columna dentro de la base de datos. El objeto de metadatos de clave maestra de columna también debe contener una signatura válida de las propiedades de los metadatos.
+- **Clave de cifrado de columna habilitada para el enclave**: una clave de cifrado de columna cifrada con una clave maestra de columna habilitada para el enclave.
 
 Cuando el motor de SQL Server determina las operaciones, especificadas en una consulta, que se deben realizar dentro del enclave seguro, el motor de SQL Server solicita que el controlador cliente comparta las claves de cifrado de columna que se necesitan para los cálculos con el enclave seguro. El controlador cliente comparte las claves de cifrado de columna solo si las claves están habilitadas para el enclave (es decir, si están cifradas con claves maestras de columna habilitadas para el enclave) y están firmadas correctamente. En caso contrario, se generará un error en la consulta.
 
@@ -80,8 +80,8 @@ Para obtener más información, consulte [Administración de claves para Always�
 
 Una columna habilitada para el enclave es una columna de base de datos cifrada con una clave de cifrado de columna habilitada para el enclave. La funcionalidad disponible para una columna habilitada para el enclave depende del tipo de cifrado que usa la columna.
 
-- **Cifrado determinista** : las columnas habilitadas para el enclave que usan el cifrado determinista admiten el cifrado en contexto, pero ninguna otra operación dentro del enclave seguro. Se admite la comparación de igualdad, pero se realiza fuera del enclave mediante la comparación del texto cifrado.  
-- **Cifrado aleatorio** : las columnas habilitadas para el enclave que usan el cifrado aleatorio admiten el cifrado en contexto, al igual que los cálculos completos, dentro del enclave seguro. Los cálculos completos son la coincidencia de patrones y los [operadores de comparación](../../../t-sql/language-elements/comparison-operators-transact-sql.md), incluida la comparación de igualdad.
+- **Cifrado determinista**: las columnas habilitadas para el enclave que usan el cifrado determinista admiten el cifrado en contexto, pero ninguna otra operación dentro del enclave seguro. Se admite la comparación de igualdad, pero se realiza fuera del enclave mediante la comparación del texto cifrado.  
+- **Cifrado aleatorio**: las columnas habilitadas para el enclave que usan el cifrado aleatorio admiten el cifrado en contexto, al igual que los cálculos completos, dentro del enclave seguro. Los cálculos completos son la coincidencia de patrones y los [operadores de comparación](../../../t-sql/language-elements/comparison-operators-transact-sql.md), incluida la comparación de igualdad.
 
 Para más información sobre los tipos de cifrado, consulte [Criptografía de Always Encrypted](always-encrypted-cryptography.md).
 

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 435c9e512278d3954c46e543ab6d68610f1cbdfc
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1225f99547dd143b4284f6415df761bdca5c0c38
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679263"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480856"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Carga masiva de datos cifrados en columnas con Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ En el siguiente escenario se muestra cómo importar datos de forma incorrecta po
 
 1.  El valor de la opción se establece en ON para un usuario.  
  
-2.  El usuario ejecuta la aplicación que se conecta a la base de datos. La aplicación utiliza las API de operaciones masiva para insertar valores de texto sin formato en las columnas cifradas. La aplicación espera que un controlador cliente con Always Encrypted cifre los datos durante la inserción. Pero la aplicación no está configurada correctamente, por lo que termina usando un controlador que no admite Always Encrypted o la cadena de conexión no contiene **column encryption setting=enabled** .  
+2.  El usuario ejecuta la aplicación que se conecta a la base de datos. La aplicación utiliza las API de operaciones masiva para insertar valores de texto sin formato en las columnas cifradas. La aplicación espera que un controlador cliente con Always Encrypted cifre los datos durante la inserción. Pero la aplicación no está configurada correctamente, por lo que termina usando un controlador que no admite Always Encrypted o la cadena de conexión no contiene **column encryption setting=enabled**.  
 
 3.  La aplicación envía los valores de texto no cifrado al servidor. Como las comprobaciones de metadatos criptográficos se deshabilitan en el servidor para el usuario, dicho servidor permite que los datos incorrectos (texto no cifrado en lugar de texto cifrado correctamente) se inserten en una columna cifrada.  
  

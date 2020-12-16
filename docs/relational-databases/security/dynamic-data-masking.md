@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9da4fe7d516453b91ab5d60ec170431035146b6b
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 568b3f60205e94bd0b81ff5e80e8b3db372a4691
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496950"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480916"
 ---
 # <a name="dynamic-data-masking"></a>Enmascaramiento dinámico de datos
 [!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -41,7 +41,7 @@ El enmascaramiento dinámico de datos está disponible en [!INCLUDE[ssSQL15](../
   
 |Función|Descripción|Ejemplos|  
 |--------------|-----------------|--------------|  
-|Valor predeterminado|Enmascaramiento completo de acuerdo con los tipos de datos de los campos designados.<br /><br /> Para los tipos de datos String, use XXXX o un número menor de X si el tamaño del campo es inferior a 4 caracteres ( **char** , **nchar** ,  **varchar** , **nvarchar** , **text** , **ntext** ).  <br /><br /> Para los tipos de datos numéricos, use un valor cero ( **bigint** , **bit** , **decimal** , **int** , **money** , **numeric** , **smallint** , **smallmoney** , **tinyint** , **float** , **real** ).<br /><br /> En el caso de los tipos de datos de fecha y hora, use 01.01.1900 00:00:00.0000000 ( **date** , **datetime2** , **datetime** , **datetimeoffset** , **smalldatetime** , **time** ).<br /><br />En lo que respecta a los tipos de datos binarios, use un solo byte de valor 0 de ASCII ( **binary** , **varbinary** , **image** ).|Ejemplo de sintaxis de definición de columna: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|Valor predeterminado|Enmascaramiento completo de acuerdo con los tipos de datos de los campos designados.<br /><br /> Para los tipos de datos String, use XXXX o un número menor de X si el tamaño del campo es inferior a 4 caracteres (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Para los tipos de datos numéricos, use un valor cero (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> En el caso de los tipos de datos de fecha y hora, use 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />En lo que respecta a los tipos de datos binarios, use un solo byte de valor 0 de ASCII (**binary**, **varbinary**, **image**).|Ejemplo de sintaxis de definición de columna: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|Método de enmascaramiento que expone la primera letra de una dirección de correo electrónico y el sufijo constante ".com", en el formato de una dirección de correo electrónico. `aXXX@XXXX.com`.|Ejemplo de sintaxis de definición: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Random|Una función de enmascaramiento aleatorio que se puede usar con cualquier tipo numérico a fin de enmascarar el valor original con uno aleatorio dentro de un intervalo especificado.|Ejemplo de sintaxis de definición: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |Cadena personalizada|Método de enmascaramiento que expone la primera y última letra y agrega una cadena de relleno personalizada en el medio. `prefix,[padding],suffix`<br /><br /> Nota: Si el valor original es demasiado corto como para que se complete toda la máscara, no se expondrá parte del prefijo o sufijo.|Ejemplo de sintaxis de definición: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Ejemplo adicional:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`|  
@@ -61,7 +61,7 @@ El enmascaramiento dinámico de datos está disponible en [!INCLUDE[ssSQL15](../
   
 -   Si se utiliza `SELECT INTO` o `INSERT INTO` para copiar datos de una columna enmascarada en otra tabla, se generarán datos enmascarados en la tabla de destino.  
   
--   Se aplica el enmascaramiento dinámico de datos al ejecutar la importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una base de datos que contenga columnas enmascaradas dará como resultado un archivo de datos exportado con los datos enmascarados (suponiendo que lo exporte un usuario sin privilegios **UNMASK** ), y la base de datos importada contendrá datos enmascarados de forma estática.  
+-   Se aplica el enmascaramiento dinámico de datos al ejecutar la importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una base de datos que contenga columnas enmascaradas dará como resultado un archivo de datos exportado con los datos enmascarados (suponiendo que lo exporte un usuario sin privilegios **UNMASK**), y la base de datos importada contendrá datos enmascarados de forma estática.  
   
 ## <a name="querying-for-masked-columns"></a>Realización de consultas en columnas enmascaradas  
  Use la vista **sys.masked_columns** para realizar una consulta en columnas y tablas que tengan aplicada la función de enmascaramiento. Esta vista se hereda de la vista **sys.columns** . Devuelve todas las columnas de la vista **sys.columns** , junto con las columnas **is_masked** y **masking_function** . Además, indica si estas están enmascaradas y, en caso afirmativo, qué función de enmascaramiento se ha definido. Esta vista solo muestra las columnas en las que se ha aplicado la función de enmascaramiento.  
@@ -87,7 +87,7 @@ WHERE is_masked = 1;
   
 -   Una columna con enmascaramiento de datos no puede ser una clave para un índice FULLTEXT.  
   
- Para los usuarios sin el permiso **UNMASK** , las instrucciones en desuso **READTEXT** , **UPDATETEXT** y **WRITETEXT** no funcionan adecuadamente en una columna configurada para el enmascaramiento dinámico de datos. 
+ Para los usuarios sin el permiso **UNMASK** , las instrucciones en desuso **READTEXT**, **UPDATETEXT** y **WRITETEXT** no funcionan adecuadamente en una columna configurada para el enmascaramiento dinámico de datos. 
  
  Agregar una máscara dinámica de datos se implementa como un cambio de esquema en la tabla subyacente y, por tanto, no puede realizarse en una columna con dependencias. Para trabajar en torno a esta restricción, primero puede quitar la dependencia y, después, agregar la máscara dinámica de datos y volver a crear la dependencia. Por ejemplo, si la dependencia se debe a un índice que depende de esa columna, puede quitar el índice, después agregar la máscara y, luego, volver a crear el índice dependiente.
  

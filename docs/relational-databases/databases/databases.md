@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d69fbd48f7d7f713d9a10806c65c144fff84d6d
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d1550e59cfa9579cf2c7bf38cdbc8c688b447b69
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87361605"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478376"
 ---
 # <a name="databases"></a>Bases de datos
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,13 +45,13 @@ ms.locfileid: "87361605"
     :::column:::
         [Bases de datos del sistema](../../relational-databases/databases/system-databases.md)  
         [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)  
-        [Archivos de datos de SQL Server en Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
+        [Archivos de datos de SQL Server en Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
         [Archivos y grupos de archivos de base de datos](../../relational-databases/databases/database-files-and-filegroups.md)  
         [Estados de base de datos](../../relational-databases/databases/database-states.md)  
         [Estados de los archivos](../../relational-databases/databases/file-states.md)  
         [Estimar el tamaño de una base de datos](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
         [Copiar bases de datos en otros servidores](../../relational-databases/databases/copy-databases-to-other-servers.md)  
-        [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
+        [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
         [Agregar archivos de datos o de registro a una base de datos](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
         [Cambiar los valores de configuración de una base de datos](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)  
         [Crear una base de datos](../../relational-databases/databases/create-a-database.md)  
@@ -70,7 +70,7 @@ ms.locfileid: "87361605"
         [Ver o cambiar el nivel de compatibilidad de una base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
         [Usar el Asistente para planes de mantenimiento](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
         [Crear un alias de tipo de datos definido por el usuario](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)  
-        [Instantáneas de bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
+        [Instantáneas de bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
     :::column-end:::
 :::row-end:::
 

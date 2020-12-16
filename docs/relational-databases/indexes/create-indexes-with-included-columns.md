@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b7c552fa3955818c8d9978802f950f07f8a6bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ce010e0093e234c9095c440f3283b8c7942c78bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408271"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480056"
 ---
 # <a name="create-indexes-with-included-columns"></a>Crear índices con columnas incluidas
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,11 +54,11 @@ ms.locfileid: "88408271"
   
 -   Las columnas sin clave solo pueden definirse en índices no clúster.  
   
--   Todos los tipos de datos excepto **text**, **ntext**e **image** se pueden usar como columnas sin clave.  
+-   Todos los tipos de datos excepto **text**, **ntext** e **image** se pueden usar como columnas sin clave.  
   
 -   Las columnas calculadas que son deterministas, y precisas o imprecisas, pueden ser columnas sin clave. Para obtener más información, vea [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
--   Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**y **text** pueden ser columnas sin clave siempre que se permita el tipo de datos de la columna calculada como columna de índice sin clave.  
+-   Las columnas calculadas derivadas de los tipos de datos **image**, **ntext** y **text** pueden ser columnas sin clave siempre que se permita el tipo de datos de la columna calculada como columna de índice sin clave.  
   
 -   Las columnas sin clave no se pueden quitar de una tabla, a menos que antes se quite el índice de la tabla.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88408271"
   
     -   Cambiar la nulabilidad de NOT NULL a NULL.  
   
-    -   Aumentar la longitud de las columnas **varchar**, **nvarchar**o **varbinary** .  
+    -   Aumentar la longitud de las columnas **varchar**, **nvarchar** o **varbinary** .  
   
 ###  <a name="security"></a><a name="Security"></a> Seguridad  
   

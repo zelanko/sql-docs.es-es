@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c9a0dfad97e37325c0990bb8c1786a63a5bf897a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867828"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479366"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Creación y almacenamiento de claves maestras de columna para Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-Las*claves maestras de columna* son claves que protegen las claves que se usan en Always Encrypted para cifrar las claves de cifrado de columnas. Las claves maestras de columna pueden almacenarse en un almacén de claves de confianza, y las claves deben ser accesibles a las aplicaciones que necesiten cifrar o descifrar datos y a las herramientas para configurar Always Encrypted y administrar las claves de Always Encrypted.
+Las *claves maestras de columna* son claves que protegen las claves que se usan en Always Encrypted para cifrar las claves de cifrado de columnas. Las claves maestras de columna pueden almacenarse en un almacén de claves de confianza, y las claves deben ser accesibles a las aplicaciones que necesiten cifrar o descifrar datos y a las herramientas para configurar Always Encrypted y administrar las claves de Always Encrypted.
 
 En este artículo se proporciona información para seleccionar un almacén de claves y crear claves maestras de columna para Always Encrypted. Para obtener información general detallada, vea [Overview of Key Management for Always Encrypted (Información general de administración de claves de Always Encrypted)](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 
@@ -30,7 +30,7 @@ En este artículo se proporciona información para seleccionar un almacén de cl
 
 Always Encrypted admite varios almacenes de claves para almacenar las claves maestras de columna de Always Encrypted. Los almacenes de claves admitidos varían en función del controlador y la versión que se usen.
 
-Existen dos categorías de alto nivel de almacenes de claves para tener en cuenta: *Almacenes de claves locales*y *Almacenes de claves centralizados*.
+Existen dos categorías de alto nivel de almacenes de claves para tener en cuenta: *Almacenes de claves locales* y *Almacenes de claves centralizados*.
 
 ###  <a name="local-or-centralized-key-store"></a>¿Almacén de claves local o centralizado?
 
@@ -95,8 +95,8 @@ Para conceder al usuario el permiso de *lectura* para un certificado almacenado 
 1.  Abra un símbolo del sistema y escriba **mmc**.
 2.  En el menú **Archivo** de la consola MMC, haga clic en **Agregar o quitar complemento**.
 3.  En el cuadro de diálogo **Agregar o quitar complemento** , haga clic en **Agregar**.
-4.  En el cuadro de diálogo **Agregar un complemento independiente** , haga clic en **Certificados**y, después, en **Agregar**.
-5.  En el cuadro de diálogo del complemento **Certificados** , haga clic en **Cuenta de equipo**y, después, en **Finalizar**.
+4.  En el cuadro de diálogo **Agregar un complemento independiente** , haga clic en **Certificados** y, después, en **Agregar**.
+5.  En el cuadro de diálogo del complemento **Certificados** , haga clic en **Cuenta de equipo** y, después, en **Finalizar**.
 6.  En el cuadro de diálogo **Agregar un complemento independiente** , haga clic en **Cerrar**.
 7.  En el cuadro de diálogo **Agregar o quitar complemento** , haga clic en **Aceptar**.
 8.  En el complemento **Certificados**, busque el certificado en la carpeta **Certificados > Personal**, haga clic con el botón derecho en el certificado, seleccione **Todas las tareas** y, después, haga clic en **Administrar claves privadas**.
@@ -134,7 +134,7 @@ Para obtener un tutorial paso a paso que usa SSMS y almacena claves Always Encry
 
 Al usar una clave de Azure Key Vault como una clave maestra de columna, la aplicación necesita autenticarse en Azure y la identidad de la aplicación necesita tener los siguientes permisos en el almacén de claves: *get*, *unwrapKey* y *verify*. 
 
-Para aprovisionar claves de cifrado de columnas que se protegen con una clave maestra de columna almacenada en el Almacén de claves de Azure, necesita los permisos *get*, *unwrapKey*, *wrapKey*, *sign*y *verify* . Además, para crear una clave nueva en un Almacén de claves de Azure necesita el permiso *create* ; para enumerar los contenidos del almacén de claves necesita el permiso *list* .
+Para aprovisionar claves de cifrado de columnas que se protegen con una clave maestra de columna almacenada en el Almacén de claves de Azure, necesita los permisos *get*, *unwrapKey*, *wrapKey*, *sign* y *verify* . Además, para crear una clave nueva en un Almacén de claves de Azure necesita el permiso *create* ; para enumerar los contenidos del almacén de claves necesita el permiso *list* .
 
 #### <a name="using-powershell"></a>Usar PowerShell
 

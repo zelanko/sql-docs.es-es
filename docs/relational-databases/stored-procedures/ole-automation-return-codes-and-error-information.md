@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a810d032a2668e217d6776bb3fbab7fe40b79e91
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ef7b62123195fbc514350e2e600c3e5c1e5f88b1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332578"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479146"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Códigos de retorno e información de error de OLE Automation
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Los procedimientos almacenados del sistema de automatización OLE devuelven un código de retorno **int** que es el HRESULT devuelto por la operación de automatización OLE subyacente. Un HRESULT con el valor 0 indica que la operación se realizó correctamente. Un valor de HRESULT distinto de cero es un código de error OLE con formato hexadecimal 0x800*nnnnn*, aunque cuando se devuelve como un valor **int** en un código de retorno de un procedimiento almacenado, tiene el formato 214*nnnnnnn*.  
+  Los procedimientos almacenados del sistema de automatización OLE devuelven un código de retorno **int** que es el HRESULT devuelto por la operación de automatización OLE subyacente. Un HRESULT con el valor 0 indica que la operación se realizó correctamente. Un valor de HRESULT distinto de cero es un código de error OLE con formato hexadecimal 0x800 *nnnnn*, aunque cuando se devuelve como un valor **int** en un código de retorno de un procedimiento almacenado, tiene el formato 214 *nnnnnnn*.  
   
  Por ejemplo, pasar un nombre de objeto no válido (SQLDMO.Xyzzy) a sp_OACreate hace que el procedimiento devuelva un HRESULT **int** de 2147221005, que es 0x800401f3 en formato hexadecimal.  
   

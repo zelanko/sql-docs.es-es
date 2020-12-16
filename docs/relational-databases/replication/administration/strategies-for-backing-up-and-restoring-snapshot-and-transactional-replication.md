@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5da2a080ef20bd98b27873796a64b433268ae06f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 1d395bebae8b009f4e91d8df074401f8659e1748
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87108424"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467406"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -186,7 +186,7 @@ ms.locfileid: "87108424"
          Para obtener más información acerca de cómo especificar que el suscriptor ya tiene los datos, vea [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
 #### <a name="publication-database-peer-to-peer-transactional-replication"></a>Base de datos de publicación: Peer-to-Peer Transactional Replication  
- En los pasos siguientes, las bases de datos de publicación **A**, **B**y **C** están en una topología de replicación transaccional punto a punto. Las bases de datos **A** y **C** están en línea y funcionan correctamente; la base de datos **B** es la que se desea restaurar. El proceso descrito aquí, sobre todo los pasos 7, 10 y 11, son muy similares al proceso que se requiere para agregar un nodo a una topología punto a punto. La forma más directa de llevar a cabo estos pasos es mediante el Asistente de configuración de la topología punto a punto, pero también puede usar procedimientos almacenados.  
+ En los pasos siguientes, las bases de datos de publicación **A**, **B** y **C** están en una topología de replicación transaccional punto a punto. Las bases de datos **A** y **C** están en línea y funcionan correctamente; la base de datos **B** es la que se desea restaurar. El proceso descrito aquí, sobre todo los pasos 7, 10 y 11, son muy similares al proceso que se requiere para agregar un nodo a una topología punto a punto. La forma más directa de llevar a cabo estos pasos es mediante el Asistente de configuración de la topología punto a punto, pero también puede usar procedimientos almacenados.  
   
 1.  Ejecute los agentes de distribución para sincronizar las suscripciones de las bases de datos **A** y **C**. Vaya al paso 2.  
   

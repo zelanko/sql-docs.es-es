@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2665ab9b5a30209a123056664921334ce3c8367
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eebd2896dc1931e03dd121867ee09c1940d02d36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485319"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466716"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funciones deterministas y no deterministas
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -165,7 +165,7 @@ ms.locfileid: "88485319"
 |Función|Comentarios|  
 |--------------|--------------|  
 |todas las funciones de agregado|Todas las funciones de agregado son deterministas a menos que se especifiquen con las cláusulas OVER y ORDER BY. Para obtener una lista de estas funciones, vea [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md).|  
-|CAST|Deterministas, a menos que se usen con **datetime**, **smalldatetime**o **sql_variant**.|  
+|CAST|Deterministas, a menos que se usen con **datetime**, **smalldatetime** o **sql_variant**.|  
 |CONVERT|Determinista, a menos que se cumpla una de estas condiciones:<br /><br /> <br /><br /> El tipo de origen es **sql_variant**.<br /><br /> El tipo de destino es **sql_variant** y su tipo de origen no es determinista.<br /><br /> El tipo de origen o destino es **datetime** o **smalldatetime**, el otro tipo de origen o destino es una cadena de caracteres, y se especifica un tipo de estilo no determinista. Para que sea determinista, el parámetro de estilo debe ser una constante. Además, los estilos menores o iguales que 100 son no deterministas, salvo los estilos 20 y 21. Los estilos mayores que 100 son deterministas, salvo los estilos 106, 107, 109 y 113.|  
 |CHECKSUM|Determinista, excepto CHECKSUM(*).|  
 |ISDATE|Determinista solo si se utiliza con la función CONVERT, se especifica el parámetro de estilo CONVERT y el estilo no es igual a 0, 100, 9 ni 109.|  

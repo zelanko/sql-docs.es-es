@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 31850fe7f9ecf78af666faced53f552646de672a
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 2a75dec86a197a5a0c4f4029a947ad801b1f2271
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364702"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467396"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Actualizar scripts de replicación (programación de la replicación con Transact-SQL)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,31 +37,31 @@ ms.locfileid: "93364702"
   
  Estas mejoras de seguridad, que hacen posible un mayor control sobre los permisos permitiéndole especificar de manera explícita las cuentas [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows bajo las cuales se ejecutan los trabajos del agente de replicación, afectan a los siguientes procedimientos almacenados de scripts existentes:  
   
--   **sp_addpublication_snapshot** :  
+-   **sp_addpublication_snapshot**:  
   
      Debería proporcionar ahora las credenciales de Windows como `@job_login` y `@job_password` al ejecutar [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) para crear el trabajo bajo el que el Agente de instantáneas se ejecuta en el distribuidor.  
   
--   **sp_addpushsubscription_agent** :  
+-   **sp_addpushsubscription_agent**:  
   
      Debería ejecutar ahora [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) para agregar de forma explícita un trabajo y proporcionar las credenciales de Windows (`@job_login` y `@job_password`) bajo las que se ejecuta el Agente de distribución en el distribuidor. En las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], esto se hacía automáticamente cuando se creaba una suscripción de inserción.  
   
--   **sp_addmergepushsubscription_agent** :  
+-   **sp_addmergepushsubscription_agent**:  
   
      Debería ejecutar ahora [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) para agregar de forma explícita un trabajo y proporcionar las credenciales de Windows (`@job_login` y `@job_password`) bajo las que se ejecuta el Agente de mezcla en el distribuidor. En las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], esto se hacía automáticamente cuando se creaba una suscripción de inserción.  
   
--   **sp_addpullsubscription_agent** :  
+-   **sp_addpullsubscription_agent**:  
   
      Debería proporcionar ahora las credenciales de Windows como `@job_login` y `@job_password` al ejecutar [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) para crear el trabajo bajo el que el Agente de distribución se ejecuta en el suscriptor.  
   
--   **sp_addmergepullsubscription_agent** :  
+-   **sp_addmergepullsubscription_agent**:  
   
      Debería proporcionar ahora las credenciales de Windows como `@job_login` y `@job_password` al ejecutar [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) para crear el trabajo bajo el que el Agente de mezcla se ejecuta en el suscriptor.  
   
--   **sp_addlogreader_agent** :  
+-   **sp_addlogreader_agent**:  
   
      Debería ejecutar ahora [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) para agregar manualmente el trabajo y proporcionar las credenciales de Windows bajo las que se ejecuta el Agente de registro del LOG en el distribuidor. En las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], esto se hacía automáticamente cuando se creaba una publicación transaccional.  
   
--   **sp_addqreader_agent** :  
+-   **sp_addqreader_agent**:  
   
      Debería ejecutar ahora [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) para agregar manualmente el trabajo y proporcionar las credenciales de Windows bajo las que se ejecuta el Agente de lectura de cola en el distribuidor. En las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], esto se hacía automáticamente cuando se creaba una publicación transaccional que admitía actualización en cola.  
   

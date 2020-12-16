@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5198b93db0372a1bd16fa99a7c0b65feeac70aa4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 96a8558b4a1c233ef94fdd47cae70309f1ce53ec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428007"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467286"
 ---
 # <a name="articles"></a>Artículos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88428007"
 -   Haga clic con el botón secundario en un objeto del panel para ver un menú de comandos para dicho objeto.  
   
  **Propiedades del artículo**  
- Haga clic en **Propiedades del artículo**y, a continuación, haga clic en una de las siguientes opciones:  
+ Haga clic en **Propiedades del artículo** y, a continuación, haga clic en una de las siguientes opciones:  
   
 -   Haga clic en **Establecer propiedades del artículo de \<ObjectType> resaltado** para iniciar el cuadro de diálogo **Propiedades del artículo: \<ObjectName>** ; los cambios de propiedad realizados en este cuadro de diálogo solo se aplican al objeto que está resaltado en el panel de objetos de la página **Artículos**.  
   

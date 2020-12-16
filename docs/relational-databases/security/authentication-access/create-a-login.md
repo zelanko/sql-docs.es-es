@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b94fa9994a42dd11b6fa5a54fffd222e87feb2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a5c6647b06d058b1b97188810c4a23644d05c4f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867451"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468596"
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "91867451"
   
      Si hace clic en **Buscar...** :  
   
-    1.  En **Seleccionar este tipo de objeto**, haga clic en **Tipos de objeto...** para abrir el cuadro de diálogo **Tipos de objetos** y seleccione alguna o todas las opciones siguientes: **Entidades de seguridad integradas**, **Grupos** y **Usuarios**. Las opciones**Entidades de seguridad integradas** y **Usuarios** están seleccionadas de forma predeterminada. Cuando termine, haga clic en **Aceptar**.  
+    1.  En **Seleccionar este tipo de objeto**, haga clic en **Tipos de objeto...** para abrir el cuadro de diálogo **Tipos de objetos** y seleccione alguna o todas las opciones siguientes: **Entidades de seguridad integradas**, **Grupos** y **Usuarios**. Las opciones **Entidades de seguridad integradas** y **Usuarios** están seleccionadas de forma predeterminada. Cuando termine, haga clic en **Aceptar**.  
   
     2.  En **Desde esta ubicación**, haga clic en **Ubicaciones...** para abrir el cuadro de diálogo **Ubicaciones** y seleccione una de las ubicaciones de servidor disponibles. Cuando termine, haga clic en **Aceptar**.  
   
@@ -78,13 +78,13 @@ ms.locfileid: "91867451"
   
     1.  En el campo **Contraseña** , escriba una contraseña para el usuario nuevo. Vuelva a escribir esa contraseña en el cuadro **Confirmar contraseña** .  
   
-    2.  Al cambiar una contraseña existente, seleccione **Especificar contraseña anterior**y escriba la contraseña anterior en el cuadro **Contraseña anterior** .  
+    2.  Al cambiar una contraseña existente, seleccione **Especificar contraseña anterior** y escriba la contraseña anterior en el cuadro **Contraseña anterior** .  
   
     3.  Para aplicar las opciones de la directiva de contraseñas a efectos de complejidad y exigencia, seleccione **Exigir directivas de contraseñas**. Para obtener más información, vea [Password Policy](../../../relational-databases/security/password-policy.md). Esta es una opción predeterminada cuando se selecciona **Autenticación de SQL Server** .  
   
-    4.  Para aplicar las opciones de la directiva de contraseñas a efectos de expiración, seleccione **Exigir expiración de contraseña**. Debe seleccionar la opción**Exigir directivas de contraseñas** para habilitar esta casilla. Esta es una opción predeterminada cuando se selecciona **Autenticación de SQL Server** .  
+    4.  Para aplicar las opciones de la directiva de contraseñas a efectos de expiración, seleccione **Exigir expiración de contraseña**. Debe seleccionar la opción **Exigir directivas de contraseñas** para habilitar esta casilla. Esta es una opción predeterminada cuando se selecciona **Autenticación de SQL Server** .  
   
-    5.  Para obligar al usuario a crear una nueva contraseña después de utilizarse el inicio de sesión por primera vez, seleccione **El usuario debe cambiar la contraseña en el siguiente inicio de sesión**. Debe seleccionar la opción**Exigir expiración de contraseña** para habilitar esta casilla. Esta es una opción predeterminada cuando se selecciona **Autenticación de SQL Server** .  
+    5.  Para obligar al usuario a crear una nueva contraseña después de utilizarse el inicio de sesión por primera vez, seleccione **El usuario debe cambiar la contraseña en el siguiente inicio de sesión**. Debe seleccionar la opción **Exigir expiración de contraseña** para habilitar esta casilla. Esta es una opción predeterminada cuando se selecciona **Autenticación de SQL Server** .  
   
 6.  Para asociar el inicio de sesión a un certificado de seguridad independiente, seleccione **Asignado a certificado** y seleccione el nombre de un certificado existente de la lista.  
   
@@ -104,31 +104,31 @@ ms.locfileid: "91867451"
 ### <a name="server-roles"></a>Roles del servidor  
  La página **Roles de servidor** enumera todos los roles posibles que se pueden asignar al nuevo inicio de sesión. Están disponibles las siguientes opciones:  
   
- Casilla**bulkadmin**  
+ Casilla **bulkadmin**  
  Los miembros del rol fijo de servidor **bulkadmin** pueden ejecutar la instrucción BULK INSERT.  
   
- Casilla**dbcreator**  
+ Casilla **dbcreator**  
  Los miembros del rol fijo de servidor **dbcreator** pueden crear, modificar, quitar y restaurar cualquier base de datos.  
   
- Casilla**diskadmin**  
+ Casilla **diskadmin**  
  Los miembros del rol fijo de servidor **diskadmin** pueden administrar archivos de disco.  
   
- Casilla**processadmin**  
+ Casilla **processadmin**  
  Los miembros del rol fijo de servidor **processadmin** pueden finalizar procesos mediante la ejecución de una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
- Casilla**public**  
+ Casilla **public**  
  Todos los usuarios, grupos y roles de SQL Server pertenecen al rol fijo de servidor **public** de forma predeterminada.  
   
- Casilla**securityadmin**  
+ Casilla **securityadmin**  
  Los miembros del rol fijo de servidor **securityadmin** administran los inicios de sesión y sus propiedades. Administran los permisos de servidor GRANT, DENY y REVOKE. También administran los permisos de base de datos GRANT, DENY y REVOKE. Asimismo, pueden restablecer contraseñas para inicios de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Casilla**serveradmin**  
+ Casilla **serveradmin**  
  Los miembros del rol fijo de servidor **serveradmin** pueden cambiar opciones de configuración en el servidor y cerrar el servidor.  
   
- Casilla**setupadmin**  
+ Casilla **setupadmin**  
  Los miembros del rol fijo de servidor **setupadmin** pueden agregar y quitar servidores vinculados, y ejecutar algunos procedimientos almacenados del sistema.  
   
- Casilla**sysadmin**  
+ Casilla **sysadmin**  
  Los miembros del rol fijo de servidor **sysadmin** pueden realizar cualquier actividad en el [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 ### <a name="user-mapping"></a>Asignación de usuarios  

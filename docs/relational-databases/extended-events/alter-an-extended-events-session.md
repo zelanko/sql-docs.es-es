@@ -10,13 +10,13 @@ ms.topic: tutorial
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26c54a8100f697275e87826e949f8b83276507a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8ad23756f19dd2305215ed7e44f52e65f5e52f74
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85778455"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465606"
 ---
 # <a name="alter-an-extended-events-session"></a>Modificar una sesión de eventos extendidos
 
@@ -46,7 +46,7 @@ ms.locfileid: "85778455"
   
 ## <a name="how-to-alter-an-extended-events-session-using-the-sql-server-extended-events-wizard"></a>Cómo modificar una sesión de eventos extendidos con el Asistente para eventos extendidos de SQL Server  
   
--   En el Explorador de objetos, expanda **Administración**, expanda **Eventos extendidos**y, a continuación, expanda **Sesiones**.  
+-   En el Explorador de objetos, expanda **Administración**, expanda **Eventos extendidos** y, a continuación, expanda **Sesiones**.  
   
 -   Haga clic con el botón derecho en la sesión que quiera modificar y luego haga clic en **Propiedades**.  
   

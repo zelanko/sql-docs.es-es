@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 83fdbfc82724e7c3c1a41210a44e6371f9191f9e
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: e978c269a17f42bc75729303a860c61d4868f3fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868598"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468616"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (motor de base de datos)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
 
-  La*auditoría* de una instancia de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o de una base de datos individual implica el seguimiento y registro de los eventos que se producen en [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. La auditoría de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite crear auditorías de servidor, que pueden contener especificaciones de auditoría de servidor para los eventos de servidor, y especificaciones de auditoría de base de datos para los eventos de base de datos. Los eventos auditados se pueden escribir en los registros de eventos o en los archivos de auditoría.  
+  La *auditoría* de una instancia de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o de una base de datos individual implica el seguimiento y registro de los eventos que se producen en [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. La auditoría de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite crear auditorías de servidor, que pueden contener especificaciones de auditoría de servidor para los eventos de servidor, y especificaciones de auditoría de base de datos para los eventos de base de datos. Los eventos auditados se pueden escribir en los registros de eventos o en los archivos de auditoría.  
   
 [!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
@@ -60,7 +60,7 @@ ms.locfileid: "91868598"
 ### <a name="database-audit-specification"></a>Especificación de auditoría de base de datos  
  El objeto *Especificación de auditoría de base de datos* también pertenece a una auditoría de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Puede crear una única especificación de auditoría de base de datos para cada base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y cada auditoría.  
   
- La especificación de auditoría de base de datos recopila acciones de auditoría de nivel de base de datos generadas por la característica Extended Events. Puede agregar grupos de acciones de auditoría o eventos de auditoría a una especificación de auditoría de base de datos. Los*eventos de auditoría* son las acciones atómicas que puede auditar el motor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Los*grupos de acciones de auditoría* son grupos predefinidos de acciones. Ambos están en el ámbito de la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Estas acciones se envían a la auditoría, que las registra en el destino. No incluya objetos con ámbito en el servidor, como las vistas del sistema, en una especificación de auditoría de base de datos.  
+ La especificación de auditoría de base de datos recopila acciones de auditoría de nivel de base de datos generadas por la característica Extended Events. Puede agregar grupos de acciones de auditoría o eventos de auditoría a una especificación de auditoría de base de datos. Los *eventos de auditoría* son las acciones atómicas que puede auditar el motor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Los *grupos de acciones de auditoría* son grupos predefinidos de acciones. Ambos están en el ámbito de la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Estas acciones se envían a la auditoría, que las registra en el destino. No incluya objetos con ámbito en el servidor, como las vistas del sistema, en una especificación de auditoría de base de datos.  
   
  Los grupos de acciones de auditoría de base de datos y las acciones de auditoría se describen en el tema [Grupos de acciones y acciones de SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "91868598"
   
 3.  Habilite la auditoría.  
   
-4.  Lea los eventos de auditoría mediante el **Visor de eventos**de Windows, el **Visor del archivo de registros**o la función fn_get_audit_file.  
+4.  Lea los eventos de auditoría mediante el **Visor de eventos** de Windows, el **Visor del archivo de registros** o la función fn_get_audit_file.  
 
  Para obtener más información, consulte [Crear una auditoría de servidor y una especificación de auditoría de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) y [Crear una especificación de auditoría de servidor y de auditoría de base de datos](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   

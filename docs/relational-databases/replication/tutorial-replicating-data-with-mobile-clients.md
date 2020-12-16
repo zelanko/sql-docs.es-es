@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4ffeb0300e8211110ba3a8b303ff21b230626b9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7070e1aa45101022073d4ce21cf7943cfca31d34
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866905"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468716"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Configuración de la replicación (de mezcla) entre un servidor y clientes móviles
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ En esta sección, se crea una publicación de mezcla mediante [!INCLUDE[ssManStu
 1. Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y, después, expanda el nodo de servidor.  
   
 2. Inicie el Agente SQL Server haciendo clic con el botón derecho en el Explorador de objetos y seleccionando **Iniciar**. Si esto no inicia el agente, deberá hacerlo manualmente desde el Administrador de configuración de SQL Server.  
-3. Expanda la carpeta **Replicación**, haga clic con el botón derecho en la carpeta **Publicaciones locales**y, después, seleccione **Nueva publicación**. Se inicia el Asistente para nueva publicación:  
+3. Expanda la carpeta **Replicación**, haga clic con el botón derecho en la carpeta **Publicaciones locales** y, después, seleccione **Nueva publicación**. Se inicia el Asistente para nueva publicación:  
 
    ![Selecciones para iniciar el Asistente para nueva publicación](media/tutorial-replicating-data-between-continuously-connected-servers/newpublication.png)
   
@@ -116,7 +116,7 @@ En esta sección, se crea una publicación de mezcla mediante [!INCLUDE[ssManStu
     ON [Employee].[BusinessEntityID] =  [SalesOrderHeader].[SalesPersonID] 
     ```  
   
-    b. En **Especifique las opciones de combinación**, seleccione **Clave única**y, a continuación, seleccione **Aceptar**.
+    b. En **Especifique las opciones de combinación**, seleccione **Clave única** y, a continuación, seleccione **Aceptar**.
 
     ![Selecciones para agregar una combinación al filtro](media/tutorial-replicating-data-with-mobile-clients/mergeaddjoin.png)
 
@@ -131,11 +131,11 @@ En esta sección, se crea una publicación de mezcla mediante [!INCLUDE[ssManStu
     ON [SalesOrderHeader].[SalesOrderID] = [SalesOrderDetail].[SalesOrderID] 
     ```  
   
-    d. En **Especifique las opciones de combinación**, seleccione **Clave única**y, a continuación, seleccione **Aceptar**. Seleccione **Next** (Siguiente). 
+    d. En **Especifique las opciones de combinación**, seleccione **Clave única** y, a continuación, seleccione **Aceptar**. Seleccione **Next** (Siguiente). 
 
     ![Selecciones para agregar otra combinación para pedidos de venta](media/tutorial-replicating-data-with-mobile-clients/joinsalestables.png)
   
-21. Seleccione **Crear una instantánea inmediatamente**, desactive **Programar el Agente de instantáneas para ejecutarse**y, a continuación, seleccione **Siguiente**:  
+21. Seleccione **Crear una instantánea inmediatamente**, desactive **Programar el Agente de instantáneas para ejecutarse** y, a continuación, seleccione **Siguiente**:  
 
     ![Selección para crear una instantánea inmediatamente](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   

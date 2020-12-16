@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 107e25f9d4307532e4d1bd6d413e05347fc5209b
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 2cbdcfca40f1fa2fd51e669aeefcf317a958c687
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624742"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467436"
 ---
 # <a name="type-mapping-with-polybase"></a>Asignación de tipos con PolyBase
 
@@ -57,7 +57,7 @@ En tablas externas que hacen referencia a archivos de orígenes de datos externo
 | Decimal       | Decimal                   | Decimal        | BigDecimalWritable    | Se aplica a Hive 0.11 y posterior. |
 
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-ver15 "
 
 ## <a name="oracle-type-mapping-reference"></a>Referencia de asignación de tipos de Oracle
 

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f336e026d95db0de5ad40a9fb4ebc90d8165f609
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 630b6a3c00d3bd4fccdb13acaadad64279a460c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998992"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465526"
 ---
 # <a name="xml-format-files-sql-server"></a>XML, archivos de formato (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -270,12 +270,12 @@ ms.locfileid: "85998992"
   
 |Categoría de tipo|Tipos de datos de \<COLUMN>|Atributos XML obligatorios<br /><br /> para el tipo de datos|Atributos XML opcionales<br /><br /> para el tipo de datos|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|Corregido|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**y **SQLUNIQUEID**|Ninguno.|NULLABLE|  
+|Corregido|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT** y **SQLUNIQUEID**|Ninguno.|NULLABLE|  
 |Número de variable|**SQLDECIMAL** y **SQLNUMERIC**|Ninguno.|NULLABLE, PRECISION, SCALE|  
-|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT**y **SQLUDT**|Ninguno.|NULLABLE|  
+|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT** y **SQLUDT**|Ninguno.|NULLABLE|  
 |LOB de caracteres|**SQLNTEXT**|Ninguno.|NULLABLE|  
 |Cadena binaria|**SQLBINARY** y **SQLVARYBIN**|Ninguno.|NULLABLE, LENGTH|  
-|Cadena de caracteres|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**y **SQLNVARCHAR**|Ninguno.|NULLABLE, LENGTH|  
+|Cadena de caracteres|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR** y **SQLNVARCHAR**|Ninguno.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
 >  Para importar o exportar de forma masiva datos SQLXML, utilice uno de los tipos de datos siguientes en el archivo de formato: SQLCHAR o SQLVARYCHAR (los datos se envían en la página de códigos del cliente o en la página de códigos implícita en la intercalación), SQLNCHAR o SQLNVARCHAR (los datos se envían como Unicode), o SQLBINARY o SQLVARYBIN (los datos se envían sin ninguna conversión).  

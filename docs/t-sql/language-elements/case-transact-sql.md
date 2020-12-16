@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3662722ae800aa078fe5ba58567d2c55efbb613
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 16477e0e469ef67b0dbbceb04d5760b7edc6730a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92187689"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468096"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 
@@ -115,7 +115,7 @@ END
   
 -   Devuelve la *result_expression* de la primera *Boolean_expression* que se evalúa como TRUE.  
   
--   Si no hay ninguna *Boolean_expression*que se evalúe como TRUE, el [!INCLUDE[ssDE](../../includes/ssde-md.md)]devuelve la *else_result_expression* si se especifica una cláusula ELSE, o bien un valor NULL si no se especifica ninguna cláusula ELSE.  
+-   Si no hay ninguna *Boolean_expression* que se evalúe como TRUE, el [!INCLUDE[ssDE](../../includes/ssde-md.md)]devuelve la *else_result_expression* si se especifica una cláusula ELSE, o bien un valor NULL si no se especifica ninguna cláusula ELSE.  
   
 ## <a name="remarks"></a>Observaciones  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo permite 10 niveles de anidamiento en las expresiones CASE.  

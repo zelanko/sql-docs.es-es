@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9426f7d3717a32a473628ea82e789c4e8fd580fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81519e9f529cea23c12bab3ec55c3164e848a543
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479780"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468206"
 ---
 # <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
 
@@ -55,7 +55,7 @@ ERROR_STATE ( )
   
  Devuelve NULL si se le llama desde fuera del ámbito del bloque CATCH.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Algunos mensajes de error se pueden generar en varios puntos del código de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por ejemplo, el error "1105" se puede generar bajo diferentes condiciones. Cada condición específica que genera el error asigna un código de estado único.  
   
  Cuando se ven las bases de datos de problemas conocidos, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, puede utilizar el número de estado para determinar si el problema registrado puede ser el mismo que el error que ha encontrado. Por ejemplo, si un artículo de Knowledge Base trata un mensaje de error 1105 con un estado de 2 y el mensaje de error 1105 que recibió tiene un estado de 3, probablemente su error tiene un origen distinto del registrado en el artículo.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 591b33a5ad44a242fde2377c86002ea1f5b5931a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 3b29f98ad39d34935d65530841f8e81063233791
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719512"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468726"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Sincronizar una suscripción mediante el Administrador de sincronización de Windows
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "85719512"
   
 1.  Inicie el Administrador de sincronización mediante uno de los métodos siguientes:  
   
-    -   En Internet Explorer, haga clic en el menú **Herramientas**y, a continuación, en **Sincronizar**.  
+    -   En Internet Explorer, haga clic en el menú **Herramientas** y, a continuación, en **Sincronizar**.  
   
-    -   Haga clic en **Inicio**, seleccione **Programas** o **Todos los programas**, **Accesorios**y, después, haga clic en **Sincronizar**.  
+    -   Haga clic en **Inicio**, seleccione **Programas** o **Todos los programas**, **Accesorios** y, después, haga clic en **Sincronizar**.  
   
-    -   Haga clic en **Inicio**y, a continuación, en **Ejecutar** . En el cuadro de diálogo **Ejecutar** , escriba **mobsync.exe** in the **Abrir** y luego haga clic en **Aceptar**.  
+    -   Haga clic en **Inicio** y, a continuación, en **Ejecutar** . En el cuadro de diálogo **Ejecutar** , escriba **mobsync.exe** in the **Abrir** y luego haga clic en **Aceptar**.  
   
 2.  En el cuadro de diálogo **Elementos para sincronizar** , seleccione las suscripciones para sincronizar. Las suscripciones se enumeran en las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas en el equipo.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "85719512"
   
     -   **Identificación**  
   
-    -   **Inicio de sesión del suscriptor**, **Inicio de sesión del distribuidor**e **Inicio de sesión del publicador** (solamente para la replicación de mezcla)  
+    -   **Inicio de sesión del suscriptor**, **Inicio de sesión del distribuidor** e **Inicio de sesión del publicador** (solamente para la replicación de mezcla)  
   
     -   **Información del servidor web** (para suscripciones de mezcla en suscriptores que ejecuten SQL Server 2005 o posterior)  
   

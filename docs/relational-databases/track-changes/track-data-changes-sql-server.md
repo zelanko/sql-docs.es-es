@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5edcc10b7cb9682f6856c8129e13a2d57af67074
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b38293d4b60168028a5669a9f5dd2e01ccbde012
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810753"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466756"
 ---
 # <a name="track-data-changes-sql-server"></a>Seguimiento de cambios de datos (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "91810753"
  Para obtener acceso a los datos modificados que están asociados a una instancia de captura, se debe conceder al usuario acceso exclusivo a todas las columnas capturadas de la tabla de origen asociada. Además, si se especifica un rol de acceso cuando se crea la instancia de captura, el autor de las llamadas también debe ser miembro del rol de acceso especificado. Otras funciones de captura de datos modificados generales para tener acceso a los metadatos serán accesibles para todos los usuarios de la base de datos a través del rol public, aunque el acceso a los metadatos devueltos también se conseguirá normalmente mediante un acceso exclusivo a las tablas de origen subyacentes y por pertenencia a cualquier rol de acceso definido.  
   
  **Operaciones DDL para las tablas de origen habilitadas para la captura de datos modificados**  
- Cuando una tabla está habilitada para la captura de datos modificados, solo un miembro del rol fijo de servidor **sysadmin**o de los roles de base de datos **database role db_owner**o **database role db_ddladmin**puede aplicarle las operaciones DDL. Los usuarios a los que se les haya permitido explícitamente realizar operaciones DDL en la tabla recibirán el error 22914 si intentan estas operaciones.  
+ Cuando una tabla está habilitada para la captura de datos modificados, solo un miembro del rol fijo de servidor **sysadmin** o de los roles de base de datos **database role db_owner** o **database role db_ddladmin** puede aplicarle las operaciones DDL. Los usuarios a los que se les haya permitido explícitamente realizar operaciones DDL en la tabla recibirán el error 22914 si intentan estas operaciones.  
   
 ### <a name="data-type-considerations-for-change-data-capture"></a>Consideraciones sobre los tipos de datos para la captura de datos modificados  
  La captura de datos modificados admite todos los tipos de columna base. En la tabla siguiente, se especifican el comportamiento y las limitaciones para varios tipos de columna.  

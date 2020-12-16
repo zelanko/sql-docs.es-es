@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c82c4e4f5b1f1af6194ff409a684ca239881487a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9220519a926ca75a00843dba54dfad797064aee
+ms.sourcegitcommit: 52252e8b4c9b50d3915aecd3135e8901d345e7e2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765402"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97599852"
 ---
 # <a name="accessing-the-current-transaction"></a>Obtener acceso a la transacción actual
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85765402"
   
 -   La función o el procedimiento administrado puede cancelar la transacción actual llamando al método **Transaction.Rollback** si se cumple una condición determinada.  
   
- Cuando se llama al método **Transaction.Rollback** dentro de una función o de un procedimiento administrado, éste inicia una excepción con un mensaje de error ambiguo y puede colocarse dentro de un bloque try/catch. El mensaje de error puede ser similar al siguiente:  
+ Cuando se llama al método **Transaction.Rollback** dentro de una función o de un procedimiento administrado, éste inicia una excepción con un mensaje de error ambiguo y puede colocarse dentro de un bloque try/catch. El mensaje de error es similar al siguiente:  
   
 ```  
 Msg 3994, Level 16, State 1, Procedure uspRollbackFromProc, Line 0  

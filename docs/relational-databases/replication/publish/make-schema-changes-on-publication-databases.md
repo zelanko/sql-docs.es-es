@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1dfa866c6c03234a28fbccb14a2c45cea2571090
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 81929c8da672e9294d276b5b562e55886a1c3515
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918503"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469006"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Realizar cambios de esquema en bases de datos de publicaciones
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "86918503"
   
 -   La lectura no confirmada no es un nivel de aislamiento compatible al hacer DDL en una tabla publicada.  
   
--   No se debe usar**SET CONTEXT_INFO** para modificar el contexto de las transacciones en las que se realizan cambios de esquema en objetos publicados.  
+-   No se debe usar **SET CONTEXT_INFO** para modificar el contexto de las transacciones en las que se realizan cambios de esquema en objetos publicados.  
   
 #### <a name="adding-columns"></a>Agregar columnas  
   
@@ -151,7 +151,7 @@ ms.locfileid: "86918503"
         |**hierarchyid**|Permitir cambio|Bloquear cambio|Bloquear cambio|  
         |**geography** y **geometry**|Permitir cambio|Permitir cambio*|Bloquear cambio|  
         |**secuencia de archivo**|Permitir cambio|Bloquear cambio|Bloquear cambio|  
-        |**date**, **time**, **datetime2**y **datetimeoffset**|Permitir cambio|Permitir cambio*|Bloquear cambio|  
+        |**date**, **time**, **datetime2** y **datetimeoffset**|Permitir cambio|Permitir cambio*|Bloquear cambio|  
   
          *Los suscriptores de SQL Server Compact convierten estos tipos de datos en el suscriptor.  
   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7d0a169e6b160bc865c5ba3c115803fb690cbe68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 6c7f660c4550a3bd792b2132ad0699d944b90a2e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423489"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468996"
 ---
 # <a name="manage-identity-columns"></a>Administrar columnas de identidad
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "88423489"
   
 2.  En la página **Artículos** , seleccione una tabla con una columna de identidad.  
   
-3.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado**.  
+3.  Haga clic en **Propiedades del artículo** y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado**.  
   
 4.  En la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<Article>** , en la sección **Administración de intervalos de identidad**, establezca la propiedad **Administrar intervalos de identidad automáticamente** en **Automático** o **Manual** (para publicadores que ejecuten [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior), o en **True** o **False** (para publicadores que ejecuten una versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88423489"
   
 1.  En la página **Artículos** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione una tabla con una columna de identidad.  
   
-2.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado**.  
+2.  Haga clic en **Propiedades del artículo** y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado**.  
   
 3.  En la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<Article>** , en la sección **Administración de intervalos de identidad**, escriba valores para una o varias de las propiedades siguientes: **Tamaño de intervalo del publicador**, **Tamaño de intervalo del suscriptor** y **Porcentaje de umbral del intervalo**.  
   

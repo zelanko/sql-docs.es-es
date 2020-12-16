@@ -10,13 +10,13 @@ ms.topic: tutorial
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 802ef2c4b7c73847e1c3de3cdc67516a9d35f2e3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3b7295d803770d37940480606ce038129e62a01d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868543"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465516"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Administrar sesiones de eventos en el Explorador de objetos
 
@@ -66,16 +66,16 @@ STATE = STOP
 ```  
   
 ### <a name="start-or-stop-an-extended-events-session-in-object-explorer"></a>Iniciar o detener una sesión de eventos extendidos en el Explorador de objetos  
- Para iniciar o detener una sesión de eventos extendidos en el **Explorador de objetos**, expanda los nodos **Administración**, **Eventos extendidos**y **Sesiones** y, a continuación, haga clic con el botón secundario en una sesión y en **Iniciar sesión** o **Detener sesión**.  
+ Para iniciar o detener una sesión de eventos extendidos en el **Explorador de objetos**, expanda los nodos **Administración**, **Eventos extendidos** y **Sesiones** y, a continuación, haga clic con el botón secundario en una sesión y en **Iniciar sesión** o **Detener sesión**.  
   
 ## <a name="export-an-extended-events-session-template"></a>Exportar una plantilla de sesión de eventos extendidos  
- Puede exportar una sesión de eventos extendidos con el **Explorador de objetos**y guardarlos en un archivo de plantilla .xml. Por ejemplo, puede exportar una sesión y, a continuación, aplicar la plantilla a una nueva sesión de evento mediante el **Asistente para nueva sesión** o el cuadro de diálogo **Nueva sesión** .  
+ Puede exportar una sesión de eventos extendidos con el **Explorador de objetos** y guardarlos en un archivo de plantilla .xml. Por ejemplo, puede exportar una sesión y, a continuación, aplicar la plantilla a una nueva sesión de evento mediante el **Asistente para nueva sesión** o el cuadro de diálogo **Nueva sesión** .  
   
  Al exportar una sesión, asegúrese de que guarda el archivo de plantilla en una ubicación que usa el sistema de archivos NTFS y que restringe el acceso a los usuarios que están autorizados para ver la información.  
   
  Para exportar una sesión de eventos extendidos en el **Explorador de objetos**:  
   
-1.  Expanda los nodos de **Administración**, **Eventos extendidos**y **Sesiones** .  
+1.  Expanda los nodos de **Administración**, **Eventos extendidos** y **Sesiones** .  
   
 2.  Haga clic con el botón derecho en la sesión que quiere exportar y seleccione **Exportar sesión**.  
   
@@ -92,7 +92,7 @@ STATE = STOP
   
  Para importar una sesión de eventos extendidos:  
   
-1.  En el **Explorador de objetos**, expanda los nodos **Administración**y después **Eventos extendidos** .  
+1.  En el **Explorador de objetos**, expanda los nodos **Administración** y después **Eventos extendidos** .  
   
 2.  Haga clic con el botón derecho en **Sesiones** y seleccione **Nueva sesión**.  
   
@@ -109,7 +109,7 @@ STATE = STOP
   
  Para editar una sesión de eventos extendidos:  
   
-1.  En el **Explorador de objetos**, expanda los nodos **Administración**, **Eventos extendidos**y **Sesiones** .  
+1.  En el **Explorador de objetos**, expanda los nodos **Administración**, **Eventos extendidos** y **Sesiones** .  
   
 2.  Haga clic con el botón derecho en una sesión y seleccione **Propiedades**.  
   
@@ -120,7 +120,7 @@ STATE = STOP
 ## <a name="script-an-event-session-definition-using-tsql"></a>Crear un script para una definición de la sesión de eventos mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  Tanto el Asistente para nueva sesión como el cuadro de diálogo Nueva sesión tienen una opción de script que genera [!INCLUDE[tsql](../../includes/tsql-md.md)] para definir la sesión de eventos extendidos.  
   
- Puede tener acceso a [!INCLUDE[tsql](../../includes/tsql-md.md)] para una sesión de eventos extendidos existente haciendo clic con el botón secundario en el nombre de la sesión, seleccionando **Incluir sesión como**y después seleccionando **Crear para**.  
+ Puede tener acceso a [!INCLUDE[tsql](../../includes/tsql-md.md)] para una sesión de eventos extendidos existente haciendo clic con el botón secundario en el nombre de la sesión, seleccionando **Incluir sesión como** y después seleccionando **Crear para**.  
   
 ## <a name="delete-an-extended-events-session"></a>Eliminar una sesión de eventos extendidos  
  Puede eliminar una sesión de eventos extendidos:  
@@ -138,7 +138,7 @@ STATE = STOP
   
  Para eliminar una sesión de eventos extendidos en el **Explorador de objetos**:  
   
-1.  Expanda los nodos de **Administración**, **Eventos extendidos**y **Sesiones** .  
+1.  Expanda los nodos de **Administración**, **Eventos extendidos** y **Sesiones** .  
   
 2.  Haga clic con el botón derecho en la sesión y seleccione **Eliminar**.  
   

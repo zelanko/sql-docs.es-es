@@ -18,13 +18,13 @@ ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 047ca1b9ebb3a9157dfe9cbea2ececb898f6b478
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 17c91b53c786934d292692493fa886698128b34d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91867670"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465306"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
 
@@ -73,7 +73,7 @@ Las operaciones de índice en línea requieren más espacio en disco necesario q
 
 Para más información, consulte [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
-## <a name="performance-considerations"></a>Consideraciones sobre el rendimiento
+## <a name="performance-considerations"></a>Consideraciones de rendimiento
 
 Aunque las operaciones de índice en línea permiten actividades de actualización de usuario simultáneas, las operaciones de índice tardan más si la actividad de actualización es muy grande. Normalmente, las operaciones de índice en línea son más lentas que las operaciones de índice sin conexión equivalentes, independientemente del nivel de actividad de actualización simultánea.  
   
@@ -129,7 +129,7 @@ ELEVATE_ONLINE y ELEVATE_RESUMABLE solo se aplican a las instrucciones de DDL qu
 > [!NOTE]
 > ELEVATE_ONLINE y ELEVATE_RESUMABLE no se aplican a las operaciones de índice XML.
 
-## <a name="related-content"></a>Contenido relacionado
+## <a name="related-content"></a>Contenidos relacionados
 
 - [Cómo funcionan las operaciones de índice en línea](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [Realizar operaciones de índice en línea](../../relational-databases/indexes/perform-index-operations-online.md)  

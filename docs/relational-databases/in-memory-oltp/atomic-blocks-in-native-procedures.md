@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84adfac47c755bccee6603a632dfa44aa2c151b2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7e5de0ea599650792feef01508c1eed54aed68c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867354"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465436"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Bloques ATOMIC en procedimientos nativos
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91867354"
   
  Si no hay ninguna transacción activa en una sesión, **BEGIN ATOMIC** iniciará una nueva transacción. Si no se inicia una excepción fuera del ámbito del bloque, la transacción se confirmará al final del bloque. Si el bloque produce una excepción (es decir, la excepción no se detecta ni se controla en el bloque), la transacción se revertirá. Para las transacciones que ocupan un único bloque ATOMIC (un solo procedimiento almacenado compilado de forma nativa), no se deben escribir instrucciones **BEGIN TRANSACTION** y **COMMIT** o **ROLLBACK** explícitas.  
   
- Los procedimientos almacenados compilados de forma nativa admiten las construcciones **TRY**, **CATCH**y **THROW** para el control de errores. No se admite**RAISERROR** .  
+ Los procedimientos almacenados compilados de forma nativa admiten las construcciones **TRY**, **CATCH** y **THROW** para el control de errores. No se admite **RAISERROR** .  
   
  En el ejemplo siguiente se muestra el comportamiento de control de errores con bloques atomic y procedimientos almacenados compilados de forma nativa:  
   
@@ -136,7 +136,7 @@ GO
   
 |Configuración necesaria|Descripción|  
 |----------------------|-----------------|  
-|**TRANSACTION ISOLATION LEVEL**|Los valores admitidos son **SNAPSHOT**, **REPEATABLEREAD**y **SERIALIZABLE**.|  
+|**TRANSACTION ISOLATION LEVEL**|Los valores admitidos son **SNAPSHOT**, **REPEATABLEREAD** y **SERIALIZABLE**.|  
 |**LANGUAGE**|Determina los formatos de fecha y hora y los mensajes del sistema. Se admiten todos los lenguajes y alias de [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
   
  Los siguientes parámetros de configuración son opcionales:  

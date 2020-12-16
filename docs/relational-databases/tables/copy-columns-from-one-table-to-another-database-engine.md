@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1952dc72148ee9e8d0d68b375f39f5fc3bedfc3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2b8b8dd930fa6fff0b5be86ed0c83ad485326996
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488638"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439426"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copiar columnas de una tabla a otra (motor de base de datos)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "88488638"
 
 3.  Haga clic con el botón derecho en el Editor de consultas y, luego, haga clic en **Diseñar consulta en el editor**. 
 
-4.  En el cuadro de diálogo **Agregar tabla** , seleccione la tabla de origen y destino, haga clic en **Agregar**y, luego, cierre el cuadro de diálogo **Agregar tabla** . 
+4.  En el cuadro de diálogo **Agregar tabla** , seleccione la tabla de origen y destino, haga clic en **Agregar** y, luego, cierre el cuadro de diálogo **Agregar tabla** . 
 
 5.  Haga clic con el botón derecho en un área abierta del Editor de consultas, seleccione **Cambiar tipo** y, luego, haga clic en **Insertar resultados**.  
 

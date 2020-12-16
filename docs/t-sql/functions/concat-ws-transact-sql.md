@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: aa8c2b6ae98020c46352c55924f16a6912da1ce6
-ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: f471f29f14a1d1d2044ffc82874836d0c5d17db0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93405062"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440326"
 ---
 # <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
-Esta función devuelve una cadena resultante de la concatenación, o la combinación, de dos o más valores de cadena de una manera integral. Separa esos valores de cadena concatenados con el delimitador especificado en el primer argumento de función. (`CONCAT_WS` indica *concatenar con separador* ).
+Esta función devuelve una cadena resultante de la concatenación, o la combinación, de dos o más valores de cadena de una manera integral. Separa esos valores de cadena concatenados con el delimitador especificado en el primer argumento de función. (`CONCAT_WS` indica *concatenar con separador*).
 
 ##  <a name="syntax"></a>Sintaxis   
 ```syntaxsql

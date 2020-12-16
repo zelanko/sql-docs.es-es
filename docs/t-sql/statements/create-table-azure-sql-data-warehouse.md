@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 64cbc15572d8d7316d5d61cc65190960aa496357
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: fdadefa5b898a2b37c7e5a7f087c429ccc6b8d4f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300204"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438968"
 ---
 # <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
@@ -140,7 +140,7 @@ Almacena la tabla como un índice de almacén de columnas en clúster. El índic
  
  `HEAP` Almacena la tabla como un montón. Este es el comportamiento predeterminado para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
- `CLUSTERED INDEX` ( *index_column_name* [ ,... *n* ] )  
+ `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
  Almacena la tabla como un índice agrupado con una o varias columnas de clave. Este comportamiento almacena los datos por fila. Use *index_column_name* para especificar el nombre de una o varias columnas de clave en el índice.  Para obtener más información, vea Tablas de almacén de filas en la sección Comentarios generales.
  
  `LOCATION = USER_DB` Esta opción está en desuso. Se acepta sintácticamente, pero ya no es necesaria y no afecta al comportamiento.   
@@ -149,7 +149,7 @@ Almacena la tabla como un índice de almacén de columnas en clúster. El índic
 
 Para entender cómo elegir el mejor método de distribución y usar tablas distribuidas, vea el artículo sobre la [distribución de tablas en [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
 
-`DISTRIBUTION = HASH` ( *distribution_column_name* ) Asigna cada fila a una distribución aplicando un algoritmo hash al valor almacenado en *distribution_column_name* . El algoritmo es determinista, lo que significa que siempre se aplica el algoritmo hash al mismo valor para la misma distribución.  La columna de distribución se debe definir como NOT NULL porque todas las filas que tengan NULL se asignan a la misma distribución.
+`DISTRIBUTION = HASH` (*distribution_column_name*) Asigna cada fila a una distribución aplicando un algoritmo hash al valor almacenado en *distribution_column_name*. El algoritmo es determinista, lo que significa que siempre se aplica el algoritmo hash al mismo valor para la misma distribución.  La columna de distribución se debe definir como NOT NULL porque todas las filas que tengan NULL se asignan a la misma distribución.
 
 `DISTRIBUTION = ROUND_ROBIN` Distribuye uniformemente las filas entre todas las distribuciones de un modo Round Robin. Este es el comportamiento predeterminado para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
 
@@ -158,7 +158,7 @@ Para entender cómo elegir el mejor método de distribución y usar tablas distr
 ### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> Opciones de partición de tabla
 Para obtener instrucciones sobre cómo usar las particiones de tabla, vea el artículo sobre la [partición de tablas en [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
 
- `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,... *n* ] ] ))   
+ `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 Crea una o varias particiones de tabla. Estas particiones son segmentos de tabla horizontales que permiten aplicar operaciones a subconjuntos de filas, independientemente de si la tabla se almacena como un montón, índice agrupado o índice de almacén de columnas en clúster. A diferencia de la columna de distribución, las particiones de tabla no determinan la distribución donde se almacena cada fila. En su lugar, las particiones de tabla determinan cómo se agrupan las filas y se almacenan dentro de cada distribución.  
 
 | Argumento | Explicación |
@@ -166,7 +166,7 @@ Crea una o varias particiones de tabla. Estas particiones son segmentos de tabla
 |*partition_column_name*| Especifica la columna que va a usar [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] para crear particiones de las filas. Esta columna puede ser de cualquier tipo de datos. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ordena los valores de columna de partición en orden ascendente. El orden de bajo a alto va de `LEFT` a `RIGHT` en la especificación de `RANGE`. |  
 | `RANGE LEFT` | Especifica que el valor de límite pertenece a la partición de la izquierda (los valores más bajos). El valor predeterminado es LEFT. |
 | `RANGE RIGHT` | Especifica que el valor de límite pertenece a la partición de la derecha (los valores más altos). | 
-| `FOR VALUES` ( *boundary_value* [,... *n* ] ) | Especifica los valores de límite para la partición. *valor_de_límite* es una expresión constante. No puede ser NULL. Debe coincidir o ser implícitamente convertible al tipo de datos de *partition_column_name* . No se puede truncar durante la conversión implícita para que el tamaño y la escala del valor no coincidan con el tipo de datos de *partition_column_name* .<br></br><br></br>Si se especifica la cláusula `PARTITION`, pero no se especifica un valor de límite, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] creará una tabla con particiones con una partición. Si procede, más adelante se puede dividir la tabla en dos particiones.<br></br><br></br>Si se especifica un valor de límite, la tabla resultante tendrá dos particiones; una para los valores inferiores al valor de límite y otra para los valores superiores al valor de límite. Si se mueve una partición a una tabla sin particiones, la tabla sin particiones recibirá los datos, pero no tendrá los límites de partición en sus metadatos.| 
+| `FOR VALUES` ( *boundary_value* [,...*n*] ) | Especifica los valores de límite para la partición. *valor_de_límite* es una expresión constante. No puede ser NULL. Debe coincidir o ser implícitamente convertible al tipo de datos de *partition_column_name*. No se puede truncar durante la conversión implícita para que el tamaño y la escala del valor no coincidan con el tipo de datos de *partition_column_name*.<br></br><br></br>Si se especifica la cláusula `PARTITION`, pero no se especifica un valor de límite, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] creará una tabla con particiones con una partición. Si procede, más adelante se puede dividir la tabla en dos particiones.<br></br><br></br>Si se especifica un valor de límite, la tabla resultante tendrá dos particiones; una para los valores inferiores al valor de límite y otra para los valores superiores al valor de límite. Si se mueve una partición a una tabla sin particiones, la tabla sin particiones recibirá los datos, pero no tendrá los límites de partición en sus metadatos.| 
 
  Vea [Crear una tabla con particiones](#PartitionedTable) en la sección Ejemplos.
 
@@ -219,7 +219,7 @@ Igual que `datetime`, salvo que puede se especificar el número de fracciones de
  El valor predeterminado de *n* es `7`.  
   
  `float` [ ( *n* ) ]  
- Tipo de datos numérico aproximado que se usa con datos numéricos de punto flotante. Los datos de punto flotante son aproximados, lo que significa que no todos los valores del rango del tipo de datos se pueden representar con exactitud. *n* especifica el número de bits que se usa para almacenar la mantisa del `float` en notación científica. *n* determina el tamaño de almacenamiento y la precisión. Si se especifica *n* , debe ser un valor entre `1` y `53`. El valor predeterminado de *n* es `53`.  
+ Tipo de datos numérico aproximado que se usa con datos numéricos de punto flotante. Los datos de punto flotante son aproximados, lo que significa que no todos los valores del rango del tipo de datos se pueden representar con exactitud. *n* especifica el número de bits que se usa para almacenar la mantisa del `float` en notación científica. *n* determina el tamaño de almacenamiento y la precisión. Si se especifica *n*, debe ser un valor entre `1` y `53`. El valor predeterminado de *n* es `53`.  
   
 | Valor *n* | Precision | Tamaño de almacenamiento |  
 | --------: | --------: | -----------: |  
@@ -240,7 +240,7 @@ Igual que `datetime`, salvo que puede se especificar el número de fracciones de
  El número total máximo de dígitos decimales que se puede almacenar, tanto a la izquierda como a la derecha del separador decimal. La precisión debe ser un valor comprendido entre `1` y la precisión máxima de `38`. La precisión predeterminada es `18`.  
   
  *scale*  
- El número máximo de dígitos decimales que se puede almacenar a la derecha del separador decimal. La *escala* debe ser un valor comprendido entre `0` y *precisión* . Solo se puede especificar *escala* si se especifica *precisión* . La escala predeterminada es `0` y, por tanto, `0` <= *escala* <= *precisión* . Los tamaños de almacenamiento máximo varían según la precisión.  
+ El número máximo de dígitos decimales que se puede almacenar a la derecha del separador decimal. La *escala* debe ser un valor comprendido entre `0` y *precisión*. Solo se puede especificar *escala* si se especifica *precisión*. La escala predeterminada es `0` y, por tanto, `0` <= *escala* <= *precisión*. Los tamaños de almacenamiento máximo varían según la precisión.  
   
 | Precision | Bytes de almacenamiento  |  
 | ---------: |-------------: |  
@@ -341,7 +341,7 @@ Al usar particiones, la columna de partición no puede tener una intercalación 
 CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))
 ```  
  
- Si *valor_de_límite* es un valor literal que se debe convertir implícitamente al tipo de datos en *partition_column_name* , se producirá una discrepancia. El valor literal se muestra a través de las vistas del sistema de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], pero el valor convertido se usa para operaciones de [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+ Si *valor_de_límite* es un valor literal que se debe convertir implícitamente al tipo de datos en *partition_column_name*, se producirá una discrepancia. El valor literal se muestra a través de las vistas del sistema de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], pero el valor convertido se usa para operaciones de [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
 ### <a name="temporary-tables"></a>Tablas temporales
 

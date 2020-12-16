@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Sintaxis de creación de bases de datos para SQL Server, Azure SQL Database, Azure Synapse Analytics y Analytics Platform System
 ms.custom: references_regions
-ms.date: 10/30/2020
+ms.date: 12/11/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -36,13 +36,13 @@ helpviewer_keywords:
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e66c5801b3a927b28f355e450be9d31c796e78dc
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
+ms.openlocfilehash: 0e0cf7b17061340f347af536cad762f63cc38ef3
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235402"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489146"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -54,7 +54,7 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -70,7 +70,7 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -208,7 +208,7 @@ Para más información sobre los nombres de intercalación de Windows y de SQL, 
 WITH \<option>
  **\<filestream_option>**
 
-NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Se aplica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores
+NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores
 
 Especifica el nivel de acceso no transaccional de FILESTREAM a la base de datos.
 
@@ -219,7 +219,7 @@ Especifica el nivel de acceso no transaccional de FILESTREAM a la base de datos.
 |FULL|El acceso no transaccional total a objetos FileTable de FILESTREAM está habilitado.|
 
 DIRECTORY_NAME = \<directory_name>
-**Se aplica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores
+**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores
 
 Un nombre de directorio compatible con Windows. Este nombre debe ser único entre todos los nombres de Database_Directory en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La comparación de unicidad no distingue mayúsculas de minúsculas, independientemente de la configuración de intercalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta opción se debe establecer antes de crear un objeto FileTable en esta base de datos.
 
@@ -276,7 +276,7 @@ Las opciones siguientes se permiten solo cuando CONTAINMENT se ha establecido en
 
 - **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-  Cuando se especifica esta opción, se crea el búfer de registro de transacciones en un volumen que se encuentra en un dispositivo de disco respaldado por la memoria de clase de almacenamiento (almacenamiento permanente de NVDIMM-N), también conocido como un búfer de registro persistente. Para más información, consulte [Transaction Commit latency acceleration using Storage Class Memory](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) (Aceleración de latencia de confirmación de transacciones con memoria de clase de almacenamiento). **Válido para** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y versiones más recientes.
+  Cuando se especifica esta opción, se crea el búfer de registro de transacciones en un volumen que se encuentra en un dispositivo de disco respaldado por la memoria de clase de almacenamiento (almacenamiento permanente de NVDIMM-N), también conocido como un búfer de registro persistente. Para más información, consulte [Transaction Commit latency acceleration using Storage Class Memory](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) (Aceleración de latencia de confirmación de transacciones con memoria de clase de almacenamiento). **Válido para**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y versiones más recientes.
 
 FOR ATTACH [ WITH \< attach_database_option > ] Especifica que la base de datos se crea al [adjuntar](../../relational-databases/databases/database-detach-and-attach-sql-server.md) un conjunto existente de archivos del sistema operativo. Debe haber una entrada \<filespec> que especifique el archivo principal. Las demás entradas \<filespec> obligatorias son las correspondientes a los archivos con una ruta de acceso diferente de la que tenían al crear la base de datos o cuando se adjuntó por última vez. Se debe especificar una entrada \<filespec> para estos archivos.
 
@@ -292,7 +292,7 @@ Si una base de datos de lectura/escritura tiene un único archivo de registro qu
 
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los archivos de texto completo que formen parte de la base de datos que se va a adjuntar se adjuntarán con la base de datos. Para especificar una nueva ruta de acceso al catálogo de texto completo, escriba la nueva ubicación sin incluir el nombre de archivo de texto completo del sistema operativo. Para obtener más información, vea la sección Ejemplos.
 
-Si se adjunta una base de datos que contiene una opción FILESTREAM de "Nombre de directorio" en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se solicitará a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que compruebe que el nombre de Database_Directory es único. Si no lo es, se producirá un error en la operación de adjuntar con el mensaje "El nombre \<name> Database_Directory de FILESTREAM no es único en esta instancia de SQL Server". Para evitar este error, se debe pasar a esta operación el parámetro opcional  *directory_name*.
+Si se adjunta una base de datos que contiene una opción FILESTREAM de "Nombre de directorio" en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se solicitará a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que compruebe que el nombre de Database_Directory es único. Si no lo es, se producirá un error en la operación de adjuntar con el mensaje "El nombre \<name> Database_Directory de FILESTREAM no es único en esta instancia de SQL Server". Para evitar este error, se debe pasar a esta operación el parámetro opcional *directory_name*.
 
 FOR ATTACH no se puede especificar en una instantánea de base de datos.
 
@@ -315,7 +315,7 @@ Si adjunta una base de datos replicada que fue copiada en lugar de ser separada,
 - Si adjunta la base de datos a una instancia de servidor diferente, independientemente de la versión, debe ejecutar [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) para quitar la replicación una vez que se complete la operación de adjuntar.
 
 > [!NOTE]
-> Adjunte los trabajos con el formato de almacenamiento **vardecimal** , pero el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] se debe actualizar al menos a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2. No puede adjuntar ninguna base de datos que use el formato de almacenamiento vardecimal a una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre el formato de almacenamiento **vardecimal** , consulte [Compresión de datos](../../relational-databases/data-compression/data-compression.md).
+> Adjunte los trabajos con el formato de almacenamiento **vardecimal**, pero el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] se debe actualizar al menos a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2. No puede adjuntar ninguna base de datos que use el formato de almacenamiento vardecimal a una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre el formato de almacenamiento **vardecimal**, consulte [Compresión de datos](../../relational-databases/data-compression/data-compression.md).
 
 La primera vez que se adjunta una base de datos o se restaura en una instancia nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aún no se ha almacenado una copia de la clave maestra de la base de datos (cifrada por la clave maestra de servicio) en el servidor. Debe usar la instrucción **OPEN MASTER KEY** para descifrar la clave maestra de la base de datos (DMK). Una vez que se ha descifrado la clave maestra de la base de datos, tiene la posibilidad de habilitar el descifrado automático en el futuro usando la instrucción **ALTER MASTER KEY REGENERATE** para proporcionar al servidor una copia de la clave maestra de la base de datos cifrada con la clave maestra de servicio (SMK). Cuando una base de datos se haya actualizado desde una versión anterior, se debe volver a generar la DMK para usar el algoritmo AES más reciente. Para obtener más información sobre cómo volver a generar la DMK, vea [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). El tiempo necesario para volver a generar la DMK con el fin de actualizarse a AES depende del número de objetos protegidos por la DMK. Solo es necesario volver a generar la DMK una vez y no tiene ningún efecto sobre las nuevas generaciones futuras como parte de una estrategia de rotación de claves. Para obtener información sobre cómo actualizar una base de datos mediante el uso de adjuntar, vea [Actualizar una base de datos mediante Separar y Adjuntar](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md).
 
@@ -377,7 +377,7 @@ Se pueden utilizar los sufijos kilobyte (KB), megabyte (MB), gigabyte (GB) o ter
 
 MAXSIZE *max_size* Especifica el tamaño máximo que puede alcanzar el archivo. MAXSIZE no se puede especificar si se especifica *os_file_name* como ruta UNC.
 
-*max_size* Es el tamaño máximo del archivo. Se pueden utilizar los sufijos KB, MB, GB y TB. El valor predeterminado es MB. Especifique un número entero; no incluya decimales. Si no se especifica *max_size* , el archivo aumenta de tamaño hasta que el disco esté lleno. *Max_size* es un valor entero. Para valores mayores que 2147483647, utilice unidades más grandes.
+*max_size* Es el tamaño máximo del archivo. Se pueden utilizar los sufijos KB, MB, GB y TB. El valor predeterminado es MB. Especifique un número entero; no incluya decimales. Si no se especifica *max_size*, el archivo aumenta de tamaño hasta que el disco esté lleno. *Max_size* es un valor entero. Para valores mayores que 2147483647, utilice unidades más grandes.
 
 UNLIMITED Especifica que el archivo crecerá hasta que el disco esté lleno. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si se especifica un crecimiento ilimitado para un archivo de registro, su tamaño máximo será de 2 TB, y para un archivo de datos será de 16 TB.
 
@@ -456,7 +456,7 @@ Algunas características de la base de datos dependen de características o capa
 
 ## <a name="database-files-and-filegroups"></a>Archivos y grupos de archivos de base de datos
 
-Todas las bases de datos tienen al menos dos archivos (un *archivo principal* y un *archivo de registro de transacciones* ) y un grupo de archivos como mínimo. Para cada base de datos pueden especificarse hasta 32.767 archivos y 32.767 grupos de archivos.
+Todas las bases de datos tienen al menos dos archivos (un *archivo principal* y un *archivo de registro de transacciones*) y un grupo de archivos como mínimo. Para cada base de datos pueden especificarse hasta 32.767 archivos y 32.767 grupos de archivos.
 
 Cuando cree una base de datos, defina el mayor tamaño posible para los archivos de datos según la cantidad de datos máxima prevista para la base datos.
 
@@ -859,11 +859,11 @@ GO
 - [Objeto binario grande - Datos de blob](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_**
@@ -875,7 +875,7 @@ GO
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1013,7 +1013,7 @@ MAXSIZE especifica el tamaño máximo de la base de datos. El valor de MAXSIZE d
 |500 GB|N/D|N/D|√|√ (D)|√|
 |750 GB|N/D|N/D|√|√|√|
 |1024 GB|N/D|N/D|√|√|√ (D)|
-|Desde 1024 GB hasta 4096 GB en incrementos de 256 GB* |N/D|N/D|N/D|N/D|√|√|
+|Desde 1024 GB hasta 4096 GB en incrementos de 256 GB* |N/D|N/D|N/D|N/A|√|√|
 
 \* P11 y P15 permiten un valor de MAXSIZE de hasta 4 TB, con 1024 GB como tamaño predeterminado. P11 y P15 pueden usar hasta 4 TB de almacenamiento incluido sin cargos adicionales. En el nivel Premium, un valor de MAXSIZE mayor de 1 TB está actualmente disponible en las regiones siguientes: Este de EE. UU. 2, Oeste de EE. UU., US Gov Virginia, Oeste de Europa, Centro de Alemania, Sudeste de Asia, Este de Japón, Este de Australia, Centro de Canadá y Este de Canadá. Para obtener más información sobre las limitaciones de recursos para el modelo de DTU, consulte [Límites de recursos de DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
@@ -1140,7 +1140,7 @@ Para crear una base de datos en un grupo de bases de datos elásticas, establezc
 AS COPY OF [source_server_name.]source_database_name **Se aplica a:** Solo bases de datos únicas y agrupadas.
 Para copiar una base de datos al mismo o a otro servidor de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
-*nombre_del_servidor_de_origen* : el nombre del servidor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] donde está ubicada la base de datos de origen. Este parámetro es opcional cuando la base de datos de origen y la de destino van a estar ubicadas en el mismo servidor [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+*nombre_del_servidor_de_origen*: el nombre del servidor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] donde está ubicada la base de datos de origen. Este parámetro es opcional cuando la base de datos de origen y la de destino van a estar ubicadas en el mismo servidor [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
 > [!NOTE]
 > El argumento `AS COPY OF` no admite nombres de dominio únicos completos. En otras palabras, si el nombre de dominio completo del servidor es `serverName.database.windows.net`, utilice solo `serverName` durante la copia de la base de datos.
@@ -1288,11 +1288,11 @@ CREATE DATABASE test_zone_redundancy
 - [ALTER DATABASE - Azure SQL Database](alter-database-transact-sql.md?view=azuresqldb-currentls)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1304,7 +1304,7 @@ CREATE DATABASE test_zone_redundancy
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1324,7 +1324,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 ```
 
 > [!IMPORTANT]
-> Para agregar archivos o establecer la independencia de una base de datos en una instancia administrada, use la instrucción [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi).
+> Para agregar archivos o establecer la independencia de una base de datos en una instancia administrada, use la instrucción [ALTER DATABASE](alter-database-transact-sql.md?tabs=sqldbmi).
 
 ## <a name="arguments"></a>Argumentos
 
@@ -1372,11 +1372,11 @@ CREATE DATABASE TestDB1;
 Consulte [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1388,7 +1388,7 @@ Consulte [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-curr
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1402,7 +1402,7 @@ En Azure Synapse, esta instrucción se puede usar con un servidor de Azure SQL D
 
 ## <a name="syntax"></a>Sintaxis
 
-### <a name="sql-pool"></a>[Grupo de SQL](#tab/sqlpool)
+### <a name="dedicated-sql-pool"></a>[Grupo de SQL dedicado](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1423,7 +1423,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
-### <a name="sql-on-demand-preview"></a>[SQL a petición (versión preliminar)](#tab/sqlod)
+### <a name="serverless-sql-pool"></a>[Grupo de SQL sin servidor](#tab/sqlod)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 [;] 
@@ -1504,11 +1504,11 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 - [DROP DATABASE - Transact-SQL](../../t-sql/statements/drop-database-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1548,21 +1548,21 @@ WITH (
 
 *database_name* El nombre de la nueva base de datos. Para más información sobre los nombres de base de datos permitidos, vea las secciones sobre las reglas de nomenclatura de objetos y sobre los nombres reservados de base de datos en la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
-AUTOGROW = ON | **OFF** Especifica si los parámetros *replicated_size* , *distributed_size* y *log_size* de esta base de datos van a crecer automáticamente según sea necesario y más allá de sus tamaños establecidos. El valor predeterminado es **OFF**.
+AUTOGROW = ON | **OFF** Especifica si los parámetros *replicated_size*, *distributed_size* y *log_size* de esta base de datos van a crecer automáticamente según sea necesario y más allá de sus tamaños establecidos. El valor predeterminado es **OFF**.
 
-Si AUTOGROW se establece en ON, *replicated_size* , *distributed_size* y *log_size* aumentarán según sea necesario (no en bloques con el tamaño inicial especificado) con cada inserción de datos, actualización u otra acción que requiera más almacenamiento del que ya hay asignado.
+Si AUTOGROW se establece en ON, *replicated_size*, *distributed_size* y *log_size* aumentarán según sea necesario (no en bloques con el tamaño inicial especificado) con cada inserción de datos, actualización u otra acción que requiera más almacenamiento del que ya hay asignado.
 
-Si AUTOGROW se establece en OFF, el tamaño no aumentará automáticamente. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] devolverá un error si se intenta realizar una acción que requiera que *replicated_size* , *distributed_size* o *log_size* aumenten por encima de su valor especificado.
+Si AUTOGROW se establece en OFF, el tamaño no aumentará automáticamente. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] devolverá un error si se intenta realizar una acción que requiera que *replicated_size*, *distributed_size* o *log_size* aumenten por encima de su valor especificado.
 
 AUTOGROW se establece en ON o en OFF invariablemente para todos los tamaños. Por ejemplo, no es posible establecer AUTOGROW en ON para *log_size* y no establecerlo para *replicated_size*.
 
-*replicated_size* [ GB ] Un número positivo. Establece el tamaño (en gigabytes en forma de número entero o con decimales) del espacio total asignado a las tablas replicadas y a los datos correspondientes *en cada nodo de ejecución*. Para conocer los requisitos mínimos y máximos de *replicated_size* , vea la sección sobre valores mínimos y máximos de la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+*replicated_size* [ GB ] Un número positivo. Establece el tamaño (en gigabytes en forma de número entero o con decimales) del espacio total asignado a las tablas replicadas y a los datos correspondientes *en cada nodo de ejecución*. Para conocer los requisitos mínimos y máximos de *replicated_size*, vea la sección sobre valores mínimos y máximos de la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Si AUTOGROW está establecido en ON, las tablas replicadas podrán crecer más allá de este límite.
 
 Si AUTOGROW está establecido en OFF, se devolverá un error si un usuario intenta crear una tabla replicada, insertar datos en una tabla replicada ya existente o actualizar una tabla replicada ya existente de forma que pueda aumentar el tamaño más allá de *replicated_size*.
 
-*distributed_size* [ GB ] Un número positivo. Se trata del tamaño (en gigabytes en forma de número entero o con decimales) del espacio total asignado a las tablas distribuidas (y a los datos correspondientes) *en todo el dispositivo*. Para conocer los requisitos mínimos y máximos de *distributed_size* , vea la sección sobre valores mínimos y máximos de la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+*distributed_size* [ GB ] Un número positivo. Se trata del tamaño (en gigabytes en forma de número entero o con decimales) del espacio total asignado a las tablas distribuidas (y a los datos correspondientes) *en todo el dispositivo*. Para conocer los requisitos mínimos y máximos de *distributed_size*, vea la sección sobre valores mínimos y máximos de la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Si AUTOGROW está establecido en ON, las tablas distribuidas podrán crecer más allá de este límite.
 
@@ -1570,7 +1570,7 @@ Si AUTOGROW está establecido en OFF, se devolverá un error si un usuario inten
 
 *log_size* [ GB ] Un número positivo. Se trata del tamaño (en gigabytes en forma de número entero o con decimales) del registro de transacciones *en todo el dispositivo*.
 
-Para conocer los requisitos mínimos y máximos de *log_size* , vea la sección sobre valores mínimos y máximos de la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+Para conocer los requisitos mínimos y máximos de *log_size*, vea la sección sobre valores mínimos y máximos de la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Si AUTOGROW está establecido en ON, el archivo de registro podrá crecer más allá de este límite. Use la instrucción [DBCC SHRINKLOG (Azure Synapse Analytics)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) para reducir el tamaño de los archivos de registro a su tamaño original.
 
@@ -1602,8 +1602,8 @@ Para más información sobre las limitaciones mínimas y máximas en las bases d
 En el momento en que se cree una base de datos, debe haber suficiente espacio libre disponible *en cada nodo de ejecución* que permita asignar el total combinado de los siguientes tamaños:
 
 - Base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con tablas que tengan el tamaño de *replicated_table_size*.
-- Base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con tablas que tengan un tamaño de ( *distributed_table_size* /número de nodos de ejecución).
-- Registros de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tengan un tamaño de ( *log_size* /número de nodos de ejecución).
+- Base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con tablas que tengan un tamaño de (*distributed_table_size*/número de nodos de ejecución).
+- Registros de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tengan un tamaño de (*log_size*/número de nodos de ejecución).
 
 ## <a name="locking"></a>Bloqueo
 

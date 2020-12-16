@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4a39dcf3f4d9023b85d05a5368a979a8dc1ee5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ec0ced044ba6405d36f53bed4a42f17b57e7d342
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428497"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485427"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning [clase de eventos]
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88428497"
 >  Para describir las salidas de hash, también se usan los términos *combinación hash aplazada* y *combinación hash de repetición* .  
   
 > [!IMPORTANT]  
->  Para determinar dónde se está produciendo el evento Hash Warning cuando el optimizador de consultas genera un plan de ejecución, debería recopilar la clase de eventos Showplan en el seguimiento. Puede elegir cualquiera de las clases de eventos Showplan, excepto Showplan Text y Showplan Text (Unencoded), que no devuelven ningún identificador de nodo. Los identificadores de nodo en las clases de evento Showplans identifican cada operación que realiza el optimizador de consultas cuando genera un plan de ejecución de consultas. Estas operaciones se denominan *operadores*y cada operador de un Showplan tiene un identificador de nodo. La columna ObjectID para los eventos Warning Hash se corresponden con el identificador de nodo en las clase de eventos Showplan para que pueda determinar qué operador u operación está provocando el error.  
+>  Para determinar dónde se está produciendo el evento Hash Warning cuando el optimizador de consultas genera un plan de ejecución, debería recopilar la clase de eventos Showplan en el seguimiento. Puede elegir cualquiera de las clases de eventos Showplan, excepto Showplan Text y Showplan Text (Unencoded), que no devuelven ningún identificador de nodo. Los identificadores de nodo en las clases de evento Showplans identifican cada operación que realiza el optimizador de consultas cuando genera un plan de ejecución de consultas. Estas operaciones se denominan *operadores* y cada operador de un Showplan tiene un identificador de nodo. La columna ObjectID para los eventos Warning Hash se corresponden con el identificador de nodo en las clase de eventos Showplan para que pueda determinar qué operador u operación está provocando el error.  
   
 ## <a name="hash-warning-event-class-data-columns"></a>Columnas de datos de la clase de eventos Hash Warning  
   

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28472efd6747239910630388133bdfe3ca95a6a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f4ff1708cf4c3986a90aff1b4c8048879bf0658e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547815"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489486"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -157,7 +157,7 @@ DEFAULT
  Es un valor literal, un valor NULL o una función del sistema que se usa como valor predeterminado de la columna. Si se usa junto con una columna definida como de tipo [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] definido por el usuario, la implementación del tipo debe ser compatible con la conversión implícita de *constant_expression* en el tipo definido por el usuario.  
   
 WITH VALUES   
- Al agregar una columna Y una restricción DEFAULT, si la columna permite valores NULL con WITH VALUES, para las filas existentes, establecerá el valor de la columna nueva en el valor determinado en la expresión *constant_expression* DEFAULT. Si la columna que se agrega no permite valores NULL, para las filas existentes, el valor de la columna siempre se establecerá en el valor determinado en la *expresión constante* DEFAULT. Desde SQL Server 2012, está puede ser una operación de metadatos [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ Al agregar una columna Y una restricción DEFAULT, si la columna permite valores NULL con WITH VALUES, para las filas existentes, establecerá el valor de la columna nueva en el valor determinado en la expresión *constant_expression* DEFAULT. Si la columna que se agrega no permite valores NULL, para las filas existentes, el valor de la columna siempre se establecerá en el valor determinado en la *expresión constante* DEFAULT. Desde SQL Server 2012, está puede ser una operación de metadatos [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation).
 Si se usa cuando no se está agregando también la columna relacionada, no tiene ningún impacto.
  
  Especifica que el valor dado en DEFAULT *constant_expression* se almacena en una nueva columna que se agrega a las filas existentes. Si la columna agregada permite valores NULL y se ha especificado WITH VALUES, el valor predeterminado se almacena en la nueva columna que se agrega a las filas existentes. Si no se especifica WITH VALUES para las columnas que permiten valores NULL, el valor NULL se almacena en la nueva columna en las filas existentes. Si la nueva columna no permite valores NULL, el valor predeterminado se almacena en las nuevas filas, independientemente de que se especifique o no WITH VALUES.  
@@ -165,7 +165,7 @@ Si se usa cuando no se está agregando también la columna relacionada, no tiene
 IDENTITY  
  Especifica que la nueva columna es una columna de identidad. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] proporciona un valor incremental único para la columna. Al agregar columnas de identificadores a tablas existentes, los números de identidad se agregan a las filas existentes de la tabla con los valores de inicialización e incremento. No se garantiza el orden en que las filas se actualizan. También se generan números de identidad para las filas nuevas que se añadan.  
   
- Las columnas de identidad se utilizan normalmente junto con restricciones PRIMARY KEY para que actúen como identificador exclusivo de fila para la tabla. La propiedad IDENTITY se puede asignar a una columna **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o**numeric(p,0)** . Solo se puede crear una columna de identidad para cada tabla. La palabra clave DEFAULT y los valores predeterminados enlazados no se pueden utilizar con una columna de identidad. En este caso, debe especificarse tanto el valor de inicialización como el incremento o ninguno. Si no se especifica ninguno, el valor predeterminado es (1,1).  
+ Las columnas de identidad se utilizan normalmente junto con restricciones PRIMARY KEY para que actúen como identificador exclusivo de fila para la tabla. La propiedad IDENTITY se puede asignar a una columna **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)** . Solo se puede crear una columna de identidad para cada tabla. La palabra clave DEFAULT y los valores predeterminados enlazados no se pueden utilizar con una columna de identidad. En este caso, debe especificarse tanto el valor de inicialización como el incremento o ninguno. Si no se especifica ninguno, el valor predeterminado es (1,1).  
   
 > [!NOTE]  
 >  No puede modificar una columna de tabla existente para agregar la propiedad IDENTITY.  
@@ -205,9 +205,9 @@ SPARSE
  Especifica la clave de cifrado de columna. Para más información, vea [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md).  
   
 ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
- El**cifrado determinista** usa un método que genera siempre el mismo valor cifrado para cualquier valor de texto no cifrado concreto. Al usar cifrado determinista se pueden realizar búsquedas mediante comparación de igualdad, agrupar y unir tablas mediante combinaciones de igualdad basadas en valores cifrados, y además se puede permitir a usuarios no autorizados que averigüen la información sobre valores cifrados mediante el análisis de patrones en la columna cifrada. La combinación de dos tablas en columnas cifradas de manera determinista solo es posible si ambas columnas están cifradas con la misma clave de cifrado de columna. El cifrado determinista debe usar una intercalación de columna con un criterio de ordenación binario 2 para columnas de caracteres.  
+ El **cifrado determinista** usa un método que genera siempre el mismo valor cifrado para cualquier valor de texto no cifrado concreto. Al usar cifrado determinista se pueden realizar búsquedas mediante comparación de igualdad, agrupar y unir tablas mediante combinaciones de igualdad basadas en valores cifrados, y además se puede permitir a usuarios no autorizados que averigüen la información sobre valores cifrados mediante el análisis de patrones en la columna cifrada. La combinación de dos tablas en columnas cifradas de manera determinista solo es posible si ambas columnas están cifradas con la misma clave de cifrado de columna. El cifrado determinista debe usar una intercalación de columna con un criterio de ordenación binario 2 para columnas de caracteres.  
   
- El**cifrado aleatorio** utiliza un método que cifra los datos de una manera menos predecible. El cifrado aleatorio es más seguro, pero impide todos los cálculos y la indexación en columnas cifradas, a menos que la instancia de SQL Server admita [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+ El **cifrado aleatorio** utiliza un método que cifra los datos de una manera menos predecible. El cifrado aleatorio es más seguro, pero impide todos los cálculos y la indexación en columnas cifradas, a menos que la instancia de SQL Server admita [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
  Si usa Always Encrypted (sin los enclaves seguros), utilice el cifrado determinista para que se busquen columnas con parámetros o parámetros de agrupación, por ejemplo, un número de identificación gubernamental. Use el cifrado aleatorio para datos como números de tarjeta de crédito, que no estén agrupados con otros registros ni se estén usando para combinar tablas, y en los que no se realicen búsquedas porque se estén usando otras columnas (por ejemplo, un número de transacción) para buscar la fila que contiene la columna cifrada en cuestión.  
 

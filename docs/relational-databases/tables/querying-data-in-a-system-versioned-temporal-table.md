@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f25698110307ca4539b0939ad8c1f0cb9696145b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1efbdca9b0d3d7919cf3e3f54837decd37bdf5b0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537838"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484447"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Consulta de los datos de una tabla temporal con control de versiones del sistema
 
@@ -39,9 +39,9 @@ Para llevar a cabo cualquier tipo de análisis basado en tiempo, use la nueva cl
 
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>Consulta de una hora específica con la subcláusula AS OF
 
-Use la subcláusula**AS OF** cuando necesite reconstruir el estado de datos a como era en un momento concreto del pasado. Puede reconstruir los datos con la precisión del tipo datetime2 que se especificó en las definiciones de la columna **PERIOD** .
+Use la subcláusula **AS OF** cuando necesite reconstruir el estado de datos a como era en un momento concreto del pasado. Puede reconstruir los datos con la precisión del tipo datetime2 que se especificó en las definiciones de la columna **PERIOD** .
 
-La subcláusula**AS OF** puede usarse con literales constantes o con variables, lo que permite especificar de forma dinámica una condición temporal. Los valores proporcionados se interpretan como hora UTC.
+La subcláusula **AS OF** puede usarse con literales constantes o con variables, lo que permite especificar de forma dinámica una condición temporal. Los valores proporcionados se interpretan como hora UTC.
 
 Este primer ejemplo devuelve el estado de la tabla dbo.Department en una fecha específica del pasado.
 

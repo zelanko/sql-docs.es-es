@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6c431669d89f87c49cfd96d48e6b3c53c8d866e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7acb5296f5cfcefd5c39c9ceb643a1076c11bfbd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548882"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484477"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Modificación de los datos de una tabla temporal con control de versiones del sistema
 
@@ -191,11 +191,11 @@ AND Department.DeptID = 10 ;
 
 ## <a name="deleting-data"></a>Eliminación de datos
 
-Puede eliminar datos en la tabla actual con una instrucción **DELETE** habitual. La columna PERIOD final de las filas eliminadas se rellenará con la hora de inicio de la transacción subyacente. No puede eliminar filas directamente de la tabla de historial en el caso de que **SYSTEM_VERSIONING = ON**. Establezca **SYSTEM_VERSIONING = OFF** y elimine las filas de la tabla actual y de historial, pero tenga en cuenta que así el sistema no conservará el historial de cambios. Las instrucciones**TRUNCATE**, **SWITCH PARTITION OUT** para la tabla actual y la instrucción **SWITCH PARTITION IN** para la tabla del historial no se admiten si **SYSTEM_VERSIONING = ON**.
+Puede eliminar datos en la tabla actual con una instrucción **DELETE** habitual. La columna PERIOD final de las filas eliminadas se rellenará con la hora de inicio de la transacción subyacente. No puede eliminar filas directamente de la tabla de historial en el caso de que **SYSTEM_VERSIONING = ON**. Establezca **SYSTEM_VERSIONING = OFF** y elimine las filas de la tabla actual y de historial, pero tenga en cuenta que así el sistema no conservará el historial de cambios. Las instrucciones **TRUNCATE**, **SWITCH PARTITION OUT** para la tabla actual y la instrucción **SWITCH PARTITION IN** para la tabla del historial no se admiten si **SYSTEM_VERSIONING = ON**.
 
 ## <a name="using-merge-to-modify-data-in-temporal-table"></a>Uso de MERGE para modificar los datos de la tabla temporal
 
-La operación**MERGE** se admite con las mismas limitaciones que tienen las instrucciones **INSERT** y **UPDATE** en lo relativo a las columnas **PERIOD** .
+La operación **MERGE** se admite con las mismas limitaciones que tienen las instrucciones **INSERT** y **UPDATE** en lo relativo a las columnas **PERIOD** .
 
 ```sql
 CREATE TABLE DepartmentStaging (DeptId INT, DeptName varchar(50));

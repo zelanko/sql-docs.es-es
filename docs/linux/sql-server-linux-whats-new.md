@@ -7,12 +7,12 @@ ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f2b955579853c48f7899614f0e87dd996f3076e
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 7f2eba8e373fd291606a3580f0464b829a86d03c
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115588"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489765"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Novedades de SQL Server 2017 en Linux
 
@@ -25,11 +25,11 @@ En este artículo se describen las características y los servicios principales 
 
 ## <a name="ubuntu-1804-supported"></a>Compatibilidad con Ubuntu 18.04
 
-A partir de SQL Server 2017 CU20, ahora se admite Ubuntu 18.04. Consulte nuestro Inicio rápido sobre [instalación de SQL Server y creación de una base de datos en Ubuntu](quickstart-install-connect-ubuntu.md?view=sql-server-2017).
+A partir de SQL Server 2017 CU20, ahora se admite Ubuntu 18.04. Consulte nuestro Inicio rápido sobre [instalación de SQL Server y creación de una base de datos en Ubuntu](quickstart-install-connect-ubuntu.md).
 
 ## <a name="rhel-8-supported"></a>Compatibilidad con RHEL 8
 
-A partir de SQL Server 2017 CU20, ahora se admite RHEL 8. Consulte nuestro Inicio rápido sobre [instalación de SQL Server y creación de una base de datos en Red Hat](quickstart-install-connect-red-hat.md?view=sql-server-2017).
+A partir de SQL Server 2017 CU20, ahora se admite RHEL 8. Consulte nuestro Inicio rápido sobre [instalación de SQL Server y creación de una base de datos en Red Hat](quickstart-install-connect-red-hat.md).
 
 ## <a name="sql-server-database-engine"></a>Motor de base de datos de SQL Server
 

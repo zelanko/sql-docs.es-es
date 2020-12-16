@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e484cfef4f805f1456101ad966ddf64912daca5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5159591eeafc76ca16fde95f8a7b9789acc084e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867182"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485317"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91867182"
  El informe de análisis de rendimiento de transacción y los asesores de migración se instalan como parte de SQL Server Management Studio (SSMS) cuando se selecciona **Herramientas de administración - Básica** o **Herramientas de administración - Avanzada** al instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o bien al [descargar SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).    
   
 ## <a name="transaction-performance-analysis-reports"></a>Informes de análisis del rendimiento de las transacciones  
- Puede generar informes de análisis del rendimiento de las transacciones en **Explorador de objetos** haciendo clic con el botón derecho en la base de datos, seleccionando **Informes**y, después, **Informes estándar**e **Información general de análisis del rendimiento de las transacciones**. La base de datos debe tener una carga de trabajo activa o haber ejecutado una recientemente para generar un informe de análisis significativo.  
+ Puede generar informes de análisis del rendimiento de las transacciones en **Explorador de objetos** haciendo clic con el botón derecho en la base de datos, seleccionando **Informes** y, después, **Informes estándar** e **Información general de análisis del rendimiento de las transacciones**. La base de datos debe tener una carga de trabajo activa o haber ejecutado una recientemente para generar un informe de análisis significativo.  
   
 ### <a name="tables"></a>Tablas
   
@@ -108,7 +108,7 @@ Las estadísticas de contención del informe de detalles de la tabla se recopila
   
 **Pasos para generar una lista de comprobación de migración mediante el comando de la interfaz de usuario**  
   
-1.  En **Explorador de objetos**, haga clic con el botón derecho en una base de datos que no sea la del sistema, en **Tareas**y, después, en **Generar listas de comprobación de migración de OLTP en memoria**.  
+1.  En **Explorador de objetos**, haga clic con el botón derecho en una base de datos que no sea la del sistema, en **Tareas** y, después, en **Generar listas de comprobación de migración de OLTP en memoria**.  
   
 2.  En el cuadro de diálogo Generar listas de comprobación de migración de OLTP en memoria, haga clic en Siguiente para ir a la página **Configurar opciones de generación de lista de comprobación** . En esta página, realice lo siguiente:  
   
@@ -122,7 +122,7 @@ Las estadísticas de contención del informe de detalles de la tabla se recopila
   
 3.  Haga clic en **Siguiente** y confirme que la lista de tareas coincide con la configuración de la página **Configure Checklist Generation Options** (Configurar opciones de generación de lista de comprobación).  
   
-4.  Haga clic en **Finalizar**y, después, confirme que se han generado los informes de lista de comprobación de migración solo para los objetos seleccionados.  
+4.  Haga clic en **Finalizar** y, después, confirme que se han generado los informes de lista de comprobación de migración solo para los objetos seleccionados.  
 
  Puede comprobar la precisión de los informes comparándolos con los generados mediante la herramienta Asesor de optimización de memoria y el Asistente para compilación nativa. Para obtener más información, consulte [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) y [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md).  
   

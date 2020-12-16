@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a1e6bcb89b8206f34c8438f6ebab2ef983210057
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 910671ecefc7a52f86a7e025492c3e5ec1371e65
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88330441"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485367"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Auditoría de seguridad (categoría de eventos, SQL Server Profiler)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88330441"
 |[Audit DBCC (clase de eventos)](../../relational-databases/event-classes/audit-dbcc-event-class.md)|Indica que se ha emitido un comando DBCC.|  
 |[Clase de eventos Audit Fulltext](../../relational-databases/event-classes/audit-fulltext-event-class.md)|Indica que se ha producido un evento de texto completo.|  
 |[Audit Login Change Password (clase de eventos)](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Indica que un usuario ha cambiado su contraseña de inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|[Audit Login Change Property (clase de eventos)](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Indica que se ha usado **sp_defaultdb**, **sp_defaultlanguage**o ALTER LOGIN para modificar una propiedad de un inicio de sesión.|  
+|[Audit Login Change Property (clase de eventos)](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Indica que se ha usado **sp_defaultdb**, **sp_defaultlanguage** o ALTER LOGIN para modificar una propiedad de un inicio de sesión.|  
 |[Audit Login (clase de eventos)](../../relational-databases/event-classes/audit-login-event-class.md)|Indica que un usuario ha iniciado una sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Audit Login Failed (clase de eventos)](../../relational-databases/event-classes/audit-login-failed-event-class.md)|Indica que un usuario intentó iniciar una sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pero no lo consiguió.|  
 |[Audit Login GDR (clase de eventos)](../../relational-databases/event-classes/audit-login-gdr-event-class.md)|Indica que se ha agregado o quitado un derecho de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  

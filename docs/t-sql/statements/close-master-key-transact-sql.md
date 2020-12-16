@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: bb04ef7a-9f3a-437e-a6f9-ba0204082cb9
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44884bdfe8b5981ade28508a016e8e3f3b78bfb2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d5dd1f98b4dcfb8bdec73c5e562bb4bd94f2c6ea
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193255"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483977"
 ---
 # <a name="close-master-key-transact-sql"></a>CLOSE MASTER KEY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ CLOSE MASTER KEY
 ## <a name="arguments"></a>Argumentos
  No tiene argumentos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta instrucción revierte la operación realizada por OPEN MASTER KEY. CLOSE MASTER KEY solo funciona correctamente si la clave maestra de la base de datos se abrió en la sesión actual con la instrucción OPEN MASTER KEY.  
   
 ## <a name="permissions"></a>Permisos  

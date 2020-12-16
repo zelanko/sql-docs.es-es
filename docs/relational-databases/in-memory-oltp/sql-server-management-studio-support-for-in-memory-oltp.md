@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddd1c896aa3a1425b6d31d33a6d113c77c9c11bf
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8684764c0386513c0890b10dee8bfa3582c1cf59
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867487"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485177"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Compatibilidad de SQL Server Management Studio con OLTP en memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "91867487"
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del Motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, a continuación, expándala.  
   
-2.  Haga clic con el botón derecho en **Bases de datos**y, después, haga clic en **Nueva base de datos**.  
+2.  Haga clic con el botón derecho en **Bases de datos** y, después, haga clic en **Nueva base de datos**.  
   
 3.  Para agregar un nuevo grupo de archivos de datos optimizados para memoria, haga clic en la página **Grupos de archivos** . En **DATOS OPTIMIZADOS PARA MEMORIA**, haga clic en **Agregar grupo de archivos** y escriba el nombre del grupo de archivos de datos optimizados para memoria.  La columna con la etiqueta **Archivos FILESTREAM** representa el número de contenedores en el grupo de archivos. Los contenedores se agregan en la página **General** .  
   
@@ -41,7 +41,7 @@ ms.locfileid: "91867487"
   
 ### <a name="to-create-a-memory-optimized-table"></a>Para crear una tabla optimizada para memoria  
   
-1.  En el **Explorador de objetos**, haga clic con el botón derecho en el nodo **Tablas** de la base de datos, haga clic en **Nuevo**y, después, haga clic en **Tabla con optimización para memoria**.  
+1.  En el **Explorador de objetos**, haga clic con el botón derecho en el nodo **Tablas** de la base de datos, haga clic en **Nuevo** y, después, haga clic en **Tabla con optimización para memoria**.  
   
      Se mostrará una plantilla para crear tablas optimizadas para memoria.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "91867487"
   
 ### <a name="to-create-a-natively-compiled-stored-procedure"></a>Para crear un procedimiento almacenado compilado de forma nativa  
   
-1.  En el **Explorador de objetos**, haga clic con el botón derecho en el nodo **Procedimientos almacenados** de la base de datos, haga clic en **Nuevo**y, luego, haga clic en **Procedimiento almacenado compilado de forma nativa**.  
+1.  En el **Explorador de objetos**, haga clic con el botón derecho en el nodo **Procedimientos almacenados** de la base de datos, haga clic en **Nuevo** y, luego, haga clic en **Procedimiento almacenado compilado de forma nativa**.  
   
      Se muestra una plantilla para crear procedimientos almacenados compilados de forma nativa.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "91867487"
   
 ### <a name="to-create-a-user-defined-memory-optimized-table-type"></a>Para crear un tipo de tabla optimizada para memoria definido por el usuario  
   
-1.  En el **Explorador de objetos**, expanda el nodo **Tipos** de la base de datos, haga clic con el botón derecho en el nodo **Tipos de tablas definidos por el usuario** , haga clic en **Nuevo**y, después, haga clic en **Nuevo tipo de tabla definido por el usuario optimizado de memoria**.  
+1.  En el **Explorador de objetos**, expanda el nodo **Tipos** de la base de datos, haga clic con el botón derecho en el nodo **Tipos de tablas definidos por el usuario** , haga clic en **Nuevo** y, después, haga clic en **Nuevo tipo de tabla definido por el usuario optimizado de memoria**.  
   
      Aparece una plantilla para crear el tipo de tabla optimizada para memoria definido por el usuario.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "91867487"
   
 #### <a name="view-memory-usage-by-memory-optimized-objects-report"></a>Ver el uso de la memoria en el informe de objetos con optimización para memoria  
   
--   En el **Explorador de objetos**, haga clic con el botón derecho en la base de datos, haga clic en **Informes**, haga clic en **Informes estándar**y haga clic en **Uso de memoria por los objetos con optimización para memoria**.  
+-   En el **Explorador de objetos**, haga clic con el botón derecho en la base de datos, haga clic en **Informes**, haga clic en **Informes estándar** y haga clic en **Uso de memoria por los objetos con optimización para memoria**.  
   
      Este informe proporciona datos detallados acerca de la utilización del espacio de memoria por parte de los objetos optimizados para memoria dentro de la base de datos.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "91867487"
   
 1.  Para obtener información sobre el uso de memoria:  
   
-    -   En el **Explorador de objetos**, haga clic con el botón derecho en la tabla optimizada para memoria, haga clic en **Propiedades**y, después, haga clic en la página **Almacenamiento** . El valor de la propiedad **Espacio de datos** indica la memoria utilizada por los datos de la tabla. El valor de la propiedad **Espacio de índice** indica la memoria utilizada por los índices de la tabla.  
+    -   En el **Explorador de objetos**, haga clic con el botón derecho en la tabla optimizada para memoria, haga clic en **Propiedades** y, después, haga clic en la página **Almacenamiento** . El valor de la propiedad **Espacio de datos** indica la memoria utilizada por los datos de la tabla. El valor de la propiedad **Espacio de índice** indica la memoria utilizada por los índices de la tabla.  
   
-    -   En el **Explorador de objetos**, haga clic con el botón derecho en la base de datos, haga clic en **Propiedades**y, después, haga clic en la página **General** . El valor de la propiedad **Memoria asignada a los objetos optimizados para memoria** indica la memoria asignada a los objetos optimizados para memoria en la base de datos. El valor de la propiedad **Memoria usada por los objetos optimizados para memoria** indica la memoria usada por los objetos optimizados para memoria en la base de datos.  
+    -   En el **Explorador de objetos**, haga clic con el botón derecho en la base de datos, haga clic en **Propiedades** y, después, haga clic en la página **General** . El valor de la propiedad **Memoria asignada a los objetos optimizados para memoria** indica la memoria asignada a los objetos optimizados para memoria en la base de datos. El valor de la propiedad **Memoria usada por los objetos optimizados para memoria** indica la memoria usada por los objetos optimizados para memoria en la base de datos.  
   
 ## <a name="supported-features-in-ssmanstudiofull"></a>Características admitidas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admite las características y las operaciones compatibles con el motor de base de datos en las bases de datos con un grupo de archivos de datos optimizados para memoria, tablas optimizadas para memoria, índices y procedimientos compilados de forma nativa.  

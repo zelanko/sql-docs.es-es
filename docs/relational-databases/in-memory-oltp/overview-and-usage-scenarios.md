@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: kevin-farlee
 ms.author: kfarlee
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f759c6cb9b13b75216f5927d078f45996378ab8
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 35e59fa45d81c5b80fe6ff28e2cb3ab4abab47c9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175980"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485277"
 ---
 # <a name="overview-and-usage-scenarios"></a>Información general y escenarios de uso
 
@@ -37,10 +37,10 @@ Ahora, solo porque los datos residen en memoria, no significa que los pierda si 
 
 Para usar OLTP en memoria en la base de datos, debe usar uno o varios de los siguientes tipos de objetos:
 
-- Las*tablas con optimización para memoria* se usan para almacenar datos de usuario. Declara que una tabla es una tabla optimizada para memoria en el momento de su creación.
-- Las*tablas no duraderas* se usan para los datos transitorios, ya sea para el almacenamiento en caché o para un conjunto de resultados intermedio (que reemplaza las tablas temporales tradicionales). Una tabla no duradera es una tabla optimizada para memoria que se declara con DURABILITY=SCHEMA_ONLY, lo que significa que los cambios en estas tablas no generan ningún E/S. Esto evita que consuman recursos de E/S de registro en los casos donde la durabilidad no es tema.
-- Los*tipos de tablas con optimización para memoria* se usan para los parámetros con valores de tabla (TVP), así como conjuntos de resultados intermedios en procedimientos almacenados. Se pueden usar en lugar de los tipos de tablas tradicionales. Las variables de tabla y los TVP que se declaran con un tipo de tabla optimizada para memoria heredan las ventajas de las tablas no duraderas optimizadas para memoria: acceso eficaz a los datos y no E/S.
-- Los*módulos T-SQL compilados de manera nativa* se usan para reducir aún más el tiempo que demora una transacción individual mediante la disminución de los ciclos de CPU que se requieren para procesar las operaciones. Declara un módulo Transact-SQL como compilado de manera nativa en el momento de su creación. En este momento, se pueden compilar de manera nativa los siguientes módulos T-SQL: procedimientos almacenados, desencadenadores y funciones escalares definidas por el usuario.
+- Las *tablas con optimización para memoria* se usan para almacenar datos de usuario. Declara que una tabla es una tabla optimizada para memoria en el momento de su creación.
+- Las *tablas no duraderas* se usan para los datos transitorios, ya sea para el almacenamiento en caché o para un conjunto de resultados intermedio (que reemplaza las tablas temporales tradicionales). Una tabla no duradera es una tabla optimizada para memoria que se declara con DURABILITY=SCHEMA_ONLY, lo que significa que los cambios en estas tablas no generan ningún E/S. Esto evita que consuman recursos de E/S de registro en los casos donde la durabilidad no es tema.
+- Los *tipos de tablas con optimización para memoria* se usan para los parámetros con valores de tabla (TVP), así como conjuntos de resultados intermedios en procedimientos almacenados. Se pueden usar en lugar de los tipos de tablas tradicionales. Las variables de tabla y los TVP que se declaran con un tipo de tabla optimizada para memoria heredan las ventajas de las tablas no duraderas optimizadas para memoria: acceso eficaz a los datos y no E/S.
+- Los *módulos T-SQL compilados de manera nativa* se usan para reducir aún más el tiempo que demora una transacción individual mediante la disminución de los ciclos de CPU que se requieren para procesar las operaciones. Declara un módulo Transact-SQL como compilado de manera nativa en el momento de su creación. En este momento, se pueden compilar de manera nativa los siguientes módulos T-SQL: procedimientos almacenados, desencadenadores y funciones escalares definidas por el usuario.
 
 OLTP en memoria está integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Además, y dado que estos objetos tienen un comportamiento similar al de sus homólogos tradicionales, a menudo puede obtener ventajas de rendimiento aplicando solo cambios mínimos en la base de datos y la aplicación. Además, puede tener tablas optimizadas para memoria y tablas basadas en discos tradicionales en la misma base de datos, y ejecutar consultas entre ambas. Hacia el final de este artículo encontrará un script Transact-SQL que muestra un ejemplo de cada uno de estos tipos de objetos.
 

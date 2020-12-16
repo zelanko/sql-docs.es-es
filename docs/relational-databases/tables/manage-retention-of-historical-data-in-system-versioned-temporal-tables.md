@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d1c849a1828664fa24d8e2473dfe9c692c048cd
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f742ece496377a224a67b12223b09d198327812a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243620"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484497"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Administración de la retención de datos históricos en las tablas temporales con versiones del sistema
 
@@ -72,7 +72,7 @@ Puede configurar una tabla de historial temporal para Stretch con el Asistente d
 
 El método más sencillo para los principiantes es usar el Asistente de Stretch para habilitar el ajuste para la base de datos completa y, después, seleccionar la tabla de historial temporal en el Asistente de Stretch (en este ejemplo se supone que ha configurado la tabla de departamento como una tabla temporal con versiones del sistema en una base de datos vacía). En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], no puede hacer clic con el botón derecho en la propia tabla de historial temporal y hacer clic en Stretch.
 
-1. Haga clic con el botón derecho en la base de datos y seleccione **Tareas** , seleccione **Stretch** y, después, haga clic en **Habilitar** para iniciar el asistente.
+1. Haga clic con el botón derecho en la base de datos y seleccione **Tareas**, seleccione **Stretch** y, después, haga clic en **Habilitar** para iniciar el asistente.
 2. En la ventana **Seleccionar tablas** , seleccione la casilla de la tabla de historial temporal y haga clic en Siguiente.
 
     ![Selección de la tabla de historial en la página Seleccionar tablas](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selección de la tabla de historial en la página Seleccionar tablas")
@@ -82,7 +82,7 @@ El método más sencillo para los principiantes es usar el Asistente de Stretch 
 4. En la ventana **Credenciales de seguridad** , proporcione una contraseña para la clave maestra de base de datos para proteger sus credenciales de base de datos de SQL Server de origen y haga clic en Siguiente.
 
     ![Página de credenciales seguras del Asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Página de credenciales seguras del Asistente para Stretch Database")
-5. En la ventana **Seleccionar dirección IP** , proporcione el intervalo de direcciones IP para SQL Server para que el servidor de Azure se comunique con SQL Server (si selecciona un servidor existente para el que ya existe una regla de firewall, simplemente haga clic en Siguiente aquí para usar la regla de firewall existente). Haga clic en **Siguiente** y, después, en **Finalizar** para habilitar Stretch Database y ajustar la tabla de historial temporal.
+5. En la ventana **Seleccionar dirección IP**, proporcione el intervalo de direcciones IP para SQL Server para que el servidor de Azure se comunique con SQL Server (si selecciona un servidor existente para el que ya existe una regla de firewall, simplemente haga clic en Siguiente aquí para usar la regla de firewall existente). Haga clic en **Siguiente** y, después, en **Finalizar** para habilitar Stretch Database y ajustar la tabla de historial temporal.
 
     ![Página Seleccionar dirección IP del Asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Página Seleccionar dirección IP del Asistente para Stretch Database")
 6. Cuando se complete el asistente, compruebe que se haya habilitado el ajuste correctamente para la base de datos. Vea los iconos del Explorador de objetos que indican que se ha ajustado la base de datos.
@@ -332,7 +332,7 @@ En el escenario de ventana deslizante, siempre quitamos el límite inferior de l
 - Caso RANGE LEFT: en el caso RANGE LEFT, el límite inferior de la partición pertenece a la partición 1, que está vacía (después de conmutar la partición), por lo que MERGE RANGE no causará ningún movimiento de datos.
 - Caso RANGE RIGHT: en el caso RANGE RIGHT, el límite inferior de la partición pertenece a la partición 2, que no está vacía ya que se ha supuesto que la partición 1 se había vaciado mediante la conmutación. En este caso, la opción MERGE RANGE provocará un movimiento de datos (los datos de la partición 2 se moverán a la partición 1). Para evitar esto, la opción RANGE RIGHT del escenario de ventana deslizante debe tener la partición 1, que siempre está vacía. Esto significa que si usamos la opción RANGE RIGHT, debemos crear y mantener una partición adicional en comparación con el caso de RANGE LEFT.
 
-**Conclusión** : el uso de RANGE LEFT en la partición deslizante es mucho más simple para la administración de la partición y evita el movimiento de datos. Sin embargo, la definición de los límites de partición con la opción RANGE RIGHT es un poco más simple, ya que no tiene que tratar con problemas de marca de tiempo de fecha y hora.
+**Conclusión**: el uso de RANGE LEFT en la partición deslizante es mucho más simple para la administración de la partición y evita el movimiento de datos. Sin embargo, la definición de los límites de partición con la opción RANGE RIGHT es un poco más simple, ya que no tiene que tratar con problemas de marca de tiempo de fecha y hora.
 
 ## <a name="using-custom-cleanup-script-approach"></a>Uso del enfoque de script de limpieza personalizado
 

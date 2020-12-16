@@ -46,13 +46,13 @@ helpviewer_keywords:
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11718e97ac633b108c6cf49c27d2d47ea0d0ee94
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 99697c6bb3e3b9eb8de2f3e6c41e092539cb79b5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300252"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483927"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -64,7 +64,7 @@ Crea un procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] 
 - Contener instrucciones de programación que realicen operaciones en la base de datos, incluidas las llamadas a otros procedimientos.
 - Devolver un valor de estado a un lote o a un procedimiento que realice una llamada para indicar si la operación se ha realizado correctamente o se han producido errores, y el motivo de estos.
 
-Use esta instrucción para crear un procedimiento permanente en la base de datos actual o un procedimiento temporal en la base de datos **tempdb** .
+Use esta instrucción para crear un procedimiento permanente en la base de datos actual o un procedimiento temporal en la base de datos **tempdb**.
 
 > [!NOTE]
 > En este tema se describe la integración de CLR de .NET Framework en SQL Server. La integración de CLR no se aplica a Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
@@ -148,23 +148,23 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 
 OR ALTER
 
-**Se aplica a** : Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).
+**Se aplica a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).
 
 Modifica el procedimiento si es que ya existe.
 
-*schema_name* : el nombre del esquema al que pertenece el procedimiento. Los procedimientos se enlazan a un esquema. Si no se especifica el nombre del esquema cuando se crea el procedimiento, se asigna automáticamente el esquema predeterminado del usuario que crea este procedimiento.
+*schema_name*: el nombre del esquema al que pertenece el procedimiento. Los procedimientos se enlazan a un esquema. Si no se especifica el nombre del esquema cuando se crea el procedimiento, se asigna automáticamente el esquema predeterminado del usuario que crea este procedimiento.
 
-*procedure_name* : el nombre del procedimiento. Los nombres de los procedimientos deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md) y deben ser exclusivos en el esquema.
+*procedure_name*: el nombre del procedimiento. Los nombres de los procedimientos deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md) y deben ser exclusivos en el esquema.
 
 Evite el uso del prefijo **sp_** cuando asigne nombre a los procedimientos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa este prefijo para designar los procedimientos del sistema. Si usa el prefijo, puede provocar la ruptura del código de la aplicación si existe un procedimiento del sistema con el mismo nombre.
 
-Los procedimientos temporales locales o globales se pueden crear anteponiendo un signo de número (#) al parámetro *procedure_name* ( *#procedure_name* ) para los procedimientos temporales locales y dos signos de número ( *##procedure_name* ) para los procedimientos temporales globales. Solo la conexión que creó un procedimiento temporal local lo ve y se quita cuando se cierra esa conexión. Un procedimiento temporal global está disponible para todas las conexiones y se quita al final de la última sesión que lo use. No se pueden especificar nombres temporales para los procedimientos CLR.
+Los procedimientos temporales locales o globales se pueden crear anteponiendo un signo de número (#) al parámetro *procedure_name* ( *#procedure_name*) para los procedimientos temporales locales y dos signos de número ( *##procedure_name*) para los procedimientos temporales globales. Solo la conexión que creó un procedimiento temporal local lo ve y se quita cuando se cierra esa conexión. Un procedimiento temporal global está disponible para todas las conexiones y se quita al final de la última sesión que lo use. No se pueden especificar nombres temporales para los procedimientos CLR.
 
 El nombre completo de un procedimiento o un procedimiento temporal global, incluidos los signos de número ##, no puede superar los 128 caracteres. El nombre completo de un procedimiento temporal local, incluido el signo de número #, no puede superar los 116 caracteres.
 
 **;** *number*
 
-**Se aplica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Entero opcional que se usa para agrupar procedimientos con el mismo nombre. Estos procedimientos agrupados se pueden quitar juntos mediante una instrucción DROP PROCEDURE.
 
@@ -173,13 +173,13 @@ Entero opcional que se usa para agrupar procedimientos con el mismo nombre. Esto
 
 Los procedimientos numerados no pueden usar **xml** ni los tipos definidos por el usuario CLR. Tampoco se pueden usar en una guía de plan.
 
-**@** *parameter* : un parámetro declarado en el procedimiento. Especifique un nombre de parámetro usando una arroba ( **@** ) como el primer carácter. El nombre del parámetro debe cumplir las mismas reglas para [identifiers](../../relational-databases/databases/database-identifiers.md). Los parámetros son locales respecto al procedimiento; los mismos nombres de parámetro se pueden usar en otros procedimientos.
+**@** *parameter*: un parámetro declarado en el procedimiento. Especifique un nombre de parámetro usando una arroba ( **@** ) como el primer carácter. El nombre del parámetro debe cumplir las mismas reglas para [identifiers](../../relational-databases/databases/database-identifiers.md). Los parámetros son locales respecto al procedimiento; los mismos nombres de parámetro se pueden usar en otros procedimientos.
 
 Se pueden declarar uno o varios parámetros; el valor máximo es 2.100. El usuario debe proporcionar el valor de cada parámetro declarado cuando se llame al procedimiento, a menos que se haya definido un valor predeterminado para el parámetro o se haya establecido en el mismo valor que el de otro parámetro. Si un procedimiento contiene [parámetros con valores de tabla](../../relational-databases/tables/use-table-valued-parameters-database-engine.md) y el parámetro no está en la llamada, se pasa una tabla vacía. Los parámetros solo pueden ocupar el lugar de expresiones constantes; no se pueden usar en lugar de nombres de tablas, nombres de columnas o nombres de otros objetos de base de datos. Para obtener más información, vea [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).
 
 No se pueden declarar los parámetros si se especifica FOR REPLICATION.
 
-[ _type\_schema\_name_ **.** ] *data_type* : el tipo de datos del parámetro y el esquema al que pertenece el tipo de datos.
+[ _type\_schema\_name_ **.** ] *data_type*: el tipo de datos del parámetro y el esquema al que pertenece el tipo de datos.
 
 **Directrices para procedimientos de [!INCLUDE[tsql](../../includes/tsql-md.md)]** :
 
@@ -187,20 +187,20 @@ No se pueden declarar los parámetros si se especifica FOR REPLICATION.
 - Puede usar el tipo de tabla definido por el usuario para crear parámetros con valores de tabla. Los parámetros con valores de tabla solo pueden ser parámetros INPUT y deben ir acompañados de la palabra clave READONLY. Para más información, vea[Usar parámetros con valores de tabla &#40;motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).
 - Los tipos de datos **cursor** solo pueden ser parámetros OUTPUT y deben ir acompañados de la palabra clave VARYING.
 
-**Directrices para procedimientos CLR** :
+**Directrices para procedimientos CLR**:
 
 - Todos los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativos con un equivalente en código administrado se pueden usar como parámetros. Para más información sobre la correspondencia entre los tipos CLR y los tipos de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Asignar datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md). Para más información sobre los tipos de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y su sintaxis, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).
 
 - Los tipos de datos **cursor** o con valores de tabla no se pueden usar como parámetros.
 - Si el tipo de datos del parámetro es un tipo definido por el usuario de CLR, se debe disponer del permiso EXECUTE en el tipo.
 
-VARYING: especifica el conjunto de resultados admitido como parámetro de salida. Este parámetro lo crea de forma dinámica el procedimiento y su contenido puede variar. Solo se aplica a los parámetros **cursor** . Esta opción no es válida para los procedimientos CLR.
+VARYING: especifica el conjunto de resultados admitido como parámetro de salida. Este parámetro lo crea de forma dinámica el procedimiento y su contenido puede variar. Solo se aplica a los parámetros **cursor**. Esta opción no es válida para los procedimientos CLR.
 
-*default* : un valor predeterminado de un parámetro. Si se define un valor predeterminado para un parámetro, el procedimiento se puede ejecutar sin especificar ningún valor para ese parámetro. El valor predeterminado debe ser una constante o puede ser NULL. El valor constante puede tener el formato de un carácter comodín, lo que permite usar la palabra clave LIKE cuando se pase el parámetro al procedimiento.
+*default*: un valor predeterminado de un parámetro. Si se define un valor predeterminado para un parámetro, el procedimiento se puede ejecutar sin especificar ningún valor para ese parámetro. El valor predeterminado debe ser una constante o puede ser NULL. El valor constante puede tener el formato de un carácter comodín, lo que permite usar la palabra clave LIKE cuando se pase el parámetro al procedimiento.
 
-Los valores predeterminados solo se registran en la columna  **sys.parameters.default** de los procedimientos CLR. Esa columna es NULL para los parámetros de procedimientos de [!INCLUDE[tsql](../../includes/tsql-md.md)].
+Los valores predeterminados solo se registran en la columna **sys.parameters.default** de los procedimientos CLR. Esa columna es NULL para los parámetros de procedimientos de [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-OUT | OUTPUT: indica que se trata de un parámetro de salida. Utilice los parámetros OUTPUT para devolver valores al autor de la llamada del procedimiento. Los parámetros **text** , **ntext** e **image** no se pueden usar como parámetros OUTPUT, a menos que se trate de un procedimiento de CLR. Un parámetro de salida puede ser un marcador de posición de cursor, a menos que el procedimiento sea un procedimiento CLR. Un tipo de datos con valores de tabla no se puede especificar como parámetro OUTPUT de un procedimiento.
+OUT | OUTPUT: indica que se trata de un parámetro de salida. Utilice los parámetros OUTPUT para devolver valores al autor de la llamada del procedimiento. Los parámetros **text**, **ntext** e **image** no se pueden usar como parámetros OUTPUT, a menos que se trate de un procedimiento de CLR. Un parámetro de salida puede ser un marcador de posición de cursor, a menos que el procedimiento sea un procedimiento CLR. Un tipo de datos con valores de tabla no se puede especificar como parámetro OUTPUT de un procedimiento.
 
 READONLY: indica que el parámetro no se puede actualizar ni modificar dentro del cuerpo del procedimiento. Si el tipo de parámetro es un tipo con valores de tabla, se debe especificar READONLY.
 
@@ -210,7 +210,7 @@ Para indicar a [!INCLUDE[ssDE](../../includes/ssde-md.md)] que descarte planes 
 
 ENCRYPTION
 
-**Se aplica a** : SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte el texto original de la instrucción CREATE PROCEDURE en un formato confuso. La salida de la protección no es directamente visible en ninguna de las vistas de catálogo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los usuarios que no dispongan de acceso a las tablas del sistema o a los archivos de base de datos no pueden recuperar el texto confuso. Sin embargo, estará disponible para los usuarios con privilegios que puedan acceder a las tablas del sistema a través del [puerto DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) o que puedan acceder directamente a los archivos de base de datos. Además, los usuarios que puedan adjuntar un depurador al proceso del servidor pueden recuperar el procedimiento descifrado de la memoria en tiempo de ejecución. Para más información sobre cómo tener acceso al sistema, vea [Configuración de visibilidad de los metadatos](../../relational-databases/security/metadata-visibility-configuration.md).
 
@@ -226,17 +226,17 @@ Para obtener más información, vea [EXECUTE AS &#40;cláusula de Transact-SQL&#
 
 FOR REPLICATION
 
-**Se aplica a** : SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica que el procedimiento se crea para replicación. Por consiguiente, no se puede ejecutar en el suscriptor. Se usa un procedimiento creado con la opción FOR REPLICATION como filtro de procedimiento y solo se ejecuta durante la replicación. No se pueden declarar los parámetros si se especifica FOR REPLICATION. No se puede especificar FOR REPLICATION en los procedimientos CLR. La opción RECOMPILE no se tiene en cuenta en el caso de procedimientos creados con FOR REPLICATION.
 
-Un procedimiento `FOR REPLICATION` tiene un tipo de objeto **RF** en **sys.objects** y **sys.procedures** .
+Un procedimiento `FOR REPLICATION` tiene un tipo de objeto **RF** en **sys.objects** y **sys.procedures**.
 
-{ [ BEGIN ] *sql_statement* [;] [ ... *n* ] [ END ] }: una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que comprenden el cuerpo del procedimiento. Puede usar las palabras clave BEGIN y END opcionales para incluir las instrucciones. Para obtener información, vea las secciones Prácticas recomendadas, Comentarios generales, así como Limitaciones y restricciones que aparecen más adelante.
+{ [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }: una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que comprenden el cuerpo del procedimiento. Puede usar las palabras clave BEGIN y END opcionales para incluir las instrucciones. Para obtener información, vea las secciones Prácticas recomendadas, Comentarios generales, así como Limitaciones y restricciones que aparecen más adelante.
 
 EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_
 
-**Se aplica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
 Especifica el método de un ensamblado de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para un procedimiento CLR al que se va a hacer referencia. *class_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como clase en el ensamblado. Si la clase tiene un nombre completo de espacio de nombres que usa un punto ( **.** ) para separar las partes del espacio de nombres, el nombre de la clase debe delimitarse mediante paréntesis ( **[]** ) o comillas ( **""** ). El método especificado debe ser un método estático de la clase.
 
@@ -247,7 +247,7 @@ De manera predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 
 ATOMIC WITH
 
-**Se aplica a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Indica la ejecución automática de procedimientos almacenados. Los cambios se confirman o todos se revierten iniciando una excepción. El bloqueo ATOMIC WITH se requiere para los procedimientos almacenados compilados de forma nativa.
 
@@ -273,25 +273,25 @@ Hay un bloqueo ATOMIC por cada procedimiento almacenado compilado de forma nativ
 
 NATIVE_COMPILATION
 
-**Se aplica a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Indica que el procedimiento está compilado de forma nativa. NATIVE_COMPILATION, SCHEMABINDING, y EXECUTE AS se pueden especificar en cualquier orden. Para más información, vea [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).
 
 SCHEMABINDING
 
-**Se aplica a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Se garantiza que las tablas a las que un procedimiento hace referencia no se pueden quitar o modificar. SCHEMABINDING se requiere en los procedimientos almacenados compilados de forma nativa (Para más información, vea [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)). Las restricciones SCHEMABINDING son las mismas que para las funciones definidas por el usuario. Para más información, vea la sección SCHEMABINDING en [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).
 
 LANGUAGE = [N] 'language'
 
-**Se aplica a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Equivalente a la opción de sesión [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md). LANGUAGE = [N] 'language' es necesaria.
 
 NIVEL DE AISLAMIENTO DE TRANSACCIÓN
 
-**Se aplica a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Se requiere para los procedimientos almacenados compilados de forma nativa. Especifica el nivel de aislamiento de la transacción para el procedimiento almacenado. Las opciones son las siguientes:
 
@@ -309,7 +309,7 @@ SNAPSHOT: especifica que los datos que ha leído cualquier instrucción de una t
 
 DATEFIRST = *number*
 
-**Se aplica a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica el primer día de la semana en un número del 1 al 7. DATEFIRST es opcional. Si no se especifica, el valor se deduce del idioma especificado.
 
@@ -317,7 +317,7 @@ Para más información, vea [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/s
 
 DATEFORMAT = *format*
 
-**Se aplica a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica el orden de las partes correspondientes al mes, día y año de una fecha para interpretar las cadenas de caracteres date, smalldatetime, datetime, datetime2 y datetimeoffset. DATEFORMAT es opcional. Si no se especifica, el valor se deduce del idioma especificado.
 
@@ -325,7 +325,7 @@ Para más información, vea [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/
 
 DELAYED_DURABILITY = { OFF | ON }
 
-**Se aplica a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Las confirmaciones de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden ser totalmente durables (el valor predeterminado) o durables diferidas.
 
@@ -396,7 +396,7 @@ Otras opciones de SET, como SET ARITHABORT, SET ANSI_WARNINGS o SET ANSI_PADDING
 En un procedimiento se puede especificar cualquier instrucción SET, excepto SET SHOWPLAN_TEXT y SET SHOWPLAN_ALL. Estas deben ser las únicas instrucciones del lote. La opción SET elegida permanece vigente durante la ejecución del procedimiento y, a continuación, revierte a su valor anterior.
 
 > [!NOTE]
-> No se respeta SET ANSI_WARNINGS al pasar parámetros de un procedimiento almacenado, una función definida por el usuario o al declarar y establecer variables en una instrucción por lotes. Por ejemplo, si una variable se define como **char** (3) y después se establece en un valor de más de tres caracteres, los datos se truncan hasta el tamaño definido y la instrucción INSERT o UPDATE se ejecuta correctamente.
+> No se respeta SET ANSI_WARNINGS al pasar parámetros de un procedimiento almacenado, una función definida por el usuario o al declarar y establecer variables en una instrucción por lotes. Por ejemplo, si una variable se define como **char**(3) y después se establece en un valor de más de tres caracteres, los datos se truncan hasta el tamaño definido y la instrucción INSERT o UPDATE se ejecuta correctamente.
 
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones
 
@@ -440,7 +440,7 @@ En la tabla siguiente se enumeran las vistas de catálogo y las vistas de admini
 
 |Ver|Descripción|
 |----------|-----------------|
-|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Devuelve la definición de un procedimiento de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El texto de un procedimiento creado con la opción ENCRYPTION no se puede ver mediante la vista de catálogo **sys.sql_modules** .|
+|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Devuelve la definición de un procedimiento de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El texto de un procedimiento creado con la opción ENCRYPTION no se puede ver mediante la vista de catálogo **sys.sql_modules**.|
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Devuelve información sobre un procedimiento CLR.|
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Devuelve información sobre los parámetros definidos en un procedimiento.|
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)|Devuelve los objetos a los que hace referencia un procedimiento.|
@@ -459,7 +459,7 @@ Para calcular el tamaño de un procedimiento compilado, use los siguientes conta
 
 ### <a name="permissions"></a>Permisos
 
-Necesita el permiso **CREATE PROCEDURE** en la base de datos y el permiso **ALTER** en el esquema en el que se va a crear el procedimiento o la pertenencia al rol fijo de base de datos **db_ddladmin** .
+Necesita el permiso **CREATE PROCEDURE** en la base de datos y el permiso **ALTER** en el esquema en el que se va a crear el procedimiento o la pertenencia al rol fijo de base de datos **db_ddladmin**.
 
 Para los procedimientos almacenados de CLR, se necesita la propiedad del ensamblado al que se hace referencia en la cláusula EXTERNAL NAME o el permiso **REFERENCES** en ese ensamblado.
 
@@ -545,7 +545,7 @@ GO
 
 En este ejemplo se crea el procedimiento `GetPhotoFromDB` que hace referencia al método `GetPhotoFromDB` de la clase `LargeObjectBinary` del ensamblado `HandlingLOBUsingCLR`. Antes de crear el procedimiento, el ensamblado `HandlingLOBUsingCLR` se registra en la base de datos local.
 
-**Se aplica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (si se usa un ensamblado creado a partir de *assembly_bits.*
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (si se usa un ensamblado creado a partir de *assembly_bits.*
 
 ```sql
 CREATE ASSEMBLY HandlingLOBUsingCLR
@@ -665,10 +665,10 @@ SET @ComparePrice = @MaxPrice;
 GO
 ```
 
-Ejecute `uspGetList` para obtener una lista de los productos de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (bicicletas) que cuestan menos de `$700`. Los parámetros de `OUTPUT`, `@Cost` y `@ComparePrices` se usa con el lenguaje de control de flujo para devolver un mensaje en la ventana **Mensajes** .
+Ejecute `uspGetList` para obtener una lista de los productos de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (bicicletas) que cuestan menos de `$700`. Los parámetros de `OUTPUT`, `@Cost` y `@ComparePrices` se usa con el lenguaje de control de flujo para devolver un mensaje en la ventana **Mensajes**.
 
 > [!NOTE]
-> La variable OUTPUT debe definirse al crear el procedimiento y también al utilizar la variable. Los nombres de parámetro y de variable no tienen por qué coincidir, pero el tipo de datos y la posición de los parámetros sí deben coincidir, a no ser que se use `@ListPrice` = *variable* .
+> La variable OUTPUT debe definirse al crear el procedimiento y también al utilizar la variable. Los nombres de parámetro y de variable no tienen por qué coincidir, pero el tipo de datos y la posición de los parámetros sí deben coincidir, a no ser que se use `@ListPrice` = *variable*.
 
 ```sql
 DECLARE @ComparePrice MONEY, @Cost MONEY;
@@ -886,7 +886,7 @@ En los ejemplos de esta sección se muestra cómo ofuscar la definición del pro
 
 En el ejemplo siguiente se crea el procedimiento `HumanResources.uspEncryptThis`.
 
-**Se aplica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, SQL Database
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, SQL Database
 
 ```sql
 CREATE PROCEDURE HumanResources.uspEncryptThis

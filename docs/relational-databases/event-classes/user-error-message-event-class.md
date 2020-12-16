@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 662a67c16766641d4b89ca29ab994eb8361599c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9caf232e0f383adf0949f85b3d97d8f271c3721e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486972"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481396"
 ---
 # <a name="user-error-message-event-class"></a>User Error Message, clase de eventos
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88486972"
 |RequestID|**int**|Id. de la solicitud que contiene la instrucción.|49|Sí|  
 |nombreDeServidor|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
-|Gravedad|**int**|Nivel de gravedad del error o la excepción.|20|Sí|  
+|severity|**int**|Nivel de gravedad del error o la excepción.|20|Sí|  
 |SPID|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |State|**int**|Equivalente a un código de estado de error.|30|Sí|  

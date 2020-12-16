@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 9ea52519-80d1-473f-b988-0572f0e2c92f
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0edc7b32bb14ba9ccfba424d1265dbbee4a45aa9
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a1f30ab28df95569466864bc9ad2fdbfab4e5123
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92189282"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481896"
 ---
 # <a name="-addition-assignment-transact-sql"></a>+= (Asignación de suma) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ expression += expression
 ## <a name="result-types"></a>Tipos de resultado  
  Devuelve el tipo de datos del argumento con mayor prioridad. Para obtener más información, vea [Prioridad de tipo de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para más información, vea [+ &#40;Suma&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-transact-sql.md).  
   
 ## <a name="see-also"></a>Vea también  

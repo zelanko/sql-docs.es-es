@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b89a8841bd679b9100e43b0b8d7d79dc6bb8165
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 034142392069443993c5d987b8aed80231c229fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868581"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481336"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Usar el proveedor de PowerShell para eventos extendidos
 
@@ -28,14 +28,14 @@ ms.locfileid: "91868581"
 
   Puede administrar los eventos extendidos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando el proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. La subcarpeta XEvent está disponible en la unidad SQLSERVER. Para acceder a la carpeta, puede usar cualquiera de los métodos siguientes:  
   
--   En el símbolo del sistema, escriba **sqlps**y luego presione ENTRAR. Escriba **cd xevent**y, a continuación, presione ENTRAR. Desde allí, puede usar los comandos **cd** y **dir** (o los cmdlets **Set-Location** y **Get-Childitem** ) para desplazarse al nombre del servidor y el nombre de la instancia.  
+-   En el símbolo del sistema, escriba **sqlps** y luego presione ENTRAR. Escriba **cd xevent** y, a continuación, presione ENTRAR. Desde allí, puede usar los comandos **cd** y **dir** (o los cmdlets **Set-Location** y **Get-Childitem** ) para desplazarse al nombre del servidor y el nombre de la instancia.  
   
--   En el Explorador de objetos, expanda el nombre de la instancia, expanda **Administración**, haga clic con el botón derecho en **Eventos extendidos**y haga clic en **Iniciar PowerShell**. De esta forma, se inicia PowerShell en la siguiente ruta de acceso:  
+-   En el Explorador de objetos, expanda el nombre de la instancia, expanda **Administración**, haga clic con el botón derecho en **Eventos extendidos** y haga clic en **Iniciar PowerShell**. De esta forma, se inicia PowerShell en la siguiente ruta de acceso:  
   
      PS SQLSERVER:\XEvent\\*nombreDeServidor*\\*nombreDeInstancia*>  
   
     > [!NOTE]  
-    >  Puede iniciar PowerShell en cualquier nodo situado debajo de **Eventos extendidos**. Por ejemplo, puede hacer clic con el botón derecho en **Sesiones**y, después, hacer clic en **Iniciar PowerShell**. De esta forma, se inicia PowerShell en un nivel más profundo de la carpeta Sessions.  
+    >  Puede iniciar PowerShell en cualquier nodo situado debajo de **Eventos extendidos**. Por ejemplo, puede hacer clic con el botón derecho en **Sesiones** y, después, hacer clic en **Iniciar PowerShell**. De esta forma, se inicia PowerShell en un nivel más profundo de la carpeta Sessions.  
   
  Puede examinar el árbol de carpetas XEvent para ver las sesiones de eventos extendidos, así como sus eventos, destinos y predicados asociados. Por ejemplo, desde la ruta de acceso PS SQLSERVER:\XEvent\\*nombreDeServidor*\\*nombreDeInstancia*>, si escribe **cd sessions**, pulsa ENTRAR, escribe **dir** y pulsa ENTRAR, puede ver la lista de las sesiones almacenadas en esa instancia. Asimismo, puede ver si la sesión se está ejecutando (y si este es el caso, durante cuánto tiempo), así como si la sesión está configurada para iniciarse cuando se inicie la instancia.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "91868581"
   
 -   Los scripts se deben guardar con una extensión .ps1.  
   
--   La directiva de ejecución de PowerShell debe permitir que se ejecute el script. Para establecer la directiva de ejecución, use el cmdlet **Set-Executionpolicy** . (Para obtener más información, escriba **get-help set-executionpolicy -detailed**y pulse ENTRAR).  
+-   La directiva de ejecución de PowerShell debe permitir que se ejecute el script. Para establecer la directiva de ejecución, use el cmdlet **Set-Executionpolicy** . (Para obtener más información, escriba **get-help set-executionpolicy -detailed** y pulse ENTRAR).  
   
  En el siguiente script se crea una nueva sesión denominada 'TestSession'.  
   

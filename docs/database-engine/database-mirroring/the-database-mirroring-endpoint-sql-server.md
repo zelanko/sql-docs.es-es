@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dd3477fb75040443fdfa56969ba9772baaabb0c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d674ed580a3c4a73a3f136344b8c2c5d76d33ac4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896997"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481506"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>El extremo de creación de reflejo de la base de datos (SQL Server)
 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  Para participar en la creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , una instancia de servidor requiere su propio *extremo de creación de reflejo de la base de datos*dedicado. Se trata de un extremo especial que se utiliza exclusivamente para recibir conexiones procedentes de otras instancias de servidor. En una instancia de servidor determinada, todas las conexiones de creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a cualquier otra instancia de servidor utilizan un único extremo de creación de reflejo de la base de datos.  
+  Para participar en la creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , una instancia de servidor requiere su propio *extremo de creación de reflejo de la base de datos* dedicado. Se trata de un extremo especial que se utiliza exclusivamente para recibir conexiones procedentes de otras instancias de servidor. En una instancia de servidor determinada, todas las conexiones de creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a cualquier otra instancia de servidor utilizan un único extremo de creación de reflejo de la base de datos.  
   
  Los extremos de creación de reflejo de la base de datos utilizan el Protocolo de control de transporte (TCP) para enviar y recibir mensajes entre las instancias del servidor que participan en sesiones de creación de reflejo de la base de datos u hospedan réplicas de disponibilidad. El extremo de creación de reflejo de la base de datos escucha en un número de puerto TCP exclusivo.  
   

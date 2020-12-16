@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a29b6a050779cdf61d97833d49ad9854cac4e484
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 244a625cb41d05f0d2f7cf61e8d6631a85dc8a4e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89521752"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462566"
 ---
 # <a name="temporal-table-security"></a>Seguridad de la tabla temporal
 
@@ -25,7 +25,7 @@ ms.locfileid: "89521752"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-Para comprender la seguridad en relación con las tablas temporales, conviene entender los principios de seguridad que se aplican a las dichas tablas. Una vez que comprenda estos principios de seguridad, estará listo para profundizar en la seguridad de las instrucciones **CREATE TABLE**, **ALTER TABLE**y **SELECT** .
+Para comprender la seguridad en relación con las tablas temporales, conviene entender los principios de seguridad que se aplican a las dichas tablas. Una vez que comprenda estos principios de seguridad, estará listo para profundizar en la seguridad de las instrucciones **CREATE TABLE**, **ALTER TABLE** y **SELECT** .
 
 ## <a name="security-principles"></a>Principios de seguridad
 
@@ -36,7 +36,7 @@ Para comprender la seguridad en relación con las tablas temporales, conviene en
 |La habilitación o deshabilitación del control de versiones del sistema requiere los privilegios más altos en los objetos afectados.|Para habilitar y deshabilitar SYSTEM_VERSIONING, se requiere el permiso CONTROL en la tabla actual y de historial.|
 |Los datos del historial no se pueden modificar directamente.|Cuando SYSTEM_VERSIONING tenga el valor ON, los usuarios no podrán modificar los datos del historial, con independencia de los permisos que tengan en la tabla actual o de historial. Se incluyen las modificaciones de datos y esquema.|
 |Para consultar datos del historial se requiere el permiso **SELECT** en la tabla de historial.|Solo porque un usuario tenga el permiso **SELECT** en la tabla actual no significa que disfrutará del permiso **SELECT** en la de historial.|
-|En la auditoría se muestran las operaciones que afectan a la tabla de historial de forma específica:|La configuración de auditoría de la tabla actual no se aplica automáticamente a la tabla de historial. La auditoría debe habilitarse de forma explícita para la tabla de historial.<br /><br /> Una vez habilitada, la auditoría de la tabla de historial captura de forma regular todos los intentos directos de acceder a los datos (al margen de si se han realizado correctamente o no).<br /><br /> El permiso**SELECT** con la extensión de consulta temporal muestra que esa operación afectó a la tabla de historial.<br /><br /> La instrucción**CREATE/ALTER** para una tabla temporal expone información según la que la comprobación de permisos también tiene lugar en la tabla del historial. El archivo de auditoría contendrá un registro adicional para la tabla de historial.<br /><br /> Las operaciones DML efectuadas en la tabla actual muestran que la de historial se vio afectada, pero additional_info ofrece el contexto necesario (DML fue el resultado de system_versioning).|
+|En la auditoría se muestran las operaciones que afectan a la tabla de historial de forma específica:|La configuración de auditoría de la tabla actual no se aplica automáticamente a la tabla de historial. La auditoría debe habilitarse de forma explícita para la tabla de historial.<br /><br /> Una vez habilitada, la auditoría de la tabla de historial captura de forma regular todos los intentos directos de acceder a los datos (al margen de si se han realizado correctamente o no).<br /><br /> El permiso **SELECT** con la extensión de consulta temporal muestra que esa operación afectó a la tabla de historial.<br /><br /> La instrucción **CREATE/ALTER** para una tabla temporal expone información según la que la comprobación de permisos también tiene lugar en la tabla del historial. El archivo de auditoría contendrá un registro adicional para la tabla de historial.<br /><br /> Las operaciones DML efectuadas en la tabla actual muestran que la de historial se vio afectada, pero additional_info ofrece el contexto necesario (DML fue el resultado de system_versioning).|
 
 ## <a name="performing-schema-operations"></a>Realización de operaciones de esquema
 
@@ -63,19 +63,19 @@ Cuando SYSTEM_VERSIONING esté establecido en ON, las operaciones de modificaci�
 
 | Característica | Crear una nueva tabla de historial | Volver a usar la tabla de historial existente |
 | ------- | ------------------------ | ---------------------------- |
-|Permiso necesario|El permiso**CREATE TABLE** en la base de datos.<br /><br /> El permiso**ALTER** en los esquemas en los que se están creando las tablas actuales y de historial.|El permiso**CREATE TABLE** en la base de datos.<br /><br /> El permiso**ALTER** en el esquema en el que se creará la tabla actual.<br /><br /> El permiso**CONTROL** en la tabla de historial especificada como parte de la instrucción **CREATE TABLE** que crea la tabla temporal.|
+|Permiso necesario|El permiso **CREATE TABLE** en la base de datos.<br /><br /> El permiso **ALTER** en los esquemas en los que se están creando las tablas actuales y de historial.|El permiso **CREATE TABLE** en la base de datos.<br /><br /> El permiso **ALTER** en el esquema en el que se creará la tabla actual.<br /><br /> El permiso **CONTROL** en la tabla de historial especificada como parte de la instrucción **CREATE TABLE** que crea la tabla temporal.|
 |Auditoría|En la auditoría se muestra que los usuarios trataron de crear dos objetos. La operación puede producir un error debido a una falta de permisos para crear la tabla en la base de datos o modificar esquemas para cualquiera de las dos tablas.|En la auditoría se muestra que la tabla temporal se creó. La operación puede generar un error debido a la falta de permisos para crear una tabla en la base de datos o alterar el esquema para la tabla temporal, o bien que no se dispongan que los permisos suficientes en la tabla de historial.|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>Seguridad de la instrucción ALTER TABLE SET (tabla temporal) (SYSTEM_VERSIONING ON/OFF)
 
 | Característica | Crear una nueva tabla de historial | Volver a usar la tabla de historial existente |
 | ------- | ------------------------ | ---------------------------- |
-|Permiso necesario|El permiso**CONTROL** en la base de datos.<br /><br /> El permiso**CREATE TABLE** en la base de datos.<br /><br /> El**ALTER** permiso en los esquemas en los que se está creando la tabla de historial.|El permiso**CONTROL** en la tabla original que se ha modificado.<br /><br /> El permiso**CONTROL** en la tabla de historial especificada como parte de la instrucción **ALTER TABLE** .|
+|Permiso necesario|El permiso **CONTROL** en la base de datos.<br /><br /> El permiso **CREATE TABLE** en la base de datos.<br /><br /> El **ALTER** permiso en los esquemas en los que se está creando la tabla de historial.|El permiso **CONTROL** en la tabla original que se ha modificado.<br /><br /> El permiso **CONTROL** en la tabla de historial especificada como parte de la instrucción **ALTER TABLE** .|
 |Auditoría|En la auditoría se muestra que se modificó la tabla temporal y que la de historial se creó a la vez. La operación puede generar un error debido a la falta de permisos para crear una tabla en la base de datos, alterar el esquema para la tabla de historial o modificar la tabla de temporal.|En la auditoría se muestra que se modificó la tabla temporal, pero que la operación requería acceso a la de historial. La operación puede generar un error debido a una falta de permisos en la tabla de historial o en la actual.|
 
 ## <a name="security-of-select-statement"></a>Seguridad de la instrucción SELECT
 
-El permiso**SELECT** no cambia para las instrucciones **SELECT** que no afectan a la tabla de historial. En lo que respecta a las instrucciones **SELECT** que afectan a la tabla de historial, se requiere el permiso **SELECT** en la tabla actual y de historial.
+El permiso **SELECT** no cambia para las instrucciones **SELECT** que no afectan a la tabla de historial. En lo que respecta a las instrucciones **SELECT** que afectan a la tabla de historial, se requiere el permiso **SELECT** en la tabla actual y de historial.
 
 ## <a name="see-also"></a>Consulte también
 

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a433fbfe50e2a673ab29595729f7c8b83f9444ae
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4b57082f1ce4f76e191c0237e80f404199a9ac4a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538224"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462646"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>Cambio del esquema de una tabla temporal con control de versiones del sistema
 
@@ -58,7 +58,7 @@ ALTER TABLE dbo.Department
 
 ### <a name="important-remarks"></a>Notas importantes
 
-- Se requiere el permiso**CONTROL** en tablas de historial y actuales para cambiar el esquema de tabla temporal.
+- Se requiere el permiso **CONTROL** en tablas de historial y actuales para cambiar el esquema de tabla temporal.
 - Durante una operación **ALTER TABLE** , el sistema mantiene un bloqueo de esquema en ambas tablas.
 - El cambio de esquema especificado se propaga a la tabla de historial de manera adecuada (según el tipo de cambio).
 - Si agrega una columna que no admite valores NULL o modifica una columna existente para que no admita valores NULL, debe especificar el valor predeterminado de las filas existentes. El sistema generará un valor predeterminadas adicional con el mismo valor y lo aplicará a la tabla de historial. Agregar **DEFAULT** a una tabla no vacía es una operación de tamaño de datos en todas las ediciones excepto en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition (donde es una operación de metadatos).
@@ -71,7 +71,7 @@ ALTER TABLE dbo.Department
 
   - Agregar una columna calculada
   - Agregar una columna **IDENTITY**
-  - Agregar una columna **SPARSE** o cambiar la columna existente para que sea **SPARSE**si la tabla de historial está establecida en **DATA_COMPRESSION = PAGE** o en **DATA_COMPRESSION = ROW**, que es el valor predeterminado de la tabla de historial.
+  - Agregar una columna **SPARSE** o cambiar la columna existente para que sea **SPARSE** si la tabla de historial está establecida en **DATA_COMPRESSION = PAGE** o en **DATA_COMPRESSION = ROW**, que es el valor predeterminado de la tabla de historial.
   - Agregar un **COLUMN_SET**
   - Agregar una columna **ROWGUIDCOL** o cambiar una columna existente para que sea **ROWGUIDCOL**
 

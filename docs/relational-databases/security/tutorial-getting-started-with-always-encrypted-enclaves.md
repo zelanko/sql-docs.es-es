@@ -12,13 +12,13 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75d9993cb91ff153075aa1feae19dd5a43499b0d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 99b04548244da3bda45346e7aa4a7c4d72481789
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868162"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463096"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Always Encrypted con enclaves seguros con SSMS
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -285,7 +285,7 @@ En este paso, va a cifrar los datos almacenados en las columnas **SSN** y **Sala
     1. Inicie una nueva instancia de SSMS.
     1. En el cuadro de diálogo **Conectar a servidor**, especifique el nombre del servidor, seleccione un método de autenticación e indique sus credenciales.
     1. Haga clic en **Opciones >>** y seleccione la pestaña **Always Encrypted**.
-    1. Active la casilla **Habilitar Always Encrypted (cifrado de columna)** y especifique su dirección URL de atestación de enclave (por ejemplo, ht<span>tp://</span>hgs.bastion.local/Attestation).
+    1. Active la casilla **Habilitar Always Encrypted (cifrado de columna)** y especifique su dirección URL de atestación de enclave (por ejemplo, ht <span>tp://</span>hgs.bastion.local/Attestation).
     1. Seleccione **Conectar**.
     1. Si se le pide que habilite la parametrización para las consultas Always Encrypted, haga clic en **Habilitar**.
 

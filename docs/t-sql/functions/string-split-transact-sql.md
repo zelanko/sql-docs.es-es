@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: a7c3220138c0f375b043f41044d5023fdb355ff5
-ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
+monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017
+ms.openlocfilehash: d30220685c2654c745c40ecc8782b79049f5c598
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93405052"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461196"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -53,7 +53,7 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>Argumentos
 
  *string*  
- Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo de carácter (por ejemplo **nvarchar** , **varchar** , **nchar** o **char** ).  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo de carácter (por ejemplo **nvarchar**, **varchar**, **nchar** o **char**).  
   
  *separator*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de carácter único de cualquier tipo de caracteres (por ejemplo, **nvarchar(1)** , **varchar(1)** , **nchar(1)** o **char(1)** ) que se usa como separador para subcadenas concatenadas.  
@@ -68,7 +68,7 @@ Devuelve una tabla de una sola columna cuyas filas son las subcadenas. El nombre
 
 Las filas de salida pueden estar en cualquier orden. _No_ se garantiza que el orden coincida con el de las subcadenas de la cadena de entrada. Puede invalidar el orden final usando una cláusula ORDER BY en la instrucción SELECT (`ORDER BY value`).
 
-0x0000 ( **char(0)** ) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en STRING_SPLIT.
+0x0000 (**char(0)** ) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en STRING_SPLIT.
 
 Las subcadenas vacías de longitud cero están presentes cuando la cadena de entrada contiene dos o más repeticiones consecutivas del carácter delimitador. Las subcadenas vacías se tratan de la misma forma que las subcadenas sin formato. Puede filtrar las filas que contienen la subcadena vacía usando la cláusula WHERE (`WHERE value <> ''`). Si la cadena de entrada es NULL, la función con valores de tabla STRING_SPLIT devuelve una tabla vacía.  
 

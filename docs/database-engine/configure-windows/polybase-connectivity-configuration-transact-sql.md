@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b3daf000381fbfaa5481ae18f348bd987689e46b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 71c71e4809b573dae9507b52bc3d32e5b6f5142e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84938988"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460748"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuración de conectividad de PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ RECONFIGURE
  Es el nombre de una opción de configuración. *option_name* es **varchar(35)** y su valor predeterminado es NULL. Si no se especifica, se devuelve la lista completa de opciones.  
   
  [ **@configvalue=** ] **'** _valor_ **'**  
- Es la nueva configuración. *value* es de tipo **int**y su valor predeterminado es NULL. El valor máximo depende de la opción individual.  
+ Es la nueva configuración. *value* es de tipo **int** y su valor predeterminado es NULL. El valor máximo depende de la opción individual.  
   
  **'conectividad de hadoop'**  
  Especifica el tipo de origen de datos de Hadoop para todas las conexiones de PolyBase a clústeres de Hadoop o almacenamiento de blobs de Azure (WASB). Esta configuración es necesaria para crear un origen de datos externo para una tabla externa. Para obtener más información, vea [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).  

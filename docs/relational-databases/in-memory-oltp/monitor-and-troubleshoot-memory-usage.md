@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08a3bbf542911c31681f72c74ed783cf6ae79d99
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 03159a0a6656e4fa45d4b3363ee0e61ebdef6878
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439523"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460418"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Supervisar y solucionar problemas de uso de memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "92439523"
   
 1.  Inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-2.  Haga clic en **Nueva consulta** .  
+2.  Haga clic en **Nueva consulta**.  
   
 3.  Pegue este código en la nueva ventana de consulta y ejecute todas las secciones.  
 
@@ -138,7 +138,7 @@ ms.locfileid: "92439523"
   
 2.  En el Explorador de objetos, haga clic con el botón secundario en la base de datos en la que desee los informes.  
   
-3.  En el menú contextual, seleccione **Informes** -> **Standard Informes** -> **Uso de memoria por los objetos con optimización para memoria** .  
+3.  En el menú contextual, seleccione **Informes** -> **Standard Informes** -> **Uso de memoria por los objetos con optimización para memoria**.  
   
  ![Captura de pantalla en la que se muestra el Explorador de objetos con Informes > Informes estándar > Uso de memoria por objetos con optimización para memoria seleccionado.](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   

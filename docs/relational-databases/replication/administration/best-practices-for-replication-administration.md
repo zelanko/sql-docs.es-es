@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: fffbaee8df76859f5c09d08e7bb0d23e466c4e00
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 17f96bc2ee6c1e8c4d55491424b0099c467ed8de
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918329"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461886"
 ---
 # <a name="best-practices-for-replication-administration"></a>Prácticas recomendadas para la administración de replicación
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "86918329"
   
 -   Bases de datos de suscripciones  
   
--   Base de datos**msdb** y base de datos **master** en el publicador, distribuidor y todos los suscriptores  
+-   Base de datos **msdb** y base de datos **master** en el publicador, distribuidor y todos los suscriptores  
   
  Las bases de datos replicadas requieren una atención especial en relación con la copia de seguridad y restauración de los datos. Para obtener más información, vea [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   

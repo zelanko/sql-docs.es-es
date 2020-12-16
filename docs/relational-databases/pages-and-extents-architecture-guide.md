@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56bd6740a6b016bd06084b2e44958e61adc7ca89
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4fdc13dcfa509ed2df3ec39afe5a9aa591aa6e39
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439399"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461946"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guía de arquitectura de páginas y extensiones
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ Las extensiones son la unidad básica en la que se administra el espacio. Una ex
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene dos tipos de extensiones: 
 
 * Las extensiones **uniformes** son propiedad de un único objeto; solo el objeto propietario puede usar las ocho páginas de la extensión.
-* Las extensiones **mixtas** , que pueden estar compartidas por hasta ocho objetos. Cada una de las 8 páginas de la extensión puede ser propiedad de un objeto diferente.
+* Las extensiones **mixtas**, que pueden estar compartidas por hasta ocho objetos. Cada una de las 8 páginas de la extensión puede ser propiedad de un objeto diferente.
 
 ![Extensiones uniformes y mixtas](../relational-databases/media/extents.gif)
 
@@ -182,7 +182,7 @@ Si [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] necesita insertar 
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] solo asigna una nueva extensión a una unidad de asignación cuando no puede encontrar rápidamente una página en una extensión existente con espacio suficiente para almacenar la fila que se va a insertar. 
 
-<a name="ProportionalFill"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] asigna las extensiones entre las que están disponibles en el grupo de archivos siguiendo un **algoritmo de asignación de relleno proporcional** . Si en el mismo grupo de archivos con dos archivos, uno de ellos tiene el doble de espacio disponible que el otro, se asignarán dos páginas del archivo con más espacio disponible por cada página asignada del otro archivo. Esto significa que los archivos de un grupo de archivos tienen un porcentaje de espacio utilizado similar. 
+<a name="ProportionalFill"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] asigna las extensiones entre las que están disponibles en el grupo de archivos siguiendo un **algoritmo de asignación de relleno proporcional**. Si en el mismo grupo de archivos con dos archivos, uno de ellos tiene el doble de espacio disponible que el otro, se asignarán dos páginas del archivo con más espacio disponible por cada página asignada del otro archivo. Esto significa que los archivos de un grupo de archivos tienen un porcentaje de espacio utilizado similar. 
 
 ## <a name="tracking-modified-extents"></a>Realizar un seguimiento de las extensiones modificadas 
 

@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: efbd90e43c4f2bf7863106330b59f436c31b6238
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cdadcfea01226f1076e26a08316f79b1c0d7a4d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868538"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460398"
 ---
 # <a name="native-compilation-advisor"></a>Asistente de compilación nativa
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "91868538"
  Esta página le indicará si el procedimiento almacenado utiliza construcciones que no son compatibles con la compilación nativa. Puede hacer clic en **Siguiente** para ver los detalles. Si hay construcciones que no son compatibles con la compilación nativa, puede hacer clic en **Siguiente** para ver los detalles.  
   
 ### <a name="stored-procedure-validation-result"></a>Resultado de la validación del procedimiento almacenado  
- Si hay construcciones que no son compatibles con la compilación nativa, la página **Resultado de la validación del procedimiento almacenado** mostrará los detalles. Puede generar un informe (haga clic en **Generar informe**), salir del **Asistente de compilación nativa**y actualizar el código para que sea compatible con la compilación nativa.  
+ Si hay construcciones que no son compatibles con la compilación nativa, la página **Resultado de la validación del procedimiento almacenado** mostrará los detalles. Puede generar un informe (haga clic en **Generar informe**), salir del **Asistente de compilación nativa** y actualizar el código para que sea compatible con la compilación nativa.  
   
 ## <a name="code-sample"></a>Ejemplo de código  
  El ejemplo siguiente muestra un procedimiento almacenado interpretado y el procedimiento almacenado *equivalente* para la compilación nativa. El ejemplo supone que existe un directorio denominado c:\data.  

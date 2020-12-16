@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: badcd52070da65122e113116be763c903b3e509a
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 4ae266962891a52ae9e2b201f7817365e71f8a74
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300158"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460798"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -62,7 +62,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  Es el nombre del ensamblado. El nombre debe ser único en la base de datos y un [identificador](../../relational-databases/databases/database-identifiers.md) válido.  
   
  AUTHORIZATION *owner_name*  
- Especifica el nombre de un usuario o rol como propietario del ensamblado. *owner_name* debe ser el nombre de un rol del que el usuario actual sea miembro, o bien el usuario actual debe tener el permiso IMPERSONATE sobre *owner_name* . Si no se especifica, la propiedad se otorga al usuario actual.  
+ Especifica el nombre de un usuario o rol como propietario del ensamblado. *owner_name* debe ser el nombre de un rol del que el usuario actual sea miembro, o bien el usuario actual debe tener el permiso IMPERSONATE sobre *owner_name*. Si no se especifica, la propiedad se otorga al usuario actual.  
   
  \<client_assembly_specifier>  
 Especifica la ruta de acceso local o ubicación de red en la que se encuentra el ensamblado que se carga y, además, el nombre de archivo de manifiesto que se corresponde con el ensamblado.  \<client_assembly_specifier> se puede expresar como una cadena fija o una expresión que se evalúe como una cadena fija, con variables. CREATE ASSEMBLY no admite la carga de ensamblados de varios módulos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también busca cualquier ensamblado dependiente de este ensamblado en la misma ubicación y lo carga con el mismo propietario que el ensamblado de nivel raíz. Si estos ensamblados dependientes no se encuentran o aún no están cargados en la base de datos actual, CREATE ASSEMBLY produce un error. Si los ensamblados dependientes ya están cargados en la base de datos actual, el propietario de los mismos deberá ser el mismo que el del ensamblado nuevo que se crea.
@@ -79,10 +79,10 @@ Especifica la ruta de acceso local o ubicación de red en la que se encuentra el
 >  Esta opción no está disponible en las bases de datos independientes.  
   
  *varbinary_literal*  
- Es un literal **varbinary** .  
+ Es un literal **varbinary**.  
   
  *expresión_varbinary*  
- Es una expresión de tipo **varbinary** .  
+ Es una expresión de tipo **varbinary**.  
   
  PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
 > [!IMPORTANT]
@@ -120,7 +120,7 @@ Cuando se habilita, la opción `PERMISSION_SET` en las instrucciones `CREATE ASS
   
 Cuando se intenta obtener acceso al ensamblado especificado en \<client_assembly_specifier>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suplanta el contexto de seguridad del inicio de sesión de Windows actual. Si \<client_assembly_specifier> especifica una ubicación de red (ruta de acceso UNC), la suplantación del inicio de sesión actual no se mantiene en la ubicación de red debido a las limitaciones de delegación. En este caso, el acceso se realiza mediante el contexto de seguridad de la cuenta del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información, vea [Credenciales &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).
   
- Además del ensamblado raíz especificado por *assembly_name* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta cargar cualquier ensamblado al que haga referencia el ensamblado raíz que se carga. Si ya se ha cargado en la base de datos un ensamblado referenciado por la existencia de una instrucción CREATE ASSEMBLY anterior, este ensamblado no se carga, sino que está disponible para el ensamblado raíz. Si no se ha cargado antes un ensamblado dependiente, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede localizar el archivo de manifiesto en el directorio de origen, CREATE ASSEMBLY produce un error.  
+ Además del ensamblado raíz especificado por *assembly_name*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta cargar cualquier ensamblado al que haga referencia el ensamblado raíz que se carga. Si ya se ha cargado en la base de datos un ensamblado referenciado por la existencia de una instrucción CREATE ASSEMBLY anterior, este ensamblado no se carga, sino que está disponible para el ensamblado raíz. Si no se ha cargado antes un ensamblado dependiente, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede localizar el archivo de manifiesto en el directorio de origen, CREATE ASSEMBLY produce un error.  
   
  Si un ensamblado dependiente referenciado por el ensamblado raíz no está aún en la base de datos y se ha cargado implícitamente junto con el ensamblado raíz, este ensamblado tiene establecidos los mismos permisos que el ensamblado raíz. Si se deben crear ensamblados dependientes mediante el uso de permisos diferentes de los del ensamblado raíz, estos deben cargarse explícitamente antes del ensamblado raíz con los permisos apropiados establecidos.  
   
@@ -154,7 +154,7 @@ Cuando se intenta obtener acceso al ensamblado especificado en \<client_assembly
   
  Si se especifica PERMISSION_SET = EXTERNAL_ACCESS, se requiere el permiso **EXTERNAL ACCESS ASSEMBLY** en el servidor. Si se especifica PERMISSION_SET = UNSAFE, se requiere el permiso **UNSAFE ASSEMBLY** en el servidor.  
   
- El usuario debe ser el propietario de cualquier ensamblado al que el ensamblado que se va a cargar haga referencia (si los ensamblados ya existen en la base de datos). Para cargar un ensamblado mediante una ruta de acceso de archivo, el usuario actual debe ser miembro del inicio de sesión autenticado de Windows o del rol fijo de servidor **sysadmin** . El inicio de sesión de Windows del usuario que ejecuta CREATE ASSEMBLY debe tener permisos de lectura en el recurso compartido y en los archivos que se cargan por medio de la instrucción.  
+ El usuario debe ser el propietario de cualquier ensamblado al que el ensamblado que se va a cargar haga referencia (si los ensamblados ya existen en la base de datos). Para cargar un ensamblado mediante una ruta de acceso de archivo, el usuario actual debe ser miembro del inicio de sesión autenticado de Windows o del rol fijo de servidor **sysadmin**. El inicio de sesión de Windows del usuario que ejecuta CREATE ASSEMBLY debe tener permisos de lectura en el recurso compartido y en los archivos que se cargan por medio de la instrucción.  
 
 ### <a name="permissions-with-clr-strict-security"></a>Permisos con seguridad estricta de CLR    
 Los siguientes permisos son necesarios para crear un ensamblado CLR cuando la opción `CLR strict security` está habilitada:

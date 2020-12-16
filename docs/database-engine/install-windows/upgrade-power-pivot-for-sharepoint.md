@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+monikerRange: '>=sql-server-2016'
 manager: erikre
-ms.openlocfilehash: 6169741cf4e744aa89c17c960a83a6af18d54851
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 03041d41745e51d858f56bfcd21407ad58530dd9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670189"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460698"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Actualización de PowerPivot para SharePoint
 
@@ -103,11 +103,11 @@ ms.locfileid: "91670189"
   
          Or  
   
-         En el menú **Inicio** , elija **Todos los programas**, haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], en **Herramientas de configuración**y, después, en **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration Tool**(Herramienta de configuración de PowerPivot para SharePoint 2013). Observe que esta herramienta solo se enumera cuando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está instalado en el servidor local.  
+         En el menú **Inicio** , elija **Todos los programas**, haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], en **Herramientas de configuración** y, después, en **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration Tool**(Herramienta de configuración de PowerPivot para SharePoint 2013). Observe que esta herramienta solo se enumera cuando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está instalado en el servidor local.  
   
     2.  Al iniciarse, la herramienta de configuración comprueba el estado de actualización de la solución de granja de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y las soluciones de aplicación web de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Si se detectan versiones anteriores de estas soluciones, verá el mensaje "**Se han detectado versiones más recientes de los archivos de solución de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Seleccione la opción de actualización para actualizar la granja**". Haga clic en **Aceptar** para cerrar el mensaje de validación del sistema.  
   
-    3.  Haga clic en **Actualizar características, servicios, aplicaciones y soluciones**y, a continuación, haga clic en **Aceptar**.  
+    3.  Haga clic en **Actualizar características, servicios, aplicaciones y soluciones** y, a continuación, haga clic en **Aceptar**.  
   
     4.  Revise las acciones de la lista de tareas del panel izquierdo y excluya las que no desea que realice la herramienta. Todas las acciones se incluyen de forma predeterminada. Para quitar una acción, selecciónela en la lista de tareas de la izquierda y, a continuación, en la página **Parámetros** , desactive la casilla **Incluir esta acción en la lista de tareas** .  
   
@@ -122,7 +122,7 @@ ms.locfileid: "91670189"
         > [!IMPORTANT]  
         >  La primera acción, **Actualizar solución de granja**, siempre se debe procesar primero. Registra los cmdlets de PowerShell que se utilizan para configurar el servidor. Si obtiene un error en esta acción, no debe continuar. En su lugar, utilice la información proporcionada por el error para diagnosticar y resolver el problema antes de procesar acciones adicionales en la lista de tareas.  
   
-    7.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la advertencia siguiente, para recordarle que las acciones se procesan en modo por lotes: "**Todos los parámetros de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?** ".  
+    7.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción **Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la advertencia siguiente, para recordarle que las acciones se procesan en modo por lotes: "**Todos los parámetros de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?** ".  
   
     8.  Haga clic en **Sí** para continuar.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "91670189"
   
     2.  Al iniciarse, la herramienta de configuración comprueba el estado de actualización de la solución de granja de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y las soluciones de aplicación web de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Si se detectan versiones anteriores de estas soluciones, verá el mensaje "Se han detectado versiones más recientes de los archivos de solución de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Seleccione la opción de actualización para actualizar la granja". Haga clic en **Aceptar** para cerrar el mensaje.  
   
-    3.  Haga clic en **Actualizar características, servicios, aplicaciones y soluciones**y, a continuación, haga clic en **Aceptar** para continuar.  
+    3.  Haga clic en **Actualizar características, servicios, aplicaciones y soluciones** y, a continuación, haga clic en **Aceptar** para continuar.  
   
     4.  Aparece la advertencia siguiente: "Los libros del Panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] van a actualizarse a la última versión. Se perderán las personalizaciones realizadas en los libros existentes. ¿Quiere continuar?".  
   
@@ -198,7 +198,7 @@ ms.locfileid: "91670189"
         > [!IMPORTANT]  
         >  La primera acción, **Actualizar solución de granja**, siempre se debe procesar primero. Registra los cmdlets de PowerShell que se utilizan para configurar el servidor. Si obtiene un error en esta acción, no debe continuar. En su lugar, utilice la información proporcionada por el error para diagnosticar y resolver el problema antes de procesar acciones adicionales en la lista de tareas.  
   
-    8.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la advertencia siguiente, para recordarle que las acciones se procesan en modo por lotes: "Todos los parámetros de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?".  
+    8.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción **Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la advertencia siguiente, para recordarle que las acciones se procesan en modo por lotes: "Todos los parámetros de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?".  
   
     9. Haga clic en **Sí** para continuar.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "91670189"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  Revise las implementaciones existentes para la siguiente información: **Tipo**es Retracción o Implementación, **Archivo** es powerpivotwebapp.wsp o powerpivotfarm.wsp.  
+    2.  Revise las implementaciones existentes para la siguiente información: **Tipo** es Retracción o Implementación, **Archivo** es powerpivotwebapp.wsp o powerpivotfarm.wsp.  
   
     3.  En las implementaciones o las retracciones relacionadas con soluciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], copie el valor GUID para **JobId** y péguelo en el comando siguiente (use los comandos Marcar, Copiar y Pegar del menú Edición del shell para copiar el GUID):  
   
@@ -331,7 +331,7 @@ Get-PowerPivotSystemService
   
 2.  Inicie la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-3.  Haga clic en **Actualizar características, servicios, aplicaciones y soluciones**y, a continuación, haga clic en **Aceptar**.  
+3.  Haga clic en **Actualizar características, servicios, aplicaciones y soluciones** y, a continuación, haga clic en **Aceptar**.  
   
 4.  Revise las acciones que se incluyen en la tarea de actualización y haga clic en **Validar**.  
   

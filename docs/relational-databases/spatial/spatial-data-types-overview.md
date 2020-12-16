@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5eca8f5329c6d4727c622c78d7b66000ad50935
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 668d1fda7e4b979e52377c03daaddb0cb2286cdd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006218"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462966"
 ---
 # <a name="spatial-data-types-overview"></a>Información general de los tipos de datos espaciales
 
@@ -96,7 +96,7 @@ En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** es un ti
 
 ### <a name="outer-and-inner-rings-in-geography-data-type"></a>Anillos externos e internos en el tipo de datos `geography`
 
-Las *características simples de OGC para la especificación de SQL* analizan los anillos externos e internos, pero esta distinción tiene poco sentido para el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geography**de**; se puede tomar cualquier anillo de un polígono como anillo externo.  
+Las *características simples de OGC para la especificación de SQL* analizan los anillos externos e internos, pero esta distinción tiene poco sentido para el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geography **de**; se puede tomar cualquier anillo de un polígono como anillo externo.  
 
 Para obtener más información sobre las especificaciones de OGC, vea los recursos siguientes:
 
@@ -151,7 +151,7 @@ LS Length    CS Length
 5.65685...   6.28318...
 ```
 
-Las instancias de **CircularString** usan menos puntos para almacenar límites curvos con mayor precisión que las instancias de **LineString** . Las instancias de **CircularString** son útiles para almacenar límites circulares, como un radio de búsqueda de 20 millas desde un punto específico. Las instancias de**LineString** funcionan bien para almacenar límites que son lineales como un bloque de ciudad cuadrado.  
+Las instancias de **CircularString** usan menos puntos para almacenar límites curvos con mayor precisión que las instancias de **LineString** . Las instancias de **CircularString** son útiles para almacenar límites circulares, como un radio de búsqueda de 20 millas desde un punto específico. Las instancias de **LineString** funcionan bien para almacenar límites que son lineales como un bloque de ciudad cuadrado.  
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>Comparación de LineString y CompoundCurve
 
@@ -187,7 +187,7 @@ Para almacenar el segmento de gráfico circular mediante una instancia de **Circ
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
-Las instancias de**CompoundCurve** permiten componentes tanto de **LineString** como de **CircularString** para que solo se necesiten conocer dos puntos en los segmentos de línea del segmento de gráfico circular.  En este ejemplo de código se muestra cómo usar **CompoundCurve** para almacenar la misma figura:
+Las instancias de **CompoundCurve** permiten componentes tanto de **LineString** como de **CircularString** para que solo se necesiten conocer dos puntos en los segmentos de línea del segmento de gráfico circular.  En este ejemplo de código se muestra cómo usar **CompoundCurve** para almacenar la misma figura:
 
 ```sql
 DECLARE @g geometry;
@@ -197,7 +197,7 @@ SELECT @g.ToString(), @g.STLength();
 
 ### <a name="polygon-and-curvepolygon-comparison"></a>Comparación de Polygon y CurvePolygon
 
-Las instancias de**CurvePolygon** pueden usar las instancias de **CircularString** y **CompoundCurve** instances when defining their exterior y interior rings. Las instancias de **Polygon** no pueden.
+Las instancias de **CurvePolygon** pueden usar las instancias de **CircularString** y **CompoundCurve** instances when defining their exterior y interior rings. Las instancias de **Polygon** no pueden.
 
 ## <a name="see-also"></a>Consulte también
 

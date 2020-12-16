@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73e56eb0ffcc4996ddd6903f2e79c14947b9a450
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a5225cdec356cbefc3df6abae58ae4cd512445b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485414"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461516"
 ---
 # <a name="manage-trigger-security"></a>Administrar la seguridad de los desencadenadores
 
@@ -50,7 +50,7 @@ Este desencadenador significa que cuando un usuario con permiso para ejecutar un
 ## <a name="trigger-security-best-practices"></a>Prácticas recomendadas de seguridad de los desencadenadores  
  Para evitar que se ejecute código de desencadenador con privilegios aumentados, puede adoptar las siguientes medidas:  
   
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 -   Tenga en cuenta los desencadenadores DML y DDL que se encuentran en la base de datos y en la instancia del servidor al consultar la vistas de catálogo [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) y [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) . La consulta siguiente devuelve todos los desencadenadores DML y DLL de base de datos para la base de datos actual, además de todos los desencadenadores DDL de servidor para la instancia de servidor:  
   
@@ -65,7 +65,7 @@ Este desencadenador significa que cuando un usuario con permiso para ejecutar un
 
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 -   Sepa cuáles son los desencadenadores DML y DDL que existen en la base de datos mediante una consulta a la vista del catálogo [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md). La consulta siguiente devuelve todos los desencadenadores DDL de nivel de base de datos y DML de la base de datos actual:  
   

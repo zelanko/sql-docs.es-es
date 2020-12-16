@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d213b41fe392bbc82f663360879b7d67b07675be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09be06fc9f84b46a93363c8386b492f987872583
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767551"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463106"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>Rotación de claves de Always Encrypted mediante SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -120,7 +120,7 @@ La rotación de una clave de cifrado de columnas implica descifrar los datos de 
 > La rotación de una clave de cifrado de columnas puede tardar mucho tiempo si las tablas que contienen columnas cifradas con la clave que se va a rotar son grandes. Mientras se vuelven a cifrar los datos, las aplicaciones no pueden escribir en las tablas afectadas. Por lo tanto, la organización tiene que planear muy cuidadosamente cualquier rotación de claves de cifrado de columnas.
 Para realizar la rotación de una clave de cifrado de columnas, use el Asistente para Always Encrypted.
 
-1.  Para abrir el asistente para la base de datos, haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, después, haga clic en **Cifrar columnas**.
+1.  Para abrir el asistente para la base de datos, haga clic con el botón derecho en la base de datos, seleccione **Tareas** y, después, haga clic en **Cifrar columnas**.
 2.  Revise la página **Introduction** y haga clic en **Next**.
 3.  En la página **Selección de columna** , expanda las tablas y busque todas las columnas que quiera reemplazar que actualmente estén cifradas con la clave de cifrado de columnas antigua.
 4.  Para cada columna cifrada con la clave de cifrado de columna antigua, establezca **Clave de cifrado** en una nueva clave generada automáticamente. **Nota:** También puede crear una clave de cifrado de columnas antes de ejecutar el asistente. Vea [Aprovisionamiento de claves de cifrado de columnas con el cuadro de diálogo Nueva clave de cifrado de columnas](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog).

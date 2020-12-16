@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b422f4c34831c570b3ed6d9d54bcdb90d1d86754
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ba2d4bc789c324e3e6153dc971a983638af603f4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645942"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482342"
 ---
 # <a name="use-sparse-columns"></a>Usar columnas dispersas
 
@@ -125,7 +125,7 @@ ms.locfileid: "88645942"
 ## <a name="restrictions-for-using-sparse-columns"></a>Restricciones de uso de las columnas dispersas  
  Las columnas dispersas pueden adoptar cualquier tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y comportarse como cualquier otra columna, con las restricciones siguientes:  
   
--   Deben aceptar valores NULL y no pueden tener las propiedades ROWGUIDCOL ni IDENTITY. No pueden adoptar los tipos de datos siguientes: **text**, **ntext**, **image**, **timestamp**, tipo de datos definido por el usuario, **geometry**ni **geography**; ni tener el atributo FILESTREAM.  
+-   Deben aceptar valores NULL y no pueden tener las propiedades ROWGUIDCOL ni IDENTITY. No pueden adoptar los tipos de datos siguientes: **text**, **ntext**, **image**, **timestamp**, tipo de datos definido por el usuario, **geometry** ni **geography**; ni tener el atributo FILESTREAM.  
   
 -   No pueden tener un valor predeterminado.  
   

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28e2c218d9f474638c7d0d8c390f79bf42ca3679
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3ba8729558f6e3e1736db9c380a268cd606444f1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548887"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482348"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Limitaciones y consideraciones de las tablas temporales
 
@@ -41,7 +41,7 @@ Tenga en cuenta lo siguiente al trabajar con tablas temporales:
 - La tabla de historial no puede tener restricciones (de clave principal, clave externa, tabla o columna).
 - No se admiten vistas indexadas con consultas temporales (las consultas que usan la cláusula **FOR SYSTEM_TIME**).
 - La opción en línea (**WITH (ONLINE = ON**) no tiene ningún efecto sobre **ALTER TABLE ALTER COLUMN** en las tablas temporales con versiones del sistema. La columna ALTER no se realiza en línea, independientemente del valor que se especificó para la opción ONLINE.
-- Las instrucciones**INSERT** y **UPDATE** no pueden hacer referencia a las columnas de periodo SYSTEM_TIME. Se bloquearán los intentos de insertar valores directamente en estas columnas.
+- Las instrucciones **INSERT** y **UPDATE** no pueden hacer referencia a las columnas de periodo SYSTEM_TIME. Se bloquearán los intentos de insertar valores directamente en estas columnas.
 - **TRUNCATE TABLE** no se admite mientras **SYSTEM_VERSIONING** esté configurado como **ON**
 - No se permite la modificación directa de los datos en una tabla de historial.
 - **ON DELETE CASCADE** y **ON UPDATE CASCADE** no se permiten en la tabla actual. Es decir, cuando la tabla temporal hace referencia a la tabla de la relación de clave externa (correspondiente a *parent_object_id* en sys.foreign_keys), no se permiten las opciones CASCADE. Para solucionar esta limitación, use la lógica de aplicación o los desencadenadores AFTER para mantener la coherencia de eliminación en la tabla de clave principal (correspondiente a *referenced_object_id* en sys.foreign_keys). Si la tabla de clave principal es temporal y la de referencia no lo es, significa que no hay ninguna limitación de este tipo.
@@ -49,7 +49,7 @@ Tenga en cuenta lo siguiente al trabajar con tablas temporales:
   > [!NOTE]
   > Esta limitación solo se aplica a SQL Server 2016. Se admiten opciones CASCADE en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y a partir de la versión CTP 2.0 de SQL Server 2017.
 
-- Los desencadenadores**INSTEAD OF** no se permiten en la tabla actual o de historial para evitar que se invalide la lógica DML. Los desencadenadores**AFTER** solo se permiten en la tabla actual. Se bloquean en la tabla de historial para evitar que se invalide la lógica DML.
+- Los desencadenadores **INSTEAD OF** no se permiten en la tabla actual o de historial para evitar que se invalide la lógica DML. Los desencadenadores **AFTER** solo se permiten en la tabla actual. Se bloquean en la tabla de historial para evitar que se invalide la lógica DML.
 - El uso de tecnologías de replicación está limitado:
 
   - **Always On:** totalmente compatible

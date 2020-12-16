@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 01d90b3a146c8e110b5cfad11b4d198a1f97c609
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: fa48c38c00732759cf49c8fb694a54f8bc210971
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720875"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483026"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>Cuadro de diálogo "Propiedades de la publicación" de Replicación de SQL Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -141,12 +141,12 @@ Para obtener el máximo rendimiento de la aplicación y reducir la cantidad de a
   
 ### <a name="options"></a>Opciones  
  **Obtener acceso a archivos de instantánea a través de FTP**  
- Active **Permitir a los suscriptores descargar archivos de instantánea usando FTP (Protocolo de transferencia de archivos)** y especifique el **Nombre del servidor FTP**, el **Número de puerto**, la **Ruta de acceso de la carpeta raíz del servidor FTP**, el **Inicio de sesión**y la **Contraseña**para permitir a los suscriptores usar el FTP para entregar instantáneas.  
+ Active **Permitir a los suscriptores descargar archivos de instantánea usando FTP (Protocolo de transferencia de archivos)** y especifique el **Nombre del servidor FTP**, el **Número de puerto**, la **Ruta de acceso de la carpeta raíz del servidor FTP**, el **Inicio de sesión** y la **Contraseña** para permitir a los suscriptores usar el FTP para entregar instantáneas.  
   
  Esta opción permite a los suscriptores usar el FTP para recuperar archivos de instantáneas, pero no les obliga a hacerlo. Si se selecciona esta opción, el Asistente para nueva suscripción establece de forma predeterminada que el suscriptor debe recuperar los archivos de instantáneas mediante el FTP. Puede cambiar esta configuración en el cuadro de diálogo **Propiedades de suscripción** . Si permite a los suscriptores tener acceso a los archivos de instantáneas mediante el FTP, debe especificar la carpeta FTP y la ubicación de los archivos de instantáneas en la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación** . Al hacerlo de esta forma, el Agente de instantáneas actualiza automáticamente los archivos en la carpeta FTP cuando se genera una nueva instantánea. Si no establece la carpeta FTP como ubicación, deberá actualizar manualmente los archivos al generar nuevas instantáneas. Para obtener más información, vea [Entregar una instantánea mediante FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
  **Sincronización web**  
- Solo replicación de mezcla. Active **Permitir a los suscriptores sincronizarse mediante la conexión a un servidor web**y especifique la dirección de un servidor web para permitir a los suscriptores de mezcla utilizar la sincronización web. El servidor web debe usar la Seguridad de la capa de transporte (TLS), anteriormente conocida como Capa de sockets seguros (SSL), y la dirección web debe ser completa, como, por ejemplo, `https://server.domain.com/synchronize`. Para más información, consulte [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
+ Solo replicación de mezcla. Active **Permitir a los suscriptores sincronizarse mediante la conexión a un servidor web** y especifique la dirección de un servidor web para permitir a los suscriptores de mezcla utilizar la sincronización web. El servidor web debe usar la Seguridad de la capa de transporte (TLS), anteriormente conocida como Capa de sockets seguros (SSL), y la dirección web debe ser completa, como, por ejemplo, `https://server.domain.com/synchronize`. Para más información, consulte [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
 
 
 ## <a name="agent-security"></a>Seguridad del agente
@@ -209,7 +209,7 @@ Instantánea
 -   Seleccione **Poner los archivos en la siguiente carpeta** para especificar una ubicación alternativa, o adicional, a la ubicación predeterminada. Escriba una ruta en el cuadro de texto o haga clic en **Examinar** para navegar a una ubicación. Seleccione **Comprimir archivos de instantánea en esta carpeta** para comprimir los archivos en la ubicación de instantáneas alternativa. La ubicación alternativa puede estar en otro servidor, en una unidad de red o en un medio extraíble, como un CD-ROM o un disco extraíble. Para más información, vea [Modificar propiedades de instantáneas](../../relational-databases/replication/snapshot-options.md).  
   
  **Ejecutar scripts adicionales**  
- Permite especificar los scripts que se deben ejecutar antes y después de aplicar la instantánea al suscriptor. Si el **Formato de instantánea** es **Carácter**no se pueden especificar scripts.  
+ Permite especificar los scripts que se deben ejecutar antes y después de aplicar la instantánea al suscriptor. Si el **Formato de instantánea** es **Carácter** no se pueden especificar scripts.  
   
  Los scripts son opcionales, pero proporcionan un modo adecuado de ejecutar comandos y aplicar cambios administrativos en los suscriptores. Para obtener más información, vea [Ejecutar scripts antes y después de aplicar la instantánea](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).  
   

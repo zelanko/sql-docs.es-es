@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 01/04/2020
-ms.openlocfilehash: ee2e8a95155cd235210acecee2a5ca15b5ae79c8
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: c7739675f03e5c7d895939a286d4f262c8302586
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935270"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472516"
 ---
 # <a name="configure-a-report-server-database-connection-report-server-configuration-manager"></a>Configurar una conexión de base de datos del servidor de informes (Administrador de configuración del servidor de informes)
 
@@ -42,9 +42,9 @@ La base de datos del servidor de informes es un componente interno, al que solo 
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa **System.Data.SqlClient** para conectarse al [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda la base de datos del servidor de informes. Si usa una instancia local de [!INCLUDE[ssDE](../../includes/ssde-md.md)], el servidor de informes establecerá la conexión utilizando la memoria compartida. Si usa un servidor de bases de datos remoto para la base de datos del servidor de informes, es posible que tenga que habilitar las conexiones remotas según la edición que utilice. Si está usando la edición Enterprise Edition, las conexiones remotas están habilitadas para TCP/IP de forma predeterminada.  
 
-Para comprobar que la instancia acepta conexiones remotas, haga clic sucesivamente en **Inicio**, **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**, **Administrador de configuración de SQL Server**y, luego, compruebe que el protocolo TCP/IP está habilitado para cada servicio.  
+Para comprobar que la instancia acepta conexiones remotas, haga clic sucesivamente en **Inicio**, **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**, **Administrador de configuración de SQL Server** y, luego, compruebe que el protocolo TCP/IP está habilitado para cada servicio.  
 
-Al habilitar las conexiones remotas, los protocolos de servidor y de cliente también se habilitarán. Para comprobar que los protocolos están habilitados, haga clic sucesivamente en **Inicio**, **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**, **Administrador de configuración de SQL Server**, **Configuración de red de SQL Server**y, por último, haga clic en **Protocolos de MSSQLSERVER**. Para más información, vea [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Al habilitar las conexiones remotas, los protocolos de servidor y de cliente también se habilitarán. Para comprobar que los protocolos están habilitados, haga clic sucesivamente en **Inicio**, **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**, **Administrador de configuración de SQL Server**, **Configuración de red de SQL Server** y, por último, haga clic en **Protocolos de MSSQLSERVER**. Para más información, vea [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ## <a name="defining-a-report-server-database-connection"></a>Definir una conexión a la base de datos del servidor de informes
 
@@ -91,7 +91,7 @@ Hay tres tipos de credenciales que se pueden utilizar en una conexión a la base
   
 Si la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se configura para la autenticación de Windows y está en el mismo dominio o en un dominio de confianza con el equipo del servidor de informes, puede configurar la conexión para utilizar la cuenta de servicio o una cuenta de usuario de dominio que administre como una propiedad de conexión a través de la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si el servidor de bases de datos está en un dominio diferente o si utiliza la seguridad del grupo de trabajo, debe configurar la conexión para utilizar un inicio de sesión de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En este caso, asegúrese de cifrar la conexión.  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Al usar Instancia administrada de Azure SQL Database para hospedar las bases de datos del servidor de informes, la autenticación de SQL Server es el único tipo de credencial compatible. Además, tenga en cuenta que Instancia administrada no puede hospedar la instancia del servidor de informes.
@@ -118,9 +118,9 @@ Puede especificar un solo inicio de sesión de [!INCLUDE[ssNoVersion](../../incl
 
 A las cuentas utilizadas para conectarse a la base de datos del servidor de informes se les conceden los siguientes roles:  
 
-- Roles**public** y **RSExecRole** para la base de datos **ReportServer** .  
+- Roles **public** y **RSExecRole** para la base de datos **ReportServer** .  
 
-- Rol**RSExecRole** para las bases de datos **master**, **msdb**y **ReportServerTempDB** .  
+- Rol **RSExecRole** para las bases de datos **master**, **msdb** y **ReportServerTempDB** .  
 
 Cuando utiliza la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con el fin de crear o modificar la conexión, estos permisos se conceden automáticamente. Si usa la utilidad rsconfig y especifica una cuenta diferente para la conexión, debe actualizar el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para esa nueva cuenta. Puede crear archivos de scripts con la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que actualicen el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el servidor de informes.  
 

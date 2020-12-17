@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c2240ad1cbc9bb8c9fd252eefd6633e81e4ab2f8
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 8574b99c65972f566817749f34d89e3f6d3ca3e5
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91115232"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900984"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Expresión escalar opcional de tipo **sysname** que representa el nombre de la subentidad protegible en la que se va a probar el permiso. El valor predeterminado es NULL.  
   
 > [!NOTE]  
->  En las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y posteriores, las subentidades protegibles no pueden usar corchetes con el formato **"[**_sub name_**]"**. Es mejor usar **'** _sub name_ **'** .  
+>  Las subentidades protegibles no pueden usar corchetes con el formato **"[** _nombre_de_la_subentidad_ **]"** . Es mejor usar **'** _sub name_ **'** .  
   
  *sub-securable_class*  
  Expresión escalar opcional de tipo **nvarchar(60)** que representa la clase de subentidad protegible en la que se va a probar el permiso. El valor predeterminado es NULL.  

@@ -18,13 +18,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0397c22a479f911ebe5e070ece2d9cdf1fe6ab07
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f047c57adc1c9cd660b38d7c72bc5dc3a00cc9e5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036644"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477056"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
 
@@ -41,7 +41,7 @@ En este tema se describe cómo dar de baja varios servidores de destino desde un
   
 1.  En el **Explorador de objetos**, expanda un servidor que esté configurado como servidor maestro.  
   
-2.  Haga clic con el botón derecho en **Agente SQL Server**, seleccione **Administración multiservidor**y, luego, haga clic en **Administrar servidores de destino**.  
+2.  Haga clic con el botón derecho en **Agente SQL Server**, seleccione **Administración multiservidor** y, luego, haga clic en **Administrar servidores de destino**.  
   
 3.  Haga clic en **Exponer instrucciones**, y, a continuación, en la lista **Tipo de instrucción** , haga clic en **Dar de baja**.  
   
@@ -49,7 +49,7 @@ En este tema se describe cómo dar de baja varios servidores de destino desde un
   
     -   Haga clic en **Todos los servidores de destino** para dar de baja todos los servidores de destino de este servidor principal. Utilice esta opción si desea desinstalar totalmente la configuración de la administración multiservidor actual.  
   
-    -   Haga clic en **Estos servidores de destino**y, a continuación, active la casilla **Seleccionar** correspondiente para dar de baja algunos servidores de destino, pero no todos, de este servidor principal.  
+    -   Haga clic en **Estos servidores de destino** y, a continuación, active la casilla **Seleccionar** correspondiente para dar de baja algunos servidores de destino, pero no todos, de este servidor principal.  
   
 ## <a name="see-also"></a>Consulte también  
 [Crear un entorno multiservidor](../../ssms/agent/create-a-multiserver-environment.md)  

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ed72d25320caef7e946ffc317541665ca37c5b6d
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 1dd9f995efad5f8e4209baf5827c7be8ccdd8886
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115401"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471356"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Supervisar la ejecución de scripts de R y Python mediante informes personalizados en SQL Server Management Studio
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -41,7 +41,7 @@ Para usar estos informes, siga estos pasos:
 
 1. Descargue los [informes personalizados de SSMS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) para SQL Server Machine Learning Services desde GitHub.
 
-   ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+   ::: moniker range="=azuresqldb-mi-current"
    >[!NOTE]
    > No se admite el informe personalizado **ML Services: configuración de instancia** no es compatible con Azure SQL Managed Instance.
    ::: moniker-end
@@ -60,11 +60,11 @@ Para usar estos informes, siga estos pasos:
 
     1. En Management Studio, haga clic en el nodo **Bases de datos** de la instancia donde quiere ejecutar los informes.
 
-    2. Haga clic en **Informes** y, después, en **Informes personalizados** .
+    2. Haga clic en **Informes** y, después, en **Informes personalizados**.
 
     3. En el cuadro de diálogo **Abrir archivo** , ubique la carpeta de informes personalizados.
 
-    4. Seleccione uno de los archivos RDL que descargó y, luego, haga clic en **Abrir** .
+    4. Seleccione uno de los archivos RDL que descargó y, luego, haga clic en **Abrir**.
 
 ## <a name="reports"></a>Informes
 

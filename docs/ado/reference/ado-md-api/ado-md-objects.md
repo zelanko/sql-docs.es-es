@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a75672db242d5b7388eb625bc028728c8522b11c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c988c6a1bbe0d8d582af3ab8a355f1109906401c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987436"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97639652"
 ---
 # <a name="ado-md-objects"></a>Objetos de ADO MD
 
@@ -34,7 +34,7 @@ ms.locfileid: "88987436"
 |[Hierarchy](./hierarchy-object-ado-md.md)|Representa una manera en la que los miembros de una dimensión se pueden agregar o "acumular". Una dimensión se puede Agregar A una o más jerarquías.|  
 |[Level](./level-object-ado-md.md)|Contiene un conjunto de miembros, cada uno de los cuales tiene el mismo rango dentro de una jerarquía.|  
 |[Miembro](./member-object-ado-md.md)|Representa un miembro de un nivel de un cubo, los elementos secundarios de un miembro de un nivel o un miembro de una posición a lo largo de un eje de un Cellset.|  
-|[Posición](./position-object-ado-md.md)|Representa un conjunto de uno o más miembros de distintas dimensiones que define un punto a lo largo de un eje.|  
+|[Position](./position-object-ado-md.md)|Representa un conjunto de uno o más miembros de distintas dimensiones que define un punto a lo largo de un eje.|  
   
  Además, el objeto de **Catálogo** se conecta a un objeto de **conexión** ADO, que se incluye con la biblioteca estándar de ADO:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "88987436"
  Muchos objetos ADO MD pueden estar contenidos en una colección correspondiente. Por ejemplo, un objeto [CubeDef](./cubedef-object-ado-md.md) puede estar contenido en una colección [CubeDefs](./cubedefs-collection-ado-md.md) de un **Catálogo**. Para obtener más información, vea [colecciones de ADO MD](./ado-md-collections.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Referencia de API de ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [Referencia de API de ADO MD](./ado-md-object-model.md)   
  [Ejemplos de código ADO MD](./ado-md-code-examples.md)   
  [Colecciones de ADO MD](./ado-md-collections.md)   
  [ADO MD constantes enumeradas](./ado-md-enumerated-constants.md)   

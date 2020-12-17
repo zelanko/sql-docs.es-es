@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c67f5f1e1021a303a1cdb52e02fdb5c8c1f8f2e2
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d623bd63cfb9d2d72f41bf498259b1d13fe651b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901538"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478426"
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>Propiedades de SQL Server (pestaña Alta disponibilidad de AlwaysOn)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88901538"
  **Habilitar los grupos de disponibilidad AlwaysOn**  
  Use esta casilla para habilitar o deshabilitar los Grupos de disponibilidad AlwaysOn en esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tal como se indica abajo:  
   
--   Si esta casilla está vacía, los Grupos de disponibilidad AlwaysOn estarán deshabilitados. Para habilitar los Grupos de disponibilidad AlwaysOn, seleccione esta casilla, haga clic en **Aceptar**y reinicie manualmente el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Si esta casilla está vacía, los Grupos de disponibilidad AlwaysOn estarán deshabilitados. Para habilitar los Grupos de disponibilidad AlwaysOn, seleccione esta casilla, haga clic en **Aceptar** y reinicie manualmente el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Si esta casilla ya está seleccionada, los Grupos de disponibilidad AlwaysOn ya están habilitados. Para deshabilitar los Grupos de disponibilidad AlwaysOn, desactive la casilla y haga clic en **Aceptar**. Esto hace que se reinicie la instancia del servidor.  
   

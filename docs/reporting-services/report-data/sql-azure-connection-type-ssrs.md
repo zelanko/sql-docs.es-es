@@ -8,13 +8,13 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f64ef01e248052667239f7516b0ccddc592871c7
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 1b13134166c4c17bea73d2990ceaf678fe1b4b2c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935191"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478846"
 ---
 # <a name="azure-sql-connection-type-ssrs"></a>Tipo de conexión de Azure SQL (SSRS)
 
@@ -152,7 +152,7 @@ Para más información, vea [Tipo de conexión ODBC &#40;SSRS&#41;](../../report
 
 Para más información sobre la compatibilidad con plataformas y versiones, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 
 ## <a name="azure-sql-database-and-aad"></a>Tabla de base de datos SQL de Azure y AAD
 

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2a37b086804a8fabe3719db0744b49345d69e6b8
-ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 15047969fdf25727d324ae577414273cc86769cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674143"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471226"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Instalación de un entorno de ejecución personalizado de Python para SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -25,7 +25,7 @@ En este artículo se describe cómo instalar un entorno de ejecución personaliz
 
 + Una instalación de Machine Learning Services con SQL Server 2019. La extensión de lenguaje se puede usar con [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) después de completar algunos pasos de configuración adicionales.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > En este artículo se describe cómo instalar un entorno de ejecución personalizado para Python en Windows. Para instalar en Linux, consulte [Instalación de un entorno de ejecución personalizado de Python para SQL Server en Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
@@ -148,7 +148,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 Puede instalar SQL Server en Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) y Ubuntu. Para obtener más información, vea [la sección Plataformas admitidas de las instrucciones de instalación de SQL Server en Linux](../../linux/sql-server-linux-setup.md).
 

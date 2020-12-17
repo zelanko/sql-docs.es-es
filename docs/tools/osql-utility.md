@@ -25,13 +25,13 @@ ms.manageR: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2c3767addadd34aebac1b29ee1b7fbdba189ae43
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 29f495dda754d3456e8d8df8811620548426cd89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002981"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478446"
 ---
 # <a name="osql-utility"></a>osql (utilidad)
 
@@ -198,7 +198,7 @@ osql -E -q "select name, object_id from %table%"
 >  Las opciones **-n**, **-O** y **-D** han dejado de admitirse en **osql**.  
   
 ## <a name="remarks"></a>Observaciones  
- La utilidad **osql** se inicia directamente desde el sistema operativo con las opciones en mayúsculas o en minúsculas, tal como se muestran aquí. Después de iniciar **osql**acepta instrucciones SQL y las envía a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma interactiva. Se da formato a los resultados y se muestran en la pantalla (**stdout**). Utilice QUIT o EXIT para salir de **osql**.  
+ La utilidad **osql** se inicia directamente desde el sistema operativo con las opciones en mayúsculas o en minúsculas, tal como se muestran aquí. Después de iniciar **osql** acepta instrucciones SQL y las envía a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma interactiva. Se da formato a los resultados y se muestran en la pantalla (**stdout**). Utilice QUIT o EXIT para salir de **osql**.  
   
  Si no especifica un nombre de usuario cuando inicia **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comprueba las variables de entorno y las usa, por ejemplo, **osqluser=(** _user_ **)** u **osqlserver=(** _server_ **)** . Si no se establecen variables de entorno, se utilizará el nombre de usuario de la estación de trabajo. Si no especifica un servidor, se utilizará el nombre de la estación de trabajo.  
   

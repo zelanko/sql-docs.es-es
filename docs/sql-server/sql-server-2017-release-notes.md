@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 2cb011f6d5140099a82a3d41587c5f7a93fac009
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: = sql-server-2017
+ms.openlocfilehash: 83829530014c83279bcde7dc8aa4be17496bdf50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985711"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409591"
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de la versión de SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -44,7 +44,7 @@ En este artículo se describen las limitaciones y los problemas de SQL Server 20
     3. Seleccione **Habilitar FILESTREAM para el acceso de transmisión por secuencias de E/S de archivos** de nuevo con el nombre del recurso compartido original y haga clic en **Aplicar**.
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- **Problema e impacto en el cliente:**   en la página de permisos de usuario, al conceder permisos al nivel raíz de la vista de árbol de entidades, verá el siguiente error: `"The model permission cannot be saved. The object guid is not valid"`
+- **Problema e impacto en el cliente:**  en la página de permisos de usuario, al conceder permisos al nivel raíz de la vista de árbol de entidades, verá el siguiente error: `"The model permission cannot be saved. The object guid is not valid"`
 
 - **Solución alternativa:** 
   - Conceda permisos a los subnodos en la vista de árbol en lugar de a nivel de raíz.

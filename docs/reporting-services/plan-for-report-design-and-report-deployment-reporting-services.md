@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cdaaaa55756860e4b62f90cb7e01c88c63ad4b61
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247544"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477066"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planeación del diseño y la implementación de informes | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varios enfoques para la creación e implementación de informes paginados. Sepa cómo planear un entorno de servidor de informes y creación de informes que operen en conjunto.
@@ -53,7 +53,7 @@ En este tema se proporciona información general sobre la compatibilidad de defi
   
 -   **Portal web:** cargue un informe en un servidor de informes en modo nativo desde el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 -   **SharePoint:** cargue un informe en un sitio de SharePoint que esté configurado con un servidor de informes en modo de SharePoint.  
 
@@ -73,7 +73,7 @@ En este tema se proporciona información general sobre la compatibilidad de defi
   
  Puede extraer del servidor de informes una copia de solo lectura del archivo de definición de informe (.rdl). En un servidor de informes en modo nativo, vaya al [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], seleccione el informe y haga clic en **Descargar**. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 En una implementación en modo de SharePoint, vaya a la biblioteca de documentos, seleccione el informe y haga clic en **Descargar una copia**.  
 

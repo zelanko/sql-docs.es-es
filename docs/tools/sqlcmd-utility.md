@@ -27,13 +27,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: ff7316307676c15f96579631bdf2dd6eb9612acc
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: fcd184e195ce8c81e16ca4ceaaab03a1f156a812
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005945"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471836"
 ---
 # <a name="sqlcmd-utility"></a>Utilidad sqlcmd
 
@@ -270,7 +270,7 @@ sesiones de **sqlcmd**.
 
 No. Sin embargo, se recomienda el uso de una contraseña segura.
 
-#### <a name="use-a-strong-password"></a>[**Utilice una contraseña segura.** ](../relational-databases/security/strong-passwords.md)
+#### <a name="use-a-strong-password"></a>[**Utilice una contraseña segura.**](../relational-databases/security/strong-passwords.md)
 
  El mensaje de contraseña se muestra en la consola de la siguiente manera: `Password:`  
   
@@ -423,7 +423,7 @@ No. Sin embargo, se recomienda el uso de una contraseña segura.
 >  El tiempo de espera real puede variar unos segundos con respecto al valor de *tiempo_de_espera* especificado.  
   
  **-vvar =**  _value_[ **var =** _value_...]  
- Crea una variable de scripting de **sqlcmd**que puede usarse en un script de **sqlcmd** . Si el valor contiene espacios en blanco, especifíquelo entre comillas. Puede especificar varios valores _**var**_= **"** _values_ **"** . Si hay errores en alguno de los valores especificados, **sqlcmd** genera un mensaje de error y después se cierra.  
+ Crea una variable de scripting de **sqlcmd** que puede usarse en un script de **sqlcmd** . Si el valor contiene espacios en blanco, especifíquelo entre comillas. Puede especificar varios valores _**var**_= **"** _values_ **"** . Si hay errores en alguno de los valores especificados, **sqlcmd** genera un mensaje de error y después se cierra.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -581,7 +581,7 @@ Para usar **sqlcmd** de forma interactiva, escriba **sqlcmd** en el símbolo del
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  Para ver las variables de entorno, en el **Panel de control**, abra **Sistema**y haga clic en la pestaña **Opciones avanzadas** .  
+>  Para ver las variables de entorno, en el **Panel de control**, abra **Sistema** y haga clic en la pestaña **Opciones avanzadas** .  
   
 ## <a name="sqlcmd-scripting-variables"></a>Variables de scripting sqlcmd  
   
@@ -633,7 +633,7 @@ Para usar **sqlcmd** de forma interactiva, escriba **sqlcmd** en el símbolo del
     > [!IMPORTANT]  
     >  Para mantener la compatibilidad con los scripts de **osql** existentes, algunos de los comandos se reconocerán sin los dos puntos, indicado por [ **:** ].
   
-- Los comandos de**sqlcmd** se reconocen solo si aparecen al principio de una línea.  
+- Los comandos de **sqlcmd** se reconocen solo si aparecen al principio de una línea.  
   
 - Los comandos de **sqlcmd** no distinguen entre mayúsculas y minúsculas.  
   
@@ -684,7 +684,7 @@ Para usar **sqlcmd** de forma interactiva, escriba **sqlcmd** en el símbolo del
  Muestra una lista de variables de scripting que están establecidas actualmente.  
   
 > [!NOTE]  
->  Solo se mostrarán las variables de scripting establecidas mediante **sqlcmd**y las variables establecidas con el comando **:Setvar** .  
+>  Solo se mostrarán las variables de scripting establecidas mediante **sqlcmd** y las variables establecidas con el comando **:Setvar** .  
   
  **Comandos de salida**  
   **:Error**   
@@ -823,7 +823,7 @@ Para usar **sqlcmd** de forma interactiva, escriba **sqlcmd** en el símbolo del
  Muestra los comandos de **sqlcmd** junto con una breve descripción de cada comando.  
   
 ### <a name="sqlcmd-file-names"></a>Nombres de archivo de sqlcmd  
- Los archivos de entrada de**sqlcmd** se pueden especificar con la opción **-i** o con el comando **:r** . Los archivos de salida se pueden especificar con la opción **-o** o con los comandos **:Error**, **:Out** y **:Perftrace** . A continuación se incluyen algunas directrices para trabajar con estos archivos:  
+ Los archivos de entrada de **sqlcmd** se pueden especificar con la opción **-i** o con el comando **:r** . Los archivos de salida se pueden especificar con la opción **-o** o con los comandos **:Error**, **:Out** y **:Perftrace** . A continuación se incluyen algunas directrices para trabajar con estos archivos:  
   
 - **:Error**, **:Out** y **:Perftrace** deben usar un valor **\<**_filename_**>** distinto. Si se usa el mismo valor **\<**_filename_**>** , es posible que las entradas de los comandos se entremezclen.  
   

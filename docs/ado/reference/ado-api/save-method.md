@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ffd13c07fad10d4b0386d342a6ddcbec37256da
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a32419db6e4dd04cc57b31b1d9267e80a30db41d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989336"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638135"
 ---
 # <a name="save-method"></a>Save (método)
 Guarda el [conjunto de registros](./recordset-object-ado.md) en un archivo o en un objeto de [secuencia](./stream-object-ado.md) .  
@@ -42,9 +42,9 @@ recordset.Save Destination, PersistFormat
  Opcional. Valor [PersistFormatEnum](./persistformatenum.md) que especifica el formato en el que se va a guardar el **conjunto de registros** (XML o ADTG). El valor predeterminado es **adPersistADTG**.  
   
 ## <a name="remarks"></a>Observaciones  
- El método [Save método]() solo se puede invocar en un **conjunto de registros**abierto. Utilice el método [Open (conjunto de registros ADO)](./open-method-ado-recordset.md) para restaurar posteriormente el **conjunto de registros** desde *Destination*.  
+ El método **Save método** solo se puede invocar en un **conjunto de registros** abierto. Utilice el método [Open (conjunto de registros ADO)](./open-method-ado-recordset.md) para restaurar posteriormente el **conjunto de registros** desde *Destination*.  
   
- Si la propiedad [Filter Property](./filter-property.md) está en vigor para el **conjunto de registros**, solo se guardan las filas a las que se puede tener acceso en el filtro. Si el **conjunto de registros** es jerárquico, se guardan el **conjunto de registros** secundario actual y sus elementos secundarios, incluido el conjunto de **registros**primario. Si se llama al método Save de un **conjunto de registros** secundario, se guardan el elemento secundario y todos sus elementos secundarios, pero el elemento primario no lo es.  
+ Si la propiedad [Filter Property](./filter-property.md) está en vigor para el **conjunto de registros**, solo se guardan las filas a las que se puede tener acceso en el filtro. Si el **conjunto de registros** es jerárquico, se guardan el **conjunto de registros** secundario actual y sus elementos secundarios, incluido el conjunto de **registros** primario. Si se llama al método Save de un **conjunto de registros** secundario, se guardan el elemento secundario y todos sus elementos secundarios, pero el elemento primario no lo es.  
   
  La primera vez que se guarda el **conjunto de registros**, es opcional especificar el *destino*. Si omite *Destination*, se creará un nuevo archivo con un nombre establecido en el valor de la propiedad Source del conjunto de **registros**.  
   
@@ -63,9 +63,9 @@ recordset.Save Destination, PersistFormat
  Cuando un **conjunto de registros** se mantiene con la propiedad **CursorLocation** establecida en **adUseServer**, la capacidad de actualización del **conjunto de registros** es limitada. Normalmente, solo se permiten actualizaciones de tabla única, inserciones y eliminaciones (dependiendo de la funcionalidad del proveedor). El método [Resync Method](./resync-method.md) también está disponible en esta configuración.  
   
 > [!NOTE]
->  ADO no admite el guardado de un **conjunto de registros** con **campos** de tipo **adVariant**, **adIDispatch**o **adIUnknown** y puede producir resultados imprevisibles.  
+>  ADO no admite el guardado de un **conjunto de registros** con **campos** de tipo **adVariant**, **adIDispatch** o **adIUnknown** y puede producir resultados imprevisibles.  
   
- Solo los filtros en forma de cadenas de criterios (por ejemplo, OrderDate > ' 12/31/1999 ') afectan al contenido de un **conjunto de registros**persistente. Los filtros creados con una matriz de **marcadores** o usando un valor de [FilterGroupEnum](./filtergroupenum.md) no afectarán al contenido del **conjunto de registros**guardado. Estas reglas se aplican al **conjunto de registros**creado con cursores del lado cliente o del lado servidor.  
+ Solo los filtros en forma de cadenas de criterios (por ejemplo, OrderDate > ' 12/31/1999 ') afectan al contenido de un **conjunto de registros** persistente. Los filtros creados con una matriz de **marcadores** o usando un valor de [FilterGroupEnum](./filtergroupenum.md) no afectarán al contenido del **conjunto de registros** guardado. Estas reglas se aplican al **conjunto de registros** creado con cursores del lado cliente o del lado servidor.  
   
  Dado que el parámetro de *destino* puede aceptar cualquier objeto que admita la interfaz OLE DB IStream, puede guardar un **conjunto de registros** directamente en el objeto de respuesta de ASP. Para obtener más información, vea el **escenario de persistencia del conjunto de registros XML**.  
   
@@ -84,7 +84,7 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 ```  
   
 > [!NOTE]
->  Al guardar conjuntos de registros jerárquicos (formas de datos) en formato XML, se aplican dos limitaciones. No se puede guardar en XML si el **conjunto de registros** jerárquico contiene actualizaciones pendientes y no se puede guardar un conjunto de **registros**jerárquico con parámetros.  
+>  Al guardar conjuntos de registros jerárquicos (formas de datos) en formato XML, se aplican dos limitaciones. No se puede guardar en XML si el **conjunto de registros** jerárquico contiene actualizaciones pendientes y no se puede guardar un conjunto de **registros** jerárquico con parámetros.  
   
  Un **conjunto de registros** guardado en formato XML se guarda con el formato UTF-8. Cuando se carga un archivo de este tipo en una secuencia de ADO, el objeto de secuencia no intentará abrir un **conjunto de registros** desde la secuencia a menos que la propiedad charset de la secuencia esté establecida en el valor adecuado para el formato UTF-8.  
   

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6bc64949b0e636a6c64e7b0ef576613f6e02c5c2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b67460528da7cac2e7d3d2d10dfbb4719b08d77f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777724"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638074"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Supervisión de cargas en almacenamiento de datos paralelos
 Supervise las cargas [dwloaders](dwloader.md) activas y recientes mediante la consola de administración de Analytics Platform System (APS) o las [vistas del sistema](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)de almacenamiento de datos paralelo (PDW). 
@@ -26,7 +26,7 @@ Supervise las cargas [dwloaders](dwloader.md) activas y recientes mediante la co
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
 Independientemente del método utilizado para supervisar una carga, el inicio de sesión debe tener permiso de acceso a los orígenes de datos subyacentes. 
 
 <!-- MISSING LINKS
@@ -49,7 +49,7 @@ Consulte estas vistas del sistema para obtener información sobre los metadatos 
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7)  
+-   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)  
   
 -   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
@@ -58,7 +58,7 @@ Consulte estas vistas del sistema para obtener información sobre los metadatos 
 ### <a name="to-monitor-loads-by-using-system-views"></a>Para supervisar las cargas mediante vistas del sistema  
 Para supervisar las cargas activas y recientes mediante PDW de SQL Server vistas, siga los pasos que se indican a continuación. Para cada vista del sistema utilizada, vea la documentación de esa vista para obtener información sobre las columnas y los valores posibles devueltos por la vista.  
   
-1.  Busque la `request_id` de la carga en la vista [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) buscando la línea de comandos del cargador en la `command` columna para esta vista.  
+1.  Busque la `request_id` de la carga en la [Sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) vista buscando la línea de comandos del cargador en la `command` columna para esta vista.  
   
     Por ejemplo, el siguiente comando devuelve el texto del comando y el estado actual, más el `request_id` .  
   
@@ -66,7 +66,7 @@ Para supervisar las cargas activas y recientes mediante PDW de SQL Server vistas
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
     ```  
   
-2.  Utilice `request_id` para recuperar información adicional para la carga mediante las vistas [sys. pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) y [Sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) . Por ejemplo, la consulta siguiente devuelve el `run_id` y la información sobre los tiempos de inicio, finalización y duración de la carga, más los errores e información sobre el número de filas procesadas:  
+2.  Utilice el `request_id` para recuperar información adicional para la carga mediante el [Sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) y las vistas de [Sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) . Por ejemplo, la consulta siguiente devuelve el `run_id` y la información sobre los tiempos de inicio, finalización y duración de la carga, más los errores e información sobre el número de filas procesadas:  
   
     ```sql  
     SELECT lbr.run_id,   

@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 922445116df06017b84aa84bf8dff8f924f2aeae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935576"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474556"
 ---
 # <a name="create-a-report-server-database-report-server-configuration-manager"></a>Crear una base de datos del servidor de informes (Administrador de configuración del servidor de informes)  
 
@@ -25,9 +25,9 @@ El modo nativo de SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 
 Las bases de datos se crean juntas y se enlazan mediante el nombre. Con una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , las bases de datos tienen los nombres **reportserver** y **reportservertempdb**. En conjunto, ambas se conocen como **base de datos del servidor de informes** o **catálogo del servidor de informes**.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
-El [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]modo SharePoint**de SQL Server** incluye una tercera base de datos que se usa para los metadatos de alerta de datos. Las tres bases de datos se crean para cada aplicación de servicio de SSRS. Los nombres de base de datos incluyen de forma predeterminada un GUID que representa la aplicación de servicio. 
+El [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]modo SharePoint **de SQL Server** incluye una tercera base de datos que se usa para los metadatos de alerta de datos. Las tres bases de datos se crean para cada aplicación de servicio de SSRS. Los nombres de base de datos incluyen de forma predeterminada un GUID que representa la aplicación de servicio. 
 
 A continuación, se indican nombres de ejemplo de las tres bases de datos en modo de SharePoint:
 
@@ -53,7 +53,7 @@ A continuación, se indican nombres de ejemplo de las tres bases de datos en mod
   
 - **Manual**. Use el Administrador de configuración de SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si usa una instancia remota de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], cree la base de datos del servidor de informes manualmente para hospedarla. Para más información, consulte [Crear una base de datos del servidor de informes de modo nativo](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ### <a name="sharepoint-mode"></a>Modo de SharePoint 
 La página **Report Server Installation Options** (Opciones de instalación del servidor de informes) solo tiene una opción para el modo SharePoint, **Install Only** (Solo instalar). Esta opción instala todos los archivos de SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y el servicio compartido de SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. El paso siguiente consiste en crear al menos una aplicación de servicio de SSRS de una de las siguientes maneras:  
@@ -67,14 +67,14 @@ La página **Report Server Installation Options** (Opciones de instalación del 
 ## <a name="database-server-version-requirements"></a>Requisitos de versión del servidor de bases de datos
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usa para hospedar las bases de datos del servidor de informes. La instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] puede ser local o remota. Las siguientes versiones admitidas de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pueden hospedar las bases de datos del servidor de informes:  
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 - Instancia administrada de Azure SQL
 
 - SQL Server 2019
 
 ::: moniker-end
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 - SQL Server 2017  
 ::: moniker-end

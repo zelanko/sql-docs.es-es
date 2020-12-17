@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e94cb9bbd873c32e17f25c00da719c11c3260162
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1ffc556d5c4138f35b1831a8aebeb15622328d4c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987426"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637865"
 ---
 # <a name="ado-md-properties"></a>Propiedades de ADO MD
 
 |Propiedad|Descripción|  
 |-|-|  
 |[ActiveConnection](./activeconnection-property-ado-md.md)|Indica a qué objeto de **conexión** ADO pertenece actualmente el objeto Cellset o el catálogo actual.|  
-|[Caption](./caption-property-ado-md.md)|Indica el título de texto que se va a usar al mostrar un **nivel** o un objeto de **miembro** .|  
+|[Título](./caption-property-ado-md.md)|Indica el título de texto que se va a usar al mostrar un **nivel** o un objeto de **miembro** .|  
 |[ChildCount](./childcount-property-ado-md.md)|Indica el número de miembros para los que el objeto **miembro** actual es el elemento primario de una jerarquía.|  
 |[Children](./children-property-ado-md.md)|Devuelve una colección de **miembros** para los que el **miembro** actual es el elemento primario de la jerarquía.|  
-|[Recuento](../ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
+|[Count](../ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
 |[Profundidad](./depth-property-ado-md.md)|Indica el número de niveles entre el **nivel** y la raíz del nivel de la jerarquía.|  
 |[Descripción](./description-property-ado-md.md)|Devuelve una explicación de texto del objeto actual.|  
 |[DimensionCount](./dimensioncount-property-ado-md.md)|Indica el número de dimensiones de un eje.|  
@@ -52,7 +52,7 @@ ms.locfileid: "88987426"
 |[Valor](./value-property-ado-md.md)|Indica el valor de la celda actual.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Referencia de API de ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [Referencia de API de ADO MD](./ado-md-object-model.md)   
  [Ejemplos de código ADO MD](./ado-md-code-examples.md)   
  [Colecciones de ADO MD](./ado-md-collections.md)   
  [ADO MD constantes enumeradas](./ado-md-enumerated-constants.md)   

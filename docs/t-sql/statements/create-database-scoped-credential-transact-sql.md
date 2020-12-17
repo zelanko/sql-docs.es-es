@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee984b5e04426cd269b7ed21f43d6b9b9dc91469
-ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bd526468e48eddb24aacaa776af4f35164f51b32
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328125"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478566"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* Especifica el nombre de la credencial con ámbito de base de datos que se va a crear. *credential_name* no puede comenzar por el signo de almohadilla (#). Las credenciales del sistema comienzan por ##.
 
-IDENTITY **="** _nombre\_identidad_ **"** Especifica el nombre de la cuenta que se va a usar para conectarse fuera del servidor. Para importar un archivo desde Azure Blob Storage usando una clave compartida, el nombre de identidad debe ser `SHARED ACCESS SIGNATURE`. Para cargar datos en SQL DW, se puede usar cualquier valor válido para la identidad. Para saber más sobre las firmas de acceso compartido, vea [Uso de firmas de acceso compartido (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). Cuando utilice Kerberos (Windows Active Directory o MIT KDC), no use el nombre de dominio en el argumento IDENTITY. Solamente debe usar el nombre de la cuenta.
+IDENTITY **="** _nombre\_identidad_ **"** Especifica el nombre de la cuenta que se va a usar para conectarse fuera del servidor. Para importar un archivo desde Azure Blob Storage usando una clave compartida, el nombre de identidad debe ser `SHARED ACCESS SIGNATURE`. Para cargar datos en Azure Synapse Analytics, se puede usar cualquier valor válido para la identidad. Para saber más sobre las firmas de acceso compartido, vea [Uso de firmas de acceso compartido (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). Cuando use Kerberos (Windows Active Directory o MIT KDC), no use el nombre de dominio en el argumento IDENTITY. Solamente debe usar el nombre de la cuenta.
 
 > [!IMPORTANT]
 > Los conectores ODBC de SQL, Oracle, Teradata y MongoDB para PolyBase solo admiten la autenticación básica, no la autenticación Kerberos.
@@ -61,7 +61,7 @@ IDENTITY **="** _nombre\_identidad_ **"** Especifica el nombre de la cuenta que 
 > [!NOTE]
 > WITH IDENTITY no es necesario si el contenedor de Azure Blob Storage está habilitado para el acceso anónimo. Para ver un ejemplo en el que se consulta Azure Blob Storage, consulte [Importación en una tabla desde un archivo almacenado en Azure Blob Storage](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).
 
-SECRET **="** _secreto_ **"** Especifica el secreto necesario para la autenticación de salida. `SECRET` es necesario para importar un archivo del almacenamiento de blobs de Azure. Para cargar datos de Azure Blob Storage a SQL DW o Almacenamiento de datos paralelos, el secreto debe ser la clave de Azure Storage.
+SECRET **="** _secreto_ **"** Especifica el secreto necesario para la autenticación de salida. `SECRET` es necesario para importar un archivo del almacenamiento de blobs de Azure. Para cargar desde Azure Blob Storage a Azure Synapse Analytics o Almacenamiento de datos paralelos, el secreto debe ser la clave de Azure Storage.
 > [!WARNING]
 > El valor de clave SAS debe empezar con un signo de interrogación (“?”). Cuando use la clave SAS, debe quitar el símbolo “?” inicial. Si no lo hace, puede que se bloquee su trabajo.
 
@@ -110,7 +110,7 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Creación de una credencial con ámbito de base de datos para una firma de acceso compartido
 
-En el ejemplo siguiente se crea una credencial con ámbito de base de datos que se puede usar para crear un [origen de datos externo](../../t-sql/statements/create-external-data-source-transact-sql.md), que puede realizar operaciones masivas, como [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Las firmas de acceso compartido no se pueden usar con PolyBase en SQL Server, APS ni SQL DW.
+En el ejemplo siguiente se crea una credencial con ámbito de base de datos que se puede usar para crear un [origen de datos externo](../../t-sql/statements/create-external-data-source-transact-sql.md), que puede realizar operaciones masivas, como [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Las firmas de acceso compartido no se pueden usar con PolyBase en SQL Server, APS ni Azure Synapse Analytics.
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.

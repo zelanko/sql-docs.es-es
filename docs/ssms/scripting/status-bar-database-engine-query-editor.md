@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 228952530dbf3f4d33c86e0154ef84d1ba928cf4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 14c56abe049649930840ec331a2439a1fa80d94c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036254"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476876"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra de estado (Editor de consultas del motor de base de datos)
 
@@ -73,7 +73,7 @@ Si desea establecer un color de barra de estado personalizado para un nodo de se
 ##  <a name="open-an-editor-using-a-server-color"></a><a name="OpenServerColor"></a> Abrir un editor mediante un color de servidor  
  **Para abrir una ventana del editor mediante un color de servidor**  
   
--   Haga clic con el botón derecho en un nodo del servidor en el **Explorador de objetos** o en **Servidores registrados**y seleccione **Nueva consulta**.  
+-   Haga clic con el botón derecho en un nodo del servidor en el **Explorador de objetos** o en **Servidores registrados** y seleccione **Nueva consulta**.  
   
 -   O bien, resalte un nodo servidor y, a continuación, haga clic en el botón de la barra de herramientas **Nueva consulta** .  
   
@@ -82,7 +82,7 @@ Si desea establecer un color de barra de estado personalizado para un nodo de se
 ##  <a name="open-an-editor-specifying-a-status-color"></a><a name="OpenSpecColor"></a> Abrir un editor especificando un color de estado  
  **Para abrir una ventana del editor especificando un color de estado**  
   
--   Abra el menú **Archivo** , seleccione **Nuevo**y, a continuación, seleccione **Consulta de motor de base de datos**.  
+-   Abra el menú **Archivo** , seleccione **Nuevo** y, a continuación, seleccione **Consulta de motor de base de datos**.  
   
 -   En el cuadro de diálogo **Conectar con el servidor**, seleccione **Options >>** .  
   

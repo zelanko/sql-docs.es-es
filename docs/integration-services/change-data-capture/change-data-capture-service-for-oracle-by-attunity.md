@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 715ff2845d686d5cff37a66fdd26866e47c51a99
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 08bfc658b939520cb7b694d39c3c9bee557172a1
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257971"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934059"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Servicio de captura de datos modificados para Oracle de Attunity
 
@@ -29,6 +29,7 @@ ms.locfileid: "92257971"
 
 Descargue Microsoft Change Data Capture Designer y Service para Oracle de Attunity para la versión de SQL Server correspondiente de los vínculos siguientes:
 
+- [Feature Pack de CDC Designer/Service para Oracle de Attunity de Microsoft SQL Server 2012 Integration Services](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Feature pack de CDC Designer/Service para Oracle de Attunity de Microsoft SQL Server 2016 Integration Services](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
 - [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303)
@@ -57,6 +58,8 @@ Descargue Microsoft Change Data Capture Designer y Service para Oracle de Attuni
 -   Oracle Database 10g versión 2
 -   Oracle Database 11g versión 1 y versión 2
 -   Oracle Database 12C en instalación clásica. (La instalación de tipo multiinquilino no es compatible).  
+-   Oracle Database 18c en instalación clásica. (La instalación de tipo multiinquilino no es compatible). 
+-   Oracle Database 19c en instalación clásica. (La instalación de tipo multiinquilino no es compatible). 
   
 ### <a name="target-sql-server-database"></a>Base de datos de SQL Server de destino  
  Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  

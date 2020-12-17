@@ -16,13 +16,13 @@ ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 966acd47edc24294f5ca1a9bd0a0d7f88927f4aa
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 4aaac1b02996efdf950e4a0fecac054b25a9055c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037955"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474466"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Force a Target Server to Poll the Master Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,6 +54,6 @@ Para obtener información detallada, vea [Implement SQL Server Agent Security](.
   
 1.  En el **Explorador de objetos**, expanda el servidor maestro.  
   
-2.  Haga clic con el botón derecho en **Agente SQL Server**, seleccione **Administración multiservidor**y, luego, haga clic en **Administrar servidores de destino**.  
+2.  Haga clic con el botón derecho en **Agente SQL Server**, seleccione **Administración multiservidor** y, luego, haga clic en **Administrar servidores de destino**.  
   
 3.  Haga clic en un servidor de destino y, a continuación, haga clic en **Forzar sondeo**.  

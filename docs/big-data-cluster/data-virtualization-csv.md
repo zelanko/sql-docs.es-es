@@ -9,14 +9,14 @@ ms.date: 04/24/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
+monikerRange: '>= sql-server-ver15'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 6625e985781f3980c44bef9b6dbd408243ac78a9
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: a524b238e980ee4b8972a4a8f7b976a34ca17c3e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523855"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420127"
 ---
 # <a name="virtualize-csv-data-from-storage-pool-big-data-clusters"></a>Virtualización de datos CSV del bloque de almacenamiento (clústeres de macrodatos)
 
@@ -89,9 +89,9 @@ Este paso proporciona un resumen de las selecciones. Proporciona el nombre del s
 
 ![Pantalla de resumen](media/data-virtualization/150-csv-virtualize-data-summary.png)
 
-Si hace clic en **Crear tabla** , SQL Server crea la tabla externa en la base de datos de destino.
+Si hace clic en **Crear tabla**, SQL Server crea la tabla externa en la base de datos de destino.
 
-Si hace clic en **Generar script** , Azure Data Studio crea la consulta de T-SQL para crear la tabla externa.
+Si hace clic en **Generar script**, Azure Data Studio crea la consulta de T-SQL para crear la tabla externa.
 
 Una vez creada la tabla, ahora se puede realizar consultas directamente con T-SQL a partir de la instancia de SQL Server.
 

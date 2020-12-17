@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8402ec9094b7e765764d5e650ac27a0b87b0e5d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793752"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471126"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instalación de modelos de aprendizaje automático entrenados previamente en SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -38,13 +38,13 @@ Debe tener derechos de administrador en el equipo y SQL Server para agregar mode
 
 Los scripts externos deben estar habilitados y el servicio SQL Server LaunchPad debe estar en ejecución. Las instrucciones de instalación proporcionan los pasos para habilitar y comprobar estas capacidades. 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 El [paquete MicrosoftML R](/machine-learning-server/r-reference/microsoftml/microsoftml-package) o el [paquete microsoftml de Python](/machine-learning-server/python-reference/microsoftml/microsoftml-package) contienen los modelos entrenados previamente.
 
 [SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) incluye las versiones de ambos lenguajes de la biblioteca de aprendizaje automático, por lo que se cumple este requisito previo sin necesidad de realizar ninguna acción por su parte. Dado que las bibliotecas están presentes, puede usar el script de PowerShell que se describe en este artículo para agregar los modelos entrenados previamente a estas bibliotecas.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 El [paquete MicrosoftML R](/machine-learning-server/r-reference/microsoftml/microsoftml-package) contiene los modelos entrenados previamente.
 
 [SQL Server R Services](sql-r-services-windows-install.md), que solo admite R, no incluye el [paquete MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) de serie. Para agregar MicrosoftML, debe realizar una [actualización de componentes](../install/upgrade-r-and-python.md). Una ventaja de la actualización de componentes es que puede agregar simultáneamente los modelos entrenados previamente, lo que hace que no sea necesario ejecutar el script de PowerShell. Sin embargo, si ya ha realizado la actualización pero ha perdido la adición de los modelos previamente entrenados la primera vez, puede ejecutar el script de PowerShell como se describe en este artículo. Funciona en ambas versiones de SQL Server. Antes de hacerlo, confirme que la biblioteca MicrosoftML existe en `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`.
@@ -73,11 +73,11 @@ Si los modelos ya están instalados, vaya al [paso de validación](#verify) para
 
 ## <a name="download-the-installation-script"></a>Descargue el script de instalación.
 
-Haga clic en [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) para descargar el archivo **Install-MLModels.ps1** .
+Haga clic en [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) para descargar el archivo **Install-MLModels.ps1**.
 
 ## <a name="execute-with-elevated-privileges"></a>Ejecución con privilegios elevados
 
-1. Inicie PowerShell. En la barra de tareas, haga clic con el botón derecho en el icono del programa PowerShell y seleccione **Ejecutar como administrador** .
+1. Inicie PowerShell. En la barra de tareas, haga clic con el botón derecho en el icono del programa PowerShell y seleccione **Ejecutar como administrador**.
 2. Escriba una ruta de acceso completa al archivo de script de instalación e incluya el nombre de la instancia. Asumiendo la carpeta descargas y una instancia predeterminada, el comando podría ser similar al siguiente:
 
    ```powershell
@@ -196,7 +196,7 @@ El siguiente vínculo incluye el código de ejemplo que invoca los modelos previ
 
 ## <a name="research-and-resources"></a>Investigación y recursos
 
-Actualmente, los modelos que están disponibles son modelos de red neuronal profunda (DNN) para el análisis de sentimiento y la clasificación de imágenes. Todos los modelos entrenados previamente se entrenaron mediante el uso del [kit de herramientas de red computacional de Microsoft](https://cntk.ai/Features/Index.html) o **CNTK** .
+Actualmente, los modelos que están disponibles son modelos de red neuronal profunda (DNN) para el análisis de sentimiento y la clasificación de imágenes. Todos los modelos entrenados previamente se entrenaron mediante el uso del [kit de herramientas de red computacional de Microsoft](https://cntk.ai/Features/Index.html) o **CNTK**.
 
 La configuración de cada red se basó en las siguientes implementaciones de referencia:
 

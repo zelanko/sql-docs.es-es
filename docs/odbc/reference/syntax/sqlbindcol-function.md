@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 84793bdd1261c4a2f65b1bdb60eec4a516a1a1d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e6eaebf18b37df69ebe922aa4b42671378fc659
+ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476173"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97617524"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol (función)
 **Conformidad**  
@@ -45,7 +45,7 @@ SQLRETURN SQLBindCol(
       SQLSMALLINT    TargetType,  
       SQLPOINTER     TargetValuePtr,  
       SQLLEN         BufferLength,  
-      SQLLEN *       StrLen_or_Ind);  
+      SQLLEN *       StrLen_or_IndPtr);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -56,7 +56,7 @@ SQLRETURN SQLBindCol(
  Entradas Número de la columna del conjunto de resultados que se va a enlazar. Las columnas se numeran al aumentar el orden de las columnas empezando por 0, donde la columna 0 es la columna de marcador. Si no se utilizan marcadores, es decir, el atributo de instrucción SQL_ATTR_USE_BOOKMARKS está establecido en SQL_UB_OFF-los números de columna empiezan en 1.  
   
  *TargetType*  
- Entradas Identificador del tipo de datos C del \* búfer *TargetValuePtr* . Cuando se recuperan datos del origen de datos con **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**o **SQLSetPos**, el controlador convierte los datos a este tipo. Cuando envía datos al origen de datos con **SQLBulkOperations** o **SQLSetPos**, el controlador convierte los datos de este tipo. Para obtener una lista de tipos de datos e identificadores de tipo de C válidos, vea la sección tipos de datos de [c](../../../odbc/reference/appendixes/c-data-types.md) en el Apéndice D: tipos de datos.  
+ Entradas Identificador del tipo de datos C del \* búfer *TargetValuePtr* . Cuando se recuperan datos del origen de datos con **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations** o **SQLSetPos**, el controlador convierte los datos a este tipo. Cuando envía datos al origen de datos con **SQLBulkOperations** o **SQLSetPos**, el controlador convierte los datos de este tipo. Para obtener una lista de tipos de datos e identificadores de tipo de C válidos, vea la sección tipos de datos de [c](../../../odbc/reference/appendixes/c-data-types.md) en el Apéndice D: tipos de datos.  
   
  Si el argumento *TargetType* es un tipo de datos de intervalo, se usan para los datos la precisión inicial del intervalo predeterminado (2) y la precisión de segundos del intervalo predeterminado (6), tal como se establece en los campos SQL_DESC_DATETIME_INTERVAL_PRECISION y SQL_DESC_PRECISION de ARD, respectivamente. Si el argumento *TargetType* es SQL_C_NUMERIC, se usa la precisión predeterminada (definida por el controlador) y la escala predeterminada (0), como se establece en los campos SQL_DESC_PRECISION y SQL_DESC_SCALE de ARD, para los datos. Si una precisión o escala predeterminada no es adecuada, la aplicación debe establecer explícitamente el campo de descriptor adecuado mediante una llamada a **SQLSetDescField** o **SQLSetDescRec**.  
   
@@ -79,7 +79,7 @@ SQLRETURN SQLBindCol(
  *StrLen_or_IndPtr*  
  [Entrada/salida diferida] Puntero al búfer de longitud/indicador que se va a enlazar a la columna. **SQLFetch** y **SQLFetchScroll** devuelven un valor en este búfer. **SQLBulkOperations** recupera un valor de este búfer cuando la *operación* es SQL_ADD, SQL_UPDATE_BY_BOOKMARK o SQL_DELETE_BY_BOOKMARK. **SQLBulkOperations** devuelve un valor en este búfer cuando se SQL_FETCH_BY_BOOKMARK la *operación* . **SQLSetPos** devuelve un valor en este búfer cuando se SQL_REFRESH la *operación* ; Recupera un valor de este búfer cuando se SQL_UPDATE la *operación* .  
   
- **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**y **SQLSetPos** pueden devolver los siguientes valores en el búfer de longitud/indicador:  
+ **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations** y **SQLSetPos** pueden devolver los siguientes valores en el búfer de longitud/indicador:  
   
 -   La longitud de los datos disponibles para devolver  
   
@@ -120,10 +120,10 @@ SQLRETURN SQLBindCol(
 |01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |07006|Infracción de atributo de tipo de datos restringido|(DM) el argumento *ColumnNumber* era 0 y el argumento *TargetType* no se SQL_C_BOOKMARK ni SQL_C_VARBOOKMARK.|  
 |07009|Índice de descriptor no válido|El valor especificado para el argumento *ColumnNumber* ha superado el número máximo de columnas del conjunto de resultados.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer *\* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY003|Tipo de búfer de aplicación no válido|El *TargetType* del argumento no era un tipo de datos válido ni SQL_C_DEFAULT.|  
-|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a **SQLBindCol** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.|  
+|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a **SQLBindCol** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect** o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
 |HY090|Longitud de búfer o cadena no válida|(DM) el valor especificado para el argumento *BufferLength* era menor que 0.<br /><br /> (DM) el controlador era ODBC 2. *x* , el argumento *ColumnNumber* se estableció en 0 y el valor especificado para el argumento *BufferLength* no era igual a 4.|  
 |HY117|La conexión se suspendió debido a un estado de transacción desconocido. Solo se permiten las funciones de desconexión y de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -132,7 +132,7 @@ SQLRETURN SQLBindCol(
 |IM001|El controlador no admite esta función|(DM) el controlador asociado a *StatementHandle* no admite la función.|  
   
 ## <a name="comments"></a>Comentarios  
- **SQLBindCol** se utiliza para asociar o *enlazar* columnas del conjunto de resultados a búferes de datos y búferes de longitud/indicador en la aplicación. Cuando la aplicación llama a **SQLFetch**, **SQLFetchScroll**o **SQLSetPos** para capturar datos, el controlador devuelve los datos de las columnas enlazadas en los búferes especificados; para obtener más información, vea [función SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md). Cuando la aplicación llama a **SQLBulkOperations** para actualizar o insertar una fila o **SQLSetPos** para actualizar una fila, el controlador recupera los datos de las columnas enlazadas de los búferes especificados; para obtener más información, vea [función SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md) o [función SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md). Para obtener más información sobre el enlace, vea [recuperar resultados (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
+ **SQLBindCol** se utiliza para asociar o *enlazar* columnas del conjunto de resultados a búferes de datos y búferes de longitud/indicador en la aplicación. Cuando la aplicación llama a **SQLFetch**, **SQLFetchScroll** o **SQLSetPos** para capturar datos, el controlador devuelve los datos de las columnas enlazadas en los búferes especificados; para obtener más información, vea [función SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md). Cuando la aplicación llama a **SQLBulkOperations** para actualizar o insertar una fila o **SQLSetPos** para actualizar una fila, el controlador recupera los datos de las columnas enlazadas de los búferes especificados; para obtener más información, vea [función SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md) o [función SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md). Para obtener más información sobre el enlace, vea [recuperar resultados (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
   
  Tenga en cuenta que no es necesario enlazar columnas para recuperar datos de ellas. Una aplicación también puede llamar a **SQLGetData** para recuperar datos de columnas. Aunque es posible enlazar algunas columnas de una fila y llamar a **SQLGetData** para otras, esto está sujeto a algunas restricciones. Para obtener más información, consulte [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).  
   
@@ -145,7 +145,7 @@ SQLRETURN SQLBindCol(
 ## <a name="binding-columns"></a>Enlazar columnas  
  Para enlazar una columna, una aplicación llama a **SQLBindCol** y pasa el número de columna, el tipo, la dirección y la longitud de un búfer de datos, así como la dirección de un búfer de longitud/indicador. Para obtener información sobre cómo se usan estas direcciones, vea "direcciones de búfer", más adelante en esta sección. Para obtener más información acerca de cómo enlazar columnas, vea [usar SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
   
- El uso de estos búferes se aplaza; es decir, la aplicación los enlaza en **SQLBindCol** pero el controlador accede a ellos desde otras funciones, es decir, **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**o **SQLSetPos**. Es responsabilidad de la aplicación asegurarse de que los punteros especificados en **SQLBindCol** siguen siendo válidos siempre que el enlace permanezca en vigor. Si la aplicación permite que estos punteros dejen de ser válidos; por ejemplo, libera un búfer y, a continuación, llama a una función que espera que sea válido, las consecuencias son indefinidas. Para obtener más información, vea [búferes diferidos](../../../odbc/reference/develop-app/deferred-buffers.md).  
+ El uso de estos búferes se aplaza; es decir, la aplicación los enlaza en **SQLBindCol** pero el controlador accede a ellos desde otras funciones, es decir, **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll** o **SQLSetPos**. Es responsabilidad de la aplicación asegurarse de que los punteros especificados en **SQLBindCol** siguen siendo válidos siempre que el enlace permanezca en vigor. Si la aplicación permite que estos punteros dejen de ser válidos; por ejemplo, libera un búfer y, a continuación, llama a una función que espera que sea válido, las consecuencias son indefinidas. Para obtener más información, vea [búferes diferidos](../../../odbc/reference/develop-app/deferred-buffers.md).  
   
  El enlace permanece en vigor hasta que se reemplaza por un nuevo enlace, se desenlaza la columna o se libera la instrucción.  
   
@@ -265,13 +265,13 @@ SQLRETURN SQLBindCol(
   
     -   Establece el campo de SQL_DESC_OCTET_LENGTH en el valor de *BufferLength*.  
   
-    -   Establece el campo de SQL_DESC_DATA_PTR en el valor de *valor*.  
+    -   Establece el campo de SQL_DESC_DATA_PTR en el valor de *TargetValuePtr*.  
   
-    -   Establece el SQL_DESC_INDICATOR_PTR campo en el valor de *StrLen_or_Ind*. (Vea el párrafo siguiente).  
+    -   Establece el SQL_DESC_INDICATOR_PTR campo en el valor de *StrLen_or_IndPtr*. (Vea el párrafo siguiente).  
   
-    -   Establece el SQL_DESC_OCTET_LENGTH_PTR campo en el valor de *StrLen_or_Ind*. (Vea el párrafo siguiente).  
+    -   Establece el SQL_DESC_OCTET_LENGTH_PTR campo en el valor de *StrLen_or_IndPtr*. (Vea el párrafo siguiente).  
   
- La variable a la que hace referencia el argumento *StrLen_or_Ind* se usa para la información de indicador y de longitud. Si una captura encuentra un valor null para la columna, almacena SQL_NULL_DATA en esta variable; de lo contrario, almacena la longitud de los datos en esta variable. Si se pasa un puntero nulo como *StrLen_or_Ind* se impide que la operación de captura devuelva la longitud de los datos, pero se produce un error en la captura si encuentra un valor NULL y no tiene ninguna manera de devolver SQL_NULL_DATA.  
+ La variable a la que hace referencia el argumento *StrLen_or_IndPtr* se usa para la información de indicador y de longitud. Si una captura encuentra un valor null para la columna, almacena SQL_NULL_DATA en esta variable; de lo contrario, almacena la longitud de los datos en esta variable. Si se pasa un puntero nulo como *StrLen_or_IndPtr* se impide que la operación de captura devuelva la longitud de los datos, pero se produce un error en la captura si encuentra un valor NULL y no tiene ninguna manera de devolver SQL_NULL_DATA.  
   
  Si se produce un error en la llamada a **SQLBindCol** , el contenido de los campos de descriptor que habría establecido en ARD no está definido y el valor del campo de SQL_DESC_COUNT de ARD no cambia.  
   
@@ -279,7 +279,7 @@ SQLRETURN SQLBindCol(
  **SQLBindCol** establece SQL_DESC_COUNT en el valor del argumento *ColumnNumber* solo cuando esto aumentaría el valor de SQL_DESC_COUNT. Si el valor del argumento *TargetValuePtr* es un puntero nulo y el valor del argumento *ColumnNumber* es igual a SQL_DESC_COUNT (es decir, al desenlazar la columna enlazada más alta), SQL_DESC_COUNT se establece en el número de la columna límite restante más alta.  
   
 ## <a name="cautions-regarding-sql_default"></a>Precauciones respecto a SQL_DEFAULT  
- Para recuperar los datos de la columna correctamente, la aplicación debe determinar correctamente la longitud y el punto inicial de los datos en el búfer de la aplicación. Cuando la aplicación especifica un *TargetType*explícito, se detectan fácilmente los malentendidos de las aplicaciones. Sin embargo, cuando la aplicación especifica un *TargetType* de SQL_DEFAULT, **SQLBindCol** se puede aplicar a una columna de un tipo de datos diferente del que desea la aplicación, ya sea de los cambios en los metadatos o aplicando el código a una columna diferente. En este caso, es posible que la aplicación no determine siempre el inicio o la longitud de los datos de la columna capturada. Esto puede provocar errores de datos no notificados o infracciones de memoria.  
+ Para recuperar los datos de la columna correctamente, la aplicación debe determinar correctamente la longitud y el punto inicial de los datos en el búfer de la aplicación. Cuando la aplicación especifica un *TargetType* explícito, se detectan fácilmente los malentendidos de las aplicaciones. Sin embargo, cuando la aplicación especifica un *TargetType* de SQL_DEFAULT, **SQLBindCol** se puede aplicar a una columna de un tipo de datos diferente del que desea la aplicación, ya sea de los cambios en los metadatos o aplicando el código a una columna diferente. En este caso, es posible que la aplicación no determine siempre el inicio o la longitud de los datos de la columna capturada. Esto puede provocar errores de datos no notificados o infracciones de memoria.  
   
 ## <a name="code-example"></a>Ejemplo de código  
  En el ejemplo siguiente, una aplicación ejecuta una instrucción **Select** en la tabla Customers para devolver un conjunto de resultados de los ID. de cliente, los nombres y los números de teléfono, ordenados por nombre. A continuación, llama a **SQLBindCol** para enlazar las columnas de datos a los búferes locales. Por último, la aplicación captura cada fila de datos con **SQLFetch** e imprime el nombre, el identificador y el número de teléfono de cada cliente.  
@@ -389,6 +389,6 @@ int main() {
 |Capturar parte o toda una columna de datos|[Función SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
 |Devolver el número de columnas del conjunto de resultados|[SQLNumResultCols (función)](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

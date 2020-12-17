@@ -8,21 +8,21 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2332aff0cb4c73fb7bbda61e498b1167327f6957
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d446416076160642f86c035082481d318479d594
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956819"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471186"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Instalación de Machine Learning Server (independiente) o R Server (independiente) con el programa de instalación de SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 El programa de instalación de SQL Server incluye una opción de **características compartidas** para instalar un servidor aprendizaje automático independiente que se ejecuta fuera de SQL Server. Se denomina **Machine Learning Server (independiente)** e incluye Python y R. 
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 El programa de instalación de SQL Server incluye una opción de **características compartidas** para instalar un servidor aprendizaje automático independiente que se ejecuta fuera de SQL Server. En SQL Server 2016, esta característica se denomina **R Server (independiente)** .  
 ::: moniker-end
 
@@ -59,7 +59,7 @@ Solo en SQL Server 2016: Microsoft ha identificado un problema con la versión
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## <a name="run-setup"></a>Ejecución del programa de instalación
 
 En instalaciones locales, debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, deberá usar una cuenta de dominio que tenga permisos de lectura y ejecución para dicho recurso.
@@ -69,13 +69,13 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
 2. Haga clic en la pestaña **Instalación** y seleccione **Nueva instalación de Machine Learning Server (independiente)** .
     
    ::: moniker-end
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![Instalación independiente de Machine Learning Server](media/2017setup-installation-page-mlsvr.png "Inicio de la instalación de Machine Learning Server (independiente)")
    ::: moniker-end
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![Instalación independiente de Machine Learning Server](media/2019setup-installation-page-mlsvr.png "Inicio de la instalación de Machine Learning Server (independiente)")
    ::: moniker-end
-   ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-2017"
 
 3. Cuando finalice la comprobación de reglas, acepte los términos de licencia de SQL Server y seleccione una nueva instalación.
 
@@ -86,13 +86,13 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
     - **R** y **Python** están seleccionados de forma predeterminada. Puede anular la selección de cualquiera de estos lenguajes admitidos, pero se recomienda instalar al menos uno de ellos.
 
    ::: moniker-end
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![Elección de características de R o de Python](media/2017setup-features-page-mlsvr-rpy.png "Inicio de la instalación de Machine Learning Server (independiente)")
    ::: moniker-end
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![Elección de características de R o de Python](media/2019setup-features-page-mlsvr-rpy.png "Inicio de la instalación de Machine Learning Server (independiente)")
    ::: moniker-end
-   ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-2017"
     
    El resto de opciones se deben omitir. 
     
@@ -228,7 +228,7 @@ Los desarrolladores de R pueden empezar con algunos ejemplos sencillos y conoce
 + [Inicio rápido: Ejecutar R en T-SQL](../tutorials/quickstart-r-create-script.md)
 + [Tutorial: Análisis en base de datos para desarrolladores de R](../tutorials/r-taxi-classification-introduction.md)
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Los desarrolladores de Python pueden aprender a usar Python con SQL Server con estos tutoriales:
 
 + [Tutorial de Python: Predicción de alquileres de esquíes con regresión lineal en SQL Server Machine Learning Services](../tutorials/python-ski-rental-linear-regression-deploy-model.md)

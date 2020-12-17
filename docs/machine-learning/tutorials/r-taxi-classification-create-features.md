@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e498b76d1b7924a4ee4154c35c4e492612b9c801
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 67c8c2c34ff49df4c9be7bea9dc1015d4bcebedd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412572"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470176"
 ---
 # <a name="r-tutorial-create-data-features"></a>Tutorial de R: Crear características de datos
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -40,11 +40,11 @@ En la [parte cinco](./python-taxi-classification-deploy-model.md), aprenderá a 
 
 ## <a name="about-feature-engineering"></a>Acerca de la ingeniería de características
 
-Después de varias series de exploración de datos, ha recopilado conocimientos de los datos y está listo para pasar a la *ingeniería de funciones* . Este proceso de creación de características significativas a partir de los datos sin procesar es un paso fundamental a la hora de crear modelos analíticos.
+Después de varias series de exploración de datos, ha recopilado conocimientos de los datos y está listo para pasar a la *ingeniería de funciones*. Este proceso de creación de características significativas a partir de los datos sin procesar es un paso fundamental a la hora de crear modelos analíticos.
 
 En este conjunto de datos, los valores de distancia se basan en la distancia notificada del taxímetro, y no representan necesariamente la distancia geográfica o la distancia recorrida realmente. Por tanto, debe calcular la distancia directa entre los puntos de origen y destino, usando las coordenadas disponibles en el conjunto de datos de origen NYC Taxi. Puede hacerlo mediante la [fórmula Haversine](https://en.wikipedia.org/wiki/Haversine_formula) en un función personalizada de [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
-Usará una función personalizada de T-SQL, _fnCalculateDistance_ , para calcular la distancia usando la fórmula Haversine, y una segunda función personalizada de T-SQL, _fnEngineerFeatures_ , para crear una tabla que contiene todas las características.
+Usará una función personalizada de T-SQL, _fnCalculateDistance_, para calcular la distancia usando la fórmula Haversine, y una segunda función personalizada de T-SQL, _fnEngineerFeatures_, para crear una tabla que contiene todas las características.
 
 El proceso general consiste en lo siguiente:
 
@@ -58,7 +58,7 @@ El proceso general consiste en lo siguiente:
 
 La función _fnCalculateDistance_ debe haberse descargado y registrado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte de la preparación de este tutorial. Tómese un minuto para revisar el código.
   
-1. En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expanda **Programación** , expanda **Funciones** y, después, **Funciones escalares** .   
+1. En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expanda **Programación**, expanda **Funciones** y, después, **Funciones escalares**.   
 
 2. Haga clic con el botón derecho en _fnCalculateDistance_ y seleccione **Modificar** para abrir el script de [!INCLUDE[tsql](../../includes/tsql-md.md)] en una nueva ventana de consulta.
   
@@ -92,9 +92,9 @@ La función _fnCalculateDistance_ debe haberse descargado y registrado con [!INC
 
 ## <a name="generate-the-features-using-_fnengineerfeatures_"></a>Generación de las características con _fnEngineerFeatures_
 
-Para agregar los valores calculados a una tabla y poder usarlos para entrenar el modelo, deberá usar otra función, _fnEngineerFeatures_ . La nueva función llama a la función de T-SQL creada anteriormente, _fnCalculateDistance_ , para obtener la distancia directa entre las ubicaciones de origen y destino. 
+Para agregar los valores calculados a una tabla y poder usarlos para entrenar el modelo, deberá usar otra función, _fnEngineerFeatures_. La nueva función llama a la función de T-SQL creada anteriormente, _fnCalculateDistance_, para obtener la distancia directa entre las ubicaciones de origen y destino. 
 
-1. Tómese un minuto para revisar el código de la función personalizada de T-SQL, _fnEngineerFeatures_ , que debe haberse creado como parte de la preparación para este tutorial.
+1. Tómese un minuto para revisar el código de la función personalizada de T-SQL, _fnEngineerFeatures_, que debe haberse creado como parte de la preparación para este tutorial.
   
    ```sql
    CREATE FUNCTION [dbo].[fnEngineerFeatures] (  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 81e34f795391ad53728f35c8fed6e6b2363b3f7a
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: d3663fb72891f31cdd710fefebaef906c5b14762
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115679"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471676"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Inicio rápido: instalar SQL Server y crear una base de datos en Red Hat
 
@@ -28,7 +28,7 @@ En este inicio rápido, instalará SQL Server 2017 o SQL Server 2019 en Red Hat 
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 En este inicio rápido, instalará SQL Server 2019 en Red Hat Enterprise Linux (RHEL) 8. Después, se conectará con **sqlcmd** para crear la primera base de datos y ejecutar consultas.
 
@@ -40,16 +40,16 @@ En este inicio rápido, instalará SQL Server 2019 en Red Hat Enterprise Linux 
 ## <a name="prerequisites"></a>Requisitos previos
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-Necesita una máquina con RHEL 7.3-7.8 u 8.0-8.2, con un **mínimo de 2 GB** de memoria.
+Necesita un equipo con RHEL 7.3-7.8 u 8.0-8.3, con un **mínimo de 2 GB** de memoria.
 
 ::: moniker-end
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Necesita una máquina con RHEL 7.3, 7.4, 7.5, 7.6 u 8.0, con un **mínimo de 2 GB** de memoria.
+Necesita un equipo con RHEL 7.3-7.8 u 8.0-8.3, con un **mínimo de 2 GB** de memoria.
 
 ::: moniker-end
 
@@ -129,7 +129,7 @@ En este momento, SQL Server se ejecuta en el equipo con RHEL y está listo para 
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="install-sql-server"></a><a id="install"></a>Instalar SQL Server
 

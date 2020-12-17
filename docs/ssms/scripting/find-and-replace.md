@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b788a7f0996eaf8b6321caf9418d660deb08ac9c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: adf3998c70af1f13a4dc12c5a1b7c9b92ced9bb9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039069"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466406"
 ---
 # <a name="find-and-replace"></a>Buscar y reemplazar
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Utilice el cuadro de diálogo **Buscar y reemplazar** para buscar texto en un archivo y, opcionalmente, reemplazarlo. Pueden aparecer versiones del cuadro de diálogo **Buscar y reemplazar** con opciones ligeramente distintas, en función de la forma en que se haya abierto el cuadro de diálogo. En el menú **Editar** , seleccione **Buscar y reemplazar**y, a continuación, haga clic en **Búsqueda rápida** para abrir el cuadro de diálogo con las opciones de búsqueda, pero sin las opciones de reemplazo. En el menú **Editar** , seleccione **Buscar y reemplazar**y, a continuación, haga clic en **Reemplazo rápido** para abrir el cuadro de diálogo con las opciones de búsqueda y de reemplazo.  
+  Utilice el cuadro de diálogo **Buscar y reemplazar** para buscar texto en un archivo y, opcionalmente, reemplazarlo. Pueden aparecer versiones del cuadro de diálogo **Buscar y reemplazar** con opciones ligeramente distintas, en función de la forma en que se haya abierto el cuadro de diálogo. En el menú **Editar** , seleccione **Buscar y reemplazar** y, a continuación, haga clic en **Búsqueda rápida** para abrir el cuadro de diálogo con las opciones de búsqueda, pero sin las opciones de reemplazo. En el menú **Editar** , seleccione **Buscar y reemplazar** y, a continuación, haga clic en **Reemplazo rápido** para abrir el cuadro de diálogo con las opciones de búsqueda y de reemplazo.  
   
  También hay botones de la barra de la herramientas y teclas de método abreviado disponibles para abrir el cuadro de diálogo **Buscar y reemplazar** .  
   
@@ -63,7 +63,7 @@ ms.locfileid: "92039069"
 > [!CAUTION]  
 >  Asegúrese de que **Buscar en** esté establecido de modo que solo incluya los archivos que quiere modificar.  
   
- Se muestra un aviso que incluye la opción **Mantener archivos modificados abiertos** . Para conservar la opción **Deshacer** , deberá seleccionar esta opción. La opción**Deshacer** solo estará disponible en los archivos que permanezcan abiertos para editarlos después de haberlos modificado.  
+ Se muestra un aviso que incluye la opción **Mantener archivos modificados abiertos** . Para conservar la opción **Deshacer** , deberá seleccionar esta opción. La opción **Deshacer** solo estará disponible en los archivos que permanezcan abiertos para editarlos después de haberlos modificado.  
   
  **Omitir archivo**  
  Esta opción estará disponible cuando el valor especificado en **Buscar en** incluya varios archivos. Haga clic en este botón si no desea realizar búsquedas en el archivo actual o si no desea modificarlo. La búsqueda continuará en el siguiente archivo de la lista de **Buscar en**.  
@@ -100,10 +100,10 @@ ms.locfileid: "92039069"
  Comienza a buscar el texto del cuadro **Buscar** .  
   
  **Sustituya**  
- Haga clic en este botón para reemplazar la instancia actual de la cadena especificada en **Buscar** por la cadena especificada en **Reemplazar con**y buscar la siguiente instancia dentro del ámbito especificado en **Buscar en**.  
+ Haga clic en este botón para reemplazar la instancia actual de la cadena especificada en **Buscar** por la cadena especificada en **Reemplazar con** y buscar la siguiente instancia dentro del ámbito especificado en **Buscar en**.  
   
  **Replace All**  
- Elija este botón para reemplazar todas las instancias de la cadena especificada en **Buscar** por la cadena especificada en **Reemplazar con**en todos los archivos del ámbito especificado en **Buscar en**.  
+ Elija este botón para reemplazar todas las instancias de la cadena especificada en **Buscar** por la cadena especificada en **Reemplazar con** en todos los archivos del ámbito especificado en **Buscar en**.  
   
 > [!CAUTION]  
 >  Asegúrese de que **Buscar en** esté establecido de modo que solo incluya los archivos que quiere modificar.  

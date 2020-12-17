@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da80bf7a847e6724eaad79d2efd86a0b095b6b52
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 976d10c246c2364129341986a9f16e4e053b86df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036155"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474206"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Depurador de Transact-SQL: ventana Subprocesos
 
@@ -33,7 +33,7 @@ La ventana **Subprocesos** muestra información sobre el subproceso de [!INCLUDE
 
 **Para tener acceso a la ventana Subprocesos**
   
--   En el menú **Depurar** , haga clic en **Ventanas**y, a continuación, haga clic en **Subprocesos**.  
+-   En el menú **Depurar** , haga clic en **Ventanas** y, a continuación, haga clic en **Subprocesos**.  
   
 ## <a name="columns"></a>Columnas  
  **Id**  

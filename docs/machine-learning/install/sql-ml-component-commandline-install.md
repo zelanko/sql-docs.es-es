@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8e32b14682c7813dd911b52e80249cf6af7ebaac
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 7c9fb33f32a5807f46136ec1ede69386927621ca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96122766"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471146"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Instalación de SQL Server Machine Learning Services con R y Python mediante la línea de comandos
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +41,7 @@ El argumento **/FEATURES** es obligatorio, igual que los contratos de términos 
 
 Al realizar la instalación a través del símbolo del sistema, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el modo totalmente silencioso mediante el uso del parámetro **/Q** o el modo silencioso sencillo mediante el parámetro **/QS**. El modificador **/QS** solamente muestra el progreso, pero no acepta ninguna entrada ni muestra mensajes de error si los encuentra. El parámetro **/QS** solamente se admite cuando se ha especificado **/Action=install**.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 | Argumentos | Descripción |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Instala la versión en la base de datos: SQL Server R Services (en base de datos).  |
@@ -52,7 +52,7 @@ Al realizar la instalación a través del símbolo del sistema, [!INCLUDE[ssNoVe
 | /MRCACHEDIRECTORY | Para la instalación sin conexión, establece la carpeta que contiene los archivos .cab de los componentes de R. |
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 | Argumentos | Descripción |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Instala la versión en la base de datos: SQL Server Machine Learning Services (en base de datos).  |
@@ -67,7 +67,7 @@ Al realizar la instalación a través del símbolo del sistema, [!INCLUDE[ssNoVe
 | /MPYCACHEDIRECTORY | Reservado para uso futuro. Use %TEMP% para almacenar archivos .cab de los componentes de Python para su instalación en equipos que no tienen conexión a Internet. |
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 | Argumentos | Descripción |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | Instala la versión en la base de datos: SQL Server Machine Learning Services (en base de datos).  |
@@ -92,7 +92,7 @@ Para ver la información de progreso sin los mensajes interactivos en pantalla, 
 > [!IMPORTANT]
 > Después de la instalación, quedan dos pasos de configuración más. La integración no está completa hasta que no se realizan estas tareas. Consulte [Tareas posteriores a la instalación](#post-install) para obtener instrucciones.
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ### <a name="sql-server-machine-learning-services-database-engine-advanced-analytics-with-python-and-r"></a>SQL Server Machine Learning Services: motor de base de datos y análisis avanzado con Python y R
 
 Para una instalación simultánea de la instancia del motor de base de datos, proporcione el nombre de la instancia y las credenciales de inicio de sesión de un administrador (Windows). Incluye características para la instalación de componentes principales y de lenguaje, así como la aceptación de todos los términos de licencia.
@@ -120,7 +120,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY
 ```
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 ### <a name="sql-server-r-services-database-engine-and-advanced-analytics-with-r"></a>SQL Server R Services: motor de base de datos y análisis avanzado con R
 
 Para una instalación simultánea de la instancia del motor de base de datos, proporcione el nombre de la instancia y las credenciales de inicio de sesión de un administrador (Windows). Incluye características para la instalación de componentes principales y de lenguaje, así como la aceptación de todos los términos de licencia.
@@ -141,13 +141,13 @@ Una vez finalizada la instalación, tiene una instancia del motor de base de dat
 Se necesitan realizar dos pasos más para completar la instalación:
 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 1. Reinicie el servicio de motor de base de datos.
 
 1. SQL Server Machine Learning Services: Habilite los scripts externos para poder usar la característica. El siguiente paso es seguir las instrucciones de [Instalación de SQL Server Machine Learning Services (en bases de datos)](sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 1. Reinicie el servicio de motor de base de datos.
 
 1. SQL Server R Services: Habilite los scripts externos para poder usar la característica. El siguiente paso es seguir las instrucciones de [Instalación de SQL Server R Services (en bases de datos)](sql-r-services-windows-install.md). 
@@ -177,7 +177,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 
 Un servidor independiente es una "característica compartida" que no está enlazada a una instancia del motor de base de datos. En los siguientes ejemplos se muestra la sintaxis válida para la instalación del servidor independiente.
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 SQL Server Machine Learning Server admite Python y R en un servidor independiente:
 
 ```cmd
@@ -185,7 +185,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY
 /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 SQL Server R Server solo admite R:
 
 ```cmd

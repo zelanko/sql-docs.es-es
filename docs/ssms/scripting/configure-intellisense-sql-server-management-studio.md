@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac7b092672a715b48e32b962a509bd7e6aa4ccdf
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 98ad4f0261edbf7468403f388af155a6bc305838
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005696"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474326"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>Configurar IntelliSense (SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "92005696"
   
 1.  En el menú **Herramientas** , haga clic en **Opciones**.  
   
-2.  Expanda **Editor de texto**, expanda **Todos los lenguajes**, **Transact-SQL**o **XML**y luego haga clic en **General**.  
+2.  Expanda **Editor de texto**, expanda **Todos los lenguajes**, **Transact-SQL** o **XML** y luego haga clic en **General**.  
   
 3.  Desactive todas las casillas correspondientes a las opciones de finalización de instrucciones que no desee y, a continuación, haga clic en **Aceptar**.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "92005696"
   
 1.  En el menú **Herramientas** , haga clic en **Opciones**.  
   
-2.  Expanda **Editor de texto**, **Transact-SQL**y después haga clic en **IntelliSense**.  
+2.  Expanda **Editor de texto**, **Transact-SQL** y después haga clic en **IntelliSense**.  
   
 3.  Desactive las casillas de las opciones de IntelliSense que no desee.  
   

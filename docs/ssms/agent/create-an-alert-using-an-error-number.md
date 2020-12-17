@@ -15,13 +15,13 @@ ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6cd2a92ccc47e48493f35ce95c11a0870cd7d4df
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 3cf6f420007e367a2c82d85fcb5e257d713fe79c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035098"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464416"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>Create an Alert Using an Error Number
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,7 +62,7 @@ De forma predeterminada, solo los miembros del rol fijo de servidor **sysadmin**
   
 7.  En **Definición de evento de alerta**, en la lista **Nombre de la base de datos** , seleccione una base de datos para restringir la alerta a una base de datos específica.  
   
-8.  En **Las alertas se mostrarán en función de**, haga clic en **Número de error**y escriba un número de error válido para la alerta. También puede hacer clic en **Gravedad** y seleccionar la gravedad específica que producirá la alerta.  
+8.  En **Las alertas se mostrarán en función de**, haga clic en **Número de error** y escriba un número de error válido para la alerta. También puede hacer clic en **Gravedad** y seleccionar la gravedad específica que producirá la alerta.  
   
 9. Active la casilla correspondiente a **Mostrar alerta cuando el mensaje contenga** para restringir la alerta a una secuencia de caracteres en particular y, a continuación, escriba una palabra clave o una cadena de caracteres en el **Texto del mensaje**. El número máximo de caracteres es 100.  
   

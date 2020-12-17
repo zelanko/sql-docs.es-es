@@ -7,13 +7,13 @@ ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cdb11607fe7424c8c1159ba767e6f8292361065f
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 12088a5d5a8413f76176da09e2f8aa94e72e63f0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793762"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470916"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Creación de flujos de trabajo de SSIS y SSRS con R en SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-En el Diseñador SSIS, cree una [tarea Ejecutar SQL](../../integration-services/control-flow/execute-sql-task.md) para ejecutar el procedimiento almacenado **generate_iris_rx_model** . El modelo se serializa y se guarda en la tabla ssis_iris_models. El script de **SQLStatement** es el siguiente:
+En el Diseñador SSIS, cree una [tarea Ejecutar SQL](../../integration-services/control-flow/execute-sql-task.md) para ejecutar el procedimiento almacenado **generate_iris_rx_model**. El modelo se serializa y se guarda en la tabla ssis_iris_models. El script de **SQLStatement** es el siguiente:
 
 ```T-SQL
 insert into ssis_iris_models (model)

@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d66452796f3c3cd669784ae7233fb9dcf8e5bc5c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 9938cdeca70e4fd7a97c9ce8b9d38035022ce714
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195107"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470566"
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Consulta y modificación de datos de SQL Server (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -127,7 +127,7 @@ Asignar la columna a las abreviaturas antes de usarla como un factor mejora real
     Var 9: fraudRisk, Type: integer
     ```
 
-Ahora las tres variables que ha especificado (*gender*, *state*y *cardholder*) se tratan como factores.
+Ahora las tres variables que ha especificado (*gender*, *state* y *cardholder*) se tratan como factores.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

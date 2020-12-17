@@ -18,14 +18,14 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 399a09695b14fa3b3f55fcae8c3d88ba16324057
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 37e3914abd99f03fa441a2b6284bd43ea570e269
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868961"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468636"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Buscar propiedades de documento con listas de propiedades de búsqueda
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "91868961"
   
 1.  En el Explorador de objetos, expanda el servidor.  
   
-2.  Expanda **Bases de datos**y, a continuación, expanda la base de datos en la que desea crear la lista de propiedades de búsqueda.  
+2.  Expanda **Bases de datos** y, a continuación, expanda la base de datos en la que desea crear la lista de propiedades de búsqueda.  
   
 3.  Expanda **Almacenamiento** y, a continuación, haga clic con el botón secundario del mouse en **Listas de propiedades de búsqueda**.  
   
@@ -188,7 +188,7 @@ GO
   
 1.  En el Explorador de objetos, expanda el servidor.  
   
-2.  Expanda **Bases de datos**y, a continuación, expanda la base de datos.  
+2.  Expanda **Bases de datos** y, a continuación, expanda la base de datos.  
   
 3.  Expanda **Almacenamiento**.  
   
@@ -200,7 +200,7 @@ GO
   
     1.  Para quitar una propiedad de documento, haga clic en el encabezado de fila a la izquierda de la propiedad y presione SUPR.  
   
-    2.  Para agregar una propiedad de documento, haga clic en la fila vacía en la parte inferior de la lista, a la derecha del símbolo **\*** y escriba los valores para la nueva propiedad.  
+    2.  Para agregar una propiedad de documento, haga clic en la fila vacía de la parte inferior de la lista, a la derecha del símbolo * *\** _, y escriba los valores para la nueva propiedad.  
   
          Para obtener información sobre estos valores, vea [Editor de lista de propiedades de búsqueda](../../t-sql/statements/create-search-property-list-transact-sql.md). Para obtener información sobre cómo obtener estos valores para las propiedades definidas por Microsoft, vea [Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Para obtener información sobre propiedades definidas por un fabricante de software independiente (ISV), vea la documentación de ese fabricante.  
   
@@ -209,7 +209,7 @@ GO
 ###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a> Eliminar una lista de propiedades de búsqueda  
  No se puede quitar una lista de propiedades de una base de datos mientras la lista está asociada a un índice de texto completo.  
   
- **Para eliminar una lista de propiedades de búsqueda con Transact-SQL**  
+ _ *Para eliminar una lista de propiedades de búsqueda con Transact-SQL**  
   
  Use la instrucción [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md).  
   
@@ -217,7 +217,7 @@ GO
   
 1.  En el Explorador de objetos, expanda el servidor.  
   
-2.  Expanda **Bases de datos**y, a continuación, expanda la base de datos.  
+2.  Expanda **Bases de datos** y, a continuación, expanda la base de datos.  
   
 3.  Expanda **Almacenamiento** y, a continuación, expanda el nodo **Listas de propiedades de búsqueda**.  
   

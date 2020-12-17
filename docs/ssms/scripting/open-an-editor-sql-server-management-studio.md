@@ -10,13 +10,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66b83e6c2a26f5fb9f8c2676dc3245d4d79e080e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d33b6442ef66a6be4d1ff600fe583947981a017f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036489"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474266"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Abrir un editor (SQL Server Management Studio)
 
@@ -37,7 +37,7 @@ En este tema se describe cómo abrir el editor de consultas, MDX, DMX o XML/A de
  En esta sección se explica cómo abrir varios editores en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Mediante el menú Archivo/Nuevo  
- En el menú **Archivo** , haga clic en **Nuevo**y, a continuación, seleccione una de las opciones del editor de consultas:  
+ En el menú **Archivo** , haga clic en **Nuevo** y, a continuación, seleccione una de las opciones del editor de consultas:  
   
 -   **Consulta con conexión actual**: abre una nueva ventana del editor del tipo asociado a la conexión actual en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La ventana del editor usa la misma información de autenticación que la conexión actual. Por ejemplo, si selecciona una instancia en el Explorador de objetos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y, a continuación, usa **Consulta con conexión actual**, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre un editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] conectado a la misma instancia con la misma información de autenticación.  
   
@@ -50,7 +50,7 @@ En este tema se describe cómo abrir el editor de consultas, MDX, DMX o XML/A de
 -   **Consulta XML/A de Analysis Services** : abre un nuevo editor de consultas XML/A de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y un cuadro de diálogo para obtener la información necesaria para conectarse a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ### <a name="using-the-fileopen-menu"></a>Usar el menú Archivo/Abrir  
- En el menú **Archivo** , haga clic en **Abrir**y, a continuación, navegue a un archivo y ábralo. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre el tipo de editor adecuado correspondiente a la extensión de archivo, copia el contenido del archivo en la ventana del editor y también abre un cuadro de diálogo de conexión si es necesario. Por ejemplo, si abre un archivo con la extensión .sql, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre una ventana del editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , copia el contenido del archivo .sql, y abre un cuadro de diálogo de conexión. Si abre un archivo con una extensión no asociada a un editor determinado, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre una ventana y copia el editor de texto de contenido del archivo.  
+ En el menú **Archivo** , haga clic en **Abrir** y, a continuación, navegue a un archivo y ábralo. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre el tipo de editor adecuado correspondiente a la extensión de archivo, copia el contenido del archivo en la ventana del editor y también abre un cuadro de diálogo de conexión si es necesario. Por ejemplo, si abre un archivo con la extensión .sql, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre una ventana del editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , copia el contenido del archivo .sql, y abre un cuadro de diálogo de conexión. Si abre un archivo con una extensión no asociada a un editor determinado, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre una ventana y copia el editor de texto de contenido del archivo.  
   
  Para obtener más información, vea [Associate File Extensions to a Code Editor (Asociar extensiones de archivo a un editor de código)](./associate-file-extensions-to-a-code-editor.md).  
   

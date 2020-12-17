@@ -21,13 +21,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69892b05d5e9d34784a06551b929fe9664e2ca4b
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5c96185636472a1bf7cc512fa4947597289f38e5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093503"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474286"
 ---
 # <a name="navigate-code-and-text"></a>Navegar por código y texto
 
@@ -68,7 +68,7 @@ Para moverse por el texto utilice:
 -   Utilice la combinación de teclas CTRL+FLECHA ARRIBA y CTRL+FLECHA ABAJO para desplazar la vista sin mover el punto de inserción.  
   
 ## <a name="go-to-command"></a>Ir a, comando  
- Use el comando **Ir a** para ir a un número de línea específico. Para que la numeración de líneas esté visible, en el cuadro de diálogo **Opciones** , haga clic en **Editor de texto**, **Todos los lenguajes**, **General**y, finalmente, seleccione **Números de línea**.  
+ Use el comando **Ir a** para ir a un número de línea específico. Para que la numeración de líneas esté visible, en el cuadro de diálogo **Opciones** , haga clic en **Editor de texto**, **Todos los lenguajes**, **General** y, finalmente, seleccione **Números de línea**.  
   
  **Para ir a un número de línea específico**  
   

@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ab8d7167e81b5a7cdf665f1312b1b414d95d9f7b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 0fcfaa029005d9b45be6ce9c6e242e4e7cc0de42
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037798"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472296"
 ---
 # <a name="set-cpu-idle-time-and-duration"></a>Establecimiento de la duración y el tiempo de inactividad de la CPU
 
@@ -40,7 +40,7 @@ En este tema se explica cómo definir la condición de inactividad de la CPU par
   
 1.  En el **Explorador de objetos** , conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]y, después, expándala.  
   
-2.  Haga clic con el botón derecho en el **Agente SQL Server**, haga clic en **Propiedades**y seleccione la página **Avanzadas** .  
+2.  Haga clic con el botón derecho en el **Agente SQL Server**, haga clic en **Propiedades** y seleccione la página **Avanzadas** .  
   
 3.  En **Condición de CPU inactiva**, haga lo siguiente:  
   

@@ -26,13 +26,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d85ba0589e239fc54280f3c418eaf011e69906b1
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 04adcfacb3a540a9275f445a71ee9813c1702246
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093416"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408540"
 ---
 # <a name="manage-code-formatting"></a>Administrar formato de código
 
@@ -109,13 +109,13 @@ Con el editor, puede aplicar formato al código mediante sangrías, texto oculto
   
 1.  Seleccione el texto cuyos espacios en blanco desea convertir en tabulaciones.  
   
-2.  En el menú **Editar** , elija **Avanzado**y, a continuación, haga clic en **Aplicar tabulaciones a la selección**.  
+2.  En el menú **Editar** , elija **Avanzado** y, a continuación, haga clic en **Aplicar tabulaciones a la selección**.  
   
 #### <a name="to-convert-tabs-to-spaces"></a>Para convertir tabulaciones en espacios  
   
 1.  Seleccione el texto cuyas tabulaciones desea convertir en espacios.  
   
-2.  En el menú **Editar** , elija **Avanzado**y, a continuación, haga clic en **No aplicar tabulaciones a la selección**.  
+2.  En el menú **Editar** , elija **Avanzado** y, a continuación, haga clic en **No aplicar tabulaciones a la selección**.  
   
  El comportamiento de estos comandos depende de la configuración de las tabulaciones en el cuadro de diálogo **Opciones** . Por ejemplo, si la configuración de las tabulaciones es 4, **Aplicar tabulaciones a la selección** crea una tabulación por cada 4 espacios contiguos. Mientras, **No aplicar tabulaciones a la selección** crea 4 espacios por cada tabulación.  
   

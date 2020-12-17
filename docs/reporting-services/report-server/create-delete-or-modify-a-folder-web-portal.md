@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1c2094a4ee16d33c6e076440e56a55434b2347a
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6826e09f85e001e9932e2c6f85c400f722534c2a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987191"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409351"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>Creación, eliminación o modificación de una carpeta: Reporting Services
   Puede crear carpetas para organizar y administrar los elementos que publica en un servidor de informes. La creación de carpetas puede ayudar a los usuarios a buscar informes de su interés. Para administradores de contenido, las carpetas proporcionan un marco para aplicar permisos. Puede crear asignaciones de roles en carpetas concretas para restringir el acceso a los informes que se están desarrollando o que no se deberían distribuir de manera amplia.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## <a name="to-create-a-folder"></a>Para crear una carpeta  
   
@@ -63,13 +63,13 @@ ms.locfileid: "91987191"
   
     -   Para mostrar la carpeta en la vista predeterminada en la página **Contenido** , desactive **Ocultar en la vista de lista**.  
   
-6.  O bien, haga clic en **Eliminar**para quitar la carpeta y su contenido.  
+6.  O bien, haga clic en **Eliminar** para quitar la carpeta y su contenido.  
   
 7.  Haga clic en **Apply** (Aplicar) para guardar los cambios.  
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
  
 ## <a name="to-create-a-folder"></a>Para crear una carpeta  
   

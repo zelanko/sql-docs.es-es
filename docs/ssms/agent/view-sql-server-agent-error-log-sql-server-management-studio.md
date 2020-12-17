@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 966929c35df641a6a464c14481c03a11e45bc34a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 77c2134ee706b7cd86676501aec703f8468d6a5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038139"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476956"
 ---
 # <a name="view-sql-server-agent-error-log"></a>Ver el registro de errores del Agente SQL Server
 
@@ -80,7 +80,7 @@ Para más información sobre los permisos de Windows necesarios para la cuenta d
     Actualice la vista de los registros seleccionados. El botón **Actualizar** hace que se vuelvan a leer los registros seleccionados del servidor de destino al tiempo que se aplica una configuración de filtro.  
   
     **Filter**  
-    Abre un cuadro de diálogo que permite especificar la configuración que se usa para filtrar el archivo de registro, como **Conexión**, **Fecha**u otros criterios de filtro de **General** .  
+    Abre un cuadro de diálogo que permite especificar la configuración que se usa para filtrar el archivo de registro, como **Conexión**, **Fecha** u otros criterios de filtro de **General** .  
   
     **Búsqueda**  
     Permite buscar texto específico en el archivo de registro. No se admite la búsqueda con caracteres comodín.  

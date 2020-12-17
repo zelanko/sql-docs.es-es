@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 62b76b616786c593d395ee8720bba4c012390290
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6843efa430fcd43149d048c9d21c5120954ab896
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766894"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637821"
 ---
 # <a name="instant-file-initialization-configuration"></a>Configuración de inicialización instantánea de archivos
 La inicialización instantánea de archivos es una característica SQL Server que permite que las operaciones de archivo de datos se ejecuten más rápidamente. Si activa la casilla para activar la inicialización instantánea de archivos, se mejorará el rendimiento de PDW de SQL Server. Sin embargo, si esto supone un riesgo de seguridad para su negocio, deje la casilla desactivada.  
@@ -25,17 +25,17 @@ La inicialización instantánea de archivos es una característica SQL Server qu
 La inicialización instantánea de archivos no está disponible cuando el TDE está habilitado.  
   
 ## <a name="add-permission-for-the-backup-account"></a>Agregar permiso para la cuenta de copia de seguridad  
-El proceso de copia de seguridad requiere una credencial de red (cuenta de usuario de Windows) que puede tener acceso a la ubicación de almacenamiento de copia de seguridad. Puede autorizar a PDW para que use la cuenta mediante el procedimiento [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) . Vea [backup Database](../t-sql/statements/backup-transact-sql.md?view=sql-server-ver15) para todo el proceso de copia de seguridad. Para usar la inicialización instantánea de archivos, se debe conceder el permiso a la cuenta de copia de seguridad `Perform volume maintenance tasks` .  
+El proceso de copia de seguridad requiere una credencial de red (cuenta de usuario de Windows) que puede tener acceso a la ubicación de almacenamiento de copia de seguridad. Puede autorizar a PDW para que use la cuenta mediante el procedimiento [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) . Vea [backup Database](../t-sql/statements/backup-transact-sql.md) para todo el proceso de copia de seguridad. Para usar la inicialización instantánea de archivos, se debe conceder el permiso a la cuenta de copia de seguridad `Perform volume maintenance tasks` .  
   
 1.  En el servidor de copia de seguridad, abra la aplicación de **Directiva de seguridad local** ( `secpol.msc` ).  
   
-2.  En el panel izquierdo, expanda **Directivas locales**y, a continuación, haga clic en **Asignación de derechos de usuario**.  
+2.  En el panel izquierdo, expanda **Directivas locales** y, a continuación, haga clic en **Asignación de derechos de usuario**.  
   
 3.  En el panel derecho, haga doble clic en **Realizar tareas de mantenimiento del volumen**.  
   
 4.  Haga clic en **Agregar usuario o grupo** y añada las cuentas de usuario que se utilicen para las copias de seguridad.  
   
-5.  Haga clic en **Aplicar**y, a continuación, cierre todos los cuadros de diálogo de **Directiva de seguridad local** .  
+5.  Haga clic en **Aplicar** y, a continuación, cierre todos los cuadros de diálogo de **Directiva de seguridad local** .  
   
 ## <a name="to-turn-instant-file-initialization-on-or-off"></a>Para activar o desactivar la inicialización instantánea de archivos  
   

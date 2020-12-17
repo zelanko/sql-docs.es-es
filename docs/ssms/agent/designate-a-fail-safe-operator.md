@@ -16,13 +16,13 @@ ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 139694d124788cc68aec005f3c35b2ee47a39ef4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5e8774eeb1f0c13350e81a6cb5635695c80a3eb8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037980"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423511"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Designar un operador para notificaciones de error
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,6 +61,6 @@ Solo los miembros del rol fijo de servidor **sysadmin** pueden designar operador
   
 5.  En la lista **Operador** , seleccione el operador que desee que sea el operador para notificaciones de error.  
   
-6.  Active alguna o la totalidad de las siguientes casillas para especificar cómo se notificará al operador: **Correo electrónico**, **Buscapersonas**o **Net send**.  
+6.  Active alguna o la totalidad de las siguientes casillas para especificar cómo se notificará al operador: **Correo electrónico**, **Buscapersonas** o **Net send**.  
   
 7.  Cuando termine, haga clic en **Aceptar**.  

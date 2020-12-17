@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 817395eca7ed1fd5f9a0ae9f01c3059c17deffef
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fcc511680e1635563c8dac50786130fb6835d472
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036385"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466306"
 ---
 # <a name="search-documents-using-results-lists"></a>Buscar en documentos mediante las listas de resultados
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "92036385"
   
 2.  En el cuadro de texto **Buscar** , escriba el texto que desea buscar.  
   
-3.  En la lista **Buscar en** , haga clic en **Todos los documentos abiertos**, **Proyecto actual**, **Toda la solución**o especifique una ruta de acceso.  
+3.  En la lista **Buscar en** , haga clic en **Todos los documentos abiertos**, **Proyecto actual**, **Toda la solución** o especifique una ruta de acceso.  
   
 4.  En la lista **Tipos de archivo** , seleccione uno de los conjuntos enumerados de extensiones de archivo o especifique las extensiones de los tipos de archivo que desea buscar, separadas por signos de punto y coma. Utilice \*.\* para buscar todos los archivos del directorio que aparece en la lista desplegable **Buscar en** .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "92036385"
   
 3.  En el cuadro **Reemplazar con** , escriba el texto que reemplazará al texto de la búsqueda.  
   
-4.  En la lista **Buscar en** , haga clic en **Todos los documentos abiertos**, **Proyecto actual**, **Toda la solución**o especifique una ruta de acceso.  
+4.  En la lista **Buscar en** , haga clic en **Todos los documentos abiertos**, **Proyecto actual**, **Toda la solución** o especifique una ruta de acceso.  
   
 5.  Haga clic en **Reemplazar** para reemplazar el texto de búsqueda con el texto del cuadro **Reemplazar con** . Puede omitir una coincidencia específica si hace clic en **Buscar siguiente** o un archivo entero si hace clic en **Omitir archivo**.  
   

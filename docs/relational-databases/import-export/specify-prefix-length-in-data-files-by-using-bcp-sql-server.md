@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e6692984d0383a671ed66b9a7b36032e185aea0b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 81ac71e3e236209592087ffb0a11cde47cc6f18e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003145"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481296"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>Especificación de la longitud de prefijo en archivos de datos con bcp (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Para proporcionar el almacenamiento en archivo más compacto para exportar de forma masiva datos en formato nativo a un archivo de datos, el comando **bcp** precede cada campo con uno o varios caracteres que indican la longitud del campo. Estos caracteres se denominan *caracteres de prefijo de longitud*.  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>Petición bcp de longitud de prefijo  
- Si un comando **bcp** interactivo contiene la opción **in** o **out** sin el modificador de archivo de formato ( **-f**) o un modificador de formato de datos ( **-n**, **-c**, **-w**o **-N**), el comando solicita la longitud de prefijo de cada campo, de la manera siguiente:  
+ Si un comando **bcp** interactivo contiene la opción **in** o **out** sin el modificador de archivo de formato ( **-f**) o un modificador de formato de datos ( **-n**, **-c**, **-w** o **-N**), el comando solicita la longitud de prefijo de cada campo, de la manera siguiente:  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   
@@ -59,12 +59,12 @@ ms.locfileid: "86003145"
 |**varchar**|2|2|2|2|  
 |**nchar**|2|2|2|2|  
 |**nvarchar**|2|2|2|2|  
-|**text***|4|4|4|4|  
-|**ntext***|4|4|4|4|  
-|**binary**|2|2|2|2|  
+|**text** _|4|4|4|4|  
+|_*ntext**_|4|4|4|4|  
+|_ *binary**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
-|**image***|4|4|4|4|  
-|**datetime**|0|1|0|1|  
+|**image** _|4|4|4|4|  
+|_ *datetime**|0|1|0|1|  
 |**smalldatetime**|0|1|0|1|  
 |**decimal**|1|1|1|1|  
 |**numeric**|1|1|1|1|  
@@ -85,7 +85,7 @@ ms.locfileid: "86003145"
 |**XML**|8|8|8|8|  
 |**sql_variant**|8|8|8|8|  
   
- \*Los tipos de datos **ntext**, **text**e **image** se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. Use **nvarchar(max)** , **varchar(max)** y **varbinary(max)** en su lugar.  
+ \*Los tipos de datos **ntext**, **text** e **image** se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. Use **nvarchar(max)** , **varchar(max)** y **varbinary(max)** en su lugar.  
   
 ##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Longitudes de prefijo para la importación masiva  
  Cuando los datos se importan de manera masiva, la longitud de prefijo es el valor que se especificó cuando se creó originalmente el archivo de datos. Si el archivo de datos no se creó con un comando **bcp** , probablemente no existan los caracteres de prefijo de longitud. En tal caso, especifique 0 como longitud de prefijo.  

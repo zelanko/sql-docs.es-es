@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 549333b7556e3537fd8a6a628738b0c0f87a1da9
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 18d1cc11b8ab4d4501e62ac5acfbffaeab32c892
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935322"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466586"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>Agregar una instantánea al historial de informes
 
@@ -24,7 +24,7 @@ Las instantáneas de informe no se guardan con un formato de representación con
   
 ## <a name="to-manually-add-snapshots-to-report-history"></a>Para agregar manualmente instantáneas a un historial de informe
   
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 1. En el Administrador de informes, vaya a la página **Contenido** , desplace el puntero sobre el elemento del que quiere ver el historial y haga clic en la flecha de lista desplegable.
   
@@ -75,7 +75,7 @@ Las instantáneas de informe no se guardan con un formato de representación con
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 ## <a name="to-manually-add-snapshots-to-report-history"></a>Para agregar manualmente instantáneas a un historial de informe
   

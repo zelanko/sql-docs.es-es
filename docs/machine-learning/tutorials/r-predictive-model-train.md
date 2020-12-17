@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 597cbdc270c902b6c13f17b6fe66a369357a539d
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 3f9cd6dd00e45f89d178bad737b4bd958e07de7c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870315"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470136"
 ---
 # <a name="tutorial-create-a-predictive-model-in-r-with-sql-machine-learning"></a>Tutorial: Creación de un modelo predictivo en R con el aprendizaje automático de SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 En la parte tres de esta serie de tutoriales de cuatro partes, entrenará un modelo predictivo en R. En la siguiente parte de esta serie, implementará este modelo en una base de datos de SQL Server con Machine Learning Services o en clústeres de macrodatos.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 En la parte tres de esta serie de tutoriales de cuatro partes, entrenará un modelo predictivo en R. En la siguiente parte de esta serie, implementará este modelo en una base de datos de SQL Server con Machine Learning Services.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 En la parte tres de esta serie de tutoriales de cuatro partes, entrenará un modelo predictivo en R. En la siguiente parte de esta serie, implementará este modelo en una base de datos con SQL Server R Services.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 En la parte tres de esta serie de tutoriales de cuatro partes, entrenará un modelo predictivo en R. En la siguiente parte de esta serie, implementará este modelo en una base de datos de Azure SQL Managed Instance con Machine Learning Services.
 ::: moniker-end
 

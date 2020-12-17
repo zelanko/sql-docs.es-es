@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: b2926817399e0e7604279d25fe46f0a944117a49
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5ecfdb5747eee9fc12934f3514b3df4b74cd8d46
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440790"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644051"
 ---
 # <a name="sysdm_pdw_nodes_exec_text_query_plan--transact-sql"></a>sys.dm_pdw_nodes_exec_text_query_plan (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -36,13 +36,13 @@ Devuelve el plan de presentación en formato de texto para un lote [!INCLUDE[tsq
 |**cifra**|**bit**|Indica si el procedimiento almacenado correspondiente está cifrado.<br /><br /> 0 = no cifrado<br /><br /> 1 = cifrado<br /><br /> La columna no acepta valores NULL.|  
 |**query_plan**|**nvarchar(max)**|Contiene la representación del plan de presentación de tiempo de compilación del plan de ejecución de consultas especificado con *plan_handle*. El plan de presentación está en formato de texto. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario.<br /><br /> Esta columna acepta valores NULL.|  
 
-## <a name="remarks"></a>Comentarios  
-Se aplican los mismos comentarios en [Sys.dm_exec_text_query_plan](./sys-dm-exec-text-query-plan-transact-sql.md?view=sql-server-ver15) .  
+## <a name="remarks"></a>Observaciones  
+Se aplican los mismos comentarios en [Sys.dm_exec_text_query_plan](./sys-dm-exec-text-query-plan-transact-sql.md) .  
 
 ## <a name="permissions"></a>Permisos  
  Requiere el rol de servidor **sysadmin** o `VIEW SERVER STATE` el permiso en el servidor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Azure Synapse Analytics y vistas de administración dinámica de almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
   ## <a name="next-steps"></a>Pasos siguientes

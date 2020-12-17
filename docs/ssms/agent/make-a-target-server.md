@@ -20,13 +20,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dcb200c472eb0284af8ef829687b89b5ae0340b7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 20a6fb0b2f32c838290d113529661e34a805e4df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036562"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472356"
 ---
 # <a name="make-a-target-server"></a>Establecer un servidor de destino
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ Los permisos de ejecución para este procedimiento corresponden de forma predete
   
 1.  En el **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] y expándala.  
   
-2.  Haga clic con el botón derecho en **Agente SQL Server**, seleccione **Administración de multiservidor**y, luego, haga clic en **Establecer como destino**. El **Asistente para establecer servidor de destino** le guiará en el proceso de establecimiento de un servidor de destino.  
+2.  Haga clic con el botón derecho en **Agente SQL Server**, seleccione **Administración de multiservidor** y, luego, haga clic en **Establecer como destino**. El **Asistente para establecer servidor de destino** le guiará en el proceso de establecimiento de un servidor de destino.  
   
 3.  En la página **Seleccionar un servidor maestro** , seleccione el servidor maestro del que este servidor de destino recibirá trabajos.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ed406e7bb91f18149b0d42db90ed248de0d86c8
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 651abd2ca0261deae83d77a15b88840499dce957
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84535457"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482231"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Servidor de informes de Reporting Services (modo nativo)
   Un servidor de informes configurado para el modo nativo se ejecuta como un servidor de aplicaciones que proporciona todas las funcionalidades de procesamiento y administración exclusivamente a través de los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -52,7 +52,7 @@ ms.locfileid: "84535457"
   
 -   Permisos de administrador de base de datos para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 -   Si va a instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en un controlador de dominio, debe ser un administrador de dominio.  
 

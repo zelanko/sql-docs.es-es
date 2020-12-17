@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d3ccbef48b79ef0706920ab2ff83a2daee68db9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 89097e7ef1b21008561db783fbb907ac903928f5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036411"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466336"
 ---
 # <a name="replace-in-files"></a>Reemplazar en archivos
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "92036411"
 > [!CAUTION]  
 >  Asegúrese de que **Buscar en** esté establecido de modo que solo incluya los archivos que quiere modificar.  
   
- Se muestra un aviso que incluye la opción **Mantener archivos modificados abiertos** . Para conservar la opción **Deshacer** , deberá seleccionar esta opción. La opción**Deshacer** solo estará disponible en los archivos que permanezcan abiertos para editarlos después de haberlos modificado.  
+ Se muestra un aviso que incluye la opción **Mantener archivos modificados abiertos** . Para conservar la opción **Deshacer** , deberá seleccionar esta opción. La opción **Deshacer** solo estará disponible en los archivos que permanezcan abiertos para editarlos después de haberlos modificado.  
   
  **Omitir archivo**  
  Está disponible cuando **Buscar en** incluye varios archivos. Haga clic en este botón si no desea realizar búsquedas en el archivo actual o si no desea modificarlo. La búsqueda continuará en el siguiente archivo de la lista de **Buscar en**.  
@@ -74,7 +74,7 @@ ms.locfileid: "92036411"
  Seleccione un ámbito predefinido de búsqueda en esta lista, o use el cuadro de diálogo **Elegir carpetas de búsqueda** para escribir su propio grupo de directorios.  
   
  **Documento actual**  
- Esta opción está disponible cuando se abre un documento en un editor. Busca la cadena especificada en **Buscar**solo en el documento activo.  
+ Esta opción está disponible cuando se abre un documento en un editor. Busca la cadena especificada en **Buscar** solo en el documento activo.  
   
  **Todos los documentos abiertos**  
  Busca en todos los archivos abiertos actualmente para edición.  

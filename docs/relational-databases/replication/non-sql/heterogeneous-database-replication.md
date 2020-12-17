@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 199177f4df8c97bfaf651b1d4ad42d5d864b757d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5ea494a48932fac171eb4d9e8bc3e032001e55b
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465091"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999245"
 ---
 # <a name="heterogeneous-database-replication"></a>replicación de bases de datos heterogéneas  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88465091"
   |Escenario|2016 o anterior |2017 o posterior |
   |-------|-------|--------|
   |Replicación de Oracle |Compatibilidad solo con Oracle 10g o versiones anteriores |Compatibilidad solo con Oracle 10g o versiones anteriores |
-  |Replicación en Oracle |Hasta Oracle 12c |No compatible |
+  |Replicación en Oracle |Todas las versiones anteriores a Oracle 12c |No compatible |
 
 
  La replicación heterogénea en suscriptores que no son SQL Server está desusada. La publicación de Oracle está desusada. Para mover datos, cree soluciones mediante captura de datos modificados y [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7f8b963f2b46ec68d0306e29e487f6c59f537ae
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 3359888ec94a9893dc018782f73827f876e95037
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934478"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472406"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pueden instalarse de uno de dos modos, Nativo o SharePoint. Los pasos que debería seguir para comprobar la instalación dependen del modo del servidor de informes.  
@@ -28,7 +28,7 @@ ms.locfileid: "91934478"
 > [!NOTE]
 > La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> Comprobar la instalación en modo de SharePoint  
   
@@ -87,7 +87,7 @@ ms.locfileid: "91934478"
   
 1.  Ejecute la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese a la instancia del servidor de informes recién instalada. La página Dirección URL del servicio web incluye un vínculo al servicio web del servidor de informes. Haga clic en el vínculo para comprobar que puede tener acceso al servidor. Si la base de datos del servidor de informes no está configurada, haga eso primero antes de hacer clic en el vínculo.  
   
-2.  Abra las aplicaciones de la consola Servicios y compruebe que se está ejecutando el servicio Servidor de informes. Para ver el estado del servicio del servidor de informes, haga clic en **Inicio**, seleccione **Panel de control**, haga doble clic en **Herramientas administrativas**y, después, en **Servicios**. Cuando aparezca la lista de servicios, desplácese a **Servidor de informes (MSSQLSERVER)**. El estado debe ser **Iniciado**.  
+2.  Abra las aplicaciones de la consola Servicios y compruebe que se está ejecutando el servicio Servidor de informes. Para ver el estado del servicio del servidor de informes, haga clic en **Inicio**, seleccione **Panel de control**, haga doble clic en **Herramientas administrativas** y, después, en **Servicios**. Cuando aparezca la lista de servicios, desplácese a **Servidor de informes (MSSQLSERVER)**. El estado debe ser **Iniciado**.  
   
 3.  Abra un explorador y escriba la dirección URL del servidor de informes en la barra de direcciones. La dirección está formada por el nombre del servidor y el nombre del directorio virtual que haya especificado para el servidor de informes durante la instalación. De manera predeterminada, el directorio virtual del servidor de informes se denomina **ReportServer**. Puede usar la siguiente dirección URL para comprobar la instalación del servidor de informes: https:// *\<computer name>* /ReportServer *\<_instance name>* . La dirección URL será distinta si el servidor de informes se instala como una instancia con nombre. Para más información sobre el formato de las direcciones URL, vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración del servidor de informes&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Si es un administrador local en Windows Vista o Windows Server 2008, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   

@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: bd60220151fb8f389ac7c82c1bdb0f10cf46bba1
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: d261cbabe0e5bdb22db537a10ef259b9b9d39e6c
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713813"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489915"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lección 2: Uso del Asistente para la optimización de motor de base de datos
 
@@ -32,10 +32,10 @@ Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, ac
 
 - Instale [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Descargue la [base de datos de ejemplo de AdventureWorks2017](../../samples/adventureworks-install-configure.md?view=sql-server-2017).
+- Descargue la [base de datos de ejemplo de AdventureWorks2017](../../samples/adventureworks-install-configure.md).
 
 
-Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
+Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
 
   >[!NOTE]
   > Este tutorial está destinado a un usuario familiarizado con el uso de SQL Server Management Studio y las tareas básicas de administración de bases de datos. 
@@ -104,7 +104,7 @@ El Asistente para la optimización de motor de base de datos puede utilizarse pa
  
    ![Menú de selección para la recomendación de índices](media/dta-tutorials/dta-index-recommendation-options.png)
   
-3.  En el menú **Acciones** , haga clic en **Guardar recomendaciones** para guardar todas las recomendaciones en un script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Asigne el nombre **MySessionRecommendations.sql**al script.  
+3.  En el menú **Acciones** , haga clic en **Guardar recomendaciones** para guardar todas las recomendaciones en un script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Asigne el nombre **MySessionRecommendations.sql** al script.  
   
     Abra el script MySessionRecommendations.sql en el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para verla. Podría aplicar las recomendaciones a la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ejecutando el script en el Editor de consultas; pero no lo haga. Cierre el script en el Editor de consultas sin ejecutarla.  
   
@@ -114,7 +114,7 @@ El Asistente para la optimización de motor de base de datos puede utilizarse pa
   
 5.  En el menú **Acciones** , haga clic en **Evaluar recomendaciones**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea una nueva sesión de optimización en la que puede evaluar un subconjunto de las recomendaciones originales de MySession.  
   
-6.  Escriba **EvaluateMySession** para el nuevo **Nombre de sesión**y haga clic en el botón **Iniciar análisis** de la barra de herramientas. Puede repetir los pasos 2 y 3 con esta nueva sesión de optimización para ver las recomendaciones.  
+6.  Escriba **EvaluateMySession** para el nuevo **Nombre de sesión** y haga clic en el botón **Iniciar análisis** de la barra de herramientas. Puede repetir los pasos 2 y 3 con esta nueva sesión de optimización para ver las recomendaciones.  
   
 ### <a name="summary"></a>Resumen  
 Evaluar un subconjunto de recomendaciones de optimización puede ser necesario si tiene que cambiar las opciones de optimización después de ejecutar una sesión. Por ejemplo, si solicita al Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que tenga en cuenta las vistas indizadas cuando especifique opciones de optimización para una sesión, pero, después de que la recomendación se genere, decide usar las vistas indizadas de nuevo, Puede usar la opción **Evaluar recomendaciones** del menú **Acciones** para que el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] vuelva a evaluar la sesión omitiendo las vistas indexadas. Cuando utilice la opción **Evaluar recomendaciones** , las recomendaciones generadas previamente se aplicarán hipotéticamente al diseño físico actual para lograr el diseño físico de la segunda sesión de optimización.  

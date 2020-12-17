@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4f65282964494ba1fdb160b1e755922a60ad80d8
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4053b827b51eda8f238e6cada863773d625d1f59
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394991"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999238"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -245,10 +245,10 @@ replmerg [-?]
  Especifica la contraseña utilizada al conectarse a una DLL ISAPI de escucha de replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que requiere autenticación.  
   
  **-InternetProxyLogin**  *internet_proxy_login*  
- Especifica el nombre de inicio de sesión utilizado para conectarse a un servidor proxy definido en *internet_proxy_server*que requiere autenticación.  
+ Especifica el nombre de inicio de sesión utilizado para conectarse a un servidor proxy definido en *internet_proxy_server* que requiere autenticación.  
   
  **–InternetProxyPassword**  *internet_proxy_password*  
- Especifica la contraseña utilizada para conectarse a un servidor proxy definido en *internet_proxy_server*que requiere autenticación.  
+ Especifica la contraseña utilizada para conectarse a un servidor proxy definido en *internet_proxy_server* que requiere autenticación.  
   
  **-InternetProxyServer**  *internet_proxy_server*  
  Especifica qué servidor proxy se debe utilizar al obtener acceso al recurso HTTP especificado en *internet_url*.  
@@ -292,7 +292,12 @@ replmerg [-?]
  Especifica si el resultado debería ser detallado. Si el nivel detallado es **0**, solo se imprimen los mensajes de error. Si el nivel detallado es **1**, se imprimen todos los mensajes del informe de progreso. Si el nivel detallado es **2** (valor predeterminado), se imprimen todos los mensajes de error y mensajes del informe de progreso, lo que es útil para la depuración.  
   
  **-ParallelUploadDownload** [**0**\|**1**]  
- Especifica si el Agente de mezcla debe procesar en paralelo los cambios cargados al Publicador y los descargados al Suscriptor. Esto es útil en entornos de grandes volúmenes con un ancho de banda de red elevado. Si **ParallelUploadDownload** es **1**, se habilita el procesamiento en paralelo.  
+ Especifica si el Agente de mezcla debe procesar en paralelo los cambios cargados al Publicador y los descargados al Suscriptor. Esto es útil en entornos de grandes volúmenes con un ancho de banda de red elevado. Pero tenga en cuenta la siguiente advertencia para los casos en los que **ParallelUploadDownload** está establecido en **1**.
+ 
+Este parámetro está en la lista para posiblemente quedar en desuso en breve. Se recomienda establecer el parámetro **ParallelUploadDownload** en 0 y evitar el uso del perfil de agente de mezcla "Grandes volúmenes entre servidores", ya que **ParallelUploadDownload** está establecido en 1 en este perfil.
+
+> [!WARNING]
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]
   
  **-PacketSize**  
  Es el tamaño del paquete, en bytes. El valor predeterminado es 4096 (bytes).  

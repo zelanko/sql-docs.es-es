@@ -8,25 +8,25 @@ ms.date: 05/27/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 0bbc530a84ca09ce5e2797bc770e50a20fc5113e
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ee042503a0d88a878b96caba480551e9553d6a88
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869981"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471006"
 ---
 # <a name="get-r-package-information"></a>Obtención de información de paquetes de R
 
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 En este artículo se describe cómo obtener información sobre los paquetes de R instalados en [Machine Learning Services en SQL Server](../sql-server-machine-learning-services.md) y en [Clústeres de macrodatos](../../big-data-cluster/machine-learning-services.md). Los scripts de R de ejemplo muestran cómo mostrar información de paquetes, como la ruta de instalación y la versión.
 ::: moniker-end
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 En este artículo se describe cómo obtener información sobre los paquetes de R instalados en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Los scripts de R de ejemplo muestran cómo mostrar información de paquetes, como la ruta de instalación y la versión.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 En este artículo se describe cómo obtener información sobre los paquetes de R instalados en [Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview). Los scripts de R de ejemplo muestran cómo mostrar información de paquetes, como la ruta de instalación y la versión.
 ::: moniker-end
 
@@ -37,7 +37,7 @@ Al instalar Machine Learning con SQL Server, se crea una biblioteca de paquetes
 Todo el script que se ejecuta en la base de datos en SQL Server debe cargar funciones desde la biblioteca de instancias. SQL Server no puede obtener acceso a los paquetes instalados en otras bibliotecas. También se aplica a los clientes remotos: cualquier script de R que se ejecute en el contexto del proceso del servidor solo puede usar paquetes instalados en la biblioteca de instancias.
 Para proteger los recursos del servidor, la biblioteca de instancias predeterminadas solo la puede modificar un administrador del equipo.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 La ruta de acceso predeterminada de los archivos binarios de R es:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
@@ -45,7 +45,7 @@ La ruta de acceso predeterminada de los archivos binarios de R es:
 Se da por sentado que la instancia predeterminada de SQL es MSSQLSERVER. Si se instala SQL Server como instancia con nombre definida por el usuario, se usará el nombre especificado.
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 La ruta de acceso predeterminada de los archivos binarios de R es:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library`
@@ -53,7 +53,7 @@ La ruta de acceso predeterminada de los archivos binarios de R es:
 Se da por sentado que la instancia predeterminada de SQL es MSSQLSERVER. Si se instala SQL Server como instancia con nombre definida por el usuario, se usará el nombre especificado.
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 La ruta de acceso predeterminada de los archivos binarios de R es:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\library`
@@ -73,7 +73,7 @@ GO
 
 ## <a name="default-microsoft-r-packages"></a>Paquetes predeterminados de R en Microsoft
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 Los siguientes paquetes de R de Microsoft se instalan con SQL Server R Services.
 
@@ -84,7 +84,7 @@ Los siguientes paquetes de R de Microsoft se instalan con SQL Server R Services
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 Los siguientes paquetes de R de Microsoft se instalan con SQL Server Machine Learning Services al seleccionar la característica de R durante la instalación.
 
@@ -97,7 +97,7 @@ Los siguientes paquetes de R de Microsoft se instalan con SQL Server Machine Le
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 
 Los siguientes paquetes de R de Microsoft se instalan con SQL Server Machine Learning Services al seleccionar la característica de R durante la instalación.
 
@@ -114,7 +114,7 @@ Los siguientes paquetes de R de Microsoft se instalan con SQL Server Machine Le
 
 De forma predeterminada, los paquetes de R se actualizan mediante Service Packs y actualizaciones acumulativas. Los paquetes adicionales y las actualizaciones de versión completa de los componentes básicos de R solo son posibles mediante las actualizaciones de producto o enlazando la compatibilidad de R con Microsoft Machine Learning Server.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Además, puede agregar paquetes de MicrosoftML y olapR a una instancia de SQL Server a través de una actualización de componente.
 ::: moniker-end
 
@@ -178,9 +178,9 @@ print(packageDescription("MicrosoftML"))
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 + [Instalación de paquetes con herramientas de R](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [Instalación de nuevos paquetes de R con sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

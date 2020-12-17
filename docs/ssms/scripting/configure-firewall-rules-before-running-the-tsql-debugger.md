@@ -22,13 +22,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.date: 10/20/2016
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18ddcd8e2671416af4af22ee324caedd296b89bf
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b3b03ba4a8fae0114991cfb7556070b6a2266acd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039089"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474296"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurar reglas de firewall antes de ejecutar al depurador de TSQL
 
@@ -50,7 +50,7 @@ El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] incluye los componen
 
 No existen requisitos de configuración para ejecutar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] cuando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] se ejecute en el mismo equipo que la instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. No obstante, para ejecutar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] al establecer conexión con una instancia remota del [!INCLUDE[ssDE](../../includes/ssde-md.md)], se deben habilitar reglas de programas y puertos en el Firewall de Windows de ambos equipos. Estas reglas las puede crear el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si obtiene errores al intentar abrir una sesión de depuración remota, asegúrese de que las reglas de firewall siguientes estén definidas en el equipo.
 
-Use la aplicación **Firewall de Windows con seguridad avanzada** para administrar las reglas de firewall. Tanto en [!INCLUDE[win7](../../includes/win7-md.md)] como en [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], abra **Panel de control**, abra **Firewall de Windows**y seleccione **Configuración avanzada**. En [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] también puede abrir **Administrador de servicios**, expandir **Configuración** en el panel izquierdo y expandir **Firewall de Windows con seguridad avanzada**.
+Use la aplicación **Firewall de Windows con seguridad avanzada** para administrar las reglas de firewall. Tanto en [!INCLUDE[win7](../../includes/win7-md.md)] como en [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], abra **Panel de control**, abra **Firewall de Windows** y seleccione **Configuración avanzada**. En [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] también puede abrir **Administrador de servicios**, expandir **Configuración** en el panel izquierdo y expandir **Firewall de Windows con seguridad avanzada**.
 
 > [!CAUTION]
 >  Al habilitar reglas en Firewall de Windows, el equipo puede quedar expuesto a amenazas de seguridad que el firewall está diseñado para bloquear. Al habilitar reglas para la depuración remota se desbloquean los puertos y los programas mostrados en este tema.
@@ -60,13 +60,13 @@ En el equipo en el que se ejecuta la instancia del [!INCLUDE[ssDE](../../include
 
 - Agregar una regla de programa de entrada para sqlservr.exe. Debe tener una regla para cada instancia que necesite admitir sesiones de depuración remota.
 
-   1. En la opción **Firewall de Windows con seguridad avanzada**del panel izquierdo, haga clic con el botón derecho en **Reglas de entrada**y, luego, seleccione **Nueva regla** en el panel de acciones.
+   1. En la opción **Firewall de Windows con seguridad avanzada** del panel izquierdo, haga clic con el botón derecho en **Reglas de entrada** y, luego, seleccione **Nueva regla** en el panel de acciones.
 
-   2. En el cuadro de diálogo **Tipo de regla** , seleccione **Programa**y, a continuación, haga clic en **Siguiente**.
+   2. En el cuadro de diálogo **Tipo de regla** , seleccione **Programa** y, a continuación, haga clic en **Siguiente**.
 
    3. En el cuadro de diálogo **Programa** , seleccione **Esta ruta de acceso del programa:** y escriba la ruta de acceso completa a sqlservr.exe para esta instancia. De forma predeterminada, sqlservr.exe se instala en C:\Archivos de programa\Microsoft SQL Server\MSSQL13.*nombreDeInstancia*\MSSQL\Binn, donde *nombreDeInstancia* es MSSQLSERVER para la instancia predeterminada y el nombre de la instancia de cualquier instancia con nombre.
 
-   4. En el cuadro de diálogo **Acción** , seleccione **Permitir la conexión**y, a continuación, haga clic en **Siguiente**.
+   4. En el cuadro de diálogo **Acción** , seleccione **Permitir la conexión** y, a continuación, haga clic en **Siguiente**.
 
    5. En el cuadro de diálogo **Perfil** , seleccione los perfiles que describan el entorno de conexión del equipo cuando desee abrir una sesión de depuración con la instancia y, a continuación, haga clic en **Siguiente**.
 
@@ -76,17 +76,17 @@ En el equipo en el que se ejecuta la instancia del [!INCLUDE[ssDE](../../include
 
    8. Seleccione la pestaña **Protocolos y puertos** .
 
-   9. Seleccione **TCP** en el cuadro **Tipo de protocolo:** , seleccione **Puertos dinámicos RPC** en el cuadro **Puerto local:** , haga clic en **Aplicar**y, a continuación, haga clic en **Aceptar**.
+   9. Seleccione **TCP** en el cuadro **Tipo de protocolo:** , seleccione **Puertos dinámicos RPC** en el cuadro **Puerto local:** , haga clic en **Aplicar** y, a continuación, haga clic en **Aceptar**.
 
 - Agregue una regla de programa de entrada para svchost.exe con el fin de habilitar las comunicaciones DCOM desde sesiones remotas del depurador.
 
-   1. En la opción **Firewall de Windows con seguridad avanzada**del panel izquierdo, haga clic con el botón derecho en **Reglas de entrada**y, luego, seleccione **Nueva regla** en el panel de acciones.
+   1. En la opción **Firewall de Windows con seguridad avanzada** del panel izquierdo, haga clic con el botón derecho en **Reglas de entrada** y, luego, seleccione **Nueva regla** en el panel de acciones.
 
-   2. En el cuadro de diálogo **Tipo de regla** , seleccione **Programa**y, a continuación, haga clic en **Siguiente**.
+   2. En el cuadro de diálogo **Tipo de regla** , seleccione **Programa** y, a continuación, haga clic en **Siguiente**.
 
    3. En el cuadro de diálogo **Programa** , seleccione **Esta ruta de acceso del programa:** y escriba la ruta de acceso completa a svchost.exe. De forma predeterminada, svchost.exe se instala en %systemroot%\System32\svchost.exe.
 
-   4. En el cuadro de diálogo **Acción** , seleccione **Permitir la conexión**y, a continuación, haga clic en **Siguiente**.
+   4. En el cuadro de diálogo **Acción** , seleccione **Permitir la conexión** y, a continuación, haga clic en **Siguiente**.
 
    5. En el cuadro de diálogo **Perfil** , seleccione los perfiles que describan el entorno de conexión del equipo cuando desee abrir una sesión de depuración con la instancia y, a continuación, haga clic en **Siguiente**.
 
@@ -96,7 +96,7 @@ En el equipo en el que se ejecuta la instancia del [!INCLUDE[ssDE](../../include
 
    8. Seleccione la pestaña **Protocolos y puertos** .
 
-   9. Seleccione **TCP** en el cuadro **Tipo de protocolo:** , seleccione **Asignador de extremos de RPC** en el cuadro **Puerto local:** , haga clic en **Aplicar**y, a continuación, haga clic en **Aceptar**.
+   9. Seleccione **TCP** en el cuadro **Tipo de protocolo:** , seleccione **Asignador de extremos de RPC** en el cuadro **Puerto local:** , haga clic en **Aplicar** y, a continuación, haga clic en **Aceptar**.
 
 - Si la directiva de dominio necesita que las comunicaciones de red se realicen a través de IPsec, también debe agregar reglas de entrada que abran los puertos UDP 4500 y 500.
 
@@ -108,13 +108,13 @@ Si obtiene errores al intentar abrir una sesión de depuración remota, puede co
 
 - Agregue una entrada de programa para svchost:
 
-   1. En la opción **Firewall de Windows con seguridad avanzada**del panel izquierdo, haga clic con el botón derecho en **Reglas de entrada**y, luego, seleccione **Nueva regla** en el panel de acciones.
+   1. En la opción **Firewall de Windows con seguridad avanzada** del panel izquierdo, haga clic con el botón derecho en **Reglas de entrada** y, luego, seleccione **Nueva regla** en el panel de acciones.
 
-   2. En el cuadro de diálogo **Tipo de regla** , seleccione **Programa**y, a continuación, haga clic en **Siguiente**.
+   2. En el cuadro de diálogo **Tipo de regla** , seleccione **Programa** y, a continuación, haga clic en **Siguiente**.
 
    3. En el cuadro de diálogo **Programa** , seleccione **Esta ruta de acceso del programa:** y escriba la ruta de acceso completa a svchost.exe. De forma predeterminada, svchost.exe se instala en %systemroot%\System32\svchost.exe.
 
-   4. En el cuadro de diálogo **Acción** , seleccione **Permitir la conexión**y, a continuación, haga clic en **Siguiente**.
+   4. En el cuadro de diálogo **Acción** , seleccione **Permitir la conexión** y, a continuación, haga clic en **Siguiente**.
 
    5. En el cuadro de diálogo **Perfil** , seleccione los perfiles que describan el entorno de conexión del equipo cuando desee abrir una sesión de depuración con la instancia y, a continuación, haga clic en **Siguiente**.
 
@@ -124,13 +124,13 @@ Si obtiene errores al intentar abrir una sesión de depuración remota, puede co
 
    8. Seleccione la pestaña **Protocolos y puertos** .
 
-   9. Seleccione **TCP** en el cuadro **Tipo de protocolo:** , seleccione **Asignador de extremos de RPC** en el cuadro **Puerto local:** , haga clic en **Aplicar**y, a continuación, haga clic en **Aceptar**.
+   9. Seleccione **TCP** en el cuadro **Tipo de protocolo:** , seleccione **Asignador de extremos de RPC** en el cuadro **Puerto local:** , haga clic en **Aplicar** y, a continuación, haga clic en **Aceptar**.
 
 - Agregue una entrada de programa para la aplicación que hospeda el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Si necesita abrir sesiones de depuración remota desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] en el mismo equipo, debe agregar una regla de programa para ambos:
 
-   1. En la opción **Firewall de Windows con seguridad avanzada**del panel izquierdo, haga clic con el botón derecho en **Reglas de entrada**y, luego, seleccione **Nueva regla** en el panel de acciones.
+   1. En la opción **Firewall de Windows con seguridad avanzada** del panel izquierdo, haga clic con el botón derecho en **Reglas de entrada** y, luego, seleccione **Nueva regla** en el panel de acciones.
 
-   2. En el cuadro de diálogo **Tipo de regla** , seleccione **Programa**y, a continuación, haga clic en **Siguiente**.
+   2. En el cuadro de diálogo **Tipo de regla** , seleccione **Programa** y, a continuación, haga clic en **Siguiente**.
 
    3. En el cuadro de diálogo **Programa** , seleccione **Esta ruta de acceso del programa:** y escriba uno de estos tres valores.
 
@@ -144,7 +144,7 @@ Si obtiene errores al intentar abrir una sesión de depuración remota, puede co
 
             3. Puede encontrar la ruta de acceso a ssms.exe en el acceso directo que emplea para iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puede encontrar la ruta de acceso a devenv.exe en el acceso directo que emplea para iniciar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Haga clic con el botón secundario en el acceso directo y seleccione **Propiedades**. El archivo ejecutable y la ruta de acceso se muestran en el cuadro **Destino** .
 
-   4. En el cuadro de diálogo **Acción** , seleccione **Permitir la conexión**y, a continuación, haga clic en **Siguiente**.
+   4. En el cuadro de diálogo **Acción** , seleccione **Permitir la conexión** y, a continuación, haga clic en **Siguiente**.
 
    5. En el cuadro de diálogo **Perfil** , seleccione los perfiles que describan el entorno de conexión del equipo cuando desee abrir una sesión de depuración con la instancia y, a continuación, haga clic en **Siguiente**.
 
@@ -154,7 +154,7 @@ Si obtiene errores al intentar abrir una sesión de depuración remota, puede co
 
    8. Seleccione la pestaña **Protocolos y puertos** .
 
-   9. Seleccione **TCP** en el cuadro **Tipo de protocolo:** , seleccione **Puertos dinámicos RPC** en el cuadro **Puerto local:** , haga clic en **Aplicar**y, a continuación, haga clic en **Aceptar**.
+   9. Seleccione **TCP** en el cuadro **Tipo de protocolo:** , seleccione **Puertos dinámicos RPC** en el cuadro **Puerto local:** , haga clic en **Aplicar** y, a continuación, haga clic en **Aceptar**.
 
 ## <a name="requirements-for-starting-the-debugger"></a>Requisitos para iniciar el depurador
 

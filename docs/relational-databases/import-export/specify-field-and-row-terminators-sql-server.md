@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d36cb40971fc371022eb71dc922eb22a198bab9e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 88b25ab93d2baf680464d70b08bf6962b6aafb4c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001712"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407571"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo y de fila (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "86001712"
         > [!NOTE]  
         >  Si se especifica el modificador **-n** (datos nativos) o **-N** (nativos Unicode), no se insertan los terminadores.  
   
-    -   Si un comando **bcp** interactivo contiene la opción **in** o **out** sin el modificador de archivo de formato ( **-f**) ni un modificador de formato de datos ( **-n**, **-c**, **-w**o **-N**), y ha decidido no especificar la longitud de prefijo ni la longitud de campo, el comando solicita el terminador de cada campo, con el valor predeterminado "none":  
+    -   Si un comando **bcp** interactivo contiene la opción **in** o **out** sin el modificador de archivo de formato ( **-f**) ni un modificador de formato de datos ( **-n**, **-c**, **-w** o **-N**), y ha decidido no especificar la longitud de prefijo ni la longitud de campo, el comando solicita el terminador de cada campo, con el valor predeterminado "none":  
   
          `Enter field terminator [none]:`  
   
@@ -138,8 +138,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualifier|Descripción|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='***field_terminator***'**|Especifica el terminador de campo que se utilizará para los archivos de caracteres y de caracteres Unicode.<br /><br /> El valor predeterminado es \t (carácter de tabulación).|  
-    |ROWTERMINATOR **='***row_terminator***'**|Especifica el terminador de fila que se utilizará para los archivos de caracteres y de caracteres Unicode.<br /><br /> El valor predeterminado es \n (carácter de nueva línea).|  
+    |FIELDTERMINATOR **="** _terminador_de_campo_*_"_*|Especifica el terminador de campo que se utilizará para los archivos de caracteres y de caracteres Unicode.<br /><br /> El valor predeterminado es \t (carácter de tabulación).|  
+    |ROWTERMINATOR **="** _terminador_de_fila_*_"_*|Especifica el terminador de fila que se utilizará para los archivos de caracteres y de caracteres Unicode.<br /><br /> El valor predeterminado es \n (carácter de nueva línea).|  
   
      Para obtener más información, vea [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   

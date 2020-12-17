@@ -13,12 +13,12 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 8fd0bbad8ede056d1d35a9be62e82704575472bd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 839a1d906fcd7b6a4a980a7381b4f5fcdcf10d5d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482506"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644047"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,8 +29,8 @@ ms.locfileid: "97482506"
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|request_id y step_index componen la clave para esta vista.<br /><br /> IDENTIFICADOR numérico único asociado a la solicitud.|Vea request_id en [sys.dm_pdw_exec_requests &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|request_id y step_index componen la clave para esta vista.<br /><br /> La posición de este paso en la secuencia de pasos que componen la solicitud.|de 0 a (n-1) para una solicitud con n pasos.|  
-|plan_node_id|**int**|IDENTIFICADOR de nodo que corresponde al identificador de operador de ese paso en el plan de ejecución.|Ninguno|  
-|operation_type|**nvarchar(35)**|Tipo de operación representada por este paso.|**Operaciones del plan de consulta de DMS:** ' ReturnOperation ', ' PartitionMoveOperation ', ' MoveOperation ', ' BroadcastMoveOperation ', ' ShuffleMoveOperation ', ' TrimMoveOperation ', ' CopyOperation ', ' DistributeReplicatedTableMoveOperation '<br /><br /> **Operaciones del plan de consulta SQL:** ' Operación ', ' RemoteOperation '<br /><br /> **Otras operaciones del plan de consulta:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Operaciones externas para lecturas:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Operaciones externas para MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Operaciones externas para Escrituras:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Para obtener más información, vea "Descripción de los planes de consulta" en la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] . <br /><br />  Un plan de consulta también puede verse afectado por la configuración de la base de datos.  Active [las opciones de ALTER DATABASE Set](../../t-sql/statements/alter-database-transact-sql-set-options.md?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json&view=azure-sqldw-latest) para obtener más información.|  
+|plan_node_id|**int**|IDENTIFICADOR de nodo que corresponde al identificador de operador de ese paso en el plan de ejecución.|None|  
+|operation_type|**nvarchar(35)**|Tipo de operación representada por este paso.|**Operaciones del plan de consulta de DMS:** ' ReturnOperation ', ' PartitionMoveOperation ', ' MoveOperation ', ' BroadcastMoveOperation ', ' ShuffleMoveOperation ', ' TrimMoveOperation ', ' CopyOperation ', ' DistributeReplicatedTableMoveOperation '<br /><br /> **Operaciones del plan de consulta SQL:** ' Operación ', ' RemoteOperation '<br /><br /> **Otras operaciones del plan de consulta:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Operaciones externas para lecturas:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Operaciones externas para MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Operaciones externas para Escrituras:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Para obtener más información, vea "Descripción de los planes de consulta" en la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] . <br /><br />  Un plan de consulta también puede verse afectado por la configuración de la base de datos.  Active [las opciones de ALTER DATABASE Set](../../t-sql/statements/alter-database-transact-sql-set-options.md?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json&view=azure-sqldw-latest&preserve-view=true) para obtener más información.|  
 |distribution_type|**nvarchar(32)**|Tipo de distribución que se va a someter a este paso.|' AllNodes ', ' AllDistributions ', ' AllComputeNodes ', ' ComputeNode ', ' Distribution ', ' SubsetNodes ', ' SubsetDistributions ', ' unespecifiqued '|  
 |location_type|**nvarchar(32)**|Dónde se está ejecutando el paso.|' Compute ', ' control ', ' DMS '|  
 |status|**nvarchar(32)**|Estado de este paso.|Pending, running, complete, failed, UndoFailed, PendingCancel, Canceled, Undone, Aborted|  

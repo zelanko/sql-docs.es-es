@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5585f26247ad360fa848a24109416a59c49c94a6
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 412d1501344f5cdcb64ebd08cc9d328f4b7090c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793782"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469986"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Implementación del modelo de R y su uso en SQL Server (tutorial)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -29,7 +29,7 @@ En este artículo se muestran las dos formas más habituales de usar un modelo e
 
 ## <a name="batch-scoring"></a>Puntuación por lotes
 
-Cree un procedimiento almacenado, *PredictTipBatchMode* , que genere varias predicciones, pasando una consulta o tabla SQL como entrada. Se devuelve una tabla de resultados, que puede insertar directamente en una tabla o escribir en un archivo.
+Cree un procedimiento almacenado, *PredictTipBatchMode*, que genere varias predicciones, pasando una consulta o tabla SQL como entrada. Se devuelve una tabla de resultados, que puede insertar directamente en una tabla o escribir en un archivo.
 
 - Obtiene un conjunto de datos de entrada como una consulta SQL
 - Llama al modelo de regresión logística entrenado que ha guardado en la lección anterior
@@ -74,11 +74,11 @@ Cree un procedimiento almacenado, *PredictTipBatchMode* , que genere varias pred
 
     + Use una instrucción SELECT para llamar al modelo almacenado desde una tabla SQL. El modelo se recupera de la tabla como datos **varbinary(max)** , se almacena en la variable SQL _\@lmodel2_ y se pasa como parámetro *mod* al procedimiento almacenado del sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Los datos que se usan como entradas de la puntuación se definen como una consulta SQL y se almacenan como una cadena en la variable SQL _\@input_ . A medida que se recuperan datos de la base de datos, se van almacenando en una trama de datos llamada *InputDataSet* , que es sencillamente el nombre predeterminado de los datos de entrada en el procedimiento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Si lo necesita, puede establecer otro nombre de variable con el parámetro _\@input_data_1_name_ .
+    + Los datos que se usan como entradas de la puntuación se definen como una consulta SQL y se almacenan como una cadena en la variable SQL _\@input_. A medida que se recuperan datos de la base de datos, se van almacenando en una trama de datos llamada *InputDataSet*, que es sencillamente el nombre predeterminado de los datos de entrada en el procedimiento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Si lo necesita, puede establecer otro nombre de variable con el parámetro _\@input_data_1_name_.
 
-    + Para generar las puntuaciones, el procedimiento almacenado llama a la función rxPredict de la biblioteca **RevoScaleR** .
+    + Para generar las puntuaciones, el procedimiento almacenado llama a la función rxPredict de la biblioteca **RevoScaleR**.
 
-    + El valor devuelto, *Score* , es la probabilidad de que el conductor reciba una propina, según el modelo. De manera opcional, podría aplicar fácilmente algún tipo de filtro a los valores devueltos para clasificarlos en grupos tipo "propina" o "sin propina".  Por ejemplo, una probabilidad menor que 0,5 significaría que no es probable que reciba una propina.
+    + El valor devuelto, *Score*, es la probabilidad de que el conductor reciba una propina, según el modelo. De manera opcional, podría aplicar fácilmente algún tipo de filtro a los valores devueltos para clasificarlos en grupos tipo "propina" o "sin propina".  Por ejemplo, una probabilidad menor que 0,5 significaría que no es probable que reciba una propina.
   
 2.  Para llamar al procedimiento almacenado en el modo por lotes, se define la consulta requerida como entrada del procedimiento almacenado. La siguiente es la consulta SQL que se puede ejecutar en SSMS para comprobar que esto funciona.
 
@@ -192,13 +192,13 @@ El procedimiento almacenado *PredictTipSingleMode* muestra este método. Toma co
     END
     ```
 
-2. En SQL Server Management Studio, pude usar el procedimiento de [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** (o **EXECUTE** ) para llamar al procedimiento almacenado y pasar las entradas necesarias. Pruebe a ejecutar, por ejemplo, esta instrucción en Management Studio:
+2. En SQL Server Management Studio, pude usar el procedimiento de [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** (o **EXECUTE**) para llamar al procedimiento almacenado y pasar las entradas necesarias. Pruebe a ejecutar, por ejemplo, esta instrucción en Management Studio:
 
     ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    Los valores pasados aquí se corresponden, respectivamente, con las variables _passenger\_count_ , _trip_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ y _dropoff\_longitude_ .
+    Los valores pasados aquí se corresponden, respectivamente, con las variables _passenger\_count_, _trip_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ y _dropoff\_longitude_.
 
 3. Para ejecutar esta misma llamada desde código R, basta con definir una variable de R que contenga toda la llamada al procedimiento almacenado, como el siguiente:
 
@@ -206,9 +206,9 @@ El procedimiento almacenado *PredictTipSingleMode* muestra este método. Toma co
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
-    Los valores pasados aquí se corresponden, respectivamente, con las variables _passenger\_count_ , _trip\_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ y _dropoff\_longitude_ .
+    Los valores pasados aquí se corresponden, respectivamente, con las variables _passenger\_count_, _trip\_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ y _dropoff\_longitude_.
 
-4. Llame a `sqlQuery` (desde el paquete **RODBC** ) y pase la cadena de conexión, así como la variable de cadena que contiene la llamada al procedimiento almacenado.
+4. Llame a `sqlQuery` (desde el paquete **RODBC**) y pase la cadena de conexión, así como la variable de cadena que contiene la llamada al procedimiento almacenado.
 
     ```R
     # predict with stored procedure in single mode

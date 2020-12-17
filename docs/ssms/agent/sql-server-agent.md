@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0270966cb84ee7fab587f92a5c84f9f52ad128f0
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 58d9f3921500e2fd7fd1fa02046d4f89d67ccbeb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036608"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478796"
 ---
 # <a name="sql-server-agent"></a>Agente SQL Server
 
@@ -115,10 +115,10 @@ Para enviar a los operadores notificaciones por correo electrónico o buscaperso
 Puede definir un operador como alias de un grupo de personas. De esta manera, todos los miembros de este alias pueden recibir notificaciones al mismo tiempo. Para obtener más información, vea [Operadores (Guía de programación de C#)](../../ssms/agent/operators.md).  
   
 ## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>Seguridad en la administración del Agente SQL Server  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa los roles fijos de base de datos **SQLAgentUserRole**, **SQLAgentReaderRole**y **SQLAgentOperatorRole** en la base de datos **msdb** para controlar el acceso al Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para aquellos usuarios que no son miembros del rol fijo de servidor **sysadmin** . Además de estos roles fijos de base de datos, los subsistemas y los servidores proxy ayudan a los administradores de bases de datos a garantizar que cada paso de trabajo se ejecuta con los permisos mínimos necesarios para realizar la tarea.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa los roles fijos de base de datos **SQLAgentUserRole**, **SQLAgentReaderRole** y **SQLAgentOperatorRole** en la base de datos **msdb** para controlar el acceso al Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para aquellos usuarios que no son miembros del rol fijo de servidor **sysadmin** . Además de estos roles fijos de base de datos, los subsistemas y los servidores proxy ayudan a los administradores de bases de datos a garantizar que cada paso de trabajo se ejecuta con los permisos mínimos necesarios para realizar la tarea.  
   
 ### <a name="roles"></a>Roles  
-Los miembros de los roles fijos de base de datos **SQLAgentUserRole**, **SQLAgentReaderRole**y **SQLAgentOperatorRole** de **msdb**y los miembros del rol fijo de servidor **sysadmin** tienen acceso al Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un usuario que no pertenezca a ninguno de estos roles no puede utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información sobre los roles que usa el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
+Los miembros de los roles fijos de base de datos **SQLAgentUserRole**, **SQLAgentReaderRole** y **SQLAgentOperatorRole** de **msdb** y los miembros del rol fijo de servidor **sysadmin** tienen acceso al Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un usuario que no pertenezca a ninguno de estos roles no puede utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información sobre los roles que usa el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Subsistemas  
 Un subsistema es un objeto predefinido que representa las funciones disponibles para un paso de trabajo. Cada proxy tiene acceso a uno o varios subsistemas. Los subsistemas proporcionan seguridad, ya que delimitan el acceso a las que funciones que están disponibles para el proxy. Cada paso de trabajo se ejecuta en el contexto de un proxy, con la excepción de los pasos de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El trabajo [!INCLUDE[tsql](../../includes/tsql-md.md)] usa el comando EXECUTE AS para establecer el contexto de seguridad como su propietario.  
@@ -147,7 +147,7 @@ Un subsistema es un objeto predefinido que representa las funciones disponibles 
 ### <a name="proxies"></a>Servidores proxy  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa servidores proxy para administrar contextos de seguridad. Se puede utilizar un servidor proxy en más de un paso de trabajo. Los miembros del rol fijo de servidor **sysadmin** pueden crear servidores proxy.  
   
-Cada proxy se corresponde con unas credenciales de seguridad. Cada proxy puede asociarse a un conjunto de subsistemas y un conjunto de inicios de sesión. El proxy solo se puede utilizar con pasos de trabajo que utilizan un subsistema asociado al proxy. Para crear un paso de trabajo que utilice un proxy determinado, el propietario del trabajo debe utilizar un inicio de sesión asociado al proxy o debe ser miembro de un rol con acceso ilimitado a los servidores proxy. Los miembros del rol fijo de servidor **sysadmin** tienen acceso ilimitado a los servidores proxy. Los miembros de **SQLAgentUserRole**, **SQLAgentReaderRole**o **SQLAgentOperatorRole** solo pueden utilizar servidores proxy para los que dispongan de acceso específico. Cada usuario que sea miembro de alguno de estos roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener acceso a servidores proxy específicos para poder crear pasos de trabajo que usen esos proxy.  
+Cada proxy se corresponde con unas credenciales de seguridad. Cada proxy puede asociarse a un conjunto de subsistemas y un conjunto de inicios de sesión. El proxy solo se puede utilizar con pasos de trabajo que utilizan un subsistema asociado al proxy. Para crear un paso de trabajo que utilice un proxy determinado, el propietario del trabajo debe utilizar un inicio de sesión asociado al proxy o debe ser miembro de un rol con acceso ilimitado a los servidores proxy. Los miembros del rol fijo de servidor **sysadmin** tienen acceso ilimitado a los servidores proxy. Los miembros de **SQLAgentUserRole**, **SQLAgentReaderRole** o **SQLAgentOperatorRole** solo pueden utilizar servidores proxy para los que dispongan de acceso específico. Cada usuario que sea miembro de alguno de estos roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener acceso a servidores proxy específicos para poder crear pasos de trabajo que usen esos proxy.  
   
 ## <a name="related-tasks"></a>Related Tasks  
 Use los pasos siguientes para configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera que se automatice la administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  

@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 744120ac17992b75f63e510414cdfc79e4527a8b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 66eda4d5c7cf3d5098eec0f00e4cb5dbf50cd0d7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036153"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478726"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Depurador de Transact-SQL: ventana Resultados
 
@@ -32,7 +32,7 @@ Esta ventana muestra mensajes de estado de varias características de [!INCLUDE[
   
  **Para tener acceso a la ventana Resultados**  
   
--   En el menú **Ver** , haga clic en **Otras ventanas**y haga clic en **Resultados**.  
+-   En el menú **Ver** , haga clic en **Otras ventanas** y haga clic en **Resultados**.  
   
 ## <a name="options"></a>Opciones  
  **Lista de paneles de resultados**  

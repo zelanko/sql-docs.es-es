@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a7ef1c053dbf22bc1717a47d9a662d1d29fd55f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 28b62c4f3bc15e00337099fd3f954406e3f04122
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247571"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425500"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Crear una alerta de datos en el Diseñador de alertas de datos
 
@@ -82,7 +82,7 @@ Las definiciones de alertas de datos se crean en el Diseñador de alertas de dat
   
      La cláusula OR se agrega debajo y dentro de la regla AND.  
   
-12. De manera opcional, haga clic en la flecha abajo, seleccione **Modo de selección de campos**y, después, seleccione una columna de la lista.  
+12. De manera opcional, haga clic en la flecha abajo, seleccione **Modo de selección de campos** y, después, seleccione una columna de la lista.  
   
      Observará que el signo de puntos suspensivos **(...)** en los que se hace clic para agregar cláusulas OR ha desaparecido.  
   
@@ -98,7 +98,7 @@ Las definiciones de alertas de datos se crean en el Diseñador de alertas de dat
   
      La fecha de inicio predeterminada es la fecha actual.  
   
-17. Si lo desea, active la casilla situada junto a **Detener alerta el**y después elija una fecha para detener el mensaje de alerta.  
+17. Si lo desea, active la casilla situada junto a **Detener alerta el** y después elija una fecha para detener el mensaje de alerta.  
   
      De forma predeterminada, un mensaje de alerta no tiene ninguna fecha de detención.  
   

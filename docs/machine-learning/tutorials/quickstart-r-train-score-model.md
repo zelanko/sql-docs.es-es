@@ -9,27 +9,27 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ca5b9db64d7846caf9f97188614f11faa7e4d1d
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 9e2f5f7d35eb029dce0b88825f3c60989e35db06
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870340"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470236"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-machine-learning"></a>Inicio rápido: Creación y puntuación de un modelo predictivo en R con el aprendizaje automático de SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 En este inicio rápido, creará y entrenará un modelo predictivo con T. Guardará el modelo en una tabla de su instancia de SQL Server y, después, usará el modelo para predecir valores a partir de datos nuevos mediante [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) o en [clústeres de macrodatos](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 En este inicio rápido, creará y entrenará un modelo predictivo con T. Guardará el modelo en una tabla de su instancia de SQL Server y, después, usará el modelo para predecir valores a partir de datos nuevos mediante [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 En este inicio rápido, creará y entrenará un modelo predictivo con T. Guardará el modelo en una tabla de su instancia de SQL Server y, después, usará el modelo para predecir valores a partir de datos nuevos mediante [SQL Server R Services](../r/sql-server-r-services.md).
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 En este inicio rápido, creará y entrenará un modelo predictivo con T. Guardará el modelo en una tabla de su instancia de SQL Server y, después, usará el modelo para predecir valores a partir de datos nuevos mediante [Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
@@ -49,16 +49,16 @@ Después de completar este inicio rápido, aprenderá a:
 
 Para ejecutar este inicio rápido, debe cumplir los siguientes requisitos previos.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 - SQL Server Machine Learning Services. Para instalar Machine Learning Services, vea la [Guía de instalación para Windows](../install/sql-machine-learning-services-windows-install.md) o la [Guía de instalación para Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). También puede [habilitar Machine Learning Services en clústeres de macrodatos de SQL Server](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 - SQL Server Machine Learning Services. Para instalar Machine Learning Services, vea la [Guía de instalación para Windows](../install/sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 - SQL Server 2016 R Services. Para instalar R Services, consulte la [Guía de instalación de Windows](../install/sql-r-services-windows-install.md).
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 - Machine Learning Services en Azure SQL Managed Instance. Para obtener información, vea [Machine Learning Services de Instancia administrada de Azure SQL (versión preliminar)](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 

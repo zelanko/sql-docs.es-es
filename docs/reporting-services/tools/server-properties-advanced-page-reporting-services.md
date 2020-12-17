@@ -8,13 +8,13 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 10/19/2020
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e8bb8de8d13a9b7696bb6505363b15d38cd35994
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: ed31e889e195cffb828f5e04e131ffd2cb71fa84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194281"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466666"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>Página Opciones avanzadas de las propiedades del servidor: Power BI Report Server y Reporting Services
 
@@ -161,10 +161,10 @@ Incluye información de errores externa (por ejemplo, sobre los orígenes de dat
 Indica si se envían mensajes de error detallados al equipo cliente cuando los usuarios prueban las conexiones a orígenes de datos mediante el servidor de informes. El valor predeterminado es **true**. Si la opción se establece en **false**, solo se enviarán mensajes de error genéricos.
 
 ###  <a name="executionlogdayskept"></a>ExecutionLogDaysKept  
-Número de días que mantener la información de ejecución de informes en el registro de ejecución. Entre los valores válidos de esta propiedad están el rango **-1** - **2**,**147**,**483**y**647**. Si el valor es **-1**, no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es **60**.  
+Número de días que mantener la información de ejecución de informes en el registro de ejecución. Entre los valores válidos de esta propiedad están el rango **-1** - **2**,**147**,**483** y **647**. Si el valor es **-1**, no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es **60**.  
 
 > [!NOTE]
-> Si establece un valor de **0, se ** *eliminan* todas las entradas del registro de ejecución. Un valor de **-1** mantiene las entradas del registro de ejecución y no las elimina.
+> Si establece un valor de **0, se** *eliminan* todas las entradas del registro de ejecución. Un valor de **-1** mantiene las entradas del registro de ejecución y no las elimina.
 
 ### <a name="executionloglevel"></a>ExecutionLogLevel
 Establezca el nivel de registro de ejecución. *El valor predeterminado es Normal.*
@@ -227,10 +227,10 @@ Define la manera en la que se comprimen las instantáneas. El valor predetermina
 |**All**|Las instantáneas se comprimen para todas las opciones de almacenamiento, lo que incluye la base de datos del servidor de informes o el sistema de archivos.|
 
 ### <a name="storedparameterslifetime"></a>StoredParametersLifetime
-Especifica el número máximo de días que un parámetro almacenado puede estar almacenado. Los valores válidos **-1**y de **+1** a **2 147 483 647**. El valor predeterminado es **180** días.  
+Especifica el número máximo de días que un parámetro almacenado puede estar almacenado. Los valores válidos **-1** y de **+1** a **2 147 483 647**. El valor predeterminado es **180** días.  
 
 ### <a name="storedparametersthreshold"></a>StoredParametersThreshold
-Especifica el número máximo de valores de parámetro que se pueden almacenar por el servidor de informes. Los valores válidos **-1**y de **+1** a **2 147 483 647**. El valor predeterminado es **1500**.  
+Especifica el número máximo de valores de parámetro que se pueden almacenar por el servidor de informes. Los valores válidos **-1** y de **+1** a **2 147 483 647**. El valor predeterminado es **1500**.  
 
 ### <a name="supportedhyperlinkschemes"></a>SupportedHyperlinkSchemes 
 (Solo Power BI Report Server de enero de 2019, Reporting Services 2019 y versiones posteriores) Establece una lista separada por comas de los esquemas de URI que se pueden definir en acciones de hipervínculo que pueden representarse o "&ast;" para habilitar todos los esquemas de hipervínculo. Por ejemplo, al establecer "http, https" se permitirían los hipervínculos a "https://www. contoso.com", pero quitaría hipervínculos a "mailto:bill@contoso.com" o "javascript:window.open(‘ www.contoso.com’, ‘_blank’)". El valor predeterminado es "&ast;".

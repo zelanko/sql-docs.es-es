@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 00a34797c1253418230f5c40a57c2ce5e2948949
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: d92e83fd3bba6c5ee6ae6af3743de98000e05575
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866664"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408277"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>Preparación de los datos para la exportación o importación en bloque
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "91866664"
   
 -   Para importar datos de archivos de datos con campos de longitud fija o ancho fijo, use un archivo de formato. Para obtener más información, vea [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
--   Las operaciones de importación masiva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admiten los archivos de valores separados por comas (CSV). Sin embargo, en algunos casos se puede utilizar un archivo de valores separados por comas (CSV) como archivo de datos para una importación masiva de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tenga en cuenta que el terminador de campo de un archivo CSV no tiene que ser una coma. Para poderse utilizar como archivo de datos para la importación masiva, un archivo CSV debe observar las restricciones siguientes:  
+-  A partir de SQL Server 2017 se puede usar un archivo CSV como archivo de datos para una importación en bloque de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tenga en cuenta que el terminador de campo de un archivo CSV no tiene que ser una coma. Para poderse utilizar como archivo de datos para la importación masiva, un archivo CSV debe observar las restricciones siguientes:  
   
     -   Los campos de datos no contienen nunca el terminador de campo.  
   

@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307e262c57409725014a202b4a48143b5228763e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f4a350830a4d0672877cb94deb9b4baf8e602944
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036312"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466276"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Especificar un filtro del punto de interrupción
 
@@ -45,7 +45,7 @@ Los filtros del punto de interrupción no suelen utilizarse con el depurador de 
   
     -   **MachineName** es el equipo que ejecuta la instancia del Motor de base de datos.  
   
-    -   **ProcessID**y **ProcessName** son el proceso del sistema operativo que ejecuta la instancia del Motor de base de datos.  
+    -   **ProcessID** y **ProcessName** son el proceso del sistema operativo que ejecuta la instancia del Motor de base de datos.  
   
     -   **ThreadID** y **ThreadName** son el subproceso del sistema operativo que ejecuta el lote, procedimiento o función de [!INCLUDE[tsql](../../includes/tsql-md.md)] en la instancia del Motor de base de datos.  
   

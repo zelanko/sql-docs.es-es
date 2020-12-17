@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c71685e6abf6a38827394c24fb9d2dc5e1afb8d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dd26583a850cc3734c2201b0640da99ce971fa8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036272"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476906"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd: usar la utilidad
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "92036272"
     > **SUGERENCIA:** Para ver una lista de opciones admitidas por la utilidad **sqlcmd** , ejecute: `sqlcmd -?`.  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>Ejecutar instrucciones Transact-SQL de forma interactiva mediante sqlcmd  
- Se puede usar la utilidad **sqlcmd** de forma interactiva para ejecutar instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en una ventana del símbolo del sistema. Para ejecutar de forma interactiva instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante **sqlcmd**, ejecute la utilidad sin usar las opciones **-Q**, **-q**, **-Z**o **-i** para especificar archivos de entrada o consultas. Por ejemplo:  
+ Se puede usar la utilidad **sqlcmd** de forma interactiva para ejecutar instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en una ventana del símbolo del sistema. Para ejecutar de forma interactiva instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante **sqlcmd**, ejecute la utilidad sin usar las opciones **-Q**, **-q**, **-Z** o **-i** para especificar archivos de entrada o consultas. Por ejemplo:  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -385,7 +385,7 @@ ms.locfileid: "92036272"
  `Syed Abbas, Catherine Abel, Kim Abercrombie,`  
   
 ### <a name="f-using-sqlcmd-in-a-windows-script-file"></a>F. Usar sqlcmd en un archivo de script de Windows  
- Un comando **sqlcmd**como `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` se puede ejecutar en un archivo .bat junto con VBScript. En este caso, no se deben usar opciones interactivas. **sqlcmd** se debe instalar en el equipo que ejecuta el archivo .bat.  
+ Un comando **sqlcmd** como `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` se puede ejecutar en un archivo .bat junto con VBScript. En este caso, no se deben usar opciones interactivas. **sqlcmd** se debe instalar en el equipo que ejecuta el archivo .bat.  
   
  Primero, cree los siguientes cuatro archivos:  
   
@@ -453,7 +453,7 @@ ms.locfileid: "92036272"
  `SQLCMD returned 100 to the command shell`  
   
 ### <a name="g-using-sqlcmd-to-set-encryption-on-azure-sql-database"></a>G. Usar sqlcmd para establecer el cifrado en Azure SQL Database  
- Se puede ejecutar un comando **sqlcmd**en una conexión con datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] para especificar el cifrado y la confianza del certificado. Hay dos opciones **sqlcmd**disponibles:  
+ Se puede ejecutar un comando **sqlcmd** en una conexión con datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] para especificar el cifrado y la confianza del certificado. Hay dos opciones **sqlcmd** disponibles:  
   
 -   El modificador -N lo usa el cliente para solicitar una conexión cifrada. Esta opción es equivalente a ADO.net `ENCRYPT = true`.  
   

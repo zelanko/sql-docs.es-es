@@ -20,13 +20,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e71aa6719c06dd181d756ebb1ee5e14e47ba96f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 65ca95f3aa2cef72b49a9f80bdbf615e890a85d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038989"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478776"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Administrar el editor y el modo de vista
 
@@ -36,7 +36,7 @@ El editor permite controlar la vista del código de diferentes maneras.
 
 ## <a name="changing-the-view-mode"></a>Cambiar el modo de vista  
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye un modo de vista denominado **Organización por pestañas**que permite abrir varios editores y documentos al mismo tiempo, y tener acceso a ellos mediante pestañas situadas en la parte superior del editor. También puede abrir el entorno de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] en modo Interfaz de múltiples documentos (MDI) para unir las ventanas sin las pestañas y poder organizarlas en mosaico, minimizarlas, etc.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye un modo de vista denominado **Organización por pestañas** que permite abrir varios editores y documentos al mismo tiempo, y tener acceso a ellos mediante pestañas situadas en la parte superior del editor. También puede abrir el entorno de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] en modo Interfaz de múltiples documentos (MDI) para unir las ventanas sin las pestañas y poder organizarlas en mosaico, minimizarlas, etc.  
   
 #### <a name="to-switch-between-view-modes"></a>Para cambiar de un modo de vista a otro  
   

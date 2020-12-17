@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5df33c67466a355dd7b204dcfd6f12f146ac59bb
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8e6c97089feee33f1bbff76f0820ea37de5ae69c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093453"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474316"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modificar scripts SQLCMD con el Editor de consultas
 
@@ -54,7 +54,7 @@ Con el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!I
   
 #### <a name="to-switch-a-database-engine-query-editor-window-to-sqlcmd-mode"></a>Para cambiar una ventana del Editor de consultas de Database Engine al modo SQLCMD  
   
-1.  En el Explorador de objetos, haga clic con el botón derecho en el servidor y, después, haga clic en **Nueva consulta**para abrir una ventana nueva del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+1.  En el Explorador de objetos, haga clic con el botón derecho en el servidor y, después, haga clic en **Nueva consulta** para abrir una ventana nueva del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 2.  En el menú **Consulta** , haga clic en **Modo SQLCMD**.  
   
@@ -91,7 +91,7 @@ Con el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!I
  Para obtener más información acerca de cómo ejecutar SQLCMD, vea [sqlcmd Utility](../../tools/sqlcmd-utility.md)o realice el tutorial de SQLCMD.  
   
 ## <a name="enable-sqlcmd-scripting-by-default"></a>Habilitar scripting SQLCMD de forma predeterminada  
- Para activar scripting SQLCMD de forma predeterminada, seleccione **Opciones** en el menú **Herramientas**, expanda **Ejecución de la consulta**y **SQL Server**, haga clic en la página **General** y, a continuación, active la casilla **De forma predeterminada, abrir nuevas consultas en modo SQLCMD** .  
+ Para activar scripting SQLCMD de forma predeterminada, seleccione **Opciones** en el menú **Herramientas**, expanda **Ejecución de la consulta** y **SQL Server**, haga clic en la página **General** y, a continuación, active la casilla **De forma predeterminada, abrir nuevas consultas en modo SQLCMD** .  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>Escribir y modificar scripts SQLCMD  
  Tras habilitar el modo de scripting, puede escribir comandos SQLCMD e instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Se aplican las reglas siguientes:  

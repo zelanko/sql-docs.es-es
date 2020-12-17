@@ -16,13 +16,13 @@ ms.assetid: 8c7ef3b3-c06d-4a27-802d-ed329dc86ef3
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3793bd48e3b14c5bf8ae0e9f709751cf2b1f10d7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: b3a3de7f3d87cfdcda48fce509799c2107e05f05
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039197"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474486"
 ---
 # <a name="create-a-schedule"></a>Create a Schedule
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +55,7 @@ Para obtener información detallada, vea [Implementar la seguridad del Agente SQ
   
 1.  En el **Explorador de objetos** , conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]y, después, expándala.  
   
-2.  Expanda el **Agente SQL Server**, haga clic con el botón derecho en **Trabajos**y seleccione **Administrar programaciones**.  
+2.  Expanda el **Agente SQL Server**, haga clic con el botón derecho en **Trabajos** y seleccione **Administrar programaciones**.  
   
 3.  En el cuadro de diálogo **Administrar programaciones** , haga clic en **Nueva**.  
   
@@ -67,7 +67,7 @@ Para obtener información detallada, vea [Implementar la seguridad del Agente SQ
   
     -   Para iniciar el trabajo cuando las CPU alcancen la condición de inactivas, haga clic en **Iniciar al quedar inactivas las CPU**.  
   
-    -   Si desea que una programación se ejecute varias veces, haga clic en **Periódica**. Para establecer la programación periódica, rellene los grupos **Frecuencia**, **Frecuencia diaria**y **Duración** en el cuadro de diálogo.  
+    -   Si desea que una programación se ejecute varias veces, haga clic en **Periódica**. Para establecer la programación periódica, rellene los grupos **Frecuencia**, **Frecuencia diaria** y **Duración** en el cuadro de diálogo.  
   
     -   Si desea que la programación se ejecute solo una vez, haga clic en **Una vez**. Para establecer la programación en **Una vez** , rellene el grupo **Única repetición** del cuadro de diálogo.  
   

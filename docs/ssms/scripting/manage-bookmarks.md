@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61053e087f572e586bfd37e20a2efa6e659dabfd
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 902b22b19f356b0c59c6550ddeb8bfc6200f367b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093553"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474306"
 ---
 # <a name="manage-bookmarks"></a>Administrar marcadores
 
@@ -30,7 +30,7 @@ Cuando trabaja en un editor de código, la ventana **Marcadores** permite crear 
  Para crear y navegar a través de los marcadores, haga clic en los botones que se ubican en la barra de herramientas del **Editor de texto** y en la parte superior de la ventana **Marcadores** . Puede agregar y quitar marcadores, activarlos o deshabilitarlos, y organizarlos en carpetas. También están disponibles algunos comandos desde el menú contextual de la ventana **Marcadores** . Para agregar o quitar un marcador, coloque el punto de inserción en la línea deseada del editor y haga clic en **Cambiar a un marcador de la línea actual**. Para activar un marcador, active su casilla en la ventana **Marcadores** ; para deshabilitarlo (pero no quitarlo), desactive la casilla.  
   
 ## <a name="text-editor-toolbar"></a>Barra de herramientas del Editor de texto  
- Cuando un documento se abre en el editor, se habilitan los siguientes botones en la barra de herramientas del **Editor de texto** . Para mostrar la barra de herramientas del Editor de texto cuando se encuentra en el **Editor de consultas** , seleccione **Barras de herramientas** en el menú **Ver**y luego haga clic en **Editor de texto**.  
+ Cuando un documento se abre en el editor, se habilitan los siguientes botones en la barra de herramientas del **Editor de texto** . Para mostrar la barra de herramientas del Editor de texto cuando se encuentra en el **Editor de consultas** , seleccione **Barras de herramientas** en el menú **Ver** y luego haga clic en **Editor de texto**.  
   
  **Cambiar a un marcador de la línea actual**  
  Agrega o elimina un marcador en la línea seleccionada del documento en el editor activo. No modifica la línea de código marcada.  

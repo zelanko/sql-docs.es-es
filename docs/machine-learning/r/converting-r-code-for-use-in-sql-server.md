@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 3badcbfeb967f76cef945bf3ebe108c44825772e
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 56a52c3245d364bd1b111dbe5fedbda9da48e493
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098874"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470956"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Conversión de código de R para ejecutarlo en instancias de SQL Server (en la base de datos)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -103,7 +103,7 @@ La cantidad de código que cambie dependerá de si quiere enviar el código de R
 
 ### <a name="improve-performance-and-security"></a>Mejorar el rendimiento y la seguridad
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + Evite escribir predicciones o resultados intermedios en un archivo. Es preferible escribir las predicciones en una tabla para evitar el movimiento de datos.
 ::: moniker-end
 
@@ -117,7 +117,7 @@ La cantidad de código que cambie dependerá de si quiere enviar el código de R
 
 + Busque la manera de usar T-SQL en lugar de código de R para computaciones basadas en conjuntos.
 
-  ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+  ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
   Por ejemplo, esta solución de R muestra cómo las funciones de T-SQL definidas por el usuario y R pueden realizar la misma tarea de ingeniería de características: [Tutorial integral de ciencia de datos](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md).
   ::: moniker-end
 
@@ -169,6 +169,6 @@ Aquí puede ver ejemplos de cómo se puede implementar una solución de R en SQL
 
 + [Tutorial de R: Predicción de tarifas de taxi de Nueva York con clasificación binaria](../tutorials/r-taxi-classification-introduction.md)
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 + [Solución de ciencia de datos de un extremo a otro](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): incluye una comparación de la ingeniería de características en R y T-SQL.
 ::: moniker-end

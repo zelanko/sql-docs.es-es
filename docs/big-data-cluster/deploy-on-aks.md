@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d82ac562495e916ce34b591190f6c427e6c8413e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27e2596894e6d36742472ad1d3ae192fc37787e6
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765944"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489675"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurar Azure Kubernetes Service para implementaciones de clúster de macrodatos de SQL Server
 
@@ -149,7 +149,7 @@ Seleccione la versión disponible más reciente para el clúster. Anote el núme
 
 ## <a name="connect-to-the-cluster"></a>Conectarse al clúster
 
-1. Para configurar kubectl con el fin de conectarse a su clúster de Kubernetes, ejecute el comando [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials). Este paso descarga las credenciales y configura la CLI de kubectl para usarlas.
+1. Para configurar kubectl con el fin de conectarse a su clúster de Kubernetes, ejecute el comando [az aks get-credentials](/cli/azure/aks#az-aks-get-credentials). Este paso descarga las credenciales y configura la CLI de kubectl para usarlas.
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -165,7 +165,7 @@ Seleccione la versión disponible más reciente para el clúster. Anote el núme
 
 Si tiene problemas para crear una instancia de Azure Kubernetes Service con los comandos anteriores, pruebe las soluciones siguientes:
 
-- Asegúrese de que ha instalado la versión más reciente de la [CLI de Azure](/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Asegúrese de que ha instalado la versión más reciente de la [CLI de Azure](/cli/azure/install-azure-cli).
 - Pruebe los mismos pasos con otro grupo de recursos y nombre de clúster.
 - Vea la [documentación de solución de problemas de AKS](/azure/aks/troubleshooting).
 

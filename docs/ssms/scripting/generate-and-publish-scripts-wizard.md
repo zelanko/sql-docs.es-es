@@ -43,13 +43,13 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: df5c82ef6887dba2d261a1517d1d1f9b871d5ec4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039026"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478816"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Asistente generar y publicar scripts
 
@@ -81,7 +81,7 @@ Para publicar con el asistente, el usuario también debe proporcionar un nombre 
 
 1. En **Explorador de objetos**, expanda el nodo de la instancia que contiene la base de datos que se va a incluir en el script.
 
-2. Seleccione **Tareas**y, a continuación, seleccione **Generar scripts**.
+2. Seleccione **Tareas** y, a continuación, seleccione **Generar scripts**.
 
     ![Asistente para generar scripts](media/generate-and-publish-scripts-wizard/generate-scripts.png)
 
@@ -204,7 +204,7 @@ Use esta página para especificar cómo desea que este asistente genere los scri
 
 - **Generar script de seguimiento de cambios** : incluye en el script el seguimiento de cambios si se ha habilitado en la base de datos de origen o en las tablas de la base de datos de origen. El valor predeterminado es **False**. Para obtener más información, vea [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).
 
-- **Incluir restricciones CHECK en el script**: agrega restricciones **CHECK** al script. El valor predeterminado es **True**. Las restricciones**CHECK** requieren datos que se escriban en una tabla para cumplir con una condición especificada. Para más información, consulte [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).
+- **Incluir restricciones CHECK en el script**: agrega restricciones **CHECK** al script. El valor predeterminado es **True**. Las restricciones **CHECK** requieren datos que se escriban en una tabla para cumplir con una condición especificada. Para más información, consulte [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).
 
 - **Incluir opciones de compresión de datos en el script** : incluye las opciones de compresión de datos en el script, si se han configurado en la base de datos de origen o en las tablas de la base de datos de origen. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md). El valor predeterminado es **False**.
 

@@ -17,13 +17,13 @@ ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b22dc30718a2b3f97252d14fcb98235834fd644
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 38af7227ffc682b786c767c4cde4dc5bad9283d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038158"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482136"
 ---
 # <a name="view-the-job-history"></a>View the Job History
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +56,7 @@ Para obtener información detallada, vea [Implementar la seguridad del Agente SQ
   
 1.  En el **Explorador de objetos** , conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]y, después, expándala.  
   
-2.  Expanda el **Agente SQL Server**y, a continuación, haga clic en **Trabajos**.  
+2.  Expanda el **Agente SQL Server** y, a continuación, haga clic en **Trabajos**.  
   
 3.  Haga clic con el botón derecho en un trabajo y, luego, haga clic en **Ver historial**.  
   

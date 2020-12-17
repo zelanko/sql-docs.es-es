@@ -11,13 +11,13 @@ ms.author: maghan
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98d82f71690be9f22cb891d002a315ccfa7c1762
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 76d942c643b510f956f5199920c228e4071795e8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039009"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480656"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Generar scripts (SQL Server Management Studio)
 
@@ -65,7 +65,7 @@ Puede usar el panel **Detalles del Explorador de objetos** para generar un scrip
 
 3. Expanda el nodo de categoría de los tipos de objeto que desea incluir en el script, como el nodo **Tablas** .
 
-4. Abra el panel **Detalles del Explorador de objetos** seleccionando **F7**o abriendo el menú **Ver** y seleccionando **Detalles del Explorador de objetos**.
+4. Abra el panel **Detalles del Explorador de objetos** seleccionando **F7** o abriendo el menú **Ver** y seleccionando **Detalles del Explorador de objetos**.
 
     ![Menú Ver](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
 

@@ -7,13 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 55d2917d149a4c88dbfddf614971c8d4f1e60d26
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 5943de8bcc6588572bc3acebed5b3ba4104b7a96
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869960"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471066"
 ---
 # <a name="install-packages-with-r-tools"></a>Instalación de paquetes con herramientas de R
 
@@ -24,7 +24,7 @@ En este artículo se describe cómo usar herramientas de R estándar para instal
 Además de las herramientas de R estándar, puede instalar paquetes de R mediante:
 
 + [RevoScaleR](install-r-packages-with-revoscaler.md)
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [T-SQL](install-r-packages-with-tsql.md) (CREATE EXTERNAL LIBRARY)
 ::: moniker-end
 
@@ -35,13 +35,13 @@ Esto incluye las bibliotecas de R instaladas con otros productos de Microsoft.
 
 + La biblioteca de paquetes de R se encuentra en la carpeta Archivos de programa de la instancia de SQL Server y, de forma predeterminada, se requieren permisos de administrador para instalar contenido en esta carpeta. Para obtener más información, consulte [Ubicación de la biblioteca de paquetes](../package-management/r-package-information.md#default-r-library-location).
 
-  ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2017"
   Los usuarios que no son administradores pueden instalar paquetes mediante RevoScaleR 9.0.1 y versiones posteriores, o bien mediante CREATE EXTERNAL LIBRARY. El usuario **dbo_owner**, o un usuario con permiso CREATE EXTERNAL LIBRARY, puede instalar paquetes de R en la base de datos actual. Para más información, consulte:
   + [Uso de RevoScaleR para instalar paquetes de R](install-r-packages-with-revoscaler.md)
   + [Uso de T-SQL (CREATE EXTERNAL LIBRARY) para instalar paquetes de R en SQL Server](install-r-packages-with-tsql.md)
   ::: moniker-end
 
-  ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2016"
   Los usuarios que no son administradores pueden instalar paquetes mediante RevoScaleR 9.0.1 y versiones posteriores. El usuario **dbo_owner** puede instalar paquetes de R en la base de datos actual. Para obtener más información, vea [Uso de RevoScaleR para instalar paquetes de R](install-r-packages-with-revoscaler.md).
   ::: moniker-end
 
@@ -56,13 +56,13 @@ Si el servidor SQL Server tiene acceso a Internet, puede usar las herramientas 
 
 1. Determine la ubicación de la biblioteca de instancias (vea [Obtención de información de paquetes de R](../package-management/r-package-information.md)) y vaya a la carpeta donde están instaladas las herramientas de R.
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    Por ejemplo, la ruta de acceso predeterminada para una instancia predeterminada de SQL Server es la siguiente:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    Por ejemplo, la ruta de acceso predeterminada para una instancia predeterminada de SQL Server es la siguiente:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
@@ -87,13 +87,13 @@ Una vez que el archivo comprimido está en la instancia de SQL Server, puede in
 
 1. Determine la ubicación de la biblioteca de instancias (vea [Obtención de información de paquetes de R](../package-management/r-package-information.md)) y vaya a la carpeta donde están instaladas las herramientas de R. 
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    Por ejemplo, la ruta de acceso predeterminada para una instancia predeterminada de SQL Server es la siguiente:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    Por ejemplo, la ruta de acceso predeterminada para una instancia predeterminada de SQL Server es la siguiente:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`

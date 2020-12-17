@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 27248c9a8ef05b8662f56255cab47e47bd2959f4
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: e6571c92f68412a464b96964be4b02d22a106a0b
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257235"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489705"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalación de las herramientas de macrodatos de SQL Server 2019
 
@@ -33,7 +33,7 @@ En la tabla siguiente se indican herramientas comunes de clúster de macrodatos 
 | `kubectl`<sup>1</sup> | Sí | Herramienta de línea de comandos para supervisar el clúster de Kubernetes subyacente ([Más información](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Azure Data Studio** | Sí | Herramienta gráfica multiplataforma para consultar SQL Server. | [Instalación](../azure-data-studio/download-azure-data-studio.md) |
 | **Extensión de virtualización de datos** | Sí | Extensión de Azure Data Studio que proporciona un asistente para la virtualización de datos. | [Instalación](../azure-data-studio/extensions/data-virtualization-extension.md) |
-| **CLI de Azure**<sup>2</sup> | Para AKS | Interfaz de línea de comandos moderna para administrar servicios de Azure. Se usa con implementaciones de clústeres de macrodatos de AKS ([Más información](/cli/azure/?view=azure-cli-latest&preserve-view=true)). | [Instalación](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) |
+| **CLI de Azure**<sup>2</sup> | Para AKS | Interfaz de línea de comandos moderna para administrar servicios de Azure. Se usa con implementaciones de clústeres de macrodatos de AKS ([Más información](/cli/azure/)). | [Instalación](/cli/azure/install-azure-cli) |
 | **mssql-cli** | Opcional | Interfaz de línea de comandos moderna para consultar SQL Server ([Más información](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | Para algunos scripts | Herramienta de línea de comandos heredada para consultar SQL Server ([Más información](../tools/sqlcmd-utility.md)). Es posible que tenga que instalar Microsoft ODBC Driver 11 para SQL Server antes de instalar el paquete SQLCMD. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | Para algunos scripts | Herramienta de línea de comandos para transferir datos con direcciones URL. | [Windows](https://curl.haxx.se/windows/) \| Linux: instalación de paquete curl |

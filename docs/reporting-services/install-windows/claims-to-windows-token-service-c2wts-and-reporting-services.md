@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 429933e4491a7e0f7382e5ca8faa3b6ae26f3c82
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 78d7265398cab553a9378fecc54b25a32d36e84d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891605"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489835"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Notificaciones del servicio de token de Windows (C2WTS) y Reporting Services
 
@@ -31,7 +31,7 @@ El elemento web Visor de informes se puede usar para insertar informes de SQL Se
 
 1. Para configurar la instancia de Reporting Services (modo nativo) para la autenticación Kerberos, determine la cuenta de servicio SSRS, establezca un SPN y actualice el archivo rsreportserver.config para usar el tipo de autenticación RSWindowsNegotiate. [Registro de un nombre principal de servicio (SPN) para un servidor de informes](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)
 
-2. Siga los pasos que aparecen en [Pasos necesarios para configurar c2WTS](?view=sql-server-2017#steps-needed-to-configure-c2wts)
+2. Siga los pasos que aparecen en [Pasos necesarios para configurar c2WTS](#steps-needed-to-configure-c2wts)
  
 
 ## <a name="sharepoint-mode-integration"></a>Integración del modo SharePoint
@@ -84,7 +84,7 @@ Si en su entorno se usa la delegación limitada de Kerberos, el servicio SharePo
     * Seleccione **Usuarios o equipos...&#42;** y escriba la cuenta que hospeda el servicio. Por ejemplo, si un servidor SQL Server se ejecuta en una cuenta denominada *sqlservice*, escriba `sqlservice`. 
       Para el **elemento web Visor de informes**, esta será la cuenta de servicio para la instancia de Reporting Services (modo nativo).
 
-    * Seleccione la lista de servicios. Esto mostrará los SPN disponibles en esa cuenta. Si el servicio no está indicado en la cuenta, es posible que falte o que esté en otra cuenta. Puede usar la utilidad SetSPN para ajustar los SPN. Para el **elemento web Visor de informes**, verá el SPN HTTP que se configuró en [Configuración del elemento web Visor de informes](?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
+    * Seleccione la lista de servicios. Esto mostrará los SPN disponibles en esa cuenta. Si el servicio no está indicado en la cuenta, es posible que falte o que esté en otra cuenta. Puede usar la utilidad SetSPN para ajustar los SPN. Para el **elemento web Visor de informes**, verá el SPN HTTP que se configuró en [Configuración del elemento web Visor de informes](#report-viewer-native-mode-web-part-configuration).
 
     * Seleccione Aceptar para salir de los cuadros de diálogo.
 

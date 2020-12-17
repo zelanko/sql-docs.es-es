@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b698f7e3d566cd49a0106c0cdf834be894cb92f
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 2f06c967c894092d8d89224948ed1772c9e70ed5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764900"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461476"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Establecer opciones de procesamiento (Reporting Services en el modo integrado de SharePoint)
 
@@ -47,7 +47,7 @@ ms.locfileid: "83764900"
   
 4.  En **Opciones de instantánea de datos**, seleccione **Programar procesamiento de datos**.  
   
-5.  Seleccione **En una programación compartida** si dispone de una programación compartida que desee usar; de lo contrario, haga clic en **En una programación personalizada**y, a continuación, haga clic en **Configurar**.  
+5.  Seleccione **En una programación compartida** si dispone de una programación compartida que desee usar; de lo contrario, haga clic en **En una programación personalizada** y, a continuación, haga clic en **Configurar**.  
   
 6.  Seleccione la frecuencia, la programación y las fechas de inicio y finalización y, a continuación, haga clic en **Aceptar**.  
   

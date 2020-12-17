@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0879c9399a21300fdbbfd735685d8a049a52b14f
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: = sql-server-2016
+ms.openlocfilehash: 123a1604717fdfb58f7f1e69db353995e6e0a960
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384697"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559297"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notas de la versión de SQL Server 2012 Service Pack
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -38,25 +38,25 @@ Los Service Pack solo están disponibles en línea, no en los soportes de instal
 
 
 ### <a name="performance-and-scale-improvements"></a>Mejoras de rendimiento y escalado
-- **Procedimiento de limpieza del agente de distribución mejorado** : una base de datos de distribución demasiado grande ha provocado la situación de bloqueo e interbloqueo. Un procedimiento de limpieza mejorado aspira a eliminar algunos de estos escenarios de bloqueo o interbloqueo. 
-- **Escalado de objetos de memoria dinámico** : partición dinámica de objetos de memoria según el número de nodos y núcleos para escalar en hardware moderno. El objetivo de la promoción dinámica es evitar posibles cuellos de botella y realizar automáticamente la partición de un objeto de memoria seguro para subprocesos. Los objetos de memoria no particionados se pueden promocionar de forma dinámica para particionarse por nodo. El número de particiones es igual al número de nodos NUMA. Los objetos de memoria particionados por nodo se pueden promocionar aún más para particionarse por CPU, donde el número de particiones es igual al número de CPU.
-- **Habilitar > 8TB para grupo de búferes** : habilita el espacio de direcciones virtual de 128 TB para uso por parte del grupo de búferes
-- **Limpieza de Change Tracking** : rendimiento y eficacia mejorados de limpieza del seguimiento de cambios para tablas de Change Tracking. 
+- **Procedimiento de limpieza del agente de distribución mejorado**: una base de datos de distribución demasiado grande ha provocado la situación de bloqueo e interbloqueo. Un procedimiento de limpieza mejorado aspira a eliminar algunos de estos escenarios de bloqueo o interbloqueo. 
+- **Escalado de objetos de memoria dinámico**: partición dinámica de objetos de memoria según el número de nodos y núcleos para escalar en hardware moderno. El objetivo de la promoción dinámica es evitar posibles cuellos de botella y realizar automáticamente la partición de un objeto de memoria seguro para subprocesos. Los objetos de memoria no particionados se pueden promocionar de forma dinámica para particionarse por nodo. El número de particiones es igual al número de nodos NUMA. Los objetos de memoria particionados por nodo se pueden promocionar aún más para particionarse por CPU, donde el número de particiones es igual al número de CPU.
+- **Habilitar > 8TB para grupo de búferes**: habilita el espacio de direcciones virtual de 128 TB para uso por parte del grupo de búferes
+- **Limpieza de Change Tracking**: rendimiento y eficacia mejorados de limpieza del seguimiento de cambios para tablas de Change Tracking. 
 
 ### <a name="supportability-and-diagnostics-improvements"></a>Mejoras de compatibilidad y diagnóstico
-- **Compatibilidad de volcados de memoria completos con los agentes de replicación** : en este momento si los agentes de replicación detectan una excepción no controlada, el comportamiento predeterminado es crear un minivolcado de los síntomas de la excepción. El comportamiento predeterminado exige complejos pasos de solución de problemas para las excepciones no controladas. SP4 presenta una nueva clave del Registro que admite la creación de un volcado completo para los agentes de replicación.
-- **Diagnósticos mejorados en el plan de presentación XML** : el plan de presentación XML se ha mejorado para exponer información sobre las marcas de seguimiento habilitadas, las fracciones de memoria para la combinación de bucle anidado optimizada, el tiempo de CPU y el tiempo transcurrido. 
-- **Mejor correlación entre DMV y XE de diagnóstico** : los campos query_hash y query_plan_hash se usan para identificar una consulta de forma exclusiva. DMV los define como varbinary (8), mientras que XEvent los define como UINT64. Puesto que SQL Server no tiene "bigint sin signo", la conversión no siempre funciona. Esta mejora presenta nuevas columnas de filtro o acción XEvent equivalentes a query_hash y query_plan_hash, salvo que se definen como INT64, lo que puede ayudar a correlacionar consultas entre XE y DMV. 
-- **Mejores diagnósticos de concesión o uso de memoria** : nuevo XEvent query_memory_grant_usage (actualización retroactiva desde Server 2016 SP1)
-- **Adición de seguimiento de protocolos a los pasos de negociación SSL** : agrega información de seguimiento de bits de negociación correcta o errónea, incluido el protocolo, etc. Puede ser útil a la hora de solucionar problemas de escenarios de conectividad mientras, por ejemplo, se implementa TLS 1.2
-- **Establecimiento del nivel de compatibilidad correcto para la base de datos de distribución** : después de la instalación del Service Pack, cambia el nivel de compatibilidad de la base de datos de distribución a 90. El cambio de nivel se debe a un problema en el procedimiento almacenado sp_vupgrade_replication. Ahora el SP se ha modificado para establecer el nivel de compatibilidad correcto para la base de datos de distribución. 
-- **Nuevo comando DBCC para clonar una base de datos** : Base de datos clonada es un nuevo comando DBCC agregado que permite a los usuarios avanzados, como CSS, solucionar problemas de bases de datos de producción existentes mediante la clonación del esquema y los metadatos, sin los datos. La llamada se realiza con clonedatabase de DBCC ("source_database_name", "clone_database_name"). Las bases de datos clonadas no se deben usar en entornos de producción. Para ver si una base de datos se ha generado a partir de una llamada a la base de datos clonada, puede usar el comando siguiente, select DATABASEPROPERTYEX('clonedb', 'isClone'). El valor devuelto de 1 es true y 0 es false. 
-- **Información del archivo TempDB y del tamaño de archivo en el registro de errores de SQL** : si el tamaño y el crecimiento automático es diferente para los archivos de datos de TempDB durante el inicio, imprime el número de archivos y desencadena una advertencia.
-- **IFI admite mensajes en el registro de errores de SQL Server** : indica en el registro de errores que la inicialización instantánea de archivos de base de datos está habilitada o deshabilitada
-- **Nueva DMF para reemplazar a DBCC INPUTBUFFER** : se ha presentado una nueva función de administración dinámica sys.dm_input_buffer que toma session_id como parámetro para reemplazar a DBCC INPUTBUFFER
-- **Mejora de XEvents para el error de enrutamiento de lectura de un grupo de disponibilidad** : actualmente el XEvent read_only_rout_fail solo se desencadena si hay una lista de enrutamiento, pero ninguno de los servidores de la lista de enrutamiento está disponible para las conexiones. Esta mejora incluye información adicional para ayudar a solucionar el problema y además se expande en los puntos de código donde se desencadena el XEvent. 
-- **Mejora del control de Service Broker con conmutación por error de grupo de disponibilidad** : actualmente, cuando Service Broker está habilitado en bases de datos de un grupo de disponibilidad, durante una conmutación por error del grupo de disponibilidad se dejan abiertas todas las conexiones de Service Broker originadas en la réplica principal. La mejora cierra todas estas conexiones abiertas durante una conmutación por error del grupo de disponibilidad.
-- **Creación de particiones de soft-NUMA automática** : con SQL 2014 SP2, se presenta la creación de particiones de [soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) automática cuando la marca de seguimiento 8079 está habilitada en el nivel de servidor. Cuando la marca de seguimiento 8079 está habilitada durante el inicio, SQL Server 2014 SP2 interroga al diseño de hardware y configura automáticamente soft-NUMA en los sistemas que notifican ocho o más CPU por nodo NUMA. El comportamiento de soft-NUMA automática reconoce el hiperproceso (procesador HT/lógico). La creación de particiones y la creación de nodos adicionales escala el procesamiento en segundo plano al aumentar el número de agentes de escucha, escalado y capacidades de red y cifrado. Se recomienda probar primero el rendimiento de la carga de trabajo con soft-NUMA automática antes de activarla en producción.
+- **Compatibilidad de volcados de memoria completos con los agentes de replicación**: en este momento si los agentes de replicación detectan una excepción no controlada, el comportamiento predeterminado es crear un minivolcado de los síntomas de la excepción. El comportamiento predeterminado exige complejos pasos de solución de problemas para las excepciones no controladas. SP4 presenta una nueva clave del Registro que admite la creación de un volcado completo para los agentes de replicación.
+- **Diagnósticos mejorados en el plan de presentación XML**: el plan de presentación XML se ha mejorado para exponer información sobre las marcas de seguimiento habilitadas, las fracciones de memoria para la combinación de bucle anidado optimizada, el tiempo de CPU y el tiempo transcurrido. 
+- **Mejor correlación entre DMV y XE de diagnóstico**: los campos query_hash y query_plan_hash se usan para identificar una consulta de forma exclusiva. DMV los define como varbinary (8), mientras que XEvent los define como UINT64. Puesto que SQL Server no tiene "bigint sin signo", la conversión no siempre funciona. Esta mejora presenta nuevas columnas de filtro o acción XEvent equivalentes a query_hash y query_plan_hash, salvo que se definen como INT64, lo que puede ayudar a correlacionar consultas entre XE y DMV. 
+- **Mejores diagnósticos de concesión o uso de memoria**: nuevo XEvent query_memory_grant_usage (actualización retroactiva desde Server 2016 SP1)
+- **Adición de seguimiento de protocolos a los pasos de negociación SSL**: agrega información de seguimiento de bits de negociación correcta o errónea, incluido el protocolo, etc. Puede ser útil a la hora de solucionar problemas de escenarios de conectividad mientras, por ejemplo, se implementa TLS 1.2
+- **Establecimiento del nivel de compatibilidad correcto para la base de datos de distribución**: después de la instalación del Service Pack, cambia el nivel de compatibilidad de la base de datos de distribución a 90. El cambio de nivel se debe a un problema en el procedimiento almacenado sp_vupgrade_replication. Ahora el SP se ha modificado para establecer el nivel de compatibilidad correcto para la base de datos de distribución. 
+- **Nuevo comando DBCC para clonar una base de datos**: Base de datos clonada es un nuevo comando DBCC agregado que permite a los usuarios avanzados, como CSS, solucionar problemas de bases de datos de producción existentes mediante la clonación del esquema y los metadatos, sin los datos. La llamada se realiza con clonedatabase de DBCC ("source_database_name", "clone_database_name"). Las bases de datos clonadas no se deben usar en entornos de producción. Para ver si una base de datos se ha generado a partir de una llamada a la base de datos clonada, puede usar el comando siguiente, select DATABASEPROPERTYEX('clonedb', 'isClone'). El valor devuelto de 1 es true y 0 es false. 
+- **Información del archivo TempDB y del tamaño de archivo en el registro de errores de SQL**: si el tamaño y el crecimiento automático es diferente para los archivos de datos de TempDB durante el inicio, imprime el número de archivos y desencadena una advertencia.
+- **IFI admite mensajes en el registro de errores de SQL Server**: indica en el registro de errores que la inicialización instantánea de archivos de base de datos está habilitada o deshabilitada
+- **Nueva DMF para reemplazar a DBCC INPUTBUFFER**: se ha presentado una nueva función de administración dinámica sys.dm_input_buffer que toma session_id como parámetro para reemplazar a DBCC INPUTBUFFER
+- **Mejora de XEvents para el error de enrutamiento de lectura de un grupo de disponibilidad**: actualmente el XEvent read_only_rout_fail solo se desencadena si hay una lista de enrutamiento, pero ninguno de los servidores de la lista de enrutamiento está disponible para las conexiones. Esta mejora incluye información adicional para ayudar a solucionar el problema y además se expande en los puntos de código donde se desencadena el XEvent. 
+- **Mejora del control de Service Broker con conmutación por error de grupo de disponibilidad**: actualmente, cuando Service Broker está habilitado en bases de datos de un grupo de disponibilidad, durante una conmutación por error del grupo de disponibilidad se dejan abiertas todas las conexiones de Service Broker originadas en la réplica principal. La mejora cierra todas estas conexiones abiertas durante una conmutación por error del grupo de disponibilidad.
+- **Creación de particiones de soft-NUMA automática**: con SQL 2014 SP2, se presenta la creación de particiones de [soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) automática cuando la marca de seguimiento 8079 está habilitada en el nivel de servidor. Cuando la marca de seguimiento 8079 está habilitada durante el inicio, SQL Server 2014 SP2 interroga al diseño de hardware y configura automáticamente soft-NUMA en los sistemas que notifican ocho o más CPU por nodo NUMA. El comportamiento de soft-NUMA automática reconoce el hiperproceso (procesador HT/lógico). La creación de particiones y la creación de nodos adicionales escala el procesamiento en segundo plano al aumentar el número de agentes de escucha, escalado y capacidades de red y cifrado. Se recomienda probar primero el rendimiento de la carga de trabajo con soft-NUMA automática antes de activarla en producción.
 
 ## <a name="service-pack-3-release-notes"></a>Notas de la versión del Service Pack 3
 
@@ -149,7 +149,7 @@ Para obtener una lista completa de errores y de problemas conocidos corregidos e
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Para usar PowerPivot para Excel con Excel 2013, debe usar el complemento que se instala con Excel  
 **Problema:** con Office 2010, PowerPivot para Excel es un complemento independiente que se puede descargar desde [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx). También se puede descargar desde el [Centro de descarga Microsoft](https://www.microsoft.com/download/details.aspx?id=29074). Tenga en cuenta que hay dos versiones del complemento PowerPivot como una descarga: Uno que se incluye con SQL Server 2008 R2 y otro que se incluye con SQL Server 2012. Sin embargo, en el caso de Office 2013, PowerPivot para Excel se incluye con Office y se instala al instalar Excel. Si bien las versiones de SQL Server 2008 R2 y SQL Server 2012 de PowerPivot para Excel 2010 no son compatibles con Excel 2013, puede instalar PowerPivot para Excel 2010 en el equipo cliente si desea ejecutar Excel 2010 en paralelo con Excel 2013. Es decir, las dos versiones de Excel pueden coexistir, así como sus complementos PowerPivot correspondientes.  
   
-**Solución alternativa:** Para usar PowerPivot para Excel 2013 debe habilitar el complemento COM. En Excel 2013, seleccione **Archivo** | **Opciones** | **Complementos**. En el cuadro desplegable **Administrar** , seleccione **Complementos COM** y haga clic en **Ir**. En **Complementos COM** , seleccione **Microsoft Office PowerPivot para Excel 2013** y haga clic en **Aceptar**.  
+**Solución alternativa:** Para usar PowerPivot para Excel 2013 debe habilitar el complemento COM. En Excel 2013, seleccione **Archivo** | **Opciones** | **Complementos**. En el cuadro desplegable **Administrar** , seleccione **Complementos COM** y haga clic en **Ir**. En **Complementos COM**, seleccione **Microsoft Office PowerPivot para Excel 2013** y haga clic en **Aceptar**.  
   
 ### <a name="reporting-services"></a>Reporting Services  
   
@@ -175,19 +175,19 @@ Los detalles del error interno contendrán un mensaje similar al siguiente:
   
 -   "El valor 'SharePoint Principal' no es compatible con la propiedad de la cadena de conexión 'User Identity'."  
   
-**Solución alternativa:** instale el paquete del instalador de PowerPivot para SharePoint 2013 ( **spPowerPivot.msi** ) en SharePoint Server 2013. El paquete del instalador está disponible como parte de [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Feature Pack se puede descargar desde el centro de descargas de [!INCLUDE[msCoName](../includes/msconame-md.md)] en [SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)  
+**Solución alternativa:** instale el paquete del instalador de PowerPivot para SharePoint 2013 (**spPowerPivot.msi**) en SharePoint Server 2013. El paquete del instalador está disponible como parte de [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Feature Pack se puede descargar desde el centro de descargas de [!INCLUDE[msCoName](../includes/msconame-md.md)] en [SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>Las hojas de Power View en un libro PowerPivot se borran tras una actualización de datos programada  
 **Problema:** en el complemento PowerPivot para SharePoint, al usar **Actualización de datos programada** en un libro con Power View, se eliminan todas las hojas de Power View.  
   
-**Solución alternativa** : para usar la **Actualización de datos programada** con libros Power View, cree un libro PowerPivot que sea el modelo de datos. Cree otro libro con las hojas de Excel y Power View que se vincule al libro PowerPivot con el modelo de datos. Para la actualización de datos, solo se debe programar el libro PowerPivot con el modelo de datos.  
+**Solución alternativa**: para usar la **Actualización de datos programada** con libros Power View, cree un libro PowerPivot que sea el modelo de datos. Cree otro libro con las hojas de Excel y Power View que se vincule al libro PowerPivot con el modelo de datos. Para la actualización de datos, solo se debe programar el libro PowerPivot con el modelo de datos.  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS disponible en la edición incorrecta de SQL Server 2012  
 **Problema:** en la versión [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM, la característica Data Quality Services (DQS) está disponible en ediciones de SQL Server distintas de Enterprise, Business Intelligence y Developer. Después de instalar SQL Server 2012 SP1, DQS no estará disponible en todas las ediciones salvo en Enterprise, Business Intelligence y Developer.  
   
-**Solución alternativa** : si usa DQS en una edición no admitida, actualice a una edición admitida o desinstale la dependencia de esta característica de sus aplicaciones.  
+**Solución alternativa**: si usa DQS en una edición no admitida, actualice a una edición admitida o desinstale la dependencia de esta característica de sus aplicaciones.  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -232,7 +232,7 @@ Anteriormente, DACFx no conservaba el estado (WITH CHECK/NOCHECK) de las restric
   
 -   Importar BACPAC: importa un archivo .bacpac para crear una instancia nueva de SQL Server o Azure SQL Database, o bien para rellenar una vacía.  
   
-La documentación completa de SqlPackage.exe en MSDN se puede encontrar [aquí](../tools/sqlpackage.md).  
+La documentación completa de SqlPackage.exe en MSDN se puede encontrar [aquí](../tools/sqlpackage/sqlpackage.md).  
   
 **Compatibilidad de los paquetes**  
   

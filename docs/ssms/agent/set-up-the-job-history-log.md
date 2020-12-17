@@ -16,13 +16,13 @@ ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b4ce368d462ced9b5bbcbf21193802a510c760dc
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: d00c7cb8ee961dca15a7fcdfe0950963e7dec7b2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035518"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402494"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,15 +46,15 @@ Para obtener información detallada, vea [Implementar la seguridad del Agente SQ
   
 1.  En el **Explorador de objetos** , conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]y, después, expándala.  
   
-2.  Haga clic con el botón derecho en **Agente SQL Server**y, luego, haga clic en **Propiedades**.  
+2.  Haga clic con el botón derecho en **Agente SQL Server** y, luego, haga clic en **Propiedades**.  
   
 3.  En el cuadro de diálogo **Propiedades de Agente SQL Server** , seleccione la página **Historial** .  
   
 4.  Elija entre las siguientes opciones:  
   
-    1.  Seleccione **Limitar tamaño del registro de historial de trabajos**y, a continuación, escriba el número máximo de filas del registro y el número máximo de filas por trabajo.  
+    1.  Seleccione **Limitar tamaño del registro de historial de trabajos** y, a continuación, escriba el número máximo de filas del registro y el número máximo de filas por trabajo.  
   
-    2.  Seleccione **Quitar automáticamente historial del agente**y especifique un período de tiempo para que se elimine del registro la información anterior al mismo.  
+    2.  Seleccione **Quitar automáticamente historial del agente** y especifique un período de tiempo para que se elimine del registro la información anterior al mismo.  
   
 ## <a name="see-also"></a>Consulte también  
 [Implementar trabajos](../../ssms/agent/implement-jobs.md)  

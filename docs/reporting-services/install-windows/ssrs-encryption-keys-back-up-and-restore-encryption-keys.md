@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa300420df785fa27eacb68ae5090cd042f1ddbb
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: eb35ae0143b2146d5d5d38ebf0f2ab6d51a94049
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933760"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439330"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Claves de cifrado de SSRS: copia de seguridad y restauración de claves de cifrado
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91933760"
   
  **Modo nativo:** el Administrador de configuración del servidor de informes o la utilidad **rskeymgmt**.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **Modo de SharePoint** : páginas de Administración central de SharePoint o PowerShell.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "91933760"
   
 1.  Inicie el Administrador de configuración del servidor de informes y, a continuación, conéctese a la instancia del servidor de informes que desea configurar.  
   
-2.  Haga clic en **Claves de cifrado**y, luego, seleccione **Copia de seguridad**.  
+2.  Haga clic en **Claves de cifrado** y, luego, seleccione **Copia de seguridad**.  
   
 3.  Escriba una contraseña segura.  
   

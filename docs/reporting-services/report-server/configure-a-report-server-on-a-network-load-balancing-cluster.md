@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
-ms.openlocfilehash: b5bf533e9b74edd11d6c39d10d97eeb385c9e1a9
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 674e549b48cdb96a6ecae1b8630353751195085f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933854"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461396"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar un servidor de informes en un clúster con equilibrio de carga de red
 
@@ -43,11 +43,11 @@ ms.locfileid: "91933854"
   
 ## <a name="how-to-configure-view-state-validation"></a><a name="ViewState"></a> Cómo configurar la validación del estado de la vista
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Para ejecutar una implementación escalada en un clúster NLB, debe configurar la validación del estado de la vista para que los usuarios puedan ver los informes HTML interactivos.  Debe hacer esto para el servicio web del servidor de informes.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Para ejecutar una implementación escalada en un clúster NLB, debe configurar la validación del estado de la vista para que los usuarios puedan ver los informes HTML interactivos.
 ::: moniker-end
   
@@ -55,7 +55,7 @@ Para ejecutar una implementación escalada en un clúster NLB, debe configurar l
   
  Para evitar este problema, puede generar una clave de validación arbitraria que admita la validación del estado de la vista y, después, configurar manualmente cada nodo del servidor de informes para que utilice la misma clave. Puede utilizar cualquier secuencia hexadecimal generada de forma aleatoria. El algoritmo de validación (como SHA1) determina la longitud que debe tener la secuencia hexadecimal.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 1. Genere una clave de validación y una clave de descifrado utilizando la funcionalidad de generación automática que proporciona [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Al final, debe tener una única entrada <`machineKey`> que puede pegar en el archivo Web.config para cada instancia del servidor de informes de la implementación de escala horizontal.  
   
@@ -75,7 +75,7 @@ Para ejecutar una implementación escalada en un clúster NLB, debe configurar l
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 1. Genere una clave de validación y una clave de descifrado utilizando la funcionalidad de generación automática que proporciona [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Al final, debe tener una única entrada \<**MachineKey**> que podrá pegar en el archivo RSReportServer.config para cada instancia del servidor de informes de la implementación escalada.
 

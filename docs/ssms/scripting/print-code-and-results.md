@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bb0992fc4db3bf9745c7fe3ef9058cb2955967a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 83fc47073eb5fbc95bf51e676ab61638fbacacd6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036436"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440356"
 ---
 # <a name="print-code-and-results"></a>Imprimir código y resultados
 
@@ -29,7 +29,7 @@ ms.locfileid: "92036436"
 
 Al imprimir una consulta o un archivo, los elementos en color se imprimen en color siempre que la impresora sea compatible con la impresión en color y ésta se haya habilitado en la configuración de la impresora.  
   
- No obstante, la fuente y el color del texto en el editor, y el modo que en que el texto se imprime en la impresora pueden variar. En el menú **Herramientas** , seleccione **Opciones**. En **Entorno**, haga clic en **Fuentes y colores**y seleccione las fuentes y los colores de los elementos que se mostrarán en el editor y las fuentes y los colores que resultarán al imprimir. Puesto que estos valores pueden variar, el resultado puede ser distinto al que aparece en el editor.  
+ No obstante, la fuente y el color del texto en el editor, y el modo que en que el texto se imprime en la impresora pueden variar. En el menú **Herramientas** , seleccione **Opciones**. En **Entorno**, haga clic en **Fuentes y colores** y seleccione las fuentes y los colores de los elementos que se mostrarán en el editor y las fuentes y los colores que resultarán al imprimir. Puesto que estos valores pueden variar, el resultado puede ser distinto al que aparece en el editor.  
   
  Si tiene habilitados los números de línea en el editor, estos no se imprimirán a menos que se seleccione **Incluir números de línea** en el cuadro de diálogo **Imprimir** del menú **Archivo** .  
   

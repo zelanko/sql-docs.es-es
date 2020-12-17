@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 06bfaa994c2b29959f44cfc554122465db9e0394
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: e7a618ef92a9f4a4cc969112886a4246ad25adc6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772289"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559207"
 ---
 # <a name="retrieve-data-by-a-datareader"></a>Recuperación de datos mediante un objeto DataReader
 
@@ -53,7 +53,7 @@ Llame siempre al método **Close** cuando haya terminado de usar el objeto **Dat
 > Mientras un objeto **DataReader** está abierto, usa de forma exclusiva el objeto **Connection**. No se podrá ejecutar ningún comando para el objeto **Connection** hasta que se cierre el objeto **DataReader** original, incluida la creación de otro objeto **DataReader**.  
 
 > [!NOTE]
-> No llame a **Close** o **Dispose** para objetos **Connection** o **DataReader**, ni para ningún otro objeto administrado en el método **Finalize** de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no dispone de recursos no administrados, no incluya un método **Finalize** en la definición de clase. Para obtener más información, consulte [Recolección de elementos no utilizados](/dotnet/standard/garbage-collection/index.md).
+> No llame a **Close** o **Dispose** para objetos **Connection** o **DataReader**, ni para ningún otro objeto administrado en el método **Finalize** de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no dispone de recursos no administrados, no incluya un método **Finalize** en la definición de clase. Para obtener más información, consulte [Recolección de elementos no utilizados](/dotnet/standard/garbage-collection/index).
  
 ## <a name="retrieve-multiple-result-sets-using-nextresult"></a>Recuperación de varios conjuntos de resultados con NextResult
 

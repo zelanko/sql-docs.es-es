@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 941369bd-cd4d-4a64-8e42-724d9a866eb7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 81676553e506725ff8d3b02e14c113442a40629c
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: f6294c73d9ba3a422381d38f1914e84d48d9596e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900546"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463866"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>Protocolos de cliente: Propiedades de Memoria compartida (pestaña Protocolo)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

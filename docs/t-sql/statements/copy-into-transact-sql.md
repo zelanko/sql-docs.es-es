@@ -17,13 +17,13 @@ dev_langs:
 - TSQL
 author: kevinvngo
 ms.author: kevin
-monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
-ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 9b480c90337017c77a0d05afe5861e85c89637d3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96788028"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460788"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -432,6 +432,18 @@ No es necesario dividir los archivos ORC o Parquet porque el comando COPY lo har
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>¿Hay alguna limitación en el número o el tamaño de los archivos?
 No hay limitaciones en cuanto al número o tamaño de los archivos; sin embargo, para obtener el mejor rendimiento, recomendamos usar archivos de al menos 4 MB.
+
+### <a name="are-there-any-known-issues-with-the-copy-statement"></a>¿Hay algún problema conocido con la instrucción COPY?
+Si tiene un área de trabajo de Synapse que se haya creado antes del 07/12/2020, puede aparecer un mensaje de error similar al autenticarse mediante Identidad administrada:
+
+*com.microsoft.sqlserver.jdbc.SQLServerException: La identidad de servicio administrada no se ha habilitado en este servidor. Habilite la identidad de servicio administrada e inténtelo de nuevo.*
+
+Siga estos pasos para solucionar este problema volviendo a registrar la identidad administrada del área de trabajo:
+
+1. Vaya al área de trabajo de Synapse en Azure Portal.
+2. Vaya a la hoja Identidades administradas. 
+3. Si la opción "Permitir canalizaciones" ya está activada, debe desactivarla y guardar.
+4. Active la opción "Permitir canalizaciones" y guarde.
 
 
 ## <a name="see-also"></a>Consulte también  

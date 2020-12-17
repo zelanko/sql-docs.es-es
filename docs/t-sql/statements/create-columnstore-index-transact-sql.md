@@ -29,13 +29,13 @@ helpviewer_keywords:
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1421ba7d2f03ecdf6f8a687e4e6d662702fe464a
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f47f17c4391d548ff2e087afb12080a84660b832
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300433"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464176"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -136,7 +136,7 @@ Especifica el nombre del nuevo índice.
   
 Si la tabla ya tiene un índice clúster de almacén de columnas, puede especificar el mismo nombre que el índice existente o puede usar la opción DROP EXISTING para especificar uno nuevo.  
   
-ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 
 Especifica el nombre de una, dos o tres partes de la tabla que se almacenará como un índice clúster de almacén de columnas. Si la tabla es un montón o un índice clúster, se convierte de almacén de filas en un almacén de columnas. Si la tabla ya es un almacén de columnas, esta instrucción vuelve a compilar el índice clúster de almacén de columnas. Para convertir a un índice ordenado de almacén de columnas agrupado, el índice existente debe ser un índice de almacén de columnas agrupado.
   
@@ -219,11 +219,11 @@ Crea un índice no clúster de almacén de columnas en memoria en una tabla de a
 *index_name*  
    Especifica el nombre del índice. *index_name* debe ser único en la tabla, pero no es necesario que sea único en la base de datos. Los nombres de índice deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- **(** _column_  [ **,** ... *n* ] **)**  
+ **(** _column_  [ **,** ...*n* ] **)**  
     Especifica las columnas que se van a almacenar. Un índice no clúster de almacén de columnas está limitado a 1024 columnas.  
    Cada columna debe ser de un tipo de datos compatible con los índices de almacén de columnas. Vea [Limitaciones y restricciones](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) para obtener una lista de los tipos de datos admitidos.  
 
-ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Especifica el nombre de una, dos o tres partes de la tabla que contiene el índice.  
 
 #### <a name="with-options"></a>Opciones de WITH
@@ -380,8 +380,8 @@ Si la tabla subyacente tiene una columna con un tipo de datos no admitido para l
 -   No puede tener más de 1024 columnas.
 -   No se pueden crear como índice basado en restricciones. Se pueden tener restricciones únicas, restricciones de clave principal y restricciones de clave externa en una tabla con un índice de almacén de columnas. Las restricciones se aplican siempre con un índice de almacén de filas. Las restricciones no se pueden aplicar con un índice de almacén de columnas (agrupado o no agrupado).
 -   No puede incluir ninguna columna dispersa.  
--   No se pueden modificar mediante la instrucción **ALTER INDEX** . Para cambiar el índice no clúster, debe quitar y volver a crear el índice de almacén de columnas en su lugar. Puede usar **ALTER INDEX** para deshabilitar y volver a compilar un índice de almacén de columnas.  
--   No se pueden crear mediante la palabra clave **INCLUDE** .  
+-   No se pueden modificar mediante la instrucción **ALTER INDEX**. Para cambiar el índice no clúster, debe quitar y volver a crear el índice de almacén de columnas en su lugar. Puede usar **ALTER INDEX** para deshabilitar y volver a compilar un índice de almacén de columnas.  
+-   No se pueden crear mediante la palabra clave **INCLUDE**.  
 -   No pueden incluir las palabras clave **ASC** ni **DESC** para ordenar el índice. Los índices de almacén de columnas se ordenan de acuerdo con los algoritmos de compresión. La ordenación eliminaría muchas mejoras de rendimiento.  
 -   No se pueden incluir columnas de objetos grandes (LOB) de tipo nvarchar(max), varchar(max) y varbinary(max) en índices no clúster de almacén de columnas. Solo los índices clúster de almacén de columnas admiten tipos LOB, a partir de la versión [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y Azure SQL Database configurados en el nivel Premium, nivel estándar (S3 y posteriores) y en todos los niveles de ofertas de núcleo virtual. Tenga en cuenta que las versiones anteriores no admiten tipos LOB en los índices clúster y no clúster de almacén de columnas.
 
@@ -402,7 +402,7 @@ Limitaciones específicas de **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]
 Estas limitaciones solo se aplican a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. En esta versión se presentaron los índices clúster de almacén de columnas actualizables. Los índices no clúster de almacén de consultas seguían siendo de solo lectura.  
 
 -   Seguimiento de cambios. No se puede usar el seguimiento de cambios con índices de almacén de columnas.  
--   Captura de datos modificados. No se puede usar la captura de datos modificados con los índices no clúster de almacén de columnas (NCCI) porque son de solo lectura. Sí funciona con los índices clúster de almacén de columnas (CCI).  
+-   Captura de datos modificados. La captura de datos modificados no se puede habilitar en las tablas con un índice de almacén de columnas agrupado. A partir de SQL Server 2016, se puede habilitar en las tablas con un índice de almacén de columnas no agrupado.  
 -   Secundario legible. No se puede acceder a un índice clúster de almacén de columnas (CCI) desde un secundario legible de un grupo de disponibilidad Always On legible.  Puede acceder a un índice no clúster de almacén de columnas (NCCI) desde un secundario legible.  
 -   Conjuntos de resultados activos múltiples (MARS). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] usa MARS para las conexiones de solo lectura a las tablas con un índice de almacén de columnas. Pero [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] no es compatible con MARS para operaciones simultáneas de lenguaje de manipulación de datos (DML) en una tabla con un índice de almacén de columnas. Cuando ocurre esto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] termina las conexiones y anula las transacciones.  
 -  Los índices de almacén de columnas no agrupados no se pueden crear en una vista o vista indexada.

@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d92479dbc8cc705e263b0828926bc2a5e86312b6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6474b863e5078b94da5dc79c1c1a7f90b3faf761
+ms.sourcegitcommit: e120899c5e72ce3108d1e459703ccd2ea6a84a5b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778454"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97353716"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Envío de trabajos de Spark en un clúster de macrodatos de SQL Server en Visual Studio Code
 
@@ -28,7 +28,7 @@ Spark & Hive Tools se puede instalar en las plataformas compatibles con Visual S
 
 Los elementos siguientes son necesarios para completar los pasos indicados en este artículo:
 
-- Un clúster de macrodatos de SQL Server. Vea [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
+- Un clúster de macrodatos de SQL Server. Vea [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview).
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Mono](https://www.mono-project.com/docs/getting-started/install/). Mono solo es necesario para Linux y macOS.
 - [Configure el entorno de PySpark interactivo para Visual Studio Code](/azure/hdinsight/set-up-pyspark-interactive-environment).
@@ -256,4 +256,4 @@ Spark & Hive para Visual Studio Code admite las características siguientes:
 3. Revise la vista **SALIDA**.  
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información sobre los clústeres de macrodatos de SQL Server y los escenarios relacionados, vea [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
+Para obtener más información sobre los clústeres de macrodatos de SQL Server y los escenarios relacionados, vea [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview).

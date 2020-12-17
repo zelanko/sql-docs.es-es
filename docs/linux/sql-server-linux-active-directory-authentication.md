@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 003001752ee656483d7b4a1820f191aafc044f25
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f1e526621d9ff769094830af5cf312eb8c1f17f9
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115934"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323694"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Uso de la autenticación de Active Directory con SQL Server en Linux
 
@@ -64,7 +64,11 @@ Una el host Linux de SQL Server con un controlador de dominio de Active Directo
    ```
 
    > [!NOTE]
-   > Es un procedimiento de seguridad recomendado tener una cuenta de AD dedicada para SQL Server, de modo que las credenciales de SQL Server no se compartan con otros servicios que usen la misma cuenta. En cambio, si quiere puede volver a usar una cuenta de AD existente si conoce su contraseña (que es necesaria para generar un archivo keytab en el paso siguiente). Además, la cuenta debe estar habilitada para admitir el cifrado AES de Kerberos de 128 y 256 bits (atributo **msDS-SupportedEncryptionTypes**) en la cuenta de usuario.
+   > Es un procedimiento de seguridad recomendado tener una cuenta de AD dedicada para SQL Server, de modo que las credenciales de SQL Server no se compartan con otros servicios que usen la misma cuenta. En cambio, si quiere puede volver a usar una cuenta de AD existente si conoce su contraseña (que es necesaria para generar un archivo keytab en el paso siguiente). Además, la cuenta debe estar habilitada para admitir el cifrado AES de Kerberos de 128 y 256 bits (atributo **msDS-SupportedEncryptionTypes**) en la cuenta de usuario. Para validar que la cuenta está habilitada para el cifrado AES, busque la cuenta en la utilidad **Usuarios y equipos de Active Directory** y seleccione **Propiedades**. Busque la pestaña **Cuentas** en las **Propiedades** y compruebe que estén activadas las dos casillas de verificación siguientes. 
+   >
+   > 1. **Esta cuenta admite cifrado AES de Kerberos de 128 bits**
+   >
+   > 2. **Esta cuenta admite cifrado AES de Kerberos de 256 bits**
 
 2. Establezca el ServicePrincipalName (SPN) de esta cuenta mediante la herramienta **setspn.exe**. El SPN debe tener el formato exacto que se especifica en el ejemplo siguiente. Para buscar el nombre de dominio completo del equipo host de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ejecute `hostname --all-fqdns` en el host de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. El puerto TCP debe ser 1433 a menos que haya configurado [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para usar otro número de puerto.
 
@@ -274,4 +278,4 @@ En este tutorial, se ha descrito cómo configurar la autenticación de Active Di
 Explore ahora otros escenarios de seguridad para SQL Server en Linux.
 
 > [!div class="nextstepaction"]
-> [Cifrado de conexiones a SQL Server en Linux](sql-server-linux-encrypted-connections.md)
+> [Cifrado de conexiones a SQL Server en Linux](sql-server-linux-encrypted-connections.md)

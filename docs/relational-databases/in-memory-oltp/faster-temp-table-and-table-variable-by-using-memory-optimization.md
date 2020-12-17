@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: kevin-farlee
 ms.author: kfarlee
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eac4d8a51dabb844ff6f3607383e676ecf0fc16a
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09d3e92d2e181264965a1d4525d13f7d13b4504d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175970"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460488"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabla temporal y variable de tabla más rápidas con optimización para memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -411,7 +411,7 @@ Beginning execution loop
 Batch execution completed 5001 times.  
 2016-04-20 00:27:05.440  = End time, _tempdb.  
 ---- Tests done. ----  
-***/
+**_/
 ```
   
   
@@ -423,7 +423,7 @@ Puede aprender a predecir las necesidades de memoria activa de las tablas optimi
 - [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [Tamaño de tabla y fila de las tablas optimizadas para memoria: cálculo de ejemplo](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
-En variables de tabla más grandes, los índices no agrupados usan más memoria que con las *tablas* optimizadas para memoria. Cuanto mayor sea el recuento de filas y la clave de índice, más aumentará la diferencia.  
+En variables de tabla más grandes, los índices no agrupados usan más memoria que con las _tablas* optimizadas para memoria. Cuanto mayor sea el recuento de filas y la clave de índice, más aumentará la diferencia.  
   
 Si se accede a la variable de tabla optimizada para memoria solo con un valor de clave exacto por acceso, un índice de hash puede ser una opción mejor que un índice no agrupado. Pero si no puede calcular el valor BUCKET_COUNT adecuado, un índice NONCLUSTERED es una buena segunda opción.  
   

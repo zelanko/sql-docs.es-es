@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/08/2019
-ms.openlocfilehash: 31ec98b4fa474ab97b3cac37f49ae885f04d1414
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc0463e49bf19c60cab94a12c10c4d8e8289e848
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418671"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402831"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Operaciones de copia de seguridad y restauración de Reporting Services
 
@@ -33,7 +33,7 @@ ms.locfileid: "88418671"
     - [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
     - [Migrar una instalación de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+    ::: moniker range="=sql-server-2016"
   
     - [Migrar una instalación de Reporting Services &#40;modo de SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
 
@@ -50,17 +50,17 @@ ms.locfileid: "88418671"
   
  Para obtener más información sobre la copia de seguridad y la recuperación de bases de datos relacionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"  
+::: moniker range="=sql-server-2016"
 
 > [!IMPORTANT]  
->  Si el servidor de informes está en modo de SharePoint, hay que tener en cuenta otras bases de datos adicionales, incluidas las bases de datos de configuración de SharePoint y la base de datos de alertas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En el modo de SharePoint, se crean tres bases de datos para cada aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las bases de datos **reportserver**, **reportservertempdb**y **dataalerting** . Para obtener más información, vea [Copias de seguridad y restauración de aplicaciones de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md).  
+>  Si el servidor de informes está en modo de SharePoint, hay que tener en cuenta otras bases de datos adicionales, incluidas las bases de datos de configuración de SharePoint y la base de datos de alertas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En el modo de SharePoint, se crean tres bases de datos para cada aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las bases de datos **reportserver**, **reportservertempdb** y **dataalerting** . Para obtener más información, vea [Copias de seguridad y restauración de aplicaciones de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md).  
 
 ::: moniker-end
   
 ## <a name="backing-up-the-encryption-keys"></a>Realizar copias de seguridad de claves de cifrado  
  La primera vez que se configura una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se recomienda realizar una copia de seguridad de las claves de cifrado. También se debería realizar una copia de seguridad de las claves siempre que se cambie la identidad de las cuentas de servicio o el nombre del equipo. Para obtener más información, vea [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 Para los servidores de informes en modo de SharePoint, vea la sección "Administración de claves" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
 

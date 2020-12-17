@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 01ec0494fa258aed08c723869efb414600eb8359
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 95742efced8c5b5704863d2582c6ca80c5b227e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988732"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440487"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Contadores de rendimiento de objetos de rendimiento de modo de SharePoint MSRS 2011
   En este tema se describen los contadores de rendimiento para los objetos de rendimiento **Modo de SharePoint del servicio web de MSRS 2011** y **Modo de SharePoint del servicio Windows de MSRS 2011** que forman parte de una implementación en modo de SharePoint de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
@@ -55,7 +55,7 @@ ms.locfileid: "91988732"
 |**Errores de caché por segundo**|Número de solicitudes por segundo que no han podido devolver un informe de memoria caché. Utilice este contador para averiguar si los recursos utilizados para el almacenamiento en caché (disco o memoria) son suficientes.|  
 |**Errores de caché por segundo (modelos semánticos)**|Número de solicitudes por segundo que no han podido devolver un modelo de memoria caché. Utilice este contador para averiguar si los recursos utilizados para el almacenamiento en caché (disco o memoria) son suficientes.|  
 |**Solicitudes de primera sesión por segundo**|Número de nuevas sesiones de usuario que se inician desde la memoria caché del servidor de informes por segundo.|  
-|**Aciertos de caché en memoria por segundo**|Número de veces por segundo que se recuperan informes de la memoria caché en memoria. La*caché en memoria* es una parte de la memoria caché que almacena informes en la memoria de la CPU. Cuando se usa la memoria caché en memoria, el servidor de informes no realiza una consulta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el contenido en memoria caché.|  
+|**Aciertos de caché en memoria por segundo**|Número de veces por segundo que se recuperan informes de la memoria caché en memoria. La *caché en memoria* es una parte de la memoria caché que almacena informes en la memoria de la CPU. Cuando se usa la memoria caché en memoria, el servidor de informes no realiza una consulta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el contenido en memoria caché.|  
 |**Errores de caché en memoria por segundo**|Número de veces por segundo que no se han podido recuperar informes de la memoria caché en memoria.|  
 |**Solicitudes de siguiente sesión por segundo**|Número de solicitudes por segundo de informes que se abren en una sesión existente (como informes que se representan a partir de una instantánea de sesión).|  
 |**Solicitudes de informe**|Número de informes actualmente activos que el servidor de informes está procesando.|  
@@ -65,7 +65,7 @@ ms.locfileid: "91988732"
 |**Total de aciertos de caché (modelos semánticos)**|Número total de solicitudes del modelo de la memoria caché después del inicio del servicio. Este contador se restablece siempre que ASP.NET detiene el servicio web del servidor de informes.|  
 |**Total de errores de caché**|Número total de veces que no se ha podido devolver un informe de la memoria caché después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes. Utilice este contador para determinar si el espacio en disco y la memoria son suficientes.|  
 |**Total de errores de caché (modelos semánticos)**|Número total de veces que no se ha podido devolver un modelo de la memoria caché después del inicio del servicio. Este contador se restablece siempre que ASP.NET detiene el servicio web del servidor de informes. Utilice este contador para determinar si el espacio en disco y la memoria son suficientes.|  
-|**Total de aciertos de caché en memoria**|Número total de informes en memoria caché devueltos desde la memoria caché en memoria después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes. La*caché en memoria* es una parte de la memoria caché que almacena informes en la memoria de la CPU. Cuando se usa la memoria caché en memoria, el servidor de informes no realiza una consulta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el contenido en memoria caché.|  
+|**Total de aciertos de caché en memoria**|Número total de informes en memoria caché devueltos desde la memoria caché en memoria después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes. La *caché en memoria* es una parte de la memoria caché que almacena informes en la memoria de la CPU. Cuando se usa la memoria caché en memoria, el servidor de informes no realiza una consulta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el contenido en memoria caché.|  
 |**Total de errores de caché en memoria**|Número total de errores de memoria caché en la memoria caché en memoria después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.|  
 |**Total de errores de procesamiento**|Número de errores del procesamiento de la solicitud de servicio web del servidor de informes.|  
 |**Total de subprocesos rechazados**|Número total de subprocesos rechazados para el procesamiento asincrónico y tratados posteriormente como procesos sincrónicos en el mismo subproceso. Cada origen de datos se procesa en un subproceso. Si el volumen de subprocesos es superior a la capacidad, se rechazan subprocesos para el procesamiento asincrónico y, a continuación, se procesan en serie.|  
@@ -96,7 +96,7 @@ ms.locfileid: "91988732"
 |**Entregas por segundo**|Número de entregas de informes por segundo, desde cualquier extensión de entrega.|  
 |**Eventos por segundo**|Número de eventos procesados por segundo. Entre los eventos que se supervisan se incluyen **SnapshotUpdated** y **TimedSubscription**.|  
 |**Solicitudes de primera sesión por segundo**|Número de nuevas sesiones de ejecución de informe creadas por segundo.|  
-|**Aciertos de caché en memoria por segundo**|Número de veces por segundo que se recuperan informes de la memoria caché en memoria. La*caché en memoria* es una parte de la memoria caché que almacena informes en la memoria de la CPU. Cuando se usa la memoria caché en memoria, el servidor de informes no realiza una consulta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el contenido en memoria caché.|  
+|**Aciertos de caché en memoria por segundo**|Número de veces por segundo que se recuperan informes de la memoria caché en memoria. La *caché en memoria* es una parte de la memoria caché que almacena informes en la memoria de la CPU. Cuando se usa la memoria caché en memoria, el servidor de informes no realiza una consulta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el contenido en memoria caché.|  
 |**Errores de caché en memoria por segundo**|Número de veces por segundo que no se pueden recuperar informes de la memoria caché en memoria.|  
 |**Solicitudes de siguiente sesión por segundo**|Número de solicitudes por segundo de informes que se abren en una sesión existente (como informes que se representan a partir de una instantánea de sesión).|  
 |**Solicitudes de informe**|Número de informes actualmente activos que el servidor de informes está procesando. Utilice este contador para evaluar la estrategia de almacenamiento en memoria caché. Es posible que haya bastantes más solicitudes que informes generados.|  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 28f69b4aa47b45708832162b2b4b8429a847bc65
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 04b8fa62adfc5cb78ec52f2d87617f9136042aa7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454537"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402570"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Aprovisionar Subscripciones y alertas para aplicaciones de servicio SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requieren el Agente SQL Server y la configuración de permisos del mismo. Si ve mensajes de error que indican que se requiere el Agente SQL Server y ha comprobado que se está ejecutando, actualice o compruebe los permisos. El ámbito de este tema es [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint y en él se describen tres formas de actualizar los permisos del Agente SQL Server con suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las credenciales que use para los pasos de este tema deben disponer de los permisos adecuados para conceder permisos de ejecución a RSExecRole para los objetos de la aplicación de servicio, msdb y las bases de datos maestras.  
@@ -107,7 +107,7 @@ ms.locfileid: "88454537"
   
 1.  En la barra de herramientas de SQL Server Management Studio, haga clic en **Nueva consulta**.  
   
-2.  En el menú **Archivo** , haga clic en **Abrir**y, a continuación, en **Archivo**.  
+2.  En el menú **Archivo** , haga clic en **Abrir** y, a continuación, en **Archivo**.  
   
 3.  Navegue a la carpeta donde guardó la instrucción Transact-SQL que generó en el Shell de administración de SharePoint 2016 o SharePoint 2013.  
   

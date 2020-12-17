@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 82c949647cf670c0e335b2c4446c248fea86581d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: e7d7b36c2c19d48fec393e38c741244f6713dcd3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196332"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470636"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Escenarios de ciencia de datos y plantillas de soluciones
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "92196332"
 En este artículo se describe una serie de plantillas de solución de aprendizaje automático de SQL Server. Estas plantillas demuestran procedimientos recomendados y proporcionan los bloques de creación para ayudarle a implementar una solución de aprendizaje automático rápidamente. Cada plantilla está diseñada para resolver un problema específico de ciencia de datos, para un segmento o un sector en concreto.
 Las tareas de cada plantilla permiten desde preparación de datos e ingeniería de características hasta el entrenamiento y la puntuación de modelos. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Use estas plantillas para descubrir cómo funciona [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Después, no dude en personalizar la plantilla para que se adapte a su escenario y compilar una solución personalizada.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 Use estas plantillas para obtener información sobre el funcionamiento de SQL Server Machine Learning Services. Después, no dude en personalizar la plantilla para que se adapte a su escenario y compilar una solución personalizada.
 ::: moniker-end
 

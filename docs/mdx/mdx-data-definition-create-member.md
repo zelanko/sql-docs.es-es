@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d2a604bd27145b839476c75ea443d680e78c464
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 878d189aba259e5b69f5c27dbbc8b80b3f7f880b
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196991"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642982"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definición de datos de MDX: CREATE MEMBER
 
@@ -47,7 +47,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  *Property_Value*  
  Expresión escalar válida que define el valor de la propiedad de miembro calculado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La instrucción CREATE MEMBER define los miembros calculados disponibles durante la sesión y que, por lo tanto, se pueden utilizar en varias consultas mientras la sesión esté activa. Para obtener más información, vea [crear Session-Scoped miembros calculados &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
   
  También puede definir un miembro calculado para su uso en una sola consulta. Para definir un miembro calculado limitado a una sola consulta, use la cláusula WITH de la instrucción SELECT. Para obtener más información, vea [crear Query-Scoped miembros calculados &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
@@ -115,7 +115,7 @@ WHERE ProfitRatio
 |SOLVE_ORDER|Orden de resolución del miembro calculado en aquellos casos en los que un miembro calculado haga referencia a otro miembro calculado (es decir, cuando exista una intersección de miembros calculados).|  
 |FORMAT_STRING|Cadena de formato de estilo de Office que la aplicación cliente puede usar al mostrar valores de celda.|  
 |VISIBLE|Valor que indica si el miembro calculado es visible en el conjunto de filas del esquema. Los miembros calculados visibles se pueden agregar a un conjunto con la función [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Un valor distinto de cero indica que el miembro calculado es visible. El valor predeterminado de esta propiedad es *visible*.<br /><br /> Los miembros calculados no visibles (cuando el valor se establece en cero) suelen utilizarse como pasos intermedios en miembros calculados más complejos. También otros tipos de miembro, como las medidas, pueden hacer referencia a estos miembros calculados.|  
-|NON_EMPTY_BEHAVIOR|Medida o conjunto utilizados para determinar el comportamiento de los miembros calculados al resolver celdas vacías.<br /><br /> ADVERTENCIA: esta propiedad está en desuso. ** \* \* \* \* ** No la active. Consulte [características Desusadas Analysis Services en SQL Server 2014](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014) para obtener más información.|  
+|NON_EMPTY_BEHAVIOR|Medida o conjunto utilizados para determinar el comportamiento de los miembros calculados al resolver celdas vacías.<br /><br /> ADVERTENCIA: esta propiedad está en desuso. **\* \* \* \*** No la active. Consulte [características Desusadas Analysis Services en SQL Server 2014](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014&preserve-view=true) para obtener más información.|  
 |CAPTION|Cadena que utiliza la aplicación cliente como título para el miembro.|  
 |DISPLAY_FOLDER|Cadena que identifica la ruta de la carpeta que usa la aplicación cliente para mostrar el miembro. La aplicación cliente define el separador de niveles de carpetas. Para las herramientas y clientes proporcionados por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la barra diagonal inversa ( \\ ) es el separador de nivel. Si va a asignar varias carpetas para mostrar a un miembro definido, utilice un punto y coma (;) para separar las carpetas.|  
 |ASSOCIATED_MEASURE_GROUP|Nombre del grupo de medida al que se asocia el miembro.|  

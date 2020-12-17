@@ -18,13 +18,13 @@ ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 33621e680b958bf6945fb26fa82209ee640ba9f2
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: d0ec97acbbae3f0e5947348ba35308bd3cfc86ff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034048"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424996"
 ---
 # <a name="assign-alerts-to-an-operator"></a>Assign Alerts to an Operator
 
@@ -60,11 +60,11 @@ Solo los miembros del rol fijo de servidor **sysadmin** pueden asignar alertas a
   
 3.  Haga clic en el signo más para expandir la carpeta **Operadores** .  
   
-4.  Haga clic con el botón derecho en el operador al que desea asignar una alerta y seleccione **Propiedades**y, luego, la página **Notificaciones** .  
+4.  Haga clic con el botón derecho en el operador al que desea asignar una alerta y seleccione **Propiedades** y, luego, la página **Notificaciones** .  
   
 5.  En el cuadro de diálogo **Propiedades de**_nombre\_operador_, en **Seleccionar una página**, seleccione **Notificaciones**.  
   
-6.  En **Ver las notificaciones enviadas a este usuario por**, seleccione **Alertas** para ver una lista de las alertas enviadas a este operador o seleccione **Trabajos** para ver una lista de los trabajos que envían notificaciones a este operador. Active una o varias de las siguientes casillas para definir el método de notificación de cada notificación según corresponda: **Correo electrónico**, **Buscapersonas**o **Net send**.  
+6.  En **Ver las notificaciones enviadas a este usuario por**, seleccione **Alertas** para ver una lista de las alertas enviadas a este operador o seleccione **Trabajos** para ver una lista de los trabajos que envían notificaciones a este operador. Active una o varias de las siguientes casillas para definir el método de notificación de cada notificación según corresponda: **Correo electrónico**, **Buscapersonas** o **Net send**.  
   
 7.  Cuando termine, haga clic en **Aceptar**.  
   

@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f0bdba9e6d1e91560f78ea3eb91c8cf8aa419b5d
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 5f39c1c078b470c2b0c2ec47cb8fa69060481259
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809546"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642281"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitectura de integración CLR: entorno hospedado CLR
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "91809546"
  El código con seguridad de tipos es código que obtiene acceso a las estructuras de memoria siguiendo métodos perfectamente definidos. Por ejemplo, dada una referencia válida a un objeto, el código con seguridad de tipos puede obtener acceso a la memoria en desplazamientos fijos que se correspondan con miembros de campo reales. Sin embargo, si el código obtiene acceso a la memoria en desplazamientos arbitrarios que se encuentran dentro o fuera del intervalo de memoria perteneciente al objeto, significa que no tiene seguridad de tipos. Cuando los ensamblados se cargan en CLR, antes de que MSIL se compile mediante la compilación Just-In-Time (JIT), el tiempo de ejecución realiza una fase de comprobación que examina el código para determinar su seguridad de tipos. El código que supera correctamente esta comprobación se denomina código con seguridad de tipos comprobable.  
   
 ###### <a name="application-domains"></a>Dominios de aplicación  
- CLR admite la noción de dominios de aplicación como zonas de ejecución dentro de un proceso de host donde los ensamblados de código administrado pueden cargarse y ejecutarse. El límite del dominio de aplicación proporciona aislamiento entre los ensamblados. Los ensamblados se aíslan en lo que se refiere a la visibilidad de variables estáticas y miembros de datos, y a la capacidad de llamar al código de forma dinámica. Los dominios de aplicación también constituyen el mecanismo de carga y descarga de código. Solo es posible descargar código de la memoria descargando el dominio de aplicación. Para obtener más información, vea [dominios de aplicación y seguridad de la integración CLR](/previous-versions/sql/2014/database-engine/dev-guide/application-domains-and-clr-integration-security?view=sql-server-2014).  
+ CLR admite la noción de dominios de aplicación como zonas de ejecución dentro de un proceso de host donde los ensamblados de código administrado pueden cargarse y ejecutarse. El límite del dominio de aplicación proporciona aislamiento entre los ensamblados. Los ensamblados se aíslan en lo que se refiere a la visibilidad de variables estáticas y miembros de datos, y a la capacidad de llamar al código de forma dinámica. Los dominios de aplicación también constituyen el mecanismo de carga y descarga de código. Solo es posible descargar código de la memoria descargando el dominio de aplicación. Para obtener más información, vea [dominios de aplicación y seguridad de la integración CLR](/previous-versions/sql/2014/database-engine/dev-guide/application-domains-and-clr-integration-security?view=sql-server-2014&preserve-view=true).  
   
 ###### <a name="code-access-security-cas"></a>Seguridad de acceso del código (CAS)  
  El sistema de seguridad de CLR proporciona un modo de controlar qué tipos de operaciones puede llevar a cabo el código administrado mediante la asignación de permisos al código. Los permisos de acceso a código se asignan según la identidad del código (por ejemplo, la firma del ensamblado o el origen del código).  
@@ -174,7 +174,7 @@ Thread.EndThreadAffinity();
   
  A la vista de estas consideraciones, se desaconseja el uso de variables estáticas y miembros de datos estáticos de las clases que se utilizan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En el caso de ensamblados SAFE y EXTERNAL_ACCESS, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examina los metadatos del ensamblado en el momento de creación del ensamblado (CREATE ASSEMBLY) y no puede crear dichos ensamblados si detecta el uso de variables y miembros de datos estáticos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tampoco permite llamadas a .NET Framework API anotadas con los atributos de protección de host **SharedState**, **Synchronization**y **ExternalProcessMgmt** . Esto impide que los ensamblados EXTERNAL_ACCESS y SAFE llamen a cualquiera de las API que habilitan el estado compartido, ejecuten la sincronización y puedan afectar a la integridad del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea restricciones del modelo de programación de la [integración CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tampoco permite llamadas a .NET Framework API anotadas con los atributos de protección de host **SharedState**, **Synchronization** y **ExternalProcessMgmt** . Esto impide que los ensamblados EXTERNAL_ACCESS y SAFE llamen a cualquiera de las API que habilitan el estado compartido, ejecuten la sincronización y puedan afectar a la integridad del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea restricciones del modelo de programación de la [integración CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Seguridad de la integración CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   

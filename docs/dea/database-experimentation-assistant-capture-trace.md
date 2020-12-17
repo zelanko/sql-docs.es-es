@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 67b427e7d1d73b072ce2ec319bfc3cbcbbcfddf9
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: e335170c97f18039767fab8bf0b8400ce9f9b45d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636105"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643765"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturar un seguimiento en Asistente para experimentación con bases de datos
 
@@ -33,24 +33,24 @@ El almacenamiento en caché de consultas en SQL Server puede afectar a los resul
 
     ![Creación de una captura en DEA](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
 
-2. En la página **nueva captura** , en **detalles**de la captura, escriba o seleccione la siguiente información:
+2. En la página **nueva captura** , en **detalles** de la captura, escriba o seleccione la siguiente información:
 
-    - **Nombre**de la captura: escriba un nombre para el archivo de seguimiento de la captura.
+    - **Nombre** de la captura: escriba un nombre para el archivo de seguimiento de la captura.
     - **Formato**: especifique el formato (Trace o XEvents) para la captura.
     - **Duración**: seleccione el período de tiempo (en minutos) durante el que desea que se ejecute la captura de seguimiento.
-    - **Ubicación**de la captura: seleccione la ruta de acceso de destino del archivo de seguimiento.
+    - **Ubicación** de la captura: seleccione la ruta de acceso de destino del archivo de seguimiento.
 
         > [!NOTE]
         > La ruta de acceso al archivo de seguimiento debe estar en el equipo que ejecuta SQL Server. Si el servicio SQL Server no está establecido para una cuenta específica, es posible que el servicio necesite permisos de escritura en la carpeta especificada para que se escriba el archivo de seguimiento.
 
 3. Compruebe que ha realizado una copia de seguridad seleccionando la opción **sí, he realizado manualmente la copia de seguridad...** .
 
-4. En **detalles**de la captura, escriba o seleccione la siguiente información:
+4. En **detalles** de la captura, escriba o seleccione la siguiente información:
 
     - **Tipo de servidor**: especifique el tipo de servidor SQL Server **(SQLServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
     - **Nombre del servidor**: especifique el nombre del servidor o la dirección IP de su SQL Server.
     - **Tipo de autenticación**: para el tipo de autenticación, seleccione **Windows**.
-    - **Nombre**de la base de datos: escriba un nombre para la base de datos en la que se va a iniciar un seguimiento de base de datos. Si no se especifica una base de datos, el seguimiento se captura en todas las bases de datos del servidor.
+    - **Nombre** de la base de datos: escriba un nombre para la base de datos en la que se va a iniciar un seguimiento de base de datos. Si no se especifica una base de datos, el seguimiento se captura en todas las bases de datos del servidor.
 
 5. Active o desactive las casillas **cifrar conexión** y **confiar en certificado de servidor** según corresponda para su escenario.
 
@@ -133,12 +133,12 @@ Si ve un error al ejecutar una captura de seguimiento, confirme lo siguiente:
 
 - El nombre del equipo que ejecuta SQL Server es válido. Para confirmar, intente conectarse al equipo que ejecuta SQL Server mediante SQL Server Management Studio (SSMS).
 - La configuración del firewall no bloquea las conexiones con el equipo que ejecuta SQL Server.
-- El usuario tiene los permisos que se enumeran en las [preguntas más frecuentes sobre la reproducción](./database-experimentation-assistant-replay-trace.md?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
+- El usuario tiene los permisos que se enumeran en las [preguntas más frecuentes sobre la reproducción](./database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay).
 - El nombre de seguimiento no sigue la Convención estándar de sustitución incremental (Capture \_ 1). En su lugar, pruebe nombres de seguimiento como Capture \_ 1A o Capture1.
 
 A continuación se muestran algunos posibles errores que podrían aparecer y soluciones para resolverlos:
 
-|Posibles errores|Soluciones|  
+|Posibles errores|Solución|  
 |---|---|  
 |No se puede iniciar el seguimiento en el SQL Server de destino, compruebe si tiene los permisos necesarios y si la cuenta de SQL Server tiene acceso de escritura a la ruta del archivo de seguimiento especificada código de error de SQL (53)|El usuario que ejecuta la herramienta DEA debe tener acceso al equipo que ejecuta SQL Server. El usuario debe tener asignado el rol sysadmin.|  
 |No se puede iniciar el seguimiento en el SQL Server de destino, compruebe si tiene los permisos necesarios y si la cuenta de SQL Server tiene acceso de escritura a la ruta del archivo de seguimiento especificada código de error de SQL (19062)|Es posible que la ruta de acceso especificada no exista o que la carpeta no tenga permisos de escritura para la cuenta en la que se están ejecutando los servicios de SQL Server (por ejemplo, servicio de red). La ruta de acceso debe existir y debe tener los permisos necesarios para que se inicie el seguimiento.|  
@@ -147,6 +147,6 @@ A continuación se muestran algunos posibles errores que podrían aparecer y sol
 
 Si ve algún otro error con la etiqueta *código de error de SQL*, consulte [motor de base de datos errores](../relational-databases/errors-events/database-engine-events-and-errors.md) para obtener descripciones detalladas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - Para obtener información sobre cómo configurar las herramientas de Distributed Replay en SQL Server antes de reproducir un seguimiento capturado, consulte [configuración de Distributed Replay para Asistente para experimentación con bases de datos](database-experimentation-assistant-configure-replay.md).

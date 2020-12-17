@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: a8f3cfc9e47cc18df2728e7b6078cc355c488fa0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c5c908d8db988e83d682bbf636de08ef86a8223a
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440806"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644072"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
 
@@ -70,14 +70,14 @@ Los contadores devueltos son por operador y por subproceso. Los resultados son d
 |actual_read_row_count|**bigint**|Número de filas leídas por un operador antes de que se aplicara el predicado residual.| 
 |estimated_read_row_count|**bigint**|**Se aplica a:** A partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número de filas que un operador debe leer antes de que se aplicara el predicado residual.|  
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Se aplican los mismos comentarios en [Sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) .  
+Se aplican los mismos comentarios en [Sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md) .  
 
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso `VIEW SERVER STATE` en el servidor.  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
  [Azure Synapse Analytics y vistas de administración dinámica de almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    

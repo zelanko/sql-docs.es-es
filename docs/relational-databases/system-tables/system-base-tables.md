@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09f898ac65e48977b98b55c1f6b5e5ed9057ee49
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 35d75fe78e9631423f6dc9acc48cd89ef41d8d79
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810217"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641913"
 ---
 # <a name="system-base-tables"></a>Tablas base del sistema
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "91810217"
 |**sys.sysguidrefs**|Existe en todas las bases de datos. Contiene una fila para cada referencia del identificador clasificado por GUID.|  
   
 ## <a name="updating-system-base-tables"></a>Actualizar tablas base del sistema    
-Puede ver los datos de las tablas del sistema a través de las vistas de catálogo del sistema. Para actualizar los metadatos de una tabla base del sistema, utilice la interfaz TSQL adecuada (por ejemplo, instrucciones DDL). No se pueden actualizar manualmente las tablas del sistema. SQL Server notifica los siguientes mensajes al realizar actualizaciones directas en las tablas del sistema.
+Puede ver los datos de las tablas del sistema mediante las vistas de catálogo del sistema. Para actualizar los metadatos de una tabla base del sistema, utilice la interfaz TSQL adecuada (por ejemplo, instrucciones DDL). No se pueden actualizar manualmente las tablas del sistema. SQL Server notifica los siguientes mensajes al realizar actualizaciones directas en las tablas del sistema.
 
 ### <a name="a-system-table-is-manually-updated"></a>Una tabla del sistema se actualiza manualmente
 Mensaje 17659: Advertencia: Se ha actualizado la tabla del sistema con id. <id> directamente en la base de datos con id. <id> y es posible que no se haya mantenido la coherencia de la caché. Debe reiniciar SQL Server.
@@ -100,4 +100,4 @@ MSG 3859: ADVERTENCIA: el catálogo del sistema se actualizó directamente en la
 ### <a name="executing-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>Ejecutar el comando DBCC_CHECKDB después de actualizar manualmente una tabla del sistema
 MSG 3859: ADVERTENCIA: el catálogo del sistema se actualizó directamente en la base de datos con el ID. 17, más recientemente en date_time.
 
-Si realiza actualizaciones manuales en una tabla del sistema y encuentra un problema, es posible que se le pida que realice una restauración a partir de una copia de seguridad o que copie los datos de la base de datos afectada en una nueva base de datos. Más información sobre [los mensajes de error de acción del usuario](../errors-events/mssqlserver-8992-database-engine-error.md?view=sql-server-ver15#user-action).
+Si realiza actualizaciones manuales en una tabla del sistema y encuentra un problema, es posible que se le pida que realice una restauración a partir de una copia de seguridad o que copie los datos de la base de datos afectada en una nueva base de datos. Más información sobre [los mensajes de error de acción del usuario](../errors-events/mssqlserver-8992-database-engine-error.md#user-action).

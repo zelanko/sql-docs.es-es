@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f80767ef3b371260e916aef386dd1c8dbc755586
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: dc6b582895a684386ed2d14b0c31612dcd0a47d1
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777734"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641571"
 ---
 # <a name="transparent-data-encryption"></a>Cifrado de datos transparente
 Puede tomar varias precauciones para ayudar a proteger la base de datos, como diseñar un sistema seguro, cifrar los recursos confidenciales e instalar un firewall alrededor de los servidores de base de datos. Sin embargo, para un escenario en el que se roban los medios físicos (como unidades o cintas de copia de seguridad), un usuario malintencionado solo puede restaurar o adjuntar la base de datos y examinar los datos. Una solución consiste en cifrar los datos confidenciales en la base de datos y usar un certificado para proteger las claves que se utilizan para cifrarlos. Esto evita que utilice los datos cualquiera que carezca de las claves, pero este tipo de protección debe planearse de antemano.  
@@ -142,7 +142,7 @@ La visualización de los metadatos relacionados con TDE requiere el `CONTROL SER
 ## <a name="considerations"></a>Consideraciones  
 Mientras se realiza el examen del proceso de nuevo cifrado para una operación de cifrado de base de datos, las operaciones de mantenimiento de la base de datos están deshabilitadas.  
   
-Puede encontrar el estado del cifrado de base de datos mediante la vista de administración dinámica **Sys. dm_pdw_nodes_database_encryption_keys** . Para obtener más información, vea la sección *vistas de catálogo y vistas de administración dinámica* anteriormente en este artículo.  
+Puede encontrar el estado del cifrado de base de datos mediante la **Sys.dm_pdw_nodes_database_encryption_keys** vista de administración dinámica. Para obtener más información, vea la sección *vistas de catálogo y vistas de administración dinámica* anteriormente en este artículo.  
   
 ### <a name="restrictions"></a>Restricciones  
 No se permiten las siguientes operaciones durante las `CREATE DATABASE ENCRYPTION KEY` `ALTER DATABASE ENCRYPTION KEY` instrucciones,, `DROP DATABASE ENCRYPTION KEY` o `ALTER DATABASE...SET ENCRYPTION` .  
@@ -207,7 +207,7 @@ La clave de cifrado de base de datos (DEK) está protegida por los certificados 
   
 El sistema puede acceder a las claves sin necesidad de intervención humana (por ejemplo, proporcionar una contraseña). Si el certificado no está disponible, el sistema generará un error que explica que el DEK no se puede descifrar hasta que el certificado adecuado esté disponible.  
   
-Al mover una base de datos de un dispositivo a otro, el certificado que se usa para proteger su ' DEK debe restaurarse primero en el servidor de destino. A continuación, la base de datos se puede restaurar como de costumbre. Para obtener más información, consulte la documentación de SQL Server estándar, en el apartado sobre [Cómo trasladar una base de datos protegida por TDE a otra SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md?view=sql-server-ver15).  
+Al mover una base de datos de un dispositivo a otro, el certificado que se usa para proteger su ' DEK debe restaurarse primero en el servidor de destino. A continuación, la base de datos se puede restaurar como de costumbre. Para obtener más información, consulte la documentación de SQL Server estándar, en el apartado sobre [Cómo trasladar una base de datos protegida por TDE a otra SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
   
 Los certificados usados para cifrar DEK se deben conservar siempre que haya copias de seguridad de base de datos que las usen. Las copias de seguridad de certificados deben incluir la clave privada del certificado, ya que sin la clave privada, no se puede usar un certificado para restaurar la base de datos. Dichas copias de seguridad de claves privadas de certificados se almacenan en un archivo independiente, protegido por una contraseña que se debe proporcionar para la restauración de certificados.  
   
@@ -246,7 +246,7 @@ Ejemplo de la acción para reemplazar una máquina virtual.
   
 Durante la actualización, si una base de usuarios está cifrada y no se proporciona la contraseña de DMK, se producirá un error en la acción de actualización. Durante el reemplazo, si no se proporciona la contraseña correcta cuando existe un DMK, la operación omitirá el paso de recuperación de DMK. Todos los demás pasos se completarán al final de la acción reemplazar VM, pero la acción informará de un error al final para indicar que se requieren pasos adicionales. En los registros de instalación (que se encuentran en **\ProgramData\Microsoft\Microsoft SQL Server Warehouse\100\Logs\Setup de datos paralelos \\<marca de tiempo> \detail-Setup**), se mostrará la siguiente advertencia cerca del final.  
   
-`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
+`**_ WARNING \_\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
 Ejecute estas instrucciones manualmente en PDW y reinicie el dispositivo después de eso para recuperar DMK:  
   

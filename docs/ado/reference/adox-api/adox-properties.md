@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71c53b9a1f57e5c207500d25f1ab3eb0fec16ad8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cbc72515c3ba8bcee52bff213ba11bd0b4bc2140
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985596"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641154"
 ---
 # <a name="adox-properties"></a>Propiedades ADOX
 
@@ -29,7 +29,7 @@ ms.locfileid: "88985596"
 |[Atributos](./attributes-property-adox.md)|Describe las características de las columnas.|  
 |[Agrupado](./clustered-property-adox.md)|Indica si el índice está agrupado.|  
 |[Comando](./command-property-adox.md)|Especifica un objeto **Command** de ADO que se puede utilizar para crear o ejecutar el procedimiento.|  
-|[Recuento](../ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
+|[Count](../ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
 |[DateCreated](./datecreated-property-adox.md)|Indica la fecha de creación del objeto.|  
 |[DateModified](./datemodified-property-adox.md)|Indica la fecha en que se modificó el objeto por última vez.|  
 |[DefinedSize](./definedsize-property-adox.md)|Indica el tamaño máximo indicado de la columna.|  
@@ -51,5 +51,5 @@ ms.locfileid: "88985596"
 |[UpdateRule](./updaterule-property-adox.md)|Indica la acción que se realiza cuando se actualiza una clave principal.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Referencia de la API de ADOX](./adox-object-model.md?view=sql-server-ver15)   
+ [Referencia de la API de ADOX](./adox-object-model.md)   
  [Extensiones de ADO para lenguaje de definición de datos y seguridad (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

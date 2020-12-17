@@ -16,13 +16,13 @@ ms.assetid: 5041261f-0c32-4d4a-8bee-59a6c16200dd
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c0a05ea8209ae22ef7408d29fe58cc2aca9985c7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f0e345b59e3bd625e65dcc9d4c28d063735c9c03
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037968"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423920"
 ---
 # <a name="disable-or-enable-a-job"></a>Deshabilitar o habilitar un trabajo
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ Para obtener información detallada, vea [Implementar la seguridad del Agente SQ
   
 2.  Expanda **Agente SQL Server**.  
   
-3.  Expanda **Trabajos**y, luego, haga clic con el botón derecho en el trabajo que desee deshabilitar o habilitar.  
+3.  Expanda **Trabajos** y, luego, haga clic con el botón derecho en el trabajo que desee deshabilitar o habilitar.  
   
 4.  Para deshabilitar un trabajo, haga clic en **Deshabilitar**. Para habilitar un trabajo, haga clic en **Habilitar**.  
   

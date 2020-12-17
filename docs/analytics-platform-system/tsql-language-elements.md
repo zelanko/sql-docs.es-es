@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4d28d64c4c59655c1f08eb0e4c6dc979a7814652
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ba4b4992b97cb930005458640215497f0487016f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778414"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641558"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Elementos del lenguaje T-SQL para almacenamiento de datos paralelos
 Elementos del lenguaje T-SQL para el sistema de plataforma analítica (APS) SQL Server almacenamiento de datos paralelos (PDW).
@@ -23,7 +23,7 @@ Elementos del lenguaje T-SQL para el sistema de plataforma analítica (APS) SQL 
 * [convenciones de sintaxis](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [reglas de nomenclatura de objetos](../relational-databases/databases/database-identifiers.md)
 * [palabras clave reservadas](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [intercalaciones](../t-sql/statements/collations.md?view=sql-server-ver15)
+* [intercalaciones](../t-sql/statements/collations.md)
 * [comentarios](../t-sql/language-elements/comment-transact-sql.md)
 * [constantes](../t-sql/data-types/constants-transact-sql.md)
 * [tipos de datos](../t-sql/data-types/data-types-transact-sql.md)
@@ -60,7 +60,7 @@ Elementos del lenguaje T-SQL para el sistema de plataforma analítica (APS) SQL 
 * [&lt; (Menor que)](../t-sql/language-elements/less-than-transact-sql.md)
 * [&gt;= (Mayor o igual que)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [&lt;= (Menor o igual que)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
-* [&lt;&gt; (No igual a)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
+* [&lt; &gt; (No igual a)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= (No es igual a)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)

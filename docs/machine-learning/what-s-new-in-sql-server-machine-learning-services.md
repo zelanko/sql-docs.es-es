@@ -9,20 +9,20 @@ ms.author: davidph
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning-services
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d0da76c639048e9479afd575b584275a9bb51c6
-ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: fdf9cb30fead518c36fef8de4e62db4cd56d9560
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94810515"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469996"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades de SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
 
 En este artículo se describen las nuevas funcionalidades y características que se incluyen en cada versión de [Machine Learning Services de SQL Server](sql-server-machine-learning-services.md). Se han agregado funciones de aprendizaje automático a SQL Server en cada versión a medida que se continúa la expansión, ampliación y profundización de la integración entre la plataforma de datos, el análisis avanzado y la ciencia de datos. 
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ## <a name="new-in-sql-server-2019"></a>Novedades de SQL Server 2019
 
 En esta versión se agregan las características principales solicitadas para las operaciones de aprendizaje automático de Python y R en SQL Server. Para obtener más información sobre todas las características de esta versión, consulte [Novedades de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) y [Notas de la versión de SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md).
@@ -41,7 +41,7 @@ A continuación, se muestran las características nuevas para SQL Server Machin
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## <a name="new-in-sql-server-2017"></a>Novedades de SQL Server 2017
 
 En esta versión se agregan [compatibilidad con Python y algoritmos de aprendizaje automático líderes del sector](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Después de cambiar el nombre para reflejar el nuevo ámbito, SQL Server 2017 marca la introducción de [SQL Server Machine Learning Services (en base de datos)](sql-server-machine-learning-services.md), con compatibilidad de lenguaje para Python y R. 
@@ -90,7 +90,7 @@ Existen [**modelos previamente entrenados**](install/sql-pretrained-models-insta
 En esta versión también se agrega [SQL Server Machine Learning Server (independiente)](r/r-server-standalone.md), un servidor de ciencia de datos totalmente independiente, que admite el análisis predictivo y estadístico en R y Python. Como sucede con R Services, este servidor es la próxima versión de SQL Server 2016 R Server (independiente). Con el servidor independiente, puede distribuir y escalar soluciones de R o Python sin dependencias en SQL Server.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## <a name="new-in-sql-server-2016"></a>Novedades de SQL Server 2016
 
 En esta versión se han introducido funciones de aprendizaje automático en SQL Server a través de **SQL Server 2016 R Services**, un motor de análisis en la base de datos para procesar scripts de R en datos residentes dentro de una instancia del motor de base de datos.
@@ -106,7 +106,7 @@ Para obtener todos los anuncios de características, vea [Novedades de SQL Serve
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## <a name="linux-support"></a>Compatibilidad de Linux
 
 SQL Server 2019 agrega compatibilidad con Linux para R y Python cuando se instalan los paquetes de aprendizaje automático con una instancia del motor de base de datos. Para obtener más información, vea [Instalación de SQL Server Machine Learning Services en Linux](../linux/sql-server-linux-setup-machine-learning.md).

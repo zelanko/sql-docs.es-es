@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: decdf70e29d907e8f95b7e16cbd88ac94e16b857
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b8010bda8e05b30eae24fd58f74622d4526ce8ef
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036088"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480616"
 ---
 # <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>Identificación de problemas con IntelliSense: SQL Server Management Studio (SSMS)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "92036088"
   
 -   La funcionalidad de IntelliSense no abarca a los objetos de base de datos creados por otra conexión después de que la ventana del editor se conecte a la base de datos. Si faltan objetos de las características de IntelliSense tales como las listas de finalización, puede elegir uno de estos tres mecanismos si desea actualizar la memoria caché de objetos para la ventana del editor:  
   
-    -   Seleccione el menú **Edición** , seleccione **IntelliSense**y, a continuación, seleccione **Actualizar caché local**.  
+    -   Seleccione el menú **Edición** , seleccione **IntelliSense** y, a continuación, seleccione **Actualizar caché local**.  
   
     -   Utilice el método abreviado de teclado CTRL+Mayús+R.  
   

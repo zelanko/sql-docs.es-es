@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3e07dd36e3ee4f27aa91e034848cab48e2f53105
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: b8d459824641e07f5b17bcf9aefbddb334d2b2da
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038789"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489591"
 ---
 # <a name="sql-server-agent-error-log"></a>Registro de errores del Agente SQL Server
 
@@ -41,7 +41,7 @@ ms.locfileid: "92038789"
   
 De forma predeterminada, los mensajes de seguimiento de ejecución no se escriben en el registro de errores del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque lo pueden llenar, reduciendo así la posibilidad de seleccionar y analizar los errores más difíciles. Puesto que el registro de errores agrega una carga de proceso adicional al servidor, es importante considerar las ventajas que se obtienen al capturar los mensajes de seguimiento de ejecución en este registro de errores. Generalmente, es mejor capturar todos los mensajes solo cuando se está depurando un problema específico.  
   
-Cuando se detiene el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se puede modificar la ubicación del registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando el registro de errores está vacío, no se puede abrir. Puede reciclar el registro del agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cualquier momento sin detener el agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [dbo.sp_cycle_agent_errorlog](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md?view=sql-server-2017).  
+Cuando se detiene el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se puede modificar la ubicación del registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando el registro de errores está vacío, no se puede abrir. Puede reciclar el registro del agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cualquier momento sin detener el agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [dbo.sp_cycle_agent_errorlog](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md).  
   
 **Para ver el registro de errores del Agente SQL Server**  
   

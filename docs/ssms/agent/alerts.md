@@ -23,13 +23,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ea3cc85669b31eed9ba2b91d6d4c91c8b59bd603
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 82e633e1a0614882fef7775b9119077d3b9b9e84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039229"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424836"
 ---
 # <a name="alerts"></a>Alertas
 
@@ -98,9 +98,9 @@ Puede especificar una alerta para que se active en respuesta a una condición de
   
 -   **Alertar si el contador** y **Valor**  
   
-    El umbral de la alerta y el comportamiento que genera la alerta. El umbral es un número. El comportamiento **puede ser: está por debajo de**, **es igual a**o **está por encima de un número especificado en Valor**. El **Valor** es un número que describe el contador de condición de rendimiento. Por ejemplo, para establecer una alerta que tendrá lugar para el objeto de rendimiento **SQLServer:Locks** cuando pasen 30 minutos del **Tiempo de espera de bloqueos** , deberá elegir **está por encima de** y **especificar 30 para el valor**.  
+    El umbral de la alerta y el comportamiento que genera la alerta. El umbral es un número. El comportamiento **puede ser: está por debajo de**, **es igual a** o **está por encima de un número especificado en Valor**. El **Valor** es un número que describe el contador de condición de rendimiento. Por ejemplo, para establecer una alerta que tendrá lugar para el objeto de rendimiento **SQLServer:Locks** cuando pasen 30 minutos del **Tiempo de espera de bloqueos** , deberá elegir **está por encima de** y **especificar 30 para el valor**.  
   
-    En otro ejemplo, puede especificar que una alerta tenga lugar para el objeto de rendimiento **SQLServer:Transactions** cuando el espacio disponible en **tempdb** esté por debajo de 1000 KB. Para ello, elegirá el contador **Espacio disponible en tempdb (KB)** , **está por debajo de**y un **Valor** de **1000**.  
+    En otro ejemplo, puede especificar que una alerta tenga lugar para el objeto de rendimiento **SQLServer:Transactions** cuando el espacio disponible en **tempdb** esté por debajo de 1000 KB. Para ello, elegirá el contador **Espacio disponible en tempdb (KB)** , **está por debajo de** y un **Valor** de **1000**.  
   
     > [!NOTE]  
     > Se muestrean periódicamente los datos de rendimiento, lo que puede causar una pequeña demora (unos segundos) entre el momento en que se alcanza el umbral y la activación de la alerta relativa al rendimiento.  

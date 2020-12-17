@@ -2,7 +2,7 @@
 title: Configuración de la administración extensible de claves de Cifrado de datos transparente (TDE) con Azure Key Vault
 description: Instale y configure el conector de SQL Server para Azure Key Vault.
 ms.custom: seo-lt-2019
-ms.date: 10/08/2020
+ms.date: 11/25/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,15 +12,16 @@ helpviewer_keywords:
 - EKM, with key vault setup
 - SQL Server Connector, setup
 - SQL Server Connector
+- TDE, AKV, EKM
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: Rupp29
 ms.author: arupp
-ms.openlocfilehash: 4df1fb243b2e811b216b03ec453164ae1a00b1af
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 03ed7f3bca347bbb65ea0b51c807547d7bdb5656
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130212"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489635"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>Configuración de Administración extensible de claves de TDE de SQL Server mediante Azure Key Vault
 
@@ -258,13 +259,13 @@ El motor de base de datos de SQL Server usa el almacén de claves y la clave qu
 1. Genere una clave asimétrica en el almacén de claves. Puede hacerlo de dos maneras: importar una clave existente o crear una.  
 
      > [!NOTE]
-     > SQL Server solo admite claves RSA de 2048 bits.
+     > SQL Server solo admite claves RSA de 2048 bits y 3072 bits, y claves RSA-HSM de 2048 bits y 3072 bits.
 
 ### <a name="best-practices"></a>Procedimientos recomendados
 
 Para garantizar una recuperación rápida de las claves y la capacidad de acceder a los datos fuera de Azure, se recomiendan los procedimientos recomendados siguientes:
 
-- Cree la clave de cifrado localmente en un dispositivo de módulo de seguridad de hardware (HSM) local. Asegúrese de usar una clave RSA 2048 asimétrica, para que sea compatible con SQL Server.
+- Cree la clave de cifrado localmente en un dispositivo de módulo de seguridad de hardware (HSM) local. Asegúrese de usar una clave RSA 2048 o 3072 asimétrica, para que sea compatible con SQL Server.
 - Importe la clave de cifrado al almacén de claves de Azure. Este proceso se describe en las secciones siguientes.
 - Antes de usar la clave por primera vez en el almacén de claves de Azure, cree una copia de seguridad de la clave. Para obtener más información, vea el comando [Backup-AzureKeyVaultKey]().
 - Siempre que realice cambios en la clave (por ejemplo, si agrega ACL, etiquetas o atributos de clave), asegúrese de realizar otra copia de seguridad de la clave del almacén de claves de Azure.
@@ -274,7 +275,7 @@ Para garantizar una recuperación rápida de las claves y la capacidad de accede
 
 ### <a name="types-of-keys"></a>Tipos de claves
 
-Pueden genera dos tipos de claves en un almacén de claves de Azure que funcionarán con SQL Server. Los dos tipos son claves RSA de 2048 bits asimétricas.  
+Puede generar cuatro tipos de claves en un almacén de claves de Azure que funcionarán con SQL Server. Claves RSA asimétricas de 2048 bits y 3072 bits, y claves RSA-HSM de 2048 bits y 3072 bits.
   
 - **Protegidas mediante software**: procesada en el software y cifrada en reposo. Las operaciones en claves protegidas mediante software se producen en máquinas virtuales de Azure. Se recomienda este tipo para las claves que no se usan en una implementación de producción.  
 
@@ -340,7 +341,8 @@ Descargue el conector de SQL Server desde el [Centro de descarga de Microsoft](h
 > - A partir de la versión 1.0.3.0, el conector de SQL Server notifica los mensajes de error pertinentes a los registros de eventos de Windows para la solución de problemas.
 > - A partir de la versión 1.0.4.0, hay compatibilidad con las nubes de Azure privadas, entre las que se incluyen Azure China, Azure Alemania y Azure Government.
 > - Hay un cambio importante en la versión 1.0.5.0, relacionado con el algoritmo de huella digital. Puede experimentar un error de restauración de base de datos después de actualizar a la versión 1.0.5.0. Para obtener más información, vea el [artículo de KB 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
-> - **A partir de la versión 1.0.5.0 (marca de tiempo: septiembre de 2020), el Conector de SQL Server admite el filtrado de mensajes y la lógica de reintento de solicitud de red.**
+> - A partir de la versión 1.0.5.0 (marca de tiempo: septiembre de 2020), el Conector de SQL Server admite el filtrado de mensajes y la lógica de reintento de solicitud de red.
+> - **A partir de la versión 1.0.5.0 actualizada (marca de tiempo: noviembre de 2020), el Conector de SQL Server admite las claves RSA 2048, RSA 3072, RSA-HSM 2048 y RSA-HSM 3072.**
   
   ![Captura de pantalla del Asistente para la instalación de Conector de SQL Server](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   

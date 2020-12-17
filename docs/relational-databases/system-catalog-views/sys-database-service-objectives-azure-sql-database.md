@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: ca0b8567115c2a9209efb61185aad4fa4d05fa24
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6435440b60c7b90d78f8050d64b5b580e610f017
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97412993"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643338"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -32,7 +32,7 @@ Devuelve la edición (nivel de servicio), el objetivo de servicio (nivel de prec
   
  Para obtener información sobre los precios, consulte [Opciones y rendimiento de SQL Database:](https://azure.microsoft.com/pricing/details/sql-database/) precios de SQL Database y [precios de Azure Synapse Analytics](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
- Para cambiar la configuración del servicio, vea [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md) y [ALTER DATABASE (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest).  
+ Para cambiar la configuración del servicio, vea [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-transact-sql.md) y [ALTER DATABASE (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).  
   
  La vista sys.database_service_objectives contiene las columnas siguientes.  
   

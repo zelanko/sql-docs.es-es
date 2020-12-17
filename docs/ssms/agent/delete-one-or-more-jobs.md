@@ -17,13 +17,13 @@ ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4eba0199c490bd2d96e202184b055150eed03933
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5f5b2a54dcea75f1f1d9a51a5cef6e29c7eefae7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039224"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423830"
 ---
 # <a name="delete-one-or-more-jobs"></a>Eliminar uno o más trabajos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +56,7 @@ Solo podrá eliminar los trabajos que posea, a menos que sea miembro del rol fij
   
 2.  Expanda **Agente SQL Server**.  
   
-3.  Haga clic con el botón derecho en **Monitor de actividad de trabajo**y haga clic en **Ver actividad de trabajo**.  
+3.  Haga clic con el botón derecho en **Monitor de actividad de trabajo** y haga clic en **Ver actividad de trabajo**.  
   
 4.  En Monitor de actividad de trabajo, seleccione los trabajos que desee eliminar, haga clic con el botón derecho en la selección y, luego, elija **Eliminar trabajos**.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b0f5c1ba58efb8fddcf5375d2a38fbf9f227f43f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 7774d83d959bccea3a1de1d7d0a06660d52c191b
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196875"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641920"
 ---
 # <a name="clr-integration-security"></a>Seguridad de la integración CLR
 
@@ -55,7 +55,7 @@ ms.locfileid: "92196875"
   
  Indica los problemas que surgen cuando un método administrado invoca a un método en una clase incluida dentro de otro ensamblado.  
   
- [Dominios de aplicación y seguridad de la integración CLR](/previous-versions/sql/2014/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
+ [Dominios de aplicación y seguridad de la integración CLR](/previous-versions/sql/2014/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014&preserve-view=true)  
  Describe la forma en que los ensamblados se cargan en los dominios de aplicación.  
   
 ## <a name="see-also"></a>Consulte también  

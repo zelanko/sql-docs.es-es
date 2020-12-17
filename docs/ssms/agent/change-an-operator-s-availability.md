@@ -23,13 +23,13 @@ ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9192b3b68c649b7e8e45f13b5b95a91aea1ff8a1
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 60ade9965f92b1c9ff5e459f1af109bd37c6a9c5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035728"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482273"
 ---
 # <a name="change-an-operator39s-availability"></a>Cambiar la disponibilidad de un operador
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

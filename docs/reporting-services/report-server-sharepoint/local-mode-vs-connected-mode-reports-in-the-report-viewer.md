@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d21d06182f259451f53fed45ba77a5cbacbb382d
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 76d9f23cb32818c67c34e562b6b1f714a5666c72
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767006"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482264"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Informes en modo local frente a modo conectado en el Visor de informes
 
@@ -33,7 +33,7 @@ ms.locfileid: "83767006"
 
  **Modo local**: cuando tiene una extensión de datos que admite el modo local, el Visor de informes representa de forma directa los informes de SharePoint. En *modo local* no hay ningún servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Es necesario que instale el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint, pero no se necesita el servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Con el modo local, los usuarios pueden ver informes pero **no** tendrán acceso a características del lado servidor como suscripciones y alertas de datos.  
   
- El**modo conectado**, también llamado *modo remoto* , necesita que haya un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] conectado a una granja de servidores de SharePoint para que el Visor de informes pueda representar informes.  
+ El **modo conectado**, también llamado *modo remoto* , necesita que haya un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] conectado a una granja de servidores de SharePoint para que el Visor de informes pueda representar informes.  
   
  La siguiente es una lista de las extensiones de procesamiento de datos que admite informes en modo local:  
   

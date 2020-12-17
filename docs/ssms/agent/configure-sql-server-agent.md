@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a12ed0026afa31592d4b2f5f9f5dcc1cc30ae94
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 497ac3d6bd46de41ca9bd682381afca4919f6ef2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035656"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466556"
 ---
 # <a name="configure-sql-server-agent"></a>Configure SQL Server Agent
 
@@ -62,7 +62,7 @@ Para más información sobre los permisos de Windows necesarios para la cuenta d
   
 1.  Haga clic en el botón **Inicio** y después, en el menú **Inicio**  , haga clic en **Panel de control**.  
   
-2.  En el Panel de control, haga clic en **Sistema y seguridad**, haga clic en **Herramientas administrativas**y seleccione **Directiva de seguridad local**.  
+2.  En el Panel de control, haga clic en **Sistema y seguridad**, haga clic en **Herramientas administrativas** y seleccione **Directiva de seguridad local**.  
   
 3.  En Directiva de seguridad local, haga clic en las comillas angulares para expandir la carpeta **Directivas locales** y, a continuación, haga clic en la carpeta **Asignación de derechos de usuario** .  
   

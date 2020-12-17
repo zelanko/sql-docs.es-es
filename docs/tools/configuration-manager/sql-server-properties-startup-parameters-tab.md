@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9584b479d77efaa6c114cd160964e0fbf09c77d7
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: f8e0b03d5ea3be6473c8e00a8d62ef5900f33973
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901030"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465736"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propiedades de SQL Server (pestaña Parámetros de inicio)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88901030"
  Para obtener más información sobre cómo mover la base de datos maestra, vea el tema "Mover bases de datos del sistema" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="optional-parameters"></a>Parámetros opcionales  
- Todos los parámetros de inicio admitidos se describen en el tema "Usar las opciones de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un parámetro de inicio de -T*n.º de seguimiento* indica que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha de iniciarse con una marca de seguimiento especificada (*n.º de seguimiento*) activa. Las marcas de seguimiento se utilizan para iniciar el servidor con un comportamiento distinto del habitual. Para más información sobre las marcas de seguimiento, consulte el tema "Marcas de seguimiento ([!INCLUDE[tsql](../../includes/tsql-md.md)])" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Todos los parámetros de inicio admitidos se describen en el tema "Usar las opciones de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un parámetro de inicio de -T *n.º de seguimiento* indica que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha de iniciarse con una marca de seguimiento especificada (*n.º de seguimiento*) activa. Las marcas de seguimiento se utilizan para iniciar el servidor con un comportamiento distinto del habitual. Para más información sobre las marcas de seguimiento, consulte el tema "Marcas de seguimiento ([!INCLUDE[tsql](../../includes/tsql-md.md)])" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!CAUTION]  
 >  Puede ver parámetros de inicio y marcas de seguimiento sin documentar adicionales en Internet. Los parámetros de inicio y marcas de seguimiento sin documentar se crean para resolver problemas poco habituales o forzar determinadas condiciones requeridas para las pruebas. El uso de parámetros de inicio sin documentar puede proporcionar resultados inesperados. No utilice parámetros sin documentar a menos que estén dirigidos por los servicios de soporte al cliente de Microsoft.  

@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7e48e25444acc2f84794afc487c95bdd5af64f30
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 0e746113d49c3cfa419a51826405bc993d90c51c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195077"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470046"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>Visualización y resumen de datos de SQL Server mediante R (tutorial)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -67,7 +67,7 @@ Ejecute las siguientes instrucciones de R en un entorno de R en la estación de 
     sqlConsoleOutput <- FALSE
     ```
 
-    - R usa un directorio temporal cuando serializa los objetos de R entre la estación de trabajo y el equipo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede especificar el directorio local que se usa como *sqlShareDir*o aceptar el valor predeterminado.
+    - R usa un directorio temporal cuando serializa los objetos de R entre la estación de trabajo y el equipo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede especificar el directorio local que se usa como *sqlShareDir* o aceptar el valor predeterminado.
   
     - Use *sqlWait* para indicar si quiere que R espere los resultados del servidor.  Para obtener una explicación sobre si esperar o no los trabajos, vea [Proceso distribuido y en paralelo con RevoScaleR en Microsoft R](/r-server/r/how-to-revoscaler-distributed-computing).
   

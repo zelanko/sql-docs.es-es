@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 85c10890a3af8ac30be21a1a15e13dfeaa60f7ad
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: b2f80086fa2efa754a02523a8dfa836c427f19cd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900889"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438910"
 ---
 # <a name="sql-server-properties-service-tab"></a>Propiedades de SQL Server (pestaña Servicio)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
-  Utilice la pestaña **Servicio**del cuadro de diálogo **Propiedades de MSSQLSERVER** para ver o especificar las siguientes opciones.  
+  Utilice la pestaña **Servicio** del cuadro de diálogo **Propiedades de MSSQLSERVER** para ver o especificar las siguientes opciones.  
   
 ## <a name="options"></a>Opciones  
  **Ruta de acceso binaria**  

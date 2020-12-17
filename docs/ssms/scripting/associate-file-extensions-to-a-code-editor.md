@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0845fc6cbf14259c02e2fdbf1f30bcf450917f00
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b1258d21f2478d30e10938d0ac97cce935d34b00
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039149"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440396"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>Asociar extensiones de archivo a un editor de código
 
@@ -33,7 +33,7 @@ La asociación de extensiones de archivo a un editor de código específico perm
   
 ### <a name="to-associate-a-new-file-extension-with-sql-server-management-studio"></a>Para asociar una nueva extensión de archivo con SQL Server Management Studio  
   
-1.  En el menú **Inicio** , seleccione **Todos los programas**, **Accesorios**y, a continuación, haga clic en **Explorador de Windows**.  
+1.  En el menú **Inicio** , seleccione **Todos los programas**, **Accesorios** y, a continuación, haga clic en **Explorador de Windows**.  
   
 2.  En el menú **Herramientas** del Explorador de Windows, haga clic en **Opciones de carpeta**.  
   
@@ -51,11 +51,11 @@ La asociación de extensiones de archivo a un editor de código específico perm
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el menú **Herramientas** , haga clic en **Opciones**.  
   
-2.  En el cuadro de diálogo **Opciones** , haga clic en **Editor de texto**y, a continuación, en **Extensión de archivo**.  
+2.  En el cuadro de diálogo **Opciones** , haga clic en **Editor de texto** y, a continuación, en **Extensión de archivo**.  
   
 3.  En el cuadro **Extensión** , escriba la nueva extensión de archivo.  
   
-4.  En el cuadro **Editor** , haga clic en el editor de código que desea utilizar para abrir este tipo de archivo, haga clic en **Agregar**y, a continuación, en **Aceptar**.  
+4.  En el cuadro **Editor** , haga clic en el editor de código que desea utilizar para abrir este tipo de archivo, haga clic en **Agregar** y, a continuación, en **Aceptar**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Ssms (Utilidad)](../ssms-utility.md)  

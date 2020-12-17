@@ -34,13 +34,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2d0ce5b51dffbb057ad3299689f5bb400bb017d6
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>= sql-server-2017'
+ms.openlocfilehash: f5d591fb4ca068251cc0a4effbdd9477f80e4606
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92257741"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402721"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Ediciones y características admitidas de SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -136,7 +136,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Memoria máxima para el grupo de búferes por cada instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Sistema operativo máximo|128 GB|64 GB|1410 MB|1410 MB|
 |Cantidad máxima de memoria para la caché de segmento del almacén de columnas por cada instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria ilimitada| 32 GB| 16 GB| 352 MB| 352 MB|  
 |Tamaño máximo de datos optimizados para memoria por base de datos en [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Memoria ilimitada| 32 GB| 16 GB| 352 MB| 352 MB|  
-|Memoria máxima usada por instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Sistema operativo máximo|Tabular: 16 GB<br /><br /> MOLAP: 64 GB|No aplicable|No aplicable|No aplicable|  
+|Memoria máxima usada por instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Sistema operativo máximo|Tabular: 16 GB<br /><br /> MOLAP: 64 GB|No aplicable|N/D|No aplicable|  
 |Memoria máxima usada por instancia de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Sistema operativo máximo|64 GB|64 GB|4 GB|No aplicable|
 |Tamaño máximo de la base de datos relacional|524 PB|524 PB|524 PB|10 GB|10 GB|  
   
@@ -205,7 +205,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 
 <sup>1</sup> El tamaño de los datos de OLTP en memoria y la memoria caché del segmento del almacén de columnas se limitan a la cantidad de memoria especificada por edición en la sección [Límites de escala](#Cross-BoxScaleLimits). El grado de paralelismo (DOP) de las operaciones del [modo de proceso por lotes](../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) está limitado a dos para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition y a uno para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web Edition y Express Edition. Se refiere a los índices de almacén de columnas que se crean en tablas basadas en disco y en tablas optimizadas para memoria.
 
-<sup>2</sup> Aplicación de agregados, Aplicación del predicado de la cadena y Optimizaciones de SIMD son mejoras de escalabilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition. Para más detalles, consulte [Novedades de los índices de almacén de columnas](../relational-databases/indexes/columnstore-indexes-what-s-new.md).
+<sup>2</sup> Aplicación de agregados, Aplicación del predicado de la cadena y Optimizaciones de SIMD son mejoras de escalabilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition. Para más detalles, consulte [Novedades de los índices de almacén de columnas](../relational-databases/indexes/columnstore-indexes-what-s-new.md).
 
 <sup>3</sup> Esta característica no está incluida en la opción de instalación LocalDB.
 

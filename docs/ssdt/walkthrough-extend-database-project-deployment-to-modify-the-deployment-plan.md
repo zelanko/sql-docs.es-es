@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e38e126274b03a53c693f9cdd904ee8301b0069b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 52a3ee78a73e2ba3e600d7dae99019d481da73a7
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987709"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559117"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Tutorial: Ampliación de la implementación del proyecto de base de datos para modificar el plan de implementación
 
@@ -775,7 +775,7 @@ Después de haber seguido uno de estos métodos, puede usar MSBuild con el fin d
         > Si implementa un proyecto de base de datos idéntico a la base de datos de destino, el informe resultante no será muy significativo. Para resultados más significativos, implemente los cambios en una base de datos o implemente una nueva base de datos.  
   
 ## <a name="command-line-deployment-using-generated-dacpac-file"></a>Implementación de la línea de comandos mediante el archivo dacpac generado  
-Una vez que se ha compilado un proyecto de SQL, se crea un archivo dacpac que se puede utilizar para implementar el esquema desde la línea de comandos, y que puede habilitar la implementación desde otro equipo como un equipo de compilación. SqlPackage es un programa de línea de comandos que habilita la implementación de dacpacs con una gama completa de opciones que permiten a los usuarios implementar un dacpac o generar un script de implementación, entre otras acciones. Para más información, consulte [SqlPackage.exe](../tools/sqlpackage.md).  
+Una vez que se ha compilado un proyecto de SQL, se crea un archivo dacpac que se puede utilizar para implementar el esquema desde la línea de comandos, y que puede habilitar la implementación desde otro equipo como un equipo de compilación. SqlPackage es un programa de línea de comandos que habilita la implementación de dacpacs con una gama completa de opciones que permiten a los usuarios implementar un dacpac o generar un script de implementación, entre otras acciones. Para más información, consulte [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md).  
   
 > [!NOTE]  
 > Para implementar correctamente los dacpacs compilados desde proyectos con la propiedad DeploymentContributors definida, el (los) DLL que contiene(n) su(s) colaborador(es) de implementación se deben instalar en el equipo que se está utilizando. Esto es así porque se han marcado como necesarios para que la implementación se complete correctamente.  

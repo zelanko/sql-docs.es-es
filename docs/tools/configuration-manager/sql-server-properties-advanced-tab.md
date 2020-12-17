@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2acca0bd84985700395cb3d073e6476167577b68
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: ab2a821d2c7d14f16caefb7f881f69962b3eaa94
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901177"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465776"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Propiedades de SQL Server (pestaña Avanzadas)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "88901177"
  Muestra la referencia de almacén (SKU) del producto, que también se denomina edición del producto.  
   
  **Parámetros de inicio**  
- Enumera los parámetros de inicio utilizados por esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los parámetros se separan mediante signos de punto y coma. Los parámetros predeterminados incluyen la ruta de acceso del archivo de datos de la base de datos maestra (`master.mdf`), el archivo de registro de la base de datos maestra (`mastlog.ldf`) y el archivo de registro de errores. Para conocer la sintaxis de parámetros de inicio, busque el tema **Uso de las opciones de inicio de servicio de SQL Server**en los libros en pantalla.  
+ Enumera los parámetros de inicio utilizados por esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los parámetros se separan mediante signos de punto y coma. Los parámetros predeterminados incluyen la ruta de acceso del archivo de datos de la base de datos maestra (`master.mdf`), el archivo de registro de la base de datos maestra (`mastlog.ldf`) y el archivo de registro de errores. Para conocer la sintaxis de parámetros de inicio, busque el tema **Uso de las opciones de inicio de servicio de SQL Server** en los libros en pantalla.  
   
  **Referencia de almacén**  
  Muestra el número de referencia de almacén (SKU) del producto.  

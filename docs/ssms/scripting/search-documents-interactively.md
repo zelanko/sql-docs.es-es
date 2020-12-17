@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a97a33dadae8f9039a6c5a0ca935decfb1e24b4a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bdf33a22b10a5a10dc14f0ecce870ce43fc33aee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036388"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466316"
 ---
 # <a name="search-documents-interactively"></a>Buscar documentos de forma interactiva
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "92036388"
   
 #### <a name="to-replace-in-all-active-files-interactively"></a>Para reemplazar en todos los archivos activos de forma interactiva  
   
-1.  En el menú **Editar** , elija **Buscar y reemplazar**y, después, haga clic en **Reemplazo rápido**.  
+1.  En el menú **Editar** , elija **Buscar y reemplazar** y, después, haga clic en **Reemplazo rápido**.  
   
 2.  En el cuadro **Buscar** , escriba el texto que desea buscar.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "92036388"
   
 4.  En la lista **Buscar en** , seleccione **Todos los documentos abiertos**.  
   
-5.  Haga clic en **Reemplazar**y siga haciendo clic en **Reemplazar** hasta que haya reemplazado la última coincidencia del última archivo. Haga clic en **Buscar siguiente** para omitir una coincidencia que no desea reemplazar.  
+5.  Haga clic en **Reemplazar** y siga haciendo clic en **Reemplazar** hasta que haya reemplazado la última coincidencia del última archivo. Haga clic en **Buscar siguiente** para omitir una coincidencia que no desea reemplazar.  
   
      O bien  
   

@@ -8,24 +8,24 @@ ms.date: 05/21/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f417a92a00b290f06326433b24b73137a0a424fa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 6e527f7ba5d9a0f97a52cf068565b1b24ee696bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178552"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470316"
 ---
 # <a name="python-tutorials-for-sql-machine-learning"></a>Tutoriales de Python para aprendizaje automático de SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 En este artículo se describen los tutoriales e inicios rápidos de Python para [Machine Learning Services en SQL Server](../sql-server-machine-learning-services.md) y en [clústeres de macrodatos](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 En este artículo se describen los tutoriales e inicios rápidos de Python para [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 En este artículo se describen los tutoriales e inicios rápidos de Python para [Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
@@ -33,7 +33,7 @@ En este artículo se describen los tutoriales e inicios rápidos de Python para 
 
 ## <a name="python-tutorials"></a>Tutoriales de Python
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 | Tutorial | Descripción |
 |-|-|
 | [Predicción de alquiler de esquís con regresión lineal](python-ski-rental-linear-regression.md) | Utilice Python con regresión lineal para predecir el número de alquileres de esquí. Use cuadernos en Azure Data Studio para preparar los datos y entrenar el modelo y T-SQL para la implementación de modelo. |

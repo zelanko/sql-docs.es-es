@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e7657dcfe382ed87b31ca17e6c36d9019d1b84e2
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 0b32d12a694062e56611abaff18dc4f1e2f23061
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412523"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470116"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>Tutorial de R: Ejecución de predicciones en procedimientos almacenados de SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -24,9 +24,9 @@ En la parte cinco de esta serie de tutoriales de cinco partes, aprenderá a *usa
 
 En este artículo se muestran dos maneras de realizar la puntuación:
 
-+ **Modo de puntuación por lotes** : Use una consulta SELECT como entrada para el procedimiento almacenado. El procedimiento almacenado devuelve una tabla de observaciones correspondientes a los casos de entrada.
++ **Modo de puntuación por lotes**: Use una consulta SELECT como entrada para el procedimiento almacenado. El procedimiento almacenado devuelve una tabla de observaciones correspondientes a los casos de entrada.
 
-+ **Modo de puntuación individual** : pasar un conjunto de valores de parámetros individuales como entrada.  El procedimiento almacenado devuelve una sola fila o valor.
++ **Modo de puntuación individual**: pasar un conjunto de valores de parámetros individuales como entrada.  El procedimiento almacenado devuelve una sola fila o valor.
 
 En este artículo, hará lo siguiente:
 

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56201dec5bb9b6a66c63f6c4bca50d90b4e27c33
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ac7abdfbac2beec19e5cd53d0077dbcd0c2c8d24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039055"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466366"
 ---
 # <a name="find-in-files"></a>Buscar en archivos
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "92039055"
  Seleccione un ámbito predefinido de búsqueda en esta lista, o use el cuadro de diálogo **Elegir carpetas de búsqueda** para escribir su propio grupo de directorios.  
   
  **Documento actual**  
- Esta opción está disponible cuando se abre un documento en un editor. Solo busca la cadena de **Buscar**en el documento activo.  
+ Esta opción está disponible cuando se abre un documento en un editor. Solo busca la cadena de **Buscar** en el documento activo.  
   
  **Todos los documentos abiertos**  
  Busca en todos los archivos abiertos actualmente para edición.  

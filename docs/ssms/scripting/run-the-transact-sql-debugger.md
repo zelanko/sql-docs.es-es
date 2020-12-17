@@ -22,13 +22,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e8a30b5c8ff29155c58f940de8d800075c84c1e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e9fe76a738bc38eafc1c778fef6a6f91d93492e2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036398"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466286"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Ejecutar el depurador de Transact-SQL
 
@@ -94,7 +94,7 @@ Los requisitos para iniciar el depurador de [!INCLUDE[tsql](../../includes/tsql-
 |**Windows/Variables locales**|No disponible|**Puntos de interrupción/Variables locales**|CTRL+ALT+V, L|Mostrar la ventana **Variables locales** .|  
 |**Windows/Pila de llamadas**|No disponible|**Puntos de interrupción/Pila de llamadas**|CTRL+ALT+C|Mostrar la ventana **Pila de llamadas** .|  
 |**Windows/Subprocesos**|No disponible|**Puntos de interrupción/Subprocesos**|CTRL+ALT+H|Mostrar la ventana **Subprocesos** .|  
-|**Continuar**|No disponible|**Continuar**|ALT+F5|Ejecutar un proceso hasta el siguiente punto de interrupción. La opción**Continuar** no está activa hasta que coloque el foco en una ventana del Editor de consultas que esté en el modo de depuración.|  
+|**Continuar**|No disponible|**Continuar**|ALT+F5|Ejecutar un proceso hasta el siguiente punto de interrupción. La opción **Continuar** no está activa hasta que coloque el foco en una ventana del Editor de consultas que esté en el modo de depuración.|  
 |**Iniciar depuración**|No disponible|**Iniciar depuración**|ALT+F5|Poner una ventana del Editor de consultas en el modo de depuración y ejecutar hasta el primer punto de interrupción. Si el foco está en la ventana del Editor de consultas que está en el modo de depuración, la opción **Iniciar depuración** se reemplaza por **Continuar**.|  
 |**Interrumpir todos**|No disponible|**Interrumpir todos**|CTRL+ALT+INTERR|El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no usa esta característica.|  
 |**Detener la depuración**|No disponible|**Detener la depuración**|MAYÚS+F5|Sacar una ventana del Editor de consultas del modo de depuración y volver a ponerla en el modo normal.|  

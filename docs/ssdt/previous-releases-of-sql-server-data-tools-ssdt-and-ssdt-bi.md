@@ -10,13 +10,13 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 06/17/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c88e83bcc0b4722bf52da697bdaa03af37b972d
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current'
+ms.openlocfilehash: 35c16a4184665052781ae88ad37635ede298d668
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988593"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440506"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versiones anteriores de SQL Server Data Tools (SSDT y SSDT-BI)
 
@@ -26,7 +26,7 @@ SQL Server Data Tools (SSDT) proporciona plantillas de proyecto y superficies de
 
 SSDT es compatible con versiones anteriores, por lo que siempre puede usar la [versión más reciente de SSDT](download-sql-server-data-tools-ssdt.md) para diseñar e implementar bases de datos, modelos, informes y paquetes que se ejecutan en versiones anteriores de SQL Server.
 
-Desde que se creó, el shell de Visual Studio que se utiliza para crear tipos de contenido de SQL Server se ha lanzado con diferentes nombres, como **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence**y **Business Intelligence Development Studio**. Las versiones anteriores incluían conjuntos específicos de plantillas de proyecto. Para que todas las plantillas de proyecto se encuentren en una misma versión de SSDT, necesita instalar [la más reciente](download-sql-server-data-tools-ssdt.md). De lo contrario, es probable que tenga que instalar varias versiones anteriores para obtener todas las plantillas que se usan en SQL Server. Solo se instala un shell por versión de Visual Studio; si se instala una segunda versión de SSDT solo se agregan las plantillas que faltan.
+Desde que se creó, el shell de Visual Studio que se utiliza para crear tipos de contenido de SQL Server se ha lanzado con diferentes nombres, como **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence** y **Business Intelligence Development Studio**. Las versiones anteriores incluían conjuntos específicos de plantillas de proyecto. Para que todas las plantillas de proyecto se encuentren en una misma versión de SSDT, necesita instalar [la más reciente](download-sql-server-data-tools-ssdt.md). De lo contrario, es probable que tenga que instalar varias versiones anteriores para obtener todas las plantillas que se usan en SQL Server. Solo se instala un shell por versión de Visual Studio; si se instala una segunda versión de SSDT solo se agregan las plantillas que faltan.
 
 ## <a name="previous-ssdt-releases"></a>Versiones de SSDT anteriores
 

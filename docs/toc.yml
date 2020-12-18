@@ -8506,8 +8506,14 @@
               href: ssms/sql-server-management-studio-ssms.md
         - name: Guías de inicio rápido
           items:
-            - name: Conectar y consultar SQL Server
-              href: ssms/quickstarts/connect-query-sql-server.md
+            - name: "Conexión a SQL\_Server y realización de consultas"
+              href: ssms/quickstarts/ssms-connect-query-sql-server.md
+            - name: "Conexión y consulta de SQL\_Server en máquinas virtuales de Azure"
+              href: ssms/quickstarts/ssms-connect-query-sql-server-azure-vm.md
+            - name: Conectarse y consultar Azure SQL Database
+              href: ssms/quickstarts/ssms-connect-query-azure-sql.md
+            - name: Conexión y consulta de un grupo de SQL dedicado en Azure Synapse Analytics
+              href: ssms/quickstarts/ssms-connect-query-azure-synapse-analytics.md
         - name: Tutoriales
           items:
             - name: Configuración de SSMS

@@ -4,22 +4,29 @@ description: Obtenga información sobre los cambios en SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 57b589ef62259904d63106298326dd537d33fc15
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: c9bbea58446a4e42410273e6d20f2649121ee813
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036069"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665873"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Novedades de SSMA para SAP ASE (SybaseToSQL)
 
 En este artículo se enumeran los cambios de SQL Server Migration Assistant (SSMA) para SAP ASE (anteriormente SSMA para Sybase) en cada versión.
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+La versión v 8.16 de SSMA para SAP ASE contiene los siguientes cambios:
+
+* Quitar compatibilidad con el analizador heredado
+* Corrección del problema con objetos que no se actualizan desde la base de datos
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -81,7 +88,7 @@ La versión v 8.7 de SSMA for SAP ASE tiene correcciones y mejoras de rendimient
 
 Además de un conjunto de correcciones diseñado para mejorar la facilidad de uso y el rendimiento, la versión v 8.6 de SSMA for SAP ASE se ha mejorado agregando una configuración que permite a los usuarios omitir las propiedades extendidas de SSMA en el código convertido.
 
-Para aprovechar esta configuración, en SSMA for SAP ase, vaya a **herramientas**  >  **configuración del proyecto**  >  **General**  >  **conversión** general y, a continuación, en **varios** , actualice el valor de la opción **omitir propiedades extendidas** a **sí** .
+Para aprovechar esta configuración, en SSMA for SAP ase, vaya a **herramientas**  >  **configuración del proyecto**  >    >  **conversión** general y, a continuación, en **varios**, actualice el valor de la opción **omitir propiedades extendidas** a **sí**.
 
 ![Omitir la configuración de propiedades extendidas](../sybase/media/ssma-omit-extended-properties.png)
 
@@ -162,7 +169,7 @@ La versión v 7.9 de SSMA para SAP ASE contiene los siguientes cambios:
 
 La versión v 7.8 de SSMA para SAP ASE contiene los siguientes cambios:
 
-* Cambiar la asignación de tipos resaltada en la **configuración del proyecto** .
+* Cambiar la asignación de tipos resaltada en la **configuración del proyecto**.
 * La capacidad de los usuarios de deshabilitar la telemetría.
 
 ## <a name="ssma-v77"></a>SSMA v 7.7

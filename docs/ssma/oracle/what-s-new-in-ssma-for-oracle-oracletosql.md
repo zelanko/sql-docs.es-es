@@ -4,22 +4,30 @@ description: Obtenga información sobre los cambios en SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: d7bcff5c96935dee5b696b0fa828cf3ba33eb56e
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 84a94725df5f3d1d817ed9f6de1048b9a54d6c64
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036021"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665846"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Novedades de SSMA para Oracle (OracleToSQL)
 
 En este artículo se enumeran los cambios SQL Server Migration Assistant (SSMA) para Oracle en cada versión.
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+La versión v 8.16 de SSMA para Oracle contiene los siguientes cambios:
+
+* Agregar compatibilidad para columnas de identidad
+* Quitar compatibilidad con el analizador heredado
+* Corrección del problema con objetos que no se actualizan desde la base de datos
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -110,7 +118,7 @@ Además, SSMA para Oracle ahora permite filtrar objetos en función del estado d
 
 Además de un conjunto de correcciones diseñado para mejorar la facilidad de uso y el rendimiento, la versión v 8.6 de SSMA para Oracle se ha mejorado agregando una configuración que permite a los usuarios omitir las propiedades extendidas de SSMA en el código convertido.
 
-Para aprovechar este valor, en SSMA para Oracle, vaya a **herramientas**  >  **configuración del proyecto**  >  **General**  >  **conversión** general y, a continuación, en **varios** , actualice el valor de la opción **omitir propiedades extendidas** a **sí** .
+Para aprovechar este valor, en SSMA para Oracle, vaya a **herramientas**  >  **configuración del proyecto**  >    >  **conversión** general y, a continuación, en **varios**, actualice el valor de la opción **omitir propiedades extendidas** a **sí**.
 
 ![Omitir la configuración de propiedades extendidas](../oracle/media/ssma-omit-extended-properties.png)
 
@@ -233,7 +241,7 @@ La versión v 7.8 de SSMA para Oracle contiene los siguientes cambios:
   * Expresión de fila para la `IN` cláusula.
   * Conversiones de tipos implícitas.
   * `UID` conversión para Azure SQL Database.
-* Cambiar la asignación de tipos resaltada en la **configuración del proyecto** .
+* Cambiar la asignación de tipos resaltada en la **configuración del proyecto**.
 * La capacidad de los usuarios de deshabilitar la telemetría.
 
 ## <a name="ssma-v77"></a>SSMA v 7.7
@@ -243,7 +251,7 @@ La versión v 7.7 de SSMA para Oracle contiene los siguientes cambios:
 * SSMA para Oracle se ha mejorado con correcciones dirigidas que mejoran las métricas de calidad y conversión.
 * En función de la demanda popular, la versión de 32 bits de SSMA para Oracle vuelve a ser. En comparación con la implementación anterior (antes de v 7.4), hay dos paquetes de instalador, pero no se pueden instalar en paralelo. Como resultado, debe elegir la versión más adecuada en función de los componentes de conectividad que tenga. Siempre es preferible usar la versión de 64 bits, si es posible.
 * La compatibilidad con SQL Server 2017 es ahora oficial con el paquete de extensiones de Oracle admitido en Linux también (nueva opción de instalación remota). Tenga en cuenta que la funcionalidad del paquete de extensiones está limitada cuando se instala en Linux, ya que no se admiten las características de migración de datos del lado servidor y el evaluador.
-* SSMA para Oracle permite migrar las vistas materializadas como tablas normales (se pueden configurar a través de los valores de configuración del **proyecto**  ->  **sincronizar**  ->  **detectar tablas de respaldo para vistas materializadas** ).
+* SSMA para Oracle permite migrar las vistas materializadas como tablas normales (se pueden configurar a través de los valores de configuración del **proyecto**  ->  **sincronizar**  ->  **detectar tablas de respaldo para vistas materializadas**).
 
 ## <a name="ssma-v76"></a>SSMA v 7.6
 
